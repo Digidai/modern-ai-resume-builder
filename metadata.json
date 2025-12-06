@@ -1,0 +1,5 @@
+{
+  "name": "Modern AI Resume Builder",
+  "description": "A concise, modern resume builder featuring real-time preview and Gemini AI-powered text enhancement.",
+  "requestFramePermissions": []
+}
