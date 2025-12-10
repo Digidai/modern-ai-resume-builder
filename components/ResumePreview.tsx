@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResumeData } from '../types';
-import { ModernTemplate, MinimalistTemplate, SidebarTemplate, ExecutiveTemplate, CreativeTemplate, CompactTemplate, TechTemplate, ProfessionalTemplate, AcademicTemplate, ElegantTemplate, SwissTemplate, OpalTemplate, WireframeTemplate, BerlinTemplate, LateralTemplate, IronTemplate, GintoTemplate, SymmetryTemplate, BronxTemplate, PathTemplate, QuartzTemplate, SilkTemplate } from './ResumeTemplates';
+import { ModernTemplate, MinimalistTemplate, SidebarTemplate, ExecutiveTemplate, CreativeTemplate, CompactTemplate, TechTemplate, ProfessionalTemplate, AcademicTemplate, ElegantTemplate, SwissTemplate, OpalTemplate, WireframeTemplate, BerlinTemplate, LateralTemplate, IronTemplate, GintoTemplate, SymmetryTemplate, BronxTemplate, PathTemplate, QuartzTemplate, SilkTemplate, MonoTemplate, PopTemplate } from './ResumeTemplates';
 
 interface ResumePreviewProps {
   data: ResumeData;
@@ -61,6 +61,10 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         return <QuartzTemplate data={data} />;
       case 'silk':
         return <SilkTemplate data={data} />;
+      case 'mono':
+        return <MonoTemplate data={data} />;
+      case 'pop':
+        return <PopTemplate data={data} />;
       case 'modern':
       default:
         return <ModernTemplate data={data} />;

@@ -110,6 +110,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         { id: 'path', name: 'Path', color: 'bg-white' },
         { id: 'quartz', name: 'Quartz', color: 'bg-white border border-slate-900' },
         { id: 'silk', name: 'Silk', color: 'bg-stone-50' },
+        { id: 'mono', name: 'Mono', color: 'bg-slate-900' },
+        { id: 'pop', name: 'Pop', color: 'bg-gradient-to-r from-indigo-100 to-pink-100' },
     ];
 
 
@@ -177,6 +179,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                         {t.id === 'path' && <div className="h-full w-full bg-white p-2 flex gap-1"><div className="relative w-4 h-full"><div className="absolute left-1.5 top-0 bottom-0 w-0.5 bg-indigo-200"></div><div className="absolute left-0.5 top-2 w-2.5 h-2.5 rounded-full bg-indigo-500 border-2 border-white"></div></div><div className="flex-1 flex flex-col gap-1 pt-2"><div className="w-full h-1 bg-slate-300"></div><div className="w-3/4 h-1 bg-slate-200"></div><div className="w-full h-10 bg-slate-50 mt-1"></div></div></div>}
                                         {t.id === 'quartz' && <div className="h-full w-full bg-white p-1"><div className="h-full w-full border border-black p-1 flex flex-col"><div className="w-full h-1/4 border-b border-black mb-1"></div><div className="flex flex-1 gap-1"><div className="w-1/3 border-r border-black"></div><div className="flex-1"></div></div></div></div>}
                                         {t.id === 'silk' && <div className="h-full w-full bg-[#fafaf9] p-2 flex flex-col items-center"><div className="font-serif italic text-[6px] text-stone-800 mb-1">Name</div><div className="w-full h-px bg-stone-200 mb-2"></div><div className="w-3/4 flex flex-col gap-1"><div className="w-full h-1 bg-stone-200"></div><div className="w-full h-1 bg-stone-100"></div></div></div>}
+                                        {t.id === 'mono' && <div className="h-full w-full bg-slate-900 p-2 flex flex-col"><div className="text-[5px] text-green-400 mb-1">// code</div><div className="w-1/2 h-1 bg-slate-700 mb-1"></div><div className="w-full h-px bg-slate-700 mb-2"></div><div className="flex flex-col gap-1 pl-1 border-l border-slate-700"><div className="w-3/4 h-1 bg-slate-700"></div></div></div>}
+                                        {t.id === 'pop' && <div className="h-full w-full bg-gradient-to-br from-indigo-50 to-pink-50 p-2"><div className="w-1/2 h-1 bg-slate-800 rounded-full mb-1"></div><div className="w-1/3 h-2 bg-indigo-500 rounded-full mb-2"></div><div className="w-full h-8 bg-white/50 rounded-xl"></div></div>}
                                     </div>
                                     {data.templateId === t.id && (
                                         <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
