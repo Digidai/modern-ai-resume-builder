@@ -102,6 +102,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         { id: 'opal', name: 'Opal', color: 'bg-slate-50' },
         { id: 'wireframe', name: 'Wireframe', color: 'bg-white border border-slate-300' },
         { id: 'berlin', name: 'Berlin', color: 'bg-white border-t-4 border-black' },
+        { id: 'lateral', name: 'Lateral', color: 'bg-white' },
+        { id: 'iron', name: 'Iron', color: 'bg-black' },
     ];
 
 
@@ -161,6 +163,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                         {t.id === 'opal' && <div className="h-full w-full bg-white p-2 flex flex-col items-center gap-1"><div className="w-1/2 h-1 bg-slate-200 rounded-full"></div><div className="w-3/4 h-8 bg-slate-50 rounded-lg"></div></div>}
                                         {t.id === 'wireframe' && <div className="h-full w-full bg-slate-50 p-2 font-mono flex flex-col gap-1"><div className="w-full border border-black h-1/4"></div><div className="flex flex-1 gap-1"><div className="w-1/3 border border-black"></div><div className="w-2/3 border border-black"></div></div></div>}
                                         {t.id === 'berlin' && <div className="h-full w-full bg-white p-2 flex flex-col"><div className="w-full h-1 bg-black mb-2"></div><div className="w-3/4 h-2 bg-black mb-2"></div><div className="w-full border-t border-black pt-1 flex gap-1"><div className="w-full h-0.5 bg-slate-400"></div></div></div>}
+                                        {t.id === 'lateral' && <div className="h-full w-full bg-white p-2 flex flex-col gap-1"><div className="w-full border-b border-slate-200 h-1/4 mb-1"></div><div className="flex flex-1"><div className="w-1/4 border-r border-slate-100"></div><div className="w-3/4"></div></div></div>}
+                                        {t.id === 'iron' && <div className="h-full w-full bg-white flex flex-col"><div className="w-full h-1/4 bg-black p-1"></div><div className="p-1 flex flex-col gap-1"><div className="w-1/3 h-1 bg-black"></div><div className="w-full h-px bg-slate-200"></div><div className="w-1/3 h-1 bg-black mt-1"></div></div></div>}
                                     </div>
                                     {data.templateId === t.id && (
                                         <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
