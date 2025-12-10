@@ -1096,3 +1096,206 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
     </div>
   )
 }
+
+// --- 13. WIREFRAME (Structural, monospace, grid lines, blueprint style) ---
+export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white font-mono text-xs text-slate-800 p-8">
+      <div className="border-2 border-slate-900 h-full flex flex-col">
+
+        {/* Header Block */}
+        <div className="border-b-2 border-slate-900 p-6 flex justify-between items-start">
+          <div>
+            <h1 className="text-2xl font-bold uppercase tracking-widest mb-2">{data.fullName}</h1>
+            <p className="text-sm border inline-block px-2 py-0.5 border-slate-800">{data.title}</p>
+          </div>
+          <div className="text-right flex flex-col gap-1 items-end">
+            {[data.email, data.phone, data.website, data.location].filter(Boolean).map((t, i) => (
+              <div key={i} className="border-b border-slate-300 pb-0.5">{t}</div>
+            ))}
+          </div>
+        </div>
+
+        <div className="flex flex-1">
+          {/* Left Sidebar Block */}
+          <div className="w-1/3 border-r-2 border-slate-900 flex flex-col">
+
+            {data.skills.length > 0 && (
+              <div className="p-4 border-b-2 border-slate-900">
+                <h2 className="font-bold underline mb-3 text-sm">SKILLS_LIST</h2>
+                <ul className="list-disc list-inside space-y-1 marker:text-slate-500">
+                  {data.skills.map((s, i) => (
+                    <li key={i}>{s}</li>
+                  ))}
+                </ul>
+              </div>
+            )}
+
+            {data.education.length > 0 && (
+              <div className="p-4 flex-1">
+                <h2 className="font-bold underline mb-3 text-sm">EDUCATION_DATA</h2>
+                <div className="flex flex-col gap-4">
+                  {data.education.map(edu => (
+                    <div key={edu.id} className="border border-slate-400 p-2 relative">
+                      <div className="absolute -top-2 left-2 bg-white px-1 text-[10px] text-slate-500">Node</div>
+                      <div className="font-bold">{edu.school}</div>
+                      <div>{edu.degree}</div>
+                      <div className="text-[10px] text-slate-500 mt-1">{edu.startDate} -&gt; {edu.endDate}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {/* Main Content Block */}
+          <div className="w-2/3 flex flex-col">
+            {data.summary && (
+              <div className="p-4 border-b-2 border-slate-900">
+                <h2 className="font-bold underline mb-2 text-sm">SUMMARY</h2>
+                <p className="leading-relaxed">{data.summary}</p>
+              </div>
+            )}
+
+            {data.experience.length > 0 && (
+              <div className="p-4 flex-1 border-b-2 border-slate-900">
+                <h2 className="font-bold underline mb-4 text-sm">EXPERIENCE_LOG</h2>
+                <div className="flex flex-col gap-6">
+                  {data.experience.map(exp => (
+                    <div key={exp.id} className="grid grid-cols-[80px_1fr] gap-4">
+                      <div className="text-[10px] border-r border-slate-300 pr-2 h-full">
+                        {exp.startDate}<br />
+                        |<br />
+                        {exp.isCurrent ? 'NOW' : exp.endDate}
+                      </div>
+                      <div>
+                        <div className="font-bold text-sm uppercase">{exp.role}</div>
+                        <div className="text-xs mb-2">@ {exp.company}</div>
+                        <p className="leading-snug text-slate-600">{exp.description}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {data.projects.length > 0 && (
+              <div className="p-4">
+                <h2 className="font-bold underline mb-4 text-sm">PROJECT_INDEX</h2>
+                <div className="grid grid-cols-1 gap-3">
+                  {data.projects.map(proj => (
+                    <div key={proj.id} className="border border-dashed border-slate-400 p-2">
+                      <div className="font-bold">{proj.name}</div>
+                      <div className="text-[10px] text-slate-500 mt-1">{proj.description}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// --- 14. BERLIN (Strict, Key-line, Grotesk, B&W) ---
+export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-black p-10 font-sans">
+      <header className="pb-8 border-b-4 border-black mb-8">
+        <h1 className="text-6xl font-black uppercase tracking-tighter mb-4 leading-none">{data.fullName}</h1>
+        <div className="flex justify-between items-end">
+          <p className="text-xl font-bold uppercase tracking-wide">{data.title}</p>
+          <div className="text-right text-sm font-medium">
+            {[data.email, data.phone, data.location].filter(Boolean).join(' / ')}
+            {data.website && <div>{data.website}</div>}
+          </div>
+        </div>
+      </header>
+
+      <div className="flex flex-col gap-10">
+
+        {data.summary && (
+          <section className="grid grid-cols-[150px_1fr] gap-8">
+            <h2 className="text-sm font-bold uppercase tracking-widest pt-1">About</h2>
+            <p className="text-lg leading-relaxed font-medium">{data.summary}</p>
+          </section>
+        )}
+
+        <div className="border-t border-black my-2"></div>
+
+        {data.experience.length > 0 && (
+          <section className="grid grid-cols-[150px_1fr] gap-8">
+            <h2 className="text-sm font-bold uppercase tracking-widest pt-1">Experience</h2>
+            <div className="flex flex-col gap-10">
+              {data.experience.map(exp => (
+                <div key={exp.id} className="grid grid-cols-[1fr_3fr] gap-6">
+                  <div>
+                    <div className="font-bold">{exp.startDate} –</div>
+                    <div className="font-bold">{exp.isCurrent ? 'Present' : exp.endDate}</div>
+                    <div className="text-sm text-slate-500 mt-1">{exp.company}</div>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold mb-2 uppercase">{exp.role}</h3>
+                    <p className="text-base leading-relaxed text-slate-800">{exp.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="border-t border-black my-2"></div>
+
+        <div className="grid grid-cols-2 gap-8">
+          {data.education.length > 0 && (
+            <section>
+              <h2 className="text-sm font-bold uppercase tracking-widest mb-6 border-b border-black pb-2 inline-block">Education</h2>
+              <div className="flex flex-col gap-4">
+                {data.education.map(edu => (
+                  <div key={edu.id}>
+                    <div className="font-bold text-lg">{edu.school}</div>
+                    <div className="text-base">{edu.degree}</div>
+                    <div className="text-sm text-slate-500">{edu.startDate} – {edu.endDate}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {data.skills.length > 0 && (
+            <section>
+              <h2 className="text-sm font-bold uppercase tracking-widest mb-6 border-b border-black pb-2 inline-block">Competencies</h2>
+              <div className="flex flex-wrap gap-x-6 gap-y-2">
+                {data.skills.map((s, i) => (
+                  <div key={i} className="font-medium text-base relative">
+                    <span className="absolute -left-3 top-2 w-1.5 h-1.5 bg-black rounded-full"></span>
+                    {s}
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        {data.projects.length > 0 && (
+          <>
+            <div className="border-t border-black my-2"></div>
+            <section className="grid grid-cols-[150px_1fr] gap-8">
+              <h2 className="text-sm font-bold uppercase tracking-widest pt-1">Projects</h2>
+              <div className="grid grid-cols-2 gap-8">
+                {data.projects.map(proj => (
+                  <div key={proj.id}>
+                    <div className="font-bold text-lg mb-1">{proj.name}</div>
+                    <p className="text-sm text-slate-600">{proj.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          </>
+        )}
+      </div>
+    </div>
+  )
+}

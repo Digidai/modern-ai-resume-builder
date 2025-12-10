@@ -1,6 +1,6 @@
 import React from 'react';
 import { ResumeData } from '../types';
-import { ModernTemplate, MinimalistTemplate, SidebarTemplate, ExecutiveTemplate, CreativeTemplate, CompactTemplate, TechTemplate, ProfessionalTemplate, AcademicTemplate, ElegantTemplate, SwissTemplate, OpalTemplate } from './ResumeTemplates';
+import { ModernTemplate, MinimalistTemplate, SidebarTemplate, ExecutiveTemplate, CreativeTemplate, CompactTemplate, TechTemplate, ProfessionalTemplate, AcademicTemplate, ElegantTemplate, SwissTemplate, OpalTemplate, WireframeTemplate, BerlinTemplate } from './ResumeTemplates';
 
 interface ResumePreviewProps {
   data: ResumeData;
@@ -41,6 +41,10 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         return <SwissTemplate data={data} />;
       case 'opal':
         return <OpalTemplate data={data} />;
+      case 'wireframe':
+        return <WireframeTemplate data={data} />;
+      case 'berlin':
+        return <BerlinTemplate data={data} />;
       case 'modern':
       default:
         return <ModernTemplate data={data} />;
