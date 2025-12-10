@@ -1299,3 +1299,563 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
     </div>
   )
 }
+
+// --- 15. LATERAL (Side-headers, wide layout) ---
+export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-slate-800 font-sans p-10">
+      <header className="border-b border-slate-200 pb-8 mb-8">
+        <h1 className="text-4xl font-bold text-slate-900 mb-2">{data.fullName}</h1>
+        <div className="flex justify-between items-end">
+          <p className="text-xl text-slate-500 font-medium">{data.title}</p>
+          <div className="text-right text-sm">
+            {[data.email, data.phone].filter(Boolean).join(' | ')}
+            {data.website && <div className="text-slate-400">{data.website}</div>}
+          </div>
+        </div>
+      </header>
+
+      <div className="flex flex-col gap-10">
+
+        {data.summary && (
+          <section className="grid grid-cols-[150px_1fr] gap-8">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 pt-1">About</h2>
+            <p className="text-slate-600 leading-relaxed">{data.summary}</p>
+          </section>
+        )}
+
+        {data.experience.length > 0 && (
+          <section className="grid grid-cols-[150px_1fr] gap-8">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 pt-1">Experience</h2>
+            <div className="flex flex-col gap-8">
+              {data.experience.map(exp => (
+                <div key={exp.id}>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h3 className="text-lg font-bold text-slate-900">{exp.role}</h3>
+                    <span className="text-sm text-slate-400">{exp.startDate} - {exp.isCurrent ? 'Present' : exp.endDate}</span>
+                  </div>
+                  <div className="text-slate-500 font-medium mb-2">{exp.company}</div>
+                  <p className="text-slate-600 text-sm leading-relaxed">{exp.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {data.education.length > 0 && (
+          <section className="grid grid-cols-[150px_1fr] gap-8">
+            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 pt-1">Education</h2>
+            <div className="flex flex-col gap-4">
+              {data.education.map(edu => (
+                <div key={edu.id}>
+                  <div className="font-bold text-slate-900">{edu.school}</div>
+                  <div className="text-slate-600 text-sm">{edu.degree}</div>
+                  <div className="text-xs text-slate-400 mt-1">{edu.startDate} - {edu.endDate}</div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="grid grid-cols-[150px_1fr] gap-8">
+          <h2 className="text-sm font-bold uppercase tracking-wider text-slate-400 pt-1">Skills</h2>
+          <div className="flex flex-wrap gap-2">
+            {data.skills.map((s, i) => (
+              <span key={i} className="bg-slate-50 text-slate-600 px-2 py-1 text-sm rounded">{s}</span>
+            ))}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+// --- 16. IRON (Inverted headers, high contrast) ---
+export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-slate-900 font-sans">
+      <header className="bg-black text-white p-10">
+        <h1 className="text-5xl font-black tracking-tight mb-2 uppercase">{data.fullName}</h1>
+        <p className="text-xl font-medium text-slate-400 uppercase tracking-widest mb-6">{data.title}</p>
+        <div className="flex gap-6 text-sm font-bold text-slate-300">
+          {[data.email, data.phone].filter(Boolean).map((t, i) => <span key={i}>{t}</span>)}
+        </div>
+      </header>
+
+      <div className="p-10 flex flex-col gap-10">
+
+        {data.summary && (
+          <section>
+            <div className="bg-black text-white inline-block px-4 py-1 font-bold uppercase tracking-widest text-sm mb-4">Profile</div>
+            <p className="text-lg font-medium leading-relaxed max-w-3xl">{data.summary}</p>
+          </section>
+        )}
+
+        {data.experience.length > 0 && (
+          <section>
+            <div className="bg-black text-white inline-block px-4 py-1 font-bold uppercase tracking-widest text-sm mb-6">Experience</div>
+            <div className="border-l-4 border-black pl-6 flex flex-col gap-8">
+              {data.experience.map(exp => (
+                <div key={exp.id}>
+                  <div className="flex justify-between items-baseline mb-1">
+                    <h3 className="text-2xl font-bold uppercase">{exp.role}</h3>
+                    <span className="font-bold text-sm bg-slate-100 px-2 py-1">{exp.startDate} - {exp.isCurrent ? 'Present' : exp.endDate}</span>
+                  </div>
+                  <div className="text-lg font-bold text-slate-500 mb-2">{exp.company}</div>
+                  <p className="text-base font-medium leading-relaxed">{exp.description}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="grid grid-cols-2 gap-10">
+          {data.education.length > 0 && (
+            <section>
+              <div className="bg-black text-white inline-block px-4 py-1 font-bold uppercase tracking-widest text-sm mb-6">Education</div>
+              <div className="flex flex-col gap-4">
+                {data.education.map(edu => (
+                  <div key={edu.id} className="border-b-2 border-slate-100 pb-4">
+                    <div className="font-bold text-lg">{edu.school}</div>
+                    <div className="text-slate-600 font-bold">{edu.degree}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {data.skills.length > 0 && (
+            <section>
+              <div className="bg-black text-white inline-block px-4 py-1 font-bold uppercase tracking-widest text-sm mb-6">Skills</div>
+              <div className="flex flex-wrap gap-2">
+                {data.skills.map((s, i) => (
+                  <span key={i} className="font-black text-lg border-b-2 border-black leading-none">{s}</span>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+// --- 17. GINTO (Geometric, numbered sections, pop style) ---
+export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-slate-900 font-sans p-10">
+      <header className="mb-12">
+        <h1 className="text-6xl font-extrabold tracking-tighter mb-4"><span className="text-indigo-600">.</span>{data.fullName}</h1>
+        <div className="flex justify-between items-end border-b-4 border-slate-900 pb-4">
+          <p className="text-2xl font-bold uppercase tracking-widest">{data.title}</p>
+          <div className="text-right font-medium text-sm">
+            {[data.email, data.phone].filter(Boolean).join(' • ')}
+            {data.website && <div>{data.website}</div>}
+          </div>
+        </div>
+      </header>
+
+      <div className="flex flex-col gap-10">
+
+        {data.summary && (
+          <section className="grid grid-cols-[80px_1fr] gap-6">
+            <div className="text-4xl font-black text-indigo-100 leading-none select-none">01</div>
+            <div>
+              <h2 className="text-sm font-bold uppercase tracking-widest mb-2 text-indigo-600">Profile</h2>
+              <p className="text-lg font-medium leading-relaxed">{data.summary}</p>
+            </div>
+          </section>
+        )}
+
+        {data.experience.length > 0 && (
+          <section className="grid grid-cols-[80px_1fr] gap-6">
+            <div className="text-4xl font-black text-indigo-100 leading-none select-none">02</div>
+            <div>
+              <h2 className="text-sm font-bold uppercase tracking-widest mb-6 text-indigo-600">Experience</h2>
+              <div className="flex flex-col gap-8">
+                {data.experience.map(exp => (
+                  <div key={exp.id} className="relative pl-8 border-l-2 border-slate-100 hover:border-indigo-200 transition-colors">
+                    <span className="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-white border-4 border-indigo-600"></span>
+                    <div className="flex justify-between items-baseline mb-1">
+                      <h3 className="text-xl font-bold">{exp.role}</h3>
+                      <span className="font-mono text-sm text-slate-400 font-medium">{exp.startDate} — {exp.isCurrent ? 'Now' : exp.endDate}</span>
+                    </div>
+                    <div className="text-base font-bold text-slate-500 mb-2">{exp.company}</div>
+                    <p className="text-slate-700 leading-relaxed">{exp.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {data.education.length > 0 && (
+          <section className="grid grid-cols-[80px_1fr] gap-6">
+            <div className="text-4xl font-black text-indigo-100 leading-none select-none">03</div>
+            <div>
+              <h2 className="text-sm font-bold uppercase tracking-widest mb-6 text-indigo-600">Education</h2>
+              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+                {data.education.map(edu => (
+                  <div key={edu.id} className="bg-slate-50 p-4 rounded-xl border border-slate-100">
+                    <div className="font-bold text-lg">{edu.school}</div>
+                    <div className="text-indigo-600 font-medium">{edu.degree}</div>
+                    <div className="text-sm text-slate-400 mt-1">{edu.startDate} - {edu.endDate}</div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        <div className="grid grid-cols-2 gap-10">
+          {data.skills.length > 0 && (
+            <section className="grid grid-cols-[80px_1fr] gap-6">
+              <div className="text-4xl font-black text-indigo-100 leading-none select-none">04</div>
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-widest mb-4 text-indigo-600">Skills</h2>
+                <div className="flex flex-wrap gap-2">
+                  {data.skills.map((s, i) => (
+                    <span key={i} className="bg-slate-900 text-white px-3 py-1 text-sm font-bold rounded-full">{s}</span>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+
+          {data.projects.length > 0 && (
+            <section className="grid grid-cols-[80px_1fr] gap-6">
+              <div className="text-4xl font-black text-indigo-100 leading-none select-none">05</div>
+              <div>
+                <h2 className="text-sm font-bold uppercase tracking-widest mb-4 text-indigo-600">Projects</h2>
+                <div className="flex flex-col gap-4">
+                  {data.projects.map(proj => (
+                    <div key={proj.id}>
+                      <div className="font-bold">{proj.name}</div>
+                      <p className="text-xs text-slate-500">{proj.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </section>
+          )}
+        </div>
+      </div>
+    </div>
+  )
+}
+
+// --- 18. SYMMETRY (Centered, elegant, balanced) ---
+export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-slate-50 text-slate-800 font-serif p-12">
+      <header className="text-center mb-12">
+        <h1 className="text-4xl font-medium tracking-wide text-slate-900 mb-3">{data.fullName}</h1>
+        <p className="text-sm uppercase tracking-[0.3em] text-slate-500 mb-6">{data.title}</p>
+        <div className="flex justify-center gap-6 text-xs text-slate-500 italic font-medium">
+          {[data.email, data.phone, data.location].filter(Boolean).map((t, i) => (
+            <span key={i} className="relative px-2">
+              {i > 0 && <span className="absolute -left-3 top-0 opacity-30">/</span>}
+              {t}
+            </span>
+          ))}
+        </div>
+      </header>
+
+      <div className="flex flex-col gap-10 max-w-3xl mx-auto w-full">
+
+        {data.summary && (
+          <section className="text-center">
+            <div className="w-10 h-0.5 bg-slate-300 mx-auto mb-4"></div>
+            <p className="text-slate-600 leading-loose italic">{data.summary}</p>
+          </section>
+        )}
+
+        {data.skills.length > 0 && (
+          <section className="text-center">
+            <h2 className="text-xs font-bold uppercase tracking-widest text-slate-400 mb-4">Competencies</h2>
+            <div className="flex justify-center flex-wrap gap-x-6 gap-y-2">
+              {data.skills.map((s, i) => (
+                <span key={i} className="text-sm font-medium text-slate-700 border-b border-transparent hover:border-slate-300 transition-colors">{s}</span>
+              ))}
+            </div>
+          </section>
+        )}
+
+        {data.experience.length > 0 && (
+          <section>
+            <div className="flex items-center gap-4 mb-8">
+              <div className="h-px bg-slate-200 flex-1"></div>
+              <h2 className="text-lg font-medium italic text-slate-900">Professional Experience</h2>
+              <div className="h-px bg-slate-200 flex-1"></div>
+            </div>
+
+            <div className="flex flex-col gap-10">
+              {data.experience.map(exp => (
+                <div key={exp.id} className="grid grid-cols-[1fr_3fr] gap-8">
+                  <div className="text-right pt-1">
+                    <div className="text-xs font-bold uppercase tracking-widest text-slate-400">{exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}</div>
+                    <div className="text-sm font-medium text-slate-800 mt-1">{exp.company}</div>
+                  </div>
+                  <div className="border-l border-slate-200 pl-8">
+                    <h3 className="text-xl font-medium text-slate-900 mb-2">{exp.role}</h3>
+                    <p className="text-sm text-slate-600 leading-relaxed text-justify">{exp.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
+        )}
+
+        <div className="grid grid-cols-2 gap-12">
+          {data.education.length > 0 && (
+            <section>
+              <div className="h-px bg-slate-200 w-full mb-6 relative">
+                <span className="absolute left-1/2 -translate-x-1/2 -top-2.5 bg-slate-50 px-2 text-xs font-bold uppercase tracking-widest text-slate-400">Education</span>
+              </div>
+              <div className="flex flex-col gap-6 text-center">
+                {data.education.map(edu => (
+                  <div key={edu.id}>
+                    <div className="font-medium text-lg text-slate-900">{edu.school}</div>
+                    <div className="text-sm italic text-slate-600">{edu.degree}</div>
+                    <div className="text-xs text-slate-400 mt-1">{edu.startDate} - {edu.endDate}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {data.projects.length > 0 && (
+            <section>
+              <div className="h-px bg-slate-200 w-full mb-6 relative">
+                <span className="absolute left-1/2 -translate-x-1/2 -top-2.5 bg-slate-50 px-2 text-xs font-bold uppercase tracking-widest text-slate-400">Projects</span>
+              </div>
+              <div className="flex flex-col gap-6 text-center">
+                {data.projects.map(proj => (
+                  <div key={proj.id}>
+                    <div className="font-medium text-lg text-slate-900">{proj.name}</div>
+                    <p className="text-xs text-slate-500 mt-1 leading-normal">{proj.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+// --- 19. BRONX (Editorial, bold typography, modern magazine style) ---
+export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-slate-900 font-sans p-12">
+      <header className="mb-16">
+        <h1 className="text-8xl font-black tracking-tighter leading-[0.8] mb-6 uppercase break-words">{data.fullName}</h1>
+        <div className="flex flex-col gap-2 border-t-4 border-black pt-6">
+          <div className="flex justify-between items-baseline">
+            <p className="text-2xl font-bold uppercase tracking-wide">{data.title}</p>
+            <div className="text-right font-bold text-sm">
+              {[data.email, data.phone].filter(Boolean).join('  /  ')}
+            </div>
+          </div>
+          <div className="flex justify-between text-sm font-medium text-slate-500">
+            <div>{data.location}</div>
+            <div>{data.website}</div>
+          </div>
+        </div>
+      </header>
+
+      <div className="grid grid-cols-[1fr_2fr] gap-16">
+
+        <div className="flex flex-col gap-12">
+          {data.summary && (
+            <section>
+              <h2 className="text-xs font-black uppercase tracking-[0.2em] mb-4">About</h2>
+              <p className="text-lg font-medium leading-tight">{data.summary}</p>
+            </section>
+          )}
+
+          {data.skills.length > 0 && (
+            <section>
+              <h2 className="text-xs font-black uppercase tracking-[0.2em] mb-4">Skills</h2>
+              <div className="flex flex-col gap-2">
+                {data.skills.map((s, i) => (
+                  <span key={i} className="text-xl font-bold leading-none hover:text-indigo-600 transition-colors cursor-default">{s}</span>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {data.education.length > 0 && (
+            <section>
+              <h2 className="text-xs font-black uppercase tracking-[0.2em] mb-4">Education</h2>
+              <div className="flex flex-col gap-8">
+                {data.education.map(edu => (
+                  <div key={edu.id}>
+                    <div className="font-bold text-lg leading-tight">{edu.school}</div>
+                    <div className="text-sm font-medium text-slate-500 mt-1">{edu.degree}</div>
+                    <div className="text-xs font-bold mt-2">{edu.startDate} - {edu.endDate}</div>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+        <div className="flex flex-col gap-16">
+          {data.experience.length > 0 && (
+            <section>
+              <h2 className="text-xs font-black uppercase tracking-[0.2em] mb-8 border-b-2 border-black pb-2">Experience</h2>
+              <div className="flex flex-col gap-12">
+                {data.experience.map(exp => (
+                  <div key={exp.id} className="group">
+                    <div className="flex justify-between items-baseline mb-2">
+                      <h3 className="text-3xl font-bold leading-none group-hover:text-indigo-600 transition-colors">{exp.role}</h3>
+                      <span className="font-mono text-xs font-bold bg-black text-white px-2 py-1">{exp.startDate} - {exp.isCurrent ? 'Now' : exp.endDate}</span>
+                    </div>
+                    <div className="text-xl font-medium text-slate-500 mb-4">{exp.company}</div>
+                    <p className="text-base font-medium leading-relaxed max-w-xl">{exp.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+
+          {data.projects.length > 0 && (
+            <section>
+              <h2 className="text-xs font-black uppercase tracking-[0.2em] mb-8 border-b-2 border-black pb-2">Selected Projects</h2>
+              <div className="grid grid-cols-1 gap-8">
+                {data.projects.map(proj => (
+                  <div key={proj.id}>
+                    <div className="text-2xl font-bold mb-2">{proj.name}</div>
+                    <p className="text-sm font-medium text-slate-600 leading-relaxed">{proj.description}</p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+
+      </div>
+    </div>
+  )
+}
+
+// --- 20. PATH (Timeline, visual connection, journey) ---
+export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
+  return (
+    <div className="flex flex-col h-full bg-white text-slate-800 font-sans p-10">
+      <header className="pl-[29px]"> {/* Align with timeline line */}
+        <h1 className="text-4xl font-bold text-indigo-600 mb-2">{data.fullName}</h1>
+        <p className="text-xl font-medium text-slate-700 mb-6">{data.title}</p>
+        <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 mb-10">
+          {[data.email, data.phone].filter(Boolean).map((t, i) => (
+            <div key={i} className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
+              {t}
+            </div>
+          ))}
+          {data.location && (
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
+              {data.location}
+            </div>
+          )}
+          {data.website && (
+            <div className="flex items-center gap-2">
+              <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
+              {data.website}
+            </div>
+          )}
+        </div>
+      </header>
+
+      <div className="flex gap-10 h-full">
+        {/* Timeline Column */}
+        <div className="flex-1 relative">
+          <div className="absolute left-[7px] top-0 bottom-0 w-0.5 bg-indigo-100"></div>
+
+          <div className="flex flex-col gap-10 pb-10">
+            {data.summary && (
+              <div className="relative pl-10">
+                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-2">Profile</h2>
+                <p className="text-slate-600 leading-relaxed">{data.summary}</p>
+              </div>
+            )}
+
+            {data.experience.length > 0 && (
+              <div className="relative pl-10">
+                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-6">Experience Path</h2>
+                <div className="flex flex-col gap-8">
+                  {data.experience.map(exp => (
+                    <div key={exp.id} className="relative">
+                      <div className="absolute -left-[45px] top-1.5 w-2 h-2 rounded-full bg-indigo-200 border-2 border-white"></div>
+                      <div className="font-bold text-slate-900 text-lg">{exp.role}</div>
+                      <div className="flex justify-between items-baseline mb-2">
+                        <div className="text-indigo-600 font-medium">{exp.company}</div>
+                        <div className="text-xs font-mono text-slate-400 bg-slate-50 px-2 py-0.5 rounded">{exp.startDate} - {exp.isCurrent ? 'Now' : exp.endDate}</div>
+                      </div>
+                      <p className="text-sm text-slate-600 leading-relaxed">{exp.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {data.education.length > 0 && (
+              <div className="relative pl-10">
+                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-6">Education</h2>
+                <div className="flex flex-col gap-6">
+                  {data.education.map(edu => (
+                    <div key={edu.id} className="relative">
+                      <div className="absolute -left-[45px] top-1.5 w-2 h-2 rounded-full bg-indigo-200 border-2 border-white"></div>
+                      <div className="font-bold text-slate-900">{edu.school}</div>
+                      <div className="text-sm text-slate-600">{edu.degree}</div>
+                      <div className="text-xs text-slate-400 mt-1">{edu.startDate} - {edu.endDate}</div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+
+        {/* Sidebar Column */}
+        <div className="w-1/3 pt-1">
+          <div className="sticky top-10 flex flex-col gap-10">
+            {data.skills.length > 0 && (
+              <section className="bg-slate-50 p-6 rounded-2xl">
+                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-4">Skills</h2>
+                <div className="flex flex-wrap gap-2">
+                  {data.skills.map((s, i) => (
+                    <span key={i} className="bg-white border border-indigo-100 px-3 py-1 rounded-full text-xs font-medium text-indigo-800 shadow-sm">{s}</span>
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {data.projects.length > 0 && (
+              <section>
+                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-4 pl-2">Projects</h2>
+                <div className="flex flex-col gap-4">
+                  {data.projects.map(proj => (
+                    <div key={proj.id} className="border-l-2 border-indigo-100 pl-4 py-1 hover:border-indigo-400 transition-colors">
+                      <div className="font-bold text-slate-800">{proj.name}</div>
+                      <p className="text-xs text-slate-500 mt-1">{proj.description}</p>
+                    </div>
+                  ))}
+                </div>
+              </section>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}

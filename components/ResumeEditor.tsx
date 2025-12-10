@@ -104,6 +104,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         { id: 'berlin', name: 'Berlin', color: 'bg-white border-t-4 border-black' },
         { id: 'lateral', name: 'Lateral', color: 'bg-white' },
         { id: 'iron', name: 'Iron', color: 'bg-black' },
+        { id: 'ginto', name: 'Ginto', color: 'bg-white' },
+        { id: 'symmetry', name: 'Symmetry', color: 'bg-slate-50' },
+        { id: 'bronx', name: 'Bronx', color: 'bg-white' },
+        { id: 'path', name: 'Path', color: 'bg-white' },
     ];
 
 
@@ -165,6 +169,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                         {t.id === 'berlin' && <div className="h-full w-full bg-white p-2 flex flex-col"><div className="w-full h-1 bg-black mb-2"></div><div className="w-3/4 h-2 bg-black mb-2"></div><div className="w-full border-t border-black pt-1 flex gap-1"><div className="w-full h-0.5 bg-slate-400"></div></div></div>}
                                         {t.id === 'lateral' && <div className="h-full w-full bg-white p-2 flex flex-col gap-1"><div className="w-full border-b border-slate-200 h-1/4 mb-1"></div><div className="flex flex-1"><div className="w-1/4 border-r border-slate-100"></div><div className="w-3/4"></div></div></div>}
                                         {t.id === 'iron' && <div className="h-full w-full bg-white flex flex-col"><div className="w-full h-1/4 bg-black p-1"></div><div className="p-1 flex flex-col gap-1"><div className="w-1/3 h-1 bg-black"></div><div className="w-full h-px bg-slate-200"></div><div className="w-1/3 h-1 bg-black mt-1"></div></div></div>}
+                                        {t.id === 'ginto' && <div className="h-full w-full bg-white p-2 flex flex-col gap-1"><div className="w-full h-1/3 mb-1"><div className="w-1/2 h-full border-b-2 border-slate-900"></div></div><div className="flex gap-1 items-start"><div className="text-[8px] font-black text-slate-200">01</div><div className="flex-1 space-y-1"><div className="w-full h-1 bg-slate-200"></div></div></div></div>}
+                                        {t.id === 'symmetry' && <div className="h-full w-full bg-slate-50 p-2 flex flex-col items-center"><div className="w-1/2 h-1 bg-slate-800 mb-2"></div><div className="w-full h-px bg-slate-200 mb-2"></div><div className="w-full flex justify-between gap-2 px-1"><div className="w-1/3 text-[4px] text-right">ooo</div><div className="w-2/3 h-6 border-l border-slate-200"></div></div></div>}
+                                        {t.id === 'bronx' && <div className="h-full w-full bg-white p-2 flex flex-col"><div className="w-3/4 h-8 bg-black mb-2 text-white text-[8px] font-black leading-none p-1">NAME</div><div className="flex gap-1 h-full"><div className="w-1/3 flex flex-col gap-1"><div className="w-full h-1 bg-black"></div><div className="w-full h-1 bg-black"></div></div><div className="flex-1 flex flex-col gap-2"><div className="w-full h-px bg-black mb-1"></div><div className="w-full h-full bg-slate-50"></div></div></div></div>}
+                                        {t.id === 'path' && <div className="h-full w-full bg-white p-2 flex gap-1"><div className="relative w-4 h-full"><div className="absolute left-1.5 top-0 bottom-0 w-0.5 bg-indigo-200"></div><div className="absolute left-0.5 top-2 w-2.5 h-2.5 rounded-full bg-indigo-500 border-2 border-white"></div></div><div className="flex-1 flex flex-col gap-1 pt-2"><div className="w-full h-1 bg-slate-300"></div><div className="w-3/4 h-1 bg-slate-200"></div><div className="w-full h-10 bg-slate-50 mt-1"></div></div></div>}
                                     </div>
                                     {data.templateId === t.id && (
                                         <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
