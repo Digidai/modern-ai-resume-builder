@@ -114,6 +114,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         { id: 'pop', name: 'Pop', color: 'bg-gradient-to-r from-indigo-100 to-pink-100' },
         { id: 'noir', name: 'Noir', color: 'bg-zinc-900' },
         { id: 'paper', name: 'Paper', color: 'bg-[#fffef8] border border-slate-300' },
+        { id: 'cast', name: 'Cast', color: 'bg-[#fafafa] font-mono' },
+        { id: 'moda', name: 'Moda', color: 'bg-white' },
     ];
 
 
@@ -185,6 +187,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                         {t.id === 'pop' && <div className="h-full w-full bg-gradient-to-br from-indigo-50 to-pink-50 p-2"><div className="w-1/2 h-1 bg-slate-800 rounded-full mb-1"></div><div className="w-1/3 h-2 bg-indigo-500 rounded-full mb-2"></div><div className="w-full h-8 bg-white/50 rounded-xl"></div></div>}
                                         {t.id === 'noir' && <div className="h-full w-full bg-zinc-900 p-2 flex flex-col"><div className="w-2/3 h-1 bg-zinc-700 mb-1"></div><div className="w-1/3 h-0.5 bg-amber-400 mb-2"></div><div className="flex gap-1 h-full"><div className="flex-1 border-l border-zinc-700 pl-1"><div className="w-full h-1 bg-zinc-700"></div></div><div className="w-1/4"></div></div></div>}
                                         {t.id === 'paper' && <div className="h-full w-full bg-[#fffef8] p-2 flex flex-col items-center font-serif"><div className="w-2/3 h-1 bg-black mb-1"></div><div className="w-full border-b border-black mb-2"></div><div className="flex gap-1 w-full"><div className="flex-1"><div className="h-1 bg-slate-300 mb-1"></div><div className="h-1 bg-slate-300"></div></div><div className="w-1/3 border-l border-slate-200 pl-1"><div className="h-1 bg-slate-300"></div></div></div></div>}
+                                        {t.id === 'cast' && <div className="h-full w-full bg-[#fafafa] p-2 font-mono flex flex-col items-center"><div className="w-1/2 h-1 bg-slate-800 mb-3 border-b border-slate-300"></div><div className="w-full flex flex-col gap-2"><div className="text-[4px] uppercase mr-auto text-slate-500">INT. Work</div><div className="w-3/4 h-1 bg-slate-300 mx-auto"></div></div></div>}
+                                        {t.id === 'moda' && <div className="h-full w-full bg-white p-2 flex flex-col items-center justify-between"><div className="flex flex-col items-center w-full"><div className="w-3/4 h-1 bg-black mb-1"></div><div className="text-[4px] tracking-widest text-slate-400">DESIGN</div></div><div className="text-[4px] tracking-[0.2em] text-center w-full text-slate-300">CONTENT</div></div>}
                                     </div>
                                     {data.templateId === t.id && (
                                         <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full"></div>
