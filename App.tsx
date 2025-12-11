@@ -6,9 +6,30 @@ import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon } from './co
 import { Button } from './components/Button';
 
 function App() {
-  const [resumeData, setResumeData] = useState<ResumeData>(INITIAL_RESUME_DATA);
+  // Initialize state from localStorage or default
+  const [resumeData, setResumeData] = useState<ResumeData>(() => {
+    try {
+      const saved = localStorage.getItem('resumeData');
+      if (saved) {
+        return { ...INITIAL_RESUME_DATA, ...JSON.parse(saved) }; // Merge to ensure new fields are present
+      }
+    } catch (e) {
+      console.error("Failed to load resume data", e);
+    }
+    return INITIAL_RESUME_DATA;
+  });
+
   const [isEditing, setIsEditing] = useState(false);
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
+
+  // Auto-save to localStorage
+  React.useEffect(() => {
+    try {
+      localStorage.setItem('resumeData', JSON.stringify(resumeData));
+    } catch (e) {
+      console.error("Failed to save resume data", e);
+    }
+  }, [resumeData]);
 
   // Robust PDF generation triggers the browser print dialog
   const handleDownloadPdf = () => {
@@ -18,6 +39,13 @@ function App() {
     window.print();
     // Restore title (optional, browser handling varies on when this executes)
     setTimeout(() => { document.title = originalTitle; }, 500);
+  };
+
+  const handleResetData = () => {
+    if (confirm("Are you sure you want to reset all data to defaults? This cannot be undone.")) {
+      setResumeData(INITIAL_RESUME_DATA);
+      localStorage.removeItem('resumeData');
+    }
   };
 
   // Allow users to save their data to a JSON file
@@ -89,7 +117,7 @@ function App() {
             </div>
 
             {/* Footer Actions */}
-            <div className="flex-shrink-0 p-4 bg-slate-100 border-t border-slate-200 z-10">
+            <div className="flex-shrink-0 p-4 bg-slate-100 border-t border-slate-200 z-10 flex flex-col gap-2">
               <Button
                 onClick={handleDownloadPdf}
                 variant="secondary"
@@ -98,6 +126,11 @@ function App() {
               >
                 Download PDF
               </Button>
+              <div className="flex justify-center">
+                <button onClick={handleResetData} className="text-xs text-slate-400 hover:text-red-500 transition-colors">
+                  Reset All Data
+                </button>
+              </div>
             </div>
           </div>
         </aside>

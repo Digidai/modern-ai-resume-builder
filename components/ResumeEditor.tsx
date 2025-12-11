@@ -3,6 +3,7 @@ import { ResumeData, Experience, Education, Project } from '../types';
 import { SparklesIcon, PlusIcon, TrashIcon, LoaderIcon } from './Icons';
 import { improveText, generateSummary } from '../services/geminiService';
 import { Button } from './Button';
+import { ApiKeyModal } from './ApiKeyModal';
 
 interface ResumeEditorProps {
     data: ResumeData;
@@ -11,17 +12,105 @@ interface ResumeEditorProps {
 
 const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     const [activeTab, setActiveTab] = useState<'basics' | 'experience' | 'skills' | 'design'>('basics');
+
+    // AI State
+    const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
+    const [aiLoading, setAiLoading] = useState<string | null>(null); // 'summary', 'exp-{id}'
+    const [pendingAiAction, setPendingAiAction] = useState<(() => Promise<void>) | null>(null);
+
+    const handleAiAction = async (action: (key: string) => Promise<void>) => {
+        const key = localStorage.getItem('gemini_api_key');
+        if (key) {
+            await action(key);
+        } else {
+            setPendingAiAction(() => async () => {
+                const newKey = localStorage.getItem('gemini_api_key');
+                if (newKey) await action(newKey);
+            });
+            setIsApiKeyModalOpen(true);
+        }
+    };
+
+    const handleSaveApiKey = (key: string) => {
+        localStorage.setItem('gemini_api_key', key);
+        if (pendingAiAction) {
+            pendingAiAction();
+            setPendingAiAction(null);
+        }
+    };
+
+    const handleImproveSummary = () => {
+        handleAiAction(async (key) => {
+            setAiLoading('summary');
+            try {
+                // If summary exists, improve it. If not, generate new one from experience.
+                let text = "";
+                if (data.summary) {
+                    text = await improveText(data.summary, "professional summary", key);
+                } else {
+                    text = await generateSummary(data.title || "Professional", data.skills, key);
+                }
+                onChange({ ...data, summary: text });
+            } catch (error) {
+                alert("Failed to generate content. Please check your API key.");
+            } finally {
+                setAiLoading(null);
+            }
+        });
+    };
+
+    const handleImproveExperience = (id: string, description: string) => {
+        handleAiAction(async (key) => {
+            setAiLoading(`exp-${id}`);
+            try {
+                const improved = await improveText(description, "job description", key);
+                onChange({
+                    ...data,
+                    experience: data.experience.map(exp =>
+                        exp.id === id ? { ...exp, description: improved } : exp
+                    )
+                });
+            } catch (error) {
+                alert("Failed to improve text.");
+            } finally {
+                setAiLoading(null);
+            }
+        });
+    };
+    const handleAiImprovement = (fieldId: string, text: string, context: string, onUpdate: (val: string) => void) => {
+        handleAiAction(async (key) => {
+            setLoadingField(fieldId);
+            try {
+                const improved = await improveText(text, context, key);
+                onUpdate(improved);
+            } catch (error) {
+                console.error(error);
+                alert("Failed to generate content. Please check your API key.");
+            } finally {
+                setLoadingField(null);
+            }
+        });
+    };
+
+    const handleAiGeneration = (fieldId: string, generator: (key: string) => Promise<string>, onUpdate: (val: string) => void) => {
+        handleAiAction(async (key) => {
+            setLoadingField(fieldId);
+            try {
+                const result = await generator(key);
+                onUpdate(result);
+            } catch (error) {
+                console.error(error);
+                alert("Failed to generate content. Please check your API key.");
+            } finally {
+                setLoadingField(null);
+            }
+        });
+    };
+
     const [loadingField, setLoadingField] = useState<string | null>(null);
 
     const handleInputChange = (field: keyof ResumeData, value: any) => {
         onChange({ ...data, [field]: value });
-    };
-
-    const handleImproveText = async (fieldId: string, text: string, context: string) => {
-        setLoadingField(fieldId);
-        const improved = await improveText(text, context);
-        setLoadingField(null);
-        return improved;
     };
 
     // --- Experience Handlers ---
@@ -221,12 +310,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                             <div className="flex justify-between items-center">
                                 <label className="block text-sm font-medium text-slate-700">Professional Summary</label>
                                 <Button
-                                    onClick={async () => {
-                                        setLoadingField('summary');
-                                        const sum = await generateSummary(data.title, data.skills);
-                                        handleInputChange('summary', sum);
-                                        setLoadingField(null);
-                                    }}
+                                    onClick={() => handleAiGeneration(
+                                        'summary',
+                                        (key) => generateSummary(data.title, data.skills, key),
+                                        (val) => handleInputChange('summary', val)
+                                    )}
                                     variant="ghost"
                                     size="sm"
                                     className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 px-2"
@@ -244,10 +332,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                     placeholder="Briefly describe your professional background..."
                                 />
                                 <Button
-                                    onClick={async () => {
-                                        const imp = await handleImproveText('summary-polish', data.summary, 'Professional Summary');
-                                        handleInputChange('summary', imp);
-                                    }}
+                                    onClick={() => handleAiImprovement(
+                                        'summary-polish',
+                                        data.summary,
+                                        'Professional Summary',
+                                        (val) => handleInputChange('summary', val)
+                                    )}
                                     disabled={loadingField === 'summary-polish' || !data.summary}
                                     variant="ghost"
                                     size="sm"
@@ -339,10 +429,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                             placeholder="• Achieved X by doing Y..."
                                         />
                                         <Button
-                                            onClick={async () => {
-                                                const improved = await handleImproveText(`exp-${exp.id}`, exp.description, 'Job Description');
-                                                updateExperience(exp.id, 'description', improved);
-                                            }}
+                                            onClick={() => handleAiImprovement(
+                                                `exp-${exp.id}`,
+                                                exp.description,
+                                                'Job Description',
+                                                (val) => updateExperience(exp.id, 'description', val)
+                                            )}
                                             disabled={loadingField === `exp-${exp.id}` || !exp.description}
                                             className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                                             variant="ghost"
@@ -406,10 +498,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                                 onChange={(e) => updateProject(proj.id, 'description', e.target.value)}
                                             />
                                             <Button
-                                                onClick={async () => {
-                                                    const improved = await handleImproveText(`proj-${proj.id}`, proj.description, 'Project Description');
-                                                    updateProject(proj.id, 'description', improved);
-                                                }}
+                                                onClick={() => handleAiImprovement(
+                                                    `proj-${proj.id}`,
+                                                    proj.description,
+                                                    'Project Description',
+                                                    (val) => updateProject(proj.id, 'description', val)
+                                                )}
                                                 disabled={loadingField === `proj-${proj.id}` || !proj.description}
                                                 className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                                                 variant="ghost"
@@ -426,6 +520,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 )}
 
             </div>
+
+            <ApiKeyModal
+                isOpen={isApiKeyModalOpen}
+                onClose={() => setIsApiKeyModalOpen(false)}
+                onSave={handleSaveApiKey}
+            />
         </div>
     );
 };

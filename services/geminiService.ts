@@ -1,10 +1,18 @@
 import { GoogleGenAI } from "@google/genai";
 
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
+// Helper to get the API key from env or passed argument
+const getApiKey = (key?: string) => {
+  return key || (import.meta as any).env.VITE_GEMINI_API_KEY || "";
+};
 
-export const improveText = async (text: string, context: string = "resume"): Promise<string> => {
+export const improveText = async (text: string, context: string = "resume", apiKey?: string): Promise<string> => {
   if (!text) return "";
-  
+
+  const key = getApiKey(apiKey);
+  if (!key) throw new Error("API Key is missing");
+
+  const ai = new GoogleGenAI({ apiKey: key });
+
   try {
     const prompt = `
       You are an expert resume writer and career coach. 
@@ -21,18 +29,23 @@ export const improveText = async (text: string, context: string = "resume"): Pro
     `;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-2.0-flash-exp',
       contents: prompt,
     });
 
     return response.text?.trim() || text;
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return text; // Fallback to original
+    throw error;
   }
 };
 
-export const generateSummary = async (role: string, skills: string[]): Promise<string> => {
+export const generateSummary = async (role: string, skills: string[], apiKey?: string): Promise<string> => {
+  const key = getApiKey(apiKey);
+  if (!key) throw new Error("API Key is missing");
+
+  const ai = new GoogleGenAI({ apiKey: key });
+
   try {
     const prompt = `
       Write a professional resume summary (max 3 sentences) for a ${role}.
@@ -42,13 +55,13 @@ export const generateSummary = async (role: string, skills: string[]): Promise<s
     `;
 
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash',
+      model: 'gemini-2.0-flash-exp',
       contents: prompt,
     });
 
     return response.text?.trim() || "";
   } catch (error) {
     console.error("Gemini API Error:", error);
-    return "Experienced professional dedicated to delivering high-quality results.";
+    throw error;
   }
 };
