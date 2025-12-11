@@ -34,16 +34,16 @@ function App() {
   // --- View: Editor Mode ---
   if (isEditing) {
     return (
-      <div className="min-h-screen flex flex-col md:flex-row bg-slate-100 font-sans print:bg-white">
+      <div className="h-screen flex flex-col md:flex-row bg-slate-100 font-sans print:bg-white overflow-hidden">
         {/* Sidebar / Editor */}
         <aside className={`
-          fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 p-4 bg-slate-100
+          fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 bg-slate-100 flex flex-col h-full border-r border-slate-200
           transition-transform duration-300 ease-in-out
           ${isPreviewModeMobile ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}
           print:hidden
         `}>
-          <div className="h-full flex flex-col gap-4">
-            <header className="flex justify-between items-center px-2">
+          <div className="flex-1 flex flex-col h-full overflow-hidden">
+            <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 z-10">
               <div className="flex items-center gap-3">
                 <button
                   onClick={() => setIsEditing(false)}
@@ -83,9 +83,13 @@ function App() {
               </div>
             </header>
 
-            <ResumeEditor data={resumeData} onChange={setResumeData} />
+            {/* Editor Content - independent scroll */}
+            <div className="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
+              <ResumeEditor data={resumeData} onChange={setResumeData} />
+            </div>
 
-            <div className="flex flex-col gap-2 mt-auto">
+            {/* Footer Actions */}
+            <div className="flex-shrink-0 p-4 bg-slate-100 border-t border-slate-200 z-10">
               <Button
                 onClick={handleDownloadPdf}
                 variant="secondary"
@@ -98,10 +102,22 @@ function App() {
           </div>
         </aside>
 
-        {/* Main Content / Preview */}
-        <main className="flex-1 relative overflow-y-auto h-screen custom-scrollbar print:h-auto print:overflow-visible bg-slate-200 md:bg-slate-100 p-4 md:p-8 print:p-0">
-          <div className="max-w-[21cm] mx-auto print:my-0 print:mx-0 print:w-full">
-            <ResumePreview data={resumeData} />
+        {/* Preview Area */}
+        <main className={`
+          flex-1 h-full bg-slate-200/50 overflow-y-auto custom-scrollbar relative
+          transition-all duration-300
+          ${isPreviewModeMobile ? 'z-30 inset-0 fixed' : ''}
+        `}>
+          {isPreviewModeMobile && (
+            <div className="fixed top-4 right-4 z-50 md:hidden">
+              <Button onClick={() => setIsPreviewModeMobile(false)} variant="secondary" size="sm">Close Preview</Button>
+            </div>
+          )}
+
+          <div className="min-h-full p-4 md:p-8 lg:p-12 flex justify-center items-start">
+            <div className="w-full max-w-[210mm] shadow-2xl print:shadow-none bg-white origin-top transition-transform duration-200">
+              <ResumePreview data={resumeData} />
+            </div>
           </div>
 
           {/* Floating Actions for Desktop */}

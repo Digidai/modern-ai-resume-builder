@@ -122,7 +122,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     return (
         <div className="flex flex-col h-full bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
             {/* Tabs */}
-            <div className="flex border-b border-slate-200 bg-slate-50 overflow-x-auto no-scrollbar">
+            <div className="flex-shrink-0 border-b border-slate-200 bg-slate-50 overflow-x-auto no-scrollbar">
                 {(['basics', 'experience', 'skills', 'design'] as const).map(tab => (
                     <button
                         key={tab}
