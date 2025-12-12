@@ -909,9 +909,9 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 11. SWISS (International style, bold, grid-based, high contrast) ---
 export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-white font-sans text-slate-900">
+    <div className="flex flex-col h-full bg-white font-sans text-slate-900 p-10">
       {/* Header Grid */}
-      <div className="grid grid-cols-[1fr_2fr] gap-8 mb-12 pt-8">
+      <div className="grid grid-cols-[1fr_2fr] gap-8 mb-12">
         <div className="bg-slate-900 text-white p-6 flex flex-col justify-between">
           <h1 className="text-5xl font-black leading-none tracking-tighter uppercase">{data.fullName.split(' ').map((n, i) => <span key={i} className="block">{n}</span>)}</h1>
         </div>
@@ -957,7 +957,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
         </div>
 
         {/* Right Column */}
-        <div className="flex flex-col gap-12 pr-8">
+        <div className="flex flex-col gap-12">
           {data.summary && (
             <section>
               <p className="text-lg font-medium leading-relaxed indent-12">{data.summary}</p>
