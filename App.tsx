@@ -74,13 +74,14 @@ function App() {
           <div className="flex-1 flex flex-col h-full overflow-hidden">
             <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 z-10">
               <div className="flex items-center gap-3">
-                <button
+                <Button
                   onClick={() => setIsEditing(false)}
-                  className="p-2 -ml-2 rounded-full hover:bg-slate-200 text-slate-600 transition-colors"
+                  variant="icon"
+                  className="-ml-2"
                   title="Back to Preview"
                 >
                   <ArrowLeftIcon className="w-5 h-5" />
-                </button>
+                </Button>
                 <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
                   Edit Resume
                 </h1>
@@ -103,12 +104,15 @@ function App() {
                     Preview
                   </Button>
                 </div>
-                <button
+                <Button
                   onClick={() => setIsEditing(false)}
-                  className="hidden md:flex items-center gap-1 text-sm font-medium text-green-700 bg-green-100 px-3 py-1.5 rounded-full hover:bg-green-200 transition-colors"
+                  variant="success"
+                  size="sm"
+                  className="hidden md:flex"
+                  leftIcon={<CheckIcon className="w-4 h-4" />}
                 >
-                  <CheckIcon className="w-4 h-4" /> Done
-                </button>
+                  Done
+                </Button>
               </div>
             </header>
 
@@ -128,9 +132,9 @@ function App() {
                 Download PDF
               </Button>
               <div className="flex justify-center">
-                <button onClick={handleResetData} className="text-xs text-slate-400 hover:text-red-500 transition-colors">
+                <Button onClick={handleResetData} variant="danger-ghost" size="sm">
                   Reset All Data
-                </button>
+                </Button>
               </div>
             </div>
           </div>
@@ -192,12 +196,14 @@ function App() {
           </h1>
           <div className="flex gap-3">
             <ThemeToggle />
-            <button
+            <Button
               onClick={handleDownloadPdf}
-              className="hidden md:flex items-center gap-2 text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white font-medium px-4 py-2 rounded-lg hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              variant="ghost"
+              className="hidden md:flex"
+              leftIcon={<DownloadIcon className="w-4 h-4" />}
             >
-              <DownloadIcon className="w-4 h-4" /> Download PDF
-            </button>
+              Download PDF
+            </Button>
             <Button
               onClick={() => setIsEditing(true)}
               variant="primary"

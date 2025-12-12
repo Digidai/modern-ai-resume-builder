@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Button } from './Button';
 
 const ThemeToggle: React.FC = () => {
     const [theme, setTheme] = useState<'light' | 'dark'>(() => {
@@ -26,9 +27,11 @@ const ThemeToggle: React.FC = () => {
     };
 
     return (
-        <button
+        <Button
             onClick={toggleTheme}
-            className="p-2 rounded-lg bg-slate-100 dark:bg-slate-800 text-slate-800 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition-colors"
+            variant="ghost"
+            size="icon"
+            className="text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100"
             aria-label="Toggle theme"
             title={theme === 'light' ? 'Switch to Dark Mode' : 'Switch to Light Mode'}
         >
@@ -43,7 +46,7 @@ const ThemeToggle: React.FC = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z" />
                 </svg>
             )}
-        </button>
+        </Button>
     );
 };
 
