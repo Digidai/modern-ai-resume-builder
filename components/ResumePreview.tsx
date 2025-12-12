@@ -9,12 +9,19 @@ interface ResumePreviewProps {
 const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   // Common wrapper styling for the paper effect
   // print:p-[2cm] ensures standard margins for non-sidebar templates when @page margin is 0
-  const wrapperClass = "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl p-12 md:p-16 print:p-[1.5cm] overflow-hidden relative";
+  const wrapperClass = "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none p-12 md:p-16 print:p-[1.5cm] overflow-hidden relative";
 
-  // Templates that handle their own full-bleed layout
-  const isFullBleed = data.templateId === 'sidebar' || data.templateId === 'creative';
+  // Templates that handle their own full-bleed layout or have specific padding requirements
+  // These templates should NOT have the default container padding applied
+  const fullBleedTemplates = [
+    'sidebar', 'creative', 'professional', 'swiss', 'opal', 'wireframe', 'berlin',
+    'lateral', 'iron', 'ginto', 'symmetry', 'bronx', 'path', 'quartz', 'silk',
+    'mono', 'pop', 'noir', 'paper', 'cast', 'moda'
+  ];
+
+  const isFullBleed = fullBleedTemplates.includes(data.templateId);
   const containerClass = isFullBleed
-    ? "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl overflow-hidden"
+    ? "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none overflow-hidden"
     : wrapperClass;
 
   const renderTemplate = () => {
