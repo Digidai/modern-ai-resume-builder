@@ -909,7 +909,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 11. SWISS (International style, bold, grid-based, high contrast) ---
 export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-white font-sans text-slate-900 p-10">
+    <div className="flex flex-col h-full bg-white font-sans text-slate-900 p-10 print:p-0">
       {/* Header Grid */}
       <div className="grid grid-cols-[1fr_2fr] gap-8 mb-12">
         <div className="bg-slate-900 text-white p-6 flex flex-col justify-between">
@@ -931,7 +931,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-col gap-10">
           {data.skills.length > 0 && (
             <section>
-              <h2 className="text-sm font-black uppercase tracking-widest mb-4">Skills</h2>
+              <h2 className="text-sm font-black uppercase tracking-widest mb-4 break-after-avoid">Skills</h2>
               <div className="flex flex-col gap-2">
                 {data.skills.map((s, i) => (
                   <span key={i} className="text-sm font-bold border-l-4 border-slate-900 pl-2 leading-none py-1">{s}</span>
@@ -942,7 +942,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
 
           {data.education.length > 0 && (
             <section>
-              <h2 className="text-sm font-black uppercase tracking-widest mb-4">Education</h2>
+              <h2 className="text-sm font-black uppercase tracking-widest mb-4 break-after-avoid">Education</h2>
               <div className="flex flex-col gap-6">
                 {data.education.map(edu => (
                   <div key={edu.id}>
@@ -966,7 +966,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
 
           {data.experience.length > 0 && (
             <section>
-              <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2">Experience</h2>
+              <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2 break-after-avoid">Experience</h2>
               <div className="flex flex-col gap-8">
                 {data.experience.map(exp => (
                   <div key={exp.id} className="grid grid-cols-[100px_1fr] gap-6 break-inside-avoid">
@@ -984,7 +984,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
 
           {data.projects.length > 0 && (
             <section>
-              <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2">Projects</h2>
+              <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2 break-after-avoid">Projects</h2>
               <div className="grid grid-cols-2 gap-6">
                 {data.projects.map(proj => (
                   <div key={proj.id} className="bg-slate-50 p-4 break-inside-avoid">

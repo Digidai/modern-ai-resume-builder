@@ -14,7 +14,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   // Templates that handle their own full-bleed layout or have specific padding requirements
   // These templates should NOT have the default container padding applied
   const fullBleedTemplates = [
-    'sidebar', 'creative', 'professional', 'swiss', 'opal', 'wireframe', 'berlin',
+    'sidebar', 'creative', 'professional', 'opal', 'wireframe', 'berlin',
     'lateral', 'iron', 'ginto', 'symmetry', 'bronx', 'path', 'quartz', 'silk',
     'mono', 'pop', 'noir', 'paper', 'cast', 'moda'
   ];
@@ -23,6 +23,21 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   const containerClass = isFullBleed
     ? "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none overflow-hidden print:overflow-visible flex flex-col"
     : wrapperClass;
+
+  // Dynamic Print Styles
+  // For standard templates, we use @page margins to ensure every page has specific white space.
+  // For full-bleed templates, we set 0 margin so colors can touch the edge.
+  const printStyles = `
+    @page {
+      size: A4;
+      margin: ${isFullBleed ? '0mm' : '15mm'};
+    }
+    @media print {
+      .resume-preview-container {
+        padding: 0 !important; /* Let @page handle margins */
+      }
+    }
+  `;
 
   const renderTemplate = () => {
     switch (data.templateId) {
@@ -87,6 +102,8 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
 
   return (
     <div className={containerClass} id="resume-preview-container">
+      <style>{printStyles}</style>
+
       {/* Visual Page Break Marker (screen only) */}
       <div
         className="absolute inset-x-0 top-0 bottom-0 pointer-events-none z-50 print:hidden opacity-50"
