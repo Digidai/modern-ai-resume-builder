@@ -30,18 +30,29 @@
   }
 
   .custom-scrollbar::-webkit-scrollbar-track {
-    background: transparent;
+    @apply bg-transparent;
   }
 
   .custom-scrollbar::-webkit-scrollbar-thumb {
-    background-color: #cbd5e1;
-    /* slate-300 */
-    border-radius: 20px;
+    @apply bg-slate-300 dark:bg-slate-700 rounded-full hover:bg-slate-400 dark:hover:bg-slate-600 transition-colors;
   }
 
-  .custom-scrollbar::-webkit-scrollbar-thumb:hover {
-    background-color: #94a3b8;
-    /* slate-400 */
+  /* Global Scrollbar Theme */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-slate-100 dark:bg-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-slate-300 dark:bg-slate-700 rounded-lg border-2 border-slate-100 dark:border-slate-900;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-slate-400 dark:bg-slate-600;
   }
 }
 
