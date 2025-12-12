@@ -105,17 +105,32 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
       <style>{printStyles}</style>
 
       {/* Visual Page Break Marker (screen only) */}
+      {/* Visual Page Break Marker (screen only) */}
       <div
-        className="absolute inset-x-0 top-0 bottom-0 pointer-events-none z-50 print:hidden opacity-50"
+        className="absolute inset-0 pointer-events-none z-50 print:hidden"
         style={{
-          backgroundImage: 'linear-gradient(to bottom, transparent calc(297mm - 1px), red calc(297mm - 1px), red 297mm)',
-          backgroundSize: '100% 297mm'
+          // Creates a subtle dashed line effect at A4 intervals (297mm)
+          backgroundImage: `
+            linear-gradient(to right, #94a3b8 50%, transparent 50%),
+            linear-gradient(to right, #94a3b8 50%, transparent 50%)
+          `,
+          backgroundSize: '12px 1px',
+          backgroundPosition: '0 297mm', // Start at first page break
+          backgroundRepeat: 'repeat-x',
+          // Use a second gradient to repeat this line vertically every 297mm
+          maskImage: 'linear-gradient(to bottom, transparent 296.8mm, black 296.8mm, black 297.2mm, transparent 297.2mm)',
+          maskSize: '100% 297mm',
+          WebkitMaskImage: 'linear-gradient(to bottom, transparent 296.8mm, black 296.8mm, black 297.2mm, transparent 297.2mm)',
+          WebkitMaskSize: '100% 297mm',
+          opacity: 0.4
         }}
-      >
-        <div className="sticky top-2 right-2 text-[10px] text-red-500 font-mono text-right pr-2">
-          Page 1<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
-          ---- PAGE BREAK ----
-        </div>
+      />
+      {/* Page Number Indicators (Approximate for first few pages) */}
+      <div className="absolute top-[297mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none">
+        <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 2 Start</div>
+      </div>
+      <div className="absolute top-[594mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none">
+        <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 3 Start</div>
       </div>
 
       {renderTemplate()}
