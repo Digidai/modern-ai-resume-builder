@@ -209,16 +209,16 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
 
     return (
-        <div className="flex flex-col h-full bg-white rounded-lg shadow-sm border border-slate-200 overflow-hidden">
+        <div className="flex flex-col h-full bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
             {/* Tabs */}
-            <div className="flex-shrink-0 border-b border-slate-200 bg-slate-50 overflow-x-auto no-scrollbar">
+            <div className="flex-shrink-0 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 overflow-x-auto no-scrollbar transition-colors">
                 {(['basics', 'experience', 'skills', 'design'] as const).map(tab => (
                     <button
                         key={tab}
                         onClick={() => setActiveTab(tab)}
                         className={`px-5 py-3 text-sm font-medium capitalize focus:outline-none transition-colors whitespace-nowrap ${activeTab === tab
-                            ? 'text-indigo-600 border-b-2 border-indigo-600 bg-white'
-                            : 'text-slate-500 hover:text-slate-700 hover:bg-slate-100'
+                            ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 bg-white dark:bg-slate-800'
+                            : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
                             }`}
                     >
                         {tab}
@@ -231,20 +231,20 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 {/* DESIGN TAB */}
                 {activeTab === 'design' && (
                     <div className="space-y-6 animate-in fade-in duration-300">
-                        <h3 className="text-lg font-bold text-slate-800">Select Template</h3>
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Select Template</h3>
                         <div className="grid grid-cols-2 gap-4">
                             {templates.map(t => (
                                 <button
                                     key={t.id}
                                     onClick={() => handleInputChange('templateId', t.id)}
-                                    className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 ${data.templateId === t.id ? 'border-indigo-600 bg-indigo-50 ring-1 ring-indigo-600' : 'border-slate-200 bg-white'
+                                    className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 ${data.templateId === t.id ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 ring-1 ring-indigo-600' : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                                         }`}
                                 >
                                     <div className="flex items-center gap-3 mb-2">
                                         <div className={`w-8 h-8 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-xs font-bold`}>
                                             {t.name[0]}
                                         </div>
-                                        <span className={`font-semibold ${data.templateId === t.id ? 'text-indigo-900' : 'text-slate-700'}`}>
+                                        <span className={`font-semibold ${data.templateId === t.id ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
                                             {t.name}
                                         </span>
                                     </div>
@@ -295,7 +295,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 {/* BASICS TAB */}
                 {activeTab === 'basics' && (
                     <div className="space-y-6 animate-in fade-in duration-300">
-                        <h3 className="text-lg font-bold text-slate-800">Personal Details</h3>
+                        <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Personal Details</h3>
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                             <Input label="Full Name" value={data.fullName} onChange={(v) => handleInputChange('fullName', v)} />
                             <Input label="Job Title" value={data.title} onChange={(v) => handleInputChange('title', v)} />
@@ -308,7 +308,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
                         <div className="space-y-2">
                             <div className="flex justify-between items-center">
-                                <label className="block text-sm font-medium text-slate-700">Professional Summary</label>
+                                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">Professional Summary</label>
                                 <Button
                                     onClick={() => handleAiGeneration(
                                         'summary',
@@ -326,7 +326,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                             </div>
                             <div className="relative">
                                 <textarea
-                                    className="w-full min-h-[120px] p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm leading-relaxed"
+                                    className="w-full min-h-[120px] p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm leading-relaxed"
                                     value={data.summary}
                                     onChange={(e) => handleInputChange('summary', e.target.value)}
                                     placeholder="Briefly describe your professional background..."
@@ -349,16 +349,16 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                             </div>
                         </div>
 
-                        <div className="border-t border-slate-200 pt-6">
+                        <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
                             <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-lg font-bold text-slate-800">Education</h3>
+                                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Education</h3>
                                 <Button onClick={addEducation} variant="ghost" size="sm" className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50" leftIcon={<PlusIcon className="w-4 h-4" />}>
                                     Add
                                 </Button>
                             </div>
                             <div className="space-y-6">
                                 {data.education.map((edu) => (
-                                    <div key={edu.id} className="p-4 bg-slate-50 rounded-lg border border-slate-200 relative group">
+                                    <div key={edu.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative group">
                                         <Button onClick={() => removeEducation(edu.id)} variant="icon" className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50" size="icon">
                                             <TrashIcon className="w-4 h-4" />
                                         </Button>
@@ -381,7 +381,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 {activeTab === 'experience' && (
                     <div className="space-y-6 animate-in fade-in duration-300">
                         <div className="flex justify-between items-center">
-                            <h3 className="text-lg font-bold text-slate-800">Work History</h3>
+                            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Work History</h3>
                             <Button onClick={addExperience} variant="primary" size="sm" leftIcon={<PlusIcon className="w-4 h-4" />}>
                                 Add Position
                             </Button>
@@ -389,7 +389,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
                         <div className="space-y-6">
                             {data.experience.map((exp, idx) => (
-                                <div key={exp.id} className="p-5 bg-slate-50 rounded-lg border border-slate-200 relative">
+                                <div key={exp.id} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
                                     <div className="absolute top-4 right-4 flex gap-2">
                                         <Button onClick={() => removeExperience(exp.id)} variant="icon" className="text-slate-400 hover:text-red-500 hover:bg-red-50" size="icon">
                                             <TrashIcon className="w-4 h-4" />
@@ -415,15 +415,15 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                                     onChange={(e) => updateExperience(exp.id, 'isCurrent', e.target.checked)}
                                                     className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
                                                 />
-                                                <span className="text-xs text-slate-600">I currently work here</span>
+                                                <span className="text-xs text-slate-600 dark:text-slate-400">I currently work here</span>
                                             </label>
                                         </div>
                                     </div>
 
                                     <div className="relative">
-                                        <label className="block text-sm font-medium text-slate-700 mb-1">Description</label>
+                                        <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Description</label>
                                         <textarea
-                                            className="w-full min-h-[100px] p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
+                                            className="w-full min-h-[100px] p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm"
                                             value={exp.description}
                                             onChange={(e) => updateExperience(exp.id, 'description', e.target.value)}
                                             placeholder="• Achieved X by doing Y..."
@@ -459,29 +459,29 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 {activeTab === 'skills' && (
                     <div className="space-y-8 animate-in fade-in duration-300">
                         <div>
-                            <h3 className="text-lg font-bold text-slate-800 mb-4">Skills</h3>
+                            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Skills</h3>
                             <div className="space-y-2">
-                                <label className="block text-sm font-medium text-slate-700">Comma separated list</label>
+                                <label className="block text-sm font-medium text-slate-700 dark:text-slate-300">Comma separated list</label>
                                 <textarea
                                     value={data.skills.join(', ')}
                                     onChange={(e) => handleSkillsChange(e.target.value)}
-                                    className="w-full p-3 border border-slate-300 rounded-md focus:ring-2 focus:ring-indigo-500 text-sm"
+                                    className="w-full p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 text-sm"
                                     rows={3}
                                     placeholder="Design, Figma, React, TypeScript..."
                                 />
                             </div>
                         </div>
 
-                        <div className="border-t border-slate-200 pt-6">
+                        <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
                             <div className="flex justify-between items-center mb-4">
-                                <h3 className="text-lg font-bold text-slate-800">Projects</h3>
+                                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Projects</h3>
                                 <Button onClick={addProject} variant="ghost" size="sm" className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50" leftIcon={<PlusIcon className="w-4 h-4" />}>
                                     Add
                                 </Button>
                             </div>
                             <div className="space-y-4">
                                 {data.projects.map(proj => (
-                                    <div key={proj.id} className="p-4 bg-slate-50 rounded-lg border border-slate-200 relative">
+                                    <div key={proj.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
                                         <Button onClick={() => removeProject(proj.id)} variant="icon" className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50" size="icon">
                                             <TrashIcon className="w-4 h-4" />
                                         </Button>
@@ -491,7 +491,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                                         </div>
                                         <div className="relative">
                                             <textarea
-                                                className="w-full p-2 border border-slate-300 rounded-md text-sm"
+                                                className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md text-sm"
                                                 placeholder="Project description..."
                                                 rows={2}
                                                 value={proj.description}
@@ -533,10 +533,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 // Helper Input Component
 const Input = ({ label, value, onChange, type = "text", disabled = false }: { label: string, value: string, onChange: (val: string) => void, type?: string, disabled?: boolean }) => (
     <div className="flex flex-col gap-1">
-        <label className="block text-xs font-medium text-slate-500 uppercase tracking-wide">{label}</label>
+        <label className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">{label}</label>
         <input
             type={type}
-            className="w-full px-3 py-2 border border-slate-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm disabled:bg-slate-100 disabled:text-slate-400"
+            className="w-full px-3 py-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm disabled:bg-slate-100 dark:disabled:bg-slate-900 disabled:text-slate-400"
             value={value}
             onChange={(e) => onChange(e.target.value)}
             disabled={disabled}
