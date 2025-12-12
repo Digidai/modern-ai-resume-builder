@@ -63,16 +63,16 @@ function App() {
   // --- View: Editor Mode ---
   if (isEditing) {
     return (
-      <div className="h-screen flex flex-col md:flex-row bg-slate-100 font-sans print:bg-white overflow-hidden">
+      <div className="h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans print:bg-white overflow-hidden transition-colors duration-300">
         {/* Sidebar / Editor */}
         <aside className={`
-          fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 bg-slate-100 flex flex-col h-full border-r border-slate-200
-          transition-transform duration-300 ease-in-out
+          fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 bg-slate-100 dark:bg-slate-900 flex flex-col h-full border-r border-slate-200 dark:border-slate-800
+          transition-all duration-300 ease-in-out
           ${isPreviewModeMobile ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}
           print:hidden
         `}>
           <div className="flex-1 flex flex-col h-full overflow-hidden">
-            <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 z-10">
+            <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 dark:bg-slate-900 z-10 transition-colors">
               <div className="flex items-center gap-3">
                 <Button
                   onClick={() => setIsEditing(false)}
@@ -82,7 +82,7 @@ function App() {
                 >
                   <ArrowLeftIcon className="w-5 h-5" />
                 </Button>
-                <h1 className="text-xl font-bold text-slate-800 flex items-center gap-2">
+                <h1 className="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
                   Edit Resume
                 </h1>
               </div>
@@ -122,11 +122,11 @@ function App() {
             </div>
 
             {/* Footer Actions */}
-            <div className="flex-shrink-0 p-4 bg-slate-100 border-t border-slate-200 z-10 flex flex-col gap-2">
+            <div className="flex-shrink-0 p-4 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-10 flex flex-col gap-2 transition-colors">
               <Button
                 onClick={handleDownloadPdf}
                 variant="secondary"
-                className="w-full bg-slate-800 text-white hover:bg-slate-900 border-none"
+                className="w-full bg-slate-800 text-white hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 border-none"
                 leftIcon={<DownloadIcon className="w-4 h-4" />}
               >
                 Download PDF
@@ -142,7 +142,7 @@ function App() {
 
         {/* Preview Area */}
         <main className={`
-          flex-1 h-full bg-slate-200/50 overflow-y-auto custom-scrollbar relative
+          flex-1 h-full bg-slate-200/50 dark:bg-slate-950 overflow-y-auto custom-scrollbar relative
           transition-all duration-300
           ${isPreviewModeMobile ? 'z-30 inset-0 fixed' : ''}
         `}>
