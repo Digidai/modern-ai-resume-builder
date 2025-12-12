@@ -42,7 +42,7 @@ export const ModernTemplate: React.FC<TemplateProps> = ({ data }) => {
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">Experience</h2>
           <div className="flex flex-col gap-6 print:gap-4">
             {data.experience.map((exp) => (
-              <div key={exp.id}>
+              <div key={exp.id} className="break-inside-avoid">
                 <div className="flex justify-between items-baseline mb-1">
                   <h3 className="font-bold text-slate-900">{exp.role}</h3>
                   <span className="text-sm text-slate-500 whitespace-nowrap">{exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}</span>
@@ -71,7 +71,7 @@ export const ModernTemplate: React.FC<TemplateProps> = ({ data }) => {
           <h2 className="text-sm font-bold uppercase tracking-widest text-slate-400 mb-4 print:mb-2">Education</h2>
           <div className="flex flex-col gap-4">
             {data.education.map((edu) => (
-              <div key={edu.id} className="flex justify-between items-start">
+              <div key={edu.id} className="flex justify-between items-start break-inside-avoid">
                 <div>
                   <h3 className="font-bold text-slate-900">{edu.school}</h3>
                   <div className="text-sm text-slate-600">{edu.degree}</div>
@@ -969,7 +969,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
               <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2">Experience</h2>
               <div className="flex flex-col gap-8">
                 {data.experience.map(exp => (
-                  <div key={exp.id} className="grid grid-cols-[100px_1fr] gap-6">
+                  <div key={exp.id} className="grid grid-cols-[100px_1fr] gap-6 break-inside-avoid">
                     <div className="text-xs font-bold font-mono py-1">{exp.startDate}<br />|<br />{exp.isCurrent ? 'NOW' : exp.endDate}</div>
                     <div>
                       <h3 className="text-xl font-bold leading-none mb-1">{exp.role}</h3>
@@ -987,7 +987,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
               <h2 className="text-sm font-black uppercase tracking-widest mb-6 border-b-4 border-slate-900 pb-2">Projects</h2>
               <div className="grid grid-cols-2 gap-6">
                 {data.projects.map(proj => (
-                  <div key={proj.id} className="bg-slate-50 p-4">
+                  <div key={proj.id} className="bg-slate-50 p-4 break-inside-avoid">
                     <div className="font-bold text-base mb-2">{proj.name}</div>
                     <p className="text-xs leading-relaxed text-slate-600">{proj.description}</p>
                   </div>
@@ -1162,7 +1162,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <h2 className="font-bold underline mb-4 text-sm">EXPERIENCE_LOG</h2>
                 <div className="flex flex-col gap-6">
                   {data.experience.map(exp => (
-                    <div key={exp.id} className="grid grid-cols-[80px_1fr] gap-4">
+                    <div key={exp.id} className="grid grid-cols-[80px_1fr] gap-4 break-inside-avoid">
                       <div className="text-[10px] border-r border-slate-300 pr-2 h-full">
                         {exp.startDate}<br />
                         |<br />

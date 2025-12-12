@@ -30,22 +30,22 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         return <MinimalistTemplate data={data} />;
       case 'sidebar':
         return <SidebarTemplate data={data} />;
-      case 'executive':
-        return <ExecutiveTemplate data={data} />;
-      case 'creative':
-        return <CreativeTemplate data={data} />;
-      case 'compact':
-        return <CompactTemplate data={data} />;
       case 'tech':
         return <TechTemplate data={data} />;
       case 'professional':
         return <ProfessionalTemplate data={data} />;
+      case 'creative':
+        return <CreativeTemplate data={data} />;
+      case 'executive':
+        return <ExecutiveTemplate data={data} />;
+      case 'compact':
+        return <CompactTemplate data={data} />;
+      case 'swiss':
+        return <SwissTemplate data={data} />; // Added Swiss
       case 'academic':
         return <AcademicTemplate data={data} />;
       case 'elegant':
         return <ElegantTemplate data={data} />;
-      case 'swiss':
-        return <SwissTemplate data={data} />;
       case 'opal':
         return <OpalTemplate data={data} />;
       case 'wireframe':
@@ -80,17 +80,94 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         return <CastTemplate data={data} />;
       case 'moda':
         return <ModaTemplate data={data} />;
-      case 'modern':
       default:
         return <ModernTemplate data={data} />;
     }
   };
 
   return (
-    <div className={containerClass}>
+    <div className={containerClass} id="resume-preview-container">
+      {/* Visual Page Break Marker (screen only) */}
+      <div
+        className="absolute inset-x-0 top-0 bottom-0 pointer-events-none z-50 print:hidden opacity-50"
+        style={{
+          backgroundImage: 'linear-gradient(to bottom, transparent calc(297mm - 1px), red calc(297mm - 1px), red 297mm)',
+          backgroundSize: '100% 297mm'
+        }}
+      >
+        <div className="sticky top-2 right-2 text-[10px] text-red-500 font-mono text-right pr-2">
+          Page 1<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+          ---- PAGE BREAK ----
+        </div>
+      </div>
+
       {renderTemplate()}
     </div>
   );
+};
+      case 'sidebar':
+return <SidebarTemplate data={data} />;
+      case 'executive':
+return <ExecutiveTemplate data={data} />;
+      case 'creative':
+return <CreativeTemplate data={data} />;
+      case 'compact':
+return <CompactTemplate data={data} />;
+      case 'tech':
+return <TechTemplate data={data} />;
+      case 'professional':
+return <ProfessionalTemplate data={data} />;
+      case 'academic':
+return <AcademicTemplate data={data} />;
+      case 'elegant':
+return <ElegantTemplate data={data} />;
+      case 'swiss':
+return <SwissTemplate data={data} />;
+      case 'opal':
+return <OpalTemplate data={data} />;
+      case 'wireframe':
+return <WireframeTemplate data={data} />;
+      case 'berlin':
+return <BerlinTemplate data={data} />;
+      case 'lateral':
+return <LateralTemplate data={data} />;
+      case 'iron':
+return <IronTemplate data={data} />;
+      case 'ginto':
+return <GintoTemplate data={data} />;
+      case 'symmetry':
+return <SymmetryTemplate data={data} />;
+      case 'bronx':
+return <BronxTemplate data={data} />;
+      case 'path':
+return <PathTemplate data={data} />;
+      case 'quartz':
+return <QuartzTemplate data={data} />;
+      case 'silk':
+return <SilkTemplate data={data} />;
+      case 'mono':
+return <MonoTemplate data={data} />;
+      case 'pop':
+return <PopTemplate data={data} />;
+      case 'noir':
+return <NoirTemplate data={data} />;
+      case 'paper':
+return <PaperTemplate data={data} />;
+      case 'cast':
+return <CastTemplate data={data} />;
+      case 'moda':
+return <ModaTemplate data={data} />;
+      case 'modern':
+      default:
+return <ModernTemplate data={data} />;
+    }
+  };
+
+return (
+  <div className={containerClass}>
+    {renderTemplate()}
+  </div>
+);
 };
 
 export default ResumePreview;
