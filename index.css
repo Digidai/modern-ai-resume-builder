@@ -6,6 +6,17 @@
   body {
     @apply transition-colors duration-300;
   }
+
+  @media print {
+
+    body,
+    html,
+    #root {
+      background-color: white !important;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+  }
 }
 
 @layer utilities {

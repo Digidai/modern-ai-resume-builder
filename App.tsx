@@ -142,7 +142,7 @@ function App() {
 
         {/* Preview Area */}
         <main className={`
-          flex-1 h-full bg-slate-200/50 dark:bg-slate-950 overflow-y-auto custom-scrollbar relative
+          flex-1 h-full bg-slate-200/50 dark:bg-slate-950 print:bg-white overflow-y-auto custom-scrollbar relative
           transition-all duration-300
           ${isPreviewModeMobile ? 'z-30 inset-0 fixed' : ''}
         `}>
@@ -152,7 +152,7 @@ function App() {
             </div>
           )}
 
-          <div className="min-h-full p-4 md:p-8 lg:p-12 flex justify-center items-start">
+          <div className="min-h-full p-4 md:p-8 lg:p-12 print:p-0 flex justify-center items-start">
             <div className="w-full max-w-[210mm] shadow-2xl print:shadow-none bg-white origin-top transition-transform duration-200">
               <ResumePreview data={resumeData} />
             </div>
