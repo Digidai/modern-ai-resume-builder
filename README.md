@@ -77,6 +77,30 @@ A modern, AI-powered resume builder with real-time preview and Gemini AI text en
 | `npm run dev` | Start development server |
 | `npm run build` | Build for production |
 | `npm run preview` | Preview production build |
+| `npm run deploy` | Deploy to Cloudflare Workers |
+
+## Deploying to Cloudflare
+
+### Option A: Cloudflare Workers (Wrangler)
+
+This repo includes `wrangler.jsonc` configured to deploy the built `./dist` directory as static assets.
+
+1. Build:
+   ```bash
+   npm run build
+   ```
+
+2. Deploy:
+   ```bash
+   npm run deploy
+   ```
+
+### Option B: Cloudflare Pages
+
+In Cloudflare Pages settings:
+
+- Build command: `npm run build`
+- Build output directory: `dist`
 
 ## Project Structure
 
