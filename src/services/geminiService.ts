@@ -2,7 +2,7 @@ import { GoogleGenAI } from "@google/genai";
 
 // Helper to get the API key from env or passed argument
 const getApiKey = (key?: string) => {
-  return key || (import.meta as any).env.VITE_GEMINI_API_KEY || "";
+  return key || import.meta.env.VITE_GEMINI_API_KEY || "";
 };
 
 export const improveText = async (text: string, context: string = "resume", apiKey?: string): Promise<string> => {
