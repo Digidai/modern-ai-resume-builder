@@ -19,7 +19,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     const [pendingAiAction, setPendingAiAction] = useState<(() => Promise<void>) | null>(null);
 
     const handleAiAction = async (action: (key: string) => Promise<void>) => {
-        const key = localStorage.getItem('gemini_api_key');
+        const key = localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY;
         if (key) {
             await action(key);
         } else {

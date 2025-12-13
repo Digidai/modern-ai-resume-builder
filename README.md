@@ -43,7 +43,7 @@ A modern, AI-powered resume builder with real-time preview and Gemini AI text en
 ### Prerequisites
 
 - Node.js (v18 or higher recommended)
-- A Gemini API key from [Google AI Studio](https://aistudio.google.com/)
+- (Optional) A Gemini API key from [Google AI Studio](https://aistudio.google.com/) to use AI features
 
 ### Installation
 
@@ -58,10 +58,14 @@ A modern, AI-powered resume builder with real-time preview and Gemini AI text en
    npm install
    ```
 
-3. Set your Gemini API key in `.env.local`:
-   ```
-   API_KEY=your_gemini_api_key_here
-   ```
+3. (Optional) Provide your Gemini API key:
+
+   - Recommended: run the app and enter your key when prompted (saved locally in your browser).
+   - Or set it via Vite env for local dev by creating `.env.local`:
+     ```
+     VITE_GEMINI_API_KEY=your_gemini_api_key_here
+     ```
+     Note: any `VITE_` variable is embedded into the client bundle.
 
 4. Start the development server:
    ```bash
@@ -106,17 +110,15 @@ In Cloudflare Pages settings:
 
 ```
 modern-ai-resume-builder/
-├── components/
-│   ├── Icons.tsx           # SVG icon components
-│   ├── ResumeEditor.tsx    # Main editor with tabs
-│   ├── ResumePreview.tsx   # Resume display component
-│   └── ResumeTemplates.tsx # Template definitions
-├── services/
-│   └── geminiService.ts    # Gemini AI integration
-├── App.tsx                 # Main application component
-├── types.ts                # TypeScript type definitions
-├── index.tsx               # Entry point
-└── index.html              # HTML template
+├── src/
+│   ├── components/         # UI components (editor/preview/templates)
+│   ├── hooks/              # React hooks (local storage, etc.)
+│   ├── services/           # Gemini AI integration
+│   ├── App.tsx             # Main application component
+│   ├── index.tsx           # Entry point
+│   └── types.ts            # TypeScript type definitions
+├── index.html              # HTML template
+└── wrangler.jsonc          # Cloudflare Workers deploy config
 ```
 
 ## License
