@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ResumeData, INITIAL_RESUME_DATA } from './types';
+import { useResumeData } from './hooks/useResumeData';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
 import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon } from './components/Icons';
@@ -7,30 +7,9 @@ import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 
 function App() {
-  // Initialize state from localStorage or default
-  const [resumeData, setResumeData] = useState<ResumeData>(() => {
-    try {
-      const saved = localStorage.getItem('resumeData');
-      if (saved) {
-        return { ...INITIAL_RESUME_DATA, ...JSON.parse(saved) }; // Merge to ensure new fields are present
-      }
-    } catch (e) {
-      console.error("Failed to load resume data", e);
-    }
-    return INITIAL_RESUME_DATA;
-  });
-
+  const { resumeData, setResumeData, resetData } = useResumeData();
   const [isEditing, setIsEditing] = useState(false);
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
-
-  // Auto-save to localStorage
-  React.useEffect(() => {
-    try {
-      localStorage.setItem('resumeData', JSON.stringify(resumeData));
-    } catch (e) {
-      console.error("Failed to save resume data", e);
-    }
-  }, [resumeData]);
 
   // Robust PDF generation triggers the browser print dialog
   const handleDownloadPdf = () => {
@@ -42,12 +21,8 @@ function App() {
     setTimeout(() => { document.title = originalTitle; }, 500);
   };
 
-  const handleResetData = () => {
-    if (confirm("Are you sure you want to reset all data to defaults? This cannot be undone.")) {
-      setResumeData(INITIAL_RESUME_DATA);
-      localStorage.removeItem('resumeData');
-    }
-  };
+  // Handlers
+  const handleResetData = resetData;
 
   // Allow users to save their data to a JSON file
   const handleExportJson = () => {
