@@ -1,4 +1,4 @@
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
 // Helper to get the API key from env or passed argument
 const getApiKey = (key?: string) => {
@@ -11,7 +11,8 @@ export const improveText = async (text: string, context: string = "resume", apiK
   const key = getApiKey(apiKey);
   if (!key) throw new Error("API Key is missing");
 
-  const ai = new GoogleGenAI({ apiKey: key });
+  const genAI = new GoogleGenerativeAI(key);
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
   try {
     const prompt = `
@@ -28,12 +29,11 @@ export const improveText = async (text: string, context: string = "resume", apiK
       Return ONLY the improved text, no explanations or quotes.
     `;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash-exp',
-      contents: prompt,
-    });
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    const improvedText = response.text();
 
-    return response.text?.trim() || text;
+    return improvedText?.trim() || text;
   } catch (error) {
     console.error("Gemini API Error:", error);
     throw error;
@@ -44,7 +44,8 @@ export const generateSummary = async (role: string, skills: string[], apiKey?: s
   const key = getApiKey(apiKey);
   if (!key) throw new Error("API Key is missing");
 
-  const ai = new GoogleGenAI({ apiKey: key });
+  const genAI = new GoogleGenerativeAI(key);
+  const model = genAI.getGenerativeModel({ model: "gemini-2.0-flash-exp" });
 
   try {
     const prompt = `
@@ -54,12 +55,9 @@ export const generateSummary = async (role: string, skills: string[], apiKey?: s
       Return ONLY the summary text.
     `;
 
-    const response = await ai.models.generateContent({
-      model: 'gemini-2.0-flash-exp',
-      contents: prompt,
-    });
-
-    return response.text?.trim() || "";
+    const result = await model.generateContent(prompt);
+    const response = await result.response;
+    return response.text()?.trim() || "";
   } catch (error) {
     console.error("Gemini API Error:", error);
     throw error;
