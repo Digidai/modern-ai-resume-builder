@@ -205,7 +205,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                                     {category.titles.map((title) => (
                                         <li key={title}>
                                             <button
-                                                onClick={() => onSelect(title)}
+                                                onClick={() => onSelect(title.replace(/\s+/g, '-'))}
                                                 className="w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer"
                                             >
                                                 {title}
