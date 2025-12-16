@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useResumeData } from './hooks/useResumeData';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
@@ -7,196 +8,19 @@ import TemplateSelector from './components/TemplateSelector';
 import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon, BriefcaseIcon } from './components/Icons';
 import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
+import { ResumeData } from './types';
 
-type ViewMode = 'home' | 'editor' | 'directory' | 'template_selection';
+// ============================================================================
+// Sub-View Components (Defined here to avoid creating multiple files for now)
+// ============================================================================
 
-function App() {
-  const { resumeData, setResumeData, resetData } = useResumeData();
-  const [currentView, setCurrentView] = useState<ViewMode>('home');
-  const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
-  const [selectedJobTitle, setSelectedJobTitle] = useState("");
+interface HomeViewProps {
+  resumeData: ResumeData;
+  onDownloadPdf: () => void;
+}
 
-  // Robust PDF generation triggers the browser print dialog
-  const handleDownloadPdf = () => {
-    // Dynamically set title for the file name
-    const originalTitle = document.title;
-    document.title = `${resumeData.fullName.trim() || 'Resume'} - ModernCV`;
-    window.print();
-    // Restore title (optional, browser handling varies on when this executes)
-    setTimeout(() => { document.title = originalTitle; }, 500);
-  };
-
-  // Handlers
-  const handleResetData = resetData;
-
-  const handleJobSelect = (title: string) => {
-    setSelectedJobTitle(title);
-    setCurrentView('template_selection');
-  };
-
-  const handleUseTemplate = (templateId: string) => {
-    // Update global state with selected title and template
-    setResumeData(prev => ({
-      ...prev,
-      title: selectedJobTitle,
-      templateId: templateId
-    }));
-    // Switch to editor
-    setCurrentView('editor');
-  };
-
-  // Allow users to save their data to a JSON file
-  const handleExportJson = () => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resumeData, null, 2));
-    const downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", `${(resumeData.fullName || 'resume').replace(/\s+/g, '_').toLowerCase()}.json`);
-    document.body.appendChild(downloadAnchorNode);
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
-  };
-
-  // --- View: Template Selection ---
-  if (currentView === 'template_selection') {
-    return (
-      <TemplateSelector
-        jobTitle={selectedJobTitle}
-        onBack={() => setCurrentView('directory')}
-        onUseTemplate={handleUseTemplate}
-      />
-    );
-  }
-
-  // --- View: Job Directory ---
-  if (currentView === 'directory') {
-    return <JobTitles onBack={() => setCurrentView('home')} onSelect={handleJobSelect} />;
-  }
-
-  // --- View: Editor Mode ---
-  if (currentView === 'editor') {
-    return (
-      <div className="h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans print:bg-white overflow-hidden transition-colors duration-300">
-        {/* Sidebar / Editor */}
-        <aside className={`
-          fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 bg-slate-100 dark:bg-slate-900 flex flex-col h-full border-r border-slate-200 dark:border-slate-800
-          transition-all duration-300 ease-in-out
-          ${isPreviewModeMobile ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}
-          print:hidden
-        `}>
-          <div className="flex-1 flex flex-col h-full overflow-hidden">
-            <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 dark:bg-slate-900 z-10 transition-colors">
-              <div className="flex items-center gap-3">
-                <Button
-                  onClick={() => setCurrentView('home')}
-                  variant="icon"
-                  className="-ml-2"
-                  title="Back to Preview"
-                >
-                  <ArrowLeftIcon className="w-5 h-5" />
-                </Button>
-                <h1 className="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
-                  Edit Resume
-                </h1>
-              </div>
-
-              <div className="flex gap-2 items-center">
-                <Button
-                  onClick={handleExportJson}
-                  variant="icon"
-                  title="Save Data (JSON)"
-                >
-                  <SaveIcon className="w-5 h-5" />
-                </Button>
-                <div className="md:hidden">
-                  <Button
-                    onClick={() => setIsPreviewModeMobile(true)}
-                    variant="primary"
-                    size="sm"
-                  >
-                    Preview
-                  </Button>
-                </div>
-                <Button
-                  onClick={() => setCurrentView('home')}
-                  variant="success"
-                  size="sm"
-                  className="hidden md:flex"
-                  leftIcon={<CheckIcon className="w-4 h-4" />}
-                >
-                  Done
-                </Button>
-              </div>
-            </header>
-
-            {/* Editor Content - independent scroll */}
-            <div className="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
-              <ResumeEditor data={resumeData} onChange={setResumeData} />
-            </div>
-
-            {/* Footer Actions */}
-            <div className="flex-shrink-0 p-4 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-10 flex flex-col gap-2 transition-colors">
-              <Button
-                onClick={handleDownloadPdf}
-                variant="secondary"
-                className="w-full bg-slate-800 text-white hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 border-none"
-                leftIcon={<DownloadIcon className="w-4 h-4" />}
-              >
-                Download PDF
-              </Button>
-              <div className="flex justify-center">
-                <Button onClick={handleResetData} variant="danger-ghost" size="sm">
-                  Reset All Data
-                </Button>
-              </div>
-            </div>
-          </div>
-        </aside>
-
-        {/* Preview Area */}
-        <main className={`
-          flex-1 h-full bg-slate-200/50 dark:bg-slate-950 print:bg-white overflow-y-auto custom-scrollbar relative
-          transition-all duration-300
-          ${isPreviewModeMobile ? 'z-30 inset-0 fixed' : ''}
-        `}>
-          {isPreviewModeMobile && (
-            <div className="fixed top-4 right-4 z-50 md:hidden">
-              <Button onClick={() => setIsPreviewModeMobile(false)} variant="secondary" size="sm">Close Preview</Button>
-            </div>
-          )}
-
-          <div className="min-h-full p-4 md:p-8 lg:p-12 print:p-0 flex justify-center items-start">
-            <div className="w-full max-w-[210mm] shadow-2xl print:shadow-none bg-white origin-top transition-transform duration-200">
-              <ResumePreview data={resumeData} />
-            </div>
-          </div>
-
-          {/* Floating Actions for Desktop */}
-          <div className="fixed bottom-8 right-8 print:hidden flex gap-4">
-            <Button
-              onClick={handleDownloadPdf}
-              variant="primary"
-              className="rounded-full shadow-xl p-4 h-auto"
-              title="Download PDF"
-            >
-              <DownloadIcon className="w-5 h-5" />
-            </Button>
-          </div>
-
-          {/* Mobile Preview Toggle */}
-          <div className={`md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-30 transition-transform ${isPreviewModeMobile ? 'translate-y-0' : 'translate-y-20'}`}>
-            <Button
-              onClick={() => setIsPreviewModeMobile(false)}
-              className="bg-slate-800 text-white px-6 py-3 rounded-full shadow-xl h-auto"
-            >
-              Continue Editing
-            </Button>
-          </div>
-        </main>
-      </div>
-    );
-  }
-
-  // --- View: Home / Formal Preview ---
+const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-slate-200 dark:bg-slate-950 font-sans print:bg-white flex flex-col transition-colors duration-300">
       {/* Header */}
@@ -209,7 +33,7 @@ function App() {
           <div className="flex gap-3">
             <ThemeToggle />
             <Button
-              onClick={() => setCurrentView('directory')}
+              onClick={() => navigate('/directory')}
               variant="ghost"
               className="hidden md:flex text-slate-600 dark:text-slate-300"
               leftIcon={<BriefcaseIcon className="w-4 h-4" />}
@@ -217,7 +41,7 @@ function App() {
               Job Directory
             </Button>
             <Button
-              onClick={handleDownloadPdf}
+              onClick={onDownloadPdf}
               variant="ghost"
               className="hidden md:flex"
               leftIcon={<DownloadIcon className="w-4 h-4" />}
@@ -225,7 +49,7 @@ function App() {
               Download PDF
             </Button>
             <Button
-              onClick={() => setCurrentView('editor')}
+              onClick={() => navigate('/editor')}
               variant="primary"
               leftIcon={<EditIcon className="w-4 h-4" />}
             >
@@ -239,14 +63,13 @@ function App() {
         <div className="max-w-[21cm] mx-auto shadow-2xl print:shadow-none transition-transform duration-500 ease-out animate-in fade-in slide-in-from-bottom-4">
           <ResumePreview data={resumeData} />
         </div>
-
         <div className="h-24 print:hidden"></div> {/* Spacer for mobile fab */}
       </main>
 
       {/* Mobile Floating Action Bar */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 md:hidden print:hidden flex gap-3">
         <Button
-          onClick={() => setCurrentView('directory')}
+          onClick={() => navigate('/directory')}
           variant="secondary"
           className="rounded-full shadow-xl"
           title="Job Directory"
@@ -254,14 +77,14 @@ function App() {
           <BriefcaseIcon className="w-5 h-5" />
         </Button>
         <Button
-          onClick={handleDownloadPdf}
+          onClick={onDownloadPdf}
           variant="secondary"
           className="rounded-full shadow-xl"
           leftIcon={<DownloadIcon className="w-5 h-5" />}
         >
         </Button>
         <Button
-          onClick={() => setCurrentView('editor')}
+          onClick={() => navigate('/editor')}
           variant="primary"
           className="rounded-full shadow-xl"
           leftIcon={<EditIcon className="w-4 h-4" />}
@@ -269,8 +92,205 @@ function App() {
           Edit Resume
         </Button>
       </div>
-
     </div>
+  );
+};
+
+interface EditorViewProps {
+  resumeData: ResumeData;
+  setResumeData: React.Dispatch<React.SetStateAction<ResumeData>>;
+  resetData: () => void;
+  onDownloadPdf: () => void;
+  onExportJson: () => void;
+}
+
+const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, resetData, onDownloadPdf, onExportJson }) => {
+  const navigate = useNavigate();
+  const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
+
+  return (
+    <div className="h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans print:bg-white overflow-hidden transition-colors duration-300">
+      {/* Sidebar / Editor */}
+      <aside className={`
+        fixed inset-0 z-20 md:static md:w-[450px] lg:w-[500px] flex-shrink-0 bg-slate-100 dark:bg-slate-900 flex flex-col h-full border-r border-slate-200 dark:border-slate-800
+        transition-all duration-300 ease-in-out
+        ${isPreviewModeMobile ? 'translate-y-full md:translate-y-0' : 'translate-y-0'}
+        print:hidden
+      `}>
+        <div className="flex-1 flex flex-col h-full overflow-hidden">
+          <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 dark:bg-slate-900 z-10 transition-colors">
+            <div className="flex items-center gap-3">
+              <Button
+                onClick={() => navigate('/')}
+                variant="icon"
+                className="-ml-2"
+                title="Back to Preview"
+              >
+                <ArrowLeftIcon className="w-5 h-5" />
+              </Button>
+              <h1 className="text-xl font-bold text-slate-800 dark:text-white flex items-center gap-2">
+                Edit Resume
+              </h1>
+            </div>
+
+            <div className="flex gap-2 items-center">
+              <Button
+                onClick={onExportJson}
+                variant="icon"
+                title="Save Data (JSON)"
+              >
+                <SaveIcon className="w-5 h-5" />
+              </Button>
+              <div className="md:hidden">
+                <Button
+                  onClick={() => setIsPreviewModeMobile(true)}
+                  variant="primary"
+                  size="sm"
+                >
+                  Preview
+                </Button>
+              </div>
+              <Button
+                onClick={() => navigate('/')}
+                variant="success"
+                size="sm"
+                className="hidden md:flex"
+                leftIcon={<CheckIcon className="w-4 h-4" />}
+              >
+                Done
+              </Button>
+            </div>
+          </header>
+
+          {/* Editor Content - independent scroll */}
+          <div className="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
+            <ResumeEditor data={resumeData} onChange={setResumeData} />
+          </div>
+
+          {/* Footer Actions */}
+          <div className="flex-shrink-0 p-4 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-10 flex flex-col gap-2 transition-colors">
+            <Button
+              onClick={onDownloadPdf}
+              variant="secondary"
+              className="w-full bg-slate-800 text-white hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 border-none"
+              leftIcon={<DownloadIcon className="w-4 h-4" />}
+            >
+              Download PDF
+            </Button>
+            <div className="flex justify-center">
+              <Button onClick={resetData} variant="danger-ghost" size="sm">
+                Reset All Data
+              </Button>
+            </div>
+          </div>
+        </div>
+      </aside>
+
+      {/* Preview Area */}
+      <main className={`
+        flex-1 h-full bg-slate-200/50 dark:bg-slate-950 print:bg-white overflow-y-auto custom-scrollbar relative
+        transition-all duration-300
+        ${isPreviewModeMobile ? 'z-30 inset-0 fixed' : ''}
+      `}>
+        {isPreviewModeMobile && (
+          <div className="fixed top-4 right-4 z-50 md:hidden">
+            <Button onClick={() => setIsPreviewModeMobile(false)} variant="secondary" size="sm">Close Preview</Button>
+          </div>
+        )}
+
+        <div className="min-h-full p-4 md:p-8 lg:p-12 print:p-0 flex justify-center items-start">
+          <div className="w-full max-w-[210mm] shadow-2xl print:shadow-none bg-white origin-top transition-transform duration-200">
+            <ResumePreview data={resumeData} />
+          </div>
+        </div>
+
+        {/* Floating Actions for Desktop */}
+        <div className="fixed bottom-8 right-8 print:hidden flex gap-4">
+          <Button
+            onClick={onDownloadPdf}
+            variant="primary"
+            className="rounded-full shadow-xl p-4 h-auto"
+            title="Download PDF"
+          >
+            <DownloadIcon className="w-5 h-5" />
+          </Button>
+        </div>
+
+        {/* Mobile Preview Toggle */}
+        <div className={`md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-30 transition-transform ${isPreviewModeMobile ? 'translate-y-0' : 'translate-y-20'}`}>
+          <Button
+            onClick={() => setIsPreviewModeMobile(false)}
+            className="bg-slate-800 text-white px-6 py-3 rounded-full shadow-xl h-auto"
+          >
+            Continue Editing
+          </Button>
+        </div>
+      </main>
+    </div>
+  );
+};
+
+
+// ============================================================================
+// Main App Component
+// ============================================================================
+
+function App() {
+  const { resumeData, setResumeData, resetData } = useResumeData();
+  const navigate = useNavigate();
+
+  // Robust PDF generation triggers the browser print dialog
+  const handleDownloadPdf = () => {
+    // Dynamically set title for the file name
+    const originalTitle = document.title;
+    document.title = `${resumeData.fullName.trim() || 'Resume'} - ModernCV`;
+    window.print();
+    // Restore title (optional, browser handling varies on when this executes)
+    setTimeout(() => { document.title = originalTitle; }, 500);
+  };
+
+  // Allow users to save their data to a JSON file
+  const handleExportJson = () => {
+    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resumeData, null, 2));
+    const downloadAnchorNode = document.createElement('a');
+    downloadAnchorNode.setAttribute("href", dataStr);
+    downloadAnchorNode.setAttribute("download", `${(resumeData.fullName || 'resume').replace(/\s+/g, '_').toLowerCase()}.json`);
+    document.body.appendChild(downloadAnchorNode);
+    downloadAnchorNode.click();
+    downloadAnchorNode.remove();
+  };
+
+  const handleUseTemplate = (jobTitle: string, templateId: string) => {
+    setResumeData(prev => ({
+      ...prev,
+      title: jobTitle,
+      templateId: templateId
+    }));
+    navigate('/editor');
+  };
+
+  const handleJobSelect = (title: string) => {
+    navigate(`/resume_tmpl/${encodeURIComponent(title)}`);
+  };
+
+  return (
+    <Routes>
+      <Route path="/" element={<HomeView resumeData={resumeData} onDownloadPdf={handleDownloadPdf} />} />
+      <Route path="/directory" element={<JobTitles onBack={() => navigate('/')} onSelect={handleJobSelect} />} />
+      <Route path="/resume_tmpl/:jobTitle" element={<TemplateSelector onUseTemplate={handleUseTemplate} />} />
+      <Route
+        path="/editor"
+        element={
+          <EditorView
+            resumeData={resumeData}
+            setResumeData={setResumeData}
+            resetData={resetData}
+            onDownloadPdf={handleDownloadPdf}
+            onExportJson={handleExportJson}
+          />
+        }
+      />
+    </Routes>
   );
 }
 
