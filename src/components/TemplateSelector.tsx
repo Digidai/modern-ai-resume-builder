@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ResumeData, INITIAL_RESUME_DATA } from '../types';
 import ResumePreview from './ResumePreview';
@@ -49,6 +49,11 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
     const decodedJobTitle = useMemo(() => {
         return jobTitle ? decodeURIComponent(jobTitle) : "Professional";
     }, [jobTitle]);
+
+    // SEO: Update Page Title
+    useEffect(() => {
+        document.title = `Resume Templates for ${decodedJobTitle} - ModernCV`;
+    }, [decodedJobTitle]);
 
     // Create preview data based on the selected job title
     const previewData: ResumeData = useMemo(() => {
@@ -104,12 +109,12 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                 <div className="p-6">
                     <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-6">Select a Template</h3>
 
-                    <div className="grid grid-cols-2 gap-4">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 lg:grid-cols-2 gap-4">
                         {TEMPLATES.map((t) => (
                             <button
                                 key={t.id}
                                 onClick={() => setSelectedTemplateId(t.id)}
-                                className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 
+                                className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 w-full max-w-[240px] mx-auto
                             ${selectedTemplateId === t.id
                                         ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 ring-1 ring-indigo-600'
                                         : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'

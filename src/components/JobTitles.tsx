@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
 
@@ -115,6 +115,11 @@ interface JobTitlesProps {
 
 const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
     const [search, setSearch] = useState("");
+
+    useEffect(() => {
+        document.title = "Job Title Networking / Directory - ModernCV";
+    }, []);
+
 
     const filteredCategories = useMemo(() => {
         if (!search.trim()) return JOB_CATEGORIES;

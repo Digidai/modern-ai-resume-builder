@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useResumeData } from './hooks/useResumeData';
 import ResumePreview from './components/ResumePreview';
@@ -21,6 +21,11 @@ interface HomeViewProps {
 
 const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = "Free AI Resume Builder - ModernCV";
+  }, []);
+
   return (
     <div className="min-h-screen bg-slate-200 dark:bg-slate-950 font-sans print:bg-white flex flex-col transition-colors duration-300">
       {/* Header */}
@@ -107,6 +112,11 @@ interface EditorViewProps {
 const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, resetData, onDownloadPdf, onExportJson }) => {
   const navigate = useNavigate();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
+
+  useEffect(() => {
+    document.title = "Edit Resume - ModernCV";
+  }, []);
+
 
   return (
     <div className="h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans print:bg-white overflow-hidden transition-colors duration-300">
