@@ -98,8 +98,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     </div>
                 </header>
 
-                <div className="flex-1 overflow-y-auto custom-scrollbar p-8 flex justify-center items-start">
-                    <div className="w-full max-w-[210mm] shadow-2xl bg-white origin-top transform scale-75 md:scale-90 lg:scale-100 transition-transform duration-200">
+                <div className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 lg:p-12 flex justify-center items-start">
+                    <div className="w-full max-w-[210mm] shadow-2xl bg-white origin-top transition-transform duration-200">
                         <ResumePreview data={previewData} />
                     </div>
                 </div>
