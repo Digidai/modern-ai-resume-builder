@@ -2,13 +2,16 @@ import React, { useState } from 'react';
 import { useResumeData } from './hooks/useResumeData';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
-import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon } from './components/Icons';
+import JobTitles from './components/JobTitles';
+import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon, BriefcaseIcon } from './components/Icons';
 import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 
+type ViewMode = 'home' | 'editor' | 'directory';
+
 function App() {
   const { resumeData, setResumeData, resetData } = useResumeData();
-  const [isEditing, setIsEditing] = useState(false);
+  const [currentView, setCurrentView] = useState<ViewMode>('home');
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
   // Robust PDF generation triggers the browser print dialog
@@ -35,8 +38,13 @@ function App() {
     downloadAnchorNode.remove();
   };
 
+  // --- View: Job Directory ---
+  if (currentView === 'directory') {
+    return <JobTitles onBack={() => setCurrentView('home')} />;
+  }
+
   // --- View: Editor Mode ---
-  if (isEditing) {
+  if (currentView === 'editor') {
     return (
       <div className="h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans print:bg-white overflow-hidden transition-colors duration-300">
         {/* Sidebar / Editor */}
@@ -50,7 +58,7 @@ function App() {
             <header className="flex-shrink-0 flex justify-between items-center p-4 bg-slate-100 dark:bg-slate-900 z-10 transition-colors">
               <div className="flex items-center gap-3">
                 <Button
-                  onClick={() => setIsEditing(false)}
+                  onClick={() => setCurrentView('home')}
                   variant="icon"
                   className="-ml-2"
                   title="Back to Preview"
@@ -80,7 +88,7 @@ function App() {
                   </Button>
                 </div>
                 <Button
-                  onClick={() => setIsEditing(false)}
+                  onClick={() => setCurrentView('home')}
                   variant="success"
                   size="sm"
                   className="hidden md:flex"
@@ -172,6 +180,14 @@ function App() {
           <div className="flex gap-3">
             <ThemeToggle />
             <Button
+              onClick={() => setCurrentView('directory')}
+              variant="ghost"
+              className="hidden md:flex text-slate-600 dark:text-slate-300"
+              leftIcon={<BriefcaseIcon className="w-4 h-4" />}
+            >
+              Job Directory
+            </Button>
+            <Button
               onClick={handleDownloadPdf}
               variant="ghost"
               className="hidden md:flex"
@@ -180,7 +196,7 @@ function App() {
               Download PDF
             </Button>
             <Button
-              onClick={() => setIsEditing(true)}
+              onClick={() => setCurrentView('editor')}
               variant="primary"
               leftIcon={<EditIcon className="w-4 h-4" />}
             >
@@ -201,6 +217,14 @@ function App() {
       {/* Mobile Floating Action Bar */}
       <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-30 md:hidden print:hidden flex gap-3">
         <Button
+          onClick={() => setCurrentView('directory')}
+          variant="secondary"
+          className="rounded-full shadow-xl"
+          title="Job Directory"
+        >
+          <BriefcaseIcon className="w-5 h-5" />
+        </Button>
+        <Button
           onClick={handleDownloadPdf}
           variant="secondary"
           className="rounded-full shadow-xl"
@@ -208,7 +232,7 @@ function App() {
         >
         </Button>
         <Button
-          onClick={() => setIsEditing(true)}
+          onClick={() => setCurrentView('editor')}
           variant="primary"
           className="rounded-full shadow-xl"
           leftIcon={<EditIcon className="w-4 h-4" />}
