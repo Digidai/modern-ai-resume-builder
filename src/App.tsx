@@ -23,7 +23,7 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = "Free AI Resume Builder - ModernCV";
+    document.title = "ModernCV - Free AI Resume Builder | Create Professional Resumes Online";
   }, []);
 
   return (
@@ -114,7 +114,7 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
   useEffect(() => {
-    document.title = "Edit Resume - ModernCV";
+    document.title = "Edit Your Resume - Free Online Resume Editor | ModernCV";
   }, []);
 
 

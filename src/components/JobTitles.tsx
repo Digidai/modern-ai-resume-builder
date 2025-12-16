@@ -117,7 +117,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
     const [search, setSearch] = useState("");
 
     useEffect(() => {
-        document.title = "Job Title Networking / Directory - ModernCV";
+        document.title = "Browse Resume Templates by Job Title | ModernCV Directory";
     }, []);
 
 

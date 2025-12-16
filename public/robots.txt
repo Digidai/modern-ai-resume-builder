@@ -1,0 +1,9 @@
+# Robots.txt for ModernCV
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://moderncv.pages.dev/sitemap.xml
+
+# Crawl-delay (optional, for polite crawlers)
+Crawl-delay: 1
