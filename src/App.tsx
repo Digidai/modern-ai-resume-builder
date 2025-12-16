@@ -9,6 +9,7 @@ import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon, BriefcaseIc
 import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 import { ResumeData } from './types';
+import { slugifyJobTitle } from './utils/slug';
 
 // ============================================================================
 // Sub-View Components (Defined here to avoid creating multiple files for now)
@@ -280,7 +281,7 @@ function App() {
   };
 
   const handleJobSelect = (title: string) => {
-    navigate(`/resume_tmpl/${encodeURIComponent(title)}`);
+    navigate(`/resume_tmpl/${slugifyJobTitle(title)}`);
   };
 
   return (

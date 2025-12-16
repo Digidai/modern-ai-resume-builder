@@ -6,6 +6,15 @@ import { ScaledResumePreview } from './ScaledResumePreview';
 import { Button } from './Button';
 import { ArrowLeftIcon, CheckIcon } from './Icons';
 import { getResumeDataForRole } from '../data/roleExamples';
+import jobTitlesData from '../data/jobTitles.json';
+import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
+
+interface JobTitleCategory {
+    name: string;
+    titles: string[];
+}
+
+const ALL_JOB_TITLES = (jobTitlesData as JobTitleCategory[]).flatMap((category) => category.titles);
 
 // Extended template list with colors and visual identifiers (matching ResumeEditor)
 const TEMPLATES = [
@@ -48,24 +57,40 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
     const navigate = useNavigate();
     const [selectedTemplateId, setSelectedTemplateId] = useState('modern');
 
-    const decodedJobTitle = useMemo(() => {
-        // Decode URI and replace hyphens with spaces for display
-        return jobTitle ? decodeURIComponent(jobTitle).replace(/-/g, ' ') : "Professional";
+    const { resolvedJobTitle, canonicalSlug } = useMemo(() => {
+        const raw = jobTitle ?? '';
+        if (!raw) return { resolvedJobTitle: 'Professional', canonicalSlug: null as string | null };
+
+        const matched = findJobTitleBySlug(raw, ALL_JOB_TITLES);
+        if (matched) {
+            return { resolvedJobTitle: matched, canonicalSlug: slugifyJobTitle(matched) };
+        }
+
+        const humanized = humanizeSlug(raw);
+        return { resolvedJobTitle: humanized || 'Professional', canonicalSlug: null as string | null };
     }, [jobTitle]);
+
+    // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
+    useEffect(() => {
+        if (!canonicalSlug || !jobTitle) return;
+        if (jobTitle !== canonicalSlug) {
+            navigate(`/resume_tmpl/${canonicalSlug}`, { replace: true });
+        }
+    }, [canonicalSlug, jobTitle, navigate]);
 
     // SEO: Update Page Title
     useEffect(() => {
-        document.title = `Resume Templates for ${decodedJobTitle} - ModernCV`;
-    }, [decodedJobTitle]);
+        document.title = `Resume Templates for ${resolvedJobTitle} - ModernCV`;
+    }, [resolvedJobTitle]);
 
     // Create preview data based on the selected job title using the new helper
     const previewData: ResumeData = useMemo(() => {
-        const roleData = getResumeDataForRole(decodedJobTitle, INITIAL_RESUME_DATA);
+        const roleData = getResumeDataForRole(resolvedJobTitle, INITIAL_RESUME_DATA);
         return {
             ...roleData,
             templateId: selectedTemplateId,
         };
-    }, [decodedJobTitle, selectedTemplateId]);
+    }, [resolvedJobTitle, selectedTemplateId]);
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans transition-colors duration-300">
@@ -83,14 +108,14 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     </Button>
                     <div>
                         <h2 className="text-lg font-bold text-slate-800 dark:text-white">
-                            Previewing: {decodedJobTitle}
+                            Previewing: {resolvedJobTitle}
                         </h2>
                         <p className="text-xs text-slate-500">Template: {TEMPLATES.find(t => t.id === selectedTemplateId)?.name}</p>
                     </div>
 
                     <div className="ml-auto">
                         <Button
-                            onClick={() => onUseTemplate(decodedJobTitle, selectedTemplateId)}
+                            onClick={() => onUseTemplate(resolvedJobTitle, selectedTemplateId)}
                             variant="primary"
                             leftIcon={<CheckIcon className="w-4 h-4" />}
                         >

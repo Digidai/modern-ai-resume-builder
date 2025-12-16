@@ -5,7 +5,9 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build && npx wrangler deploy",
+    "build": "vite build && node scripts/seo-postbuild.mjs",
+    "build:deploy": "npm run build && npx wrangler deploy",
+    "seo:postbuild": "node scripts/seo-postbuild.mjs",
     "deploy": "npx wrangler deploy",
     "preview": "vite preview"
   },

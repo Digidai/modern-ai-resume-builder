@@ -1,112 +1,14 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
+import jobTitlesData from '../data/jobTitles.json';
 
 interface JobTitleCategory {
     name: string;
     titles: string[];
 }
 
-const JOB_CATEGORIES: JobTitleCategory[] = [
-    {
-        name: "Engineering",
-        titles: [
-            "Software Engineer",
-            "Frontend Developer",
-            "Backend Developer",
-            "Full Stack Developer",
-            "DevOps Engineer",
-            "Site Reliability Engineer (SRE)",
-            "Data Engineer",
-            "Mobile Developer (iOS/Android)",
-            "Game Developer",
-            "Embedded Systems Engineer",
-            "QA Engineer",
-            "Security Engineer",
-            "Machine Learning Engineer",
-            "Cloud Architect",
-            "Engineering Manager",
-            "CTO"
-        ]
-    },
-    {
-        name: "Design & Product",
-        titles: [
-            "Product Designer",
-            "UX Researcher",
-            "UI Designer",
-            "Graphic Designer",
-            "Motion Designer",
-            "Product Manager",
-            "Product Owner",
-            "Creative Director",
-            "Art Director",
-            "Head of Product",
-            "Chief Product Officer (CPO)"
-        ]
-    },
-    {
-        name: "Data & Analytics",
-        titles: [
-            "Data Scientist",
-            "Data Analyst",
-            "Business Analyst",
-            "BI Developer",
-            "Analytics Engineer",
-            "Director of Data"
-        ]
-    },
-    {
-        name: "Marketing & Growth",
-        titles: [
-            "Marketing Manager",
-            "Content Strategist",
-            "SEO Specialist",
-            "Social Media Manager",
-            "Growth Hacker",
-            "Product Marketing Manager",
-            "Brand Manager",
-            "Email Marketing Specialist",
-            "CMO"
-        ]
-    },
-    {
-        name: "Sales & Support",
-        titles: [
-            "Sales Representative",
-            "Account Executive",
-            "Customer Success Manager",
-            "Sales Manager",
-            "Business Development Manager",
-            "Solution Engineer",
-            "Support Specialist",
-            "Head of Sales"
-        ]
-    },
-    {
-        name: "HR & Operations",
-        titles: [
-            "HR Manager",
-            "Recruiter",
-            "Talent Acquisition Specialist",
-            "People Operations Manager",
-            "Office Manager",
-            "Operations Manager",
-            "COO"
-        ]
-    },
-    {
-        name: "Finance & Legal",
-        titles: [
-            "Financial Analyst",
-            "Accountant",
-            "Controller",
-            "CFO",
-            "Legal Counsel",
-            "Paralegal"
-        ]
-    }
-];
+const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
 
 interface JobTitlesProps {
     onBack: () => void;
@@ -205,7 +107,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                                     {category.titles.map((title) => (
                                         <li key={title}>
                                             <button
-                                                onClick={() => onSelect(title.replace(/\s+/g, '-'))}
+                                                onClick={() => onSelect(title)}
                                                 className="w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer"
                                             >
                                                 {title}

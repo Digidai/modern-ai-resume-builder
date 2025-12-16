@@ -1,0 +1,100 @@
+[
+  {
+    "name": "Engineering",
+    "titles": [
+      "Software Engineer",
+      "Frontend Developer",
+      "Backend Developer",
+      "Full Stack Developer",
+      "DevOps Engineer",
+      "Site Reliability Engineer (SRE)",
+      "Data Engineer",
+      "Mobile Developer (iOS/Android)",
+      "Game Developer",
+      "Embedded Systems Engineer",
+      "QA Engineer",
+      "Security Engineer",
+      "Machine Learning Engineer",
+      "Cloud Architect",
+      "Engineering Manager",
+      "CTO"
+    ]
+  },
+  {
+    "name": "Design & Product",
+    "titles": [
+      "Product Designer",
+      "UX Researcher",
+      "UI Designer",
+      "Graphic Designer",
+      "Motion Designer",
+      "Product Manager",
+      "Product Owner",
+      "Creative Director",
+      "Art Director",
+      "Head of Product",
+      "Chief Product Officer (CPO)"
+    ]
+  },
+  {
+    "name": "Data & Analytics",
+    "titles": [
+      "Data Scientist",
+      "Data Analyst",
+      "Business Analyst",
+      "BI Developer",
+      "Analytics Engineer",
+      "Director of Data"
+    ]
+  },
+  {
+    "name": "Marketing & Growth",
+    "titles": [
+      "Marketing Manager",
+      "Content Strategist",
+      "SEO Specialist",
+      "Social Media Manager",
+      "Growth Hacker",
+      "Product Marketing Manager",
+      "Brand Manager",
+      "Email Marketing Specialist",
+      "CMO"
+    ]
+  },
+  {
+    "name": "Sales & Support",
+    "titles": [
+      "Sales Representative",
+      "Account Executive",
+      "Customer Success Manager",
+      "Sales Manager",
+      "Business Development Manager",
+      "Solution Engineer",
+      "Support Specialist",
+      "Head of Sales"
+    ]
+  },
+  {
+    "name": "HR & Operations",
+    "titles": [
+      "HR Manager",
+      "Recruiter",
+      "Talent Acquisition Specialist",
+      "People Operations Manager",
+      "Office Manager",
+      "Operations Manager",
+      "COO"
+    ]
+  },
+  {
+    "name": "Finance & Legal",
+    "titles": [
+      "Financial Analyst",
+      "Accountant",
+      "Controller",
+      "CFO",
+      "Legal Counsel",
+      "Paralegal"
+    ]
+  }
+]

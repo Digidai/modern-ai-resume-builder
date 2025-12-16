@@ -26,6 +26,8 @@
       ]
     },
     "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "noEmit": true
   },
   "include": [
