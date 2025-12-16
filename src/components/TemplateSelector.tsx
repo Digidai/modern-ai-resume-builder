@@ -118,7 +118,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                             <button
                                 key={t.id}
                                 onClick={() => setSelectedTemplateId(t.id)}
-                                className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group hover:border-indigo-300 hover:shadow-lg w-full aspect-[3/4] flex flex-col
+                                className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group hover:border-indigo-300 hover:shadow-lg w-full aspect-[210/297] flex flex-col
                             ${selectedTemplateId === t.id
                                         ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-900/20 ring-1 ring-indigo-600 shadow-md'
                                         : 'border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50'
