@@ -110,9 +110,10 @@ const JOB_CATEGORIES: JobTitleCategory[] = [
 
 interface JobTitlesProps {
     onBack: () => void;
+    onSelect: (jobTitle: string) => void;
 }
 
-const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
+const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
     const [search, setSearch] = useState("");
 
     const filteredCategories = useMemo(() => {
@@ -168,7 +169,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                         Find Your Professional Role
                     </h2>
                     <p className="text-slate-600 dark:text-slate-400 mb-8">
-                        Explore our comprehensive directory of standard job titles across various industries.
+                        Select a job title to preview related resume templates.
                     </p>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
@@ -195,10 +196,15 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                                         {category.titles.length}
                                     </span>
                                 </h3>
-                                <ul className="space-y-2">
+                                <ul className="space-y-1">
                                     {category.titles.map((title) => (
-                                        <li key={title} className="text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors cursor-default select-all">
-                                            {title}
+                                        <li key={title}>
+                                            <button
+                                                onClick={() => onSelect(title)}
+                                                className="w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer"
+                                            >
+                                                {title}
+                                            </button>
                                         </li>
                                     ))}
                                 </ul>

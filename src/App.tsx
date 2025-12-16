@@ -3,16 +3,18 @@ import { useResumeData } from './hooks/useResumeData';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
 import JobTitles from './components/JobTitles';
+import TemplateSelector from './components/TemplateSelector';
 import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon, BriefcaseIcon } from './components/Icons';
 import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 
-type ViewMode = 'home' | 'editor' | 'directory';
+type ViewMode = 'home' | 'editor' | 'directory' | 'template_selection';
 
 function App() {
   const { resumeData, setResumeData, resetData } = useResumeData();
   const [currentView, setCurrentView] = useState<ViewMode>('home');
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
+  const [selectedJobTitle, setSelectedJobTitle] = useState("");
 
   // Robust PDF generation triggers the browser print dialog
   const handleDownloadPdf = () => {
@@ -27,6 +29,22 @@ function App() {
   // Handlers
   const handleResetData = resetData;
 
+  const handleJobSelect = (title: string) => {
+    setSelectedJobTitle(title);
+    setCurrentView('template_selection');
+  };
+
+  const handleUseTemplate = (templateId: string) => {
+    // Update global state with selected title and template
+    setResumeData(prev => ({
+      ...prev,
+      title: selectedJobTitle,
+      templateId: templateId
+    }));
+    // Switch to editor
+    setCurrentView('editor');
+  };
+
   // Allow users to save their data to a JSON file
   const handleExportJson = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resumeData, null, 2));
@@ -38,9 +56,20 @@ function App() {
     downloadAnchorNode.remove();
   };
 
+  // --- View: Template Selection ---
+  if (currentView === 'template_selection') {
+    return (
+      <TemplateSelector
+        jobTitle={selectedJobTitle}
+        onBack={() => setCurrentView('directory')}
+        onUseTemplate={handleUseTemplate}
+      />
+    );
+  }
+
   // --- View: Job Directory ---
   if (currentView === 'directory') {
-    return <JobTitles onBack={() => setCurrentView('home')} />;
+    return <JobTitles onBack={() => setCurrentView('home')} onSelect={handleJobSelect} />;
   }
 
   // --- View: Editor Mode ---
