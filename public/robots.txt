@@ -1,5 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /editor
 
 Sitemap: https://moderncv.pages.dev/sitemap.xml
