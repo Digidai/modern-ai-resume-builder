@@ -181,8 +181,8 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
           <div className="flex-shrink-0 p-4 bg-slate-100 dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 z-10 flex flex-col gap-2 transition-colors">
             <Button
               onClick={onDownloadPdf}
-              variant="secondary"
-              className="w-full bg-slate-800 text-white hover:bg-slate-900 dark:bg-slate-800 dark:hover:bg-slate-700 border-none"
+              variant="dark"
+              className="w-full"
               leftIcon={<DownloadIcon className="w-4 h-4" />}
             >
               Download PDF
