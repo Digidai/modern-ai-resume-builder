@@ -153,7 +153,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                                     }
                         `}
                             >
-                                <div className="flex-1 w-full bg-slate-50 rounded-lg shadow-sm border border-slate-200 overflow-hidden mb-3 relative group-hover:shadow-md transition-shadow">
+                                <div className="flex-1 w-full bg-slate-50 rounded-lg shadow-sm border border-slate-200 overflow-hidden mb-3 relative group-hover:shadow-md transition-shadow p-3 flex justify-center items-start">
                                     <ScaledResumePreview data={previewData} templateId={t.id} />
                                 </div>
 

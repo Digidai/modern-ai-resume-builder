@@ -95,7 +95,7 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 5. CREATIVE (Split layout with colorful sidebar) ---
 export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full">
+    <div className="flex flex-col min-h-[297mm]">
       {/* Header */}
       <div className="bg-emerald-600 text-white p-8">
         <h1 className="text-4xl font-bold tracking-tight mb-2">{data.fullName}</h1>
@@ -274,7 +274,7 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 7. TECH (Monospace, terminal style) ---
 export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col gap-6 font-mono text-sm text-slate-800">
+    <div className="flex flex-col min-h-[297mm] gap-6 font-mono text-sm text-slate-800">
       <header className="mb-4">
         <h1 className="text-2xl font-bold text-indigo-600 mb-2">{`> ${data.fullName}`}</h1>
         <p className="text-slate-600 mb-4">{`// ${data.title}`}</p>
@@ -1100,7 +1100,7 @@ export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 16. IRON (Inverted headers, high contrast) ---
 export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-white text-slate-900 font-sans">
+    <div className="flex flex-col min-h-[297mm] bg-white text-slate-900 font-sans">
       <header className="bg-black text-white p-10">
         <h1 className="text-5xl font-black tracking-tight mb-2 uppercase">{data.fullName}</h1>
         <p className="text-xl font-medium text-slate-400 uppercase tracking-widest mb-6">{data.title}</p>
@@ -1275,7 +1275,7 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 18. SYMMETRY (Centered, elegant, balanced) ---
 export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-slate-50 text-slate-800 font-serif p-12">
+    <div className="flex flex-col min-h-[297mm] bg-slate-50 text-slate-800 font-serif p-12">
       <header className="text-center mb-12">
         <h1 className="text-4xl font-medium tracking-wide text-slate-900 mb-3">{data.fullName}</h1>
         <p className="text-sm uppercase tracking-[0.3em] text-slate-500 mb-6">{data.title}</p>
@@ -1741,7 +1741,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 23. MONO (Developer, Terminal, Monospace) ---
 export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-slate-900 text-slate-100 font-mono p-10">
+    <div className="flex flex-col min-h-[297mm] bg-slate-900 text-slate-100 font-mono p-10">
       <header className="mb-10">
         <div className="text-green-400 text-sm mb-2">// resume.tsx</div>
         <h1 className="text-4xl font-bold text-white mb-2">{data.fullName}</h1>
@@ -1810,7 +1810,7 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 24. POP (Soft, Rounded, Friendly) ---
 export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-gradient-to-br from-indigo-50 to-pink-50 text-slate-800 font-sans p-10">
+    <div className="flex flex-col min-h-[297mm] bg-gradient-to-br from-indigo-50 to-pink-50 text-slate-800 font-sans p-10">
       <header className="mb-10">
         <h1 className="text-4xl font-bold text-slate-900 mb-2">{data.fullName}</h1>
         <span className="inline-block bg-indigo-600 text-white px-4 py-1 rounded-full text-sm font-bold mb-6">{data.title}</span>
@@ -1878,7 +1878,7 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 25. NOIR (Dark, Elegant, High Contrast) ---
 export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-zinc-900 text-zinc-100 font-sans p-12">
+    <div className="flex flex-col min-h-[297mm] bg-zinc-900 text-zinc-100 font-sans p-12">
       <header className="mb-12 border-b border-zinc-700 pb-10">
         <h1 className="text-5xl font-light tracking-wide text-white mb-3">{data.fullName}</h1>
         <p className="text-lg text-amber-400 font-medium uppercase tracking-[0.3em] mb-8">{data.title}</p>
@@ -1946,7 +1946,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 26. PAPER (Publication, Newspaper, Classic) ---
 export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-[#fffef8] text-slate-900 font-serif p-12">
+    <div className="flex flex-col min-h-[297mm] bg-[#fffef8] text-slate-900 font-serif p-12">
       <header className="text-center mb-8 border-b-2 border-black pb-6">
         <h1 className="text-5xl font-bold tracking-tight mb-2" style={{ fontFamily: 'Georgia, serif' }}>{data.fullName}</h1>
         <p className="text-lg text-slate-600 italic">{data.title}</p>
@@ -2123,7 +2123,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
 // --- 28. MODA (Fashion, Editorial, Minimal) ---
 export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
   return (
-    <div className="flex flex-col h-full bg-white text-slate-900 p-12">
+    <div className="flex flex-col min-h-[297mm] bg-white text-slate-900 p-12">
       <header className="text-center mb-10">
         <h1 className="text-5xl font-extrabold tracking-tight">{data.fullName}</h1>
         <p className="mt-2 text-sm uppercase tracking-[0.3em] text-slate-500">{data.title}</p>

@@ -12,7 +12,7 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({ data, 
     // We use a container that enforces this aspect ratio
 
     return (
-        <div className="w-full h-full relative overflow-hidden bg-white select-none pointer-events-none">
+        <div className="w-full h-full relative overflow-hidden select-none pointer-events-none">
             {/* 
         Scaling Container:
         The content inside is fixed at 210mm width (A4 width).
@@ -52,7 +52,7 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({ data, 
 
                 // Let's try the container query style approach which acts as a "ViewBox".
                 // Actually, for a list of thumbnails, a simple CSS scale trick is:
-                className="origin-top-left absolute inset-0 w-[210mm] h-[297mm]"
+                className="origin-top-left absolute inset-0 w-[210mm] h-[297mm] bg-white shadow-sm"
             // We need JavaScript to calculate scale if we want it to be perfectly responsive to ANY parent size.
             // OR we can rely on the fact that `TemplateSelector` grid columns have a roughly known width? No, they are responsive.
 
