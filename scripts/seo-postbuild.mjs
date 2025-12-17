@@ -1,5 +1,6 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { slugifyJobTitle } from './slugify.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
 
@@ -26,15 +27,6 @@ const escapeHtml = (value) =>
     .replace(/'/g, '&#39;');
 
 const escapeAttr = escapeHtml;
-
-const slugifyJobTitle = (title) =>
-  String(title)
-    .trim()
-    .toLowerCase()
-    .replace(/&/g, ' and ')
-    .replace(/['’]/g, '')
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
 
 const replaceOrInsertMeta = (html, matcher, replacement) => {
   if (matcher.test(html)) return html.replace(matcher, replacement);
@@ -93,8 +85,6 @@ const writeFileEnsuringDir = async (filePath, content) => {
 };
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
-
-const collectJobTitles = (categories) => categories.flatMap((c) => c.titles);
 
 const buildUrl = (siteUrl, routePath) => {
   if (routePath === '/') return `${siteUrl}/`;
@@ -262,7 +252,60 @@ const main = async () => {
   const templateHtml = await fs.readFile(templateHtmlPath, 'utf8');
 
   const categories = await readJson(jobTitlesPath);
-  const allTitles = collectJobTitles(categories);
+  if (!Array.isArray(categories)) {
+    throw new Error(`Invalid job titles data: expected array in ${jobTitlesPath}`);
+  }
+
+  const allTitles = [];
+  const seenTitles = new Set();
+  const duplicateTitles = new Set();
+  const slugToTitles = new Map();
+
+  for (const category of categories) {
+    if (!category || typeof category !== 'object') {
+      throw new Error(`Invalid job titles data: category must be an object in ${jobTitlesPath}`);
+    }
+    if (typeof category.name !== 'string' || !category.name.trim()) {
+      throw new Error(`Invalid job titles data: category.name must be a non-empty string in ${jobTitlesPath}`);
+    }
+    if (!Array.isArray(category.titles)) {
+      throw new Error(`Invalid job titles data: category.titles must be an array in ${jobTitlesPath}`);
+    }
+
+    for (const rawTitle of category.titles) {
+      if (typeof rawTitle !== 'string') {
+        throw new Error(`Invalid job titles data: title must be a string in ${jobTitlesPath}`);
+      }
+
+      const title = rawTitle.trim();
+      if (!title) continue;
+
+      allTitles.push(title);
+
+      if (seenTitles.has(title)) duplicateTitles.add(title);
+      seenTitles.add(title);
+
+      const slug = slugifyJobTitle(title);
+      const list = slugToTitles.get(slug) ?? [];
+      list.push(title);
+      slugToTitles.set(slug, list);
+    }
+  }
+
+  if (duplicateTitles.size > 0) {
+    throw new Error(
+      `Duplicate job titles found in ${jobTitlesPath}: ${[...duplicateTitles].sort().join(', ')}`
+    );
+  }
+
+  const slugCollisions = [...slugToTitles.entries()].filter(([, titles]) => titles.length > 1);
+  if (slugCollisions.length > 0) {
+    const preview = slugCollisions
+      .slice(0, 20)
+      .map(([slug, titles]) => `${slug}: ${titles.join(' | ')}`)
+      .join('; ');
+    throw new Error(`Job title slug collisions found in ${jobTitlesPath}: ${preview}`);
+  }
 
   const templates = [
     'Modern',

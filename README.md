@@ -83,6 +83,8 @@ A modern, AI-powered resume builder with real-time preview and Gemini AI text en
 | `npm run preview` | Preview production build |
 | `npm run deploy` | Deploy to Cloudflare Workers |
 | `npm run build:deploy` | Build + deploy (Wrangler) |
+| `npm run jobtitles:validate` | Validate job title list (dedupe/slug collisions) |
+| `npm run jobtitles:import -- --input <file>` | Bulk import job titles into `src/data/jobTitles.json` |
 
 ## Deploying to Cloudflare
 
@@ -122,9 +124,11 @@ modern-ai-resume-builder/
 │   ├── components/         # UI components (editor/preview/templates)
 │   ├── hooks/              # React hooks (local storage, etc.)
 │   ├── services/           # Gemini AI integration
+│   ├── data/               # Job titles + role examples
 │   ├── App.tsx             # Main application component
 │   ├── index.tsx           # Entry point
 │   └── types.ts            # TypeScript type definitions
+├── scripts/                # SEO + content generation scripts
 ├── index.html              # HTML template
 └── wrangler.jsonc          # Cloudflare Workers deploy config
 ```

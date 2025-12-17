@@ -8,6 +8,8 @@
     "build": "vite build && node scripts/seo-postbuild.mjs",
     "build:deploy": "npm run build && npx wrangler deploy",
     "seo:postbuild": "node scripts/seo-postbuild.mjs",
+    "jobtitles:validate": "node scripts/jobtitles-validate.mjs",
+    "jobtitles:import": "node scripts/jobtitles-import.mjs",
     "deploy": "npx wrangler deploy",
     "preview": "vite preview"
   },

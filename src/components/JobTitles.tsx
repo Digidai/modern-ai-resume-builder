@@ -17,6 +17,7 @@ interface JobTitlesProps {
 
 const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
     const [search, setSearch] = useState("");
+    const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
 
     useEffect(() => {
         document.title = "Browse Resume Templates by Job Title | ModernCV Directory";
@@ -48,6 +49,20 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
         }).filter(Boolean) as JobTitleCategory[];
     }, [search]);
 
+    const isSearching = search.trim().length > 0;
+
+    const stats = useMemo(() => {
+        const totalCategories = JOB_CATEGORIES.length;
+        const totalTitles = JOB_CATEGORIES.reduce((sum, c) => sum + c.titles.length, 0);
+
+        const filteredTitleCount = filteredCategories.reduce((sum, c) => sum + c.titles.length, 0);
+        return { totalCategories, totalTitles, filteredTitleCount };
+    }, [filteredCategories]);
+
+    const toggleCategory = (categoryName: string) => {
+        setExpandedCategories((prev) => ({ ...prev, [categoryName]: !prev[categoryName] }));
+    };
+
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans transition-colors duration-300">
             {/* Header */}
@@ -78,6 +93,11 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                     <p className="text-slate-600 dark:text-slate-400 mb-8">
                         Select a job title to preview related resume templates.
                     </p>
+                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                        {isSearching
+                            ? `Found ${stats.filteredTitleCount} roles in ${filteredCategories.length} categories`
+                            : `${stats.totalTitles} roles across ${stats.totalCategories} categories`}
+                    </p>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <SearchIcon className="h-5 w-5 text-slate-400" />
@@ -96,6 +116,12 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredCategories.length > 0 ? (
                         filteredCategories.map((category) => (
+                            (() => {
+                                const isExpanded = !!expandedCategories[category.name];
+                                const visibleTitles = isSearching || isExpanded ? category.titles : category.titles.slice(0, 10);
+                                const hasMore = !isSearching && category.titles.length > visibleTitles.length;
+
+                                return (
                             <div key={category.name} className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
                                 <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
                                     {category.name}
@@ -104,7 +130,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                                     </span>
                                 </h3>
                                 <ul className="space-y-1">
-                                    {category.titles.map((title) => (
+                                    {visibleTitles.map((title) => (
                                         <li key={title}>
                                             <button
                                                 onClick={() => onSelect(title)}
@@ -115,7 +141,20 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                                         </li>
                                     ))}
                                 </ul>
+                                {!isSearching && category.titles.length > 10 && (
+                                    <div className="mt-4">
+                                        <Button
+                                            variant="ghost"
+                                            className="w-full justify-center text-indigo-600"
+                                            onClick={() => toggleCategory(category.name)}
+                                        >
+                                            {hasMore ? `Show all ${category.titles.length}` : 'Show less'}
+                                        </Button>
+                                    </div>
+                                )}
                             </div>
+                                );
+                            })()
                         ))
                     ) : (
                         <div className="col-span-full text-center py-12">
