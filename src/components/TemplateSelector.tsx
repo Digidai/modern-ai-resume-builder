@@ -8,6 +8,7 @@ import { ArrowLeftIcon, CheckIcon } from './Icons';
 import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
+import { getPersonaFullNameForJobTitle } from '../data/personas';
 
 interface JobTitleCategory {
     name: string;
@@ -88,6 +89,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         const roleData = getResumeDataForRole(resolvedJobTitle, INITIAL_RESUME_DATA);
         return {
             ...roleData,
+            fullName: getPersonaFullNameForJobTitle(resolvedJobTitle),
             templateId: selectedTemplateId,
         };
     }, [resolvedJobTitle, selectedTemplateId]);
