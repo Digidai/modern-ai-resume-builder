@@ -86,6 +86,97 @@ A modern, AI-powered resume builder with real-time preview and Gemini AI text en
 | `npm run jobtitles:validate` | Validate job title list (dedupe/slug collisions) |
 | `npm run jobtitles:import -- --input <file>` | Bulk import job titles into `src/data/jobTitles.json` |
 
+## Adding Job Titles (新增职位)
+
+Job titles are the source of truth for:
+
+- The `/directory` page
+- SEO pre-rendered pages under `/resume_tmpl/<job-title-slug>`
+- `sitemap.xml`, `_redirects`, and other SEO assets generated at build time
+
+### Rules (必须满足)
+
+- **No duplicates**: job titles must be globally unique (across all categories).
+- **No slug collisions**: different titles must not produce the same slug.
+- **More titles = more pages**: `npm run build` generates one HTML page per title under `dist/resume_tmpl/<slug>/index.html`.
+
+> Tip: `npm run build` (and `npm run jobtitles:validate`) will fail fast if duplicates or slug collisions are detected.
+
+### Method A: Edit `src/data/jobTitles.json` manually (少量新增)
+
+1. Add a title under the right category (or create a new `{ "name": "...", "titles": [] }` category).
+2. Validate + rebuild SEO outputs:
+   ```bash
+   npm run jobtitles:validate
+   npm run build
+   ```
+3. Preview locally (`npm run preview` prints the URL/port), then check:
+   - `/directory`
+   - `/resume_tmpl/<slug>`
+
+### Method B: Bulk import (recommended) (批量新增)
+
+Use the importer for large batches: `scripts/jobtitles-import.mjs`.
+
+#### TXT format (one title per line, optional `[Category]` sections)
+
+Example `titles.txt`:
+```txt
+[Engineering]
+Staff Software Engineer
+Senior Frontend Developer
+
+[Marketing & Growth]
+Growth Hacker
+SEO Manager
+```
+
+Run:
+```bash
+# Preview changes without writing
+npm run jobtitles:import -- --input titles.txt --dry-run
+
+# Apply changes
+npm run jobtitles:import -- --input titles.txt
+```
+
+If your TXT file has no `[Category]` headers, provide a default category:
+```bash
+npm run jobtitles:import -- --input titles.txt --category "Engineering"
+```
+
+#### CSV/TSV format (`category,title`)
+
+Example `titles.csv`:
+```csv
+Engineering,Staff Software Engineer
+Marketing & Growth,Growth Hacker
+```
+
+Run:
+```bash
+npm run jobtitles:import -- --input titles.csv --format csv
+```
+
+Importer options:
+- `--dry-run` to preview summary only
+- `--no-sort` to keep input order (default sorts titles within each category)
+
+After importing:
+```bash
+npm run jobtitles:validate
+npm run build
+```
+
+### SEO + Canonical Domain (重要)
+
+`npm run build` runs `scripts/seo-postbuild.mjs` and generates `dist/sitemap.xml`, canonical tags, and Open Graph URLs.
+Set `SITE_URL` in your build environment so the generated URLs use your production domain (defaults to `https://genedai.cv`).
+
+### Sample Names per Job Title (职位页姓名自动不同)
+
+Each job title page uses a deterministic persona so the preview full name differs per role automatically (no manual work needed).
+
 ## Deploying to Cloudflare
 
 ### Option A: Cloudflare Workers (Wrangler)
