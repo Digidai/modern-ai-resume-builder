@@ -1,7 +1,7 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
 
-const DEFAULT_SITE_URL = 'https://moderncv.pages.dev';
+const DEFAULT_SITE_URL = 'https://genedai.cv';
 
 const projectRoot = process.cwd();
 const distDir = path.join(projectRoot, 'dist');
