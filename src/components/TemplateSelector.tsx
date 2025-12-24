@@ -5,6 +5,7 @@ import ResumePreview from './ResumePreview';
 import { ScaledResumePreview } from './ScaledResumePreview';
 import { Button } from './Button';
 import { ArrowLeftIcon, CheckIcon } from './Icons';
+import ThemeToggle from './ThemeToggle';
 import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
@@ -115,7 +116,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         <p className="text-xs text-slate-500">Template: {TEMPLATES.find(t => t.id === selectedTemplateId)?.name}</p>
                     </div>
 
-                    <div className="ml-auto">
+                    <div className="ml-auto flex items-center gap-2">
+                        <ThemeToggle />
                         <Button
                             onClick={() => onUseTemplate(resolvedJobTitle, selectedTemplateId)}
                             variant="primary"

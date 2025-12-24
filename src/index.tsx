@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter } from 'react-router-dom';
 import App from './App';
+import { ThemeProvider } from './contexts/ThemeContext';
 
 const computeBasename = () => {
   if (import.meta.env.DEV) return '/';
@@ -25,8 +26,10 @@ if (!rootElement) {
 const root = ReactDOM.createRoot(rootElement);
 root.render(
   <React.StrictMode>
-    <BrowserRouter basename={computeBasename()}>
-      <App />
-    </BrowserRouter>
+    <ThemeProvider>
+      <BrowserRouter basename={computeBasename()}>
+        <App />
+      </BrowserRouter>
+    </ThemeProvider>
   </React.StrictMode>
 );

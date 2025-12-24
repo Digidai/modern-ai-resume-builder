@@ -1,6 +1,7 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
+import ThemeToggle from './ThemeToggle';
 import jobTitlesData from '../data/jobTitles.json';
 
 interface JobTitleCategory {
@@ -81,6 +82,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                             Job Title Directory
                         </h1>
                     </div>
+                    <ThemeToggle />
                 </div>
             </header>
 

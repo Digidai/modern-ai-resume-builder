@@ -86,8 +86,9 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
           onClick={onDownloadPdf}
           variant="secondary"
           className="rounded-full shadow-xl"
-          leftIcon={<DownloadIcon className="w-5 h-5" />}
+          title="Download PDF"
         >
+          <DownloadIcon className="w-5 h-5" />
         </Button>
         <Button
           onClick={() => navigate('/editor')}
@@ -145,6 +146,7 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
             </div>
 
             <div className="flex gap-2 items-center">
+              <ThemeToggle />
               <Button
                 onClick={onExportJson}
                 variant="icon"

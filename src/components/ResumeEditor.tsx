@@ -160,7 +160,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
     // --- Skills Handlers ---
     const handleSkillsChange = (val: string) => {
-        onChange({ ...data, skills: val.split(',').map(s => s.trim()) });
+        const cleaned = val
+            .split(',')
+            .map(s => s.trim())
+            .filter(Boolean);
+        onChange({ ...data, skills: cleaned });
     }
 
     // --- Projects Handlers ---
