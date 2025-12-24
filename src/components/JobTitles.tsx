@@ -4,7 +4,7 @@ import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
 import ThemeToggle from './ThemeToggle';
 import jobTitlesData from '../data/jobTitles.json';
-import { useSeo, SEO_ROBOTS_INDEX } from '../hooks/useSeo';
+import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { slugifyJobTitle } from '../utils/slug';
 
 interface JobTitleCategory {
@@ -24,7 +24,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
     const [search, setSearch] = useState("");
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
 
-    const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+    const siteUrl = getSiteUrl();
     const orgId = `${siteUrl}/#organization`;
     const websiteId = `${siteUrl}/#website`;
 

@@ -171,7 +171,8 @@ npm run build
 ### SEO + Canonical Domain (重要)
 
 `npm run build` runs `scripts/seo-postbuild.mjs` and generates `dist/sitemap.xml`, canonical tags, and Open Graph URLs.
-Set `SITE_URL` in your build environment so the generated URLs use your production domain (defaults to `https://moderncv.pages.dev`).
+Set `SITE_URL` in your build environment so the generated URLs use your production domain (defaults to `https://genedai.cv`).
+For runtime meta updates in the SPA, set `VITE_SITE_URL` to the same value so canonical/OG URLs stay consistent across deployments (GitHub Pages vs Workers).
 
 ### Sample Names per Job Title (职位页姓名自动不同)
 

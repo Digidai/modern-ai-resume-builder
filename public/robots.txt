@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://moderncv.pages.dev/sitemap.xml
+Sitemap: https://genedai.cv/sitemap.xml

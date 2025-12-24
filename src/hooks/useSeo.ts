@@ -60,6 +60,13 @@ const buildCanonicalUrl = (canonical: string | undefined, origin: string) => {
   return `${origin}${path.startsWith('/') ? path : `/${path}`}`;
 };
 
+const getRuntimeSiteUrl = () => {
+  const envSiteUrl = import.meta.env.VITE_SITE_URL;
+  if (envSiteUrl) return envSiteUrl.replace(/\/+$/, '');
+  if (typeof window !== 'undefined') return window.location.origin;
+  return '';
+};
+
 const ensureLdJson = (payload: string) => {
   let script = document.head.querySelector<HTMLScriptElement>('script[type="application/ld+json"]');
   if (!script) {
@@ -88,7 +95,8 @@ export const useSeo = ({
   useEffect(() => {
     if (typeof document === 'undefined' || typeof window === 'undefined') return;
 
-    const origin = window.location.origin;
+    const siteUrl = getRuntimeSiteUrl();
+    const origin = siteUrl || window.location.origin;
     const canonicalUrl = buildCanonicalUrl(canonical, origin);
     const imageUrl = toAbsoluteUrl(ogImage ?? '/og-image.png', origin);
     const resolvedImageAlt = imageAlt ?? DEFAULT_IMAGE_ALT;
@@ -138,3 +146,4 @@ export const useSeo = ({
 
 export const SEO_ROBOTS_INDEX = DEFAULT_ROBOTS;
 export const SEO_ROBOTS_NOINDEX = 'noindex, nofollow, noarchive';
+export const getSiteUrl = getRuntimeSiteUrl;

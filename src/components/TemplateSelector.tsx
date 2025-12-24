@@ -6,7 +6,7 @@ import { ScaledResumePreview } from './ScaledResumePreview';
 import { Button } from './Button';
 import { ArrowLeftIcon, CheckIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
-import { useSeo, SEO_ROBOTS_INDEX } from '../hooks/useSeo';
+import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
@@ -73,7 +73,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         return { resolvedJobTitle: humanized || 'Professional', canonicalSlug: null as string | null };
     }, [jobTitle]);
 
-    const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+    const siteUrl = getSiteUrl();
     const orgId = `${siteUrl}/#organization`;
     const websiteId = `${siteUrl}/#website`;
     const canonicalPath = canonicalSlug

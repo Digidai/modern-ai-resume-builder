@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useResumeData } from './hooks/useResumeData';
-import { useSeo, SEO_ROBOTS_INDEX, SEO_ROBOTS_NOINDEX } from './hooks/useSeo';
+import { useSeo, SEO_ROBOTS_INDEX, SEO_ROBOTS_NOINDEX, getSiteUrl } from './hooks/useSeo';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
 import JobTitles from './components/JobTitles';
@@ -24,7 +24,7 @@ interface HomeViewProps {
 const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
   const navigate = useNavigate();
 
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
 
@@ -170,7 +170,7 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
   const navigate = useNavigate();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
-  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
   const pageUrl = `${siteUrl}/editor`;

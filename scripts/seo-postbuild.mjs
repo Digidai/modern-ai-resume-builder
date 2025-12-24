@@ -2,7 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { slugifyJobTitle } from './slugify.mjs';
 
-const DEFAULT_SITE_URL = 'https://moderncv.pages.dev';
+const DEFAULT_SITE_URL = 'https://genedai.cv';
 const SITE_NAME = 'ModernCV';
 const DEFAULT_LOCALE = 'en_US';
 const DEFAULT_OG_IMAGE = '/og-image.png';

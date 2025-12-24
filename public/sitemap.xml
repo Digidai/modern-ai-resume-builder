@@ -1,391 +1,391 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://moderncv.pages.dev/</loc>
+    <loc>https://genedai.cv/</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/directory</loc>
+    <loc>https://genedai.cv/directory</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/software-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/software-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/frontend-developer</loc>
+    <loc>https://genedai.cv/resume_tmpl/frontend-developer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/backend-developer</loc>
+    <loc>https://genedai.cv/resume_tmpl/backend-developer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/full-stack-developer</loc>
+    <loc>https://genedai.cv/resume_tmpl/full-stack-developer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/devops-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/devops-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/site-reliability-engineer-sre</loc>
+    <loc>https://genedai.cv/resume_tmpl/site-reliability-engineer-sre</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/data-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/data-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/mobile-developer-ios-android</loc>
+    <loc>https://genedai.cv/resume_tmpl/mobile-developer-ios-android</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/game-developer</loc>
+    <loc>https://genedai.cv/resume_tmpl/game-developer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/embedded-systems-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/embedded-systems-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/qa-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/qa-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/security-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/security-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/machine-learning-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/machine-learning-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/cloud-architect</loc>
+    <loc>https://genedai.cv/resume_tmpl/cloud-architect</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/engineering-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/engineering-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/cto</loc>
+    <loc>https://genedai.cv/resume_tmpl/cto</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/product-designer</loc>
+    <loc>https://genedai.cv/resume_tmpl/product-designer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/ux-researcher</loc>
+    <loc>https://genedai.cv/resume_tmpl/ux-researcher</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/ui-designer</loc>
+    <loc>https://genedai.cv/resume_tmpl/ui-designer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/graphic-designer</loc>
+    <loc>https://genedai.cv/resume_tmpl/graphic-designer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/motion-designer</loc>
+    <loc>https://genedai.cv/resume_tmpl/motion-designer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/product-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/product-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/product-owner</loc>
+    <loc>https://genedai.cv/resume_tmpl/product-owner</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/creative-director</loc>
+    <loc>https://genedai.cv/resume_tmpl/creative-director</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/art-director</loc>
+    <loc>https://genedai.cv/resume_tmpl/art-director</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/head-of-product</loc>
+    <loc>https://genedai.cv/resume_tmpl/head-of-product</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/chief-product-officer-cpo</loc>
+    <loc>https://genedai.cv/resume_tmpl/chief-product-officer-cpo</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/data-scientist</loc>
+    <loc>https://genedai.cv/resume_tmpl/data-scientist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/data-analyst</loc>
+    <loc>https://genedai.cv/resume_tmpl/data-analyst</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/business-analyst</loc>
+    <loc>https://genedai.cv/resume_tmpl/business-analyst</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/bi-developer</loc>
+    <loc>https://genedai.cv/resume_tmpl/bi-developer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/analytics-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/analytics-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/director-of-data</loc>
+    <loc>https://genedai.cv/resume_tmpl/director-of-data</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/marketing-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/marketing-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/content-strategist</loc>
+    <loc>https://genedai.cv/resume_tmpl/content-strategist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/seo-specialist</loc>
+    <loc>https://genedai.cv/resume_tmpl/seo-specialist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/social-media-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/social-media-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/growth-hacker</loc>
+    <loc>https://genedai.cv/resume_tmpl/growth-hacker</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/product-marketing-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/product-marketing-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/brand-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/brand-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/email-marketing-specialist</loc>
+    <loc>https://genedai.cv/resume_tmpl/email-marketing-specialist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/cmo</loc>
+    <loc>https://genedai.cv/resume_tmpl/cmo</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/sales-representative</loc>
+    <loc>https://genedai.cv/resume_tmpl/sales-representative</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/account-executive</loc>
+    <loc>https://genedai.cv/resume_tmpl/account-executive</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/customer-success-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/customer-success-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/sales-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/sales-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/business-development-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/business-development-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/solution-engineer</loc>
+    <loc>https://genedai.cv/resume_tmpl/solution-engineer</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/support-specialist</loc>
+    <loc>https://genedai.cv/resume_tmpl/support-specialist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/head-of-sales</loc>
+    <loc>https://genedai.cv/resume_tmpl/head-of-sales</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/hr-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/hr-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/recruiter</loc>
+    <loc>https://genedai.cv/resume_tmpl/recruiter</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/talent-acquisition-specialist</loc>
+    <loc>https://genedai.cv/resume_tmpl/talent-acquisition-specialist</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/people-operations-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/people-operations-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/office-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/office-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/operations-manager</loc>
+    <loc>https://genedai.cv/resume_tmpl/operations-manager</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/coo</loc>
+    <loc>https://genedai.cv/resume_tmpl/coo</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/financial-analyst</loc>
+    <loc>https://genedai.cv/resume_tmpl/financial-analyst</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/accountant</loc>
+    <loc>https://genedai.cv/resume_tmpl/accountant</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/controller</loc>
+    <loc>https://genedai.cv/resume_tmpl/controller</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/cfo</loc>
+    <loc>https://genedai.cv/resume_tmpl/cfo</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/legal-counsel</loc>
+    <loc>https://genedai.cv/resume_tmpl/legal-counsel</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://moderncv.pages.dev/resume_tmpl/paralegal</loc>
+    <loc>https://genedai.cv/resume_tmpl/paralegal</loc>
     <lastmod>2025-12-16</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
