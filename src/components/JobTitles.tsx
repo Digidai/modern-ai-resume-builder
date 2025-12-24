@@ -1,8 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
 import ThemeToggle from './ThemeToggle';
 import jobTitlesData from '../data/jobTitles.json';
+import { useSeo, SEO_ROBOTS_INDEX } from '../hooks/useSeo';
+import { slugifyJobTitle } from '../utils/slug';
 
 interface JobTitleCategory {
     name: string;
@@ -17,12 +20,84 @@ interface JobTitlesProps {
 }
 
 const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
+    const [searchParams, setSearchParams] = useSearchParams();
     const [search, setSearch] = useState("");
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
 
+    const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+    const orgId = `${siteUrl}/#organization`;
+    const websiteId = `${siteUrl}/#website`;
+
+    const allTitles = useMemo(
+        () => JOB_CATEGORIES.flatMap((category) => category.titles),
+        []
+    );
+
+    useSeo({
+        title: 'Browse Resume Templates by Job Title | ModernCV Directory',
+        description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
+        canonical: '/directory',
+        robots: SEO_ROBOTS_INDEX,
+        ldJson: {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'Organization',
+                    '@id': orgId,
+                    name: 'ModernCV',
+                    url: `${siteUrl}/`,
+                    logo: {
+                        '@type': 'ImageObject',
+                        url: `${siteUrl}/apple-touch-icon.png`,
+                    },
+                },
+                {
+                    '@type': 'WebSite',
+                    '@id': websiteId,
+                    name: 'ModernCV',
+                    url: `${siteUrl}/`,
+                    inLanguage: 'en',
+                    potentialAction: {
+                        '@type': 'SearchAction',
+                        target: `${siteUrl}/directory?q={search_term_string}`,
+                        'query-input': 'required name=search_term_string',
+                    },
+                },
+                {
+                    '@type': 'CollectionPage',
+                    '@id': `${siteUrl}/directory#collection`,
+                    name: 'Job Title Resume Template Directory',
+                    description: 'Browse ModernCV resume templates by job title and role.',
+                    url: `${siteUrl}/directory`,
+                    inLanguage: 'en',
+                    isPartOf: { '@id': websiteId },
+                    mainEntity: {
+                        '@type': 'ItemList',
+                        itemListElement: allTitles.map((title, index) => ({
+                            '@type': 'ListItem',
+                            position: index + 1,
+                            name: title,
+                            url: `${siteUrl}/resume_tmpl/${slugifyJobTitle(title)}`,
+                        })),
+                    },
+                },
+                {
+                    '@type': 'BreadcrumbList',
+                    '@id': `${siteUrl}/directory#breadcrumb`,
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+                    ],
+                },
+            ],
+        },
+    });
+
+    const searchQuery = searchParams.get('q') ?? '';
+
     useEffect(() => {
-        document.title = "Browse Resume Templates by Job Title | ModernCV Directory";
-    }, []);
+        setSearch(searchQuery);
+    }, [searchQuery]);
 
 
     const filteredCategories = useMemo(() => {
@@ -109,7 +184,15 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                             className="block w-full pl-11 pr-4 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm transition-all"
                             placeholder="Search for a job title (e.g., 'Product Manager')..."
                             value={search}
-                            onChange={(e) => setSearch(e.target.value)}
+                            onChange={(e) => {
+                                const next = e.target.value;
+                                setSearch(next);
+                                if (next.trim()) {
+                                    setSearchParams({ q: next }, { replace: true });
+                                } else {
+                                    setSearchParams({}, { replace: true });
+                                }
+                            }}
                         />
                     </div>
                 </div>

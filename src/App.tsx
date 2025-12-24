@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { useResumeData } from './hooks/useResumeData';
+import { useSeo, SEO_ROBOTS_INDEX, SEO_ROBOTS_NOINDEX } from './hooks/useSeo';
 import ResumePreview from './components/ResumePreview';
 import ResumeEditor from './components/ResumeEditor';
 import JobTitles from './components/JobTitles';
@@ -23,9 +24,63 @@ interface HomeViewProps {
 const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
   const navigate = useNavigate();
 
-  useEffect(() => {
-    document.title = "ModernCV - Free AI Resume Builder | Create Professional Resumes Online";
-  }, []);
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const orgId = `${siteUrl}/#organization`;
+  const websiteId = `${siteUrl}/#website`;
+
+  useSeo({
+    title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
+    description:
+      "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
+    canonical: '/',
+    robots: SEO_ROBOTS_INDEX,
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': orgId,
+          name: 'ModernCV',
+          url: `${siteUrl}/`,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/apple-touch-icon.png`,
+          },
+        },
+        {
+          '@type': 'WebSite',
+          '@id': websiteId,
+          name: 'ModernCV',
+          url: `${siteUrl}/`,
+          inLanguage: 'en',
+          potentialAction: {
+            '@type': 'SearchAction',
+            target: `${siteUrl}/directory?q={search_term_string}`,
+            'query-input': 'required name=search_term_string',
+          },
+        },
+        {
+          '@type': 'WebApplication',
+          name: 'ModernCV',
+          description: 'Free AI-powered resume builder to create professional resumes online',
+          url: `${siteUrl}/`,
+          applicationCategory: 'BusinessApplication',
+          operatingSystem: 'Any',
+          offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+          featureList: [
+            'AI-powered resume suggestions',
+            'Multiple professional templates',
+            'PDF export',
+            'Real-time preview',
+            'Dark mode support',
+          ],
+          screenshot: `${siteUrl}/og-image.png`,
+          publisher: { '@id': orgId },
+          isPartOf: { '@id': websiteId },
+        },
+      ],
+    },
+  });
 
   return (
     <div className="min-h-screen bg-slate-200 dark:bg-slate-950 font-sans print:bg-white flex flex-col transition-colors duration-300">
@@ -115,9 +170,48 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
   const navigate = useNavigate();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
-  useEffect(() => {
-    document.title = "Edit Your Resume - Free Online Resume Editor | ModernCV";
-  }, []);
+  const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+  const orgId = `${siteUrl}/#organization`;
+  const websiteId = `${siteUrl}/#website`;
+  const pageUrl = `${siteUrl}/editor`;
+
+  useSeo({
+    title: 'Edit Your Resume Online | ModernCV Editor',
+    description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
+    canonical: '/editor',
+    robots: SEO_ROBOTS_NOINDEX,
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        {
+          '@type': 'Organization',
+          '@id': orgId,
+          name: 'ModernCV',
+          url: `${siteUrl}/`,
+          logo: {
+            '@type': 'ImageObject',
+            url: `${siteUrl}/apple-touch-icon.png`,
+          },
+        },
+        {
+          '@type': 'WebSite',
+          '@id': websiteId,
+          name: 'ModernCV',
+          url: `${siteUrl}/`,
+          inLanguage: 'en',
+        },
+        {
+          '@type': 'WebPage',
+          '@id': `${pageUrl}#webpage`,
+          name: 'ModernCV Resume Editor',
+          description: 'Interactive resume editor for building and exporting resumes.',
+          url: pageUrl,
+          inLanguage: 'en',
+          isPartOf: { '@id': websiteId },
+        },
+      ],
+    },
+  });
 
 
   return (

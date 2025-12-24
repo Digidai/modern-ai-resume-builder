@@ -6,6 +6,7 @@ import { ScaledResumePreview } from './ScaledResumePreview';
 import { Button } from './Button';
 import { ArrowLeftIcon, CheckIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
+import { useSeo, SEO_ROBOTS_INDEX } from '../hooks/useSeo';
 import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
@@ -72,6 +73,14 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         return { resolvedJobTitle: humanized || 'Professional', canonicalSlug: null as string | null };
     }, [jobTitle]);
 
+    const siteUrl = typeof window !== 'undefined' ? window.location.origin : '';
+    const orgId = `${siteUrl}/#organization`;
+    const websiteId = `${siteUrl}/#website`;
+    const canonicalPath = canonicalSlug
+        ? `/resume_tmpl/${canonicalSlug}`
+        : `/resume_tmpl/${slugifyJobTitle(resolvedJobTitle)}`;
+    const pageUrl = `${siteUrl}${canonicalPath}`;
+
     // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
     useEffect(() => {
         if (!canonicalSlug || !jobTitle) return;
@@ -80,10 +89,61 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         }
     }, [canonicalSlug, jobTitle, navigate]);
 
-    // SEO: Update Page Title
-    useEffect(() => {
-        document.title = `Resume Templates for ${resolvedJobTitle} - ModernCV`;
-    }, [resolvedJobTitle]);
+    useSeo({
+        title: `Resume Templates for ${resolvedJobTitle} | ModernCV`,
+        description: `Browse ModernCV resume templates for ${resolvedJobTitle}. Choose a layout, tailor content with AI suggestions, and download as PDF.`,
+        canonical: canonicalPath,
+        robots: SEO_ROBOTS_INDEX,
+        ldJson: {
+            '@context': 'https://schema.org',
+            '@graph': [
+                {
+                    '@type': 'Organization',
+                    '@id': orgId,
+                    name: 'ModernCV',
+                    url: `${siteUrl}/`,
+                    logo: {
+                        '@type': 'ImageObject',
+                        url: `${siteUrl}/apple-touch-icon.png`,
+                    },
+                },
+                {
+                    '@type': 'WebSite',
+                    '@id': websiteId,
+                    name: 'ModernCV',
+                    url: `${siteUrl}/`,
+                    inLanguage: 'en',
+                },
+                {
+                    '@type': 'WebPage',
+                    '@id': `${pageUrl}#webpage`,
+                    name: `Resume Templates for ${resolvedJobTitle}`,
+                    description: `Browse ModernCV resume templates for ${resolvedJobTitle}.`,
+                    url: pageUrl,
+                    inLanguage: 'en',
+                    isPartOf: { '@id': websiteId },
+                    breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+                    mainEntity: {
+                        '@type': 'ItemList',
+                        itemListElement: TEMPLATES.map((template, index) => ({
+                            '@type': 'ListItem',
+                            position: index + 1,
+                            name: template.name,
+                        })),
+                    },
+                },
+                {
+                    '@type': 'BreadcrumbList',
+                    '@id': `${pageUrl}#breadcrumb`,
+                    itemListElement: [
+                        { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+                        { '@type': 'ListItem', position: 3, name: resolvedJobTitle, item: pageUrl },
+                    ],
+                },
+            ],
+        },
+    });
 
     // Create preview data based on the selected job title using the new helper
     const previewData: ResumeData = useMemo(() => {

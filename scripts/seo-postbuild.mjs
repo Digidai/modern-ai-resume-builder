@@ -2,7 +2,14 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { slugifyJobTitle } from './slugify.mjs';
 
-const DEFAULT_SITE_URL = 'https://genedai.cv';
+const DEFAULT_SITE_URL = 'https://moderncv.pages.dev';
+const SITE_NAME = 'ModernCV';
+const DEFAULT_LOCALE = 'en_US';
+const DEFAULT_OG_IMAGE = '/og-image.png';
+const DEFAULT_IMAGE_ALT = 'ModernCV - AI Resume Builder';
+const DEFAULT_TWITTER_CARD = 'summary_large_image';
+const ROBOTS_INDEX = 'index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1';
+const ROBOTS_NOINDEX = 'noindex, nofollow, noarchive';
 
 const projectRoot = process.cwd();
 const distDir = path.join(projectRoot, 'dist');
@@ -50,11 +57,40 @@ const setMetaByProperty = (html, property, content) =>
     `<meta property="${property}" content="${escapeAttr(content)}" />`
   );
 
+const replaceOrInsertLink = (html, matcher, replacement) => {
+  if (matcher.test(html)) return html.replace(matcher, replacement);
+  return html.replace(/<\/head>/i, `  ${replacement}\n</head>`);
+};
+
 const setCanonical = (html, href) =>
-  html.replace(
-    /<link\s+rel="canonical"\s+href="[^"]*"\s*\/?>/i,
+  replaceOrInsertLink(
+    html,
+    /<link\s+rel="canonical"[^>]*>/i,
     `<link rel="canonical" href="${escapeAttr(href)}" />`
   );
+
+const setSitemapLink = (html, href) =>
+  replaceOrInsertLink(
+    html,
+    /<link\s+rel="sitemap"[^>]*>/i,
+    `<link rel="sitemap" type="application/xml" href="${escapeAttr(href)}" />`
+  );
+
+const setAlternateLinks = (html, links) => {
+  const cleaned = html.replace(/<link\s+rel="alternate"[^>]*>\s*/gi, '');
+  if (!links || links.length === 0) return cleaned;
+
+  const markup = links
+    .map(
+      (link) =>
+        `  <link rel="alternate" hreflang="${escapeAttr(link.hreflang)}" href="${escapeAttr(
+          link.href
+        )}" />`
+    )
+    .join('\n');
+
+  return cleaned.replace(/<\/head>/i, `${markup}\n</head>`);
+};
 
 const setLdJson = (html, json) => {
   const start = '<script type="application/ld+json">';
@@ -91,59 +127,169 @@ const buildUrl = (siteUrl, routePath) => {
   return `${siteUrl}${routePath}`;
 };
 
-const buildHomeSchema = (siteUrl) => ({
-  '@context': 'https://schema.org',
-  '@type': 'WebApplication',
-  name: 'ModernCV',
-  description: 'Free AI-powered resume builder to create professional resumes online',
+const buildOrganizationSchema = (siteUrl) => ({
+  '@type': 'Organization',
+  '@id': `${siteUrl}/#organization`,
+  name: SITE_NAME,
   url: `${siteUrl}/`,
-  applicationCategory: 'BusinessApplication',
-  operatingSystem: 'Any',
-  offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-  featureList: [
-    'AI-powered resume suggestions',
-    'Multiple professional templates',
-    'PDF export',
-    'Real-time preview',
-    'Dark mode support',
-  ],
-  screenshot: `${siteUrl}/og-image.png`,
-});
-
-const buildDirectorySchema = (siteUrl, items) => ({
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
-  name: 'Job Title Resume Template Directory',
-  description: 'Browse ModernCV resume templates by job title and role.',
-  url: `${siteUrl}/directory`,
-  isPartOf: { '@type': 'WebSite', name: 'ModernCV', url: `${siteUrl}/` },
-  mainEntity: {
-    '@type': 'ItemList',
-    itemListElement: items.map((item, index) => ({
-      '@type': 'ListItem',
-      position: index + 1,
-      name: item.title,
-      url: buildUrl(siteUrl, item.path),
-    })),
+  logo: {
+    '@type': 'ImageObject',
+    url: `${siteUrl}/apple-touch-icon.png`,
   },
 });
 
-const buildJobPageSchema = (siteUrl, title, pageUrl) => ({
-  '@context': 'https://schema.org',
-  '@type': 'WebPage',
-  name: `Resume Templates for ${title}`,
-  description: `Browse ModernCV resume templates for ${title}.`,
-  url: pageUrl,
-  isPartOf: { '@type': 'WebSite', name: 'ModernCV', url: `${siteUrl}/` },
-  breadcrumb: {
-    '@type': 'BreadcrumbList',
-    itemListElement: [
-      { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-      { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
-      { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+const buildWebSiteSchema = (siteUrl) => ({
+  '@type': 'WebSite',
+  '@id': `${siteUrl}/#website`,
+  name: SITE_NAME,
+  url: `${siteUrl}/`,
+  inLanguage: 'en',
+  potentialAction: {
+    '@type': 'SearchAction',
+    target: `${siteUrl}/directory?q={search_term_string}`,
+    'query-input': 'required name=search_term_string',
+  },
+});
+
+const buildHomeSchema = (siteUrl) => {
+  const organization = buildOrganizationSchema(siteUrl);
+  const website = buildWebSiteSchema(siteUrl);
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      organization,
+      website,
+      {
+        '@type': 'WebApplication',
+        '@id': `${siteUrl}/#webapp`,
+        name: SITE_NAME,
+        description: 'Free AI-powered resume builder to create professional resumes online',
+        url: `${siteUrl}/`,
+        applicationCategory: 'BusinessApplication',
+        operatingSystem: 'Any',
+        offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
+        featureList: [
+          'AI-powered resume suggestions',
+          'Multiple professional templates',
+          'PDF export',
+          'Real-time preview',
+          'Dark mode support',
+        ],
+        screenshot: `${siteUrl}${DEFAULT_OG_IMAGE}`,
+        publisher: { '@id': organization['@id'] },
+        isPartOf: { '@id': website['@id'] },
+      },
     ],
-  },
-});
+  };
+};
+
+const buildDirectorySchema = (siteUrl, items) => {
+  const organization = buildOrganizationSchema(siteUrl);
+  const website = buildWebSiteSchema(siteUrl);
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      organization,
+      website,
+      {
+        '@type': 'CollectionPage',
+        '@id': `${siteUrl}/directory#collection`,
+        name: 'Job Title Resume Template Directory',
+        description: 'Browse ModernCV resume templates by job title and role.',
+        url: `${siteUrl}/directory`,
+        inLanguage: 'en',
+        isPartOf: { '@id': website['@id'] },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: items.map((item, index) => ({
+            '@type': 'ListItem',
+            position: index + 1,
+            name: item.title,
+            url: buildUrl(siteUrl, item.path),
+          })),
+        },
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${siteUrl}/directory#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+        ],
+      },
+    ],
+  };
+};
+
+const buildJobPageSchema = (siteUrl, title, pageUrl, templates) => {
+  const organization = buildOrganizationSchema(siteUrl);
+  const website = buildWebSiteSchema(siteUrl);
+  const hasTemplates = Array.isArray(templates) && templates.length > 0;
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      organization,
+      website,
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        name: `Resume Templates for ${title}`,
+        description: `Browse ModernCV resume templates for ${title}.`,
+        url: pageUrl,
+        inLanguage: 'en',
+        isPartOf: { '@id': website['@id'] },
+        breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+        ...(hasTemplates
+          ? {
+              mainEntity: {
+                '@type': 'ItemList',
+                itemListElement: templates.map((template, index) => ({
+                  '@type': 'ListItem',
+                  position: index + 1,
+                  name: template,
+                })),
+              },
+            }
+          : {}),
+      },
+      {
+        '@type': 'BreadcrumbList',
+        '@id': `${pageUrl}#breadcrumb`,
+        itemListElement: [
+          { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+          { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
+        ],
+      },
+    ],
+  };
+};
+
+const buildEditorSchema = (siteUrl) => {
+  const organization = buildOrganizationSchema(siteUrl);
+  const website = buildWebSiteSchema(siteUrl);
+  const pageUrl = `${siteUrl}/editor`;
+
+  return {
+    '@context': 'https://schema.org',
+    '@graph': [
+      organization,
+      website,
+      {
+        '@type': 'WebPage',
+        '@id': `${pageUrl}#webpage`,
+        name: 'ModernCV Resume Editor',
+        description: 'Interactive resume editor for building and exporting resumes.',
+        url: pageUrl,
+        inLanguage: 'en',
+        isPartOf: { '@id': website['@id'] },
+      },
+    ],
+  };
+};
 
 const buildSitemapXml = ({ siteUrl, lastmod, jobItems }) => {
   const urls = [
@@ -247,6 +393,7 @@ const renderEditorRoot = (toPath) => `
 const main = async () => {
   const siteUrl = getSiteUrl();
   const lastmod = toIsoDate(new Date());
+  const lastmodIso = new Date().toISOString();
 
   const templateHtmlPath = path.join(distDir, 'index.html');
   const templateHtml = await fs.readFile(templateHtmlPath, 'utf8');
@@ -318,6 +465,24 @@ const main = async () => {
     'Professional',
     'Academic',
     'Elegant',
+    'Swiss',
+    'Opal',
+    'Wireframe',
+    'Berlin',
+    'Lateral',
+    'Iron',
+    'Ginto',
+    'Symmetry',
+    'Bronx',
+    'Path',
+    'Quartz',
+    'Silk',
+    'Mono',
+    'Pop',
+    'Noir',
+    'Paper',
+    'Cast',
+    'Moda',
   ];
 
   const jobItems = allTitles.map((title) => ({
@@ -347,16 +512,28 @@ const main = async () => {
     html = setMetaByName(html, 'description', description);
     html = setMetaByName(html, 'robots', robots);
     html = setCanonical(html, pageUrl);
+    html = setSitemapLink(html, `${siteUrl}/sitemap.xml`);
+    html = setAlternateLinks(html, [
+      { hreflang: 'en', href: pageUrl },
+      { hreflang: 'x-default', href: pageUrl },
+    ]);
 
     html = setMetaByProperty(html, 'og:url', pageUrl);
     html = setMetaByProperty(html, 'og:title', title);
     html = setMetaByProperty(html, 'og:description', description);
-    html = setMetaByProperty(html, 'og:image', `${siteUrl}/og-image.png`);
+    html = setMetaByProperty(html, 'og:type', 'website');
+    html = setMetaByProperty(html, 'og:site_name', SITE_NAME);
+    html = setMetaByProperty(html, 'og:locale', DEFAULT_LOCALE);
+    html = setMetaByProperty(html, 'og:updated_time', lastmodIso);
+    html = setMetaByProperty(html, 'og:image', `${siteUrl}${DEFAULT_OG_IMAGE}`);
+    html = setMetaByProperty(html, 'og:image:alt', DEFAULT_IMAGE_ALT);
 
+    html = setMetaByName(html, 'twitter:card', DEFAULT_TWITTER_CARD);
     html = setMetaByName(html, 'twitter:url', pageUrl);
     html = setMetaByName(html, 'twitter:title', title);
     html = setMetaByName(html, 'twitter:description', description);
-    html = setMetaByName(html, 'twitter:image', `${siteUrl}/og-image.png`);
+    html = setMetaByName(html, 'twitter:image', `${siteUrl}${DEFAULT_OG_IMAGE}`);
+    html = setMetaByName(html, 'twitter:image:alt', DEFAULT_IMAGE_ALT);
 
     html = setLdJson(html, ldJson);
     html = setRootContent(html, rootHtml);
@@ -374,7 +551,7 @@ const main = async () => {
     title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
     description:
       "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
-    robots: 'index, follow',
+    robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl),
     rootHtml: '',
   });
@@ -383,7 +560,7 @@ const main = async () => {
     routePath: '/directory',
     title: 'Browse Resume Templates by Job Title | ModernCV Directory',
     description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
-    robots: 'index, follow',
+    robots: ROBOTS_INDEX,
     ldJson: buildDirectorySchema(siteUrl, jobItems),
     rootHtml: renderDirectoryRoot(categories, toPath),
   });
@@ -392,15 +569,8 @@ const main = async () => {
     routePath: '/editor',
     title: 'Edit Your Resume Online | ModernCV Editor',
     description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
-    robots: 'noindex, nofollow',
-    ldJson: {
-      '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      name: 'ModernCV Resume Editor',
-      description: 'Interactive resume editor for building and exporting resumes.',
-      url: `${siteUrl}/editor`,
-      isPartOf: { '@type': 'WebSite', name: 'ModernCV', url: `${siteUrl}/` },
-    },
+    robots: ROBOTS_NOINDEX,
+    ldJson: buildEditorSchema(siteUrl),
     rootHtml: renderEditorRoot(toPath),
   });
 
@@ -413,8 +583,8 @@ const main = async () => {
       routePath: item.path,
       title: pageTitle,
       description,
-      robots: 'index, follow',
-      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl),
+      robots: ROBOTS_INDEX,
+      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates),
       rootHtml: renderJobRoot(item.title, templates, toPath),
     });
   }
