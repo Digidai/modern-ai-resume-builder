@@ -66,8 +66,7 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   // Try Vector Export for supported templates
   if (supportsVectorTemplate(data.templateId)) {
     try {
-      const pdfBytes = await exportResumeVectorPdf(data);
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+      const blob = await exportResumeVectorPdf(data);
       downloadBlob(blob, `${safeName}.pdf`);
       return;
     } catch (error) {
