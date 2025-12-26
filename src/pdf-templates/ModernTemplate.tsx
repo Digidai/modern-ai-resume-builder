@@ -4,9 +4,9 @@ import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE, MailIconPdf, PhoneIconPdf
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: SPACING['16'],
-    paddingBottom: SPACING['16'],
-    paddingHorizontal: SPACING['16'], 
+    paddingTop: 40,
+    paddingBottom: 40,
+    paddingHorizontal: 40, 
     fontFamily: 'Roboto',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
@@ -15,94 +15,94 @@ const styles = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
-    paddingBottom: SPACING['8'], 
-    marginBottom: SPACING['6'],  
+    paddingBottom: SPACING['6'], 
+    marginBottom: SPACING['5'],  
   },
   name: {
-    fontSize: FONT_SIZE['4xl'],
+    fontSize: 32, // Increased from 27
     fontFamily: 'Roboto',
     fontWeight: 900,
     textTransform: 'uppercase',
     color: COLORS.slate900,
-    letterSpacing: -0.5, 
+    letterSpacing: -1, 
     lineHeight: 1,
   },
   title: {
     fontSize: FONT_SIZE['xl'],
-    color: COLORS.slate600,
-    marginTop: SPACING['2'], 
+    color: COLORS.slate500, // Lighter than slate600 to match web font-light feel
+    marginTop: SPACING['1.5'], 
     fontFamily: 'Roboto',
-    fontWeight: 'light', 
+    fontWeight: 'normal', 
     letterSpacing: 0.5, 
   },
   contactRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     gap: SPACING['4'], 
-    marginTop: SPACING['6'],
+    marginTop: SPACING['5'],
   },
   contactItem: {
     fontSize: FONT_SIZE['sm'], 
     color: COLORS.slate600,
     flexDirection: 'row',
     alignItems: 'center',
-    gap: 4, // Space between icon and text
+    gap: 4,
   },
   
   // Sections
   sectionContainer: {
-    marginBottom: SPACING['6'],
+    marginBottom: SPACING['5'], // Tightened
   },
   sectionTitle: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: FONT_SIZE['xs'], // Smaller like web
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     textTransform: 'uppercase',
     color: COLORS.slate400,
-    letterSpacing: 2,
-    marginBottom: SPACING['3'],
+    letterSpacing: 3, // Drastically increased
+    marginBottom: SPACING['2'],
   },
   
   // Content
   summaryText: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: 10, // Slightly smaller
     color: COLORS.slate700,
-    lineHeight: 1.625, 
+    lineHeight: 1.5, 
     textAlign: 'justify',
   },
   
   // Experience
   expList: {
     flexDirection: 'column',
-    gap: SPACING['6'],
+    gap: SPACING['4'],
   },
   expHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    marginBottom: SPACING['1'],
+    marginBottom: 1,
   },
   role: {
-    fontSize: FONT_SIZE['base'],
+    fontSize: 11,
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: COLORS.slate900,
   },
   date: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: 9,
     color: COLORS.slate500,
   },
   company: {
-    fontSize: FONT_SIZE['base'],
+    fontSize: 10,
     color: COLORS.slate600,
     fontFamily: 'Roboto',
-    fontWeight: 'medium', // Medium maps to Bold usually if only bold registered, but we have bold. Let's try to map nicely.
-    marginBottom: SPACING['2'],
+    fontWeight: 'bold',
+    marginBottom: 2,
   },
   description: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: 9.5,
     color: COLORS.slate700,
-    lineHeight: 1.625,
+    lineHeight: 1.5,
   },
   
   // Skills
@@ -112,24 +112,24 @@ const styles = StyleSheet.create({
     gap: SPACING['2'],
   },
   skillChip: {
-    paddingHorizontal: SPACING['3'],
-    paddingVertical: 2,
+    paddingHorizontal: 6,
+    paddingVertical: 1, // Extremely tight
     backgroundColor: COLORS.slate100,
     borderWidth: 1,
     borderColor: COLORS.slate200,
-    borderRadius: 4.5,
+    borderRadius: 4,
   },
   skillText: {
-    fontSize: FONT_SIZE['xs'],
+    fontSize: 8, // Smaller
     fontFamily: 'Roboto',
-    fontWeight: 'bold', // font-semibold
+    fontWeight: 'bold',
     color: COLORS.slate700,
   },
   
   // Education
   eduList: {
     flexDirection: 'column',
-    gap: SPACING['4'],
+    gap: SPACING['3'],
   },
   eduItem: {
     flexDirection: 'row',
@@ -137,18 +137,17 @@ const styles = StyleSheet.create({
     alignItems: 'flex-start',
   },
   school: {
-    fontSize: FONT_SIZE['base'],
+    fontSize: 11,
     fontFamily: 'Roboto',
     fontWeight: 'bold',
     color: COLORS.slate900,
   },
   degree: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: 9.5,
     color: COLORS.slate600,
-    marginTop: 0,
   },
   eduDate: {
-    fontSize: FONT_SIZE['sm'],
+    fontSize: 9,
     color: COLORS.slate500,
   },
 });

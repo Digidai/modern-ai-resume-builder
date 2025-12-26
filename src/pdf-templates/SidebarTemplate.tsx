@@ -6,22 +6,28 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     backgroundColor: COLORS.white,
-    fontFamily: 'Roboto', // Used generic sans in web
+    fontFamily: 'Roboto',
+  },
+  sidebarBackground: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    bottom: 0,
+    width: '33.33%',
+    backgroundColor: COLORS.slate900,
   },
   sidebar: {
     width: '33.33%',
-    backgroundColor: COLORS.slate900,
+    // backgroundColor handled by sidebarBackground
     padding: SPACING['8'],
     color: COLORS.slate200,
-    minHeight: '100%',
     flexGrow: 1,
   },
   main: {
     width: '66.67%',
     padding: SPACING['8'],
-    backgroundColor: COLORS.white,
+    // backgroundColor default white
     color: COLORS.slate900,
-    minHeight: '100%',
     flexGrow: 1,
   },
   
@@ -231,6 +237,7 @@ const styles = StyleSheet.create({
 export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
   return (
     <Page size="A4" style={styles.page}>
+      <View style={styles.sidebarBackground} fixed />
       {/* Sidebar */}
       <View style={styles.sidebar}>
         <View style={styles.sidebarHeaderBlock}>
