@@ -119,7 +119,7 @@ const styles = StyleSheet.create({
   
   // Main Content
   mainSection: {
-    marginBottom: SPACING['8'],
+    marginBottom: SPACING['2'],
   },
   mainHeader: {
     flexDirection: 'row',
