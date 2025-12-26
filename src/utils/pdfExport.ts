@@ -4,6 +4,30 @@ import { toPng } from 'html-to-image';
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
+const MM_TO_PT = 2.83464567;
+const DEFAULT_MARGIN_MM = 15;
+const FULL_BLEED_TEMPLATES = new Set([
+  'sidebar',
+  'creative',
+  'professional',
+  'opal',
+  'wireframe',
+  'berlin',
+  'lateral',
+  'iron',
+  'ginto',
+  'symmetry',
+  'bronx',
+  'path',
+  'quartz',
+  'silk',
+  'mono',
+  'pop',
+  'noir',
+  'paper',
+  'cast',
+  'moda',
+]);
 
 const loadImage = (src: string) =>
   new Promise<HTMLImageElement>((resolve, reject) => {
@@ -35,24 +59,51 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
     await document.fonts.ready;
   }
 
-  const width = element.scrollWidth;
-  const height = element.scrollHeight;
+  const templateId = element.dataset.templateId ?? '';
+  const isFullBleed = FULL_BLEED_TEMPLATES.has(templateId);
+  const marginPt = (isFullBleed ? 0 : DEFAULT_MARGIN_MM) * MM_TO_PT;
+  const contentWidth = A4_WIDTH_PT - marginPt * 2;
+  const contentHeight = A4_HEIGHT_PT - marginPt * 2;
 
-  const dataUrl = await toPng(element, {
-    cacheBust: true,
-    pixelRatio: EXPORT_PIXEL_RATIO,
-    backgroundColor: '#ffffff',
-    width,
-    height,
-    style: {
-      boxShadow: 'none',
-      margin: '0',
-    },
-    filter: (node) => {
-      if (!(node instanceof HTMLElement)) return true;
-      return node.dataset.exportIgnore !== 'true';
-    },
-  });
+  const clone = element.cloneNode(true) as HTMLElement;
+  const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
+  const safeWidth = Math.max(1, Math.round(baseWidth));
+  clone.style.boxShadow = 'none';
+  clone.style.margin = '0';
+  clone.style.padding = '0';
+  clone.style.overflow = 'visible';
+  clone.style.height = 'auto';
+  clone.style.width = `${safeWidth}px`;
+
+  const wrapper = document.createElement('div');
+  wrapper.style.position = 'fixed';
+  wrapper.style.left = '-100000px';
+  wrapper.style.top = '0';
+  wrapper.style.visibility = 'hidden';
+  wrapper.style.pointerEvents = 'none';
+  wrapper.style.width = `${safeWidth}px`;
+  wrapper.appendChild(clone);
+  document.body.appendChild(wrapper);
+
+  const width = clone.scrollWidth || safeWidth;
+  const height = clone.scrollHeight;
+
+  let dataUrl = '';
+  try {
+    dataUrl = await toPng(clone, {
+      cacheBust: true,
+      pixelRatio: EXPORT_PIXEL_RATIO,
+      backgroundColor: '#ffffff',
+      width,
+      height,
+      filter: (node) => {
+        if (!(node instanceof HTMLElement)) return true;
+        return node.dataset.exportIgnore !== 'true';
+      },
+    });
+  } finally {
+    wrapper.remove();
+  }
 
   const image = await loadImage(dataUrl);
   const pdfDoc = await PDFDocument.create();
@@ -60,17 +111,17 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
 
   const pageWidth = A4_WIDTH_PT;
   const pageHeight = A4_HEIGHT_PT;
-  const scale = pageWidth / image.width;
+  const scale = contentWidth / image.width;
   const scaledHeight = image.height * scale;
-  const pageCount = Math.max(1, Math.ceil(scaledHeight / pageHeight));
+  const pageCount = Math.max(1, Math.ceil(scaledHeight / contentHeight));
 
   for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
     const page = pdfDoc.addPage([pageWidth, pageHeight]);
-    const y = pageHeight - scaledHeight + pageHeight * pageIndex;
+    const y = marginPt + contentHeight - scaledHeight + contentHeight * pageIndex;
     page.drawImage(pngImage, {
-      x: 0,
+      x: marginPt,
       y,
-      width: pageWidth,
+      width: contentWidth,
       height: scaledHeight,
     });
   }

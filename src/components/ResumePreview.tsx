@@ -44,7 +44,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   };
 
   return (
-    <div className={containerClass} id="resume-preview-container">
+    <div className={containerClass} id="resume-preview-container" data-template-id={data.templateId}>
       <style>{printStyles}</style>
 
       {/* Visual Page Break Marker (screen only) */}
