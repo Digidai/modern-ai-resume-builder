@@ -1,7 +1,8 @@
 <div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
 
-# Modern AI Resume Builder
+# ModernCV - AI Resume Builder
+
+<img width="100" height="100" src="https://img.icons8.com/fluency/100/resume.png" alt="ModernCV Logo"/>
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?logo=react&logoColor=white)](https://react.dev/)
@@ -296,7 +297,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 <div align="center">
 
-**[Back to Top](#modern-ai-resume-builder)**
+**[Back to Top](#moderncv---ai-resume-builder)**
 
 Made with love for job seekers everywhere
 
