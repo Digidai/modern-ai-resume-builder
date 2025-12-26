@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
     color: COLORS.slate500,
     marginBottom: SPACING['1'],
     fontFamily: 'Roboto',
-    fontWeight: 'bold',
   },
   contactValue: {
     fontSize: FONT_SIZE['sm'],
@@ -130,7 +129,7 @@ const styles = StyleSheet.create({
   },
   headerBar: {
     width: SPACING['8'],
-    height: 4,
+    height: 3,
     backgroundColor: COLORS.slate900,
   },
   headerTitle: {
@@ -163,7 +162,7 @@ const styles = StyleSheet.create({
   },
   expDot: {
     position: 'absolute',
-    left: -31,
+    left: -23.25,
     top: 4.5,
     width: 9,
     height: 9,

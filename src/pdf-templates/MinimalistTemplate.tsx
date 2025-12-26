@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
   header: {
     flexDirection: 'column',
     alignItems: 'center',
-    borderBottomWidth: 2,
+    borderBottomWidth: 1.5,
     borderBottomColor: COLORS.black,
     paddingBottom: SPACING['6'],
     marginBottom: SPACING['2'],
