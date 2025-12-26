@@ -1,5 +1,5 @@
 import React from 'react';
-import { Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { Page, Text, View, StyleSheet, Svg, Rect } from '@react-pdf/renderer';
 import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
 
 const styles = StyleSheet.create({
@@ -12,10 +12,8 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    bottom: 0,
     width: '33.33%',
-    height: '100%',
-    backgroundColor: COLORS.slate900,
+    // Background color removed, handled by Svg
     padding: SPACING['8'],
     color: COLORS.slate200,
   },
@@ -232,6 +230,17 @@ const styles = StyleSheet.create({
 export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
   return (
     <Page size="A4" style={styles.page}>
+      {/* Fixed Background SVG - Purely decorative, zero layout impact */}
+      <Svg fixed style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
+        <Rect
+          x="0"
+          y="0"
+          width="33.33%"
+          height="100%"
+          fill={COLORS.slate900}
+        />
+      </Svg>
+
       {/* Sidebar - Absolute positioned and fixed to repeat on each page */}
       <View style={styles.sidebar} fixed>
         <View style={styles.sidebarHeaderBlock}>
