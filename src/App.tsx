@@ -364,8 +364,7 @@ function App() {
 
     setIsExportingPdf(true);
     try {
-      const fileBase = resumeData.fullName.trim() || 'resume';
-      await exportResumeToPdf(preview, fileBase);
+      await exportResumeToPdf(preview, resumeData);
     } catch (error) {
       console.error(error);
       alert('Failed to export PDF. Please try again.');
