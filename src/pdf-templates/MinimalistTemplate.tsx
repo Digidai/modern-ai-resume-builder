@@ -17,55 +17,54 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     borderBottomWidth: 2,
     borderBottomColor: COLORS.black,
-    paddingBottom: SPACING['6'], // pb-6
-    marginBottom: SPACING['2'],  // mb-2 (web says mb-2)
+    paddingBottom: SPACING['6'],
+    marginBottom: SPACING['2'],
   },
   name: {
-    fontSize: FONT_SIZE['5xl'], // md:text-5xl (36px -> 36pt? No, 36px=27pt. Wait. 5xl=48px=36pt. 3xl=30px=22.5pt. Let's use 32pt)
-    // Actually using FONT_SIZE['5xl'] (36pt) as defined in shared
+    fontSize: FONT_SIZE['5xl'],
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
-    marginBottom: SPACING['2'], // mb-2
-    letterSpacing: -0.5, // tracking-tight
+    marginBottom: SPACING['2'],
+    letterSpacing: -0.5,
     lineHeight: 1,
   },
   title: {
-    fontSize: FONT_SIZE['xl'], // md:text-xl
+    fontSize: FONT_SIZE['xl'],
     fontFamily: 'Times-Italic',
     color: COLORS.slate600,
-    marginBottom: SPACING['4'], // mb-4
+    marginBottom: SPACING['4'],
   },
   contactRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
   },
   contactItem: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
     fontFamily: 'Times-Roman',
   },
   
   // Layout
   mainGrid: {
-    marginTop: SPACING['4'], // mt-4
-    gap: SPACING['8'], // gap-8
+    marginTop: SPACING['4'],
+    gap: SPACING['8'],
   },
   
   // Summary
   summarySection: {
-    marginTop: 0, // In Web it's not in the grid, it's distinct
+    marginTop: 0,
     alignItems: 'center',
     marginBottom: SPACING['4'],
   },
   summaryText: {
-    fontSize: FONT_SIZE['base'], // md:text-base
+    fontSize: FONT_SIZE['base'],
     fontFamily: 'Times-Roman',
     color: COLORS.slate700,
     lineHeight: 1.625,
     textAlign: 'center',
-    maxWidth: '90%', // Limit width for readability like web's max-w-2xl
+    maxWidth: '90%',
     alignSelf: 'center',
   },
   
@@ -75,71 +74,71 @@ const styles = StyleSheet.create({
     borderTopColor: COLORS.slate100,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate100,
-    paddingVertical: SPACING['4'], // py-4
+    paddingVertical: SPACING['4'],
     alignItems: 'center',
     marginBottom: 0,
   },
   skillsTitle: {
-    fontSize: FONT_SIZE['xs'], // text-xs
-    fontFamily: 'Helvetica-Bold', // Web says font-bold uppercase. Default Tailwind sans.
+    fontSize: FONT_SIZE['xs'],
+    fontFamily: 'Helvetica-Bold', // Web says font-bold uppercase.
     textTransform: 'uppercase',
-    letterSpacing: 1.5, // tracking-widest
+    letterSpacing: 1.5,
     color: COLORS.slate400,
-    marginBottom: SPACING['3'], // mb-3
+    marginBottom: SPACING['3'],
   },
   skillsList: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: SPACING['3'], // gap-3
+    gap: SPACING['3'],
   },
   skillText: {
-    fontSize: FONT_SIZE['sm'], // text-sm
-    fontFamily: 'Helvetica-Bold', // font-medium -> Bold
+    fontSize: FONT_SIZE['sm'],
+    fontFamily: 'Helvetica-Bold',
     color: COLORS.slate800,
   },
   
   // Section Headers
   sectionHeader: {
-    fontSize: FONT_SIZE['xl'], // text-xl
+    fontSize: FONT_SIZE['xl'],
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
-    paddingBottom: SPACING['2'], // pb-2
-    marginBottom: SPACING['6'], // mb-6
+    paddingBottom: SPACING['2'],
+    marginBottom: SPACING['6'],
   },
   
   // Experience
   expList: {
-    gap: SPACING['8'], // gap-8
+    gap: SPACING['8'],
   },
   expGrid: {
     flexDirection: 'row',
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
   },
   expDateCol: {
-    width: '20%', // 1fr approx
+    width: '20%',
   },
   expContentCol: {
-    width: '80%', // 3fr approx
+    width: '80%',
   },
   dateText: {
     fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
-    fontFamily: 'Helvetica-Bold', // font-medium
-    marginTop: 2, // pt-1
+    fontFamily: 'Helvetica-Bold', // Sans for dates
+    marginTop: 2,
   },
   role: {
-    fontSize: FONT_SIZE['lg'], // text-lg
+    fontSize: FONT_SIZE['lg'],
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
   },
   company: {
-    fontSize: FONT_SIZE['base'], // text-base/medium implied
+    fontSize: FONT_SIZE['base'],
     fontFamily: 'Times-Italic',
     color: COLORS.slate700,
-    marginBottom: SPACING['2'], // mb-2
+    marginBottom: SPACING['2'],
   },
   description: {
     fontSize: FONT_SIZE['sm'],
@@ -152,10 +151,10 @@ const styles = StyleSheet.create({
   projectGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: SPACING['6'], // gap-6
+    gap: SPACING['6'],
   },
   projectItem: {
-    width: '45%', // grid-cols-2 approx with gap
+    width: '45%',
     marginBottom: 0,
   },
   projHeader: {
@@ -173,7 +172,7 @@ const styles = StyleSheet.create({
     color: COLORS.slate400,
   },
   projDesc: {
-    marginTop: SPACING['1'], // mt-1
+    marginTop: SPACING['1'],
     fontSize: FONT_SIZE['sm'],
     color: COLORS.slate600,
     lineHeight: 1.4,

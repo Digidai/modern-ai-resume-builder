@@ -1,13 +1,13 @@
 import React from 'react';
 import { Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
+import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE, MailIconPdf, PhoneIconPdf, MapPinIconPdf, GlobeIconPdf, LinkedinIconPdf } from './shared';
 
 const styles = StyleSheet.create({
   page: {
     paddingTop: SPACING['10'],
     paddingBottom: SPACING['10'],
-    paddingHorizontal: SPACING['10'], // ~40px
-    fontFamily: 'Helvetica',
+    paddingHorizontal: SPACING['10'], 
+    fontFamily: 'Roboto',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
   },
@@ -15,120 +15,121 @@ const styles = StyleSheet.create({
   header: {
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
-    paddingBottom: SPACING['8'], // pb-8
-    marginBottom: SPACING['8'],  // gap-8 (between header and body)
+    paddingBottom: SPACING['8'], 
+    marginBottom: SPACING['8'],  
   },
   name: {
-    fontSize: FONT_SIZE['4xl'], // text-4xl
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['4xl'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     textTransform: 'uppercase',
     color: COLORS.slate900,
-    letterSpacing: -0.5, // tracking-tight
+    letterSpacing: -0.5, 
     lineHeight: 1,
   },
   title: {
-    fontSize: FONT_SIZE['xl'], // text-xl
+    fontSize: FONT_SIZE['xl'],
     color: COLORS.slate600,
-    marginTop: SPACING['2'], // mt-2
-    fontFamily: 'Helvetica', // font-light fallback
-    letterSpacing: 0.5, // tracking-wide
+    marginTop: SPACING['2'], 
+    fontFamily: 'Roboto',
+    fontWeight: 'normal', 
+    letterSpacing: 0.5, 
   },
   contactRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: SPACING['4'], // gap-4
-    marginTop: SPACING['6'], // mt-6
+    gap: SPACING['4'], 
+    marginTop: SPACING['6'],
   },
   contactItem: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'], 
     color: COLORS.slate600,
     flexDirection: 'row',
     alignItems: 'center',
+    gap: 4, // Space between icon and text
   },
   
   // Sections
-  section: {
-    marginBottom: 0, // Parent gap handles spacing usually, but here we use manual spacing
-  },
   sectionContainer: {
-    marginBottom: SPACING['8'], // gap-8 equivalent for main layout
+    marginBottom: SPACING['8'],
   },
   sectionTitle: {
-    fontSize: FONT_SIZE['sm'], // text-sm
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['sm'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     textTransform: 'uppercase',
     color: COLORS.slate400,
-    letterSpacing: 1.5, // tracking-widest
-    marginBottom: SPACING['3'], // mb-3
+    letterSpacing: 1.5,
+    marginBottom: SPACING['3'],
   },
   
   // Content
   summaryText: {
-    fontSize: FONT_SIZE['sm'], // text-sm (web uses text-sm for summary body too)
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate700,
-    lineHeight: 1.625, // relaxed
+    lineHeight: 1.625, 
     textAlign: 'justify',
   },
   
   // Experience
   expList: {
     flexDirection: 'column',
-    gap: SPACING['6'], // gap-6
-  },
-  expItem: {
-    marginBottom: SPACING['6'],
+    gap: SPACING['6'],
   },
   expHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    marginBottom: SPACING['1'], // mb-1
+    marginBottom: SPACING['1'],
   },
   role: {
-    fontSize: FONT_SIZE['base'], // Web uses implicit base or explicit? Web: h3 font-bold (base)
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['base'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.slate900,
   },
   date: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
   },
   company: {
-    fontSize: FONT_SIZE['base'], // text-base/medium
+    fontSize: FONT_SIZE['base'],
     color: COLORS.slate600,
-    fontFamily: 'Helvetica-Bold', // font-medium -> Bold in PDF
-    marginBottom: SPACING['2'], // mb-2
+    fontFamily: 'Roboto',
+    fontWeight: 'medium', // Medium maps to Bold usually if only bold registered, but we have bold. Let's try to map nicely.
+    marginBottom: SPACING['2'],
   },
   description: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate700,
-    lineHeight: 1.625, // relaxed
+    lineHeight: 1.625,
   },
   
   // Skills
   skillsList: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: SPACING['2'], // gap-2
+    gap: SPACING['2'],
   },
   skillChip: {
-    paddingHorizontal: SPACING['3'], // px-3
-    paddingVertical: SPACING['1'], // py-1
+    paddingHorizontal: SPACING['3'],
+    paddingVertical: SPACING['1'],
     backgroundColor: COLORS.slate100,
     borderWidth: 1,
     borderColor: COLORS.slate200,
-    borderRadius: 6, // rounded-md
+    borderRadius: 6,
   },
   skillText: {
-    fontSize: FONT_SIZE['xs'], // text-xs
-    fontFamily: 'Helvetica-Bold', // font-semibold
+    fontSize: FONT_SIZE['xs'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold', // font-semibold
     color: COLORS.slate700,
   },
   
   // Education
   eduList: {
     flexDirection: 'column',
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
   },
   eduItem: {
     flexDirection: 'row',
@@ -137,18 +138,18 @@ const styles = StyleSheet.create({
   },
   school: {
     fontSize: FONT_SIZE['base'],
-    fontFamily: 'Helvetica-Bold',
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.slate900,
   },
   degree: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate600,
     marginTop: 0,
   },
   eduDate: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
-    whiteSpace: 'nowrap',
   },
 });
 
@@ -159,14 +160,36 @@ export const ModernTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
         <Text style={styles.name}>{data.fullName}</Text>
         <Text style={styles.title}>{data.title}</Text>
         <View style={styles.contactRow}>
-          {[data.email, data.phone, data.location, data.website, data.linkedin]
-            .filter(Boolean)
-            .map((item, i) => (
-              <Text key={i} style={styles.contactItem}>
-                {i > 0 ? ' • ' : ''}
-                {item}
-              </Text>
-            ))}
+          {data.email && (
+             <View style={styles.contactItem}>
+               <MailIconPdf size={12} color={COLORS.slate600} />
+               <Text>{data.email}</Text>
+             </View>
+          )}
+          {data.phone && (
+             <View style={styles.contactItem}>
+               <PhoneIconPdf size={12} color={COLORS.slate600} />
+               <Text>{data.phone}</Text>
+             </View>
+          )}
+          {data.location && (
+             <View style={styles.contactItem}>
+               <MapPinIconPdf size={12} color={COLORS.slate600} />
+               <Text>{data.location}</Text>
+             </View>
+          )}
+          {data.website && (
+             <View style={styles.contactItem}>
+               <GlobeIconPdf size={12} color={COLORS.slate600} />
+               <Text>{data.website}</Text>
+             </View>
+          )}
+          {data.linkedin && (
+             <View style={styles.contactItem}>
+               <LinkedinIconPdf size={12} color={COLORS.slate600} />
+               <Text>{data.linkedin}</Text>
+             </View>
+          )}
         </View>
       </View>
 

@@ -6,19 +6,19 @@ const styles = StyleSheet.create({
   page: {
     flexDirection: 'row',
     backgroundColor: COLORS.white,
-    fontFamily: 'Helvetica',
+    fontFamily: 'Roboto', // Used generic sans in web
   },
   sidebar: {
     width: '33.33%',
     backgroundColor: COLORS.slate900,
-    padding: SPACING['8'], // p-8
+    padding: SPACING['8'],
     color: COLORS.slate200,
     minHeight: '100%',
     flexGrow: 1,
   },
   main: {
     width: '66.67%',
-    padding: SPACING['8'], // p-8
+    padding: SPACING['8'],
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
     minHeight: '100%',
@@ -27,118 +27,126 @@ const styles = StyleSheet.create({
   
   // Sidebar Content
   sidebarHeaderBlock: {
-    marginBottom: SPACING['4'], // mb-4
-    gap: SPACING['1'], // gap-1
+    marginBottom: SPACING['4'],
+    gap: SPACING['1'],
   },
   sidebarName: {
-    fontSize: FONT_SIZE['3xl'], // text-3xl
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['3xl'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.white,
-    letterSpacing: 0.5, // tracking-wider
-    lineHeight: 1.25, // leading-tight
+    letterSpacing: 0.5,
+    lineHeight: 1.25,
   },
   sidebarTitle: {
-    fontSize: FONT_SIZE['lg'], // text-lg
+    fontSize: FONT_SIZE['lg'],
     color: COLORS.indigo400,
-    fontFamily: 'Helvetica-Bold', // font-medium
+    fontFamily: 'Roboto',
+    fontWeight: 'medium',
   },
   
   sidebarContactList: {
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
     marginBottom: SPACING['8'],
   },
   contactItem: {
-    fontSize: FONT_SIZE['sm'], // text-sm
-    color: COLORS.slate300,
+    marginBottom: 0,
   },
   contactLabel: {
-    fontSize: FONT_SIZE['xs'], // text-xs
+    fontSize: FONT_SIZE['xs'],
     textTransform: 'uppercase',
-    letterSpacing: 0.5, // tracking-wider
+    letterSpacing: 0.5,
     color: COLORS.slate500,
-    marginBottom: SPACING['1'], // mb-1
-    display: 'flex',
-    fontFamily: 'Helvetica', // block
+    marginBottom: SPACING['1'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
+  },
+  contactValue: {
+    fontSize: FONT_SIZE['sm'],
+    color: COLORS.slate300,
   },
   
-  // Sidebar Sections (Skills/Edu)
+  // Sidebar Sections
   sidebarSection: {
     marginBottom: 0, 
   },
   sidebarSectionHeader: {
-    fontSize: FONT_SIZE['xs'], // text-xs
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['xs'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     textTransform: 'uppercase',
-    letterSpacing: 1.5, // tracking-widest
+    letterSpacing: 1.5,
     color: COLORS.white,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate700,
-    paddingBottom: SPACING['2'], // pb-2
-    marginBottom: SPACING['4'], // mb-4
+    paddingBottom: SPACING['2'],
+    marginBottom: SPACING['4'],
   },
   skillChips: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: SPACING['2'], // gap-2
+    gap: SPACING['2'],
   },
   skillChip: {
-    paddingHorizontal: SPACING['2'], // px-2
-    paddingVertical: SPACING['1'], // py-1
+    paddingHorizontal: SPACING['2'],
+    paddingVertical: SPACING['1'],
     backgroundColor: COLORS.slate800,
-    borderRadius: 4, // rounded
+    borderRadius: 4,
   },
   skillText: {
-    fontSize: FONT_SIZE['xs'], // text-xs
+    fontSize: FONT_SIZE['xs'],
     color: COLORS.slate300,
   },
   
   // Sidebar Edu
   eduList: {
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
   },
   eduSchool: {
-    fontSize: FONT_SIZE['sm'], // text-sm
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['sm'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.white,
   },
   eduDegree: {
-    fontSize: FONT_SIZE['xs'], // text-xs
+    fontSize: FONT_SIZE['xs'],
     color: COLORS.slate400,
-    marginBottom: SPACING['1'], // mb-1
+    marginBottom: SPACING['1'],
   },
   eduDate: {
-    fontSize: FONT_SIZE['xs'], // text-xs
+    fontSize: FONT_SIZE['xs'],
     color: COLORS.slate500,
   },
   
   // Main Content
   mainSection: {
-    marginBottom: SPACING['8'], // implicit spacing? No, templates stick usually.
+    marginBottom: SPACING['8'],
   },
   mainHeader: {
     flexDirection: 'row',
     alignItems: 'center',
-    marginBottom: SPACING['4'], // mb-4
-    gap: SPACING['2'], // gap-2
+    marginBottom: SPACING['4'],
+    gap: SPACING['2'],
   },
   headerBar: {
-    width: SPACING['8'], // w-8
-    height: 4, // h-1 (4px -> 3pt)
+    width: SPACING['8'],
+    height: 4,
     backgroundColor: COLORS.slate900,
   },
   headerTitle: {
-    fontSize: FONT_SIZE['xl'], // text-xl
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['xl'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.slate800,
     textTransform: 'uppercase',
-    letterSpacing: -0.25, // tracking-tight
+    letterSpacing: -0.25,
   },
   
   // Profile
   summaryText: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate600,
-    lineHeight: 1.625, // relaxed
+    lineHeight: 1.625,
     textAlign: 'justify',
   },
   
@@ -146,74 +154,77 @@ const styles = StyleSheet.create({
   expList: {
     borderLeftWidth: 2,
     borderLeftColor: COLORS.slate100,
-    paddingLeft: SPACING['6'], // pl-6
-    marginLeft: 4, // ml-1 (4px)
-    gap: SPACING['8'], // gap-8
+    paddingLeft: SPACING['6'],
+    marginLeft: 4,
+    gap: SPACING['8'],
   },
   expItem: {
     position: 'relative',
   },
   expDot: {
     position: 'absolute',
-    left: -31, // -left-[31px] (-23.25pt)
-    top: 4.5, // top-1.5 (6px -> 4.5pt)
-    width: 9, // w-3 (12px -> 9pt)
-    height: 9, // h-3
+    left: -31,
+    top: 4.5,
+    width: 9,
+    height: 9,
     borderRadius: 4.5,
     backgroundColor: COLORS.slate200,
-    borderWidth: 2, // border-2
+    borderWidth: 2,
     borderColor: COLORS.white,
   },
   role: {
-    fontSize: FONT_SIZE['lg'], // text-lg
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['lg'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.slate900,
-    marginBottom: SPACING['1'], // mb-1
+    marginBottom: SPACING['1'],
   },
   expMeta: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    marginBottom: SPACING['3'], // mb-3
-    fontSize: FONT_SIZE['sm'], // text-sm
+    marginBottom: SPACING['3'],
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
   },
   company: {
-    fontFamily: 'Helvetica-Bold', // font-semibold
+    fontFamily: 'Roboto',
+    fontWeight: 'bold', // font-semibold
     color: COLORS.indigo600,
   },
   description: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate600,
-    lineHeight: 1.625, // relaxed
+    lineHeight: 1.625,
   },
   
   // Projects
   projList: {
-    gap: SPACING['4'], // gap-4
+    gap: SPACING['4'],
   },
   projItem: {
     backgroundColor: COLORS.slate50,
-    padding: SPACING['4'], // p-4
-    borderRadius: 8, // rounded-lg
+    padding: SPACING['4'],
+    borderRadius: 8,
   },
   projHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'baseline',
-    marginBottom: SPACING['2'], // mb-2
+    marginBottom: SPACING['2'],
   },
   projName: {
-    fontSize: FONT_SIZE['base'], // text-base (implicit)
-    fontFamily: 'Helvetica-Bold',
+    fontSize: FONT_SIZE['base'],
+    fontFamily: 'Roboto',
+    fontWeight: 'bold',
     color: COLORS.slate900,
   },
   projLink: {
-    fontSize: FONT_SIZE['xs'], // text-xs
+    fontSize: FONT_SIZE['xs'],
     color: COLORS.indigo600,
   },
   projDesc: {
-    fontSize: FONT_SIZE['sm'], // text-sm
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate600,
   },
 });
@@ -232,31 +243,31 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
           {data.email && (
             <View style={styles.contactItem}>
               <Text style={styles.contactLabel}>Email</Text>
-              <Text>{data.email}</Text>
+              <Text style={styles.contactValue}>{data.email}</Text>
             </View>
           )}
           {data.phone && (
             <View style={styles.contactItem}>
               <Text style={styles.contactLabel}>Phone</Text>
-              <Text>{data.phone}</Text>
+              <Text style={styles.contactValue}>{data.phone}</Text>
             </View>
           )}
           {data.location && (
             <View style={styles.contactItem}>
               <Text style={styles.contactLabel}>Location</Text>
-              <Text>{data.location}</Text>
+              <Text style={styles.contactValue}>{data.location}</Text>
             </View>
           )}
           {data.website && (
             <View style={styles.contactItem}>
               <Text style={styles.contactLabel}>Portfolio</Text>
-              <Text>{data.website}</Text>
+              <Text style={styles.contactValue}>{data.website}</Text>
             </View>
           )}
           {data.linkedin && (
             <View style={styles.contactItem}>
               <Text style={styles.contactLabel}>LinkedIn</Text>
-              <Text>{data.linkedin}</Text>
+              <Text style={styles.contactValue}>{data.linkedin}</Text>
             </View>
           )}
         </View>
