@@ -1,121 +1,154 @@
 import React from 'react';
-import { Page, Text, View, StyleSheet, Link } from '@react-pdf/renderer';
-import { PdfTemplateProps, COLORS } from './shared';
+import { Page, Text, View, StyleSheet } from '@react-pdf/renderer';
+import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
 
 const styles = StyleSheet.create({
   page: {
-    padding: 40,
+    paddingTop: SPACING['10'],
+    paddingBottom: SPACING['10'],
+    paddingHorizontal: SPACING['10'], // ~40px
     fontFamily: 'Helvetica',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
   },
+  // Header
   header: {
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
-    paddingBottom: 20,
-    marginBottom: 20,
+    paddingBottom: SPACING['8'], // pb-8
+    marginBottom: SPACING['8'],  // gap-8 (between header and body)
   },
   name: {
-    fontSize: 26, // text-4xl approx
+    fontSize: FONT_SIZE['4xl'], // text-4xl
     fontFamily: 'Helvetica-Bold',
     textTransform: 'uppercase',
     color: COLORS.slate900,
-    marginBottom: 4,
-    letterSpacing: -0.5,
+    letterSpacing: -0.5, // tracking-tight
+    lineHeight: 1,
   },
   title: {
-    fontSize: 14, // text-xl approx
+    fontSize: FONT_SIZE['xl'], // text-xl
     color: COLORS.slate600,
-    fontWeight: 'light',
-    letterSpacing: 0.5,
-    marginBottom: 12,
+    marginTop: SPACING['2'], // mt-2
+    fontFamily: 'Helvetica', // font-light fallback
+    letterSpacing: 0.5, // tracking-wide
   },
   contactRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 12,
+    gap: SPACING['4'], // gap-4
+    marginTop: SPACING['6'], // mt-6
   },
   contactItem: {
-    fontSize: 9, // text-sm approx
+    fontSize: FONT_SIZE['sm'], // text-sm
     color: COLORS.slate600,
     flexDirection: 'row',
     alignItems: 'center',
   },
+  
+  // Sections
   section: {
-    marginBottom: 18,
+    marginBottom: 0, // Parent gap handles spacing usually, but here we use manual spacing
+  },
+  sectionContainer: {
+    marginBottom: SPACING['8'], // gap-8 equivalent for main layout
   },
   sectionTitle: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'], // text-sm
     fontFamily: 'Helvetica-Bold',
     textTransform: 'uppercase',
     color: COLORS.slate400,
-    letterSpacing: 1.5,
-    marginBottom: 8,
+    letterSpacing: 1.5, // tracking-widest
+    marginBottom: SPACING['3'], // mb-3
   },
+  
+  // Content
   summaryText: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'], // text-sm (web uses text-sm for summary body too)
     color: COLORS.slate700,
-    lineHeight: 1.5,
+    lineHeight: 1.625, // relaxed
     textAlign: 'justify',
   },
-  experienceItem: {
-    marginBottom: 12,
+  
+  // Experience
+  expList: {
+    flexDirection: 'column',
+    gap: SPACING['6'], // gap-6
   },
-  rowBetween: {
+  expItem: {
+    marginBottom: SPACING['6'],
+  },
+  expHeader: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'flex-end',
-    marginBottom: 2,
+    marginBottom: SPACING['1'], // mb-1
   },
   role: {
-    fontSize: 11,
+    fontSize: FONT_SIZE['base'], // Web uses implicit base or explicit? Web: h3 font-bold (base)
     fontFamily: 'Helvetica-Bold',
     color: COLORS.slate900,
   },
   date: {
-    fontSize: 9,
+    fontSize: FONT_SIZE['sm'], // text-sm
     color: COLORS.slate500,
   },
   company: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['base'], // text-base/medium
     color: COLORS.slate600,
-    fontFamily: 'Helvetica-Bold', // ResumeEditor uses font-medium which maps to Bold often in PDF
-    marginBottom: 4,
+    fontFamily: 'Helvetica-Bold', // font-medium -> Bold in PDF
+    marginBottom: SPACING['2'], // mb-2
   },
   description: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'], // text-sm
     color: COLORS.slate700,
-    lineHeight: 1.5,
+    lineHeight: 1.625, // relaxed
   },
-  skillsRow: {
+  
+  // Skills
+  skillsList: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 6,
+    gap: SPACING['2'], // gap-2
   },
   skillChip: {
+    paddingHorizontal: SPACING['3'], // px-3
+    paddingVertical: SPACING['1'], // py-1
     backgroundColor: COLORS.slate100,
     borderWidth: 1,
     borderColor: COLORS.slate200,
-    borderRadius: 4,
-    paddingHorizontal: 8,
-    paddingVertical: 3,
+    borderRadius: 6, // rounded-md
   },
   skillText: {
-    fontSize: 9,
+    fontSize: FONT_SIZE['xs'], // text-xs
+    fontFamily: 'Helvetica-Bold', // font-semibold
     color: COLORS.slate700,
-    fontFamily: 'Helvetica-Bold',
+  },
+  
+  // Education
+  eduList: {
+    flexDirection: 'column',
+    gap: SPACING['4'], // gap-4
   },
   eduItem: {
-    marginBottom: 8,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'flex-start',
   },
   school: {
-    fontSize: 11,
+    fontSize: FONT_SIZE['base'],
     fontFamily: 'Helvetica-Bold',
     color: COLORS.slate900,
   },
   degree: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'], // text-sm
     color: COLORS.slate600,
+    marginTop: 0,
+  },
+  eduDate: {
+    fontSize: FONT_SIZE['sm'], // text-sm
+    color: COLORS.slate500,
+    whiteSpace: 'nowrap',
   },
 });
 
@@ -138,34 +171,36 @@ export const ModernTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
       </View>
 
       {data.summary && (
-        <View style={styles.section}>
+        <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Profile</Text>
           <Text style={styles.summaryText}>{data.summary}</Text>
         </View>
       )}
 
       {data.experience.length > 0 && (
-        <View style={styles.section}>
+        <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Experience</Text>
-          {data.experience.map((exp) => (
-            <View key={exp.id} style={styles.experienceItem} wrap={false}>
-              <View style={styles.rowBetween}>
-                <Text style={styles.role}>{exp.role}</Text>
-                <Text style={styles.date}>
-                  {exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}
-                </Text>
+          <View style={styles.expList}>
+            {data.experience.map((exp) => (
+              <View key={exp.id} wrap={false}>
+                <View style={styles.expHeader}>
+                  <Text style={styles.role}>{exp.role}</Text>
+                  <Text style={styles.date}>
+                    {exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}
+                  </Text>
+                </View>
+                <Text style={styles.company}>{exp.company}</Text>
+                <Text style={styles.description}>{exp.description}</Text>
               </View>
-              <Text style={styles.company}>{exp.company}</Text>
-              <Text style={styles.description}>{exp.description}</Text>
-            </View>
-          ))}
+            ))}
+          </View>
         </View>
       )}
 
       {data.skills.length > 0 && (
-        <View style={styles.section}>
+        <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Skills</Text>
-          <View style={styles.skillsRow}>
+          <View style={styles.skillsList}>
             {data.skills.map((skill, index) => (
               <View key={index} style={styles.skillChip}>
                 <Text style={styles.skillText}>{skill}</Text>
@@ -176,21 +211,21 @@ export const ModernTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
       )}
 
       {data.education.length > 0 && (
-        <View style={styles.section}>
+        <View style={styles.sectionContainer}>
           <Text style={styles.sectionTitle}>Education</Text>
-          {data.education.map((edu) => (
-            <View key={edu.id} style={styles.eduItem} wrap={false}>
-              <View style={styles.rowBetween}>
+          <View style={styles.eduList}>
+            {data.education.map((edu) => (
+              <View key={edu.id} style={styles.eduItem} wrap={false}>
                 <View>
                   <Text style={styles.school}>{edu.school}</Text>
                   <Text style={styles.degree}>{edu.degree}</Text>
                 </View>
-                <Text style={styles.date}>
+                <Text style={styles.eduDate}>
                   {edu.startDate} — {edu.endDate}
                 </Text>
               </View>
-            </View>
-          ))}
+            ))}
+          </View>
         </View>
       )}
     </Page>

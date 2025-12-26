@@ -1,135 +1,192 @@
 import React from 'react';
 import { Page, Text, View, StyleSheet } from '@react-pdf/renderer';
-import { PdfTemplateProps, COLORS } from './shared';
+import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
 
 const styles = StyleSheet.create({
   page: {
-    padding: 40,
-    fontFamily: 'Times-Roman', // Minimalist uses Serif
+    paddingTop: SPACING['10'],
+    paddingBottom: SPACING['10'],
+    paddingHorizontal: SPACING['10'],
+    fontFamily: 'Times-Roman',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
   },
+  // Header
   header: {
-    borderBottomWidth: 1.5,
-    borderBottomColor: COLORS.black,
-    paddingBottom: 20,
-    marginBottom: 20,
+    flexDirection: 'column',
     alignItems: 'center',
+    borderBottomWidth: 2,
+    borderBottomColor: COLORS.black,
+    paddingBottom: SPACING['6'], // pb-6
+    marginBottom: SPACING['2'],  // mb-2 (web says mb-2)
   },
   name: {
-    fontSize: 28, // text-5xl is huge, scaling down slightly for PDF readability
+    fontSize: FONT_SIZE['5xl'], // md:text-5xl (36px -> 36pt? No, 36px=27pt. Wait. 5xl=48px=36pt. 3xl=30px=22.5pt. Let's use 32pt)
+    // Actually using FONT_SIZE['5xl'] (36pt) as defined in shared
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
-    marginBottom: 8,
+    marginBottom: SPACING['2'], // mb-2
+    letterSpacing: -0.5, // tracking-tight
+    lineHeight: 1,
   },
   title: {
-    fontSize: 14,
+    fontSize: FONT_SIZE['xl'], // md:text-xl
     fontFamily: 'Times-Italic',
     color: COLORS.slate600,
-    marginBottom: 10,
+    marginBottom: SPACING['4'], // mb-4
   },
   contactRow: {
     flexDirection: 'row',
     flexWrap: 'wrap',
     justifyContent: 'center',
-    gap: 12,
+    gap: SPACING['4'], // gap-4
   },
   contactItem: {
-    fontSize: 9,
+    fontSize: FONT_SIZE['sm'], // text-sm
     color: COLORS.slate500,
     fontFamily: 'Times-Roman',
   },
-  section: {
-    marginBottom: 20,
+  
+  // Layout
+  mainGrid: {
+    marginTop: SPACING['4'], // mt-4
+    gap: SPACING['8'], // gap-8
   },
+  
+  // Summary
+  summarySection: {
+    marginTop: 0, // In Web it's not in the grid, it's distinct
+    alignItems: 'center',
+    marginBottom: SPACING['4'],
+  },
+  summaryText: {
+    fontSize: FONT_SIZE['base'], // md:text-base
+    fontFamily: 'Times-Roman',
+    color: COLORS.slate700,
+    lineHeight: 1.625,
+    textAlign: 'center',
+    maxWidth: '90%', // Limit width for readability like web's max-w-2xl
+    alignSelf: 'center',
+  },
+  
+  // Skills
+  skillsSection: {
+    borderTopWidth: 1,
+    borderTopColor: COLORS.slate100,
+    borderBottomWidth: 1,
+    borderBottomColor: COLORS.slate100,
+    paddingVertical: SPACING['4'], // py-4
+    alignItems: 'center',
+    marginBottom: 0,
+  },
+  skillsTitle: {
+    fontSize: FONT_SIZE['xs'], // text-xs
+    fontFamily: 'Helvetica-Bold', // Web says font-bold uppercase. Default Tailwind sans.
+    textTransform: 'uppercase',
+    letterSpacing: 1.5, // tracking-widest
+    color: COLORS.slate400,
+    marginBottom: SPACING['3'], // mb-3
+  },
+  skillsList: {
+    flexDirection: 'row',
+    flexWrap: 'wrap',
+    justifyContent: 'center',
+    gap: SPACING['3'], // gap-3
+  },
+  skillText: {
+    fontSize: FONT_SIZE['sm'], // text-sm
+    fontFamily: 'Helvetica-Bold', // font-medium -> Bold
+    color: COLORS.slate800,
+  },
+  
+  // Section Headers
   sectionHeader: {
-    fontSize: 16,
+    fontSize: FONT_SIZE['xl'], // text-xl
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
-    paddingBottom: 4,
-    marginBottom: 12,
+    paddingBottom: SPACING['2'], // pb-2
+    marginBottom: SPACING['6'], // mb-6
   },
-  centerSection: {
-    marginBottom: 20,
-    alignItems: 'center',
-  },
-  summaryText: {
-    fontSize: 10,
-    fontFamily: 'Times-Roman',
-    color: COLORS.slate700,
-    lineHeight: 1.6,
-    textAlign: 'center',
-    maxWidth: '80%',
-  },
-  competenciesTitle: {
-    fontSize: 9,
-    fontFamily: 'Helvetica-Bold', // This specific header was Sans in HTML
-    textTransform: 'uppercase',
-    letterSpacing: 1.5,
-    color: COLORS.slate400,
-    marginBottom: 6,
-  },
-  competenciesList: {
-    flexDirection: 'row',
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    gap: 8,
-  },
-  competencyItem: {
-    fontSize: 10,
-    fontFamily: 'Times-Roman',
-    color: COLORS.slate800,
+  
+  // Experience
+  expList: {
+    gap: SPACING['8'], // gap-8
   },
   expGrid: {
     flexDirection: 'row',
-    marginBottom: 16,
+    gap: SPACING['4'], // gap-4
   },
   expDateCol: {
-    width: '25%',
-    paddingRight: 10,
+    width: '20%', // 1fr approx
   },
   expContentCol: {
-    width: '75%',
+    width: '80%', // 3fr approx
   },
   dateText: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'],
     color: COLORS.slate500,
-    fontFamily: 'Helvetica', // Date looks better in Sans often, matches HTML
-    textAlign: 'right',
+    fontFamily: 'Helvetica-Bold', // font-medium
+    marginTop: 2, // pt-1
   },
   role: {
-    fontSize: 12,
+    fontSize: FONT_SIZE['lg'], // text-lg
     fontFamily: 'Times-Bold',
     color: COLORS.slate900,
-    marginBottom: 2,
   },
   company: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['base'], // text-base/medium implied
     fontFamily: 'Times-Italic',
     color: COLORS.slate700,
-    marginBottom: 4,
+    marginBottom: SPACING['2'], // mb-2
   },
   description: {
-    fontSize: 10,
+    fontSize: FONT_SIZE['sm'],
     fontFamily: 'Times-Roman',
     color: COLORS.slate700,
-    lineHeight: 1.5,
+    lineHeight: 1.625,
   },
+  
+  // Projects
   projectGrid: {
     flexDirection: 'row',
     flexWrap: 'wrap',
-    gap: 20,
+    gap: SPACING['6'], // gap-6
   },
   projectItem: {
-    width: '48%',
-    marginBottom: 10,
+    width: '45%', // grid-cols-2 approx with gap
+    marginBottom: 0,
+  },
+  projHeader: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'baseline',
+  },
+  projName: {
+    fontSize: FONT_SIZE['base'],
+    fontFamily: 'Times-Bold',
+    color: COLORS.slate900,
+  },
+  projLink: {
+    fontSize: FONT_SIZE['xs'],
+    color: COLORS.slate400,
+  },
+  projDesc: {
+    marginTop: SPACING['1'], // mt-1
+    fontSize: FONT_SIZE['sm'],
+    color: COLORS.slate600,
+    lineHeight: 1.4,
+  },
+  
+  // Education
+  eduList: {
+    gap: SPACING['4'],
   },
   eduRow: {
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginBottom: 8,
+    alignItems: 'center',
   },
 });
 
@@ -152,75 +209,79 @@ export const MinimalistTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
       </View>
 
       {data.summary && (
-        <View style={styles.centerSection}>
+        <View style={styles.summarySection}>
           <Text style={styles.summaryText}>{data.summary}</Text>
         </View>
       )}
 
       {data.skills.length > 0 && (
-        <View style={{ ...styles.centerSection, borderTopWidth: 1, borderTopColor: COLORS.slate100, borderBottomWidth: 1, borderBottomColor: COLORS.slate100, paddingVertical: 12 }}>
-          <Text style={styles.competenciesTitle}>Core Competencies</Text>
-          <View style={styles.competenciesList}>
+        <View style={styles.skillsSection}>
+          <Text style={styles.skillsTitle}>Core Competencies</Text>
+          <View style={styles.skillsList}>
             {data.skills.map((skill, index) => (
-              <Text key={index} style={styles.competencyItem}>
-                {skill}
-              </Text>
+              <Text key={index} style={styles.skillText}>{skill}</Text>
             ))}
           </View>
         </View>
       )}
 
-      {data.experience.length > 0 && (
-        <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Experience</Text>
-          {data.experience.map((exp) => (
-            <View key={exp.id} style={styles.expGrid} wrap={false}>
-              <View style={styles.expDateCol}>
-                <Text style={styles.dateText}>
-                  {exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}
-                </Text>
-              </View>
-              <View style={styles.expContentCol}>
-                <Text style={styles.role}>{exp.role}</Text>
-                <Text style={styles.company}>{exp.company}</Text>
-                <Text style={styles.description}>{exp.description}</Text>
-              </View>
+      <View style={styles.mainGrid}>
+        {data.experience.length > 0 && (
+          <View>
+            <Text style={styles.sectionHeader}>Experience</Text>
+            <View style={styles.expList}>
+              {data.experience.map((exp) => (
+                <View key={exp.id} style={styles.expGrid} wrap={false}>
+                  <View style={styles.expDateCol}>
+                    <Text style={styles.dateText}>
+                      {exp.startDate} — {exp.isCurrent ? 'Present' : exp.endDate}
+                    </Text>
+                  </View>
+                  <View style={styles.expContentCol}>
+                    <Text style={styles.role}>{exp.role}</Text>
+                    <Text style={styles.company}>{exp.company}</Text>
+                    <Text style={styles.description}>{exp.description}</Text>
+                  </View>
+                </View>
+              ))}
             </View>
-          ))}
-        </View>
-      )}
-
-      {data.projects.length > 0 && (
-        <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Projects</Text>
-          <View style={styles.projectGrid}>
-            {data.projects.map((proj) => (
-              <View key={proj.id} style={styles.projectItem} wrap={false}>
-                <Text style={styles.role}>{proj.name}</Text>
-                {proj.link && <Text style={{ fontSize: 9, color: COLORS.slate400, marginBottom: 2 }}>{proj.link}</Text>}
-                <Text style={styles.description}>{proj.description}</Text>
-              </View>
-            ))}
           </View>
-        </View>
-      )}
+        )}
 
-      {data.education.length > 0 && (
-        <View style={styles.section}>
-          <Text style={styles.sectionHeader}>Education</Text>
-          {data.education.map((edu) => (
-            <View key={edu.id} style={styles.eduRow} wrap={false}>
-              <View>
-                <Text style={styles.role}>{edu.school}</Text>
-                <Text style={styles.company}>{edu.degree}</Text>
-              </View>
-              <Text style={styles.dateText}>
-                {edu.startDate} — {edu.endDate}
-              </Text>
+        {data.projects.length > 0 && (
+          <View>
+            <Text style={{ ...styles.sectionHeader, marginBottom: SPACING['4'] }}>Projects</Text>
+            <View style={styles.projectGrid}>
+              {data.projects.map((proj) => (
+                <View key={proj.id} style={styles.projectItem} wrap={false}>
+                  <View style={styles.projHeader}>
+                    <Text style={styles.projName}>{proj.name}</Text>
+                    {proj.link && <Text style={styles.projLink}>{proj.link}</Text>}
+                  </View>
+                  <Text style={styles.projDesc}>{proj.description}</Text>
+                </View>
+              ))}
             </View>
-          ))}
-        </View>
-      )}
+          </View>
+        )}
+
+        {data.education.length > 0 && (
+          <View>
+            <Text style={{ ...styles.sectionHeader, marginBottom: SPACING['4'] }}>Education</Text>
+            <View style={styles.eduList}>
+              {data.education.map((edu) => (
+                <View key={edu.id} style={styles.eduRow} wrap={false}>
+                  <View>
+                    <Text style={{ ...styles.role, fontSize: FONT_SIZE.base }}>{edu.school}</Text>
+                    <Text style={{ ...styles.company, fontFamily: 'Times-Italic', fontSize: FONT_SIZE.sm, marginBottom: 0 }}>{edu.degree}</Text>
+                  </View>
+                  <Text style={{ ...styles.dateText, fontFamily: 'Helvetica' }}>{edu.startDate} — {edu.endDate}</Text>
+                </View>
+              ))}
+            </View>
+          </View>
+        )}
+      </View>
     </Page>
   );
 };
