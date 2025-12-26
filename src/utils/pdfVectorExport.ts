@@ -4,25 +4,35 @@ import { ResumeData } from '../types';
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
 
+// Tailwind Slate Colors (Exact RGB values)
 const COLORS = {
   black: rgb(0, 0, 0),
   white: rgb(1, 1, 1),
-  slate900: rgb(0.07, 0.09, 0.16),
-  slate800: rgb(0.12, 0.16, 0.23),
-  slate700: rgb(0.2, 0.24, 0.31),
-  slate600: rgb(0.28, 0.32, 0.38),
-  slate500: rgb(0.39, 0.44, 0.51),
-  slate400: rgb(0.58, 0.62, 0.69),
-  slate300: rgb(0.8, 0.82, 0.85),
-  slate200: rgb(0.9, 0.92, 0.95),
-  slate100: rgb(0.96, 0.97, 0.98),
-  indigo500: rgb(0.39, 0.4, 0.94),
-  indigo400: rgb(0.51, 0.55, 0.96),
+  slate900: rgb(15 / 255, 23 / 255, 42 / 255),  // #0f172a
+  slate800: rgb(30 / 255, 41 / 255, 59 / 255),  // #1e293b
+  slate700: rgb(51 / 255, 65 / 255, 85 / 255),  // #334155
+  slate600: rgb(71 / 255, 85 / 255, 105 / 255), // #475569
+  slate500: rgb(100 / 255, 116 / 255, 139 / 255), // #64748b
+  slate400: rgb(148 / 255, 163 / 255, 184 / 255), // #94a3b8
+  slate300: rgb(203 / 255, 213 / 255, 225 / 255), // #cbd5e1
+  slate200: rgb(226 / 255, 232 / 255, 240 / 255), // #e2e8f0
+  slate100: rgb(241 / 255, 245 / 255, 249 / 255), // #f1f5f9
+  slate50:  rgb(248 / 255, 250 / 255, 252 / 255), // #f8fafc
+  indigo600: rgb(79 / 255, 70 / 255, 229 / 255),  // #4f46e5
+  indigo500: rgb(99 / 255, 102 / 255, 241 / 255), // #6366f1
+  indigo400: rgb(129 / 255, 140 / 255, 248 / 255), // #818cf8
 };
 
 const VECTOR_TEMPLATES = new Set(['modern', 'minimalist', 'sidebar']);
 
 export const supportsVectorTemplate = (templateId: string) => VECTOR_TEMPLATES.has(templateId);
+
+// Check for characters outside Latin-1 range (Standard fonts only support Latin-1)
+const hasNonLatinCharacters = (str: string) => {
+    // Regex for non-Latin-1 characters. 
+    // Latin-1 Supplement is up to \u00FF.
+    return /[^\u0000-\u00FF]/.test(str);
+};
 
 type FontSet = {
   sans: PDFFont;
@@ -143,9 +153,10 @@ const drawTextLine = (
   let drawX = x;
   if (align === 'center') drawX = x + (maxWidth - textWidth) / 2;
   if (align === 'right') drawX = x + maxWidth - textWidth;
+  
   page.drawText(text, {
     x: drawX,
-    y: yTop - size,
+    y: yTop - size + (size * 0.2), // Adjustment to match baseline better
     size,
     font,
     color,
@@ -221,7 +232,7 @@ const drawLeftRightLine = (
   const rightWidth = rightText ? measureTextWidth(fontRight, sizeRight, rightText) : 0;
   const leftMax = Math.max(0, maxWidth - rightWidth - gap);
   const lines = wrapText(leftText, fontLeft, sizeLeft, leftMax);
-  const lineHeight = sizeLeft * 1.35;
+  const lineHeight = sizeLeft * 1.4;
 
   lines.forEach((line, index) => {
     ctx.ensureSpace(lineHeight);
@@ -302,7 +313,7 @@ const drawSkillChips = (
 
     ctx.page.drawText(label, {
       x: currentX + paddingX,
-      y: rowTop - chipHeight + paddingY + (chipHeight - size) / 2 - 1,
+      y: rowTop - chipHeight + paddingY + (chipHeight - size) / 2 + 1, // Adjusted vertical center
       size,
       font,
       color: textColor,
@@ -317,55 +328,63 @@ const drawSkillChips = (
 const buildContactLine = (data: ResumeData) =>
   [data.email, data.phone, data.location, data.website, data.linkedin].filter(Boolean).join(' • ');
 
+// --- Modern Template ---
 const renderModernTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: FontSet) => {
-  const margins = { top: 42, bottom: 42, left: 42, right: 42 };
+  const margins = { top: 40, bottom: 40, left: 40, right: 40 };
   const ctx = createLayoutContext(pdfDoc, margins);
   const contentWidth = ctx.pageWidth - margins.left - margins.right;
   const startX = margins.left;
 
+  // Name: text-4xl (36px) -> 27pt
   drawWrappedText(
     ctx,
     data.fullName.toUpperCase(),
     startX,
     contentWidth,
     fonts.sansBold,
-    26,
+    27, 
     COLORS.slate900,
-    { lineHeight: 30 }
+    { lineHeight: 32 }
   );
-
-  drawWrappedText(ctx, data.title, startX, contentWidth, fonts.sans, 13, COLORS.slate600, {
-    lineHeight: 18,
-    paragraphGap: 6,
+  
+  // Title: text-xl (20px) -> 15pt
+  drawWrappedText(ctx, data.title, startX, contentWidth, fonts.sans, 15, COLORS.slate600, {
+    lineHeight: 20,
+    paragraphGap: 8,
   });
 
   const contacts = buildContactLine(data);
   if (contacts) {
-    drawWrappedText(ctx, contacts, startX, contentWidth, fonts.sans, 9, COLORS.slate600, {
-      lineHeight: 12,
+    // text-sm (14px) -> 10.5pt
+    drawWrappedText(ctx, contacts, startX, contentWidth, fonts.sans, 10.5, COLORS.slate600, {
+      lineHeight: 14,
       paragraphGap: 0,
     });
   }
 
-  ctx.moveCursor(8);
+  ctx.moveCursor(16);
   ctx.page.drawLine({
     start: { x: startX, y: ctx.cursorY },
     end: { x: startX + contentWidth, y: ctx.cursorY },
     thickness: 1,
     color: COLORS.slate200,
   });
-  ctx.moveCursor(18);
+  ctx.moveCursor(20);
 
+  const sectionHeaderSize = 10.5; // text-sm
+  const bodyTextSize = 10.5; // text-sm
+  const sectionGap = 16;
+  
   if (data.summary) {
-    drawSectionTitle(ctx, 'Profile', startX, contentWidth, fonts.sansBold, 9, COLORS.slate400, 14);
-    drawWrappedText(ctx, data.summary, startX, contentWidth, fonts.sans, 10, COLORS.slate700, {
-      lineHeight: 14,
+    drawSectionTitle(ctx, 'Profile', startX, contentWidth, fonts.sansBold, sectionHeaderSize, COLORS.slate400, sectionGap);
+    drawWrappedText(ctx, data.summary, startX, contentWidth, fonts.sans, bodyTextSize, COLORS.slate700, {
+      lineHeight: 16,
     });
-    ctx.moveCursor(10);
+    ctx.moveCursor(12);
   }
 
   if (data.experience.length > 0) {
-    drawSectionTitle(ctx, 'Experience', startX, contentWidth, fonts.sansBold, 9, COLORS.slate400, 16);
+    drawSectionTitle(ctx, 'Experience', startX, contentWidth, fonts.sansBold, sectionHeaderSize, COLORS.slate400, sectionGap);
     for (const exp of data.experience) {
       const dateText = `${exp.startDate} — ${exp.isCurrent ? 'Present' : exp.endDate}`;
       drawLeftRightLine(
@@ -376,38 +395,40 @@ const renderModernTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: Font
         contentWidth,
         fonts.sansBold,
         fonts.sans,
-        11,
-        9,
+        bodyTextSize,
+        10, // slightly smaller date
         COLORS.slate900,
         COLORS.slate500
       );
 
-      drawWrappedText(ctx, exp.company, startX, contentWidth, fonts.sansBold, 9.5, COLORS.slate600, {
-        lineHeight: 13,
+      drawWrappedText(ctx, exp.company, startX, contentWidth, fonts.sans, bodyTextSize, COLORS.slate600, {
+        lineHeight: 14,
         paragraphGap: 4,
       });
 
-      drawWrappedText(ctx, exp.description, startX, contentWidth, fonts.sans, 9, COLORS.slate700, {
-        lineHeight: 12,
-        paragraphGap: 6,
+      drawWrappedText(ctx, exp.description, startX, contentWidth, fonts.sans, bodyTextSize, COLORS.slate700, {
+        lineHeight: 15,
+        paragraphGap: 8,
       });
 
-      ctx.moveCursor(8);
+      ctx.moveCursor(12);
     }
   }
 
   if (data.skills.length > 0) {
-    drawSectionTitle(ctx, 'Skills', startX, contentWidth, fonts.sansBold, 9, COLORS.slate400, 14);
-    drawSkillChips(ctx, data.skills, startX, contentWidth, fonts.sansBold, 8, {
+    drawSectionTitle(ctx, 'Skills', startX, contentWidth, fonts.sansBold, sectionHeaderSize, COLORS.slate400, sectionGap);
+    drawSkillChips(ctx, data.skills, startX, contentWidth, fonts.sans, 9, {
       fill: COLORS.slate100,
       border: COLORS.slate200,
       text: COLORS.slate700,
+      paddingX: 8,
+      paddingY: 4
     });
-    ctx.moveCursor(6);
+    ctx.moveCursor(12);
   }
 
   if (data.education.length > 0) {
-    drawSectionTitle(ctx, 'Education', startX, contentWidth, fonts.sansBold, 9, COLORS.slate400, 14);
+    drawSectionTitle(ctx, 'Education', startX, contentWidth, fonts.sansBold, sectionHeaderSize, COLORS.slate400, sectionGap);
     for (const edu of data.education) {
       const dateText = `${edu.startDate} — ${edu.endDate}`;
       drawLeftRightLine(
@@ -418,145 +439,157 @@ const renderModernTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: Font
         contentWidth,
         fonts.sansBold,
         fonts.sans,
+        bodyTextSize,
         10,
-        9,
         COLORS.slate900,
         COLORS.slate500
       );
-      drawWrappedText(ctx, edu.degree, startX, contentWidth, fonts.sans, 9, COLORS.slate600, {
-        lineHeight: 12,
+      drawWrappedText(ctx, edu.degree, startX, contentWidth, fonts.sans, 10, COLORS.slate600, {
+        lineHeight: 14,
         paragraphGap: 6,
       });
-      ctx.moveCursor(4);
+      ctx.moveCursor(8);
     }
   }
 };
 
+// --- Minimalist Template ---
 const renderMinimalistTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: FontSet) => {
-  const margins = { top: 42, bottom: 42, left: 42, right: 42 };
+  const margins = { top: 40, bottom: 40, left: 40, right: 40 };
   const ctx = createLayoutContext(pdfDoc, margins);
   const contentWidth = ctx.pageWidth - margins.left - margins.right;
   const startX = margins.left;
 
-  drawWrappedText(ctx, data.fullName, startX, contentWidth, fonts.serifBold, 24, COLORS.slate900, {
-    lineHeight: 28,
+  // Name: text-3xl md:text-5xl -> let's go with 32pt (approx 42px)
+  drawWrappedText(ctx, data.fullName, startX, contentWidth, fonts.serifBold, 32, COLORS.slate900, {
+    lineHeight: 38,
     align: 'center',
   });
-  drawWrappedText(ctx, data.title, startX, contentWidth, fonts.serifItalic, 13, COLORS.slate600, {
-    lineHeight: 18,
+  
+  // Title: text-lg md:text-xl -> 15pt
+  drawWrappedText(ctx, data.title, startX, contentWidth, fonts.serifItalic, 15, COLORS.slate600, {
+    lineHeight: 20,
     align: 'center',
-    paragraphGap: 4,
+    paragraphGap: 6,
   });
 
   const contacts = buildContactLine(data);
   if (contacts) {
-    drawWrappedText(ctx, contacts, startX, contentWidth, fonts.serif, 9, COLORS.slate500, {
-      lineHeight: 12,
+    // text-sm -> 10.5pt
+    drawWrappedText(ctx, contacts, startX, contentWidth, fonts.serif, 10.5, COLORS.slate500, {
+      lineHeight: 14,
       align: 'center',
     });
   }
 
-  ctx.moveCursor(10);
+  ctx.moveCursor(12);
   ctx.page.drawLine({
     start: { x: startX, y: ctx.cursorY },
     end: { x: startX + contentWidth, y: ctx.cursorY },
     thickness: 1.5,
     color: COLORS.black,
   });
-  ctx.moveCursor(18);
+  ctx.moveCursor(20);
 
   if (data.summary) {
-    drawWrappedText(ctx, data.summary, startX + 40, contentWidth - 80, fonts.serif, 10, COLORS.slate700, {
-      lineHeight: 15,
+    // text-sm md:text-base -> 11pt
+    drawWrappedText(ctx, data.summary, startX + 40, contentWidth - 80, fonts.serif, 11, COLORS.slate700, {
+      lineHeight: 16,
       align: 'center',
     });
-    ctx.moveCursor(14);
+    ctx.moveCursor(16);
   }
 
   if (data.skills.length > 0) {
-    drawSectionTitle(ctx, 'Core Competencies', startX, contentWidth, fonts.sansBold, 8, COLORS.slate400, 14);
+    drawSectionTitle(ctx, 'Core Competencies', startX, contentWidth, fonts.sansBold, 9, COLORS.slate400, 14); // Keep sans for header in minimalist per design? No, design says font-bold uppercase, but usually sans looks better for tiny headers. Template says "text-xs font-bold uppercase". Tailwind default is sans.
+    
+    // Skills are centered text
     const skillsLine = data.skills.join(' • ');
-    drawWrappedText(ctx, skillsLine, startX, contentWidth, fonts.serif, 9, COLORS.slate800, {
-      lineHeight: 12,
+    drawWrappedText(ctx, skillsLine, startX, contentWidth, fonts.serif, 10.5, COLORS.slate800, {
+      lineHeight: 15,
       align: 'center',
     });
-    ctx.moveCursor(14);
+    ctx.moveCursor(20);
   }
 
+  // Section Headers: Serif Bold, text-xl -> 15pt
+  const sectionHeaderFont = fonts.serifBold;
+  const sectionHeaderSize = 15;
+
   if (data.experience.length > 0) {
-    drawWrappedText(ctx, 'Experience', startX, contentWidth, fonts.serifBold, 14, COLORS.slate900, {
-      lineHeight: 18,
+    drawWrappedText(ctx, 'Experience', startX, contentWidth, sectionHeaderFont, sectionHeaderSize, COLORS.slate900, {
+      lineHeight: 20,
     });
     ctx.page.drawLine({
       start: { x: startX, y: ctx.cursorY + 4 },
       end: { x: startX + contentWidth, y: ctx.cursorY + 4 },
-      thickness: 1,
+      thickness: 0.5,
       color: COLORS.slate200,
     });
     ctx.moveCursor(16);
 
-    const leftWidth = 120;
-    const gap = 12;
+    const leftWidth = 130;
+    const gap = 16;
     const rightX = startX + leftWidth + gap;
     const rightWidth = contentWidth - leftWidth - gap;
 
     for (const exp of data.experience) {
       const dateText = `${exp.startDate} — ${exp.isCurrent ? 'Present' : exp.endDate}`;
-      drawTextLine(ctx.page, dateText, startX, ctx.cursorY, fonts.serif, 9, COLORS.slate500, leftWidth);
+      drawTextLine(ctx.page, dateText, startX, ctx.cursorY, fonts.sans, 10, COLORS.slate500, leftWidth); // Sans for dates looks cleaner
 
-      drawWrappedText(ctx, exp.role, rightX, rightWidth, fonts.serifBold, 11, COLORS.slate900, {
+      drawWrappedText(ctx, exp.role, rightX, rightWidth, fonts.sansBold, 12, COLORS.slate900, { // Mix sans for clarity? Template says serif for company
+        lineHeight: 15,
+        paragraphGap: 2,
+      });
+      drawWrappedText(ctx, exp.company, rightX, rightWidth, fonts.serifItalic, 11, COLORS.slate700, {
         lineHeight: 14,
-        paragraphGap: 4,
+        paragraphGap: 6,
       });
-      drawWrappedText(ctx, exp.company, rightX, rightWidth, fonts.serifItalic, 9.5, COLORS.slate700, {
-        lineHeight: 12,
-        paragraphGap: 4,
-      });
-      drawWrappedText(ctx, exp.description, rightX, rightWidth, fonts.serif, 9, COLORS.slate700, {
-        lineHeight: 12,
-        paragraphGap: 8,
+      drawWrappedText(ctx, exp.description, rightX, rightWidth, fonts.serif, 10.5, COLORS.slate700, {
+        lineHeight: 15,
+        paragraphGap: 12,
       });
 
-      ctx.moveCursor(8);
+      ctx.moveCursor(4);
     }
   }
 
   if (data.projects.length > 0) {
-    drawWrappedText(ctx, 'Projects', startX, contentWidth, fonts.serifBold, 14, COLORS.slate900, {
-      lineHeight: 18,
+    drawWrappedText(ctx, 'Projects', startX, contentWidth, sectionHeaderFont, sectionHeaderSize, COLORS.slate900, {
+      lineHeight: 20,
     });
     ctx.page.drawLine({
       start: { x: startX, y: ctx.cursorY + 4 },
       end: { x: startX + contentWidth, y: ctx.cursorY + 4 },
-      thickness: 1,
+      thickness: 0.5,
       color: COLORS.slate200,
     });
     ctx.moveCursor(16);
 
     for (const proj of data.projects) {
       const nameLine = proj.link ? `${proj.name} (${proj.link})` : proj.name;
-      drawWrappedText(ctx, nameLine, startX, contentWidth, fonts.serifBold, 10, COLORS.slate900, {
-        lineHeight: 13,
+      drawWrappedText(ctx, nameLine, startX, contentWidth, fonts.sansBold, 11, COLORS.slate900, {
+        lineHeight: 14,
         paragraphGap: 4,
       });
-      drawWrappedText(ctx, proj.description, startX, contentWidth, fonts.serif, 9, COLORS.slate600, {
-        lineHeight: 12,
-        paragraphGap: 10,
+      drawWrappedText(ctx, proj.description, startX, contentWidth, fonts.serif, 10.5, COLORS.slate600, {
+        lineHeight: 14,
+        paragraphGap: 12,
       });
     }
   }
 
   if (data.education.length > 0) {
-    drawWrappedText(ctx, 'Education', startX, contentWidth, fonts.serifBold, 14, COLORS.slate900, {
-      lineHeight: 18,
+    drawWrappedText(ctx, 'Education', startX, contentWidth, sectionHeaderFont, sectionHeaderSize, COLORS.slate900, {
+      lineHeight: 20,
     });
     ctx.page.drawLine({
       start: { x: startX, y: ctx.cursorY + 4 },
       end: { x: startX + contentWidth, y: ctx.cursorY + 4 },
-      thickness: 1,
+      thickness: 0.5,
       color: COLORS.slate200,
     });
-    ctx.moveCursor(14);
+    ctx.moveCursor(16);
 
     for (const edu of data.education) {
       const dateText = `${edu.startDate} — ${edu.endDate}`;
@@ -566,21 +599,22 @@ const renderMinimalistTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: 
         dateText,
         startX,
         contentWidth,
-        fonts.serifBold,
-        fonts.serif,
+        fonts.sansBold,
+        fonts.sans, // Date in Sans
+        11,
         10,
-        9,
         COLORS.slate900,
         COLORS.slate500
       );
-      drawWrappedText(ctx, edu.degree, startX, contentWidth, fonts.serifItalic, 9, COLORS.slate600, {
-        lineHeight: 12,
-        paragraphGap: 8,
+      drawWrappedText(ctx, edu.degree, startX, contentWidth, fonts.serifItalic, 10.5, COLORS.slate600, {
+        lineHeight: 14,
+        paragraphGap: 10,
       });
     }
   }
 };
 
+// --- Sidebar Template ---
 const drawSidebarLeftColumn = (
   page: PDFPage,
   data: ResumeData,
@@ -590,7 +624,7 @@ const drawSidebarLeftColumn = (
 ) => {
   const startX = padding;
   const maxWidth = sidebarWidth - padding * 2;
-  let y = A4_HEIGHT_PT - padding;
+  let y = A4_HEIGHT_PT - padding - 10;
 
   const drawBlock = (
     text: string,
@@ -606,9 +640,11 @@ const drawSidebarLeftColumn = (
     }
   };
 
-  drawBlock(data.fullName, fonts.sansBold, 16, COLORS.white, 18);
-  drawBlock(data.title, fonts.sans, 10.5, COLORS.indigo400, 14);
-  y -= 6;
+  // Name: text-3xl -> 24pt
+  drawBlock(data.fullName, fonts.sansBold, 24, COLORS.white, 28);
+  // Title: text-lg -> 14pt
+  drawBlock(data.title, fonts.sans, 14, COLORS.indigo400, 20);
+  y -= 20;
 
   const contactItems = [
     { label: 'Email', value: data.email },
@@ -622,76 +658,97 @@ const drawSidebarLeftColumn = (
     if (!item.value) continue;
     page.drawText(item.label.toUpperCase(), {
       x: startX,
-      y: y - 7,
-      size: 7,
-      font: fonts.sansBold,
-      color: COLORS.slate500,
-    });
-    y -= 12;
-    const lines = wrapText(item.value, fonts.sans, 9, maxWidth);
-    for (const line of lines) {
-      page.drawText(line, { x: startX, y: y - 9, size: 9, font: fonts.sans, color: COLORS.slate300 });
-      y -= 12;
-    }
-    y -= 4;
-  }
-
-  if (data.skills.length > 0) {
-    page.drawText('SKILLS', {
-      x: startX,
       y: y - 8,
       size: 8,
       font: fonts.sansBold,
-      color: COLORS.white,
+      color: COLORS.slate500,
     });
     y -= 14;
+    // Break long contact items (like URLs)
+    const lines = wrapText(item.value, fonts.sans, 10, maxWidth);
+    for (const line of lines) {
+      page.drawText(line, { x: startX, y: y - 10, size: 10, font: fonts.sans, color: COLORS.slate300 });
+      y -= 14;
+    }
+    y -= 8;
+  }
 
-    const chipFontSize = 8;
+  if (data.skills.length > 0) {
+    y -= 10;
+    page.drawText('SKILLS', {
+      x: startX,
+      y: y - 9,
+      size: 9,
+      font: fonts.sansBold,
+      color: COLORS.white,
+    });
+    page.drawLine({
+        start: { x: startX, y: y - 12 },
+        end: { x: startX + maxWidth, y: y - 12 },
+        thickness: 1,
+        color: COLORS.slate700
+    });
+    y -= 22;
+
+    const chipFontSize = 9;
     const chipGap = 4;
     let chipX = startX;
     let chipY = y;
+    
     for (const skill of data.skills) {
       const label = skill.trim();
       if (!label) continue;
-      const chipWidth = measureTextWidth(fonts.sans, chipFontSize, label) + 10;
+      const textWidth = measureTextWidth(fonts.sans, chipFontSize, label);
+      const chipPadding = 8;
+      const chipWidth = textWidth + chipPadding;
+      
       if (chipX + chipWidth > startX + maxWidth) {
         chipX = startX;
-        chipY -= 14;
+        chipY -= 18;
       }
+      
+      // Sidebar uses bg-slate-800
       page.drawRectangle({
         x: chipX,
-        y: chipY - 10,
+        y: chipY - 12,
         width: chipWidth,
-        height: 12,
+        height: 16,
         color: COLORS.slate800,
+        opacity: 1
       });
       page.drawText(label, {
-        x: chipX + 5,
-        y: chipY - 8,
+        x: chipX + 4,
+        y: chipY - 9,
         size: chipFontSize,
         font: fonts.sans,
         color: COLORS.slate300,
       });
       chipX += chipWidth + chipGap;
     }
-    y = chipY - 18;
+    y = chipY - 24;
   }
 
   if (data.education.length > 0) {
     page.drawText('EDUCATION', {
       x: startX,
-      y: y - 8,
-      size: 8,
+      y: y - 9,
+      size: 9,
       font: fonts.sansBold,
       color: COLORS.white,
     });
-    y -= 16;
+    page.drawLine({
+        start: { x: startX, y: y - 12 },
+        end: { x: startX + maxWidth, y: y - 12 },
+        thickness: 1,
+        color: COLORS.slate700
+    });
+    y -= 22;
 
     for (const edu of data.education) {
-      drawBlock(edu.school, fonts.sansBold, 9, COLORS.white, 12);
-      drawBlock(edu.degree, fonts.sans, 8, COLORS.slate300, 10);
-      drawBlock(`${edu.startDate} — ${edu.endDate}`, fonts.sans, 7, COLORS.slate500, 10);
-      y -= 6;
+      drawBlock(edu.school, fonts.sansBold, 10, COLORS.white, 12);
+      drawBlock(edu.degree, fonts.sans, 9, COLORS.slate400, 11);
+      drawBlock(`${edu.startDate} — ${edu.endDate}`, fonts.sans, 8, COLORS.slate500, 10);
+      y -= 12;
     }
   }
 };
@@ -699,7 +756,7 @@ const drawSidebarLeftColumn = (
 const renderSidebarTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: FontSet) => {
   const sidebarWidth = 200;
   const sidebarPadding = 24;
-  const mainPadding = 28;
+  const mainPadding = 32;
   const mainX = sidebarWidth + mainPadding;
   const mainWidth = A4_WIDTH_PT - mainX - mainPadding;
 
@@ -721,70 +778,108 @@ const renderSidebarTemplate = (data: ResumeData, pdfDoc: PDFDocument, fonts: Fon
   );
 
   const sectionTitle = (title: string) => {
-    ctx.ensureSpace(24);
-    const lineY = ctx.cursorY - 10;
+    ctx.ensureSpace(30);
+    const lineY = ctx.cursorY - 14;
+    // Sidebar marker
     ctx.page.drawRectangle({
       x: mainX,
       y: lineY,
-      width: 24,
-      height: 2,
+      width: 28,
+      height: 4,
       color: COLORS.slate900,
     });
     ctx.page.drawText(title.toUpperCase(), {
-      x: mainX + 32,
+      x: mainX + 40,
       y: ctx.cursorY - 14,
-      size: 12,
+      size: 14,
       font: fonts.sansBold,
       color: COLORS.slate800,
     });
-    ctx.moveCursor(26);
+    ctx.moveCursor(32);
   };
 
   if (data.summary) {
     sectionTitle('Profile');
-    drawWrappedText(ctx, data.summary, mainX, mainWidth, fonts.sans, 9.5, COLORS.slate600, {
-      lineHeight: 13,
-      paragraphGap: 6,
+    drawWrappedText(ctx, data.summary, mainX, mainWidth, fonts.sans, 10.5, COLORS.slate600, {
+      lineHeight: 15,
+      paragraphGap: 8,
     });
-    ctx.moveCursor(10);
+    ctx.moveCursor(16);
   }
 
   if (data.experience.length > 0) {
     sectionTitle('Experience');
+    
+    // Draw vertical line line the template
+    const lineStartY = ctx.cursorY;
+    
+    // We need to track where the line should end. This is tricky in a streamed layout.
+    // For simplicity in PDF-Lib, we'll just draw the text and decorations per item.
+    
+    // The sidebar template has a border-l-2.
+    const borderX = mainX + 6;
+    
     for (const exp of data.experience) {
-      drawWrappedText(ctx, exp.role, mainX, mainWidth, fonts.sansBold, 11, COLORS.slate900, {
-        lineHeight: 14,
+        // Bullet point
+        ctx.page.drawEllipse({
+            x: borderX,
+            y: ctx.cursorY - 6,
+            xScale: 3,
+            yScale: 3,
+            color: COLORS.slate200,
+            borderColor: COLORS.white,
+            borderWidth: 1.5
+        });
+
+      drawWrappedText(ctx, exp.role, mainX + 24, mainWidth - 24, fonts.sansBold, 12, COLORS.slate900, {
+        lineHeight: 16,
         paragraphGap: 4,
       });
+      
       const meta = `${exp.company}  |  ${exp.startDate} — ${exp.isCurrent ? 'Present' : exp.endDate}`;
-      drawWrappedText(ctx, meta, mainX, mainWidth, fonts.sansBold, 9, COLORS.indigo500, {
-        lineHeight: 12,
-        paragraphGap: 4,
+      drawWrappedText(ctx, meta, mainX + 24, mainWidth - 24, fonts.sansBold, 10, COLORS.indigo600, {
+        lineHeight: 14,
+        paragraphGap: 6,
       });
-      drawWrappedText(ctx, exp.description, mainX, mainWidth, fonts.sans, 9, COLORS.slate600, {
-        lineHeight: 12,
-        paragraphGap: 8,
+      
+      drawWrappedText(ctx, exp.description, mainX + 24, mainWidth - 24, fonts.sans, 10.5, COLORS.slate600, {
+        lineHeight: 15,
+        paragraphGap: 12,
       });
-      ctx.moveCursor(6);
+      
+      ctx.moveCursor(12);
     }
+    
+    // Draw the vertical line roughly
+    // ctx.page.drawLine({
+    //    start: { x: borderX, y: lineStartY },
+    //    end: { x: borderX, y: ctx.cursorY },
+    //    thickness: 2,
+    //    color: COLORS.slate100
+    // });
+    // Note: To draw the line correctly behind items, we'd need to know height beforehand or use layers.
+    // For now, omitting the continuous line to avoid complexity, or we can just draw small segments.
   }
 
   if (data.projects.length > 0) {
     sectionTitle('Projects');
     for (const proj of data.projects) {
-      drawWrappedText(ctx, proj.name, mainX, mainWidth, fonts.sansBold, 10, COLORS.slate900, {
-        lineHeight: 13,
+      ctx.ensureSpace(40);
+      // Project box background is tricky. skipping bg, focusing on text layout.
+      
+      drawWrappedText(ctx, proj.name, mainX, mainWidth, fonts.sansBold, 11, COLORS.slate900, {
+        lineHeight: 14,
         paragraphGap: 4,
       });
       if (proj.link) {
-        drawWrappedText(ctx, proj.link, mainX, mainWidth, fonts.sans, 8.5, COLORS.indigo500, {
-          lineHeight: 11,
-          paragraphGap: 2,
+        drawWrappedText(ctx, proj.link, mainX, mainWidth, fonts.sans, 9, COLORS.indigo600, {
+          lineHeight: 12,
+          paragraphGap: 4,
         });
       }
-      drawWrappedText(ctx, proj.description, mainX, mainWidth, fonts.sans, 9, COLORS.slate600, {
-        lineHeight: 12,
-        paragraphGap: 10,
+      drawWrappedText(ctx, proj.description, mainX, mainWidth, fonts.sans, 10.5, COLORS.slate600, {
+        lineHeight: 15,
+        paragraphGap: 12,
       });
     }
   }
@@ -800,6 +895,13 @@ const loadFonts = async (pdfDoc: PDFDocument): Promise<FontSet> => ({
 });
 
 export const exportResumeVectorPdf = async (data: ResumeData): Promise<Uint8Array> => {
+  // 1. Safety Check: If data contains non-Latin characters, Standard Fonts will fail.
+  // Fallback to image export (handled by caller catching this error).
+  const jsonString = JSON.stringify(data);
+  if (hasNonLatinCharacters(jsonString)) {
+      throw new Error("Resume contains non-Latin characters. Vector export not supported without custom fonts. Falling back to image export.");
+  }
+
   const pdfDoc = await PDFDocument.create();
   const fonts = await loadFonts(pdfDoc);
 
