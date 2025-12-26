@@ -11,6 +11,7 @@ import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 import { ResumeData } from './types';
 import { slugifyJobTitle } from './utils/slug';
+import { exportResumeToPdf } from './utils/pdfExport';
 
 // ============================================================================
 // Sub-View Components (Defined here to avoid creating multiple files for now)
@@ -19,9 +20,10 @@ import { slugifyJobTitle } from './utils/slug';
 interface HomeViewProps {
   resumeData: ResumeData;
   onDownloadPdf: () => void;
+  isExportingPdf: boolean;
 }
 
-const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
+const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf, isExportingPdf }) => {
   const navigate = useNavigate();
 
   const siteUrl = getSiteUrl();
@@ -106,6 +108,7 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
               variant="ghost"
               className="hidden md:flex"
               leftIcon={<DownloadIcon className="w-4 h-4" />}
+              isLoading={isExportingPdf}
             >
               Download PDF
             </Button>
@@ -142,6 +145,7 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf }) => {
           variant="secondary"
           className="rounded-full shadow-xl"
           title="Download PDF"
+          isLoading={isExportingPdf}
         >
           <DownloadIcon className="w-5 h-5" />
         </Button>
@@ -164,9 +168,10 @@ interface EditorViewProps {
   resetData: () => void;
   onDownloadPdf: () => void;
   onExportJson: () => void;
+  isExportingPdf: boolean;
 }
 
-const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, resetData, onDownloadPdf, onExportJson }) => {
+const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, resetData, onDownloadPdf, onExportJson, isExportingPdf }) => {
   const navigate = useNavigate();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
@@ -281,6 +286,7 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
               variant="dark"
               className="w-full"
               leftIcon={<DownloadIcon className="w-4 h-4" />}
+              isLoading={isExportingPdf}
             >
               Download PDF
             </Button>
@@ -318,6 +324,7 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
             variant="primary"
             className="rounded-full shadow-xl p-4 h-auto"
             title="Download PDF"
+            isLoading={isExportingPdf}
           >
             <DownloadIcon className="w-5 h-5" />
           </Button>
@@ -344,16 +351,27 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
 
 function App() {
   const { resumeData, setResumeData, resetData } = useResumeData();
+  const [isExportingPdf, setIsExportingPdf] = useState(false);
   const navigate = useNavigate();
 
-  // Robust PDF generation triggers the browser print dialog
-  const handleDownloadPdf = () => {
-    // Dynamically set title for the file name
-    const originalTitle = document.title;
-    document.title = `${resumeData.fullName.trim() || 'Resume'} - ModernCV`;
-    window.print();
-    // Restore title (optional, browser handling varies on when this executes)
-    setTimeout(() => { document.title = originalTitle; }, 500);
+  const handleDownloadPdf = async () => {
+    if (isExportingPdf) return;
+    const preview = document.getElementById('resume-preview-container');
+    if (!preview) {
+      alert('Resume preview is not ready yet.');
+      return;
+    }
+
+    setIsExportingPdf(true);
+    try {
+      const fileBase = resumeData.fullName.trim() || 'resume';
+      await exportResumeToPdf(preview, fileBase);
+    } catch (error) {
+      console.error(error);
+      alert('Failed to export PDF. Please try again.');
+    } finally {
+      setIsExportingPdf(false);
+    }
   };
 
   // Allow users to save their data to a JSON file
@@ -382,7 +400,7 @@ function App() {
 
   return (
     <Routes>
-      <Route path="/" element={<HomeView resumeData={resumeData} onDownloadPdf={handleDownloadPdf} />} />
+      <Route path="/" element={<HomeView resumeData={resumeData} onDownloadPdf={handleDownloadPdf} isExportingPdf={isExportingPdf} />} />
       <Route path="/directory" element={<JobTitles onBack={() => navigate('/')} onSelect={handleJobSelect} />} />
       <Route path="/resume_tmpl/:jobTitle" element={<TemplateSelector onUseTemplate={handleUseTemplate} />} />
       <Route
@@ -394,6 +412,7 @@ function App() {
             resetData={resetData}
             onDownloadPdf={handleDownloadPdf}
             onExportJson={handleExportJson}
+            isExportingPdf={isExportingPdf}
           />
         }
       />

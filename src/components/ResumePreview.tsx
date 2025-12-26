@@ -51,6 +51,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
       {/* Visual Page Break Marker (screen only) */}
       <div
         className="absolute inset-0 pointer-events-none z-50 print:hidden"
+        data-export-ignore="true"
         style={{
           // Creates a subtle dashed line effect at A4 intervals (297mm)
           backgroundImage: `
@@ -69,10 +70,10 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
         }}
       />
       {/* Page Number Indicators (Approximate for first few pages) */}
-      <div className="absolute top-[297mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none">
+      <div className="absolute top-[297mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none" data-export-ignore="true">
         <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 2 Start</div>
       </div>
-      <div className="absolute top-[594mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none">
+      <div className="absolute top-[594mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none" data-export-ignore="true">
         <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 3 Start</div>
       </div>
 
