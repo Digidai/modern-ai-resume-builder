@@ -1,7 +1,5 @@
 import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
-import { ResumeData } from '../types';
-import { exportResumeVectorPdf, supportsVectorTemplate } from './pdfVectorExport';
 
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
@@ -32,22 +30,9 @@ const downloadBlob = (blob: Blob, fileName: string) => {
   URL.revokeObjectURL(url);
 };
 
-export const exportResumeToPdf = async (element: HTMLElement, data: ResumeData) => {
+export const exportResumeToPdf = async (element: HTMLElement, rawFileName: string) => {
   if (document.fonts?.ready) {
     await document.fonts.ready;
-  }
-
-  const safeName = sanitizeFileName(data.fullName || 'resume') || 'resume';
-
-  if (supportsVectorTemplate(data.templateId)) {
-    try {
-      const pdfBytes = await exportResumeVectorPdf(data);
-      const blob = new Blob([pdfBytes], { type: 'application/pdf' });
-      downloadBlob(blob, `${safeName}.pdf`);
-      return;
-    } catch (error) {
-      console.warn('Vector PDF export failed, falling back to image export.', error);
-    }
   }
 
   const width = element.scrollWidth;
@@ -92,5 +77,6 @@ export const exportResumeToPdf = async (element: HTMLElement, data: ResumeData) 
 
   const pdfBytes = await pdfDoc.save();
   const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+  const safeName = sanitizeFileName(rawFileName) || 'resume';
   downloadBlob(blob, `${safeName}.pdf`);
 };
