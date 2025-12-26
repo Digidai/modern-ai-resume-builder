@@ -87,6 +87,8 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   wrapper.appendChild(clone);
   document.body.appendChild(wrapper);
 
+  clone.querySelectorAll('[data-export-ignore="true"]').forEach((node) => node.remove());
+
   const width = clone.scrollWidth || safeWidth;
   const height = clone.scrollHeight;
 
