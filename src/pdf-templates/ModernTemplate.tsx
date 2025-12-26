@@ -4,9 +4,9 @@ import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE, MailIconPdf, PhoneIconPdf
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: SPACING['10'],
-    paddingBottom: SPACING['10'],
-    paddingHorizontal: SPACING['10'], 
+    paddingTop: SPACING['16'],
+    paddingBottom: SPACING['16'],
+    paddingHorizontal: SPACING['16'], 
     fontFamily: 'Roboto',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     color: COLORS.slate600,
     marginTop: SPACING['2'], 
     fontFamily: 'Roboto',
-    fontWeight: 'normal', 
+    fontWeight: 'light', 
     letterSpacing: 0.5, 
   },
   contactRow: {
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
     backgroundColor: COLORS.slate100,
     borderWidth: 1,
     borderColor: COLORS.slate200,
-    borderRadius: 6,
+    borderRadius: 4.5,
   },
   skillText: {
     fontSize: FONT_SIZE['xs'],

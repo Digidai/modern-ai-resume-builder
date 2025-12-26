@@ -4,9 +4,9 @@ import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
 
 const styles = StyleSheet.create({
   page: {
-    paddingTop: SPACING['10'],
-    paddingBottom: SPACING['10'],
-    paddingHorizontal: SPACING['10'],
+    paddingTop: SPACING['16'],
+    paddingBottom: SPACING['16'],
+    paddingHorizontal: SPACING['16'],
     fontFamily: 'Times-Roman',
     backgroundColor: COLORS.white,
     color: COLORS.slate900,
