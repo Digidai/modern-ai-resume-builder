@@ -16,6 +16,8 @@
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues)
 
+[English](#why-this-project) | [中文](#功能特性)
+
 </div>
 
 ---
@@ -39,6 +41,18 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - Print-ready A4 layout and PDF export via browser print.
 - JSON export for portability or integration with other tools.
 - Light and dark themes.
+
+## 功能特性
+
+- **28 套专业模板** - 涵盖多种行业和风格的精心设计模板
+- **640 个职位页面** - SEO 优化的职位目录页面
+- **实时预览** - 输入内容时即时查看简历更新
+- **AI 智能优化** - 使用 Google Gemini AI 优化和润色简历文本
+- **自动生成摘要** - 根据职位和技能自动生成专业摘要
+- **本地数据存储** - 数据存储在 localStorage，无需后端服务
+- **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
+- **JSON 导出** - 支持 JSON 格式导出，便于备份和迁移
+- **明暗主题** - 支持浅色和深色主题切换
 
 ## Templates
 
@@ -72,6 +86,35 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Resume data lives in localStorage.
 - AI requests send only the selected text to Gemini.
 - API key can be provided in the UI and stored locally.
+
+## Usage Guide
+
+### Editing Your Resume
+1. Click **"Edit Resume"** to enter edit mode
+2. Use the **tabs** to navigate between sections:
+   - **Basics**: Personal details, summary, and education
+   - **Experience**: Work history with AI-enhanced descriptions
+   - **Skills**: Skills list and project showcase
+3. Changes are saved automatically to localStorage
+
+### AI Features
+- **Polish Text**: Click the ✨ sparkle icon on any text field to improve it with AI
+- **Generate Summary**: Click "Generate with AI" to create a professional summary based on your role and skills
+
+### Exporting
+- Click **"Download PDF"** to export your resume
+- Or press `Cmd/Ctrl + P` to open the print dialog and select "Save as PDF"
+
+## Resume Sections
+
+| Section | Description |
+|---------|-------------|
+| **Personal Info** | Name, title, contact details, website, LinkedIn |
+| **Summary** | Professional summary (AI-generated or custom) |
+| **Experience** | Work history with company, role, dates, and descriptions |
+| **Education** | Schools, degrees, and graduation dates |
+| **Skills** | Comma-separated list of skills |
+| **Projects** | Personal or professional projects with links |
 
 ## Tech Stack
 
@@ -207,9 +250,28 @@ npm run build:deploy
 
 The `dist` folder can be deployed to any static hosting (Vercel, Netlify, GitHub Pages, S3 + CloudFront).
 
+## API Reference
+
+### Gemini Service
+
+```typescript
+// Improve existing text with AI
+improveText(text: string, context: string): Promise<string>
+
+// Generate professional summary
+generateSummary(role: string, skills: string[]): Promise<string>
+```
+
 ## Contributing
 
-We welcome contributions. Please see `CONTRIBUTING.md` for details.
+We welcome contributions! Please see `CONTRIBUTING.md` for details.
+
+### Development Guidelines
+
+- Follow the existing code style
+- Write TypeScript types for new features
+- Test on both desktop and mobile viewports
+- Ensure AI features gracefully degrade when API is unavailable
 
 ## Roadmap
 
