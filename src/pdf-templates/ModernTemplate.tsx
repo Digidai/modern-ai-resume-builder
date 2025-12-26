@@ -16,12 +16,12 @@ const styles = StyleSheet.create({
     borderBottomWidth: 1,
     borderBottomColor: COLORS.slate200,
     paddingBottom: SPACING['8'], 
-    marginBottom: SPACING['8'],  
+    marginBottom: SPACING['6'],  
   },
   name: {
     fontSize: FONT_SIZE['4xl'],
     fontFamily: 'Roboto',
-    fontWeight: 'bold',
+    fontWeight: 900,
     textTransform: 'uppercase',
     color: COLORS.slate900,
     letterSpacing: -0.5, 
@@ -51,7 +51,7 @@ const styles = StyleSheet.create({
   
   // Sections
   sectionContainer: {
-    marginBottom: SPACING['8'],
+    marginBottom: SPACING['6'],
   },
   sectionTitle: {
     fontSize: FONT_SIZE['sm'],
@@ -59,7 +59,7 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     textTransform: 'uppercase',
     color: COLORS.slate400,
-    letterSpacing: 1.5,
+    letterSpacing: 2,
     marginBottom: SPACING['3'],
   },
   
@@ -113,7 +113,7 @@ const styles = StyleSheet.create({
   },
   skillChip: {
     paddingHorizontal: SPACING['3'],
-    paddingVertical: SPACING['1'],
+    paddingVertical: 2,
     backgroundColor: COLORS.slate100,
     borderWidth: 1,
     borderColor: COLORS.slate200,
