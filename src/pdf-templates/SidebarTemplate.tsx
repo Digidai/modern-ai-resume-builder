@@ -12,7 +12,7 @@ const styles = StyleSheet.create({
     position: 'absolute',
     top: 0,
     left: 0,
-    bottom: 0,
+    height: '100%',
     width: '33.33%',
     backgroundColor: COLORS.slate900,
   },
@@ -21,14 +21,12 @@ const styles = StyleSheet.create({
     // backgroundColor handled by sidebarBackground
     padding: SPACING['8'],
     color: COLORS.slate200,
-    flexGrow: 1,
   },
   main: {
     width: '66.67%',
     padding: SPACING['8'],
     // backgroundColor default white
     color: COLORS.slate900,
-    flexGrow: 1,
   },
   
   // Sidebar Content
