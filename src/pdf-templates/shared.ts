@@ -1,15 +1,5 @@
-import { StyleSheet, Font } from '@react-pdf/renderer';
+import { StyleSheet } from '@react-pdf/renderer';
 import { ResumeData } from '../types';
-
-// Register Fonts (Standard Fonts for now to ensure portability without huge assets)
-// Ideally, we would register custom fonts here.
-Font.register({
-  family: 'Helvetica',
-  fonts: [
-    { src: 'https://fonts.gstatic.com/s/helveticaneue/v70/1Ptsg8zYS_SKggPNyC0IT4ttDfA.ttf' }, // Fallback or standard
-    { src: 'https://fonts.gstatic.com/s/helveticaneue/v70/1Ptsg8zYS_SKggPNyC0IT4ttDfA.ttf', fontWeight: 'bold' },
-  ]
-});
 
 export type PdfTemplateProps = {
   data: ResumeData;
