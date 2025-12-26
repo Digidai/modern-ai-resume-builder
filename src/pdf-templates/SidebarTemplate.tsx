@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     // No flexDirection, default block layout
     backgroundColor: COLORS.white,
     fontFamily: 'Roboto',
+    padding: 0, // Explicitly zero padding to prevent overflow
   },
   sidebar: {
     position: 'absolute',
@@ -241,8 +242,8 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
         />
       </Svg>
 
-      {/* Sidebar - Absolute positioned and fixed to repeat on each page */}
-      <View style={styles.sidebar} fixed>
+      {/* Sidebar - Absolute positioned, only on first page */}
+      <View style={styles.sidebar}>
         <View style={styles.sidebarHeaderBlock}>
           <Text style={styles.sidebarName}>{data.fullName}</Text>
           <Text style={styles.sidebarTitle}>{data.title}</Text>
