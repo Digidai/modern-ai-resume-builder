@@ -67,7 +67,8 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
 
   const clone = element.cloneNode(true) as HTMLElement;
   const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
-  const safeWidth = Math.max(1, Math.round(baseWidth));
+  const fallbackWidth = element.scrollWidth || 794;
+  const safeWidth = Math.max(1, Math.round(baseWidth || fallbackWidth));
   clone.style.boxShadow = 'none';
   clone.style.margin = '0';
   clone.style.padding = '0';
@@ -79,7 +80,8 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   wrapper.style.position = 'fixed';
   wrapper.style.left = '-100000px';
   wrapper.style.top = '0';
-  wrapper.style.visibility = 'hidden';
+  wrapper.style.opacity = '0';
+  wrapper.style.zIndex = '-1';
   wrapper.style.pointerEvents = 'none';
   wrapper.style.width = `${safeWidth}px`;
   wrapper.appendChild(clone);
