@@ -81,6 +81,10 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         ? `/resume_tmpl/${canonicalSlug}`
         : `/resume_tmpl/${slugifyJobTitle(resolvedJobTitle)}`;
     const pageUrl = `${siteUrl}${canonicalPath}`;
+    const ogImagePath = canonicalSlug
+        ? `/og/resume_tmpl/${canonicalSlug}.png`
+        : '/og/resume_tmpl/default.png';
+    const ogImageAlt = `Resume templates for ${resolvedJobTitle}`;
 
     // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
     useEffect(() => {
@@ -95,6 +99,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         description: `Browse ModernCV resume templates for ${resolvedJobTitle}. Choose a layout, tailor content with AI suggestions, and download as PDF.`,
         canonical: canonicalPath,
         robots: SEO_ROBOTS_INDEX,
+        ogImage: ogImagePath,
+        imageAlt: ogImageAlt,
         ldJson: {
             '@context': 'https://schema.org',
             '@graph': [

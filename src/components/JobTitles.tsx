@@ -32,11 +32,15 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
         []
     );
 
+    const directoryOgImage = '/og/directory.png';
+
     useSeo({
         title: 'Browse Resume Templates by Job Title | ModernCV Directory',
         description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
         canonical: '/directory',
         robots: SEO_ROBOTS_INDEX,
+        ogImage: directoryOgImage,
+        imageAlt: 'ModernCV job title resume template directory preview',
         ldJson: {
             '@context': 'https://schema.org',
             '@graph': [

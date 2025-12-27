@@ -1,5 +1,6 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import sharp from 'sharp';
 import { slugifyJobTitle } from './slugify.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
@@ -15,6 +16,9 @@ const projectRoot = process.cwd();
 const distDir = path.join(projectRoot, 'dist');
 const publicDir = path.join(projectRoot, 'public');
 const jobTitlesPath = path.join(projectRoot, 'src', 'data', 'jobTitles.json');
+const OG_IMAGE_WIDTH = 1200;
+const OG_IMAGE_HEIGHT = 630;
+const OG_FONT_STACK = "ui-sans-serif, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif";
 
 const shouldWritePublic = () => process.env.SEO_WRITE_PUBLIC === '1';
 
@@ -34,6 +38,21 @@ const escapeHtml = (value) =>
     .replace(/'/g, '&#39;');
 
 const escapeAttr = escapeHtml;
+
+const truncateText = (value, maxLength) => {
+  const text = String(value ?? '').trim();
+  if (!text) return '';
+  if (text.length <= maxLength) return text;
+  if (maxLength <= 3) return text.slice(0, maxLength);
+  return `${text.slice(0, maxLength - 3)}...`;
+};
+
+const resolveOgImageUrl = (siteUrl, ogImagePath) => {
+  if (!ogImagePath) return `${siteUrl}${DEFAULT_OG_IMAGE}`;
+  if (/^https?:\/\//i.test(ogImagePath)) return ogImagePath;
+  if (ogImagePath.startsWith('/')) return `${siteUrl}${ogImagePath}`;
+  return `${siteUrl}/${ogImagePath}`;
+};
 
 const replaceOrInsertMeta = (html, matcher, replacement) => {
   if (matcher.test(html)) return html.replace(matcher, replacement);
@@ -122,6 +141,24 @@ const writeFileEnsuringDir = async (filePath, content) => {
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
 
+const renderSvgToPng = async (svg) => {
+  const svgBuffer = Buffer.from(svg, 'utf8');
+  return sharp(svgBuffer)
+    .png({ compressionLevel: 9 })
+    .toBuffer();
+};
+
+const writeOgImage = async ({ relativePath, svg, publicDirReady }) => {
+  const outputPath = path.join(distDir, relativePath.replace(/^\//, ''));
+  const pngBuffer = await renderSvgToPng(svg);
+  await writeFileEnsuringDir(outputPath, pngBuffer);
+
+  if (publicDirReady) {
+    const publicPath = path.join(publicDir, relativePath.replace(/^\//, ''));
+    await writeFileEnsuringDir(publicPath, pngBuffer);
+  }
+};
+
 const buildUrl = (siteUrl, routePath) => {
   if (routePath === '/') return `${siteUrl}/`;
   return `${siteUrl}${routePath}`;
@@ -184,7 +221,7 @@ const buildHomeSchema = (siteUrl) => {
   };
 };
 
-const buildDirectorySchema = (siteUrl, items) => {
+const buildDirectorySchema = (siteUrl, items, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
 
@@ -201,6 +238,14 @@ const buildDirectorySchema = (siteUrl, items) => {
         url: `${siteUrl}/directory`,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
+        ...(imageUrl
+          ? {
+              primaryImageOfPage: {
+                '@type': 'ImageObject',
+                url: imageUrl,
+              },
+            }
+          : {}),
         mainEntity: {
           '@type': 'ItemList',
           itemListElement: items.map((item, index) => ({
@@ -223,7 +268,7 @@ const buildDirectorySchema = (siteUrl, items) => {
   };
 };
 
-const buildJobPageSchema = (siteUrl, title, pageUrl, templates) => {
+const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
@@ -241,6 +286,14 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates) => {
         url: pageUrl,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
+        ...(imageUrl
+          ? {
+              primaryImageOfPage: {
+                '@type': 'ImageObject',
+                url: imageUrl,
+              },
+            }
+          : {}),
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         ...(hasTemplates
           ? {
@@ -316,6 +369,118 @@ const buildSitemapXml = ({ siteUrl, lastmod, jobItems }) => {
 const buildRobotsTxt = ({ siteUrl }) => {
   // Prefer `noindex` on `/editor` over `Disallow`, so crawlers can see the directive.
   return `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`;
+};
+
+const buildOgSvgShell = (content) => `<?xml version="1.0" encoding="UTF-8"?>
+<svg width="${OG_IMAGE_WIDTH}" height="${OG_IMAGE_HEIGHT}" viewBox="0 0 ${OG_IMAGE_WIDTH} ${OG_IMAGE_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#f8fafc" />
+      <stop offset="100%" stop-color="#e2e8f0" />
+    </linearGradient>
+  </defs>
+  <style>
+    .brand { font-family: ${OG_FONT_STACK}; font-size: 18px; font-weight: 700; letter-spacing: 0.28em; fill: #6366f1; text-transform: uppercase; }
+    .eyebrow { font-family: ${OG_FONT_STACK}; font-size: 16px; font-weight: 600; letter-spacing: 0.18em; fill: #64748b; text-transform: uppercase; }
+    .title { font-family: ${OG_FONT_STACK}; font-size: 52px; font-weight: 700; fill: #0f172a; }
+    .subtitle { font-family: ${OG_FONT_STACK}; font-size: 22px; font-weight: 400; fill: #475569; }
+    .chip-text { font-family: ${OG_FONT_STACK}; font-size: 16px; font-weight: 600; fill: #0f172a; }
+    .template-label { font-family: ${OG_FONT_STACK}; font-size: 14px; font-weight: 600; fill: #4338ca; }
+  </style>
+  <rect width="${OG_IMAGE_WIDTH}" height="${OG_IMAGE_HEIGHT}" fill="url(#bg)" />
+  ${content}
+</svg>`;
+
+const buildDirectoryOgSvg = ({ titles, totalTitles, totalCategories, templateCount }) => {
+  const displayTitles = titles.slice(0, 8);
+  const chipWidth = 280;
+  const chipHeight = 40;
+  const chipGapX = 16;
+  const chipGapY = 14;
+  const chipStartX = 72;
+  const chipStartY = 280;
+  const chipCols = 2;
+
+  const chips = displayTitles
+    .map((title, index) => {
+      const col = index % chipCols;
+      const row = Math.floor(index / chipCols);
+      const x = chipStartX + col * (chipWidth + chipGapX);
+      const y = chipStartY + row * (chipHeight + chipGapY);
+      const label = truncateText(title, 24);
+      return `
+      <g>
+        <rect x="${x}" y="${y}" width="${chipWidth}" height="${chipHeight}" rx="10" fill="#ffffff" stroke="#e2e8f0" />
+        <text x="${x + 14}" y="${y + 26}" class="chip-text">${escapeHtml(label)}</text>
+      </g>`;
+    })
+    .join('\n');
+
+  const templateLabel = `${templateCount} Templates`;
+
+  const content = `
+  <text class="brand" x="72" y="80">ModernCV</text>
+  <text class="title" x="72" y="150">Job Title Directory</text>
+  <text class="subtitle" x="72" y="200">${escapeHtml(
+    `${totalTitles} roles across ${totalCategories} categories`
+  )}</text>
+  ${chips}
+  <g transform="translate(760 130)">
+    <rect x="18" y="18" width="320" height="400" rx="16" fill="#e2e8f0" opacity="0.5" />
+    <rect x="9" y="9" width="320" height="400" rx="16" fill="#e2e8f0" opacity="0.8" />
+    <rect x="0" y="0" width="320" height="400" rx="16" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="0" y="0" width="320" height="8" rx="4" fill="#6366f1" />
+    <rect x="24" y="28" width="140" height="16" rx="6" fill="#0f172a" />
+    <rect x="24" y="52" width="110" height="10" rx="5" fill="#94a3b8" />
+    <rect x="24" y="78" width="272" height="2" fill="#e2e8f0" />
+    <rect x="24" y="98" width="76" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="24" y="118" width="250" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="136" width="230" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="154" width="240" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="188" width="96" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="24" y="208" width="246" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="226" width="216" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="244" width="256" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="24" y="330" width="140" height="26" rx="13" fill="#eef2ff" />
+    <text x="36" y="348" class="template-label">${escapeHtml(templateLabel)}</text>
+  </g>`;
+
+  return buildOgSvgShell(content);
+};
+
+const buildJobOgSvg = ({ title, templateName }) => {
+  const displayTitle = truncateText(title, 34);
+  const titleFontSize = displayTitle.length > 28 ? 46 : 52;
+  const templateLabel = truncateText(`${templateName} Template`, 22);
+
+  const content = `
+  <text class="brand" x="72" y="80">ModernCV</text>
+  <text class="eyebrow" x="72" y="128">Resume Templates For</text>
+  <text class="title" x="72" y="195" font-size="${titleFontSize}">${escapeHtml(displayTitle)}</text>
+  <text class="subtitle" x="72" y="245">Pick a template, customize content, export PDF.</text>
+  <g transform="translate(700 90)">
+    <rect x="0" y="0" width="420" height="470" rx="18" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="0" y="0" width="420" height="8" rx="4" fill="#6366f1" />
+    <rect x="32" y="30" width="200" height="18" rx="6" fill="#0f172a" />
+    <rect x="32" y="56" width="150" height="10" rx="5" fill="#94a3b8" />
+    <rect x="32" y="82" width="356" height="2" fill="#e2e8f0" />
+    <rect x="32" y="102" width="90" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="32" y="122" width="320" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="140" width="300" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="158" width="330" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="190" width="110" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="32" y="210" width="310" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="228" width="280" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="246" width="320" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="278" width="110" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="32" y="298" width="310" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="316" width="260" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="334" width="300" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="390" width="160" height="28" rx="14" fill="#eef2ff" />
+    <text x="48" y="409" class="template-label">${escapeHtml(templateLabel)}</text>
+  </g>`;
+
+  return buildOgSvgShell(content);
 };
 
 const renderDirectoryRoot = (categories, toPath) => {
@@ -419,6 +584,8 @@ const main = async () => {
 
   const templateHtmlPath = path.join(distDir, 'index.html');
   const templateHtml = await fs.readFile(templateHtmlPath, 'utf8');
+  const publicDirReady = shouldWritePublic()
+    && (await fs.stat(publicDir).then(() => true).catch(() => false));
 
   const categories = await readJson(jobTitlesPath);
   if (!Array.isArray(categories)) {
@@ -520,6 +687,37 @@ const main = async () => {
     path: `/resume_tmpl/${slugifyJobTitle(title)}`,
   }));
 
+  const defaultTemplateName = templates.find((template) => template.id === 'modern')?.name
+    ?? templates[0]?.name
+    ?? 'Modern';
+  const directoryOgPath = '/og/directory.png';
+  const defaultJobOgPath = '/og/resume_tmpl/default.png';
+
+  await writeOgImage({
+    relativePath: directoryOgPath,
+    svg: buildDirectoryOgSvg({
+      titles: allTitles,
+      totalTitles: allTitles.length,
+      totalCategories: categories.length,
+      templateCount: templates.length,
+    }),
+    publicDirReady,
+  });
+
+  await writeOgImage({
+    relativePath: defaultJobOgPath,
+    svg: buildJobOgSvg({ title: 'Your Role', templateName: defaultTemplateName }),
+    publicDirReady,
+  });
+
+  for (const item of jobItems) {
+    await writeOgImage({
+      relativePath: `/og/resume_tmpl/${item.slug}.png`,
+      svg: buildJobOgSvg({ title: item.title, templateName: defaultTemplateName }),
+      publicDirReady,
+    });
+  }
+
   const legacyRedirects = allTitles
     .map((title) => {
       const legacySlug = encodeURIComponent(String(title).replace(/\s+/g, '-'));
@@ -532,8 +730,10 @@ const main = async () => {
 
   const toPath = (p) => p;
 
-  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml }) => {
+  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt }) => {
     const pageUrl = buildUrl(siteUrl, routePath);
+    const ogImageUrl = resolveOgImageUrl(siteUrl, ogImage);
+    const resolvedImageAlt = imageAlt ?? DEFAULT_IMAGE_ALT;
 
     let html = templateHtml;
     html = setTitleTag(html, title);
@@ -554,15 +754,17 @@ const main = async () => {
     html = setMetaByProperty(html, 'og:site_name', SITE_NAME);
     html = setMetaByProperty(html, 'og:locale', DEFAULT_LOCALE);
     html = setMetaByProperty(html, 'og:updated_time', lastmodIso);
-    html = setMetaByProperty(html, 'og:image', `${siteUrl}${DEFAULT_OG_IMAGE}`);
-    html = setMetaByProperty(html, 'og:image:alt', DEFAULT_IMAGE_ALT);
+    html = setMetaByProperty(html, 'og:image', ogImageUrl);
+    html = setMetaByProperty(html, 'og:image:alt', resolvedImageAlt);
+    html = setMetaByProperty(html, 'og:image:width', String(OG_IMAGE_WIDTH));
+    html = setMetaByProperty(html, 'og:image:height', String(OG_IMAGE_HEIGHT));
 
     html = setMetaByName(html, 'twitter:card', DEFAULT_TWITTER_CARD);
     html = setMetaByName(html, 'twitter:url', pageUrl);
     html = setMetaByName(html, 'twitter:title', title);
     html = setMetaByName(html, 'twitter:description', description);
-    html = setMetaByName(html, 'twitter:image', `${siteUrl}${DEFAULT_OG_IMAGE}`);
-    html = setMetaByName(html, 'twitter:image:alt', DEFAULT_IMAGE_ALT);
+    html = setMetaByName(html, 'twitter:image', ogImageUrl);
+    html = setMetaByName(html, 'twitter:image:alt', resolvedImageAlt);
 
     html = setLdJson(html, ldJson);
     html = setRootContent(html, rootHtml);
@@ -585,13 +787,16 @@ const main = async () => {
     rootHtml: '',
   });
 
+  const directoryOgImageUrl = resolveOgImageUrl(siteUrl, directoryOgPath);
   await writePage({
     routePath: '/directory',
     title: 'Browse Resume Templates by Job Title | ModernCV Directory',
     description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
     robots: ROBOTS_INDEX,
-    ldJson: buildDirectorySchema(siteUrl, jobItems),
+    ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl),
     rootHtml: renderDirectoryRoot(categories, toPath),
+    ogImage: directoryOgPath,
+    imageAlt: 'ModernCV job title resume template directory preview',
   });
 
   await writePage({
@@ -607,6 +812,8 @@ const main = async () => {
     const pageTitle = `Resume Templates for ${item.title} | ModernCV`;
     const description = `Browse ModernCV resume templates for ${item.title}. Choose a layout, tailor content with AI suggestions, and download as PDF.`;
     const pageUrl = buildUrl(siteUrl, item.path);
+    const jobOgPath = `/og/resume_tmpl/${item.slug}.png`;
+    const jobOgImageUrl = resolveOgImageUrl(siteUrl, jobOgPath);
     const categoryName = titleToCategory.get(item.title);
     const categoryTitles = categoryName ? categoryToTitles.get(categoryName) ?? [] : [];
     const relatedTitles = categoryTitles.filter((title) => title !== item.title).slice(0, 8);
@@ -616,8 +823,10 @@ const main = async () => {
       title: pageTitle,
       description,
       robots: ROBOTS_INDEX,
-      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates),
+      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl),
       rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
+      ogImage: jobOgPath,
+      imageAlt: `Resume templates for ${item.title}`,
     });
   }
 
@@ -626,7 +835,7 @@ const main = async () => {
   const redirects = ['# Generated by scripts/seo-postbuild.mjs', ...legacyRedirects].join('\n');
 
   await writeFileEnsuringDir(path.join(distDir, '_redirects'), `${redirects}\n`);
-  if (shouldWritePublic() && (await fs.stat(publicDir).then(() => true).catch(() => false))) {
+  if (publicDirReady) {
     await writeFileEnsuringDir(path.join(publicDir, '_redirects'), `${redirects}\n`);
   }
 
@@ -634,7 +843,7 @@ const main = async () => {
   const robotsTxt = buildRobotsTxt({ siteUrl });
   await writeFileEnsuringDir(path.join(distDir, 'sitemap.xml'), sitemapXml);
   await writeFileEnsuringDir(path.join(distDir, 'robots.txt'), robotsTxt);
-  if (shouldWritePublic() && (await fs.stat(publicDir).then(() => true).catch(() => false))) {
+  if (publicDirReady) {
     await writeFileEnsuringDir(path.join(publicDir, 'sitemap.xml'), sitemapXml);
     await writeFileEnsuringDir(path.join(publicDir, 'robots.txt'), robotsTxt);
   }
