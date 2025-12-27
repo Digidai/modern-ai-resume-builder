@@ -188,9 +188,10 @@ const buildWebSiteSchema = (siteUrl) => ({
   },
 });
 
-const buildHomeSchema = (siteUrl) => {
+const buildHomeSchema = (siteUrl, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
+  const resolvedImageUrl = imageUrl || `${siteUrl}${DEFAULT_OG_IMAGE}`;
 
   return {
     '@context': 'https://schema.org',
@@ -213,9 +214,22 @@ const buildHomeSchema = (siteUrl) => {
           'Real-time preview',
           'Dark mode support',
         ],
-        screenshot: `${siteUrl}${DEFAULT_OG_IMAGE}`,
+        screenshot: resolvedImageUrl,
         publisher: { '@id': organization['@id'] },
         isPartOf: { '@id': website['@id'] },
+      },
+      {
+        '@type': 'WebPage',
+        '@id': `${siteUrl}/#webpage`,
+        name: 'ModernCV - Free AI Resume Builder',
+        description: 'Create stunning professional resumes in minutes with ModernCV.',
+        url: `${siteUrl}/`,
+        inLanguage: 'en',
+        isPartOf: { '@id': website['@id'] },
+        primaryImageOfPage: {
+          '@type': 'ImageObject',
+          url: resolvedImageUrl,
+        },
       },
     ],
   };
@@ -322,7 +336,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   };
 };
 
-const buildEditorSchema = (siteUrl) => {
+const buildEditorSchema = (siteUrl, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const pageUrl = `${siteUrl}/editor`;
@@ -340,6 +354,14 @@ const buildEditorSchema = (siteUrl) => {
         url: pageUrl,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
+        ...(imageUrl
+          ? {
+              primaryImageOfPage: {
+                '@type': 'ImageObject',
+                url: imageUrl,
+              },
+            }
+          : {}),
       },
     ],
   };
@@ -481,6 +503,102 @@ const buildJobOgSvg = ({ title, templateName }) => {
   </g>`;
 
   return buildOgSvgShell(content);
+};
+
+const buildHomeOgSvg = ({ templateName }) => {
+  const templateLabel = truncateText(`${templateName} Template`, 22);
+  const content = `
+  <text class="brand" x="72" y="80">ModernCV</text>
+  <text class="eyebrow" x="72" y="128">AI Resume Builder</text>
+  <text class="title" x="72" y="195">Build a resume in minutes</text>
+  <text class="subtitle" x="72" y="245">Choose a template, tailor content, export PDF.</text>
+  <g transform="translate(700 90)">
+    <rect x="0" y="0" width="420" height="470" rx="18" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="0" y="0" width="420" height="8" rx="4" fill="#6366f1" />
+    <rect x="32" y="30" width="200" height="18" rx="6" fill="#0f172a" />
+    <rect x="32" y="56" width="150" height="10" rx="5" fill="#94a3b8" />
+    <rect x="32" y="82" width="356" height="2" fill="#e2e8f0" />
+    <rect x="32" y="104" width="110" height="10" rx="5" fill="#cbd5e1" />
+    <rect x="32" y="128" width="320" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="146" width="300" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="164" width="330" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="200" width="120" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="32" y="220" width="310" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="238" width="280" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="256" width="320" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="32" y="396" width="160" height="28" rx="14" fill="#eef2ff" />
+    <text x="48" y="415" class="template-label">${escapeHtml(templateLabel)}</text>
+  </g>`;
+
+  return buildOgSvgShell(content);
+};
+
+const buildEditorOgSvg = () => {
+  const content = `
+  <text class="brand" x="72" y="80">ModernCV</text>
+  <text class="eyebrow" x="72" y="128">Resume Editor</text>
+  <text class="title" x="72" y="195">Customize with live preview</text>
+  <text class="subtitle" x="72" y="245">Edit sections, switch templates, export PDF.</text>
+  <g transform="translate(650 110)">
+    <rect x="0" y="0" width="470" height="420" rx="18" fill="#ffffff" stroke="#e2e8f0" />
+    <rect x="0" y="0" width="470" height="8" rx="4" fill="#6366f1" />
+    <rect x="24" y="28" width="160" height="16" rx="6" fill="#0f172a" />
+    <rect x="24" y="52" width="120" height="10" rx="5" fill="#94a3b8" />
+    <rect x="24" y="80" width="180" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="24" y="100" width="200" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="24" y="120" width="190" height="10" rx="5" fill="#e2e8f0" />
+    <rect x="240" y="28" width="206" height="300" rx="12" fill="#f8fafc" stroke="#e2e8f0" />
+    <rect x="260" y="48" width="150" height="12" rx="6" fill="#0f172a" />
+    <rect x="260" y="70" width="110" height="8" rx="4" fill="#94a3b8" />
+    <rect x="260" y="92" width="170" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="260" y="110" width="150" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="260" y="128" width="180" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="260" y="156" width="90" height="8" rx="4" fill="#cbd5e1" />
+    <rect x="260" y="176" width="160" height="8" rx="4" fill="#e2e8f0" />
+    <rect x="260" y="194" width="140" height="8" rx="4" fill="#e2e8f0" />
+  </g>`;
+
+  return buildOgSvgShell(content);
+};
+
+const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
+  const roleLinks = featuredTitles
+    .map((title) => {
+      const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
+      return `<li><a class="text-indigo-600 hover:underline" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
+    })
+    .join('\n');
+
+  const templateLinks = templates
+    .map((template) => `<li class="text-slate-700 dark:text-slate-200">${escapeHtml(template.name)}</li>`)
+    .join('\n');
+
+  return `
+  <main class="max-w-6xl mx-auto p-6 md:p-10">
+    <header class="mb-10">
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">ModernCV AI Resume Builder</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Build a professional resume in minutes with modern templates, AI suggestions, and instant PDF export.</p>
+      <div class="mt-6 flex flex-wrap gap-4">
+        <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
+        <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse job titles</a>
+      </div>
+    </header>
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">Popular roles</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
+        ${roleLinks}
+      </ul>
+    </section>
+    <section class="mb-10">
+      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">Templates</h2>
+      <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-slate-700 dark:text-slate-200">
+        ${templateLinks}
+      </ul>
+    </section>
+    <noscript>
+      <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the interactive resume editor.</p>
+    </noscript>
+  </main>`;
 };
 
 const renderDirectoryRoot = (categories, toPath) => {
@@ -680,6 +798,9 @@ const main = async () => {
     { id: 'cast', name: 'Cast' },
     { id: 'moda', name: 'Moda' },
   ];
+  const featuredTitles = categories
+    .flatMap((category) => category.titles.slice(0, 2))
+    .slice(0, 12);
 
   const jobItems = allTitles.map((title) => ({
     title,
@@ -690,8 +811,22 @@ const main = async () => {
   const defaultTemplateName = templates.find((template) => template.id === 'modern')?.name
     ?? templates[0]?.name
     ?? 'Modern';
+  const homeOgPath = '/og/home.png';
+  const editorOgPath = '/og/editor.png';
   const directoryOgPath = '/og/directory.png';
   const defaultJobOgPath = '/og/resume_tmpl/default.png';
+
+  await writeOgImage({
+    relativePath: homeOgPath,
+    svg: buildHomeOgSvg({ templateName: defaultTemplateName }),
+    publicDirReady,
+  });
+
+  await writeOgImage({
+    relativePath: editorOgPath,
+    svg: buildEditorOgSvg(),
+    publicDirReady,
+  });
 
   await writeOgImage({
     relativePath: directoryOgPath,
@@ -758,6 +893,7 @@ const main = async () => {
     html = setMetaByProperty(html, 'og:image:alt', resolvedImageAlt);
     html = setMetaByProperty(html, 'og:image:width', String(OG_IMAGE_WIDTH));
     html = setMetaByProperty(html, 'og:image:height', String(OG_IMAGE_HEIGHT));
+    html = setMetaByProperty(html, 'og:image:type', 'image/png');
 
     html = setMetaByName(html, 'twitter:card', DEFAULT_TWITTER_CARD);
     html = setMetaByName(html, 'twitter:url', pageUrl);
@@ -783,8 +919,10 @@ const main = async () => {
     description:
       "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
     robots: ROBOTS_INDEX,
-    ldJson: buildHomeSchema(siteUrl),
-    rootHtml: '',
+    ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath)),
+    rootHtml: renderHomeRoot({ featuredTitles, templates, toPath }),
+    ogImage: homeOgPath,
+    imageAlt: 'ModernCV AI resume builder preview',
   });
 
   const directoryOgImageUrl = resolveOgImageUrl(siteUrl, directoryOgPath);
@@ -804,8 +942,10 @@ const main = async () => {
     title: 'Edit Your Resume Online | ModernCV Editor',
     description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
     robots: ROBOTS_NOINDEX,
-    ldJson: buildEditorSchema(siteUrl),
+    ldJson: buildEditorSchema(siteUrl, resolveOgImageUrl(siteUrl, editorOgPath)),
     rootHtml: renderEditorRoot(toPath),
+    ogImage: editorOgPath,
+    imageAlt: 'ModernCV resume editor preview',
   });
 
   for (const item of jobItems) {

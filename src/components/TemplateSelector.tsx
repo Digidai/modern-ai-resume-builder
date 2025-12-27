@@ -85,6 +85,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         ? `/og/resume_tmpl/${canonicalSlug}.png`
         : '/og/resume_tmpl/default.png';
     const ogImageAlt = `Resume templates for ${resolvedJobTitle}`;
+    const ogImageUrl = `${siteUrl}${ogImagePath}`;
 
     // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
     useEffect(() => {
@@ -130,6 +131,10 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     inLanguage: 'en',
                     isPartOf: { '@id': websiteId },
                     breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+                    primaryImageOfPage: {
+                        '@type': 'ImageObject',
+                        url: ogImageUrl,
+                    },
                     mainEntity: {
                         '@type': 'ItemList',
                         itemListElement: TEMPLATES.map((template, index) => ({

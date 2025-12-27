@@ -33,6 +33,7 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
     );
 
     const directoryOgImage = '/og/directory.png';
+    const directoryOgImageUrl = `${siteUrl}${directoryOgImage}`;
 
     useSeo({
         title: 'Browse Resume Templates by Job Title | ModernCV Directory',
@@ -74,6 +75,10 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                     url: `${siteUrl}/directory`,
                     inLanguage: 'en',
                     isPartOf: { '@id': websiteId },
+                    primaryImageOfPage: {
+                        '@type': 'ImageObject',
+                        url: directoryOgImageUrl,
+                    },
                     mainEntity: {
                         '@type': 'ItemList',
                         itemListElement: allTitles.map((title, index) => ({

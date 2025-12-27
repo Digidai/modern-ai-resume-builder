@@ -28,6 +28,8 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf, isExport
   const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
+  const homeOgImage = '/og/home.png';
+  const homeOgImageUrl = `${siteUrl}${homeOgImage}`;
 
   useSeo({
     title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
@@ -35,6 +37,8 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf, isExport
       "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
     canonical: '/',
     robots: SEO_ROBOTS_INDEX,
+    ogImage: homeOgImage,
+    imageAlt: 'ModernCV AI resume builder preview',
     ldJson: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -75,9 +79,22 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf, isExport
             'Real-time preview',
             'Dark mode support',
           ],
-          screenshot: `${siteUrl}/og-image.png`,
+          screenshot: homeOgImageUrl,
           publisher: { '@id': orgId },
           isPartOf: { '@id': websiteId },
+        },
+        {
+          '@type': 'WebPage',
+          '@id': `${siteUrl}/#webpage`,
+          name: 'ModernCV - Free AI Resume Builder',
+          description: "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder.",
+          url: `${siteUrl}/`,
+          inLanguage: 'en',
+          isPartOf: { '@id': websiteId },
+          primaryImageOfPage: {
+            '@type': 'ImageObject',
+            url: homeOgImageUrl,
+          },
         },
       ],
     },
@@ -124,9 +141,9 @@ const HomeView: React.FC<HomeViewProps> = ({ resumeData, onDownloadPdf, isExport
 
       <main className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 print:p-0">
         <div className="max-w-[21cm] mx-auto shadow-2xl print:shadow-none transition-transform duration-500 ease-out animate-in fade-in slide-in-from-bottom-4">
-          <ResumePreview data={resumeData} />
+          <ResumePreview data={resumeData} showFullPage={false} />
         </div>
-        <div className="h-24 print:hidden"></div> {/* Spacer for mobile fab */}
+        <div className="h-20 md:hidden print:hidden"></div> {/* Spacer for mobile fab */}
       </main>
 
       {/* Mobile Floating Action Bar */}
@@ -178,12 +195,16 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
   const pageUrl = `${siteUrl}/editor`;
+  const editorOgImage = '/og/editor.png';
+  const editorOgImageUrl = `${siteUrl}${editorOgImage}`;
 
   useSeo({
     title: 'Edit Your Resume Online | ModernCV Editor',
     description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
     canonical: '/editor',
     robots: SEO_ROBOTS_NOINDEX,
+    ogImage: editorOgImage,
+    imageAlt: 'ModernCV resume editor preview',
     ldJson: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -212,6 +233,10 @@ const EditorView: React.FC<EditorViewProps> = ({ resumeData, setResumeData, rese
           url: pageUrl,
           inLanguage: 'en',
           isPartOf: { '@id': websiteId },
+          primaryImageOfPage: {
+            '@type': 'ImageObject',
+            url: editorOgImageUrl,
+          },
         },
       ],
     },
