@@ -58,6 +58,7 @@ ModernCV is a static, local-first resume builder. It runs entirely in the browse
 
 - `src/hooks/useSeo.ts` applies meta tags and JSON-LD at runtime.
 - `scripts/seo-postbuild.mjs` generates static HTML for `/directory` and `/resume_tmpl/*` routes.
+- The postbuild step also generates Open Graph share images (PNG) under `dist/og`.
 - Sitemap and canonical URLs use `SITE_URL` or `VITE_SITE_URL`.
 
 ## Deployment

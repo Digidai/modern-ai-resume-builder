@@ -15,13 +15,32 @@
 
 **ModernCV is an AI-powered resume builder with 28 templates, real-time preview, and 640 job-title pages for SEO.**
 
-[Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues)
+[Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
 [English](#why-this-project) | [中文](#功能特性)
 
 </div>
 
 ---
+
+## Table of Contents
+
+- [Why This Project?](#why-this-project)
+- [Who Is It For?](#who-is-it-for)
+- [Highlights](#highlights)
+- [Templates](#templates)
+- [Preview](#preview)
+- [Features](#features)
+- [SEO & Social Sharing](#seo--social-sharing)
+- [Getting Started](#getting-started)
+- [Scripts Reference](#scripts-reference)
+- [Project Structure](#project-structure)
+- [Adding Job Titles](#adding-job-titles)
+- [Deployment](#deployment)
+- [Contributing](#contributing)
+- [Roadmap](#roadmap)
+- [Community](#community)
+- [License](#license)
 
 ## Why This Project?
 
@@ -54,6 +73,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
 - **JSON 导出** - 支持 JSON 格式导出，便于备份和迁移
 - **明暗主题** - 支持浅色和深色主题切换
+- **社交分享图** - 构建时自动生成适配职位页与目录页的分享缩略图
 
 ## Templates
 
@@ -87,6 +107,13 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Resume data lives in localStorage.
 - AI requests send only the selected text to Gemini.
 - API key can be provided in the UI and stored locally.
+
+## SEO & Social Sharing
+
+- Open Graph + Twitter tags are set per page (runtime + build).
+- Build generates share images (1200x630 PNG) for home, directory, editor, and each job page.
+- Images are generated from SVG and saved under `dist/og/**`.
+- Set `SITE_URL` (build) or `VITE_SITE_URL` (runtime) to ensure correct canonical URLs.
 
 ## Usage Guide
 
@@ -128,6 +155,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 | Routing | React Router 6 |
 | AI | Google Gemini API |
 | PDF | pdf-lib |
+| SEO | JSON-LD, sitemap + OG images (sharp) |
 | Deployment | Cloudflare Pages/Workers |
 
 ## Getting Started
@@ -169,11 +197,15 @@ VITE_SITE_URL=https://your-domain.com
 
 # Optional: build-time site URL for SEO postbuild assets
 SITE_URL=https://your-domain.com
+
+# Optional: write SEO assets to public/ for local testing
+SEO_WRITE_PUBLIC=1
 ```
 
 Notes:
 - `VITE_` variables are embedded into the client bundle.
 - You can also enter the Gemini API key directly in the UI; it is stored in localStorage.
+- `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference
 

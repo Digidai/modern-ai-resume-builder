@@ -6,7 +6,7 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 1. Install dependencies: `npm install`
 2. Start dev server: `npm run dev`
-3. Build for production: `npm run build`
+3. Build for production: `npm run build` (generates SEO pages + OG images)
 
 ## Project Conventions
 
@@ -27,7 +27,13 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 1. Edit `src/data/jobTitles.json`.
 2. Validate: `npm run jobtitles:validate`.
-3. Build: `npm run build` (SEO pages depend on job titles).
+3. Build: `npm run build` (SEO pages + share images depend on job titles).
+
+## SEO + Social Sharing
+
+- `scripts/seo-postbuild.mjs` generates static HTML, sitemap, and share images.
+- Set `SITE_URL` to ensure canonical URLs and OG tags are correct.
+- Optional: set `SEO_WRITE_PUBLIC=1` to write generated assets into `public/` for local testing.
 
 ## AI Prompts
 
