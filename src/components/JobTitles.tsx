@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
 import ThemeToggle from './ThemeToggle';
@@ -16,10 +16,9 @@ const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
 
 interface JobTitlesProps {
     onBack: () => void;
-    onSelect: (jobTitle: string) => void;
 }
 
-const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
+const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
     const [searchParams, setSearchParams] = useSearchParams();
     const [search, setSearch] = useState("");
     const [expandedCategories, setExpandedCategories] = useState<Record<string, boolean>>({});
@@ -162,6 +161,11 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
             </header>
 
             <main className="max-w-7xl mx-auto p-6 md:p-12">
+                <nav className="text-xs text-slate-500 dark:text-slate-400 mb-6">
+                    <Link className="text-indigo-600 hover:underline" to="/">Home</Link>
+                    <span className="mx-2">/</span>
+                    <span className="text-slate-700 dark:text-slate-200">Job Directory</span>
+                </nav>
                 {/* Search Section */}
                 <div className="mb-12 text-center max-w-2xl mx-auto">
                     <h2 className="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white mb-4">
@@ -217,12 +221,12 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack, onSelect }) => {
                                 <ul className="space-y-1">
                                     {visibleTitles.map((title) => (
                                         <li key={title}>
-                                            <button
-                                                onClick={() => onSelect(title)}
-                                                className="w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all cursor-pointer"
+                                            <Link
+                                                to={`/resume_tmpl/${slugifyJobTitle(title)}`}
+                                                className="block w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
                                             >
                                                 {title}
-                                            </button>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

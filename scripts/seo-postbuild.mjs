@@ -249,7 +249,8 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates) => {
                 itemListElement: templates.map((template, index) => ({
                   '@type': 'ListItem',
                   position: index + 1,
-                  name: template,
+                  name: template.name,
+                  url: `${pageUrl}#template-${template.id}`,
                 })),
               },
             }
@@ -350,10 +351,30 @@ const renderDirectoryRoot = (categories, toPath) => {
   </main>`;
 };
 
-const renderJobRoot = (title, templates, toPath) => {
+const renderJobRoot = (title, templates, relatedTitles, toPath) => {
   const templateItems = templates
-    .map((t) => `<li class="px-3 py-2 rounded-lg bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">${escapeHtml(t)}</li>`)
+    .map(
+      (t) =>
+        `<li id="template-${escapeAttr(t.id)}" class="px-3 py-2 rounded-lg bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">${escapeHtml(t.name)}</li>`
+    )
     .join('\n');
+
+  const relatedLinks = (relatedTitles ?? [])
+    .map((relatedTitle) => {
+      const href = toPath(`/resume_tmpl/${slugifyJobTitle(relatedTitle)}`);
+      return `<a class="px-3 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-600 transition-colors" href="${escapeAttr(
+        href
+      )}">${escapeHtml(relatedTitle)}</a>`;
+    })
+    .join('\n');
+
+  const relatedSection = relatedLinks
+    ? `
+    <h2 class="mt-8 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Related roles</h2>
+    <div class="mt-3 flex flex-wrap gap-2">
+      ${relatedLinks}
+    </div>`
+    : '';
 
   return `
   <main class="max-w-4xl mx-auto p-6 md:p-10">
@@ -370,6 +391,7 @@ const renderJobRoot = (title, templates, toPath) => {
     <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-800 dark:text-slate-200">
       ${templateItems}
     </ul>
+    ${relatedSection}
     <div class="mt-8 flex flex-wrap gap-4">
       <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Open resume editor</a>
       <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse other roles</a>
@@ -407,6 +429,8 @@ const main = async () => {
   const seenTitles = new Set();
   const duplicateTitles = new Set();
   const slugToTitles = new Map();
+  const titleToCategory = new Map();
+  const categoryToTitles = new Map();
 
   for (const category of categories) {
     if (!category || typeof category !== 'object') {
@@ -428,6 +452,11 @@ const main = async () => {
       if (!title) continue;
 
       allTitles.push(title);
+      if (!categoryToTitles.has(category.name)) {
+        categoryToTitles.set(category.name, []);
+      }
+      categoryToTitles.get(category.name).push(title);
+      titleToCategory.set(title, category.name);
 
       if (seenTitles.has(title)) duplicateTitles.add(title);
       seenTitles.add(title);
@@ -455,34 +484,34 @@ const main = async () => {
   }
 
   const templates = [
-    'Modern',
-    'Minimalist',
-    'Sidebar',
-    'Executive',
-    'Creative',
-    'Compact',
-    'Tech',
-    'Professional',
-    'Academic',
-    'Elegant',
-    'Swiss',
-    'Opal',
-    'Wireframe',
-    'Berlin',
-    'Lateral',
-    'Iron',
-    'Ginto',
-    'Symmetry',
-    'Bronx',
-    'Path',
-    'Quartz',
-    'Silk',
-    'Mono',
-    'Pop',
-    'Noir',
-    'Paper',
-    'Cast',
-    'Moda',
+    { id: 'modern', name: 'Modern' },
+    { id: 'minimalist', name: 'Minimalist' },
+    { id: 'sidebar', name: 'Sidebar' },
+    { id: 'executive', name: 'Executive' },
+    { id: 'creative', name: 'Creative' },
+    { id: 'compact', name: 'Compact' },
+    { id: 'tech', name: 'Tech' },
+    { id: 'professional', name: 'Professional' },
+    { id: 'academic', name: 'Academic' },
+    { id: 'elegant', name: 'Elegant' },
+    { id: 'swiss', name: 'Swiss' },
+    { id: 'opal', name: 'Opal' },
+    { id: 'wireframe', name: 'Wireframe' },
+    { id: 'berlin', name: 'Berlin' },
+    { id: 'lateral', name: 'Lateral' },
+    { id: 'iron', name: 'Iron' },
+    { id: 'ginto', name: 'Ginto' },
+    { id: 'symmetry', name: 'Symmetry' },
+    { id: 'bronx', name: 'Bronx' },
+    { id: 'path', name: 'Path' },
+    { id: 'quartz', name: 'Quartz' },
+    { id: 'silk', name: 'Silk' },
+    { id: 'mono', name: 'Mono' },
+    { id: 'pop', name: 'Pop' },
+    { id: 'noir', name: 'Noir' },
+    { id: 'paper', name: 'Paper' },
+    { id: 'cast', name: 'Cast' },
+    { id: 'moda', name: 'Moda' },
   ];
 
   const jobItems = allTitles.map((title) => ({
@@ -578,6 +607,9 @@ const main = async () => {
     const pageTitle = `Resume Templates for ${item.title} | ModernCV`;
     const description = `Browse ModernCV resume templates for ${item.title}. Choose a layout, tailor content with AI suggestions, and download as PDF.`;
     const pageUrl = buildUrl(siteUrl, item.path);
+    const categoryName = titleToCategory.get(item.title);
+    const categoryTitles = categoryName ? categoryToTitles.get(categoryName) ?? [] : [];
+    const relatedTitles = categoryTitles.filter((title) => title !== item.title).slice(0, 8);
 
     await writePage({
       routePath: item.path,
@@ -585,7 +617,7 @@ const main = async () => {
       description,
       robots: ROBOTS_INDEX,
       ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates),
-      rootHtml: renderJobRoot(item.title, templates, toPath),
+      rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
     });
   }
 

@@ -9,7 +9,7 @@ interface ResumePreviewProps {
 const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
   // Common wrapper styling for the paper effect
   // print:p-[2cm] ensures standard margins for non-sidebar templates when @page margin is 0
-  const wrapperClass = "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none p-12 md:p-16 print:p-[1.5cm] overflow-hidden print:overflow-visible relative flex flex-col";
+  const wrapperClass = "resume-preview-container box-border bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none p-12 md:p-16 print:p-[1.5cm] overflow-hidden print:overflow-visible relative flex flex-col";
 
   // Templates that handle their own full-bleed layout or have specific padding requirements
   // These templates should NOT have the default container padding applied
@@ -21,7 +21,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data }) => {
 
   const isFullBleed = fullBleedTemplates.includes(data.templateId);
   const containerClass = isFullBleed
-    ? "resume-preview-container bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none overflow-hidden print:overflow-visible flex flex-col"
+    ? "resume-preview-container box-border bg-white text-slate-900 w-full h-full min-h-[29.7cm] shadow-xl print:shadow-none overflow-hidden print:overflow-visible flex flex-col"
     : wrapperClass;
 
   // Dynamic Print Styles

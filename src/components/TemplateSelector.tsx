@@ -1,5 +1,5 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { ResumeData, INITIAL_RESUME_DATA } from '../types';
 import ResumePreview from './ResumePreview';
 import { ScaledResumePreview } from './ScaledResumePreview';
@@ -17,7 +17,8 @@ interface JobTitleCategory {
     titles: string[];
 }
 
-const ALL_JOB_TITLES = (jobTitlesData as JobTitleCategory[]).flatMap((category) => category.titles);
+const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
+const ALL_JOB_TITLES = JOB_CATEGORIES.flatMap((category) => category.titles);
 
 // Extended template list with colors and visual identifiers (matching ResumeEditor)
 const TEMPLATES = [
@@ -129,6 +130,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                             '@type': 'ListItem',
                             position: index + 1,
                             name: template.name,
+                            url: `${pageUrl}#template-${template.id}`,
                         })),
                     },
                 },
@@ -154,6 +156,17 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             templateId: selectedTemplateId,
         };
     }, [resolvedJobTitle, selectedTemplateId]);
+
+    const relatedTitles = useMemo(() => {
+        const normalizedSlug = slugifyJobTitle(resolvedJobTitle);
+        const category = JOB_CATEGORIES.find((cat) =>
+            cat.titles.some((title) => slugifyJobTitle(title) === normalizedSlug)
+        );
+        if (!category) return [];
+        return category.titles
+            .filter((title) => slugifyJobTitle(title) !== normalizedSlug)
+            .slice(0, 8);
+    }, [resolvedJobTitle]);
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans transition-colors duration-300">
@@ -198,8 +211,24 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             {/* Right Panel: Template List */}
             <div className="w-full md:w-2/5 lg:w-1/3 h-[50vh] md:h-screen overflow-y-auto bg-white dark:bg-slate-900 custom-scrollbar border-l border-slate-200 dark:border-slate-800">
                 <div className="p-6 md:p-8 max-w-xl mx-auto">
+                    <div className="mb-6">
+                        <nav aria-label="Breadcrumb" className="text-xs text-slate-500 dark:text-slate-400 mb-3">
+                            <Link className="text-indigo-600 hover:underline" to="/">Home</Link>
+                            <span className="mx-2">/</span>
+                            <Link className="text-indigo-600 hover:underline" to="/directory">Job Directory</Link>
+                            <span className="mx-2">/</span>
+                            <span className="text-slate-700 dark:text-slate-200">{resolvedJobTitle}</span>
+                        </nav>
+                        <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
+                            Resume Templates for {resolvedJobTitle}
+                        </h1>
+                        <p className="mt-2 text-slate-500 dark:text-slate-400 text-sm">
+                            Preview layouts tailored for {resolvedJobTitle}. Pick a template, then customize and export to PDF.
+                        </p>
+                    </div>
+
                     <div className="mb-8">
-                        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-2">Select a Template</h3>
+                        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Select a Template</h2>
                         <p className="text-slate-500 dark:text-slate-400 text-sm">Choose a design that fits your style. Content is preserved across templates.</p>
                     </div>
 
@@ -207,6 +236,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         {TEMPLATES.map((t) => (
                             <button
                                 key={t.id}
+                                id={`template-${t.id}`}
                                 onClick={() => setSelectedTemplateId(t.id)}
                                 className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group hover:border-indigo-300 hover:shadow-lg w-full aspect-[210/297] flex flex-col
                             ${selectedTemplateId === t.id
@@ -235,6 +265,25 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                             </button>
                         ))}
                     </div>
+
+                    {relatedTitles.length > 0 && (
+                        <div className="mt-10">
+                            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
+                                Related roles
+                            </h2>
+                            <div className="mt-3 flex flex-wrap gap-2">
+                                {relatedTitles.map((title) => (
+                                    <Link
+                                        key={title}
+                                        to={`/resume_tmpl/${slugifyJobTitle(title)}`}
+                                        className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                                    >
+                                        {title}
+                                    </Link>
+                                ))}
+                            </div>
+                        </div>
+                    )}
                 </div>
             </div>
 

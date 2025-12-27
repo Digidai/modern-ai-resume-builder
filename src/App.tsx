@@ -10,7 +10,6 @@ import { DownloadIcon, EditIcon, CheckIcon, ArrowLeftIcon, SaveIcon, BriefcaseIc
 import { Button } from './components/Button';
 import ThemeToggle from './components/ThemeToggle';
 import { ResumeData } from './types';
-import { slugifyJobTitle } from './utils/slug';
 import { exportResumeToPdf } from './utils/pdfExport';
 
 // ============================================================================
@@ -394,14 +393,11 @@ function App() {
     navigate('/editor');
   };
 
-  const handleJobSelect = (title: string) => {
-    navigate(`/resume_tmpl/${slugifyJobTitle(title)}`);
-  };
 
   return (
     <Routes>
       <Route path="/" element={<HomeView resumeData={resumeData} onDownloadPdf={handleDownloadPdf} isExportingPdf={isExportingPdf} />} />
-      <Route path="/directory" element={<JobTitles onBack={() => navigate('/')} onSelect={handleJobSelect} />} />
+      <Route path="/directory" element={<JobTitles onBack={() => navigate('/')} />} />
       <Route path="/resume_tmpl/:jobTitle" element={<TemplateSelector onUseTemplate={handleUseTemplate} />} />
       <Route
         path="/editor"
