@@ -5,6 +5,8 @@ import { ModernTemplatePdf } from '../pdf-templates/ModernTemplate';
 import { MinimalistTemplatePdf } from '../pdf-templates/MinimalistTemplate';
 import { SidebarTemplatePdf } from '../pdf-templates/SidebarTemplate';
 import { Document } from '@react-pdf/renderer';
+// Import shared to register fonts
+import '../pdf-templates/shared';
 
 const VECTOR_TEMPLATES = new Set(['modern', 'minimalist', 'sidebar']);
 
@@ -14,7 +16,7 @@ export const supportsVectorTemplate = (templateId: string) => VECTOR_TEMPLATES.h
 // @react-pdf uses fontkit, which is smarter, but if we don't load a Chinese font, it will still render tofu boxes.
 // So we keep this check.
 const hasNonLatinCharacters = (str: string) => {
-    return /[^\u0000-\u00FF]/.test(str);
+  return /[^\u0000-\u00FF]/.test(str);
 };
 
 // Wrapper Component to hold the specific template page
@@ -35,11 +37,11 @@ export const exportResumeVectorPdf = async (data: ResumeData): Promise<Blob> => 
   // 1. Safety Check for non-Latin characters
   const jsonString = JSON.stringify(data);
   if (hasNonLatinCharacters(jsonString)) {
-      throw new Error("Resume contains non-Latin characters. Vector export skipped to avoid missing fonts.");
+    throw new Error("Resume contains non-Latin characters. Vector export skipped to avoid missing fonts.");
   }
 
   if (!supportsVectorTemplate(data.templateId)) {
-      throw new Error(`Vector export not supported for template: ${data.templateId}`);
+    throw new Error(`Vector export not supported for template: ${data.templateId}`);
   }
 
   // 2. Generate PDF using @react-pdf

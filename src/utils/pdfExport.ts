@@ -8,6 +8,7 @@ const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
 const MM_TO_PT = 2.83464567;
 const DEFAULT_MARGIN_MM = 15;
+const PAGE_SPLIT_EPSILON_PT = 1;
 const FULL_BLEED_TEMPLATES = new Set([
   'sidebar',
   'creative',
@@ -133,7 +134,8 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   const pageHeight = A4_HEIGHT_PT;
   const scale = contentWidth / image.width;
   const scaledHeight = image.height * scale;
-  const pageCount = Math.max(1, Math.ceil(scaledHeight / contentHeight));
+  // Avoid spurious extra pages from sub-point rounding when height ~= A4.
+  const pageCount = Math.max(1, Math.ceil((scaledHeight - PAGE_SPLIT_EPSILON_PT) / contentHeight));
 
   for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
     const page = pdfDoc.addPage([pageWidth, pageHeight]);

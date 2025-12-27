@@ -1,0 +1,38 @@
+✗ Build failed in 785ms
+error during build:
+[vite:esbuild] Transform failed with 2 errors:
+/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/src/pdf-templates/SidebarTemplate.tsx:227:74: ERROR: Invalid identifier: ">"
+/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/src/pdf-templates/SidebarTemplate.tsx:227:81: ERROR: Expected ";" but found "{"
+file: /Users/dai/Documents/CursorProjects/modern-ai-resume-builder/src/pdf-templates/SidebarTemplate.tsx:227:74
+
+Invalid identifier: ">"
+225|  });
+226|  
+227|  export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) =\u003e {
+   |                                                                            ^
+228|    return (
+229|  \u003cPage size =\"A4\" style={styles.page}\u003e
+
+Expected ";" but found "{"
+225|  });
+226|  
+227|  export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) =\u003e {
+   |                                                                                   ^
+228|    return (
+229|  \u003cPage size =\"A4\" style={styles.page}\u003e
+
+    at failureErrorWithLog (/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/node_modules/esbuild/lib/main.js:1467:15)
+    at /Users/dai/Documents/CursorProjects/modern-ai-resume-builder/node_modules/esbuild/lib/main.js:736:50
+    at responseCallbacks.<computed> (/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/node_modules/esbuild/lib/main.js:603:9)
+    at handleIncomingPacket (/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/node_modules/esbuild/lib/main.js:658:12)
+    at Socket.readFromStdout (/Users/dai/Documents/CursorProjects/modern-ai-resume-builder/node_modules/esbuild/lib/main.js:581:7)
+    at Socket.emit (node:events:508:28)
+    at addChunk (node:internal/streams/readable:559:12)
+    at readableAddChunkPushByteMode (node:internal/streams/readable:510:3)
+    at Readable.push (node:internal/streams/readable:390:5)
+    at Pipe.onStreamRead (node:internal/stream_base_commons:189:23)
+npm notice
+npm notice New minor version of npm available! 11.6.2 -> 11.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.7.0
+npm notice To update run: npm install -g npm@11.7.0
+npm notice

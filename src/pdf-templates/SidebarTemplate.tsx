@@ -1,30 +1,32 @@
 import React from 'react';
-import { Page, Text, View, StyleSheet, Svg, Rect } from '@react-pdf/renderer';
+import { Page, Text, View, StyleSheet } from '@react-pdf/renderer';
 import { PdfTemplateProps, COLORS, SPACING, FONT_SIZE } from './shared';
+
+const SIDEBAR_WIDTH = '33.33%';
 
 const styles = StyleSheet.create({
   page: {
-    // No flexDirection, default block layout
     backgroundColor: COLORS.white,
     fontFamily: 'Roboto',
-    padding: 0, // Explicitly zero padding to prevent overflow
+    padding: 0,
   },
+  // Sidebar (absolute positioned, only on first page)
   sidebar: {
     position: 'absolute',
     top: 0,
     left: 0,
-    width: '33.33%',
-    // Background color removed, handled by Svg
+    width: SIDEBAR_WIDTH,
+    backgroundColor: COLORS.slate900,
     padding: SPACING['8'],
     color: COLORS.slate200,
   },
+  // Main content with left margin to avoid sidebar
   main: {
-    marginLeft: '33.33%',
-    width: '66.67%',
+    marginLeft: SIDEBAR_WIDTH,
     padding: SPACING['8'],
     color: COLORS.slate900,
   },
-  
+
   // Sidebar Content
   sidebarHeaderBlock: {
     marginBottom: SPACING['4'],
@@ -44,7 +46,7 @@ const styles = StyleSheet.create({
     fontFamily: 'Roboto',
     fontWeight: 'medium',
   },
-  
+
   sidebarContactList: {
     gap: SPACING['4'],
     marginBottom: SPACING['8'],
@@ -64,10 +66,10 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE['sm'],
     color: COLORS.slate300,
   },
-  
+
   // Sidebar Sections
   sidebarSection: {
-    marginBottom: 0, 
+    marginBottom: SPACING['8'],
   },
   sidebarSectionHeader: {
     fontSize: FONT_SIZE['xs'],
@@ -96,7 +98,7 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE['xs'],
     color: COLORS.slate300,
   },
-  
+
   // Sidebar Edu
   eduList: {
     gap: SPACING['4'],
@@ -116,10 +118,10 @@ const styles = StyleSheet.create({
     fontSize: FONT_SIZE['xs'],
     color: COLORS.slate500,
   },
-  
+
   // Main Content
   mainSection: {
-    marginBottom: SPACING['2'],
+    marginBottom: SPACING['6'],
   },
   mainHeader: {
     flexDirection: 'row',
@@ -140,7 +142,7 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     letterSpacing: -0.25,
   },
-  
+
   // Profile
   summaryText: {
     fontSize: FONT_SIZE['sm'],
@@ -148,14 +150,14 @@ const styles = StyleSheet.create({
     lineHeight: 1.625,
     textAlign: 'justify',
   },
-  
+
   // Experience
   expList: {
     borderLeftWidth: 2,
     borderLeftColor: COLORS.slate100,
     paddingLeft: SPACING['6'],
     marginLeft: 4,
-    gap: SPACING['8'],
+    gap: SPACING['6'],
   },
   expItem: {
     position: 'relative',
@@ -188,7 +190,7 @@ const styles = StyleSheet.create({
   },
   company: {
     fontFamily: 'Roboto',
-    fontWeight: 'bold', // font-semibold
+    fontWeight: 'bold',
     color: COLORS.indigo600,
   },
   description: {
@@ -196,7 +198,7 @@ const styles = StyleSheet.create({
     color: COLORS.slate600,
     lineHeight: 1.625,
   },
-  
+
   // Projects
   projList: {
     gap: SPACING['4'],
@@ -231,18 +233,7 @@ const styles = StyleSheet.create({
 export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
   return (
     <Page size="A4" style={styles.page}>
-      {/* Fixed Background SVG - Purely decorative, zero layout impact */}
-      <Svg fixed style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', zIndex: -1 }}>
-        <Rect
-          x="0"
-          y="0"
-          width="33.33%"
-          height="100%"
-          fill={COLORS.slate900}
-        />
-      </Svg>
-
-      {/* Sidebar - Absolute positioned, only on first page */}
+      {/* Sidebar - absolute positioned, only first page */}
       <View style={styles.sidebar}>
         <View style={styles.sidebarHeaderBlock}>
           <Text style={styles.sidebarName}>{data.fullName}</Text>
@@ -283,7 +274,7 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
         </View>
 
         {data.skills.length > 0 && (
-          <View style={{ ...styles.sidebarSection, marginBottom: SPACING['8'] }}>
+          <View style={styles.sidebarSection}>
             <Text style={styles.sidebarSectionHeader}>Skills</Text>
             <View style={styles.skillChips}>
               {data.skills.map((skill, index) => (
@@ -311,7 +302,7 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
         )}
       </View>
 
-      {/* Main Content */}
+      {/* Main Content - with left margin, flows naturally */}
       <View style={styles.main}>
         {data.summary && (
           <View style={styles.mainSection}>
@@ -324,17 +315,17 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
         )}
 
         {data.experience.length > 0 && (
-          <View style={{ ...styles.mainSection, marginBottom: SPACING['8'] }}>
-             <View style={{ ...styles.mainHeader, marginBottom: SPACING['6'] }}>
+          <View style={styles.mainSection}>
+            <View style={styles.mainHeader}>
               <View style={styles.headerBar} />
               <Text style={styles.headerTitle}>Experience</Text>
             </View>
             <View style={styles.expList}>
               {data.experience.map((exp) => (
-                <View key={exp.id} style={styles.expItem} wrap={false}>
+                <View key={exp.id} style={styles.expItem}>
                   <View style={styles.expDot} />
                   <View style={{ flexDirection: 'row', justifyContent: 'space-between', alignItems: 'baseline', marginBottom: SPACING['1'] }}>
-                     <Text style={styles.role}>{exp.role}</Text>
+                    <Text style={styles.role}>{exp.role}</Text>
                   </View>
                   <View style={styles.expMeta}>
                     <Text style={styles.company}>{exp.company}</Text>
@@ -349,13 +340,13 @@ export const SidebarTemplatePdf: React.FC<PdfTemplateProps> = ({ data }) => {
 
         {data.projects.length > 0 && (
           <View style={styles.mainSection}>
-             <View style={styles.mainHeader}>
+            <View style={styles.mainHeader}>
               <View style={styles.headerBar} />
               <Text style={styles.headerTitle}>Projects</Text>
             </View>
             <View style={styles.projList}>
               {data.projects.map((proj) => (
-                <View key={proj.id} style={styles.projItem} wrap={false}>
+                <View key={proj.id} style={styles.projItem}>
                   <View style={styles.projHeader}>
                     <Text style={styles.projName}>{proj.name}</Text>
                     {proj.link && <Text style={styles.projLink}>{proj.link}</Text>}
