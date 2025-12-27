@@ -6,31 +6,7 @@ import { exportResumeVectorPdf, supportsVectorTemplate } from './pdfVectorExport
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
-const MM_TO_PT = 2.83464567;
-const DEFAULT_MARGIN_MM = 15;
 const PAGE_SPLIT_EPSILON_PT = 1;
-const FULL_BLEED_TEMPLATES = new Set([
-  'sidebar',
-  'creative',
-  'professional',
-  'opal',
-  'wireframe',
-  'berlin',
-  'lateral',
-  'iron',
-  'ginto',
-  'symmetry',
-  'bronx',
-  'path',
-  'quartz',
-  'silk',
-  'mono',
-  'pop',
-  'noir',
-  'paper',
-  'cast',
-  'moda',
-]);
 
 const loadImage = (src: string) =>
   new Promise<HTMLImageElement>((resolve, reject) => {
@@ -76,11 +52,10 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
     }
   }
 
-  const templateId = element.dataset.templateId ?? '';
-  const isFullBleed = FULL_BLEED_TEMPLATES.has(templateId);
-  const marginPt = (isFullBleed ? 0 : DEFAULT_MARGIN_MM) * MM_TO_PT;
-  const contentWidth = A4_WIDTH_PT - marginPt * 2;
-  const contentHeight = A4_HEIGHT_PT - marginPt * 2;
+  // Preserve the on-screen layout (padding/backgrounds) for higher fidelity.
+  const marginPt = 0;
+  const contentWidth = A4_WIDTH_PT;
+  const contentHeight = A4_HEIGHT_PT;
 
   const clone = element.cloneNode(true) as HTMLElement;
   const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
@@ -88,8 +63,6 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   const safeWidth = Math.max(1, Math.round(baseWidth || fallbackWidth));
   clone.style.boxShadow = 'none';
   clone.style.margin = '0';
-  clone.style.padding = '0';
-  clone.style.overflow = 'visible';
   clone.style.height = 'auto';
   clone.style.width = `${safeWidth}px`;
 
