@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect } from 'react';
+import React, { useState, useMemo, useEffect, useCallback } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
@@ -6,6 +6,7 @@ import ThemeToggle from './ThemeToggle';
 import jobTitlesData from '../data/jobTitles.json';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { slugifyJobTitle } from '../utils/slug';
+import { debounce } from '../utils/debounce';
 
 interface JobTitleCategory {
     name: string;
@@ -17,6 +18,52 @@ const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
 interface JobTitlesProps {
     onBack: () => void;
 }
+
+interface CategoryCardProps {
+    category: JobTitleCategory;
+    isSearching: boolean;
+    isExpanded: boolean;
+    onToggleCategory: (name: string) => void;
+}
+
+const CategoryCard: React.FC<CategoryCardProps> = ({ category, isSearching, isExpanded, onToggleCategory }) => {
+    const visibleTitles = isSearching || isExpanded ? category.titles : category.titles.slice(0, 10);
+    const hasMore = !isSearching && category.titles.length > visibleTitles.length;
+
+    return (
+        <div key={category.name} className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
+            <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
+                {category.name}
+                <span className="ml-auto text-xs font-normal text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">
+                    {category.titles.length}
+                </span>
+            </h3>
+            <ul className="space-y-1">
+                {visibleTitles.map((title) => (
+                    <li key={title}>
+                        <Link
+                            to={`/resume_tmpl/${slugifyJobTitle(title)}`}
+                            className="block w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
+                        >
+                            {title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+            {!isSearching && category.titles.length > 10 && (
+                <div className="mt-4">
+                    <Button
+                        variant="ghost"
+                        className="w-full justify-center text-indigo-600"
+                        onClick={() => onToggleCategory(category.name)}
+                    >
+                        {hasMore ? `Show all ${category.titles.length}` : 'Show less'}
+                    </Button>
+                </div>
+            )}
+        </div>
+    );
+};
 
 const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
     const [searchParams, setSearchParams] = useSearchParams();
@@ -147,6 +194,17 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
         setExpandedCategories((prev) => ({ ...prev, [categoryName]: !prev[categoryName] }));
     };
 
+    const debouncedSetSearchParams = useCallback(
+        debounce((query: string) => {
+            if (query.trim()) {
+                setSearchParams({ q: query }, { replace: true });
+            } else {
+                setSearchParams({}, { replace: true });
+            }
+        }, 300),
+        [setSearchParams]
+    );
+
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans transition-colors duration-300">
             {/* Header */}
@@ -183,11 +241,11 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                     <p className="text-slate-600 dark:text-slate-400 mb-8">
                         Select a job title to preview related resume templates.
                     </p>
-                    <p className="text-sm text-slate-500 dark:text-slate-400 mb-4">
+                    <div className="text-sm text-slate-500 dark:text-slate-400 mb-4" aria-live="polite" aria-atomic="true">
                         {isSearching
                             ? `Found ${stats.filteredTitleCount} roles in ${filteredCategories.length} categories`
                             : `${stats.totalTitles} roles across ${stats.totalCategories} categories`}
-                    </p>
+                    </div>
                     <div className="relative">
                         <div className="absolute inset-y-0 left-0 pl-4 flex items-center pointer-events-none">
                             <SearchIcon className="h-5 w-5 text-slate-400" />
@@ -197,14 +255,11 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                             className="block w-full pl-11 pr-4 py-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-xl text-slate-900 dark:text-white placeholder-slate-400 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-transparent shadow-sm transition-all"
                             placeholder="Search for a job title (e.g., 'Product Manager')..."
                             value={search}
+                            aria-label="Search job titles"
                             onChange={(e) => {
                                 const next = e.target.value;
                                 setSearch(next);
-                                if (next.trim()) {
-                                    setSearchParams({ q: next }, { replace: true });
-                                } else {
-                                    setSearchParams({}, { replace: true });
-                                }
+                                debouncedSetSearchParams(next);
                             }}
                         />
                     </div>
@@ -214,45 +269,13 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {filteredCategories.length > 0 ? (
                         filteredCategories.map((category) => (
-                            (() => {
-                                const isExpanded = !!expandedCategories[category.name];
-                                const visibleTitles = isSearching || isExpanded ? category.titles : category.titles.slice(0, 10);
-                                const hasMore = !isSearching && category.titles.length > visibleTitles.length;
-
-                                return (
-                            <div key={category.name} className="bg-white dark:bg-slate-900 rounded-2xl p-6 shadow-sm border border-slate-200 dark:border-slate-800 hover:shadow-md transition-shadow">
-                                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-4 flex items-center gap-2 pb-3 border-b border-slate-100 dark:border-slate-800">
-                                    {category.name}
-                                    <span className="ml-auto text-xs font-normal text-slate-500 bg-slate-100 dark:bg-slate-800 px-2 py-1 rounded-full">
-                                        {category.titles.length}
-                                    </span>
-                                </h3>
-                                <ul className="space-y-1">
-                                    {visibleTitles.map((title) => (
-                                        <li key={title}>
-                                            <Link
-                                                to={`/resume_tmpl/${slugifyJobTitle(title)}`}
-                                                className="block w-full text-left px-2 py-1.5 rounded-lg text-slate-600 dark:text-slate-400 hover:text-indigo-600 dark:hover:text-indigo-400 hover:bg-slate-50 dark:hover:bg-slate-800 transition-all"
-                                            >
-                                                {title}
-                                            </Link>
-                                        </li>
-                                    ))}
-                                </ul>
-                                {!isSearching && category.titles.length > 10 && (
-                                    <div className="mt-4">
-                                        <Button
-                                            variant="ghost"
-                                            className="w-full justify-center text-indigo-600"
-                                            onClick={() => toggleCategory(category.name)}
-                                        >
-                                            {hasMore ? `Show all ${category.titles.length}` : 'Show less'}
-                                        </Button>
-                                    </div>
-                                )}
-                            </div>
-                                );
-                            })()
+                            <CategoryCard
+                                key={category.name}
+                                category={category}
+                                isSearching={isSearching}
+                                isExpanded={!!expandedCategories[category.name]}
+                                onToggleCategory={toggleCategory}
+                            />
                         ))
                     ) : (
                         <div className="col-span-full text-center py-12">

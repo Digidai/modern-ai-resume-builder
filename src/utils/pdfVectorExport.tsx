@@ -5,12 +5,10 @@ import { ModernTemplatePdf } from '../pdf-templates/ModernTemplate';
 import { MinimalistTemplatePdf } from '../pdf-templates/MinimalistTemplate';
 import { SidebarTemplatePdf } from '../pdf-templates/SidebarTemplate';
 import { Document } from '@react-pdf/renderer';
-// Import shared to register fonts
 import '../pdf-templates/shared';
+import { supportsPdfVector } from '../constants/templates';
 
-const VECTOR_TEMPLATES = new Set(['modern', 'minimalist', 'sidebar']);
-
-export const supportsVectorTemplate = (templateId: string) => VECTOR_TEMPLATES.has(templateId);
+export const supportsVectorTemplate = supportsPdfVector;
 
 // Check for characters outside Latin-1 range (Standard fonts only support Latin-1)
 // @react-pdf uses fontkit, which is smarter, but if we don't load a Chinese font, it will still render tofu boxes.

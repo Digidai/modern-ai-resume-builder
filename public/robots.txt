@@ -1,4 +1,22 @@
-User-agent: *
-Allow: /
+# Robots.txt for ModernCV
+# Last updated: 2025-01-04
 
+# Allow all crawlers
+User-agent: *
+
+# Main sitemap location
 Sitemap: https://genedai.cv/sitemap.xml
+
+# Crawl-delay (optional, respectful crawling)
+Crawl-delay: 1
+
+# Block low-value directories (if any exist)
+Disallow: /_redirects
+Disallow: /assets/
+Disallow: /node_modules/
+
+# Disallow editor pages (noindex anyway)
+Disallow: /editor
+
+# Allow API endpoints (future use)
+Allow: /api/

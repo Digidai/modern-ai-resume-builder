@@ -2,7 +2,10 @@
 
 interface ImportMetaEnv {
     readonly VITE_GEMINI_API_KEY: string
-    // more env variables...
+    readonly VITE_SITE_URL?: string
+    readonly DEV: boolean
+    readonly PROD: boolean
+    readonly MODE: string
 }
 
 interface ImportMeta {

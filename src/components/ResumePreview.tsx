@@ -1,6 +1,8 @@
 import React from 'react';
 import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
+import { isFullBleedTemplate } from '../constants/templates';
+import { PRINT_CONFIG } from '../constants/print';
 
 interface ResumePreviewProps {
   data: ResumeData;
@@ -8,21 +10,11 @@ interface ResumePreviewProps {
 }
 
 const ResumePreview: React.FC<ResumePreviewProps> = ({ data, showFullPage = true }) => {
-  // Common wrapper styling for the paper effect
-  // print:p-[2cm] ensures standard margins for non-sidebar templates when @page margin is 0
   const wrapperClass = "resume-preview-container box-border bg-white text-slate-900 w-full h-full shadow-xl print:shadow-none p-12 md:p-16 print:p-[1.5cm] overflow-hidden print:overflow-visible relative flex flex-col";
 
-  // Templates that handle their own full-bleed layout or have specific padding requirements
-  // These templates should NOT have the default container padding applied
-  const fullBleedTemplates = [
-    'sidebar', 'creative', 'professional', 'opal', 'wireframe', 'berlin',
-    'lateral', 'iron', 'ginto', 'symmetry', 'bronx', 'path', 'quartz', 'silk',
-    'mono', 'pop', 'noir', 'paper', 'cast', 'moda'
-  ];
-
-  const isFullBleed = fullBleedTemplates.includes(data.templateId);
+  const isFullBleed = isFullBleedTemplate(data.templateId);
   const shouldUseA4Height = showFullPage || isFullBleed;
-  const pageHeightClass = shouldUseA4Height ? 'min-h-[29.7cm]' : '';
+  const pageHeightClass = shouldUseA4Height ? `min-h-[${PRINT_CONFIG.PAGE_HEIGHT_MM}cm]` : '';
   const containerClass = isFullBleed
     ? `resume-preview-container box-border bg-white text-slate-900 w-full h-full ${pageHeightClass} shadow-xl print:shadow-none overflow-hidden print:overflow-visible flex flex-col`
     : `${wrapperClass} ${pageHeightClass}`;
@@ -33,7 +25,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, showFullPage = true
   const printStyles = `
     @page {
       size: A4;
-      margin: ${isFullBleed ? '0mm' : '15mm'};
+      margin: ${isFullBleed ? `${PRINT_CONFIG.MARGIN_FULL_BLEED_MM}mm` : `${PRINT_CONFIG.MARGIN_STANDARD_MM}mm`};
     }
     @media print {
       .resume-preview-container {
@@ -56,29 +48,28 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, showFullPage = true
         className="absolute inset-0 pointer-events-none z-50 print:hidden"
         data-export-ignore="true"
         style={{
-          // Creates a subtle dashed line effect at A4 intervals (297mm)
+          // Creates a subtle dashed line effect at A4 intervals
           backgroundImage: `
             linear-gradient(to right, #94a3b8 50%, transparent 50%),
             linear-gradient(to right, #94a3b8 50%, transparent 50%)
           `,
           backgroundSize: '12px 1px',
-          backgroundPosition: '0 297mm', // Start at first page break
+          backgroundPosition: `0 ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`, // Start at first page break
           backgroundRepeat: 'repeat-x',
-          // Use a second gradient to repeat this line vertically every 297mm
-          maskImage: 'linear-gradient(to bottom, transparent 296.8mm, black 296.8mm, black 297.2mm, transparent 297.2mm)',
-          maskSize: '100% 297mm',
-          WebkitMaskImage: 'linear-gradient(to bottom, transparent 296.8mm, black 296.8mm, black 297.2mm, transparent 297.2mm)',
-          WebkitMaskSize: '100% 297mm',
+          // Use a second gradient to repeat this line vertically
+          maskImage: `linear-gradient(to bottom, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm)`,
+          maskSize: `100% ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`,
+          WebkitMaskImage: `linear-gradient(to bottom, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm)`,
+          WebkitMaskSize: `100% ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`,
           opacity: 0.4
         }}
       />
       {/* Page Number Indicators (Approximate for first few pages) */}
-      <div className="absolute top-[297mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none" data-export-ignore="true">
-        <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 2 Start</div>
-      </div>
-      <div className="absolute top-[594mm] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none" data-export-ignore="true">
-        <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page 3 Start</div>
-      </div>
+      {[...PRINT_CONFIG.PAGE_BREAK_POSITIONS].map((position, index) => (
+        <div key={position} className={`absolute top-[${position}] right-0 w-full border-t border-transparent z-50 print:hidden pointer-events-none`} data-export-ignore="true">
+          <div className="absolute right-2 -top-3 text-[10px] text-slate-400 font-sans bg-white/80 px-1 rounded">Page {index + 2} Start</div>
+        </div>
+      ))}
 
       {renderTemplate()}
     </div>

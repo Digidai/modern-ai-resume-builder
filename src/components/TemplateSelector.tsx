@@ -11,6 +11,7 @@ import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
 import { getPersonaFullNameForJobTitle } from '../data/personas';
+import { TEMPLATES } from '../constants/templates';
 
 interface JobTitleCategory {
     name: string;
@@ -19,38 +20,6 @@ interface JobTitleCategory {
 
 const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
 const ALL_JOB_TITLES = JOB_CATEGORIES.flatMap((category) => category.titles);
-
-// Extended template list with colors and visual identifiers (matching ResumeEditor)
-const TEMPLATES = [
-    { id: 'modern', name: 'Modern', color: 'bg-indigo-500' },
-    { id: 'minimalist', name: 'Minimalist', color: 'bg-slate-200' },
-    { id: 'sidebar', name: 'Sidebar', color: 'bg-slate-800' },
-    { id: 'executive', name: 'Executive', color: 'bg-slate-600' },
-    { id: 'creative', name: 'Creative', color: 'bg-emerald-600' },
-    { id: 'compact', name: 'Compact', color: 'bg-blue-400' },
-    { id: 'tech', name: 'Tech', color: 'bg-gray-900' },
-    { id: 'professional', name: 'Professional', color: 'bg-blue-800' },
-    { id: 'academic', name: 'Academic', color: 'bg-slate-100 border border-slate-400 !text-slate-800' },
-    { id: 'elegant', name: 'Elegant', color: 'bg-stone-200' },
-    { id: 'swiss', name: 'Swiss', color: 'bg-slate-900 border-2 border-white' },
-    { id: 'opal', name: 'Opal', color: 'bg-slate-50' },
-    { id: 'wireframe', name: 'Wireframe', color: 'bg-white border border-slate-300' },
-    { id: 'berlin', name: 'Berlin', color: 'bg-white border-t-4 border-black' },
-    { id: 'lateral', name: 'Lateral', color: 'bg-white' },
-    { id: 'iron', name: 'Iron', color: 'bg-black' },
-    { id: 'ginto', name: 'Ginto', color: 'bg-white' },
-    { id: 'symmetry', name: 'Symmetry', color: 'bg-slate-50' },
-    { id: 'bronx', name: 'Bronx', color: 'bg-white' },
-    { id: 'path', name: 'Path', color: 'bg-white' },
-    { id: 'quartz', name: 'Quartz', color: 'bg-white border border-slate-900' },
-    { id: 'silk', name: 'Silk', color: 'bg-stone-50' },
-    { id: 'mono', name: 'Mono', color: 'bg-slate-900' },
-    { id: 'pop', name: 'Pop', color: 'bg-gradient-to-r from-indigo-100 to-pink-100' },
-    { id: 'noir', name: 'Noir', color: 'bg-zinc-900' },
-    { id: 'paper', name: 'Paper', color: 'bg-[#fffef8] border border-slate-300' },
-    { id: 'cast', name: 'Cast', color: 'bg-[#fafafa] font-mono' },
-    { id: 'moda', name: 'Moda', color: 'bg-white' },
-];
 
 interface TemplateSelectorProps {
     onUseTemplate: (jobTitle: string, templateId: string) => void;
@@ -94,6 +63,25 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             navigate(`/resume_tmpl/${canonicalSlug}`, { replace: true });
         }
     }, [canonicalSlug, jobTitle, navigate]);
+
+    // Keyboard navigation for template selection
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            const currentIndex = TEMPLATES.findIndex(t => t.id === selectedTemplateId);
+            if (currentIndex === -1) return;
+
+            if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                setSelectedTemplateId(TEMPLATES[currentIndex - 1].id);
+                e.preventDefault();
+            } else if (e.key === 'ArrowRight' && currentIndex < TEMPLATES.length - 1) {
+                setSelectedTemplateId(TEMPLATES[currentIndex + 1].id);
+                e.preventDefault();
+            }
+        };
+
+        window.addEventListener('keydown', handleKeyDown);
+        return () => window.removeEventListener('keydown', handleKeyDown);
+    }, [selectedTemplateId]);
 
     useSeo({
         title: `Resume Templates for ${resolvedJobTitle} | ModernCV`,

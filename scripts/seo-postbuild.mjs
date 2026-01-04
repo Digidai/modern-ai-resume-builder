@@ -111,6 +111,29 @@ const setAlternateLinks = (html, links) => {
   return cleaned.replace(/<\/head>/i, `${markup}\n</head>`);
 };
 
+const generateJobKeywords = (jobTitle) => {
+  const baseKeywords = [jobTitle, 'resume', 'CV', 'template'];
+  const roleKeywords = {
+    'software engineer': ['developer', 'programming', 'coding', 'software'],
+    'data scientist': ['machine learning', 'analytics', 'python', 'data'],
+    'product manager': ['product', 'agile', 'kanban', 'stakeholder', 'roadmap'],
+    'ux designer': ['user experience', 'ui', 'ux design', 'figma', 'prototype'],
+    'marketing manager': ['digital marketing', 'seo', 'content marketing', 'campaign'],
+    'sales manager': ['b2b', 'sales', 'quota', 'deals', 'revenue'],
+    'project manager': ['agile', 'scrum', 'jira', 'stakeholder', 'delivery'],
+  };
+
+  const titleLower = jobTitle.toLowerCase();
+  const additionalKeywords = Object.entries(roleKeywords).reduce((acc, [role, keywords]) => {
+    if (titleLower.includes(role.toLowerCase())) {
+      acc.push(...keywords);
+    }
+    return acc;
+  }, []);
+
+  return [...baseKeywords, ...additionalKeywords];
+};
+
 const setLdJson = (html, json) => {
   const start = '<script type="application/ld+json">';
   const startIndex = html.indexOf(start);
@@ -194,8 +217,8 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
   const resolvedImageUrl = imageUrl || `${siteUrl}${DEFAULT_OG_IMAGE}`;
 
   return {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       organization,
       website,
       {
@@ -234,14 +257,15 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
     ],
   };
 };
+};
 
 const buildDirectorySchema = (siteUrl, items, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
 
   return {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       organization,
       website,
       {
@@ -288,26 +312,26 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
 
   return {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       organization,
       website,
       {
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
         name: `Resume Templates for ${title}`,
-        description: `Browse ModernCV resume templates for ${title}.`,
+        description: `Browse ModernCV resume templates for ${title}. Choose a clean, professional resume template for ${title} role. Customize content with AI suggestions, and download as PDF instantly.`,
         url: pageUrl,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
           ? {
-              primaryImageOfPage: {
-                '@type': 'ImageObject',
-                url: imageUrl,
-              },
-            }
-          : {}),
+                primaryImageOfPage: {
+                  '@type': 'ImageObject',
+                  url: imageUrl,
+                },
+              }
+            : {}),
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         ...(hasTemplates
           ? {
@@ -342,8 +366,8 @@ const buildEditorSchema = (siteUrl, imageUrl) => {
   const pageUrl = `${siteUrl}/editor`;
 
   return {
-    '@context': 'https://schema.org',
-    '@graph': [
+    "@context": "https://schema.org",
+    "@graph": [
       organization,
       website,
       {
@@ -865,15 +889,17 @@ const main = async () => {
 
   const toPath = (p) => p;
 
-  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt }) => {
+  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt, keywords }) => {
     const pageUrl = buildUrl(siteUrl, routePath);
     const ogImageUrl = resolveOgImageUrl(siteUrl, ogImage);
     const resolvedImageAlt = imageAlt ?? DEFAULT_IMAGE_ALT;
+    const resolvedKeywords = keywords ?? generateJobKeywords(title);
 
     let html = templateHtml;
     html = setTitleTag(html, title);
     html = setMetaByName(html, 'title', title);
     html = setMetaByName(html, 'description', description);
+    html = setMetaByName(html, 'keywords', resolvedKeywords);
     html = setMetaByName(html, 'robots', robots);
     html = setCanonical(html, pageUrl);
     html = setSitemapLink(html, `${siteUrl}/sitemap.xml`);
@@ -963,6 +989,7 @@ const main = async () => {
       title: pageTitle,
       description,
       robots: ROBOTS_INDEX,
+      keywords: generateJobKeywords(item.title),
       ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl),
       rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
       ogImage: jobOgPath,

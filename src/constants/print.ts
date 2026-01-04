@@ -1,0 +1,12 @@
+export const PRINT_CONFIG = {
+  PAGE_WIDTH_MM: 210,
+  PAGE_HEIGHT_MM: 297,
+  MARGIN_STANDARD_MM: 15,
+  MARGIN_FULL_BLEED_MM: 0,
+  PAGE_BREAK_POSITIONS: ['297mm', '594mm', '891mm'],
+} as const;
+
+export const A4_DIMENSIONS = {
+  WIDTH_PT: 595.28,
+  HEIGHT_PT: 841.89,
+} as const;
