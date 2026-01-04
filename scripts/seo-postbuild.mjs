@@ -697,8 +697,12 @@ const renderJobRoot = (title, templates, relatedTitles, toPath) => {
     <h2 class="mt-8 text-lg font-semibold text-slate-900 dark:text-white">Popular templates</h2>
     <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-800 dark:text-slate-200">
       ${templateItems}
-    </ul>
-    ${relatedSection}
+     </ul>
+    ${relatedSection ? `
+    <h2 class="mt-8 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Related roles</h2>
+    <div class="mt-3 flex flex-wrap gap-2">
+      ${relatedSection}
+    </div>` : ''}
     <div class="mt-8 flex flex-wrap gap-4">
       <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Open resume editor</a>
       <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse other roles</a>
