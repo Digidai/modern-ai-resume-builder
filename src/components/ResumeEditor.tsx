@@ -8,6 +8,8 @@ import { ScaledResumePreview } from './ScaledResumePreview';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
+import { Input } from './Input';
+import { LazyResumePreview } from './LazyResumePreview';
 
 interface ResumeEditorProps {
   data: ResumeData;
@@ -52,9 +54,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [pendingAiAction]);
 
   const handleAiImprovement = useCallback((
-    fieldId: string, 
-    text: string, 
-    context: string, 
+    fieldId: string,
+    text: string,
+    context: string,
     onUpdate: (val: string) => void
   ) => {
     handleAiAction(async (key) => {
@@ -72,8 +74,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [handleAiAction, showError]);
 
   const handleAiGeneration = useCallback((
-    fieldId: string, 
-    generator: (key: string) => Promise<string>, 
+    fieldId: string,
+    generator: (key: string) => Promise<string>,
     onUpdate: (val: string) => void
   ) => {
     handleAiAction(async (key) => {
@@ -91,7 +93,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [handleAiAction, showError]);
 
   const handleInputChange = useCallback(<K extends keyof ResumeData>(
-    field: K, 
+    field: K,
     value: ResumeData[K]
   ) => {
     onChange({ ...data, [field]: value });
@@ -111,11 +113,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [data, onChange]);
 
   const updateExperience = useCallback(<K extends keyof Experience>(
-    id: string, 
-    field: K, 
+    id: string,
+    field: K,
     value: Experience[K]
   ) => {
-    const updated = data.experience.map(exp => 
+    const updated = data.experience.map(exp =>
       exp.id === id ? { ...exp, [field]: value } : exp
     );
     onChange({ ...data, experience: updated });
@@ -137,11 +139,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [data, onChange]);
 
   const updateEducation = useCallback(<K extends keyof Education>(
-    id: string, 
-    field: K, 
+    id: string,
+    field: K,
     value: Education[K]
   ) => {
-    const updated = data.education.map(edu => 
+    const updated = data.education.map(edu =>
       edu.id === id ? { ...edu, [field]: value } : edu
     );
     onChange({ ...data, education: updated });
@@ -157,21 +159,21 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [data, onChange]);
 
   const addProject = useCallback(() => {
-    const newProj: Project = { 
-      id: Date.now().toString(), 
-      name: '', 
-      link: '', 
-      description: '' 
+    const newProj: Project = {
+      id: Date.now().toString(),
+      name: '',
+      link: '',
+      description: ''
     };
     onChange({ ...data, projects: [...data.projects, newProj] });
   }, [data, onChange]);
 
   const updateProject = useCallback(<K extends keyof Project>(
-    id: string, 
-    field: K, 
+    id: string,
+    field: K,
     value: Project[K]
   ) => {
-    const updated = data.projects.map(p => 
+    const updated = data.projects.map(p =>
       p.id === id ? { ...p, [field]: value } : p
     );
     onChange({ ...data, projects: updated });
@@ -191,11 +193,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
             aria-selected={activeTab === tab}
             aria-controls={`panel-${tab}`}
             onClick={() => setActiveTab(tab)}
-            className={`px-5 py-3 text-sm font-medium capitalize focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors whitespace-nowrap ${
-              activeTab === tab
-                ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 bg-white dark:bg-slate-800'
-                : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
-            }`}
+            className={`px-5 py-3 text-sm font-medium capitalize focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors whitespace-nowrap ${activeTab === tab
+              ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 bg-white dark:bg-slate-800'
+              : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
+              }`}
           >
             {tab}
           </button>
@@ -213,11 +214,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                   role="radio"
                   aria-checked={data.templateId === t.id}
                   onClick={() => handleInputChange('templateId', t.id)}
-                  className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${
-                    data.templateId === t.id 
-                      ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 ring-1 ring-indigo-600' 
-                      : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
-                  }`}
+                  className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${data.templateId === t.id
+                    ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 ring-1 ring-indigo-600'
+                    : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
+                    }`}
                 >
                   <div className="flex items-center gap-3 mb-2">
                     <div className={`w-8 h-8 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-xs font-bold`}>
@@ -228,7 +228,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                     </span>
                   </div>
                   <div className="w-full h-32 bg-slate-100 rounded-md overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity relative pointer-events-none">
-                    <ScaledResumePreview data={{ ...data, templateId: t.id }} templateId={t.id} />
+                    <LazyResumePreview data={{ ...data, templateId: t.id }} templateId={t.id} />
                   </div>
                   {data.templateId === t.id && (
                     <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full" aria-hidden="true" />
@@ -248,33 +248,33 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Input label="Full Name" value={data.fullName} onChange={(v) => handleInputChange('fullName', v)} />
               <Input label="Job Title" value={data.title} onChange={(v) => handleInputChange('title', v)} />
-              <Input 
-                label="Email" 
+              <Input
+                label="Email"
                 type="email"
-                value={data.email} 
-                onChange={(v) => handleInputChange('email', v)} 
+                value={data.email}
+                onChange={(v) => handleInputChange('email', v)}
                 error={getEmailError(data.email)}
               />
-              <Input 
-                label="Phone" 
+              <Input
+                label="Phone"
                 type="tel"
-                value={data.phone} 
-                onChange={(v) => handleInputChange('phone', v)} 
+                value={data.phone}
+                onChange={(v) => handleInputChange('phone', v)}
                 error={getPhoneError(data.phone)}
               />
               <Input label="Location" value={data.location} onChange={(v) => handleInputChange('location', v)} />
-              <Input 
-                label="Website" 
+              <Input
+                label="Website"
                 type="url"
-                value={data.website} 
-                onChange={(v) => handleInputChange('website', v)} 
+                value={data.website}
+                onChange={(v) => handleInputChange('website', v)}
                 error={getUrlError(data.website)}
               />
-              <Input 
-                label="LinkedIn" 
+              <Input
+                label="LinkedIn"
                 type="url"
-                value={data.linkedin} 
-                onChange={(v) => handleInputChange('linkedin', v)} 
+                value={data.linkedin}
+                onChange={(v) => handleInputChange('linkedin', v)}
                 error={getUrlError(data.linkedin)}
               />
             </div>
@@ -340,10 +340,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
               <div className="space-y-6">
                 {data.education.map((edu) => (
                   <div key={edu.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative group">
-                    <Button 
-                      onClick={() => removeEducation(edu.id)} 
-                      variant="icon" 
-                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50" 
+                    <Button
+                      onClick={() => removeEducation(edu.id)}
+                      variant="icon"
+                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50"
                       size="icon"
                       aria-label={`Remove ${edu.school || 'education'}`}
                     >
@@ -377,10 +377,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
               {data.experience.map((exp) => (
                 <div key={exp.id} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
                   <div className="absolute top-4 right-4 flex gap-2">
-                    <Button 
-                      onClick={() => removeExperience(exp.id)} 
-                      variant="icon" 
-                      className="text-slate-400 hover:text-red-500 hover:bg-red-50" 
+                    <Button
+                      onClick={() => removeExperience(exp.id)}
+                      variant="icon"
+                      className="text-slate-400 hover:text-red-500 hover:bg-red-50"
                       size="icon"
                       aria-label={`Remove ${exp.role || 'position'} at ${exp.company || 'company'}`}
                     >
@@ -481,10 +481,10 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
               <div className="space-y-4">
                 {data.projects.map(proj => (
                   <div key={proj.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
-                    <Button 
-                      onClick={() => removeProject(proj.id)} 
-                      variant="icon" 
-                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50" 
+                    <Button
+                      onClick={() => removeProject(proj.id)}
+                      variant="icon"
+                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50"
                       size="icon"
                       aria-label={`Remove ${proj.name || 'project'}`}
                     >
@@ -492,11 +492,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                     </Button>
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
                       <Input label="Project Name" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
-                      <Input 
-                        label="Link (optional)" 
+                      <Input
+                        label="Link (optional)"
                         type="url"
-                        value={proj.link} 
-                        onChange={(v) => updateProject(proj.id, 'link', v)} 
+                        value={proj.link}
+                        onChange={(v) => updateProject(proj.id, 'link', v)}
                         error={getUrlError(proj.link)}
                       />
                     </div>
@@ -547,44 +547,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   );
 };
 
-interface InputProps {
-  label: string;
-  value: string;
-  onChange: (val: string) => void;
-  type?: string;
-  disabled?: boolean;
-  error?: string;
-}
 
-const Input = ({ label, value, onChange, type = "text", disabled = false, error }: InputProps) => {
-  const id = `input-${label.toLowerCase().replace(/\s+/g, '-')}`;
-  
-  return (
-    <div className="flex flex-col gap-1">
-      <label htmlFor={id} className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
-        {label}
-      </label>
-      <input
-        id={id}
-        type={type}
-        className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm disabled:bg-slate-100 dark:disabled:bg-slate-900 disabled:text-slate-400 ${
-          error 
-            ? 'border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20' 
-            : 'border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100'
-        }`}
-        value={value}
-        onChange={(e) => onChange(e.target.value)}
-        disabled={disabled}
-        aria-invalid={!!error}
-        aria-describedby={error ? `${id}-error` : undefined}
-      />
-      {error && (
-        <p id={`${id}-error`} className="text-xs text-red-600 dark:text-red-400" role="alert">
-          {error}
-        </p>
-      )}
-    </div>
-  );
-};
+
 
 export default ResumeEditor;

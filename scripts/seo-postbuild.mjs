@@ -27,7 +27,7 @@ const toIsoDate = (date) => date.toISOString().slice(0, 10);
 const getSiteUrl = () => {
   const raw = process.env.SITE_URL || process.env.VITE_SITE_URL || DEFAULT_SITE_URL;
   return raw.replace(/\/+$/, '');
-
+};
 
 const escapeHtml = (value) =>
   String(value)
@@ -45,19 +45,19 @@ const truncateText = (value, maxLength) => {
   if (text.length <= maxLength) return text;
   if (maxLength <= 3) return text.slice(0, maxLength);
   return `${text.slice(0, maxLength - 3)}...`;
-
+};
 
 const resolveOgImageUrl = (siteUrl, ogImagePath) => {
   if (!ogImagePath) return `${siteUrl}${DEFAULT_OG_IMAGE}`;
   if (/^https?:\/\//i.test(ogImagePath)) return ogImagePath;
   if (ogImagePath.startsWith('/')) return `${siteUrl}${ogImagePath}`;
   return `${siteUrl}/${ogImagePath}`;
-
+};
 
 const replaceOrInsertMeta = (html, matcher, replacement) => {
   if (matcher.test(html)) return html.replace(matcher, replacement);
   return html.replace(/<\/head>/i, `  ${replacement}\n</head>`);
-
+};
 
 const setTitleTag = (html, title) =>
   html.replace(/<title>[^<]*<\/title>/i, `<title>${escapeHtml(title)}</title>`);
@@ -79,7 +79,7 @@ const setMetaByProperty = (html, property, content) =>
 const replaceOrInsertLink = (html, matcher, replacement) => {
   if (matcher.test(html)) return html.replace(matcher, replacement);
   return html.replace(/<\/head>/i, `  ${replacement}\n</head>`);
-
+};
 
 const setCanonical = (html, href) =>
   replaceOrInsertLink(
@@ -109,30 +109,7 @@ const setAlternateLinks = (html, links) => {
     .join('\n');
 
   return cleaned.replace(/<\/head>/i, `${markup}\n</head>`);
-
-
-const generateJobKeywords = (jobTitle) => {
-  const baseKeywords = [jobTitle, 'resume', 'CV', 'template'];
-  const roleKeywords = {
-    'software engineer': ['developer', 'programming', 'coding', 'software'],
-    'data scientist': ['machine learning', 'analytics', 'python', 'data'],
-    'product manager': ['product', 'agile', 'kanban', 'stakeholder', 'roadmap'],
-    'ux designer': ['user experience', 'ui', 'ux design', 'figma', 'prototype'],
-    'marketing manager': ['digital marketing', 'seo', 'content marketing', 'campaign'],
-    'sales manager': ['b2b', 'sales', 'quota', 'deals', 'revenue'],
-    'project manager': ['agile', 'scrum', 'jira', 'stakeholder', 'delivery'],
-  };
-
-  const titleLower = jobTitle.toLowerCase();
-  const additionalKeywords = Object.entries(roleKeywords).reduce((acc, [role, keywords]) => {
-    if (titleLower.includes(role.toLowerCase())) {
-      acc.push(...keywords);
-    }
-    return acc;
-  }, []);
-
-  return [...baseKeywords, ...additionalKeywords];
-
+};
 
 const setLdJson = (html, json) => {
   const start = '<script type="application/ld+json">';
@@ -146,21 +123,21 @@ const setLdJson = (html, json) => {
   const after = html.slice(endIndex + '</script>'.length);
   const payload = `${start}\n${JSON.stringify(json, null, 2)}\n</script>`;
   return `${before}${payload}${after}`;
-
+};
 
 const setRootContent = (html, rootHtml) => {
   if (!rootHtml) return html;
   return html.replace(/<div id="root"><\/div>/i, `<div id="root">\n${rootHtml}\n</div>`);
-
+};
 
 const ensureDir = async (dirPath) => {
   await fs.mkdir(dirPath, { recursive: true });
-
+};
 
 const writeFileEnsuringDir = async (filePath, content) => {
   await ensureDir(path.dirname(filePath));
   await fs.writeFile(filePath, content);
-
+};
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
 
@@ -169,7 +146,7 @@ const renderSvgToPng = async (svg) => {
   return sharp(svgBuffer)
     .png({ compressionLevel: 9 })
     .toBuffer();
-
+};
 
 const writeOgImage = async ({ relativePath, svg, publicDirReady }) => {
   const outputPath = path.join(distDir, relativePath.replace(/^\//, ''));
@@ -180,12 +157,12 @@ const writeOgImage = async ({ relativePath, svg, publicDirReady }) => {
     const publicPath = path.join(publicDir, relativePath.replace(/^\//, ''));
     await writeFileEnsuringDir(publicPath, pngBuffer);
   }
-
+};
 
 const buildUrl = (siteUrl, routePath) => {
   if (routePath === '/') return `${siteUrl}/`;
   return `${siteUrl}${routePath}`;
-
+};
 
 const buildOrganizationSchema = (siteUrl) => ({
   '@type': 'Organization',
@@ -217,8 +194,8 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
   const resolvedImageUrl = imageUrl || `${siteUrl}${DEFAULT_OG_IMAGE}`;
 
   return {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       organization,
       website,
       {
@@ -256,15 +233,15 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
       },
     ],
   };
-
+};
 
 const buildDirectorySchema = (siteUrl, items, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
 
   return {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       organization,
       website,
       {
@@ -303,7 +280,7 @@ const buildDirectorySchema = (siteUrl, items, imageUrl) => {
       },
     ],
   };
-
+};
 
 const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
@@ -311,26 +288,26 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
 
   return {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       organization,
       website,
       {
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
         name: `Resume Templates for ${title}`,
-        description: `Browse ModernCV resume templates for ${title}. Choose a clean, professional resume template for ${title} role. Customize content with AI suggestions, and download as PDF instantly.`,
+        description: `Browse ModernCV resume templates for ${title}.`,
         url: pageUrl,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
           ? {
-                primaryImageOfPage: {
-                  '@type': 'ImageObject',
-                  url: imageUrl,
-                },
-              }
-            : {}),
+              primaryImageOfPage: {
+                '@type': 'ImageObject',
+                url: imageUrl,
+              },
+            }
+          : {}),
         breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
         ...(hasTemplates
           ? {
@@ -357,7 +334,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
       },
     ],
   };
-
+};
 
 const buildEditorSchema = (siteUrl, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
@@ -365,8 +342,8 @@ const buildEditorSchema = (siteUrl, imageUrl) => {
   const pageUrl = `${siteUrl}/editor`;
 
   return {
-    "@context": "https://schema.org",
-    "@graph": [
+    '@context': 'https://schema.org',
+    '@graph': [
       organization,
       website,
       {
@@ -388,7 +365,7 @@ const buildEditorSchema = (siteUrl, imageUrl) => {
       },
     ],
   };
-
+};
 
 const buildSitemapXml = ({ siteUrl, lastmod, jobItems }) => {
   const urls = [
@@ -409,12 +386,12 @@ const buildSitemapXml = ({ siteUrl, lastmod, jobItems }) => {
     .join('\n');
 
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
-
+};
 
 const buildRobotsTxt = ({ siteUrl }) => {
   // Prefer `noindex` on `/editor` over `Disallow`, so crawlers can see the directive.
   return `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`;
-
+};
 
 const buildOgSvgShell = (content) => `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${OG_IMAGE_WIDTH}" height="${OG_IMAGE_HEIGHT}" viewBox="0 0 ${OG_IMAGE_WIDTH} ${OG_IMAGE_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
@@ -491,7 +468,7 @@ const buildDirectoryOgSvg = ({ titles, totalTitles, totalCategories, templateCou
   </g>`;
 
   return buildOgSvgShell(content);
-
+};
 
 const buildJobOgSvg = ({ title, templateName }) => {
   const displayTitle = truncateText(title, 34);
@@ -526,7 +503,7 @@ const buildJobOgSvg = ({ title, templateName }) => {
   </g>`;
 
   return buildOgSvgShell(content);
-
+};
 
 const buildHomeOgSvg = ({ templateName }) => {
   const templateLabel = truncateText(`${templateName} Template`, 22);
@@ -554,7 +531,7 @@ const buildHomeOgSvg = ({ templateName }) => {
   </g>`;
 
   return buildOgSvgShell(content);
-
+};
 
 const buildEditorOgSvg = () => {
   const content = `
@@ -582,7 +559,7 @@ const buildEditorOgSvg = () => {
   </g>`;
 
   return buildOgSvgShell(content);
-
+};
 
 const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
   const roleLinks = featuredTitles
@@ -622,7 +599,7 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
       <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the interactive resume editor.</p>
     </noscript>
   </main>`;
-
+};
 
 const renderDirectoryRoot = (categories, toPath) => {
   const categoryCards = categories
@@ -655,7 +632,7 @@ const renderDirectoryRoot = (categories, toPath) => {
       <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the interactive resume editor.</p>
     </noscript>
   </main>`;
-
+};
 
 const renderJobRoot = (title, templates, relatedTitles, toPath) => {
   const templateItems = templates
@@ -696,12 +673,8 @@ const renderJobRoot = (title, templates, relatedTitles, toPath) => {
     <h2 class="mt-8 text-lg font-semibold text-slate-900 dark:text-white">Popular templates</h2>
     <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-800 dark:text-slate-200">
       ${templateItems}
-     </ul>
-    ${relatedSection ? `
-    <h2 class="mt-8 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Related roles</h2>
-    <div class="mt-3 flex flex-wrap gap-2">
-      ${relatedSection}
-    </div>` : ''}
+    </ul>
+    ${relatedSection}
     <div class="mt-8 flex flex-wrap gap-4">
       <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Open resume editor</a>
       <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse other roles</a>
@@ -710,7 +683,7 @@ const renderJobRoot = (title, templates, relatedTitles, toPath) => {
       <p class="mt-10 text-sm text-slate-600">JavaScript is required to preview templates and edit your resume.</p>
     </noscript>
   </main>`;
-
+};
 
 const renderEditorRoot = (toPath) => `
   <main class="max-w-3xl mx-auto p-6 md:p-10">
@@ -892,17 +865,15 @@ const main = async () => {
 
   const toPath = (p) => p;
 
-  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt, keywords }) => {
+  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt }) => {
     const pageUrl = buildUrl(siteUrl, routePath);
     const ogImageUrl = resolveOgImageUrl(siteUrl, ogImage);
     const resolvedImageAlt = imageAlt ?? DEFAULT_IMAGE_ALT;
-    const resolvedKeywords = keywords ?? generateJobKeywords(title);
 
     let html = templateHtml;
     html = setTitleTag(html, title);
     html = setMetaByName(html, 'title', title);
     html = setMetaByName(html, 'description', description);
-    html = setMetaByName(html, 'keywords', resolvedKeywords);
     html = setMetaByName(html, 'robots', robots);
     html = setCanonical(html, pageUrl);
     html = setSitemapLink(html, `${siteUrl}/sitemap.xml`);
@@ -992,7 +963,6 @@ const main = async () => {
       title: pageTitle,
       description,
       robots: ROBOTS_INDEX,
-      keywords: generateJobKeywords(item.title),
       ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl),
       rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
       ogImage: jobOgPath,
@@ -1020,7 +990,7 @@ const main = async () => {
 
   // Keep lastmod available for downstream generators (sitemap script may reuse).
   await writeFileEnsuringDir(path.join(distDir, '.seo-lastmod'), `${lastmod}\n`);
-
+};
 
 main().catch((err) => {
   console.error(err);
