@@ -20,7 +20,11 @@ const loadFromStorage = (): ResumeData => {
       const parsed = JSON.parse(saved);
       if (!isValidResumeData(parsed)) {
         console.warn('Corrupted resume data detected, using defaults');
-        localStorage.removeItem(STORAGE_KEY);
+        try {
+          localStorage.removeItem(STORAGE_KEY);
+        } catch (e) {
+          console.warn('Failed to remove corrupted data:', e);
+        }
         return INITIAL_RESUME_DATA;
       }
       return { ...INITIAL_RESUME_DATA, ...parsed };
@@ -28,9 +32,13 @@ const loadFromStorage = (): ResumeData => {
   } catch (e) {
     if (e instanceof SyntaxError) {
       console.error('Failed to parse resume data:', e);
-      localStorage.removeItem(STORAGE_KEY);
     } else {
       console.error('Failed to load resume data:', e);
+    }
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (removeError) {
+      console.warn('Failed to remove data after error:', removeError);
     }
   }
   return INITIAL_RESUME_DATA;

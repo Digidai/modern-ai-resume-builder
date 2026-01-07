@@ -7,7 +7,9 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
             {/* Header Grid */}
             <div className="grid grid-cols-[1fr_2fr] gap-8 mb-12">
                 <div className="bg-slate-900 text-white p-6 flex flex-col justify-between">
-                    <h1 className="text-5xl font-black leading-none tracking-tighter uppercase">{data.fullName.split(' ').map((n, i) => <span key={i} className="block">{n}</span>)}</h1>
+                    <h1 className="text-5xl font-black leading-none tracking-tighter uppercase">
+                        {data.fullName ? data.fullName.split(' ').map((n, i) => <span key={i} className="block">{n}</span>) : <span>Name</span>}
+                    </h1>
                 </div>
                 <div className="flex flex-col justify-end pb-2">
                     <p className="text-2xl font-bold uppercase tracking-tight mb-6 text-slate-900">{data.title}</p>

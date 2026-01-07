@@ -7,7 +7,7 @@ export interface TemplateProps {
 }
 
 // Helper to render contact info consistently
-export const ContactItem = ({ icon: Icon, value }: { icon: any, value: string }) => {
+export const ContactItem = ({ icon: Icon, value }: { icon: React.ComponentType<{ className?: string }>, value: string }) => {
     if (!value) return null;
     return (
         <div className="flex items-center gap-2 text-slate-600 dark:text-slate-400">

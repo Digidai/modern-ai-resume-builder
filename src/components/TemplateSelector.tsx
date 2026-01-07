@@ -67,15 +67,21 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
     // Keyboard navigation for template selection
     useEffect(() => {
         const handleKeyDown = (e: KeyboardEvent) => {
-            const currentIndex = TEMPLATES.findIndex(t => t.id === selectedTemplateId);
-            if (currentIndex === -1) return;
+            try {
+                if (!TEMPLATES || TEMPLATES.length === 0) return;
 
-            if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                setSelectedTemplateId(TEMPLATES[currentIndex - 1].id);
-                e.preventDefault();
-            } else if (e.key === 'ArrowRight' && currentIndex < TEMPLATES.length - 1) {
-                setSelectedTemplateId(TEMPLATES[currentIndex + 1].id);
-                e.preventDefault();
+                const currentIndex = TEMPLATES.findIndex(t => t.id === selectedTemplateId);
+                if (currentIndex === -1) return;
+
+                if (e.key === 'ArrowLeft' && currentIndex > 0) {
+                    setSelectedTemplateId(TEMPLATES[currentIndex - 1].id);
+                    e.preventDefault();
+                } else if (e.key === 'ArrowRight' && currentIndex < TEMPLATES.length - 1) {
+                    setSelectedTemplateId(TEMPLATES[currentIndex + 1].id);
+                    e.preventDefault();
+                }
+            } catch (error) {
+                console.error('Error handling keyboard navigation:', error);
             }
         };
 
@@ -185,7 +191,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         <h2 className="text-lg font-bold text-slate-800 dark:text-white">
                             Previewing: {resolvedJobTitle}
                         </h2>
-                        <p className="text-xs text-slate-500">Template: {TEMPLATES.find(t => t.id === selectedTemplateId)?.name}</p>
+                        <p className="text-xs text-slate-500">Template: {TEMPLATES.find(t => t.id === selectedTemplateId)?.name || 'Template'}</p>
                     </div>
 
                     <div className="ml-auto flex items-center gap-2">
@@ -251,7 +257,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                                 <div className="flex items-center justify-between">
                                     <div className="flex items-center gap-2">
                                         <div className={`w-6 h-6 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-[10px] font-bold`}>
-                                            {t.name[0]}
+                                            {t.name?.[0] || 'T'}
                                         </div>
                                         <span className={`font-semibold text-sm ${selectedTemplateId === t.id ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
                                             {t.name}

@@ -85,7 +85,10 @@ export const improveText = async (
     const result = await model.generateContent(prompt);
     const response = result.response;
     const improvedText = response.text();
-    return improvedText?.trim() || text;
+    if (!improvedText) {
+      throw new GeminiError('No response generated from AI', false);
+    }
+    return improvedText.trim() || text;
   });
 };
 
@@ -112,6 +115,10 @@ export const generateSummary = async (
   return executeWithRetry(async () => {
     const result = await model.generateContent(prompt);
     const response = result.response;
-    return response.text()?.trim() || "";
+    const text = response.text();
+    if (!text) {
+      throw new GeminiError('Failed to generate summary', false);
+    }
+    return text.trim();
   });
 };

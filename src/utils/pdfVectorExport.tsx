@@ -43,6 +43,13 @@ export const exportResumeVectorPdf = async (data: ResumeData): Promise<Blob> => 
   }
 
   // 2. Generate PDF using @react-pdf
-  const blob = await pdf(<ResumeDocument data={data} />).toBlob();
-  return blob;
+  try {
+    const blob = await pdf(<ResumeDocument data={data} />).toBlob();
+    if (!blob || blob.size === 0) {
+      throw new Error('Generated PDF is empty');
+    }
+    return blob;
+  } catch (error) {
+    throw new Error(`Vector PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  }
 };

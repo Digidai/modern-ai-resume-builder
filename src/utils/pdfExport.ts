@@ -57,6 +57,10 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   const contentWidth = A4_WIDTH_PT;
   const contentHeight = A4_HEIGHT_PT;
 
+  if (!element) {
+    throw new Error('Resume element not found');
+  }
+
   const clone = element.cloneNode(true) as HTMLElement;
   const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
   const fallbackWidth = element.scrollWidth || 794;
@@ -95,33 +99,42 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
         return node.dataset.exportIgnore !== 'true';
       },
     });
-  } finally {
+    if (!dataUrl) {
+      throw new Error('Failed to generate image from resume');
+    }
+  } catch (error) {
     wrapper.remove();
+    throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
+  wrapper.remove();
 
-  const image = await loadImage(dataUrl);
-  const pdfDoc = await PDFDocument.create();
-  const pngImage = await pdfDoc.embedPng(dataUrl);
+  try {
+    const image = await loadImage(dataUrl);
+    const pdfDoc = await PDFDocument.create();
+    const pngImage = await pdfDoc.embedPng(dataUrl);
 
-  const pageWidth = A4_WIDTH_PT;
-  const pageHeight = A4_HEIGHT_PT;
-  const scale = contentWidth / image.width;
-  const scaledHeight = image.height * scale;
-  // Avoid spurious extra pages from sub-point rounding when height ~= A4.
-  const pageCount = Math.max(1, Math.ceil((scaledHeight - PAGE_SPLIT_EPSILON_PT) / contentHeight));
+    const pageWidth = A4_WIDTH_PT;
+    const pageHeight = A4_HEIGHT_PT;
+    const scale = contentWidth / image.width;
+    const scaledHeight = image.height * scale;
+    // Avoid spurious extra pages from sub-point rounding when height ~= A4.
+    const pageCount = Math.max(1, Math.ceil((scaledHeight - PAGE_SPLIT_EPSILON_PT) / contentHeight));
 
-  for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
-    const page = pdfDoc.addPage([pageWidth, pageHeight]);
-    const y = marginPt + contentHeight - scaledHeight + contentHeight * pageIndex;
-    page.drawImage(pngImage, {
-      x: marginPt,
-      y,
-      width: contentWidth,
-      height: scaledHeight,
-    });
+    for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
+      const page = pdfDoc.addPage([pageWidth, pageHeight]);
+      const y = marginPt + contentHeight - scaledHeight + contentHeight * pageIndex;
+      page.drawImage(pngImage, {
+        x: marginPt,
+        y,
+        width: contentWidth,
+        height: scaledHeight,
+      });
+    }
+
+    const pdfBytes = await pdfDoc.save();
+    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    downloadBlob(blob, `${safeName}.pdf`);
+  } catch (error) {
+    throw new Error(`Failed to create PDF: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
-
-  const pdfBytes = await pdfDoc.save();
-  const blob = new Blob([pdfBytes as any], { type: 'application/pdf' });
-  downloadBlob(blob, `${safeName}.pdf`);
 };

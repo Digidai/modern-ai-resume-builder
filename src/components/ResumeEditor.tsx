@@ -33,12 +33,25 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [onError, showToastError]);
 
   const handleAiAction = useCallback(async (action: (key: string) => Promise<void>) => {
-    const key = localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY;
+    const getKey = () => {
+      try {
+        return localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY || '';
+      } catch {
+        return import.meta.env.VITE_GEMINI_API_KEY || '';
+      }
+    };
+    const key = getKey();
     if (key) {
       await action(key);
     } else {
       setPendingAiAction(() => async () => {
-        const newKey = localStorage.getItem('gemini_api_key');
+        const newKey = (() => {
+          try {
+            return localStorage.getItem('gemini_api_key');
+          } catch {
+            return null;
+          }
+        })();
         if (newKey) await action(newKey);
       });
       setIsApiKeyModalOpen(true);
@@ -46,7 +59,13 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, []);
 
   const handleSaveApiKey = useCallback((key: string) => {
-    localStorage.setItem('gemini_api_key', key);
+    try {
+      localStorage.setItem('gemini_api_key', key);
+    } catch (error) {
+      console.error('Failed to save API key:', error);
+      showError('Failed to save API key. Please check your browser settings.');
+      return;
+    }
     if (pendingAiAction) {
       pendingAiAction();
       setPendingAiAction(null);
@@ -219,9 +238,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                     : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
                     }`}
                 >
-                  <div className="flex items-center gap-3 mb-2">
+                  <div className={`flex items-center gap-3 mb-2`}>
                     <div className={`w-8 h-8 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-xs font-bold`}>
-                      {t.name[0]}
+                      {t.name?.[0] || 'T'}
                     </div>
                     <span className={`font-semibold ${data.templateId === t.id ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
                       {t.name}
@@ -285,7 +304,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                 <Button
                   onClick={() => handleAiGeneration(
                     'summary',
-                    (key) => generateSummary(data.title, data.skills, key),
+                    (key) => generateSummary(data.title, data.skills || [], key),
                     (val) => handleInputChange('summary', val)
                   )}
                   variant="ghost"
@@ -314,7 +333,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                 <Button
                   onClick={() => handleAiImprovement(
                     'summary-polish',
-                    data.summary,
+                    data.summary || '',
                     'Professional Summary',
                     (val) => handleInputChange('summary', val)
                   )}
