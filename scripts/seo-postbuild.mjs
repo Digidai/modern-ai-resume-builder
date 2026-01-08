@@ -47,6 +47,41 @@ const truncateText = (value, maxLength) => {
   return `${text.slice(0, maxLength - 3)}...`;
 };
 
+// SEO title max length is 60 characters. Format: "Resume Templates for {title} | ModernCV"
+// Overhead: "Resume Templates for " (20) + " | ModernCV" (11) = 31 chars
+// So job title should be <= 29 chars for safe SEO title length
+const MAX_SEO_TITLE_LENGTH = 60;
+const SEO_TITLE_OVERHEAD = 31; // "Resume Templates for " + " | ModernCV"
+
+const shortenJobTitleForSeo = (title) => {
+  const maxTitleLength = MAX_SEO_TITLE_LENGTH - SEO_TITLE_OVERHEAD;
+  if (title.length <= maxTitleLength) return title;
+
+  // If title has parentheses with abbreviation at end like "Business Development Representative (BDR)",
+  // use the abbreviation: "BDR"
+  const abbrevAtEndMatch = title.match(/^(.+?)\s*\(([A-Z]{2,})\)$/);
+  if (abbrevAtEndMatch) {
+    const abbreviated = abbrevAtEndMatch[2];
+    if (abbreviated.length <= maxTitleLength) return abbreviated;
+  }
+
+  // If title has parentheses with expansion like "SDET (Software Development Engineer in Test)",
+  // use the part before parentheses: "SDET"
+  const abbrevAtStartMatch = title.match(/^([A-Z][A-Za-z/&]*)\s*\((.+)\)$/);
+  if (abbrevAtStartMatch) {
+    const abbreviated = abbrevAtStartMatch[1];
+    if (abbreviated.length <= maxTitleLength) return abbreviated;
+  }
+
+  // Fallback: truncate with ellipsis
+  return truncateText(title, maxTitleLength);
+};
+
+const buildSeoTitle = (jobTitle) => {
+  const shortTitle = shortenJobTitleForSeo(jobTitle);
+  return `Resume Templates for ${shortTitle} | ModernCV`;
+};
+
 const resolveOgImageUrl = (siteUrl, ogImagePath) => {
   if (!ogImagePath) return `${siteUrl}${DEFAULT_OG_IMAGE}`;
   if (/^https?:\/\//i.test(ogImagePath)) return ogImagePath;
@@ -161,7 +196,9 @@ const writeOgImage = async ({ relativePath, svg, publicDirReady }) => {
 
 const buildUrl = (siteUrl, routePath) => {
   if (routePath === '/') return `${siteUrl}/`;
-  return `${siteUrl}${routePath}`;
+  // Ensure trailing slash for all paths to match server behavior
+  const normalizedPath = routePath.endsWith('/') ? routePath : `${routePath}/`;
+  return `${siteUrl}${normalizedPath}`;
 };
 
 const buildOrganizationSchema = (siteUrl) => ({
@@ -183,7 +220,7 @@ const buildWebSiteSchema = (siteUrl) => ({
   inLanguage: 'en',
   potentialAction: {
     '@type': 'SearchAction',
-    target: `${siteUrl}/directory?q={search_term_string}`,
+    target: `${siteUrl}/directory/?q={search_term_string}`,
     'query-input': 'required name=search_term_string',
   },
 });
@@ -246,10 +283,10 @@ const buildDirectorySchema = (siteUrl, items, imageUrl) => {
       website,
       {
         '@type': 'CollectionPage',
-        '@id': `${siteUrl}/directory#collection`,
+        '@id': `${siteUrl}/directory/#collection`,
         name: 'Job Title Resume Template Directory',
         description: 'Browse ModernCV resume templates by job title and role.',
-        url: `${siteUrl}/directory`,
+        url: `${siteUrl}/directory/`,
         inLanguage: 'en',
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
@@ -272,10 +309,10 @@ const buildDirectorySchema = (siteUrl, items, imageUrl) => {
       },
       {
         '@type': 'BreadcrumbList',
-        '@id': `${siteUrl}/directory#breadcrumb`,
+        '@id': `${siteUrl}/directory/#breadcrumb`,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory/` },
         ],
       },
     ],
@@ -328,7 +365,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
         '@id': `${pageUrl}#breadcrumb`,
         itemListElement: [
           { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+          { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory/` },
           { '@type': 'ListItem', position: 3, name: title, item: pageUrl },
         ],
       },
@@ -339,7 +376,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
 const buildEditorSchema = (siteUrl, imageUrl) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
-  const pageUrl = `${siteUrl}/editor`;
+  const pageUrl = `${siteUrl}/editor/`;
 
   return {
     '@context': 'https://schema.org',
@@ -949,7 +986,7 @@ const main = async () => {
   });
 
   for (const item of jobItems) {
-    const pageTitle = `Resume Templates for ${item.title} | ModernCV`;
+    const pageTitle = buildSeoTitle(item.title);
     const description = `Browse ModernCV resume templates for ${item.title}. Choose a layout, tailor content with AI suggestions, and download as PDF.`;
     const pageUrl = buildUrl(siteUrl, item.path);
     const jobOgPath = `/og/resume_tmpl/${item.slug}.png`;
