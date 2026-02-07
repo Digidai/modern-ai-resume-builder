@@ -8,6 +8,7 @@ import { Button } from '../components/Button';
 import ThemeToggle from '../components/ThemeToggle';
 import { useResume } from '../contexts/ResumeContext';
 import { SectionErrorBoundary } from '../components/ErrorBoundary';
+import { buildEditorSeoKeywords } from '../utils/seo';
 
 const EditorView: React.FC = () => {
   const navigate = useNavigate();
@@ -17,14 +18,15 @@ const EditorView: React.FC = () => {
   const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
-  const pageUrl = `${siteUrl}/editor`;
+  const pageUrl = `${siteUrl}/editor/`;
   const editorOgImage = '/og/editor.png';
   const editorOgImageUrl = `${siteUrl}${editorOgImage}`;
 
   useSeo({
     title: 'Edit Your Resume Online | ModernCV Editor',
     description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
-    canonical: '/editor',
+    keywords: buildEditorSeoKeywords(),
+    canonical: '/editor/',
     robots: SEO_ROBOTS_NOINDEX,
     ogImage: editorOgImage,
     imageAlt: 'ModernCV resume editor preview',

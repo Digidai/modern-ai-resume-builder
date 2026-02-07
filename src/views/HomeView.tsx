@@ -7,6 +7,7 @@ import { Button } from '../components/Button';
 import ThemeToggle from '../components/ThemeToggle';
 import { useResume } from '../contexts/ResumeContext';
 import { SectionErrorBoundary } from '../components/ErrorBoundary';
+import { buildHomeSeoKeywords, buildHomeFaqSchema } from '../utils/seo';
 
 const HomeView: React.FC = () => {
   const navigate = useNavigate();
@@ -22,6 +23,7 @@ const HomeView: React.FC = () => {
     title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
     description:
       "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
+    keywords: buildHomeSeoKeywords(),
     canonical: '/',
     robots: SEO_ROBOTS_INDEX,
     ogImage: homeOgImage,
@@ -47,7 +49,7 @@ const HomeView: React.FC = () => {
           inLanguage: 'en',
           potentialAction: {
             '@type': 'SearchAction',
-            target: `${siteUrl}/directory?q={search_term_string}`,
+            target: `${siteUrl}/directory/?q={search_term_string}`,
             'query-input': 'required name=search_term_string',
           },
         },
@@ -83,6 +85,7 @@ const HomeView: React.FC = () => {
             url: homeOgImageUrl,
           },
         },
+        buildHomeFaqSchema(siteUrl),
       ],
     },
   });

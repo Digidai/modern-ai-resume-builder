@@ -12,6 +12,7 @@ import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
 import { getPersonaFullNameForJobTitle } from '../data/personas';
 import { TEMPLATES } from '../constants/templates';
+import { buildJobSeoDescription, buildJobSeoKeywords } from '../utils/seo';
 
 interface JobTitleCategory {
     name: string;
@@ -46,15 +47,24 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
     const siteUrl = getSiteUrl();
     const orgId = `${siteUrl}/#organization`;
     const websiteId = `${siteUrl}/#website`;
+    const normalizedSlug = slugifyJobTitle(resolvedJobTitle);
+    const categoryName = useMemo(() => {
+        const category = JOB_CATEGORIES.find((cat) =>
+            cat.titles.some((title) => slugifyJobTitle(title) === normalizedSlug)
+        );
+        return category?.name;
+    }, [normalizedSlug]);
     const canonicalPath = canonicalSlug
-        ? `/resume_tmpl/${canonicalSlug}`
-        : `/resume_tmpl/${slugifyJobTitle(resolvedJobTitle)}`;
+        ? `/resume_tmpl/${canonicalSlug}/`
+        : `/resume_tmpl/${slugifyJobTitle(resolvedJobTitle)}/`;
     const pageUrl = `${siteUrl}${canonicalPath}`;
     const ogImagePath = canonicalSlug
         ? `/og/resume_tmpl/${canonicalSlug}.png`
         : '/og/resume_tmpl/default.png';
     const ogImageAlt = `Resume templates for ${resolvedJobTitle}`;
     const ogImageUrl = `${siteUrl}${ogImagePath}`;
+    const seoDescription = buildJobSeoDescription(resolvedJobTitle, categoryName);
+    const seoKeywords = buildJobSeoKeywords(resolvedJobTitle, categoryName);
 
     // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
     useEffect(() => {
@@ -91,7 +101,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
 
     useSeo({
         title: `Resume Templates for ${resolvedJobTitle} | ModernCV`,
-        description: `Browse ModernCV resume templates for ${resolvedJobTitle}. Choose a layout, tailor content with AI suggestions, and download as PDF.`,
+        description: seoDescription,
+        keywords: seoKeywords,
         canonical: canonicalPath,
         robots: SEO_ROBOTS_INDEX,
         ogImage: ogImagePath,
@@ -120,7 +131,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     '@type': 'WebPage',
                     '@id': `${pageUrl}#webpage`,
                     name: `Resume Templates for ${resolvedJobTitle}`,
-                    description: `Browse ModernCV resume templates for ${resolvedJobTitle}.`,
+                    description: seoDescription,
                     url: pageUrl,
                     inLanguage: 'en',
                     isPartOf: { '@id': websiteId },
@@ -144,7 +155,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     '@id': `${pageUrl}#breadcrumb`,
                     itemListElement: [
                         { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory/` },
                         { '@type': 'ListItem', position: 3, name: resolvedJobTitle, item: pageUrl },
                     ],
                 },
@@ -163,15 +174,13 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
     }, [resolvedJobTitle, selectedTemplateId]);
 
     const relatedTitles = useMemo(() => {
-        const normalizedSlug = slugifyJobTitle(resolvedJobTitle);
-        const category = JOB_CATEGORIES.find((cat) =>
-            cat.titles.some((title) => slugifyJobTitle(title) === normalizedSlug)
-        );
+        if (!categoryName) return [];
+        const category = JOB_CATEGORIES.find((cat) => cat.name === categoryName);
         if (!category) return [];
         return category.titles
             .filter((title) => slugifyJobTitle(title) !== normalizedSlug)
             .slice(0, 8);
-    }, [resolvedJobTitle]);
+    }, [categoryName, normalizedSlug]);
 
     return (
         <div className="min-h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans transition-colors duration-300">

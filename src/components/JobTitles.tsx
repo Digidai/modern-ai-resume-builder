@@ -7,6 +7,7 @@ import jobTitlesData from '../data/jobTitles.json';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { slugifyJobTitle } from '../utils/slug';
 import { debounce } from '../utils/debounce';
+import { buildDirectorySeoKeywords } from '../utils/seo';
 
 interface JobTitleCategory {
     name: string;
@@ -85,7 +86,8 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
     useSeo({
         title: 'Browse Resume Templates by Job Title | ModernCV Directory',
         description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
-        canonical: '/directory',
+        keywords: buildDirectorySeoKeywords(),
+        canonical: '/directory/',
         robots: SEO_ROBOTS_INDEX,
         ogImage: directoryOgImage,
         imageAlt: 'ModernCV job title resume template directory preview',
@@ -110,16 +112,16 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                     inLanguage: 'en',
                     potentialAction: {
                         '@type': 'SearchAction',
-                        target: `${siteUrl}/directory?q={search_term_string}`,
+                        target: `${siteUrl}/directory/?q={search_term_string}`,
                         'query-input': 'required name=search_term_string',
                     },
                 },
                 {
                     '@type': 'CollectionPage',
-                    '@id': `${siteUrl}/directory#collection`,
+                    '@id': `${siteUrl}/directory/#collection`,
                     name: 'Job Title Resume Template Directory',
                     description: 'Browse ModernCV resume templates by job title and role.',
-                    url: `${siteUrl}/directory`,
+                    url: `${siteUrl}/directory/`,
                     inLanguage: 'en',
                     isPartOf: { '@id': websiteId },
                     primaryImageOfPage: {
@@ -138,10 +140,10 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                 },
                 {
                     '@type': 'BreadcrumbList',
-                    '@id': `${siteUrl}/directory#breadcrumb`,
+                    '@id': `${siteUrl}/directory/#breadcrumb`,
                     itemListElement: [
                         { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
-                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory` },
+                        { '@type': 'ListItem', position: 2, name: 'Job Directory', item: `${siteUrl}/directory/` },
                     ],
                 },
             ],

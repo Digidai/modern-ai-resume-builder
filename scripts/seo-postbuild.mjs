@@ -82,6 +82,146 @@ const buildSeoTitle = (jobTitle) => {
   return `Resume Templates for ${shortTitle} | ModernCV`;
 };
 
+const BASE_KEYWORDS = [
+  'ai resume builder',
+  'free resume builder',
+  'resume template',
+  'cv builder',
+  'ats friendly resume',
+  'online resume creator',
+];
+
+const CATEGORY_KEYWORDS = {
+  Engineering: ['software engineer resume', 'developer resume', 'technical resume'],
+  'Design & Product': ['product designer resume', 'ux resume', 'product manager resume'],
+  'Data & Analytics': ['data scientist resume', 'analytics resume', 'data analyst cv'],
+  'Marketing & Growth': ['marketing resume', 'growth resume', 'seo resume template'],
+  'Sales & Support': ['sales resume', 'account executive resume', 'customer success resume'],
+  'HR & Operations': ['hr resume', 'operations resume', 'talent acquisition resume'],
+  'Finance & Legal': ['finance resume', 'accountant resume', 'legal resume'],
+  'Business & Strategy': ['strategy resume', 'program manager resume', 'business consultant resume'],
+  'Operations & Supply Chain': ['supply chain resume', 'logistics resume', 'procurement resume'],
+  Healthcare: ['healthcare resume', 'nursing resume', 'clinical resume template'],
+  Education: ['teacher resume', 'education resume', 'academic cv'],
+  'Creative & Media': ['creative resume', 'copywriter resume', 'media resume'],
+  'Retail & Hospitality': ['retail resume', 'hospitality resume', 'customer service cv'],
+  'Construction & Real Estate': ['construction resume', 'real estate resume', 'project engineer resume'],
+};
+
+const ROLE_KEYWORD_RULES = [
+  { pattern: /\b(engineer|developer|architect|devops|sre|qa)\b/i, keywords: ['engineering resume'] },
+  { pattern: /\b(data|analytics|bi|scientist|ml|ai)\b/i, keywords: ['data resume template'] },
+  { pattern: /\b(designer|ux|ui|creative|art)\b/i, keywords: ['design resume template'] },
+  { pattern: /\b(marketing|seo|growth|content|brand)\b/i, keywords: ['marketing cv template'] },
+  { pattern: /\b(sales|account executive|business development|customer success)\b/i, keywords: ['sales cv template'] },
+  { pattern: /\b(manager|director|head|chief|vp|lead)\b/i, keywords: ['leadership resume'] },
+];
+
+const HOME_FAQ_ITEMS = [
+  {
+    question: 'Is ModernCV free to use?',
+    answer:
+      'Yes. ModernCV is free to use and lets you edit resumes, switch templates, and export to PDF without paid tiers.',
+  },
+  {
+    question: 'Can I tailor my resume to a specific job title?',
+    answer:
+      'Yes. You can browse role-based pages, pick a matching template, and customize resume content for each target position.',
+  },
+  {
+    question: 'Are the resume templates ATS friendly?',
+    answer:
+      'The templates are designed with clear hierarchy and readable structure so your content remains easy for ATS parsers and recruiters.',
+  },
+  {
+    question: 'Do I need to install anything to build my resume?',
+    answer:
+      'No installation is required. ModernCV runs in the browser and your resume can be exported directly as a PDF.',
+  },
+];
+
+const dedupeKeywords = (keywords) => {
+  const seen = new Set();
+  const result = [];
+  for (const rawKeyword of keywords) {
+    const keyword = String(rawKeyword ?? '').trim();
+    if (!keyword) continue;
+    const normalized = keyword.toLowerCase();
+    if (seen.has(normalized)) continue;
+    seen.add(normalized);
+    result.push(keyword);
+  }
+  return result;
+};
+
+const joinKeywords = (keywords) => dedupeKeywords(keywords).join(', ');
+
+const getRoleKeywordsFromTitle = (jobTitle) =>
+  ROLE_KEYWORD_RULES
+    .filter((rule) => rule.pattern.test(jobTitle))
+    .flatMap((rule) => rule.keywords);
+
+const buildHomeKeywords = () =>
+  joinKeywords([
+    ...BASE_KEYWORDS,
+    'resume maker',
+    'resume writing assistant',
+    'professional resume templates',
+    'pdf resume download',
+  ]);
+
+const buildDirectoryKeywords = () =>
+  joinKeywords([
+    ...BASE_KEYWORDS,
+    'resume templates by job title',
+    'job specific resume examples',
+    'resume role directory',
+  ]);
+
+const buildEditorKeywords = () =>
+  joinKeywords([
+    ...BASE_KEYWORDS,
+    'resume editor',
+    'online cv editor',
+    'edit resume online',
+    'resume customization',
+  ]);
+
+const buildJobKeywords = ({ jobTitle, categoryName }) =>
+  joinKeywords([
+    ...BASE_KEYWORDS,
+    `${jobTitle} resume`,
+    `${jobTitle} resume template`,
+    `${jobTitle} CV`,
+    `${jobTitle} CV example`,
+    ...(categoryName ? CATEGORY_KEYWORDS[categoryName] ?? [] : []),
+    ...getRoleKeywordsFromTitle(jobTitle),
+  ]);
+
+const buildJobDescription = ({ jobTitle, categoryName }) => {
+  const categoryTemplates = {
+    Engineering: `Explore ATS-friendly resume templates for ${jobTitle}. Highlight technical projects, architecture choices, and measurable delivery impact with AI guidance.`,
+    'Design & Product': `Discover resume templates for ${jobTitle} roles that emphasize product thinking, user outcomes, and cross-functional collaboration.`,
+    'Data & Analytics': `Use resume templates for ${jobTitle} positions to showcase analysis depth, business impact, and decision-ready insights.`,
+    'Marketing & Growth': `Browse resume templates for ${jobTitle} jobs that spotlight campaign performance, conversion growth, and channel strategy.`,
+    'Sales & Support': `Choose resume templates for ${jobTitle} roles that focus on pipeline creation, retention metrics, and customer outcomes.`,
+    'HR & Operations': `Create a strong ${jobTitle} resume with templates built for process ownership, people operations, and cross-team execution.`,
+    'Finance & Legal': `Find resume templates for ${jobTitle} opportunities that highlight compliance, financial rigor, and risk-aware decision making.`,
+    'Business & Strategy': `Select resume templates for ${jobTitle} paths that emphasize strategic planning, stakeholder alignment, and execution results.`,
+    'Operations & Supply Chain': `Review resume templates for ${jobTitle} roles designed to surface process optimization, planning accuracy, and fulfillment reliability.`,
+    Healthcare: `Browse resume templates for ${jobTitle} candidates with a focus on patient outcomes, compliance, and multidisciplinary collaboration.`,
+    Education: `Build a ${jobTitle} resume with templates that foreground student outcomes, curriculum leadership, and instructional effectiveness.`,
+    'Creative & Media': `Pick resume templates for ${jobTitle} roles that showcase storytelling, brand consistency, and production quality.`,
+    'Retail & Hospitality': `Use resume templates for ${jobTitle} jobs that highlight customer experience, team leadership, and operational efficiency.`,
+    'Construction & Real Estate': `Explore resume templates for ${jobTitle} openings built around project delivery, site coordination, and compliance.`,
+  };
+
+  return (
+    categoryTemplates[categoryName] ??
+    `Browse ModernCV resume templates for ${jobTitle}. Choose a layout, tailor content with AI suggestions, and download as PDF.`
+  );
+};
+
 const resolveOgImageUrl = (siteUrl, ogImagePath) => {
   if (!ogImagePath) return `${siteUrl}${DEFAULT_OG_IMAGE}`;
   if (/^https?:\/\//i.test(ogImagePath)) return ogImagePath;
@@ -225,7 +365,7 @@ const buildWebSiteSchema = (siteUrl) => ({
   },
 });
 
-const buildHomeSchema = (siteUrl, imageUrl) => {
+const buildHomeSchema = (siteUrl, imageUrl, lastmodIso) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const resolvedImageUrl = imageUrl || `${siteUrl}${DEFAULT_OG_IMAGE}`;
@@ -243,6 +383,8 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
         url: `${siteUrl}/`,
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Any',
+        isAccessibleForFree: true,
+        dateModified: lastmodIso,
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         featureList: [
           'AI-powered resume suggestions',
@@ -262,17 +404,30 @@ const buildHomeSchema = (siteUrl, imageUrl) => {
         description: 'Create stunning professional resumes in minutes with ModernCV.',
         url: `${siteUrl}/`,
         inLanguage: 'en',
+        dateModified: lastmodIso,
         isPartOf: { '@id': website['@id'] },
         primaryImageOfPage: {
           '@type': 'ImageObject',
           url: resolvedImageUrl,
         },
       },
+      {
+        '@type': 'FAQPage',
+        '@id': `${siteUrl}/#faq`,
+        mainEntity: HOME_FAQ_ITEMS.map((item) => ({
+          '@type': 'Question',
+          name: item.question,
+          acceptedAnswer: {
+            '@type': 'Answer',
+            text: item.answer,
+          },
+        })),
+      },
     ],
   };
 };
 
-const buildDirectorySchema = (siteUrl, items, imageUrl) => {
+const buildDirectorySchema = (siteUrl, items, imageUrl, lastmodIso) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
 
@@ -288,6 +443,7 @@ const buildDirectorySchema = (siteUrl, items, imageUrl) => {
         description: 'Browse ModernCV resume templates by job title and role.',
         url: `${siteUrl}/directory/`,
         inLanguage: 'en',
+        dateModified: lastmodIso,
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
           ? {
@@ -319,7 +475,7 @@ const buildDirectorySchema = (siteUrl, items, imageUrl) => {
   };
 };
 
-const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
+const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmodIso) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
@@ -336,6 +492,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
         description: `Browse ModernCV resume templates for ${title}.`,
         url: pageUrl,
         inLanguage: 'en',
+        dateModified: lastmodIso,
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
           ? {
@@ -373,7 +530,7 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl) => {
   };
 };
 
-const buildEditorSchema = (siteUrl, imageUrl) => {
+const buildEditorSchema = (siteUrl, imageUrl, lastmodIso) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const pageUrl = `${siteUrl}/editor/`;
@@ -390,6 +547,7 @@ const buildEditorSchema = (siteUrl, imageUrl) => {
         description: 'Interactive resume editor for building and exporting resumes.',
         url: pageUrl,
         inLanguage: 'en',
+        dateModified: lastmodIso,
         isPartOf: { '@id': website['@id'] },
         ...(imageUrl
           ? {
@@ -404,25 +562,38 @@ const buildEditorSchema = (siteUrl, imageUrl) => {
   };
 };
 
-const buildSitemapXml = ({ siteUrl, lastmod, jobItems }) => {
+const buildSitemapXml = ({ siteUrl, lastmod, jobItems, homeOgPath, directoryOgPath }) => {
   const urls = [
-    { path: '/', priority: '1.0', changefreq: 'weekly' },
-    { path: '/directory', priority: '0.9', changefreq: 'weekly' },
-    ...jobItems.map((item) => ({ path: item.path, priority: '0.8', changefreq: 'weekly' })),
+    { path: '/', priority: '1.0', changefreq: 'weekly', imagePath: homeOgPath },
+    { path: '/directory', priority: '0.9', changefreq: 'weekly', imagePath: directoryOgPath },
+    ...jobItems.map((item) => ({
+      path: item.path,
+      priority: '0.8',
+      changefreq: 'weekly',
+      imagePath: `/og/resume_tmpl/${item.slug}.png`,
+    })),
   ];
 
   const body = urls
-    .map(
-      (u) => `  <url>
+    .map((u) => {
+      const imageMarkup = u.imagePath
+        ? `
+    <image:image>
+      <image:loc>${escapeHtml(resolveOgImageUrl(siteUrl, u.imagePath))}</image:loc>
+    </image:image>`
+        : '';
+
+      return `  <url>
     <loc>${escapeHtml(buildUrl(siteUrl, u.path))}</loc>
     <lastmod>${escapeHtml(lastmod)}</lastmod>
     <changefreq>${escapeHtml(u.changefreq)}</changefreq>
     <priority>${escapeHtml(u.priority)}</priority>
-  </url>`
-    )
+${imageMarkup}
+  </url>`;
+    })
     .join('\n');
 
-  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${body}\n</urlset>\n`;
+  return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${body}\n</urlset>\n`;
 };
 
 const buildRobotsTxt = ({ siteUrl }) => {
@@ -902,16 +1073,32 @@ const main = async () => {
 
   const toPath = (p) => p;
 
-  const writePage = async ({ routePath, title, description, robots, ldJson, rootHtml, ogImage, imageAlt }) => {
+  const writePage = async ({
+    routePath,
+    title,
+    description,
+    keywords,
+    robots,
+    ldJson,
+    rootHtml,
+    ogImage,
+    imageAlt,
+  }) => {
     const pageUrl = buildUrl(siteUrl, routePath);
     const ogImageUrl = resolveOgImageUrl(siteUrl, ogImage);
     const resolvedImageAlt = imageAlt ?? DEFAULT_IMAGE_ALT;
+    const resolvedKeywords = keywords || '';
 
     let html = templateHtml;
     html = setTitleTag(html, title);
     html = setMetaByName(html, 'title', title);
     html = setMetaByName(html, 'description', description);
+    html = setMetaByName(html, 'keywords', resolvedKeywords);
     html = setMetaByName(html, 'robots', robots);
+    html = setMetaByName(html, 'googlebot', robots);
+    html = setMetaByName(html, 'author', SITE_NAME);
+    html = setMetaByName(html, 'application-name', SITE_NAME);
+    html = setMetaByName(html, 'referrer', 'strict-origin-when-cross-origin');
     html = setCanonical(html, pageUrl);
     html = setSitemapLink(html, `${siteUrl}/sitemap.xml`);
     html = setAlternateLinks(html, [
@@ -931,6 +1118,7 @@ const main = async () => {
     html = setMetaByProperty(html, 'og:image:width', String(OG_IMAGE_WIDTH));
     html = setMetaByProperty(html, 'og:image:height', String(OG_IMAGE_HEIGHT));
     html = setMetaByProperty(html, 'og:image:type', 'image/png');
+    html = setMetaByProperty(html, 'og:image:secure_url', ogImageUrl);
 
     html = setMetaByName(html, 'twitter:card', DEFAULT_TWITTER_CARD);
     html = setMetaByName(html, 'twitter:url', pageUrl);
@@ -955,8 +1143,9 @@ const main = async () => {
     title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
     description:
       "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
+    keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
-    ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath)),
+    ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),
     rootHtml: renderHomeRoot({ featuredTitles, templates, toPath }),
     ogImage: homeOgPath,
     imageAlt: 'ModernCV AI resume builder preview',
@@ -967,8 +1156,9 @@ const main = async () => {
     routePath: '/directory',
     title: 'Browse Resume Templates by Job Title | ModernCV Directory',
     description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
+    keywords: buildDirectoryKeywords(),
     robots: ROBOTS_INDEX,
-    ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl),
+    ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl, lastmodIso),
     rootHtml: renderDirectoryRoot(categories, toPath),
     ogImage: directoryOgPath,
     imageAlt: 'ModernCV job title resume template directory preview',
@@ -978,8 +1168,9 @@ const main = async () => {
     routePath: '/editor',
     title: 'Edit Your Resume Online | ModernCV Editor',
     description: 'Open the ModernCV resume editor to customize your content, apply templates, and export as PDF.',
+    keywords: buildEditorKeywords(),
     robots: ROBOTS_NOINDEX,
-    ldJson: buildEditorSchema(siteUrl, resolveOgImageUrl(siteUrl, editorOgPath)),
+    ldJson: buildEditorSchema(siteUrl, resolveOgImageUrl(siteUrl, editorOgPath), lastmodIso),
     rootHtml: renderEditorRoot(toPath),
     ogImage: editorOgPath,
     imageAlt: 'ModernCV resume editor preview',
@@ -987,11 +1178,12 @@ const main = async () => {
 
   for (const item of jobItems) {
     const pageTitle = buildSeoTitle(item.title);
-    const description = `Browse ModernCV resume templates for ${item.title}. Choose a layout, tailor content with AI suggestions, and download as PDF.`;
+    const categoryName = titleToCategory.get(item.title);
+    const description = buildJobDescription({ jobTitle: item.title, categoryName });
+    const keywords = buildJobKeywords({ jobTitle: item.title, categoryName });
     const pageUrl = buildUrl(siteUrl, item.path);
     const jobOgPath = `/og/resume_tmpl/${item.slug}.png`;
     const jobOgImageUrl = resolveOgImageUrl(siteUrl, jobOgPath);
-    const categoryName = titleToCategory.get(item.title);
     const categoryTitles = categoryName ? categoryToTitles.get(categoryName) ?? [] : [];
     const relatedTitles = categoryTitles.filter((title) => title !== item.title).slice(0, 8);
 
@@ -999,8 +1191,9 @@ const main = async () => {
       routePath: item.path,
       title: pageTitle,
       description,
+      keywords,
       robots: ROBOTS_INDEX,
-      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl),
+      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl, lastmodIso),
       rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
       ogImage: jobOgPath,
       imageAlt: `Resume templates for ${item.title}`,
@@ -1016,7 +1209,13 @@ const main = async () => {
     await writeFileEnsuringDir(path.join(publicDir, '_redirects'), `${redirects}\n`);
   }
 
-  const sitemapXml = buildSitemapXml({ siteUrl, lastmod, jobItems });
+  const sitemapXml = buildSitemapXml({
+    siteUrl,
+    lastmod,
+    jobItems,
+    homeOgPath,
+    directoryOgPath,
+  });
   const robotsTxt = buildRobotsTxt({ siteUrl });
   await writeFileEnsuringDir(path.join(distDir, 'sitemap.xml'), sitemapXml);
   await writeFileEnsuringDir(path.join(distDir, 'robots.txt'), robotsTxt);
