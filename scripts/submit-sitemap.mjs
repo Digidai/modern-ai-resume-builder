@@ -100,9 +100,9 @@ async function submitSitemap() {
         siteUrl: normalizedSiteUrl,
       });
 
-      console.log(`✅ Found ${sitemapListList.data?.sitemap?.length || 0} sitemap(s):`);
-      if (sitemapListList.data?.sitemap) {
-        sitemapListList.data.sitemap.forEach((sitemap, index) => {
+      console.log(`✅ Found ${sitemapsList.data?.sitemap?.length || 0} sitemap(s):`);
+      if (sitemapsList.data?.sitemap) {
+        sitemapsList.data.sitemap.forEach((sitemap, index) => {
           console.log(`   ${index + 1}. ${sitemap.path}`);
           console.log(`      - Last submitted: ${sitemap.lastSubmitted}`);
           console.log(`      - Status: ${sitemap.contents?.[0]?.status || 'N/A'}`);

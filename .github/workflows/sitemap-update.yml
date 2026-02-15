@@ -30,14 +30,15 @@ jobs:
       - name: Build and generate sitemap
         run: npm run build
         env:
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://genedai.cv' }}
 
       - name: Submit sitemap to Google Search Console
+        if: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL != '' && secrets.GOOGLE_PRIVATE_KEY != '' }}
         run: node scripts/submit-sitemap.mjs
         env:
           GOOGLE_SERVICE_ACCOUNT_EMAIL: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL }}
           GOOGLE_PRIVATE_KEY: ${{ secrets.GOOGLE_PRIVATE_KEY }}
-          SITE_URL: ${{ vars.SITE_URL }}
+          SITE_URL: ${{ vars.SITE_URL || 'https://genedai.cv' }}
 
       - name: Upload sitemap as artifact
         uses: actions/upload-artifact@v4
@@ -50,6 +51,14 @@ jobs:
         run: |
           echo "## Sitemap Update Summary" >> $GITHUB_STEP_SUMMARY
           echo "" >> $GITHUB_STEP_SUMMARY
-          echo "- **Site URL**: ${{ vars.SITE_URL }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Site URL**: ${{ vars.SITE_URL || 'https://genedai.cv' }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Timestamp**: $(date -u +"%Y-%m-%d %H:%M:%S UTC")" >> $GITHUB_STEP_SUMMARY
           echo "- **Workflow Run**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}" >> $GITHUB_STEP_SUMMARY
+
+      - name: Note skipped sitemap submission
+        if: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_EMAIL == '' || secrets.GOOGLE_PRIVATE_KEY == '' }}
+        run: |
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Sitemap Submission" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- Skipped: missing Google Search Console secrets (GOOGLE_SERVICE_ACCOUNT_EMAIL, GOOGLE_PRIVATE_KEY)." >> $GITHUB_STEP_SUMMARY
