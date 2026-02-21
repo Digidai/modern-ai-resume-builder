@@ -13,10 +13,7 @@ export interface TemplateConfig {
   supportsPdfVector: boolean;
 }
 
-/**
- * All available resume templates with their configurations
- */
-export const TEMPLATES: TemplateConfig[] = [
+const TEMPLATE_CATALOG = [
   { id: 'modern', name: 'Modern', color: 'bg-indigo-500', isFullBleed: false, supportsPdfVector: true },
   { id: 'minimalist', name: 'Minimalist', color: 'bg-slate-200', isFullBleed: false, supportsPdfVector: true },
   { id: 'sidebar', name: 'Sidebar', color: 'bg-slate-800', isFullBleed: true, supportsPdfVector: true },
@@ -45,38 +42,48 @@ export const TEMPLATES: TemplateConfig[] = [
   { id: 'paper', name: 'Paper', color: 'bg-[#fffef8] border border-slate-300', isFullBleed: true, supportsPdfVector: false },
   { id: 'cast', name: 'Cast', color: 'bg-[#fafafa] font-mono', isFullBleed: true, supportsPdfVector: false },
   { id: 'moda', name: 'Moda', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
-];
+] as const satisfies readonly TemplateConfig[];
+
+export type TemplateId = (typeof TEMPLATE_CATALOG)[number]['id'];
+
+/**
+ * All available resume templates with their configurations
+ */
+export const TEMPLATES: ReadonlyArray<TemplateConfig & { id: TemplateId }> = TEMPLATE_CATALOG;
+
+/** All template IDs */
+export const TEMPLATE_IDS: TemplateId[] = TEMPLATES.map((template) => template.id) as TemplateId[];
 
 /** Template IDs that support full-bleed layout */
-export const FULL_BLEED_TEMPLATE_IDS = TEMPLATES
-  .filter(t => t.isFullBleed)
-  .map(t => t.id);
+export const FULL_BLEED_TEMPLATE_IDS: TemplateId[] = TEMPLATES
+  .filter((template) => template.isFullBleed)
+  .map((template) => template.id) as TemplateId[];
 
 /** Template IDs that support vector PDF export */
-export const PDF_VECTOR_TEMPLATE_IDS = TEMPLATES
-  .filter(t => t.supportsPdfVector)
-  .map(t => t.id);
+export const PDF_VECTOR_TEMPLATE_IDS: TemplateId[] = TEMPLATES
+  .filter((template) => template.supportsPdfVector)
+  .map((template) => template.id) as TemplateId[];
 
 /** Default template ID */
-export const DEFAULT_TEMPLATE_ID = 'modern';
+export const DEFAULT_TEMPLATE_ID: TemplateId = 'modern';
 
 /**
  * Get template config by ID
  */
 export const getTemplateById = (id: string): TemplateConfig | undefined => {
-  return TEMPLATES.find(t => t.id === id);
+  return TEMPLATES.find((template) => template.id === id);
 };
 
 /**
  * Check if a template is full-bleed
  */
 export const isFullBleedTemplate = (templateId: string): boolean => {
-  return FULL_BLEED_TEMPLATE_IDS.includes(templateId);
+  return FULL_BLEED_TEMPLATE_IDS.includes(templateId as TemplateId);
 };
 
 /**
  * Check if a template supports vector PDF export
  */
 export const supportsPdfVector = (templateId: string): boolean => {
-  return PDF_VECTOR_TEMPLATE_IDS.includes(templateId);
+  return PDF_VECTOR_TEMPLATE_IDS.includes(templateId as TemplateId);
 };

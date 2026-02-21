@@ -17,20 +17,45 @@ interface ResumeEditorProps {
 }
 
 const GEMINI_API_KEY_STORAGE_KEY = 'gemini_api_key';
+const GEMINI_API_KEY_SESSION_STORAGE_KEY = 'gemini_api_key_session';
+const GEMINI_API_KEY_REMEMBER_KEY = 'gemini_api_key_remember';
 const AI_CONSENT_STORAGE_KEY = 'ai_data_transfer_consent_v1';
+
+const readStoredApiKey = (): string => {
+  try {
+    return (
+      sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY) ||
+      localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY) ||
+      ''
+    );
+  } catch {
+    return '';
+  }
+};
+
+const readRememberApiKey = (): boolean => {
+  try {
+    if (sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY)) {
+      return false;
+    }
+
+    if (localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY)) {
+      return true;
+    }
+
+    return localStorage.getItem(GEMINI_API_KEY_REMEMBER_KEY) === 'true';
+  } catch {
+    return false;
+  }
+};
 
 const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) => {
   const [activeTab, setActiveTab] = useState<'basics' | 'experience' | 'skills' | 'design'>('basics');
   const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
   const [isApiKeyRequired, setIsApiKeyRequired] = useState(false);
   const [loadingField, setLoadingField] = useState<string | null>(null);
-  const [storedApiKey, setStoredApiKey] = useState(() => {
-    try {
-      return localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY) || '';
-    } catch {
-      return '';
-    }
-  });
+  const [storedApiKey, setStoredApiKey] = useState(readStoredApiKey);
+  const [rememberApiKey, setRememberApiKey] = useState(readRememberApiKey);
   const [hasAiConsent, setHasAiConsent] = useState(() => {
     try {
       return localStorage.getItem(AI_CONSENT_STORAGE_KEY) === 'true';
@@ -49,12 +74,22 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
     }
   }, [onError, showToastError]);
 
-  const persistAiSettings = useCallback((apiKey: string, consentGranted: boolean) => {
+  const persistAiSettings = useCallback((apiKey: string, consentGranted: boolean, shouldRememberApiKey: boolean) => {
     try {
       if (apiKey) {
-        localStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, apiKey);
+        if (shouldRememberApiKey) {
+          localStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, apiKey);
+          sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
+          localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'true');
+        } else {
+          sessionStorage.setItem(GEMINI_API_KEY_SESSION_STORAGE_KEY, apiKey);
+          localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+          localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
+        }
       } else {
         localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
+        sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
+        localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
       }
       localStorage.setItem(AI_CONSENT_STORAGE_KEY, consentGranted ? 'true' : 'false');
     } catch (error) {
@@ -84,11 +119,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
     }
   }, [hasAiConsent, storedApiKey]);
 
-  const handleSaveAiSettings = useCallback(async (settings: { apiKey: string; consentGranted: boolean }) => {
+  const handleSaveAiSettings = useCallback(async (settings: { apiKey: string; consentGranted: boolean; rememberApiKey: boolean }) => {
     try {
-      persistAiSettings(settings.apiKey, settings.consentGranted);
+      persistAiSettings(settings.apiKey, settings.consentGranted, settings.rememberApiKey);
       setStoredApiKey(settings.apiKey);
       setHasAiConsent(settings.consentGranted);
+      setRememberApiKey(settings.rememberApiKey);
     } catch (error) {
       const message = error instanceof Error ? error.message : 'Failed to save AI settings.';
       showError(message);
@@ -625,6 +661,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         requireApiKey={isApiKeyRequired}
         requireConsent={!hasAiConsent}
         initialApiKey={storedApiKey}
+        initialRememberApiKey={rememberApiKey}
         onClose={() => {
           setIsApiKeyModalOpen(false);
           setIsApiKeyRequired(false);

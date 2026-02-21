@@ -12,15 +12,15 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 ## System Overview
 
 - UI: React app with routes for home, editor, directory, and job templates.
-- State: Resume data stored in React state and persisted to localStorage.
-- Rendering: Preview uses a template renderer that maps template IDs to components.
-- AI: Frontend calls an edge proxy (`/api/gemini`) which then calls Gemini.
+- State: Resume data stored in React state and persisted to segmented localStorage keys (`resumeData:v2:*`) with debounced writes.
+- Rendering: Preview uses a template renderer that lazily maps template IDs to components.
+- AI: Frontend first requests a short-lived signed session token, then calls edge proxy (`/api/gemini`).
 - SEO: Runtime meta tags via `useSeo` and build-time static pages via `seo-postbuild`.
 
 ## Core Data Flow
 
 1. User edits resume in `ResumeEditor`.
-2. `useResumeData` persists changes to localStorage.
+2. `useResumeData` persists changed fields to segmented localStorage keys.
 3. `ResumePreview` renders the current data through `ResumeTemplateRenderer`.
 4. Optional AI actions call `geminiService`, require explicit user consent, and update resume content.
 
@@ -50,8 +50,8 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## AI Integration
 
-- `src/services/geminiService.ts` calls `/api/gemini`.
-- `worker/index.ts` handles prompt composition and calls the Gemini API using a server-side secret (`GEMINI_API_KEY`) or an optional user-provided key.
+- `src/services/geminiService.ts` fetches `/api/gemini/session` and calls `/api/gemini` with the signed session token.
+- `worker/index.ts` validates origin, verifies token signature, applies per-IP rate limits, then calls Gemini using server secret (`GEMINI_API_KEY`) or optional user key.
 - AI actions require explicit user consent in the editor before text is sent.
 
 ## SEO Pipeline

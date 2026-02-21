@@ -1,18 +1,17 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useParams, useNavigate } from 'react-router-dom';
-import { ResumeData, INITIAL_RESUME_DATA } from '../types';
+import { ResumeData } from '../types';
 import ResumePreview from './ResumePreview';
 import { ScaledResumePreview } from './ScaledResumePreview';
 import { Button } from './Button';
 import { ArrowLeftIcon, CheckIcon } from './Icons';
 import ThemeToggle from './ThemeToggle';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
-import { getResumeDataForRole } from '../data/roleExamples';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
-import { getPersonaFullNameForJobTitle } from '../data/personas';
 import { TEMPLATES } from '../constants/templates';
 import { buildJobSeoDescription, buildJobSeoKeywords } from '../utils/seo';
+import { useResume } from '../contexts/ResumeContext';
 
 interface JobTitleCategory {
     name: string;
@@ -29,7 +28,8 @@ interface TemplateSelectorProps {
 const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => {
     const { jobTitle } = useParams<{ jobTitle: string }>();
     const navigate = useNavigate();
-    const [selectedTemplateId, setSelectedTemplateId] = useState('modern');
+    const { resumeData } = useResume();
+    const [selectedTemplateId, setSelectedTemplateId] = useState(() => resumeData.templateId || 'modern');
 
     const { resolvedJobTitle, canonicalSlug } = useMemo(() => {
         const raw = jobTitle ?? '';
@@ -99,6 +99,11 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         return () => window.removeEventListener('keydown', handleKeyDown);
     }, [selectedTemplateId]);
 
+    useEffect(() => {
+        if (!resumeData.templateId) return;
+        setSelectedTemplateId((current) => (current === resumeData.templateId ? current : resumeData.templateId));
+    }, [resumeData.templateId]);
+
     useSeo({
         title: `Resume Templates for ${resolvedJobTitle} | ModernCV`,
         description: seoDescription,
@@ -163,15 +168,14 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         },
     });
 
-    // Create preview data based on the selected job title using the new helper
+    // Preview should reflect the user's actual resume content to avoid template-state drift.
     const previewData: ResumeData = useMemo(() => {
-        const roleData = getResumeDataForRole(resolvedJobTitle, INITIAL_RESUME_DATA);
         return {
-            ...roleData,
-            fullName: getPersonaFullNameForJobTitle(resolvedJobTitle),
+            ...resumeData,
+            title: resolvedJobTitle || resumeData.title,
             templateId: selectedTemplateId,
         };
-    }, [resolvedJobTitle, selectedTemplateId]);
+    }, [resumeData, resolvedJobTitle, selectedTemplateId]);
 
     const relatedTitles = useMemo(() => {
         if (!categoryName) return [];

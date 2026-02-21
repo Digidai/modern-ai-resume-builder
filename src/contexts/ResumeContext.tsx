@@ -10,6 +10,7 @@ interface ResumeContextValue {
   resumeData: ResumeData;
   setResumeData: Dispatch<SetStateAction<ResumeData>>;
   resetData: () => void;
+  saveError: string | null;
   isExportingPdf: boolean;
   handleDownloadPdf: () => Promise<void>;
   handleExportJson: () => void;
@@ -22,7 +23,7 @@ interface ResumeProviderProps {
 }
 
 const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
-  const { resumeData, setResumeData, resetData } = useResumeData();
+  const { resumeData, setResumeData, resetData, saveError } = useResumeData();
   const [isExportingPdf, setIsExportingPdf] = useState(false);
   const { showError } = useToast();
 
@@ -61,10 +62,11 @@ const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
     resumeData,
     setResumeData,
     resetData,
+    saveError,
     isExportingPdf,
     handleDownloadPdf,
     handleExportJson,
-  }), [resumeData, setResumeData, resetData, isExportingPdf, handleDownloadPdf, handleExportJson]);
+  }), [resumeData, setResumeData, resetData, saveError, isExportingPdf, handleDownloadPdf, handleExportJson]);
 
   return (
     <ResumeContext.Provider value={value}>

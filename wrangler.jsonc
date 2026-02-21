@@ -7,6 +7,9 @@
     "directory": "./dist"
   },
   "vars": {
-    "GEMINI_MODEL": "gemini-2.0-flash-exp"
+    "GEMINI_MODEL": "gemini-2.0-flash-exp",
+    "AI_RATE_LIMIT_PER_MINUTE": "20",
+    "AI_SESSION_RATE_LIMIT_PER_MINUTE": "60",
+    "AI_SESSION_TTL_SECONDS": "600"
   }
 }

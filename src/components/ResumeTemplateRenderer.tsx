@@ -1,5 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { ResumeData } from '../types';
+import { DEFAULT_TEMPLATE_ID, TEMPLATE_IDS, TemplateId } from '../constants/templates';
 
 interface ResumeTemplateRendererProps {
   data: ResumeData;
@@ -15,7 +16,7 @@ type TemplateLoader = () => Promise<{ default: TemplateComponent }>;
 
 const createLazyTemplate = (loader: TemplateLoader): React.LazyExoticComponent<TemplateComponent> => lazy(loader);
 
-const TEMPLATE_LOADERS: Record<string, TemplateLoader> = {
+const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   modern: () => import('./templates/ModernTemplate').then((module) => ({ default: module.ModernTemplate })),
   minimalist: () => import('./templates/MinimalistTemplate').then((module) => ({ default: module.MinimalistTemplate })),
   sidebar: () => import('./templates/SidebarTemplate').then((module) => ({ default: module.SidebarTemplate })),
@@ -46,21 +47,33 @@ const TEMPLATE_LOADERS: Record<string, TemplateLoader> = {
   moda: () => import('./templates/ModaTemplate').then((module) => ({ default: module.ModaTemplate })),
 };
 
-const TEMPLATES = Object.fromEntries(
-  Object.entries(TEMPLATE_LOADERS).map(([templateId, loader]) => [templateId, createLazyTemplate(loader)])
-) as Record<string, React.LazyExoticComponent<TemplateComponent>>;
+const resolveTemplateId = (templateId: string): TemplateId => {
+  return templateId in TEMPLATE_LOADERS
+    ? (templateId as TemplateId)
+    : DEFAULT_TEMPLATE_ID;
+};
+
+const TEMPLATES = TEMPLATE_IDS.reduce<Record<TemplateId, React.LazyExoticComponent<TemplateComponent>>>(
+  (map, templateId) => {
+    map[templateId] = createLazyTemplate(TEMPLATE_LOADERS[templateId]);
+    return map;
+  },
+  {} as Record<TemplateId, React.LazyExoticComponent<TemplateComponent>>
+);
 
 const TemplateFallback: React.FC = () => (
   <div className="w-full min-h-[120px] rounded-md bg-slate-100 dark:bg-slate-900 animate-pulse" />
 );
 
 export const preloadResumeTemplate = async (templateId: string): Promise<void> => {
-  const loader = TEMPLATE_LOADERS[templateId] || TEMPLATE_LOADERS.modern;
-  await loader();
+  const resolvedId = resolveTemplateId(templateId);
+  await TEMPLATE_LOADERS[resolvedId]();
 };
 
 export const ResumeTemplateRenderer: React.FC<ResumeTemplateRendererProps> = ({ data, templateId }) => {
-  const Template = TEMPLATES[templateId] || TEMPLATES.modern;
+  const resolvedId = resolveTemplateId(templateId);
+  const Template = TEMPLATES[resolvedId];
+
   return (
     <Suspense fallback={<TemplateFallback />}>
       <Template data={data} />

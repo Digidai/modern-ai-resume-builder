@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { Button } from './Button';
 import { KeyIcon } from './Icons';
 
@@ -7,8 +7,9 @@ interface ApiKeyModalProps {
   requireApiKey?: boolean;
   requireConsent?: boolean;
   initialApiKey?: string;
+  initialRememberApiKey?: boolean;
   onClose: () => void;
-  onSave: (settings: { apiKey: string; consentGranted: boolean }) => void | Promise<void>;
+  onSave: (settings: { apiKey: string; consentGranted: boolean; rememberApiKey: boolean }) => void | Promise<void>;
 }
 
 const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
@@ -31,11 +32,13 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
   requireApiKey = false,
   requireConsent = true,
   initialApiKey = '',
+  initialRememberApiKey = false,
   onClose,
   onSave,
 }) => {
   const [key, setKey] = useState(initialApiKey);
   const [consentGranted, setConsentGranted] = useState(!requireConsent);
+  const [rememberApiKey, setRememberApiKey] = useState(initialRememberApiKey);
   const [isSaving, setIsSaving] = useState(false);
   const dialogRef = useRef<HTMLDivElement>(null);
   const previousFocusRef = useRef<HTMLElement | null>(null);
@@ -43,11 +46,23 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
   const titleId = useMemo(() => 'ai-settings-title', []);
   const descriptionId = useMemo(() => 'ai-settings-description', []);
 
-  useEffect(() => {
-    if (!isOpen) return;
-    setKey(initialApiKey);
-    setConsentGranted(!requireConsent);
-  }, [initialApiKey, isOpen, requireConsent]);
+  const isDirty =
+    key.trim() !== initialApiKey.trim() ||
+    consentGranted !== !requireConsent ||
+    rememberApiKey !== initialRememberApiKey;
+
+  const canSubmit =
+    !isSaving &&
+    (!requireApiKey || Boolean(key.trim())) &&
+    (!requireConsent || consentGranted);
+
+  const handleRequestClose = useCallback(() => {
+    if (isDirty) {
+      const confirmed = window.confirm('Discard unsaved AI settings? Your current input will be kept if you stay.');
+      if (!confirmed) return;
+    }
+    onClose();
+  }, [isDirty, onClose]);
 
   useEffect(() => {
     if (!isOpen) return;
@@ -64,7 +79,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
     const handleKeyDown = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         event.preventDefault();
-        onClose();
+        handleRequestClose();
         return;
       }
 
@@ -90,14 +105,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
       document.removeEventListener('keydown', handleKeyDown);
       previousFocusRef.current?.focus();
     };
-  }, [isOpen, onClose]);
-
-  if (!isOpen) return null;
-
-  const canSubmit =
-    !isSaving &&
-    (!requireApiKey || Boolean(key.trim())) &&
-    (!requireConsent || consentGranted);
+  }, [handleRequestClose, isOpen]);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
@@ -105,7 +113,16 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
 
     setIsSaving(true);
     try {
-      await onSave({ apiKey: key.trim(), consentGranted: consentGranted || !requireConsent });
+      const trimmedKey = key.trim();
+      await onSave({
+        apiKey: trimmedKey,
+        consentGranted: consentGranted || !requireConsent,
+        rememberApiKey: Boolean(trimmedKey) && rememberApiKey,
+      });
+
+      setKey(trimmedKey);
+      setConsentGranted(consentGranted || !requireConsent);
+      setRememberApiKey(Boolean(trimmedKey) && rememberApiKey);
       onClose();
     } catch {
       // Keep the modal open; the caller shows an error message.
@@ -114,11 +131,10 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
     }
   };
 
+  if (!isOpen) return null;
+
   return (
-    <div
-      className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 animate-in fade-in duration-200"
-      onMouseDown={onClose}
-    >
+    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 backdrop-blur-sm p-4 animate-in fade-in duration-200">
       <div
         ref={dialogRef}
         role="dialog"
@@ -126,7 +142,6 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
         aria-labelledby={titleId}
         aria-describedby={descriptionId}
         className="bg-white dark:bg-slate-900 rounded-xl shadow-2xl p-6 w-full max-w-md animate-in fade-in zoom-in duration-200 border border-slate-200 dark:border-slate-800"
-        onMouseDown={(event) => event.stopPropagation()}
       >
         <div className="flex items-center gap-3 mb-4 text-indigo-600 dark:text-indigo-400">
           <div className="p-2 bg-indigo-50 dark:bg-indigo-900/30 rounded-lg">
@@ -172,6 +187,19 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
             </div>
           </div>
 
+          <label className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
+            <input
+              type="checkbox"
+              checked={rememberApiKey}
+              onChange={(event) => setRememberApiKey(event.target.checked)}
+              className="mt-1 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
+              disabled={!key.trim()}
+            />
+            <span>
+              Remember this API key on this device (less secure). If unchecked, the key is kept for this tab session only.
+            </span>
+          </label>
+
           {requireConsent && (
             <label className="flex items-start gap-2 text-sm text-slate-700 dark:text-slate-300">
               <input
@@ -188,7 +216,7 @@ export const ApiKeyModal: React.FC<ApiKeyModalProps> = ({
           )}
 
           <div className="flex gap-3 mt-2">
-            <Button type="button" variant="ghost" onClick={onClose} className="flex-1">
+            <Button type="button" variant="ghost" onClick={handleRequestClose} className="flex-1">
               Cancel
             </Button>
             <Button type="submit" variant="primary" disabled={!canSubmit} className="flex-1" isLoading={isSaving}>

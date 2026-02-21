@@ -57,7 +57,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - 28 professionally designed resume templates.
 - 640 job titles with SEO-friendly, pre-rendered pages.
 - Gemini AI assistance for summaries and experience bullet improvements.
-- Local-first data storage (localStorage) for resume editing.
+- Local-first data storage with debounced segmented persistence for resume editing.
 - Optional AI proxy via Cloudflare Worker for server-side Gemini key handling.
 - Print-ready A4 layout and PDF export via browser print.
 - JSON export for portability or integration with other tools.
@@ -70,7 +70,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - **实时预览** - 输入内容时即时查看简历更新
 - **AI 智能优化** - 使用 Google Gemini AI 优化和润色简历文本
 - **自动生成摘要** - 根据职位和技能自动生成专业摘要
-- **本地数据存储** - 数据存储在 localStorage，无需后端服务
+- **本地数据存储** - 数据优先保存在浏览器（分片存储 + 自动保存）
 - **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
 - **JSON 导出** - 支持 JSON 格式导出，便于备份和迁移
 - **明暗主题** - 支持浅色和深色主题切换
@@ -97,7 +97,8 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 ### AI Assistance (Gemini)
 - Generate a professional summary based on role and skills.
 - Improve experience bullets with action verbs and measurable impact.
-- Requests go through `/api/gemini` so service keys stay server-side.
+- Frontend requests a short-lived signed session via `/api/gemini/session`, then calls `/api/gemini`.
+- Worker applies origin checks, session verification, and per-IP rate limiting before hitting Gemini.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
@@ -105,10 +106,10 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Structured data (JSON-LD) on directory and job pages.
 
 ### Privacy and Data
-- Resume data lives in localStorage.
+- Resume data is persisted in segmented localStorage keys (`resumeData:v2:*`) with debounced writes.
 - AI requests send selected text to Google Gemini for processing.
 - Users must explicitly consent before AI actions are sent.
-- You can optionally provide a personal Gemini key in the UI; it is stored locally.
+- Personal Gemini keys default to session-only storage; “remember on this device” is optional and off by default.
 
 ## SEO & Social Sharing
 
@@ -125,7 +126,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
    - **Basics**: Personal details, summary, and education
    - **Experience**: Work history with AI-enhanced descriptions
    - **Skills**: Skills list and project showcase
-3. Changes are saved automatically to localStorage
+3. Changes are autosaved locally (with visible warning if persistence fails)
 
 ### AI Features
 - **Polish Text**: Click the ✨ sparkle icon on any text field to improve it with AI
@@ -210,10 +211,16 @@ Notes:
 - Do not store service keys in `VITE_` variables.
 - For Cloudflare Worker deployments, set a server secret:
   - `wrangler secret put GEMINI_API_KEY`
+  - `wrangler secret put GEMINI_SIGNING_SECRET`
 - For local AI proxy testing, run Worker dev and point the frontend to it:
   - `VITE_AI_PROXY_URL=http://127.0.0.1:8787/api/gemini`
   - `npx wrangler dev`
-- You can still enter a personal Gemini API key in the UI as a fallback; it is stored in localStorage.
+- Optional Worker vars:
+  - `ALLOWED_ORIGINS` (comma-separated origins allowed to request AI sessions)
+  - `AI_RATE_LIMIT_PER_MINUTE`
+  - `AI_SESSION_RATE_LIMIT_PER_MINUTE`
+  - `AI_SESSION_TTL_SECONDS`
+- You can still enter a personal Gemini API key in the UI as a fallback. By default it is scoped to the current tab session.
 - `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference
@@ -223,6 +230,8 @@ Notes:
 | `npm run dev` | Start development server |
 | `npm run build` | Build for production and run SEO postbuild |
 | `npm run preview` | Preview the production build |
+| `npm run test` | Run unit/integration tests (Vitest) |
+| `npm run test:watch` | Run tests in watch mode |
 | `npm run seo:postbuild` | Run SEO postbuild only |
 | `npm run jobtitles:validate` | Validate job titles (duplicates, slug collisions) |
 | `npm run jobtitles:import` | Bulk import job titles |

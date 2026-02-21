@@ -1,16 +1,38 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ResumeData, INITIAL_RESUME_DATA } from '../types';
 
-const STORAGE_KEY = 'resumeData';
+const LEGACY_STORAGE_KEY = 'resumeData';
+const STORAGE_PREFIX = 'resumeData:v2';
+const STORAGE_VERSION_KEY = `${STORAGE_PREFIX}:version`;
+const STORAGE_VERSION = '2';
 const SAVE_DEBOUNCE_MS = 300;
+
+const RESUME_FIELDS: Array<keyof ResumeData> = [
+  'templateId',
+  'fullName',
+  'title',
+  'email',
+  'phone',
+  'location',
+  'website',
+  'linkedin',
+  'summary',
+  'experience',
+  'education',
+  'skills',
+  'projects',
+];
 
 const isValidResumeData = (data: unknown): data is Partial<ResumeData> => {
   if (typeof data !== 'object' || data === null) return false;
+
   const obj = data as Record<string, unknown>;
   if (obj.fullName !== undefined && typeof obj.fullName !== 'string') return false;
   if (obj.experience !== undefined && !Array.isArray(obj.experience)) return false;
   if (obj.education !== undefined && !Array.isArray(obj.education)) return false;
   if (obj.skills !== undefined && !Array.isArray(obj.skills)) return false;
+  if (obj.projects !== undefined && !Array.isArray(obj.projects)) return false;
+
   return true;
 };
 
@@ -19,37 +41,112 @@ const mergeResumeData = (data: Partial<ResumeData>): ResumeData => ({
   ...data,
 });
 
-const areResumeDataEqual = (a: ResumeData, b: ResumeData): boolean => {
-  return JSON.stringify(a) === JSON.stringify(b);
+const getFieldStorageKey = (field: keyof ResumeData): string => `${STORAGE_PREFIX}:${field}`;
+
+const isKnownField = (value: string): value is keyof ResumeData => {
+  return (RESUME_FIELDS as string[]).includes(value);
+};
+
+const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => {
+  switch (field) {
+    case 'templateId':
+    case 'fullName':
+    case 'title':
+    case 'email':
+    case 'phone':
+    case 'location':
+    case 'website':
+    case 'linkedin':
+    case 'summary':
+      return typeof value === 'string';
+    case 'experience':
+    case 'education':
+    case 'skills':
+    case 'projects':
+      return Array.isArray(value);
+    default:
+      return false;
+  }
+};
+
+const clearSegmentedStorage = (): void => {
+  for (const field of RESUME_FIELDS) {
+    localStorage.removeItem(getFieldStorageKey(field));
+  }
+  localStorage.removeItem(STORAGE_VERSION_KEY);
+};
+
+const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
+  const nextData: Partial<ResumeData> = {};
+  let hasAnyField = false;
+
+  for (const field of RESUME_FIELDS) {
+    const raw = localStorage.getItem(getFieldStorageKey(field));
+    if (raw === null) continue;
+
+    hasAnyField = true;
+
+    try {
+      const parsed = JSON.parse(raw);
+      if (!isValidFieldValue(field, parsed)) {
+        localStorage.removeItem(getFieldStorageKey(field));
+        continue;
+      }
+
+      nextData[field] = parsed as ResumeData[typeof field];
+    } catch {
+      localStorage.removeItem(getFieldStorageKey(field));
+    }
+  }
+
+  if (!hasAnyField) return null;
+  return isValidResumeData(nextData) ? nextData : null;
+};
+
+const loadLegacyData = (): Partial<ResumeData> | null => {
+  const saved = localStorage.getItem(LEGACY_STORAGE_KEY);
+  if (!saved) return null;
+
+  try {
+    const parsed = JSON.parse(saved);
+    if (!isValidResumeData(parsed)) {
+      localStorage.removeItem(LEGACY_STORAGE_KEY);
+      return null;
+    }
+
+    return parsed;
+  } catch {
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
+    return null;
+  }
 };
 
 const loadFromStorage = (): ResumeData => {
   try {
-    const saved = localStorage.getItem(STORAGE_KEY);
-    if (!saved) return INITIAL_RESUME_DATA;
-
-    const parsed = JSON.parse(saved);
-    if (!isValidResumeData(parsed)) {
-      console.warn('Corrupted resume data detected, using defaults');
-      localStorage.removeItem(STORAGE_KEY);
-      return INITIAL_RESUME_DATA;
+    const segmentedData = loadFromSegmentedStorage();
+    if (segmentedData) {
+      return mergeResumeData(segmentedData);
     }
 
-    return mergeResumeData(parsed);
+    const legacyData = loadLegacyData();
+    if (legacyData) {
+      return mergeResumeData(legacyData);
+    }
   } catch (error) {
     console.error('Failed to load resume data:', error);
-    try {
-      localStorage.removeItem(STORAGE_KEY);
-    } catch (removeError) {
-      console.warn('Failed to remove data after load error:', removeError);
-    }
-    return INITIAL_RESUME_DATA;
   }
+
+  return INITIAL_RESUME_DATA;
 };
 
-const saveToStorage = (data: ResumeData): boolean => {
+const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>): boolean => {
   try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    for (const field of fields) {
+      localStorage.setItem(getFieldStorageKey(field), JSON.stringify(data[field]));
+    }
+
+    localStorage.setItem(STORAGE_VERSION_KEY, STORAGE_VERSION);
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
     return true;
   } catch (error) {
     const isQuotaError =
@@ -69,21 +166,45 @@ const saveToStorage = (data: ResumeData): boolean => {
 export const useResumeData = () => {
   const [resumeData, setResumeData] = useState<ResumeData>(loadFromStorage);
   const [saveError, setSaveError] = useState<string | null>(null);
-  const saveTimerRef = useRef<number | null>(null);
 
-  const flushSave = useCallback((nextData: ResumeData) => {
-    const success = saveToStorage(nextData);
-    setSaveError(success ? null : 'Failed to save changes');
+  const saveTimerRef = useRef<number | null>(null);
+  const pendingFieldsRef = useRef<Set<keyof ResumeData>>(new Set());
+  const latestDataRef = useRef<ResumeData>(resumeData);
+  const previousDataRef = useRef<ResumeData>(resumeData);
+  const hasInitializedRef = useRef(false);
+
+  const flushSave = useCallback(() => {
+    const pendingFields = Array.from(pendingFieldsRef.current);
+    if (pendingFields.length === 0) return;
+
+    pendingFieldsRef.current.clear();
+    const success = saveFieldsToStorage(latestDataRef.current, pendingFields);
+    setSaveError(success ? null : 'Failed to save changes locally');
   }, []);
 
   useEffect(() => {
+    latestDataRef.current = resumeData;
+
+    const changedFields = hasInitializedRef.current
+      ? RESUME_FIELDS.filter((field) => !Object.is(previousDataRef.current[field], resumeData[field]))
+      : [...RESUME_FIELDS];
+
+    previousDataRef.current = resumeData;
+    hasInitializedRef.current = true;
+
+    if (changedFields.length === 0) return;
+
+    for (const field of changedFields) {
+      pendingFieldsRef.current.add(field);
+    }
+
     if (saveTimerRef.current !== null) {
       window.clearTimeout(saveTimerRef.current);
     }
 
     saveTimerRef.current = window.setTimeout(() => {
       saveTimerRef.current = null;
-      flushSave(resumeData);
+      flushSave();
     }, SAVE_DEBOUNCE_MS);
 
     return () => {
@@ -96,23 +217,58 @@ export const useResumeData = () => {
 
   useEffect(() => {
     const handleStorage = (event: StorageEvent) => {
-      if (event.key !== STORAGE_KEY) return;
+      if (!event.key) return;
 
-      if (!event.newValue) {
-        setResumeData((prev) => (areResumeDataEqual(prev, INITIAL_RESUME_DATA) ? prev : INITIAL_RESUME_DATA));
+      if (event.key === LEGACY_STORAGE_KEY) {
+        if (!event.newValue) return;
+
+        try {
+          const parsed = JSON.parse(event.newValue);
+          if (!isValidResumeData(parsed)) return;
+
+          const merged = mergeResumeData(parsed);
+          setResumeData((prev) => {
+            if (JSON.stringify(prev) === JSON.stringify(merged)) return prev;
+            return merged;
+          });
+          setSaveError(null);
+        } catch {
+          // Ignore malformed legacy payloads from other tabs.
+        }
+
+        return;
+      }
+
+      if (!event.key.startsWith(`${STORAGE_PREFIX}:`) || event.key === STORAGE_VERSION_KEY) {
+        return;
+      }
+
+      const fieldName = event.key.slice(`${STORAGE_PREFIX}:`.length);
+      if (!isKnownField(fieldName)) return;
+
+      if (event.newValue === null) {
+        setResumeData((prev) => ({
+          ...prev,
+          [fieldName]: INITIAL_RESUME_DATA[fieldName],
+        }));
         setSaveError(null);
         return;
       }
 
       try {
         const parsed = JSON.parse(event.newValue);
-        if (!isValidResumeData(parsed)) return;
+        if (!isValidFieldValue(fieldName, parsed)) return;
 
-        const nextData = mergeResumeData(parsed);
-        setResumeData((prev) => (areResumeDataEqual(prev, nextData) ? prev : nextData));
+        setResumeData((prev) => {
+          if (Object.is(prev[fieldName], parsed)) return prev;
+          return {
+            ...prev,
+            [fieldName]: parsed,
+          };
+        });
         setSaveError(null);
-      } catch (error) {
-        console.warn('Ignored malformed resume data from another tab:', error);
+      } catch {
+        // Ignore malformed field payloads from other tabs.
       }
     };
 
@@ -130,8 +286,15 @@ export const useResumeData = () => {
       saveTimerRef.current = null;
     }
 
+    pendingFieldsRef.current.clear();
+    clearSegmentedStorage();
+    localStorage.removeItem(LEGACY_STORAGE_KEY);
+
+    previousDataRef.current = INITIAL_RESUME_DATA;
+    latestDataRef.current = INITIAL_RESUME_DATA;
+    hasInitializedRef.current = false;
+
     setResumeData(INITIAL_RESUME_DATA);
-    localStorage.removeItem(STORAGE_KEY);
     setSaveError(null);
   }, []);
 

@@ -11,7 +11,7 @@ import { buildHomeSeoKeywords, buildHomeFaqSchema } from '../utils/seo';
 
 const HomeView: React.FC = () => {
   const navigate = useNavigate();
-  const { resumeData, handleDownloadPdf, isExportingPdf } = useResume();
+  const { resumeData, handleDownloadPdf, isExportingPdf, saveError } = useResume();
 
   const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
@@ -129,6 +129,14 @@ const HomeView: React.FC = () => {
       </header>
 
       <main className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 print:p-0">
+        {saveError && (
+          <div
+            role="alert"
+            className="max-w-[21cm] mx-auto mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+          >
+            Autosave warning: {saveError}. Changes may not persist in this browser tab.
+          </div>
+        )}
         <div className="max-w-[21cm] mx-auto shadow-2xl print:shadow-none transition-transform duration-500 ease-out animate-in fade-in slide-in-from-bottom-4">
           <SectionErrorBoundary sectionName="Resume Preview">
             <ResumePreview data={resumeData} showFullPage={false} />

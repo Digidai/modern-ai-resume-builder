@@ -21,3 +21,5 @@ Do not post API keys, personal data, or private resume content in public issues.
 
 - Never expose service keys in client-side `VITE_*` variables.
 - For Cloudflare deployments, store `GEMINI_API_KEY` as a Worker secret (`wrangler secret put GEMINI_API_KEY`).
+- Use a dedicated session signing secret for AI tokens (`wrangler secret put GEMINI_SIGNING_SECRET`).
+- Keep browser CSP/security headers enabled at the Worker layer to reduce script injection risk.

@@ -1,11 +1,16 @@
 type GeminiErrorCode =
   | 'API_KEY_REQUIRED'
+  | 'AUTH_REQUIRED'
+  | 'INVALID_SESSION_TOKEN'
+  | 'SESSION_EXPIRED'
+  | 'SIGNING_SECRET_MISSING'
   | 'INVALID_REQUEST'
   | 'INVALID_JSON'
   | 'REQUEST_TOO_LARGE'
   | 'METHOD_NOT_ALLOWED'
   | 'FORBIDDEN_ORIGIN'
   | 'NOT_FOUND'
+  | 'RATE_LIMITED'
   | 'UPSTREAM_RATE_LIMIT'
   | 'UPSTREAM_UNAVAILABLE'
   | 'UPSTREAM_ERROR'
@@ -33,10 +38,23 @@ interface GeminiApiResponse {
   text?: string;
 }
 
+interface GeminiSessionResponse {
+  token?: string;
+  expiresAt?: number;
+}
+
+interface GeminiSessionCache {
+  token: string;
+  expiresAt: number;
+}
+
 const MAX_RETRIES = 3;
 const RETRY_DELAY_MS = 1000;
 const TIMEOUT_MS = 30000;
+const SESSION_REFRESH_BUFFER_MS = 5000;
 const FALLBACK_PROXY_PATH = '/api/gemini';
+
+let cachedSession: GeminiSessionCache | null = null;
 
 export class GeminiError extends Error {
   constructor(
@@ -54,6 +72,12 @@ const sleep = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
 const getProxyUrl = (): string => {
   const configured = import.meta.env.VITE_AI_PROXY_URL?.trim();
   return configured || FALLBACK_PROXY_PATH;
+};
+
+const getSessionUrl = (): string => {
+  const proxyUrl = getProxyUrl();
+  if (proxyUrl.endsWith('/session')) return proxyUrl;
+  return `${proxyUrl}/session`;
 };
 
 const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
@@ -74,7 +98,7 @@ const withTimeout = <T>(promise: Promise<T>, ms: number): Promise<T> => {
 const shouldRetry = (status: number, code?: GeminiErrorCode): boolean => {
   if (status === 429) return true;
   if (status >= 500) return true;
-  return code === 'UPSTREAM_TIMEOUT' || code === 'NETWORK_ERROR';
+  return code === 'UPSTREAM_TIMEOUT' || code === 'NETWORK_ERROR' || code === 'SESSION_EXPIRED';
 };
 
 const executeWithRetry = async <T>(
@@ -118,8 +142,33 @@ const parseError = async (response: Response): Promise<GeminiError> => {
   return new GeminiError(message, code, shouldRetry(response.status, code));
 };
 
-const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
-  const endpoint = getProxyUrl();
+const readSessionCache = (): GeminiSessionCache | null => {
+  if (!cachedSession) return null;
+
+  const now = Date.now();
+  if (cachedSession.expiresAt - SESSION_REFRESH_BUFFER_MS <= now) {
+    cachedSession = null;
+    return null;
+  }
+
+  return cachedSession;
+};
+
+const setSessionCache = (session: GeminiSessionCache): void => {
+  cachedSession = session;
+};
+
+const clearSessionCache = (): void => {
+  cachedSession = null;
+};
+
+const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
+  if (!forceRefresh) {
+    const existing = readSessionCache();
+    if (existing) return existing.token;
+  }
+
+  const endpoint = getSessionUrl();
 
   let response: Response;
   try {
@@ -127,6 +176,44 @@ const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
+      },
+    });
+  } catch {
+    throw new GeminiError(
+      'Unable to reach AI session service. Please check your connection and try again.',
+      'NETWORK_ERROR',
+      true
+    );
+  }
+
+  if (!response.ok) {
+    throw await parseError(response);
+  }
+
+  const data = (await response.json().catch(() => ({}))) as GeminiSessionResponse;
+  const token = typeof data.token === 'string' ? data.token.trim() : '';
+  const expiresAt = Number(data.expiresAt || 0);
+
+  if (!token || !Number.isFinite(expiresAt) || expiresAt <= Date.now()) {
+    throw new GeminiError('AI session response is invalid.', 'INVALID_RESPONSE', false);
+  }
+
+  setSessionCache({ token, expiresAt });
+  return token;
+};
+
+const postGeminiRequest = async (
+  payload: GeminiApiRequest,
+  sessionToken: string
+): Promise<Response> => {
+  const endpoint = getProxyUrl();
+
+  try {
+    return await fetch(endpoint, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+        'x-ai-session-token': sessionToken,
       },
       body: JSON.stringify(payload),
     });
@@ -136,6 +223,22 @@ const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
       'NETWORK_ERROR',
       true
     );
+  }
+};
+
+const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
+  let sessionToken = await fetchSessionToken();
+  let response = await postGeminiRequest(payload, sessionToken);
+
+  if (response.status === 401) {
+    const authError = await parseError(response);
+    if (authError.code === 'SESSION_EXPIRED' || authError.code === 'INVALID_SESSION_TOKEN' || authError.code === 'AUTH_REQUIRED') {
+      clearSessionCache();
+      sessionToken = await fetchSessionToken(true);
+      response = await postGeminiRequest(payload, sessionToken);
+    } else {
+      throw authError;
+    }
   }
 
   if (!response.ok) {
@@ -181,4 +284,8 @@ export const generateSummary = async (
       apiKey: apiKey?.trim() || undefined,
     });
   });
+};
+
+export const __resetGeminiSessionCacheForTests = (): void => {
+  clearSessionCache();
 };

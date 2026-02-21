@@ -12,7 +12,7 @@ import { buildEditorSeoKeywords } from '../utils/seo';
 
 const EditorView: React.FC = () => {
   const navigate = useNavigate();
-  const { resumeData, setResumeData, resetData, handleDownloadPdf, handleExportJson, isExportingPdf } = useResume();
+  const { resumeData, setResumeData, resetData, handleDownloadPdf, handleExportJson, isExportingPdf, saveError } = useResume();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
   const siteUrl = getSiteUrl();
@@ -124,6 +124,14 @@ const EditorView: React.FC = () => {
           </header>
 
           <div className="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
+            {saveError && (
+              <div
+                role="alert"
+                className="mb-4 rounded-lg border border-red-200 bg-red-50 px-4 py-3 text-sm text-red-700"
+              >
+                Autosave warning: {saveError}. Changes may not persist in this browser tab.
+              </div>
+            )}
             <SectionErrorBoundary sectionName="Resume Editor">
               <ResumeEditor data={resumeData} onChange={setResumeData} />
             </SectionErrorBoundary>
