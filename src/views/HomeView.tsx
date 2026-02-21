@@ -143,6 +143,7 @@ const HomeView: React.FC = () => {
           variant="secondary"
           className="rounded-full shadow-xl"
           title="Job Directory"
+          aria-label="Open job directory"
         >
           <BriefcaseIcon className="w-5 h-5" />
         </Button>
@@ -151,6 +152,7 @@ const HomeView: React.FC = () => {
           variant="secondary"
           className="rounded-full shadow-xl"
           title="Download PDF"
+          aria-label="Download resume as PDF"
           isLoading={isExportingPdf}
         >
           <DownloadIcon className="w-5 h-5" />

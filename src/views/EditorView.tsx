@@ -83,6 +83,7 @@ const EditorView: React.FC = () => {
                 variant="icon"
                 className="-ml-2"
                 title="Back to Preview"
+                aria-label="Back to preview"
               >
                 <ArrowLeftIcon className="w-5 h-5" />
               </Button>
@@ -97,6 +98,7 @@ const EditorView: React.FC = () => {
                 onClick={handleExportJson}
                 variant="icon"
                 title="Save Data (JSON)"
+                aria-label="Export resume data as JSON"
               >
                 <SaveIcon className="w-5 h-5" />
               </Button>
@@ -171,6 +173,7 @@ const EditorView: React.FC = () => {
             variant="primary"
             className="rounded-full shadow-xl p-4 h-auto"
             title="Download PDF"
+            aria-label="Download resume as PDF"
             isLoading={isExportingPdf}
           >
             <DownloadIcon className="w-5 h-5" />

@@ -1,70 +1,69 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import { ResumeData } from '../types';
-import { ModernTemplate, MinimalistTemplate, SidebarTemplate, ExecutiveTemplate, CreativeTemplate, CompactTemplate, TechTemplate, ProfessionalTemplate, AcademicTemplate, ElegantTemplate, SwissTemplate, OpalTemplate, WireframeTemplate, BerlinTemplate, LateralTemplate, IronTemplate, GintoTemplate, SymmetryTemplate, BronxTemplate, PathTemplate, QuartzTemplate, SilkTemplate, MonoTemplate, PopTemplate, NoirTemplate, PaperTemplate, CastTemplate, ModaTemplate } from './ResumeTemplates';
 
 interface ResumeTemplateRendererProps {
-    data: ResumeData;
-    templateId: string;
+  data: ResumeData;
+  templateId: string;
 }
 
+interface TemplateProps {
+  data: ResumeData;
+}
+
+type TemplateComponent = React.ComponentType<TemplateProps>;
+type TemplateLoader = () => Promise<{ default: TemplateComponent }>;
+
+const createLazyTemplate = (loader: TemplateLoader): React.LazyExoticComponent<TemplateComponent> => lazy(loader);
+
+const TEMPLATE_LOADERS: Record<string, TemplateLoader> = {
+  modern: () => import('./templates/ModernTemplate').then((module) => ({ default: module.ModernTemplate })),
+  minimalist: () => import('./templates/MinimalistTemplate').then((module) => ({ default: module.MinimalistTemplate })),
+  sidebar: () => import('./templates/SidebarTemplate').then((module) => ({ default: module.SidebarTemplate })),
+  executive: () => import('./templates/ExecutiveTemplate').then((module) => ({ default: module.ExecutiveTemplate })),
+  creative: () => import('./templates/CreativeTemplate').then((module) => ({ default: module.CreativeTemplate })),
+  compact: () => import('./templates/CompactTemplate').then((module) => ({ default: module.CompactTemplate })),
+  tech: () => import('./templates/TechTemplate').then((module) => ({ default: module.TechTemplate })),
+  professional: () => import('./templates/ProfessionalTemplate').then((module) => ({ default: module.ProfessionalTemplate })),
+  academic: () => import('./templates/AcademicTemplate').then((module) => ({ default: module.AcademicTemplate })),
+  elegant: () => import('./templates/ElegantTemplate').then((module) => ({ default: module.ElegantTemplate })),
+  swiss: () => import('./templates/SwissTemplate').then((module) => ({ default: module.SwissTemplate })),
+  opal: () => import('./templates/OpalTemplate').then((module) => ({ default: module.OpalTemplate })),
+  wireframe: () => import('./templates/WireframeTemplate').then((module) => ({ default: module.WireframeTemplate })),
+  berlin: () => import('./templates/BerlinTemplate').then((module) => ({ default: module.BerlinTemplate })),
+  lateral: () => import('./templates/LateralTemplate').then((module) => ({ default: module.LateralTemplate })),
+  iron: () => import('./templates/IronTemplate').then((module) => ({ default: module.IronTemplate })),
+  ginto: () => import('./templates/GintoTemplate').then((module) => ({ default: module.GintoTemplate })),
+  symmetry: () => import('./templates/SymmetryTemplate').then((module) => ({ default: module.SymmetryTemplate })),
+  bronx: () => import('./templates/BronxTemplate').then((module) => ({ default: module.BronxTemplate })),
+  path: () => import('./templates/PathTemplate').then((module) => ({ default: module.PathTemplate })),
+  quartz: () => import('./templates/QuartzTemplate').then((module) => ({ default: module.QuartzTemplate })),
+  silk: () => import('./templates/SilkTemplate').then((module) => ({ default: module.SilkTemplate })),
+  mono: () => import('./templates/MonoTemplate').then((module) => ({ default: module.MonoTemplate })),
+  pop: () => import('./templates/PopTemplate').then((module) => ({ default: module.PopTemplate })),
+  noir: () => import('./templates/NoirTemplate').then((module) => ({ default: module.NoirTemplate })),
+  paper: () => import('./templates/PaperTemplate').then((module) => ({ default: module.PaperTemplate })),
+  cast: () => import('./templates/CastTemplate').then((module) => ({ default: module.CastTemplate })),
+  moda: () => import('./templates/ModaTemplate').then((module) => ({ default: module.ModaTemplate })),
+};
+
+const TEMPLATES = Object.fromEntries(
+  Object.entries(TEMPLATE_LOADERS).map(([templateId, loader]) => [templateId, createLazyTemplate(loader)])
+) as Record<string, React.LazyExoticComponent<TemplateComponent>>;
+
+const TemplateFallback: React.FC = () => (
+  <div className="w-full min-h-[120px] rounded-md bg-slate-100 dark:bg-slate-900 animate-pulse" />
+);
+
+export const preloadResumeTemplate = async (templateId: string): Promise<void> => {
+  const loader = TEMPLATE_LOADERS[templateId] || TEMPLATE_LOADERS.modern;
+  await loader();
+};
+
 export const ResumeTemplateRenderer: React.FC<ResumeTemplateRendererProps> = ({ data, templateId }) => {
-    switch (templateId) {
-        case 'minimalist':
-            return <MinimalistTemplate data={data} />;
-        case 'sidebar':
-            return <SidebarTemplate data={data} />;
-        case 'tech':
-            return <TechTemplate data={data} />;
-        case 'professional':
-            return <ProfessionalTemplate data={data} />;
-        case 'creative':
-            return <CreativeTemplate data={data} />;
-        case 'executive':
-            return <ExecutiveTemplate data={data} />;
-        case 'compact':
-            return <CompactTemplate data={data} />;
-        case 'swiss':
-            return <SwissTemplate data={data} />;
-        case 'academic':
-            return <AcademicTemplate data={data} />;
-        case 'elegant':
-            return <ElegantTemplate data={data} />;
-        case 'opal':
-            return <OpalTemplate data={data} />;
-        case 'wireframe':
-            return <WireframeTemplate data={data} />;
-        case 'berlin':
-            return <BerlinTemplate data={data} />;
-        case 'lateral':
-            return <LateralTemplate data={data} />;
-        case 'iron':
-            return <IronTemplate data={data} />;
-        case 'ginto':
-            return <GintoTemplate data={data} />;
-        case 'symmetry':
-            return <SymmetryTemplate data={data} />;
-        case 'bronx':
-            return <BronxTemplate data={data} />;
-        case 'path':
-            return <PathTemplate data={data} />;
-        case 'quartz':
-            return <QuartzTemplate data={data} />;
-        case 'silk':
-            return <SilkTemplate data={data} />;
-        case 'mono':
-            return <MonoTemplate data={data} />;
-        case 'pop':
-            return <PopTemplate data={data} />;
-        case 'noir':
-            return <NoirTemplate data={data} />;
-        case 'paper':
-            return <PaperTemplate data={data} />;
-        case 'cast':
-            return <CastTemplate data={data} />;
-        case 'moda':
-            return <ModaTemplate data={data} />;
-        case 'modern':
-        default:
-            return <ModernTemplate data={data} />;
-    }
+  const Template = TEMPLATES[templateId] || TEMPLATES.modern;
+  return (
+    <Suspense fallback={<TemplateFallback />}>
+      <Template data={data} />
+    </Suspense>
+  );
 };

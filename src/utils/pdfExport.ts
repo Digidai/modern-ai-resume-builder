@@ -8,6 +8,12 @@ const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
 const PAGE_SPLIT_EPSILON_PT = 1;
 
+interface ExportResumeToPdfOptions {
+  rawFileName: string;
+  data: ResumeData;
+  previewElementId?: string;
+}
+
 const loadImage = (src: string) =>
   new Promise<HTMLImageElement>((resolve, reject) => {
     const img = new Image();
@@ -33,10 +39,32 @@ const downloadBlob = (blob: Blob, fileName: string) => {
   URL.revokeObjectURL(url);
 };
 
-export const exportResumeToPdf = async (element: HTMLElement, rawFileName: string, data: ResumeData) => {
+const nextFrame = () => new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
+
+const getPreviewElement = async (previewElementId: string): Promise<HTMLElement> => {
+  const immediate = document.getElementById(previewElementId);
+  if (immediate) return immediate;
+
+  await nextFrame();
+  const retried = document.getElementById(previewElementId);
+  if (!retried) {
+    throw new Error('Resume preview is not ready yet.');
+  }
+
+  return retried;
+};
+
+export const exportResumeToPdf = async ({
+  rawFileName,
+  data,
+  previewElementId = 'resume-preview-container',
+}: ExportResumeToPdfOptions) => {
   if (document.fonts?.ready) {
     await document.fonts.ready;
   }
+
+  const element = await getPreviewElement(previewElementId);
+  await nextFrame();
 
   const safeName = sanitizeFileName(rawFileName) || 'resume';
 
@@ -56,10 +84,6 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
   const marginPt = 0;
   const contentWidth = A4_WIDTH_PT;
   const contentHeight = A4_HEIGHT_PT;
-
-  if (!element) {
-    throw new Error('Resume element not found');
-  }
 
   const clone = element.cloneNode(true) as HTMLElement;
   const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
@@ -88,6 +112,7 @@ export const exportResumeToPdf = async (element: HTMLElement, rawFileName: strin
 
   let dataUrl = '';
   try {
+    await nextFrame();
     dataUrl = await toPng(clone, {
       cacheBust: true,
       pixelRatio: EXPORT_PIXEL_RATIO,

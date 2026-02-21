@@ -44,7 +44,7 @@
 
 ## Why This Project?
 
-ModernCV helps job seekers build professional resumes quickly while giving HR teams a consistent, template-driven way to review and share role-specific layouts. It runs entirely in the browser, keeps data local, and can be deployed as a static site.
+ModernCV helps job seekers build professional resumes quickly while giving HR teams a consistent, template-driven way to review and share role-specific layouts. Editing stays local-first in the browser, while AI requests are routed through a server-side proxy for safer key management.
 
 ## Who Is It For?
 
@@ -57,7 +57,8 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - 28 professionally designed resume templates.
 - 640 job titles with SEO-friendly, pre-rendered pages.
 - Gemini AI assistance for summaries and experience bullet improvements.
-- Local-first data storage (localStorage); no backend required.
+- Local-first data storage (localStorage) for resume editing.
+- Optional AI proxy via Cloudflare Worker for server-side Gemini key handling.
 - Print-ready A4 layout and PDF export via browser print.
 - JSON export for portability or integration with other tools.
 - Light and dark themes.
@@ -96,7 +97,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 ### AI Assistance (Gemini)
 - Generate a professional summary based on role and skills.
 - Improve experience bullets with action verbs and measurable impact.
-- Client-side integration using `@google/generative-ai` (Gemini 2.0 Flash experimental).
+- Requests go through `/api/gemini` so service keys stay server-side.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
@@ -105,8 +106,9 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 
 ### Privacy and Data
 - Resume data lives in localStorage.
-- AI requests send only the selected text to Gemini.
-- API key can be provided in the UI and stored locally.
+- AI requests send selected text to Google Gemini for processing.
+- Users must explicitly consent before AI actions are sent.
+- You can optionally provide a personal Gemini key in the UI; it is stored locally.
 
 ## SEO & Social Sharing
 
@@ -189,8 +191,9 @@ npm run dev
 Create a `.env.local` file if needed:
 
 ```env
-# Optional: Gemini API key for local development
-VITE_GEMINI_API_KEY=your_gemini_api_key_here
+# Optional: frontend override for AI proxy endpoint
+# Defaults to /api/gemini
+VITE_AI_PROXY_URL=
 
 # Optional: runtime canonical site URL for SEO tags
 VITE_SITE_URL=https://your-domain.com
@@ -204,7 +207,13 @@ SEO_WRITE_PUBLIC=1
 
 Notes:
 - `VITE_` variables are embedded into the client bundle.
-- You can also enter the Gemini API key directly in the UI; it is stored in localStorage.
+- Do not store service keys in `VITE_` variables.
+- For Cloudflare Worker deployments, set a server secret:
+  - `wrangler secret put GEMINI_API_KEY`
+- For local AI proxy testing, run Worker dev and point the frontend to it:
+  - `VITE_AI_PROXY_URL=http://127.0.0.1:8787/api/gemini`
+  - `npx wrangler dev`
+- You can still enter a personal Gemini API key in the UI as a fallback; it is stored in localStorage.
 - `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference
@@ -276,12 +285,17 @@ npm run jobtitles:import -- --input titles.csv --format csv
 ### Cloudflare Workers
 
 ```bash
+# First-time only: configure server-side Gemini key
+wrangler secret put GEMINI_API_KEY
+
+# Build and deploy
 npm run build:deploy
 ```
 
 ### Other Platforms
 
-The `dist` folder can be deployed to any static hosting (Vercel, Netlify, GitHub Pages, S3 + CloudFront).
+The `dist` folder can be deployed to any static hosting (Vercel, Netlify, GitHub Pages, S3 + CloudFront) for core resume editing.
+If you need AI features, deploy an API endpoint compatible with `/api/gemini` and set `VITE_AI_PROXY_URL` when needed.
 
 ## API Reference
 

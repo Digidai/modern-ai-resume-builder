@@ -1,10 +1,9 @@
 import { useState, useCallback } from 'react';
 import { ResumeData, Experience, Education, Project } from '../types';
 import { SparklesIcon, PlusIcon, TrashIcon, LoaderIcon } from './Icons';
-import { improveText, generateSummary } from '../services/geminiService';
+import { improveText, generateSummary, GeminiError } from '../services/geminiService';
 import { Button } from './Button';
 import { ApiKeyModal } from './ApiKeyModal';
-import { ScaledResumePreview } from './ScaledResumePreview';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
@@ -17,11 +16,29 @@ interface ResumeEditorProps {
   onError?: (message: string) => void;
 }
 
+const GEMINI_API_KEY_STORAGE_KEY = 'gemini_api_key';
+const AI_CONSENT_STORAGE_KEY = 'ai_data_transfer_consent_v1';
+
 const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) => {
   const [activeTab, setActiveTab] = useState<'basics' | 'experience' | 'skills' | 'design'>('basics');
   const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
+  const [isApiKeyRequired, setIsApiKeyRequired] = useState(false);
   const [loadingField, setLoadingField] = useState<string | null>(null);
-  const [pendingAiAction, setPendingAiAction] = useState<(() => Promise<void>) | null>(null);
+  const [storedApiKey, setStoredApiKey] = useState(() => {
+    try {
+      return localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY) || '';
+    } catch {
+      return '';
+    }
+  });
+  const [hasAiConsent, setHasAiConsent] = useState(() => {
+    try {
+      return localStorage.getItem(AI_CONSENT_STORAGE_KEY) === 'true';
+    } catch {
+      return false;
+    }
+  });
+  const [pendingAiAction, setPendingAiAction] = useState<((key?: string) => Promise<void>) | null>(null);
   const { showError: showToastError } = useToast();
 
   const showError = useCallback((message: string) => {
@@ -32,45 +49,70 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
     }
   }, [onError, showToastError]);
 
-  const handleAiAction = useCallback(async (action: (key: string) => Promise<void>) => {
-    const getKey = () => {
-      try {
-        return localStorage.getItem('gemini_api_key') || import.meta.env.VITE_GEMINI_API_KEY || '';
-      } catch {
-        return import.meta.env.VITE_GEMINI_API_KEY || '';
+  const persistAiSettings = useCallback((apiKey: string, consentGranted: boolean) => {
+    try {
+      if (apiKey) {
+        localStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, apiKey);
+      } else {
+        localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
       }
-    };
-    const key = getKey();
-    if (key) {
-      await action(key);
-    } else {
-      setPendingAiAction(() => async () => {
-        const newKey = (() => {
-          try {
-            return localStorage.getItem('gemini_api_key');
-          } catch {
-            return null;
-          }
-        })();
-        if (newKey) await action(newKey);
-      });
-      setIsApiKeyModalOpen(true);
+      localStorage.setItem(AI_CONSENT_STORAGE_KEY, consentGranted ? 'true' : 'false');
+    } catch (error) {
+      console.error('Failed to persist AI settings:', error);
+      throw new Error('Failed to save AI settings. Please check your browser settings.');
     }
   }, []);
 
-  const handleSaveApiKey = useCallback((key: string) => {
-    try {
-      localStorage.setItem('gemini_api_key', key);
-    } catch (error) {
-      console.error('Failed to save API key:', error);
-      showError('Failed to save API key. Please check your browser settings.');
+  const handleAiAction = useCallback(async (action: (key?: string) => Promise<void>) => {
+    if (!hasAiConsent) {
+      setIsApiKeyRequired(false);
+      setPendingAiAction(() => action);
+      setIsApiKeyModalOpen(true);
       return;
     }
-    if (pendingAiAction) {
-      pendingAiAction();
-      setPendingAiAction(null);
+
+    try {
+      await action(storedApiKey || undefined);
+    } catch (error) {
+      if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
+        setIsApiKeyRequired(true);
+        setPendingAiAction(() => action);
+        setIsApiKeyModalOpen(true);
+        return;
+      }
+      throw error;
     }
-  }, [pendingAiAction]);
+  }, [hasAiConsent, storedApiKey]);
+
+  const handleSaveAiSettings = useCallback(async (settings: { apiKey: string; consentGranted: boolean }) => {
+    try {
+      persistAiSettings(settings.apiKey, settings.consentGranted);
+      setStoredApiKey(settings.apiKey);
+      setHasAiConsent(settings.consentGranted);
+    } catch (error) {
+      const message = error instanceof Error ? error.message : 'Failed to save AI settings.';
+      showError(message);
+      throw error;
+    }
+
+    const actionToRun = pendingAiAction;
+    setPendingAiAction(null);
+    setIsApiKeyRequired(false);
+
+    if (!actionToRun) return;
+
+    try {
+      await actionToRun(settings.apiKey || undefined);
+    } catch (error) {
+      if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
+        setIsApiKeyRequired(true);
+        setPendingAiAction(() => actionToRun);
+        throw error;
+      }
+      const message = error instanceof Error ? error.message : 'Failed to run AI action';
+      showError(message);
+    }
+  }, [pendingAiAction, persistAiSettings, showError]);
 
   const handleAiImprovement = useCallback((
     fieldId: string,
@@ -78,36 +120,48 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
     context: string,
     onUpdate: (val: string) => void
   ) => {
-    handleAiAction(async (key) => {
+    void handleAiAction(async (key) => {
       setLoadingField(fieldId);
       try {
         const improved = await improveText(text, context, key);
         onUpdate(improved);
       } catch (error) {
+        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
+          throw error;
+        }
         const message = error instanceof Error ? error.message : 'Failed to improve text';
         showError(message);
       } finally {
         setLoadingField(null);
       }
+    }).catch((error) => {
+      const message = error instanceof Error ? error.message : 'Failed to improve text';
+      showError(message);
     });
   }, [handleAiAction, showError]);
 
   const handleAiGeneration = useCallback((
     fieldId: string,
-    generator: (key: string) => Promise<string>,
+    generator: (key?: string) => Promise<string>,
     onUpdate: (val: string) => void
   ) => {
-    handleAiAction(async (key) => {
+    void handleAiAction(async (key) => {
       setLoadingField(fieldId);
       try {
         const result = await generator(key);
         onUpdate(result);
       } catch (error) {
+        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
+          throw error;
+        }
         const message = error instanceof Error ? error.message : 'Failed to generate content';
         showError(message);
       } finally {
         setLoadingField(null);
       }
+    }).catch((error) => {
+      const message = error instanceof Error ? error.message : 'Failed to generate content';
+      showError(message);
     });
   }, [handleAiAction, showError]);
 
@@ -223,6 +277,15 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
       </div>
 
       <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
+        {activeTab !== 'design' && (
+          <div
+            className="rounded-lg border border-amber-200 bg-amber-50 text-amber-900 px-4 py-3 text-xs leading-relaxed"
+            role="note"
+          >
+            AI features send selected text to Google Gemini for processing. Do not submit confidential or regulated personal data.
+          </div>
+        )}
+
         {activeTab === 'design' && (
           <div id="panel-design" role="tabpanel" className="space-y-6 animate-in fade-in duration-300">
             <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Select Template</h3>
@@ -559,8 +622,15 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
 
       <ApiKeyModal
         isOpen={isApiKeyModalOpen}
-        onClose={() => setIsApiKeyModalOpen(false)}
-        onSave={handleSaveApiKey}
+        requireApiKey={isApiKeyRequired}
+        requireConsent={!hasAiConsent}
+        initialApiKey={storedApiKey}
+        onClose={() => {
+          setIsApiKeyModalOpen(false);
+          setIsApiKeyRequired(false);
+          setPendingAiAction(null);
+        }}
+        onSave={handleSaveAiSettings}
       />
     </div>
   );

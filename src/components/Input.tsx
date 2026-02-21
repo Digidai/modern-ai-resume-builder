@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useId } from 'react';
 
 interface InputProps {
     label: string;
     value: string;
     onChange: (val: string) => void;
+    id?: string;
     type?: string;
     disabled?: boolean;
     error?: string;
@@ -13,19 +14,23 @@ export const Input: React.FC<InputProps> = ({
     label,
     value,
     onChange,
+    id,
     type = "text",
     disabled = false,
     error
 }) => {
-    const id = `input-${label.toLowerCase().replace(/\s+/g, '-')}`;
+    const generatedId = useId();
+    const safeLabel = label.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    const inputId = id || `input-${safeLabel}-${generatedId.replace(/:/g, '')}`;
+    const errorId = `${inputId}-error`;
 
     return (
         <div className="flex flex-col gap-1">
-            <label htmlFor={id} className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
+            <label htmlFor={inputId} className="block text-xs font-medium text-slate-500 dark:text-slate-400 uppercase tracking-wide">
                 {label}
             </label>
             <input
-                id={id}
+                id={inputId}
                 type={type}
                 className={`w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm disabled:bg-slate-100 dark:disabled:bg-slate-900 disabled:text-slate-400 ${error
                         ? 'border-red-300 dark:border-red-700 bg-red-50 dark:bg-red-900/20'
@@ -35,10 +40,10 @@ export const Input: React.FC<InputProps> = ({
                 onChange={(e) => onChange(e.target.value)}
                 disabled={disabled}
                 aria-invalid={!!error}
-                aria-describedby={error ? `${id}-error` : undefined}
+                aria-describedby={error ? errorId : undefined}
             />
             {error && (
-                <p id={`${id}-error`} className="text-xs text-red-600 dark:text-red-400" role="alert">
+                <p id={errorId} className="text-xs text-red-600 dark:text-red-400" role="alert">
                     {error}
                 </p>
             )}

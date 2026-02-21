@@ -4,6 +4,7 @@ import { ResumeData } from '../types';
 import { useResumeData } from '../hooks/useResumeData';
 import { exportResumeToPdf } from '../utils/pdfExport';
 import { useToast } from '../components/Toast';
+import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 
 interface ResumeContextValue {
   resumeData: ResumeData;
@@ -28,19 +29,19 @@ const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
   const handleDownloadPdf = useCallback(async () => {
     if (isExportingPdf) return;
 
-    const preview = document.getElementById('resume-preview-container');
-    if (!preview) {
-      showError('Resume preview is not ready yet.');
-      return;
-    }
-
     setIsExportingPdf(true);
     try {
+      await preloadResumeTemplate(resumeData.templateId);
       const fileBase = resumeData.fullName.trim() || 'resume';
-      await exportResumeToPdf(preview, fileBase, resumeData);
+      await exportResumeToPdf({
+        rawFileName: fileBase,
+        data: resumeData,
+        previewElementId: 'resume-preview-container',
+      });
     } catch (error) {
       console.error(error);
-      showError('Failed to export PDF. Please try again.');
+      const message = error instanceof Error && error.message ? error.message : 'Failed to export PDF. Please try again.';
+      showError(message);
     } finally {
       setIsExportingPdf(false);
     }

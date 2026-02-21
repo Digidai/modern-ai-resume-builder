@@ -1,7 +1,12 @@
 {
   "name": "modern-ai-resume-builder",
+  "main": "worker/index.ts",
   "compatibility_date": "2025-12-13",
   "assets": {
+    "binding": "ASSETS",
     "directory": "./dist"
+  },
+  "vars": {
+    "GEMINI_MODEL": "gemini-2.0-flash-exp"
   }
 }

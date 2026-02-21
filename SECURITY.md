@@ -16,3 +16,8 @@ We aim to acknowledge reports within 7 days.
 ## Sensitive Data
 
 Do not post API keys, personal data, or private resume content in public issues.
+
+## AI Key Handling
+
+- Never expose service keys in client-side `VITE_*` variables.
+- For Cloudflare deployments, store `GEMINI_API_KEY` as a Worker secret (`wrangler secret put GEMINI_API_KEY`).

@@ -1,10 +1,10 @@
 # Architecture
 
-ModernCV is a static, local-first resume builder. It runs entirely in the browser, stores data locally, and uses a postbuild SEO pipeline to generate static pages for search engines.
+ModernCV is a local-first resume builder. Core editing runs in the browser and persists to localStorage, while AI actions are proxied through a server-side endpoint for safer key handling.
 
 ## Goals
 
-- Zero backend requirement for core functionality.
+- Zero backend requirement for core editing functionality.
 - Fast authoring with real-time preview.
 - Strong SEO through pre-rendered job-title pages.
 - Simple, extensible template system.
@@ -14,7 +14,7 @@ ModernCV is a static, local-first resume builder. It runs entirely in the browse
 - UI: React app with routes for home, editor, directory, and job templates.
 - State: Resume data stored in React state and persisted to localStorage.
 - Rendering: Preview uses a template renderer that maps template IDs to components.
-- AI: Client-side calls to Gemini for summary and bullet improvements.
+- AI: Frontend calls an edge proxy (`/api/gemini`) which then calls Gemini.
 - SEO: Runtime meta tags via `useSeo` and build-time static pages via `seo-postbuild`.
 
 ## Core Data Flow
@@ -22,7 +22,7 @@ ModernCV is a static, local-first resume builder. It runs entirely in the browse
 1. User edits resume in `ResumeEditor`.
 2. `useResumeData` persists changes to localStorage.
 3. `ResumePreview` renders the current data through `ResumeTemplateRenderer`.
-4. Optional AI actions call `geminiService` and update resume content.
+4. Optional AI actions call `geminiService`, require explicit user consent, and update resume content.
 
 ## Routing
 
@@ -50,9 +50,9 @@ ModernCV is a static, local-first resume builder. It runs entirely in the browse
 
 ## AI Integration
 
-- `src/services/geminiService.ts` wraps `@google/generative-ai`.
-- The API key is provided via environment variable or user input and stored locally.
-- Only the selected text is sent to Gemini for improvement.
+- `src/services/geminiService.ts` calls `/api/gemini`.
+- `worker/index.ts` handles prompt composition and calls the Gemini API using a server-side secret (`GEMINI_API_KEY`) or an optional user-provided key.
+- AI actions require explicit user consent in the editor before text is sent.
 
 ## SEO Pipeline
 

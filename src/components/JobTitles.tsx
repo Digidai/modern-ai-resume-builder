@@ -1,4 +1,4 @@
-import React, { useState, useMemo, useEffect, useCallback } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { ArrowLeftIcon, SearchIcon } from './Icons';
 import { Button } from './Button';
@@ -196,16 +196,21 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
         setExpandedCategories((prev) => ({ ...prev, [categoryName]: !prev[categoryName] }));
     };
 
-    const debouncedSetSearchParams = useCallback(
-        debounce((query: string) => {
+    const debouncedSetSearchParams = useMemo(() => {
+        return debounce((query: string) => {
             if (query.trim()) {
                 setSearchParams({ q: query }, { replace: true });
             } else {
                 setSearchParams({}, { replace: true });
             }
-        }, 300),
-        [setSearchParams]
-    );
+        }, 300);
+    }, [setSearchParams]);
+
+    useEffect(() => {
+        return () => {
+            debouncedSetSearchParams.cancel();
+        };
+    }, [debouncedSetSearchParams]);
 
     return (
         <div className="min-h-screen bg-slate-50 dark:bg-slate-950 font-sans transition-colors duration-300">
@@ -285,7 +290,11 @@ const JobTitles: React.FC<JobTitlesProps> = ({ onBack }) => {
                             <Button
                                 variant="ghost"
                                 className="mt-4 text-indigo-600"
-                                onClick={() => setSearch("")}
+                                onClick={() => {
+                                    setSearch("");
+                                    debouncedSetSearchParams.cancel();
+                                    setSearchParams({}, { replace: true });
+                                }}
                             >
                                 Clear Search
                             </Button>
