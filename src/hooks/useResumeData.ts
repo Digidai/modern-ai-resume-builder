@@ -6,6 +6,9 @@ const STORAGE_PREFIX = 'resumeData:v2';
 const STORAGE_VERSION_KEY = `${STORAGE_PREFIX}:version`;
 const STORAGE_VERSION = '2';
 const SAVE_DEBOUNCE_MS = 300;
+const SAVED_STATUS_DURATION_MS = 1500;
+
+export type ResumeSaveStatus = 'idle' | 'saving' | 'saved' | 'error';
 
 const RESUME_FIELDS: Array<keyof ResumeData> = [
   'templateId',
@@ -22,6 +25,22 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'skills',
   'projects',
 ];
+
+const SESSION_SCOPED_FIELDS = new Set<keyof ResumeData>([
+  'fullName',
+  'email',
+  'phone',
+  'location',
+  'website',
+  'linkedin',
+  'summary',
+  'experience',
+  'education',
+  'projects',
+]);
+
+const getStorageForField = (field: keyof ResumeData): Storage =>
+  SESSION_SCOPED_FIELDS.has(field) ? sessionStorage : localStorage;
 
 const isValidResumeData = (data: unknown): data is Partial<ResumeData> => {
   if (typeof data !== 'object' || data === null) return false;
@@ -71,7 +90,7 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
 
 const clearSegmentedStorage = (): void => {
   for (const field of RESUME_FIELDS) {
-    localStorage.removeItem(getFieldStorageKey(field));
+    getStorageForField(field).removeItem(getFieldStorageKey(field));
   }
   localStorage.removeItem(STORAGE_VERSION_KEY);
 };
@@ -81,7 +100,8 @@ const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
   let hasAnyField = false;
 
   for (const field of RESUME_FIELDS) {
-    const raw = localStorage.getItem(getFieldStorageKey(field));
+    const storage = getStorageForField(field);
+    const raw = storage.getItem(getFieldStorageKey(field));
     if (raw === null) continue;
 
     hasAnyField = true;
@@ -89,13 +109,13 @@ const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
     try {
       const parsed = JSON.parse(raw);
       if (!isValidFieldValue(field, parsed)) {
-        localStorage.removeItem(getFieldStorageKey(field));
+        storage.removeItem(getFieldStorageKey(field));
         continue;
       }
 
       nextData[field] = parsed as ResumeData[typeof field];
     } catch {
-      localStorage.removeItem(getFieldStorageKey(field));
+      storage.removeItem(getFieldStorageKey(field));
     }
   }
 
@@ -142,7 +162,7 @@ const loadFromStorage = (): ResumeData => {
 const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>): boolean => {
   try {
     for (const field of fields) {
-      localStorage.setItem(getFieldStorageKey(field), JSON.stringify(data[field]));
+      getStorageForField(field).setItem(getFieldStorageKey(field), JSON.stringify(data[field]));
     }
 
     localStorage.setItem(STORAGE_VERSION_KEY, STORAGE_VERSION);
@@ -166,8 +186,10 @@ const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>):
 export const useResumeData = () => {
   const [resumeData, setResumeData] = useState<ResumeData>(loadFromStorage);
   const [saveError, setSaveError] = useState<string | null>(null);
+  const [saveStatus, setSaveStatus] = useState<ResumeSaveStatus>('idle');
 
   const saveTimerRef = useRef<number | null>(null);
+  const saveStatusTimerRef = useRef<number | null>(null);
   const pendingFieldsRef = useRef<Set<keyof ResumeData>>(new Set());
   const latestDataRef = useRef<ResumeData>(resumeData);
   const previousDataRef = useRef<ResumeData>(resumeData);
@@ -178,8 +200,22 @@ export const useResumeData = () => {
     if (pendingFields.length === 0) return;
 
     pendingFieldsRef.current.clear();
+    if (saveStatusTimerRef.current !== null) {
+      window.clearTimeout(saveStatusTimerRef.current);
+      saveStatusTimerRef.current = null;
+    }
     const success = saveFieldsToStorage(latestDataRef.current, pendingFields);
-    setSaveError(success ? null : 'Failed to save changes locally');
+    if (success) {
+      setSaveError(null);
+      setSaveStatus('saved');
+      saveStatusTimerRef.current = window.setTimeout(() => {
+        setSaveStatus('idle');
+        saveStatusTimerRef.current = null;
+      }, SAVED_STATUS_DURATION_MS);
+    } else {
+      setSaveError('Failed to save changes locally');
+      setSaveStatus('error');
+    }
   }, []);
 
   useEffect(() => {
@@ -197,6 +233,8 @@ export const useResumeData = () => {
     for (const field of changedFields) {
       pendingFieldsRef.current.add(field);
     }
+
+    setSaveStatus('saving');
 
     if (saveTimerRef.current !== null) {
       window.clearTimeout(saveTimerRef.current);
@@ -232,6 +270,7 @@ export const useResumeData = () => {
             return merged;
           });
           setSaveError(null);
+          setSaveStatus('idle');
         } catch {
           // Ignore malformed legacy payloads from other tabs.
         }
@@ -246,12 +285,18 @@ export const useResumeData = () => {
       const fieldName = event.key.slice(`${STORAGE_PREFIX}:`.length);
       if (!isKnownField(fieldName)) return;
 
+      const expectedStorage = getStorageForField(fieldName);
+      if (event.storageArea && event.storageArea !== expectedStorage) {
+        return;
+      }
+
       if (event.newValue === null) {
         setResumeData((prev) => ({
           ...prev,
           [fieldName]: INITIAL_RESUME_DATA[fieldName],
         }));
         setSaveError(null);
+        setSaveStatus('idle');
         return;
       }
 
@@ -267,6 +312,7 @@ export const useResumeData = () => {
           };
         });
         setSaveError(null);
+        setSaveStatus('idle');
       } catch {
         // Ignore malformed field payloads from other tabs.
       }
@@ -286,6 +332,11 @@ export const useResumeData = () => {
       saveTimerRef.current = null;
     }
 
+    if (saveStatusTimerRef.current !== null) {
+      window.clearTimeout(saveStatusTimerRef.current);
+      saveStatusTimerRef.current = null;
+    }
+
     pendingFieldsRef.current.clear();
     clearSegmentedStorage();
     localStorage.removeItem(LEGACY_STORAGE_KEY);
@@ -296,6 +347,15 @@ export const useResumeData = () => {
 
     setResumeData(INITIAL_RESUME_DATA);
     setSaveError(null);
+    setSaveStatus('idle');
+  }, []);
+
+  useEffect(() => {
+    return () => {
+      if (saveStatusTimerRef.current !== null) {
+        window.clearTimeout(saveStatusTimerRef.current);
+      }
+    };
   }, []);
 
   return {
@@ -303,5 +363,6 @@ export const useResumeData = () => {
     setResumeData,
     resetData,
     saveError,
+    saveStatus,
   };
 };

@@ -1,47 +1,11 @@
-type GeminiErrorCode =
-  | 'API_KEY_REQUIRED'
-  | 'AUTH_REQUIRED'
-  | 'INVALID_SESSION_TOKEN'
-  | 'SESSION_EXPIRED'
-  | 'SIGNING_SECRET_MISSING'
-  | 'INVALID_REQUEST'
-  | 'INVALID_JSON'
-  | 'REQUEST_TOO_LARGE'
-  | 'METHOD_NOT_ALLOWED'
-  | 'FORBIDDEN_ORIGIN'
-  | 'NOT_FOUND'
-  | 'RATE_LIMITED'
-  | 'UPSTREAM_RATE_LIMIT'
-  | 'UPSTREAM_UNAVAILABLE'
-  | 'UPSTREAM_ERROR'
-  | 'UPSTREAM_TIMEOUT'
-  | 'EMPTY_RESPONSE'
-  | 'NETWORK_ERROR'
-  | 'INVALID_RESPONSE'
-  | 'UNKNOWN_ERROR';
-
-interface GeminiApiRequest {
-  action: 'improve' | 'summary';
-  apiKey?: string;
-  text?: string;
-  context?: string;
-  role?: string;
-  skills?: string[];
-}
-
-interface GeminiApiError {
-  code?: GeminiErrorCode;
-  error?: string;
-}
-
-interface GeminiApiResponse {
-  text?: string;
-}
-
-interface GeminiSessionResponse {
-  token?: string;
-  expiresAt?: number;
-}
+import {
+  type GeminiErrorCode,
+  type GeminiErrorEnvelope,
+  type GeminiRequest,
+  isGeminiApiResponse,
+  isGeminiErrorCode,
+  isGeminiSessionResponse,
+} from '../shared/geminiContract';
 
 interface GeminiSessionCache {
   token: string;
@@ -128,11 +92,11 @@ const parseError = async (response: Response): Promise<GeminiError> => {
   let code: GeminiErrorCode = 'UPSTREAM_ERROR';
 
   try {
-    const data = (await response.json()) as GeminiApiError;
+    const data = (await response.json()) as GeminiErrorEnvelope;
     if (typeof data.error === 'string' && data.error.trim()) {
       message = data.error.trim();
     }
-    if (data.code) {
+    if (isGeminiErrorCode(data.code)) {
       code = data.code;
     }
   } catch {
@@ -160,6 +124,13 @@ const setSessionCache = (session: GeminiSessionCache): void => {
 
 const clearSessionCache = (): void => {
   cachedSession = null;
+};
+
+const createRequestId = (): string => {
+  if (typeof crypto !== 'undefined' && 'randomUUID' in crypto) {
+    return crypto.randomUUID();
+  }
+  return `${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
 };
 
 const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
@@ -190,7 +161,12 @@ const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
     throw await parseError(response);
   }
 
-  const data = (await response.json().catch(() => ({}))) as GeminiSessionResponse;
+  const rawData = (await response.json().catch(() => ({}))) as unknown;
+  if (!isGeminiSessionResponse(rawData)) {
+    throw new GeminiError('AI session response schema is invalid.', 'INVALID_RESPONSE', false);
+  }
+
+  const data = rawData;
   const token = typeof data.token === 'string' ? data.token.trim() : '';
   const expiresAt = Number(data.expiresAt || 0);
 
@@ -203,7 +179,7 @@ const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
 };
 
 const postGeminiRequest = async (
-  payload: GeminiApiRequest,
+  payload: GeminiRequest,
   sessionToken: string
 ): Promise<Response> => {
   const endpoint = getProxyUrl();
@@ -214,6 +190,7 @@ const postGeminiRequest = async (
       headers: {
         'content-type': 'application/json',
         'x-ai-session-token': sessionToken,
+        'x-ai-request-id': createRequestId(),
       },
       body: JSON.stringify(payload),
     });
@@ -226,7 +203,7 @@ const postGeminiRequest = async (
   }
 };
 
-const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
+const callGeminiProxy = async (payload: GeminiRequest): Promise<string> => {
   let sessionToken = await fetchSessionToken();
   let response = await postGeminiRequest(payload, sessionToken);
 
@@ -245,7 +222,12 @@ const callGeminiProxy = async (payload: GeminiApiRequest): Promise<string> => {
     throw await parseError(response);
   }
 
-  const data = (await response.json().catch(() => ({}))) as GeminiApiResponse;
+  const rawData = (await response.json().catch(() => ({}))) as unknown;
+  if (!isGeminiApiResponse(rawData)) {
+    throw new GeminiError('AI response schema is invalid.', 'INVALID_RESPONSE', false);
+  }
+
+  const data = rawData;
   const text = typeof data.text === 'string' ? data.text.trim() : '';
   if (!text) {
     throw new GeminiError('AI returned an empty response.', 'INVALID_RESPONSE', false);

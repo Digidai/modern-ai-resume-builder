@@ -49,6 +49,7 @@ describe('geminiService', () => {
         headers: expect.objectContaining({
           'content-type': 'application/json',
           'x-ai-session-token': 'session-token',
+          'x-ai-request-id': expect.any(String),
         }),
       })
     );

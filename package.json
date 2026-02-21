@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build && node scripts/seo-postbuild.mjs",
+    "build:clean": "node -e \"const fs=require('fs');fs.rmSync('dist',{recursive:true,force:true});\" && npm run build",
     "build:deploy": "npm run build && npx wrangler deploy",
     "seo:postbuild": "node scripts/seo-postbuild.mjs",
     "jobtitles:validate": "node scripts/jobtitles-validate.mjs",

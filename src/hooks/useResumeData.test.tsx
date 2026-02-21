@@ -3,6 +3,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useResumeData } from './useResumeData';
 
 const FULL_NAME_KEY = 'resumeData:v2:fullName';
+const TEMPLATE_ID_KEY = 'resumeData:v2:templateId';
 
 const dispatchStorageEvent = (key: string, newValue: string | null) => {
   window.dispatchEvent(
@@ -35,22 +36,22 @@ describe('useResumeData', () => {
       }));
     });
 
-    expect(localStorage.getItem(FULL_NAME_KEY)).toBeNull();
+    expect(sessionStorage.getItem(FULL_NAME_KEY)).toBeNull();
 
     act(() => {
       vi.advanceTimersByTime(350);
     });
 
-    expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
+    expect(sessionStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
   });
 
   it('syncs field updates from other tabs through storage events', () => {
     const { result } = renderHook(() => useResumeData());
 
     act(() => {
-      dispatchStorageEvent(FULL_NAME_KEY, JSON.stringify('Cross Tab User'));
+      dispatchStorageEvent(TEMPLATE_ID_KEY, JSON.stringify('sidebar'));
     });
 
-    expect(result.current.resumeData.fullName).toBe('Cross Tab User');
+    expect(result.current.resumeData.templateId).toBe('sidebar');
   });
 });

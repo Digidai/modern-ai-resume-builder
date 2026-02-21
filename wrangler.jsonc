@@ -6,6 +6,20 @@
     "binding": "ASSETS",
     "directory": "./dist"
   },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "RATE_LIMITER",
+        "class_name": "RateLimiter"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1-rate-limiter",
+      "new_classes": ["RateLimiter"]
+    }
+  ],
   "vars": {
     "GEMINI_MODEL": "gemini-2.0-flash-exp",
     "AI_RATE_LIMIT_PER_MINUTE": "20",

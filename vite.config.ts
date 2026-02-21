@@ -13,6 +13,14 @@ export default defineConfig({
   optimizeDeps: {
     include: ['pdf-lib'],
   },
+  build: {
+    // Pin a single SPA entry to avoid accidentally treating generated dist HTML files as build inputs.
+    rollupOptions: {
+      input: path.resolve(__dirname, 'index.html'),
+    },
+    // Dist can contain thousands of generated static role pages; full deletion is extremely slow.
+    emptyOutDir: false,
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),

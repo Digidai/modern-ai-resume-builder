@@ -1,7 +1,7 @@
-import { useState, useCallback } from 'react';
+import { useState, useCallback, type KeyboardEvent } from 'react';
 import { ResumeData, Experience, Education, Project } from '../types';
 import { SparklesIcon, PlusIcon, TrashIcon, LoaderIcon } from './Icons';
-import { improveText, generateSummary, GeminiError } from '../services/geminiService';
+import { generateSummary } from '../services/geminiService';
 import { Button } from './Button';
 import { ApiKeyModal } from './ApiKeyModal';
 import { TEMPLATES } from '../constants/templates';
@@ -9,6 +9,7 @@ import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
 import { Input } from './Input';
 import { LazyResumePreview } from './LazyResumePreview';
+import { useAiActions } from '../hooks/useAiActions';
 
 interface ResumeEditorProps {
   data: ResumeData;
@@ -16,54 +17,11 @@ interface ResumeEditorProps {
   onError?: (message: string) => void;
 }
 
-const GEMINI_API_KEY_STORAGE_KEY = 'gemini_api_key';
-const GEMINI_API_KEY_SESSION_STORAGE_KEY = 'gemini_api_key_session';
-const GEMINI_API_KEY_REMEMBER_KEY = 'gemini_api_key_remember';
-const AI_CONSENT_STORAGE_KEY = 'ai_data_transfer_consent_v1';
-
-const readStoredApiKey = (): string => {
-  try {
-    return (
-      sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY) ||
-      localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY) ||
-      ''
-    );
-  } catch {
-    return '';
-  }
-};
-
-const readRememberApiKey = (): boolean => {
-  try {
-    if (sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY)) {
-      return false;
-    }
-
-    if (localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY)) {
-      return true;
-    }
-
-    return localStorage.getItem(GEMINI_API_KEY_REMEMBER_KEY) === 'true';
-  } catch {
-    return false;
-  }
-};
+const EDITOR_TABS = ['basics', 'experience', 'skills', 'design'] as const;
+type ResumeEditorTab = (typeof EDITOR_TABS)[number];
 
 const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) => {
-  const [activeTab, setActiveTab] = useState<'basics' | 'experience' | 'skills' | 'design'>('basics');
-  const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
-  const [isApiKeyRequired, setIsApiKeyRequired] = useState(false);
-  const [loadingField, setLoadingField] = useState<string | null>(null);
-  const [storedApiKey, setStoredApiKey] = useState(readStoredApiKey);
-  const [rememberApiKey, setRememberApiKey] = useState(readRememberApiKey);
-  const [hasAiConsent, setHasAiConsent] = useState(() => {
-    try {
-      return localStorage.getItem(AI_CONSENT_STORAGE_KEY) === 'true';
-    } catch {
-      return false;
-    }
-  });
-  const [pendingAiAction, setPendingAiAction] = useState<((key?: string) => Promise<void>) | null>(null);
+  const [activeTab, setActiveTab] = useState<ResumeEditorTab>('basics');
   const { showError: showToastError } = useToast();
 
   const showError = useCallback((message: string) => {
@@ -74,132 +32,42 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
     }
   }, [onError, showToastError]);
 
-  const persistAiSettings = useCallback((apiKey: string, consentGranted: boolean, shouldRememberApiKey: boolean) => {
-    try {
-      if (apiKey) {
-        if (shouldRememberApiKey) {
-          localStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, apiKey);
-          sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
-          localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'true');
-        } else {
-          sessionStorage.setItem(GEMINI_API_KEY_SESSION_STORAGE_KEY, apiKey);
-          localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
-          localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
-        }
-      } else {
-        localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
-        sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
-        localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
+  const {
+    isApiKeyModalOpen,
+    isApiKeyRequired,
+    loadingField,
+    storedApiKey,
+    rememberApiKey,
+    hasAiConsent,
+    closeAiModal,
+    handleSaveAiSettings,
+    improveField,
+    generateField,
+  } = useAiActions({ onError: showError });
+
+  const handleTabKeyDown = useCallback(
+    (event: KeyboardEvent<HTMLButtonElement>, tab: ResumeEditorTab) => {
+      const currentIndex = EDITOR_TABS.indexOf(tab);
+      if (currentIndex === -1) return;
+
+      if (event.key === 'ArrowRight') {
+        event.preventDefault();
+        const next = EDITOR_TABS[(currentIndex + 1) % EDITOR_TABS.length];
+        setActiveTab(next);
+      } else if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+        const prev = EDITOR_TABS[(currentIndex - 1 + EDITOR_TABS.length) % EDITOR_TABS.length];
+        setActiveTab(prev);
+      } else if (event.key === 'Home') {
+        event.preventDefault();
+        setActiveTab(EDITOR_TABS[0]);
+      } else if (event.key === 'End') {
+        event.preventDefault();
+        setActiveTab(EDITOR_TABS[EDITOR_TABS.length - 1]);
       }
-      localStorage.setItem(AI_CONSENT_STORAGE_KEY, consentGranted ? 'true' : 'false');
-    } catch (error) {
-      console.error('Failed to persist AI settings:', error);
-      throw new Error('Failed to save AI settings. Please check your browser settings.');
-    }
-  }, []);
-
-  const handleAiAction = useCallback(async (action: (key?: string) => Promise<void>) => {
-    if (!hasAiConsent) {
-      setIsApiKeyRequired(false);
-      setPendingAiAction(() => action);
-      setIsApiKeyModalOpen(true);
-      return;
-    }
-
-    try {
-      await action(storedApiKey || undefined);
-    } catch (error) {
-      if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-        setIsApiKeyRequired(true);
-        setPendingAiAction(() => action);
-        setIsApiKeyModalOpen(true);
-        return;
-      }
-      throw error;
-    }
-  }, [hasAiConsent, storedApiKey]);
-
-  const handleSaveAiSettings = useCallback(async (settings: { apiKey: string; consentGranted: boolean; rememberApiKey: boolean }) => {
-    try {
-      persistAiSettings(settings.apiKey, settings.consentGranted, settings.rememberApiKey);
-      setStoredApiKey(settings.apiKey);
-      setHasAiConsent(settings.consentGranted);
-      setRememberApiKey(settings.rememberApiKey);
-    } catch (error) {
-      const message = error instanceof Error ? error.message : 'Failed to save AI settings.';
-      showError(message);
-      throw error;
-    }
-
-    const actionToRun = pendingAiAction;
-    setPendingAiAction(null);
-    setIsApiKeyRequired(false);
-
-    if (!actionToRun) return;
-
-    try {
-      await actionToRun(settings.apiKey || undefined);
-    } catch (error) {
-      if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-        setIsApiKeyRequired(true);
-        setPendingAiAction(() => actionToRun);
-        throw error;
-      }
-      const message = error instanceof Error ? error.message : 'Failed to run AI action';
-      showError(message);
-    }
-  }, [pendingAiAction, persistAiSettings, showError]);
-
-  const handleAiImprovement = useCallback((
-    fieldId: string,
-    text: string,
-    context: string,
-    onUpdate: (val: string) => void
-  ) => {
-    void handleAiAction(async (key) => {
-      setLoadingField(fieldId);
-      try {
-        const improved = await improveText(text, context, key);
-        onUpdate(improved);
-      } catch (error) {
-        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-          throw error;
-        }
-        const message = error instanceof Error ? error.message : 'Failed to improve text';
-        showError(message);
-      } finally {
-        setLoadingField(null);
-      }
-    }).catch((error) => {
-      const message = error instanceof Error ? error.message : 'Failed to improve text';
-      showError(message);
-    });
-  }, [handleAiAction, showError]);
-
-  const handleAiGeneration = useCallback((
-    fieldId: string,
-    generator: (key?: string) => Promise<string>,
-    onUpdate: (val: string) => void
-  ) => {
-    void handleAiAction(async (key) => {
-      setLoadingField(fieldId);
-      try {
-        const result = await generator(key);
-        onUpdate(result);
-      } catch (error) {
-        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-          throw error;
-        }
-        const message = error instanceof Error ? error.message : 'Failed to generate content';
-        showError(message);
-      } finally {
-        setLoadingField(null);
-      }
-    }).catch((error) => {
-      const message = error instanceof Error ? error.message : 'Failed to generate content';
-      showError(message);
-    });
-  }, [handleAiAction, showError]);
+    },
+    []
+  );
 
   const handleInputChange = useCallback(<K extends keyof ResumeData>(
     field: K,
@@ -294,13 +162,16 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
 
   return (
     <div className="flex flex-col h-full bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
-      <div className="flex-shrink-0 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 overflow-x-auto no-scrollbar transition-colors" role="tablist">
-        {(['basics', 'experience', 'skills', 'design'] as const).map(tab => (
+      <div className="flex-shrink-0 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 overflow-x-auto no-scrollbar transition-colors" role="tablist" aria-label="Resume editor sections">
+        {EDITOR_TABS.map(tab => (
           <button
             key={tab}
+            id={`tab-${tab}`}
             role="tab"
             aria-selected={activeTab === tab}
             aria-controls={`panel-${tab}`}
+            tabIndex={activeTab === tab ? 0 : -1}
+            onKeyDown={(event) => handleTabKeyDown(event, tab)}
             onClick={() => setActiveTab(tab)}
             className={`px-5 py-3 text-sm font-medium capitalize focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors whitespace-nowrap ${activeTab === tab
               ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 bg-white dark:bg-slate-800'
@@ -323,7 +194,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         )}
 
         {activeTab === 'design' && (
-          <div id="panel-design" role="tabpanel" className="space-y-6 animate-in fade-in duration-300">
+          <div id="panel-design" role="tabpanel" aria-labelledby="tab-design" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
             <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Select Template</h3>
             <div className="grid grid-cols-2 gap-4" role="radiogroup" aria-label="Resume templates">
               {TEMPLATES.map(t => (
@@ -361,7 +232,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         )}
 
         {activeTab === 'basics' && (
-          <div id="panel-basics" role="tabpanel" className="space-y-6 animate-in fade-in duration-300">
+          <div id="panel-basics" role="tabpanel" aria-labelledby="tab-basics" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
             <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Personal Details</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Input label="Full Name" value={data.fullName} onChange={(v) => handleInputChange('fullName', v)} />
@@ -401,11 +272,13 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
               <div className="flex justify-between items-center">
                 <label id="summary-label" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Professional Summary</label>
                 <Button
-                  onClick={() => handleAiGeneration(
-                    'summary',
-                    (key) => generateSummary(data.title, data.skills || [], key),
-                    (val) => handleInputChange('summary', val)
-                  )}
+                  onClick={() =>
+                    generateField({
+                      fieldId: 'summary',
+                      generator: (key) => generateSummary(data.title, data.skills || [], key),
+                      onUpdate: (val) => handleInputChange('summary', val),
+                    })
+                  }
                   variant="ghost"
                   size="sm"
                   className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 px-2"
@@ -430,12 +303,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                   </div>
                 )}
                 <Button
-                  onClick={() => handleAiImprovement(
-                    'summary-polish',
-                    data.summary || '',
-                    'Professional Summary',
-                    (val) => handleInputChange('summary', val)
-                  )}
+                  onClick={() =>
+                    improveField({
+                      fieldId: 'summary-polish',
+                      text: data.summary || '',
+                      context: 'Professional Summary',
+                      onUpdate: (val) => handleInputChange('summary', val),
+                    })
+                  }
                   disabled={loadingField === 'summary-polish' || !data.summary}
                   variant="ghost"
                   size="sm"
@@ -483,7 +358,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         )}
 
         {activeTab === 'experience' && (
-          <div id="panel-experience" role="tabpanel" className="space-y-6 animate-in fade-in duration-300">
+          <div id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Work History</h3>
               <Button onClick={addExperience} variant="primary" size="sm" leftIcon={<PlusIcon className="w-4 h-4" />}>
@@ -545,12 +420,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                       </div>
                     )}
                     <Button
-                      onClick={() => handleAiImprovement(
-                        `exp-${exp.id}`,
-                        exp.description,
-                        'Job Description',
-                        (val) => updateExperience(exp.id, 'description', val)
-                      )}
+                      onClick={() =>
+                        improveField({
+                          fieldId: `exp-${exp.id}`,
+                          text: exp.description,
+                          context: 'Job Description',
+                          onUpdate: (val) => updateExperience(exp.id, 'description', val),
+                        })
+                      }
                       disabled={loadingField === `exp-${exp.id}` || !exp.description}
                       className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                       variant="ghost"
@@ -573,7 +450,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         )}
 
         {activeTab === 'skills' && (
-          <div id="panel-skills" role="tabpanel" className="space-y-8 animate-in fade-in duration-300">
+          <div id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" tabIndex={0} className="space-y-8 animate-in fade-in duration-300">
             <div>
               <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Skills</h3>
               <div className="space-y-2">
@@ -633,12 +510,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                         </div>
                       )}
                       <Button
-                        onClick={() => handleAiImprovement(
-                          `proj-${proj.id}`,
-                          proj.description,
-                          'Project Description',
-                          (val) => updateProject(proj.id, 'description', val)
-                        )}
+                        onClick={() =>
+                          improveField({
+                            fieldId: `proj-${proj.id}`,
+                            text: proj.description,
+                            context: 'Project Description',
+                            onUpdate: (val) => updateProject(proj.id, 'description', val),
+                          })
+                        }
                         disabled={loadingField === `proj-${proj.id}` || !proj.description}
                         className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                         variant="ghost"
@@ -662,11 +541,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
         requireConsent={!hasAiConsent}
         initialApiKey={storedApiKey}
         initialRememberApiKey={rememberApiKey}
-        onClose={() => {
-          setIsApiKeyModalOpen(false);
-          setIsApiKeyRequired(false);
-          setPendingAiAction(null);
-        }}
+        onClose={closeAiModal}
         onSave={handleSaveAiSettings}
       />
     </div>

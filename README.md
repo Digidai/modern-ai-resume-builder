@@ -98,7 +98,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Generate a professional summary based on role and skills.
 - Improve experience bullets with action verbs and measurable impact.
 - Frontend requests a short-lived signed session via `/api/gemini/session`, then calls `/api/gemini`.
-- Worker applies origin checks, session verification, and per-IP rate limiting before hitting Gemini.
+- Worker applies origin checks, session+request-id verification, and cross-instance rate limiting (Durable Object) before hitting Gemini.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
@@ -106,7 +106,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Structured data (JSON-LD) on directory and job pages.
 
 ### Privacy and Data
-- Resume data is persisted in segmented localStorage keys (`resumeData:v2:*`) with debounced writes.
+- Resume data is persisted in segmented browser storage (`resumeData:v2:*`) with debounced writes; sensitive fields default to session scope.
 - AI requests send selected text to Google Gemini for processing.
 - Users must explicitly consent before AI actions are sent.
 - Personal Gemini keys default to session-only storage; “remember on this device” is optional and off by default.
@@ -229,6 +229,7 @@ Notes:
 |---------|-------------|
 | `npm run dev` | Start development server |
 | `npm run build` | Build for production and run SEO postbuild |
+| `npm run build:clean` | Clean `dist` then run full production build |
 | `npm run preview` | Preview the production build |
 | `npm run test` | Run unit/integration tests (Vitest) |
 | `npm run test:watch` | Run tests in watch mode |

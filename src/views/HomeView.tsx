@@ -11,7 +11,7 @@ import { buildHomeSeoKeywords, buildHomeFaqSchema } from '../utils/seo';
 
 const HomeView: React.FC = () => {
   const navigate = useNavigate();
-  const { resumeData, handleDownloadPdf, isExportingPdf, saveError } = useResume();
+  const { resumeData, handleDownloadPdf, isExportingPdf, saveError, saveStatus } = useResume();
 
   const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
@@ -129,6 +129,12 @@ const HomeView: React.FC = () => {
       </header>
 
       <main className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 print:p-0">
+        <div className="max-w-[21cm] mx-auto mb-4 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-600" role="status" aria-live="polite">
+          {saveStatus === 'saving' && 'Saving changes...'}
+          {saveStatus === 'saved' && 'All changes saved locally.'}
+          {saveStatus === 'error' && 'Autosave failed. Check warning below.'}
+          {saveStatus === 'idle' && 'Autosave is active.'}
+        </div>
         {saveError && (
           <div
             role="alert"

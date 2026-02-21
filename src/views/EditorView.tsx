@@ -12,7 +12,7 @@ import { buildEditorSeoKeywords } from '../utils/seo';
 
 const EditorView: React.FC = () => {
   const navigate = useNavigate();
-  const { resumeData, setResumeData, resetData, handleDownloadPdf, handleExportJson, isExportingPdf, saveError } = useResume();
+  const { resumeData, setResumeData, resetData, handleDownloadPdf, handleExportJson, isExportingPdf, saveError, saveStatus } = useResume();
   const [isPreviewModeMobile, setIsPreviewModeMobile] = useState(false);
 
   const siteUrl = getSiteUrl();
@@ -124,6 +124,12 @@ const EditorView: React.FC = () => {
           </header>
 
           <div className="flex-1 overflow-y-auto px-4 pb-4 custom-scrollbar">
+            <div className="mb-4 rounded-lg border border-slate-200 bg-white px-3 py-2 text-xs text-slate-600" role="status" aria-live="polite">
+              {saveStatus === 'saving' && 'Saving changes...'}
+              {saveStatus === 'saved' && 'All changes saved locally.'}
+              {saveStatus === 'error' && 'Autosave failed. Check warning below.'}
+              {saveStatus === 'idle' && 'Autosave is active.'}
+            </div>
             {saveError && (
               <div
                 role="alert"

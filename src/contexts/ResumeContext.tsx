@@ -1,7 +1,7 @@
 import { createContext, useContext, useState, useCallback, useMemo, ReactNode, ComponentType } from 'react';
 import type { Dispatch, SetStateAction, FC } from 'react';
 import { ResumeData } from '../types';
-import { useResumeData } from '../hooks/useResumeData';
+import { useResumeData, type ResumeSaveStatus } from '../hooks/useResumeData';
 import { exportResumeToPdf } from '../utils/pdfExport';
 import { useToast } from '../components/Toast';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
@@ -11,6 +11,7 @@ interface ResumeContextValue {
   setResumeData: Dispatch<SetStateAction<ResumeData>>;
   resetData: () => void;
   saveError: string | null;
+  saveStatus: ResumeSaveStatus;
   isExportingPdf: boolean;
   handleDownloadPdf: () => Promise<void>;
   handleExportJson: () => void;
@@ -23,9 +24,9 @@ interface ResumeProviderProps {
 }
 
 const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
-  const { resumeData, setResumeData, resetData, saveError } = useResumeData();
+  const { resumeData, setResumeData, resetData, saveError, saveStatus } = useResumeData();
   const [isExportingPdf, setIsExportingPdf] = useState(false);
-  const { showError } = useToast();
+  const { showError, showSuccess } = useToast();
 
   const handleDownloadPdf = useCallback(async () => {
     if (isExportingPdf) return;
@@ -39,6 +40,7 @@ const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
         data: resumeData,
         previewElementId: 'resume-preview-container',
       });
+      showSuccess('PDF exported successfully.');
     } catch (error) {
       console.error(error);
       const message = error instanceof Error && error.message ? error.message : 'Failed to export PDF. Please try again.';
@@ -46,7 +48,7 @@ const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
     } finally {
       setIsExportingPdf(false);
     }
-  }, [isExportingPdf, resumeData, showError]);
+  }, [isExportingPdf, resumeData, showError, showSuccess]);
 
   const handleExportJson = useCallback(() => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resumeData, null, 2));
@@ -56,17 +58,19 @@ const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
     document.body.appendChild(downloadAnchorNode);
     downloadAnchorNode.click();
     downloadAnchorNode.remove();
-  }, [resumeData]);
+    showSuccess('Resume data exported as JSON.');
+  }, [resumeData, showSuccess]);
 
   const value = useMemo(() => ({
     resumeData,
     setResumeData,
     resetData,
     saveError,
+    saveStatus,
     isExportingPdf,
     handleDownloadPdf,
     handleExportJson,
-  }), [resumeData, setResumeData, resetData, saveError, isExportingPdf, handleDownloadPdf, handleExportJson]);
+  }), [resumeData, setResumeData, resetData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson]);
 
   return (
     <ResumeContext.Provider value={value}>

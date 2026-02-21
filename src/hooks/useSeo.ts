@@ -127,6 +127,11 @@ const ensureLdJson = (payload: string) => {
     script.setAttribute('data-seo-managed', 'true');
     document.head.appendChild(script);
   }
+  const nonceMeta = document.head.querySelector<HTMLMetaElement>('meta[name="csp-nonce"]');
+  const nonce = nonceMeta?.getAttribute('content');
+  if (nonce) {
+    script.setAttribute('nonce', nonce);
+  }
   script.textContent = payload;
 };
 

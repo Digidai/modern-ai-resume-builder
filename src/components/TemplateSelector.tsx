@@ -227,8 +227,8 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             </div>
 
             {/* Right Panel: Template List */}
-            <div className="w-full md:w-2/5 lg:w-1/3 h-[50vh] md:h-screen overflow-y-auto bg-white dark:bg-slate-900 custom-scrollbar border-l border-slate-200 dark:border-slate-800">
-                <div className="p-6 md:p-8 max-w-xl mx-auto">
+            <div className="w-full md:w-2/5 lg:w-1/3 h-auto md:h-screen overflow-visible md:overflow-y-auto bg-white dark:bg-slate-900 custom-scrollbar border-l border-slate-200 dark:border-slate-800">
+                <div className="p-6 md:p-8 max-w-xl mx-auto pb-24 md:pb-8">
                     <div className="mb-6">
                         <nav aria-label="Breadcrumb" className="text-xs text-slate-500 dark:text-slate-400 mb-3">
                             <Link className="text-indigo-600 hover:underline" to="/">Home</Link>
@@ -250,11 +250,15 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         <p className="text-slate-500 dark:text-slate-400 text-sm">Choose a design that fits your style. Content is preserved across templates.</p>
                     </div>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" role="radiogroup" aria-label="Resume template options">
                         {TEMPLATES.map((t) => (
                             <button
                                 key={t.id}
                                 id={`template-${t.id}`}
+                                role="radio"
+                                aria-checked={selectedTemplateId === t.id}
+                                aria-pressed={selectedTemplateId === t.id}
+                                aria-label={`${t.name} template${selectedTemplateId === t.id ? ', selected' : ''}`}
                                 onClick={() => setSelectedTemplateId(t.id)}
                                 className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group hover:border-indigo-300 hover:shadow-lg w-full aspect-[210/297] flex flex-col
                             ${selectedTemplateId === t.id
@@ -277,7 +281,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                                         </span>
                                     </div>
                                     {selectedTemplateId === t.id && (
-                                        <div className="w-2 h-2 bg-indigo-600 rounded-full"></div>
+                                        <div className="w-2 h-2 bg-indigo-600 rounded-full" aria-hidden="true"></div>
                                     )}
                                 </div>
                             </button>
@@ -302,6 +306,16 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                             </div>
                         </div>
                     )}
+                </div>
+                <div className="fixed bottom-4 left-4 right-4 z-20 md:hidden">
+                    <Button
+                        onClick={() => onUseTemplate(resolvedJobTitle, selectedTemplateId)}
+                        variant="primary"
+                        className="w-full shadow-xl"
+                        leftIcon={<CheckIcon className="w-4 h-4" />}
+                    >
+                        Use This Template
+                    </Button>
                 </div>
             </div>
 

@@ -1,6 +1,17 @@
+import {
+  type GeminiErrorCode,
+  type GeminiRequest,
+} from '../src/shared/geminiContract';
+
 interface Env {
   ASSETS: {
     fetch: (request: Request) => Promise<Response>;
+  };
+  RATE_LIMITER?: {
+    idFromName: (name: string) => unknown;
+    get: (id: unknown) => {
+      fetch: (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
+    };
   };
   GEMINI_API_KEY?: string;
   GEMINI_MODEL?: string;
@@ -11,25 +22,10 @@ interface Env {
   AI_SESSION_TTL_SECONDS?: string;
 }
 
-interface GeminiImproveRequest {
-  action: 'improve';
-  text: string;
-  context?: string;
-  apiKey?: string;
-}
-
-interface GeminiSummaryRequest {
-  action: 'summary';
-  role: string;
-  skills: string[];
-  apiKey?: string;
-}
-
-type GeminiRequest = GeminiImproveRequest | GeminiSummaryRequest;
-
 type JsonObject = Record<string, unknown>;
 
 interface SessionTokenPayload {
+  sidHash: string;
   ip: string;
   uaHash: string;
   iat: number;
@@ -48,8 +44,24 @@ interface RateLimitBucket {
   resetAt: number;
 }
 
+interface RateLimitRequest {
+  limit: number;
+  now: number;
+  windowMs: number;
+}
+
+interface DurableObjectStateLike {
+  storage: {
+    get<T = unknown>(key: string): Promise<T | undefined>;
+    put<T = unknown>(key: string, value: T): Promise<void>;
+    delete(key: string): Promise<boolean>;
+    setAlarm(timestamp: number): Promise<void>;
+  };
+}
+
 const API_PATH = '/api/gemini';
 const SESSION_PATH = '/api/gemini/session';
+const RATE_LIMIT_DO_PATH = 'https://rate-limiter/consume';
 const MAX_BODY_BYTES = 64 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = 'gemini-2.0-flash-exp';
@@ -58,9 +70,15 @@ const DEFAULT_SESSION_RATE_LIMIT_PER_MINUTE = 60;
 const DEFAULT_SESSION_TTL_SECONDS = 10 * 60;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const MAX_RATE_LIMIT_BUCKETS = 5000;
+const SESSION_COOKIE_NAME = 'ai_session_id';
+const REQUEST_ID_HEADER = 'x-ai-request-id';
+const REQUEST_ID_MAX_BYTES = 128;
+const REQUEST_ID_TTL_MS = 2 * 60 * 1000;
+const MAX_REQUEST_REPLAY_CACHE = 10000;
 
 const tokenEncoder = new TextEncoder();
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
+const usedRequestIds = new Map<string, number>();
 
 const jsonResponse = (body: JsonObject, status = 200): Response =>
   new Response(JSON.stringify(body), {
@@ -71,7 +89,7 @@ const jsonResponse = (body: JsonObject, status = 200): Response =>
     },
   });
 
-const errorResponse = (status: number, code: string, message: string): Response =>
+const errorResponse = (status: number, code: GeminiErrorCode, message: string): Response =>
   jsonResponse({ code, error: message }, status);
 
 const normalizeText = (value: unknown): string =>
@@ -131,6 +149,53 @@ const sha256Hex = async (value: string): Promise<string> => {
     .join('');
 };
 
+const generateSessionId = (): string => {
+  const random = crypto.getRandomValues(new Uint8Array(16));
+  return base64UrlEncode(random);
+};
+
+const parseCookieHeader = (cookieHeader: string | null): Record<string, string> => {
+  if (!cookieHeader) return {};
+
+  return cookieHeader
+    .split(';')
+    .map((part) => part.trim())
+    .filter(Boolean)
+    .reduce<Record<string, string>>((acc, part) => {
+      const separatorIndex = part.indexOf('=');
+      if (separatorIndex <= 0) return acc;
+
+      const key = part.slice(0, separatorIndex).trim();
+      const value = part.slice(separatorIndex + 1).trim();
+      if (!key) return acc;
+      acc[key] = value;
+      return acc;
+    }, {});
+};
+
+const cleanupUsedRequestIds = (now: number): void => {
+  if (usedRequestIds.size <= MAX_REQUEST_REPLAY_CACHE) return;
+
+  for (const [id, expiresAt] of usedRequestIds) {
+    if (expiresAt <= now) {
+      usedRequestIds.delete(id);
+    }
+    if (usedRequestIds.size <= MAX_REQUEST_REPLAY_CACHE) break;
+  }
+};
+
+const reserveRequestId = (requestId: string, now = Date.now()): boolean => {
+  cleanupUsedRequestIds(now);
+
+  const current = usedRequestIds.get(requestId);
+  if (current && current > now) {
+    return false;
+  }
+
+  usedRequestIds.set(requestId, now + REQUEST_ID_TTL_MS);
+  return true;
+};
+
 const cleanupRateLimitBuckets = (now: number): void => {
   if (rateLimitBuckets.size <= MAX_RATE_LIMIT_BUCKETS) return;
 
@@ -143,7 +208,7 @@ const cleanupRateLimitBuckets = (now: number): void => {
   }
 };
 
-const consumeRateLimit = (key: string, limit: number, now = Date.now()): RateLimitResult => {
+const consumeRateLimitLocal = (key: string, limit: number, now = Date.now()): RateLimitResult => {
   cleanupRateLimitBuckets(now);
 
   const existing = rateLimitBuckets.get(key);
@@ -164,6 +229,53 @@ const consumeRateLimit = (key: string, limit: number, now = Date.now()): RateLim
     remaining,
     resetAt: bucket.resetAt,
   };
+};
+
+const consumeRateLimit = async (
+  env: Env,
+  key: string,
+  limit: number,
+  now = Date.now()
+): Promise<RateLimitResult> => {
+  const namespace = env.RATE_LIMITER;
+  if (!namespace) {
+    return consumeRateLimitLocal(key, limit, now);
+  }
+
+  try {
+    const id = namespace.idFromName(key);
+    const stub = namespace.get(id);
+    const response = await stub.fetch(RATE_LIMIT_DO_PATH, {
+      method: 'POST',
+      headers: {
+        'content-type': 'application/json',
+      },
+      body: JSON.stringify({
+        limit,
+        now,
+        windowMs: RATE_LIMIT_WINDOW_MS,
+      } satisfies RateLimitRequest),
+    });
+
+    if (!response.ok) {
+      return consumeRateLimitLocal(key, limit, now);
+    }
+
+    const payload = (await response.json().catch(() => null)) as RateLimitResult | null;
+    if (
+      !payload ||
+      typeof payload.allowed !== 'boolean' ||
+      !Number.isFinite(payload.limit) ||
+      !Number.isFinite(payload.remaining) ||
+      !Number.isFinite(payload.resetAt)
+    ) {
+      return consumeRateLimitLocal(key, limit, now);
+    }
+
+    return payload;
+  } catch {
+    return consumeRateLimitLocal(key, limit, now);
+  }
 };
 
 const appendRateLimitHeaders = (response: Response, result: RateLimitResult): Response => {
@@ -235,7 +347,10 @@ const signSessionPayload = async (payload: string, secret: string): Promise<stri
   return base64UrlEncode(new Uint8Array(signature));
 };
 
-const issueSessionToken = async (request: Request, env: Env): Promise<{ token: string; expiresAt: number }> => {
+const issueSessionToken = async (
+  request: Request,
+  env: Env
+): Promise<{ token: string; expiresAt: number; sessionId: string }> => {
   const secret = getSigningSecret(env);
   if (!secret) {
     throw new Error('SIGNING_SECRET_MISSING');
@@ -244,10 +359,12 @@ const issueSessionToken = async (request: Request, env: Env): Promise<{ token: s
   const now = Math.floor(Date.now() / 1000);
   const ttlSeconds = parseInteger(env.AI_SESSION_TTL_SECONDS, DEFAULT_SESSION_TTL_SECONDS, 60, 3600);
   const expiresAt = now + ttlSeconds;
+  const sessionId = generateSessionId();
   const ip = getClientIp(request);
   const userAgent = normalizeText(request.headers.get('user-agent')) || 'unknown';
 
   const payload: SessionTokenPayload = {
+    sidHash: await sha256Hex(sessionId),
     ip,
     uaHash: await sha256Hex(userAgent),
     iat: now,
@@ -260,6 +377,7 @@ const issueSessionToken = async (request: Request, env: Env): Promise<{ token: s
   return {
     token: `${encodedPayload}.${signature}`,
     expiresAt: expiresAt * 1000,
+    sessionId,
   };
 };
 
@@ -267,7 +385,7 @@ const verifySessionToken = async (
   request: Request,
   token: string,
   env: Env
-): Promise<{ valid: true } | { valid: false; code: string; message: string }> => {
+): Promise<{ valid: true } | { valid: false; code: GeminiErrorCode; message: string }> => {
   const secret = getSigningSecret(env);
   if (!secret) {
     return { valid: false, code: 'SIGNING_SECRET_MISSING', message: 'Session signing secret is not configured.' };
@@ -298,6 +416,25 @@ const verifySessionToken = async (
   const now = Math.floor(Date.now() / 1000);
   if (!Number.isFinite(payload.exp) || payload.exp <= now) {
     return { valid: false, code: 'SESSION_EXPIRED', message: 'AI session token expired. Refresh and try again.' };
+  }
+
+  const cookies = parseCookieHeader(request.headers.get('cookie'));
+  const sessionId = normalizeText(cookies[SESSION_COOKIE_NAME]);
+  if (!sessionId) {
+    return {
+      valid: false,
+      code: 'AUTH_REQUIRED',
+      message: 'AI session cookie is missing. Refresh and try again.',
+    };
+  }
+
+  const sidHash = await sha256Hex(sessionId);
+  if (!payload.sidHash || payload.sidHash !== sidHash) {
+    return {
+      valid: false,
+      code: 'INVALID_SESSION_TOKEN',
+      message: 'AI session token does not match this browser session.',
+    };
   }
 
   const ip = getClientIp(request);
@@ -483,7 +620,7 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
     300
   );
   const ip = getClientIp(request);
-  const rateLimit = consumeRateLimit(`session:${ip}`, sessionRateLimit);
+  const rateLimit = await consumeRateLimit(env, `session:${ip}`, sessionRateLimit);
   if (!rateLimit.allowed) {
     console.warn('[ai-session] rate limited', { ip, limit: sessionRateLimit });
     return appendRateLimitHeaders(
@@ -494,8 +631,20 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
 
   try {
     const session = await issueSessionToken(request, env);
+    const ttlSeconds = Math.max(60, Math.floor((session.expiresAt - Date.now()) / 1000));
+    const sessionResponse = jsonResponse({ token: session.token, expiresAt: session.expiresAt });
+    const sessionHeaders = new Headers(sessionResponse.headers);
+    sessionHeaders.append(
+      'set-cookie',
+      `${SESSION_COOKIE_NAME}=${session.sessionId}; Max-Age=${ttlSeconds}; Path=${API_PATH}; HttpOnly; Secure; SameSite=Strict`
+    );
+
     return appendRateLimitHeaders(
-      jsonResponse({ token: session.token, expiresAt: session.expiresAt }),
+      new Response(sessionResponse.body, {
+        status: sessionResponse.status,
+        statusText: sessionResponse.statusText,
+        headers: sessionHeaders,
+      }),
       rateLimit
     );
   } catch (error) {
@@ -531,6 +680,15 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
     return errorResponse(401, 'AUTH_REQUIRED', 'Missing AI session token.');
   }
 
+  const requestId = normalizeText(request.headers.get(REQUEST_ID_HEADER));
+  if (!requestId || requestId.length > REQUEST_ID_MAX_BYTES || !/^[a-zA-Z0-9._-]+$/.test(requestId)) {
+    return errorResponse(400, 'INVALID_REQUEST', 'Missing or invalid AI request id.');
+  }
+
+  if (!reserveRequestId(requestId)) {
+    return errorResponse(409, 'INVALID_REQUEST', 'Duplicate AI request detected. Retry with a new request id.');
+  }
+
   const tokenVerification = await verifySessionToken(request, token, env);
   if (!tokenVerification.valid) {
     console.warn('[ai] invalid session token', {
@@ -542,7 +700,7 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
 
   const aiRateLimit = parseInteger(env.AI_RATE_LIMIT_PER_MINUTE, DEFAULT_RATE_LIMIT_PER_MINUTE, 5, 240);
   const ip = getClientIp(request);
-  const rateLimit = consumeRateLimit(`ai:${ip}`, aiRateLimit);
+  const rateLimit = await consumeRateLimit(env, `ai:${ip}`, aiRateLimit);
   if (!rateLimit.allowed) {
     console.warn('[ai] rate limited', { ip, limit: aiRateLimit });
     return appendRateLimitHeaders(
@@ -630,7 +788,12 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
   }
 };
 
-const withSecurityHeaders = (response: Response): Response => {
+const generateCspNonce = (): string => {
+  const bytes = crypto.getRandomValues(new Uint8Array(18));
+  return base64UrlEncode(bytes);
+};
+
+const withSecurityHeaders = async (response: Response): Promise<Response> => {
   const headers = new Headers(response.headers);
   headers.set('x-content-type-options', 'nosniff');
   headers.set('x-frame-options', 'DENY');
@@ -642,12 +805,13 @@ const withSecurityHeaders = (response: Response): Response => {
 
   const contentType = normalizeText(headers.get('content-type')).toLowerCase();
   if (contentType.includes('text/html')) {
+    const nonce = generateCspNonce();
     headers.set(
       'content-security-policy',
       [
         "default-src 'self'",
-        "script-src 'self' 'unsafe-inline'",
-        "style-src 'self' 'unsafe-inline'",
+        `script-src 'self' 'nonce-${nonce}'`,
+        `style-src 'self' 'nonce-${nonce}'`,
         "img-src 'self' data: blob:",
         "font-src 'self' data:",
         "connect-src 'self'",
@@ -657,6 +821,24 @@ const withSecurityHeaders = (response: Response): Response => {
         "frame-ancestors 'none'",
       ].join('; ')
     );
+
+    const html = await response.text();
+    const nonceMeta = `<meta name="csp-nonce" content="${nonce}">`;
+    const withMeta = html.includes('name="csp-nonce"')
+      ? html
+      : html.replace('</head>', `  ${nonceMeta}\n</head>`);
+    const withNonce = withMeta
+      .replace(/<style>/g, `<style nonce="${nonce}">`)
+      .replace(
+        /<script(?![^>]*nonce=)([^>]*)type="application\/ld\+json"/g,
+        `<script nonce="${nonce}"$1type="application/ld+json"`
+      );
+
+    return new Response(withNonce, {
+      status: response.status,
+      statusText: response.statusText,
+      headers,
+    });
   }
 
   return new Response(response.body, {
@@ -665,6 +847,61 @@ const withSecurityHeaders = (response: Response): Response => {
     headers,
   });
 };
+
+export class RateLimiter {
+  private state: DurableObjectStateLike;
+
+  constructor(state: DurableObjectStateLike) {
+    this.state = state;
+  }
+
+  async fetch(request: Request): Promise<Response> {
+    if (request.method !== 'POST') {
+      return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Rate limiter accepts POST only.');
+    }
+
+    let payload: RateLimitRequest | null = null;
+    try {
+      payload = (await request.json()) as RateLimitRequest;
+    } catch {
+      return errorResponse(400, 'INVALID_JSON', 'Rate limiter payload must be valid JSON.');
+    }
+
+    const limit = Number(payload?.limit || 0);
+    const now = Number(payload?.now || Date.now());
+    const windowMs = Number(payload?.windowMs || RATE_LIMIT_WINDOW_MS);
+    if (!Number.isFinite(limit) || limit <= 0 || !Number.isFinite(now) || !Number.isFinite(windowMs) || windowMs < 1) {
+      return errorResponse(400, 'INVALID_REQUEST', 'Invalid rate limiter request payload.');
+    }
+
+    const storageKey = 'bucket';
+    const stored = await this.state.storage.get<RateLimitBucket>(storageKey);
+    const inWindow = stored && stored.resetAt > now;
+    const bucket: RateLimitBucket = inWindow
+      ? stored
+      : {
+        count: 0,
+        resetAt: now + windowMs,
+      };
+
+    bucket.count += 1;
+    await this.state.storage.put(storageKey, bucket);
+    await this.state.storage.setAlarm(bucket.resetAt + windowMs);
+
+    const result: RateLimitResult = {
+      allowed: bucket.count <= limit,
+      limit,
+      remaining: Math.max(0, limit - bucket.count),
+      resetAt: bucket.resetAt,
+    };
+
+    return jsonResponse(result as JsonObject, 200);
+  }
+
+  async alarm(): Promise<void> {
+    await this.state.storage.delete('bucket');
+  }
+}
 
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
