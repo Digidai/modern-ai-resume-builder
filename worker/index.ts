@@ -18,8 +18,11 @@ interface Env {
   GEMINI_SIGNING_SECRET?: string;
   ALLOWED_ORIGINS?: string;
   AI_RATE_LIMIT_PER_MINUTE?: string;
+  AI_PER_SESSION_RATE_LIMIT_PER_MINUTE?: string;
+  AI_GLOBAL_RATE_LIMIT_PER_MINUTE?: string;
   AI_SESSION_RATE_LIMIT_PER_MINUTE?: string;
   AI_SESSION_TTL_SECONDS?: string;
+  AI_CLIENT_TOKEN_TTL_SECONDS?: string;
 }
 
 type JsonObject = Record<string, unknown>;
@@ -28,6 +31,15 @@ interface SessionTokenPayload {
   sidHash: string;
   ip: string;
   uaHash: string;
+  iat: number;
+  exp: number;
+}
+
+interface ClientTokenPayload {
+  clientIdHash: string;
+  ip: string;
+  uaHash: string;
+  origin: string;
   iat: number;
   exp: number;
 }
@@ -66,11 +78,17 @@ const MAX_BODY_BYTES = 64 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = 'gemini-2.0-flash-exp';
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
+const DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE = 20;
+const DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE = 240;
 const DEFAULT_SESSION_RATE_LIMIT_PER_MINUTE = 60;
 const DEFAULT_SESSION_TTL_SECONDS = 10 * 60;
+const DEFAULT_CLIENT_TOKEN_TTL_SECONDS = 24 * 60 * 60;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const MAX_RATE_LIMIT_BUCKETS = 5000;
 const SESSION_COOKIE_NAME = 'ai_session_id';
+const CLIENT_TOKEN_COOKIE_NAME = 'ai_client_id';
+const CLIENT_TOKEN_META_NAME = 'ai-client-token';
+const CLIENT_TOKEN_HEADER = 'x-ai-client-token';
 const REQUEST_ID_HEADER = 'x-ai-request-id';
 const REQUEST_ID_MAX_BYTES = 128;
 const REQUEST_ID_TTL_MS = 2 * 60 * 1000;
@@ -79,6 +97,8 @@ const MAX_REQUEST_REPLAY_CACHE = 10000;
 const tokenEncoder = new TextEncoder();
 const rateLimitBuckets = new Map<string, RateLimitBucket>();
 const usedRequestIds = new Map<string, number>();
+let hasLoggedMissingRateLimiter = false;
+let hasLoggedRateLimiterFallback = false;
 
 const jsonResponse = (body: JsonObject, status = 200): Response =>
   new Response(JSON.stringify(body), {
@@ -173,23 +193,38 @@ const parseCookieHeader = (cookieHeader: string | null): Record<string, string> 
     }, {});
 };
 
-const cleanupUsedRequestIds = (now: number): void => {
-  if (usedRequestIds.size <= MAX_REQUEST_REPLAY_CACHE) return;
+const getOldestMapKey = <T>(map: Map<string, T>): string | null => {
+  const iterator = map.keys().next();
+  return iterator.done ? null : iterator.value;
+};
 
-  for (const [id, expiresAt] of usedRequestIds) {
-    if (expiresAt <= now) {
-      usedRequestIds.delete(id);
-    }
-    if (usedRequestIds.size <= MAX_REQUEST_REPLAY_CACHE) break;
+const cleanupExpiredRequestIds = (now: number): void => {
+  while (usedRequestIds.size > 0) {
+    const oldestKey = getOldestMapKey(usedRequestIds);
+    if (!oldestKey) return;
+
+    const expiresAt = usedRequestIds.get(oldestKey) || 0;
+    if (expiresAt > now) return;
+    usedRequestIds.delete(oldestKey);
   }
 };
 
 const reserveRequestId = (requestId: string, now = Date.now()): boolean => {
-  cleanupUsedRequestIds(now);
+  cleanupExpiredRequestIds(now);
 
   const current = usedRequestIds.get(requestId);
   if (current && current > now) {
     return false;
+  }
+
+  if (current) {
+    usedRequestIds.delete(requestId);
+  }
+
+  while (usedRequestIds.size >= MAX_REQUEST_REPLAY_CACHE) {
+    const oldestKey = getOldestMapKey(usedRequestIds);
+    if (!oldestKey) break;
+    usedRequestIds.delete(oldestKey);
   }
 
   usedRequestIds.set(requestId, now + REQUEST_ID_TTL_MS);
@@ -239,6 +274,10 @@ const consumeRateLimit = async (
 ): Promise<RateLimitResult> => {
   const namespace = env.RATE_LIMITER;
   if (!namespace) {
+    if (!hasLoggedMissingRateLimiter) {
+      hasLoggedMissingRateLimiter = true;
+      console.warn('[rate-limit] RATE_LIMITER binding missing, falling back to in-memory limiter.');
+    }
     return consumeRateLimitLocal(key, limit, now);
   }
 
@@ -258,6 +297,10 @@ const consumeRateLimit = async (
     });
 
     if (!response.ok) {
+      if (!hasLoggedRateLimiterFallback) {
+        hasLoggedRateLimiterFallback = true;
+        console.warn('[rate-limit] Durable Object unavailable, falling back to in-memory limiter.');
+      }
       return consumeRateLimitLocal(key, limit, now);
     }
 
@@ -269,11 +312,19 @@ const consumeRateLimit = async (
       !Number.isFinite(payload.remaining) ||
       !Number.isFinite(payload.resetAt)
     ) {
+      if (!hasLoggedRateLimiterFallback) {
+        hasLoggedRateLimiterFallback = true;
+        console.warn('[rate-limit] Invalid limiter payload, falling back to in-memory limiter.');
+      }
       return consumeRateLimitLocal(key, limit, now);
     }
 
     return payload;
   } catch {
+    if (!hasLoggedRateLimiterFallback) {
+      hasLoggedRateLimiterFallback = true;
+      console.warn('[rate-limit] Limiter request failed, falling back to in-memory limiter.');
+    }
     return consumeRateLimitLocal(key, limit, now);
   }
 };
@@ -291,8 +342,14 @@ const appendRateLimitHeaders = (response: Response, result: RateLimitResult): Re
   });
 };
 
+const getRequestOrigin = (request: Request): string => new URL(request.url).origin;
+const isLocalHostRequest = (request: Request): boolean => {
+  const hostname = new URL(request.url).hostname;
+  return hostname === 'localhost' || hostname === '127.0.0.1';
+};
+
 const getAllowedOrigins = (request: Request, env: Env): Set<string> => {
-  const urlOrigin = new URL(request.url).origin;
+  const urlOrigin = getRequestOrigin(request);
   const allowed = new Set<string>([urlOrigin]);
 
   const configured = normalizeText(env.ALLOWED_ORIGINS);
@@ -307,23 +364,61 @@ const getAllowedOrigins = (request: Request, env: Env): Set<string> => {
   return allowed;
 };
 
-const isAllowedOriginRequest = (request: Request, env: Env): boolean => {
+const hasAllowedOriginOrReferer = (request: Request, env: Env): boolean => {
   const allowedOrigins = getAllowedOrigins(request, env);
-
   const originHeader = normalizeText(request.headers.get('origin'));
   const refererHeader = normalizeText(request.headers.get('referer'));
-  const secFetchSite = normalizeText(request.headers.get('sec-fetch-site'));
 
   const hasValidOrigin = originHeader ? allowedOrigins.has(originHeader) : false;
   const hasValidReferer = refererHeader
     ? Array.from(allowedOrigins).some((allowedOrigin) => refererHeader.startsWith(`${allowedOrigin}/`) || refererHeader === allowedOrigin)
     : false;
 
-  const hasTrustedFetchSite = secFetchSite
-    ? secFetchSite === 'same-origin' || secFetchSite === 'same-site'
-    : false;
+  return hasValidOrigin || hasValidReferer;
+};
 
-  return hasValidOrigin || hasValidReferer || hasTrustedFetchSite;
+const hasTrustedFetchMetadata = (request: Request): boolean => {
+  const secFetchSite = normalizeText(request.headers.get('sec-fetch-site'));
+  const secFetchMode = normalizeText(request.headers.get('sec-fetch-mode'));
+
+  if (secFetchSite && secFetchSite !== 'same-origin' && secFetchSite !== 'same-site') {
+    return false;
+  }
+
+  if (secFetchMode && secFetchMode !== 'cors' && secFetchMode !== 'same-origin') {
+    return false;
+  }
+
+  return true;
+};
+
+const isAllowedOriginRequest = (request: Request, env: Env): boolean => {
+  return hasAllowedOriginOrReferer(request, env) && hasTrustedFetchMetadata(request);
+};
+
+const withCorsHeaders = (request: Request, env: Env, response: Response): Response => {
+  const originHeader = normalizeText(request.headers.get('origin'));
+  if (!originHeader) return response;
+
+  if (!getAllowedOrigins(request, env).has(originHeader)) {
+    return response;
+  }
+
+  const headers = new Headers(response.headers);
+  headers.set('access-control-allow-origin', originHeader);
+  headers.set('access-control-allow-credentials', 'true');
+  headers.set('access-control-allow-methods', 'POST, OPTIONS');
+  headers.set(
+    'access-control-allow-headers',
+    `content-type, ${REQUEST_ID_HEADER}, x-ai-session-token, ${CLIENT_TOKEN_HEADER}`
+  );
+  headers.set('vary', 'origin');
+
+  return new Response(response.body, {
+    status: response.status,
+    statusText: response.statusText,
+    headers,
+  });
 };
 
 const getClientIp = (request: Request): string => {
@@ -381,11 +476,129 @@ const issueSessionToken = async (
   };
 };
 
-const verifySessionToken = async (
+const issueClientToken = async (
+  request: Request,
+  env: Env
+): Promise<{ token: string; cookie: string }> => {
+  const secret = getSigningSecret(env);
+  if (!secret) {
+    throw new Error('SIGNING_SECRET_MISSING');
+  }
+
+  const now = Math.floor(Date.now() / 1000);
+  const ttlSeconds = parseInteger(
+    env.AI_CLIENT_TOKEN_TTL_SECONDS,
+    DEFAULT_CLIENT_TOKEN_TTL_SECONDS,
+    600,
+    7 * 24 * 60 * 60
+  );
+  const userAgent = normalizeText(request.headers.get('user-agent')) || 'unknown';
+  const cookies = parseCookieHeader(request.headers.get('cookie'));
+  const clientId = normalizeText(cookies[CLIENT_TOKEN_COOKIE_NAME]) || generateSessionId();
+
+  const payload: ClientTokenPayload = {
+    clientIdHash: await sha256Hex(clientId),
+    ip: getClientIp(request),
+    uaHash: await sha256Hex(userAgent),
+    origin: getRequestOrigin(request),
+    iat: now,
+    exp: now + ttlSeconds,
+  };
+
+  const encodedPayload = base64UrlEncode(tokenEncoder.encode(JSON.stringify(payload)));
+  const signature = await signSessionPayload(encodedPayload, secret);
+
+  return {
+    token: `${encodedPayload}.${signature}`,
+    cookie: `${CLIENT_TOKEN_COOKIE_NAME}=${clientId}; Max-Age=${ttlSeconds}; Path=${API_PATH}; HttpOnly; Secure; SameSite=Strict`,
+  };
+};
+
+const verifyClientToken = async (
   request: Request,
   token: string,
   env: Env
 ): Promise<{ valid: true } | { valid: false; code: GeminiErrorCode; message: string }> => {
+  const secret = getSigningSecret(env);
+  if (!secret) {
+    return { valid: false, code: 'SIGNING_SECRET_MISSING', message: 'Session signing secret is not configured.' };
+  }
+
+  const [encodedPayload, providedSignature] = token.split('.');
+  if (!encodedPayload || !providedSignature) {
+    return { valid: false, code: 'INVALID_CLIENT_TOKEN', message: 'Malformed AI client token.' };
+  }
+
+  const expectedSignature = await signSessionPayload(encodedPayload, secret);
+  if (!timingSafeEqual(expectedSignature, providedSignature)) {
+    return { valid: false, code: 'INVALID_CLIENT_TOKEN', message: 'Invalid AI client token signature.' };
+  }
+
+  const decodedPayloadBytes = base64UrlDecode(encodedPayload);
+  if (!decodedPayloadBytes) {
+    return { valid: false, code: 'INVALID_CLIENT_TOKEN', message: 'Invalid AI client token payload.' };
+  }
+
+  let payload: ClientTokenPayload;
+  try {
+    payload = JSON.parse(new TextDecoder().decode(decodedPayloadBytes)) as ClientTokenPayload;
+  } catch {
+    return { valid: false, code: 'INVALID_CLIENT_TOKEN', message: 'Unreadable AI client token payload.' };
+  }
+
+  const now = Math.floor(Date.now() / 1000);
+  if (!Number.isFinite(payload.exp) || payload.exp <= now) {
+    return { valid: false, code: 'CLIENT_TOKEN_REQUIRED', message: 'AI client token expired. Refresh and try again.' };
+  }
+
+  if (payload.origin !== getRequestOrigin(request)) {
+    return {
+      valid: false,
+      code: 'INVALID_CLIENT_TOKEN',
+      message: 'AI client token origin mismatch.',
+    };
+  }
+
+  const cookies = parseCookieHeader(request.headers.get('cookie'));
+  const clientId = normalizeText(cookies[CLIENT_TOKEN_COOKIE_NAME]);
+  if (!clientId) {
+    return {
+      valid: false,
+      code: 'CLIENT_TOKEN_REQUIRED',
+      message: 'Missing AI client cookie. Refresh and try again.',
+    };
+  }
+
+  const clientIdHash = await sha256Hex(clientId);
+  if (!payload.clientIdHash || payload.clientIdHash !== clientIdHash) {
+    return {
+      valid: false,
+      code: 'INVALID_CLIENT_TOKEN',
+      message: 'AI client token does not match this browser.',
+    };
+  }
+
+  const ip = getClientIp(request);
+  const userAgent = normalizeText(request.headers.get('user-agent')) || 'unknown';
+  const uaHash = await sha256Hex(userAgent);
+  if (payload.ip !== ip || payload.uaHash !== uaHash) {
+    return {
+      valid: false,
+      code: 'INVALID_CLIENT_TOKEN',
+      message: 'AI client token does not match this client.',
+    };
+  }
+
+  return { valid: true };
+};
+
+const verifySessionToken = async (
+  request: Request,
+  token: string,
+  env: Env
+): Promise<
+  { valid: true; sidHash: string } | { valid: false; code: GeminiErrorCode; message: string }
+> => {
   const secret = getSigningSecret(env);
   if (!secret) {
     return { valid: false, code: 'SIGNING_SECRET_MISSING', message: 'Session signing secret is not configured.' };
@@ -449,7 +662,7 @@ const verifySessionToken = async (
     };
   }
 
-  return { valid: true };
+  return { valid: true, sidHash };
 };
 
 const isHtmlNavigationRequest = (request: Request): boolean => {
@@ -511,7 +724,6 @@ const validateRequest = (body: unknown): GeminiRequest | null => {
       action: 'improve',
       text,
       context: normalizeText(value.context) || 'resume',
-      apiKey: normalizeText(value.apiKey) || undefined,
     };
   }
 
@@ -524,7 +736,6 @@ const validateRequest = (body: unknown): GeminiRequest | null => {
       action: 'summary',
       role: normalizeText(value.role) || 'Professional',
       skills,
-      apiKey: normalizeText(value.apiKey) || undefined,
     };
   }
 
@@ -613,6 +824,27 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
     return errorResponse(403, 'FORBIDDEN_ORIGIN', 'Untrusted origin for AI session request.');
   }
 
+  if (!getSigningSecret(env)) {
+    return errorResponse(500, 'SIGNING_SECRET_MISSING', 'AI session signing secret is not configured.');
+  }
+
+  const clientToken = normalizeText(request.headers.get(CLIENT_TOKEN_HEADER));
+  if (!clientToken) {
+    if (!isLocalHostRequest(request)) {
+      return errorResponse(401, 'CLIENT_TOKEN_REQUIRED', 'Missing AI client token. Refresh and try again.');
+    }
+    console.warn('[ai-session] skipping client token check for localhost development.');
+  } else {
+    const clientTokenVerification = await verifyClientToken(request, clientToken, env);
+    if (!clientTokenVerification.valid) {
+      console.warn('[ai-session] invalid client token', {
+        ip: getClientIp(request),
+        code: clientTokenVerification.code,
+      });
+      return errorResponse(401, clientTokenVerification.code, clientTokenVerification.message);
+    }
+  }
+
   const sessionRateLimit = parseInteger(
     env.AI_SESSION_RATE_LIMIT_PER_MINUTE,
     DEFAULT_SESSION_RATE_LIMIT_PER_MINUTE,
@@ -658,10 +890,6 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
 };
 
 const handleGeminiRequest = async (request: Request, env: Env): Promise<Response> => {
-  if (request.method === 'OPTIONS') {
-    return new Response(null, { status: 204 });
-  }
-
   if (request.method !== 'POST') {
     return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
   }
@@ -698,14 +926,54 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
     return errorResponse(401, tokenVerification.code, tokenVerification.message);
   }
 
-  const aiRateLimit = parseInteger(env.AI_RATE_LIMIT_PER_MINUTE, DEFAULT_RATE_LIMIT_PER_MINUTE, 5, 240);
   const ip = getClientIp(request);
-  const rateLimit = await consumeRateLimit(env, `ai:${ip}`, aiRateLimit);
-  if (!rateLimit.allowed) {
-    console.warn('[ai] rate limited', { ip, limit: aiRateLimit });
+  const ipRateLimitLimit = parseInteger(env.AI_RATE_LIMIT_PER_MINUTE, DEFAULT_RATE_LIMIT_PER_MINUTE, 5, 240);
+  const sessionRateLimitLimit = parseInteger(
+    env.AI_PER_SESSION_RATE_LIMIT_PER_MINUTE,
+    DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE,
+    3,
+    120
+  );
+  const globalRateLimitLimit = parseInteger(
+    env.AI_GLOBAL_RATE_LIMIT_PER_MINUTE,
+    DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE,
+    30,
+    3000
+  );
+
+  const ipRateLimit = await consumeRateLimit(env, `ai:ip:${ip}`, ipRateLimitLimit);
+  if (!ipRateLimit.allowed) {
+    console.warn('[ai] rate limited', { ip, scope: 'ip', limit: ipRateLimitLimit });
     return appendRateLimitHeaders(
       errorResponse(429, 'RATE_LIMITED', 'AI rate limit reached. Please wait and try again.'),
-      rateLimit
+      ipRateLimit
+    );
+  }
+
+  const sessionRateLimit = await consumeRateLimit(
+    env,
+    `ai:session:${tokenVerification.sidHash}`,
+    sessionRateLimitLimit
+  );
+  if (!sessionRateLimit.allowed) {
+    console.warn('[ai] rate limited', {
+      ip,
+      scope: 'session',
+      limit: sessionRateLimitLimit,
+      sidHash: tokenVerification.sidHash,
+    });
+    return appendRateLimitHeaders(
+      errorResponse(429, 'RATE_LIMITED', 'AI session limit reached. Please wait and try again.'),
+      sessionRateLimit
+    );
+  }
+
+  const globalRateLimit = await consumeRateLimit(env, 'ai:global', globalRateLimitLimit);
+  if (!globalRateLimit.allowed) {
+    console.warn('[ai] rate limited', { ip, scope: 'global', limit: globalRateLimitLimit });
+    return appendRateLimitHeaders(
+      errorResponse(429, 'RATE_LIMITED', 'AI service is busy. Please retry shortly.'),
+      globalRateLimit
     );
   }
 
@@ -716,12 +984,12 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
     if (error instanceof Error && error.message === 'REQUEST_TOO_LARGE') {
       return appendRateLimitHeaders(
         errorResponse(413, 'REQUEST_TOO_LARGE', 'Request payload is too large.'),
-        rateLimit
+        globalRateLimit
       );
     }
     return appendRateLimitHeaders(
       errorResponse(400, 'INVALID_JSON', 'Request body must be valid JSON.'),
-      rateLimit
+      globalRateLimit
     );
   }
 
@@ -729,16 +997,16 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
   if (!payload) {
     return appendRateLimitHeaders(
       errorResponse(400, 'INVALID_REQUEST', 'Invalid AI request payload.'),
-      rateLimit
+      globalRateLimit
     );
   }
 
   const model = normalizeText(env.GEMINI_MODEL) || DEFAULT_MODEL;
-  const apiKey = normalizeText(env.GEMINI_API_KEY) || normalizeText(payload.apiKey);
+  const apiKey = normalizeText(env.GEMINI_API_KEY);
   if (!apiKey) {
     return appendRateLimitHeaders(
-      errorResponse(400, 'API_KEY_REQUIRED', 'AI key is missing on the server. Add GEMINI_API_KEY or provide your own key.'),
-      rateLimit
+      errorResponse(500, 'SERVER_KEY_MISSING', 'AI service is not configured. Missing GEMINI_API_KEY on the server.'),
+      globalRateLimit
     );
   }
 
@@ -746,44 +1014,44 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
 
   try {
     const text = await callGemini(prompt, apiKey, model);
-    return appendRateLimitHeaders(jsonResponse({ text }), rateLimit);
+    return appendRateLimitHeaders(jsonResponse({ text }), globalRateLimit);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error';
 
     if (message.startsWith('UPSTREAM_RATE_LIMIT:')) {
       return appendRateLimitHeaders(
         errorResponse(429, 'UPSTREAM_RATE_LIMIT', message.replace('UPSTREAM_RATE_LIMIT:', '').trim()),
-        rateLimit
+        globalRateLimit
       );
     }
     if (message.startsWith('UPSTREAM_UNAVAILABLE:')) {
       return appendRateLimitHeaders(
         errorResponse(503, 'UPSTREAM_UNAVAILABLE', message.replace('UPSTREAM_UNAVAILABLE:', '').trim()),
-        rateLimit
+        globalRateLimit
       );
     }
     if (message.startsWith('UPSTREAM_ERROR:')) {
       return appendRateLimitHeaders(
         errorResponse(502, 'UPSTREAM_ERROR', message.replace('UPSTREAM_ERROR:', '').trim()),
-        rateLimit
+        globalRateLimit
       );
     }
     if (message === 'UPSTREAM_TIMEOUT') {
       return appendRateLimitHeaders(
         errorResponse(504, 'UPSTREAM_TIMEOUT', 'AI request timed out. Please try again.'),
-        rateLimit
+        globalRateLimit
       );
     }
     if (message === 'EMPTY_RESPONSE') {
       return appendRateLimitHeaders(
         errorResponse(502, 'EMPTY_RESPONSE', 'AI returned an empty response.'),
-        rateLimit
+        globalRateLimit
       );
     }
 
     return appendRateLimitHeaders(
       errorResponse(500, 'UNKNOWN_ERROR', 'Unexpected AI proxy error.'),
-      rateLimit
+      globalRateLimit
     );
   }
 };
@@ -793,7 +1061,19 @@ const generateCspNonce = (): string => {
   return base64UrlEncode(bytes);
 };
 
-const withSecurityHeaders = async (response: Response): Promise<Response> => {
+const escapeRegExp = (value: string): string => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+const upsertMetaTag = (html: string, name: string, content: string): string => {
+  const metaTag = `<meta name="${name}" content="${content}">`;
+  const pattern = new RegExp(`<meta\\s+name=["']${escapeRegExp(name)}["'][^>]*>`, 'i');
+  if (pattern.test(html)) {
+    return html.replace(pattern, metaTag);
+  }
+
+  return html.replace('</head>', `  ${metaTag}\n</head>`);
+};
+
+const withSecurityHeaders = async (request: Request, env: Env, response: Response): Promise<Response> => {
   const headers = new Headers(response.headers);
   headers.set('x-content-type-options', 'nosniff');
   headers.set('x-frame-options', 'DENY');
@@ -822,12 +1102,20 @@ const withSecurityHeaders = async (response: Response): Promise<Response> => {
       ].join('; ')
     );
 
-    const html = await response.text();
-    const nonceMeta = `<meta name="csp-nonce" content="${nonce}">`;
-    const withMeta = html.includes('name="csp-nonce"')
-      ? html
-      : html.replace('</head>', `  ${nonceMeta}\n</head>`);
-    const withNonce = withMeta
+    let html = await response.text();
+    html = upsertMetaTag(html, 'csp-nonce', nonce);
+
+    try {
+      const clientToken = await issueClientToken(request, env);
+      html = upsertMetaTag(html, CLIENT_TOKEN_META_NAME, clientToken.token);
+      headers.append('set-cookie', clientToken.cookie);
+    } catch (error) {
+      if (error instanceof Error && error.message === 'SIGNING_SECRET_MISSING') {
+        console.warn('[ai-client] signing secret missing while rendering html.');
+      }
+    }
+
+    const withNonce = html
       .replace(/<style>/g, `<style nonce="${nonce}">`)
       .replace(
         /<script(?![^>]*nonce=)([^>]*)type="application\/ld\+json"/g,
@@ -846,6 +1134,11 @@ const withSecurityHeaders = async (response: Response): Promise<Response> => {
     statusText: response.statusText,
     headers,
   });
+};
+
+const finalizeResponse = async (request: Request, env: Env, response: Response): Promise<Response> => {
+  const corsResponse = withCorsHeaders(request, env, response);
+  return withSecurityHeaders(request, env, corsResponse);
 };
 
 export class RateLimiter {
@@ -907,30 +1200,37 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
+    if ((url.pathname === SESSION_PATH || url.pathname === API_PATH) && request.method === 'OPTIONS') {
+      const preflight = isAllowedOriginRequest(request, env)
+        ? new Response(null, { status: 204 })
+        : errorResponse(403, 'FORBIDDEN_ORIGIN', 'Cross-origin requests are not allowed.');
+      return finalizeResponse(request, env, preflight);
+    }
+
     let response: Response;
     if (url.pathname === SESSION_PATH) {
       response = await handleSessionRequest(request, env);
-      return withSecurityHeaders(response);
+      return finalizeResponse(request, env, response);
     }
 
     if (url.pathname === API_PATH) {
       response = await handleGeminiRequest(request, env);
-      return withSecurityHeaders(response);
+      return finalizeResponse(request, env, response);
     }
 
     if (url.pathname.startsWith('/api/')) {
       response = errorResponse(404, 'NOT_FOUND', 'API route not found.');
-      return withSecurityHeaders(response);
+      return finalizeResponse(request, env, response);
     }
 
     const assetResponse = await env.ASSETS.fetch(request);
     if (assetResponse.status !== 404 || !isHtmlNavigationRequest(request)) {
-      return withSecurityHeaders(assetResponse);
+      return finalizeResponse(request, env, assetResponse);
     }
 
     const spaUrl = new URL(request.url);
     spaUrl.pathname = '/index.html';
     const fallback = await env.ASSETS.fetch(new Request(spaUrl.toString(), request));
-    return withSecurityHeaders(fallback);
+    return finalizeResponse(request, env, fallback);
   },
 };

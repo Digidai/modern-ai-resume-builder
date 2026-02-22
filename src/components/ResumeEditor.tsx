@@ -1,9 +1,7 @@
 import { useState, useCallback, type KeyboardEvent } from 'react';
 import { ResumeData, Experience, Education, Project } from '../types';
 import { SparklesIcon, PlusIcon, TrashIcon, LoaderIcon } from './Icons';
-import { generateSummary } from '../services/geminiService';
 import { Button } from './Button';
-import { ApiKeyModal } from './ApiKeyModal';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
@@ -33,16 +31,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
   }, [onError, showToastError]);
 
   const {
-    isApiKeyModalOpen,
-    isApiKeyRequired,
-    loadingField,
-    storedApiKey,
-    rememberApiKey,
-    hasAiConsent,
-    closeAiModal,
-    handleSaveAiSettings,
+    aiStatus,
+    isLoadingField,
     improveField,
     generateField,
+    generateSummaryField,
   } = useAiActions({ onError: showError });
 
   const handleTabKeyDown = useCallback(
@@ -185,11 +178,28 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
 
       <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
         {activeTab !== 'design' && (
-          <div
-            className="rounded-lg border border-amber-200 bg-amber-50 text-amber-900 px-4 py-3 text-xs leading-relaxed"
-            role="note"
-          >
-            AI features send selected text to Google Gemini for processing. Do not submit confidential or regulated personal data.
+          <div className="sticky top-0 z-20 -mx-6 px-6 pb-3 pt-1 bg-white/95 dark:bg-slate-900/95 backdrop-blur">
+            <div
+              className="rounded-lg border border-amber-200 bg-amber-50 text-amber-900 px-4 py-3 text-xs leading-relaxed"
+              role="note"
+            >
+              AI features send selected text to Google Gemini for processing. Do not submit confidential or regulated personal data.
+            </div>
+            {aiStatus.state !== 'idle' && (
+              <div
+                className={`mt-2 rounded-lg border px-4 py-2 text-xs leading-relaxed ${
+                  aiStatus.state === 'error'
+                    ? 'border-red-200 bg-red-50 text-red-800'
+                    : aiStatus.state === 'success'
+                    ? 'border-emerald-200 bg-emerald-50 text-emerald-800'
+                    : 'border-blue-200 bg-blue-50 text-blue-800'
+                }`}
+                role={aiStatus.state === 'error' ? 'alert' : 'status'}
+                aria-live="polite"
+              >
+                {aiStatus.message}
+              </div>
+            )}
           </div>
         )}
 
@@ -275,15 +285,15 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                   onClick={() =>
                     generateField({
                       fieldId: 'summary',
-                      generator: (key) => generateSummary(data.title, data.skills || [], key),
+                      generator: () => generateSummaryField(data.title, data.skills || []),
                       onUpdate: (val) => handleInputChange('summary', val),
                     })
                   }
                   variant="ghost"
                   size="sm"
                   className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 px-2"
-                  disabled={loadingField === 'summary'}
-                  leftIcon={loadingField === 'summary' ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
+                  disabled={isLoadingField('summary')}
+                  leftIcon={isLoadingField('summary') ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
                 >
                   Generate with AI
                 </Button>
@@ -295,9 +305,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                   value={data.summary}
                   onChange={(e) => handleInputChange('summary', e.target.value)}
                   placeholder="Briefly describe your professional background..."
-                  disabled={loadingField === 'summary-polish'}
+                  disabled={isLoadingField('summary-polish')}
                 />
-                {loadingField === 'summary-polish' && (
+                {isLoadingField('summary-polish') && (
                   <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
                     <LoaderIcon className="animate-spin w-6 h-6 text-indigo-600" />
                   </div>
@@ -311,14 +321,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                       onUpdate: (val) => handleInputChange('summary', val),
                     })
                   }
-                  disabled={loadingField === 'summary-polish' || !data.summary}
+                  disabled={isLoadingField('summary-polish') || !data.summary}
                   variant="ghost"
                   size="sm"
                   className="absolute bottom-2 right-2 h-auto py-1 px-2 border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600 bg-white"
                   title="Polish Text"
                   aria-label="Polish summary with AI"
                 >
-                  {loadingField === 'summary-polish' ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
+                  {isLoadingField('summary-polish') ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
                 </Button>
               </div>
             </div>
@@ -412,9 +422,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                       value={exp.description}
                       onChange={(e) => updateExperience(exp.id, 'description', e.target.value)}
                       placeholder="• Achieved X by doing Y..."
-                      disabled={loadingField === `exp-${exp.id}`}
+                      disabled={isLoadingField(`exp-${exp.id}`)}
                     />
-                    {loadingField === `exp-${exp.id}` && (
+                    {isLoadingField(`exp-${exp.id}`) && (
                       <div className="absolute inset-0 top-6 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
                         <LoaderIcon className="animate-spin w-6 h-6 text-indigo-600" />
                       </div>
@@ -428,14 +438,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                           onUpdate: (val) => updateExperience(exp.id, 'description', val),
                         })
                       }
-                      disabled={loadingField === `exp-${exp.id}` || !exp.description}
+                      disabled={isLoadingField(`exp-${exp.id}`) || !exp.description}
                       className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                       variant="ghost"
                       size="sm"
                       title="Polish with AI"
                       aria-label="Polish description with AI"
                     >
-                      {loadingField === `exp-${exp.id}` ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
+                      {isLoadingField(`exp-${exp.id}`) ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
                     </Button>
                   </div>
                 </div>
@@ -502,9 +512,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                         rows={2}
                         value={proj.description}
                         onChange={(e) => updateProject(proj.id, 'description', e.target.value)}
-                        disabled={loadingField === `proj-${proj.id}`}
+                        disabled={isLoadingField(`proj-${proj.id}`)}
                       />
-                      {loadingField === `proj-${proj.id}` && (
+                      {isLoadingField(`proj-${proj.id}`) && (
                         <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
                           <LoaderIcon className="animate-spin w-5 h-5 text-indigo-600" />
                         </div>
@@ -518,13 +528,13 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
                             onUpdate: (val) => updateProject(proj.id, 'description', val),
                           })
                         }
-                        disabled={loadingField === `proj-${proj.id}` || !proj.description}
+                        disabled={isLoadingField(`proj-${proj.id}`) || !proj.description}
                         className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
                         variant="ghost"
                         size="sm"
                         aria-label="Polish project description with AI"
                       >
-                        {loadingField === `proj-${proj.id}` ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
+                        {isLoadingField(`proj-${proj.id}`) ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
                       </Button>
                     </div>
                   </div>
@@ -534,16 +544,6 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) 
           </div>
         )}
       </div>
-
-      <ApiKeyModal
-        isOpen={isApiKeyModalOpen}
-        requireApiKey={isApiKeyRequired}
-        requireConsent={!hasAiConsent}
-        initialApiKey={storedApiKey}
-        initialRememberApiKey={rememberApiKey}
-        onClose={closeAiModal}
-        onSave={handleSaveAiSettings}
-      />
     </div>
   );
 };

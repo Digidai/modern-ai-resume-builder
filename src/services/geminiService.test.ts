@@ -18,11 +18,13 @@ describe('geminiService', () => {
   beforeEach(() => {
     __resetGeminiSessionCacheForTests();
     vi.stubGlobal('fetch', fetchMock);
+    document.head.innerHTML = '<meta name="ai-client-token" content="test-client-token" />';
   });
 
   afterEach(() => {
     vi.unstubAllGlobals();
     fetchMock.mockReset();
+    document.head.innerHTML = '';
   });
 
   it('requests a session token before calling the ai endpoint', async () => {
@@ -39,7 +41,12 @@ describe('geminiService', () => {
     expect(fetchMock).toHaveBeenNthCalledWith(
       1,
       '/api/gemini/session',
-      expect.objectContaining({ method: 'POST' })
+      expect.objectContaining({
+        method: 'POST',
+        headers: expect.objectContaining({
+          'x-ai-client-token': 'test-client-token',
+        }),
+      })
     );
     expect(fetchMock).toHaveBeenNthCalledWith(
       2,

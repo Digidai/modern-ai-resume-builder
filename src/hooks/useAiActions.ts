@@ -1,49 +1,8 @@
-import { useCallback, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { improveText, generateSummary, GeminiError } from '../services/geminiService';
-
-const GEMINI_API_KEY_STORAGE_KEY = 'gemini_api_key';
-const GEMINI_API_KEY_SESSION_STORAGE_KEY = 'gemini_api_key_session';
-const GEMINI_API_KEY_REMEMBER_KEY = 'gemini_api_key_remember';
-const AI_CONSENT_STORAGE_KEY = 'ai_data_transfer_consent_v1';
-
-const readStoredApiKey = (): string => {
-  try {
-    return (
-      sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY) ||
-      localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY) ||
-      ''
-    );
-  } catch {
-    return '';
-  }
-};
-
-const readRememberApiKey = (): boolean => {
-  try {
-    if (sessionStorage.getItem(GEMINI_API_KEY_SESSION_STORAGE_KEY)) {
-      return false;
-    }
-
-    if (localStorage.getItem(GEMINI_API_KEY_STORAGE_KEY)) {
-      return true;
-    }
-
-    return localStorage.getItem(GEMINI_API_KEY_REMEMBER_KEY) === 'true';
-  } catch {
-    return false;
-  }
-};
-
-type PendingAiAction = (key?: string) => Promise<void>;
 
 interface UseAiActionsOptions {
   onError: (message: string) => void;
-}
-
-interface SaveAiSettingsInput {
-  apiKey: string;
-  consentGranted: boolean;
-  rememberApiKey: boolean;
 }
 
 interface ImproveFieldInput {
@@ -55,177 +14,172 @@ interface ImproveFieldInput {
 
 interface GenerateFieldInput {
   fieldId: string;
-  generator: (key?: string) => Promise<string>;
+  generator: () => Promise<string>;
   onUpdate: (value: string) => void;
 }
 
-const persistAiSettings = (
-  apiKey: string,
-  consentGranted: boolean,
-  shouldRememberApiKey: boolean
-): void => {
-  if (apiKey) {
-    if (shouldRememberApiKey) {
-      localStorage.setItem(GEMINI_API_KEY_STORAGE_KEY, apiKey);
-      sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
-      localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'true');
-    } else {
-      sessionStorage.setItem(GEMINI_API_KEY_SESSION_STORAGE_KEY, apiKey);
-      localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
-      localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
-    }
-  } else {
-    localStorage.removeItem(GEMINI_API_KEY_STORAGE_KEY);
-    sessionStorage.removeItem(GEMINI_API_KEY_SESSION_STORAGE_KEY);
-    localStorage.setItem(GEMINI_API_KEY_REMEMBER_KEY, 'false');
+type AiStatusState = 'idle' | 'loading' | 'success' | 'error';
+
+export interface AiStatus {
+  state: AiStatusState;
+  message: string;
+  fieldId?: string;
+  updatedAt: number;
+}
+
+const getAiErrorMessage = (error: unknown): { message: string } => {
+  if (!(error instanceof GeminiError)) {
+    return { message: error instanceof Error ? error.message : 'Failed to process AI request.' };
   }
-  localStorage.setItem(AI_CONSENT_STORAGE_KEY, consentGranted ? 'true' : 'false');
+
+  if (error.code === 'SERVER_KEY_MISSING' || error.code === 'API_KEY_REQUIRED') {
+    return { message: 'AI service is not configured on the server. Please contact support.' };
+  }
+
+  if (
+    error.code === 'CLIENT_TOKEN_REQUIRED' ||
+    error.code === 'INVALID_CLIENT_TOKEN' ||
+    error.code === 'AUTH_REQUIRED' ||
+    error.code === 'INVALID_SESSION_TOKEN' ||
+    error.code === 'SESSION_EXPIRED'
+  ) {
+    return { message: 'AI verification expired. Refresh the page and try again.' };
+  }
+
+  return { message: error.message || 'Failed to process AI request.' };
 };
 
 export const useAiActions = ({ onError }: UseAiActionsOptions) => {
-  const [isApiKeyModalOpen, setIsApiKeyModalOpen] = useState(false);
-  const [isApiKeyRequired, setIsApiKeyRequired] = useState(false);
-  const [loadingField, setLoadingField] = useState<string | null>(null);
-  const [storedApiKey, setStoredApiKey] = useState(readStoredApiKey);
-  const [rememberApiKey, setRememberApiKey] = useState(readRememberApiKey);
-  const [hasAiConsent, setHasAiConsent] = useState(() => {
-    try {
-      return localStorage.getItem(AI_CONSENT_STORAGE_KEY) === 'true';
-    } catch {
-      return false;
-    }
+  const [loadingCounts, setLoadingCounts] = useState<Record<string, number>>({});
+  const [aiStatus, setAiStatus] = useState<AiStatus>({
+    state: 'idle',
+    message: 'AI is ready.',
+    updatedAt: Date.now(),
   });
-  const [pendingAiAction, setPendingAiAction] = useState<PendingAiAction | null>(null);
 
-  const closeAiModal = useCallback(() => {
-    setIsApiKeyModalOpen(false);
-    setIsApiKeyRequired(false);
-    setPendingAiAction(null);
+  const startLoading = useCallback((fieldId: string) => {
+    setLoadingCounts((previous) => ({
+      ...previous,
+      [fieldId]: (previous[fieldId] || 0) + 1,
+    }));
   }, []);
 
-  const handleAiAction = useCallback(
-    async (action: PendingAiAction) => {
-      if (!hasAiConsent) {
-        setIsApiKeyRequired(false);
-        setPendingAiAction(() => action);
-        setIsApiKeyModalOpen(true);
-        return;
+  const stopLoading = useCallback((fieldId: string) => {
+    setLoadingCounts((previous) => {
+      const current = previous[fieldId] || 0;
+      if (current <= 1) {
+        const { [fieldId]: _removed, ...rest } = previous;
+        return rest;
       }
 
-      try {
-        await action(storedApiKey || undefined);
-      } catch (error) {
-        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-          setIsApiKeyRequired(true);
-          setPendingAiAction(() => action);
-          setIsApiKeyModalOpen(true);
-          return;
-        }
-        throw error;
-      }
-    },
-    [hasAiConsent, storedApiKey]
+      return {
+        ...previous,
+        [fieldId]: current - 1,
+      };
+    });
+  }, []);
+
+  const isLoadingField = useCallback(
+    (fieldId: string): boolean => Boolean(loadingCounts[fieldId]),
+    [loadingCounts]
   );
 
-  const handleSaveAiSettings = useCallback(
-    async (settings: SaveAiSettingsInput) => {
-      try {
-        persistAiSettings(settings.apiKey, settings.consentGranted, settings.rememberApiKey);
-        setStoredApiKey(settings.apiKey);
-        setHasAiConsent(settings.consentGranted);
-        setRememberApiKey(settings.rememberApiKey);
-      } catch (error) {
-        const message = error instanceof Error ? error.message : 'Failed to save AI settings.';
-        onError(message);
-        throw error;
-      }
-
-      const actionToRun = pendingAiAction;
-      setPendingAiAction(null);
-      setIsApiKeyRequired(false);
-
-      if (!actionToRun) return;
-
-      try {
-        await actionToRun(settings.apiKey || undefined);
-      } catch (error) {
-        if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-          setIsApiKeyRequired(true);
-          setPendingAiAction(() => actionToRun);
-          throw error;
-        }
-        const message = error instanceof Error ? error.message : 'Failed to run AI action';
-        onError(message);
-      }
-    },
-    [onError, pendingAiAction]
-  );
+  useEffect(() => {
+    // Remove legacy client-side key persistence now that AI keys are server-managed only.
+    try {
+      localStorage.removeItem('gemini_api_key');
+      localStorage.removeItem('gemini_api_key_remember');
+      localStorage.removeItem('ai_data_transfer_consent_v1');
+      sessionStorage.removeItem('gemini_api_key_session');
+    } catch {
+      // Ignore storage access issues.
+    }
+  }, []);
 
   const improveField = useCallback(
     ({ fieldId, text, context, onUpdate }: ImproveFieldInput) => {
-      void handleAiAction(async (key) => {
-        setLoadingField(fieldId);
+      void (async () => {
+        startLoading(fieldId);
+        setAiStatus({
+          state: 'loading',
+          message: 'Polishing text with AI...',
+          fieldId,
+          updatedAt: Date.now(),
+        });
         try {
-          const improved = await improveText(text, context, key);
+          const improved = await improveText(text, context);
           onUpdate(improved);
+          setAiStatus({
+            state: 'success',
+            message: 'Text polished with AI.',
+            fieldId,
+            updatedAt: Date.now(),
+          });
         } catch (error) {
-          if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-            throw error;
-          }
-          const message = error instanceof Error ? error.message : 'Failed to improve text';
-          onError(message);
+          const details = getAiErrorMessage(error);
+          setAiStatus({
+            state: 'error',
+            message: details.message,
+            fieldId,
+            updatedAt: Date.now(),
+          });
+          onError(details.message);
         } finally {
-          setLoadingField(null);
+          stopLoading(fieldId);
         }
-      }).catch((error) => {
-        const message = error instanceof Error ? error.message : 'Failed to improve text';
-        onError(message);
-      });
+      })();
     },
-    [handleAiAction, onError]
+    [onError, startLoading, stopLoading]
   );
 
   const generateField = useCallback(
     ({ fieldId, generator, onUpdate }: GenerateFieldInput) => {
-      void handleAiAction(async (key) => {
-        setLoadingField(fieldId);
+      void (async () => {
+        startLoading(fieldId);
+        setAiStatus({
+          state: 'loading',
+          message: 'Generating with AI...',
+          fieldId,
+          updatedAt: Date.now(),
+        });
         try {
-          const result = await generator(key);
+          const result = await generator();
           onUpdate(result);
+          setAiStatus({
+            state: 'success',
+            message: 'Content generated with AI.',
+            fieldId,
+            updatedAt: Date.now(),
+          });
         } catch (error) {
-          if (error instanceof GeminiError && error.code === 'API_KEY_REQUIRED') {
-            throw error;
-          }
-          const message = error instanceof Error ? error.message : 'Failed to generate content';
-          onError(message);
+          const details = getAiErrorMessage(error);
+          setAiStatus({
+            state: 'error',
+            message: details.message,
+            fieldId,
+            updatedAt: Date.now(),
+          });
+          onError(details.message);
         } finally {
-          setLoadingField(null);
+          stopLoading(fieldId);
         }
-      }).catch((error) => {
-        const message = error instanceof Error ? error.message : 'Failed to generate content';
-        onError(message);
-      });
+      })();
     },
-    [handleAiAction, onError]
+    [onError, startLoading, stopLoading]
+  );
+
+  const generateSummaryField = useCallback(
+    async (role: string, skills: string[]) => {
+      return generateSummary(role, skills);
+    },
+    []
   );
 
   return {
-    isApiKeyModalOpen,
-    isApiKeyRequired,
-    loadingField,
-    storedApiKey,
-    rememberApiKey,
-    hasAiConsent,
-    closeAiModal,
-    handleSaveAiSettings,
+    aiStatus,
+    isLoadingField,
     improveField,
     generateField,
+    generateSummaryField,
   };
-};
-
-export const aiSettingsKeys = {
-  GEMINI_API_KEY_STORAGE_KEY,
-  GEMINI_API_KEY_SESSION_STORAGE_KEY,
-  GEMINI_API_KEY_REMEMBER_KEY,
-  AI_CONSENT_STORAGE_KEY,
 };

@@ -97,8 +97,9 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 ### AI Assistance (Gemini)
 - Generate a professional summary based on role and skills.
 - Improve experience bullets with action verbs and measurable impact.
-- Frontend requests a short-lived signed session via `/api/gemini/session`, then calls `/api/gemini`.
-- Worker applies origin checks, session+request-id verification, and cross-instance rate limiting (Durable Object) before hitting Gemini.
+- Frontend uses a Worker-injected `ai-client-token` to request a short-lived signed session via `/api/gemini/session`, then calls `/api/gemini`.
+- Worker enforces origin checks, client-token verification, session+request-id verification, and multi-dimensional rate limits (IP + session + global, backed by Durable Object) before hitting Gemini.
+- Gemini API key is managed server-side only. Users no longer need to enter personal keys in the UI.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
@@ -108,8 +109,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 ### Privacy and Data
 - Resume data is persisted in segmented browser storage (`resumeData:v2:*`) with debounced writes; sensitive fields default to session scope.
 - AI requests send selected text to Google Gemini for processing.
-- Users must explicitly consent before AI actions are sent.
-- Personal Gemini keys default to session-only storage; “remember on this device” is optional and off by default.
+- AI requests use server-side credentials only; no personal Gemini key is stored in the browser.
 
 ## SEO & Social Sharing
 
@@ -167,7 +167,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 
 - Node.js 18+ recommended
 - npm
-- Optional: Gemini API key from Google AI Studio
+- Optional for self-hosting AI features: Gemini API key (configured server-side only)
 
 ### Quick Start
 
@@ -209,6 +209,7 @@ SEO_WRITE_PUBLIC=1
 Notes:
 - `VITE_` variables are embedded into the client bundle.
 - Do not store service keys in `VITE_` variables.
+- For local Worker development, copy `.dev.vars.example` to `.dev.vars` and set secrets there.
 - For Cloudflare Worker deployments, set a server secret:
   - `wrangler secret put GEMINI_API_KEY`
   - `wrangler secret put GEMINI_SIGNING_SECRET`
@@ -218,9 +219,12 @@ Notes:
 - Optional Worker vars:
   - `ALLOWED_ORIGINS` (comma-separated origins allowed to request AI sessions)
   - `AI_RATE_LIMIT_PER_MINUTE`
+  - `AI_PER_SESSION_RATE_LIMIT_PER_MINUTE`
+  - `AI_GLOBAL_RATE_LIMIT_PER_MINUTE`
   - `AI_SESSION_RATE_LIMIT_PER_MINUTE`
   - `AI_SESSION_TTL_SECONDS`
-- You can still enter a personal Gemini API key in the UI as a fallback. By default it is scoped to the current tab session.
+  - `AI_CLIENT_TOKEN_TTL_SECONDS`
+- The app now requires `GEMINI_API_KEY` to be configured on the server (Worker secret) for AI features.
 - `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference

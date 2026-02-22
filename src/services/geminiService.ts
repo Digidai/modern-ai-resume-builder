@@ -17,6 +17,7 @@ const RETRY_DELAY_MS = 1000;
 const TIMEOUT_MS = 30000;
 const SESSION_REFRESH_BUFFER_MS = 5000;
 const FALLBACK_PROXY_PATH = '/api/gemini';
+const CLIENT_TOKEN_META_NAME = 'ai-client-token';
 
 let cachedSession: GeminiSessionCache | null = null;
 
@@ -133,10 +134,32 @@ const createRequestId = (): string => {
   return `${Date.now()}-${Math.random().toString(36).slice(2, 12)}`;
 };
 
+const getClientToken = (): string => {
+  if (typeof document === 'undefined') return '';
+  const node = document.querySelector(`meta[name="${CLIENT_TOKEN_META_NAME}"]`);
+  if (!node) return '';
+  return (node.getAttribute('content') || '').trim();
+};
+
+const isLocalDevelopment = (): boolean => {
+  if (typeof window === 'undefined') return false;
+  const host = window.location.hostname;
+  return host === 'localhost' || host === '127.0.0.1';
+};
+
 const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
   if (!forceRefresh) {
     const existing = readSessionCache();
     if (existing) return existing.token;
+  }
+
+  const clientToken = getClientToken();
+  if (!clientToken && !isLocalDevelopment()) {
+    throw new GeminiError(
+      'AI client verification is missing. Refresh the page and try again.',
+      'CLIENT_TOKEN_REQUIRED',
+      false
+    );
   }
 
   const endpoint = getSessionUrl();
@@ -147,6 +170,7 @@ const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
       method: 'POST',
       headers: {
         'content-type': 'application/json',
+        ...(clientToken ? { 'x-ai-client-token': clientToken } : {}),
       },
     });
   } catch {
@@ -238,8 +262,7 @@ const callGeminiProxy = async (payload: GeminiRequest): Promise<string> => {
 
 export const improveText = async (
   text: string,
-  context: string = 'resume',
-  apiKey?: string
+  context: string = 'resume'
 ): Promise<string> => {
   if (!text.trim()) return '';
 
@@ -248,22 +271,19 @@ export const improveText = async (
       action: 'improve',
       text,
       context,
-      apiKey: apiKey?.trim() || undefined,
     });
   });
 };
 
 export const generateSummary = async (
   role: string,
-  skills: string[],
-  apiKey?: string
+  skills: string[]
 ): Promise<string> => {
   return executeWithRetry(async () => {
     return callGeminiProxy({
       action: 'summary',
       role: role?.trim() || 'Professional',
       skills,
-      apiKey: apiKey?.trim() || undefined,
     });
   });
 };

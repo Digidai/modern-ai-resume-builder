@@ -3,7 +3,10 @@ export type GeminiAction = (typeof GEMINI_ACTIONS)[number];
 
 export const GEMINI_ERROR_CODES = [
   'API_KEY_REQUIRED',
+  'SERVER_KEY_MISSING',
   'AUTH_REQUIRED',
+  'CLIENT_TOKEN_REQUIRED',
+  'INVALID_CLIENT_TOKEN',
   'INVALID_SESSION_TOKEN',
   'SESSION_EXPIRED',
   'SIGNING_SECRET_MISSING',
@@ -30,14 +33,12 @@ export interface GeminiImproveRequest {
   action: 'improve';
   text: string;
   context?: string;
-  apiKey?: string;
 }
 
 export interface GeminiSummaryRequest {
   action: 'summary';
   role: string;
   skills: string[];
-  apiKey?: string;
 }
 
 export type GeminiRequest = GeminiImproveRequest | GeminiSummaryRequest;
