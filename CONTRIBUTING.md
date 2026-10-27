@@ -16,12 +16,10 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 ## Adding or Editing Templates
 
-1. Create or edit a template component in `src/components/templates/` or `src/components/ResumeTemplates.tsx`.
-2. Export the new template in `src/components/ResumeTemplates.tsx`.
-3. Add the template ID to the lists in:
-   - `src/components/ResumeEditor.tsx`
-   - `src/components/TemplateSelector.tsx`
-4. Verify the template renders correctly in preview and print mode.
+1. Create or edit a template component in `src/components/templates/`. Its root must be `flex-1` and read the accent from `var(--rs-accent, <default>)`.
+2. Export it in `src/components/ResumeTemplates.tsx` and register it in `ResumeTemplateRenderer.tsx`.
+3. Add it to `TEMPLATE_CATALOG` in `src/constants/templates.ts` (name, description, `bestFor`, ATS flag). The picker, `/templates` pages, sitemap and `templates.json` all read this list.
+4. Check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures, then verify print preview and the PDF export.
 
 ## Updating Job Titles
 
@@ -31,7 +29,8 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 ## SEO + Social Sharing
 
-- `scripts/seo-postbuild.mjs` generates static HTML, sitemap, and share images.
+- `scripts/seo-postbuild.mjs` generates static HTML, sitemap, share images and the agent files (`llms.txt`, `llms-full.txt`, `templates.json`, `resume.schema.json`).
+- Role writing guides live in `src/data/roleGuides.json`; the home FAQ in `src/data/homeFaq.json`.
 - Set `SITE_URL` to ensure canonical URLs and OG tags are correct.
 - Optional: set `SEO_WRITE_PUBLIC=1` to write generated assets into `public/` for local testing.
 

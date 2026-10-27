@@ -174,12 +174,19 @@ const AiButton = ({
   </button>
 );
 
-/** Tag input: Enter or comma adds a skill, Backspace on an empty field removes the last one. */
+/**
+ * Tag input: Enter or comma adds a skill, Backspace on an empty field removes the last one.
+ * A "Category: a, b" entry stays one grouped skill (templates render it as a group).
+ */
 const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills: string[]) => void }) => {
   const [draft, setDraft] = useState('');
 
   const add = (raw: string) => {
-    const incoming = raw.split(/[,\n]/).map((s) => s.trim()).filter(Boolean);
+    const incoming = raw
+      .split('\n')
+      .flatMap((line) => (line.includes(':') ? [line] : line.split(',')))
+      .map((s) => s.trim())
+      .filter(Boolean);
     if (!incoming.length) return;
     const seen = new Set(skills.map((s) => s.toLowerCase()));
     const next = [...skills];
@@ -194,7 +201,7 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' || event.key === ',') {
+    if (event.key === 'Enter' || (event.key === ',' && !draft.includes(':'))) {
       event.preventDefault();
       add(draft);
     } else if (event.key === 'Backspace' && !draft && skills.length) {
@@ -226,9 +233,17 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
           value={draft}
           onChange={(e) => {
             const value = e.target.value;
-            // Pasting "a, b, c" adds all three at once.
-            if (value.includes(',')) add(value);
+            // Pasting "a, b, c" adds all three at once (unless it is a "Category: a, b" group).
+            if (value.includes(',') && !value.includes(':')) add(value);
             else setDraft(value);
+          }}
+          onPaste={(e) => {
+            // Single-line inputs drop newlines, so split pasted multi-line lists ourselves.
+            const text = e.clipboardData.getData('text');
+            if (text.includes('\n')) {
+              e.preventDefault();
+              add(`${draft}${text}`);
+            }
           }}
           onKeyDown={handleKeyDown}
           onBlur={() => add(draft)}
@@ -239,7 +254,7 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
         />
       </div>
       <p id="skills-hint" className="text-xs text-slate-500 dark:text-slate-400">
-        Press Enter or comma to add. Put your strongest skills first.
+        Press Enter or comma to add. Group related skills as “Languages: Go, Python”. Put your strongest first.
       </p>
     </div>
   );
@@ -706,16 +721,9 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
               {TEMPLATES.map((t) => {
                 const selected = data.templateId === t.id;
                 return (
-                  <button
-                    key={t.id}
-                    type="button"
-                    role="radio"
-                    aria-checked={selected}
-                    onClick={() => setField('templateId', t.id)}
-                    className="group text-left focus-visible:outline-none"
-                  >
+                  <div key={t.id} className="group relative text-left">
                     <div
-                      className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 transition group-hover:-translate-y-0.5 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-indigo-500 ${
+                      className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 transition group-hover:-translate-y-0.5 group-hover:shadow-md group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 ${
                         selected ? 'ring-2 ring-indigo-600 dark:ring-indigo-400' : 'ring-slate-200 dark:ring-slate-700'
                       }`}
                     >
@@ -741,7 +749,16 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                       )}
                     </span>
                     <span className="mt-0.5 block text-center text-xs leading-snug text-slate-500 dark:text-slate-400">{t.description}</span>
-                  </button>
+                    {/* Overlay control: previews contain links, which must not nest inside a button. */}
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={selected}
+                      onClick={() => setField('templateId', t.id)}
+                      aria-label={`${t.name}: ${t.description}`}
+                      className="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-none"
+                    />
+                  </div>
                 );
               })}
             </div>
@@ -750,7 +767,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         )}
 
         {activeTab !== 'design' && (
-          <p className="flex items-start gap-2 text-xs leading-relaxed text-slate-400 dark:text-slate-500">
+          <p className="flex items-start gap-2 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
             <SparklesIcon className="mt-0.5 h-3.5 w-3.5 shrink-0" />
             AI suggestions run on Cloudflare Workers AI and only see the text you choose to improve. Always review them — AI never knows your real numbers.
           </p>

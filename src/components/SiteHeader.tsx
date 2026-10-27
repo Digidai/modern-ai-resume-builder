@@ -30,12 +30,12 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
         <NavLink to="/directory" className={navLinkClass}>
           Resume examples
         </NavLink>
-        <a href="/#templates" className={navLinkClass({ isActive: false })}>
+        <NavLink to="/templates/" className={navLinkClass}>
           Templates
-        </a>
-        <a href="/#faq" className={navLinkClass({ isActive: false })}>
+        </NavLink>
+        <Link to="/#faq" className={navLinkClass({ isActive: false })}>
           FAQ
-        </a>
+        </Link>
       </nav>
       <div className="ml-auto flex items-center gap-1 sm:gap-2">
         <ThemeToggle />
@@ -47,6 +47,17 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
         </Link>
       </div>
     </div>
+    <nav className="flex gap-1 overflow-x-auto px-2 pb-1.5 md:hidden" aria-label="Main mobile">
+      <NavLink to="/directory" className={navLinkClass}>
+        Resume examples
+      </NavLink>
+      <NavLink to="/templates/" className={navLinkClass}>
+        Templates
+      </NavLink>
+      <Link to="/#faq" className={navLinkClass({ isActive: false })}>
+        FAQ
+      </Link>
+    </nav>
   </header>
 );
 
@@ -54,14 +65,17 @@ export const SiteFooter: React.FC = () => (
   <footer className="border-t border-slate-200 dark:border-slate-800 print:hidden">
     <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 dark:text-slate-400">
       <p>© {new Date().getFullYear()} ModernCV · Free resume builder. Your data stays in your browser.</p>
-      <nav className="flex gap-4" aria-label="Footer">
-        <Link to="/directory" className="hover:text-slate-900 dark:hover:text-white">
+      <nav className="-mx-2 flex flex-wrap" aria-label="Footer">
+        <Link to="/directory" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
           Resume examples
         </Link>
-        <Link to="/editor" className="hover:text-slate-900 dark:hover:text-white">
+        <Link to="/templates/" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+          Templates
+        </Link>
+        <Link to="/editor" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
           Editor
         </Link>
-        <a href="https://github.com/Digidai/modern-ai-resume-builder" className="hover:text-slate-900 dark:hover:text-white" rel="noopener noreferrer" target="_blank">
+        <a href="https://github.com/Digidai/modern-ai-resume-builder" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white" rel="noopener noreferrer" target="_blank">
           GitHub
         </a>
       </nav>

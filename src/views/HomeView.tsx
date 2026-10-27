@@ -100,7 +100,7 @@ const HomeView: React.FC = () => {
           applicationCategory: 'BusinessApplication',
           operatingSystem: 'Any',
           offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
-          featureList: ['AI-powered resume suggestions', 'Multiple professional templates', 'PDF export', 'Real-time preview', 'Dark mode support'],
+          featureList: [`${TEMPLATES.length} resume templates, ${TEMPLATES.filter((t) => t.atsFriendly).length} ATS-friendly`, 'AI summary and bullet point writing', 'Vector PDF export', 'Custom accent colour, font and text size', 'JSON Resume import', 'No sign-up; data stays in the browser'],
           screenshot: homeOgImageUrl,
           publisher: { '@id': orgId },
           isPartOf: { '@id': websiteId },
@@ -209,7 +209,7 @@ const HomeView: React.FC = () => {
         </section>
 
         {/* Templates */}
-        <section id="templates" className="mx-auto max-w-6xl scroll-mt-20 px-4 py-16 sm:px-6 lg:py-24">
+        <section id="templates" className="mx-auto max-w-6xl scroll-mt-32 px-4 md:scroll-mt-20 py-16 sm:px-6 lg:py-24">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
               <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Pick a look. Keep your words.</h2>
@@ -217,7 +217,7 @@ const HomeView: React.FC = () => {
                 {hasOwnResume ? 'Previews use your own resume.' : 'Every template is shown with the same sample content.'} Click one to start editing.
               </p>
             </div>
-            <Link to="/editor" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
+            <Link to="/templates/" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
               See all {TEMPLATES.length} templates →
             </Link>
           </div>
@@ -226,15 +226,22 @@ const HomeView: React.FC = () => {
               const template = TEMPLATES.find((t) => t.id === id);
               if (!template) return null;
               return (
-                <button key={id} type="button" onClick={() => useTemplate(id)} className="group text-left focus-visible:outline-none">
-                  <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-slate-900/5 transition group-hover:-translate-y-1 group-hover:shadow-xl group-focus-visible:ring-2 group-focus-visible:ring-indigo-500 dark:ring-white/10">
+                // The button overlays the card instead of wrapping it: previews contain their own links.
+                <div key={id} className="group relative">
+                  <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-slate-900/5 transition group-hover:-translate-y-1 group-hover:shadow-xl group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 dark:ring-white/10">
                     <LazyResumePreview data={resumeData} templateId={id} />
                   </div>
                   <span className="mt-3 flex items-center justify-between text-sm font-medium text-slate-800 dark:text-slate-200">
                     {template.name}
-                    <span className="text-indigo-600 opacity-0 transition group-hover:opacity-100 group-focus-visible:opacity-100 dark:text-indigo-400">Use →</span>
+                    <span className="text-indigo-600 opacity-0 transition group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 dark:text-indigo-400">Use →</span>
                   </span>
-                </button>
+                  <button
+                    type="button"
+                    onClick={() => useTemplate(id)}
+                    aria-label={`Use the ${template.name} template`}
+                    className="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-none"
+                  />
+                </div>
               );
             })}
           </div>
@@ -259,7 +266,7 @@ const HomeView: React.FC = () => {
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="mx-auto max-w-3xl scroll-mt-20 px-4 py-16 sm:px-6 lg:py-24">
+        <section id="faq" className="mx-auto max-w-3xl scroll-mt-32 px-4 md:scroll-mt-20 py-16 sm:px-6 lg:py-24">
           <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Questions</h2>
           <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
             {HOME_FAQ_ITEMS.map((item) => (

@@ -677,6 +677,13 @@ const verifySessionToken = async (
   return { valid: true, sidHash };
 };
 
+const withoutConditionalHeaders = (request: Request): Request => {
+  const headers = new Headers(request.headers);
+  headers.delete('if-none-match');
+  headers.delete('if-modified-since');
+  return new Request(request, { headers });
+};
+
 const isHtmlNavigationRequest = (request: Request): boolean => {
   if (request.method !== 'GET') return false;
   const accept = request.headers.get('accept') || '';
@@ -1165,7 +1172,12 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
   headers.set('cross-origin-embedder-policy', 'credentialless');
 
   const contentType = normalizeText(headers.get('content-type')).toLowerCase();
-  if (contentType.includes('text/html')) {
+  if (contentType.includes('text/html') && response.status !== 304) {
+    // Each HTML response carries a fresh CSP nonce, client token and matching cookie, so it must
+    // never be revalidated from cache: a 304 would pair the cached page with a new cookie/nonce.
+    headers.delete('etag');
+    headers.delete('last-modified');
+    headers.set('cache-control', 'private, no-cache');
     const nonce = generateCspNonce();
     headers.set(
       'content-security-policy',
@@ -1309,14 +1321,22 @@ export default {
       return finalizeResponse(request, env, response);
     }
 
-    const assetResponse = await env.ASSETS.fetch(request);
-    if (assetResponse.status !== 404 || !isHtmlNavigationRequest(request)) {
+    // HTML is personalised per response (nonce + client token), so ask for the full page, never a 304.
+    const assetRequest = isHtmlNavigationRequest(request) ? withoutConditionalHeaders(request) : request;
+    const assetResponse = await env.ASSETS.fetch(assetRequest);
+    const isNotFoundShell = url.pathname === '/404' || url.pathname === '/404.html';
+    if (!isNotFoundShell && (assetResponse.status !== 404 || !isHtmlNavigationRequest(request))) {
       return finalizeResponse(request, env, assetResponse);
     }
 
+    // Every real page is prerendered, so anything else is a 404. Serve the SPA shell (which renders
+    // the "not found" view) with a real 404 status so search engines don't index soft 404s.
     const spaUrl = new URL(request.url);
-    spaUrl.pathname = '/index.html';
-    const fallback = await env.ASSETS.fetch(new Request(spaUrl.toString(), request));
-    return finalizeResponse(request, env, fallback);
+    spaUrl.pathname = '/404';
+    spaUrl.search = '';
+    const shell = await env.ASSETS.fetch(new Request(spaUrl.toString(), assetRequest));
+    const notFound = new Response(shell.body, { status: 404, headers: shell.headers });
+    notFound.headers.set('x-robots-tag', 'noindex');
+    return finalizeResponse(request, env, notFound);
   },
 };

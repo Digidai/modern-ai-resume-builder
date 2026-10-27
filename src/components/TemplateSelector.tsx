@@ -12,6 +12,10 @@ import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug
 import { TEMPLATES } from '../constants/templates';
 import { buildJobSeoDescription, buildJobSeoKeywords } from '../utils/seo';
 import { useResume } from '../contexts/ResumeContext';
+import roleGuideData from '../data/roleGuides.json';
+import { buildRoleGuide } from '../shared/roleGuide.mjs';
+import { RoleGuide } from './RoleGuide';
+import NotFoundView from '../views/NotFoundView';
 
 interface JobTitleCategory {
     name: string;
@@ -25,7 +29,7 @@ interface TemplateSelectorProps {
     onUseTemplate: (jobTitle: string, templateId: string) => void;
 }
 
-const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => {
+const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => {
     const { jobTitle } = useParams<{ jobTitle: string }>();
     const navigate = useNavigate();
     const { resumeData } = useResume();
@@ -54,6 +58,10 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         );
         return category?.name;
     }, [normalizedSlug]);
+    const guide = useMemo(
+        () => buildRoleGuide({ title: resolvedJobTitle, category: categoryName, data: roleGuideData, templates: TEMPLATES }),
+        [resolvedJobTitle, categoryName]
+    );
     const canonicalPath = canonicalSlug
         ? `/resume_tmpl/${canonicalSlug}/`
         : `/resume_tmpl/${slugifyJobTitle(resolvedJobTitle)}/`;
@@ -131,6 +139,15 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     },
                 },
                 {
+                    '@type': 'FAQPage',
+                    '@id': `${pageUrl}#faq`,
+                    mainEntity: guide.faqs.map((faq) => ({
+                        '@type': 'Question',
+                        name: faq.question,
+                        acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+                    })),
+                },
+                {
                     '@type': 'BreadcrumbList',
                     '@id': `${pageUrl}#breadcrumb`,
                     itemListElement: [
@@ -178,7 +195,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
         <div className="flex min-h-screen flex-col bg-slate-50 font-sans dark:bg-slate-950">
             <SiteHeader />
 
-            <main className="mx-auto grid w-full max-w-7xl flex-1 gap-8 px-4 pb-28 pt-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_400px] lg:pb-12 xl:grid-cols-[minmax(0,1fr)_460px]">
+            <main className="mx-auto grid w-full max-w-7xl flex-1 gap-8 px-4 pb-12 pt-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_460px]">
                 <div className="lg:col-start-2 lg:row-start-1">
                     <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
                         <Link className="hover:text-slate-900 dark:hover:text-white" to="/">Home</Link>
@@ -191,7 +208,7 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         {resolvedJobTitle} resume templates
                     </h1>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                        See your resume as a {resolvedJobTitle} in every design. Pick one, then edit the content and download a PDF.
+                        See your resume as a {resolvedJobTitle} in every design. Pick one, edit the content, and download a PDF. <a href="#guide" className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">Writing guide ↓</a>
                     </p>
 
                     <div className="mx-auto mt-6 w-full max-w-sm overflow-hidden rounded-md shadow-lg ring-1 ring-slate-900/5 lg:hidden">
@@ -209,19 +226,9 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         {TEMPLATES.map((t, index) => {
                             const selected = selectedTemplateId === t.id;
                             return (
-                                <button
-                                    key={t.id}
-                                    id={`template-${t.id}`}
-                                    type="button"
-                                    role="radio"
-                                    aria-checked={selected}
-                                    tabIndex={selected ? 0 : -1}
-                                    onClick={() => setSelectedTemplateId(t.id)}
-                                    onKeyDown={(event) => handleTemplateKeyDown(event, index)}
-                                    className="group text-left focus-visible:outline-none"
-                                >
+                                <div key={t.id} className="group relative text-left">
                                     <div
-                                        className={`relative overflow-hidden rounded-md bg-white shadow-sm ring-1 transition group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-indigo-500 ${
+                                        className={`relative overflow-hidden rounded-md bg-white shadow-sm ring-1 transition group-hover:shadow-md group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 ${
                                             selected ? 'ring-2 ring-indigo-600 dark:ring-indigo-400' : 'ring-slate-200 dark:ring-slate-700'
                                         }`}
                                     >
@@ -236,7 +243,19 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                                         {t.name}
                                         {t.atsFriendly && <span className="ml-1 font-semibold text-emerald-700 dark:text-emerald-400">· ATS</span>}
                                     </span>
-                                </button>
+                                  {/* Overlay control: previews contain links, which must not nest inside a button. */}
+                                  <button
+                                    type="button"
+                                    id={`template-${t.id}`}
+                                    role="radio"
+                                    aria-checked={selected}
+                                    tabIndex={selected ? 0 : -1}
+                                    onClick={() => setSelectedTemplateId(t.id)}
+                                    onKeyDown={(event) => handleTemplateKeyDown(event, index)}
+                                    aria-label={`${t.name}: ${t.description}`}
+                                    className="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-none"
+                                  />
+                                </div>
                             );
                         })}
                     </div>
@@ -266,6 +285,15 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                 </div>
             </main>
 
+            <RoleGuide
+                title={resolvedJobTitle}
+                guide={guide}
+                onPickTemplate={(id) => {
+                    setSelectedTemplateId(id);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                }}
+            />
+
             <div className="fixed inset-x-0 bottom-0 z-20 border-t border-slate-200 bg-white/95 p-3 backdrop-blur lg:hidden dark:border-slate-800 dark:bg-slate-950/95">
                 <div className="mx-auto flex max-w-xl items-center gap-3">
                     <p className="min-w-0 flex-1 truncate text-sm text-slate-600 dark:text-slate-400">
@@ -274,9 +302,19 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                     <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use template</Button>
                 </div>
             </div>
-            <SiteFooter />
+            {/* Room for the fixed mobile "Use template" bar so it never covers the footer. */}
+            <div className="pb-20 lg:pb-0">
+                <SiteFooter />
+            </div>
         </div>
     );
+};
+
+/** Unknown job slugs get the not-found view (the Worker also answers them with a 404 status). */
+const TemplateSelector: React.FC<TemplateSelectorProps> = (props) => {
+    const { jobTitle = '' } = useParams<{ jobTitle: string }>();
+    if (!findJobTitleBySlug(jobTitle, ALL_JOB_TITLES)) return <NotFoundView />;
+    return <JobTemplatePage key={jobTitle} {...props} />;
 };
 
 export default TemplateSelector;

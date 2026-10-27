@@ -1,0 +1,30 @@
+[
+  {
+    "question": "Is ModernCV free to use?",
+    "answer": "Yes. ModernCV is completely free: no sign-up, no watermark and no paid tier. You can edit your resume, switch between all templates and download PDFs without limits."
+  },
+  {
+    "question": "Are the resume templates ATS friendly?",
+    "answer": "Templates marked ATS are single-column, use standard section headings and keep text in reading order, so applicant tracking systems parse them reliably. Classic, Modern, Ivy, Ledger and Timeline are good defaults. Two-column and creative templates are best for email, portfolios and networking."
+  },
+  {
+    "question": "Where is my resume data stored?",
+    "answer": "In your own browser (localStorage). Nothing is stored on ModernCV servers. Only the text you choose to improve with AI, and the page you export as PDF, are sent for processing and are not kept."
+  },
+  {
+    "question": "How does the AI writing help work?",
+    "answer": "One click drafts a professional summary from your title and skills, or rewrites a bullet point with a strong verb and a measurable result. It runs on Cloudflare Workers AI, works in the language you write in, and can always be undone."
+  },
+  {
+    "question": "Can I download my resume as a PDF?",
+    "answer": "Yes. Download PDF creates an A4 vector PDF with selectable text and embedded fonts that matches the preview exactly. You can also print from the browser or export a JSON backup to edit later."
+  },
+  {
+    "question": "Can I import an existing resume?",
+    "answer": "Yes. Import a ModernCV JSON backup or a JSON Resume (jsonresume.org) file from the editor menu. AI assistants can produce either format for you."
+  },
+  {
+    "question": "Can I tailor my resume to a specific job title?",
+    "answer": "Yes. The job directory has guides for 640 job titles with the sections, skills, example bullet points and templates that work for each role."
+  }
+]

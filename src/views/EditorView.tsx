@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-router';
+import { Link, useSearchParams } from 'react-router';
 import { useSeo, SEO_ROBOTS_NOINDEX, getSiteUrl } from '../hooks/useSeo';
 import ResumeEditor from '../components/ResumeEditor';
 import { ScaledResumePreview } from '../components/ScaledResumePreview';
@@ -20,6 +20,7 @@ import ThemeToggle from '../components/ThemeToggle';
 import { useResume } from '../contexts/ResumeContext';
 import { SectionErrorBoundary } from '../components/ErrorBoundary';
 import { buildEditorSeoKeywords } from '../utils/seo';
+import { getTemplateById } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
 
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
@@ -116,6 +117,17 @@ const EditorView: React.FC = () => {
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [searchParams, setSearchParams] = useSearchParams();
+
+  // Deep link: /editor/?template=<id> (used by the template pages, llms.txt and agents).
+  useEffect(() => {
+    const requested = searchParams.get('template');
+    if (!requested) return;
+    if (getTemplateById(requested)) setResumeData((prev) => ({ ...prev, templateId: requested }));
+    const next = new URLSearchParams(searchParams);
+    next.delete('template');
+    setSearchParams(next, { replace: true });
+  }, [searchParams, setSearchParams, setResumeData]);
 
   const siteUrl = getSiteUrl();
   const websiteId = `${siteUrl}/#website`;

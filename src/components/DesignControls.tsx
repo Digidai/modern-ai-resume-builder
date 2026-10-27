@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useEffect, useState, type KeyboardEvent } from 'react';
 import type { ResumeDesign } from '../types';
 import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
@@ -44,19 +44,55 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
   const pages = usePreviewPages();
   const pageCount = pages === null ? null : Math.max(1, Math.ceil(pages - 0.01));
   const [fitting, setFitting] = useState(false);
+  const [fitNote, setFitNote] = useState('');
   const [hexDraft, setHexDraft] = useState(design.accent);
 
   useEffect(() => setHexDraft(design.accent), [design.accent]);
 
-  // Fit to one page: step the scale down one notch per layout until the preview fits or hits the minimum.
-  useEffect(() => {
-    if (!fitting || pages === null) return;
-    if (pages <= 1.005 || design.scale <= SCALE_MIN + 1e-6) {
-      setFitting(false);
-      return;
+  // Fit to one page: step the scale down, letting each step lay out before measuring again. If it still
+  // doesn't fit at the minimum, restore the original size rather than leave the text shrunk for nothing.
+  const startFit = async () => {
+    const paper = document.getElementById('resume-preview-container');
+    if (!paper) return;
+    const measure = () => paper.offsetHeight / PAGE_HEIGHT_PX;
+    const nextLayout = () => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
+    const startScale = design.scale;
+    let scale = startScale;
+    setFitNote('');
+    setFitting(true);
+    while (measure() > 1.005 && scale > SCALE_MIN + 1e-6) {
+      scale = round(Math.max(SCALE_MIN, scale - SCALE_STEP));
+      onChange({ scale });
+      await nextLayout();
     }
-    onChange({ scale: round(Math.max(SCALE_MIN, design.scale - SCALE_STEP)) });
-  }, [fitting, pages, design.scale, onChange]);
+    const finalPages = measure();
+    if (finalPages > 1.005) {
+      onChange({ scale: startScale });
+      setFitNote(
+        `Still ${Math.ceil(finalPages - 0.01)} pages at the smallest size, so the size was left unchanged. Shorten a few bullets or try the Compact template.`
+      );
+    }
+    setFitting(false);
+  };
+
+  useEffect(() => {
+    if (pageCount === 1) setFitNote('');
+  }, [pageCount]);
+
+  // Roving focus for the accent radiogroup: one tab stop, arrow keys move and select.
+  const accentValues = ['', ...ACCENT_PRESETS.map((p) => p.value)];
+  const selectedAccentIndex = Math.max(0, accentValues.findIndex((v) => v.toLowerCase() === design.accent.toLowerCase()));
+  const hasPresetAccent = accentValues.some((v) => v.toLowerCase() === design.accent.toLowerCase());
+  const onAccentKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const delta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+    if (!delta) return;
+    event.preventDefault();
+    const next = (index + delta + accentValues.length) % accentValues.length;
+    onChange({ accent: accentValues[next] });
+    document.getElementById(`accent-${next}`)?.focus();
+  };
+  const accentTabIndex = (index: number) => (index === (hasPresetAccent ? selectedAccentIndex : 0) ? 0 : -1);
+  const hexInvalid = hexDraft !== '' && !HEX.test(hexDraft);
 
   const contrast = HEX.test(hexDraft) ? contrastOnWhite(hexDraft) : null;
   const isCustom = design.accent !== '' && !ACCENT_PRESETS.some((p) => p.value.toLowerCase() === design.accent.toLowerCase());
@@ -70,9 +106,12 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
         <legend className="text-sm font-medium text-slate-800 dark:text-slate-200">Accent colour</legend>
         <div className="mt-3 flex flex-wrap items-center gap-2.5" role="radiogroup" aria-label="Accent colour">
           <button
+            id="accent-0"
             type="button"
             role="radio"
             aria-checked={design.accent === ''}
+            tabIndex={accentTabIndex(0)}
+            onKeyDown={(e) => onAccentKeyDown(e, 0)}
             onClick={() => onChange({ accent: '' })}
             title="Template default"
             className={`${swatch} flex items-center justify-center border border-dashed border-slate-300 bg-white text-[10px] font-semibold text-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300 ${
@@ -81,14 +120,17 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
           >
             Auto
           </button>
-          {ACCENT_PRESETS.map((p) => {
+          {ACCENT_PRESETS.map((p, i) => {
             const selected = design.accent.toLowerCase() === p.value.toLowerCase();
             return (
               <button
                 key={p.value}
+                id={`accent-${i + 1}`}
                 type="button"
                 role="radio"
                 aria-checked={selected}
+                tabIndex={accentTabIndex(i + 1)}
+                onKeyDown={(e) => onAccentKeyDown(e, i + 1)}
                 aria-label={p.name}
                 title={p.name}
                 onClick={() => onChange({ accent: p.value })}
@@ -117,16 +159,25 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             aria-label="Accent hex value"
             value={hexDraft}
             placeholder="#RRGGBB"
+            aria-invalid={hexInvalid || undefined}
+            aria-describedby="accent-hex-status"
             onChange={(e) => {
-              const v = e.target.value.trim();
+              let v = e.target.value.trim();
+              if (/^[0-9a-f]{6}$/i.test(v)) v = `#${v}`; // accept "2F5A8A" without the hash
               setHexDraft(v);
               if (HEX.test(v)) onChange({ accent: v.toUpperCase() });
               else if (v === '') onChange({ accent: '' });
             }}
-            className="w-32 rounded-md border border-slate-300 bg-white px-2.5 py-1.5 font-mono text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+            className="w-32 rounded-md border border-slate-300 aria-invalid:border-amber-500 bg-white px-2.5 py-1.5 font-mono text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
           />
+          {hexInvalid && (
+            <span id="accent-hex-status" className="text-xs text-amber-700 dark:text-amber-400">
+              Use 6 hex digits, like #2F5A8A
+            </span>
+          )}
           {contrast !== null && (
             <span
+              id="accent-hex-status"
               className={`text-xs ${contrast >= 4.5 ? 'text-emerald-700 dark:text-emerald-400' : 'text-amber-700 dark:text-amber-400'}`}
             >
               {contrast >= 4.5 ? `Readable · ${contrast.toFixed(1)}:1` : `Low contrast · ${contrast.toFixed(1)}:1 — pick a darker shade`}
@@ -179,7 +230,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
               <button
                 type="button"
                 disabled={fitting || design.scale <= SCALE_MIN}
-                onClick={() => setFitting(true)}
+                onClick={startFit}
                 className="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:opacity-50"
               >
                 {fitting ? 'Fitting…' : design.scale <= SCALE_MIN ? 'At minimum size' : 'Fit to one page'}
@@ -196,6 +247,11 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             )}
           </div>
         </div>
+        {fitNote && (
+          <p className="mt-2 text-xs leading-relaxed text-amber-700 dark:text-amber-400" role="status">
+            {fitNote}
+          </p>
+        )}
       </div>
     </div>
   );

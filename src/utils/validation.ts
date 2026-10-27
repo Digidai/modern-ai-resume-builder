@@ -10,9 +10,13 @@ export const validatePhone = (phone: string): boolean => {
 
 export const validateUrl = (url: string): boolean => {
   if (!url) return true;
+  const value = url.trim();
+  // No spaces, and a real host with a dot (or localhost); scheme optional.
+  if (/\s/.test(value)) return false;
+  if (/^[a-z][a-z0-9+.-]*:/i.test(value) && !/^https?:\/\//i.test(value)) return false;
   try {
-    new URL(url.startsWith('http') ? url : `https://${url}`);
-    return true;
+    const { hostname } = new URL(/^https?:\/\//i.test(value) ? value : `https://${value}`);
+    return /^[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/i.test(hostname) || hostname === 'localhost';
   } catch {
     return false;
   }

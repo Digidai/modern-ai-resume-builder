@@ -2,6 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import sharp from 'sharp';
 import { slugifyJobTitle } from './slugify.mjs';
+import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
 const SITE_NAME = 'ModernCV';
@@ -117,28 +118,7 @@ const ROLE_KEYWORD_RULES = [
   { pattern: /\b(manager|director|head|chief|vp|lead)\b/i, keywords: ['leadership resume'] },
 ];
 
-const HOME_FAQ_ITEMS = [
-  {
-    question: 'Is ModernCV free to use?',
-    answer:
-      'Yes. ModernCV is free to use and lets you edit resumes, switch templates, and export to PDF without paid tiers.',
-  },
-  {
-    question: 'Can I tailor my resume to a specific job title?',
-    answer:
-      'Yes. You can browse role-based pages, pick a matching template, and customize resume content for each target position.',
-  },
-  {
-    question: 'Are the resume templates ATS friendly?',
-    answer:
-      'The templates are designed with clear hierarchy and readable structure so your content remains easy for ATS parsers and recruiters.',
-  },
-  {
-    question: 'Do I need to install anything to build my resume?',
-    answer:
-      'No installation is required. ModernCV runs in the browser and your resume can be exported directly as a PDF.',
-  },
-];
+const HOME_FAQ_ITEMS = JSON.parse(await fs.readFile(path.join(process.cwd(), 'src', 'data', 'homeFaq.json'), 'utf8'));
 
 const dedupeKeywords = (keywords) => {
   const seen = new Set();
@@ -314,7 +294,31 @@ const writeFileEnsuringDir = async (filePath, content) => {
   await fs.writeFile(filePath, content);
 };
 
+const lowerFirst = (text) => text.charAt(0).toLowerCase() + text.slice(1);
+
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
+
+/** Reads the template catalog from src/constants/templates.ts (single source of truth). */
+const loadTemplates = async () => {
+  const source = await fs.readFile(path.join(projectRoot, 'src', 'constants', 'templates.ts'), 'utf8');
+  const field = (row, key) => {
+    const m = row.match(new RegExp(`${key}: (?:'((?:[^'\\\\]|\\\\.)*)'|"((?:[^"\\\\]|\\\\.)*)"|(true|false))`));
+    if (!m) return undefined;
+    return m[3] ? m[3] === 'true' : (m[1] ?? m[2]).replace(/\\(.)/g, '$1');
+  };
+  const rows = source.match(/^\s*\{ id: '[a-z]+'.*\},$/gm) ?? [];
+  const templates = rows.map((row) => ({
+    id: field(row, 'id'),
+    name: field(row, 'name'),
+    description: field(row, 'description'),
+    bestFor: field(row, 'bestFor'),
+    atsFriendly: field(row, 'atsFriendly') === true,
+  }));
+  if (templates.length < 10 || templates.some((t) => !t.id || !t.name || !t.description || !t.bestFor)) {
+    throw new Error('Could not parse TEMPLATE_CATALOG in src/constants/templates.ts');
+  }
+  return templates;
+};
 
 const renderSvgToPng = async (svg) => {
   const svgBuffer = Buffer.from(svg, 'utf8');
@@ -387,11 +391,12 @@ const buildHomeSchema = (siteUrl, imageUrl, lastmodIso) => {
         dateModified: lastmodIso,
         offers: { '@type': 'Offer', price: '0', priceCurrency: 'USD' },
         featureList: [
-          'AI-powered resume suggestions',
-          'Multiple professional templates',
-          'PDF export',
-          'Real-time preview',
-          'Dark mode support',
+          'ATS-friendly resume templates',
+          'AI summary and bullet point writing',
+          'Vector PDF export',
+          'Custom accent colour, font and text size',
+          'JSON Resume import',
+          'No sign-up; data stays in the browser',
         ],
         screenshot: resolvedImageUrl,
         publisher: { '@id': organization['@id'] },
@@ -475,7 +480,7 @@ const buildDirectorySchema = (siteUrl, items, imageUrl, lastmodIso) => {
   };
 };
 
-const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmodIso) => {
+const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmodIso, faqs = []) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
@@ -488,8 +493,8 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmo
       {
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
-        name: `Resume Templates for ${title}`,
-        description: `Browse ModernCV resume templates for ${title}.`,
+        name: `${title} resume templates and writing guide`,
+        description: `Resume templates, example bullet points, skills and FAQs for ${title} roles.`,
         url: pageUrl,
         inLanguage: 'en',
         dateModified: lastmodIso,
@@ -510,13 +515,26 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmo
                 itemListElement: templates.map((template, index) => ({
                   '@type': 'ListItem',
                   position: index + 1,
-                  name: template.name,
-                  url: `${pageUrl}#template-${template.id}`,
+                  name: `${template.name} resume template`,
+                  url: `${siteUrl}/templates/${template.id}/`,
                 })),
               },
             }
           : {}),
       },
+      ...(faqs.length
+        ? [
+            {
+              '@type': 'FAQPage',
+              '@id': `${pageUrl}#faq`,
+              mainEntity: faqs.map((faq) => ({
+                '@type': 'Question',
+                name: faq.question,
+                acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+              })),
+            },
+          ]
+        : []),
       {
         '@type': 'BreadcrumbList',
         '@id': `${pageUrl}#breadcrumb`,
@@ -562,10 +580,17 @@ const buildEditorSchema = (siteUrl, imageUrl, lastmodIso) => {
   };
 };
 
-const buildSitemapXml = ({ siteUrl, lastmod, jobItems, homeOgPath, directoryOgPath }) => {
+const buildSitemapXml = ({ siteUrl, lastmod, jobItems, templates, homeOgPath, directoryOgPath }) => {
   const urls = [
     { path: '/', priority: '1.0', changefreq: 'weekly', imagePath: homeOgPath },
     { path: '/directory', priority: '0.9', changefreq: 'weekly', imagePath: directoryOgPath },
+    { path: '/templates', priority: '0.9', changefreq: 'weekly', imagePath: '/og/templates/classic.jpg' },
+    ...templates.map((t) => ({
+      path: `/templates/${t.id}`,
+      priority: '0.8',
+      changefreq: 'monthly',
+      imagePath: `/og/templates/${t.id}-page.jpg`,
+    })),
     ...jobItems.map((item) => ({
       path: item.path,
       priority: '0.8',
@@ -596,10 +621,20 @@ ${imageMarkup}
   return `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">\n${body}\n</urlset>\n`;
 };
 
-const buildRobotsTxt = ({ siteUrl }) => {
-  // Prefer `noindex` on `/editor` over `Disallow`, so crawlers can see the directive.
-  return `User-agent: *\nAllow: /\n\nSitemap: ${siteUrl}/sitemap.xml\n`;
-};
+// Search and AI answer engines are welcome (GEO); the API and dev routes are not content.
+// `/editor` is not disallowed: it carries `noindex`, which crawlers can only see if they fetch it.
+const AI_CRAWLERS = ['GPTBot', 'OAI-SearchBot', 'ChatGPT-User', 'ClaudeBot', 'Claude-SearchBot', 'Claude-User', 'PerplexityBot', 'Perplexity-User', 'Google-Extended', 'Applebot-Extended', 'Bingbot', 'CCBot'];
+const buildRobotsTxt = ({ siteUrl }) =>
+  [
+    'User-agent: *',
+    'Allow: /',
+    'Disallow: /api/',
+    'Disallow: /dev/',
+    '',
+    ...AI_CRAWLERS.flatMap((bot) => [`User-agent: ${bot}`, 'Allow: /', 'Disallow: /api/', '']),
+    `Sitemap: ${siteUrl}/sitemap.xml`,
+    '',
+  ].join('\n');
 
 const buildOgSvgShell = (content) => `<?xml version="1.0" encoding="UTF-8"?>
 <svg width="${OG_IMAGE_WIDTH}" height="${OG_IMAGE_HEIGHT}" viewBox="0 0 ${OG_IMAGE_WIDTH} ${OG_IMAGE_HEIGHT}" xmlns="http://www.w3.org/2000/svg">
@@ -778,7 +813,7 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
     .join('\n');
 
   const templateLinks = templates
-    .map((template) => `<li class="text-slate-700 dark:text-slate-200">${escapeHtml(template.name)}</li>`)
+    .map((template) => `<li><a href="${escapeAttr(toPath(`/templates/${template.id}/`))}">${escapeHtml(template.name)}</a></li>`)
     .join('\n');
 
   return `
@@ -842,56 +877,65 @@ const renderDirectoryRoot = (categories, toPath) => {
   </main>`;
 };
 
-const renderJobRoot = (title, templates, relatedTitles, toPath) => {
-  const templateItems = templates
-    .map(
-      (t) =>
-        `<li id="template-${escapeAttr(t.id)}" class="px-3 py-2 rounded-lg bg-white/70 dark:bg-slate-900/70 border border-slate-200 dark:border-slate-800">${escapeHtml(t.name)}</li>`
-    )
-    .join('\n');
+const htmlList = (items, tag = 'ul') => `<${tag}>${items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</${tag}>`;
 
-  const relatedLinks = (relatedTitles ?? [])
-    .map((relatedTitle) => {
-      const href = toPath(`/resume_tmpl/${slugifyJobTitle(relatedTitle)}`);
-      return `<a class="px-3 py-1 rounded-full text-xs bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-600 transition-colors" href="${escapeAttr(
-        href
-      )}">${escapeHtml(relatedTitle)}</a>`;
-    })
-    .join('\n');
-
-  const relatedSection = relatedLinks
-    ? `
-    <h2 class="mt-8 text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Related roles</h2>
-    <div class="mt-3 flex flex-wrap gap-2">
-      ${relatedLinks}
-    </div>`
-    : '';
+const renderJobRoot = (title, guide, relatedTitles, toPath) => {
+  const recommended = guide.recommended
+    .map((t) => `<li><a href="${escapeAttr(toPath(`/templates/${t.id}/`))}">${escapeHtml(t.name)}</a>${t.atsFriendly ? ' (ATS-friendly)' : ''}: ${escapeHtml(t.description)}</li>`)
+    .join('');
+  const related = (relatedTitles ?? [])
+    .map((r) => `<li><a href="${escapeAttr(toPath(`/resume_tmpl/${slugifyJobTitle(r)}/`))}">${escapeHtml(r)}</a></li>`)
+    .join('');
+  const faqs = guide.faqs.map((f) => `<h3>${escapeHtml(f.question)}</h3><p>${escapeHtml(f.answer)}</p>`).join('');
 
   return `
-  <main class="max-w-4xl mx-auto p-6 md:p-10">
-    <nav class="text-sm text-slate-500 dark:text-slate-400 mb-6">
-      <a class="text-indigo-600 hover:underline" href="${escapeAttr(toPath('/'))}">Home</a>
-      <span class="mx-2">/</span>
-      <a class="text-indigo-600 hover:underline" href="${escapeAttr(toPath('/directory'))}">Job Directory</a>
-      <span class="mx-2">/</span>
-      <span class="text-slate-700 dark:text-slate-200">${escapeHtml(title)}</span>
-    </nav>
-    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Resume Templates for ${escapeHtml(title)}</h1>
-    <p class="mt-4 text-slate-600 dark:text-slate-400 max-w-3xl">Choose a clean, professional resume template for ${escapeHtml(title)}. Customize content with AI suggestions, then download as PDF.</p>
-    <h2 class="mt-8 text-lg font-semibold text-slate-900 dark:text-white">Popular templates</h2>
-    <ul class="mt-3 grid grid-cols-1 sm:grid-cols-2 gap-3 text-sm text-slate-800 dark:text-slate-200">
-      ${templateItems}
-    </ul>
-    ${relatedSection}
-    <div class="mt-8 flex flex-wrap gap-4">
-      <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Open resume editor</a>
-      <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse other roles</a>
-    </div>
-    <noscript>
-      <p class="mt-10 text-sm text-slate-600">JavaScript is required to preview templates and edit your resume.</p>
-    </noscript>
+  <main class="max-w-4xl mx-auto p-6">
+    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <a href="${escapeAttr(toPath('/directory/'))}">Resume examples</a> / <span aria-current="page">${escapeHtml(title)}</span></nav>
+    <h1>${escapeHtml(title)} resume templates</h1>
+    <p>See your resume as a ${escapeHtml(title)} in every design. Pick one, edit the content, and download a PDF.</p>
+    <p><a href="${escapeAttr(toPath('/editor/'))}">Open the resume editor</a></p>
+    <h2>How to write a ${escapeHtml(title)} resume</h2>
+    <p>${escapeHtml(guide.intro)} ${escapeHtml(guide.advice)}</p>
+    <h3>Sections, in order</h3>${htmlList(guide.sections, 'ol')}
+    <p><strong>Length:</strong> ${escapeHtml(guide.length)}</p>
+    <p><strong>Summary:</strong> ${escapeHtml(guide.summaryTip)}</p>
+    <h3>Skills to feature</h3>${htmlList(guide.skills)}
+    <h3>Example bullet points</h3>${htmlList(guide.bullets)}
+    <h3>Tips from recruiters</h3>${htmlList(guide.tips)}
+    <h3>Recommended templates</h3><ul>${recommended}</ul>
+    <h2>${escapeHtml(title)} resume FAQ</h2>${faqs}
+    ${related ? `<h2>Related roles</h2><ul>${related}</ul>` : ''}
   </main>`;
 };
+
+const renderTemplatesRoot = (templates, toPath) => `
+  <main class="max-w-6xl mx-auto p-6">
+    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <span aria-current="page">Templates</span></nav>
+    <h1>Resume templates</h1>
+    <p>${templates.length} free resume templates. ${templates.filter((t) => t.atsFriendly).length} are single-column with standard headings, so applicant tracking systems (ATS) read them reliably. Every template supports your own accent colour, font and text size.</p>
+    <ul>${templates
+      .map(
+        (t) =>
+          `<li><a href="${escapeAttr(toPath(`/templates/${t.id}/`))}"><img src="/og/templates/${escapeAttr(t.id)}-page.jpg" alt="${escapeAttr(`${t.name} resume template preview`)}" width="599" height="848" loading="lazy"> ${escapeHtml(t.name)}</a>${t.atsFriendly ? ' (ATS-friendly)' : ''}: ${escapeHtml(t.description)}</li>`
+      )
+      .join('')}</ul>
+  </main>`;
+
+const renderTemplateRoot = (t, roles, toPath) => `
+  <main class="max-w-6xl mx-auto p-6">
+    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <a href="${escapeAttr(toPath('/templates/'))}">Templates</a> / <span aria-current="page">${escapeHtml(t.name)}</span></nav>
+    <h1>${escapeHtml(t.name)} resume template</h1>
+    <p>${escapeHtml(t.description)}.</p>
+    <img src="/og/templates/${escapeAttr(t.id)}-page.jpg" alt="${escapeAttr(`${t.name} resume template preview`)}" width="599" height="848">
+    <p><a href="${escapeAttr(toPath(`/editor/?template=${t.id}`))}">Use this template</a></p>
+    <dl>
+      <dt>ATS</dt><dd>${t.atsFriendly ? 'Friendly: single column, standard headings and real text in reading order.' : 'Use with care: multi-column or decorative layouts can confuse some applicant tracking systems.'}</dd>
+      <dt>Best for</dt><dd>${escapeHtml(t.bestFor)}</dd>
+      <dt>Customize</dt><dd>Accent colour, font (10 options) and text size, plus fit-to-one-page.</dd>
+      <dt>Export</dt><dd>Vector PDF with selectable text, or print from the browser. A4 page size.</dd>
+    </dl>
+    ${roles.length ? `<h2>Popular with</h2><ul>${roles.map((r) => `<li><a href="${escapeAttr(toPath(`/resume_tmpl/${slugifyJobTitle(r)}/`))}">${escapeHtml(r)}</a></li>`).join('')}</ul>` : ''}
+  </main>`;
 
 const renderEditorRoot = (toPath) => `
   <main class="max-w-3xl mx-auto p-6 md:p-10">
@@ -902,6 +946,201 @@ const renderEditorRoot = (toPath) => `
       <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the editor.</p>
     </noscript>
   </main>`;
+
+/** JSON Schema for the editor's import/backup format (JSON Resume documents are accepted too). */
+const buildResumeSchema = (siteUrl, templates) => {
+  const dated = (props) => ({
+    type: 'object',
+    additionalProperties: false,
+    properties: {
+      ...props,
+      startDate: { type: 'string', description: 'YYYY-MM (or YYYY).', examples: ['2021-03'] },
+      endDate: { type: 'string', description: 'YYYY-MM, or empty when current.' },
+    },
+  });
+  return {
+    $schema: 'https://json-schema.org/draft/2020-12/schema',
+    $id: `${siteUrl}/resume.schema.json`,
+    title: 'ModernCV resume',
+    description:
+      'Import format for the ModernCV editor (Editor menu → Import backup). JSON Resume documents (https://jsonresume.org/schema) are also accepted and converted automatically.',
+    type: 'object',
+    required: ['fullName'],
+    properties: {
+      templateId: { type: 'string', enum: templates.map((t) => t.id), default: 'modern' },
+      design: {
+        type: 'object',
+        properties: {
+          accent: { type: 'string', pattern: '^(#[0-9A-Fa-f]{6})?$', description: 'Accent colour; empty for the template default.' },
+          font: { type: 'string', enum: ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif'] },
+          scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1 },
+        },
+      },
+      fullName: { type: 'string' },
+      title: { type: 'string', description: 'Target job title.' },
+      email: { type: 'string' },
+      phone: { type: 'string' },
+      location: { type: 'string' },
+      website: { type: 'string' },
+      linkedin: { type: 'string' },
+      summary: { type: 'string', description: 'Two or three sentences.' },
+      experience: {
+        type: 'array',
+        items: dated({
+          company: { type: 'string' },
+          role: { type: 'string' },
+          isCurrent: { type: 'boolean' },
+          description: { type: 'string', description: 'One bullet per line, each starting with "- ".' },
+        }),
+      },
+      education: { type: 'array', items: dated({ school: { type: 'string' }, degree: { type: 'string' } }) },
+      projects: {
+        type: 'array',
+        items: {
+          type: 'object',
+          properties: { name: { type: 'string' }, link: { type: 'string' }, description: { type: 'string' } },
+        },
+      },
+      skills: {
+        type: 'array',
+        items: { type: 'string' },
+        description: 'Plain skills, or grouped as "Category: item, item".',
+        examples: [['Languages: Go, TypeScript', 'Kubernetes']],
+      },
+    },
+  };
+};
+
+const writeAgentFiles = async ({ siteUrl, templates, categories, jobItems, lastmod }) => {
+  const ats = templates.filter((t) => t.atsFriendly);
+  const templateLine = (t) =>
+    `- [${t.name}](${siteUrl}/templates/${t.id}/): ${t.description}. ${t.atsFriendly ? 'ATS-friendly. ' : ''}Best for ${lowerFirst(t.bestFor)}.`;
+  const intro = `# ModernCV
+
+> ModernCV is a free, no-sign-up resume builder with ${templates.length} templates (${ats.length} ATS-friendly), AI writing help (Cloudflare Workers AI), and vector PDF export. Resumes are stored only in the user's browser.
+
+Key facts:
+- Free, no account, no watermark. Data stays in the browser (localStorage).
+- Templates are A4 and support a custom accent colour, 10 fonts, text size and fit-to-one-page.
+- Download PDF produces a vector PDF with selectable text and embedded fonts.
+- Import accepts a ModernCV JSON backup or a JSON Resume (jsonresume.org) document.
+- Open the editor with a template preselected: ${siteUrl}/editor/?template=<id> (ids are listed in ${siteUrl}/templates.json).
+`;
+
+  const llms = `${intro}
+## Start here
+
+- [Resume editor](${siteUrl}/editor/): Edit, switch templates, use AI, download PDF.
+- [All templates](${siteUrl}/templates/): Every design with a description and ATS status.
+- [Resume examples by job title](${siteUrl}/directory/): Writing guides for ${jobItems.length} job titles.
+
+## For agents
+
+- [Template catalog (JSON)](${siteUrl}/templates.json): ids, names, descriptions, ATS status, preview images and editor links.
+- [Resume import schema (JSON Schema)](${siteUrl}/resume.schema.json): Produce a file in this shape, then the user imports it from the editor menu.
+- [Full reference](${siteUrl}/llms-full.txt): All templates, writing guides per job family, and FAQs in one file.
+
+## Recommended ATS-friendly templates
+
+${ats.slice(0, 6).map(templateLine).join('\n')}
+
+## Optional
+
+- [Sitemap](${siteUrl}/sitemap.xml)
+- [Source code](https://github.com/Digidai/modern-ai-resume-builder)
+`;
+
+  const guides = Object.entries(JSON.parse(await fs.readFile(path.join(projectRoot, 'src', 'data', 'roleGuides.json'), 'utf8')).categories)
+    .map(([name, g]) => {
+      const titles = categories.find((c) => c.name === name)?.titles ?? [];
+      const recommended = g.templates.map((id) => templates.find((t) => t.id === id)?.name).filter(Boolean).join(', ');
+      return `### ${name}
+
+A strong resume shows ${g.focus}.
+
+- Sections: ${g.sections.join(' → ')}
+- Key skills: ${g.skills.join(', ')}
+- Quantify with: ${g.metrics.join(', ')}
+- Recommended templates: ${recommended}
+- Example bullets:
+${g.bullets.map((b) => `  - ${b}`).join('\n')}
+- Tips:
+${g.tips.map((t) => `  - ${t}`).join('\n')}
+- Job pages: ${titles.map((t) => `[${t}](${siteUrl}/resume_tmpl/${slugifyJobTitle(t)}/)`).join(', ')}
+`;
+    })
+    .join('\n');
+
+  const full = `${intro}
+Last updated: ${lastmod}
+
+## Templates
+
+${templates.map(templateLine).join('\n')}
+
+## Import format
+
+Create JSON matching ${siteUrl}/resume.schema.json (or a JSON Resume document) and import it from Editor → More actions → Import backup. Experience descriptions use one bullet per line starting with "- ". Skills may be grouped as "Category: item, item".
+
+Example:
+
+\`\`\`json
+${JSON.stringify(
+  {
+    templateId: 'classic',
+    fullName: 'Alex Sterling',
+    title: 'Senior Product Designer',
+    email: 'alex@example.com',
+    location: 'San Francisco, CA',
+    summary: 'Product designer with 6 years of experience building SaaS tools.',
+    experience: [
+      {
+        company: 'TechNova',
+        role: 'Senior Product Designer',
+        startDate: '2021-03',
+        endDate: '',
+        isCurrent: true,
+        description: '- Led the design system, cutting UI build time by 30%\n- Shipped 4 major releases',
+      },
+    ],
+    education: [{ school: 'California College of the Arts', degree: 'BFA in Interaction Design', startDate: '2014-09', endDate: '2018-05' }],
+    skills: ['Design: Figma, Prototyping', 'User Research'],
+    projects: [],
+  },
+  null,
+  2
+)}
+\`\`\`
+
+## Resume writing guides by job family
+
+${guides}
+## FAQ
+
+${HOME_FAQ_ITEMS.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')}`;
+
+  const catalog = {
+    name: 'ModernCV resume templates',
+    updated: lastmod,
+    editorUrl: `${siteUrl}/editor/`,
+    importSchema: `${siteUrl}/resume.schema.json`,
+    templates: templates.map((t) => ({
+      id: t.id,
+      name: t.name,
+      description: t.description,
+      bestFor: t.bestFor,
+      atsFriendly: t.atsFriendly,
+      url: `${siteUrl}/templates/${t.id}/`,
+      useUrl: `${siteUrl}/editor/?template=${t.id}`,
+      preview: `${siteUrl}/og/templates/${t.id}-page.jpg`,
+    })),
+  };
+
+  await writeFileEnsuringDir(path.join(distDir, 'llms.txt'), llms);
+  await writeFileEnsuringDir(path.join(distDir, 'llms-full.txt'), full);
+  await writeFileEnsuringDir(path.join(distDir, 'templates.json'), `${JSON.stringify(catalog, null, 2)}\n`);
+  await writeFileEnsuringDir(path.join(distDir, 'resume.schema.json'), `${JSON.stringify(buildResumeSchema(siteUrl, templates), null, 2)}\n`);
+};
 
 const main = async () => {
   const siteUrl = getSiteUrl();
@@ -976,36 +1215,8 @@ const main = async () => {
     throw new Error(`Job title slug collisions found in ${jobTitlesPath}: ${preview}`);
   }
 
-  const templates = [
-    { id: 'modern', name: 'Modern' },
-    { id: 'minimalist', name: 'Minimalist' },
-    { id: 'sidebar', name: 'Sidebar' },
-    { id: 'executive', name: 'Executive' },
-    { id: 'creative', name: 'Creative' },
-    { id: 'compact', name: 'Compact' },
-    { id: 'tech', name: 'Tech' },
-    { id: 'professional', name: 'Professional' },
-    { id: 'academic', name: 'Academic' },
-    { id: 'elegant', name: 'Elegant' },
-    { id: 'swiss', name: 'Swiss' },
-    { id: 'opal', name: 'Opal' },
-    { id: 'wireframe', name: 'Wireframe' },
-    { id: 'berlin', name: 'Berlin' },
-    { id: 'lateral', name: 'Lateral' },
-    { id: 'iron', name: 'Iron' },
-    { id: 'ginto', name: 'Ginto' },
-    { id: 'symmetry', name: 'Symmetry' },
-    { id: 'bronx', name: 'Bronx' },
-    { id: 'path', name: 'Path' },
-    { id: 'quartz', name: 'Quartz' },
-    { id: 'silk', name: 'Silk' },
-    { id: 'mono', name: 'Mono' },
-    { id: 'pop', name: 'Pop' },
-    { id: 'noir', name: 'Noir' },
-    { id: 'paper', name: 'Paper' },
-    { id: 'cast', name: 'Cast' },
-    { id: 'moda', name: 'Moda' },
-  ];
+  const templates = await loadTemplates();
+  const roleGuides = await readJson(path.join(projectRoot, 'src', 'data', 'roleGuides.json'));
   const featuredTitles = categories
     .flatMap((category) => category.titles.slice(0, 2))
     .slice(0, 12);
@@ -1082,6 +1293,7 @@ const main = async () => {
     ldJson,
     rootHtml,
     ogImage,
+    ogImageType = 'image/png',
     imageAlt,
   }) => {
     const pageUrl = buildUrl(siteUrl, routePath);
@@ -1117,7 +1329,7 @@ const main = async () => {
     html = setMetaByProperty(html, 'og:image:alt', resolvedImageAlt);
     html = setMetaByProperty(html, 'og:image:width', String(OG_IMAGE_WIDTH));
     html = setMetaByProperty(html, 'og:image:height', String(OG_IMAGE_HEIGHT));
-    html = setMetaByProperty(html, 'og:image:type', 'image/png');
+    html = setMetaByProperty(html, 'og:image:type', ogImageType);
     html = setMetaByProperty(html, 'og:image:secure_url', ogImageUrl);
 
     html = setMetaByName(html, 'twitter:card', DEFAULT_TWITTER_CARD);
@@ -1186,6 +1398,7 @@ const main = async () => {
     const jobOgImageUrl = resolveOgImageUrl(siteUrl, jobOgPath);
     const categoryTitles = categoryName ? categoryToTitles.get(categoryName) ?? [] : [];
     const relatedTitles = categoryTitles.filter((title) => title !== item.title).slice(0, 8);
+    const guide = buildRoleGuide({ title: item.title, category: categoryName, data: roleGuides, templates });
 
     await writePage({
       routePath: item.path,
@@ -1193,12 +1406,136 @@ const main = async () => {
       description,
       keywords,
       robots: ROBOTS_INDEX,
-      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, templates, jobOgImageUrl, lastmodIso),
-      rootHtml: renderJobRoot(item.title, templates, relatedTitles, toPath),
+      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, guide.recommended, jobOgImageUrl, lastmodIso, guide.faqs),
+      rootHtml: renderJobRoot(item.title, guide, relatedTitles, toPath),
       ogImage: jobOgPath,
       imageAlt: `Resume templates for ${item.title}`,
     });
   }
+
+  const atsCount = templates.filter((t) => t.atsFriendly).length;
+  const templatesUrl = `${siteUrl}/templates/`;
+  const templatesDescription = `${templates.length} free resume templates, ${atsCount} of them ATS-friendly. Inspired by Jake's Resume, Harvard, Awesome-CV and moderncv. Preview with your own content and download a PDF.`;
+  await writePage({
+    routePath: '/templates',
+    title: `${templates.length} Free Resume Templates (ATS-Friendly) | ModernCV`,
+    description: templatesDescription,
+    keywords: joinKeywords(['resume templates', 'ats friendly resume template', 'free resume template', 'cv template', ...BASE_KEYWORDS]),
+    robots: ROBOTS_INDEX,
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        buildOrganizationSchema(siteUrl),
+        buildWebSiteSchema(siteUrl),
+        {
+          '@type': 'CollectionPage',
+          '@id': `${templatesUrl}#webpage`,
+          name: 'Resume templates',
+          description: templatesDescription,
+          url: templatesUrl,
+          inLanguage: 'en',
+          dateModified: lastmodIso,
+          isPartOf: { '@id': `${siteUrl}/#website` },
+          breadcrumb: { '@id': `${templatesUrl}#breadcrumb` },
+          mainEntity: {
+            '@type': 'ItemList',
+            numberOfItems: templates.length,
+            itemListElement: templates.map((t, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              name: `${t.name} resume template`,
+              url: `${siteUrl}/templates/${t.id}/`,
+            })),
+          },
+        },
+        {
+          '@type': 'BreadcrumbList',
+          '@id': `${templatesUrl}#breadcrumb`,
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Templates', item: templatesUrl },
+          ],
+        },
+      ],
+    },
+    rootHtml: renderTemplatesRoot(templates, toPath),
+    ogImage: '/og/templates/classic.jpg',
+    ogImageType: 'image/jpeg',
+    imageAlt: 'ModernCV resume templates',
+  });
+
+  for (const t of templates) {
+    const pageUrl = `${siteUrl}/templates/${t.id}/`;
+    const description = `${t.name} resume template: ${t.description}. ${t.atsFriendly ? 'ATS-friendly single column. ' : ''}Best for ${lowerFirst(t.bestFor)}. Free, with PDF export.`;
+    const roles = categories
+      .filter((c) => roleGuides.categories[c.name]?.templates.includes(t.id))
+      .flatMap((c) => c.titles.slice(0, 4))
+      .slice(0, 12);
+    const pageImage = `${siteUrl}/og/templates/${t.id}-page.jpg`;
+    await writePage({
+      routePath: `/templates/${t.id}`,
+      title: `${t.name} Resume Template${t.atsFriendly ? ' (ATS-Friendly)' : ''} | ModernCV`,
+      description,
+      keywords: joinKeywords([`${t.name.toLowerCase()} resume template`, ...(t.atsFriendly ? ['ats friendly resume template'] : []), ...BASE_KEYWORDS]),
+      robots: ROBOTS_INDEX,
+      ldJson: {
+        '@context': 'https://schema.org',
+        '@graph': [
+          buildOrganizationSchema(siteUrl),
+          buildWebSiteSchema(siteUrl),
+          {
+            '@type': 'WebPage',
+            '@id': `${pageUrl}#webpage`,
+            name: `${t.name} resume template`,
+            description,
+            url: pageUrl,
+            inLanguage: 'en',
+            dateModified: lastmodIso,
+            isPartOf: { '@id': `${siteUrl}/#website` },
+            breadcrumb: { '@id': `${pageUrl}#breadcrumb` },
+            primaryImageOfPage: { '@type': 'ImageObject', url: pageImage },
+          },
+          {
+            '@type': 'CreativeWork',
+            '@id': `${pageUrl}#template`,
+            name: `${t.name} resume template`,
+            description,
+            image: pageImage,
+            isAccessibleForFree: true,
+            encodingFormat: 'application/pdf',
+            audience: { '@type': 'Audience', audienceType: t.bestFor },
+            publisher: { '@id': `${siteUrl}/#organization` },
+          },
+          {
+            '@type': 'BreadcrumbList',
+            '@id': `${pageUrl}#breadcrumb`,
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+              { '@type': 'ListItem', position: 2, name: 'Templates', item: templatesUrl },
+              { '@type': 'ListItem', position: 3, name: t.name, item: pageUrl },
+            ],
+          },
+        ],
+      },
+      rootHtml: renderTemplateRoot(t, roles, toPath),
+      ogImage: `/og/templates/${t.id}.jpg`,
+      ogImageType: 'image/jpeg',
+      imageAlt: `${t.name} resume template preview`,
+    });
+  }
+
+  await writeAgentFiles({ siteUrl, templates, categories, jobItems, lastmod });
+
+  // Shell the Worker serves (with a 404 status) for unknown URLs; the SPA renders the not-found view.
+  let notFoundHtml = templateHtml;
+  notFoundHtml = setTitleTag(notFoundHtml, 'Page not found | ModernCV');
+  notFoundHtml = setMetaByName(notFoundHtml, 'robots', ROBOTS_NOINDEX);
+  notFoundHtml = setMetaByName(notFoundHtml, 'googlebot', ROBOTS_NOINDEX);
+  notFoundHtml = setRootContent(
+    notFoundHtml,
+    `<main class="max-w-3xl mx-auto p-6"><h1>We couldn't find that page</h1><p><a href="/editor/">Open the editor</a> · <a href="/templates/">Browse templates</a> · <a href="/directory/">Resume examples by job</a></p></main>`
+  );
+  await writeFileEnsuringDir(path.join(distDir, '404.html'), notFoundHtml);
 
   // Redirect rules: only keep legacy-to-canonical redirects. Avoid `.html`/`/index` rewrite targets,
   // which can be rejected by the platform due to clean-URL normalization loop detection.
@@ -1213,6 +1550,7 @@ const main = async () => {
     siteUrl,
     lastmod,
     jobItems,
+    templates,
     homeOgPath,
     directoryOgPath,
   });

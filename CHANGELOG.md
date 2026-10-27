@@ -4,6 +4,16 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Added a template gallery at `/templates/` (ATS filter) and a page per template at `/templates/<id>/` with preview images, "best for" roles, similar templates and an editor deep link (`/editor/?template=<id>`).
+- Job pages now include a writing guide and five FAQs per role (sections, skills, example bullets, recruiter tips), pre-rendered at build time with FAQPage JSON-LD.
+- Agent and GEO support: `llms.txt`, `llms-full.txt`, `templates.json`, `resume.schema.json`; `robots.txt` allows AI crawlers; sitemap grows to 677 URLs.
+- Import accepts JSON Resume documents in addition to ModernCV backups.
+- Unknown URLs and job slugs now return a real 404 page (`noindex`) instead of a redirect or a blank page.
+- Fixed AI and server PDF failing after a page reload (HTML is no longer revalidated with ETags, so the client token, cookie and CSP nonce always match).
+- Fixed: scroll position resets on navigation and `/#faq` links scroll to the FAQ; the mobile "Use template" bar no longer covers the footer; the header gains a mobile nav row.
+- Fixed: "Fit to one page" restores the original size and explains why when the resume can't fit; the accent picker supports arrow keys; the hex field accepts values without `#` and flags invalid input.
+- Fixed: pasting a multi-line skill list adds each skill; "Category: a, b" stays one group; stricter URL validation; friendlier AI error messages; no nested links in template cards.
+
 - Fixed AI in production: HTML now runs through the Worker (`run_worker_first`) so it receives the client token and CSP; AI moved from Gemini to Cloudflare Workers AI (`env.AI`, default `@cf/zai-org/glm-5.3-flash`), endpoints renamed to `/api/ai` and `/api/ai/session`, signing secret renamed to `AI_SIGNING_SECRET`.
 - Added six templates modelled on proven designs: Classic (Jake's Resume), Ivy (Harvard), Ledger (moderncv banking), Vanguard (Awesome-CV), Duo (Deedy) and Timeline.
 - Reworked all 28 existing templates to one standard: readable sizes (body ≥ 13.5px), ≥ 12mm margins, contrast-safe accents, consistent date slots, grouped skills ("Category: items"), clean empty states, and one-page defaults.

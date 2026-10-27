@@ -5,10 +5,9 @@ expected delivery horizon and may change based on community feedback.
 
 ## Now
 
-- Expand role examples to cover more job families.
-- Add JSON import to complement JSON export.
-- Improve template previews and add print QA checklist.
-- Add basic CI for build and data validation.
+- Expand role guides with more job families and levels.
+- Add a print QA checklist for templates.
+- Keyboard navigation (arrow keys) in the editor template picker.
 
 ## Next
 

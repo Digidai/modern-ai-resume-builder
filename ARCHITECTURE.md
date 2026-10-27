@@ -26,10 +26,14 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## Routing
 
-- `/` Home preview
-- `/editor` Resume editor
+- `/` Home (product overview, template showcase, FAQ)
+- `/editor` Resume editor; `?template=<id>` preselects a template
+- `/templates` Template gallery; `/templates/:templateId` template detail
 - `/directory` Job-title directory
-- `/resume_tmpl/:jobTitle` Template preview for a specific role
+- `/resume_tmpl/:jobTitle` Template preview and writing guide for a specific role
+- `*` Not-found view. The Worker returns status 404 for any path without a prerendered page.
+
+`ScrollManager` in `App.tsx` scrolls to the top on new navigations, to `#hash` targets when present, and leaves back/forward to the browser.
 
 ## Template System
 
@@ -52,13 +56,16 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 ## AI Integration
 
 - `src/services/aiService.ts` sends the Worker-injected `ai-client-token` to fetch `/api/ai/session`, then calls `/api/ai` with the signed session token.
-- `worker/index.ts` validates origin + fetch metadata, verifies client attestation token, enforces signed session token + request id, applies IP/session/global rate limits (Durable Object-backed), then calls Gemini using server secret (`GEMINI_API_KEY`).
+- `worker/index.ts` validates origin + fetch metadata, verifies client attestation token, enforces signed session token + request id, applies IP/session/global rate limits (Durable Object-backed), then calls Workers AI.
+- The Worker injects the client token, cookie and CSP nonce into every HTML response, so HTML is served with `cache-control: private, no-cache` and without ETags; a revalidated (304) page would otherwise pair a stale token with a new cookie.
 - AI requests are authenticated with short-lived signed session tokens and run on the Workers AI binding (`env.AI`); no third-party API key is involved.
 
 ## SEO Pipeline
 
 - `src/hooks/useSeo.ts` applies meta tags and JSON-LD at runtime.
-- `scripts/seo-postbuild.mjs` generates static HTML for `/directory` and `/resume_tmpl/*` routes.
+- `scripts/seo-postbuild.mjs` pre-renders `/`, `/directory`, `/templates`, `/templates/*` and `/resume_tmpl/*` with meta tags and JSON-LD, and writes `sitemap.xml`, `robots.txt`, `404.html`, `llms.txt`, `llms-full.txt`, `templates.json` and `resume.schema.json`.
+- Role guides come from `src/data/roleGuides.json` through `src/shared/roleGuide.mjs`, which both the React page (`RoleGuide.tsx`) and the build script use, so the prerendered text matches the app.
+- The template list is read from `src/constants/templates.ts`; the home FAQ from `src/data/homeFaq.json`.
 - The postbuild step also generates Open Graph share images (PNG) under `dist/og`.
 - Sitemap and canonical URLs use `SITE_URL` or `VITE_SITE_URL`.
 

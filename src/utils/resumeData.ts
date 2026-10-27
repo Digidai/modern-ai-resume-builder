@@ -37,13 +37,72 @@ export const sanitizeDesign = (input: unknown): ResumeDesign => {
   return { accent, font, scale };
 };
 
+const obj = (value: unknown): Record<string, unknown> =>
+  value && typeof value === 'object' && !Array.isArray(value) ? (value as Record<string, unknown>) : {};
+const strings = (value: unknown): string[] =>
+  Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string' && v.trim() !== '').map((v) => v.trim()) : [];
+/** JSON Resume dates are ISO (YYYY, YYYY-MM or YYYY-MM-DD); the editor stores YYYY-MM. */
+const isoMonth = (value: unknown): string => str(value).trim().slice(0, 7);
+/** Summary text plus highlight bullets, in the editor's "- bullet" description format. */
+const describe = (summary: unknown, highlights: unknown): string =>
+  [str(summary).trim(), ...strings(highlights).map((h) => `- ${h}`)].filter(Boolean).join('\n');
+
 /**
- * Coerces untrusted JSON (an imported backup) into a well-formed ResumeData, so templates
- * never see missing fields or non-string values. Returns null if it doesn't look like a resume.
+ * Converts a JSON Resume document (https://jsonresume.org/schema) into this app's backup shape,
+ * so resumes exported by other tools or written by AI agents can be imported directly.
+ */
+export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unknown> => {
+  const basics = obj(raw.basics);
+  const location = obj(basics.location);
+  const profiles = list(basics.profiles);
+  const linkedin = profiles.find((p) => /linkedin/i.test(str(p.network) + str(p.url)));
+  return {
+    fullName: str(basics.name),
+    title: str(basics.label),
+    email: str(basics.email),
+    phone: str(basics.phone),
+    website: str(basics.url) || str(basics.website),
+    linkedin: linkedin ? str(linkedin.url) || str(linkedin.username) : '',
+    location: [location.city, location.region, location.countryCode].map(str).filter(Boolean).join(', '),
+    summary: str(basics.summary),
+    experience: list(raw.work).map((w) => ({
+      company: str(w.name) || str(w.company),
+      role: str(w.position),
+      startDate: isoMonth(w.startDate),
+      endDate: isoMonth(w.endDate),
+      isCurrent: !str(w.endDate),
+      description: describe(w.summary, w.highlights),
+    })),
+    education: list(raw.education).map((e) => ({
+      school: str(e.institution),
+      degree: [str(e.studyType), str(e.area)].filter(Boolean).join(' in '),
+      startDate: isoMonth(e.startDate),
+      endDate: isoMonth(e.endDate),
+    })),
+    projects: list(raw.projects).map((p) => ({
+      name: str(p.name),
+      link: str(p.url),
+      description: describe(p.description, p.highlights),
+    })),
+    // Grouped skills use the "Category: items" convention that templates render as groups.
+    skills: list(raw.skills)
+      .map((s) => {
+        const keywords = strings(s.keywords);
+        return keywords.length ? (str(s.name) ? `${str(s.name)}: ${keywords.join(', ')}` : keywords.join(', ')) : str(s.name);
+      })
+      .filter((s) => s.trim()),
+  };
+};
+
+/**
+ * Coerces untrusted JSON (an imported backup or a JSON Resume document) into a well-formed
+ * ResumeData, so templates never see missing fields or non-string values.
+ * Returns null if it doesn't look like a resume.
  */
 export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
-  const raw = input as Record<string, unknown>;
+  let raw = input as Record<string, unknown>;
+  if (raw.basics && typeof raw.basics === 'object') raw = { ...fromJsonResume(raw), templateId: raw.templateId, design: raw.design };
   const known = ['fullName', 'title', 'summary', 'experience', 'education', 'skills', 'projects'];
   if (!known.some((key) => key in raw)) return null;
 

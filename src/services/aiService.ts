@@ -101,7 +101,11 @@ const parseError = async (response: Response): Promise<AiError> => {
       code = data.code;
     }
   } catch {
-    message = response.statusText || message;
+    // Not our JSON envelope (e.g. a proxy or static-host error page): don't surface raw status text.
+    message =
+      response.status === 429
+        ? 'Too many AI requests. Please wait a moment and try again.'
+        : 'The AI service is unavailable right now. Please try again in a moment.';
   }
 
   return new AiError(message, code, shouldRetry(response.status, code));

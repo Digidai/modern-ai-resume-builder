@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is an AI-powered resume builder with 34 templates, real-time preview, and 640 job-title pages for SEO.**
+**ModernCV is a free, local-first AI resume builder with 34 templates, a vector PDF export, and 640 job-title writing guides.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -32,6 +32,7 @@
 - [Preview](#preview)
 - [Features](#features)
 - [SEO & Social Sharing](#seo--social-sharing)
+- [For AI Agents and LLMs](#for-ai-agents-and-llms)
 - [Getting Started](#getting-started)
 - [Scripts Reference](#scripts-reference)
 - [Project Structure](#project-structure)
@@ -56,7 +57,10 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 - 34 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy) and 21 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
-- 640 job titles with SEO-friendly, pre-rendered pages.
+- A template gallery (`/templates/`) with an ATS filter and a detail page per template.
+- 640 job titles with pre-rendered pages, each with a writing guide (sections, skills, example bullets, recruiter tips) and FAQ.
+- Agent-friendly: `llms.txt`, `llms-full.txt`, a machine-readable template catalog, a resume import JSON Schema, and editor deep links.
+- Imports [JSON Resume](https://jsonresume.org/) files as well as ModernCV backups.
 - AI writing help (Cloudflare Workers AI) for summaries and experience bullets.
 - Local-first data storage with debounced segmented persistence for resume editing.
 - AI runs through the Cloudflare Worker's Workers AI binding; no API keys in the browser.
@@ -68,13 +72,17 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 - **34 套专业模板** - 吸收 Jake's、Harvard、Awesome-CV、moderncv、Deedy 等经典设计，其中 21 套为 ATS 友好单栏
 - **样式控制** - 强调色（含对比度检查）、10 种自托管字体、字号与一键压缩到一页
-- **640 个职位页面** - SEO 优化的职位目录页面
+- **模板画廊** - `/templates/` 支持 ATS 筛选，每套模板都有独立详情页
+- **640 个职位页面** - 每个职位都有预渲染的写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ
+- **对 AI Agent 友好** - 提供 `llms.txt`、`llms-full.txt`、模板目录 JSON、简历导入 JSON Schema，以及 `/editor/?template=<id>` 深链接
+- **JSON Resume 导入** - 可直接导入 JSON Resume 标准格式或本站备份文件
 - **实时预览** - 输入内容时即时查看简历更新
 - **AI 智能优化** - 使用 Cloudflare Workers AI 优化和润色简历文本
 - **自动生成摘要** - 根据职位和技能自动生成专业摘要
 - **本地数据存储** - 数据优先保存在浏览器（分片存储 + 自动保存）
 - **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
 - **JSON 导出** - 支持 JSON 格式导出，便于备份和迁移
+- **矢量 PDF** - 服务端按预览原样渲染，文字可选中、字体内嵌
 - **明暗主题** - 支持浅色和深色主题切换
 - **社交分享图** - 构建时自动生成适配职位页与目录页的分享缩略图
 
@@ -107,8 +115,10 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
-- SEO postbuild script generates static HTML and sitemap entries.
-- Structured data (JSON-LD) on directory and job pages.
+- `/resume_tmpl/<slug>/` pages: preview every template with role-specific sample content, plus a writing guide and five FAQs generated from `src/data/roleGuides.json` (14 job families × seniority levels).
+- `/templates/` gallery and `/templates/<id>/` detail pages with "best for" roles, similar templates and an editor deep link.
+- SEO postbuild script pre-renders every page (home, directory, templates, 640 job pages) with meta tags, JSON-LD (WebApplication, FAQPage, BreadcrumbList, CreativeWork, ItemList) and a 677-URL sitemap.
+- Unknown URLs return a real `404` with `x-robots-tag: noindex` instead of redirecting to home.
 
 ### Privacy and Data
 - Resume data is persisted in browser localStorage (`resumeData:v2:*`) with debounced writes. Backups can be exported/imported as JSON.
@@ -119,25 +129,41 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 
 - Open Graph + Twitter tags are set per page (runtime + build).
 - Build generates share images (1200x630 PNG) for home, directory, editor, and each job page.
-- Images are generated from SVG and saved under `dist/og/**`.
+- Each template has a screenshot share image and page preview in `public/og/templates/`.
+- `robots.txt` allows search and AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, …) and blocks `/api/` and `/dev/`.
 - Set `SITE_URL` (build) or `VITE_SITE_URL` (runtime) to ensure correct canonical URLs.
+
+## For AI Agents and LLMs
+
+The build publishes plain files so assistants and agents can answer questions about the site or help a user build a resume:
+
+| File | Contents |
+|------|----------|
+| [`/llms.txt`](https://genedai.cv/llms.txt) | Short site map following the llms.txt convention |
+| [`/llms-full.txt`](https://genedai.cv/llms-full.txt) | All templates, writing guides per job family and FAQs in one file |
+| [`/templates.json`](https://genedai.cv/templates.json) | Template catalog: id, name, description, ATS status, best-for roles, preview images, editor link |
+| [`/resume.schema.json`](https://genedai.cv/resume.schema.json) | JSON Schema for the import format |
+
+An agent can draft a resume as JSON matching the schema (or as a JSON Resume document), have the user import it from **Editor → More actions → Import backup**, and open `/editor/?template=<id>` to preselect a template. Resume data never leaves the browser except for the text sent to AI actions.
 
 ## Usage Guide
 
 ### Editing Your Resume
-1. Click **"Edit Resume"** to enter edit mode
+1. Open the editor from the home page, a template page, or a job page (`/editor/?template=<id>` preselects a template)
 2. Use the **tabs** to navigate between sections:
-   - **Basics**: Personal details, summary, and education
-   - **Experience**: Work history with AI-enhanced descriptions
-   - **Skills**: Skills list and project showcase
+   - **Profile**: Personal details and summary
+   - **Experience**: Work history, education and projects
+   - **Skills**: Skills (group them as "Languages: Go, Python"; pasting a list adds every item)
+   - **Template**: Template picker, accent colour, font, text size and "Fit to one page"
 3. Changes are autosaved locally (with visible warning if persistence fails)
+4. **More actions** saves or imports a backup (ModernCV JSON or JSON Resume), starts from blank, or restores the sample
 
 ### AI Features
-- **Polish Text**: Click the ✨ sparkle icon on any text field to improve it with AI
-- **Generate Summary**: Click "Generate with AI" to create a professional summary based on your role and skills
+- **Improve**: rewrites the summary or an experience description; **Undo** restores the original
+- **Write**: drafts a summary from your title and skills
 
 ### Exporting
-- Click **"Download PDF"** to export your resume
+- Click **"Download PDF"** for a vector PDF with selectable text (rendered on the server; falls back to an image PDF if the server is unavailable)
 - Or press `Cmd/Ctrl + P` to open the print dialog and select "Save as PDF"
 
 ## Resume Sections
@@ -148,7 +174,7 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 | **Summary** | Professional summary (AI-generated or custom) |
 | **Experience** | Work history with company, role, dates, and descriptions |
 | **Education** | Schools, degrees, and graduation dates |
-| **Skills** | Comma-separated list of skills |
+| **Skills** | Skills, optionally grouped as "Category: item, item" |
 | **Projects** | Personal or professional projects with links |
 
 ## Tech Stack
@@ -255,13 +281,17 @@ modern-ai-resume-builder/
 ├── scripts/                    # SEO and job title scripts
 ├── src/
 │   ├── components/             # UI components and templates
+│   ├── constants/              # Template catalog and design settings
 │   ├── contexts/               # React contexts
-│   ├── data/                   # Job titles, personas, role examples
+│   ├── data/                   # Job titles, role guides, FAQ, personas, role examples
+│   ├── shared/                 # Code shared by the app and build scripts (role guides)
+│   ├── views/                  # Pages (home, editor, templates, 404)
 │   ├── hooks/                  # Custom React hooks
 │   ├── services/               # AI client (Workers AI via the Worker)
 │   ├── utils/                  # Utility functions
 │   ├── App.tsx                 # Routes and page layout
 │   └── types.ts                # TypeScript types
+├── worker/                     # Cloudflare Worker: AI, PDF, CSP, 404s
 ├── ARCHITECTURE.md             # Architecture details
 ├── CHANGELOG.md                # Version history
 ├── CONTRIBUTING.md             # Contribution guide

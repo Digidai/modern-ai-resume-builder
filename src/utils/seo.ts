@@ -1,3 +1,4 @@
+import homeFaq from '../data/homeFaq.json';
 const BASE_KEYWORDS = [
   'ai resume builder',
   'free resume builder',
@@ -117,28 +118,7 @@ export const buildJobSeoKeywords = (jobTitle: string, categoryName?: string) => 
   ]);
 };
 
-export const HOME_FAQ_ITEMS = [
-  {
-    question: 'Is ModernCV free to use?',
-    answer:
-      'Yes. ModernCV is free to use and lets you edit resumes, switch templates, and export to PDF without paid tiers.',
-  },
-  {
-    question: 'Can I tailor my resume to a specific job title?',
-    answer:
-      'Yes. You can browse role-based pages, pick a matching template, and customize resume content for each target position.',
-  },
-  {
-    question: 'Are the resume templates ATS friendly?',
-    answer:
-      'The templates are designed with clear hierarchy and readable structure so your content remains easy for ATS parsers and recruiters.',
-  },
-  {
-    question: 'Do I need to install anything to build my resume?',
-    answer:
-      'No installation is required. ModernCV runs in the browser and your resume can be exported directly as a PDF.',
-  },
-];
+export const HOME_FAQ_ITEMS: { question: string; answer: string }[] = homeFaq;
 
 export const buildHomeFaqSchema = (siteUrl: string) => ({
   '@type': 'FAQPage',
