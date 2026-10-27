@@ -4,7 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
-- Site redesign in an editorial print style: paper and ink palette with one brick accent, Source Serif headings, Inter body text, mono labels, square buttons, a serif wordmark and new icons. Gradients, sparkle badges, pills and purple are gone from the site; the job page picker shows 8 templates with "Show all 40", and the agent prompt is a collapsible "Use with an AI agent" panel.
+- Site redesign in an editorial print style: paper and ink palette with one brick accent, Inter sans-serif headings and body text, square buttons, a serif wordmark and new icons. Gradients, sparkle badges, pills and purple are gone from the site; the job page picker shows 8 templates with "Show all 40", and the agent prompt is a collapsible "Use with an AI agent" panel.
 - No template defaults to purple any more (Modern, Halo and Sidebar use ocean blue; Timeline and Altitude teal; Tech green; Ginto rust; Moda wine; Path ochre; Pop orange). Preview images are regenerated.
 - Every example resume fits on one A4 page in all 40 templates: examples were trimmed where needed and carry per-template fit scales (`npm run roles:fit:apply`), applied to previews, thumbnails and "Start from example". Mono and Cast no longer spill onto page 2 with the default sample, and Lateral no longer leaves page 1 empty on long resumes.
 - MCP and HTTP API: page counts and previews now use print layout (no more "2 pages" for a resume that prints on one); job titles resolve common phrasings ("nurse", "RN", "Front-End Developer", "Sr …"); `ats_only` accepts `1`/`"true"`; link warnings; `/api/agent/example` is documented in OpenAPI, llms.txt and SKILL.md.
