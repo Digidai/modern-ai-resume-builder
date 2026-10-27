@@ -10,8 +10,8 @@ interface RoleGuideProps {
   onPickTemplate: (templateId: string) => void;
 }
 
-const Card = ({ title, children }: { title: string; children: ReactNode }) => (
-  <section className="rounded-xl border border-rule bg-surface p-6 shadow-card">
+const Card = ({ title, children, className = '' }: { title: string; children: ReactNode; className?: string }) => (
+  <section className={`rounded-xl border border-rule bg-surface p-6 shadow-card ${className}`}>
     <h3 className="font-display text-lg font-semibold tracking-display text-ink">{title}</h3>
     <div className="mt-3 text-[15px] leading-6 text-muted">{children}</div>
   </section>
@@ -65,7 +65,7 @@ export const RoleGuide = ({ title, guide, onPickTemplate }: RoleGuideProps) => (
           <p className="mt-3">Quantify with {guide.metrics.slice(0, 4).join(', ')}.</p>
         </Card>
 
-        <Card title="Tips from recruiters">
+        <Card title="Tips from recruiters" className="lg:col-span-2">
           <ul className="list-disc space-y-1.5 pl-5 marker:text-muted">
             {guide.tips.map((t) => (
               <li key={t}>{t}</li>
@@ -73,7 +73,7 @@ export const RoleGuide = ({ title, guide, onPickTemplate }: RoleGuideProps) => (
           </ul>
         </Card>
 
-        <Card title="Recommended templates">
+        <Card title="Recommended templates" className="md:col-span-2 lg:col-span-1">
           <ul className="divide-y divide-rule border-y border-rule">
             {guide.recommended.map((t) => (
               <li key={t.id}>
@@ -95,14 +95,14 @@ export const RoleGuide = ({ title, guide, onPickTemplate }: RoleGuideProps) => (
       </div>
 
       <h2 className="mt-16 font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">{title} resume FAQ</h2>
-      <div className="mt-6 max-w-3xl divide-y divide-rule border-y border-rule">
+      <div className="mt-6 max-w-3xl divide-y divide-rule overflow-hidden rounded-xl border border-rule bg-surface shadow-card">
         {guide.faqs.map((faq, i) => (
-          <details key={faq.question} className="group py-4" open={i === 0}>
-            <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 font-medium text-ink marker:hidden [&::-webkit-details-marker]:hidden">
-              <h3 className="text-[17px]">{faq.question}</h3>
+          <details key={faq.question} className="group" open={i === 0}>
+            <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 font-medium text-ink transition-colors marker:hidden hover:bg-tint focus-visible:bg-tint focus-visible:outline-none sm:px-6 [&::-webkit-details-marker]:hidden">
+              <h3 className="text-base">{faq.question}</h3>
               <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted transition group-open:rotate-180" />
             </summary>
-            <p className="mt-2 text-base leading-[26px] text-muted">{faq.answer}</p>
+            <p className="px-5 pb-5 text-[15px] leading-[25px] text-muted sm:px-6">{faq.answer}</p>
           </details>
         ))}
       </div>

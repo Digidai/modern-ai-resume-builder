@@ -51,14 +51,14 @@ const HomeView: React.FC = () => {
   const homeOgImageUrl = `${siteUrl}${homeOgImage}`;
 
   useSeo({
-    title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
+    title: `ModernCV – Free Resume Builder with ${TEMPLATES.length} Templates, No Sign-up`,
     description:
-      "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
+      `Free resume builder with ${TEMPLATES.length} templates and ${EXAMPLE_COUNT} example resumes by job title. No account, optional AI writing help, and an A4 PDF with selectable text.`,
     keywords: buildHomeSeoKeywords(),
     canonical: '/',
     robots: SEO_ROBOTS_INDEX,
     ogImage: homeOgImage,
-    imageAlt: 'ModernCV AI resume builder preview',
+    imageAlt: 'ModernCV resume builder preview',
     ldJson: {
       '@context': 'https://schema.org',
       '@graph': [
@@ -84,7 +84,7 @@ const HomeView: React.FC = () => {
         {
           '@type': 'WebApplication',
           name: 'ModernCV',
-          description: 'Free AI-powered resume builder to create professional resumes online',
+          description: `Free resume builder with ${TEMPLATES.length} templates and vector PDF export`,
           url: `${siteUrl}/`,
           applicationCategory: 'BusinessApplication',
           operatingSystem: 'Any',
@@ -97,8 +97,8 @@ const HomeView: React.FC = () => {
         {
           '@type': 'WebPage',
           '@id': `${siteUrl}/#webpage`,
-          name: 'ModernCV - Free AI Resume Builder',
-          description: "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder.",
+          name: 'ModernCV – Free Resume Builder',
+          description: `Free resume builder with ${TEMPLATES.length} templates and ${EXAMPLE_COUNT} example resumes. No account needed.`,
           url: `${siteUrl}/`,
           inLanguage: 'en',
           isPartOf: { '@id': websiteId },
@@ -245,13 +245,11 @@ const HomeView: React.FC = () => {
         {/* How it works */}
         <section className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">How it works</h2>
-          <ol className="mt-8 grid gap-4 md:grid-cols-3">
+          <ol className="mt-8 grid gap-8 md:grid-cols-3 md:gap-10">
             {STEPS.map((step, index) => (
-              <li key={step.title} className="rounded-xl border border-rule bg-surface p-6 shadow-card">
-                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-tint text-[13px] font-semibold text-ink ring-1 ring-rule">
-                  {index + 1}
-                </span>
-                <h3 className="mt-4 font-display text-lg font-semibold tracking-display text-ink">{step.title}</h3>
+              <li key={step.title} className="border-t border-rule pt-5">
+                <span className="text-[13px] font-medium tabular-nums text-muted">Step {index + 1}</span>
+                <h3 className="mt-1.5 font-display text-lg font-semibold tracking-display text-ink">{step.title}</h3>
                 <p className="mt-1.5 text-[15px] leading-6 text-muted">{step.body}</p>
               </li>
             ))}

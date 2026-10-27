@@ -131,7 +131,7 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
           </p>
           <h1 className="mt-2 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink">{name} resume template</h1>
           <p className="mt-3 text-base leading-[26px] text-muted">{template.description}.</p>
-          <Button className="mt-6 w-full sm:w-auto" size="lg" onClick={useIt}>
+          <Button className="mt-6 w-full sm:w-auto" onClick={useIt}>
             Use this template
           </Button>
 
@@ -183,7 +183,7 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
           <h2 id="similar-heading" className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">
             Similar templates
           </h2>
-          <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">
+          <Link to="/templates/" className="focus-ring inline-flex h-10 shrink-0 items-center rounded-lg border border-rule bg-surface px-4 text-sm font-medium text-ink shadow-card transition-colors hover:bg-tint">
             All {TEMPLATES.length} templates
           </Link>
         </div>

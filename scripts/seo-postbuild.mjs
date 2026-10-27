@@ -235,7 +235,7 @@ const buildJobDescription = ({ jobTitle, categoryName }) => {
 
   return (
     categoryTemplates[categoryName] ??
-    `Browse ModernCV resume templates for ${jobTitle}. Choose a layout, tailor content with AI suggestions, and download as PDF.`
+    `Browse ModernCV resume templates for ${jobTitle}. Pick a layout, start from a realistic example and download an A4 PDF.`
   );
 };
 
@@ -420,7 +420,7 @@ const buildHomeSchema = (siteUrl, imageUrl, lastmodIso) => {
         '@type': 'WebApplication',
         '@id': `${siteUrl}/#webapp`,
         name: SITE_NAME,
-        description: 'Free AI-powered resume builder to create professional resumes online',
+        description: 'Free resume builder with ATS-friendly templates and vector PDF export',
         url: `${siteUrl}/`,
         applicationCategory: 'BusinessApplication',
         operatingSystem: 'Any',
@@ -442,8 +442,8 @@ const buildHomeSchema = (siteUrl, imageUrl, lastmodIso) => {
       {
         '@type': 'WebPage',
         '@id': `${siteUrl}/#webpage`,
-        name: 'ModernCV - Free AI Resume Builder',
-        description: 'Create stunning professional resumes in minutes with ModernCV.',
+        name: 'ModernCV – Free Resume Builder',
+        description: 'Free resume builder with example resumes for every job title. No account needed.',
         url: `${siteUrl}/`,
         inLanguage: 'en',
         dateModified: lastmodIso,
@@ -843,7 +843,7 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
   <main class="max-w-6xl mx-auto p-6 md:p-10">
     <header class="mb-10">
       <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">ModernCV AI Resume Builder</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Build a professional resume in minutes with modern templates, AI suggestions, and instant PDF export.</p>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Write your resume once and set it in any of ${templates.length} templates. No account, A4 PDF with selectable text.</p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a class="inline-flex h-10 items-center justify-center rounded-lg bg-ink px-5 text-paper font-medium hover:bg-ink-hover transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
         <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse job titles</a>
@@ -1555,22 +1555,22 @@ const main = async () => {
 
   await writePage({
     routePath: '/',
-    title: 'ModernCV - Free AI Resume Builder | Create Professional Resumes Online',
+    title: `ModernCV – Free Resume Builder with ${templates.length} Templates, No Sign-up`,
     description:
-      "Create stunning professional resumes in minutes with ModernCV's free AI-powered resume builder. Choose templates, get AI suggestions, and download as PDF instantly.",
+      `Free resume builder with ${templates.length} templates and ${allTitles.length} example resumes by job title. No account, optional AI writing help, and an A4 PDF with selectable text.`,
     keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),
     rootHtml: renderHomeRoot({ featuredTitles, templates, toPath }),
     ogImage: homeOgPath,
-    imageAlt: 'ModernCV AI resume builder preview',
+    imageAlt: 'ModernCV resume builder preview',
   });
 
   const directoryOgImageUrl = resolveOgImageUrl(siteUrl, directoryOgPath);
   await writePage({
     routePath: '/directory',
     title: 'Browse Resume Templates by Job Title | ModernCV Directory',
-    description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
+    description: `${allTitles.length} resume examples by job title, each with a writing guide. Pick your role, preview it in ${templates.length} templates and download a PDF.`,
     keywords: buildDirectoryKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl, lastmodIso),

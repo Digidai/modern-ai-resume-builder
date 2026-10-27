@@ -38,9 +38,9 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
           <button
             type="button"
             onClick={() => onChange([...links, { id: createId(), label: '', url: '' }])}
-            className="focus-ring inline-flex h-7 items-center gap-1 rounded-lg text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
+            className="focus-ring inline-flex h-7 items-center gap-1 rounded-md px-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10"
           >
-            Add link
+            <PlusIcon className="h-3.5 w-3.5" /> Add link
           </button>
         )}
       </div>
@@ -244,7 +244,7 @@ const AiButton = ({
     disabled={disabled || loading}
     aria-label={label}
     title={label}
-    className="focus-ring inline-flex h-7 items-center gap-1 rounded-lg px-1.5 text-sm font-medium text-accent underline underline-offset-4 transition-colors hover:decoration-2 disabled:pointer-events-none disabled:opacity-40"
+    className="focus-ring inline-flex h-7 items-center gap-1 rounded-md px-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10 disabled:pointer-events-none disabled:opacity-40"
   >
     {loading && <LoaderIcon className="h-3.5 w-3.5 animate-spin" />}
     {children}

@@ -8,6 +8,7 @@ import jobTitlesData from '../data/jobTitles.json';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { slugifyJobTitle } from '../utils/slug';
 import { debounce } from '../utils/debounce';
+import { TEMPLATES } from '../constants/templates';
 import { buildDirectorySeoKeywords } from '../utils/seo';
 
 interface JobTitleCategory {
@@ -16,6 +17,7 @@ interface JobTitleCategory {
 }
 
 const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
+const TOTAL_TITLES = JOB_CATEGORIES.reduce((n, c) => n + c.titles.length, 0);
 
 interface CategoryCardProps {
     category: JobTitleCategory;
@@ -29,7 +31,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, isSearching, isEx
     const hasMore = !isSearching && category.titles.length > visibleTitles.length;
 
     return (
-        <section className="mb-5 break-inside-avoid rounded-xl border border-rule bg-surface p-5 shadow-card">
+        <section className="rounded-xl border border-rule bg-surface p-5 shadow-card">
             <h2 className="flex items-center justify-between gap-3 font-display text-[17px] font-semibold tracking-display text-ink">
                 {category.name}
                 <span className="tag shrink-0">{category.titles.length}</span>
@@ -81,7 +83,7 @@ const JobTitles: React.FC = () => {
 
     useSeo({
         title: 'Browse Resume Templates by Job Title | ModernCV Directory',
-        description: 'Explore resume templates by job title. Pick your role, preview designs, and build a professional resume with AI assistance.',
+        description: `${TOTAL_TITLES} resume examples by job title, each with a writing guide. Pick your role, preview it in ${TEMPLATES.length} templates and download a PDF.`,
         keywords: buildDirectorySeoKeywords(),
         canonical: '/directory/',
         robots: SEO_ROBOTS_INDEX,
@@ -277,7 +279,7 @@ const JobTitles: React.FC = () => {
                 </div>
 
                 {filteredCategories.length > 0 ? (
-                    <div className="gap-5 sm:columns-2 lg:columns-3">
+                    <div className="grid items-start gap-5 sm:grid-cols-2 lg:grid-cols-3">
                         {filteredCategories.map((category) => (
                             <CategoryCard
                                 key={category.name}
@@ -289,7 +291,7 @@ const JobTitles: React.FC = () => {
                         ))}
                     </div>
                 ) : (
-                    <div className="max-w-xl border-y border-rule py-10">
+                    <div className="max-w-xl rounded-xl border border-rule bg-surface p-8 shadow-card">
                         <p className="font-display text-2xl font-semibold tracking-display text-ink">No examples for “{search.trim()}” yet</p>
                         <p className="mt-2 text-muted">You can still build a resume with that title.</p>
                         <div className="mt-6 flex flex-col gap-2 sm:flex-row sm:items-center">

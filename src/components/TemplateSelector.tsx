@@ -293,8 +293,10 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                         <a href="#guide" className={textLink}>Writing guide</a>
                     </p>
 
-                    <div className="mx-auto mt-6 w-full max-w-sm bg-white shadow-sheet lg:hidden">
-                        <ScaledResumePreview data={previewData} />
+                    <div className="mx-auto mt-6 w-full max-w-sm rounded-2xl border border-rule bg-tint p-4 lg:hidden">
+                        <div className="overflow-hidden rounded-[3px] bg-white shadow-sheet">
+                            <ScaledResumePreview data={previewData} />
+                        </div>
                     </div>
 
                     <div className="mt-6 hidden flex-col gap-3 border-y border-rule py-4 lg:flex">
@@ -373,8 +375,10 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                 </div>
 
                 <div className="hidden lg:col-start-1 lg:row-start-1 lg:block">
-                    <div className="mx-auto w-full max-w-[210mm] bg-white shadow-sheet lg:sticky lg:top-24">
-                        <ScaledResumePreview data={previewData} mode="page" />
+                    <div className="mx-auto w-full max-w-[calc(210mm+3rem)] rounded-2xl border border-rule bg-tint p-6 lg:sticky lg:top-24">
+                        <div className="overflow-hidden rounded-[3px] bg-white shadow-sheet">
+                            <ScaledResumePreview data={previewData} mode="page" />
+                        </div>
                     </div>
                 </div>
             </main>
