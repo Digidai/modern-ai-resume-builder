@@ -37,9 +37,9 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex-1 flex flex-col bg-white text-neutral-900 font-inter text-[14px] leading-[1.5] px-[14mm] pt-[13mm] pb-[12mm] [--accent:var(--rs-accent,#111111)]">
             <header className="mb-8">
                 {data.fullName && (
-                    <h1 className={`${nameSizeClass(data.fullName)} font-montserrat font-black uppercase tracking-tight leading-[0.95] wrap-break-word`}>
+                    <div role="heading" aria-level={1} className={`${nameSizeClass(data.fullName)} font-montserrat font-black uppercase tracking-tight leading-[0.95] wrap-break-word`}>
                         {data.fullName}
-                    </h1>
+                    </div>
                 )}
                 <div className="border-t-[5px] border-(--accent) mt-5 pt-4">
                     {data.title && <p className="font-montserrat text-[19px] font-bold uppercase tracking-wide leading-tight wrap-break-word">{data.title}</p>}

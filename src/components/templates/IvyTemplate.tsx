@@ -31,7 +31,7 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
             {hasHeader && (
                 <header className="text-center break-inside-avoid">
                     {data.fullName.trim() && (
-                        <h1 className="text-[20px] font-bold leading-tight text-(--accent) tracking-[0.01em] wrap-break-word">{data.fullName}</h1>
+                        <div role="heading" aria-level={1} className="text-[20px] font-bold leading-tight text-(--accent) tracking-[0.01em] wrap-break-word">{data.fullName}</div>
                     )}
                     {data.title.trim() && <p className="mt-[1px] text-[14.67px] leading-snug wrap-break-word">{data.title}</p>}
                     <div className="mt-[5px] border-t border-(--accent)" />

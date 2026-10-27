@@ -2,6 +2,17 @@ import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
 import { DEFAULT_DESIGN, type Education, type Experience, type Project, type ResumeData, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
+
+/** URL for a JSON Resume profile that only has a username (e.g. { network: "GitHub", username: "pat" }). */
+const PROFILE_HOSTS: Record<string, string> = {
+  github: 'github.com/', gitlab: 'gitlab.com/', twitter: 'x.com/', x: 'x.com/', dribbble: 'dribbble.com/',
+  behance: 'behance.net/', medium: 'medium.com/@', instagram: 'instagram.com/', youtube: 'youtube.com/@',
+  stackoverflow: 'stackoverflow.com/users/', mastodon: '', bluesky: 'bsky.app/profile/',
+};
+const profileUrl = (network: string, username: string): string => {
+  const host = PROFILE_HOSTS[network.toLowerCase().replace(/[^a-z]/g, '')];
+  return username && host ? `${host}${username.replace(/^@/, '')}` : '';
+};
 const list = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object') : [];
 
@@ -63,10 +74,11 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
     email: str(basics.email),
     phone: str(basics.phone),
     website: str(basics.url) || str(basics.website),
-    linkedin: linkedin ? str(linkedin.url) || str(linkedin.username) : '',
+    linkedin: linkedin ? str(linkedin.url) || (str(linkedin.username) ? `linkedin.com/in/${str(linkedin.username)}` : '') : '',
     links: profiles
-      .filter((p) => p !== linkedin && str(p.url))
-      .map((p) => ({ label: str(p.network), url: str(p.url) })),
+      .filter((p) => p !== linkedin)
+      .map((p) => ({ label: str(p.network), url: str(p.url) || profileUrl(str(p.network), str(p.username)) }))
+      .filter((p) => p.url),
     location: [location.city, location.region, location.countryCode].map(str).filter(Boolean).join(', '),
     summary: str(basics.summary),
     experience: list(raw.work).map((w) => ({

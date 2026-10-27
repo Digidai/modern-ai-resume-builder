@@ -65,7 +65,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-zinc-900 px-[15mm] pt-[13mm] pb-[12mm] font-sans text-zinc-100 wrap-break-word [--accent-light:oklch(from_var(--accent)_0.82_min(c,0.14)_h)] [--accent:var(--rs-accent,#A16207)]">
             <header className="mb-6 border-b border-zinc-700 pb-6">
-                <h1 className="font-raleway text-[42px] leading-tight font-light tracking-wide text-white">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-raleway text-[42px] leading-tight font-light tracking-wide text-white">{data.fullName}</div>
                 {data.title.trim() && (
                     <p className="mt-1.5 text-[14px] font-medium tracking-[0.28em] text-(--accent-light) uppercase">{data.title}</p>
                 )}

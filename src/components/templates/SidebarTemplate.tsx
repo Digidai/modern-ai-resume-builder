@@ -32,12 +32,12 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
     const skillGroups = groupSkills(data.skills);
 
     return (
-        <div className="flex flex-1 flex-row font-roboto [--accent:var(--rs-accent,#4338CA)] [--accent-light:color-mix(in_oklab,var(--accent)_45%,white)] [--side:color-mix(in_oklab,var(--accent)_22%,#0f172a)]">
+        <div className="flex flex-1 flex-row font-roboto [--accent:var(--rs-accent,#2F5A8A)] [--accent-light:color-mix(in_oklab,var(--accent)_45%,white)] [--side:color-mix(in_oklab,var(--accent)_22%,#0f172a)]">
             <aside className="flex w-[70mm] shrink-0 flex-col gap-8 bg-(--side) pt-[15mm] pr-[8mm] pb-[12mm] pl-[12mm] text-slate-300 print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                 {(data.fullName.trim() || data.title.trim()) && (
                     <div>
                         {data.fullName.trim() && (
-                            <h1 className="text-[27px] font-bold leading-[1.15] tracking-[-0.01em] text-white wrap-break-word">{data.fullName}</h1>
+                            <div role="heading" aria-level={1} className="text-[27px] font-bold leading-[1.15] tracking-[-0.01em] text-white wrap-break-word">{data.fullName}</div>
                         )}
                         {data.title.trim() && (
                             <p className="mt-2 text-[15px] font-medium leading-snug text-(--accent-light) wrap-break-word">{data.title}</p>

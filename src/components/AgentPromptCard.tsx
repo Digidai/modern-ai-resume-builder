@@ -1,17 +1,18 @@
 import { useState } from 'react';
 import { Link } from 'react-router';
-import { Button } from './Button';
-import { CheckIcon, FileIcon, SparklesIcon } from './Icons';
+import { ChevronDownIcon } from './Icons';
 
 interface AgentPromptCardProps {
   prompt: string;
   /** What the prompt builds, e.g. "this template" or "a Nurse resume". */
   subject: string;
   className?: string;
+  /** Start expanded (the agents page shows it open). */
+  defaultOpen?: boolean;
 }
 
 /** A ready-made prompt that makes any AI agent build a resume with ModernCV's templates (MCP or API). */
-export const AgentPromptCard = ({ prompt, subject, className = '' }: AgentPromptCardProps) => {
+export const AgentPromptCard = ({ prompt, subject, className = '', defaultOpen = false }: AgentPromptCardProps) => {
   const [copied, setCopied] = useState(false);
   const copy = async () => {
     try {
@@ -24,29 +25,31 @@ export const AgentPromptCard = ({ prompt, subject, className = '' }: AgentPrompt
   };
 
   return (
-    <section className={`rounded-2xl border border-indigo-200 bg-indigo-50/60 p-5 dark:border-indigo-900/60 dark:bg-indigo-950/30 ${className}`} aria-labelledby="agent-prompt-heading">
-      <div className="flex items-start justify-between gap-3">
-        <div>
-          <h2 id="agent-prompt-heading" className="flex items-center gap-2 text-sm font-semibold text-slate-900 dark:text-white">
-            <SparklesIcon className="h-4 w-4 text-indigo-600 dark:text-indigo-400" />
-            Build {subject} with an AI agent
-          </h2>
-          <p className="mt-1 text-sm text-slate-600 dark:text-slate-400">
-            Paste this prompt into Claude, ChatGPT, Cursor or any agent. It uses ModernCV's templates through our MCP server or API, then hands you the PDF and an editor link.
-          </p>
+    <details className={`group border-y border-rule [&_summary::-webkit-details-marker]:hidden ${className}`} open={defaultOpen}>
+      <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-4">
+        <span>
+          <span className="block text-base font-medium text-ink">Use with an AI agent</span>
+          <span className="mt-0.5 block text-sm text-muted">A ready-made prompt to build {subject} in Claude, ChatGPT, Cursor or any agent.</span>
+        </span>
+        <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180" />
+      </summary>
+      <div className="pb-5">
+        <p className="text-sm leading-6 text-muted">
+          It uses ModernCV's templates through our MCP server or API, then hands you the PDF and an editor link.
+        </p>
+        <div className="mt-3 border border-rule bg-tint">
+          <div className="flex items-center justify-between border-b border-rule px-3 py-1.5">
+            <span className="kicker text-muted">Prompt</span>
+            <button type="button" onClick={copy} className="focus-ring text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2" aria-live="polite">
+              {copied ? 'Copied' : 'Copy prompt'}
+            </button>
+          </div>
+          <pre className="max-h-56 overflow-auto whitespace-pre-wrap p-3 font-label text-xs leading-relaxed text-ink">{prompt}</pre>
         </div>
-      </div>
-      <pre className="mt-3 max-h-48 overflow-auto whitespace-pre-wrap rounded-lg border border-indigo-100 bg-white p-3 font-mono text-xs leading-relaxed text-slate-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
-        {prompt}
-      </pre>
-      <div className="mt-3 flex flex-wrap items-center gap-3">
-        <Button size="sm" onClick={copy} leftIcon={copied ? <CheckIcon className="h-4 w-4" /> : <FileIcon className="h-4 w-4" />} aria-live="polite">
-          {copied ? 'Copied' : 'Copy prompt'}
-        </Button>
-        <Link to="/agents/" className="text-sm font-medium text-indigo-700 hover:underline dark:text-indigo-300">
-          Connect your agent (MCP, skill, API) →
+        <Link to="/agents/" className="focus-ring mt-3 inline-block text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2">
+          Connect your agent (MCP, skill, API)
         </Link>
       </div>
-    </section>
+    </details>
   );
 };

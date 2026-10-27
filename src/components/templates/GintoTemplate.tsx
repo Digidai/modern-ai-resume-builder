@@ -133,13 +133,13 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
     const fullCount = sections.length - halves.length;
 
     return (
-        <div className="flex-1 flex flex-col bg-white text-slate-900 font-inter text-[14px] leading-[1.5] px-[15mm] pt-[13mm] pb-[12mm] [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex-1 flex flex-col bg-white text-slate-900 font-inter text-[14px] leading-[1.5] px-[15mm] pt-[13mm] pb-[12mm] [--accent:var(--rs-accent,#A0442A)]">
             <header className="mb-7">
                 {data.fullName && (
-                    <h1 className={`${nameSizeClass(data.fullName)} font-montserrat font-extrabold tracking-tight leading-[1.05] wrap-break-word`}>
+                    <div role="heading" aria-level={1} className={`${nameSizeClass(data.fullName)} font-montserrat font-extrabold tracking-tight leading-[1.05] wrap-break-word`}>
                         <span className="text-(--accent)" aria-hidden="true">.</span>
                         {data.fullName}
-                    </h1>
+                    </div>
                 )}
                 {data.title && (
                     <p className="font-montserrat text-[16px] font-bold uppercase tracking-[0.14em] leading-snug mt-2.5 wrap-break-word">{data.title}</p>

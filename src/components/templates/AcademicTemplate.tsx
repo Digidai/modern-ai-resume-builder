@@ -30,9 +30,9 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-col flex-1 gap-[22px] font-charis text-[14.5px] leading-normal text-slate-900 [--accent:var(--rs-accent,#23395B)]">
             <header className="flex justify-between items-end gap-8 pb-3 border-b-[3px] border-double border-(--accent)">
                 <div className="min-w-0">
-                    <h1 className="text-[30px] font-bold leading-[1.1] [font-variant-caps:small-caps] tracking-[0.04em] text-(--accent) wrap-break-word">
+                    <div role="heading" aria-level={1} className="text-[30px] font-bold leading-[1.1] [font-variant-caps:small-caps] tracking-[0.04em] text-(--accent) wrap-break-word">
                         {data.fullName}
-                    </h1>
+                    </div>
                     {data.title && <p className="italic text-[15px] text-slate-700 mt-1 wrap-break-word">{data.title}</p>}
                 </div>
                 {contacts.length > 0 && (

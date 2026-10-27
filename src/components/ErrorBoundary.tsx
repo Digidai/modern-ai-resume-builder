@@ -43,9 +43,9 @@ export class ErrorBoundary extends Component<Props, State> {
       return (
         <div className="min-h-[200px] flex items-center justify-center p-8">
           <div className="text-center max-w-md">
-            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-red-100 dark:bg-red-900/30 flex items-center justify-center">
+            <div className="w-16 h-16 mx-auto mb-4 rounded-full bg-danger/10 flex items-center justify-center">
               <svg
-                className="w-8 h-8 text-red-600 dark:text-red-400"
+                className="w-8 h-8 text-danger"
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -58,18 +58,18 @@ export class ErrorBoundary extends Component<Props, State> {
                 />
               </svg>
             </div>
-            <h3 className="text-lg font-semibold text-slate-900 dark:text-white mb-2">
+            <h3 className="font-display text-xl font-semibold text-ink mb-2">
               Something went wrong
             </h3>
-            <p className="text-sm text-slate-600 dark:text-slate-400 mb-4">
+            <p className="text-sm text-muted mb-4">
               An unexpected error occurred. Please try refreshing the page.
             </p>
             {this.state.error && (
               <details className="text-left mb-4">
-                <summary className="text-xs text-slate-500 cursor-pointer hover:text-slate-700 dark:hover:text-slate-300">
+                <summary className="text-xs text-muted cursor-pointer hover:text-ink">
                   Error details
                 </summary>
-                <pre className="mt-2 p-2 bg-slate-100 dark:bg-slate-800 rounded text-xs overflow-auto max-h-32 text-red-600 dark:text-red-400">
+                <pre className="mt-2 p-2 bg-tint rounded-[2px] text-xs overflow-auto max-h-32 text-danger">
                   {this.state.error.message}
                 </pre>
               </details>
@@ -77,13 +77,13 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="flex gap-3 justify-center">
               <button
                 onClick={this.handleReset}
-                className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 transition-colors"
+                className="focus-ring h-10 px-4 text-sm font-medium text-paper bg-ink rounded-[2px] hover:bg-ink-hover transition-colors"
               >
                 Try Again
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="px-4 py-2 text-sm font-medium text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-800 rounded-lg hover:bg-slate-200 dark:hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2 transition-colors"
+                className="focus-ring h-10 px-4 text-sm font-medium text-ink border border-ink rounded-[2px] hover:bg-ink/5 transition-colors"
               >
                 Refresh Page
               </button>
@@ -112,7 +112,7 @@ export const SectionErrorBoundary: React.FC<SectionErrorBoundaryProps> = ({
   return (
     <ErrorBoundary
       fallback={
-        <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
+        <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-[2px]">
           <p className="text-sm text-amber-800 dark:text-amber-200">
             {sectionName} failed to load. Please refresh the page.
           </p>

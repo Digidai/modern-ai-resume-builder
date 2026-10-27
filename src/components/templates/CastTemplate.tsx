@@ -26,10 +26,10 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
     const flatSkills = skillGroups.length === 1 && !skillGroups[0].category;
 
     return (
-        <div className="flex flex-1 flex-col bg-[#fafafa] px-[16mm] pt-[11mm] pb-[10mm] font-jetbrains text-[13.5px] leading-normal text-slate-800 wrap-break-word [--accent:var(--rs-accent,#1E293B)]">
+        <div className="flex flex-1 flex-col bg-[#fafafa] px-[16mm] pt-[9mm] pb-[7mm] font-jetbrains text-[13.5px] leading-normal text-slate-800 wrap-break-word [--accent:var(--rs-accent,#1E293B)]">
             <header className="mb-4 border-b-2 border-(--accent) pb-4 text-center">
                 <div className="mb-1.5 text-[11px] tracking-[0.3em] text-(--accent) uppercase">Fade in:</div>
-                <h1 className="text-[28px] leading-tight font-bold tracking-[0.15em] text-slate-950 uppercase">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="text-[28px] leading-tight font-bold tracking-[0.15em] text-slate-950 uppercase">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-1.5 text-[14px] tracking-wide text-slate-700">({data.title})</p>}
                 {contacts.length > 0 && (
                     <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-1 text-[12.5px] text-slate-700">

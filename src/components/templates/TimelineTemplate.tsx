@@ -33,9 +33,9 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasCategories = skillGroups.some((group) => group.category);
 
     return (
-        <div className="flex flex-1 flex-col px-[16mm] py-[14mm] font-sans text-[#1F2937] [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex flex-1 flex-col px-[16mm] py-[14mm] font-sans text-[#1F2937] [--accent:var(--rs-accent,#1F6E73)]">
             <header className="mb-[4mm]">
-                {data.fullName.trim() && <h1 className="text-[34.5px] font-bold leading-[1.15] tracking-[-0.015em] text-[#1F2937] wrap-break-word">{data.fullName}</h1>}
+                {data.fullName.trim() && <div role="heading" aria-level={1} className="text-[34.5px] font-bold leading-[1.15] tracking-[-0.015em] text-[#1F2937] wrap-break-word">{data.fullName}</div>}
                 {data.title.trim() && <p className="mt-1 text-[16px] font-medium leading-snug text-(--accent) wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (
                     /* Each item carries its own leading "·" in a clipped gutter, so separators never dangle. */

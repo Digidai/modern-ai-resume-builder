@@ -20,21 +20,18 @@ const NotFoundView: React.FC = () => {
   });
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 font-sans dark:bg-slate-950">
+    <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
       <SiteHeader />
-      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-20 text-center sm:px-6">
-        <p className="text-sm font-semibold text-indigo-600 dark:text-indigo-400">404</p>
-        <h1 className="mt-2 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">We couldn't find that page</h1>
-        <p className="mt-3 text-slate-600 dark:text-slate-400">The link may be old or mistyped. Here are some good places to go instead.</p>
-        <ul className="mt-10 grid gap-4 text-left sm:grid-cols-3">
+      <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-20 sm:px-6">
+        <p className="kicker text-muted">Error 404</p>
+        <h1 className="mt-3 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink">We couldn't find that page</h1>
+        <p className="mt-4 text-base leading-[26px] text-muted">The link may be old or mistyped. These pages are a good place to continue.</p>
+        <ul className="mt-10 divide-y divide-rule border-y border-rule">
           {links.map((l) => (
             <li key={l.to}>
-              <Link
-                to={l.to}
-                className="block h-full rounded-2xl border border-slate-200 bg-white p-5 transition hover:border-indigo-300 hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:border-slate-800 dark:bg-slate-900 dark:hover:border-indigo-500/40"
-              >
-                <span className="font-semibold text-slate-900 dark:text-white">{l.label} →</span>
-                <span className="mt-1 block text-sm text-slate-500 dark:text-slate-400">{l.body}</span>
+              <Link to={l.to} className="focus-ring group flex flex-col gap-0.5 py-4 sm:flex-row sm:items-baseline sm:gap-6">
+                <span className="font-medium text-accent underline underline-offset-4 group-hover:decoration-2 sm:w-56 sm:shrink-0">{l.label}</span>
+                <span className="text-sm text-muted">{l.body}</span>
               </Link>
             </li>
           ))}

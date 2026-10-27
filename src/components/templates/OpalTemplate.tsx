@@ -26,7 +26,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-col flex-1 gap-6 px-[16mm] pt-[13mm] pb-[12mm] bg-white font-inter text-[14px] leading-normal text-slate-700 [--accent:var(--rs-accent,#47607A)]">
             <header className="text-center">
-                <h1 className="font-raleway text-[38px] font-light tracking-wide leading-tight text-slate-900 wrap-break-word">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-raleway text-[38px] font-light tracking-wide leading-tight text-slate-900 wrap-break-word">{data.fullName}</div>
                 {data.title && <p className="mt-1.5 text-[13px] font-semibold uppercase tracking-[0.22em] text-(--accent) wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (
                     <ul className="mt-4 flex justify-center flex-wrap gap-2 text-[12.5px] font-medium text-slate-700">

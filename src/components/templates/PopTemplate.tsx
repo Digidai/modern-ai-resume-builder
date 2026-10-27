@@ -39,9 +39,9 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasEducation = data.education.length > 0;
 
     return (
-        <div className="flex flex-1 flex-col bg-linear-to-br from-(--accent)/8 via-white to-(--accent-2)/8 px-[14mm] pt-[12mm] pb-[11mm] font-sans text-slate-800 wrap-break-word [--accent-2:color-mix(in_oklab,var(--accent)_45%,#BE185D)] [--accent:var(--rs-accent,#4F46E5)]">
+        <div className="flex flex-1 flex-col bg-linear-to-br from-(--accent)/8 via-white to-(--accent-2)/8 px-[14mm] pt-[12mm] pb-[11mm] font-sans text-slate-800 wrap-break-word [--accent-2:color-mix(in_oklab,var(--accent)_45%,#BE185D)] [--accent:var(--rs-accent,#C2410C)]">
             <header className="mb-6">
-                <h1 className="font-montserrat text-[36px] leading-tight font-extrabold tracking-tight text-slate-900">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-montserrat text-[36px] leading-tight font-extrabold tracking-tight text-slate-900">{data.fullName}</div>
                 {data.title.trim() && (
                     <p className="mt-1.5 inline-block max-w-full rounded-2xl bg-(--accent) px-4 py-1 text-sm font-bold text-white">{data.title}</p>
                 )}

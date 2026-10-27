@@ -12,7 +12,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Care for 4–5 telemetry patients per 12-hour shift, interpreting rhythms and titrating heparin and diltiazem drips per protocol\n- Led a fall-prevention bundle with purposeful hourly rounding and bed-alarm audits, lowering falls from 3.1 to 1.9 per 1,000 patient days\n- Precepted 9 new-graduate nurses through 12-week orientation; all completed residency and 8 remain on the unit\n- Standardized teach-back discharge education for heart failure patients, lifting HCAHPS care-transition scores 11 points over 4 quarters\n- Serve on the rapid response team rotation, initiating sepsis screening and lactate draws that met SEP-1 timing in 94% of cases"
+          "description": "- Care for 4–5 telemetry patients per 12-hour shift, interpreting rhythms and titrating heparin and diltiazem drips per protocol\n- Led a fall-prevention bundle with purposeful hourly rounding and bed-alarm audits, lowering falls from 3.1 to 1.9 per 1,000 patient days\n- Precepted 9 new-graduate nurses through 12-week orientation; all completed residency and 8 remain on the unit\n- Standardized teach-back discharge education for heart failure patients, lifting HCAHPS care-transition scores 11 points over 4 quarters"
         },
         {
           "company": "Prairie View Hospital",
@@ -21,7 +21,7 @@
           "startDate": "2020-06",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Managed 5–6 post-surgical and medical patients per shift, including wound vacs, PCA monitoring and blood transfusions\n- Joined the unit practice council that rolled out barcode medication administration, raising scan compliance from 86% to 98%\n- Recognized with a DAISY Award nomination for advocacy during a complex end-of-life family meeting\n- Completed a 12-month nurse residency program and an evidence-based project on early mobility after abdominal surgery"
+          "description": "- Managed 5–6 post-surgical and medical patients per shift, including wound vacs, PCA monitoring and blood transfusions\n- Joined the unit practice council that rolled out barcode medication administration, raising scan compliance from 86% to 98%"
         },
         {
           "company": "Lakeshore Regional Medical Center",
@@ -30,7 +30,7 @@
           "startDate": "2019-06",
           "endDate": "2020-05",
           "isCurrent": false,
-          "description": "- Completed a paid externship on a cardiac step-down unit, performing assessments under RN supervision\n- Recorded vitals and telemetry strips for 8–10 patients per shift"
+          "description": "- Completed a paid externship on a cardiac step-down unit, performing assessments under RN supervision"
         }
       ],
       "education": [
@@ -45,9 +45,26 @@
       "skills": [
         "Clinical: telemetry and rhythm interpretation, IV therapy, wound care, sepsis bundles, patient education",
         "Systems: Epic, Pyxis MedStation, Alaris infusion pumps, Vocera",
-        "Licenses: RN (Illinois), BLS, ACLS",
-        "Certifications: PCCN (AACN)"
-      ]
+        "Licenses: RN (Illinois), BLS, ACLS"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.92,
+        "academic": 0.97,
+        "tech": 0.98,
+        "silk": 0.99,
+        "opal": 0.95,
+        "minimalist": 0.93,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.9,
+        "symmetry": 0.95,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.98
+      }
     },
     "Licensed Practical Nurse (LPN)": {
       "summary": "Licensed practical nurse with 5 years in skilled nursing and long-term care, currently covering a 24-bed short-term rehab hall. Cut medication-pass errors to zero for 14 consecutive months through a revised workflow. Known for thorough wound documentation, clear SBAR handoffs to RNs and providers, and calm support for families.",
@@ -59,7 +76,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Administer scheduled and PRN medications to 22–24 residents per shift, including insulin, enteral feedings and IV antibiotics under RN supervision\n- Reorganized the med cart and pass sequence with the unit manager, achieving 14 months without a reportable medication error\n- Stage and measure pressure injuries weekly in PointClickCare, contributing to a 30% drop in facility-acquired wounds\n- Trained 6 new CNAs on vital-sign reporting thresholds and early change-in-condition signs using the INTERACT stop-and-watch tool\n- Complete weekly skin and fall-risk assessments and update care plans with the RN unit manager before quarterly MDS reviews"
+          "description": "- Administer scheduled and PRN medications to 22–24 residents per shift, including insulin, enteral feedings and IV antibiotics under RN supervision\n- Reorganized the med cart and pass sequence with the unit manager, achieving 14 months without a reportable medication error\n- Stage and measure pressure injuries weekly in PointClickCare, contributing to a 30% drop in facility-acquired wounds\n- Trained 6 new CNAs on vital-sign reporting thresholds and early change-in-condition signs using the INTERACT stop-and-watch tool"
         },
         {
           "company": "Buckeye Senior Living",
@@ -68,7 +85,7 @@
           "startDate": "2021-03",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Provided medication administration, glucose monitoring and treatments for 30 long-term care residents on night shift\n- Completed admission assessments and care-plan updates that passed the annual state survey without nursing deficiencies\n- Reduced missed night-shift glucose checks to zero by building a laminated schedule tied to meal and insulin times"
+          "description": "- Provided medication administration, glucose monitoring and treatments for 30 long-term care residents on night shift\n- Completed admission assessments and care-plan updates that passed the annual state survey without nursing deficiencies"
         },
         {
           "company": "Buckeye Senior Living",
@@ -92,9 +109,28 @@
       "skills": [
         "Clinical: medication administration, wound care and staging, G-tube feeding, IV therapy, fall prevention",
         "Documentation: PointClickCare, MDS support, SBAR communication",
-        "Licenses: LPN (Ohio), BLS",
-        "Certifications: IV Therapy (Ohio Board of Nursing), Wound Care Certified (WCC)"
-      ]
+        "Licenses: LPN (Ohio), BLS"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.94,
+        "academic": 0.99,
+        "tech": 0.98,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "bronx": 0.93,
+        "noir": 0.99,
+        "mono": 0.92,
+        "pop": 0.86,
+        "cast": 0.96
+      }
     },
     "Certified Nursing Assistant (CNA)": {
       "summary": "Certified nursing assistant with 3 years of hands-on care in long-term care and acute rehab, supporting 10–12 residents per day shift. Recognized as Employee of the Quarter for zero skin breakdown on an assigned hall. Brings safe transfer technique, accurate vital signs and a patient, reassuring manner with residents living with dementia.",
@@ -106,7 +142,7 @@
           "startDate": "2023-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Assist 10–12 residents per shift with bathing, dressing, toileting, feeding and mobility in a 120-bed skilled nursing facility\n- Reposition high-risk residents every 2 hours and report skin changes promptly, helping the hall go 9 months without a new pressure injury\n- Record vitals, intake and output in PointClickCare and escalate abnormal readings to the charge nurse within minutes\n- Use Hoyer lifts and gait belts for 30+ transfers per shift with no staff or resident injuries\n- Mentor 3 newly certified aides during their first 2 weeks on the floor, modeling safe transfers and resident-first communication"
+          "description": "- Assist 10–12 residents per shift with bathing, dressing, toileting, feeding and mobility in a 120-bed skilled nursing facility\n- Reposition high-risk residents every 2 hours and report skin changes promptly, helping the hall go 9 months without a new pressure injury\n- Record vitals, intake and output in PointClickCare and escalate abnormal readings to the charge nurse within minutes"
         },
         {
           "company": "Gulfside Memory Care",
@@ -115,7 +151,7 @@
           "startDate": "2022-08",
           "endDate": "2023-04",
           "isCurrent": false,
-          "description": "- Supported 14 residents with Alzheimer's disease using redirection and validation techniques, reducing evening agitation incidents\n- Led daily music and chair-exercise activities that raised participation from 5 to 11 residents\n- Documented meal intake percentages that helped the dietitian identify 4 residents at nutritional risk"
+          "description": "- Supported 14 residents with Alzheimer's disease using redirection and validation techniques, reducing evening agitation incidents\n- Led daily music and chair-exercise activities that raised participation from 5 to 11 residents"
         },
         {
           "company": "Sunrise Assisted Living",
@@ -124,7 +160,7 @@
           "startDate": "2020-06",
           "endDate": "2022-07",
           "isCurrent": false,
-          "description": "- Served meals to 60 residents, following texture-modified and diabetic diet orders\n- Logged food temperatures and cleaned kitchen areas to state inspection standards"
+          "description": "- Served meals to 60 residents, following texture-modified and diabetic diet orders"
         }
       ],
       "education": [
@@ -145,9 +181,24 @@
       "skills": [
         "Resident care: ADLs, vital signs, intake and output, catheter care, skin checks",
         "Safety: Hoyer and sit-to-stand lifts, fall precautions, infection control, PPE",
-        "Communication: dementia care, family updates, shift handoff",
-        "Certifications: CNA (Florida Board of Nursing), BLS, Alzheimer's and Dementia Care training"
-      ]
+        "Communication: dementia care, family updates, shift handoff"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "path": 0.99,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.94
+      }
     },
     "Nurse Practitioner": {
       "summary": "Board-certified family nurse practitioner with 5 years of primary care practice and 9 prior years as an RN in emergency nursing. Manages a panel of 1,400 patients and raised diabetes control rates by 14 points. Brings full-scope chronic disease management, preventive care and telehealth expertise to community health settings.",
@@ -159,7 +210,7 @@
           "startDate": "2021-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- See 20–22 patients daily across acute, chronic and preventive visits for a 1,400-patient panel, 60% Medicaid-insured\n- Launched a nurse-led diabetes group visit model that raised A1c control (under 9%) from 61% to 75% in 18 months\n- Prescribe and monitor buprenorphine for 35 patients with opioid use disorder, sustaining 82% retention at 6 months\n- Precept 4 FNP students per year and co-authored clinic protocols for hypertension titration and depression screening (PHQ-9)\n- Lead the clinic's telehealth program, completing 1,100 video visits a year with a 6% no-show rate versus 18% in person"
+          "description": "- See 20–22 patients daily across acute, chronic and preventive visits for a 1,400-patient panel, 60% Medicaid-insured\n- Launched a nurse-led diabetes group visit model that raised A1c control (under 9%) from 61% to 75% in 18 months\n- Prescribe and monitor buprenorphine for 35 patients with opioid use disorder, sustaining 82% retention at 6 months"
         },
         {
           "company": "Mesa Vista Urgent Care",
@@ -168,7 +219,7 @@
           "startDate": "2019-09",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Evaluated and treated 30–35 urgent care patients per shift, including laceration repair, splinting and X-ray interpretation\n- Cut avoidable ER transfers 18% by adding point-of-care testing and a structured follow-up call program\n- Ordered and interpreted point-of-care labs and imaging, discharging 92% of patients without specialty referral"
+          "description": "- Evaluated and treated 30–35 urgent care patients per shift, including laceration repair, splinting and X-ray interpretation\n- Cut avoidable ER transfers 18% by adding point-of-care testing and a structured follow-up call program"
         },
         {
           "company": "Rio Grande University Hospital",
@@ -198,9 +249,28 @@
       "skills": [
         "Clinical: chronic disease management, women's health, MAT for OUD, minor procedures, telehealth",
         "Systems: athenaOne, eClinicalWorks, NM Prescription Monitoring Program",
-        "Licenses: APRN-CNP (New Mexico), RN, DEA registration",
-        "Certifications: FNP-BC (ANCC), BLS, ACLS"
-      ]
+        "Licenses: APRN-CNP (New Mexico), RN, DEA registration"
+      ],
+      "fit": {
+        "modern": 0.9,
+        "executive": 0.95,
+        "academic": 0.99,
+        "tech": 0.96,
+        "silk": 0.98,
+        "opal": 0.92,
+        "minimalist": 0.9,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.9,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Clinical Nurse Specialist": {
       "summary": "Adult-gerontology clinical nurse specialist with 13 years of nursing experience, including 6 as a CNS across critical care and step-down units. Led evidence-based bundles that eliminated CLABSI in two ICUs for 18 months. Bridges bedside practice, quality data and education to improve outcomes system-wide.",
@@ -212,7 +282,7 @@
           "startDate": "2020-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead practice standards for 3 ICUs and 2 step-down units (96 beds, 340 nurses), translating evidence into policies and competencies\n- Redesigned central line maintenance with CHG bathing and daily line-necessity rounds, achieving 18 consecutive CLABSI-free months in 2 ICUs\n- Implemented an ABCDEF bundle for delirium and mobility, cutting mean ventilator days from 5.8 to 4.6\n- Chair the critical care practice council and mentor 12 nurses through annual EBP projects, 4 presented at NTI\n- Built Epic early-warning score alerts with informatics, cutting unplanned ICU transfers from step-down units by 16%"
+          "description": "- Lead practice standards for 3 ICUs and 2 step-down units (96 beds, 340 nurses), translating evidence into policies and competencies\n- Redesigned central line maintenance with CHG bathing and daily line-necessity rounds, achieving 18 consecutive CLABSI-free months in 2 ICUs\n- Implemented an ABCDEF bundle for delirium and mobility, cutting mean ventilator days from 5.8 to 4.6"
         },
         {
           "company": "Willamette General Hospital",
@@ -221,7 +291,7 @@
           "startDate": "2018-06",
           "endDate": "2020-03",
           "isCurrent": false,
-          "description": "- Reduced CAUTI rate 47% hospital-wide through nurse-driven catheter removal protocols and monthly unit audits\n- Built Epic sepsis screening workflows that improved SEP-1 bundle compliance from 58% to 79%\n- Taught 14 critical care courses a year for new ICU nurses, including hemodynamics and ventilator basics"
+          "description": "- Reduced CAUTI rate 47% hospital-wide through nurse-driven catheter removal protocols and monthly unit audits\n- Built Epic sepsis screening workflows that improved SEP-1 bundle compliance from 58% to 79%"
         },
         {
           "company": "Willamette General Hospital",
@@ -251,9 +321,27 @@
       "skills": [
         "Practice: evidence-based practice, HAI prevention, policy development, staff education, quality improvement",
         "Data: NDNQI, Epic reporting, run charts, PDSA cycles",
-        "Licenses: APRN-CNS (Oregon), RN",
-        "Certifications: ACCNS-AG (AACN), CCRN, BLS, ACLS"
-      ]
+        "Licenses: APRN-CNS (Oregon), RN"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.98,
+        "opal": 0.94,
+        "minimalist": 0.9,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "symmetry": 0.93,
+        "path": 0.99,
+        "quartz": 0.92,
+        "bronx": 0.91,
+        "mono": 0.92,
+        "pop": 0.89,
+        "cast": 0.99
+      }
     },
     "Nurse Manager": {
       "summary": "Nurse manager with 14 years of nursing experience and 5 years leading inpatient units. Oversees a 36-bed orthopedic and surgical unit with 72 FTEs and a $7.8M budget. Cut RN turnover from 24% to 11% while lifting HCAHPS nurse communication into the top quartile.",
@@ -265,7 +353,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 72 FTEs including RNs, CNAs and unit secretaries across 24/7 operations on a 36-bed unit\n- Manage a $7.8M operating budget, holding overtime under 3% of worked hours through self-scheduling and a float-pool partnership\n- Reduced RN turnover from 24% to 11% with stay interviews, a clinical ladder and shared governance council\n- Raised HCAHPS nurse communication from the 48th to the 79th percentile through leader rounding and bedside shift report\n- Hold Joint Commission tracer readiness with monthly mock surveys, closing 100% of findings within 30 days"
+          "description": "- Lead 72 FTEs including RNs, CNAs and unit secretaries across 24/7 operations on a 36-bed unit\n- Manage a $7.8M operating budget, holding overtime under 3% of worked hours through self-scheduling and a float-pool partnership\n- Reduced RN turnover from 24% to 11% with stay interviews, a clinical ladder and shared governance council"
         },
         {
           "company": "Front Range Hospital",
@@ -274,7 +362,7 @@
           "startDate": "2019-03",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Supervised daily staffing and patient flow for a 30-bed unit, reducing ED boarding holds for the unit by 25%\n- Led COVID-19 surge conversion of the unit to a negative-pressure cohort area within 72 hours\n- Partnered with bed management to raise discharge-before-noon rates from 12% to 29%"
+          "description": "- Supervised daily staffing and patient flow for a 30-bed unit, reducing ED boarding holds for the unit by 25%\n- Led COVID-19 surge conversion of the unit to a negative-pressure cohort area within 72 hours"
         },
         {
           "company": "Front Range Hospital",
@@ -304,10 +392,25 @@
       "skills": [
         "Leadership: staffing and scheduling, budget management, shared governance, coaching and discipline",
         "Quality: HCAHPS, NDNQI, Joint Commission readiness, falls and HAPI prevention",
-        "Systems: Epic, Kronos, API Healthcare, Press Ganey",
-        "Licenses: RN (Colorado, compact), BLS",
-        "Certifications: NE-BC (ANCC), ONC"
-      ]
+        "Systems: Epic, Kronos, API Healthcare, Press Ganey"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "symmetry": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     },
     "Charge Nurse": {
       "summary": "Emergency department charge nurse with 8 years of RN experience, coordinating 14 nurses and 52 beds per shift in a high-volume Level II trauma center. Cut door-to-provider time by 21 minutes through triage redesign. Brings rapid decision-making, fair assignment-making and strong partnership with physicians and EMS.",
@@ -319,7 +422,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Direct flow for a 52-bed ED seeing 220 patients a day, assigning 12–14 RNs and 6 techs by acuity and skill mix\n- Introduced a provider-in-triage and split-flow model that lowered door-to-provider time from 38 to 17 minutes\n- Coordinate trauma, STEMI and stroke alerts with EMS and specialty teams, meeting door-to-needle goals in 91% of stroke activations\n- Mentor 6 nurses toward CEN certification and lead monthly mock codes\n- Serve as liaison to the house supervisor during surge, opening hallway beds and reallocating staff to keep diversion hours under 2% a month"
+          "description": "- Direct flow for a 52-bed ED seeing 220 patients a day, assigning 12–14 RNs and 6 techs by acuity and skill mix\n- Introduced a provider-in-triage and split-flow model that lowered door-to-provider time from 38 to 17 minutes\n- Coordinate trauma, STEMI and stroke alerts with EMS and specialty teams, meeting door-to-needle goals in 91% of stroke activations\n- Mentor 6 nurses toward CEN certification and lead monthly mock codes"
         },
         {
           "company": "Gulf Coast Medical Center",
@@ -328,7 +431,7 @@
           "startDate": "2018-07",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Cared for 4–5 acute patients at a time, including intubated trauma and sepsis patients awaiting ICU beds\n- Served as ESI triage super-user, raising triage accuracy on audit from 78% to 92%\n- Trained 10 newly hired nurses on trauma bay roles and massive transfusion protocol activation"
+          "description": "- Cared for 4–5 acute patients at a time, including intubated trauma and sepsis patients awaiting ICU beds\n- Served as ESI triage super-user, raising triage accuracy on audit from 78% to 92%"
         },
         {
           "company": "Bayou City Urgent Care",
@@ -352,10 +455,19 @@
       "skills": [
         "Leadership: patient flow, assignment-making, conflict de-escalation, code and trauma coordination",
         "Clinical: ESI triage, trauma care, sepsis and stroke protocols, critical drips",
-        "Systems: Epic ASAP, Pulsara, Omnicell",
-        "Licenses: RN (Texas, compact), BLS, ACLS, PALS, TNCC",
-        "Certifications: CEN (BCEN)"
-      ]
+        "Systems: Epic ASAP, Pulsara, Omnicell"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.93,
+        "bronx": 0.98,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Physician Assistant": {
       "summary": "NCCPA-certified physician assistant with 6 years in orthopedic surgery, splitting time between clinic, OR first-assist and inpatient rounding. Expanded clinic access by 1,800 visits a year through an independent PA fracture clinic. Brings strong procedural skills and collaborative practice with a 5-surgeon group.",
@@ -367,7 +479,7 @@
           "startDate": "2021-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- See 25–30 clinic patients a day for fractures, joint pain and post-op follow-up; perform joint injections and closed reductions\n- First-assist in 6–8 total joint and sports cases per week, handling closure, positioning and post-op orders\n- Launched an independent PA fracture clinic that added 1,800 visits a year and cut new-patient wait times from 19 to 6 days\n- Built an Epic order set for total joint discharges that reduced average length of stay from 2.1 to 1.4 days\n- Respond to weekend ED orthopedic consults, splinting and reducing fractures to avoid unnecessary admissions"
+          "description": "- See 25–30 clinic patients a day for fractures, joint pain and post-op follow-up; perform joint injections and closed reductions\n- First-assist in 6–8 total joint and sports cases per week, handling closure, positioning and post-op orders\n- Launched an independent PA fracture clinic that added 1,800 visits a year and cut new-patient wait times from 19 to 6 days"
         },
         {
           "company": "Wasatch Valley Hospital",
@@ -376,7 +488,7 @@
           "startDate": "2020-01",
           "endDate": "2021-04",
           "isCurrent": false,
-          "description": "- Managed a census of 14–16 adult inpatients under hospitalist supervision, including admissions, H&Ps and discharge planning\n- Coordinated care for COVID-19 patients during surges, staffing a dedicated step-down team\n- Performed 30+ procedures a quarter, including paracentesis, arthrocentesis and lumbar punctures, under hospitalist supervision"
+          "description": "- Managed a census of 14–16 adult inpatients under hospitalist supervision, including admissions, H&Ps and discharge planning\n- Coordinated care for COVID-19 patients during surges, staffing a dedicated step-down team"
         },
         {
           "company": "Utah Valley Emergency Physicians",
@@ -385,7 +497,7 @@
           "startDate": "2015-06",
           "endDate": "2017-05",
           "isCurrent": false,
-          "description": "- Documented histories, exams and orders for 25+ ED patients a shift in real time\n- Logged 2,800 patient-care hours required for PA program admission"
+          "description": "- Documented histories, exams and orders for 25+ ED patients a shift in real time"
         }
       ],
       "education": [
@@ -406,9 +518,22 @@
       "skills": [
         "Clinical: orthopedic exam, fracture care, joint injections, surgical first-assist, suturing",
         "Systems: Epic, PACS imaging, Utah CSD database",
-        "Licenses: PA-C (Utah), DEA registration",
-        "Certifications: NCCPA PA-C, BLS, ACLS"
-      ]
+        "Licenses: PA-C (Utah), DEA registration"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.94,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "mono": 0.94,
+        "pop": 0.9,
+        "cast": 0.99
+      }
     },
     "Medical Assistant": {
       "summary": "Certified medical assistant with 4 years in busy internal medicine and pediatric practices, rooming 24–28 patients a day for two providers. Raised preventive screening capture by 19% through pre-visit chart scrubs. Brings accurate vitals, injections, EKGs and point-of-care testing, plus a warm front-to-back patient experience.",
@@ -420,7 +545,7 @@
           "startDate": "2023-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Room 24–28 patients daily for 2 physicians, taking vitals, medication reconciliation and chief complaints in Epic\n- Introduced daily pre-visit chart scrubs for overdue screenings, increasing colorectal and mammogram referrals 19%\n- Perform EKGs, venipuncture, immunizations and point-of-care A1c and strep tests with zero labeling errors on quarterly audit\n- Manage prior authorizations for 40+ medications a week, cutting average turnaround from 5 to 2 days\n- Act as clinic champion for Epic Inbasket workflows, routing 120 patient messages a day to the right care team member"
+          "description": "- Room 24–28 patients daily for 2 physicians, taking vitals, medication reconciliation and chief complaints in Epic\n- Introduced daily pre-visit chart scrubs for overdue screenings, increasing colorectal and mammogram referrals 19%\n- Perform EKGs, venipuncture, immunizations and point-of-care A1c and strep tests with zero labeling errors on quarterly audit\n- Manage prior authorizations for 40+ medications a week, cutting average turnaround from 5 to 2 days"
         },
         {
           "company": "Little Harbor Pediatrics",
@@ -429,7 +554,7 @@
           "startDate": "2021-09",
           "endDate": "2023-01",
           "isCurrent": false,
-          "description": "- Administered VFC vaccines and conducted hearing and vision screenings for 30 well-child visits a day\n- Tracked vaccine inventory and temperature logs, passing two state VFC site visits without findings\n- Reached 98% accuracy on vaccine documentation in the state registry during annual audits"
+          "description": "- Administered VFC vaccines and conducted hearing and vision screenings for 30 well-child visits a day\n- Tracked vaccine inventory and temperature logs, passing two state VFC site visits without findings"
         },
         {
           "company": "Rainier Urgent Care",
@@ -438,7 +563,7 @@
           "startDate": "2019-07",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Checked in 60 urgent care patients a day and verified insurance coverage\n- Scheduled follow-up visits and handled medical records requests"
+          "description": "- Checked in 60 urgent care patients a day and verified insurance coverage"
         }
       ],
       "education": [
@@ -451,11 +576,24 @@
       ],
       "projects": [],
       "skills": [
-        "Clinical: vitals, venipuncture, injections, EKG, point-of-care testing, wound dressing",
+        "Clinical: vitals, venipuncture, injections, EKG, point-of-care testing",
         "Administrative: prior authorization, referral management, scheduling, insurance verification",
-        "Systems: Epic, Washington IIS, Surescripts",
-        "Certifications: CMA (AAMA), BLS, Medical Assistant-Certified (Washington DOH)"
-      ]
+        "Systems: Epic, Washington IIS, Surescripts"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "opal": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.92,
+        "berlin": 0.88,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "symmetry": 0.99,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.98
+      }
     },
     "Medical Receptionist": {
       "summary": "Medical receptionist with 4 years at the front desk of high-volume specialty clinics, checking in 90+ patients a day. Cut claim denials from registration errors by 42% through insurance verification checklists. Brings fluent Spanish, HIPAA-sound handling of patient information and a calm presence on busy phones.",
@@ -467,7 +605,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Check in 90–110 patients daily for 6 cardiologists, verifying demographics, insurance eligibility and copays in athenaOne\n- Built a pre-visit insurance verification checklist that cut registration-related claim denials by 42%\n- Answer 150+ calls a day in English and Spanish, triaging urgent symptoms to nurses per clinic protocol\n- Collect $18K in copays and prior balances monthly, reconciling the cash drawer daily with no variances\n- Scan and index referral paperwork, test results and consent forms into patient charts within 24 hours"
+          "description": "- Check in 90–110 patients daily for 6 cardiologists, verifying demographics, insurance eligibility and copays in athenaOne\n- Built a pre-visit insurance verification checklist that cut registration-related claim denials by 42%\n- Answer 150+ calls a day in English and Spanish, triaging urgent symptoms to nurses per clinic protocol\n- Collect $18K in copays and prior balances monthly, reconciling the cash drawer daily with no variances"
         },
         {
           "company": "Sonoran Family Dental",
@@ -476,7 +614,7 @@
           "startDate": "2021-03",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Managed schedules for 3 dentists and 2 hygienists, reducing open chair time 15% with a short-notice call list\n- Sent automated recall reminders that raised hygiene reappointment rates from 68% to 81%\n- Trained 2 new front desk staff on Dentrix scheduling, insurance entry and opening and closing procedures"
+          "description": "- Managed schedules for 3 dentists and 2 hygienists, reducing open chair time 15% with a short-notice call list\n- Sent automated recall reminders that raised hygiene reappointment rates from 68% to 81%"
         },
         {
           "company": "Cactus Wren Pharmacy",
@@ -485,7 +623,7 @@
           "startDate": "2019-05",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Processed 150 transactions a day and answered refill pickup questions\n- Kept patient information private at pickup windows following HIPAA policy"
+          "description": "- Processed 150 transactions a day and answered refill pickup questions"
         }
       ],
       "education": [
@@ -501,9 +639,22 @@
         "Front office: patient check-in, scheduling, insurance eligibility, copay collection, referrals",
         "Systems: athenaOne, Epic Cadence, Dentrix, RingCentral",
         "Compliance: HIPAA, patient privacy, consent forms",
-        "Languages: English, Spanish (fluent)",
-        "Certifications: CMAA (NHA)"
-      ]
+        "Languages: English, Spanish (fluent)"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Pharmacy Technician": {
       "summary": "PTCB-certified pharmacy technician with 5 years in retail and hospital pharmacy, now supporting sterile compounding in a 400-bed hospital. Cut IV room turnaround by 22% through batch scheduling. Brings precise USP <797> technique, inventory control and strong partnership with pharmacists.",
@@ -515,7 +666,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Compound 150–200 sterile preparations per shift, including TPN and chemotherapy under USP <797> and <800> standards\n- Redesigned batch production times for antibiotics, cutting first-dose turnaround from 54 to 42 minutes\n- Restock 22 Omnicell cabinets daily and manage controlled-substance counts with zero discrepancies on DEA audits\n- Trained 5 technicians on gowning, garbing and media fill testing; all passed initial competencies\n- Serve as hazardous drug compounding lead, verifying closed-system transfer device use and spill kit readiness each shift"
+          "description": "- Compound 150–200 sterile preparations per shift, including TPN and chemotherapy under USP <797> and <800> standards\n- Redesigned batch production times for antibiotics, cutting first-dose turnaround from 54 to 42 minutes\n- Restock 22 Omnicell cabinets daily and manage controlled-substance counts with zero discrepancies on DEA audits\n- Trained 5 technicians on gowning, garbing and media fill testing; all passed initial competencies"
         },
         {
           "company": "Coastline Pharmacy",
@@ -524,7 +675,7 @@
           "startDate": "2021-04",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Processed 350+ prescriptions a day, resolving insurance rejections and prior authorizations\n- Cut out-of-stock fills 30% by tuning reorder points in the inventory system\n- Answered 80+ patient calls a day about refills, coverage and pickup times"
+          "description": "- Processed 350+ prescriptions a day, resolving insurance rejections and prior authorizations\n- Cut out-of-stock fills 30% by tuning reorder points in the inventory system"
         },
         {
           "company": "Coastline Pharmacy",
@@ -533,7 +684,7 @@
           "startDate": "2019-06",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Rang up prescriptions and over-the-counter items for 200 customers a day\n- Restocked shelves and handled will-call bins while training as a technician"
+          "description": "- Rang up prescriptions and over-the-counter items for 200 customers a day"
         }
       ],
       "education": [
@@ -548,9 +699,20 @@
       "skills": [
         "Pharmacy operations: sterile compounding, TPN, hazardous drugs, inventory management, controlled substances",
         "Systems: Epic Willow, Omnicell, Pyxis, PioneerRx",
-        "Compliance: USP <797>, USP <800>, DEA regulations",
-        "Certifications: CPhT (PTCB), CSPT (PTCB), Pharmacy Technician License (California)"
-      ]
+        "Compliance: USP <797>, USP <800>, DEA regulations"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.86
+      }
     },
     "Pharmacist": {
       "summary": "Licensed pharmacist with 9 years in community pharmacy, including 5 as pharmacist-in-charge of a store filling 2,800 prescriptions a week. Grew clinical services revenue 3x through immunizations and point-of-care testing. Brings sharp drug-therapy review, regulatory compliance and team leadership.",
@@ -562,7 +724,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 2 staff pharmacists and 8 technicians filling 2,800 prescriptions a week with a 99.9% accuracy rate\n- Expanded immunizations, strep testing and adherence packaging, tripling clinical services revenue to $210K a year\n- Raised Medicare Part D Star measures for statin and diabetes adherence above 88% using med synchronization\n- Maintained full compliance with Tennessee Board of Pharmacy and DEA inspections, including CII perpetual inventory\n- Precept 4 APPE pharmacy students a year in community practice, covering immunizations, MTM and law"
+          "description": "- Lead a team of 2 staff pharmacists and 8 technicians filling 2,800 prescriptions a week with a 99.9% accuracy rate\n- Expanded immunizations, strep testing and adherence packaging, tripling clinical services revenue to $210K a year\n- Raised Medicare Part D Star measures for statin and diabetes adherence above 88% using med synchronization\n- Maintained full compliance with Tennessee Board of Pharmacy and DEA inspections, including CII perpetual inventory"
         },
         {
           "company": "Volunteer Pharmacy",
@@ -571,7 +733,7 @@
           "startDate": "2017-06",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Verified 300+ prescriptions a shift and counseled patients on new therapies and drug interactions\n- Administered 2,400 COVID-19 vaccines during 2021 clinics while maintaining routine workflow\n- Completed 150 comprehensive medication reviews a year for Medicare Part D patients through Outcomes MTM"
+          "description": "- Verified 300+ prescriptions a shift and counseled patients on new therapies and drug interactions\n- Administered 2,400 COVID-19 vaccines during 2021 clinics while maintaining routine workflow"
         },
         {
           "company": "Volunteer Pharmacy",
@@ -595,10 +757,24 @@
       "skills": [
         "Clinical: drug utilization review, MTM, immunizations, point-of-care testing, patient counseling",
         "Operations: inventory, CII management, staff scheduling, third-party reconciliation",
-        "Systems: EnterpriseRx, Outcomes MTM, Tennessee CSMD",
-        "Licenses: RPh (Tennessee), NAPLEX, MPJE",
-        "Certifications: APhA Pharmacy-Based Immunization Delivery, BLS"
-      ]
+        "Systems: EnterpriseRx, Outcomes MTM, Tennessee CSMD"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Physical Therapist": {
       "summary": "Doctor of physical therapy with 7 years in outpatient orthopedics and sports rehab, treating 12–14 patients a day. Board-certified orthopedic clinical specialist who raised clinic-level functional outcome scores 18%. Brings manual therapy, return-to-sport testing and strong visit-adherence coaching.",
@@ -610,7 +786,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Treat 12–14 patients daily with post-op ACL, rotator cuff and spine conditions while directing a 6-person clinic\n- Introduced standardized outcome measures (LEFS, ODI) and progress reviews, improving average functional gains 18%\n- Raised plan-of-care completion from 64% to 81% through scheduling scripts and home exercise programs in MedBridge\n- Grew referrals from 3 orthopedic groups by 35% with return-to-sport testing reports\n- Supervise 2 PTAs and 3 aides, co-signing notes and adjusting plans of care weekly"
+          "description": "- Treat 12–14 patients daily with post-op ACL, rotator cuff and spine conditions while directing a 6-person clinic\n- Introduced standardized outcome measures (LEFS, ODI) and progress reviews, improving average functional gains 18%\n- Raised plan-of-care completion from 64% to 81% through scheduling scripts and home exercise programs in MedBridge\n- Grew referrals from 3 orthopedic groups by 35% with return-to-sport testing reports"
         },
         {
           "company": "North Star Physical Therapy",
@@ -619,7 +795,7 @@
           "startDate": "2019-07",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Managed a caseload of 60 active outpatients, applying dry needling, manual therapy and graded exercise\n- Documented in WebPT with 98% compliance on Medicare 8-minute rule and KX modifier audits\n- Delivered injury screens for 2 high school athletic programs, cutting reported ACL injuries with neuromuscular warm-ups"
+          "description": "- Managed a caseload of 60 active outpatients, applying dry needling, manual therapy and graded exercise\n- Documented in WebPT with 98% compliance on Medicare 8-minute rule and KX modifier audits"
         },
         {
           "company": "Twin Lakes Athletic Training",
@@ -628,7 +804,7 @@
           "startDate": "2015-05",
           "endDate": "2016-08",
           "isCurrent": false,
-          "description": "- Set up modalities and supervised exercise for 25 outpatients a day\n- Cleaned and maintained equipment and scheduled follow-up visits"
+          "description": "- Set up modalities and supervised exercise for 25 outpatients a day"
         }
       ],
       "education": [
@@ -649,9 +825,27 @@
       "skills": [
         "Clinical: manual therapy, dry needling, post-operative rehab, return-to-sport testing, vestibular rehab",
         "Systems: WebPT, MedBridge, Raintree",
-        "Licenses: PT (Minnesota), NPTE, BLS",
-        "Certifications: OCS (ABPTS), Certified Dry Needling (Level 2)"
-      ]
+        "Licenses: PT (Minnesota), NPTE, BLS"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "tech": 0.99,
+        "silk": 0.94,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.91
+      }
     },
     "Occupational Therapist": {
       "summary": "Registered occupational therapist with 6 years in acute care and inpatient rehabilitation, treating stroke, spinal cord and orthopedic patients. Led an early-mobility ADL program that raised discharge-to-home rates by 12%. Brings skilled functional assessment, splinting and caregiver training.",
@@ -663,7 +857,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Treat 9–11 inpatient rehab patients daily after stroke, SCI and TBI, focusing on ADLs, upper-extremity function and cognition\n- Developed a dawn ADL program with nursing that raised discharge-to-home rates from 71% to 83%\n- Fabricate custom resting and wrist splints and lead caregiver training before every discharge\n- Score Section GG functional items on admission and discharge with 96% accuracy on quality audits\n- Precept 2 level II OT students a year and lead monthly in-services on low-vision adaptations"
+          "description": "- Treat 9–11 inpatient rehab patients daily after stroke, SCI and TBI, focusing on ADLs, upper-extremity function and cognition\n- Developed a dawn ADL program with nursing that raised discharge-to-home rates from 71% to 83%\n- Fabricate custom resting and wrist splints and lead caregiver training before every discharge\n- Score Section GG functional items on admission and discharge with 96% accuracy on quality audits"
         },
         {
           "company": "James River Medical Center",
@@ -672,7 +866,7 @@
           "startDate": "2020-07",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Evaluated 12–14 acute patients a day and made discharge recommendations that cut 30-day readmissions for joint patients\n- Coordinated adaptive equipment orders and home safety plans with case management\n- Ran upper-extremity edema management programs for post-op hand patients in collaboration with surgeons"
+          "description": "- Evaluated 12–14 acute patients a day and made discharge recommendations that cut 30-day readmissions for joint patients\n- Coordinated adaptive equipment orders and home safety plans with case management"
         },
         {
           "company": "Valley Senior Living",
@@ -681,7 +875,7 @@
           "startDate": "2016-06",
           "endDate": "2018-07",
           "isCurrent": false,
-          "description": "- Led daily cognitive and fine-motor activities for 40 assisted-living residents\n- Adapted crafts and games for residents with arthritis and low vision"
+          "description": "- Led daily cognitive and fine-motor activities for 40 assisted-living residents"
         }
       ],
       "education": [
@@ -702,10 +896,26 @@
       "skills": [
         "Clinical: ADL retraining, neuro rehab, splinting, cognitive assessment, caregiver education",
         "Assessment: Section GG, FIM, MoCA, Box and Block Test",
-        "Systems: Epic Rehab, Cerner",
-        "Licenses: OT (Virginia), BLS",
-        "Certifications: OTR (NBCOT), Certified Brain Injury Specialist (CBIS)"
-      ]
+        "Systems: Epic Rehab, Cerner"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.92,
+        "opal": 0.98,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "symmetry": 0.96,
+        "path": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.89,
+        "cast": 0.97
+      }
     },
     "Radiologic Technologist": {
       "summary": "ARRT-registered radiologic technologist with 6 years in hospital radiography and CT, performing 60+ exams per shift across ED, inpatient and trauma. Cut repeat-image rates from 6.2% to 2.8% through positioning coaching. Brings ALARA dose discipline, portable and OR imaging, and steady patient care during trauma activations.",
@@ -717,7 +927,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Perform 60–70 diagnostic and CT exams per shift, including trauma pan-scans and CTA stroke protocols\n- Led a positioning peer-review program that dropped repeat-image rates from 6.2% to 2.8% across 14 technologists\n- Partnered with physics on pediatric CT protocols, reducing median CTDIvol 24% while keeping diagnostic quality\n- Run portable and C-arm imaging for 8–10 OR cases a week with zero sterile-field breaks\n- Serve as a department safety officer, logging contrast reactions and reviewing dose alerts with the radiologist each month"
+          "description": "- Perform 60–70 diagnostic and CT exams per shift, including trauma pan-scans and CTA stroke protocols\n- Led a positioning peer-review program that dropped repeat-image rates from 6.2% to 2.8% across 14 technologists\n- Partnered with physics on pediatric CT protocols, reducing median CTDIvol 24% while keeping diagnostic quality\n- Run portable and C-arm imaging for 8–10 OR cases a week with zero sterile-field breaks"
         },
         {
           "company": "Platte Valley Medical Center",
@@ -726,7 +936,7 @@
           "startDate": "2020-06",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Completed 40–50 general radiography exams per shift in ED, outpatient and inpatient settings\n- Trained 6 students per year as a clinical preceptor for the hospital-based radiography program\n- Covered night trauma call, completing C-spine and chest series within 10 minutes of ED order"
+          "description": "- Completed 40–50 general radiography exams per shift in ED, outpatient and inpatient settings\n- Trained 6 students per year as a clinical preceptor for the hospital-based radiography program"
         },
         {
           "company": "Elkhorn Valley Hospital",
@@ -735,7 +945,7 @@
           "startDate": "2017-06",
           "endDate": "2018-08",
           "isCurrent": false,
-          "description": "- Transported 40 inpatients a day between units and imaging\n- Assisted technologists with patient positioning and safety checks"
+          "description": "- Transported 40 inpatients a day between units and imaging"
         }
       ],
       "education": [
@@ -750,10 +960,19 @@
       "skills": [
         "Imaging: general radiography, CT, fluoroscopy, portable and C-arm, trauma imaging",
         "Safety: ALARA, contrast reaction response, MRI screening, infection control",
-        "Systems: Epic Radiant, GE Revolution CT, Siemens Ysio, PACS",
-        "Licenses: Medical Radiographer (Nebraska), BLS",
-        "Certifications: ARRT (R)(CT)"
-      ]
+        "Systems: Epic Radiant, GE Revolution CT, Siemens Ysio, PACS"
+      ],
+      "fit": {
+        "minimalist": 0.93,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.88,
+        "quartz": 0.97,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.88
+      }
     },
     "Ultrasound Technician": {
       "summary": "Registered diagnostic medical sonographer with 2 years in an outpatient women's imaging center, scanning 14–16 abdominal, OB and pelvic exams a day. Cut report turnaround by 30% with standardized worksheets. Brings careful image optimization, clear patient communication and solid physics knowledge from an accredited program.",
@@ -787,11 +1006,23 @@
       ],
       "projects": [],
       "skills": [
-        "Exams: OB/GYN, abdomen, pelvic, breast, thyroid, renal, early pregnancy",
+        "Exams: OB/GYN, abdomen, pelvic, breast, thyroid, renal",
         "Equipment: GE Voluson E10, GE Logiq E10, Philips EPIQ",
         "Systems: Epic Radiant, ViewPoint, PACS",
         "Certifications: RDMS (ARDMS) – Abdomen and OB/GYN, SPI, BLS"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "symmetry": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.9
+      }
     },
     "Sonographer": {
       "summary": "Cardiac sonographer with 9 years in hospital echocardiography, including transesophageal and stress echo support. As lead sonographer for an IAC-accredited lab, cut exam backlog from 6 days to same-day. Brings 3D and strain imaging expertise and a strong record of precepting students.",
@@ -803,7 +1034,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 9 sonographers performing 14,000 echocardiograms a year across inpatient, outpatient and ED settings\n- Reworked scheduling and protocols to eliminate a 6-day inpatient echo backlog, achieving same-day completion for 94% of orders\n- Introduced global longitudinal strain for cardio-oncology patients, standardizing measurements across 3 sites\n- Prepared the lab for IAC Echocardiography reaccreditation with zero deficiencies\n- Review every study for completeness against ASE guidelines, cutting incomplete studies flagged by readers from 7% to 2%"
+          "description": "- Lead 9 sonographers performing 14,000 echocardiograms a year across inpatient, outpatient and ED settings\n- Reworked scheduling and protocols to eliminate a 6-day inpatient echo backlog, achieving same-day completion for 94% of orders\n- Introduced global longitudinal strain for cardio-oncology patients, standardizing measurements across 3 sites\n- Prepared the lab for IAC Echocardiography reaccreditation with zero deficiencies"
         },
         {
           "company": "Peachtree Cardiology Group",
@@ -834,11 +1065,27 @@
       ],
       "projects": [],
       "skills": [
-        "Echo: TTE, TEE assist, stress and dobutamine echo, 3D, strain, contrast and bubble studies",
+        "Echo: TTE, TEE assist, stress and dobutamine echo, 3D, strain",
         "Leadership: lab accreditation, QA review, scheduling, student precepting",
         "Systems: Philips EPIQ CVx, GE Vivid E95, Xcelera, Epic Cupid",
         "Certifications: RDCS (ARDMS), RCS (CCI), BLS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Medical Laboratory Technician": {
       "summary": "ASCP-certified medical laboratory technician with 4 years in a hospital core lab covering chemistry, hematology and urinalysis on evening shift. Kept STAT turnaround above 95% on target during a 30% volume increase. Brings reliable QC practice, analyzer troubleshooting and CLIA-compliant documentation.",
@@ -850,7 +1097,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run 700+ chemistry, hematology and urinalysis samples per evening shift on Roche cobas and Sysmex XN analyzers\n- Maintained STAT turnaround of under 60 minutes for 96% of tests while volumes grew 30%\n- Perform daily QC with Westgard rules and resolve shifts, documenting corrective action for CAP inspections\n- Train new hires on manual differentials and body fluid counts\n- Calibrate and maintain 5 analyzers, coordinating vendor service to keep unplanned downtime under 1%"
+          "description": "- Run 700+ chemistry, hematology and urinalysis samples per evening shift on Roche cobas and Sysmex XN analyzers\n- Maintained STAT turnaround of under 60 minutes for 96% of tests while volumes grew 30%\n- Perform daily QC with Westgard rules and resolve shifts, documenting corrective action for CAP inspections\n- Train new hires on manual differentials and body fluid counts"
         },
         {
           "company": "Show-Me Diagnostics",
@@ -859,7 +1106,7 @@
           "startDate": "2021-01",
           "endDate": "2022-07",
           "isCurrent": false,
-          "description": "- Accessioned 400 specimens a day and processed send-outs with a 0.3% rejection rate\n- Collected blood specimens in a patient service center with high first-stick success\n- Labeled and routed specimens with barcode scanners, reducing mislabeled samples by 40%"
+          "description": "- Accessioned 400 specimens a day and processed send-outs with a 0.3% rejection rate\n- Collected blood specimens in a patient service center with high first-stick success"
         },
         {
           "company": "Boone County Clinic",
@@ -868,7 +1115,7 @@
           "startDate": "2019-06",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Checked in 70 clinic patients a day and entered lab orders\n- Scheduled patient draws and handled specimen pickup logs for couriers"
+          "description": "- Checked in 70 clinic patients a day and entered lab orders"
         }
       ],
       "education": [
@@ -881,11 +1128,24 @@
       ],
       "projects": [],
       "skills": [
-        "Laboratory: chemistry, hematology, coagulation, urinalysis, manual differentials, body fluids",
+        "Laboratory: chemistry, hematology, coagulation, urinalysis, manual differentials",
         "Quality: QC with Westgard rules, CAP and CLIA compliance, proficiency testing",
         "Systems: Roche cobas 8000, Sysmex XN-3000, Cerner PathNet",
         "Certifications: MLT (ASCP), BLS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Medical Technologist": {
       "summary": "Medical technologist certified as MLS(ASCP) with 10 years in microbiology and blood bank at a 500-bed academic hospital. Validated MALDI-TOF identification that cut organism ID time by 24 hours. Brings deep antimicrobial susceptibility knowledge, method validation and CAP inspection readiness.",
@@ -897,7 +1157,7 @@
           "startDate": "2020-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead day-shift microbiology bench work for 1,100 cultures a day, mentoring 7 technologists\n- Validated MALDI-TOF organism identification, reducing time to ID by 24 hours for positive blood cultures\n- Implemented rapid multiplex PCR panels with antimicrobial stewardship, cutting time to optimal therapy by 30 hours\n- Wrote 40 procedures and led CAP inspection readiness with zero microbiology deficiencies\n- Run competency assessments for 22 staff and onboard new technologists using a 12-week training plan"
+          "description": "- Lead day-shift microbiology bench work for 1,100 cultures a day, mentoring 7 technologists\n- Validated MALDI-TOF organism identification, reducing time to ID by 24 hours for positive blood cultures\n- Implemented rapid multiplex PCR panels with antimicrobial stewardship, cutting time to optimal therapy by 30 hours\n- Wrote 40 procedures and led CAP inspection readiness with zero microbiology deficiencies"
         },
         {
           "company": "Mercy Lakes Hospital",
@@ -906,7 +1166,7 @@
           "startDate": "2016-06",
           "endDate": "2020-02",
           "isCurrent": false,
-          "description": "- Performed antibody identification, crossmatching and massive transfusion protocol support\n- Reduced wasted platelet units 22% with inventory rotation and inter-site transfers\n- Performed weekly blood bank QC and reagent checks and maintained AABB documentation"
+          "description": "- Performed antibody identification, crossmatching and massive transfusion protocol support\n- Reduced wasted platelet units 22% with inventory rotation and inter-site transfers"
         },
         {
           "company": "Spartan Health Labs",
@@ -915,7 +1175,7 @@
           "startDate": "2014-06",
           "endDate": "2016-05",
           "isCurrent": false,
-          "description": "- Accessioned and centrifuged 300 specimens a day during school\n- Prepared reagents and maintained temperature logs for 4 refrigerators"
+          "description": "- Accessioned and centrifuged 300 specimens a day during school"
         }
       ],
       "education": [
@@ -930,9 +1190,20 @@
       "skills": [
         "Laboratory: microbiology, AST, molecular diagnostics, blood bank, antibody identification",
         "Quality: method validation, CAP, CLIA, AABB standards, competency assessment",
-        "Systems: Bruker MALDI Biotyper, BioFire FilmArray, BD Phoenix, Epic Beaker",
-        "Certifications: MLS(ASCP), SM(ASCP)"
-      ]
+        "Systems: Bruker MALDI Biotyper, BioFire FilmArray, BD Phoenix, Epic Beaker"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Clinical Laboratory Scientist": {
       "summary": "California-licensed clinical laboratory scientist with 5 years in a high-complexity reference laboratory, specializing in molecular and special chemistry. Brought an LC-MS/MS vitamin D assay live that saved $180K a year in send-outs. Brings rigorous validation, LIS troubleshooting and CLIA/CAP compliance.",
@@ -944,7 +1215,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Perform and review molecular and LC-MS/MS testing for 2,000+ specimens a day across 3 shifts\n- Validated an in-house vitamin D LC-MS/MS assay, replacing send-outs and saving $180K a year\n- Investigated proficiency testing failures and calibration drift, restoring 100% PT passing for 6 consecutive events\n- Configure Sunquest rules and autoverification ranges with IT, raising autoverification to 78%\n- Review and release 300+ abnormal and critical results per shift, calling critical values to providers within 15 minutes"
+          "description": "- Perform and review molecular and LC-MS/MS testing for 2,000+ specimens a day across 3 shifts\n- Validated an in-house vitamin D LC-MS/MS assay, replacing send-outs and saving $180K a year\n- Investigated proficiency testing failures and calibration drift, restoring 100% PT passing for 6 consecutive events\n- Configure Sunquest rules and autoverification ranges with IT, raising autoverification to 78%"
         },
         {
           "company": "Valley Oak Medical Center",
@@ -953,7 +1224,7 @@
           "startDate": "2021-01",
           "endDate": "2022-03",
           "isCurrent": false,
-          "description": "- Rotated through chemistry, hematology and blood bank in a 24/7 hospital laboratory\n- Completed CLS trainee year with competency sign-off in all general laboratory disciplines\n- Participated in a LIS upgrade validation, testing 150 order codes before go-live"
+          "description": "- Rotated through chemistry, hematology and blood bank in a 24/7 hospital laboratory\n- Completed CLS trainee year with competency sign-off in all general laboratory disciplines"
         },
         {
           "company": "Central Valley Biologics",
@@ -962,7 +1233,7 @@
           "startDate": "2019-06",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Prepared samples and buffers for ELISA testing in a research lab\n- Maintained inventory and equipment logs under GLP procedures"
+          "description": "- Prepared samples and buffers for ELISA testing in a research lab"
         }
       ],
       "education": [
@@ -983,10 +1254,24 @@
       "skills": [
         "Laboratory: molecular diagnostics, LC-MS/MS, special chemistry, hematology, blood bank",
         "Quality: assay validation, proficiency testing, CLIA high-complexity, CAP",
-        "Systems: Sunquest, Thermo Scientific TSQ, Hologic Panther",
-        "Licenses: Clinical Laboratory Scientist (California)",
-        "Certifications: MLS(ASCP)"
-      ]
+        "Systems: Sunquest, Thermo Scientific TSQ, Hologic Panther"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.9,
+        "mono": 0.89,
+        "pop": 0.91,
+        "cast": 0.98
+      }
     },
     "Clinical Research Coordinator": {
       "summary": "Clinical research coordinator with 4 years managing oncology trials at an NCI-designated cancer center, currently coordinating 8 active Phase I–III studies. Raised enrollment 40% through Epic pre-screening workflows. Brings GCP-compliant documentation, timely IRB submissions and clean sponsor monitoring visits.",
@@ -998,7 +1283,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coordinate 8 Phase I–III oncology trials with 60 active participants, from consent through follow-up\n- Built Epic-based pre-screening reports that lifted enrollment 40% across breast and lung cancer studies\n- Prepare IRB submissions, amendments and continuing reviews, keeping regulatory binders inspection-ready\n- Resolve 95% of EDC queries in Medidata Rave within 5 business days\n- Train 3 new research assistants on informed consent documentation and protocol deviation reporting"
+          "description": "- Coordinate 8 Phase I–III oncology trials with 60 active participants, from consent through follow-up\n- Built Epic-based pre-screening reports that lifted enrollment 40% across breast and lung cancer studies\n- Prepare IRB submissions, amendments and continuing reviews, keeping regulatory binders inspection-ready\n- Resolve 95% of EDC queries in Medidata Rave within 5 business days"
         },
         {
           "company": "Piedmont University Medical Center",
@@ -1007,7 +1292,7 @@
           "startDate": "2021-06",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Collected and processed PK samples and managed visit scheduling for 4 cardiology trials\n- Maintained 0 major findings across 12 sponsor monitoring visits\n- Coordinated participant visits and stipend payments for 120 enrolled patients"
+          "description": "- Collected and processed PK samples and managed visit scheduling for 4 cardiology trials\n- Maintained 0 major findings across 12 sponsor monitoring visits"
         },
         {
           "company": "Carolina Summer Research Program",
@@ -1016,7 +1301,7 @@
           "startDate": "2020-06",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Abstracted data from 200 charts for a retrospective breast cancer outcomes study\n- Built REDCap data entry forms with the study coordinator"
+          "description": "- Abstracted data from 200 charts for a retrospective breast cancer outcomes study"
         }
       ],
       "education": [
@@ -1033,7 +1318,20 @@
         "Systems: Medidata Rave, OnCore CTMS, Epic, Florence eBinders",
         "Clinical: phlebotomy, PK sample processing, IATA shipping",
         "Certifications: CCRP (SOCRA), CITI GCP, BLS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.92,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Clinical Data Manager": {
       "summary": "Clinical data manager with 7 years at CROs supporting Phase II–III trials in oncology and immunology. Led data management for a 1,100-patient pivotal study that locked 3 weeks ahead of plan. Brings EDC builds, CDISC standards and tight cross-functional coordination with biostatistics and clinical teams.",
@@ -1045,7 +1343,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead data management for 4 global Phase II–III studies with up to 1,100 patients and 180 sites\n- Delivered database lock for a pivotal immunology study 3 weeks early by front-loading data review and query aging targets\n- Designed eCRFs, edit checks and data management plans in Medidata Rave aligned to CDASH\n- Cut open queries per patient from 4.2 to 1.6 with targeted site retraining and automated listings\n- Mentor 3 junior data managers and review their edit-check specifications before UAT sign-off"
+          "description": "- Lead data management for 4 global Phase II–III studies with up to 1,100 patients and 180 sites\n- Delivered database lock for a pivotal immunology study 3 weeks early by front-loading data review and query aging targets\n- Designed eCRFs, edit checks and data management plans in Medidata Rave aligned to CDASH\n- Cut open queries per patient from 4.2 to 1.6 with targeted site retraining and automated listings"
         },
         {
           "company": "Triangle BioSource CRO",
@@ -1080,7 +1378,21 @@
         "Standards: CDISC CDASH and SDTM, MedDRA, WHODrug, 21 CFR Part 11",
         "Tools: Medidata Rave, Veeva Vault CDMS, SAS, Spotfire",
         "Certifications: CCDM (SCDM)"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "Clinical Operations Manager": {
       "summary": "Clinical operations manager with 11 years in biotech and CRO trial delivery, now leading 6 CRAs and study managers on a $38M Phase III program. Pulled enrollment 4 months ahead of plan through site optimization. Brings vendor oversight, budget control and inspection-ready execution.",
@@ -1092,7 +1404,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 6 managing a 90-site Phase III cardiometabolic trial with a $38M budget\n- Completed enrollment of 1,250 participants 4 months early by closing 14 low performers and adding high-yield sites\n- Negotiate CRO and central lab scopes, holding change orders under 5% of contract value\n- Led TMF readiness that earned zero critical findings in an FDA BIMO inspection\n- Present monthly program dashboards on enrollment, data quality and spend to the VP of Clinical Development"
+          "description": "- Lead a team of 6 managing a 90-site Phase III cardiometabolic trial with a $38M budget\n- Completed enrollment of 1,250 participants 4 months early by closing 14 low performers and adding high-yield sites\n- Negotiate CRO and central lab scopes, holding change orders under 5% of contract value\n- Led TMF readiness that earned zero critical findings in an FDA BIMO inspection"
         },
         {
           "company": "Northpoint Clinical CRO",
@@ -1101,7 +1413,7 @@
           "startDate": "2018-05",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Managed 3 Phase II oncology studies across 45 sites in US and EU\n- Cut site activation time from 6.5 to 4 months with templated contracts and parallel IRB submissions\n- Managed a $9M study budget, reconciling CRO invoices against milestones every month"
+          "description": "- Managed 3 Phase II oncology studies across 45 sites in US and EU\n- Cut site activation time from 6.5 to 4 months with templated contracts and parallel IRB submissions"
         },
         {
           "company": "Northpoint Clinical CRO",
@@ -1131,10 +1443,25 @@
       "skills": [
         "Trial delivery: site selection, enrollment planning, risk-based monitoring, TMF, inspection readiness",
         "Management: CRO and vendor oversight, budgets and forecasting, team leadership",
-        "Systems: Veeva Vault Clinical, Medidata, Smartsheet",
-        "Regulations: ICH E6 GCP, 21 CFR Parts 50, 56 and 312",
-        "Certifications: ACRP-CP"
-      ]
+        "Systems: Veeva Vault Clinical, Medidata, Smartsheet"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "quartz": 0.92,
+        "bronx": 0.93,
+        "mono": 0.9,
+        "pop": 0.89,
+        "cast": 0.98
+      }
     },
     "Healthcare Administrator": {
       "summary": "Healthcare administrator with 12 years in hospital and ambulatory operations, now running a 9-clinic multispecialty network with $68M in annual revenue. Improved operating margin from 1.8% to 5.4% in two years. Brings fiscal discipline, physician partnership and regulatory readiness.",
@@ -1146,7 +1473,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Direct operations for 9 clinics, 64 providers and 310 staff with $68M in annual net revenue\n- Lifted operating margin from 1.8% to 5.4% through template redesign, payer contract renegotiation and supply standardization\n- Opened 2 new clinics on time and $400K under capital budget, adding 26,000 annual visits\n- Led Joint Commission ambulatory survey preparation, earning accreditation with no direct-impact findings\n- Recruited 11 physicians and APPs in 2 years, reducing provider vacancy rates from 14% to 4%"
+          "description": "- Direct operations for 9 clinics, 64 providers and 310 staff with $68M in annual net revenue\n- Lifted operating margin from 1.8% to 5.4% through template redesign, payer contract renegotiation and supply standardization\n- Opened 2 new clinics on time and $400K under capital budget, adding 26,000 annual visits"
         },
         {
           "company": "Crescent City Hospital",
@@ -1155,7 +1482,7 @@
           "startDate": "2017-03",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Oversaw imaging, lab and rehab departments with a $22M budget and 180 FTEs\n- Reduced outpatient imaging wait from 12 to 4 days by extending hours and adding self-scheduling\n- Introduced Lean daily huddles in 4 departments that cut supply expenses $600K a year"
+          "description": "- Oversaw imaging, lab and rehab departments with a $22M budget and 180 FTEs\n- Reduced outpatient imaging wait from 12 to 4 days by extending hours and adding self-scheduling"
         },
         {
           "company": "Crescent City Hospital",
@@ -1173,22 +1500,24 @@
           "degree": "Master of Health Administration",
           "startDate": "2012-08",
           "endDate": "2014-05"
-        },
-        {
-          "school": "Louisiana State University",
-          "degree": "Bachelor of Science in Business Administration",
-          "startDate": "2008-08",
-          "endDate": "2012-05"
         }
       ],
       "projects": [],
       "skills": [
         "Operations: ambulatory management, capacity planning, Lean, payer contracting, capital projects",
         "Finance: budgeting, P&L management, revenue cycle KPIs, labor productivity",
-        "Regulatory: Joint Commission, CMS Conditions of Participation, HIPAA, OSHA",
-        "Systems: Epic, Strata, Tableau",
-        "Certifications: FACHE"
-      ]
+        "Regulatory: Joint Commission, CMS Conditions of Participation, HIPAA, OSHA"
+      ],
+      "fit": {
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.89,
+        "quartz": 0.97,
+        "bronx": 0.9,
+        "mono": 0.97,
+        "pop": 0.92
+      }
     },
     "Public Health Specialist": {
       "summary": "Public health specialist with 6 years at state and county health departments, focused on chronic disease prevention and health equity. Managed a $1.2M CDC-funded hypertension program that enrolled 3,400 residents. Brings program evaluation, community partnerships and data-driven grant reporting.",
@@ -1200,7 +1529,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a $1.2M CDC-funded hypertension control program across 14 community clinics and 22 churches\n- Enrolled 3,400 residents in self-measured blood pressure monitoring; 58% of enrollees reached control within 6 months\n- Built a REDCap and Tableau dashboard for quarterly CDC performance reporting, cutting reporting time by 60%\n- Coordinate a 30-member community health coalition and co-authored the county's community health improvement plan\n- Train 40 community health workers a year on blood pressure measurement and hypertension self-management coaching"
+          "description": "- Manage a $1.2M CDC-funded hypertension control program across 14 community clinics and 22 churches\n- Enrolled 3,400 residents in self-measured blood pressure monitoring; 58% of enrollees reached control within 6 months\n- Built a REDCap and Tableau dashboard for quarterly CDC performance reporting, cutting reporting time by 60%\n- Coordinate a 30-member community health coalition and co-authored the county's community health improvement plan"
         },
         {
           "company": "Alabama Department of Public Health",
@@ -1209,7 +1538,7 @@
           "startDate": "2020-01",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Delivered tobacco cessation programs reaching 1,800 participants with a 22% 6-month quit rate\n- Supported COVID-19 case investigation and vaccination outreach in 9 rural counties\n- Analyzed county BRFSS data to target smoking cessation outreach to 3 high-prevalence ZIP codes"
+          "description": "- Delivered tobacco cessation programs reaching 1,800 participants with a 22% 6-month quit rate\n- Supported COVID-19 case investigation and vaccination outreach in 9 rural counties"
         },
         {
           "company": "Magic City Health Outreach",
@@ -1218,7 +1547,7 @@
           "startDate": "2018-05",
           "endDate": "2019-08",
           "isCurrent": false,
-          "description": "- Staffed 30 community HIV testing events reaching 1,200 residents\n- Entered testing outcomes into the agency's reporting database"
+          "description": "- Staffed 30 community HIV testing events reaching 1,200 residents"
         }
       ],
       "education": [
@@ -1239,9 +1568,28 @@
       "skills": [
         "Program management: grant management, logic models, program evaluation, community engagement",
         "Data: REDCap, SAS, Tableau, BRFSS and census data analysis",
-        "Methods: health equity assessment, CHNA, motivational interviewing",
-        "Certifications: CHES (NCHEC), CITI Human Subjects"
-      ]
+        "Methods: health equity assessment, CHNA, motivational interviewing"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.96,
+        "silk": 0.94,
+        "opal": 0.94,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.98
+      }
     },
     "Care Coordinator": {
       "summary": "Care coordinator with 4 years in primary care and accountable care settings, supporting a panel of 220 high-risk Medicare patients. Cut 30-day readmissions for the panel by 23% with post-discharge outreach. Brings social-needs screening, resource navigation and strong teamwork with nurses and providers.",
@@ -1253,7 +1601,7 @@
           "startDate": "2023-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coordinate care for 220 high-risk Medicare patients with heart failure, COPD and diabetes across 4 practices\n- Complete 2-business-day transitional care calls after discharge, reducing panel 30-day readmissions from 17% to 13%\n- Screen for social needs with PRAPARE and connect 300+ patients a year to food, transport and utility programs\n- Close 85% of open referrals within 30 days using Epic Healthy Planet worklists\n- Run weekly huddles with RN care managers and pharmacists to review the 25 highest-risk patients on the panel"
+          "description": "- Coordinate care for 220 high-risk Medicare patients with heart failure, COPD and diabetes across 4 practices\n- Complete 2-business-day transitional care calls after discharge, reducing panel 30-day readmissions from 17% to 13%\n- Screen for social needs with PRAPARE and connect 300+ patients a year to food, transport and utility programs\n- Close 85% of open referrals within 30 days using Epic Healthy Planet worklists"
         },
         {
           "company": "Allegheny Family Medicine",
@@ -1262,7 +1610,7 @@
           "startDate": "2021-09",
           "endDate": "2023-02",
           "isCurrent": false,
-          "description": "- Scheduled specialist referrals and imaging for 6 providers, tracking 400 open orders monthly\n- Helped 120 patients enroll in Medicaid and Medicare Savings Programs\n- Answered 80+ patient calls a day about referrals, imaging and lab orders"
+          "description": "- Scheduled specialist referrals and imaging for 6 providers, tracking 400 open orders monthly\n- Helped 120 patients enroll in Medicaid and Medicare Savings Programs"
         },
         {
           "company": "Three Rivers Hospital Volunteer Services",
@@ -1271,7 +1619,7 @@
           "startDate": "2019-01",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Guided 20 patients a week through registration, imaging and lab appointments\n- Gathered patient feedback for the hospital's patient experience team"
+          "description": "- Guided 20 patients a week through registration, imaging and lab appointments"
         }
       ],
       "education": [
@@ -1286,9 +1634,17 @@
       "skills": [
         "Care coordination: transitional care, referral management, SDOH screening, community resources",
         "Programs: Medicare annual wellness, chronic care management, ACO quality measures",
-        "Systems: Epic Healthy Planet, findhelp.org, Microsoft Excel",
-        "Certifications: Certified Community Health Worker (Pennsylvania), BLS"
-      ]
+        "Systems: Epic Healthy Planet, findhelp.org, Microsoft Excel"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "mono": 0.97,
+        "pop": 0.88
+      }
     },
     "Patient Care Coordinator": {
       "summary": "Patient care coordinator with 5 years in surgical specialty practices, guiding 1,500+ patients a year from consult to post-op. Reduced same-day surgery cancellations by 34% with pre-surgical checklists. Brings authorization management, scheduling precision and clear, compassionate patient education.",
@@ -1300,7 +1656,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Guide 1,500+ patients a year through consults, financial clearance, surgery scheduling and post-op follow-up\n- Introduced a pre-surgical checklist for labs, clearances and medication holds, cutting day-of cancellations 34%\n- Secure prior authorizations for reconstructive procedures with a 93% first-pass approval rate\n- Present cosmetic surgery quotes and financing options, converting 42% of consults to booked cases\n- Coordinate surgical scheduling across 2 hospitals and an ambulatory center, booking 25 cases a week"
+          "description": "- Guide 1,500+ patients a year through consults, financial clearance, surgery scheduling and post-op follow-up\n- Introduced a pre-surgical checklist for labs, clearances and medication holds, cutting day-of cancellations 34%\n- Secure prior authorizations for reconstructive procedures with a 93% first-pass approval rate\n- Present cosmetic surgery quotes and financing options, converting 42% of consults to booked cases"
         },
         {
           "company": "Lowcountry Orthopedics",
@@ -1309,7 +1665,7 @@
           "startDate": "2021-01",
           "endDate": "2022-03",
           "isCurrent": false,
-          "description": "- Scheduled 60 surgeries a week across 2 ambulatory surgery centers and a hospital\n- Cut OR block release waste by coordinating cancellations with a short-notice list\n- Verified insurance benefits and collected surgical deposits ahead of each procedure"
+          "description": "- Scheduled 60 surgeries a week across 2 ambulatory surgery centers and a hospital\n- Cut OR block release waste by coordinating cancellations with a short-notice list"
         },
         {
           "company": "Palmetto Dermatology",
@@ -1318,7 +1674,7 @@
           "startDate": "2020-06",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Scheduled 80 dermatology appointments a day and verified insurance\n- Scanned referrals and pathology reports into patient charts"
+          "description": "- Scheduled 80 dermatology appointments a day and verified insurance"
         }
       ],
       "education": [
@@ -1335,7 +1691,20 @@
         "Revenue cycle: prior authorization, insurance verification, CPT basics, good faith estimates",
         "Systems: Nextech, Epic, Availity",
         "Certifications: CMAA (NHA), HIPAA training"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "quartz": 0.96,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.87
+      }
     },
     "Case Manager": {
       "summary": "RN case manager with 10 years of nursing experience, including 5 in hospital utilization review and discharge planning for a 28-bed medical unit. Cut excess length of stay days by 19% and avoidable denials by $1.1M a year. Brings InterQual expertise, payer negotiation and safe, timely transitions of care.",
@@ -1347,7 +1716,7 @@
           "startDate": "2021-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a caseload of 18–22 inpatients daily, completing InterQual reviews and discharge plans from admission\n- Reduced excess days over GMLOS by 19% through daily multidisciplinary progression rounds\n- Secured observation-to-inpatient status corrections and peer-to-peer reviews that recovered $1.1M in avoidable denials a year\n- Arrange SNF, home health and DME placements, cutting discharge-order-to-departure time from 5.2 to 3.4 hours\n- Educate patients and families on Medicare observation status and discharge appeal rights, meeting 100% of IM notice timelines"
+          "description": "- Manage a caseload of 18–22 inpatients daily, completing InterQual reviews and discharge plans from admission\n- Reduced excess days over GMLOS by 19% through daily multidisciplinary progression rounds\n- Secured observation-to-inpatient status corrections and peer-to-peer reviews that recovered $1.1M in avoidable denials a year\n- Arrange SNF, home health and DME placements, cutting discharge-order-to-departure time from 5.2 to 3.4 hours"
         },
         {
           "company": "Sunbelt Medical Center",
@@ -1356,7 +1725,7 @@
           "startDate": "2016-05",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Provided care to 5–6 medical patients per shift and served as unit discharge champion\n- Piloted a discharge-by-noon initiative that raised early discharges from 14% to 31%\n- Precepted 4 new nurses as a unit preceptor and served on the patient education committee"
+          "description": "- Provided care to 5–6 medical patients per shift and served as unit discharge champion\n- Piloted a discharge-by-noon initiative that raised early discharges from 14% to 31%"
         },
         {
           "company": "Orlando Community Hospice",
@@ -1365,7 +1734,7 @@
           "startDate": "2014-01",
           "endDate": "2016-04",
           "isCurrent": false,
-          "description": "- Provided companionship visits to 6 hospice patients a month\n- Supported families with respite visits and caregiver resource referrals"
+          "description": "- Provided companionship visits to 6 hospice patients a month"
         }
       ],
       "education": [
@@ -1381,9 +1750,23 @@
         "Case management: utilization review, discharge planning, level of care, payer communication, Medicare IM notices",
         "Criteria: InterQual, MCG, Two-Midnight Rule",
         "Systems: Epic Care Management, Allscripts CarePort, naviHealth",
-        "Licenses: RN (Florida, compact), BLS",
-        "Certifications: CCM (CCMC), ACM-RN (ACMA)"
-      ]
+        "Licenses: RN (Florida, compact), BLS"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.97,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.97,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.89
+      }
     },
     "Social Worker": {
       "summary": "Licensed clinical social worker with 7 years in hospital and community settings, currently covering an inpatient oncology and palliative unit. Shortened complex discharge delays by 2.5 days through early psychosocial screening. Brings crisis intervention, advance care planning and strong ties to community resources.",
@@ -1395,7 +1778,7 @@
           "startDate": "2021-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Carry a caseload of 25–30 patients and families, providing psychosocial assessment, counseling and discharge planning\n- Introduced psychosocial distress screening at admission, cutting complex discharge delays by 2.5 days on average\n- Facilitate 15+ goals-of-care family meetings a month with palliative physicians and chaplaincy\n- Secured $85K in emergency funds and lodging assistance for patients through foundation partnerships\n- Lead monthly psychosocial rounds and an oncology caregiver support group serving 60 families a year"
+          "description": "- Carry a caseload of 25–30 patients and families, providing psychosocial assessment, counseling and discharge planning\n- Introduced psychosocial distress screening at admission, cutting complex discharge delays by 2.5 days on average\n- Facilitate 15+ goals-of-care family meetings a month with palliative physicians and chaplaincy"
         },
         {
           "company": "Inland Northwest Family Services",
@@ -1404,7 +1787,7 @@
           "startDate": "2019-06",
           "endDate": "2021-09",
           "isCurrent": false,
-          "description": "- Provided trauma-focused CBT to 30 children and adolescents a week with documented PHQ-A and SCARED improvements\n- Completed child protective safety assessments in collaboration with DCYF caseworkers\n- Wrote court reports and testified in 6 dependency hearings in collaboration with legal teams"
+          "description": "- Provided trauma-focused CBT to 30 children and adolescents a week with documented PHQ-A and SCARED improvements\n- Completed child protective safety assessments in collaboration with DCYF caseworkers"
         },
         {
           "company": "Spokane Youth Shelter",
@@ -1413,7 +1796,7 @@
           "startDate": "2016-06",
           "endDate": "2017-08",
           "isCurrent": false,
-          "description": "- Supported 20 youth in emergency shelter with case plans and crisis de-escalation\n- Connected youth to school enrollment, medical care and family reunification services"
+          "description": "- Supported 20 youth in emergency shelter with case plans and crisis de-escalation"
         }
       ],
       "education": [
@@ -1434,10 +1817,25 @@
       "skills": [
         "Clinical: psychosocial assessment, crisis intervention, TF-CBT, grief counseling, advance care planning",
         "Practice: discharge planning, guardianship and APS referrals, community resources, benefits navigation",
-        "Systems: Epic, Cerner",
-        "Licenses: LICSW (Washington)",
-        "Certifications: ACHP-SW, CPR"
-      ]
+        "Systems: Epic, Cerner"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "tech": 0.99,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "mono": 0.91,
+        "pop": 0.88
+      }
     },
     "Psychologist": {
       "summary": "Licensed clinical psychologist with 8 years of post-doctoral practice in integrated behavioral health and neuropsychological assessment. Built a primary care integration program serving 2,000 patients a year. Brings evidence-based treatment for anxiety, depression and PTSD, plus supervision of doctoral trainees.",
@@ -1449,7 +1847,7 @@
           "startDate": "2021-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 7-clinician behavioral health team embedded in 5 primary care clinics serving 2,000 patients a year\n- Launched same-day warm handoffs that cut wait for first behavioral visit from 32 to 3 days\n- Deliver CPT, PE and CBT for 22–26 weekly therapy patients, with 64% showing reliable PCL-5 improvement\n- Supervise 3 doctoral interns and 2 postdoctoral fellows on an APA-accredited track\n- Built measurement-based care workflows in Epic that track PHQ-9 and GAD-7 across all integrated care visits"
+          "description": "- Lead a 7-clinician behavioral health team embedded in 5 primary care clinics serving 2,000 patients a year\n- Launched same-day warm handoffs that cut wait for first behavioral visit from 32 to 3 days\n- Deliver CPT, PE and CBT for 22–26 weekly therapy patients, with 64% showing reliable PCL-5 improvement"
         },
         {
           "company": "Delaware Valley Neuropsychology",
@@ -1458,7 +1856,7 @@
           "startDate": "2018-09",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Completed 6–8 comprehensive neuropsychological evaluations a month for dementia, ADHD and TBI referrals\n- Reduced report turnaround from 5 weeks to 12 days through templated interpretation sections\n- Supervised 2 psychometrists administering test batteries under licensed oversight"
+          "description": "- Completed 6–8 comprehensive neuropsychological evaluations a month for dementia, ADHD and TBI referrals\n- Reduced report turnaround from 5 weeks to 12 days through templated interpretation sections"
         },
         {
           "company": "Western States Veterans Medical Center",
@@ -1488,10 +1886,22 @@
       "skills": [
         "Treatment: CBT, CPT and PE for PTSD, ACT, brief intervention, group therapy",
         "Assessment: WAIS-IV, RBANS, MMPI-3, PAI, measurement-based care",
-        "Leadership: clinical supervision, program development, integrated care",
-        "Licenses: Licensed Psychologist (Pennsylvania, New Jersey), EPPP",
-        "Memberships: APA, PSYPACT authorization to practice telepsychology"
-      ]
+        "Leadership: clinical supervision, program development, integrated care"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.9,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.92
+      }
     },
     "EMT (Emergency Medical Technician)": {
       "summary": "Nationally registered EMT with 3 years on a busy municipal 911 ambulance, responding to 2,500+ calls. Earned two field commendations for cardiac arrest saves with return of spontaneous circulation. Brings calm scene management, high-quality CPR and clean ePCR documentation while pursuing paramedic certification.",
@@ -1503,7 +1913,7 @@
           "startDate": "2023-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Respond to 12–16 911 calls per 24-hour shift, providing BLS assessment, splinting, oxygen and transport\n- Delivered high-performance CPR with mechanical compression devices during 2 arrests that achieved ROSC\n- Complete ESO ePCRs averaging 98% on QA audits for documentation completeness\n- Perform daily rig checks and restock, keeping unit out-of-service time for supplies at zero\n- Assist paramedics with 12-lead placement, IV setup and medication preparation on ALS calls"
+          "description": "- Respond to 12–16 911 calls per 24-hour shift, providing BLS assessment, splinting, oxygen and transport\n- Delivered high-performance CPR with mechanical compression devices during 2 arrests that achieved ROSC\n- Complete ESO ePCRs averaging 98% on QA audits for documentation completeness\n- Perform daily rig checks and restock, keeping unit out-of-service time for supplies at zero"
         },
         {
           "company": "Desert Sun Ambulance",
@@ -1512,7 +1922,7 @@
           "startDate": "2022-01",
           "endDate": "2023-03",
           "isCurrent": false,
-          "description": "- Transported 8–10 patients per shift between hospitals, dialysis centers and skilled nursing facilities\n- Monitored vitals and oxygen therapy for bariatric and ventilator-dependent patients with critical care teams\n- Restocked and checked BLS equipment on 2 transport units each shift"
+          "description": "- Transported 8–10 patients per shift between hospitals, dialysis centers and skilled nursing facilities\n- Monitored vitals and oxygen therapy for bariatric and ventilator-dependent patients with critical care teams"
         },
         {
           "company": "Henderson Aquatic Center",
@@ -1521,7 +1931,7 @@
           "startDate": "2019-05",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Monitored a 600-swimmer pool deck and responded to 30 first-aid incidents a season\n- Held current CPR/AED and first aid certifications"
+          "description": "- Monitored a 600-swimmer pool deck and responded to 30 first-aid incidents a season"
         }
       ],
       "education": [
@@ -1536,9 +1946,21 @@
       "skills": [
         "Patient care: BLS assessment, CPR and AED, splinting, spinal motion restriction, oxygen therapy",
         "Operations: emergency vehicle operations, MCI triage (START), radio communication",
-        "Systems: ESO ePCR, LUCAS device, Stryker Power-PRO",
-        "Certifications: NREMT EMT, Nevada EMT License, BLS, EVOC, NIMS ICS-100/200"
-      ]
+        "Systems: ESO ePCR, LUCAS device, Stryker Power-PRO"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.88,
+        "symmetry": 0.99,
+        "bronx": 0.98,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Paramedic": {
       "summary": "Nationally registered paramedic and field training officer with 9 years in fire-based EMS, including 5 as lead paramedic on a high-volume medic unit. Helped raise county cardiac arrest survival to discharge from 9% to 14%. Brings advanced airway skills, 12-lead interpretation and preceptor experience.",
@@ -1550,7 +1972,7 @@
           "startDate": "2021-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead ALS care on a medic unit running 4,000 calls a year, including cardiac arrest, trauma and pediatric emergencies\n- Train 12 paramedic interns and new hires a year as FTO, with 100% completing field internship\n- Championed pit-crew CPR and pre-arrival STEMI transmission, contributing to survival-to-discharge rising from 9% to 14%\n- Maintain 97% first-pass success on advanced airway placements tracked in county QA\n- Coordinate MCI triage and transport as EMS group supervisor at 3 multi-vehicle collisions"
+          "description": "- Lead ALS care on a medic unit running 4,000 calls a year, including cardiac arrest, trauma and pediatric emergencies\n- Train 12 paramedic interns and new hires a year as FTO, with 100% completing field internship\n- Championed pit-crew CPR and pre-arrival STEMI transmission, contributing to survival-to-discharge rising from 9% to 14%\n- Maintain 97% first-pass success on advanced airway placements tracked in county QA"
         },
         {
           "company": "Saguaro Ambulance Services",
@@ -1559,7 +1981,7 @@
           "startDate": "2017-06",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Provided ALS 911 care and critical interfacility transports for 3,000+ patients\n- Reduced scene times for STEMI patients to under 15 minutes with 12-lead acquisition protocols\n- Precepted 6 EMTs through paramedic field hours"
+          "description": "- Provided ALS 911 care and critical interfacility transports for 3,000+ patients\n- Reduced scene times for STEMI patients to under 15 minutes with 12-lead acquisition protocols"
         },
         {
           "company": "Saguaro Ambulance Services",
@@ -1584,9 +2006,23 @@
         "Advanced care: RSI-assisted airway, 12-lead ECG, IO access, medication administration, ventilator management",
         "Leadership: field training, QA review, MCI command",
         "Systems: ImageTrend Elite, LIFEPAK 15, Pulsara",
-        "Certifications: NRP (NREMT), Arizona Paramedic, ACLS, PALS, PHTLS, AMLS",
-        "Fire: Firefighter I and II, Hazmat Operations"
-      ]
+        "Certifications: NRP (NREMT), Arizona Paramedic, ACLS, PALS, PHTLS"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Dental Assistant": {
       "summary": "Certified dental assistant with 4 years chairside in general and restorative dentistry, supporting 2 dentists and 14–18 patients a day. Increased same-day treatment acceptance by 21% through intraoral scan reviews. Brings expanded-function skills, radiography certification and tight infection control.",
@@ -1598,7 +2034,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Assist 2 dentists with 14–18 patients a day for fillings, crowns, root canals and extractions\n- Capture iTero intraoral scans and review them with patients, lifting same-day treatment acceptance 21%\n- Take 40+ radiographs daily, including FMX and panoramic images, with a sub-2% retake rate\n- Lead sterilization and OSHA compliance, passing weekly spore tests for 3 straight years\n- Place sealants, polish coronal surfaces and apply fluoride as expanded-function duties under North Carolina rules"
+          "description": "- Assist 2 dentists with 14–18 patients a day for fillings, crowns, root canals and extractions\n- Capture iTero intraoral scans and review them with patients, lifting same-day treatment acceptance 21%\n- Take 40+ radiographs daily, including FMX and panoramic images, with a sub-2% retake rate\n- Lead sterilization and OSHA compliance, passing weekly spore tests for 3 straight years"
         },
         {
           "company": "Queen City Pediatric Dentistry",
@@ -1607,7 +2043,7 @@
           "startDate": "2021-06",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Supported 25 pediatric patients a day, applying sealants and fluoride varnish under supervision\n- Coached anxious children and parents through nitrous oxide sedation visits\n- Managed the pediatric recall list and confirmed 50 appointments a day by text and phone"
+          "description": "- Supported 25 pediatric patients a day, applying sealants and fluoride varnish under supervision\n- Coached anxious children and parents through nitrous oxide sedation visits"
         },
         {
           "company": "Charlotte Family Orthodontics",
@@ -1616,7 +2052,7 @@
           "startDate": "2020-06",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Sterilized instruments for 4 operatories while attending dental assisting school\n- Maintained autoclave logs and weekly spore testing records"
+          "description": "- Sterilized instruments for 4 operatories while attending dental assisting school"
         }
       ],
       "education": [
@@ -1632,9 +2068,20 @@
         "Chairside: four-handed dentistry, crown and bridge, endodontics, impressions, temporaries",
         "Imaging: digital radiography, panoramic, iTero and CEREC scanning",
         "Systems: Dentrix, Eaglesoft, Dexis",
-        "Compliance: OSHA bloodborne pathogens, CDC infection control",
-        "Certifications: CDA (DANB), Dental Assistant II (North Carolina), Radiology Certification, BLS"
-      ]
+        "Compliance: OSHA bloodborne pathogens, CDC infection control"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Dental Hygienist": {
       "summary": "Registered dental hygienist with 7 years in general and periodontal practices, treating 8–9 patients a day. Grew the practice's periodontal maintenance program by 260 patients through standardized charting. Brings local anesthesia certification, laser therapy and patient education that keeps recall rates high.",
@@ -1646,7 +2093,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Provide scaling and root planing, periodontal maintenance and implant care to 8–9 patients a day\n- Standardized 6-point perio charting and risk discussions, adding 260 active periodontal maintenance patients\n- Administer local anesthesia and laser bacterial reduction under Oregon expanded-function permits\n- Maintain an 88% hygiene reappointment rate through same-visit scheduling and recall education\n- Partner with the periodontist on soft tissue management plans and present treatment estimates with the coordinator"
+          "description": "- Provide scaling and root planing, periodontal maintenance and implant care to 8–9 patients a day\n- Standardized 6-point perio charting and risk discussions, adding 260 active periodontal maintenance patients\n- Administer local anesthesia and laser bacterial reduction under Oregon expanded-function permits\n- Maintain an 88% hygiene reappointment rate through same-visit scheduling and recall education"
         },
         {
           "company": "Rose City Dental Group",
@@ -1655,7 +2102,7 @@
           "startDate": "2019-07",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Treated 9–10 adult and pediatric patients per day with prophylaxis, sealants and radiographs\n- Raised fluoride and sealant acceptance among children 30% with visual aids\n- Volunteered at 3 community school sealant days, screening 400 children"
+          "description": "- Treated 9–10 adult and pediatric patients per day with prophylaxis, sealants and radiographs\n- Raised fluoride and sealant acceptance among children 30% with visual aids"
         },
         {
           "company": "Klamath Falls Dental Clinic",
@@ -1664,7 +2111,7 @@
           "startDate": "2016-06",
           "endDate": "2019-06",
           "isCurrent": false,
-          "description": "- Assisted 2 dentists chairside part time during hygiene school\n- Took and processed radiographs and sterilized instruments"
+          "description": "- Assisted 2 dentists chairside part time during hygiene school"
         }
       ],
       "education": [
@@ -1680,9 +2127,23 @@
         "Clinical: scaling and root planing, periodontal charting, local anesthesia, laser therapy, implant maintenance",
         "Prevention: oral cancer screening, fluoride, sealants, nutritional counseling",
         "Systems: Dentrix, Dexis, Florida Probe",
-        "Licenses: RDH (Oregon), Local Anesthesia Endorsement, NBDHE",
-        "Certifications: BLS, Laser Proficiency (ALD)"
-      ]
+        "Licenses: RDH (Oregon), Local Anesthesia Endorsement, NBDHE"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.96,
+        "opal": 0.97,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Dentist": {
       "summary": "General dentist with 8 years of practice, including 4 as partner in a 6-operatory practice producing $1.9M a year. Placed 400+ implants and grew same-day crown volume by 70%. Brings comprehensive treatment planning, digital workflows and mentorship of associate dentists and hygienists.",
@@ -1694,7 +2155,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead clinical care in a 6-operatory practice with 14 staff and $1.9M in annual production\n- Expanded CEREC same-day crowns, raising crown volume 70% and cutting lab fees $95K a year\n- Placed 400+ implants with guided surgery planning and a 98% 1-year survival rate\n- Mentor 2 associate dentists on treatment planning and case presentation\n- Introduced CBCT-guided treatment planning for implants and complex endodontics in the practice"
+          "description": "- Lead clinical care in a 6-operatory practice with 14 staff and $1.9M in annual production\n- Expanded CEREC same-day crowns, raising crown volume 70% and cutting lab fees $95K a year\n- Placed 400+ implants with guided surgery planning and a 98% 1-year survival rate\n- Mentor 2 associate dentists on treatment planning and case presentation"
         },
         {
           "company": "Treasure Valley Dental",
@@ -1703,7 +2164,7 @@
           "startDate": "2018-07",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Treated 14–18 patients daily in restorative, endodontic and surgical dentistry\n- Grew personal production from $520K to $810K a year through comprehensive exams\n- Completed 150 hours of implant and sedation continuing education during associateship"
+          "description": "- Treated 14–18 patients daily in restorative, endodontic and surgical dentistry\n- Grew personal production from $520K to $810K a year through comprehensive exams"
         },
         {
           "company": "UW School of Dentistry Community Clinic",
@@ -1712,7 +2173,7 @@
           "startDate": "2016-07",
           "endDate": "2018-06",
           "isCurrent": false,
-          "description": "- Completed comprehensive care for 60 adult patients under faculty supervision\n- Treated underserved patients during 4-week community rotations in rural Washington"
+          "description": "- Completed comprehensive care for 60 adult patients under faculty supervision"
         }
       ],
       "education": [
@@ -1734,9 +2195,23 @@
         "Clinical: restorative dentistry, implants, endodontics, extractions, clear aligners",
         "Technology: CEREC CAD/CAM, CBCT, guided surgery, digital impressions",
         "Practice: treatment planning, case acceptance, team leadership",
-        "Licenses: DDS (Idaho), DEA registration, INBDE",
-        "Certifications: Moderate Sedation Permit, Invisalign Certified Provider, BLS, ACLS"
-      ]
+        "Licenses: DDS (Idaho), DEA registration, INBDE"
+      ],
+      "fit": {
+        "silk": 0.93,
+        "minimalist": 0.95,
+        "creative": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.87,
+        "cast": 0.96
+      }
     },
     "Chiropractor": {
       "summary": "Doctor of chiropractic with 6 years in multidisciplinary sports and spine clinics, managing 45–55 patient visits a day. Built a personal-injury and employer referral program worth $350K a year. Brings evidence-based manipulation, active rehab and close collaboration with physical therapists and physicians.",
@@ -1748,7 +2223,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- See 45–55 visits a day for low back, neck and sports injuries, combining manipulation, soft tissue and exercise\n- Built referral relationships with 12 primary care and orthopedic practices, growing new patients 40%\n- Developed an employer ergonomics program generating $350K a year in contracted care\n- Track ODI and NDI outcomes for every plan of care, with 78% reaching minimal clinically important change\n- Co-manage 30+ patients a month with physical therapists and primary care physicians through shared care plans"
+          "description": "- See 45–55 visits a day for low back, neck and sports injuries, combining manipulation, soft tissue and exercise\n- Built referral relationships with 12 primary care and orthopedic practices, growing new patients 40%\n- Developed an employer ergonomics program generating $350K a year in contracted care\n- Track ODI and NDI outcomes for every plan of care, with 78% reaching minimal clinically important change"
         },
         {
           "company": "Front Range Integrated Health",
@@ -1757,7 +2232,7 @@
           "startDate": "2020-01",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Treated 35–40 patients daily in an integrated clinic alongside PT and massage therapy\n- Documented personal-injury cases with defensible SOAP notes and imaging referrals\n- Gave 20 community workshops on back pain prevention for employers and running clubs"
+          "description": "- Treated 35–40 patients daily in an integrated clinic alongside PT and massage therapy\n- Documented personal-injury cases with defensible SOAP notes and imaging referrals"
         },
         {
           "company": "Rocky Mountain Sports Medicine",
@@ -1766,7 +2241,7 @@
           "startDate": "2015-06",
           "endDate": "2016-07",
           "isCurrent": false,
-          "description": "- Assisted therapists with exercise programs for 30 patients a day\n- Applied hot and cold packs and maintained the gym floor"
+          "description": "- Assisted therapists with exercise programs for 30 patients a day"
         }
       ],
       "education": [
@@ -1787,10 +2262,25 @@
       "skills": [
         "Clinical: diversified technique, instrument-assisted soft tissue, active rehab, McKenzie MDT",
         "Practice: personal injury documentation, employer programs, outcome tracking",
-        "Systems: ChiroTouch, Jane",
-        "Licenses: Chiropractor (Colorado), NBCE Parts I–IV and Physiotherapy",
-        "Certifications: CCSP, BLS"
-      ]
+        "Systems: ChiroTouch, Jane"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "symmetry": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.9,
+        "cast": 0.98
+      }
     },
     "Medical Coder": {
       "summary": "Certified professional coder with 6 years in multispecialty professional-fee and outpatient coding. Codes 130–150 E/M and procedural encounters a day at 96% audited accuracy. Brings deep ICD-10-CM, CPT and HCPCS knowledge, HCC capture and provider education that reduces denials.",
@@ -1802,7 +2292,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Code 130–150 E/M, procedure and telehealth encounters a day across cardiology, orthopedics and primary care\n- Maintain 96% accuracy on quarterly external audits, above the 95% organizational target\n- Delivered provider education on 2021 E/M guidelines and HCC documentation, lifting RAF scores 0.08\n- Reduced coding-related denials 28% by building Epic edits for modifier 25 and 59 errors\n- Query providers on documentation gaps for HCC capture with a 92% response rate within 72 hours"
+          "description": "- Code 130–150 E/M, procedure and telehealth encounters a day across cardiology, orthopedics and primary care\n- Maintain 96% accuracy on quarterly external audits, above the 95% organizational target\n- Delivered provider education on 2021 E/M guidelines and HCC documentation, lifting RAF scores 0.08\n- Reduced coding-related denials 28% by building Epic edits for modifier 25 and 59 errors"
         },
         {
           "company": "Prairie Health Billing",
@@ -1837,7 +2327,22 @@
         "Compliance: NCCI edits, LCD/NCD, OIG audit standards, HIPAA",
         "Systems: Epic, 3M 360 Encompass, Find-A-Code",
         "Certifications: CPC (AAPC), CRC (AAPC)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.96,
+        "silk": 0.95,
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85
+      }
     },
     "Medical Biller": {
       "summary": "Medical biller with 5 years in physician-practice revenue cycle, managing $14M in annual charges for 22 providers. Cut AR over 90 days from 24% to 11% and lifted clean claim rate to 97%. Brings payer follow-up, denial appeals and patient billing expertise across commercial, Medicare and Medicaid.",
@@ -1849,7 +2354,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage end-to-end billing for $14M in annual charges across 22 providers and 3 specialties\n- Reduced AR over 90 days from 24% to 11% by prioritizing high-dollar follow-up and payer escalation\n- Raised clean claim rate from 89% to 97% with front-end scrubber rules in Waystar\n- Won 72% of appealed denials, recovering $410K in 2025\n- Train 4 billing specialists and write payer-specific playbooks for Medicare, Medicaid and 6 commercial plans"
+          "description": "- Manage end-to-end billing for $14M in annual charges across 22 providers and 3 specialties\n- Reduced AR over 90 days from 24% to 11% by prioritizing high-dollar follow-up and payer escalation\n- Raised clean claim rate from 89% to 97% with front-end scrubber rules in Waystar\n- Won 72% of appealed denials, recovering $410K in 2025"
         },
         {
           "company": "North Texas Pediatric Associates",
@@ -1867,7 +2372,7 @@
           "startDate": "2019-06",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Answered patient balance questions and set up 40 payment plans a month\n- Posted copays and reconciled daily deposits"
+          "description": "- Answered patient balance questions and set up 40 payment plans a month"
         }
       ],
       "education": [
@@ -1884,7 +2389,21 @@
         "Payers: Medicare, Texas Medicaid, commercial, workers' compensation",
         "Systems: Athenahealth, Waystar, Availity, Excel",
         "Certifications: CPB (AAPC)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Health Information Technician": {
       "summary": "Registered health information technician with 5 years in hospital HIM operations, from scanning and indexing to chart analysis and release of information. Cut delinquent chart rates from 9% to 2% and processes 1,200 requests a month. Brings HIPAA-compliant record management and careful EHR data integrity work.",
@@ -1896,7 +2415,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Analyze 250+ inpatient and outpatient charts a day for missing signatures and documentation deficiencies\n- Reduced delinquent medical record rate from 9% to 2% with automated Epic deficiency notices and physician reminders\n- Process 1,200 release-of-information requests a month within HIPAA timelines and state law\n- Merged 3,400 duplicate patient records in the MPI with 99.8% accuracy\n- Lead HIM coding queue reconciliation and audit 50 releases of information a month for compliance"
+          "description": "- Analyze 250+ inpatient and outpatient charts a day for missing signatures and documentation deficiencies\n- Reduced delinquent medical record rate from 9% to 2% with automated Epic deficiency notices and physician reminders\n- Process 1,200 release-of-information requests a month within HIPAA timelines and state law\n- Merged 3,400 duplicate patient records in the MPI with 99.8% accuracy"
         },
         {
           "company": "Inland Valley Medical Group",
@@ -1931,7 +2450,24 @@
         "Compliance: HIPAA, 42 CFR Part 2, California CMIA",
         "Systems: Epic HIM, Ciox, MRO",
         "Certifications: RHIT (AHIMA)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.97,
+        "silk": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Health Coach": {
       "summary": "National board-certified health and wellness coach with 5 years in employer and digital health programs, coaching 120 active members. Helped members with prediabetes lose an average of 5.8% body weight. Brings motivational interviewing, behavior change design and outcome tracking.",
@@ -1943,7 +2479,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coach 120 active members a month by video and chat on weight, diabetes, sleep and stress goals\n- Delivered the CDC-recognized Diabetes Prevention Program to 14 cohorts, with members averaging 5.8% weight loss\n- Kept 6-month member engagement at 71% versus a 55% program average\n- Trained 8 new coaches in motivational interviewing using recorded session reviews\n- Run monthly webinar workshops on sleep and stress that average 220 live attendees"
+          "description": "- Coach 120 active members a month by video and chat on weight, diabetes, sleep and stress goals\n- Delivered the CDC-recognized Diabetes Prevention Program to 14 cohorts, with members averaging 5.8% weight loss\n- Kept 6-month member engagement at 71% versus a 55% program average\n- Trained 8 new coaches in motivational interviewing using recorded session reviews"
         },
         {
           "company": "Wellspring Employer Wellness",
@@ -1952,7 +2488,7 @@
           "startDate": "2021-01",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Ran onsite biometric screenings and coaching for 3,000 employees across 5 employer clients\n- Led walking challenges that drew 41% participation and reduced self-reported stress scores\n- Coached 50 employees one-on-one through 12-week weight and blood pressure goals"
+          "description": "- Ran onsite biometric screenings and coaching for 3,000 employees across 5 employer clients\n- Led walking challenges that drew 41% participation and reduced self-reported stress scores"
         },
         {
           "company": "Hoosier Fitness Club",
@@ -1961,7 +2497,7 @@
           "startDate": "2018-06",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Trained 25 clients a week on strength and conditioning programs\n- Ran small-group fitness classes for older adults"
+          "description": "- Trained 25 clients a week on strength and conditioning programs"
         }
       ],
       "education": [
@@ -1978,7 +2514,20 @@
         "Programs: CDC Diabetes Prevention Program, weight management, stress and sleep",
         "Tools: Healthie, Zoom, Excel",
         "Certifications: NBC-HWC, ACE Health Coach, CDC DPP Lifestyle Coach, CPR"
-      ]
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.89,
+        "cast": 0.99
+      }
     },
     "Mental Health Counselor": {
       "summary": "Licensed mental health counselor with 6 years of outpatient practice treating adults with anxiety, depression and trauma. Carries a weekly caseload of 26–28 clients with a 92% kept-appointment rate. Brings CBT, EMDR and DBT skills, measurement-based care and steady crisis assessment.",
@@ -1990,7 +2539,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Provide individual therapy to 26–28 adult clients weekly using CBT, EMDR and DBT skills\n- Introduced PHQ-9 and GAD-7 tracking every 4 sessions; 61% of clients reached clinically significant improvement\n- Lead a 10-week DBT skills group serving 40 clients a year\n- Complete suicide risk assessments using the C-SSRS and coordinate safety plans with psychiatry\n- Provide clinical supervision to 2 provisionally licensed counselors working toward LMHC"
+          "description": "- Provide individual therapy to 26–28 adult clients weekly using CBT, EMDR and DBT skills\n- Introduced PHQ-9 and GAD-7 tracking every 4 sessions; 61% of clients reached clinically significant improvement\n- Lead a 10-week DBT skills group serving 40 clients a year\n- Complete suicide risk assessments using the C-SSRS and coordinate safety plans with psychiatry"
         },
         {
           "company": "North Shore Community Mental Health",
@@ -1999,7 +2548,7 @@
           "startDate": "2020-01",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Managed a caseload of 35 clients with serious mental illness and co-occurring disorders\n- Cut no-show rates from 28% to 15% with reminder texts and telehealth options\n- Completed intake assessments and treatment plans for 8 new clients a week"
+          "description": "- Managed a caseload of 35 clients with serious mental illness and co-occurring disorders\n- Cut no-show rates from 28% to 15% with reminder texts and telehealth options"
         },
         {
           "company": "Bay State Crisis Line",
@@ -2008,7 +2557,7 @@
           "startDate": "2017-09",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Completed 400 hours of text-based crisis counseling with active rescue protocols\n- Earned a shift supervisor's commendation for de-escalation skills"
+          "description": "- Completed 400 hours of text-based crisis counseling with active rescue protocols"
         }
       ],
       "education": [
@@ -2029,10 +2578,21 @@
       "skills": [
         "Treatment: CBT, EMDR, DBT skills, motivational interviewing, trauma-informed care",
         "Assessment: C-SSRS, PHQ-9, GAD-7, DSM-5-TR diagnosis, treatment planning",
-        "Systems: SimplePractice, TherapyNotes",
-        "Licenses: LMHC (Massachusetts), NCE",
-        "Certifications: NCC (NBCC), EMDR Certified (EMDRIA)"
-      ]
+        "Systems: SimplePractice, TherapyNotes"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.93
+      }
     },
     "New Graduate Nurse": {
       "summary": "BSN graduate and newly licensed registered nurse with 1,000+ clinical hours across medical-surgical, pediatric, psychiatric and critical care rotations. Completed a 180-hour ICU capstone preceptorship carrying a full 2-patient assignment. Brings current ACLS, solid Epic documentation habits and prior experience as a patient care technician.",
@@ -2053,7 +2613,7 @@
           "startDate": "2026-01",
           "endDate": "2026-04",
           "isCurrent": false,
-          "description": "- Managed a full 2-patient ICU assignment under an RN preceptor, including ventilated and vasopressor-dependent patients\n- Presented an EBP poster on oral care to prevent ventilator-associated events, adopted into unit huddles\n- Completed ICU skills checkoffs for arterial line care, central line dressing changes and ventilator alarm response"
+          "description": "- Managed a full 2-patient ICU assignment under an RN preceptor, including ventilated and vasopressor-dependent patients\n- Presented an EBP poster on oral care to prevent ventilator-associated events, adopted into unit huddles"
         }
       ],
       "education": [
@@ -2064,20 +2624,20 @@
           "endDate": "2026-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Ventilator-Associated Event Prevention Poster",
-          "link": "",
-          "description": "Reviewed 14 studies on chlorhexidine-free oral care and presented recommendations to ICU leadership at the senior research showcase"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Clinical: head-to-toe assessment, medication administration, IV insertion, wound care, patient education",
-        "Rotations: med-surg, MICU, pediatrics, L&D, behavioral health, community health",
-        "Systems: Epic, Pyxis, Alaris pumps",
-        "Licenses: RN (California, NCLEX-RN passed 2026), BLS, ACLS",
-        "Languages: English, Tagalog (conversational)"
-      ]
+        "Rotations: med-surg, MICU, pediatrics, L&D, behavioral health",
+        "Systems: Epic, Pyxis, Alaris pumps"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.94,
+        "ginto": 0.97,
+        "quartz": 0.97,
+        "bronx": 0.87,
+        "pop": 0.97
+      }
     },
     "ICU Nurse": {
       "summary": "Critical care nurse with 8 years in a 24-bed mixed medical-surgical ICU at a Level I trauma center. CCRN-certified charge nurse and ECMO specialist who helped cut CAUTI rates to zero for 14 months. Brings advanced hemodynamic monitoring, CRRT and calm leadership during codes.",
@@ -2089,7 +2649,7 @@
           "startDate": "2020-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Care for 1–2 critically ill patients per shift on ventilators, vasopressors, CRRT and arterial and PA lines\n- Serve as ECMO specialist for 30+ VV and VA runs, managing circuit checks and anticoagulation\n- Led a nurse-driven catheter removal protocol that kept CAUTI at zero for 14 consecutive months\n- Charge nurse 2 shifts a week, coordinating admissions, rapid responses and staffing for 16 nurses\n- Precept 2 new ICU nurses a year through a 16-week critical care orientation"
+          "description": "- Care for 1–2 critically ill patients per shift on ventilators, vasopressors, CRRT and arterial and PA lines\n- Serve as ECMO specialist for 30+ VV and VA runs, managing circuit checks and anticoagulation\n- Led a nurse-driven catheter removal protocol that kept CAUTI at zero for 14 consecutive months\n- Charge nurse 2 shifts a week, coordinating admissions, rapid responses and staffing for 16 nurses"
         },
         {
           "company": "Tahoe Regional Medical Center",
@@ -2098,7 +2658,7 @@
           "startDate": "2018-06",
           "endDate": "2020-07",
           "isCurrent": false,
-          "description": "- Managed 3–4 step-down patients on BiPAP, cardiac drips and post-op monitoring\n- Joined the sepsis committee that raised 3-hour bundle compliance from 62% to 84%\n- Monitored post-cardiac catheterization and post-op vascular patients with sheath removal"
+          "description": "- Managed 3–4 step-down patients on BiPAP, cardiac drips and post-op monitoring\n- Joined the sepsis committee that raised 3-hour bundle compliance from 62% to 84%"
         },
         {
           "company": "Reno Medical Center",
@@ -2107,7 +2667,7 @@
           "startDate": "2016-06",
           "endDate": "2018-05",
           "isCurrent": false,
-          "description": "- Provided ADLs and vitals to 10 med-surg patients a shift during nursing school\n- Assisted with early mobility and fall-risk precautions"
+          "description": "- Provided ADLs and vitals to 10 med-surg patients a shift during nursing school"
         }
       ],
       "education": [
@@ -2120,11 +2680,24 @@
       ],
       "projects": [],
       "skills": [
-        "Critical care: ventilator management, hemodynamic monitoring, CRRT, ECMO, vasoactive titration, targeted temperature management",
+        "Critical care: ventilator management, hemodynamic monitoring, CRRT, ECMO, vasoactive titration",
         "Systems: Epic, Philips IntelliVue, Prismaflex, Cardiohelp",
         "Licenses: RN (Nevada, compact), BLS, ACLS",
         "Certifications: CCRN (AACN), TNCC"
-      ]
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.95,
+        "mono": 0.95,
+        "pop": 0.91
+      }
     },
     "Emergency Room Nurse": {
       "summary": "Emergency nurse with 5 years in a 60-bed Level II trauma center seeing 85,000 visits a year. CEN-certified triage nurse who cut left-without-being-seen rates from 4.1% to 1.8%. Brings ESI triage accuracy, trauma and pediatric emergency skills, and steady care during surge.",
@@ -2136,7 +2709,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Care for 4–5 patients per shift across acute, trauma and resuscitation zones, including STEMI and stroke activations\n- Triage up to 80 patients a shift using ESI, with 93% accuracy on quarterly audits\n- Helped launch a rapid medical evaluation zone that lowered LWBS rates from 4.1% to 1.8%\n- Lead monthly pediatric mock codes as an ENPC-certified unit educator\n- Serve on the sexual assault response team after SANE-A training, completing 25 forensic exams a year"
+          "description": "- Care for 4–5 patients per shift across acute, trauma and resuscitation zones, including STEMI and stroke activations\n- Triage up to 80 patients a shift using ESI, with 93% accuracy on quarterly audits\n- Helped launch a rapid medical evaluation zone that lowered LWBS rates from 4.1% to 1.8%\n- Lead monthly pediatric mock codes as an ENPC-certified unit educator"
         },
         {
           "company": "Ohio River Hospital",
@@ -2145,7 +2718,7 @@
           "startDate": "2021-06",
           "endDate": "2022-03",
           "isCurrent": false,
-          "description": "- Completed a 16-week ED residency, managing 3–4 patients per shift by the end of orientation\n- Placed ultrasound-guided IVs after certification, reducing difficult-access delays\n- Rotated through fast track and pediatric zones, treating 20+ minor injury patients per shift"
+          "description": "- Completed a 16-week ED residency, managing 3–4 patients per shift by the end of orientation\n- Placed ultrasound-guided IVs after certification, reducing difficult-access delays"
         },
         {
           "company": "Bluegrass Ambulance Service",
@@ -2154,7 +2727,7 @@
           "startDate": "2018-06",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Responded to 911 calls on an ambulance during nursing school\n- Delivered BLS care and transport for 600 patients"
+          "description": "- Responded to 911 calls on an ambulance during nursing school"
         }
       ],
       "education": [
@@ -2170,9 +2743,19 @@
         "Emergency care: ESI triage, trauma resuscitation, sepsis, stroke and STEMI protocols, pediatric emergencies",
         "Skills: ultrasound-guided IV, rapid infuser, procedural sedation monitoring, splinting",
         "Systems: Epic ASAP, Omnicell, Zoll monitors",
-        "Licenses: RN (Kentucky, compact), BLS, ACLS, PALS",
-        "Certifications: CEN (BCEN), TNCC, ENPC"
-      ]
+        "Licenses: RN (Kentucky, compact), BLS, ACLS, PALS"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Travel Nurse": {
       "summary": "Travel registered nurse with 7 years of med-surg, telemetry and step-down experience, completing 12 contracts at 9 hospitals in 6 states. Extended at 8 of 12 assignments and oriented in 3 different EHRs. Brings rapid onboarding, a multistate compact license and flexibility for float and surge staffing.",
@@ -2184,7 +2767,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Completed 12 contracts of 13 weeks at 9 hospitals in AZ, NC, TX, VA, WI and Washington, DC, 8 extended by the host facility\n- Care for 3–5 telemetry and step-down patients per shift, including cardiac drips, post-cath and post-op patients\n- Reach independent practice within 2–3 orientation shifts across Epic, Cerner and Meditech environments\n- Float to ED holds and COVID-19 cohort units during surge contracts\n- Maintain compliance files across agencies with 100% on-time skills checklists, health records and competencies"
+          "description": "- Completed 12 contracts of 13 weeks at 9 hospitals in AZ, NC, TX, VA, WI and Washington, DC, 8 extended by the host facility\n- Care for 3–5 telemetry and step-down patients per shift, including cardiac drips, post-cath and post-op patients\n- Reach independent practice within 2–3 orientation shifts across Epic, Cerner and Meditech environments\n- Float to ED holds and COVID-19 cohort units during surge contracts"
         },
         {
           "company": "Badger State Medical Center",
@@ -2193,7 +2776,7 @@
           "startDate": "2019-07",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Managed 4–5 telemetry patients per shift on a 36-bed unit and served as relief charge nurse\n- Precepted 5 new graduates and supported cardiac monitoring competency training\n- Served on the unit falls committee that reduced falls 20% in one year"
+          "description": "- Managed 4–5 telemetry patients per shift on a 36-bed unit and served as relief charge nurse\n- Precepted 5 new graduates and supported cardiac monitoring competency training"
         },
         {
           "company": "Badger State Medical Center",
@@ -2202,7 +2785,7 @@
           "startDate": "2017-06",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Assisted 10 telemetry patients a shift with ADLs, vitals and ambulation\n- Completed 12-lead EKGs and glucose checks under RN direction"
+          "description": "- Assisted 10 telemetry patients a shift with ADLs, vitals and ambulation"
         }
       ],
       "education": [
@@ -2215,11 +2798,26 @@
       ],
       "projects": [],
       "skills": [
-        "Clinical: telemetry, step-down, med-surg, post-cath care, cardiac drips, sepsis protocols",
+        "Clinical: telemetry, step-down, med-surg, post-cath care, cardiac drips",
         "Adaptability: rapid onboarding, float assignments, multiple EHRs (Epic, Cerner, Meditech)",
         "Licenses: RN multistate (Wisconsin, NLC), RN (California), BLS, ACLS",
         "Certifications: PCCN (AACN), NIHSS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "Labor and Delivery Nurse": {
       "summary": "Labor and delivery nurse with 7 years in a 20-bed L&D unit delivering 4,200 births a year. Inpatient obstetric certified and AWHONN fetal monitoring instructor who helped cut the unit's primary cesarean rate. Brings intrapartum care, high-risk antepartum monitoring and obstetric hemorrhage response skills.",
@@ -2231,7 +2829,7 @@
           "startDate": "2021-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Care for laboring patients at 1:2 ratios, moving to 1:1 in second stage and with oxytocin or high-risk conditions\n- Circulate for 6–8 cesarean births a month and recover patients in PACU\n- Teach AWHONN intermediate fetal monitoring to 40 nurses a year, raising competency pass rates to 97%\n- Championed labor support positioning and peanut ball use, contributing to an NTSV cesarean drop from 29% to 23%\n- Serve on the obstetric emergency simulation team running quarterly hemorrhage and shoulder dystocia drills"
+          "description": "- Care for laboring patients at 1:2 ratios, moving to 1:1 in second stage and with oxytocin or high-risk conditions\n- Circulate for 6–8 cesarean births a month and recover patients in PACU\n- Teach AWHONN intermediate fetal monitoring to 40 nurses a year, raising competency pass rates to 97%\n- Championed labor support positioning and peanut ball use, contributing to an NTSV cesarean drop from 29% to 23%"
         },
         {
           "company": "Delta Medical Center",
@@ -2240,7 +2838,7 @@
           "startDate": "2019-06",
           "endDate": "2021-04",
           "isCurrent": false,
-          "description": "- Cared for 4 mother-baby couplets per shift and floated to L&D for triage and inductions\n- Led quantitative blood loss rollout as part of the state obstetric hemorrhage bundle\n- Provided postpartum education on breastfeeding and newborn care to 4 couplets a shift"
+          "description": "- Cared for 4 mother-baby couplets per shift and floated to L&D for triage and inductions\n- Led quantitative blood loss rollout as part of the state obstetric hemorrhage bundle"
         },
         {
           "company": "Columbus Women's Clinic",
@@ -2249,7 +2847,7 @@
           "startDate": "2016-06",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Roomed 25 prenatal patients a day and recorded fundal heights and vitals\n- Scheduled ultrasounds and glucose tolerance tests"
+          "description": "- Roomed 25 prenatal patients a day and recorded fundal heights and vitals"
         }
       ],
       "education": [
@@ -2265,9 +2863,23 @@
         "Obstetrics: intrapartum care, fetal heart monitoring, oxytocin management, OB hemorrhage, preeclampsia",
         "Surgical: cesarean circulating, PACU recovery, neonatal resuscitation",
         "Systems: Epic Stork, PeriWatch, OBIX",
-        "Licenses: RN (Mississippi, compact), BLS, ACLS, NRP",
-        "Certifications: RNC-OB (NCC), C-EFM, AWHONN Fetal Monitoring Instructor"
-      ]
+        "Licenses: RN (Mississippi, compact), BLS, ACLS, NRP"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Operating Room Nurse": {
       "summary": "Perioperative registered nurse with 9 years as circulator and scrub in a 24-OR hospital, specializing in cardiac and orthopedic surgery. CNOR-certified service-line lead who cut first-case delays by 42%. Brings surgical safety leadership, instrument expertise and strong partnership with anesthesia and surgeons.",
@@ -2279,7 +2891,7 @@
           "startDate": "2021-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Circulate and scrub 6–10 cardiac and vascular cases a week, including CABG, valve and TAVR procedures\n- Lead a team of 11 RNs and surgical techs on the cardiac service, managing case carts and preference cards\n- Reduced first-case on-time start delays by 42% through pre-op huddles and standardized room setups\n- Audit WHO surgical safety checklist and time-out compliance at 100% for 2 years\n- Serve on the surgical site infection committee that cut cardiac SSI rates from 2.4% to 1.1%"
+          "description": "- Circulate and scrub 6–10 cardiac and vascular cases a week, including CABG, valve and TAVR procedures\n- Lead a team of 11 RNs and surgical techs on the cardiac service, managing case carts and preference cards\n- Reduced first-case on-time start delays by 42% through pre-op huddles and standardized room setups\n- Audit WHO surgical safety checklist and time-out compliance at 100% for 2 years"
         },
         {
           "company": "Smoky Mountain Medical Center",
@@ -2288,7 +2900,7 @@
           "startDate": "2017-06",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Circulated orthopedic, general and trauma cases in a 14-OR department, including on-call coverage\n- Completed a 6-month perioperative residency using AORN Periop 101\n- Recovered patients in PACU during staffing shortages"
+          "description": "- Circulated orthopedic, general and trauma cases in a 14-OR department, including on-call coverage\n- Completed a 6-month perioperative residency using AORN Periop 101"
         },
         {
           "company": "Knoxville Surgery Center",
@@ -2297,7 +2909,7 @@
           "startDate": "2014-06",
           "endDate": "2017-05",
           "isCurrent": false,
-          "description": "- Assembled 60 instrument trays a shift for orthopedic and ENT cases\n- Learned surgical instrumentation used in later OR practice"
+          "description": "- Assembled 60 instrument trays a shift for orthopedic and ENT cases"
         }
       ],
       "education": [
@@ -2310,12 +2922,23 @@
       ],
       "projects": [],
       "skills": [
-        "Perioperative: circulating, scrubbing, sterile technique, positioning, specimen handling, surgical counts",
+        "Perioperative: circulating, scrubbing, sterile technique, positioning, specimen handling",
         "Specialties: cardiac surgery, TAVR, orthopedics, trauma",
         "Systems: Epic OpTime, Stryker, Sterilization tracking (Censitrac)",
-        "Licenses: RN (Tennessee, compact), BLS, ACLS",
-        "Certifications: CNOR (CCI)"
-      ]
+        "Licenses: RN (Tennessee, compact), BLS, ACLS"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.85
+      }
     },
     "Director of Nursing": {
       "summary": "Director of nursing with 16 years of nursing experience and 6 in skilled nursing leadership, overseeing a 150-bed facility. Took the building from a 2-star to a 5-star CMS rating and a deficiency-free annual survey. Brings regulatory command, staffing stability and clinical systems that reduce hospital readmissions.",
@@ -2327,7 +2950,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 140 nursing staff across short-term rehab and long-term care in a 150-bed skilled nursing facility\n- Raised the CMS star rating from 2 to 5 and achieved a deficiency-free annual survey in 2025\n- Cut 30-day rehospitalizations from 22% to 14% with INTERACT tools and nurse practitioner coverage\n- Reduced agency spending $1.3M a year through a CNA career ladder and in-house training\n- Lead monthly QAPI meetings with the medical director and administrator on falls, infections and antipsychotic use"
+          "description": "- Lead 140 nursing staff across short-term rehab and long-term care in a 150-bed skilled nursing facility\n- Raised the CMS star rating from 2 to 5 and achieved a deficiency-free annual survey in 2025\n- Cut 30-day rehospitalizations from 22% to 14% with INTERACT tools and nurse practitioner coverage"
         },
         {
           "company": "Valley Rose Care Center",
@@ -2336,7 +2959,7 @@
           "startDate": "2020-01",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Led infection prevention during COVID-19, holding outbreaks to 2 units with cohorting and testing\n- Oversaw MDS accuracy, improving quality measure scores for pressure injuries and falls\n- Supervised 6 nurse managers and the staff development coordinator"
+          "description": "- Led infection prevention during COVID-19, holding outbreaks to 2 units with cohorting and testing\n- Oversaw MDS accuracy, improving quality measure scores for pressure injuries and falls"
         },
         {
           "company": "Capitol Medical Center",
@@ -2364,12 +2987,23 @@
       ],
       "projects": [],
       "skills": [
-        "Leadership: SNF operations, staffing, budgeting, QAPI, survey readiness, policy development",
+        "Leadership: SNF operations, staffing, budgeting, QAPI, survey readiness",
         "Regulatory: CMS F-tags, Five-Star Quality Rating, California Title 22, infection prevention",
-        "Systems: PointClickCare, SmartLinx, Abaqis",
-        "Licenses: RN (California), BLS",
-        "Certifications: RAC-CT (AAPACN), DNS-CT, CMS Nursing Home Infection Preventionist Training"
-      ]
+        "Systems: PointClickCare, SmartLinx, Abaqis"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.96,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.96
+      }
     },
     "Respiratory Therapist": {
       "summary": "Registered respiratory therapist with 6 years in adult and neonatal critical care at a 450-bed hospital. Led a ventilator liberation protocol that cut average vent days by 1.2. Brings advanced ventilator management, ECMO support, bronchoscopy assist and strong collaboration with ICU teams.",
@@ -2381,7 +3015,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 8–12 ventilated patients per shift across adult ICUs, including APRV, high-flow and NIV\n- Co-led a spontaneous awakening and breathing trial protocol that cut mean ventilator days from 5.4 to 4.2\n- Respond to all codes and rapid responses, managing airways and assisting with 15+ intubations a month\n- Train 20 new RTs and nurses a year on Hamilton C6 ventilators and high-flow therapy\n- Lead the RT-driven protocol for inhaled bronchodilators, cutting unnecessary treatments 30%"
+          "description": "- Manage 8–12 ventilated patients per shift across adult ICUs, including APRV, high-flow and NIV\n- Co-led a spontaneous awakening and breathing trial protocol that cut mean ventilator days from 5.4 to 4.2\n- Respond to all codes and rapid responses, managing airways and assisting with 15+ intubations a month\n- Train 20 new RTs and nurses a year on Hamilton C6 ventilators and high-flow therapy"
         },
         {
           "company": "Suncoast Children's Hospital",
@@ -2399,7 +3033,7 @@
           "startDate": "2018-08",
           "endDate": "2020-05",
           "isCurrent": false,
-          "description": "- Set up 8 overnight polysomnography studies a week\n- Fitted CPAP masks and coached patients on equipment"
+          "description": "- Set up 8 overnight polysomnography studies a week"
         }
       ],
       "education": [
@@ -2415,9 +3049,23 @@
         "Clinical: mechanical ventilation, NIV, ABG analysis, bronchoscopy assist, airway management, ECMO support",
         "Equipment: Hamilton C6, Servo-u, Vapotherm, SensorMedics 3100A",
         "Systems: Epic, iSTAT",
-        "Licenses: Respiratory Care Practitioner (Florida)",
-        "Certifications: RRT (NBRC), RRT-NPS, BLS, ACLS, PALS, NRP"
-      ]
+        "Licenses: Respiratory Care Practitioner (Florida)"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Physical Therapist Assistant": {
       "summary": "Licensed physical therapist assistant with 3 years in outpatient orthopedics and skilled nursing rehab, treating 14–16 patients a day under PT plans of care. Helped raise patient goal attainment by 15% through structured home programs. Brings therapeutic exercise, gait training and accurate daily notes.",
@@ -2456,7 +3104,21 @@
         "Patient education: home exercise programs, fall prevention",
         "Licenses: PTA (Indiana), NPTAE",
         "Certifications: BLS, Kinesio Taping Practitioner (CKTP)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.89
+      }
     },
     "Speech-Language Pathologist": {
       "summary": "ASHA-certified speech-language pathologist with 7 years in acute care and outpatient neuro rehab, specializing in dysphagia and aphasia. Started a FEES program that performed 600 studies in its first year. Brings instrumental swallow evaluation, cognitive-communication therapy and interdisciplinary stroke care.",
@@ -2468,7 +3130,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Evaluate and treat 10–12 acute patients a day with dysphagia, aphasia and cognitive-communication deficits after stroke and TBI\n- Launched a bedside FEES program performing 600 studies in year one and cutting MBSS wait times by 2 days\n- Partnered with nursing on a stroke dysphagia screen that lowered aspiration pneumonia rates 31%\n- Supervise 2 clinical fellows through their CFY and ASHA certification\n- Train 120 nurses a year on dysphagia screening and IDDSI diet textures"
+          "description": "- Evaluate and treat 10–12 acute patients a day with dysphagia, aphasia and cognitive-communication deficits after stroke and TBI\n- Launched a bedside FEES program performing 600 studies in year one and cutting MBSS wait times by 2 days\n- Partnered with nursing on a stroke dysphagia screen that lowered aspiration pneumonia rates 31%\n- Supervise 2 clinical fellows through their CFY and ASHA certification"
         },
         {
           "company": "Upstate Outpatient Rehab",
@@ -2477,7 +3139,7 @@
           "startDate": "2019-08",
           "endDate": "2021-01",
           "isCurrent": false,
-          "description": "- Managed a caseload of 45 outpatients with aphasia, dysarthria, voice disorders and Parkinson's disease\n- Delivered LSVT LOUD to 30 patients with average loudness gains of 8 dB\n- Evaluated cognitive-communication deficits after concussion for 15 patients a month"
+          "description": "- Managed a caseload of 45 outpatients with aphasia, dysarthria, voice disorders and Parkinson's disease\n- Delivered LSVT LOUD to 30 patients with average loudness gains of 8 dB"
         },
         {
           "company": "University of South Carolina Speech and Hearing Research Center",
@@ -2486,7 +3148,7 @@
           "startDate": "2017-08",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Treated 10 children and adults a week with articulation and language disorders\n- Completed 400 supervised clinical clock hours required by ASHA"
+          "description": "- Treated 10 children and adults a week with articulation and language disorders"
         }
       ],
       "education": [
@@ -2505,12 +3167,30 @@
       ],
       "projects": [],
       "skills": [
-        "Clinical: dysphagia management, FEES, MBSS, aphasia therapy, cognitive-communication, voice",
+        "Clinical: dysphagia management, FEES, MBSS, aphasia therapy, cognitive-communication",
         "Programs: LSVT LOUD, VitalStim, IDDSI diet standards",
         "Systems: Epic, Cerner",
-        "Licenses: SLP (South Carolina)",
-        "Certifications: CCC-SLP (ASHA), BCS-S (ABSSD), LSVT LOUD Certified"
-      ]
+        "Licenses: SLP (South Carolina)"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.96,
+        "tech": 0.99,
+        "silk": 0.93,
+        "opal": 0.98,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "symmetry": 0.97,
+        "path": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.95
+      }
     },
     "Surgical Technologist": {
       "summary": "Certified surgical technologist with 5 years scrubbing general, orthopedic and robotic cases in a 16-OR hospital. Lead tech for the robotic service, reducing room turnover by 9 minutes. Brings flawless sterile technique, instrument knowledge across 6 specialties and smooth anticipation of surgeon needs.",
@@ -2522,7 +3202,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Scrub 18–22 cases a week, including da Vinci Xi robotic colorectal, gynecologic and urologic procedures\n- Standardized robotic instrument trays and setup sequence, cutting average turnover from 34 to 25 minutes\n- Update 120 surgeon preference cards in Epic OpTime, reducing open-but-unused supply waste by $60K a year\n- Train 7 new surgical techs on robotic draping and docking\n- Serve as the department's instrument liaison to sterile processing, reducing incomplete trays 45%"
+          "description": "- Scrub 18–22 cases a week, including da Vinci Xi robotic colorectal, gynecologic and urologic procedures\n- Standardized robotic instrument trays and setup sequence, cutting average turnover from 34 to 25 minutes\n- Update 120 surgeon preference cards in Epic OpTime, reducing open-but-unused supply waste by $60K a year\n- Train 7 new surgical techs on robotic draping and docking"
         },
         {
           "company": "Midlands Surgical Center",
@@ -2540,7 +3220,7 @@
           "startDate": "2019-06",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Decontaminated and assembled instrument sets for 3 surgical clients\n- Tracked loaner trays and sterilization load records"
+          "description": "- Decontaminated and assembled instrument sets for 3 surgical clients"
         }
       ],
       "education": [
@@ -2557,7 +3237,25 @@
         "Specialties: general, orthopedic, robotic, GYN, urology, ENT",
         "Systems: Epic OpTime, da Vinci Xi, Censitrac",
         "Certifications: CST (NBSTSA), BLS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.97,
+        "tech": 0.97,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Phlebotomist": {
       "summary": "Certified phlebotomist with 3 years in hospital and outpatient draw stations, collecting 60–80 specimens a day. Holds a 98% first-stick success rate and cut specimen rejections to 0.4%. Brings pediatric and difficult-draw experience, accurate labeling and a calming chairside manner.",
@@ -2569,7 +3267,7 @@
           "startDate": "2024-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Collect 60–80 venipuncture, capillary and pediatric specimens a day with a 98% first-stick success rate\n- Reduced specimen rejections from 1.6% to 0.4% by introducing two-identifier label checks at the chair\n- Schedule and coach 4 phlebotomists, holding average patient wait under 12 minutes\n- Process and centrifuge specimens for courier pickup per CLSI collection guidelines\n- Perform DOT and non-DOT urine drug screen collections with chain-of-custody documentation"
+          "description": "- Collect 60–80 venipuncture, capillary and pediatric specimens a day with a 98% first-stick success rate\n- Reduced specimen rejections from 1.6% to 0.4% by introducing two-identifier label checks at the chair\n- Schedule and coach 4 phlebotomists, holding average patient wait under 12 minutes\n- Process and centrifuge specimens for courier pickup per CLSI collection guidelines"
         },
         {
           "company": "Wauwatosa Community Hospital",
@@ -2578,7 +3276,7 @@
           "startDate": "2023-02",
           "endDate": "2023-12",
           "isCurrent": false,
-          "description": "- Performed early-morning inpatient draws on 25–30 patients across med-surg and ICU units\n- Collected blood cultures with a contamination rate below the 3% benchmark\n- Drew pediatric patients with distraction techniques and capillary heel sticks in the NICU"
+          "description": "- Performed early-morning inpatient draws on 25–30 patients across med-surg and ICU units\n- Collected blood cultures with a contamination rate below the 3% benchmark"
         },
         {
           "company": "Milwaukee Blood Center",
@@ -2587,7 +3285,7 @@
           "startDate": "2021-06",
           "endDate": "2023-01",
           "isCurrent": false,
-          "description": "- Screened 40 blood donors a day and recorded vitals and hemoglobin results\n- Monitored donors for adverse reactions during and after donation"
+          "description": "- Screened 40 blood donors a day and recorded vitals and hemoglobin results"
         }
       ],
       "education": [
@@ -2602,9 +3300,18 @@
       "skills": [
         "Collection: venipuncture, capillary puncture, pediatric draws, blood cultures, drug screen collection",
         "Quality: specimen labeling, order of draw, CLSI standards, chain of custody",
-        "Systems: Epic Beaker, Cerner PathNet",
-        "Certifications: CPT (NHA), PBT (ASCP), BLS"
-      ]
+        "Systems: Epic Beaker, Cerner PathNet"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.95,
+        "bronx": 0.93,
+        "mono": 0.95,
+        "pop": 0.93
+      }
     },
     "Clinical Pharmacist": {
       "summary": "Board-certified clinical pharmacist with 8 years in hospital practice, specializing in infectious diseases and antimicrobial stewardship at a 600-bed academic center. Cut broad-spectrum antibiotic days by 18% and C. difficile rates by 27%. Brings PGY-1/PGY-2 training, protocol development and resident precepting.",
@@ -2616,7 +3323,7 @@
           "startDate": "2021-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Co-lead the antimicrobial stewardship program with ID physicians, reviewing 60+ patients a day\n- Implemented prospective audit and feedback that cut broad-spectrum antibiotic days per 1,000 patient days by 18%\n- Developed IV-to-PO and penicillin allergy delabeling protocols, contributing to a 27% drop in hospital-onset C. difficile\n- Precept 6 PGY-1 and PGY-2 residents a year and teach pharmacotherapy at the college of pharmacy\n- Serve on the Pharmacy and Therapeutics Committee, authoring 8 drug monographs and formulary reviews a year"
+          "description": "- Co-lead the antimicrobial stewardship program with ID physicians, reviewing 60+ patients a day\n- Implemented prospective audit and feedback that cut broad-spectrum antibiotic days per 1,000 patient days by 18%\n- Developed IV-to-PO and penicillin allergy delabeling protocols, contributing to a 27% drop in hospital-onset C. difficile"
         },
         {
           "company": "Prairie Lakes Hospital",
@@ -2625,7 +3332,7 @@
           "startDate": "2018-07",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Rounded with 2 hospitalist teams, managing vancomycin AUC dosing and anticoagulation\n- Built Epic vancomycin AUC dosing tools that cut acute kidney injury rates 22%\n- Covered overnight pharmacy operations and verified 400+ orders a shift"
+          "description": "- Rounded with 2 hospitalist teams, managing vancomycin AUC dosing and anticoagulation\n- Built Epic vancomycin AUC dosing tools that cut acute kidney injury rates 22%"
         },
         {
           "company": "Hawkeye Pharmacy",
@@ -2634,7 +3341,7 @@
           "startDate": "2013-05",
           "endDate": "2016-05",
           "isCurrent": false,
-          "description": "- Processed 300 prescriptions a day and counseled patients under pharmacist supervision\n- Completed immunization certification and administered 400 flu vaccines"
+          "description": "- Processed 300 prescriptions a day and counseled patients under pharmacist supervision"
         }
       ],
       "education": [
@@ -2643,28 +3350,23 @@
           "degree": "PGY-2 Residency, Infectious Diseases",
           "startDate": "2017-07",
           "endDate": "2018-06"
-        },
-        {
-          "school": "University of Iowa",
-          "degree": "PGY-1 Pharmacy Residency",
-          "startDate": "2016-07",
-          "endDate": "2017-06"
-        },
-        {
-          "school": "University of Iowa",
-          "degree": "Doctor of Pharmacy (PharmD)",
-          "startDate": "2012-08",
-          "endDate": "2016-05"
         }
       ],
       "projects": [],
       "skills": [
         "Clinical: antimicrobial stewardship, pharmacokinetics, anticoagulation, renal dosing, protocol development",
         "Systems: Epic Willow, TheraDoc, Sentri7",
-        "Teaching: resident precepting, P&T committee, medication use evaluations",
-        "Licenses: RPh (Iowa)",
-        "Certifications: BCIDP (BPS), BCPS (BPS), ACLS"
-      ]
+        "Teaching: resident precepting, P&T committee, medication use evaluations"
+      ],
+      "fit": {
+        "minimalist": 0.95,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "mono": 0.95,
+        "pop": 0.93
+      }
     },
     "Medical Office Manager": {
       "summary": "Medical office manager with 10 years in physician practices, currently running a 7-provider family medicine office with 22 staff. Raised collections 16% and cut patient wait times from 24 to 11 minutes. Brings revenue cycle oversight, staff leadership and compliance with HIPAA, OSHA and payer requirements.",
@@ -2676,7 +3378,7 @@
           "startDate": "2021-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage daily operations for 7 providers and 22 staff seeing 32,000 visits a year\n- Lifted net collections 16% by tightening point-of-service collection and weekly denial reviews\n- Redesigned check-in and rooming flow, cutting average lobby wait from 24 to 11 minutes\n- Oversee HIPAA, OSHA and CLIA-waived lab compliance, passing all payer and state audits\n- Credential 3 new providers with 14 payers, getting each billing within 90 days of start"
+          "description": "- Manage daily operations for 7 providers and 22 staff seeing 32,000 visits a year\n- Lifted net collections 16% by tightening point-of-service collection and weekly denial reviews\n- Redesigned check-in and rooming flow, cutting average lobby wait from 24 to 11 minutes\n- Oversee HIPAA, OSHA and CLIA-waived lab compliance, passing all payer and state audits"
         },
         {
           "company": "Triangle Pediatric Partners",
@@ -2685,7 +3387,7 @@
           "startDate": "2018-03",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Supervised 9 front-desk and billing staff and built schedules for 5 providers\n- Implemented online scheduling that filled 18% of appointments within the first year\n- Cross-trained 6 staff on scheduling and billing to cover absences"
+          "description": "- Supervised 9 front-desk and billing staff and built schedules for 5 providers\n- Implemented online scheduling that filled 18% of appointments within the first year"
         },
         {
           "company": "Triangle Pediatric Partners",
@@ -2709,10 +3411,18 @@
       "skills": [
         "Practice management: staffing, scheduling templates, vendor management, patient experience",
         "Revenue cycle: collections, denial management, payer credentialing, KPI reporting",
-        "Compliance: HIPAA, OSHA, CLIA waiver, MIPS reporting",
-        "Systems: eClinicalWorks, Athenahealth, QuickBooks",
-        "Certifications: CMM (AAPC)"
-      ]
+        "Compliance: HIPAA, OSHA, CLIA waiver, MIPS reporting"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.93
+      }
     },
     "Dental Office Manager": {
       "summary": "Dental office manager with 8 years in general and multi-specialty dental practices, now running a 10-operatory office producing $3.2M a year. Raised collections to 99% of adjusted production and grew new patients 28%. Brings insurance expertise, schedule optimization and steady team leadership.",
@@ -2724,7 +3434,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 18 team members across front office, assisting and hygiene for a 10-operatory practice\n- Raised collections from 94% to 99% of adjusted production with weekly AR reviews and pre-treatment estimates\n- Grew new patients 28% by adding online booking, Google review requests and a referral program\n- Rebuilt doctor and hygiene schedules around production goals, increasing daily production 17%\n- Implemented HIPAA and OSHA training calendars with 100% staff completion each year"
+          "description": "- Lead 18 team members across front office, assisting and hygiene for a 10-operatory practice\n- Raised collections from 94% to 99% of adjusted production with weekly AR reviews and pre-treatment estimates\n- Grew new patients 28% by adding online booking, Google review requests and a referral program\n- Rebuilt doctor and hygiene schedules around production goals, increasing daily production 17%"
         },
         {
           "company": "Scioto Family Dentistry",
@@ -2733,7 +3443,7 @@
           "startDate": "2018-05",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Verified benefits and submitted 600 claims a month, keeping insurance AR over 60 days below 8%\n- Credentialed 3 new dentists with 12 PPO networks\n- Posted insurance payments and reconciled daily deposits with Dentrix reports"
+          "description": "- Verified benefits and submitted 600 claims a month, keeping insurance AR over 60 days below 8%\n- Credentialed 3 new dentists with 12 PPO networks"
         },
         {
           "company": "Columbus Smiles",
@@ -2742,7 +3452,7 @@
           "startDate": "2016-06",
           "endDate": "2018-04",
           "isCurrent": false,
-          "description": "- Scheduled 60 patients a day and confirmed appointments\n- Handled patient check-out and collected copays"
+          "description": "- Scheduled 60 patients a day and confirmed appointments"
         }
       ],
       "education": [
@@ -2758,9 +3468,20 @@
         "Practice management: scheduling, team leadership, production goals, patient experience",
         "Revenue: dental insurance, PPO fee schedules, AR management, financing (CareCredit)",
         "Systems: Dentrix Ascend, Eaglesoft, Weave",
-        "Compliance: HIPAA, OSHA, CDT coding",
-        "Memberships: American Association of Dental Office Management (AADOM)"
-      ]
+        "Compliance: HIPAA, OSHA, CDT coding"
+      ],
+      "fit": {
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.92
+      }
     }
   }
 }

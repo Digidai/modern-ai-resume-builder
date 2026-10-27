@@ -31,7 +31,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex-1 flex flex-col border-2 border-(--accent)">
                 <header className="border-b-2 border-(--accent) grid grid-cols-[minmax(0,1fr)_auto] gap-8 px-6 py-6">
                     <div className="min-w-0">
-                        <h1 className="font-jetbrains text-[26px] leading-tight font-bold uppercase tracking-[0.1em] text-slate-900 wrap-break-word">{data.fullName}</h1>
+                        <div role="heading" aria-level={1} className="font-jetbrains text-[26px] leading-tight font-bold uppercase tracking-[0.1em] text-slate-900 wrap-break-word">{data.fullName}</div>
                         {data.title && (
                             <p className="inline-block max-w-full mt-3 border border-(--accent) px-2 py-0.5 font-jetbrains text-[13px] text-slate-900 wrap-break-word">{data.title}</p>
                         )}

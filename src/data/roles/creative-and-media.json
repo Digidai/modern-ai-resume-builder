@@ -32,19 +32,21 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Payroll compliance hub",
-          "link": "stackwise.io/guides/payroll-compliance",
-          "description": "Pillar page and 40 supporting articles; now drives 30% of the site's organic sign-ups"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Writing: long-form articles, guides, case studies, landing pages, editing",
         "SEO: keyword research, content briefs, on-page optimization, content refreshes",
         "Tools: Ahrefs, Semrush, Google Search Console, WordPress, Surfer",
         "Research: subject-matter interviews, source verification"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.96,
+        "ginto": 0.91,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "pop": 0.93
+      }
     },
     "Copywriter": {
       "summary": "Copywriter with 6 years of agency and in-house experience writing ads, email and web copy for consumer brands. Wrote a welcome email series that lifted first-purchase conversion by 21%. Writes in many brand voices, tests relentlessly and partners closely with art directors from concept to final cut.",
@@ -82,7 +84,15 @@
         "Strategy: brand voice, messaging hierarchies, creative briefs",
         "Testing: A/B subject lines, ad hook testing, landing page experiments",
         "Tools: Klaviyo, Meta Ads Manager, Google Docs, Figma"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "pop": 0.93
+      }
     },
     "Technical Writer": {
       "summary": "Technical writer with 7 years of experience documenting APIs, SDKs and admin features for developer tools. Rebuilt a docs site in a docs-as-code workflow that cut documentation-related support tickets by 34%. Works directly with engineers in Git, writes clear task-based content and maintains style and information architecture standards.",
@@ -126,7 +136,23 @@
         "Docs-as-code: Markdown, Git, Docusaurus, OpenAPI, Vale linting",
         "Structured authoring: DITA, Oxygen XML, MadCap Flare",
         "Technical: REST, GraphQL, Python and JavaScript samples"
-      ]
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Editor": {
       "summary": "Editor with 8 years of experience shaping features and service journalism for digital lifestyle publications. Edits a 12-writer roster and grew section pageviews by 48% in 2 years. Brings sharp structural editing, headline and SEO instincts, and steady management of deadlines, freelancers and budgets.",
@@ -156,7 +182,7 @@
           "startDate": "2017-01",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Wrote event listings and managed the CMS publishing calendar\n- Coordinated photo permissions for 20 stories a month"
+          "description": "- Wrote event listings and managed the CMS publishing calendar"
         }
       ],
       "education": [
@@ -173,7 +199,18 @@
         "Audience: SEO, newsletters, analytics (Chartbeat, GA4)",
         "Management: freelancer budgets, editorial calendars, writer development",
         "Style: AP Stylebook, Chicago Manual of Style, WordPress VIP"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.96,
+        "bronx": 0.93,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Copy Editor": {
       "summary": "Copy editor with 6 years of experience at a regional daily newspaper and a nonfiction book publisher. Edits up to 25,000 words a day under deadline with accuracy above newsroom benchmarks. Brings deep command of AP and Chicago style, careful fact-checking and headline writing that respects both readers and search.",
@@ -211,7 +248,15 @@
         "Style: AP Stylebook, Chicago Manual of Style, house style sheets",
         "Tools: Arc XP, InCopy, Microsoft Word track changes, PerfectIt",
         "Newsroom: deadline editing, corrections policy, SEO headlines"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.92,
+        "ginto": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "pop": 0.96
+      }
     },
     "Proofreader": {
       "summary": "Proofreader with 5 years of experience checking marketing, regulatory and published materials for accuracy and consistency. Reviews about 400 pages a week with a tracked error-escape rate under 0.2%. Brings meticulous attention to typography, style guides and pharmaceutical labeling rules, with fast turnaround under pressure.",
@@ -253,9 +298,13 @@
       "skills": [
         "Proofreading: typographic checks, consistency, reference checking, proof marks",
         "Style: AMA Manual of Style, Chicago Manual of Style, AP Stylebook",
-        "Regulatory: FDA promotional labeling basics, ISI review",
-        "Tools: Adobe Acrobat, Veeva PromoMats, InDesign, Microsoft Word"
-      ]
+        "Regulatory: FDA promotional labeling basics, ISI review"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "quartz": 0.99,
+        "bronx": 0.89
+      }
     },
     "Journalist": {
       "summary": "Investigative journalist with 9 years of experience covering government, housing and public money for regional newsrooms. A 2024 series on eviction filings prompted a state law change and won a regional Edward R. Murrow Award. Brings public records expertise, data reporting and source-driven narrative writing.",
@@ -302,7 +351,21 @@
         "Data journalism: Excel, Python (pandas), SQL basics, Datawrapper",
         "Formats: long-form, breaking news, radio features, podcasts",
         "Ethics and law: SPJ Code of Ethics, libel and media law basics"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Video Editor": {
       "summary": "Video editor with 6 years of experience cutting branded content, YouTube series and social video. Edited a weekly YouTube series that grew from 40k to 610k subscribers in 2 years. Fast in Premiere Pro and DaVinci Resolve, with strong story instincts, color and audio finishing, and organized post workflows.",
@@ -334,19 +397,21 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Cooking series reel",
-          "link": "vimeo.com/dreyes/editreel",
-          "description": "Two-minute reel of long-form, short-form and branded edits"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Editing: story editing, pacing, multicam, short-form vertical, documentary",
         "Finishing: color grading, audio mixing, captions, deliverables",
         "Tools: Premiere Pro, DaVinci Resolve, After Effects, Avid Media Composer, Frame.io",
         "Workflow: media management, proxies, conform, turnovers"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "pop": 0.93
+      }
     },
     "Videographer": {
       "summary": "Videographer with 7 years of experience shooting corporate, event and documentary video. Shot and edited a hospital recruitment campaign that contributed to a 35% increase in nursing applications. Owns a full Sony cinema kit and handles lighting, audio, drone work and edits as a one-person crew or as part of a team.",
@@ -384,7 +449,15 @@
         "Audio: lavalier, boom, Zoom F6 recording",
         "Post: Premiere Pro, DaVinci Resolve, basic After Effects",
         "Licenses: FAA Part 107 Remote Pilot Certificate"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.94,
+        "pop": 0.98
+      }
     },
     "Animator": {
       "summary": "2D animator with 6 years of experience on children's television series and branded shorts. Animated 140+ shots across two seasons of a preschool series streamed in 30 countries. Brings strong acting, timing and weight, clean Toon Boom Harmony rigs and reliable footage quotas under production schedules.",
@@ -428,7 +501,21 @@
         "Tools: Toon Boom Harmony, Adobe Animate, After Effects, TVPaint, Storyboard Pro",
         "Rigging: Harmony cut-out rigs, deformers",
         "Production: footage quotas, ShotGrid, retakes"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.94,
+        "pop": 0.85
+      }
     },
     "Motion Graphics Designer": {
       "summary": "Motion graphics designer with 5 years of experience creating broadcast packages, social content and explainer videos. Designed a sports network graphics package used on 200+ live broadcasts. Fluent in After Effects and Cinema 4D, with strong typography, templating and on-time delivery for live and fast-turn content.",
@@ -460,19 +547,20 @@
           "endDate": "2020-06"
         }
       ],
-      "projects": [
-        {
-          "name": "Broadcast package",
-          "link": "behance.net/jwatts-fieldhouse",
-          "description": "Opens, scorebugs, transitions and lower thirds for a live sports package"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Motion: broadcast design, kinetic typography, 3D motion, explainer animation",
         "Tools: After Effects, Cinema 4D, Redshift, Premiere Pro, Illustrator",
         "Broadcast: Vizrt, Mogrt templates, live graphics workflows",
         "Design: typography, layout, brand systems"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.85
+      }
     },
     "3D Artist": {
       "summary": "3D artist with 6 years of experience creating hard-surface and environment assets for console and PC games. Delivered 300+ game-ready assets for a shipped AA title rated Very Positive on Steam. Strong in modeling, PBR texturing and optimization, with a careful eye on polycount and performance budgets.",
@@ -504,19 +592,21 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Abandoned rail yard",
-          "link": "artstation.com/lmorales/railyard",
-          "description": "UE5 environment with modular kit, trim sheets and Nanite foliage tests"
-        }
-      ],
+      "projects": [],
       "skills": [
         "3D: hard-surface modeling, environment art, UVs, retopology, LODs",
         "Texturing: Substance Painter, Substance Designer, PBR workflows",
         "Tools: Maya, Blender, ZBrush, Unreal Engine 5, Marmoset Toolbag",
         "Pipeline: Perforce, performance budgets, asset reviews"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "pop": 0.96
+      }
     },
     "Illustrator": {
       "summary": "Illustrator with 8 years of experience creating editorial, picture book and packaging illustration. Illustrated 6 published children's books, including one that sold 45,000 copies. Brings a distinctive painterly digital style, reliable deadlines and clear communication with art directors, editors and brand teams.",
@@ -548,19 +638,21 @@
           "endDate": "2017-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Portfolio",
-          "link": "hnakamura-illustration.com",
-          "description": "Selected picture book spreads, editorial work and packaging"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Illustration: picture books, editorial, packaging, character design, lettering",
         "Tools: Procreate, Photoshop, Illustrator, gouache and watercolor",
         "Business: licensing and usage rights, contracts, invoicing",
         "Production: print-ready files, color proofs, art director feedback cycles"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.92,
+        "ginto": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "pop": 0.96
+      }
     },
     "Graphic Artist": {
       "summary": "Graphic artist with 5 years of experience producing signage, vehicle wraps and promotional graphics for a sign and print shop. Lays out about 600 jobs a year with a reprint rate under 1%. Skilled in vector artwork, large-format production and translating rough customer ideas into clean, production-ready files.",
@@ -598,7 +690,15 @@
         "Production: large-format print, vinyl cutting, color separations, preflight",
         "Tools: Illustrator, CorelDRAW, Photoshop, FlexiSIGN, VersaWorks",
         "Customer: mockups, quoting support, proof approvals"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.97
+      }
     },
     "Photographer": {
       "summary": "Commercial photographer with 9 years of experience shooting product, food and lifestyle work for brands and agencies. Shot an e-commerce image system that lifted a client's product page conversion by 12%. Runs shoots end to end, from pre-production and crew to lighting, retouching and asset delivery.",
@@ -636,7 +736,15 @@
         "Post: Capture One, Lightroom, Photoshop retouching, color management",
         "Gear: Phase One and Canon systems, Profoto strobes, tethered capture",
         "Business: estimates, usage licensing, crew management, client relations"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.88,
+        "ginto": 0.93,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
     },
     "Creative Producer": {
       "summary": "Creative producer with 8 years of experience producing integrated campaigns, shoots and branded content for consumer brands. Produces 40+ deliverables per campaign across video, photo and social with budgets up to $750k. Keeps creative ambition and budgets aligned, managing vendors, schedules and talent from bid to delivery.",
@@ -674,7 +782,15 @@
         "Talent and legal: SAG-AFTRA, usage rights, clearances, releases",
         "Tools: Airtable, Frame.io, Wrapbook, Google Workspace",
         "Formats: commercial video, photo, social, experiential"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.9,
+        "ginto": 0.95,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "pop": 0.9
+      }
     },
     "Producer (Film/TV)": {
       "summary": "Film and television producer with 12 years of experience on unscripted series and feature documentaries. Produced 3 seasons of a cable docuseries averaging 1.2M viewers per episode. Manages budgets up to $6M, crews of 40 and the full path from development and financing through delivery to networks and streamers.",
@@ -721,7 +837,21 @@
         "Legal and delivery: clearances, E&O insurance, music licensing, network deliverables",
         "Tools: Movie Magic Budgeting, Movie Magic Scheduling, Final Draft",
         "Leadership: crew hiring, union agreements, showrunner partnership"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Digital Content Producer": {
       "summary": "Digital content producer with 6 years of experience producing web, social and newsletter content for a public media organization. Grew the station's TikTok and Instagram audiences to 420k combined followers. Juggles writing, short video, scheduling and analytics to turn broadcast stories into formats audiences actually finish.",
@@ -759,7 +889,15 @@
         "Tools: Premiere Pro, CapCut, Canva, WordPress, Mailchimp",
         "Analytics: Chartbeat, Sprout Social, GA4",
         "News: AP style, live blogging, breaking news workflows"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "pop": 0.98
+      }
     },
     "Podcast Producer": {
       "summary": "Podcast producer with 6 years of experience producing narrative and interview shows. Produced a narrative series that reached 4.5M downloads and the top 20 of the Apple Podcasts charts. Handles booking, story structure, tape syncs, editing and mixing, plus launch plans that build audiences for each new season.",
@@ -797,7 +935,16 @@
         "Audio: Pro Tools, Adobe Audition, Descript, iZotope RX, loudness standards",
         "Distribution: Megaphone, Apple Podcasts Connect, Spotify for Podcasters, dynamic ad insertion",
         "Growth: launch plans, cross-promotion, audience analytics"
-      ]
+      ],
+      "fit": {
+        "creative": 0.99,
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
     },
     "Audio Engineer": {
       "summary": "Audio engineer with 10 years of experience in recording, mixing and live sound for music and broadcast. Engineered and mixed 3 albums released by independent labels, one of which charted on Billboard's Heatseekers list. Brings Pro Tools expertise, strong signal-flow troubleshooting and calm under live broadcast pressure.",
@@ -844,7 +991,21 @@
         "Tools: Pro Tools HDX, SSL consoles, Logic Pro, Waves and UAD plug-ins, iZotope RX",
         "Systems: Dante, signal flow, wireless frequency coordination, studio maintenance",
         "Certifications: Avid Pro Tools Certified Operator, Dante Level 2"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Sound Designer": {
       "summary": "Sound designer with 7 years of experience creating sound effects, ambiences and interactive audio for games. Designed and implemented 2,500+ sounds for a shipped action title praised for its audio in launch reviews. Combines field recording and synthesis with Wwise implementation and close work with gameplay engineers.",
@@ -888,7 +1049,18 @@
         "Implementation: Wwise, FMOD, Unreal Engine 5 audio, profiling",
         "Tools: Reaper, Pro Tools, Soundminer, iZotope RX",
         "Post: dialogue editing, M&E stems, loudness specs"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.96,
+        "pop": 0.85
+      }
     },
     "Music Producer": {
       "summary": "Music producer with 9 years of experience producing pop, R&B and sync music for artists, brands and TV. Produced tracks with 120M combined streams and 40+ sync placements. Brings songwriting and arrangement skill, fast Ableton and Logic workflows and the business sense to manage splits, publishing and deadlines.",
@@ -926,7 +1098,15 @@
         "Tools: Ableton Live, Logic Pro, Pro Tools, Serum, Melodyne",
         "Business: split sheets, publishing, PRO registration (BMI, ASCAP), sync licensing",
         "Mixing: rough mixes, stem prep, mix revisions"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.89,
+        "iron": 0.96,
+        "ginto": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
     },
     "Content Creator": {
       "summary": "Independent content creator with 5 years of experience building a personal finance channel across YouTube, TikTok and a newsletter. Grew to 380k YouTube subscribers and 52k newsletter readers while running a business earning $410k in 2025. Handles scripting, filming, editing, sponsorships and analytics as a small studio of one plus two contractors.",
@@ -964,7 +1144,16 @@
         "Production: Premiere Pro, CapCut, Descript, lighting and audio setup",
         "Growth: YouTube Studio analytics, thumbnail testing, SEO titles, retention analysis",
         "Business: sponsorship negotiation, FTC disclosure, course launches, contractor management"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
     },
     "Social Media Content Creator": {
       "summary": "Social media content creator with 3 years of in-house experience making short-form video for a beauty brand. Created a TikTok series that drove 9M views and sold out a new serum in 4 days. Plans, films, edits and posts trend-aware content daily while staying on brand and on top of performance data.",
@@ -1002,7 +1191,15 @@
         "Platforms: TikTok, Instagram Reels, YouTube Shorts, Pinterest",
         "Tools: CapCut, Premiere Rush, Canva, Later, TikTok Creative Center",
         "Analytics: retention, engagement rate, Sprout Social reporting"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "pop": 0.97
+      }
     },
     "Creative Strategist": {
       "summary": "Creative strategist with 6 years of experience turning performance data and customer research into ad concepts for DTC brands. Built a creative testing framework that cut cost per acquisition by 32% on $8M in annual Meta spend. Bridges media buyers, designers and editors with clear briefs grounded in audience insight.",
@@ -1040,7 +1237,15 @@
         "Performance: Meta Ads, TikTok Ads, hook and hold rate analysis, ROAS, CPA",
         "Research: review mining, surveys, competitor ad libraries, focus groups",
         "Tools: Motion, Foreplay, Triple Whale, Google Sheets"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.94,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
     },
     "Scriptwriter": {
       "summary": "Scriptwriter with 7 years of experience writing scripts for branded video, explainers and corporate training. Wrote a safety training series viewed by 60,000 employees that reduced reportable incidents by 18%. Translates complex subjects into clear, human scripts with strong structure, voice and timing for narration and on-camera talent.",
@@ -1078,7 +1283,15 @@
         "Formats: explainers, training, commercials, documentary-style brand stories",
         "Process: SME interviews, outlining, table reads, VO direction",
         "Tools: Final Draft, Celtx, Google Docs, Articulate Rise"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.96
+      }
     },
     "Screenwriter": {
       "summary": "Screenwriter with 8 years of experience in television writers' rooms and feature development. Staff writer turned story editor on two streaming drama series, with 3 produced episodes. Brings sharp character work, strong structure and breaking skills, plus a sold original feature currently in development.",
@@ -1108,7 +1321,7 @@
           "startDate": "2018-09",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Took room notes and maintained story documents for 2 series\n- Wrote script coverage for 150 submissions"
+          "description": "- Took room notes and maintained story documents for 2 series"
         }
       ],
       "education": [
@@ -1127,11 +1340,25 @@
       ],
       "projects": [],
       "skills": [
-        "Writing: TV drama, features, pilots, outlines, rewrites, dialogue",
+        "Writing: TV drama, features, pilots, outlines, rewrites",
         "Room skills: breaking story, pitching, punch-up, notes implementation",
         "Tools: Final Draft, WriterDuet, Highland",
         "Industry: WGA member, coverage, development process"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "Editorial Assistant": {
       "summary": "Editorial assistant with 1.5 years of experience at a trade book publisher, supporting 2 senior editors across 30 titles a year. Built a submissions tracking system that cut manuscript response time from 10 weeks to 4. Brings careful reading, organized production support and an English degree with publishing coursework.",
@@ -1175,7 +1402,14 @@
         "Production: transmittals, schedules, permissions, contracts routing",
         "Tools: Airtable, Microsoft Word track changes, Adobe Acrobat, Biblio",
         "Style: Chicago Manual of Style"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.86
+      }
     },
     "Junior Copywriter": {
       "summary": "Junior copywriter with 1 year of agency experience writing social, email and display copy for restaurant, retail and tourism clients. Wrote a tourism campaign line that ran across 40 billboards and lifted site visits by 26%. Brings a portfolio school foundation, quick drafts and an ear for brand voice.",
@@ -1219,7 +1453,18 @@
         "Concepting: campaign ideas, taglines, brand voice",
         "Tools: Google Docs, Canva, Meta Ads Manager, Grammarly",
         "Coursework: Copywriting I and II, Creative Portfolio, Consumer Behavior"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.93,
+        "berlin": 0.88,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.93,
+        "mono": 0.96,
+        "pop": 0.85
+      }
     },
     "Senior Copywriter": {
       "summary": "Senior copywriter with 10 years of experience concepting and writing integrated campaigns for automotive, telecom and financial brands. Wrote a national TV and digital campaign credited with a 14% lift in brand consideration. Leads copy on accounts, mentors juniors and sells ideas confidently to senior clients.",
@@ -1272,7 +1517,25 @@
         "Concepting: campaign platforms, pitches, presenting to clients",
         "Leadership: mentoring, script reviews, shoot and edit supervision",
         "Compliance: automotive disclaimer and financial services copy review"
-      ]
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.9,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "symmetry": 0.97,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
+      }
     },
     "Managing Editor": {
       "summary": "Managing editor with 11 years of experience running daily operations for a digital news and features site with 8M monthly readers. Manages a 14-person editorial staff and a $1.1M budget. Rebuilt the publishing workflow to cut time-to-publish by 40% while keeping standards, corrections and legal review tight.",
@@ -1293,7 +1556,7 @@
           "startDate": "2017-02",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Edited enterprise stories and managed 6 reporters on the business desk\n- Launched a paid newsletter that reached 12k subscribers\n- Coordinated coverage plans for elections and earnings seasons"
+          "description": "- Edited enterprise stories and managed 6 reporters on the business desk\n- Launched a paid newsletter that reached 12k subscribers"
         },
         {
           "company": "Prairie Business Journal",
@@ -1302,7 +1565,7 @@
           "startDate": "2014-06",
           "endDate": "2017-01",
           "isCurrent": false,
-          "description": "- Covered banking and real estate, filing 4 to 6 stories a week\n- Broke a story on a $200M development deal later picked up nationally"
+          "description": "- Covered banking and real estate, filing 4 to 6 stories a week"
         }
       ],
       "education": [
@@ -1323,9 +1586,20 @@
       "skills": [
         "Editorial management: staffing, scheduling, budgets, workflow design, coverage planning",
         "Standards: corrections policy, legal review, sourcing standards, AP style",
-        "Tools: Arc XP, Chartbeat, Slack, Google Workspace, Trello",
-        "Audience: newsletters, paid subscriptions, SEO and homepage programming"
-      ]
+        "Tools: Arc XP, Chartbeat, Slack, Google Workspace, Trello"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.99,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.95
+      }
     },
     "Editor-in-Chief": {
       "summary": "Editor-in-chief with 18 years of experience leading magazine and digital editorial brands. Leads a 30-person team across print, digital, video and events for a home and design title. Repositioned the brand around subscriptions and events, growing digital revenue from $4M to $11M while winning two National Magazine Award nominations.",
@@ -1372,7 +1646,21 @@
         "Revenue: subscriptions and memberships, events, branded content partnerships",
         "Editorial: features, commissioning, cover strategy, video and social",
         "External: press interviews, panel moderation, advertiser relationships"
-      ]
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Senior Video Editor": {
       "summary": "Senior video editor with 11 years of experience cutting commercials, documentary series and branded campaigns. Edited a national campaign that won a Silver Clio and a docuseries streamed in 50 countries. Leads post teams, shapes story from raw footage and manages finishing with color, sound and VFX vendors.",
@@ -1419,7 +1707,21 @@
         "Tools: Avid Media Composer, Premiere Pro, DaVinci Resolve, After Effects",
         "Post leadership: assistant editor supervision, shared storage, conform, vendor management",
         "Delivery: broadcast specs, closed captions, international versions"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Reporter": {
       "summary": "Local news reporter with 4 years of experience covering city hall, schools and public safety for a daily newspaper and its website. Files 6 to 8 stories a week on deadline and broke a school bus contract story that led to a $1.4M refund to the district. Brings fast, accurate reporting, records requests and multimedia skills.",
@@ -1457,7 +1759,13 @@
         "Multimedia: photography, smartphone video, social posts",
         "Data: Excel, Google Sheets, Datawrapper",
         "Standards: AP Stylebook, SPJ Code of Ethics, open meetings law"
-      ]
+      ],
+      "fit": {
+        "iron": 0.98,
+        "ginto": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.86
+      }
     },
     "Photo Editor": {
       "summary": "Photo editor with 8 years of experience selecting, commissioning and producing photography for national news and magazine outlets. Assigns 300+ shoots a year on a $400k photography budget. Combines a strong visual eye with ethics, rights management and fast turnaround on breaking news and long-form packages.",
@@ -1495,7 +1803,15 @@
         "Rights: licensing, usage contracts, model releases, archive research",
         "Tools: Photo Mechanic, Lightroom, Photoshop, Getty and AP image platforms",
         "Ethics: NPPA Code of Ethics, digital manipulation standards"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
     },
     "Production Assistant": {
       "summary": "Production assistant with 2 years of experience on commercial, music video and episodic TV sets. Worked 60+ shoot days in office, set and locations roles. Reliable with call sheets, walkies, lock-ups and paperwork, and recently completed a film degree with a focus on producing.",
@@ -1539,7 +1855,17 @@
         "Office: crew lists, paperwork, deliveries, scheduling support",
         "Tools: Google Workspace, StudioBinder, Movie Magic Scheduling basics",
         "Certifications: OSHA 10 (General Industry), valid driver's license"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.97,
+        "berlin": 0.92,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "pop": 0.86,
+        "cast": 0.98
+      }
     }
   }
 }

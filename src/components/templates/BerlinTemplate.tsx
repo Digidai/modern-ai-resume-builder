@@ -33,9 +33,9 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex-1 flex flex-col bg-white text-black font-sans text-[14px] leading-[1.55] px-[16mm] pt-[13mm] pb-[12mm] [--accent:var(--rs-accent,#111111)]">
             <header className="pb-6 border-b-[6px] border-(--accent) mb-6">
-                <h1 className={`${nameSizeClass(data.fullName)} font-black uppercase tracking-tight leading-[0.95] pt-1 wrap-break-word`}>
+                <div role="heading" aria-level={1} className={`${nameSizeClass(data.fullName)} font-black uppercase tracking-tight leading-[0.95] pt-1 wrap-break-word`}>
                     {data.fullName}
-                </h1>
+                </div>
                 {(data.title || contacts.length > 0) && (
                     <div className="grid grid-cols-[minmax(0,1fr)_auto] gap-8 items-end mt-4">
                         <p className="text-[18px] font-bold uppercase tracking-wide leading-snug wrap-break-word">{data.title}</p>

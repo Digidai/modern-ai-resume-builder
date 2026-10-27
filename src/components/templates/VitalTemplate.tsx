@@ -41,7 +41,7 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-[17px] px-[16mm] py-[14mm] font-source-sans text-slate-800 [--accent:var(--rs-accent,#1F6E73)]">
             {(name || title || contacts.length > 0) && (
                 <header className="break-inside-avoid">
-                    {name && <h1 className="text-[34px] font-bold leading-[1.1] tracking-[-0.01em] text-slate-900 wrap-break-word">{name}</h1>}
+                    {name && <div role="heading" aria-level={1} className="text-[34px] font-bold leading-[1.1] tracking-[-0.01em] text-slate-900 wrap-break-word">{name}</div>}
                     {title && <p className="mt-[3px] text-[17px] font-semibold leading-snug text-(--accent) wrap-break-word">{title}</p>}
                     {contacts.length > 0 && (
                         <dl className="mt-[10px] grid grid-cols-2 gap-x-[8mm] gap-y-[2px] border-t-2 border-(--accent) pt-[8px] text-[13.5px] leading-[1.45]">

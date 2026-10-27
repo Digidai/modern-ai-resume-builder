@@ -1,5 +1,5 @@
 import React, { useMemo, useState } from 'react';
-import { Link, useNavigate } from 'react-router';
+import { Link } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { LazyResumePreview } from '../components/LazyResumePreview';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
@@ -14,16 +14,13 @@ const FILTERS = [
 type FilterId = (typeof FILTERS)[number]['id'];
 
 export const AtsBadge: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <span
-    className={`rounded bg-emerald-50 px-1.5 py-px text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-600/20 dark:bg-emerald-500/10 dark:text-emerald-300 ${className}`}
-  >
+  <span className={`kicker text-muted ${className}`}>
     ATS
   </span>
 );
 
 const TemplatesView: React.FC = () => {
-  const navigate = useNavigate();
-  const { resumeData, setResumeData } = useResume();
+  const { resumeData } = useResume();
   const [filter, setFilter] = useState<FilterId>('all');
   const siteUrl = getSiteUrl();
   const pageUrl = `${siteUrl}/templates/`;
@@ -78,44 +75,36 @@ const TemplatesView: React.FC = () => {
     },
   });
 
-  const pickTemplate = (id: string) => {
-    setResumeData((prev) => ({ ...prev, templateId: id }));
-    navigate('/editor');
-  };
-
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 font-sans dark:bg-slate-950">
+    <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
       <SiteHeader />
       <main className="mx-auto w-full max-w-6xl flex-1 px-4 py-10 sm:px-6">
-        <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
-          <Link className="hover:text-slate-900 dark:hover:text-white" to="/">
+        <nav aria-label="Breadcrumb" className="text-sm text-muted">
+          <Link className="focus-ring hover:text-ink" to="/">
             Home
           </Link>
           <span className="mx-2" aria-hidden="true">
             /
           </span>
-          <span className="text-slate-700 dark:text-slate-200" aria-current="page">
+          <span className="text-ink" aria-current="page">
             Templates
           </span>
         </nav>
-        <h1 className="mt-4 text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl dark:text-white">Resume templates</h1>
-        <p className="mt-3 max-w-3xl text-slate-600 dark:text-slate-400">
-          {TEMPLATES.length} free designs, each previewed with the resume in your editor. {atsCount} are
-          single-column with standard headings, so applicant tracking systems (ATS) read them reliably. Every template supports your own accent
-          colour, font and text size.
+        <h1 className="mt-6 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink lg:text-[56px] lg:leading-[60px]">Resume templates</h1>
+        <p className="mt-4 max-w-3xl text-base leading-[26px] text-muted">
+          {TEMPLATES.length} free designs, each previewed with the resume in your editor. {atsCount} are single-column with standard headings, so
+          applicant tracking systems (ATS) read them reliably. Every template supports your own accent colour, font and text size.
         </p>
 
-        <div className="mt-6 flex flex-wrap gap-2" role="group" aria-label="Filter templates">
+        <div className="mt-8 flex flex-wrap gap-x-7 gap-y-2 border-b border-rule" role="group" aria-label="Filter templates">
           {FILTERS.map((f) => (
             <button
               key={f.id}
               type="button"
               aria-pressed={filter === f.id}
               onClick={() => setFilter(f.id)}
-              className={`h-9 rounded-full px-4 text-sm font-medium transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
-                filter === f.id
-                  ? 'bg-slate-900 text-white dark:bg-white dark:text-slate-900'
-                  : 'bg-white text-slate-700 ring-1 ring-slate-200 hover:ring-slate-300 dark:bg-slate-900 dark:text-slate-300 dark:ring-slate-800'
+              className={`focus-ring -mb-px border-b-2 pb-2.5 text-sm transition-colors ${
+                filter === f.id ? 'border-accent font-medium text-ink' : 'border-transparent text-muted hover:text-ink'
               }`}
             >
               {f.label}
@@ -123,32 +112,23 @@ const TemplatesView: React.FC = () => {
           ))}
         </div>
 
-        <ul className="mt-8 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
           {visible.map((t) => (
-            <li key={t.id} className="flex flex-col">
+            <li key={t.id} className="group relative flex flex-col">
               {/* Stretched link instead of wrapping the preview: previews contain their own <a> elements. */}
-              <div className="group relative">
-                <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-slate-900/5 transition group-hover:-translate-y-0.5 group-hover:shadow-xl group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 dark:ring-white/10">
-                  <LazyResumePreview data={resumeData} templateId={t.id} />
-                </div>
-                <div className="mt-3 flex items-center gap-2">
-                  <Link
-                    to={`/templates/${t.id}/`}
-                    className="font-semibold text-slate-900 after:absolute after:inset-0 hover:text-indigo-600 focus-visible:outline-none dark:text-white dark:hover:text-indigo-400"
-                  >
-                    {t.name}
-                  </Link>
-                  {t.atsFriendly && <AtsBadge />}
-                </div>
+              <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
+                <LazyResumePreview data={resumeData} templateId={t.id} />
               </div>
-              <p className="mt-1 flex-1 text-sm leading-snug text-slate-500 dark:text-slate-400">{t.description}</p>
-              <button
-                type="button"
-                onClick={() => pickTemplate(t.id)}
-                className="mt-3 h-9 self-start rounded-lg px-3 text-sm font-semibold text-indigo-600 ring-1 ring-indigo-200 transition hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-300 dark:ring-indigo-500/30 dark:hover:bg-indigo-500/10"
-              >
-                Use template
-              </button>
+              <div className="mt-3 flex items-baseline justify-between gap-2">
+                <Link
+                  to={`/templates/${t.id}/`}
+                  className="font-display text-base font-semibold text-ink after:absolute after:inset-0 group-hover:text-accent focus-visible:outline-none"
+                >
+                  {t.name}
+                </Link>
+                {t.atsFriendly && <AtsBadge />}
+              </div>
+              <p className="mt-0.5 text-sm leading-5 text-muted">{t.description}</p>
             </li>
           ))}
         </ul>

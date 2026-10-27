@@ -80,7 +80,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-1 flex-col border-2 border-(--accent)">
                 <header className="border-b-2 border-(--accent) px-[8mm] pt-[7mm] pb-[6mm]">
                     {data.fullName && (
-                        <h1 className="text-[38px] font-bold uppercase leading-[1.05] tracking-tight text-slate-900">{data.fullName}</h1>
+                        <div role="heading" aria-level={1} className="text-[38px] font-bold uppercase leading-[1.05] tracking-tight text-slate-900">{data.fullName}</div>
                     )}
                     {data.title.trim() && (
                         <p className="mt-3 inline-block max-w-full bg-(--accent) px-2.5 py-1 text-[13px] font-semibold uppercase leading-snug tracking-[0.16em] text-white">

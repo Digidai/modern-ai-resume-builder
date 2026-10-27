@@ -47,7 +47,7 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-[18px] bg-white px-[16mm] py-[14mm] font-source-serif text-neutral-900 [--accent:var(--rs-accent,#7A2E39)]">
             {(name || title || contacts.length > 0) && (
                 <header className="border-b border-neutral-300 pb-[12px] break-inside-avoid">
-                    {name && <h1 className="text-[34px] font-semibold leading-[1.1] tracking-[-0.01em] text-neutral-950 wrap-break-word">{name}</h1>}
+                    {name && <div role="heading" aria-level={1} className="text-[34px] font-semibold leading-[1.1] tracking-[-0.01em] text-neutral-950 wrap-break-word">{name}</div>}
                     {title && <p className="mt-[4px] text-[17px] italic leading-snug text-(--accent) wrap-break-word">{title}</p>}
                     {contacts.length > 0 && (
                         <p className="mt-[8px] text-[13.5px] leading-[1.55] text-neutral-700">

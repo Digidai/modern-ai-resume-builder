@@ -5,7 +5,6 @@ import { ScaledResumePreview } from '../components/ScaledResumePreview';
 import { LazyResumePreview } from '../components/LazyResumePreview';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
 import { Button } from '../components/Button';
-import { CheckIcon } from '../components/Icons';
 import { useResume } from '../contexts/ResumeContext';
 import { TEMPLATES, getTemplateById } from '../constants/templates';
 import roleGuideData from '../data/roleGuides.json';
@@ -105,40 +104,42 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
   ];
 
   return (
-    <div className="flex min-h-screen flex-col bg-slate-50 font-sans dark:bg-slate-950">
+    <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
       <SiteHeader />
-      <main className="mx-auto grid w-full max-w-6xl flex-1 gap-10 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1fr)_380px]">
+      <main className="mx-auto grid w-full max-w-6xl flex-1 gap-12 px-4 py-10 sm:px-6 lg:grid-cols-[minmax(0,1fr)_380px]">
         <div className="lg:col-start-2 lg:row-start-1">
-          <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
-            <Link className="hover:text-slate-900 dark:hover:text-white" to="/">
+          <nav aria-label="Breadcrumb" className="text-sm text-muted">
+            <Link className="focus-ring hover:text-ink" to="/">
               Home
             </Link>
             <span className="mx-2" aria-hidden="true">
               /
             </span>
-            <Link className="hover:text-slate-900 dark:hover:text-white" to="/templates/">
+            <Link className="focus-ring hover:text-ink" to="/templates/">
               Templates
             </Link>
             <span className="mx-2" aria-hidden="true">
               /
             </span>
-            <span className="text-slate-700 dark:text-slate-200" aria-current="page">
+            <span className="text-ink" aria-current="page">
               {name}
             </span>
           </nav>
-          <h1 className="mt-4 flex flex-wrap items-center gap-3 text-3xl font-bold tracking-tight text-slate-900 dark:text-white">
-            {name} resume template {template.atsFriendly && <AtsBadge className="text-xs" />}
-          </h1>
-          <p className="mt-3 text-slate-600 dark:text-slate-400">{template.description}.</p>
-          <Button className="mt-6 w-full sm:w-auto" size="lg" onClick={useIt} leftIcon={<CheckIcon className="h-4 w-4" />}>
+          <p className="kicker mt-6 text-muted">
+            Template {index + 1} of {TEMPLATES.length}
+            {template.atsFriendly ? ' · ATS-friendly' : ''}
+          </p>
+          <h1 className="mt-2 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink">{name} resume template</h1>
+          <p className="mt-3 text-base leading-[26px] text-muted">{template.description}.</p>
+          <Button className="mt-6 w-full sm:w-auto" size="lg" onClick={useIt}>
             Use this template
           </Button>
 
-          <dl className="mt-8 space-y-4 text-sm">
+          <dl className="mt-8 divide-y divide-rule border-y border-rule text-sm">
             {facts.map(([label, value]) => (
-              <div key={label} className="grid grid-cols-[88px_minmax(0,1fr)] gap-3">
-                <dt className="font-semibold text-slate-900 dark:text-white">{label}</dt>
-                <dd className="text-slate-600 dark:text-slate-400">{value}</dd>
+              <div key={label} className="grid grid-cols-[88px_minmax(0,1fr)] gap-3 py-3">
+                <dt className="kicker pt-0.5 text-muted">{label}</dt>
+                <dd className="leading-6 text-ink">{value}</dd>
               </div>
             ))}
           </dl>
@@ -147,14 +148,11 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
 
           {roles.length > 0 && (
             <section className="mt-8">
-              <h2 className="text-sm font-semibold text-slate-900 dark:text-white">Popular with</h2>
-              <ul className="mt-3 flex flex-wrap gap-2">
+              <h2 className="kicker text-muted">Popular with</h2>
+              <ul className="mt-2 columns-2 gap-6 text-sm">
                 {roles.map((role) => (
-                  <li key={role}>
-                    <Link
-                      to={`/resume_tmpl/${slugifyJobTitle(role)}/`}
-                      className="inline-block rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-700 hover:border-indigo-300 hover:text-indigo-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-indigo-300"
-                    >
+                  <li key={role} className="break-inside-avoid py-1">
+                    <Link to={`/resume_tmpl/${slugifyJobTitle(role)}/`} className="focus-ring text-ink hover:text-accent hover:underline hover:underline-offset-4">
                       {role}
                     </Link>
                   </li>
@@ -163,47 +161,48 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
             </section>
           )}
 
-          <nav className="mt-8 flex justify-between gap-4 border-t border-slate-200 pt-4 text-sm dark:border-slate-800" aria-label="Other templates">
-            <Link to={`/templates/${prev.id}/`} className="font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+          <nav className="mt-8 flex justify-between gap-4 border-t border-rule pt-4 text-sm" aria-label="Other templates">
+            <Link to={`/templates/${prev.id}/`} className="focus-ring font-medium text-muted hover:text-ink">
               ← {prev.name}
             </Link>
-            <Link to={`/templates/${next.id}/`} className="font-medium text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white">
+            <Link to={`/templates/${next.id}/`} className="focus-ring font-medium text-muted hover:text-ink">
               {next.name} →
             </Link>
           </nav>
         </div>
 
         <div className="lg:col-start-1 lg:row-start-1">
-          <div className="mx-auto w-full max-w-[210mm] shadow-xl ring-1 ring-slate-900/5">
+          <div className="mx-auto w-full max-w-[210mm] bg-white shadow-sheet">
             <ScaledResumePreview data={{ ...resumeData, templateId: template.id }} mode="page" />
           </div>
         </div>
       </main>
 
       <section className="mx-auto w-full max-w-6xl px-4 pb-16 sm:px-6" aria-labelledby="similar-heading">
-        <h2 id="similar-heading" className="text-xl font-bold tracking-tight text-slate-900 dark:text-white">
-          Similar templates
-        </h2>
-        <ul className="mt-6 grid grid-cols-2 gap-5 sm:grid-cols-4">
+        <div className="flex items-end justify-between gap-4 border-t border-rule pt-10">
+          <h2 id="similar-heading" className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">
+            Similar templates
+          </h2>
+          <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2">
+            All {TEMPLATES.length} templates
+          </Link>
+        </div>
+        <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {similar.map((t) => (
             <li key={t.id} className="group relative">
-              <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-slate-900/5 transition group-hover:-translate-y-0.5 group-hover:shadow-xl group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 dark:ring-white/10">
+              <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
                 <LazyResumePreview data={resumeData} templateId={t.id} />
               </div>
               <Link
                 to={`/templates/${t.id}/`}
-                className="mt-2 block text-sm font-medium text-slate-800 after:absolute after:inset-0 focus-visible:outline-none dark:text-slate-200"
+                className="mt-3 block font-display text-base font-semibold text-ink after:absolute after:inset-0 group-hover:text-accent focus-visible:outline-none"
               >
                 {t.name}
               </Link>
+              <p className="mt-0.5 text-sm leading-5 text-muted">{t.description}</p>
             </li>
           ))}
         </ul>
-        <p className="mt-8">
-          <Link to="/templates/" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400">
-            See all {TEMPLATES.length} templates →
-          </Link>
-        </p>
       </section>
       <SiteFooter />
     </div>

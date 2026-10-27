@@ -56,7 +56,7 @@
           "startDate": "2026-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Provide individual counseling to a caseload of 8 adults with depression and anxiety under weekly LCSW supervision\n- Complete biopsychosocial assessments, PHQ-9 and GAD-7 screenings and treatment plans in Credible EHR\n- Co-facilitate a weekly DBT skills group for 10 participants with 85% attendance\n- Link clients to benefits and food resources, closing 20+ referral loops in the first eight weeks\n- Present 2 case consultations a month to the clinical team using strengths-based case formulation"
+          "description": "- Provide individual counseling to a caseload of 8 adults with depression and anxiety under weekly LCSW supervision\n- Complete biopsychosocial assessments, PHQ-9 and GAD-7 screenings and treatment plans in Credible EHR\n- Co-facilitate a weekly DBT skills group for 10 participants with 85% attendance\n- Link clients to benefits and food resources, closing 20+ referral loops in the first eight weeks"
         },
         {
           "company": "Riverwest Elementary School",
@@ -65,7 +65,7 @@
           "startDate": "2025-09",
           "endDate": "2026-05",
           "isCurrent": false,
-          "description": "- Supported 25 students on attendance and behavior plans, raising average attendance by 9%\n- Led 12 bilingual family outreach calls a week and organized a 60-family resource night\n- Co-led a 6-week social skills group for 8 third graders"
+          "description": "- Supported 25 students on attendance and behavior plans, raising average attendance by 9%\n- Led 12 bilingual family outreach calls a week and organized a 60-family resource night"
         },
         {
           "company": "Northside Youth Center",
@@ -74,7 +74,7 @@
           "startDate": "2023-06",
           "endDate": "2025-08",
           "isCurrent": false,
-          "description": "- Led after-school programming for 40 middle schoolers and tracked attendance for funder reports\n- Connected 15 families a year to food and utility assistance"
+          "description": "- Led after-school programming for 40 middle schoolers and tracked attendance for funder reports"
         }
       ],
       "education": [
@@ -95,10 +95,26 @@
       "skills": [
         "Clinical: biopsychosocial assessment, CBT and DBT skills, safety planning, motivational interviewing",
         "Practice: trauma-informed care, crisis de-escalation, resource linkage",
-        "Documentation: Credible EHR, SOAP notes, HIPAA and 42 CFR Part 2",
-        "Languages: English, Spanish (fluent)",
-        "Research: program evaluation coursework, literature reviews, SPSS"
-      ]
+        "Documentation: Credible EHR, SOAP notes, HIPAA and 42 CFR Part 2"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.9,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.93,
+        "path": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.9,
+        "pop": 0.9,
+        "cast": 0.95
+      }
     },
     "Licensed Master Social Worker (LMSW)": {
       "summary": "Licensed master social worker with four years in hospital and community social work, specializing in discharge planning for older adults. Manages 18–22 patients a day on a medical-surgical floor and cut avoidable discharge delays by 25%. Brings thorough psychosocial assessment, Medicare and Medicaid navigation and clear coordination with families and care teams.",
@@ -110,7 +126,7 @@
           "startDate": "2024-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Assess and plan discharges for 18–22 patients a day on a 36-bed medical-surgical unit\n- Reduced avoidable discharge delays by 25% by starting SNF referrals within 24 hours of admission\n- Complete Medicaid applications and MOLST conversations for 15+ patients a month\n- Report suspected elder abuse to Adult Protective Services and document per NYS requirements\n- Run weekly interdisciplinary rounds with nursing, PT and case managers to address barriers to discharge"
+          "description": "- Assess and plan discharges for 18–22 patients a day on a 36-bed medical-surgical unit\n- Reduced avoidable discharge delays by 25% by starting SNF referrals within 24 hours of admission\n- Complete Medicaid applications and MOLST conversations for 15+ patients a month\n- Report suspected elder abuse to Adult Protective Services and document per NYS requirements"
         },
         {
           "company": "Capital Region Aging Services",
@@ -119,7 +135,7 @@
           "startDate": "2022-07",
           "endDate": "2023-12",
           "isCurrent": false,
-          "description": "- Managed a caseload of 45 older adults in a Medicaid home-care program, completing reassessments on time\n- Arranged home-delivered meals and personal care, helping 90% of clients remain at home after 12 months\n- Wrote care plans and documented every client contact in the agency's case system"
+          "description": "- Managed a caseload of 45 older adults in a Medicaid home-care program, completing reassessments on time\n- Arranged home-delivered meals and personal care, helping 90% of clients remain at home after 12 months"
         }
       ],
       "education": [
@@ -140,10 +156,20 @@
       "skills": [
         "Practice: discharge planning, psychosocial assessment, family meetings, advance directives",
         "Benefits: Medicare, Medicaid, managed long-term care, SNF and home-care referrals",
-        "Systems: Epic, Allscripts Care Management, NY Medicaid eligibility tools",
-        "Licenses: LMSW (New York), Certified Social Work Case Manager (C-SWCM) in progress",
-        "Practice skills: crisis counseling, grief support, caregiver education, motivational interviewing"
-      ]
+        "Systems: Epic, Allscripts Care Management, NY Medicaid eligibility tools"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.94
+      }
     },
     "Licensed Clinical Social Worker (LCSW)": {
       "summary": "Licensed clinical social worker with nine years of outpatient therapy and clinical supervision in community behavioral health. Carries a caseload of 28 adults with trauma and co-occurring disorders and supervises 5 associate clinicians toward licensure. Brings EMDR and CBT expertise, measurement-based care and steady leadership in a high-demand clinic.",
@@ -155,7 +181,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Treat a caseload of 28 adults with PTSD, depression and co-occurring substance use using EMDR, CPT and CBT\n- Supervise 5 ASW clinicians toward licensure, with all 4 recent candidates passing the exam on first attempt\n- Launched PHQ-9 and PCL-5 tracking that showed 61% of clients reaching clinically meaningful improvement within 16 sessions\n- Maintain Medi-Cal documentation compliance above 95% in quarterly chart audits\n- Lead monthly trauma-informed care trainings for 40 clinic staff"
+          "description": "- Treat a caseload of 28 adults with PTSD, depression and co-occurring substance use using EMDR, CPT and CBT\n- Supervise 5 ASW clinicians toward licensure, with all 4 recent candidates passing the exam on first attempt\n- Launched PHQ-9 and PCL-5 tracking that showed 61% of clients reaching clinically meaningful improvement within 16 sessions"
         },
         {
           "company": "East Bay Family Counseling",
@@ -164,7 +190,7 @@
           "startDate": "2017-08",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Provided individual and family therapy to 30+ clients a week, including adolescents in juvenile diversion\n- Completed 3,200 supervised hours and passed the LCSW exam in 2020\n- Facilitated a weekly parenting group for 12 families"
+          "description": "- Provided individual and family therapy to 30+ clients a week, including adolescents in juvenile diversion\n- Completed 3,200 supervised hours and passed the LCSW exam in 2020"
         },
         {
           "company": "Alameda Youth Shelter Network",
@@ -173,7 +199,7 @@
           "startDate": "2015-06",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Coordinated services for 20 youth in transitional housing, with 70% exiting to stable placements\n- Ran weekly independent living skills groups for 15 youth"
+          "description": "- Coordinated services for 20 youth in transitional housing, with 70% exiting to stable placements"
         }
       ],
       "education": [
@@ -182,22 +208,27 @@
           "degree": "Master of Social Welfare",
           "startDate": "2013-08",
           "endDate": "2015-05"
-        },
-        {
-          "school": "University of California, Santa Barbara",
-          "degree": "B.A. Psychology",
-          "startDate": "2009-09",
-          "endDate": "2013-06"
         }
       ],
       "projects": [],
       "skills": [
         "Clinical: EMDR, Cognitive Processing Therapy, CBT, motivational interviewing, DSM-5-TR diagnosis",
         "Supervision: BBS-compliant supervision, case consultation, clinical training",
-        "Compliance: Medi-Cal documentation (CalAIM), HIPAA, mandated reporting",
-        "Licenses: LCSW (California), EMDRIA-trained, BBS-approved supervisor",
-        "Measurement: PHQ-9, GAD-7, PCL-5, measurement-based care dashboards"
-      ]
+        "Compliance: Medi-Cal documentation (CalAIM), HIPAA, mandated reporting"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.97,
+        "berlin": 0.88,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "quartz": 0.98,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.88
+      }
     },
     "Child Welfare Caseworker": {
       "summary": "Child welfare caseworker with four years in ongoing services and investigations at a public child welfare agency. Manages 14 families with children in out-of-home care and achieved permanency for 22 children in the past two years. Brings safety assessment, court reporting and family engagement grounded in trauma-informed practice.",
@@ -209,7 +240,7 @@
           "startDate": "2023-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 14 families with 30+ children in foster or kinship care, completing monthly home visits on time\n- Achieved reunification or adoption for 22 children in two years, beating the agency median time to permanency by 3 months\n- Write court reports and testify at review hearings in juvenile court with timely case plan updates in SACWIS\n- Facilitate family team meetings with parents, foster families and providers\n- Coordinated sibling visits and kinship placement searches for 12 children in out-of-county care"
+          "description": "- Manage 14 families with 30+ children in foster or kinship care, completing monthly home visits on time\n- Achieved reunification or adoption for 22 children in two years, beating the agency median time to permanency by 3 months\n- Write court reports and testify at review hearings in juvenile court with timely case plan updates in SACWIS\n- Facilitate family team meetings with parents, foster families and providers"
         },
         {
           "company": "Buckeye Family Services",
@@ -218,7 +249,7 @@
           "startDate": "2022-01",
           "endDate": "2023-01",
           "isCurrent": false,
-          "description": "- Delivered in-home services to 10 families at a time, with 85% avoiding removal at 6 months\n- Taught parenting skills using the Nurturing Parenting curriculum\n- Documented every family contact within 48 hours to meet state requirements"
+          "description": "- Delivered in-home services to 10 families at a time, with 85% avoiding removal at 6 months\n- Taught parenting skills using the Nurturing Parenting curriculum"
         },
         {
           "company": "Scioto Valley Children Services",
@@ -227,7 +258,7 @@
           "startDate": "2021-01",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Shadowed 50 intake assessments and drafted safety plans under supervision\n- Completed collateral contacts with schools and medical providers"
+          "description": "- Shadowed 50 intake assessments and drafted safety plans under supervision"
         }
       ],
       "education": [
@@ -242,10 +273,17 @@
       "skills": [
         "Child welfare: safety and risk assessment, case planning, permanency planning, ICPC",
         "Court: juvenile court reports, testimony, case reviews",
-        "Engagement: family team meetings, kinship search, trauma-informed practice",
-        "Credentials: Ohio LSW, Ohio Child Welfare Training Program core, valid driver's license",
-        "Systems: Ohio SACWIS, court e-filing, Microsoft Office"
-      ]
+        "Engagement: family team meetings, kinship search, trauma-informed practice"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "mono": 0.95,
+        "pop": 0.88
+      }
     },
     "Substance Abuse Counselor": {
       "summary": "Substance abuse counselor with five years in outpatient and residential addiction treatment, including medication-assisted programs. Carries a caseload of 35 clients with a 68% 90-day treatment retention rate. Brings ASAM-based assessment, group facilitation, motivational interviewing and state CADC certification.",
@@ -257,7 +295,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Counsel a caseload of 35 outpatient clients in an opioid treatment program, with 68% retained at 90 days versus a 52% state average\n- Complete ASAM level-of-care assessments and individualized treatment plans in Kipu\n- Lead 6 groups a week on relapse prevention, Seeking Safety and family education\n- Coordinate with prescribers on buprenorphine and methadone care and track urine drug screen results\n- Train 3 new counselors on ASAM assessments and documentation standards"
+          "description": "- Counsel a caseload of 35 outpatient clients in an opioid treatment program, with 68% retained at 90 days versus a 52% state average\n- Complete ASAM level-of-care assessments and individualized treatment plans in Kipu\n- Lead 6 groups a week on relapse prevention, Seeking Safety and family education\n- Coordinate with prescribers on buprenorphine and methadone care and track urine drug screen results"
         },
         {
           "company": "Bluegrass Residential Treatment",
@@ -266,7 +304,7 @@
           "startDate": "2021-03",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Provided individual and group counseling to 12 residents in a 28-day program\n- Built discharge plans linking 80% of graduates to outpatient care within 7 days\n- Led daily morning groups and weekend family sessions for residents"
+          "description": "- Provided individual and group counseling to 12 residents in a 28-day program\n- Built discharge plans linking 80% of graduates to outpatient care within 7 days"
         },
         {
           "company": "Ohio Valley Crisis Stabilization Unit",
@@ -275,7 +313,7 @@
           "startDate": "2020-06",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Monitored 16 adults in a crisis stabilization unit and completed hourly safety checks\n- Co-led daily coping-skills groups"
+          "description": "- Monitored 16 adults in a crisis stabilization unit and completed hourly safety checks"
         }
       ],
       "education": [
@@ -290,10 +328,16 @@
       "skills": [
         "Treatment: ASAM criteria, MOUD coordination, relapse prevention, Seeking Safety, MI",
         "Groups: psychoeducation, process groups, family programming",
-        "Compliance: 42 CFR Part 2, HIPAA, Medicaid documentation, Kipu EHR",
-        "Certifications: Certified Alcohol and Drug Counselor (CADC, Kentucky), Naloxone trainer, CPR",
-        "Populations: opioid use disorder, co-occurring mental health conditions, justice-involved adults"
-      ]
+        "Compliance: 42 CFR Part 2, HIPAA, Medicaid documentation, Kipu EHR"
+      ],
+      "fit": {
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "mono": 0.98,
+        "pop": 0.9
+      }
     },
     "Peer Support Specialist": {
       "summary": "Certified peer support specialist with six years supporting adults in mental health and substance use recovery, drawing on lived experience. Supports 20 participants at a time and helped 75% of them stay engaged in treatment for six months. Brings recovery coaching, warm handoffs from emergency settings and trusted relationships with people others struggle to reach.",
@@ -305,7 +349,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Support 20 adults in recovery through weekly one-to-one sessions, recovery planning and community connections\n- Respond to 2 hospital emergency departments for warm handoffs, linking 140 patients to treatment in 2025\n- Helped 75% of participants stay engaged in treatment for six months or longer\n- Lead a weekly WRAP group and train new peers on boundaries and self-care\n- Document every peer contact in the agency EHR within 24 hours for Medicaid billing"
+          "description": "- Support 20 adults in recovery through weekly one-to-one sessions, recovery planning and community connections\n- Respond to 2 hospital emergency departments for warm handoffs, linking 140 patients to treatment in 2025\n- Helped 75% of participants stay engaged in treatment for six months or longer\n- Lead a weekly WRAP group and train new peers on boundaries and self-care"
         },
         {
           "company": "Allegheny Drop-In Center",
@@ -314,7 +358,7 @@
           "startDate": "2021-09",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Welcomed 40+ guests a day and connected them to housing, ID and benefits services\n- Distributed naloxone and trained 300 community members to use it\n- Helped 25 guests get into recovery housing after shelter stays"
+          "description": "- Welcomed 40+ guests a day and connected them to housing, ID and benefits services\n- Distributed naloxone and trained 300 community members to use it"
         },
         {
           "company": "Steel City Recovery Residences",
@@ -323,7 +367,7 @@
           "startDate": "2020-03",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Managed daily operations for an 8-bed recovery residence\n- Mediated house meetings and connected residents to outpatient care"
+          "description": "- Managed daily operations for an 8-bed recovery residence"
         }
       ],
       "education": [
@@ -338,10 +382,19 @@
       "skills": [
         "Peer practice: recovery coaching, WRAP facilitation, shared decision-making, harm reduction",
         "Crisis: warm handoffs, de-escalation, safety planning",
-        "Resources: housing, Medicaid, SNAP, ID recovery, recovery housing networks",
-        "Certifications: Certified Peer Specialist (Pennsylvania), Certified Recovery Specialist (CRS), Mental Health First Aid instructor",
-        "Documentation: Medicaid peer support notes, Netsmart myAvatar, HIPAA"
-      ]
+        "Resources: housing, Medicaid, SNAP, ID recovery, recovery housing networks"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.99,
+        "bronx": 0.87,
+        "mono": 0.97,
+        "pop": 0.9
+      }
     },
     "Direct Support Professional": {
       "summary": "Direct support professional with three years supporting adults with intellectual and developmental disabilities in group homes and community programs. Supports 4 residents per shift with zero medication errors over 24 months. Brings person-centered planning, safe medication administration and patient, encouraging support for independence.",
@@ -353,7 +406,7 @@
           "startDate": "2024-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Support 4 adults with IDD per shift with daily living skills, meals, hygiene and community outings\n- Administer medications with zero errors over 24 months and document every pass in Therap\n- Helped one resident reach a supported employment goal and two others learn to use public transit alone\n- Implement behavior support plans and record data used in quarterly ISP reviews\n- Communicate daily with families, nurses and case managers about health, behavior and goals"
+          "description": "- Support 4 adults with IDD per shift with daily living skills, meals, hygiene and community outings\n- Administer medications with zero errors over 24 months and document every pass in Therap\n- Helped one resident reach a supported employment goal and two others learn to use public transit alone\n- Implement behavior support plans and record data used in quarterly ISP reviews"
         },
         {
           "company": "Capital Day Support Services",
@@ -362,7 +415,7 @@
           "startDate": "2023-01",
           "endDate": "2024-02",
           "isCurrent": false,
-          "description": "- Led art, fitness and job-readiness activities for groups of 8 participants\n- Supported 12 participants on weekly volunteer outings at local food banks\n- Tracked participant goals and attendance in daily progress notes"
+          "description": "- Led art, fitness and job-readiness activities for groups of 8 participants\n- Supported 12 participants on weekly volunteer outings at local food banks"
         },
         {
           "company": "Self-employed",
@@ -371,7 +424,7 @@
           "startDate": "2021-06",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Provided weekend respite care for 3 families of children with autism\n- Followed visual schedules and behavior plans set by each family"
+          "description": "- Provided weekend respite care for 3 families of children with autism"
         }
       ],
       "education": [
@@ -386,10 +439,18 @@
       "skills": [
         "Support: person-centered planning, activities of daily living, community integration, supported employment",
         "Health and safety: medication administration, seizure protocols, Mandt de-escalation",
-        "Documentation: Therap, incident reports, ISP data collection",
-        "Certifications: Virginia DBHDS DSP Orientation, Medication Aide, CPR/First Aid, Mandt System",
-        "Communication: augmentative communication devices, visual schedules, family updates"
-      ]
+        "Documentation: Therap, incident reports, ISP data collection"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "bronx": 0.93,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "Family Support Specialist": {
       "summary": "Family support specialist with five years in home visiting and early childhood programs serving families with young children. Visits 22 families a month using Parents as Teachers, with 92% of children receiving on-time developmental screenings. Brings strengths-based coaching, developmental screening and bilingual outreach.",
@@ -401,7 +462,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Conduct home visits for 22 families with children under 5 using the Parents as Teachers model\n- Screened 100% of enrolled children with ASQ-3 and ASQ:SE-2, with 92% screened on time\n- Referred 35 children to early intervention and tracked each referral to service start\n- Run bilingual monthly group connections that average 18 families\n- Supported 6 families through postpartum depression screening and linked 4 to counseling"
+          "description": "- Conduct home visits for 22 families with children under 5 using the Parents as Teachers model\n- Screened 100% of enrolled children with ASQ-3 and ASQ:SE-2, with 92% screened on time\n- Referred 35 children to early intervention and tracked each referral to service start\n- Run bilingual monthly group connections that average 18 families"
         },
         {
           "company": "Little Oaks Early Learning Center",
@@ -419,7 +480,7 @@
           "startDate": "2018-08",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Supported a classroom of 16 toddlers and shared daily updates with parents\n- Helped run Creative Curriculum activities and developmental observations"
+          "description": "- Supported a classroom of 16 toddlers and shared daily updates with parents"
         }
       ],
       "education": [
@@ -435,9 +496,21 @@
         "Practice: home visiting, strengths-based coaching, family goal setting, reflective supervision",
         "Screening: ASQ-3, ASQ:SE-2, Edinburgh Postnatal Depression Scale",
         "Systems: Penelope, Head Start ChildPlus",
-        "Certifications: Parents as Teachers certified parent educator, CPR, bilingual English–Spanish",
-        "Community resources: WIC, Medicaid, child care subsidy, early intervention (ECI)"
-      ]
+        "Certifications: Parents as Teachers certified parent educator, CPR, bilingual English–Spanish"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Victim Advocate": {
       "summary": "Victim advocate with four years supporting survivors of domestic violence and sexual assault in hospital, court and shelter settings. Supports 60+ survivors a year and helped secure 45 protective orders in 2025. Brings crisis intervention, safety planning and calm, trauma-informed advocacy within legal and medical systems.",
@@ -449,7 +522,7 @@
           "startDate": "2023-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Provide court advocacy to 60+ survivors a year, helping secure 45 orders of protection in 2025\n- Complete lethality assessments and safety plans, and connect high-risk survivors to emergency shelter within 24 hours\n- Help survivors file Victims of Crime Act compensation claims, recovering $85k in medical and relocation costs\n- Train 30 volunteer hotline advocates a year on trauma-informed response\n- Coordinate with prosecutors and law enforcement on 25 felony cases a year to keep survivors informed"
+          "description": "- Provide court advocacy to 60+ survivors a year, helping secure 45 orders of protection in 2025\n- Complete lethality assessments and safety plans, and connect high-risk survivors to emergency shelter within 24 hours\n- Help survivors file Victims of Crime Act compensation claims, recovering $85k in medical and relocation costs\n- Train 30 volunteer hotline advocates a year on trauma-informed response"
         },
         {
           "company": "Music City Sexual Assault Center",
@@ -458,7 +531,7 @@
           "startDate": "2022-01",
           "endDate": "2023-03",
           "isCurrent": false,
-          "description": "- Responded to 90 hospital calls to support survivors during forensic exams\n- Answered 24-hour crisis line shifts handling 15–20 calls a week\n- Documented every hotline call and hospital response in the agency database"
+          "description": "- Responded to 90 hospital calls to support survivors during forensic exams\n- Answered 24-hour crisis line shifts handling 15–20 calls a week"
         },
         {
           "company": "Rutherford Crisis Line",
@@ -467,7 +540,7 @@
           "startDate": "2019-09",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Answered 4 overnight crisis line shifts a month after 40 hours of training\n- Referred callers to shelter, counseling and legal aid"
+          "description": "- Answered 4 overnight crisis line shifts a month after 40 hours of training"
         }
       ],
       "education": [
@@ -482,10 +555,18 @@
       "skills": [
         "Advocacy: crisis intervention, safety planning, lethality assessment, court accompaniment",
         "Legal systems: orders of protection, victim compensation, VAWA and U-visa referrals",
-        "Practice: trauma-informed care, confidentiality, cultural humility",
-        "Certifications: 40-hour domestic violence and sexual assault advocate training, NACP Advocate Credential",
-        "Systems: Empower DB, VictimsVoice, VINE notifications"
-      ]
+        "Practice: trauma-informed care, confidentiality, cultural humility"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "bronx": 0.98,
+        "mono": 0.97,
+        "pop": 0.87
+      }
     },
     "Housing Navigator": {
       "summary": "Housing navigator with five years helping people experiencing homelessness secure and keep housing through Housing First programs. Housed 74 households in 2025 with 91% still housed at 12 months. Brings landlord recruitment, HUD and voucher program knowledge and persistent, practical client advocacy.",
@@ -497,7 +578,7 @@
           "startDate": "2023-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Help 25 clients at a time gather documents, apply for vouchers and search for units under Housing First principles\n- Housed 74 households in 2025, with 91% retaining housing at 12 months\n- Recruited 30 new landlords through a risk-mitigation fund, cutting average search time from 95 to 60 days\n- Keep HMIS records accurate for HUD Continuum of Care reporting\n- Coordinate move-in support with case managers, including deposits, furniture and utility setup for 70+ households"
+          "description": "- Help 25 clients at a time gather documents, apply for vouchers and search for units under Housing First principles\n- Housed 74 households in 2025, with 91% retaining housing at 12 months\n- Recruited 30 new landlords through a risk-mitigation fund, cutting average search time from 95 to 60 days\n- Keep HMIS records accurate for HUD Continuum of Care reporting"
         },
         {
           "company": "Rainier Day Center",
@@ -506,7 +587,7 @@
           "startDate": "2021-06",
           "endDate": "2023-02",
           "isCurrent": false,
-          "description": "- Engaged 150 unsheltered adults a year at encampments and completed coordinated entry assessments\n- Helped 60 clients obtain IDs and benefits needed for housing applications\n- Coordinated with mobile health teams on wound care and medication referrals"
+          "description": "- Engaged 150 unsheltered adults a year at encampments and completed coordinated entry assessments\n- Helped 60 clients obtain IDs and benefits needed for housing applications"
         },
         {
           "company": "Emerald City Tenant Union",
@@ -515,7 +596,7 @@
           "startDate": "2020-09",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Helped 80 tenants apply for emergency rental assistance\n- Ran know-your-rights workshops on Washington eviction protections"
+          "description": "- Helped 80 tenants apply for emergency rental assistance"
         }
       ],
       "education": [
@@ -531,9 +612,20 @@
         "Housing: Housing First, rapid rehousing, HCV and EHV vouchers, landlord engagement",
         "Systems: HMIS (Clarity), coordinated entry, HUD CoC requirements",
         "Practice: motivational interviewing, harm reduction, tenancy sustainment",
-        "Certifications: Mental Health First Aid, naloxone administration",
-        "Landlord relations: unit inspections, lease negotiation, risk mitigation funds, HQS standards"
-      ]
+        "Certifications: Mental Health First Aid, naloxone administration"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "bronx": 0.89,
+        "mono": 0.97,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Residential Counselor": {
       "summary": "Residential counselor with two years in a group home for adolescents in foster care, working overnight and weekend shifts. Supports 8 youth per shift and cut physical restraints in the unit by 40% through de-escalation and routine building. Brings steady crisis response, life-skills coaching and clear shift documentation.",
@@ -545,7 +637,7 @@
           "startDate": "2024-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Supervise and support 8 youth ages 13–17 per shift in a licensed therapeutic group home\n- Helped reduce physical restraints on the unit by 40% using verbal de-escalation and predictable routines\n- Teach weekly life-skills sessions on budgeting, cooking and job applications\n- Write detailed shift notes and incident reports reviewed by clinicians and caseworkers\n- Coordinate with therapists on behavior plans and attend weekly treatment team meetings"
+          "description": "- Supervise and support 8 youth ages 13–17 per shift in a licensed therapeutic group home\n- Helped reduce physical restraints on the unit by 40% using verbal de-escalation and predictable routines\n- Teach weekly life-skills sessions on budgeting, cooking and job applications\n- Write detailed shift notes and incident reports reviewed by clinicians and caseworkers"
         },
         {
           "company": "Queen City Youth Club",
@@ -554,7 +646,7 @@
           "startDate": "2023-01",
           "endDate": "2024-08",
           "isCurrent": false,
-          "description": "- Led after-school homework and recreation programs for 30 middle schoolers\n- Mentored 6 youth one-to-one through the club's academic success program\n- Organized a summer basketball league for 40 youth"
+          "description": "- Led after-school homework and recreation programs for 30 middle schoolers\n- Mentored 6 youth one-to-one through the club's academic success program"
         },
         {
           "company": "Blue Ridge Adventure Camp",
@@ -563,7 +655,7 @@
           "startDate": "2021-06",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Supervised cabins of 10 campers ages 10–14 for 8-week sessions\n- Led hiking and team-building activities with zero safety incidents"
+          "description": "- Supervised cabins of 10 campers ages 10–14 for 8-week sessions"
         }
       ],
       "education": [
@@ -579,9 +671,21 @@
         "Youth care: milieu supervision, life-skills coaching, behavior management plans",
         "Crisis: verbal de-escalation, NCI and safe physical intervention, suicide risk awareness",
         "Documentation: shift logs, incident reports, medication observation records",
-        "Certifications: NCI+ (North Carolina Interventions), CPR/First Aid, Medication Administration",
-        "Youth development: trauma-informed care, positive behavior support, mentoring"
-      ]
+        "Certifications: NCI+ (North Carolina Interventions), CPR/First Aid, Medication Administration"
+      ],
+      "fit": {
+        "silk": 0.95,
+        "minimalist": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Community Health Worker": {
       "summary": "Community health worker with six years connecting low-income patients to care and social services in clinic and community settings. Supports 60 patients with diabetes and hypertension, contributing to a 1.1-point average drop in A1c over 12 months. Brings social needs screening, bilingual health education and strong ties to local resources.",
@@ -593,7 +697,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Support 60 patients with uncontrolled diabetes and hypertension through home visits, calls and appointment reminders\n- Contributed to a 1.1-point average A1c reduction among enrolled patients over 12 months\n- Screen 120 patients a month for social needs and close 70% of food, housing and utility referrals\n- Teach bilingual chronic disease self-management classes reaching 200 participants a year\n- Serve on the clinic's patient advisory council and helped redesign appointment reminder scripts"
+          "description": "- Support 60 patients with uncontrolled diabetes and hypertension through home visits, calls and appointment reminders\n- Contributed to a 1.1-point average A1c reduction among enrolled patients over 12 months\n- Screen 120 patients a month for social needs and close 70% of food, housing and utility referrals\n- Teach bilingual chronic disease self-management classes reaching 200 participants a year"
         },
         {
           "company": "Sandia Neighborhood Health Coalition",
@@ -602,7 +706,7 @@
           "startDate": "2020-05",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Enrolled 400 residents in Medicaid and marketplace coverage during outreach events\n- Delivered COVID-19 vaccine education door-to-door in 6 neighborhoods\n- Led 50 community health screenings at churches and markets"
+          "description": "- Enrolled 400 residents in Medicaid and marketplace coverage during outreach events\n- Delivered COVID-19 vaccine education door-to-door in 6 neighborhoods"
         },
         {
           "company": "Westside Family Clinic",
@@ -611,7 +715,7 @@
           "startDate": "2018-03",
           "endDate": "2020-04",
           "isCurrent": false,
-          "description": "- Checked in 60 patients a day and verified Medicaid eligibility\n- Helped 200 patients sign up for the sliding-fee program"
+          "description": "- Checked in 60 patients a day and verified Medicaid eligibility"
         }
       ],
       "education": [
@@ -626,10 +730,18 @@
       "skills": [
         "Practice: social needs screening (PRAPARE), care coordination, health coaching, home visits",
         "Health education: diabetes self-management, blood pressure monitoring, nutrition",
-        "Systems: Epic, Unite Us referral platform, Medicaid enrollment",
-        "Certifications: New Mexico Certified Community Health Worker, bilingual English–Spanish",
-        "Outreach: home visits, community events, health fairs, promotora networks"
-      ]
+        "Systems: Epic, Unite Us referral platform, Medicaid enrollment"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "bronx": 0.96,
+        "mono": 0.93,
+        "pop": 0.91
+      }
     },
     "Community Outreach Coordinator": {
       "summary": "Community outreach coordinator with five years building partnerships and enrollment for a food security nonprofit. Expanded outreach to 45 partner sites and grew SNAP enrollment assistance by 60%. Brings event planning, partner management, bilingual communications and outreach data tracking.",
@@ -641,7 +753,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew the outreach network from 28 to 45 partner sites, including schools, clinics and faith communities\n- Increased SNAP application assistance by 60%, helping 1,900 households apply in 2025\n- Plan 50+ community events a year and manage a $90k outreach budget\n- Track contacts and referrals in Salesforce and report outcomes for 3 funders\n- Trained 60 partner staff to complete SNAP screenings and refer families to pantries"
+          "description": "- Grew the outreach network from 28 to 45 partner sites, including schools, clinics and faith communities\n- Increased SNAP application assistance by 60%, helping 1,900 households apply in 2025\n- Plan 50+ community events a year and manage a $90k outreach budget\n- Track contacts and referrals in Salesforce and report outcomes for 3 funders"
         },
         {
           "company": "Westside Neighbors United",
@@ -675,9 +787,23 @@
         "Outreach: partner development, community events, canvassing, benefits enrollment",
         "Communications: flyers, social media, bilingual messaging, community presentations",
         "Data: Salesforce Nonprofit Cloud, Google Sheets, funder reporting",
-        "Languages: English, Spanish (professional)",
-        "Event planning: logistics, vendor coordination, permits, volunteer staffing"
-      ]
+        "Languages: English, Spanish (professional)"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "path": 0.99,
+        "quartz": 0.95,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Volunteer Coordinator": {
       "summary": "Volunteer coordinator with six years recruiting and managing volunteers for animal welfare and hunger relief nonprofits. Manages a pool of 650 active volunteers who logged 28,000 hours in 2025, and raised 12-month retention from 41% to 63%. Brings recruitment, training design, scheduling systems and recognition programs that keep people coming back.",
@@ -689,7 +815,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 650 active volunteers across shelter care, adoption events and foster programs, logging 28,000 hours in 2025\n- Raised 12-month volunteer retention from 41% to 63% with a redesigned orientation and mentor program\n- Moved scheduling to Better Impact, cutting no-shows by 30%\n- Recruited 15 corporate volunteer groups a year that also contributed $40k in gifts\n- Run quarterly volunteer surveys and a recognition program with 92% satisfaction scores"
+          "description": "- Manage 650 active volunteers across shelter care, adoption events and foster programs, logging 28,000 hours in 2025\n- Raised 12-month volunteer retention from 41% to 63% with a redesigned orientation and mentor program\n- Moved scheduling to Better Impact, cutting no-shows by 30%\n- Recruited 15 corporate volunteer groups a year that also contributed $40k in gifts"
         },
         {
           "company": "Capital Area Food Pantry",
@@ -723,9 +849,25 @@
         "Volunteer management: recruitment, orientation, scheduling, recognition, retention",
         "Systems: Better Impact, VolunteerHub, Salesforce, Mailchimp",
         "Program: corporate volunteer partnerships, foster program coordination",
-        "Certifications: Certified in Volunteer Administration (CVA)",
-        "Training: orientation design, safety training, animal handling certification"
-      ]
+        "Certifications: Certified in Volunteer Administration (CVA)"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Development Associate": {
       "summary": "Development associate with two years supporting fundraising at an arts education nonprofit. Processes 3,500 gifts a year in Raiser's Edge NXT with 99% accuracy and helped grow monthly donors by 45%. Brings gift operations, donor communications, event logistics and a solid foundation in grant research.",
@@ -737,7 +879,7 @@
           "startDate": "2024-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Process and acknowledge 3,500 gifts a year in Raiser's Edge NXT with 99% accuracy and 48-hour turnaround\n- Helped grow monthly donors from 180 to 260 by running a welcome email series and retention calls\n- Coordinate logistics for a 300-guest annual gala that raised $410k\n- Research 40 foundation prospects and draft 6 letters of inquiry for the grants manager\n- Prepare monthly revenue reports and reconcile gifts with finance in QuickBooks"
+          "description": "- Process and acknowledge 3,500 gifts a year in Raiser's Edge NXT with 99% accuracy and 48-hour turnaround\n- Helped grow monthly donors from 180 to 260 by running a welcome email series and retention calls\n- Coordinate logistics for a 300-guest annual gala that raised $410k\n- Research 40 foundation prospects and draft 6 letters of inquiry for the grants manager"
         },
         {
           "company": "Lakeshore Literacy Project",
@@ -755,7 +897,7 @@
           "startDate": "2021-09",
           "endDate": "2023-12",
           "isCurrent": false,
-          "description": "- Called 4,000 alumni and raised $85k for the annual fund\n- Updated donor records and logged call notes in the CRM"
+          "description": "- Called 4,000 alumni and raised $85k for the annual fund"
         }
       ],
       "education": [
@@ -771,9 +913,22 @@
         "Fundraising operations: gift entry, acknowledgments, donor database management, reporting",
         "Donor engagement: monthly giving, appeals, stewardship reports, events",
         "Tools: Raiser's Edge NXT, Classy, Mailchimp, Candid Foundation Directory",
-        "Writing: letters of inquiry, impact stories, donor communications",
-        "Finance: gift reconciliation, QuickBooks Online, pledge tracking"
-      ]
+        "Writing: letters of inquiry, impact stories, donor communications"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Grant Writer": {
       "summary": "Grant writer with six years securing foundation, corporate and government funding for youth and workforce nonprofits. Raised $4.8M over the past three years with a 58% win rate, including a $1.2M federal Department of Labor award. Brings persuasive narrative writing, logic models, budget alignment and dependable deadline management.",
@@ -785,7 +940,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Write 40+ proposals and reports a year, raising $4.8M since 2022 at a 58% win rate\n- Led the narrative for a $1.2M Department of Labor YouthBuild grant, aligning logic model, budget and evaluation plan\n- Built a grants calendar in Instrumentl that eliminated missed deadlines across 60 active funders\n- Interview program staff and participants to gather outcome data and stories for reports\n- Draft program budgets with finance and align budget justifications with narrative"
+          "description": "- Write 40+ proposals and reports a year, raising $4.8M since 2022 at a 58% win rate\n- Led the narrative for a $1.2M Department of Labor YouthBuild grant, aligning logic model, budget and evaluation plan\n- Built a grants calendar in Instrumentl that eliminated missed deadlines across 60 active funders\n- Interview program staff and participants to gather outcome data and stories for reports"
         },
         {
           "company": "Bright Futures Youth Services",
@@ -794,7 +949,7 @@
           "startDate": "2020-02",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Wrote 25 foundation proposals a year, growing institutional funding from $650k to $1.1M\n- Secured the organization's first state 21st Century Community Learning Centers award of $300k\n- Wrote 15 grant reports a year, maintaining 100% on-time submission"
+          "description": "- Wrote 25 foundation proposals a year, growing institutional funding from $650k to $1.1M\n- Secured the organization's first state 21st Century Community Learning Centers award of $300k"
         },
         {
           "company": "Mile High Arts Council",
@@ -803,7 +958,7 @@
           "startDate": "2018-06",
           "endDate": "2020-01",
           "isCurrent": false,
-          "description": "- Wrote newsletters, donor appeals and website copy for a $2M arts nonprofit\n- Drafted 8 small foundation proposals, 5 of them funded"
+          "description": "- Wrote newsletters, donor appeals and website copy for a $2M arts nonprofit"
         }
       ],
       "education": [
@@ -818,10 +973,18 @@
       "skills": [
         "Grant writing: foundation, corporate and federal proposals, LOIs, narrative reports",
         "Program design: logic models, theory of change, SMART outcomes, evaluation plans",
-        "Tools: Instrumentl, Candid Foundation Directory, Grants.gov, SAM.gov",
-        "Certifications: Grant Professional Certified (GPC)",
-        "Research: prospect research, funder alignment, outcome data collection"
-      ]
+        "Tools: Instrumentl, Candid Foundation Directory, Grants.gov, SAM.gov"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.87,
+        "bronx": 0.91,
+        "mono": 0.92,
+        "pop": 0.89
+      }
     },
     "Grants Manager": {
       "summary": "Grants manager with ten years leading grant strategy and compliance at multi-program human services nonprofits. Oversees a $9M portfolio of 70 public and private grants with clean single audits for five consecutive years. Brings pipeline strategy, federal compliance under 2 CFR 200 and a small-team management style that keeps proposals and reports on time.",
@@ -833,7 +996,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a $9M portfolio of 70 federal, state and foundation grants and a team of 2 grant writers\n- Grew grant revenue 35% in three years by adding HRSA and SAMHSA funding streams\n- Maintained clean single audits for 5 years by building post-award compliance checklists with finance\n- Track deliverables in Salesforce and brief the leadership team monthly on pipeline and risk\n- Train 15 program staff a year on reporting requirements and allowable costs"
+          "description": "- Manage a $9M portfolio of 70 federal, state and foundation grants and a team of 2 grant writers\n- Grew grant revenue 35% in three years by adding HRSA and SAMHSA funding streams\n- Maintained clean single audits for 5 years by building post-award compliance checklists with finance\n- Track deliverables in Salesforce and brief the leadership team monthly on pipeline and risk"
         },
         {
           "company": "Chesapeake Health Access Network",
@@ -842,7 +1005,7 @@
           "startDate": "2018-03",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Prepared 30 proposals a year and federal financial reports (SF-425) for 12 awards\n- Reconciled grant budgets monthly with program directors, reducing year-end underspending by 20%\n- Managed subrecipient monitoring for 6 partner organizations"
+          "description": "- Prepared 30 proposals a year and federal financial reports (SF-425) for 12 awards\n- Reconciled grant budgets monthly with program directors, reducing year-end underspending by 20%"
         },
         {
           "company": "Patapsco Youth Mentoring",
@@ -851,7 +1014,7 @@
           "startDate": "2016-07",
           "endDate": "2018-02",
           "isCurrent": false,
-          "description": "- Wrote 15 foundation proposals and managed donor records for a $1.8M organization\n- Coordinated the annual appeal and donor database cleanup"
+          "description": "- Wrote 15 foundation proposals and managed donor records for a $1.8M organization"
         }
       ],
       "education": [
@@ -866,10 +1029,22 @@
       "skills": [
         "Grants management: pipeline strategy, pre- and post-award, budget development, reporting",
         "Compliance: 2 CFR 200 Uniform Guidance, single audit, subrecipient monitoring",
-        "Systems: Salesforce, Grants.gov, eRA Commons, GrantSolutions, Payment Management System",
-        "Leadership: team supervision, cross-department coordination, board reporting",
-        "Writing: federal narratives, budget justifications, performance reports"
-      ]
+        "Systems: Salesforce, Grants.gov, eRA Commons, GrantSolutions, Payment Management System"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.95,
+        "minimalist": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.97,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.9
+      }
     },
     "Annual Giving Manager": {
       "summary": "Annual giving manager with eight years running direct mail, digital and monthly giving programs for health and environmental nonprofits. Grew annual fund revenue from $2.1M to $3.0M in three years while lifting donor retention to 52%. Brings multichannel campaign strategy, segmentation, testing and close partnership with marketing.",
@@ -881,7 +1056,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a $3.0M annual fund across direct mail, email, SMS and peer-to-peer, up from $2.1M in 2022\n- Raised overall donor retention from 44% to 52% with segmented stewardship and a second-gift series\n- Ran 20 A/B tests on appeal copy and ask strings, increasing average gift by 14%\n- Manage a $350k direct mail vendor budget and 1 coordinator\n- Partner with marketing on donor journeys and the year-end campaign calendar"
+          "description": "- Lead a $3.0M annual fund across direct mail, email, SMS and peer-to-peer, up from $2.1M in 2022\n- Raised overall donor retention from 44% to 52% with segmented stewardship and a second-gift series\n- Ran 20 A/B tests on appeal copy and ask strings, increasing average gift by 14%\n- Manage a $350k direct mail vendor budget and 1 coordinator"
         },
         {
           "company": "Cascade Children's Health Foundation",
@@ -899,7 +1074,7 @@
           "startDate": "2018-07",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Processed 2,500 gifts a year and wrote acknowledgment letters\n- Coordinated mailings for 3 appeals"
+          "description": "- Processed 2,500 gifts a year and wrote acknowledgment letters"
         }
       ],
       "education": [
@@ -915,9 +1090,22 @@
         "Fundraising: annual fund, direct mail, monthly giving, Giving Tuesday, peer-to-peer",
         "Analytics: segmentation, RFM analysis, A/B testing, retention and LYBUNT reporting",
         "Tools: Raiser's Edge NXT, Blackbaud Luminate, Classy, Mailchimp",
-        "Certifications: Certified Fund Raising Executive (CFRE) candidate",
-        "Creative: appeal copywriting, landing pages, donor surveys"
-      ]
+        "Certifications: Certified Fund Raising Executive (CFRE) candidate"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Major Gifts Officer": {
       "summary": "Major gifts officer with ten years in arts, university and hospital fundraising, managing a portfolio of 140 donors capable of $25k+ gifts. Closed $6.4M in commitments over the past two fiscal years, including two seven-figure gifts. Brings disciplined portfolio management, donor-centered cultivation and partnership with leadership on complex asks.",
@@ -929,7 +1117,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a portfolio of 140 donors rated $25k–$5M, completing 180+ substantive visits a year\n- Closed $6.4M in commitments over 2 fiscal years, including two $1M+ gifts for the cancer center campaign\n- Partner with physicians and the CEO on 20 solicitation strategies a year\n- Exceeded annual goals by an average of 18% while keeping 95% of portfolio contact reports current\n- Coordinate planned giving conversations with the gift planning team, documenting 9 new bequest intentions"
+          "description": "- Manage a portfolio of 140 donors rated $25k–$5M, completing 180+ substantive visits a year\n- Closed $6.4M in commitments over 2 fiscal years, including two $1M+ gifts for the cancer center campaign\n- Partner with physicians and the CEO on 20 solicitation strategies a year\n- Exceeded annual goals by an average of 18% while keeping 95% of portfolio contact reports current"
         },
         {
           "company": "North Star State University Foundation",
@@ -947,7 +1135,7 @@
           "startDate": "2016-07",
           "endDate": "2018-08",
           "isCurrent": false,
-          "description": "- Managed a $900k annual fund with direct mail, phone and email\n- Moved 40 mid-level donors into major gift portfolios"
+          "description": "- Managed a $900k annual fund with direct mail, phone and email"
         }
       ],
       "education": [
@@ -963,9 +1151,23 @@
         "Major gifts: portfolio management, discovery, cultivation, solicitation, stewardship",
         "Campaigns: capital and comprehensive campaigns, gift agreements, naming opportunities",
         "Tools: Raiser's Edge NXT, iWave, DonorSearch, Salesforce",
-        "Certifications: Certified Fund Raising Executive (CFRE)",
-        "Gift planning: bequests, charitable gift annuities, donor-advised funds, stock gifts"
-      ]
+        "Certifications: Certified Fund Raising Executive (CFRE)"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Development Director": {
       "summary": "Development director with 12 years in nonprofit fundraising, leading a 6-person team at a regional housing nonprofit. Grew contributed revenue from $3.5M to $6.2M in four years and led a $15M capital campaign to completion. Brings fundraising strategy, board engagement, major and planned giving and a data-informed approach to team goals.",
@@ -977,7 +1179,7 @@
           "startDate": "2021-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 6-person team and set fundraising strategy across individual, foundation, corporate and planned giving\n- Grew contributed revenue from $3.5M to $6.2M in four years while holding cost to raise a dollar at $0.18\n- Directed a $15M capital campaign that closed 6 months early for a 120-unit affordable housing development\n- Engage a 22-member board, with 100% board giving and 8 members now actively opening donor doors\n- Introduced moves management in Salesforce that raised major donor retention from 68% to 81%"
+          "description": "- Lead a 6-person team and set fundraising strategy across individual, foundation, corporate and planned giving\n- Grew contributed revenue from $3.5M to $6.2M in four years while holding cost to raise a dollar at $0.18\n- Directed a $15M capital campaign that closed 6 months early for a 120-unit affordable housing development\n- Engage a 22-member board, with 100% board giving and 8 members now actively opening donor doors"
         },
         {
           "company": "Delaware Valley Literacy Council",
@@ -986,7 +1188,7 @@
           "startDate": "2017-01",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Managed a portfolio of 90 major donors raising $1.2M a year\n- Launched a legacy society that secured 35 planned gift intentions\n- Wrote 20 foundation proposals and managed 3 corporate sponsorships"
+          "description": "- Managed a portfolio of 90 major donors raising $1.2M a year\n- Launched a legacy society that secured 35 planned gift intentions"
         },
         {
           "company": "Delaware Valley Literacy Council",
@@ -995,7 +1197,7 @@
           "startDate": "2014-06",
           "endDate": "2016-12",
           "isCurrent": false,
-          "description": "- Ran the annual fund and 2 signature events grossing $600k a year\n- Managed 1 development coordinator and the gift database"
+          "description": "- Ran the annual fund and 2 signature events grossing $600k a year"
         }
       ],
       "education": [
@@ -1010,10 +1212,19 @@
       "skills": [
         "Strategy: development plans, capital campaigns, revenue forecasting, gift tables",
         "Giving programs: major gifts, planned giving, foundations, corporate partnerships, events",
-        "Leadership: team management, board development, cross-functional work with programs and finance",
-        "Certifications: CFRE, Raiser's Edge NXT, Salesforce Nonprofit Cloud",
-        "Budgeting: development budget, revenue projections, campaign accounting"
-      ]
+        "Leadership: team management, board development, cross-functional work with programs and finance"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "bronx": 0.94,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Program Director": {
       "summary": "Program director with 12 years designing and leading youth and workforce programs at community nonprofits. Oversees 5 programs serving 1,400 young adults a year with a $4.2M budget, with 72% of graduates employed at six months. Brings program design, outcome measurement, staff leadership and strong employer and funder partnerships.",
@@ -1025,7 +1236,7 @@
           "startDate": "2021-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 5 education and workforce programs serving 1,400 young adults a year with 28 staff and a $4.2M budget\n- Raised six-month employment for graduates from 58% to 72% by adding employer-designed training tracks\n- Built an outcomes dashboard in Apricot used for board and funder reporting\n- Partnered with 40 employers and 3 community colleges to create paid apprenticeship placements\n- Secured $1.8M in new WIOA and foundation funding with the development team"
+          "description": "- Lead 5 education and workforce programs serving 1,400 young adults a year with 28 staff and a $4.2M budget\n- Raised six-month employment for graduates from 58% to 72% by adding employer-designed training tracks\n- Built an outcomes dashboard in Apricot used for board and funder reporting\n- Partnered with 40 employers and 3 community colleges to create paid apprenticeship placements"
         },
         {
           "company": "Motor City Mentoring",
@@ -1034,7 +1245,7 @@
           "startDate": "2016-08",
           "endDate": "2021-04",
           "isCurrent": false,
-          "description": "- Managed a mentoring program matching 300 youth a year, with 80% of matches lasting 12+ months\n- Supervised 6 case managers and introduced quarterly fidelity reviews\n- Trained 40 volunteer mentors a year on youth development practices"
+          "description": "- Managed a mentoring program matching 300 youth a year, with 80% of matches lasting 12+ months\n- Supervised 6 case managers and introduced quarterly fidelity reviews"
         },
         {
           "company": "Motor City Mentoring",
@@ -1043,7 +1254,7 @@
           "startDate": "2014-06",
           "endDate": "2016-07",
           "isCurrent": false,
-          "description": "- Supported 35 high school students on graduation and postsecondary plans\n- Connected 60% of seniors to college or training enrollment"
+          "description": "- Supported 35 high school students on graduation and postsecondary plans"
         }
       ],
       "education": [
@@ -1058,10 +1269,18 @@
       "skills": [
         "Program leadership: program design, logic models, fidelity monitoring, continuous improvement",
         "Workforce: apprenticeships, WIOA programs, employer partnerships, credential pathways",
-        "Data: Apricot, Salesforce, outcome dashboards, funder reporting",
-        "Management: staff supervision, budgeting, hiring and training",
-        "Funding: WIOA, AmeriCorps, foundation grants, performance-based contracts"
-      ]
+        "Data: Apricot, Salesforce, outcome dashboards, funder reporting"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "Social Services Director": {
       "summary": "Social services director with 14 years in human services, leading case management, behavioral health and benefits programs for a multi-site agency. Oversees 65 staff and a $7.8M budget serving 6,000 clients a year. Brings licensed clinical leadership, Medicaid and contract compliance, and a record of opening programs that meet measurable community needs.",
@@ -1073,7 +1292,7 @@
           "startDate": "2020-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 65 staff across case management, outpatient behavioral health and benefits enrollment with a $7.8M budget\n- Opened a certified community behavioral health clinic site that reached 1,100 new clients in its first year\n- Raised Medicaid billing compliance from 87% to 98% through documentation training and monthly audits\n- Oversee county and state contracts and present outcomes quarterly to the board\n- Led CARF reaccreditation with a three-year award and no major recommendations"
+          "description": "- Lead 65 staff across case management, outpatient behavioral health and benefits enrollment with a $7.8M budget\n- Opened a certified community behavioral health clinic site that reached 1,100 new clients in its first year\n- Raised Medicaid billing compliance from 87% to 98% through documentation training and monthly audits\n- Oversee county and state contracts and present outcomes quarterly to the board"
         },
         {
           "company": "Mississippi River Family Services",
@@ -1082,7 +1301,7 @@
           "startDate": "2015-04",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Managed 3 outpatient clinics and 22 clinicians serving 1,800 clients a year\n- Cut intake wait time from 21 to 7 days with open-access scheduling\n- Launched a school-based therapy program in 8 schools"
+          "description": "- Managed 3 outpatient clinics and 22 clinicians serving 1,800 clients a year\n- Cut intake wait time from 21 to 7 days with open-access scheduling"
         },
         {
           "company": "Mississippi River Family Services",
@@ -1091,7 +1310,7 @@
           "startDate": "2012-06",
           "endDate": "2015-03",
           "isCurrent": false,
-          "description": "- Provided therapy to a caseload of 30 children and families\n- Supervised 2 MSW interns each year"
+          "description": "- Provided therapy to a caseload of 30 children and families"
         }
       ],
       "education": [
@@ -1107,9 +1326,22 @@
         "Leadership: multi-site operations, budgeting, staff development, strategic planning",
         "Compliance: Medicaid billing, CCBHC standards, CARF accreditation, HIPAA",
         "Programs: case management, outpatient behavioral health, benefits enrollment",
-        "Licenses: LCSW (Missouri)",
-        "Data: EHR reporting, outcome dashboards, contract performance measures"
-      ]
+        "Licenses: LCSW (Missouri)"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.98,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Executive Director": {
       "summary": "Executive director with 18 years in nonprofit leadership, heading a $14M community health and family services organization with 140 staff. Doubled revenue in six years, diversified funding to 40% private sources and expanded services to two new counties. Brings board partnership, financial stewardship, strategic planning and credibility with funders and public partners.",
@@ -1121,7 +1353,7 @@
           "startDate": "2019-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 140-person organization with a $14M budget, reporting to a 17-member board\n- Doubled annual revenue from $7M to $14M and raised private funding from 22% to 40% of the total\n- Expanded home visiting and behavioral health services into 2 new counties, serving 9,000 people a year\n- Built operating reserves from 1 month to 5 months while earning a Candid Platinum Seal of Transparency\n- Led a strategic plan with staff, clients and partners that set 5-year growth and equity goals"
+          "description": "- Lead a 140-person organization with a $14M budget, reporting to a 17-member board\n- Doubled annual revenue from $7M to $14M and raised private funding from 22% to 40% of the total\n- Expanded home visiting and behavioral health services into 2 new counties, serving 9,000 people a year"
         },
         {
           "company": "Prairie Youth and Family Services",
@@ -1130,7 +1362,7 @@
           "startDate": "2013-02",
           "endDate": "2019-06",
           "isCurrent": false,
-          "description": "- Oversaw programs, HR and finance for a $6M agency with 70 staff\n- Led a merger with a smaller agency that added $1.5M in contracts and kept 100% of client services\n- Built the agency's first outcomes reporting system for funders and the board"
+          "description": "- Oversaw programs, HR and finance for a $6M agency with 70 staff\n- Led a merger with a smaller agency that added $1.5M in contracts and kept 100% of client services"
         },
         {
           "company": "Prairie Youth and Family Services",
@@ -1139,7 +1371,7 @@
           "startDate": "2008-05",
           "endDate": "2013-01",
           "isCurrent": false,
-          "description": "- Directed foster care and family preservation programs serving 400 children a year\n- Opened 2 satellite offices serving rural counties"
+          "description": "- Directed foster care and family preservation programs serving 400 children a year"
         }
       ],
       "education": [
@@ -1160,10 +1392,22 @@
       "skills": [
         "Leadership: board governance, strategic planning, organizational culture, mergers",
         "Finance: budgets, reserves policy, audit oversight, government contracts",
-        "Fundraising: major donors, foundations, capital campaigns, public funding",
-        "Partnerships: state agencies, health systems, county governments, coalitions",
-        "Governance: board recruitment, committee structure, executive compensation, policy review"
-      ]
+        "Fundraising: major donors, foundations, capital campaigns, public funding"
+      ],
+      "fit": {
+        "opal": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "symmetry": 0.99,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.93,
+        "cast": 0.99
+      }
     }
   }
 }

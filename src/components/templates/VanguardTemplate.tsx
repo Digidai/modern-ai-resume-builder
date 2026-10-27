@@ -52,10 +52,10 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col px-[18mm] pt-[14mm] pb-[15mm] font-source-sans text-[#333333] [--accent:var(--rs-accent,#C62828)]">
             <header className="mb-[6mm] text-center">
                 {name && (
-                    <h1 className="font-roboto text-[42px] leading-[1.1] text-[#333333] wrap-break-word">
+                    <div role="heading" aria-level={1} className="font-roboto text-[42px] leading-[1.1] text-[#333333] wrap-break-word">
                         {firstName && <span className="font-light text-[#5D5D5D]">{firstName} </span>}
                         <span className="font-bold">{lastName}</span>
-                    </h1>
+                    </div>
                 )}
                 {data.title.trim() && (
                     <p className="mt-2 font-roboto text-[13px] font-medium uppercase tracking-[0.14em] text-(--accent) wrap-break-word">{data.title}</p>

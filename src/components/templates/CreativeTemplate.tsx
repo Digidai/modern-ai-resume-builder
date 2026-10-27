@@ -32,7 +32,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
             {hasHeader && (
                 <header className="bg-(--accent) px-[12mm] pt-[13mm] pb-[10mm] text-white print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                     {data.fullName.trim() && (
-                        <h1 className="font-montserrat text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] wrap-break-word">{data.fullName}</h1>
+                        <div role="heading" aria-level={1} className="font-montserrat text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] wrap-break-word">{data.fullName}</div>
                     )}
                     {data.title.trim() && (
                         <p className="mt-2 text-[17px] font-bold uppercase tracking-[0.12em] text-white/90 wrap-break-word">{data.title}</p>

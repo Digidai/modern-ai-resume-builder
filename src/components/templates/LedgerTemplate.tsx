@@ -50,10 +50,10 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {(lastName || data.title.trim()) && (
                         <div className="flex flex-wrap items-baseline gap-x-[14px] gap-y-[2px]">
                             {lastName && (
-                                <h1 className="min-w-0 text-[34px] font-bold leading-[1.1] text-(--accent) wrap-break-word">
+                                <div role="heading" aria-level={1} className="min-w-0 text-[34px] font-bold leading-[1.1] text-(--accent) wrap-break-word">
                                     {firstNames && <span className="text-[color-mix(in_oklab,var(--accent)_72%,white)]">{firstNames} </span>}
                                     {lastName}
-                                </h1>
+                                </div>
                             )}
                             {data.title.trim() && (
                                 <p className="min-w-0 text-[22px] font-medium leading-tight text-neutral-500 wrap-break-word">{data.title}</p>

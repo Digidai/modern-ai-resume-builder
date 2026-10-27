@@ -20,7 +20,7 @@ const LazyResumePreviewComponent: React.FC<LazyResumePreviewProps> = ({ data, te
       {isVisible ? (
         <ScaledResumePreview data={data} templateId={templateId} />
       ) : (
-        <div className="w-full aspect-[210/297] bg-slate-100 dark:bg-slate-800 animate-pulse" />
+        <div className="w-full aspect-[210/297] bg-tint animate-pulse" />
       )}
     </div>
   );

@@ -22,7 +22,7 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {(data.fullName.trim() || data.title.trim()) && (
                     <div className="min-w-0 flex-1">
                         {data.fullName.trim() && (
-                            <h1 className="text-[30px] font-bold leading-[1.05] tracking-[-0.01em] text-slate-900 wrap-break-word">{data.fullName}</h1>
+                            <div role="heading" aria-level={1} className="text-[30px] font-bold leading-[1.05] tracking-[-0.01em] text-slate-900 wrap-break-word">{data.fullName}</div>
                         )}
                         {data.title.trim() && <p className="mt-1 text-[16px] font-semibold text-(--accent) wrap-break-word">{data.title}</p>}
                     </div>

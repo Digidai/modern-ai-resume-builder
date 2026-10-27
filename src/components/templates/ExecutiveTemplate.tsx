@@ -25,7 +25,7 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-6 font-lato text-slate-800 [--accent:var(--rs-accent,#1E3A5F)]">
             <header className="flex flex-col items-center text-center">
                 {data.fullName.trim() && (
-                    <h1 className="font-playfair text-[40px] font-bold leading-[1.1] tracking-[0.01em] text-slate-900 wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="font-playfair text-[40px] font-bold leading-[1.1] tracking-[0.01em] text-slate-900 wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title.trim() && (
                     <p className="mt-2 text-[14px] font-bold uppercase tracking-[0.24em] text-(--accent) wrap-break-word">{data.title}</p>

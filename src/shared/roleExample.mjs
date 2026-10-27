@@ -6,7 +6,7 @@
  * @typedef {{ company: string, role: string, location?: string, startDate: string, endDate: string, isCurrent: boolean, description: string }} ExampleExperience
  * @typedef {{ school: string, degree: string, startDate: string, endDate: string }} ExampleEducation
  * @typedef {{ name: string, link: string, description: string }} ExampleProject
- * @typedef {{ summary: string, experience: ExampleExperience[], education: ExampleEducation[], projects: ExampleProject[], skills: string[] }} RoleExample
+ * @typedef {{ summary: string, experience: ExampleExperience[], education: ExampleEducation[], projects: ExampleProject[], skills: string[], fit?: Record<string, number> }} RoleExample
  * @typedef {{ family: string, guide: unknown, titles: Record<string, RoleExample> }} RoleFile
  */
 

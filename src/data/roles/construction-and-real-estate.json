@@ -12,7 +12,7 @@
           "startDate": "2020-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead delivery of healthcare and commercial projects from $25M to $120M with teams of up to 12 staff\n- Finished a $120M hospital tower expansion 5 weeks early while keeping 2 adjacent floors fully occupied\n- Held final costs within 1.5% of GMP across 6 projects through monthly cost-to-complete reviews in Procore\n- Maintained a 0.6 TRIR across 900,000 field hours with daily pre-task planning and ICRA controls\n- Present monthly cost, schedule and risk reports to owner executives and hospital facilities leadership"
+          "description": "- Lead delivery of healthcare and commercial projects from $25M to $120M with teams of up to 12 staff\n- Finished a $120M hospital tower expansion 5 weeks early while keeping 2 adjacent floors fully occupied\n- Held final costs within 1.5% of GMP across 6 projects through monthly cost-to-complete reviews in Procore\n- Maintained a 0.6 TRIR across 900,000 field hours with daily pre-task planning and ICRA controls"
         },
         {
           "company": "Front Range Construction Group",
@@ -21,7 +21,7 @@
           "startDate": "2015-01",
           "endDate": "2020-02",
           "isCurrent": false,
-          "description": "- Managed office, lab and higher education projects from $10M to $45M\n- Cut change order cycle time from 21 days to 8 with a standard pricing log\n- Mentored 3 assistant project managers, 2 of whom were promoted to project manager"
+          "description": "- Managed office, lab and higher education projects from $10M to $45M\n- Cut change order cycle time from 21 days to 8 with a standard pricing log"
         },
         {
           "company": "Summit Valley Contractors",
@@ -30,7 +30,7 @@
           "startDate": "2012-06",
           "endDate": "2014-12",
           "isCurrent": false,
-          "description": "- Ran RFIs, submittals and meeting minutes for a $60M university research building\n- Tracked 1,400 submittals with no schedule-critical delays\n- Coordinated 60 subcontractor pay applications a month"
+          "description": "- Ran RFIs, submittals and meeting minutes for a $60M university research building"
         }
       ],
       "education": [
@@ -41,20 +41,26 @@
           "endDate": "2012-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Mountain View Medical Center Tower",
-          "link": "",
-          "description": "$120M, 8-story patient tower expansion delivered under CM at-risk with 2 floors occupied throughout; LEED Silver"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Project Delivery: CM at-risk, design-build, GMP management, scheduling, closeout",
         "Cost Control: Budgets, change orders, cost-to-complete forecasting, buyout",
         "Systems: Procore, Primavera P6, Bluebeam Revu, Autodesk Construction Cloud",
-        "Safety: OSHA 30, ICRA, site logistics planning",
-        "Certifications: CCM (Certified Construction Manager), LEED AP BD+C"
-      ]
+        "Safety: OSHA 30, ICRA, site logistics planning"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Site Supervisor": {
       "summary": "Site supervisor with 8 years running residential and light commercial jobsites, coordinating up to 15 subcontractors at a time. Delivered 110 townhomes on schedule in 2025 with zero lost-time injuries. Brings hands-on field leadership, daily scheduling, quality walk-throughs and solid OSHA compliance.",
@@ -66,7 +72,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run daily site operations for townhome communities of 60 to 140 units, coordinating up to 15 trade partners\n- Delivered 110 townhomes on schedule in 2025 with zero lost-time injuries\n- Cut punch-list items per home from 38 to 14 with phase inspections before drywall and before paint\n- Schedule inspections with the city, passing 96% of framing and MEP inspections on the first visit\n- Hold weekly trade partner meetings to review the 3-week lookahead, material deliveries and safety focus items"
+          "description": "- Run daily site operations for townhome communities of 60 to 140 units, coordinating up to 15 trade partners\n- Delivered 110 townhomes on schedule in 2025 with zero lost-time injuries\n- Cut punch-list items per home from 38 to 14 with phase inspections before drywall and before paint\n- Schedule inspections with the city, passing 96% of framing and MEP inspections on the first visit"
         },
         {
           "company": "Triangle Commercial Builders",
@@ -84,7 +90,7 @@
           "startDate": "2016-04",
           "endDate": "2018-01",
           "isCurrent": false,
-          "description": "- Led a 4-person framing and trim crew on 30 home renovations\n- Trained 3 apprentices in layout and finish carpentry\n- Installed trim and cabinets in 15 kitchen remodels"
+          "description": "- Led a 4-person framing and trim crew on 30 home renovations\n- Trained 3 apprentices in layout and finish carpentry"
         }
       ],
       "education": [
@@ -100,9 +106,24 @@
         "Field Operations: Daily scheduling, trade coordination, inspections, punch lists",
         "Safety: OSHA 30, toolbox talks, fall protection, site audits",
         "Systems: Procore, BuilderTrend, Bluebeam Revu",
-        "Trades Knowledge: Framing, MEP rough-in, finishes, residential codes (IRC)",
-        "Leadership: Trade partner coordination, homeowner walkthroughs, new supervisor mentoring"
-      ]
+        "Trades Knowledge: Framing, MEP rough-in, finishes, residential codes (IRC)"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Construction Superintendent": {
       "summary": "Construction superintendent with 15 years running ground-up multifamily and mixed-use projects up to $95M. Leads field teams and 30+ subcontractors and delivered a 320-unit podium project 6 weeks early. Brings three-week lookahead discipline, quality control and a strong safety culture on dense urban sites.",
@@ -114,7 +135,7 @@
           "startDate": "2019-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run field operations for multifamily and mixed-use projects from $40M to $95M with 2 assistant superintendents\n- Delivered a 320-unit, 7-story podium building 6 weeks early by sequencing framing floors with pull planning\n- Coordinate 30+ subcontractors through daily huddles and 3-week lookaheads tied to the P6 master schedule\n- Kept TRIR at 0.8 across 650,000 hours on sites bordering 2 active streets and light rail\n- Mentor 2 assistant superintendents and 3 field engineers on lookahead planning and inspections"
+          "description": "- Run field operations for multifamily and mixed-use projects from $40M to $95M with 2 assistant superintendents\n- Delivered a 320-unit, 7-story podium building 6 weeks early by sequencing framing floors with pull planning\n- Coordinate 30+ subcontractors through daily huddles and 3-week lookaheads tied to the P6 master schedule\n- Kept TRIR at 0.8 across 650,000 hours on sites bordering 2 active streets and light rail"
         },
         {
           "company": "Puget Construction Partners",
@@ -132,7 +153,7 @@
           "startDate": "2010-05",
           "endDate": "2014-02",
           "isCurrent": false,
-          "description": "- Led framing crews of up to 18 carpenters\n- Built the crew's first panelized wall program, saving 3 weeks per building\n- Ran daily safety huddles and pre-task plans for framing crews"
+          "description": "- Led framing crews of up to 18 carpenters"
         }
       ],
       "education": [
@@ -143,20 +164,29 @@
           "endDate": "2010-03"
         }
       ],
-      "projects": [
-        {
-          "name": "Ballard Junction Apartments",
-          "link": "",
-          "description": "$95M, 320-unit, 5-over-2 podium with ground-floor retail, delivered 6 weeks early with zero lost-time incidents"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Field Leadership: Subcontractor coordination, pull planning, 3-week lookaheads, quality control",
         "Construction: Podium and wood-frame, concrete, envelope, MEP coordination",
         "Systems: Procore, Primavera P6, Bluebeam Revu",
-        "Safety: OSHA 30, site-specific safety plans, crane and logistics planning",
-        "Certifications: Washington Flagger Card, First Aid/CPR"
-      ]
+        "Safety: OSHA 30, site-specific safety plans, crane and logistics planning"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Site Superintendent": {
       "summary": "Site superintendent with 10 years leading field work on industrial and distribution center projects up to 1.1M sq ft. Delivered 4 tilt-up warehouses in 2024–2025, each turned over on or before the contract date. Brings concrete and steel sequencing, subcontractor management and tight jobsite safety controls.",
@@ -193,9 +223,19 @@
         "Field Operations: Tilt-up construction, slab-on-grade, structural steel, site work",
         "Coordination: Crane planning, subcontractor scheduling, inspections, owner walkthroughs",
         "Systems: Procore, Microsoft Project, Bluebeam Revu",
-        "Safety: OSHA 30, rigging and crane safety, Cal/OSHA compliance",
-        "Leadership: Assistant superintendent mentoring, foreman meetings, owner communication"
-      ]
+        "Safety: OSHA 30, rigging and crane safety, Cal/OSHA compliance"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.92,
+        "ginto": 0.86,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.9
+      }
     },
     "Construction Scheduler": {
       "summary": "Construction scheduler with 7 years building and updating CPM schedules for transportation, healthcare and data center projects worth up to $600M. Maintains schedules of 6,000+ activities and supports delay claims with clear time-impact analysis. Brings Primavera P6 mastery and practical field knowledge. AACE PSP certified with a civil engineering degree from Georgia Tech.",
@@ -232,9 +272,21 @@
         "Scheduling: CPM scheduling, resource loading, baseline development, lookaheads",
         "Analysis: Time-impact analysis, delay claims, earned value, critical path review",
         "Systems: Primavera P6, Microsoft Project, Procore, Power BI",
-        "Communication: Schedule narratives, owner presentations, superintendent coordination",
-        "Certifications: AACE Planning & Scheduling Professional (PSP)"
-      ]
+        "Communication: Schedule narratives, owner presentations, superintendent coordination"
+      ],
+      "fit": {
+        "executive": 0.99,
+        "silk": 0.93,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.88
+      }
     },
     "Project Engineer": {
       "summary": "Project engineer with 4 years at a general contractor on higher education and laboratory projects from $30M to $85M. Manages RFIs, submittals and change documentation and cut submittal turnaround 30%. Brings strong document control, field coordination and the groundwork to move into project management. Holds OSHA 30 and LEED Green Associate credentials and is preparing for an assistant project manager role.",
@@ -246,7 +298,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage RFIs, submittals and meeting minutes for an $85M university laboratory building\n- Cut average submittal turnaround from 14 to 10 days by pre-checking packages against specs before review\n- Track 220 potential change orders and prepare pricing backup for owner review in Procore\n- Coordinate MEP 3D clash detection with 6 trades in Navisworks, resolving 400+ clashes before install\n- Walk the site daily with the superintendent to verify installed work against drawings and log issues"
+          "description": "- Manage RFIs, submittals and meeting minutes for an $85M university laboratory building\n- Cut average submittal turnaround from 14 to 10 days by pre-checking packages against specs before review\n- Track 220 potential change orders and prepare pricing backup for owner review in Procore\n- Coordinate MEP 3D clash detection with 6 trades in Navisworks, resolving 400+ clashes before install"
         },
         {
           "company": "Commonwealth Builders",
@@ -255,7 +307,7 @@
           "startDate": "2022-06",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Logged submittals and daily reports for a $30M residence hall\n- Built a closeout tracker for 1,100 O&M and warranty documents\n- Ran weekly progress photo documentation for the owner's report"
+          "description": "- Logged submittals and daily reports for a $30M residence hall\n- Built a closeout tracker for 1,100 O&M and warranty documents"
         }
       ],
       "education": [
@@ -270,10 +322,15 @@
       "skills": [
         "Project Administration: RFIs, submittals, change orders, meeting minutes, closeout",
         "Coordination: MEP clash detection, trade coordination, field verification",
-        "Systems: Procore, Navisworks, Bluebeam Revu, Revit (viewing)",
-        "Field Skills: Blueprint reading, layout checks, quality inspections, daily logs",
-        "Certifications: OSHA 30, LEED Green Associate"
-      ]
+        "Systems: Procore, Navisworks, Bluebeam Revu, Revit (viewing)"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.95,
+        "ginto": 0.97,
+        "bronx": 0.86,
+        "pop": 0.99
+      }
     },
     "Construction Project Manager": {
       "summary": "Construction project manager with 9 years at general contractors delivering K-12, municipal and office projects from $8M to $55M. Brought 7 projects in under budget, averaging 2.4% savings returned to owners. Brings buyout, subcontract management, owner communication and a firm grip on schedule and cost risk.",
@@ -285,7 +342,7 @@
           "startDate": "2020-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead delivery of K-12 and municipal projects from $8M to $55M, managing a PE, superintendent and 25+ subcontracts\n- Brought 7 projects in under budget, returning an average of 2.4% of contract value to owners\n- Bought out $38M in subcontracts for a new high school, finishing 3% under the buyout budget\n- Delivered a $42M school addition in 14 months between occupied semesters with no school-day disruptions\n- Run monthly owner meetings and board updates with schedule, budget and risk dashboards"
+          "description": "- Lead delivery of K-12 and municipal projects from $8M to $55M, managing a PE, superintendent and 25+ subcontracts\n- Brought 7 projects in under budget, returning an average of 2.4% of contract value to owners\n- Bought out $38M in subcontracts for a new high school, finishing 3% under the buyout budget\n- Delivered a $42M school addition in 14 months between occupied semesters with no school-day disruptions"
         },
         {
           "company": "North Star Builders",
@@ -303,7 +360,7 @@
           "startDate": "2016-06",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Handled RFIs and submittals for a $20M clinic\n- Prepared 3-week lookaheads with the superintendent\n- Drafted owner meeting minutes and change order logs"
+          "description": "- Handled RFIs and submittals for a $20M clinic"
         }
       ],
       "education": [
@@ -314,19 +371,28 @@
           "endDate": "2016-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Eastbrook High School Addition",
-          "link": "",
-          "description": "$42M, 110,000 sq ft classroom and athletics addition built over 14 months on an occupied campus"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Project Management: Buyout, subcontract management, pay applications, change orders",
         "Planning: Scheduling, risk registers, phasing for occupied buildings",
         "Systems: Procore, Sage 300 CRE, Primavera P6, Bluebeam Revu",
         "Certifications: PMP, OSHA 30"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Civil Engineer": {
       "summary": "Licensed civil engineer with 8 years in land development and municipal infrastructure design. Leads site grading, stormwater and utility design for residential and commercial projects up to 400 acres. Brings Civil 3D expertise, permitting knowledge and clear coordination with agencies, developers and contractors.",
@@ -338,7 +404,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead site civil design for subdivisions and commercial sites from 10 to 400 acres, managing 3 designers\n- Designed grading, drainage and utilities for a 1,100-lot master-planned community, permitted in 7 months\n- Cut detention pond footprint 30% using Atlas 14 modeling in HydroCAD, returning 22 lots to the developer\n- Coordinate approvals with TxDOT, TCEQ and 4 municipalities, with no permit denials since 2021\n- Review shop drawings and answer contractor RFIs during construction, keeping turnaround under 5 business days"
+          "description": "- Lead site civil design for subdivisions and commercial sites from 10 to 400 acres, managing 3 designers\n- Designed grading, drainage and utilities for a 1,100-lot master-planned community, permitted in 7 months\n- Cut detention pond footprint 30% using Atlas 14 modeling in HydroCAD, returning 22 lots to the developer\n- Coordinate approvals with TxDOT, TCEQ and 4 municipalities, with no permit denials since 2021"
         },
         {
           "company": "Capital Area Civil Design",
@@ -358,20 +424,23 @@
           "endDate": "2018-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Hillside Ranch Master Plan",
-          "link": "",
-          "description": "1,100-lot community with 6 miles of roadway, 2 lift stations and regional detention; designed and permitted in 7 months"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: Site grading, stormwater, water and wastewater utilities, roadway design",
         "Software: AutoCAD Civil 3D, HydroCAD, HEC-RAS, WaterCAD",
         "Permitting: TCEQ, TxDOT, SWPPP, municipal site plan approval",
-        "Project Management: Budgets, schedules, client meetings, designer mentoring",
-        "Licenses: Professional Engineer (PE), Texas"
-      ]
+        "Project Management: Budgets, schedules, client meetings, designer mentoring"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.91
+      }
     },
     "Structural Engineer": {
       "summary": "Licensed structural engineer with 10 years designing steel, concrete and mass timber buildings up to 18 stories. Leads structural design for $50M to $200M projects and delivered a cross-laminated timber office that saved 14% in structural cost. Brings seismic design expertise and close architect collaboration.",
@@ -383,7 +452,7 @@
           "startDate": "2020-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead structural design for office, lab and multifamily buildings from $50M to $200M, mentoring 4 engineers\n- Designed a 12-story mass timber office that cut structural cost 14% versus the post-tensioned concrete option\n- Performed ASCE 41 seismic evaluations and retrofit designs for 9 unreinforced masonry buildings\n- Coordinate Revit structural models with architects and MEP teams, cutting field RFIs to the structure 40%\n- Visit sites monthly during construction to review connection details and rebar placement before pours"
+          "description": "- Lead structural design for office, lab and multifamily buildings from $50M to $200M, mentoring 4 engineers\n- Designed a 12-story mass timber office that cut structural cost 14% versus the post-tensioned concrete option\n- Performed ASCE 41 seismic evaluations and retrofit designs for 9 unreinforced masonry buildings\n- Coordinate Revit structural models with architects and MEP teams, cutting field RFIs to the structure 40%"
         },
         {
           "company": "Columbia Structural Associates",
@@ -392,7 +461,7 @@
           "startDate": "2016-01",
           "endDate": "2020-06",
           "isCurrent": false,
-          "description": "- Designed steel moment frames and concrete shear walls for 15 mid-rise buildings\n- Wrote design calculations and RAM Structural System models for permit submittal\n- Reviewed 200 steel shop drawings a year for code compliance"
+          "description": "- Designed steel moment frames and concrete shear walls for 15 mid-rise buildings\n- Wrote design calculations and RAM Structural System models for permit submittal"
         },
         {
           "company": "Ridgeway Engineering",
@@ -401,7 +470,7 @@
           "startDate": "2014-06",
           "endDate": "2015-12",
           "isCurrent": false,
-          "description": "- Designed foundations and wood-frame lateral systems for 40 residential and retail projects\n- Completed 60 construction site observations\n- Prepared 25 retaining wall designs"
+          "description": "- Designed foundations and wood-frame lateral systems for 40 residential and retail projects"
         }
       ],
       "education": [
@@ -418,19 +487,27 @@
           "endDate": "2012-06"
         }
       ],
-      "projects": [
-        {
-          "name": "Pearl District Timber Office",
-          "link": "",
-          "description": "12-story CLT and glulam office with buckling-restrained braced frames; 14% structural cost savings and 2,100 tonnes of embodied carbon avoided"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: Steel, reinforced concrete, mass timber, seismic design, retrofits",
-        "Codes: IBC, ASCE 7, ASCE 41, ACI 318, AISC 360, NDS",
-        "Software: ETABS, RAM Structural System, SAP2000, Revit",
-        "Licenses: Structural Engineer (SE), Oregon and Washington; PE, Oregon"
-      ]
+        "Codes: IBC, ASCE 7, ASCE 41, ACI 318, AISC 360",
+        "Software: ETABS, RAM Structural System, SAP2000, Revit"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.9,
+        "pop": 0.91
+      }
     },
     "MEP Engineer": {
       "summary": "MEP engineer with 7 years designing mechanical and plumbing systems for healthcare, lab and commercial buildings. Leads HVAC design for projects up to 350,000 sq ft and cut modeled energy use 28% on a recent hospital. Brings energy modeling, code compliance and tight Revit coordination with architects and contractors.",
@@ -442,7 +519,7 @@
           "startDate": "2021-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead mechanical and plumbing design for healthcare and lab projects up to 350,000 sq ft\n- Designed a heat recovery chiller plant for a 220-bed hospital that cut modeled energy use 28% versus ASHRAE 90.1\n- Model loads in Trane TRACE 3D Plus and size systems to ASHRAE 170 for operating suites and isolation rooms\n- Coordinate Revit MEP models with 5 disciplines, keeping drawing issues to under 2% of RFIs during construction\n- Perform construction site visits and review 300 MEP submittals a year for code and design compliance"
+          "description": "- Lead mechanical and plumbing design for healthcare and lab projects up to 350,000 sq ft\n- Designed a heat recovery chiller plant for a 220-bed hospital that cut modeled energy use 28% versus ASHRAE 90.1\n- Model loads in Trane TRACE 3D Plus and size systems to ASHRAE 170 for operating suites and isolation rooms\n- Coordinate Revit MEP models with 5 disciplines, keeping drawing issues to under 2% of RFIs during construction"
         },
         {
           "company": "Prairie Mechanical Design",
@@ -451,7 +528,7 @@
           "startDate": "2019-06",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Produced HVAC and plumbing drawings for office and retail tenant fit-outs\n- Completed 30 field surveys of existing systems for renovation projects\n- Drafted energy code compliance forms for 20 projects"
+          "description": "- Produced HVAC and plumbing drawings for office and retail tenant fit-outs\n- Completed 30 field surveys of existing systems for renovation projects"
         }
       ],
       "education": [
@@ -462,20 +539,19 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Lakeshore Regional Hospital Expansion",
-          "link": "",
-          "description": "220-bed tower with heat recovery chillers and dedicated outdoor air systems; projected to save $410K a year in energy"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Mechanical Design: HVAC systems, chilled water plants, plumbing, medical gas",
         "Codes: ASHRAE 62.1, 90.1 and 170, IMC, IPC, NFPA 99",
-        "Software: Revit MEP, Trane TRACE 3D Plus, AutoCAD, Navisworks",
-        "Construction Administration: Submittal review, RFIs, site observation reports, commissioning support",
-        "Licenses: Professional Engineer (PE), Illinois; LEED AP BD+C"
-      ]
+        "Software: Revit MEP, Trane TRACE 3D Plus, AutoCAD, Navisworks"
+      ],
+      "fit": {
+        "iron": 0.95,
+        "ginto": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.88,
+        "pop": 0.99
+      }
     },
     "Architect": {
       "summary": "Licensed architect with 11 years designing civic, education and multifamily buildings. Leads design teams of 5 on projects up to $90M and brought a net-zero library from concept to opening. Brings design leadership, construction documents, code analysis and steady client and contractor communication.",
@@ -487,7 +563,7 @@
           "startDate": "2020-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead teams of 5 architects and designers on civic and education projects from $15M to $90M\n- Took a 45,000 sq ft net-zero energy public library from schematic design to opening, certified LEED Platinum\n- Produce Revit construction document sets and lead code analysis under the IBC and ADA standards\n- Run construction administration for 3 projects, answering 600+ RFIs and submittals within 7 days on average\n- Mentor 3 junior designers through the ARE exams, with 2 now licensed"
+          "description": "- Lead teams of 5 architects and designers on civic and education projects from $15M to $90M\n- Took a 45,000 sq ft net-zero energy public library from schematic design to opening, certified LEED Platinum\n- Produce Revit construction document sets and lead code analysis under the IBC and ADA standards\n- Run construction administration for 3 projects, answering 600+ RFIs and submittals within 7 days on average"
         },
         {
           "company": "Schuylkill Design Studio",
@@ -496,7 +572,7 @@
           "startDate": "2016-06",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Designed multifamily buildings of 80 to 240 units through design development\n- Built parametric facade studies in Rhino and Grasshopper that cut panel types 35%\n- Ran community workshops for 2 affordable housing projects"
+          "description": "- Designed multifamily buildings of 80 to 240 units through design development\n- Built parametric facade studies in Rhino and Grasshopper that cut panel types 35%"
         },
         {
           "company": "Brandywine Architecture",
@@ -505,7 +581,7 @@
           "startDate": "2015-06",
           "endDate": "2016-05",
           "isCurrent": false,
-          "description": "- Drafted details and wall sections for school renovations\n- Prepared presentation renderings for 6 client meetings\n- Built physical study models for client presentations"
+          "description": "- Drafted details and wall sections for school renovations"
         }
       ],
       "education": [
@@ -516,19 +592,27 @@
           "endDate": "2015-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Fairmount Branch Library",
-          "link": "",
-          "description": "45,000 sq ft net-zero energy library with mass timber reading room and 300 kW rooftop solar; LEED Platinum"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Architecture: Design leadership, construction documents, code analysis, construction administration",
-        "Software: Revit, Rhino, Grasshopper, Enscape, AutoCAD, Adobe Creative Cloud",
+        "Software: Revit, Rhino, Grasshopper, Enscape, AutoCAD",
         "Sustainability: Net-zero design, LEED, daylighting, embodied carbon",
         "Licenses: Registered Architect (Pennsylvania), NCARB Certificate, LEED AP BD+C"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Interior Designer": {
       "summary": "Interior designer with 7 years in commercial workplace and hospitality interiors. Leads projects from programming to installation, including a 120,000 sq ft headquarters delivered 4% under its FF&E budget. Brings space planning, finish and furniture specification, Revit documentation and confident client presentations.",
@@ -540,7 +624,7 @@
           "startDate": "2021-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead workplace and hospitality interiors projects from 10,000 to 120,000 sq ft for corporate and hotel clients\n- Delivered a 120,000 sq ft headquarters 4% under its $6.8M FF&E budget through dealer bidding and value engineering\n- Produce Revit documentation, finish schedules and furniture plans for permit and pricing\n- Ran workplace surveys of 900 employees that shaped a 25% shift from private offices to shared spaces\n- Present design concepts and finish palettes to client leadership, winning approval on the first round for 4 of 5 projects"
+          "description": "- Lead workplace and hospitality interiors projects from 10,000 to 120,000 sq ft for corporate and hotel clients\n- Delivered a 120,000 sq ft headquarters 4% under its $6.8M FF&E budget through dealer bidding and value engineering\n- Produce Revit documentation, finish schedules and furniture plans for permit and pricing\n- Ran workplace surveys of 900 employees that shaped a 25% shift from private offices to shared spaces"
         },
         {
           "company": "Uptown Design Collective",
@@ -560,20 +644,23 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Trinity Financial Headquarters",
-          "link": "",
-          "description": "120,000 sq ft, 5-floor workplace with hybrid work neighborhoods, a client center and WELL-aligned finishes"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: Space planning, programming, finish and furniture specification, lighting concepts",
         "Software: Revit, AutoCAD, SketchUp, Enscape, Adobe InDesign",
         "Project Delivery: FF&E budgets, dealer bidding, installation oversight",
-        "Client Presentations: Concept decks, material boards, 3D renderings, budget reviews",
-        "Credentials: NCIDQ Certified, Texas Registered Interior Designer, LEED Green Associate"
-      ]
+        "Client Presentations: Concept decks, material boards, 3D renderings, budget reviews"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.92,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.89
+      }
     },
     "Real Estate Agent": {
       "summary": "Licensed real estate agent with 6 years in residential sales across suburban Phoenix. Closed 38 transactions and $19.5M in volume in 2025, with 60% of business from referrals and repeat clients. Brings pricing analysis, strong listing presentations and steady guidance for first-time buyers and sellers.",
@@ -610,9 +697,19 @@
         "Sales: Listing presentations, buyer consultations, negotiation, open houses",
         "Market Analysis: CMAs, pricing strategy, neighborhood trends",
         "Systems: ARMLS Flexmls, Follow Up Boss, DocuSign, Canva",
-        "Marketing: Listing photography direction, social ads, email newsletters, open house events",
-        "Licenses: Arizona Real Estate Salesperson License, Accredited Buyer's Representative (ABR)"
-      ]
+        "Marketing: Listing photography direction, social ads, email newsletters, open house events"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.85
+      }
     },
     "Real Estate Broker": {
       "summary": "Managing real estate broker with 15 years in residential and small commercial brokerage. Leads a 42-agent office that closed $185M in volume in 2025 while personally closing $24M. Brings agent recruiting and coaching, compliance oversight and complex negotiation across luxury, investment and 1031 transactions. Holds CRS and GRI designations and a California broker license.",
@@ -649,9 +746,20 @@
         "Brokerage Leadership: Agent recruiting, training, transaction oversight, office P&L",
         "Transactions: Luxury residential, investment property, 1031 exchanges, small commercial",
         "Compliance: California DRE regulations, trust account oversight, disclosure review",
-        "Marketing: Office brand, listing presentations, agent recruiting campaigns",
-        "Licenses: California Real Estate Broker License, CRS, GRI"
-      ]
+        "Marketing: Office brand, listing presentations, agent recruiting campaigns"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.9,
+        "cast": 0.99
+      }
     },
     "Leasing Agent": {
       "summary": "Leasing agent with 3 years at Class A apartment communities, leasing about 15 units a month. Holds a 42% tour-to-lease conversion rate and helped push occupancy from 91% to 96%. Brings warm, organized tours, fair housing knowledge and accurate lease paperwork in Yardi and Entrata. NAA CALP certified and fluent in Yardi Voyager and Entrata.",
@@ -688,9 +796,19 @@
         "Leasing: Tours, lead follow-up, applicant screening, lease preparation, renewals",
         "Compliance: Fair Housing Act, application criteria, lease audits",
         "Systems: Yardi Voyager, Entrata, Knock CRM",
-        "Customer Service: Resident communication, move-in walkthroughs, service request intake",
-        "Certifications: NAA Certified Apartment Leasing Professional (CALP)"
-      ]
+        "Customer Service: Resident communication, move-in walkthroughs, service request intake"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.9
+      }
     },
     "Real Estate Analyst": {
       "summary": "Real estate analyst with 4 years underwriting multifamily and industrial acquisitions for a private equity real estate firm. Built models for $1.3B of deals reviewed and $310M closed. Brings Argus and Excel modeling, market research and clear investment memos for the investment committee.",
@@ -727,9 +845,20 @@
         "Underwriting: DCF, IRR and equity multiple, waterfall models, debt sizing",
         "Software: Excel (advanced), Argus Enterprise, CoStar, Yardi Matrix",
         "Research: Rent comps, sales comps, supply pipeline, submarket analysis",
-        "Due Diligence: Lease abstracts, operating statement review, property condition reports",
-        "Certifications: ARGUS Enterprise Certified, CFA Level I passed"
-      ]
+        "Due Diligence: Lease abstracts, operating statement review, property condition reports"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     },
     "Real Estate Appraiser": {
       "summary": "Certified residential appraiser with 9 years valuing single-family, condo and small multifamily properties for lenders and estates. Completes about 450 appraisals a year with a revision request rate under 3%. Brings USPAP-compliant reporting, sound comparable selection and on-time delivery in fast-moving markets. Handles complex assignments, including small multifamily, rural acreage and estate valuations. Also trains appraiser trainees through their licensing hours.",
@@ -766,9 +895,20 @@
         "Valuation: Sales comparison approach, cost approach, paired-sales analysis, market conditions",
         "Reporting: URAR (Form 1004), Form 1073, desktop and hybrid appraisals, UAD",
         "Standards: USPAP, Fannie Mae Selling Guide, ANSI Z765",
-        "Software: TOTAL by a la mode, MLS, county records",
-        "Licenses: Certified Residential Real Estate Appraiser, Pennsylvania"
-      ]
+        "Software: TOTAL by a la mode, MLS, county records"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.87
+      }
     },
     "Mortgage Loan Officer": {
       "summary": "NMLS-licensed mortgage loan officer with 7 years originating conventional, FHA and VA loans. Funded $42M across 120 loans in 2025 with a 92% pull-through rate. Brings clear borrower education, strong realtor partnerships and clean files that move quickly through underwriting. Licensed in Ohio, Indiana and Kentucky and known for 24-day average closings. Also hosts monthly first-time buyer workshops with partner agents.",
@@ -780,7 +920,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Funded $42M across 120 conventional, FHA and VA loans in 2025 with a 92% application-to-close pull-through\n- Built referral partnerships with 35 real estate agents, generating 70% of loan volume\n- Close loans in 24 days on average by collecting complete documents upfront in Encompass\n- Hold a 4.9 out of 5 borrower rating across 300+ post-close reviews\n- Host monthly first-time buyer workshops with partner agents, generating about 15 new applications each"
+          "description": "- Funded $42M across 120 conventional, FHA and VA loans in 2025 with a 92% application-to-close pull-through\n- Built referral partnerships with 35 real estate agents, generating 70% of loan volume\n- Close loans in 24 days on average by collecting complete documents upfront in Encompass\n- Hold a 4.9 out of 5 borrower rating across 300+ post-close reviews"
         },
         {
           "company": "Buckeye Community Bank",
@@ -789,7 +929,7 @@
           "startDate": "2019-05",
           "endDate": "2021-01",
           "isCurrent": false,
-          "description": "- Processed 25 loan files a month from application to clear-to-close\n- Cut conditions per file 30% with a pre-submission checklist\n- Ordered appraisals and title and tracked conditions in Encompass"
+          "description": "- Processed 25 loan files a month from application to clear-to-close\n- Cut conditions per file 30% with a pre-submission checklist"
         }
       ],
       "education": [
@@ -804,10 +944,15 @@
       "skills": [
         "Lending: Conventional, FHA, VA and USDA loans, pre-approvals, rate locks",
         "Compliance: TRID, RESPA, ECOA, HMDA, ability-to-repay rules",
-        "Systems: Encompass, Optimal Blue, Salesforce, Desktop Underwriter",
-        "Sales: Realtor partnerships, borrower consultations, pipeline management, Salesforce",
-        "Licenses: NMLS Mortgage Loan Originator (Ohio, Indiana, Kentucky)"
-      ]
+        "Systems: Encompass, Optimal Blue, Salesforce, Desktop Underwriter"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.85,
+        "pop": 0.98
+      }
     },
     "Title Examiner": {
       "summary": "Title examiner with 6 years examining residential and commercial titles for a regional title insurer. Examines about 70 files a month with an error rate under 0.5%. Brings deep chain-of-title research, lien and judgment searches and clear commitments that keep closings on schedule. Licensed Florida title agent working across 8 counties.",
@@ -846,7 +991,20 @@
         "Systems: SoftPro, RamQuest, county recording portals",
         "Legal Knowledge: Florida real property law, probate, foreclosure, HOA liens",
         "Licenses: Florida Title Insurance Agent (2-20 License)"
-      ]
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.98
+      }
     },
     "Property Manager": {
       "summary": "Property manager with 8 years managing multifamily communities of up to 420 units. Raised occupancy to 97% and net operating income 11% at a 2-community portfolio while cutting delinquency in half. Brings budgeting, resident relations, vendor management and Yardi expertise. Holds the CAM credential and a Tennessee real estate license.",
@@ -883,9 +1041,20 @@
         "Property Management: Budgets, NOI, leasing oversight, renewals, collections",
         "Operations: Unit turns, vendor contracts, capital projects, resident relations",
         "Systems: Yardi Voyager, RentCafe, AppFolio",
-        "Leadership: Team hiring, training, scheduling, vendor oversight",
-        "Licenses: Tennessee Real Estate License, Certified Apartment Manager (CAM)"
-      ]
+        "Leadership: Team hiring, training, scheduling, vendor oversight"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.94,
+        "cast": 0.99
+      }
     },
     "Real Estate Development Manager": {
       "summary": "Real estate development manager with 11 years leading multifamily and mixed-use projects from site acquisition to stabilization. Delivered 1,400 units and $520M in total development cost. Brings entitlements, financing, design management and construction oversight, with a record of beating pro forma returns.",
@@ -897,7 +1066,7 @@
           "startDate": "2020-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 4 multifamily and mixed-use projects at a time, totaling 1,400 units and $520M in development cost\n- Secured rezoning and variances for a 380-unit tower in 9 months through 14 community meetings\n- Closed $310M in construction loans and LIHTC equity across 3 deals\n- Delivered a 260-unit project 4% under budget, stabilizing at a 6.4% yield-on-cost versus 5.9% pro forma\n- Manage architects, general contractors and consultants through design and construction, reviewing monthly draw packages"
+          "description": "- Lead 4 multifamily and mixed-use projects at a time, totaling 1,400 units and $520M in development cost\n- Secured rezoning and variances for a 380-unit tower in 9 months through 14 community meetings\n- Closed $310M in construction loans and LIHTC equity across 3 deals\n- Delivered a 260-unit project 4% under budget, stabilizing at a 6.4% yield-on-cost versus 5.9% pro forma"
         },
         {
           "company": "Peachtree Residential Partners",
@@ -906,7 +1075,7 @@
           "startDate": "2016-06",
           "endDate": "2020-01",
           "isCurrent": false,
-          "description": "- Built development pro formas and managed due diligence for 12 site acquisitions\n- Coordinated architects and civil engineers through permitting on 2 garden-style projects\n- Prepared investment committee memos for 6 projects"
+          "description": "- Built development pro formas and managed due diligence for 12 site acquisitions\n- Coordinated architects and civil engineers through permitting on 2 garden-style projects"
         },
         {
           "company": "Southeastern Commercial Realty",
@@ -915,7 +1084,7 @@
           "startDate": "2014-07",
           "endDate": "2016-05",
           "isCurrent": false,
-          "description": "- Modeled office and retail acquisitions in Argus\n- Prepared quarterly investor reports for a $400M fund\n- Built quarterly investor reports for 2 funds"
+          "description": "- Modeled office and retail acquisitions in Argus"
         }
       ],
       "education": [
@@ -932,19 +1101,26 @@
           "endDate": "2014-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Westside Yards",
-          "link": "",
-          "description": "380-unit mixed-use tower with 25,000 sq ft of retail and 20% workforce housing; entitled in 9 months"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Development: Site acquisition, entitlements, design management, construction oversight",
         "Finance: Pro formas, construction loans, LIHTC, joint venture equity, yield-on-cost",
-        "Software: Excel, Argus Developer, Procore, CoStar",
-        "Stakeholders: Community engagement, municipal approvals, investor reporting"
-      ]
+        "Software: Excel, Argus Developer, Procore, CoStar"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.87
+      }
     },
     "Facilities Manager": {
       "summary": "Facilities manager with 10 years running corporate campuses and life science buildings up to 900,000 sq ft. Manages a $9M operating budget and cut energy use 19% while raising work order completion to 96% on time. Brings vendor management, capital planning and calm handling of critical building systems.",
@@ -956,7 +1132,7 @@
           "startDate": "2021-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run facilities for a 4-building, 900,000 sq ft R&D campus with a $9M operating budget and 18 staff and vendors\n- Cut energy use 19% through LED retrofits, chiller optimization and BAS scheduling in Siemens Desigo\n- Raised on-time work order completion from 81% to 96% after moving maintenance into ServiceNow\n- Delivered $5.5M in capital projects, including a lab HVAC upgrade completed without research downtime\n- Lead emergency response for building systems, maintaining a 24/7 on-call rotation with response under 30 minutes"
+          "description": "- Run facilities for a 4-building, 900,000 sq ft R&D campus with a $9M operating budget and 18 staff and vendors\n- Cut energy use 19% through LED retrofits, chiller optimization and BAS scheduling in Siemens Desigo\n- Raised on-time work order completion from 81% to 96% after moving maintenance into ServiceNow\n- Delivered $5.5M in capital projects, including a lab HVAC upgrade completed without research downtime"
         },
         {
           "company": "Pacific Shores Corporate Center",
@@ -965,7 +1141,7 @@
           "startDate": "2016-04",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Supervised janitorial, security and maintenance vendors for a 350,000 sq ft office campus\n- Rebid 6 service contracts, saving $420K a year\n- Planned 3 office moves of 200 employees each over weekends"
+          "description": "- Supervised janitorial, security and maintenance vendors for a 350,000 sq ft office campus\n- Rebid 6 service contracts, saving $420K a year"
         },
         {
           "company": "Mission Valley Medical Offices",
@@ -974,7 +1150,7 @@
           "startDate": "2014-06",
           "endDate": "2016-03",
           "isCurrent": false,
-          "description": "- Coordinated work orders and tenant requests for 5 medical office buildings\n- Tracked fire and life safety inspections with zero lapses\n- Built a preventive maintenance calendar for 5 buildings"
+          "description": "- Coordinated work orders and tenant requests for 5 medical office buildings"
         }
       ],
       "education": [
@@ -991,7 +1167,21 @@
         "Building Systems: HVAC, BAS, lab exhaust, emergency power, fire and life safety",
         "Systems: ServiceNow, Siemens Desigo CC, Energy Star Portfolio Manager",
         "Certifications: IFMA Certified Facility Manager (CFM), OSHA 30"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Building Inspector": {
       "summary": "ICC-certified building inspector with 9 years inspecting residential and commercial construction for a fast-growing county. Performs about 14 inspections a day and helped cut re-inspection rates 25% through contractor outreach. Brings deep IBC and IRC knowledge, clear correction notices and fair, consistent calls. Holds ICC residential combination and commercial building certifications.",
@@ -1028,9 +1218,21 @@
         "Inspection: Foundation, framing, energy, accessibility and final inspections",
         "Codes: IBC, IRC, IECC, IPC, IMC, ADA standards",
         "Systems: Accela, Bluebeam Revu, iPad field inspection apps",
-        "Communication: Correction notices, contractor education, homeowner guidance",
-        "Certifications: ICC Residential Combination Inspector, ICC Commercial Building Inspector (B2)"
-      ]
+        "Communication: Correction notices, contractor education, homeowner guidance"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.86
+      }
     },
     "Building Engineer": {
       "summary": "Building engineer with 8 years operating and maintaining Class A office towers. Keeps HVAC, plumbing and life safety systems running for 1.1M sq ft with 99.9% uptime of critical equipment. Brings chiller and boiler operation, BAS troubleshooting and quick, courteous response to tenant requests.",
@@ -1067,9 +1269,18 @@
         "Building Systems: Chillers, boilers, cooling towers, air handlers, pumps, fire pumps",
         "Controls: Johnson Controls Metasys, BAS troubleshooting, setpoint tuning",
         "Maintenance: Preventive maintenance, tenant service, life safety testing",
-        "Safety: Lockout/tagout, confined space awareness, arc flash awareness (NFPA 70E)",
-        "Licenses: City of Chicago Stationary Engineer License, EPA 608 Universal"
-      ]
+        "Safety: Lockout/tagout, confined space awareness, arc flash awareness (NFPA 70E)"
+      ],
+      "fit": {
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Safety Manager": {
       "summary": "Construction safety manager with 11 years leading safety programs for commercial and heavy civil general contractors. Oversees safety for 12 active projects and cut the company EMR from 0.94 to 0.71. Brings OSHA 1926 expertise, site audits, incident investigation and training that field crews take seriously.",
@@ -1081,7 +1292,7 @@
           "startDate": "2020-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead safety for 12 active commercial and civil projects with up to 900 workers and 3 site safety coordinators\n- Cut the company EMR from 0.94 to 0.71 and TRIR from 2.4 to 0.9 over 4 years\n- Launched a near-miss reporting app that raised reports from 15 to 140 a month and drove 60 corrective actions\n- Teach OSHA 30, fall protection and excavation competent person courses to 250 workers a year\n- Investigate every recordable and serious near miss with a root cause report shared across all jobs within 72 hours"
+          "description": "- Lead safety for 12 active commercial and civil projects with up to 900 workers and 3 site safety coordinators\n- Cut the company EMR from 0.94 to 0.71 and TRIR from 2.4 to 0.9 over 4 years\n- Launched a near-miss reporting app that raised reports from 15 to 140 a month and drove 60 corrective actions\n- Teach OSHA 30, fall protection and excavation competent person courses to 250 workers a year"
         },
         {
           "company": "Gulf Coast Civil Builders",
@@ -1090,7 +1301,7 @@
           "startDate": "2016-02",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Ran daily safety audits on refinery and highway projects\n- Wrote site-specific safety plans for 9 projects, including confined space and trenching\n- Coordinated drug testing and orientation for 300 new hires a year"
+          "description": "- Ran daily safety audits on refinery and highway projects\n- Wrote site-specific safety plans for 9 projects, including confined space and trenching"
         },
         {
           "company": "Lone Star Steel Erectors",
@@ -1099,7 +1310,7 @@
           "startDate": "2014-06",
           "endDate": "2016-01",
           "isCurrent": false,
-          "description": "- Inspected rigging, harnesses and aerial lifts for 80 ironworkers\n- Tracked certifications and toolbox talk records\n- Ran weekly toolbox talks for erection crews"
+          "description": "- Inspected rigging, harnesses and aerial lifts for 80 ironworkers"
         }
       ],
       "education": [
@@ -1116,7 +1327,19 @@
         "High-Risk Work: Fall protection, excavation and trenching, crane and rigging, confined space",
         "Systems: SafetyCulture (iAuditor), Procore Safety, Excel",
         "Certifications: CHST, OSHA 500 Authorized Trainer, First Aid/CPR Instructor"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "HVAC Technician": {
       "summary": "EPA-certified HVAC technician with 6 years installing and servicing residential and light commercial heating and cooling systems. Completes 4 to 6 service calls a day with a 95% first-visit fix rate. Brings refrigerant handling, diagnostics on heat pumps and RTUs, and clear explanations that customers trust. NATE certified and EPA 608 Universal, with a top record in maintenance agreement sales.",
@@ -1153,9 +1376,19 @@
         "HVAC Service: Diagnostics, refrigerant recovery and charging, heat pumps, gas furnaces, RTUs",
         "Installation: Split systems, ductwork, thermostats, commissioning",
         "Tools: Manifold gauges, combustion analyzers, ServiceTitan",
-        "Customer Service: Clear repair explanations, maintenance agreement sales, 5-star reviews",
-        "Licenses: EPA 608 Universal, NATE Certified (Air Conditioning and Heat Pump Service)"
-      ]
+        "Customer Service: Clear repair explanations, maintenance agreement sales, 5-star reviews"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "Electrician": {
       "summary": "Oregon-licensed journeyman electrician with 8 years in commercial and multifamily construction. Leads 3-person crews installing power, lighting and low-voltage systems and passes 97% of inspections on the first visit. Brings NEC fluency, blueprint reading and safe work under NFPA 70E. Trains apprentices on site and coordinates panel layouts with other trades.",
@@ -1167,7 +1400,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 3-person crew installing branch circuits, panels and lighting in multifamily and office projects\n- Pass 97% of rough and final inspections on the first visit under the Oregon Electrical Specialty Code (2023 NEC)\n- Installed service gear and 400A distribution for a 240-unit apartment building ahead of the energization date\n- Train 4 apprentices on conduit bending, terminations and lockout/tagout under NFPA 70E\n- Read and mark up construction drawings, coordinating panel locations with plumbing and HVAC trades"
+          "description": "- Lead a 3-person crew installing branch circuits, panels and lighting in multifamily and office projects\n- Pass 97% of rough and final inspections on the first visit under the Oregon Electrical Specialty Code (2023 NEC)\n- Installed service gear and 400A distribution for a 240-unit apartment building ahead of the energization date\n- Train 4 apprentices on conduit bending, terminations and lockout/tagout under NFPA 70E"
         },
         {
           "company": "Valley Power & Light Services",
@@ -1176,7 +1409,7 @@
           "startDate": "2017-06",
           "endDate": "2021-01",
           "isCurrent": false,
-          "description": "- Completed 8,000 on-the-job hours in commercial tenant improvements and retail fit-outs\n- Pulled wire and bent EMT for 60+ projects\n- Installed fire alarm devices and data cabling on 15 tenant improvement projects"
+          "description": "- Completed 8,000 on-the-job hours in commercial tenant improvements and retail fit-outs\n- Pulled wire and bent EMT for 60+ projects"
         }
       ],
       "education": [
@@ -1191,10 +1424,18 @@
       "skills": [
         "Electrical Work: Branch circuits, panels, service gear, lighting controls, low voltage",
         "Codes: NEC 2023, Oregon Electrical Specialty Code, NFPA 70E",
-        "Tools: Conduit benders, meters and testers, blueprint reading, Procore",
-        "Safety: Lockout/tagout, arc flash PPE, ladder and lift safety",
-        "Licenses: Oregon General Journeyman Electrician, OSHA 30"
-      ]
+        "Tools: Conduit benders, meters and testers, blueprint reading, Procore"
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "iron": 0.95,
+        "ginto": 0.9,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.97
+      }
     },
     "Plumber": {
       "summary": "Licensed journeyman plumber with 7 years in new residential construction and residential service. Handles 5 to 7 service calls a day with a 4.9-star customer rating. Brings water heater, drain and gas line expertise, clean work in occupied homes and a solid grasp of the plumbing code.",
@@ -1231,9 +1472,18 @@
         "Plumbing: DWV and water supply, water heaters, re-pipes, fixtures, gas piping",
         "Codes: International Plumbing Code and Uniform Plumbing Code as adopted in Texas, fuel gas code",
         "Tools: Drain cameras, PEX and copper tools, press fittings, ServiceTitan",
-        "Customer Service: Upfront pricing, clean work areas, clear repair explanations",
-        "Licenses: Texas Journeyman Plumber (TSBPE), OSHA 10"
-      ]
+        "Customer Service: Upfront pricing, clean work areas, clear repair explanations"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.96,
+        "pop": 0.92
+      }
     },
     "Carpenter": {
       "summary": "Journeyman carpenter with 9 years in commercial framing, concrete formwork and finish carpentry. Leads layout for 4-person crews and has worked on hotels, schools and mid-rise residential. Brings accurate layout with total stations, form work that passes first inspection and safe work at height. Comfortable leading layout with a robotic total station on 6-story buildings.",
@@ -1270,9 +1520,19 @@
         "Carpentry: Wood and metal stud framing, concrete formwork, doors and hardware, millwork",
         "Layout: Robotic total station, blueprint reading, transit and laser levels",
         "Safety: Fall protection, scaffold use, OSHA 30",
-        "Teamwork: Crew leadership, apprentice mentoring, trade coordination",
-        "Certifications: Journeyman Carpenter, Powder-Actuated Tool Certified"
-      ]
+        "Teamwork: Crew leadership, apprentice mentoring, trade coordination"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.95,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.9
+      }
     },
     "Foreman": {
       "summary": "Construction foreman with 12 years in commercial concrete, leading crews of up to 22 finishers, carpenters and laborers. Placed 38,000 cubic yards on time across 9 projects in 2024–2025. Brings daily crew planning, quality control on slabs and structures and the respect of crews who want a safe, productive day.",
@@ -1284,7 +1544,7 @@
           "startDate": "2019-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead crews of up to 22 finishers, carpenters and laborers on warehouses, schools and parking structures\n- Placed 38,000 cubic yards across 9 projects in 2024–2025 with every pour on schedule\n- Hit floor flatness of FF45/FL30 or better on 1.2M sq ft of warehouse slabs\n- Hold crew safety huddles daily, with zero recordable injuries since 2022\n- Plan daily crew assignments, concrete orders and pump schedules with the superintendent"
+          "description": "- Lead crews of up to 22 finishers, carpenters and laborers on warehouses, schools and parking structures\n- Placed 38,000 cubic yards across 9 projects in 2024–2025 with every pour on schedule\n- Hit floor flatness of FF45/FL30 or better on 1.2M sq ft of warehouse slabs\n- Hold crew safety huddles daily, with zero recordable injuries since 2022"
         },
         {
           "company": "Buckeye Structural Concrete",
@@ -1302,7 +1562,7 @@
           "startDate": "2013-04",
           "endDate": "2014-02",
           "isCurrent": false,
-          "description": "- Set forms, placed rebar and cleaned up sites for 2 crews\n- Earned a promotion to finisher within 11 months\n- Moved rebar and forms with a skid steer"
+          "description": "- Set forms, placed rebar and cleaned up sites for 2 crews\n- Earned a promotion to finisher within 11 months"
         }
       ],
       "education": [
@@ -1318,9 +1578,23 @@
         "Field Leadership: Crew planning, daily reports, productivity tracking, subcontractor coordination",
         "Concrete: Slab-on-grade, elevated decks, laser screed, flatness control, curing",
         "Safety: OSHA 30, silica exposure control, daily huddles",
-        "Equipment: Laser screeds, ride-on trowels, concrete pumps, skid steers",
-        "Certifications: ACI Concrete Flatwork Finisher, ACI Field Testing Technician Grade I"
-      ]
+        "Equipment: Laser screeds, ride-on trowels, concrete pumps, skid steers"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Quantity Surveyor": {
       "summary": "Quantity surveyor with 8 years on commercial and infrastructure projects in the UK and US, now managing cost for a general contractor's $300M project portfolio. Recovered $4.2M in variations and kept final accounts within 1% of forecast. Brings measurement, cost reporting and contract administration skills. MRICS chartered, with experience under NRM2, NEC4, AIA and ConsensusDocs contracts.",
@@ -1357,9 +1631,22 @@
         "Cost Management: Measurement, bills of quantities, cost-to-complete, final accounts",
         "Contracts: AIA, ConsensusDocs, NEC4, change orders and variations",
         "Software: CostX, Bluebeam Revu, Revit, Excel",
-        "Reporting: Monthly cost reports, earned value, cash flow forecasting",
-        "Certifications: MRICS (Chartered Quantity Surveyor), CCP (AACE)"
-      ]
+        "Reporting: Monthly cost reports, earned value, cash flow forecasting"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.91,
+        "cast": 0.99
+      }
     },
     "Surveyor": {
       "summary": "Surveyor with 6 years running field crews for construction staking, topographic and as-built surveys. Leads a 2-person crew and stakes about 25 commercial and infrastructure sites a year with no rework from layout errors. Brings GNSS and robotic total station expertise and Civil 3D data processing. FAA Part 107 certified for drone photogrammetry and earthwork volume checks.",
@@ -1396,9 +1683,20 @@
         "Surveying: Construction staking, topographic surveys, as-builts, control networks",
         "Equipment: Trimble GNSS, robotic total stations, digital levels, DJI drones",
         "Software: AutoCAD Civil 3D, Trimble Business Center, Pix4D",
-        "Safety: Traffic control awareness, OSHA 10, site safety orientation",
-        "Certifications: NSPS Certified Survey Technician (Level II), FAA Part 107"
-      ]
+        "Safety: Traffic control awareness, OSHA 10, site safety orientation"
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.96,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "Land Surveyor": {
       "summary": "Licensed professional land surveyor with 13 years in boundary, ALTA/NSPS and subdivision surveys. Signs about 300 surveys a year and manages 4 field crews. Brings deep boundary law knowledge, title commitment review and careful research that holds up in closings, permitting and the occasional courtroom.",
@@ -1410,7 +1708,7 @@
           "startDate": "2019-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Sign and seal about 300 boundary, ALTA/NSPS and subdivision surveys a year as surveyor in charge\n- Manage 4 field crews and 3 CAD technicians, keeping average turnaround at 12 business days\n- Review title commitments and Schedule B exceptions for 120 commercial ALTA surveys a year\n- Served as expert witness in 3 boundary disputes, with the court adopting the surveyed line each time\n- Review CAD deliverables and field notes from each crew before signing, with no plat rejections at county review since 2021"
+          "description": "- Sign and seal about 300 boundary, ALTA/NSPS and subdivision surveys a year as surveyor in charge\n- Manage 4 field crews and 3 CAD technicians, keeping average turnaround at 12 business days\n- Review title commitments and Schedule B exceptions for 120 commercial ALTA surveys a year\n- Served as expert witness in 3 boundary disputes, with the court adopting the surveyed line each time"
         },
         {
           "company": "Cumberland Survey Group",
@@ -1435,9 +1733,19 @@
         "Surveying: Boundary retracement, ALTA/NSPS surveys, subdivision plats, easements",
         "Research: Deed and plat research, title commitment review, boundary law",
         "Software: AutoCAD Civil 3D, Trimble Business Center, Carlson Survey",
-        "Leadership: Crew management, CAD team review, project scheduling",
-        "Licenses: Professional Land Surveyor (PLS), Tennessee and Kentucky"
-      ]
+        "Leadership: Crew management, CAD team review, project scheduling"
+      ],
+      "fit": {
+        "creative": 0.99,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.88
+      }
     },
     "Estimator": {
       "summary": "Estimator with 7 years pricing commercial interior and tenant improvement work for a general contractor. Produces about 90 estimates a year worth $160M in bid volume and holds a 27% hit rate. Brings quantity takeoff, subcontractor bid leveling and clear scope narratives that reduce surprises after award. Keeps post-award buyout within 2% of estimate on most projects.",
@@ -1474,9 +1782,19 @@
         "Estimating: Quantity takeoff, bid leveling, conceptual budgets, scope narratives",
         "Software: On-Screen Takeoff, Bluebeam Revu, BuildingConnected, Excel",
         "Construction: Interior systems, MEP scope review, tenant improvements",
-        "Communication: Bid summaries, scope narratives, subcontractor outreach",
-        "Certifications: ASPE Certified Professional Estimator (CPE) candidate"
-      ]
+        "Communication: Bid summaries, scope narratives, subcontractor outreach"
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.96,
+        "pop": 0.91,
+        "cast": 0.99
+      }
     },
     "Construction Estimator": {
       "summary": "Senior construction estimator with 12 years pricing heavy civil and site work, including roads, utilities and earthwork for public owners. Prepares bids up to $75M and won $210M in work over the last 3 years. Brings HCSS HeavyBid expertise, crew-based pricing and risk review that protects margin on hard-bid work.",
@@ -1488,7 +1806,7 @@
           "startDate": "2020-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Price hard-bid highway, utility and earthwork projects up to $75M for UDOT and municipal owners\n- Won $210M in work over 3 years with a 22% hit rate and average 9% gross margin at closeout\n- Build crew-based estimates in HCSS HeavyBid with equipment rates tied to actual fleet costs\n- Lead go/no-go and risk reviews, declining 3 bids that later saw major overruns for the low bidder\n- Mentor 2 junior estimators on takeoff, crew productivity and bid-day procedures"
+          "description": "- Price hard-bid highway, utility and earthwork projects up to $75M for UDOT and municipal owners\n- Won $210M in work over 3 years with a 22% hit rate and average 9% gross margin at closeout\n- Build crew-based estimates in HCSS HeavyBid with equipment rates tied to actual fleet costs\n- Lead go/no-go and risk reviews, declining 3 bids that later saw major overruns for the low bidder"
         },
         {
           "company": "Wasatch Excavation & Utilities",
@@ -1506,7 +1824,7 @@
           "startDate": "2014-06",
           "endDate": "2016-02",
           "isCurrent": false,
-          "description": "- Tracked quantities and pay estimates for asphalt paving jobs\n- Built daily production reports for 4 paving crews\n- Prepared monthly cost reports on paving production"
+          "description": "- Tracked quantities and pay estimates for asphalt paving jobs\n- Built daily production reports for 4 paving crews"
         }
       ],
       "education": [
@@ -1522,9 +1840,22 @@
         "Estimating: Heavy civil, earthwork, utilities, paving, crew-based pricing",
         "Software: HCSS HeavyBid, Trimble Business Center, Bluebeam Revu, Excel",
         "Risk: Bid/no-bid analysis, contingency, quantity verification",
-        "Leadership: Junior estimator mentoring, bid-day coordination",
-        "Certifications: AACE Certified Cost Professional (CCP)"
-      ]
+        "Leadership: Junior estimator mentoring, bid-day coordination"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Assistant Project Manager": {
       "summary": "Assistant project manager with 5 years at a commercial general contractor, supporting $20M to $70M office and healthcare projects. Manages 18 subcontracts, pay applications and change orders on a $64M clinic. Brings tight cost tracking, owner-ready documentation and field coordination that prepares for full project management.",
@@ -1536,7 +1867,7 @@
           "startDate": "2023-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 18 subcontracts worth $31M on a $64M outpatient clinic, including buyout, pay applications and lien waivers\n- Track 140 change events in Procore and price owner change orders, recovering $1.9M in approved changes\n- Update the monthly cost report with the PM, keeping forecast accuracy within 1% of actuals\n- Lead weekly subcontractor coordination meetings and owner-architect-contractor meeting minutes\n- Review subcontractor schedules and update the 3-week lookahead with the superintendent each week"
+          "description": "- Manage 18 subcontracts worth $31M on a $64M outpatient clinic, including buyout, pay applications and lien waivers\n- Track 140 change events in Procore and price owner change orders, recovering $1.9M in approved changes\n- Update the monthly cost report with the PM, keeping forecast accuracy within 1% of actuals\n- Lead weekly subcontractor coordination meetings and owner-architect-contractor meeting minutes"
         },
         {
           "company": "Midland Commercial Builders",
@@ -1556,20 +1887,24 @@
           "endDate": "2021-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Northland Outpatient Clinic",
-          "link": "",
-          "description": "$64M, 120,000 sq ft clinic with imaging suites and ambulatory surgery; tracking to finish 3 weeks early"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Project Controls: Subcontract management, pay applications, change orders, cost reports",
         "Coordination: OAC meetings, RFIs, submittals, closeout",
         "Systems: Procore, Sage 300 CRE, Bluebeam Revu, Primavera P6 (viewing)",
-        "Leadership: Project engineer mentoring, subcontractor relationships",
-        "Certifications: OSHA 30, LEED Green Associate"
-      ]
+        "Leadership: Project engineer mentoring, subcontractor relationships"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.91,
+        "ginto": 0.88,
+        "quartz": 0.93,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "Field Engineer": {
       "summary": "Field engineer with 3 years on heavy civil and bridge projects, handling layout, quantity tracking and quality documentation in the field. Supported a $140M interchange project and cut quantity disputes with the owner to zero. Brings survey layout, daily reporting and practical problem solving alongside superintendents and crews.",
@@ -1606,9 +1941,19 @@
         "Field Engineering: Layout, quantity tracking, daily reports, as-builts, QC documentation",
         "Equipment: Trimble robotic total station, GNSS rover, digital levels",
         "Software: HCSS HeavyJob, AutoCAD Civil 3D, Bluebeam Revu, Excel",
-        "Communication: Daily reports, RFI drafts, crew coordination",
-        "Certifications: FDOT Concrete Field Inspector Level 1, OSHA 30, Engineer in Training (EIT)"
-      ]
+        "Communication: Daily reports, RFI drafts, crew coordination"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Construction Management Intern": {
       "summary": "Construction management junior at Virginia Tech with a summer internship at a commercial general contractor and hands-on residential framing experience. Logged 400 submittals and created a site logistics plan used on a $48M project. Brings Procore and Bluebeam skills, estimating coursework and a strong safety mindset.",
@@ -1640,20 +1985,23 @@
           "endDate": "2028-05"
         }
       ],
-      "projects": [
-        {
-          "name": "ASC Region 2 Student Competition",
-          "link": "",
-          "description": "Commercial division team that produced a GMP estimate, CPM schedule and safety plan for a $30M office building in 18 hours; placed 3rd"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Construction Tools: Procore, Bluebeam Revu, Primavera P6 (coursework), On-Screen Takeoff",
         "Coursework: Estimating, construction scheduling, materials and methods, construction law",
         "Field Skills: Wood framing, site safety observation, blueprint reading",
-        "Leadership: Student chapter of the Associated General Contractors (AGC), events committee",
-        "Certifications: OSHA 30, First Aid/CPR"
-      ]
+        "Leadership: Student chapter of the Associated General Contractors (AGC), events committee"
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.97,
+        "pop": 0.88
+      }
     },
     "Assistant Property Manager": {
       "summary": "Assistant property manager with 4 years in multifamily operations at 250- to 400-unit communities. Runs collections, renewals and resident relations and cut delinquency from 5.1% to 2.4%. Brings Yardi and RealPage accounting, lease compliance and the operating knowledge to step into a property manager role.",
@@ -1690,9 +2038,20 @@
         "Property Operations: Rent collection, renewals, move-ins and move-outs, resident relations",
         "Accounting: Rent posting, delinquency reports, deposit dispositions, invoice processing",
         "Systems: Yardi Voyager, RealPage OneSite, Entrata",
-        "Leadership: Front office supervision, leasing team support, resident events",
-        "Licenses: Florida Community Association Manager (CAM), NAA Certified Apartment Manager (in progress)"
-      ]
+        "Leadership: Front office supervision, leasing team support, resident events"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.96,
+        "pop": 0.9
+      }
     },
     "Escrow Officer": {
       "summary": "Escrow officer with 9 years closing residential and commercial transactions in California. Manages about 25 open escrows at a time and closed 310 files worth $290M in 2025. Brings careful document review, clear communication with agents, lenders and buyers, and strict control of trust funds and wire fraud risk.",
@@ -1729,9 +2088,20 @@
         "Escrow: Escrow instructions, settlement statements, payoffs, disbursements, 1031 exchanges",
         "Compliance: TRID, RESPA, California Escrow Law, trust account reconciliation, wire fraud controls",
         "Systems: SoftPro, Qualia, DocuSign",
-        "Communication: Agent and lender updates, buyer and seller guidance, closing coordination",
-        "Certifications: Certified Senior Escrow Officer (CSEO), California Escrow Association"
-      ]
+        "Communication: Agent and lender updates, buyer and seller guidance, closing coordination"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.86
+      }
     },
     "Real Estate Transaction Coordinator": {
       "summary": "Real estate transaction coordinator with 4 years managing contract-to-close for residential agents and teams. Coordinates about 220 closings a year with a 99% on-time close rate. Brings contract and deadline tracking, compliance-ready files and steady communication with lenders, title and clients. Licensed North Carolina broker fluent in Dotloop and SkySlope.",
@@ -1743,7 +2113,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage contract-to-close for about 220 buyer and seller transactions a year across 9 agents\n- Hold a 99% on-time closing rate by tracking due diligence, appraisal and financing deadlines in Dotloop\n- Keep every file broker-compliant at review, with zero missing disclosures in 2025\n- Send weekly status updates to clients, lenders and attorneys, cutting agent status calls by about half\n- Build closing checklists and timelines for each new contract within 24 hours of acceptance"
+          "description": "- Manage contract-to-close for about 220 buyer and seller transactions a year across 9 agents\n- Hold a 99% on-time closing rate by tracking due diligence, appraisal and financing deadlines in Dotloop\n- Keep every file broker-compliant at review, with zero missing disclosures in 2025\n- Send weekly status updates to clients, lenders and attorneys, cutting agent status calls by about half"
         },
         {
           "company": "Capital City Closing Services",
@@ -1752,7 +2122,7 @@
           "startDate": "2021-06",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Prepared closing packages and scheduled signings for a real estate law firm handling 60 closings a month\n- Ordered title searches, HOA documents and payoffs\n- Coordinated 60 signings a month with notaries and attorneys"
+          "description": "- Prepared closing packages and scheduled signings for a real estate law firm handling 60 closings a month\n- Ordered title searches, HOA documents and payoffs"
         }
       ],
       "education": [
@@ -1767,10 +2137,16 @@
       "skills": [
         "Transaction Management: Contract-to-close, deadline tracking, disclosures, file compliance",
         "Coordination: Lenders, closing attorneys, inspectors, appraisers, HOAs",
-        "Systems: Dotloop, SkySlope, Follow Up Boss, DocuSign",
-        "Organization: Deadline calendars, document tracking, checklist management",
-        "Licenses: North Carolina Real Estate Broker License"
-      ]
+        "Systems: Dotloop, SkySlope, Follow Up Boss, DocuSign"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.95,
+        "ginto": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.87,
+        "pop": 0.99
+      }
     },
     "Preconstruction Manager": {
       "summary": "Preconstruction manager with 12 years at commercial general contractors, leading estimating, value engineering and constructability reviews for projects from $20M to $250M. Converted $640M of pursuits into negotiated work over 4 years. Brings target-value design, early trade partner engagement and budgets that hold through design development.",
@@ -1782,7 +2158,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 6-person preconstruction team covering estimating, scheduling and VDC for healthcare, higher education and office pursuits\n- Converted $640M of preconstruction-phase projects into negotiated GMP contracts over 4 years, a 78% conversion rate\n- Held final GMPs within 2% of schematic design budgets on 9 projects using target-value design with owners and architects\n- Identified $7.4M in value engineering on a $180M academic building without cutting program space\n- Run constructability and phasing reviews in Revit and Navisworks at each design milestone"
+          "description": "- Lead a 6-person preconstruction team covering estimating, scheduling and VDC for healthcare, higher education and office pursuits\n- Converted $640M of preconstruction-phase projects into negotiated GMP contracts over 4 years, a 78% conversion rate\n- Held final GMPs within 2% of schematic design budgets on 9 projects using target-value design with owners and architects"
         },
         {
           "company": "Cumberland Valley Construction",
@@ -1791,7 +2167,7 @@
           "startDate": "2016-04",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Built conceptual and detailed estimates for 70 projects from $10M to $120M using Sage Estimating and historical cost data\n- Created a cost database of 400 completed projects that cut conceptual estimate time from 2 weeks to 4 days\n- Led trade partner outreach that raised average bids per package from 3 to 6"
+          "description": "- Built conceptual and detailed estimates for 70 projects from $10M to $120M using Sage Estimating and historical cost data\n- Created a cost database of 400 completed projects that cut conceptual estimate time from 2 weeks to 4 days"
         },
         {
           "company": "Smoky Mountain Builders",
@@ -1800,7 +2176,7 @@
           "startDate": "2014-06",
           "endDate": "2016-03",
           "isCurrent": false,
-          "description": "- Performed quantity takeoffs for concrete, steel and interiors on K-12 and retail bids\n- Leveled subcontractor bids for 25 hard-bid projects\n- Visited 40 project sites before bid to verify existing conditions"
+          "description": "- Performed quantity takeoffs for concrete, steel and interiors on K-12 and retail bids"
         }
       ],
       "education": [
@@ -1811,20 +2187,26 @@
           "endDate": "2014-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Riverside College of Engineering Building",
-          "link": "",
-          "description": "$180M, 240,000 sq ft teaching and research building; preconstruction led to a GMP within 1.5% of the schematic budget"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Preconstruction: Conceptual estimating, target-value design, value engineering, constructability reviews",
         "Software: Sage Estimating, DESTINI Estimator, Revit, Navisworks, Bluebeam Revu",
-        "Business Development: Pursuit strategy, owner interviews, fee proposals, trade partner engagement",
-        "Leadership: Team management, estimator development, design-team coordination",
-        "Certifications: ASPE Certified Professional Estimator (CPE), LEED AP BD+C"
-      ]
+        "Business Development: Pursuit strategy, owner interviews, fee proposals, trade partner engagement"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.96,
+        "silk": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Real Estate Asset Manager": {
       "summary": "Real estate asset manager with 10 years in institutional office and industrial portfolios. Oversees 14 assets and 4.2M sq ft valued at $1.1B and grew portfolio NOI 13% in 3 years. Brings business plan execution, leasing strategy, capital planning and clear quarterly reporting to investors.",
@@ -1836,7 +2218,7 @@
           "startDate": "2020-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 14 industrial and office assets totaling 4.2M sq ft and $1.1B in value for 2 institutional funds\n- Grew same-store NOI 13% over 3 years by marking expiring industrial leases to market rents 28% higher\n- Directed $36M in capital projects, including dock and roof upgrades that won 3 renewals worth 900,000 sq ft\n- Led hold-sell analysis and the $185M sale of 3 office buildings at a 7% premium to appraised value\n- Oversee 3 third-party property managers, reviewing budgets, leasing pipelines and capital requests each month"
+          "description": "- Manage 14 industrial and office assets totaling 4.2M sq ft and $1.1B in value for 2 institutional funds\n- Grew same-store NOI 13% over 3 years by marking expiring industrial leases to market rents 28% higher\n- Directed $36M in capital projects, including dock and roof upgrades that won 3 renewals worth 900,000 sq ft\n- Led hold-sell analysis and the $185M sale of 3 office buildings at a 7% premium to appraised value"
         },
         {
           "company": "Prairie Shore Capital",
@@ -1845,7 +2227,7 @@
           "startDate": "2016-07",
           "endDate": "2020-09",
           "isCurrent": false,
-          "description": "- Reviewed annual budgets and leasing proposals for a $600M office portfolio\n- Built Argus models for quarterly valuations and lender reporting\n- Tracked lease expirations and renewal probabilities for 40 tenants"
+          "description": "- Reviewed annual budgets and leasing proposals for a $600M office portfolio\n- Built Argus models for quarterly valuations and lender reporting"
         },
         {
           "company": "Midway Commercial Brokerage",
@@ -1854,7 +2236,7 @@
           "startDate": "2014-06",
           "endDate": "2016-06",
           "isCurrent": false,
-          "description": "- Produced quarterly industrial and office market reports\n- Maintained lease comp database of 3,000 transactions\n- Wrote 12 market updates a year for brokerage clients"
+          "description": "- Produced quarterly industrial and office market reports"
         }
       ],
       "education": [
@@ -1875,9 +2257,22 @@
       "skills": [
         "Asset Management: Business plans, hold-sell analysis, budgets, capital planning",
         "Leasing: Lease strategy, renewals, tenant credit review, market rent analysis",
-        "Software: Argus Enterprise, Yardi, CoStar, Excel",
-        "Reporting: Investor and lender reporting, quarterly valuations, NCREIF metrics"
-      ]
+        "Software: Argus Enterprise, Yardi, CoStar, Excel"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "opal": 0.95,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.91
+      }
     }
   }
 }

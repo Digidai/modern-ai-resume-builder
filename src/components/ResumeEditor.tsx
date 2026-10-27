@@ -1,7 +1,6 @@
 import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
 import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type ResumeLink } from '../types';
 import {
-  SparklesIcon,
   PlusIcon,
   TrashIcon,
   LoaderIcon,
@@ -9,7 +8,6 @@ import {
   ArrowUpIcon,
   ArrowDownIcon,
   XIcon,
-  CheckIcon,
 } from './Icons';
 import { Button } from './Button';
 import { TEMPLATES } from '../constants/templates';
@@ -33,22 +31,25 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
   return (
     <div className="flex flex-col gap-2 sm:col-span-2">
       <div className="flex min-h-6 items-center justify-between gap-2">
-        <span className="text-sm font-medium text-slate-700 dark:text-slate-300" id="links-heading">
+        <span className="text-sm font-medium text-ink" id="links-heading">
           Other links
         </span>
         {links.length < MAX_LINKS && (
           <button
             type="button"
             onClick={() => onChange([...links, { id: createId(), label: '', url: '' }])}
-            className="inline-flex h-7 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-indigo-600 hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400 dark:hover:bg-indigo-950/50"
+            className="focus-ring inline-flex h-7 items-center gap-1 rounded-[2px] text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2"
           >
-            <PlusIcon className="h-3.5 w-3.5" /> Add link
+            Add link
           </button>
         )}
       </div>
-      {links.length === 0 ? (
-        <p className="text-xs text-slate-500 dark:text-slate-400">GitHub, portfolio, X, Dribbble, Behance, Google Scholar or any page you want recruiters to see.</p>
-      ) : (
+      <p className="text-xs text-muted">
+        {links.length === 0
+          ? 'GitHub, portfolio, X, Dribbble, Behance, Google Scholar or any page you want recruiters to see.'
+          : 'The label is optional and only shown by templates that print labelled contacts. The icon comes from the URL.'}
+      </p>
+      {links.length > 0 && (
         <ul className="flex flex-col gap-2" aria-labelledby="links-heading">
           {links.map((link, index) => {
             const detected = describeLink({ label: '', url: link.url }).label;
@@ -62,7 +63,7 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
                     onChange={(e) => update(link.id, { label: e.target.value })}
                     placeholder={link.url.trim() ? detected : 'Label'}
                     aria-label={`${name} label (optional)`}
-                    className={`${fieldClass()} w-32 shrink-0 sm:w-36`}
+                    className={`${fieldClass()} !w-24 shrink-0 sm:!w-36`}
                   />
                   <input
                     type="url"
@@ -79,13 +80,13 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
                     type="button"
                     onClick={() => onChange(links.filter((l) => l.id !== link.id))}
                     aria-label={`Remove ${name}`}
-                    className="mt-1 rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-800"
+                    className="mt-1 shrink-0 rounded-[2px] p-1.5 text-muted hover:bg-ink/5 hover:text-danger focus-ring"
                   >
                     <TrashIcon className="h-4 w-4" />
                   </button>
                 </div>
                 {error && (
-                  <p id={`link-error-${link.id}`} className="text-xs text-red-600 dark:text-red-400">
+                  <p id={`link-error-${link.id}`} className="text-xs text-danger">
                     {error}
                   </p>
                 )}
@@ -130,8 +131,8 @@ const Section = ({
   <section className="space-y-4">
     <div className="flex items-start justify-between gap-3">
       <div>
-        <h2 className="text-base font-semibold text-slate-900 dark:text-white">{title}</h2>
-        {description && <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{description}</p>}
+        <h2 className="text-base font-semibold text-ink">{title}</h2>
+        {description && <p className="mt-0.5 text-sm text-muted">{description}</p>}
       </div>
       {action}
     </div>
@@ -140,7 +141,7 @@ const Section = ({
 );
 
 const EmptyState = ({ children, onAdd, addLabel }: { children: ReactNode; onAdd: () => void; addLabel: string }) => (
-  <div className="flex flex-col items-center gap-3 rounded-xl border-2 border-dashed border-slate-200 px-4 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+  <div className="flex flex-col items-center gap-3 rounded-[2px] border-2 border-dashed border-rule px-4 py-8 text-center text-sm text-muted">
     <p>{children}</p>
     <Button variant="secondary" size="sm" onClick={onAdd} leftIcon={<PlusIcon className="h-4 w-4" />}>
       {addLabel}
@@ -174,26 +175,26 @@ const ItemCard = ({
 }: ItemCardProps) => {
   const label = title.trim() || placeholderTitle;
   return (
-    <div className="rounded-xl border border-slate-200 bg-white shadow-sm transition-colors dark:border-slate-800 dark:bg-slate-900">
+    <div className="rounded-[2px] border border-rule bg-surface transition-colors">
       <div className="flex items-center gap-1 py-1.5 pl-1.5 pr-2">
         <button
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 py-1.5 text-left hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-800/60"
+          className="flex min-w-0 flex-1 items-center gap-2 rounded-[2px] px-2 py-1.5 text-left hover:bg-ink/5 focus-ring"
         >
           <ChevronDownIcon
-            className={`h-4 w-4 shrink-0 text-slate-400 transition-transform ${isOpen ? '' : '-rotate-90'}`}
+            className={`h-4 w-4 shrink-0 text-muted transition-transform ${isOpen ? '' : '-rotate-90'}`}
           />
           <span className="min-w-0">
             <span
-              className={`block truncate text-sm font-medium ${
-                title.trim() ? 'text-slate-900 dark:text-slate-100' : 'text-slate-400 dark:text-slate-500'
+              className={`line-clamp-2 text-sm font-medium sm:line-clamp-1 ${
+                title.trim() ? 'text-ink' : 'text-muted'
               }`}
             >
               {label}
             </span>
-            {subtitle && <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{subtitle}</span>}
+            {subtitle && <span className="block truncate text-xs text-muted">{subtitle}</span>}
           </span>
         </button>
         <div className="flex shrink-0 items-center">
@@ -219,7 +220,7 @@ const ItemCard = ({
           </Button>
         </div>
       </div>
-      {isOpen && <div className="space-y-4 border-t border-slate-100 p-4 dark:border-slate-800">{children}</div>}
+      {isOpen && <div className="space-y-4 border-t border-rule p-4">{children}</div>}
     </div>
   );
 };
@@ -243,9 +244,9 @@ const AiButton = ({
     disabled={disabled || loading}
     aria-label={label}
     title={label}
-    className="inline-flex h-7 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-indigo-600 transition-colors hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 disabled:pointer-events-none disabled:opacity-40 dark:text-indigo-400 dark:hover:bg-indigo-950/50"
+    className="focus-ring inline-flex h-7 items-center gap-1 rounded-[2px] px-1.5 text-sm font-medium text-accent underline underline-offset-4 transition-colors hover:decoration-2 disabled:pointer-events-none disabled:opacity-40"
   >
-    {loading ? <LoaderIcon className="h-3.5 w-3.5 animate-spin" /> : <SparklesIcon className="h-3.5 w-3.5" />}
+    {loading && <LoaderIcon className="h-3.5 w-3.5 animate-spin" />}
     {children}
   </button>
 );
@@ -287,17 +288,17 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
 
   return (
     <div className="space-y-2">
-      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-lg border border-slate-300 bg-white p-1.5 shadow-sm transition-colors focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-500/40 dark:border-slate-700 dark:bg-slate-900">
+      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-[2px] border border-rule bg-surface p-1.5 transition-colors focus-within:border-accent focus-within:ring-1 focus-within:ring-accent">
         {skills.map((skill, index) => (
           <span
             key={`${skill}-${index}`}
-            className="inline-flex items-center gap-1 rounded-md bg-slate-100 py-1 pl-2.5 pr-1 text-sm text-slate-800 dark:bg-slate-800 dark:text-slate-200"
+            className="inline-flex items-center gap-1 rounded-[2px] bg-tint py-1 pl-2.5 pr-1 text-sm text-ink"
           >
             {skill}
             <button
               type="button"
               onClick={() => onChange(skills.filter((_, i) => i !== index))}
-              className="rounded p-0.5 text-slate-400 hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+              className="rounded p-0.5 text-muted hover:bg-ink/5 hover:text-ink focus-ring"
               aria-label={`Remove ${skill}`}
             >
               <XIcon className="h-3.5 w-3.5" />
@@ -324,12 +325,12 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
           onKeyDown={handleKeyDown}
           onBlur={() => add(draft)}
           placeholder={skills.length ? 'Add another…' : 'e.g. Figma, React, User research'}
-          className="min-w-[8rem] flex-1 bg-transparent px-1.5 py-1 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none dark:text-slate-100 dark:placeholder:text-slate-500"
+          className="min-w-[8rem] flex-1 bg-transparent px-1.5 py-1 text-sm text-ink placeholder:text-muted focus:outline-none"
           aria-label="Add a skill"
           aria-describedby="skills-hint"
         />
       </div>
-      <p id="skills-hint" className="text-xs text-slate-500 dark:text-slate-400">
+      <p id="skills-hint" className="text-xs text-muted">
         Press Enter or comma to add. Group related skills as “Languages: Go, Python”. Put your strongest first.
       </p>
     </div>
@@ -467,7 +468,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
   return (
     <div className="flex h-full flex-col">
       <div
-        className="sticky top-0 z-10 flex shrink-0 gap-1 border-b border-slate-200 bg-slate-50/95 px-3 pt-2 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95"
+        className="sticky top-0 z-10 flex shrink-0 gap-1 border-b border-rule bg-paper/95 px-3 pt-2 backdrop-blur-sm"
         role="tablist"
         aria-label="Resume sections"
       >
@@ -484,14 +485,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
               tabIndex={selected ? 0 : -1}
               onKeyDown={(event) => handleTabKeyDown(event, index)}
               onClick={() => setActiveTab(tab.id)}
-              className={`relative flex-1 whitespace-nowrap rounded-t-lg px-2 py-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-500 ${
+              className={`relative flex-1 whitespace-nowrap px-2 py-2.5 text-sm font-medium transition-colors focus-ring ${
                 selected
-                  ? 'text-indigo-600 dark:text-indigo-400'
-                  : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+                  ? 'text-ink'
+                  : 'text-muted hover:text-ink'
               }`}
             >
               {tab.label}
-              {selected && <span className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />}
+              {selected && <span className="absolute inset-x-2 -bottom-px h-0.5 bg-accent" />}
             </button>
           );
         })}
@@ -638,12 +639,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                             disabled={exp.isCurrent}
                             placeholder="YYYY-MM"
                           />
-                          <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                          <label className="flex cursor-pointer items-center gap-2 text-sm text-muted">
                             <input
                               type="checkbox"
                               checked={exp.isCurrent}
                               onChange={(e) => updateItem('experience', exp.id, { isCurrent: e.target.checked })}
-                              className="h-4 w-4 rounded border-slate-300 text-indigo-600 accent-indigo-600 focus:ring-indigo-500"
+                              className="h-4 w-4 rounded border-rule text-accent accent-[var(--site-ink)] focus:ring-accent"
                             />
                             I currently work here
                           </label>
@@ -800,32 +801,17 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 return (
                   <div key={t.id} className="group relative text-left">
                     <div
-                      className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 transition group-hover:-translate-y-0.5 group-hover:shadow-md group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 ${
-                        selected ? 'ring-2 ring-indigo-600 dark:ring-indigo-400' : 'ring-slate-200 dark:ring-slate-700'
+                      className={`relative bg-white outline-offset-2 transition-colors group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-accent ${
+                        selected ? 'outline-2 outline-accent' : 'border border-rule group-hover:border-ink'
                       }`}
                     >
                       <LazyResumePreview data={data} templateId={t.id} />
-                      {selected && (
-                        <span className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 text-white shadow">
-                          <CheckIcon className="h-3.5 w-3.5" />
-                        </span>
-                      )}
                     </div>
-                    <span className="mt-2 flex items-center justify-center gap-1.5">
-                      <span
-                        className={`text-sm ${
-                          selected ? 'font-semibold text-indigo-600 dark:text-indigo-400' : 'font-medium text-slate-700 dark:text-slate-300'
-                        }`}
-                      >
-                        {t.name}
-                      </span>
-                      {t.atsFriendly && (
-                        <span className="rounded bg-emerald-50 px-1 py-px text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-600/20 dark:bg-emerald-500/10 dark:text-emerald-300">
-                          ATS
-                        </span>
-                      )}
+                    <span className="mt-2 flex items-baseline justify-between gap-2">
+                      <span className={`text-sm ${selected ? 'font-semibold text-ink' : 'font-medium text-ink'}`}>{t.name}</span>
+                      {t.atsFriendly && <span className="kicker text-muted">ATS</span>}
                     </span>
-                    <span className="mt-0.5 block text-center text-xs leading-snug text-slate-500 dark:text-slate-400">{t.description}</span>
+                    <span className="mt-0.5 block text-xs leading-snug text-muted">{t.description}</span>
                     {/* Overlay control: previews contain links, which must not nest inside a button. */}
                     <button
                       type="button"
@@ -833,7 +819,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                       aria-checked={selected}
                       onClick={() => setField('templateId', t.id)}
                       aria-label={`${t.name}: ${t.description}`}
-                      className="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-none"
+                      className="absolute inset-0 cursor-pointer focus-visible:outline-none"
                     />
                   </div>
                 );
@@ -843,12 +829,6 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
           </>
         )}
 
-        {activeTab !== 'design' && (
-          <p className="flex items-start gap-2 text-xs leading-relaxed text-slate-500 dark:text-slate-400">
-            <SparklesIcon className="mt-0.5 h-3.5 w-3.5 shrink-0" />
-            AI suggestions run on Cloudflare Workers AI and only see the text you choose to improve. Always review them — AI never knows your real numbers.
-          </p>
-        )}
       </div>
     </div>
   );

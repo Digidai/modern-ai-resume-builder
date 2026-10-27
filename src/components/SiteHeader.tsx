@@ -3,88 +3,79 @@ import { Link, NavLink } from 'react-router';
 import ThemeToggle from './ThemeToggle';
 
 export const Logo: React.FC = () => (
-  <Link
-    to="/"
-    className="flex items-center gap-2 rounded-lg text-lg font-bold tracking-tight text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-white"
-  >
-    <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-indigo-600 font-serif text-lg italic text-white shadow-sm">M</span>
-    <span>
-      Modern<span className="text-indigo-600 dark:text-indigo-400">CV</span>
-    </span>
+  <Link to="/" className="focus-ring rounded-[2px] font-display text-[22px] font-semibold leading-none tracking-display text-ink">
+    ModernCV
   </Link>
 );
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `shrink-0 whitespace-nowrap rounded-lg px-2.5 py-2 sm:px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
-    isActive
-      ? 'text-slate-900 dark:text-white'
-      : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
+  `focus-ring shrink-0 whitespace-nowrap border-b-2 py-1 text-sm transition-colors ${
+    isActive ? 'border-accent text-ink' : 'border-transparent text-muted hover:text-ink'
   }`;
+
+const NavItems: React.FC = () => (
+  <>
+    <NavLink to="/directory" className={navLinkClass}>
+      Resume examples
+    </NavLink>
+    <NavLink to="/templates/" className={navLinkClass}>
+      Templates
+    </NavLink>
+    <NavLink to="/agents/" className={navLinkClass}>
+      AI agents
+    </NavLink>
+    <Link to="/#faq" className={navLinkClass({ isActive: false })}>
+      FAQ
+    </Link>
+  </>
+);
 
 /** Top bar shared by the marketing pages (home, directory, role pages). */
 export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open editor' }) => (
-  <header className="sticky top-0 z-30 border-b border-slate-200/80 bg-white/85 backdrop-blur-md dark:border-slate-800/80 dark:bg-slate-950/85 print:hidden">
+  <header className="sticky top-0 z-30 border-b border-rule bg-paper/95 backdrop-blur-sm print:hidden">
     <div className="mx-auto flex h-16 max-w-6xl items-center gap-2 px-4 sm:px-6">
       <Logo />
-      <nav className="ml-4 hidden items-center gap-1 md:flex" aria-label="Main">
-        <NavLink to="/directory" className={navLinkClass}>
-          Resume examples
-        </NavLink>
-        <NavLink to="/templates/" className={navLinkClass}>
-          Templates
-        </NavLink>
-        <NavLink to="/agents/" className={navLinkClass}>
-          AI agents
-        </NavLink>
-        <Link to="/#faq" className={navLinkClass({ isActive: false })}>
-          FAQ
-        </Link>
+      <nav className="ml-10 hidden items-center gap-7 md:flex" aria-label="Main">
+        <NavItems />
       </nav>
-      <div className="ml-auto flex items-center gap-1 sm:gap-2">
+      <div className="ml-auto flex items-center gap-1 sm:gap-3">
         <ThemeToggle />
         <Link
           to="/editor"
-          className="inline-flex h-9 items-center rounded-lg bg-indigo-600 px-4 text-sm font-medium text-white shadow-sm transition-colors hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:ring-offset-slate-950"
+          className="focus-ring inline-flex h-9 items-center rounded-[2px] bg-ink px-4 text-sm font-medium text-paper transition-colors hover:bg-ink-hover"
         >
           {ctaLabel}
         </Link>
       </div>
     </div>
-    <nav className="flex gap-1 overflow-x-auto px-2 pb-1.5 md:hidden" aria-label="Main mobile">
-      <NavLink to="/directory" className={navLinkClass}>
-        Resume examples
-      </NavLink>
-      <NavLink to="/templates/" className={navLinkClass}>
-        Templates
-      </NavLink>
-      <NavLink to="/agents/" className={navLinkClass}>
-        AI agents
-      </NavLink>
-      <Link to="/#faq" className={navLinkClass({ isActive: false })}>
-        FAQ
-      </Link>
+    <nav className="flex gap-6 overflow-x-auto px-4 pb-2 md:hidden" aria-label="Main mobile">
+      <NavItems />
     </nav>
   </header>
 );
 
+const footerLink = 'focus-ring rounded-[2px] py-1 hover:text-ink';
+
 export const SiteFooter: React.FC = () => (
-  <footer className="border-t border-slate-200 dark:border-slate-800 print:hidden">
-    <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-slate-500 sm:flex-row sm:items-center sm:justify-between sm:px-6 dark:text-slate-400">
-      <p>© {new Date().getFullYear()} ModernCV · Free resume builder. Your data stays in your browser.</p>
-      <nav className="-mx-2 flex flex-wrap" aria-label="Footer">
-        <Link to="/directory" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+  <footer className="border-t border-rule print:hidden">
+    <div className="mx-auto flex max-w-6xl flex-col gap-4 px-4 py-8 text-sm text-muted sm:flex-row sm:items-center sm:justify-between sm:px-6">
+      <p>
+        © {new Date().getFullYear()} <span className="font-display font-semibold text-ink">ModernCV</span> · Free resume builder. Your data stays in your browser.
+      </p>
+      <nav className="flex flex-wrap gap-x-5 gap-y-1" aria-label="Footer">
+        <Link to="/directory" className={footerLink}>
           Resume examples
         </Link>
-        <Link to="/templates/" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+        <Link to="/templates/" className={footerLink}>
           Templates
         </Link>
-        <Link to="/editor" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+        <Link to="/editor" className={footerLink}>
           Editor
         </Link>
-        <Link to="/agents/" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+        <Link to="/agents/" className={footerLink}>
           AI agents
         </Link>
-        <a href="https://github.com/Digidai/modern-ai-resume-builder" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white" rel="noopener noreferrer" target="_blank">
+        <a href="https://github.com/Digidai/modern-ai-resume-builder" className={footerLink} rel="noopener noreferrer" target="_blank">
           GitHub
         </a>
       </nav>

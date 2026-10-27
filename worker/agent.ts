@@ -13,6 +13,7 @@ import roleGuides from '../src/data/roleGuides.json';
 import jobTitles from '../src/data/jobTitles.json';
 import type { ResumeData } from '../src/types';
 import { slugifyJobTitle } from '../src/utils/slug';
+import { validateUrl } from '../src/utils/validation';
 
 export interface AgentEnv {
   ASSETS: { fetch: (request: Request) => Promise<Response> };
@@ -68,29 +69,67 @@ const categoryByTitle = new Map<string, string>();
 for (const category of jobTitles as { name: string; titles: string[] }[]) {
   for (const title of category.titles) categoryByTitle.set(title.toLowerCase(), category.name);
 }
+/** Directory titles keyed by a loose form: no parentheticals, punctuation or extra spaces ("Registered Nurse (RN)" → "registered nurse"). */
+const ABBREVIATIONS: Record<string, string> = { sr: 'senior', jr: 'junior', mgr: 'manager', eng: 'engineer', dev: 'developer', vp: 'vp' };
+const looseKey = (title: string) =>
+  title
+    .toLowerCase()
+    .replace(/\([^)]*\)/g, ' ')
+    .replace(/\b(front|back)[\s-]+end\b/g, '$1end')
+    .replace(/[^a-z0-9+#]+/g, ' ')
+    .trim()
+    .split(' ')
+    .map((w) => ABBREVIATIONS[w] ?? w)
+    .join(' ');
+/** Generic one-word requests that mean a specific directory title. */
+const GENERIC_TITLES: Record<string, string> = { nurse: 'Registered Nurse (RN)' };
+const titleByLoose = new Map<string, string>();
+for (const category of jobTitles as { name: string; titles: string[] }[]) {
+  for (const title of category.titles) {
+    titleByLoose.set(title.toLowerCase(), title);
+    if (!titleByLoose.has(looseKey(title))) titleByLoose.set(looseKey(title), title);
+    // Acronyms in parentheses also match on their own ("RN", "LPN").
+    for (const m of title.matchAll(/\(([^)]+)\)/g)) if (!titleByLoose.has(m[1].toLowerCase())) titleByLoose.set(m[1].toLowerCase(), title);
+  }
+}
+
+/** The directory title a request most likely means, or undefined. */
+const resolveTitle = (title: string): string | undefined => {
+  const lower = title.toLowerCase().trim();
+  const loose = looseKey(title);
+  const direct = titleByLoose.get(lower) ?? titleByLoose.get(loose) ?? (GENERIC_TITLES[loose] && titleByLoose.get(GENERIC_TITLES[loose].toLowerCase()));
+  if (direct) return direct;
+  // Longest known title inside the request ("Senior Data Analyst II" → "Senior Data Analyst").
+  let best: string | undefined;
+  for (const [key, known] of titleByLoose) {
+    if (key.length > 2 && (` ${loose} `).includes(` ${key} `) && key.length > (best ? looseKey(best).length : 0)) best = known;
+  }
+  if (best) return best;
+  // Shortest known title containing every word of the request ("nurse" → "Registered Nurse (RN)" is not shortest; prefer titles that start with it).
+  const words = loose.split(' ').filter(Boolean);
+  if (!words.length) return undefined;
+  const hits = [...new Set(titleByLoose.values())].filter((t) => words.every((w) => ` ${looseKey(t)} `.includes(` ${w} `)));
+  hits.sort((a, b) => looseKey(a).length - looseKey(b).length);
+  return hits[0];
+};
 
 /** Best-effort job family for titles outside the directory ("Senior Backend Engineer II"). */
 const guessCategory = (title: string): string | undefined => {
-  const lower = title.toLowerCase();
-  if (categoryByTitle.has(lower)) return categoryByTitle.get(lower);
-  let best: { name: string; length: number } | undefined;
-  for (const [known, name] of categoryByTitle) {
-    if (lower.includes(known) && known.length > (best?.length ?? 0)) best = { name, length: known.length };
-  }
-  return best?.name;
+  const resolved = resolveTitle(title);
+  return resolved ? categoryByTitle.get(resolved.toLowerCase()) : undefined;
 };
 
 const getExampleResume = async (env: AgentEnv, origin: string, jobTitle: string) => {
   const title = jobTitle.trim().slice(0, 120);
   if (!title) throw new AgentError(400, 'INVALID_REQUEST', 'job_title is required.');
   // Exact title first, then the longest known title contained in the request ("Senior Data Analyst II").
-  const lower = title.toLowerCase();
-  const candidates = [title, ...[...categoryByTitle.keys()].filter((known) => lower.includes(known)).sort((a, b) => b.length - a.length)];
+  const resolved = resolveTitle(title);
+  const candidates = [...new Set([title, ...(resolved ? [resolved] : [])])];
   for (const candidate of candidates) {
     const response = await env.ASSETS.fetch(new Request(`${origin}/examples/${slugifyJobTitle(candidate)}.json`));
     if (response.ok && (response.headers.get('content-type') ?? '').includes('json')) {
       const data = (await response.json()) as Json;
-      return { ...data, matchedTitle: data.jobTitle, exact: candidate === title };
+      return { ...data, matchedTitle: data.jobTitle, exact: String(data.jobTitle).toLowerCase() === title.toLowerCase() };
     }
   }
   throw new AgentError(404, 'NOT_FOUND', `No example for "${title}". Use get_writing_guide instead, or try a more common title.`);
@@ -131,7 +170,8 @@ const prepareResume = (input: Json): PreparedResume => {
   }
   const warnings: string[] = [];
   const raw = input.resume as Json;
-  const template = typeof input.template === 'string' ? input.template : typeof raw.templateId === 'string' ? raw.templateId : '';
+  const template =
+    typeof input.template === 'string' ? input.template : typeof input.templateId === 'string' ? input.templateId : typeof raw.templateId === 'string' ? raw.templateId : '';
   if (template && !getTemplateById(template)) warnings.push(`Unknown template "${template}"; used "modern". Call list_templates for valid ids.`);
   resume.templateId = template && getTemplateById(template) ? template : 'modern';
 
@@ -146,6 +186,9 @@ const prepareResume = (input: Json): PreparedResume => {
   if (typeof input.scale === 'number' && Number.isFinite(input.scale)) resume.design.scale = Math.min(1.15, Math.max(0.85, input.scale));
   if (!FONT_IDS.includes(resume.design.font)) resume.design.font = 'template';
 
+  const rawLinks = Array.isArray(raw.links) ? raw.links.length : 0;
+  if (rawLinks > 8) warnings.push(`Only the first 8 links are kept (got ${rawLinks}).`);
+  for (const link of resume.links) if (!validateUrl(link.url)) warnings.push(`Link "${link.url}" is not a valid URL and is hidden on the resume.`);
   if (!resume.fullName.trim()) warnings.push('fullName is empty.');
   if (!resume.email && !resume.phone) warnings.push('No email or phone; recruiters need a way to reach the candidate.');
   if (!resume.experience.length && !resume.education.length) warnings.push('No experience or education entries.');
@@ -190,7 +233,9 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       browser = await puppeteer.launch(env.BROWSER!);
       const page = await browser.newPage();
       await page.setBypassCSP(true);
-      await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: format === 'png' ? 1.5 : 1 });
+      // Measure and capture in print layout, which is what the PDF uses (screen layout is taller).
+      await page.emulateMediaType('print');
+      await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1 });
       await page.goto(renderUrl, { waitUntil: 'networkidle0' });
       await page.waitForSelector('html[data-render-state]', { timeout: 20000 });
       const [state, pagesText] = await page.evaluate(() => [
@@ -209,7 +254,10 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       timeoutId = setTimeout(() => reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.')), RENDER_TIMEOUT_MS);
     });
     const { bytes, pages } = await Promise.race([job, timeout]);
-    if (pages > 1) warnings.push(`The resume runs to ${pages} pages. For one page, shorten bullets, set scale to 0.9, or use the "compact" template.`);
+    if (pages > 1) {
+      const scaleTip = resume.design.scale > 0.9 ? 'set scale to 0.9, ' : '';
+      warnings.push(`The resume runs to ${pages} pages. For one page, shorten bullets, ${scaleTip}or use the "compact" template.`);
+    }
     return { bytes, pages, template: resume.templateId, warnings };
   } catch (error) {
     if (error instanceof AgentError) throw error;
@@ -277,6 +325,8 @@ interface Tool {
   run: (args: Json, ctx: ToolContext) => Promise<ToolContent>;
 }
 
+const isTruthy = (value: unknown) => value === true || value === 1 || (typeof value === 'string' && /^(1|true|yes)$/i.test(value));
+
 const text = (value: unknown): Json => ({ type: 'text', text: typeof value === 'string' ? value : JSON.stringify(value, null, 2) });
 
 const TOOLS: Tool[] = [
@@ -287,7 +337,7 @@ const TOOLS: Tool[] = [
       `Lists the ${TEMPLATES.length} resume templates with id, description, who each suits, ATS status and a preview image URL. ATS-friendly templates are single-column and parse reliably in applicant tracking systems; recommend them for online applications.`,
     inputSchema: { type: 'object', properties: { ats_only: { type: 'boolean', description: 'Only ATS-friendly templates.' } } },
     annotations: { readOnlyHint: true, openWorldHint: false },
-    run: async (args, { origin }) => [text(listTemplates(origin, args.ats_only === true))],
+    run: async (args, { origin }) => [text(listTemplates(origin, isTruthy(args.ats_only)))],
   },
   {
     name: 'get_writing_guide',
@@ -306,10 +356,10 @@ const TOOLS: Tool[] = [
     name: 'get_example_resume',
     title: 'Get an example resume for a job title',
     description:
-      'Returns a complete, realistic example resume written for a job title (summary, experience with quantified bullets, education, projects, grouped skills), in the same shape the render tools accept. Use it as a model for structure, tone and level of detail. Never copy its employers, dates or numbers into a real person\'s resume.',
+      'Returns a complete, realistic example resume written for a job title (summary, experience with quantified bullets, education, projects, grouped skills), as { jobTitle, family, page, resume }. Its \`resume\` field is render-ready but has a placeholder name and no contact details. Use it as a model for structure, tone and level of detail. Never copy its employers, dates or numbers into a real person\'s resume.',
     inputSchema: {
       type: 'object',
-      properties: { job_title: { type: 'string', description: 'Job title, e.g. "Registered Nurse" or "Senior Data Analyst".' } },
+      properties: { job_title: { type: 'string', description: 'Job title, e.g. "Registered Nurse (RN)", "nurse" or "Senior Data Analyst".' } },
       required: ['job_title'],
     },
     annotations: { readOnlyHint: true, openWorldHint: false },
@@ -358,7 +408,7 @@ const TOOLS: Tool[] = [
     name: 'render_pdf',
     title: 'Render the resume as a PDF',
     description:
-      'Renders the resume to an A4 vector PDF (selectable text, embedded fonts) and returns it as an embedded resource, plus the page count and warnings. The resume is not stored. Limited to 6 renders per minute.',
+      'Renders the resume to an A4 vector PDF (selectable text, embedded fonts) and returns it as an embedded resource, plus the page count and warnings. Many chat clients cannot save an embedded PDF, so also call create_editor_link and give the user that link (they can download the PDF there). The resume is not stored. Limited to 6 renders per minute.',
     inputSchema: { type: 'object', properties: RESUME_INPUT, required: ['resume'] },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
@@ -417,6 +467,7 @@ const handleRpcMessage = async (message: unknown, ctx: ToolContext): Promise<Jso
   }
   const { id, method, params } = message as { id?: unknown; method?: unknown; params?: Json };
   if (id === undefined) return null; // notification (e.g. notifications/initialized): nothing to return
+  if (method === undefined && ('result' in (message as Json) || 'error' in (message as Json))) return null; // a client response: accept, no reply
   const reply = (result: unknown) => ({ jsonrpc: '2.0', id, result });
 
   switch (method) {
@@ -477,7 +528,7 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
   const fail = (status: number, code: string, message: string) => json({ error: { code, message } }, status);
 
   if (route === 'templates' && request.method === 'GET') {
-    return json({ templates: listTemplates(ctx.origin, url.searchParams.get('ats_only') === 'true') });
+    return json({ templates: listTemplates(ctx.origin, isTruthy(url.searchParams.get('ats_only'))) });
   }
   if (route === 'guide' && request.method === 'GET') {
     return json(getWritingGuide(url.searchParams.get('job_title') ?? ''));

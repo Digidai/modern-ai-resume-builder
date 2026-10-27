@@ -65,9 +65,9 @@ export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
     );
 
     return (
-        <div className="flex flex-1 flex-col bg-white px-[16mm] pt-[14mm] pb-[12mm] font-sans text-slate-900 wrap-break-word [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex flex-1 flex-col bg-white px-[16mm] pt-[14mm] pb-[12mm] font-sans text-slate-900 wrap-break-word [--accent:var(--rs-accent,#8A2C3F)]">
             <header className="mb-7 border-b border-(--accent) pb-6 text-center">
-                <h1 className="font-playfair text-[44px] leading-[1.1] font-bold text-slate-950">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-playfair text-[44px] leading-[1.1] font-bold text-slate-950">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-2 text-[13px] font-medium tracking-[0.3em] text-slate-600 uppercase">{data.title}</p>}
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-[13px] text-slate-700">

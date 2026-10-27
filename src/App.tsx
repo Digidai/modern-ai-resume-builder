@@ -14,6 +14,7 @@ import { lazy, Suspense, useEffect } from 'react';
 
 // Dev-only template gallery; `import.meta.env.DEV` is false in production builds, so it is tree-shaken.
 const DevTemplateGallery = import.meta.env.DEV ? lazy(() => import('./dev/TemplateGallery')) : null;
+const DevFitCheck = import.meta.env.DEV ? lazy(() => import('./dev/FitCheck')) : null;
 
 /** New pages start at the top; `#hash` links scroll to their target once it has rendered. */
 function ScrollManager() {
@@ -46,7 +47,8 @@ function AppRoutes() {
   const handleUseTemplate = (jobTitle: string, templateId: string) => {
     setResumeData(prev => ({
       ...prev,
-      title: jobTitle,
+      // Keep the user's own title; only fill it in when it's empty.
+      title: prev.title.trim() ? prev.title : jobTitle,
       templateId: templateId
     }));
     navigate('/editor');
@@ -66,6 +68,9 @@ function AppRoutes() {
       <Route path="/render" element={<RenderView />} />
       {DevTemplateGallery && (
         <Route path="/dev/templates" element={<Suspense fallback={null}><DevTemplateGallery /></Suspense>} />
+      )}
+      {DevFitCheck && (
+        <Route path="/dev/fit" element={<Suspense fallback={null}><DevFitCheck /></Suspense>} />
       )}
       <Route path="*" element={<NotFoundView />} />
     </Routes>

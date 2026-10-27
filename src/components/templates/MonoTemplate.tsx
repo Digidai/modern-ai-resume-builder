@@ -46,10 +46,10 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
     );
 
     return (
-        <div className="flex flex-1 flex-col bg-slate-900 px-[15mm] pt-[11mm] pb-[10mm] font-jetbrains text-[13.5px] leading-normal text-slate-300 wrap-break-word [--accent-light:oklch(from_var(--accent)_0.8_min(c,0.13)_h)] [--accent:var(--rs-accent,#047857)]">
+        <div className="flex flex-1 flex-col bg-slate-900 px-[15mm] pt-[10mm] pb-[10mm] font-jetbrains text-[13.5px] leading-normal text-slate-300 wrap-break-word [--accent-light:oklch(from_var(--accent)_0.8_min(c,0.13)_h)] [--accent:var(--rs-accent,#047857)]">
             <header className="mb-4 border-b border-slate-700 pb-4">
                 <div className="mb-1.5 text-xs text-slate-400">// resume.tsx</div>
-                <h1 className="text-[30px] leading-tight font-bold tracking-tight text-white">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="text-[30px] leading-tight font-bold tracking-tight text-white">{data.fullName}</div>
                 {data.title.trim() && (
                     <p className="mt-1.5 text-[15px]">
                         <span className="text-slate-500">&lt;</span>

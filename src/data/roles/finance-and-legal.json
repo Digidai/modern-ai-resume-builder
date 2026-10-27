@@ -12,7 +12,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own monthly variance analysis for 3 product lines totaling $240M in revenue, presenting findings to brand directors\n- Built a driver-based gross margin forecast that cut quarterly forecast error from 8% to 3%\n- Modeled the business case for a $4.5M packaging line, approved with a projected 2.6-year payback\n- Automated weekly sales flash reporting with SQL and Power BI, saving 6 hours a week\n- Partner with supply chain on quarterly standard cost updates for 1,800 SKUs, explaining $2M in price and mix variances"
+          "description": "- Own monthly variance analysis for 3 product lines totaling $240M in revenue, presenting findings to brand directors\n- Built a driver-based gross margin forecast that cut quarterly forecast error from 8% to 3%\n- Modeled the business case for a $4.5M packaging line, approved with a projected 2.6-year payback\n- Automated weekly sales flash reporting with SQL and Power BI, saving 6 hours a week"
         },
         {
           "company": "Queensgate Bank",
@@ -21,7 +21,7 @@
           "startDate": "2022-07",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Prepared branch profitability reports for 45 locations\n- Reconciled monthly expense accruals for the retail banking division\n- Built a monthly deposit pricing tracker comparing rates against 6 local competitors"
+          "description": "- Prepared branch profitability reports for 45 locations\n- Reconciled monthly expense accruals for the retail banking division"
         },
         {
           "company": "Cedar Hollow Brands",
@@ -30,7 +30,7 @@
           "startDate": "2021-06",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Analyzed trade promotion spend for 2 retail customers, identifying $300k in unclaimed deductions\n- Built a price-volume-mix bridge template still used in quarterly brand reviews"
+          "description": "- Analyzed trade promotion spend for 2 retail customers, identifying $300k in unclaimed deductions"
         }
       ],
       "education": [
@@ -47,7 +47,19 @@
         "Tools: Excel (advanced modeling), SQL, Power BI, SAP S/4HANA, Adaptive Planning",
         "Accounting: GAAP fundamentals, accruals, month-end close support",
         "Certifications: CFA Level I Candidate"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "FP&A Analyst": {
       "summary": "FP&A Analyst with 3 years of experience in SaaS planning, covering ARR forecasting, headcount budgets and board reporting for a $90M ARR software company. Rebuilt the headcount plan in Pigment, reducing budget-to-actual payroll variance from 6% to 1.5%. Brings sound modeling, clear storytelling with numbers and close partnership with department leaders.",
@@ -59,7 +71,7 @@
           "startDate": "2023-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Build the monthly ARR, bookings and churn forecast for a $90M ARR SaaS business\n- Rebuilt the 600-person headcount plan in Pigment, cutting payroll budget-to-actual variance from 6% to 1.5%\n- Prepare budget-versus-actual packages for 8 department heads and support the quarterly board deck\n- Modeled pricing scenarios for a new usage-based tier, informing a launch that added $3.1M ARR in year one\n- Maintain the vendor spend tracker for $45M in operating expenses, flagging 12 renewals for consolidation savings of $600k"
+          "description": "- Build the monthly ARR, bookings and churn forecast for a $90M ARR SaaS business\n- Rebuilt the 600-person headcount plan in Pigment, cutting payroll budget-to-actual variance from 6% to 1.5%\n- Prepare budget-versus-actual packages for 8 department heads and support the quarterly board deck\n- Modeled pricing scenarios for a new usage-based tier, informing a launch that added $3.1M ARR in year one"
         },
         {
           "company": "Fenway Health Ventures",
@@ -68,7 +80,7 @@
           "startDate": "2022-06",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Built a 3-statement model for a portfolio clinic expansion\n- Benchmarked operating metrics across 12 outpatient providers\n- Presented model findings to the portfolio operations team at the end of the internship"
+          "description": "- Built a 3-statement model for a portfolio clinic expansion\n- Benchmarked operating metrics across 12 outpatient providers"
         }
       ],
       "education": [
@@ -83,9 +95,16 @@
       "skills": [
         "FP&A: ARR and bookings forecasting, headcount planning, budget versus actual, board reporting",
         "SaaS Metrics: net revenue retention, CAC payback, gross margin, Rule of 40",
-        "Tools: Pigment, Excel, NetSuite, Salesforce reports, Looker",
-        "Modeling: 3-statement models, scenario and sensitivity analysis"
-      ]
+        "Tools: Pigment, Excel, NetSuite, Salesforce reports, Looker"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.93,
+        "ginto": 0.94,
+        "quartz": 0.95,
+        "bronx": 0.86,
+        "pop": 0.97
+      }
     },
     "Investment Analyst": {
       "summary": "Investment Analyst with 4 years of experience in public equity research and middle-market private credit. Covers 25 industrials and business services companies for a $3.2B long-only fund, with recommendations outperforming the sector benchmark by 410 bps over two years. Brings rigorous valuation, primary research and concise investment memos.",
@@ -123,7 +142,18 @@
         "Credit: cash flow underwriting, covenant analysis, capital structure",
         "Tools: Bloomberg Terminal, FactSet, Capital IQ, Excel, Python (pandas)",
         "Certifications: CFA Level III Candidate"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.96,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.89
+      }
     },
     "Accountant": {
       "summary": "Accountant with 4 years of experience in general ledger accounting, reconciliations and month-end close for multi-entity companies. Closes books for 3 entities with $120M in combined revenue within a 6-day close. Brings solid GAAP knowledge, clean account reconciliations and a steady hand during audits.",
@@ -161,7 +191,18 @@
         "Standards: US GAAP, ASC 606 basics, internal controls",
         "Systems: NetSuite, BlackLine, Excel (pivot tables, XLOOKUP), QuickBooks",
         "Certifications: CPA candidate (2 of 4 sections passed)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.87,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.9
+      }
     },
     "Senior Accountant": {
       "summary": "Senior Accountant and CPA with 7 years of experience in public accounting and corporate close for SaaS and technology companies. Owns revenue and lease accounting for a $250M company and led its ASC 842 adoption. Brings technical accounting judgment, SOX-ready documentation and the ability to train junior staff.",
@@ -173,7 +214,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own revenue recognition under ASC 606 for $250M in annual SaaS and services revenue\n- Led ASC 842 lease accounting for 18 office leases with $42M in right-of-use assets\n- Reduced close from 8 to 5 days by building NetSuite revenue schedules and BlackLine auto-matching\n- Train and review the work of 2 staff accountants on reconciliations and journal entries\n- Document and test 25 SOX key controls over revenue and leases, passing external auditor testing with no deficiencies"
+          "description": "- Own revenue recognition under ASC 606 for $250M in annual SaaS and services revenue\n- Led ASC 842 lease accounting for 18 office leases with $42M in right-of-use assets\n- Reduced close from 8 to 5 days by building NetSuite revenue schedules and BlackLine auto-matching\n- Train and review the work of 2 staff accountants on reconciliations and journal entries"
         },
         {
           "company": "Hollis & Marsh LLP",
@@ -208,7 +249,23 @@
         "Controls: SOX 404 documentation, audit support, reconciliation review",
         "Systems: NetSuite, BlackLine, FloQast, Excel",
         "Certifications: CPA (California)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.95,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Bookkeeper": {
       "summary": "Bookkeeper with 6 years of experience keeping accurate books for small businesses in construction, hospitality and professional services. Manages full-cycle bookkeeping for 14 clients with combined revenue of $22M, delivering month-end packages by the 10th. Brings QuickBooks expertise, tidy reconciliations and plain-language reporting for owners.",
@@ -246,7 +303,19 @@
         "Payroll: Gusto, quarterly 941 filings, W-2 and 1099 preparation",
         "Software: QuickBooks Online, Xero, Bill.com, Dext, Excel",
         "Certifications: QuickBooks Online ProAdvisor, Certified Bookkeeper (AIPB)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.89,
+        "cast": 0.99
+      }
     },
     "Accounts Payable Specialist": {
       "summary": "Accounts Payable Specialist with 5 years of experience processing high-volume invoices and vendor payments for multi-location companies. Processes about 2,500 invoices a month and raised early-payment discount capture from 40% to 88%. Brings three-way match discipline, fraud-aware vendor setup and reliable payment runs.",
@@ -284,7 +353,17 @@
         "Controls: segregation of duties, fraud prevention, approval workflows",
         "Systems: Coupa, Oracle NetSuite, Microsoft Dynamics GP, Excel",
         "Certifications: Accounts Payable Specialist (APS) from IOFM"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.98,
+        "pop": 0.92
+      }
     },
     "Accounts Receivable Specialist": {
       "summary": "Accounts Receivable Specialist with 5 years of experience in B2B invoicing, cash application and collections. Manages a $28M receivables portfolio of 600 accounts and cut DSO from 58 to 41 days. Brings persistent, courteous collections, accurate cash application and clear aging reports for finance leadership.",
@@ -322,7 +401,16 @@
         "Reporting: AR aging, DSO tracking, bad debt reserve support",
         "Systems: SAP Business One, Versapay, Salesforce, Excel",
         "Certifications: Credit Business Associate (CBA) from NACM"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.93,
+        "pop": 0.89
+      }
     },
     "Billing Specialist": {
       "summary": "Billing Specialist with 4 years of experience in subscription and usage-based billing for B2B software and telecom customers. Bills about 1,400 accounts a month with a 0.6% dispute rate. Brings precise contract-to-invoice accuracy, strong Excel and billing system skills, and prompt resolution of customer questions.",
@@ -360,7 +448,19 @@
         "Systems: Zuora, Salesforce CPQ, NetSuite, Elite 3E, Excel",
         "Accounting: ASC 606 basics, billing-to-revenue reconciliation",
         "Customer Service: billing inquiries, escalation handling"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.97,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.92
+      }
     },
     "Tax Accountant": {
       "summary": "Tax Accountant with 4 years of experience in corporate and partnership tax compliance at a regional CPA firm and a public company. Prepares federal and 18 state income tax returns for a $1.1B consolidated group. Brings ASC 740 provision support, organized workpapers and strong research skills.",
@@ -404,7 +504,21 @@
         "Provision: ASC 740, deferred taxes, return-to-provision",
         "Software: OneSource, CCH Axcess, Avalara, Checkpoint, Excel",
         "Certifications: CPA (Tennessee)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.92
+      }
     },
     "Tax Manager": {
       "summary": "Tax Manager and CPA with 10 years of experience in Big Four and in-house corporate tax for multinational manufacturers. Leads ASC 740 provision and compliance for a $3B group with operations in 9 countries, and cut the effective tax rate by 2.1 points through credits and entity restructuring. Brings technical depth, audit defense and team leadership.",
@@ -416,7 +530,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead US and international tax compliance and ASC 740 provision for a $3B group in 9 countries with 3 direct reports\n- Lowered the effective tax rate from 24.3% to 22.2% through R&D credits, FDII and entity simplification\n- Defended an IRS examination of 2 tax years, closing with no proposed adjustments\n- Implemented OneSource Tax Provision, cutting quarterly provision time from 12 to 7 days\n- Review state apportionment and nexus positions across 35 states, adding 4 filings ahead of an expected audit"
+          "description": "- Lead US and international tax compliance and ASC 740 provision for a $3B group in 9 countries with 3 direct reports\n- Lowered the effective tax rate from 24.3% to 22.2% through R&D credits, FDII and entity simplification\n- Defended an IRS examination of 2 tax years, closing with no proposed adjustments"
         },
         {
           "company": "Whitmore & Cale LLP",
@@ -425,7 +539,7 @@
           "startDate": "2018-09",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Managed provision reviews and compliance for 8 public and private corporate clients\n- Advised on GILTI and Section 163(j) impacts following the 2017 tax reform\n- Mentored 4 staff on ASC 740 provision workpapers and review notes"
+          "description": "- Managed provision reviews and compliance for 8 public and private corporate clients\n- Advised on GILTI and Section 163(j) impacts following the 2017 tax reform"
         },
         {
           "company": "Whitmore & Cale LLP",
@@ -434,7 +548,7 @@
           "startDate": "2016-09",
           "endDate": "2018-08",
           "isCurrent": false,
-          "description": "- Prepared consolidated corporate returns and Forms 5471 for multinational clients\n- Drafted tax research memos reviewed by managers"
+          "description": "- Prepared consolidated corporate returns and Forms 5471 for multinational clients"
         }
       ],
       "education": [
@@ -455,9 +569,22 @@
       "skills": [
         "Corporate Tax: ASC 740, federal and state compliance, international tax (GILTI, FDII, Subpart F), R&D credits",
         "Controversy: IRS examinations, state audits, information document requests",
-        "Systems: OneSource Income Tax and Provision, CCH IntelliConnect, Oracle, Alteryx",
-        "Certifications: CPA (Pennsylvania)"
-      ]
+        "Systems: OneSource Income Tax and Provision, CCH IntelliConnect, Oracle, Alteryx"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.89,
+        "pop": 0.91,
+        "cast": 0.97
+      }
     },
     "Controller": {
       "summary": "Controller and CPA with 13 years of accounting experience, including 5 leading accounting teams at PE-backed manufacturers with $200–500M in revenue. Shortened the close from 15 to 6 days and delivered three clean audits, including the first year of SOX readiness. Brings strong controls, ERP implementation experience and reliable reporting for lenders and boards.",
@@ -469,7 +596,7 @@
           "startDate": "2021-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead an 8-person accounting team for a $420M PE-backed manufacturer with 5 plants\n- Shortened the monthly close from 15 to 6 business days using FloQast checklists and standardized plant reporting\n- Led the NetSuite migration from 3 legacy ERPs, completed on time and $150k under a $1.2M budget\n- Deliver monthly lender covenant reporting and quarterly board packages, with 3 consecutive clean audits"
+          "description": "- Lead an 8-person accounting team for a $420M PE-backed manufacturer with 5 plants\n- Shortened the monthly close from 15 to 6 business days using FloQast checklists and standardized plant reporting\n- Led the NetSuite migration from 3 legacy ERPs, completed on time and $150k under a $1.2M budget"
         },
         {
           "company": "Lakeshore Fixtures",
@@ -478,7 +605,7 @@
           "startDate": "2017-05",
           "endDate": "2021-01",
           "isCurrent": false,
-          "description": "- Managed general ledger, fixed assets and inventory costing for a $180M company\n- Implemented standard costing that reduced inventory variances by 60%\n- Coordinated purchase accounting for a $35M acquisition"
+          "description": "- Managed general ledger, fixed assets and inventory costing for a $180M company\n- Implemented standard costing that reduced inventory variances by 60%"
         },
         {
           "company": "Brandt & Okafor CPAs",
@@ -487,7 +614,7 @@
           "startDate": "2013-09",
           "endDate": "2017-04",
           "isCurrent": false,
-          "description": "- Led audits of manufacturing and distribution clients with revenue up to $250M\n- Supervised 2–4 staff per engagement"
+          "description": "- Led audits of manufacturing and distribution clients with revenue up to $250M"
         }
       ],
       "education": [
@@ -508,9 +635,22 @@
       "skills": [
         "Accounting Leadership: month-end close, consolidations, inventory costing, team management",
         "Reporting: US GAAP, lender covenant reporting, board packages, purchase accounting",
-        "Controls & Systems: SOX readiness, NetSuite implementation, FloQast, Adaptive Planning",
-        "Certifications: CPA (Michigan)"
-      ]
+        "Controls & Systems: SOX readiness, NetSuite implementation, FloQast, Adaptive Planning"
+      ],
+      "fit": {
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.88,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.93,
+        "cast": 0.99
+      }
     },
     "Internal Auditor": {
       "summary": "Internal Auditor with 4 years of experience in SOX testing, operational audits and risk assessments for a public financial services company. Completed 14 audits in 2025 and identified $1.1M in recoverable vendor overbillings. Brings data analytics in ACL and SQL, well-supported workpapers and practical recommendations that management adopts.",
@@ -548,7 +688,19 @@
         "Analytics: ACL (Diligent HighBond), SQL, Excel, Power BI",
         "IT Audit: ITGC testing, access reviews, change management controls",
         "Certifications: CIA, CPA candidate"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.96,
+        "pop": 0.91
+      }
     },
     "Audit Manager": {
       "summary": "Audit Manager and CPA with 9 years of external audit experience serving manufacturing, distribution and nonprofit clients. Manages a portfolio of 14 engagements with $2.6M in annual fees and teams of up to 8. Brings risk-based audit planning, strong technical review and client relationships that hold through tight deadlines.",
@@ -560,7 +712,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 14 audit and review engagements with $2.6M in annual fees, leading teams of up to 8\n- Implemented data-driven journal entry testing in MindBridge, cutting fieldwork hours 15% on 5 engagements\n- Led first-year Single Audits under Uniform Guidance for 3 nonprofit clients with no findings reversed on peer review\n- Coach 6 seniors and associates, with 4 promoted on schedule since 2023\n- Price and scope new engagements with partners, winning 3 new audit clients worth $310k in fees in 2025"
+          "description": "- Manage 14 audit and review engagements with $2.6M in annual fees, leading teams of up to 8\n- Implemented data-driven journal entry testing in MindBridge, cutting fieldwork hours 15% on 5 engagements\n- Led first-year Single Audits under Uniform Guidance for 3 nonprofit clients with no findings reversed on peer review\n- Coach 6 seniors and associates, with 4 promoted on schedule since 2023"
         },
         {
           "company": "Larkin Fiske & Co. LLP",
@@ -578,7 +730,7 @@
           "startDate": "2017-09",
           "endDate": "2019-08",
           "isCurrent": false,
-          "description": "- Tested inventory, receivables and payroll for 15 engagements a year\n- Observed 12 physical inventory counts at client warehouses"
+          "description": "- Tested inventory, receivables and payroll for 15 engagements a year"
         }
       ],
       "education": [
@@ -595,7 +747,24 @@
         "Technical: US GAAP, ASC 606, ASC 842, not-for-profit accounting (ASC 958)",
         "Tools: CaseWare, MindBridge, IDEA, Excel",
         "Certifications: CPA (Wisconsin)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Compliance Officer": {
       "summary": "Compliance Officer with 10 years of experience in bank and credit union compliance programs, covering BSA/AML, consumer lending and fair lending. Leads compliance for a $4.2B community bank and closed its last two regulatory exams with no matters requiring attention. Brings practical risk assessments, strong regulator relationships and training that frontline staff actually remember.",
@@ -607,7 +776,7 @@
           "startDate": "2021-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 6-person compliance team for a $4.2B bank with 38 branches, reporting to the board risk committee\n- Closed FDIC compliance exams in 2023 and 2025 with no matters requiring attention\n- Rebuilt the BSA/AML risk assessment and tuned Verafin alerts, cutting false positives 35% without missed SARs\n- Launched a fair lending monitoring program using HMDA data with quarterly regression testing\n- Deliver annual compliance training to 900 employees and directors, including a lender-specific fair lending curriculum"
+          "description": "- Lead a 6-person compliance team for a $4.2B bank with 38 branches, reporting to the board risk committee\n- Closed FDIC compliance exams in 2023 and 2025 with no matters requiring attention\n- Rebuilt the BSA/AML risk assessment and tuned Verafin alerts, cutting false positives 35% without missed SARs\n- Launched a fair lending monitoring program using HMDA data with quarterly regression testing"
         },
         {
           "company": "Saguaro Federal Credit Union",
@@ -616,7 +785,7 @@
           "startDate": "2017-03",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Managed Reg Z, Reg E and TRID compliance for a $1.6B credit union\n- Reduced compliance testing exceptions 50% through procedure rewrites and lender training\n- Led the credit union's annual Regulation CC and Regulation DD compliance reviews"
+          "description": "- Managed Reg Z, Reg E and TRID compliance for a $1.6B credit union\n- Reduced compliance testing exceptions 50% through procedure rewrites and lender training"
         },
         {
           "company": "Desert Bancorp",
@@ -625,7 +794,7 @@
           "startDate": "2016-01",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Tested 300 consumer loan files a quarter against Regulation Z and ECOA\n- Filed CTRs and supported SAR investigations"
+          "description": "- Tested 300 consumer loan files a quarter against Regulation Z and ECOA"
         }
       ],
       "education": [
@@ -638,11 +807,25 @@
       ],
       "projects": [],
       "skills": [
-        "Regulatory Compliance: BSA/AML, OFAC, Reg Z, Reg E, TRID, ECOA, HMDA, CRA, UDAAP",
+        "Regulatory Compliance: BSA/AML, OFAC, Reg Z, Reg E, TRID",
         "Program Management: risk assessments, compliance testing, policy governance, board reporting",
         "Systems: Verafin, Wolters Kluwer ComplianceOne, Excel",
         "Certifications: CRCM, CAMS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.89
+      }
     },
     "Compliance Analyst": {
       "summary": "Compliance Analyst with 3 years of experience in AML monitoring, KYC reviews and compliance testing for a digital bank and a broker-dealer. Clears about 250 transaction monitoring alerts a month with zero QA rejections in 2025. Brings sound investigative judgment, precise documentation and growing knowledge of BSA and FINRA requirements.",
@@ -680,7 +863,20 @@
         "Regulations: BSA, USA PATRIOT Act, Reg E, FINRA rules, CIP",
         "Tools: Unit21, LexisNexis Bridger, Actimize, Excel",
         "Certifications: CAMS, FINRA SIE"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.9
+      }
     },
     "Risk Manager": {
       "summary": "Risk Manager with 8 years of experience in operational and insurance risk for healthcare and hospitality organizations. Manages a $6.5M property and casualty insurance program and reduced workers' compensation claim costs 31% over three years. Brings strong claims oversight, loss control partnership and clear risk reporting for senior leaders.",
@@ -718,7 +914,22 @@
         "Analysis: loss runs, total cost of risk, RMIS reporting, Excel",
         "Systems: Origami Risk, RiskConnect",
         "Certifications: ARM (Associate in Risk Management), CPCU"
-      ]
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Enterprise Risk Manager": {
       "summary": "Enterprise Risk Manager with 11 years of experience in ERM, internal audit and operational risk at insurers and regional banks. Built the ERM framework for a $9B insurer, including risk appetite metrics reviewed quarterly by the board. Brings COSO ERM fluency, scenario analysis and risk conversations that change business decisions.",
@@ -730,7 +941,7 @@
           "startDate": "2021-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built and run the ERM framework for a $9B property and casualty insurer, leading 3 risk analysts\n- Defined 22 risk appetite metrics reported quarterly to the board risk committee\n- Led the annual ORSA report and catastrophe scenario stress tests reviewed by state regulators without comment\n- Ran risk assessments on 3 new product launches, adding controls that kept loss ratios within plan\n- Facilitate annual top-risk workshops with 12 senior leaders, refreshing the risk register and owner action plans"
+          "description": "- Built and run the ERM framework for a $9B property and casualty insurer, leading 3 risk analysts\n- Defined 22 risk appetite metrics reported quarterly to the board risk committee\n- Led the annual ORSA report and catastrophe scenario stress tests reviewed by state regulators without comment\n- Ran risk assessments on 3 new product launches, adding controls that kept loss ratios within plan"
         },
         {
           "company": "Nutmeg Regional Bank",
@@ -739,7 +950,7 @@
           "startDate": "2017-04",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Ran risk and control self-assessments across 14 business units\n- Built a loss event database that captured $2.4M in operational losses for trend analysis\n- Reported operational risk metrics quarterly to the bank's risk committee"
+          "description": "- Ran risk and control self-assessments across 14 business units\n- Built a loss event database that captured $2.4M in operational losses for trend analysis"
         },
         {
           "company": "Brandywine Mutual",
@@ -748,7 +959,7 @@
           "startDate": "2015-06",
           "endDate": "2017-03",
           "isCurrent": false,
-          "description": "- Led audits of claims, underwriting and reinsurance processes\n- Reported findings to the audit committee with management action plans"
+          "description": "- Led audits of claims, underwriting and reinsurance processes"
         }
       ],
       "education": [
@@ -771,7 +982,24 @@
         "Operational Risk: RCSA, key risk indicators, loss event analysis, control design",
         "Tools: Archer, Excel, Power BI",
         "Certifications: FRM, CIA"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.97,
+        "minimalist": 0.91,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "symmetry": 0.95,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.89,
+        "cast": 0.96
+      }
     },
     "Credit Analyst": {
       "summary": "Commercial Credit Analyst with 3 years of experience underwriting middle-market and commercial real estate loans for a regional bank. Underwrote 70 credits totaling $410M in 2025 with no early payment defaults. Brings detailed cash flow analysis, clear credit memos and a solid understanding of risk ratings and covenants.",
@@ -809,7 +1037,19 @@
         "Lending: C&I and CRE underwriting, covenant monitoring, loan structuring",
         "Tools: Moody's CreditLens, Excel, nCino, CoStar",
         "Training: RMA credit training, Omega Commercial Lending program"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Treasury Analyst": {
       "summary": "Treasury Analyst with 4 years of experience in cash management, forecasting and bank relationships for multinational companies. Manages daily liquidity of about $350M across 60 bank accounts in 8 countries and built a 13-week cash forecast accurate within 4%. Brings TMS expertise, disciplined controls and strong Excel modeling.",
@@ -847,7 +1087,18 @@
         "Systems: Kyriba, SAP, J.P. Morgan Access, Bloomberg, Excel",
         "Controls: payment approvals, bank fee analysis, signatory management",
         "Certifications: Certified Treasury Professional (CTP)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.92
+      }
     },
     "Finance Manager": {
       "summary": "Finance Manager with 9 years of experience leading budgeting, reporting and analysis for healthcare and services businesses. Manages a 4-person team and the $380M operating budget for a regional health system's physician group. Brings strong financial planning, business partnership with operators and cost initiatives that stick.",
@@ -859,7 +1110,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 4 analysts managing the $380M operating budget for a 600-provider physician group\n- Identified $7.8M in cost savings through supply standardization and locum tenens reduction\n- Built provider productivity dashboards in Tableau, tracking wRVUs and compensation for 600 providers\n- Deliver the monthly close review and forecast to the CFO within 7 business days\n- Present monthly results to service line leaders and coach them on budget ownership and staffing decisions"
+          "description": "- Lead a team of 4 analysts managing the $380M operating budget for a 600-provider physician group\n- Identified $7.8M in cost savings through supply standardization and locum tenens reduction\n- Built provider productivity dashboards in Tableau, tracking wRVUs and compensation for 600 providers\n- Deliver the monthly close review and forecast to the CFO within 7 business days"
         },
         {
           "company": "Capital Region Home Care",
@@ -868,7 +1119,7 @@
           "startDate": "2018-04",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Built the annual budget and Medicaid rate models for $95M in revenue\n- Reduced overtime cost 14% with weekly labor productivity reporting\n- Prepared Medicare cost report schedules for the annual filing"
+          "description": "- Built the annual budget and Medicaid rate models for $95M in revenue\n- Reduced overtime cost 14% with weekly labor productivity reporting"
         },
         {
           "company": "Empire State Medical Supply",
@@ -877,7 +1128,7 @@
           "startDate": "2016-06",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Prepared monthly P&L and margin analysis for 4 regional sales territories\n- Supported annual budgeting and inventory reserve analysis"
+          "description": "- Prepared monthly P&L and margin analysis for 4 regional sales territories"
         }
       ],
       "education": [
@@ -894,7 +1145,20 @@
         "Healthcare Finance: wRVU productivity, provider compensation, payer mix, Medicaid rates",
         "Tools: Strata, Tableau, Epic reporting, Excel",
         "Certifications: HFMA Certified Healthcare Financial Professional (CHFP)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Finance Director": {
       "summary": "Finance Director with 13 years of experience in FP&A, accounting and commercial finance at consumer and e-commerce companies with $300M–$1B in revenue. Leads a 12-person finance team and improved operating margin by 4 points through pricing and logistics cost programs. Brings strategic planning, board-level reporting and hands-on leadership through growth.",
@@ -906,7 +1170,7 @@
           "startDate": "2021-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 12-person FP&A and accounting team for a $640M omnichannel outdoor brand, reporting to the CFO\n- Improved operating margin from 7% to 11% through price architecture, freight renegotiation and SKU rationalization\n- Own the annual operating plan and 3-year strategic model presented to the board and PE sponsor\n- Led refinancing of a $250M credit facility, cutting interest cost 85 bps\n- Coach 3 finance managers through the annual planning cycle, cutting budget build time from 12 to 8 weeks"
+          "description": "- Lead a 12-person FP&A and accounting team for a $640M omnichannel outdoor brand, reporting to the CFO\n- Improved operating margin from 7% to 11% through price architecture, freight renegotiation and SKU rationalization\n- Own the annual operating plan and 3-year strategic model presented to the board and PE sponsor"
         },
         {
           "company": "Sundance Home Goods",
@@ -915,7 +1179,7 @@
           "startDate": "2017-01",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Managed planning for a $320M e-commerce business through 3x growth\n- Built a unit economics model by channel that shifted $12M in marketing spend to higher-margin channels\n- Led monthly results reviews with merchandising and marketing leaders"
+          "description": "- Managed planning for a $320M e-commerce business through 3x growth\n- Built a unit economics model by channel that shifted $12M in marketing spend to higher-margin channels"
         },
         {
           "company": "Kessler & Moore LLP",
@@ -924,7 +1188,7 @@
           "startDate": "2013-09",
           "endDate": "2016-12",
           "isCurrent": false,
-          "description": "- Led audits of retail and consumer products clients with revenue up to $800M\n- Earned CPA license and supervised teams of 3–5"
+          "description": "- Led audits of retail and consumer products clients with revenue up to $800M"
         }
       ],
       "education": [
@@ -945,10 +1209,23 @@
       "skills": [
         "Finance Leadership: strategic planning, annual operating plan, board reporting, team development",
         "Commercial Finance: pricing, unit economics, channel profitability, inventory planning",
-        "Capital: debt refinancing, lender relationships, PE sponsor reporting",
-        "Systems: NetSuite, Anaplan, Tableau, Excel",
-        "Certifications: CPA (Colorado, inactive)"
-      ]
+        "Capital: debt refinancing, lender relationships, PE sponsor reporting"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.9,
+        "cast": 0.99
+      }
     },
     "Finance Business Partner": {
       "summary": "Finance Business Partner with 7 years of experience embedding with sales, marketing and operations leaders at B2B technology companies. Partners with a CRO on a $310M revenue plan and redirected $9M of spend into higher-return programs. Brings commercial judgment, forecasting rigor and the ability to translate numbers into decisions.",
@@ -960,7 +1237,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Partner with the CRO and CMO on a $310M revenue plan and $95M sales and marketing budget\n- Redirected $9M from low-yield events to partner programs, raising pipeline per dollar 34%\n- Built a quota capacity model for 180 reps that cut forecast-to-actual bookings variance to 3%\n- Lead monthly business reviews with 6 sales vice presidents on pipeline, productivity and spend\n- Evaluate 20 vendor and headcount requests a quarter with ROI cases, approving those that clear payback hurdles"
+          "description": "- Partner with the CRO and CMO on a $310M revenue plan and $95M sales and marketing budget\n- Redirected $9M from low-yield events to partner programs, raising pipeline per dollar 34%\n- Built a quota capacity model for 180 reps that cut forecast-to-actual bookings variance to 3%\n- Lead monthly business reviews with 6 sales vice presidents on pipeline, productivity and spend"
         },
         {
           "company": "Clearline Logistics Software",
@@ -978,7 +1255,7 @@
           "startDate": "2018-01",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Prepared plant cost reports and capital expenditure tracking\n- Supported annual budget for 2 manufacturing plants"
+          "description": "- Prepared plant cost reports and capital expenditure tracking"
         }
       ],
       "education": [
@@ -995,7 +1272,20 @@
         "Planning: quota capacity models, bookings forecasting, headcount planning, ROI analysis",
         "Tools: Anaplan, Salesforce, NetSuite, Tableau, Excel",
         "Certifications: CMA"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "CFO": {
       "summary": "Chief Financial Officer with 20 years of finance leadership in SaaS and healthcare technology, including 7 years as CFO. Led a company from $60M to $260M ARR, raised $310M across equity and debt and guided a successful sale to a strategic acquirer. Brings capital strategy, scalable finance operations and trusted partnership with CEOs and boards.",
@@ -1007,7 +1297,7 @@
           "startDate": "2019-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead finance, accounting, legal and IT teams of 45 for a healthcare SaaS company with $260M ARR\n- Grew ARR from $60M to $260M while improving free cash flow margin from -18% to 12%\n- Raised $310M across a growth equity round and a term loan on terms below initial term sheets\n- Built SOX-ready controls and public-company reporting, completing 2 clean audits under PCAOB standards\n- Manage board and investor relations for a 7-member board, including quarterly reporting and annual plans"
+          "description": "- Lead finance, accounting, legal and IT teams of 45 for a healthcare SaaS company with $260M ARR\n- Grew ARR from $60M to $260M while improving free cash flow margin from -18% to 12%\n- Raised $310M across a growth equity round and a term loan on terms below initial term sheets\n- Built SOX-ready controls and public-company reporting, completing 2 clean audits under PCAOB standards"
         },
         {
           "company": "Volunteer Health Systems IT",
@@ -1016,7 +1306,7 @@
           "startDate": "2013-02",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Led FP&A, accounting and revenue operations for a $140M revenue software company\n- Supported the 2018 sale to a strategic buyer at 6.2x revenue, running diligence and the data room\n- Built a 5-person FP&A team and introduced monthly business reviews with each department head"
+          "description": "- Led FP&A, accounting and revenue operations for a $140M revenue software company\n- Supported the 2018 sale to a strategic buyer at 6.2x revenue, running diligence and the data room"
         },
         {
           "company": "Brentwood Partners Advisory",
@@ -1025,7 +1315,7 @@
           "startDate": "2006-08",
           "endDate": "2013-01",
           "isCurrent": false,
-          "description": "- Led quality-of-earnings diligence on 40+ middle-market transactions\n- Managed teams of 4–6 analysts"
+          "description": "- Led quality-of-earnings diligence on 40+ middle-market transactions"
         }
       ],
       "education": [
@@ -1046,9 +1336,26 @@
       "skills": [
         "Executive Finance: capital strategy, fundraising, M&A, board and investor relations",
         "Operations: SOX readiness, PCAOB audits, FP&A, revenue operations, treasury",
-        "SaaS Metrics: ARR, net revenue retention, CAC payback, Rule of 40",
-        "Certifications: CPA (Georgia)"
-      ]
+        "SaaS Metrics: ARR, net revenue retention, CAC payback, Rule of 40"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.95,
+        "minimalist": 0.9,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.92,
+        "cast": 0.95
+      }
     },
     "Legal Counsel": {
       "summary": "Legal Counsel with 6 years of experience advising technology companies on commercial contracts, privacy and product matters, following a start in law firm practice. Negotiates about 300 customer, vendor and partner agreements a year and cut median contract cycle time from 21 to 9 days. Brings practical risk calls, clear drafting and fast turnaround for business teams.",
@@ -1060,7 +1367,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Negotiate about 300 enterprise SaaS, vendor and partner agreements a year as one of 3 attorneys\n- Cut median contract cycle time from 21 to 9 days with a fallback playbook and self-serve NDA templates in Ironclad\n- Advise on FERPA, COPPA and state student privacy laws for products used by 4M students\n- Train sales and procurement teams quarterly on contract risk and approval thresholds\n- Support the marketing team on promotional claims, sweepstakes rules and school district procurement requirements"
+          "description": "- Negotiate about 300 enterprise SaaS, vendor and partner agreements a year as one of 3 attorneys\n- Cut median contract cycle time from 21 to 9 days with a fallback playbook and self-serve NDA templates in Ironclad\n- Advise on FERPA, COPPA and state student privacy laws for products used by 4M students\n- Train sales and procurement teams quarterly on contract risk and approval thresholds"
         },
         {
           "company": "Holt, Varga & Lin LLP",
@@ -1069,7 +1376,7 @@
           "startDate": "2020-09",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Drafted licensing, services and data processing agreements for 20+ technology clients\n- Supported diligence on 6 venture financings and 2 acquisitions\n- Researched state privacy and consumer protection laws for client advisories"
+          "description": "- Drafted licensing, services and data processing agreements for 20+ technology clients\n- Supported diligence on 6 venture financings and 2 acquisitions"
         }
       ],
       "education": [
@@ -1090,9 +1397,17 @@
       "skills": [
         "Legal Practice: commercial contracts, SaaS agreements, data processing addenda, product counseling",
         "Privacy: FERPA, COPPA, CCPA/CPRA, state student privacy laws",
-        "Tools: Ironclad, Westlaw, DocuSign CLM",
-        "Bar Admission: State Bar of Texas; Certifications: CIPP/US"
-      ]
+        "Tools: Ironclad, Westlaw, DocuSign CLM"
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "iron": 0.98,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.97
+      }
     },
     "Corporate Counsel": {
       "summary": "Corporate Counsel with 8 years of experience in corporate governance, M&A and securities matters, including 4 years in-house at a public company. Managed legal work on 5 acquisitions totaling $480M and supports SEC reporting for a $2B market cap issuer. Brings precise governance practice, deal execution and efficient management of outside counsel.",
@@ -1104,7 +1419,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead legal work on 5 acquisitions totaling $480M, from LOI through closing and integration\n- Draft and review 10-K, 10-Q, proxy and 8-K disclosures for a NYSE-listed company with a $2B market cap\n- Manage board and committee materials, minutes and governance for 12 subsidiaries\n- Reduced outside counsel spend 22% by bringing routine entity and financing work in-house\n- Negotiate credit agreement amendments and lender consents with outside counsel, supporting a $750M revolving facility"
+          "description": "- Lead legal work on 5 acquisitions totaling $480M, from LOI through closing and integration\n- Draft and review 10-K, 10-Q, proxy and 8-K disclosures for a NYSE-listed company with a $2B market cap\n- Manage board and committee materials, minutes and governance for 12 subsidiaries"
         },
         {
           "company": "Larchmont Pierce LLP",
@@ -1113,7 +1428,7 @@
           "startDate": "2018-09",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Drafted purchase agreements and disclosure schedules for 15 private and public deals up to $1.2B\n- Coordinated diligence teams of 6–10 lawyers across specialties\n- Drafted board resolutions and closing checklists for each transaction"
+          "description": "- Drafted purchase agreements and disclosure schedules for 15 private and public deals up to $1.2B\n- Coordinated diligence teams of 6–10 lawyers across specialties"
         }
       ],
       "education": [
@@ -1122,21 +1437,18 @@
           "degree": "J.D.",
           "startDate": "2015-08",
           "endDate": "2018-05"
-        },
-        {
-          "school": "University of Colorado Boulder",
-          "degree": "B.S. in Business Administration",
-          "startDate": "2011-08",
-          "endDate": "2015-05"
         }
       ],
       "projects": [],
       "skills": [
         "Corporate Law: M&A, corporate governance, securities disclosure, entity management",
         "Regulatory: SEC reporting, Section 16, insider trading policies, NYSE listing rules",
-        "Tools: Diligent Boards, Workiva, Westlaw, Intapp",
-        "Bar Admissions: Colorado, Illinois"
-      ]
+        "Tools: Diligent Boards, Workiva, Westlaw, Intapp"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "bronx": 0.87
+      }
     },
     "Contracts Manager": {
       "summary": "Contracts Manager with 9 years of experience negotiating and managing government and commercial contracts for engineering and defense services firms. Oversees a portfolio of 85 active contracts worth $640M and led the transition to a CLM that cut approval time 45%. Brings FAR/DFARS expertise, disciplined post-award administration and steady negotiation.",
@@ -1148,7 +1460,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 85 active federal prime contracts and subcontracts worth $640M with a team of 3 contract administrators\n- Negotiated 14 contract awards and modifications in 2025, including a $95M IDIQ task order\n- Implemented Agiloft CLM with approval workflows, cutting internal approval time 45%\n- Lead FAR and DFARS compliance reviews, closing a DCMA purchasing system review with no significant deficiencies\n- Train 25 program managers each year on contract scope, change requests and invoicing requirements"
+          "description": "- Manage 85 active federal prime contracts and subcontracts worth $640M with a team of 3 contract administrators\n- Negotiated 14 contract awards and modifications in 2025, including a $95M IDIQ task order\n- Implemented Agiloft CLM with approval workflows, cutting internal approval time 45%\n- Lead FAR and DFARS compliance reviews, closing a DCMA purchasing system review with no significant deficiencies"
         },
         {
           "company": "Potomac Engineering Group",
@@ -1157,7 +1469,7 @@
           "startDate": "2017-08",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Administered 40 cost-plus and fixed-price contracts with federal and state agencies\n- Drafted 120 subcontract agreements a year with flow-down clauses\n- Prepared contract briefs summarizing key clauses and deliverables for program teams"
+          "description": "- Administered 40 cost-plus and fixed-price contracts with federal and state agencies\n- Drafted 120 subcontract agreements a year with flow-down clauses"
         },
         {
           "company": "Old Dominion Construction",
@@ -1166,7 +1478,7 @@
           "startDate": "2016-01",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Prepared subcontracts and change orders for 30 commercial building projects\n- Tracked insurance certificates and bonds for 150 subcontractors"
+          "description": "- Prepared subcontracts and change orders for 30 commercial building projects"
         }
       ],
       "education": [
@@ -1181,9 +1493,19 @@
       "skills": [
         "Contracting: federal contracts, subcontracts, negotiation, modifications, closeout",
         "Regulations: FAR, DFARS, CAS, Truth in Negotiations Act, ITAR flow-downs",
-        "Systems: Agiloft, Deltek Costpoint, SAM.gov, Excel",
-        "Certifications: Certified Federal Contracts Manager (CFCM), NCMA member"
-      ]
+        "Systems: Agiloft, Deltek Costpoint, SAM.gov, Excel"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.9
+      }
     },
     "Contract Analyst": {
       "summary": "Contract Analyst with 3 years of experience reviewing, tracking and abstracting commercial agreements for healthcare and technology organizations. Reviews about 70 contracts a month against playbooks and abstracted 2,400 legacy agreements into a new CLM. Brings careful reading, organized repositories and timely renewal tracking.",
@@ -1221,7 +1543,21 @@
         "Healthcare: Stark Law and Anti-Kickback basics, BAA requirements, fair market value documentation",
         "Systems: Icertis, DocuSign, Adobe Acrobat, Excel",
         "Certifications: CCCM (Certified Commercial Contracts Manager) in progress"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     },
     "Legal Operations Manager": {
       "summary": "Legal Operations Manager with 8 years of experience in law firm administration and in-house legal operations at technology companies. Runs operations for a 22-person legal department and cut outside counsel spend 28% through panel consolidation and e-billing guidelines. Brings legal tech implementation, budget management and metrics that make the legal team faster.",
@@ -1233,7 +1569,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run operations for a 22-person legal department with an $11M budget, reporting to the General Counsel\n- Cut outside counsel spend 28% by consolidating 40 firms to a 9-firm panel with alternative fee arrangements\n- Implemented Ironclad CLM and Brightflag e-billing, lowering contract turnaround from 15 to 6 days\n- Built a legal intake portal in Jira handling 250 requests a month with SLA dashboards\n- Report quarterly legal spend, matter volume and cycle-time metrics to the General Counsel and CFO"
+          "description": "- Run operations for a 22-person legal department with an $11M budget, reporting to the General Counsel\n- Cut outside counsel spend 28% by consolidating 40 firms to a 9-firm panel with alternative fee arrangements\n- Implemented Ironclad CLM and Brightflag e-billing, lowering contract turnaround from 15 to 6 days\n- Built a legal intake portal in Jira handling 250 requests a month with SLA dashboards"
         },
         {
           "company": "Puget Sound Legal Partners",
@@ -1242,7 +1578,7 @@
           "startDate": "2018-07",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Managed e-discovery and litigation support vendors for 60 attorneys\n- Rolled out iManage document management, migrating 1.4M documents with no data loss\n- Negotiated rates with 3 e-discovery vendors, cutting hosting costs 30%"
+          "description": "- Managed e-discovery and litigation support vendors for 60 attorneys\n- Rolled out iManage document management, migrating 1.4M documents with no data loss"
         },
         {
           "company": "Rainier Insurance Company",
@@ -1251,7 +1587,7 @@
           "startDate": "2016-06",
           "endDate": "2018-06",
           "isCurrent": false,
-          "description": "- Tracked litigation matters and outside counsel invoices for 8 attorneys\n- Built a matter budget tracker in Excel adopted by the department"
+          "description": "- Tracked litigation matters and outside counsel invoices for 8 attorneys"
         }
       ],
       "education": [
@@ -1266,9 +1602,20 @@
       "skills": [
         "Legal Operations: budget management, outside counsel management, intake design, KPI reporting",
         "Legal Technology: Ironclad, Brightflag, iManage, Relativity, Jira Service Management",
-        "Process: vendor selection, change management, workflow automation",
-        "Memberships: CLOC (Corporate Legal Operations Consortium)"
-      ]
+        "Process: vendor selection, change management, workflow automation"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.99,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.9
+      }
     },
     "Privacy Counsel": {
       "summary": "Privacy Counsel with 7 years of experience advising consumer technology and adtech companies on US and EU privacy law. Leads privacy review for 60 product launches a year and directed the company's CPRA and state privacy law compliance program. Brings product-minded counsel, data mapping fluency and pragmatic risk positions engineers can implement.",
@@ -1280,7 +1627,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead privacy-by-design reviews for about 60 product launches a year across apps used by 30M monthly users\n- Directed compliance with CPRA and 12 state privacy laws, including opt-out signals and sensitive data consents\n- Negotiated data processing terms with 150 vendors and ad partners, including EU Standard Contractual Clauses\n- Managed responses to 3 state attorney general inquiries closed without enforcement action\n- Build privacy training for 400 engineers and product managers, with 96% completion in the first quarter"
+          "description": "- Lead privacy-by-design reviews for about 60 product launches a year across apps used by 30M monthly users\n- Directed compliance with CPRA and 12 state privacy laws, including opt-out signals and sensitive data consents\n- Negotiated data processing terms with 150 vendors and ad partners, including EU Standard Contractual Clauses"
         },
         {
           "company": "Ellison Grant LLP",
@@ -1289,7 +1636,7 @@
           "startDate": "2019-09",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Advised 25 clients on GDPR, CCPA and COPPA compliance programs\n- Supported breach response for 9 incidents, including multistate notification analysis\n- Drafted privacy policies and consent flows for 12 consumer apps"
+          "description": "- Advised 25 clients on GDPR, CCPA and COPPA compliance programs\n- Supported breach response for 9 incidents, including multistate notification analysis"
         }
       ],
       "education": [
@@ -1298,21 +1645,22 @@
           "degree": "J.D., Law and Technology Certificate",
           "startDate": "2016-08",
           "endDate": "2019-05"
-        },
-        {
-          "school": "University of California, Los Angeles",
-          "degree": "B.A. in Communication Studies",
-          "startDate": "2012-09",
-          "endDate": "2016-06"
         }
       ],
       "projects": [],
       "skills": [
-        "Privacy Law: CPRA, state comprehensive privacy laws, GDPR, COPPA, CAN-SPAM, TCPA",
+        "Privacy Law: CPRA, state comprehensive privacy laws, GDPR, COPPA, CAN-SPAM",
         "Program Work: privacy impact assessments, data mapping, consent management, vendor DPAs",
-        "Incident Response: breach analysis, regulator inquiries, notification requirements",
-        "Credentials: California Bar; CIPP/US, CIPP/E"
-      ]
+        "Incident Response: breach analysis, regulator inquiries, notification requirements"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.86,
+        "pop": 0.96
+      }
     },
     "Data Protection Officer": {
       "summary": "Data Protection Officer with 10 years of experience in privacy, information security and compliance for healthcare and life sciences organizations operating in the US and EU. Serves as DPO for a 6,000-employee clinical research company across 14 countries, with no regulator sanctions to date. Brings GDPR and HIPAA depth, independent oversight and clear guidance for operational teams.",
@@ -1324,7 +1672,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Serve as designated DPO under GDPR Article 37 for a 6,000-employee CRO operating in 14 countries\n- Oversee 300 records of processing and approve DPIAs for every new clinical trial technology\n- Coordinated response to 2 personal data breaches, notifying lead supervisory authorities within 72 hours\n- Lead a 4-person privacy team and report annually to the board audit committee\n- Oversee about 900 data subject requests a year, keeping response times within GDPR's one-month deadline"
+          "description": "- Serve as designated DPO under GDPR Article 37 for a 6,000-employee CRO operating in 14 countries\n- Oversee 300 records of processing and approve DPIAs for every new clinical trial technology\n- Coordinated response to 2 personal data breaches, notifying lead supervisory authorities within 72 hours\n- Lead a 4-person privacy team and report annually to the board audit committee"
         },
         {
           "company": "Triangle Health System",
@@ -1333,7 +1681,7 @@
           "startDate": "2017-02",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Managed HIPAA privacy compliance for 3 hospitals and 40 clinics\n- Reduced inappropriate EHR access incidents 55% through Epic access monitoring and targeted training\n- Conducted annual HIPAA privacy risk assessments with remediation plans"
+          "description": "- Managed HIPAA privacy compliance for 3 hospitals and 40 clinics\n- Reduced inappropriate EHR access incidents 55% through Epic access monitoring and targeted training"
         },
         {
           "company": "Carolina Biologics",
@@ -1342,7 +1690,7 @@
           "startDate": "2015-06",
           "endDate": "2017-01",
           "isCurrent": false,
-          "description": "- Supported 21 CFR Part 11 and data integrity compliance for lab systems\n- Maintained compliance training records for 800 employees"
+          "description": "- Supported 21 CFR Part 11 and data integrity compliance for lab systems"
         }
       ],
       "education": [
@@ -1361,11 +1709,27 @@
       ],
       "projects": [],
       "skills": [
-        "Data Protection: GDPR, UK GDPR, HIPAA, records of processing, DPIAs, data subject requests",
+        "Data Protection: GDPR, UK GDPR, HIPAA, records of processing, DPIAs",
         "Clinical Research: ICH GCP, 21 CFR Part 11, informed consent data terms, cross-border transfers",
-        "Tools: OneTrust, Epic access auditing, ServiceNow GRC",
-        "Certifications: CIPP/E, CIPM, CHPC"
-      ]
+        "Tools: OneTrust, Epic access auditing, ServiceNow GRC"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.91,
+        "symmetry": 0.97,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "Regulatory Affairs Specialist": {
       "summary": "Regulatory Affairs Specialist with 5 years of experience preparing FDA submissions and maintaining compliance for Class II medical devices. Authored or co-authored 6 510(k) submissions cleared with an average of one additional information request. Brings precise technical writing, strong knowledge of FDA and EU MDR requirements and close work with engineering and quality teams.",
@@ -1377,7 +1741,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Authored 4 510(k) submissions for Class II infusion and monitoring devices, all cleared within 140 review days\n- Compiled EU MDR technical documentation for 3 product families certified by the notified body on first review\n- Assess about 40 design and labeling changes a year for regulatory impact and letter-to-file decisions\n- Maintain FDA registration, device listings and UDI data in GUDID for 220 SKUs\n- Review advertising and promotional materials for 3 product lines, approving 120 pieces a year against cleared indications"
+          "description": "- Authored 4 510(k) submissions for Class II infusion and monitoring devices, all cleared within 140 review days\n- Compiled EU MDR technical documentation for 3 product families certified by the notified body on first review\n- Assess about 40 design and labeling changes a year for regulatory impact and letter-to-file decisions"
         },
         {
           "company": "Pacific Orthopedic Devices",
@@ -1386,7 +1750,7 @@
           "startDate": "2021-01",
           "endDate": "2022-07",
           "isCurrent": false,
-          "description": "- Co-authored 2 510(k) submissions for spinal implant systems\n- Filed 15 Medical Device Reports within FDA timelines\n- Supported a Notified Body audit with technical file documentation"
+          "description": "- Co-authored 2 510(k) submissions for spinal implant systems\n- Filed 15 Medical Device Reports within FDA timelines"
         }
       ],
       "education": [
@@ -1395,21 +1759,22 @@
           "degree": "M.S. in Regulatory Science",
           "startDate": "2019-08",
           "endDate": "2020-12"
-        },
-        {
-          "school": "University of California, San Diego",
-          "degree": "B.S. in Bioengineering",
-          "startDate": "2015-09",
-          "endDate": "2019-06"
         }
       ],
       "projects": [],
       "skills": [
         "Regulatory Submissions: 510(k), pre-submissions, EU MDR technical files, change assessments",
         "Standards: 21 CFR 820, ISO 13485, ISO 14971, IEC 60601, UDI requirements",
-        "Tools: eSTAR, GUDID, Veeva Vault RIM, Greenlight Guru",
-        "Certifications: RAC-Devices"
-      ]
+        "Tools: eSTAR, GUDID, Veeva Vault RIM, Greenlight Guru"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.95,
+        "ginto": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.86,
+        "pop": 0.97
+      }
     },
     "Corporate Secretary": {
       "summary": "Corporate Secretary with 12 years of governance experience at public companies and a large law firm. Manages board and committee operations for a Fortune 1000 company with 11 directors and 140 subsidiaries. Brings meticulous governance practice, SEC and NYSE compliance, and the discretion and judgment boards depend on.",
@@ -1421,7 +1786,7 @@
           "startDate": "2020-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run board and committee operations for an NYSE-listed company with 11 directors and 22 meetings a year\n- Manage the entity portfolio of 140 subsidiaries in 18 countries, dissolving 31 dormant entities to cut admin costs\n- Lead proxy statement and annual meeting preparation, with say-on-pay support above 92% for three years\n- Administer Section 16 filings and the insider trading policy for 60 officers and directors with zero late filings\n- Coordinate annual board and committee self-evaluations and director onboarding for 3 new directors since 2023"
+          "description": "- Run board and committee operations for an NYSE-listed company with 11 directors and 22 meetings a year\n- Manage the entity portfolio of 140 subsidiaries in 18 countries, dissolving 31 dormant entities to cut admin costs\n- Lead proxy statement and annual meeting preparation, with say-on-pay support above 92% for three years"
         },
         {
           "company": "Erie Shore Holdings",
@@ -1430,7 +1795,7 @@
           "startDate": "2016-03",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Drafted board minutes and resolutions for 3 board committees\n- Moved board materials to Diligent, cutting distribution time from 3 days to same day\n- Managed the D&O questionnaire process for 12 directors and officers"
+          "description": "- Drafted board minutes and resolutions for 3 board committees\n- Moved board materials to Diligent, cutting distribution time from 3 days to same day"
         },
         {
           "company": "Harlan Whitcomb LLP",
@@ -1439,7 +1804,7 @@
           "startDate": "2014-09",
           "endDate": "2016-02",
           "isCurrent": false,
-          "description": "- Supported securities offerings and governance work for public company clients\n- Prepared Forms 3, 4 and 5 and proxy sections"
+          "description": "- Supported securities offerings and governance work for public company clients"
         }
       ],
       "education": [
@@ -1460,9 +1825,25 @@
       "skills": [
         "Governance: board and committee management, minutes, resolutions, annual meetings, D&O questionnaires",
         "Securities Compliance: proxy statements, Section 16, insider trading policy, NYSE listing standards",
-        "Entity Management: subsidiary governance, dissolutions, foreign registrations",
-        "Tools: Diligent Boards, Diligent Entities, Workiva; Bar: Ohio"
-      ]
+        "Entity Management: subsidiary governance, dissolutions, foreign registrations"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.97,
+        "tech": 0.99,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.93,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "symmetry": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.88
+      }
     },
     "Legal Assistant": {
       "summary": "Legal Assistant with 4 years of experience supporting litigation and real estate attorneys at mid-size law firms. Manages calendars, filings and correspondence for 4 attorneys and has met every court deadline since 2022. Brings fast, accurate document preparation, e-filing expertise and calm organization under pressure.",
@@ -1500,7 +1881,20 @@
         "Systems: PACER, PeachCourt, Clio, NetDocuments, Microsoft Word (advanced), Adobe Acrobat Pro",
         "Billing: time entry, pre-bill review",
         "Typing: 80 WPM"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "silk": 0.97,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Litigation Support Specialist": {
       "summary": "Litigation Support Specialist with 7 years of experience managing e-discovery, review databases and trial technology for complex commercial litigation. Processed and hosted over 25 TB of data across 60 matters and cut review volumes up to 62% with analytics. Brings Relativity expertise, defensible workflows and steady courtroom tech support.",
@@ -1538,7 +1932,18 @@
         "Platforms: RelativityOne, Nuix, Everlaw, Cellebrite Reader",
         "Trial Technology: TrialDirector, OnCue, courtroom setup",
         "Certifications: Relativity Certified Administrator, ACEDS CEDS"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.86
+      }
     },
     "Intellectual Property (IP) Counsel": {
       "summary": "Intellectual Property Counsel and registered patent attorney with 9 years of experience in patent prosecution, portfolio strategy and licensing for semiconductor and hardware companies. Manages a 1,100-asset global patent portfolio and generated $14M in licensing revenue. Brings technical depth in electrical engineering and business-focused IP strategy.",
@@ -1550,7 +1955,7 @@
           "startDate": "2021-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a 1,100-asset global patent portfolio and a $3.2M annual prosecution budget across 6 outside firms\n- Negotiated 4 patent licenses generating $14M in revenue and cross-licenses with 2 competitors\n- Run monthly invention harvesting with 80 engineers, raising disclosures from 45 to 110 a year\n- Pruned 160 low-value patents, saving $900k in annuity fees over 5 years\n- Manage trademark filings and enforcement for 3 brands in 20 countries with outside counsel"
+          "description": "- Manage a 1,100-asset global patent portfolio and a $3.2M annual prosecution budget across 6 outside firms\n- Negotiated 4 patent licenses generating $14M in revenue and cross-licenses with 2 competitors\n- Run monthly invention harvesting with 80 engineers, raising disclosures from 45 to 110 a year\n- Pruned 160 low-value patents, saving $900k in annuity fees over 5 years"
         },
         {
           "company": "Fischer Nakamura LLP",
@@ -1559,7 +1964,7 @@
           "startDate": "2017-09",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Drafted and prosecuted 150+ US and PCT applications in semiconductors and wireless\n- Prepared freedom-to-operate and invalidity analyses for 12 client products\n- Advised 2 startup clients on IP assignment and licensing terms in financings"
+          "description": "- Drafted and prosecuted 150+ US and PCT applications in semiconductors and wireless\n- Prepared freedom-to-operate and invalidity analyses for 12 client products"
         },
         {
           "company": "Fischer Nakamura LLP",
@@ -1568,7 +1973,7 @@
           "startDate": "2014-07",
           "endDate": "2017-08",
           "isCurrent": false,
-          "description": "- Drafted patent applications under attorney supervision while attending law school in the evenings\n- Passed the USPTO registration exam in 2015"
+          "description": "- Drafted patent applications under attorney supervision while attending law school in the evenings"
         }
       ],
       "education": [
@@ -1589,9 +1994,26 @@
       "skills": [
         "Patents: prosecution, portfolio strategy, freedom-to-operate, invalidity, PTAB proceedings",
         "Transactions: licensing, cross-licenses, IP assignments, open source compliance",
-        "Technical: semiconductors, wireless communications, circuit design",
-        "Admissions: California Bar, USPTO Registered Patent Attorney"
-      ]
+        "Technical: semiconductors, wireless communications, circuit design"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.92,
+        "sidebar": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "path": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.89,
+        "cast": 0.95
+      }
     },
     "Employment Counsel": {
       "summary": "Employment Counsel with 8 years of experience advising employers on workplace law, investigations and litigation, including 4 years in-house at a multistate retailer. Manages a docket of about 70 agency charges and lawsuits a year, holding settlement spend 35% below the prior three-year average. Brings practical advice for HR teams and sound litigation strategy.",
@@ -1612,7 +2034,7 @@
           "startDate": "2018-09",
           "endDate": "2022-03",
           "isCurrent": false,
-          "description": "- Defended employers in discrimination, retaliation and wage class actions in state and federal court\n- Conducted 25 workplace investigations and drafted findings reports\n- Second-chaired 2 jury trials and argued 15 dispositive motions"
+          "description": "- Defended employers in discrimination, retaliation and wage class actions in state and federal court\n- Conducted 25 workplace investigations and drafted findings reports"
         }
       ],
       "education": [
@@ -1631,11 +2053,22 @@
       ],
       "projects": [],
       "skills": [
-        "Employment Law: Title VII, ADA, FMLA, FLSA, state wage and hour, paid leave and scheduling laws",
+        "Employment Law: Title VII, ADA, FMLA, FLSA, state wage and hour",
         "Litigation: agency charges, class action defense, mediation, outside counsel management",
-        "Advice: investigations, terminations, policies, reductions in force, NLRA",
-        "Bar Admissions: Oregon, Washington"
-      ]
+        "Advice: investigations, terminations, policies, reductions in force, NLRA"
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.97,
+        "ginto": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.98
+      }
     },
     "Paralegal": {
       "summary": "Litigation Paralegal with 6 years of experience in commercial and personal injury litigation at mid-size firms. Manages discovery and trial preparation for 45 active cases and helped prepare 6 cases for trial. Brings strong document management, legal research support and reliable deadline control for busy trial teams.",
@@ -1647,7 +2080,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage discovery, deadlines and filings for 45 active commercial litigation cases for 3 partners\n- Organized document productions of up to 400,000 pages in Relativity with privilege logs\n- Prepared trial notebooks, exhibit lists and witness binders for 6 trials, including a $12M verdict\n- Summarized 80 deposition transcripts a year and drafted initial discovery responses for attorney review\n- Draft subpoenas, notices and routine correspondence and calendar deadlines under Texas Rules of Civil Procedure"
+          "description": "- Manage discovery, deadlines and filings for 45 active commercial litigation cases for 3 partners\n- Organized document productions of up to 400,000 pages in Relativity with privilege logs\n- Prepared trial notebooks, exhibit lists and witness binders for 6 trials, including a $12M verdict\n- Summarized 80 deposition transcripts a year and drafted initial discovery responses for attorney review"
         },
         {
           "company": "Bayou City Injury Lawyers",
@@ -1656,7 +2089,7 @@
           "startDate": "2020-02",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Gathered medical records and bills for 120 personal injury cases a year\n- Drafted demand packages supporting settlements averaging $85k\n- Tracked medical treatment status and liens for each client file"
+          "description": "- Gathered medical records and bills for 120 personal injury cases a year\n- Drafted demand packages supporting settlements averaging $85k"
         }
       ],
       "education": [
@@ -1677,9 +2110,17 @@
       "skills": [
         "Litigation Support: discovery management, privilege logs, deposition summaries, trial preparation",
         "Research: Westlaw, Lexis+, Texas rules of civil procedure",
-        "Systems: Relativity, CaseMap, Clio, eFileTexas, PACER",
-        "Certifications: NALA Certified Paralegal (CP), Texas Board of Legal Specialization Board Certified Paralegal"
-      ]
+        "Systems: Relativity, CaseMap, Clio, eFileTexas, PACER"
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "berlin": 0.94,
+        "iron": 0.99,
+        "ginto": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.99
+      }
     },
     "Accounting Intern": {
       "summary": "Accounting student at Indiana University's Kelley School of Business, graduating in May 2027 and on track for the 150-hour CPA requirement. Completed a summer audit internship testing cash and revenue for 4 clients. Brings coursework in intermediate accounting and auditing, Excel proficiency and a VITA volunteer record of 60 prepared returns.",
@@ -1700,7 +2141,7 @@
           "startDate": "2025-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Prepared 60 federal and Indiana returns for low-income households in TaxSlayer, all passing quality review\n- Claimed $74k in Earned Income and Child Tax Credits for filers\n- Explain credits, refund timing and filing obligations to clients during weekly Saturday clinics"
+          "description": "- Prepared 60 federal and Indiana returns for low-income households in TaxSlayer, all passing quality review\n- Claimed $74k in Earned Income and Child Tax Credits for filers"
         }
       ],
       "education": [
@@ -1711,19 +2152,18 @@
           "endDate": "2027-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Kelley Accounting Case Competition",
-          "link": "",
-          "description": "Team of 4 analyzed a lease classification and revenue recognition case under ASC 842 and ASC 606, placing 2nd of 18 teams"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Accounting: journal entries, reconciliations, US GAAP fundamentals, audit testing",
         "Tools: Excel (pivot tables, XLOOKUP), CaseWare, QuickBooks Online, TaxSlayer",
-        "Coursework: intermediate accounting, auditing, taxation, accounting information systems",
-        "Activities: Beta Alpha Psi member, IRS VITA Advanced certification"
-      ]
+        "Coursework: intermediate accounting, auditing, taxation, accounting information systems"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "pop": 0.98
+      }
     },
     "Staff Accountant": {
       "summary": "Staff Accountant with 2 years of experience in month-end close, reconciliations and accounts payable support for a multi-location restaurant group. Reconciles 45 balance sheet accounts monthly and built an accrual template that cut close time by a day. Brings dependable GAAP fundamentals, NetSuite skills and steady progress toward the CPA.",
@@ -1761,7 +2201,19 @@
         "Systems: NetSuite, Restaurant365, Excel (pivot tables, SUMIFS), Bill.com",
         "Standards: US GAAP, gift card breakage, tip reporting basics",
         "Certifications: CPA candidate (FAR and AUD passed)"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.92
+      }
     },
     "Accounting Manager": {
       "summary": "Accounting Manager and CPA with 9 years of experience in public accounting and corporate accounting for distribution and e-commerce companies. Leads a 5-person team closing books for a $310M business in 5 days. Brings hands-on GAAP expertise, strong reconciliation and controls discipline, and practical coaching of staff accountants.",
@@ -1773,7 +2225,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 5-person team covering GL, AP, AR and fixed assets for a $310M distribution business\n- Shortened the monthly close from 10 to 5 business days using FloQast checklists and reconciliation automation\n- Redesigned inventory reserve methodology, cutting year-end audit adjustments from 7 to 1\n- Implemented Ramp for card spend and AP, eliminating 1,800 manual expense reports a year\n- Coach 2 staff accountants toward CPA licensure, both passing 3 sections within one year"
+          "description": "- Lead a 5-person team covering GL, AP, AR and fixed assets for a $310M distribution business\n- Shortened the monthly close from 10 to 5 business days using FloQast checklists and reconciliation automation\n- Redesigned inventory reserve methodology, cutting year-end audit adjustments from 7 to 1\n- Implemented Ramp for card spend and AP, eliminating 1,800 manual expense reports a year"
         },
         {
           "company": "Prairie Fire Ecommerce",
@@ -1782,7 +2234,7 @@
           "startDate": "2019-05",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Owned revenue, inventory and marketplace fee reconciliations for $90M in online sales\n- Built Shopify-to-NetSuite reconciliation reports that cut unexplained variances by 90%\n- Prepared monthly sales tax filings for 12 states with marketplace facilitator rules"
+          "description": "- Owned revenue, inventory and marketplace fee reconciliations for $90M in online sales\n- Built Shopify-to-NetSuite reconciliation reports that cut unexplained variances by 90%"
         },
         {
           "company": "Mize Calloway CPAs",
@@ -1791,7 +2243,7 @@
           "startDate": "2017-01",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Led fieldwork for 9 audits of distribution and manufacturing clients\n- Supervised 2–3 associates per engagement"
+          "description": "- Led fieldwork for 9 audits of distribution and manufacturing clients"
         }
       ],
       "education": [
@@ -1812,9 +2264,26 @@
       "skills": [
         "Accounting Management: month-end close, GL review, inventory accounting, fixed assets, team leadership",
         "Controls: reconciliation policy, approval matrices, audit coordination",
-        "Systems: NetSuite, FloQast, Ramp, Shopify, Excel",
-        "Certifications: CPA (Missouri)"
-      ]
+        "Systems: NetSuite, FloQast, Ramp, Shopify, Excel"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.98,
+        "lateral": 0.99,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.88,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.91,
+        "cast": 0.97
+      }
     },
     "Audit Associate": {
       "summary": "Audit Associate with 2 years of public accounting experience on financial statement audits of healthcare, nonprofit and manufacturing clients. Served on 11 engagements in the last busy season, testing revenue, payroll and fixed assets. Brings organized workpapers, growing technical knowledge and quick learning of client systems, with 3 of 4 CPA sections passed.",
@@ -1858,7 +2327,24 @@
         "Industries: healthcare, nonprofit (ASC 958), manufacturing",
         "Tools: CaseWare Cloud, IDEA, Excel, Alteryx basics",
         "Certifications: CPA candidate (FAR, AUD, BAR passed)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.97,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.9,
+        "cast": 0.99
+      }
     },
     "Tax Preparer": {
       "summary": "Tax Preparer and IRS Enrolled Agent with 6 seasons of experience preparing individual and small business returns. Prepares about 450 returns each filing season with a 99% e-file acceptance rate on first submission. Brings thorough client interviews, accurate deductions and credits, and clear explanations for clients facing IRS notices.",
@@ -1870,7 +2356,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Prepare about 450 individual, Schedule C and rental property returns each season in Drake Tax\n- Maintain a 99% first-submission e-file acceptance rate and review 150 returns prepared by 2 seasonal staff\n- Resolved 40 IRS and FTB notices a year, abating $62k in penalties for clients in 2025\n- Grew a book of 120 small business clients with year-round quarterly estimate planning\n- Educate clients on recordkeeping and quarterly estimates during year-end planning calls each November"
+          "description": "- Prepare about 450 individual, Schedule C and rental property returns each season in Drake Tax\n- Maintain a 99% first-submission e-file acceptance rate and review 150 returns prepared by 2 seasonal staff\n- Resolved 40 IRS and FTB notices a year, abating $62k in penalties for clients in 2025\n- Grew a book of 120 small business clients with year-round quarterly estimate planning"
         },
         {
           "company": "Valley Tax Service",
@@ -1879,7 +2365,7 @@
           "startDate": "2020-01",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Prepared 300 individual returns per season including EITC due diligence (Form 8867)\n- Scheduled appointments and gathered documents for walk-in clients\n- Completed IRS Annual Filing Season Program continuing education each year"
+          "description": "- Prepared 300 individual returns per season including EITC due diligence (Form 8867)\n- Scheduled appointments and gathered documents for walk-in clients"
         }
       ],
       "education": [
@@ -1894,9 +2380,14 @@
       "skills": [
         "Tax Preparation: Form 1040, Schedules C and E, California 540, estimated taxes, EITC due diligence",
         "Representation: IRS and FTB notices, penalty abatement, payment plans",
-        "Software: Drake Tax, Lacerte, QuickBooks Online, SmartVault",
-        "Credentials: IRS Enrolled Agent, PTIN, CTEC Registered Tax Preparer"
-      ]
+        "Software: Drake Tax, Lacerte, QuickBooks Online, SmartVault"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.96,
+        "quartz": 0.98,
+        "bronx": 0.89
+      }
     },
     "Bank Teller": {
       "summary": "Bank Teller with 3 years of experience in high-traffic retail branches handling cash transactions, deposits and customer service. Processes about 140 transactions a day with balanced drawers in 99% of daily closes. Brings accurate cash handling, fraud awareness and friendly service that converts routine visits into product referrals.",
@@ -1934,7 +2425,20 @@
         "Compliance: BSA/AML awareness, CTR thresholds, OFAC, Reg CC holds, elder fraud red flags",
         "Systems: Jack Henry SilverLake, cash recyclers, Microsoft Office",
         "Customer Service: needs-based referrals, problem resolution, Spanish (conversational)"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Personal Banker": {
       "summary": "Personal Banker with 5 years of experience building deposit and lending relationships with retail and small business clients in suburban branches. Opened $18M in new deposits in 2025 and ranked in the top 10% of 240 bankers. Brings needs-based conversations, sound compliance habits and long-term client relationships.",
@@ -1972,7 +2476,20 @@
         "Lending: HELOCs, personal loans, small business credit applications",
         "Compliance: KYC/CIP, BSA/AML, Reg D, Reg E, fair lending",
         "Licenses & Systems: NMLS registered, FINRA SIE; Fiserv, Salesforce Financial Services Cloud"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.89
+      }
     },
     "Insurance Underwriter": {
       "summary": "Commercial Insurance Underwriter with 6 years of experience writing middle-market property and general liability for contractors and manufacturers. Manages an $18M premium book with a 54% loss ratio over three years against a 62% target. Brings disciplined risk selection, clear broker communication and pricing that holds rate adequacy.",
@@ -2010,7 +2527,19 @@
         "Lines: commercial property, general liability, umbrella, inland marine",
         "Systems: Guidewire PolicyCenter, ISO rating, Verisk, Excel",
         "Designations: CPCU, AU (Associate in Commercial Underwriting)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "mono": 0.96,
+        "pop": 0.86
+      }
     },
     "Claims Adjuster": {
       "summary": "Licensed Claims Adjuster with 5 years of experience handling auto and homeowners property claims, including catastrophe deployments. Manages about 140 open claims with an average cycle time of 18 days and a 4.7/5 customer satisfaction score. Brings accurate estimates, fair coverage decisions and calm communication with policyholders after a loss.",
@@ -2048,7 +2577,22 @@
         "Tools: Xactimate, XactAnalysis, CCC ONE, Guidewire ClaimCenter, drone imagery review",
         "Compliance: Texas Prompt Payment of Claims Act, unfair claims practices rules, SIU referrals",
         "Licenses: Texas All-Lines Adjuster, HAAG Certified Inspector (Residential)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.95,
+        "minimalist": 0.96,
+        "creative": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Financial Advisor": {
       "summary": "Financial Advisor with 8 years of experience in comprehensive planning and investment management for professionals and pre-retirees. Manages $185M in assets for 140 households with 98% client retention. Brings fiduciary, planning-led advice covering retirement income, tax-aware investing and estate coordination.",
@@ -2086,7 +2630,20 @@
         "Investments: asset allocation, tax-loss harvesting, ETF and mutual fund portfolios, rebalancing",
         "Tools: eMoney, Orion, Schwab Advisor Center, Morningstar Direct",
         "Credentials: CFP, Series 65"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Associate Attorney": {
       "summary": "Associate Attorney with 3 years of experience in commercial litigation at a regional business law firm. Manages discovery and motion practice on 25 active matters and has first-chaired 2 bench trials. Brings sharp legal writing, organized case management and steady client communication.",
@@ -2098,7 +2655,7 @@
           "startDate": "2023-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Handle discovery, motions and client communication on 25 active contract, business tort and construction disputes\n- Drafted 30 dispositive and discovery motions, winning summary judgment in 4 of 6 contested motions\n- First-chaired 2 bench trials in Davidson County Chancery Court, securing a $640k judgment in one\n- Take and defend about 20 depositions a year, including expert witnesses\n- Draft engagement letters and early case assessments for new matters, including budgets for 8 clients in 2025"
+          "description": "- Handle discovery, motions and client communication on 25 active contract, business tort and construction disputes\n- Drafted 30 dispositive and discovery motions, winning summary judgment in 4 of 6 contested motions\n- First-chaired 2 bench trials in Davidson County Chancery Court, securing a $640k judgment in one\n- Take and defend about 20 depositions a year, including expert witnesses"
         },
         {
           "company": "Tennessee Court of Appeals",
@@ -2126,11 +2683,25 @@
       ],
       "projects": [],
       "skills": [
-        "Litigation: pleadings, discovery, depositions, dispositive motions, bench trials, mediation",
+        "Litigation: pleadings, discovery, depositions, dispositive motions, bench trials",
         "Practice Areas: commercial contracts, business torts, construction disputes",
         "Research & Tools: Westlaw, Lexis+, Relativity, Clio",
         "Bar Admissions: Tennessee; U.S. District Court for the Middle District of Tennessee"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.99,
+        "sidebar": 0.99,
+        "creative": 0.96,
+        "swiss": 0.95,
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.98
+      }
     },
     "Legal Secretary": {
       "summary": "Legal Secretary with 9 years of experience supporting partners in estate planning, real estate and corporate practices. Supports 3 partners handling about 200 matters a year and prepares estate plan document sets with no execution errors. Brings advanced Word formatting, precise court and recording filings, and polished client contact.",
@@ -2168,7 +2739,22 @@
         "Practice Areas: estate planning, probate, residential and commercial real estate",
         "Software: Microsoft Word (styles, templates), iManage, Clio, Adobe Acrobat Pro, Virginia e-recording",
         "Certifications: Notary Public (Virginia), NALS Accredited Legal Professional (ALP)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "General Counsel": {
       "summary": "General Counsel with 17 years of legal experience, including 6 leading legal departments at venture-backed and public technology companies. Built a 14-person legal, compliance and privacy team and led legal work for a $1.1B acquisition and a follow-on equity offering. Brings business-first judgment, board advisory and risk management that keeps growth moving.",
@@ -2180,7 +2766,7 @@
           "startDate": "2020-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 14-person legal, compliance and privacy team for a 2,200-employee public software company, reporting to the CEO\n- Directed legal work on the $1.1B acquisition of a competitor, including antitrust clearance and integration\n- Advise the board and 3 committees on governance, disclosure and enterprise risk\n- Cut outside counsel spend from $9M to $5.6M while handling more matters in-house\n- Resolved a patent assertion suit with a $1.5M license versus an initial $40M demand"
+          "description": "- Lead a 14-person legal, compliance and privacy team for a 2,200-employee public software company, reporting to the CEO\n- Directed legal work on the $1.1B acquisition of a competitor, including antitrust clearance and integration\n- Advise the board and 3 committees on governance, disclosure and enterprise risk"
         },
         {
           "company": "Fairmont Analytics",
@@ -2189,7 +2775,7 @@
           "startDate": "2015-04",
           "endDate": "2020-09",
           "isCurrent": false,
-          "description": "- Led commercial, employment and IP legal work as the company grew from 300 to 1,200 employees\n- Supported the 2019 IPO, including S-1 drafting and governance policy design\n- Managed 3 lawyers and a contracts team handling 1,500 agreements a year"
+          "description": "- Led commercial, employment and IP legal work as the company grew from 300 to 1,200 employees\n- Supported the 2019 IPO, including S-1 drafting and governance policy design"
         },
         {
           "company": "Ashby Kendrick LLP",
@@ -2198,7 +2784,7 @@
           "startDate": "2009-09",
           "endDate": "2015-03",
           "isCurrent": false,
-          "description": "- Represented technology companies in venture financings, M&A and public offerings\n- Managed diligence and closing for 30+ transactions"
+          "description": "- Represented technology companies in venture financings, M&A and public offerings"
         }
       ],
       "education": [
@@ -2207,21 +2793,24 @@
           "degree": "J.D.",
           "startDate": "2006-08",
           "endDate": "2009-05"
-        },
-        {
-          "school": "Georgia Institute of Technology",
-          "degree": "B.S. in Industrial Engineering",
-          "startDate": "2002-08",
-          "endDate": "2006-05"
         }
       ],
       "projects": [],
       "skills": [
         "Executive Legal: board advisory, corporate governance, enterprise risk, legal department leadership",
         "Transactions: M&A, antitrust clearance, IPO and securities offerings, commercial agreements",
-        "Disputes: IP litigation strategy, regulatory inquiries, settlement negotiation",
-        "Bar Admissions: Georgia"
-      ]
+        "Disputes: IP litigation strategy, regulatory inquiries, settlement negotiation"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.88
+      }
     }
   }
 }

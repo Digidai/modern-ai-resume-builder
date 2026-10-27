@@ -18,10 +18,10 @@ export const ModernTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasCategories = skillGroups.some((group) => group.category);
 
     return (
-        <div className="flex flex-1 flex-col gap-7 font-sans text-slate-800 [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex flex-1 flex-col gap-7 font-sans text-slate-800 [--accent:var(--rs-accent,#2F5A8A)]">
             <header>
                 {data.fullName.trim() && (
-                    <h1 className="text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="text-[34px] font-bold leading-[1.1] tracking-[-0.02em] text-slate-900 wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title.trim() && <p className="mt-1.5 text-[17px] font-medium leading-snug text-(--accent) wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (

@@ -29,7 +29,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-col flex-1 gap-5 font-inter text-[14px] leading-normal text-slate-900 [--accent:var(--rs-accent,#111111)]">
             <header className="flex flex-col gap-3.5">
                 <div className="bg-(--accent) text-white px-7 py-6">
-                    <h1 className="text-[40px] font-black uppercase tracking-tighter leading-[1.02] wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="text-[40px] font-black uppercase tracking-tighter leading-[1.02] wrap-break-word">{data.fullName}</div>
                     {data.title && <p className="mt-2.5 text-[17px] font-bold uppercase tracking-tight text-white/85 wrap-break-word">{data.title}</p>}
                 </div>
                 {contacts.length > 0 && (

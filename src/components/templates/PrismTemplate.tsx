@@ -38,7 +38,7 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <header className="relative break-inside-avoid">
                     <div aria-hidden className="absolute inset-0 bg-(--accent)/30 [clip-path:polygon(0_0,100%_0,100%_100%,0_calc(100%-10mm))]" />
                     <div className="relative bg-(--accent) px-[15mm] pt-[12mm] pb-[15mm] text-white [clip-path:polygon(0_0,100%_0,100%_calc(100%-11mm),0_calc(100%-2mm))]">
-                        {name && <h1 className="font-montserrat text-[34px] font-extrabold uppercase leading-[1.08] tracking-[-0.005em] wrap-break-word">{name}</h1>}
+                        {name && <div role="heading" aria-level={1} className="font-montserrat text-[34px] font-extrabold uppercase leading-[1.08] tracking-[-0.005em] wrap-break-word">{name}</div>}
                         {title && <p className="mt-[5px] font-montserrat text-[14px] font-semibold uppercase leading-snug tracking-[0.18em] text-(--accent-light) wrap-break-word">{title}</p>}
                         {contacts.length > 0 && (
                             <div className="mt-[10px] flex flex-wrap gap-x-[18px] gap-y-[4px] text-[13.5px] text-white">

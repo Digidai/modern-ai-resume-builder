@@ -12,7 +12,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run the operating cadence for a 600-person COO organization, including weekly staff meetings, quarterly business reviews and OKR tracking\n- Redesigned annual planning, aligning 14 teams on 5 company priorities and cutting the planning cycle from 10 weeks to 6\n- Led a vendor consolidation that saved $2.4M a year across support and operations tooling\n- Prepare board materials and executive briefs for the COO each quarter\n- Drove a 90-day integration plan for an acquired support team of 80, hitting all retention and SLA targets"
+          "description": "- Run the operating cadence for a 600-person COO organization, including weekly staff meetings, quarterly business reviews and OKR tracking\n- Redesigned annual planning, aligning 14 teams on 5 company priorities and cutting the planning cycle from 10 weeks to 6\n- Led a vendor consolidation that saved $2.4M a year across support and operations tooling\n- Prepare board materials and executive briefs for the COO each quarter"
         },
         {
           "company": "Charles River Strategy Partners",
@@ -21,7 +21,7 @@
           "startDate": "2019-09",
           "endDate": "2022-06",
           "isCurrent": false,
-          "description": "- Led 4-person teams on operating-model and cost programs for 6 software and services clients\n- Identified $18M in savings for a B2B services company through span-of-control redesign\n- Built the transformation office tracker used by a client's executive committee"
+          "description": "- Led 4-person teams on operating-model and cost programs for 6 software and services clients\n- Identified $18M in savings for a B2B services company through span-of-control redesign"
         },
         {
           "company": "Beacon Hill Advisory",
@@ -30,7 +30,7 @@
           "startDate": "2015-07",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Built market-sizing and financial models for 10 growth-strategy engagements\n- Synthesized 80 customer interviews into recommendations for client leadership teams\n- Drafted 30 client-ready slides a week for partner reviews"
+          "description": "- Built market-sizing and financial models for 10 growth-strategy engagements"
         }
       ],
       "education": [
@@ -51,10 +51,25 @@
       "skills": [
         "Operating Cadence: OKRs, QBRs, annual planning, executive staff meetings",
         "Strategy: problem structuring, business cases, financial modeling",
-        "Communication: board materials, executive briefs, cross-functional alignment",
-        "Tools: Excel, Google Workspace, Notion, Asana, Tableau",
-        "Execution: special projects, integration planning, decision tracking"
-      ]
+        "Communication: board materials, executive briefs, cross-functional alignment"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.95,
+        "minimalist": 0.9,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "symmetry": 0.95,
+        "path": 0.97,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.9,
+        "cast": 0.93
+      }
     },
     "Chief of Staff to CEO": {
       "summary": "Chief of staff to the CEO with 10 years of experience across investment banking, corporate strategy and startup operations. Partners with the CEO of a 250-person Series C health-tech company on priorities, board management and special projects. Led the operating plan behind a $90M fundraise and a 2.5x revenue increase.",
@@ -66,7 +81,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage the CEO’s priorities, executive team agenda and quarterly board meetings for a 250-person Series C company\n- Built the operating plan and data room supporting a $90M Series C raise\n- Led a cross-functional pricing and packaging project that contributed to 2.5x revenue growth in 2 years\n- Stood up an internal communications rhythm, including monthly all-hands and written CEO updates\n- Run the CEO's weekly decision log and follow-up tracker, closing 95% of executive actions within agreed dates"
+          "description": "- Manage the CEO’s priorities, executive team agenda and quarterly board meetings for a 250-person Series C company\n- Built the operating plan and data room supporting a $90M Series C raise\n- Led a cross-functional pricing and packaging project that contributed to 2.5x revenue growth in 2 years\n- Stood up an internal communications rhythm, including monthly all-hands and written CEO updates"
         },
         {
           "company": "Fulton Street Health",
@@ -84,7 +99,7 @@
           "startDate": "2016-07",
           "endDate": "2019-03",
           "isCurrent": false,
-          "description": "- Built LBO and merger models for 9 healthcare transactions totaling $3.1B\n- Drafted confidential information memoranda and management presentations\n- Supported sell-side diligence for 2 healthcare services companies"
+          "description": "- Built LBO and merger models for 9 healthcare transactions totaling $3.1B\n- Drafted confidential information memoranda and management presentations"
         }
       ],
       "education": [
@@ -100,9 +115,26 @@
         "Executive Partnership: CEO priorities, board management, executive team operations",
         "Strategy & Finance: operating plans, fundraising, M&A evaluation, pricing",
         "Communication: all-hands, investor updates, written strategy memos",
-        "Tools: Excel, PowerPoint, Carta, Notion",
-        "Operations: hiring executive search, offsite planning, OKR tracking"
-      ]
+        "Tools: Excel, PowerPoint, Carta, Notion"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.92
+      }
     },
     "Project Manager": {
       "summary": "PMP-certified project manager with 7 years of experience delivering software implementation and process projects for healthcare and insurance clients. Delivered 22 projects worth $14M with 95% on time and on budget. Strong in hybrid Agile and waterfall delivery, risk management and keeping sponsors informed without surprises.",
@@ -114,7 +146,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 4 to 6 concurrent EHR integration projects with budgets up to $1.8M and teams of 12\n- Delivered 22 projects worth $14M with 95% on time and within 5% of budget\n- Built a RAID log and weekly status template adopted across the 9-person PM team\n- Recovered a delayed lab-interface rollout by re-baselining scope, going live 3 weeks ahead of the revised plan\n- Facilitated go-live readiness reviews with clinical, IT and vendor teams, achieving zero rollbacks across 22 launches"
+          "description": "- Manage 4 to 6 concurrent EHR integration projects with budgets up to $1.8M and teams of 12\n- Delivered 22 projects worth $14M with 95% on time and within 5% of budget\n- Built a RAID log and weekly status template adopted across the 9-person PM team\n- Recovered a delayed lab-interface rollout by re-baselining scope, going live 3 weeks ahead of the revised plan"
         },
         {
           "company": "Crossroads Insurance Group",
@@ -132,7 +164,7 @@
           "startDate": "2017-08",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Coordinated classroom technology upgrades in 30 lecture rooms\n- Maintained project schedules and vendor contacts in Smartsheet"
+          "description": "- Coordinated classroom technology upgrades in 30 lecture rooms"
         }
       ],
       "education": [
@@ -148,9 +180,24 @@
         "Project Management: scope, schedule and budget control, RAID management, change control",
         "Methods: hybrid Agile and waterfall, Scrum, critical path",
         "Tools: Microsoft Project, Jira, Smartsheet, Confluence",
-        "Certifications: PMP",
-        "Domains: EHR integration, HL7 interfaces, insurance policy systems"
-      ]
+        "Certifications: PMP"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "Project Coordinator": {
       "summary": "Project coordinator with 3 years of experience supporting construction-technology and marketing projects. Keeps schedules, budgets and documentation current for portfolios of up to 12 projects. Known for organized trackers, clear meeting notes and catching issues before they become delays.",
@@ -162,7 +209,7 @@
           "startDate": "2024-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coordinate schedules, budgets and documentation for 12 customer implementation projects at a time\n- Built a Smartsheet portfolio tracker that cut weekly status preparation from 4 hours to 1\n- Schedule and document 15 client meetings a week, tracking 200 action items to closure\n- Processed 60 change orders and vendor invoices a quarter with no billing errors\n- Prepare weekly portfolio status reports for 4 project managers and the Director of Implementation"
+          "description": "- Coordinate schedules, budgets and documentation for 12 customer implementation projects at a time\n- Built a Smartsheet portfolio tracker that cut weekly status preparation from 4 hours to 1\n- Schedule and document 15 client meetings a week, tracking 200 action items to closure\n- Processed 60 change orders and vendor invoices a quarter with no billing errors"
         },
         {
           "company": "Queen City Creative Agency",
@@ -180,7 +227,7 @@
           "startDate": "2020-08",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Planned 12 student events with budgets up to $8,000\n- Managed timelines and assignments for 15 volunteers"
+          "description": "- Planned 12 student events with budgets up to $8,000"
         }
       ],
       "education": [
@@ -196,9 +243,21 @@
         "Coordination: scheduling, meeting facilitation, action tracking, document control",
         "Tools: Smartsheet, Asana, Microsoft 365, Jira, Teams",
         "Finance: change orders, invoice processing, budget tracking",
-        "Certifications: CAPM (Certified Associate in Project Management)",
-        "Communication: meeting minutes, status reports, client correspondence"
-      ]
+        "Certifications: CAPM (Certified Associate in Project Management)"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Program Manager": {
       "summary": "Program manager with 9 years of experience running multi-team programs in medical devices and digital health. Led a $12M connected-device program across 7 teams from concept to FDA clearance and launch. Excels at integrated planning, dependency management and keeping executives aligned on trade-offs.",
@@ -210,7 +269,7 @@
           "startDate": "2021-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a $12M connected glucose monitor program spanning hardware, firmware, app, clinical, regulatory and manufacturing teams\n- Built an integrated master schedule of 1,400 tasks, guiding the program through FDA 510(k) clearance on target date\n- Ran monthly steering committees with 6 vice presidents, escalating trade-offs with clear options and cost impacts\n- Reduced design-transfer issues 40% by adding manufacturing readiness gates under ISO 13485\n- Coordinated 3 clinical sites and 2 contract manufacturers to keep pilot builds on a 6-week cadence"
+          "description": "- Lead a $12M connected glucose monitor program spanning hardware, firmware, app, clinical, regulatory and manufacturing teams\n- Built an integrated master schedule of 1,400 tasks, guiding the program through FDA 510(k) clearance on target date\n- Ran monthly steering committees with 6 vice presidents, escalating trade-offs with clear options and cost impacts\n- Reduced design-transfer issues 40% by adding manufacturing readiness gates under ISO 13485"
         },
         {
           "company": "Northland Health Apps",
@@ -219,7 +278,7 @@
           "startDate": "2018-05",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Delivered 3 patient-engagement app releases used by 400,000 members\n- Coordinated HIPAA security reviews and penetration tests with vendors\n- Built a release-readiness checklist that cut post-launch hotfixes 30%"
+          "description": "- Delivered 3 patient-engagement app releases used by 400,000 members\n- Coordinated HIPAA security reviews and penetration tests with vendors"
         },
         {
           "company": "Lakeland Contract Manufacturing",
@@ -228,7 +287,7 @@
           "startDate": "2017-06",
           "endDate": "2018-04",
           "isCurrent": false,
-          "description": "- Managed new product introduction for 4 customer devices\n- Cut first-article inspection failures 25% through supplier reviews\n- Coordinated engineering change orders with 6 suppliers"
+          "description": "- Managed new product introduction for 4 customer devices"
         }
       ],
       "education": [
@@ -244,9 +303,21 @@
         "Program Management: integrated master schedules, dependency and risk management, steering committees",
         "Regulated Delivery: FDA 510(k), ISO 13485, design controls, HIPAA",
         "Tools: Microsoft Project, Jira, Smartsheet, Jama Connect",
-        "Certifications: PMP, PgMP",
-        "Leadership: executive communication, cross-functional alignment, vendor management"
-      ]
+        "Certifications: PMP, PgMP"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.95,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.85
+      }
     },
     "Program Coordinator": {
       "summary": "Program coordinator with 4 years of experience supporting grant-funded community health and workforce programs at nonprofits. Manages logistics, data and reporting for programs serving 1,200 participants a year. Keeps funders, partners and staff aligned with organized systems and accurate, on-time reports.",
@@ -258,7 +329,7 @@
           "startDate": "2023-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coordinate a $1.4M grant-funded chronic disease program serving 1,200 participants a year across 6 partner sites\n- Built a Salesforce Nonprofit Cloud tracker that improved funder data completeness from 78% to 98%\n- Schedule 90 workshops a quarter and manage logistics for 25 community health workers\n- Prepare quarterly reports for 3 funders, all submitted on time since 2023\n- Manage a $95,000 program supply and stipend budget with monthly reconciliation for the finance office"
+          "description": "- Coordinate a $1.4M grant-funded chronic disease program serving 1,200 participants a year across 6 partner sites\n- Built a Salesforce Nonprofit Cloud tracker that improved funder data completeness from 78% to 98%\n- Schedule 90 workshops a quarter and manage logistics for 25 community health workers\n- Prepare quarterly reports for 3 funders, all submitted on time since 2023"
         },
         {
           "company": "Chesapeake Workforce Partnership",
@@ -292,9 +363,22 @@
         "Program Operations: event logistics, participant enrollment, partner coordination",
         "Reporting: grant reporting, outcome tracking, data quality",
         "Tools: Salesforce Nonprofit Cloud, Excel, Microsoft 365, SurveyMonkey",
-        "Languages: English, Spanish (professional working)",
-        "Budget: grant budget tracking, stipend processing, invoice reconciliation"
-      ]
+        "Languages: English, Spanish (professional working)"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Technical Program Manager": {
       "summary": "Technical program manager with 10 years of experience leading infrastructure and platform programs at cloud software companies. Drove a multi-region migration of 140 services that improved availability to 99.99%. Brings engineering depth, sharp dependency management and the ability to make technical trade-offs clear to leadership.",
@@ -306,7 +390,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led a multi-region active-active migration of 140 services across 16 engineering teams, raising availability from 99.9% to 99.99%\n- Built dependency maps and milestone reviews that cut cross-team blockers resolution time from 9 days to 3\n- Drove a Kubernetes cost program that reduced compute spend $5M a year\n- Ran incident postmortem reviews and tracked 200 reliability action items to completion\n- Wrote launch plans and rollback criteria for 25 region cutovers, completing all with no customer-facing incidents"
+          "description": "- Led a multi-region active-active migration of 140 services across 16 engineering teams, raising availability from 99.9% to 99.99%\n- Built dependency maps and milestone reviews that cut cross-team blockers resolution time from 9 days to 3\n- Drove a Kubernetes cost program that reduced compute spend $5M a year\n- Ran incident postmortem reviews and tracked 200 reliability action items to completion"
         },
         {
           "company": "Fernhill Commerce Platform",
@@ -324,7 +408,7 @@
           "startDate": "2016-07",
           "endDate": "2019-02",
           "isCurrent": false,
-          "description": "- Built backend services in Java for an order-management product\n- Led the team's move to automated deployments with Jenkins\n- Wrote design documents for 3 order-service features"
+          "description": "- Built backend services in Java for an order-management product"
         }
       ],
       "education": [
@@ -340,9 +424,24 @@
         "Technical Domains: cloud infrastructure, Kubernetes, distributed systems, reliability engineering",
         "Program Management: dependency management, milestone reviews, risk tracking, executive reporting",
         "Compliance: PCI DSS, SOC 2",
-        "Tools: Jira, Confluence, Google Workspace, Grafana",
-        "Engineering Background: Java, REST APIs, AWS, CI/CD pipelines"
-      ]
+        "Tools: Jira, Confluence, Google Workspace, Grafana"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "PMO Manager": {
       "summary": "PMO manager with 12 years of experience in project delivery and portfolio governance for utilities and engineering firms. Runs a PMO overseeing 45 projects and $220M in capital spend. Improved on-budget delivery from 68% to 88% by standardizing stage gates, reporting and project manager development.",
@@ -354,7 +453,7 @@
           "startDate": "2021-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a PMO of 8 project managers and analysts overseeing 45 projects and $220M in annual capital spend\n- Standardized stage gates and earned value reporting, raising on-budget delivery from 68% to 88%\n- Implemented Planview portfolio management, giving executives one view of capacity and spend\n- Built a project manager development program that certified 6 PMPs in 2 years\n- Reduced average project intake-to-approval time from 9 weeks to 4 with a standard business case template"
+          "description": "- Lead a PMO of 8 project managers and analysts overseeing 45 projects and $220M in annual capital spend\n- Standardized stage gates and earned value reporting, raising on-budget delivery from 68% to 88%\n- Implemented Planview portfolio management, giving executives one view of capacity and spend\n- Built a project manager development program that certified 6 PMPs in 2 years"
         },
         {
           "company": "Missouri Valley Engineering",
@@ -372,7 +471,7 @@
           "startDate": "2014-06",
           "endDate": "2016-12",
           "isCurrent": false,
-          "description": "- Maintained Primavera P6 schedules and cost reports for 12 capital projects\n- Built monthly variance reports for the engineering director\n- Built resource loading reports in P6 for construction crews"
+          "description": "- Maintained Primavera P6 schedules and cost reports for 12 capital projects"
         }
       ],
       "education": [
@@ -388,9 +487,23 @@
         "Portfolio Governance: stage gates, capacity planning, earned value management, executive dashboards",
         "Tools: Planview, Primavera P6, Microsoft Project, Power BI",
         "Leadership: PM development, standards, steering committees",
-        "Certifications: PMP, PfMP",
-        "Utilities: capital project delivery, substation and transmission programs, regulatory filings"
-      ]
+        "Certifications: PMP, PfMP"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "mono": 0.96,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "PMO Analyst": {
       "summary": "PMO analyst with 3 years of experience supporting portfolio reporting and governance at a regional bank. Automated portfolio status reporting for 60 projects and cut monthly reporting time 70%. Comfortable with project data, financial tracking and helping project managers follow standards without friction.",
@@ -402,7 +515,7 @@
           "startDate": "2023-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Automated portfolio status reporting for 60 projects with Power BI and Smartsheet, cutting monthly reporting time 70%\n- Track $28M in project budgets and flag variances over 10% to the PMO manager\n- Audit project artifacts against gate criteria, raising compliance from 74% to 93%\n- Maintain the resource capacity plan for 90 IT and business staff\n- Coordinate monthly portfolio review meetings and track 40 decisions and actions for the steering committee"
+          "description": "- Automated portfolio status reporting for 60 projects with Power BI and Smartsheet, cutting monthly reporting time 70%\n- Track $28M in project budgets and flag variances over 10% to the PMO manager\n- Audit project artifacts against gate criteria, raising compliance from 74% to 93%\n- Maintain the resource capacity plan for 90 IT and business staff"
         },
         {
           "company": "Susquehanna Health Partners",
@@ -436,9 +549,22 @@
         "PMO Operations: portfolio reporting, gate reviews, resource capacity planning",
         "Financials: budget tracking, variance analysis, capitalization",
         "Tools: Smartsheet, Power BI, Excel, Microsoft Project, ServiceNow SPM",
-        "Certifications: CAPM",
-        "Governance: project gate criteria, artifact audits, steering committee support"
-      ]
+        "Certifications: CAPM"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.95
+      }
     },
     "Scrum Master": {
       "summary": "Certified Scrum Master with 5 years of experience coaching software teams at an insurance carrier and a SaaS company. Helped 3 teams raise sprint predictability from 60% to 88%. Facilitates focused ceremonies, removes blockers quickly and helps teams improve flow with simple, visible metrics.",
@@ -450,7 +576,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Serve 3 Scrum teams of 22 engineers building policyholder and agent portals\n- Raised sprint predictability from 60% to 88% through backlog refinement and WIP limits\n- Cut average cycle time from 11 days to 6 by visualizing flow in Jira and splitting stories smaller\n- Facilitate PI planning sessions with 6 teams and track cross-team dependencies\n- Coached 2 product owners on backlog ordering and story slicing, reducing carryover work 40%"
+          "description": "- Serve 3 Scrum teams of 22 engineers building policyholder and agent portals\n- Raised sprint predictability from 60% to 88% through backlog refinement and WIP limits\n- Cut average cycle time from 11 days to 6 by visualizing flow in Jira and splitting stories smaller\n- Facilitate PI planning sessions with 6 teams and track cross-team dependencies"
         },
         {
           "company": "Hawkeye Scheduling Software",
@@ -484,9 +610,22 @@
         "Agile Practices: Scrum, Kanban, backlog refinement, retrospectives, PI planning",
         "Metrics: velocity, cycle time, sprint predictability, cumulative flow",
         "Tools: Jira, Confluence, Miro, Azure DevOps",
-        "Certifications: PSM II, CSM, SAFe Scrum Master",
-        "Facilitation: sprint ceremonies, conflict resolution, team working agreements"
-      ]
+        "Certifications: PSM II, CSM, SAFe Scrum Master"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "path": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.88,
+        "cast": 0.95
+      }
     },
     "Agile Coach": {
       "summary": "Enterprise agile coach with 12 years of experience in software delivery, including 8 years coaching teams and leaders through agile transformations at banks and retailers. Coached a 40-team transformation that cut lead time 55%. Works with executives on operating models while staying close to teams and their real impediments.",
@@ -498,7 +637,7 @@
           "startDate": "2021-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Coach 40 teams and 12 leaders through a product operating model shift, cutting idea-to-release lead time 55%\n- Designed a value-stream funding pilot that replaced annual project budgets for 3 portfolios\n- Built an internal coaching guild that certified 18 Scrum Masters and 10 product owners\n- Introduced flow metrics dashboards used in quarterly business reviews\n- Coached 12 senior leaders on outcome-based OKRs, reducing in-flight initiatives from 85 to 40"
+          "description": "- Coach 40 teams and 12 leaders through a product operating model shift, cutting idea-to-release lead time 55%\n- Designed a value-stream funding pilot that replaced annual project budgets for 3 portfolios\n- Built an internal coaching guild that certified 18 Scrum Masters and 10 product owners\n- Introduced flow metrics dashboards used in quarterly business reviews"
         },
         {
           "company": "Rocky Ridge Outfitters",
@@ -516,7 +655,7 @@
           "startDate": "2014-06",
           "endDate": "2018-01",
           "isCurrent": false,
-          "description": "- Led Scrum for 2 product teams building logistics software\n- Moved release cadence from quarterly to biweekly\n- Introduced automated testing goals that cut regression time 50%"
+          "description": "- Led Scrum for 2 product teams building logistics software"
         }
       ],
       "education": [
@@ -530,11 +669,23 @@
       "projects": [],
       "skills": [
         "Coaching: leadership coaching, team coaching, facilitation, organizational change",
-        "Frameworks: Scrum, Kanban, SAFe, LeSS, OKRs, value stream management",
+        "Frameworks: Scrum, Kanban, SAFe, LeSS, OKRs",
         "Metrics: flow metrics, lead time, DORA metrics",
-        "Certifications: ICAgile Certified Expert in Agile Coaching (ICE-AC), SAFe SPC, CSP-SM",
-        "Leadership: executive workshops, coaching programs, organizational design"
-      ]
+        "Certifications: ICAgile Certified Expert in Agile Coaching (ICE-AC), SAFe SPC, CSP-SM"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "Delivery Manager": {
       "summary": "Delivery manager with 9 years of experience leading digital services delivery for government and public sector clients. Accountable for 5 teams and a $9M annual delivery budget. Shipped a benefits application service that cut processing time from 30 days to 7 while meeting Section 508 and FedRAMP requirements.",
@@ -546,7 +697,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own delivery for 5 multidisciplinary teams on a $9M annual federal contract\n- Shipped an online benefits application service that cut average processing from 30 days to 7 for 250,000 applicants a year\n- Meet Section 508 accessibility and FedRAMP Moderate requirements with zero audit findings in 2025\n- Run contract reporting, risk reviews and sprint demos with agency product owners\n- Grew team capacity from 3 to 5 squads while keeping delivery predictability above 85%"
+          "description": "- Own delivery for 5 multidisciplinary teams on a $9M annual federal contract\n- Shipped an online benefits application service that cut average processing from 30 days to 7 for 250,000 applicants a year\n- Meet Section 508 accessibility and FedRAMP Moderate requirements with zero audit findings in 2025\n- Run contract reporting, risk reviews and sprint demos with agency product owners"
         },
         {
           "company": "Capitol Digital Services",
@@ -564,7 +715,7 @@
           "startDate": "2017-01",
           "endDate": "2018-07",
           "isCurrent": false,
-          "description": "- Wrote requirements and user stories for a case management system\n- Conducted 30 user interviews with caseworkers\n- Mapped 12 caseworker workflows for system design"
+          "description": "- Wrote requirements and user stories for a case management system\n- Conducted 30 user interviews with caseworkers"
         }
       ],
       "education": [
@@ -580,9 +731,24 @@
         "Delivery: Agile delivery, release planning, risk and dependency management, contract reporting",
         "Public Sector: Section 508, FedRAMP, federal acquisition, user-centered design",
         "Tools: Jira, Confluence, GitHub, Mural",
-        "Certifications: PMP, PMI-ACP",
-        "Leadership: team health, hiring, stakeholder management, budget tracking"
-      ]
+        "Certifications: PMP, PMI-ACP"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Business Operations Manager": {
       "summary": "Business operations manager with 8 years of experience in consulting and SaaS operations, owning planning, metrics and cross-functional process for a 300-person go-to-market organization. Rebuilt the quota and territory process that lifted rep attainment from 54% to 71%. Combines financial modeling with a bias toward fixing broken processes.",
@@ -594,7 +760,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own annual planning, headcount models and KPI reporting for a 300-person go-to-market organization\n- Rebuilt quota and territory design with sales leadership, raising reps at or above quota from 54% to 71%\n- Launched a weekly business review with 12 leaders, replacing 6 overlapping status meetings\n- Negotiated renewals for 14 GTM tools, saving $850K a year\n- Built a headcount and hiring plan for 85 roles tied to bookings targets and approved by the CFO"
+          "description": "- Own annual planning, headcount models and KPI reporting for a 300-person go-to-market organization\n- Rebuilt quota and territory design with sales leadership, raising reps at or above quota from 54% to 71%\n- Launched a weekly business review with 12 leaders, replacing 6 overlapping status meetings\n- Negotiated renewals for 14 GTM tools, saving $850K a year"
         },
         {
           "company": "Midtown Software Group",
@@ -612,7 +778,7 @@
           "startDate": "2018-07",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Built cost and process models for 5 operations-improvement engagements\n- Prepared steering committee materials for client executives\n- Interviewed 40 client staff to map process pain points"
+          "description": "- Built cost and process models for 5 operations-improvement engagements\n- Prepared steering committee materials for client executives"
         }
       ],
       "education": [
@@ -628,9 +794,26 @@
         "Business Operations: annual planning, headcount modeling, operating cadence, vendor management",
         "GTM Operations: quota and territory design, capacity planning, pipeline metrics",
         "Tools: Excel, Salesforce, Tableau, Anaplan, SQL",
-        "Analysis: financial modeling, process improvement, KPI design",
-        "Communication: executive business reviews, board KPI packs, written plans"
-      ]
+        "Analysis: financial modeling, process improvement, KPI design"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.92,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Operations Analyst": {
       "summary": "Operations analyst with 3 years of experience improving fulfillment and customer operations processes at an e-commerce company. Built a labor planning model that cut overtime 19% while holding same-day ship rates above 98%. Uses SQL, Excel and process mapping to find and fix operational bottlenecks.",
@@ -642,7 +825,7 @@
           "startDate": "2023-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built a labor planning model from order forecasts, cutting fulfillment overtime 19% while holding same-day ship rates above 98%\n- Mapped the returns process end to end, removing 3 handoffs and reducing refund time from 9 days to 4\n- Track daily KPIs for 2 fulfillment centers in Looker and lead the morning operations huddle readout\n- Analyzed carrier invoices, recovering $140K in service-failure refunds\n- Built a slotting analysis that moved 400 fast-moving SKUs closer to packing, cutting pick travel 14%"
+          "description": "- Built a labor planning model from order forecasts, cutting fulfillment overtime 19% while holding same-day ship rates above 98%\n- Mapped the returns process end to end, removing 3 handoffs and reducing refund time from 9 days to 4\n- Track daily KPIs for 2 fulfillment centers in Looker and lead the morning operations huddle readout\n- Analyzed carrier invoices, recovering $140K in service-failure refunds"
         },
         {
           "company": "Riverfront Customer Care",
@@ -676,9 +859,24 @@
         "Operations: labor planning, process mapping, root-cause analysis, KPI tracking",
         "Tools: SQL, Excel, Looker, Smartsheet, NetSuite",
         "Methods: Lean, value stream mapping, workforce management",
-        "Certifications: Lean Six Sigma Green Belt",
-        "Communication: daily huddles, operations reviews, SOP documentation"
-      ]
+        "Certifications: Lean Six Sigma Green Belt"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "path": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Business Consultant": {
       "summary": "Business consultant with 10 years of experience in commercial lending and advisory work for small and midsize companies on growth, operations and financial performance. Has delivered 40 engagements across manufacturing, professional services and retail, including a turnaround that restored a client to profitability within a year. Practical, numbers-first advice that owners can implement.",
@@ -690,7 +888,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Advise 8 to 10 owner-led companies at a time with revenue of $5M to $60M on pricing, operations and cash flow\n- Led a turnaround for a $14M machine shop, moving EBITDA from -4% to 9% within 12 months\n- Built 13-week cash flow models that helped 6 clients secure bank financing\n- Run strategic planning retreats that set annual goals and scorecards for leadership teams\n- Implemented weekly KPI scorecards for 12 clients, giving owners a 1-page view of cash, sales and capacity"
+          "description": "- Advise 8 to 10 owner-led companies at a time with revenue of $5M to $60M on pricing, operations and cash flow\n- Led a turnaround for a $14M machine shop, moving EBITDA from -4% to 9% within 12 months\n- Built 13-week cash flow models that helped 6 clients secure bank financing\n- Run strategic planning retreats that set annual goals and scorecards for leadership teams"
         },
         {
           "company": "Volunteer State Small Business Center",
@@ -699,7 +897,7 @@
           "startDate": "2020-06",
           "endDate": "2022-07",
           "isCurrent": false,
-          "description": "- Counseled 150 small businesses on business plans, SBA loans and marketing\n- Helped clients secure $9M in financing, including PPP and SBA 7(a) loans\n- Delivered 20 workshops on pricing, bookkeeping and marketing to small business owners"
+          "description": "- Counseled 150 small businesses on business plans, SBA loans and marketing\n- Helped clients secure $9M in financing, including PPP and SBA 7(a) loans"
         },
         {
           "company": "Smoky Mountain Credit Union",
@@ -708,7 +906,7 @@
           "startDate": "2016-06",
           "endDate": "2018-07",
           "isCurrent": false,
-          "description": "- Analyzed financial statements for 120 small business loan applications\n- Prepared credit memos for loans up to $2M"
+          "description": "- Analyzed financial statements for 120 small business loan applications"
         }
       ],
       "education": [
@@ -729,10 +927,25 @@
       "skills": [
         "Advisory: strategic planning, turnarounds, pricing, operating scorecards",
         "Finance: cash flow forecasting, unit economics, SBA lending",
-        "Tools: Excel, QuickBooks, PowerPoint, HubSpot",
-        "Methods: EOS (Entrepreneurial Operating System), process improvement",
-        "Industries: manufacturing, professional services, specialty retail"
-      ]
+        "Tools: Excel, QuickBooks, PowerPoint, HubSpot"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.98,
+        "silk": 0.92,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "symmetry": 0.99,
+        "path": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.92,
+        "cast": 0.98
+      }
     },
     "Management Consultant": {
       "summary": "Management consultant with 6 years at a strategy and operations firm, focused on cost transformation and operating model design for healthcare and industrial clients. Led workstreams that identified $65M in savings across 9 engagements. Brings hypothesis-driven problem solving, crisp slides and strong client relationships at the VP level.",
@@ -744,7 +957,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead workstreams on cost transformation for health systems and manufacturers, identifying $65M in savings across 9 engagements\n- Redesigned the procurement operating model for a $4B hospital network, consolidating 14 buying teams into 3 centers of excellence\n- Manage 2 business analysts and present findings to client VPs and steering committees\n- Built a zero-based budgeting model adopted by a client CFO for 2025 planning\n- Built implementation roadmaps and KPI trackers that clients used to realize 70% of savings within a year"
+          "description": "- Lead workstreams on cost transformation for health systems and manufacturers, identifying $65M in savings across 9 engagements\n- Redesigned the procurement operating model for a $4B hospital network, consolidating 14 buying teams into 3 centers of excellence\n- Manage 2 business analysts and present findings to client VPs and steering committees\n- Built a zero-based budgeting model adopted by a client CFO for 2025 planning"
         },
         {
           "company": "Halstead & Rowe Consulting",
@@ -753,7 +966,7 @@
           "startDate": "2020-08",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Conducted 60 stakeholder interviews and benchmarks for operations diagnostics\n- Built spend cubes covering $1.2B in client third-party spend\n- Built benchmarking databases covering 40 hospital supply chains"
+          "description": "- Conducted 60 stakeholder interviews and benchmarks for operations diagnostics\n- Built spend cubes covering $1.2B in client third-party spend"
         },
         {
           "company": "Notre Dame Student Consulting Group",
@@ -762,7 +975,7 @@
           "startDate": "2018-08",
           "endDate": "2020-05",
           "isCurrent": false,
-          "description": "- Led 3 pro bono projects for South Bend nonprofits and small businesses\n- Built a volunteer staffing model adopted by a local food bank"
+          "description": "- Led 3 pro bono projects for South Bend nonprofits and small businesses"
         }
       ],
       "education": [
@@ -778,9 +991,22 @@
         "Consulting: hypothesis-driven problem solving, operating model design, cost transformation",
         "Analysis: zero-based budgeting, spend analysis, benchmarking, financial modeling",
         "Communication: executive presentations, workshop facilitation, steering committees",
-        "Tools: Excel, PowerPoint, Alteryx, Tableau",
-        "Industries: health systems, industrial manufacturing, procurement"
-      ]
+        "Tools: Excel, PowerPoint, Alteryx, Tableau"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Strategy Consultant": {
       "summary": "Strategy consultant with 5 years of experience advising consumer, retail and technology clients on growth strategy, market entry and portfolio choices. Built the market-entry case behind a client's $120M expansion into Canada. Strong in market sizing, customer research and turning analysis into a clear recommendation for CEOs.",
@@ -792,7 +1018,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built the market-entry strategy for a specialty retailer's $120M expansion into Canada, including site prioritization for 35 stores\n- Led a 3,000-respondent conjoint study that set pricing for a consumer subscription launch\n- Developed growth strategies for 6 clients, presenting directly to CEOs and boards\n- Coach 3 analysts on structuring, modeling and slide writing\n- Built a portfolio prioritization model that helped a software client reallocate $35M in R&D spend"
+          "description": "- Built the market-entry strategy for a specialty retailer's $120M expansion into Canada, including site prioritization for 35 stores\n- Led a 3,000-respondent conjoint study that set pricing for a consumer subscription launch\n- Developed growth strategies for 6 clients, presenting directly to CEOs and boards\n- Coach 3 analysts on structuring, modeling and slide writing"
         },
         {
           "company": "Larchmont Strategy Group",
@@ -826,9 +1052,24 @@
         "Strategy: growth strategy, market entry, portfolio strategy, competitive analysis",
         "Research: market sizing, conjoint analysis, expert interviews, customer surveys",
         "Tools: Excel, PowerPoint, Qualtrics, Tableau, ThinkCell",
-        "Languages: English, French (professional working)",
-        "Industries: specialty retail, consumer subscriptions, B2B software"
-      ]
+        "Languages: English, French (professional working)"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.94
+      }
     },
     "Strategy Analyst": {
       "summary": "Strategy analyst with 3 years of experience supporting corporate strategy at a consumer goods company. Built the category attractiveness model used to rank 18 adjacent markets in the 5-year plan. Strong in Excel modeling, market research and concise slides that leadership can decide from.",
@@ -840,7 +1081,7 @@
           "startDate": "2023-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built a category attractiveness model ranking 18 adjacent markets, informing the 5-year strategic plan\n- Analyzed Nielsen and Circana data to size a $2.3B snacking adjacency for the executive team\n- Prepared monthly competitor briefs on 12 rivals for the Chief Strategy Officer\n- Supported due diligence on 2 bolt-on acquisitions with revenue and synergy models\n- Built quarterly strategic initiative trackers covering 15 projects for the executive leadership team"
+          "description": "- Built a category attractiveness model ranking 18 adjacent markets, informing the 5-year strategic plan\n- Analyzed Nielsen and Circana data to size a $2.3B snacking adjacency for the executive team\n- Prepared monthly competitor briefs on 12 rivals for the Chief Strategy Officer\n- Supported due diligence on 2 bolt-on acquisitions with revenue and synergy models"
         },
         {
           "company": "Lakes Region Consulting",
@@ -874,9 +1115,22 @@
         "Strategy: market sizing, competitive analysis, strategic planning support, due diligence",
         "Data: Nielsen, Circana, Euromonitor, Excel, SQL basics",
         "Communication: executive slides, competitor briefs",
-        "Tools: Excel, PowerPoint, ThinkCell, Tableau",
-        "Industries: consumer packaged goods, food and beverage, retail channels"
-      ]
+        "Tools: Excel, PowerPoint, ThinkCell, Tableau"
+      ],
+      "fit": {
+        "silk": 0.95,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "path": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Strategy Manager": {
       "summary": "Strategy manager with 10 years of experience in consulting and in-house strategy at a healthcare services company. Leads strategic initiatives from analysis to launch, including a virtual care business now generating $45M a year. Combines rigorous analysis with the project leadership needed to get decisions implemented.",
@@ -888,7 +1142,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led the business case and launch plan for a virtual care service that now generates $45M in annual revenue\n- Run the annual strategic planning process across 5 business units with the Chief Strategy Officer\n- Manage 2 strategy associates and coordinate cross-functional launch teams of 20\n- Evaluated 6 partnership options for behavioral health, recommending a joint venture approved by the board\n- Built the KPI framework and monthly scorecard used by the executive team to track 8 strategic initiatives"
+          "description": "- Led the business case and launch plan for a virtual care service that now generates $45M in annual revenue\n- Run the annual strategic planning process across 5 business units with the Chief Strategy Officer\n- Manage 2 strategy associates and coordinate cross-functional launch teams of 20\n- Evaluated 6 partnership options for behavioral health, recommending a joint venture approved by the board"
         },
         {
           "company": "Trinity Advisory Group",
@@ -897,7 +1151,7 @@
           "startDate": "2018-06",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Delivered growth and network strategies for 10 provider and payer clients\n- Built a service-line profitability model used in a $200M capital plan\n- Led client workshops with hospital executives to prioritize service-line investments"
+          "description": "- Delivered growth and network strategies for 10 provider and payer clients\n- Built a service-line profitability model used in a $200M capital plan"
         },
         {
           "company": "Lone Star Health Analytics",
@@ -906,7 +1160,7 @@
           "startDate": "2016-07",
           "endDate": "2018-05",
           "isCurrent": false,
-          "description": "- Analyzed market share and referral patterns for hospital clients\n- Built demand forecasts for 3 new outpatient sites\n- Prepared referral and market reports for 6 hospital clients"
+          "description": "- Analyzed market share and referral patterns for hospital clients"
         }
       ],
       "education": [
@@ -921,10 +1175,17 @@
       "skills": [
         "Strategy: strategic planning, business cases, partnership evaluation, new business launch",
         "Analysis: financial modeling, market assessment, service-line profitability",
-        "Leadership: team management, cross-functional initiatives, executive presentations",
-        "Healthcare: virtual care, payer and provider economics, CMS reimbursement",
-        "Tools: Excel, PowerPoint, Tableau, Definitive Healthcare"
-      ]
+        "Leadership: team management, cross-functional initiatives, executive presentations"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.95,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Strategy Director": {
       "summary": "Strategy director with 13 years of experience across management consulting and corporate strategy in industrial technology. Leads a 6-person strategy team and owns the 5-year plan for a $2.8B business. Shaped a portfolio shift toward software and services that raised gross margin 6 points.",
@@ -936,7 +1197,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 6-person strategy team and own the 5-year strategic plan for a $2.8B industrial technology company\n- Shaped a portfolio shift toward software and services, raising gross margin from 34% to 40% over 4 years\n- Led the strategic review that resulted in divesting a $300M low-growth product line\n- Present strategy and progress reviews to the CEO and board twice a year\n- Built an annual strategy refresh process that links 5 business unit plans to capital allocation"
+          "description": "- Lead a 6-person strategy team and own the 5-year strategic plan for a $2.8B industrial technology company\n- Shaped a portfolio shift toward software and services, raising gross margin from 34% to 40% over 4 years\n- Led the strategic review that resulted in divesting a $300M low-growth product line\n- Present strategy and progress reviews to the CEO and board twice a year"
         },
         {
           "company": "Ardent Industrial Technologies",
@@ -945,7 +1206,7 @@
           "startDate": "2018-03",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Built the business case for an IoT services platform that reached $90M revenue\n- Ran competitor and technology scans that informed 3 acquisitions\n- Managed 2 strategy associates and the annual competitor review"
+          "description": "- Built the business case for an IoT services platform that reached $90M revenue\n- Ran competitor and technology scans that informed 3 acquisitions"
         },
         {
           "company": "Whitmore Partners",
@@ -954,7 +1215,7 @@
           "startDate": "2013-08",
           "endDate": "2018-02",
           "isCurrent": false,
-          "description": "- Led strategy engagements for 12 industrial and automotive clients\n- Built a pricing program that added $40M in annual margin for a components maker\n- Coached 8 consultants on modeling and client communication"
+          "description": "- Led strategy engagements for 12 industrial and automotive clients"
         }
       ],
       "education": [
@@ -976,9 +1237,26 @@
         "Strategy: long-range planning, portfolio strategy, divestitures, competitive strategy",
         "Leadership: team leadership, board communication, executive alignment",
         "Finance: valuation, business cases, margin analysis",
-        "Industry: industrial automation, IoT, software and services models",
-        "Tools: Excel, PowerPoint, Capital IQ, Tableau"
-      ]
+        "Industry: industrial automation, IoT, software and services models"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.93,
+        "opal": 0.99,
+        "minimalist": 0.95,
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.86,
+        "cast": 0.95
+      }
     },
     "Corporate Strategy Manager": {
       "summary": "Corporate strategy manager with 7 years of experience in investment banking and corporate strategy at a consumer fintech. Leads company-level planning, market analysis and strategic initiatives for the executive team. Built the strategy behind a small-business lending product that reached $400M in originations in its second year.",
@@ -1024,9 +1302,26 @@
         "Corporate Strategy: long-range planning, market analysis, build-buy-partner decisions",
         "Finance: valuation, DCF, business cases, unit economics",
         "Fintech: lending, payments, regulatory considerations",
-        "Tools: Excel, PowerPoint, SQL, PitchBook",
-        "Communication: executive offsites, strategy memos, board materials"
-      ]
+        "Tools: Excel, PowerPoint, SQL, PitchBook"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.92
+      }
     },
     "Competitive Intelligence Analyst": {
       "summary": "Competitive intelligence analyst with 5 years of experience tracking competitors for B2B software and medical technology companies. Built battlecards that raised competitive win rates from 38% to 49%. Combines primary research, win-loss interviews and market monitoring into timely, actionable intelligence for sales and product teams.",
@@ -1038,7 +1333,7 @@
           "startDate": "2022-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built and maintain battlecards for 8 competitors in Klue, raising competitive win rate from 38% to 49%\n- Run 60 win-loss interviews a year and share quarterly findings with product and sales leadership\n- Monitor competitor pricing, releases and hiring signals, publishing a weekly digest read by 400 employees\n- Trained 150 account executives on competitive positioning and objection handling\n- Built a competitor pricing tracker covering 120 public price points, informing 2 packaging changes"
+          "description": "- Built and maintain battlecards for 8 competitors in Klue, raising competitive win rate from 38% to 49%\n- Run 60 win-loss interviews a year and share quarterly findings with product and sales leadership\n- Monitor competitor pricing, releases and hiring signals, publishing a weekly digest read by 400 employees\n- Trained 150 account executives on competitive positioning and objection handling"
         },
         {
           "company": "Stellar Surgical Systems",
@@ -1056,7 +1351,7 @@
           "startDate": "2019-08",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Edited 20 student articles on industry trends and company strategy\n- Fact-checked financial data against SEC filings"
+          "description": "- Edited 20 student articles on industry trends and company strategy"
         }
       ],
       "education": [
@@ -1072,9 +1367,24 @@
         "Intelligence: competitor monitoring, win-loss analysis, battlecards, primary research",
         "Tools: Klue, Crayon, Gong, Salesforce, PitchBook",
         "Enablement: sales training, positioning, objection handling",
-        "Ethics & Standards: SCIP code of ethics, public-source research",
-        "Analysis: pricing analysis, market mapping, SWOT, SEC filings review"
-      ]
+        "Ethics & Standards: SCIP code of ethics, public-source research"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "path": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Corporate Development Manager": {
       "summary": "Corporate development manager with 8 years of experience in M&A advisory and in-house corporate development at a vertical software company. Led sourcing, diligence and integration planning for 5 acquisitions worth $320M. Strong in valuation, deal negotiation support and building relationships with founders and bankers.",
@@ -1104,7 +1414,7 @@
           "startDate": "2018-07",
           "endDate": "2019-06",
           "isCurrent": false,
-          "description": "- Built LBO and accretion-dilution models for software buyers\n- Screened 300 potential acquirers for client processes\n- Prepared industry research on vertical software markets"
+          "description": "- Built LBO and accretion-dilution models for software buyers\n- Screened 300 potential acquirers for client processes"
         }
       ],
       "education": [
@@ -1120,9 +1430,27 @@
         "Corporate Development: target sourcing, valuation, due diligence, integration planning",
         "Finance: DCF, LBO, accretion-dilution, comparable companies",
         "Tools: Excel, PitchBook, Capital IQ, DealRoom",
-        "Relationships: founder outreach, banker coverage, board communication",
-        "Legal & Diligence: LOIs, purchase agreements, quality of earnings coordination"
-      ]
+        "Relationships: founder outreach, banker coverage, board communication"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.97,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "M&A Analyst": {
       "summary": "M&A analyst with 2 years of experience at a middle-market investment bank covering business services and healthcare. Supported 6 closed transactions worth $940M, owning models, buyer lists and data rooms. Strong in three-statement modeling, valuation and fast, accurate turnaround under deal deadlines.",
@@ -1134,7 +1462,7 @@
           "startDate": "2024-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Supported 6 closed sell-side and buy-side transactions totaling $940M in business services and healthcare\n- Built three-statement, DCF and LBO models used in management presentations and bid evaluations\n- Compiled buyer lists of 120 strategic and sponsor targets and tracked outreach for 4 processes\n- Managed virtual data rooms with 2,500 documents and coordinated 300 diligence requests\n- Prepared buyer comparison analyses of 14 indications of interest for client management teams"
+          "description": "- Supported 6 closed sell-side and buy-side transactions totaling $940M in business services and healthcare\n- Built three-statement, DCF and LBO models used in management presentations and bid evaluations\n- Compiled buyer lists of 120 strategic and sponsor targets and tracked outreach for 4 processes\n- Managed virtual data rooms with 2,500 documents and coordinated 300 diligence requests"
         },
         {
           "company": "Lakeshore Valuation Group",
@@ -1168,9 +1496,25 @@
         "Financial Modeling: three-statement models, DCF, LBO, accretion-dilution",
         "Valuation: trading comparables, precedent transactions, sum-of-the-parts",
         "Tools: Excel, PowerPoint, Capital IQ, PitchBook, Datasite",
-        "Certifications: SIE, FINRA Series 79",
-        "Industries: business services, healthcare services, physician practice management"
-      ]
+        "Certifications: SIE, FINRA Series 79"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Product Strategy Manager": {
       "summary": "Product strategy manager with 8 years of experience in product management and strategy at B2B software companies. Shapes portfolio and pricing decisions for a $260M product line. Led the packaging redesign that grew average contract value 23% and set the multi-year product vision adopted by the executive team.",
@@ -1182,7 +1526,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Shape portfolio strategy and pricing for a $260M product line spanning 4 products\n- Led a good-better-best packaging redesign that grew average contract value 23% in the first year\n- Wrote the 3-year product vision with the CPO, aligning 9 product managers on 4 investment themes\n- Ran 45 customer and analyst interviews to size 3 AI feature opportunities\n- Built a portfolio investment model that shifted 15% of R&D capacity toward the fastest-growing product"
+          "description": "- Shape portfolio strategy and pricing for a $260M product line spanning 4 products\n- Led a good-better-best packaging redesign that grew average contract value 23% in the first year\n- Wrote the 3-year product vision with the CPO, aligning 9 product managers on 4 investment themes\n- Ran 45 customer and analyst interviews to size 3 AI feature opportunities"
         },
         {
           "company": "Copley Workflow Systems",
@@ -1200,7 +1544,7 @@
           "startDate": "2018-07",
           "endDate": "2019-03",
           "isCurrent": false,
-          "description": "- Supported product strategy projects for 3 software clients\n- Built competitive feature matrices and market models\n- Presented findings to client product leadership teams"
+          "description": "- Supported product strategy projects for 3 software clients\n- Built competitive feature matrices and market models"
         }
       ],
       "education": [
@@ -1216,9 +1560,20 @@
         "Product Strategy: portfolio planning, packaging and pricing, product vision, market sizing",
         "Research: customer interviews, win-loss analysis, Van Westendorp pricing",
         "Tools: Excel, Productboard, Amplitude, Salesforce",
-        "Leadership: executive alignment, PM coaching, investment cases",
-        "Analysis: SQL, cohort analysis, pricing elasticity, market sizing"
-      ]
+        "Leadership: executive alignment, PM coaching, investment cases"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Growth Strategy Manager": {
       "summary": "Growth strategy manager with 7 years of experience in consulting and consumer subscription businesses. Identifies and launches new growth levers, including a referral and partnerships program that delivered 180,000 new subscribers. Combines market analysis, unit economics and hands-on launch management.",
@@ -1230,7 +1585,7 @@
           "startDate": "2022-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built and launched referral and employer-partnership channels that delivered 180,000 new subscribers at 30% lower CAC\n- Prioritize growth bets with a payback and LTV model reviewed monthly by the CEO\n- Led entry into 2 new metro regions, reaching breakeven in 14 months\n- Coordinate a cross-functional growth council with marketing, product and finance leads\n- Ran a pricing test across 3 plan tiers that raised average order value 8% with no change in churn"
+          "description": "- Built and launched referral and employer-partnership channels that delivered 180,000 new subscribers at 30% lower CAC\n- Prioritize growth bets with a payback and LTV model reviewed monthly by the CEO\n- Led entry into 2 new metro regions, reaching breakeven in 14 months\n- Coordinate a cross-functional growth council with marketing, product and finance leads"
         },
         {
           "company": "Brightwell Consulting Group",
@@ -1264,9 +1619,23 @@
         "Growth Strategy: new channel development, market entry, partnership programs",
         "Economics: LTV, CAC payback, cohort modeling, pricing",
         "Tools: Excel, SQL, Looker, Amplitude",
-        "Execution: launch management, cross-functional leadership",
-        "Research: customer surveys, market sizing, competitive benchmarking"
-      ]
+        "Execution: launch management, cross-functional leadership"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Strategic Partnerships Manager": {
       "summary": "Strategic partnerships manager with 7 years of experience building technology and channel partnerships for fintech and payments companies. Owns 15 strategic partners generating $38M in annual partner-sourced revenue. Skilled at structuring deals, negotiating terms and running joint go-to-market plans that partners actually execute.",
@@ -1278,7 +1647,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own 15 strategic partners, including accounting platforms and payroll providers, generating $38M in annual partner-sourced revenue\n- Negotiated a revenue-share integration deal with a top accounting software provider that added 9,000 customers in year one\n- Built joint business plans and quarterly reviews with partner executives\n- Partnered with product to prioritize 6 integrations based on partner revenue potential\n- Led contract renewals with 4 partners, increasing revenue share terms by an average of 2 points"
+          "description": "- Own 15 strategic partners, including accounting platforms and payroll providers, generating $38M in annual partner-sourced revenue\n- Negotiated a revenue-share integration deal with a top accounting software provider that added 9,000 customers in year one\n- Built joint business plans and quarterly reviews with partner executives\n- Partnered with product to prioritize 6 integrations based on partner revenue potential"
         },
         {
           "company": "Coinbridge Payments",
@@ -1312,9 +1681,25 @@
         "Partnerships: deal structuring, revenue share, joint business planning, partner QBRs",
         "Negotiation: term sheets, commercial agreements, executive relationships",
         "Tools: Salesforce, PartnerStack, Crossbeam, Excel",
-        "Domain: fintech, payments, embedded finance, integrations",
-        "Program Management: partner tiers, partner enablement, co-marketing"
-      ]
+        "Domain: fintech, payments, embedded finance, integrations"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "prism": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Partnerships Analyst": {
       "summary": "Partnerships analyst with 3 years of experience supporting partner programs at a travel technology company. Built partner performance reporting that identified $1.6M in underperforming commitments. Brings strong Excel and Salesforce skills, contract tracking and clear analysis that helps partner managers prioritize.",
@@ -1326,7 +1711,7 @@
           "startDate": "2023-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built partner performance dashboards for 80 hotel and airline partners, flagging $1.6M in underperforming marketing commitments\n- Track contract terms, renewals and incentive payouts for 120 agreements in Salesforce\n- Modeled commission scenarios that supported renegotiation of 12 partner contracts\n- Prepare quarterly business review decks for 4 partner managers\n- Built a partner onboarding tracker that cut average setup time for new hotel partners from 6 weeks to 4"
+          "description": "- Built partner performance dashboards for 80 hotel and airline partners, flagging $1.6M in underperforming marketing commitments\n- Track contract terms, renewals and incentive payouts for 120 agreements in Salesforce\n- Modeled commission scenarios that supported renegotiation of 12 partner contracts\n- Prepare quarterly business review decks for 4 partner managers"
         },
         {
           "company": "Sunshine Coast Resorts",
@@ -1360,9 +1745,24 @@
         "Partner Analytics: performance reporting, commission modeling, incentive tracking",
         "Contract Management: renewals, terms tracking, compliance",
         "Tools: Salesforce, Excel, Tableau, Google Slides",
-        "Domain: hotel and airline distribution, travel marketplaces",
-        "Communication: QBR decks, partner reports, contract summaries"
-      ]
+        "Domain: hotel and airline distribution, travel marketplaces"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Business Development Analyst": {
       "summary": "Business development analyst with 3 years of experience supporting enterprise sales and market expansion at a logistics software company. Built a target account model that helped the team open 22 new enterprise accounts. Combines market research, CRM analysis and polished proposal support.",
@@ -1374,7 +1774,7 @@
           "startDate": "2023-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built a target account scoring model in Salesforce that helped open 22 new enterprise accounts worth $4.1M in ARR\n- Researched 3 new verticals, sizing cold-chain logistics as a $600M opportunity now in pilot\n- Prepared 35 RFP responses and proposals with sales and solutions teams\n- Track pipeline health and win rates in a weekly report for the VP of Business Development\n- Built competitive comparisons used in 18 enterprise deals, contributing to a 6-point win-rate increase"
+          "description": "- Built a target account scoring model in Salesforce that helped open 22 new enterprise accounts worth $4.1M in ARR\n- Researched 3 new verticals, sizing cold-chain logistics as a $600M opportunity now in pilot\n- Prepared 35 RFP responses and proposals with sales and solutions teams\n- Track pipeline health and win rates in a weekly report for the VP of Business Development"
         },
         {
           "company": "Cumberland Trucking Group",
@@ -1408,9 +1808,24 @@
         "Business Development: account targeting, market research, RFPs and proposals",
         "Analytics: pipeline analysis, win-rate tracking, market sizing",
         "Tools: Salesforce, ZoomInfo, Excel, PowerPoint, LinkedIn Sales Navigator",
-        "Domain: freight, logistics software, supply chain",
-        "Communication: proposals, executive briefs, sales presentations"
-      ]
+        "Domain: freight, logistics software, supply chain"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Change Management Consultant": {
       "summary": "Change management consultant with 7 years of experience leading the people side of ERP, HR system and reorganization programs. Drove adoption for a Workday rollout to 18,000 employees that reached 94% usage within 60 days. Uses Prosci ADKAR, stakeholder analysis and training plans to make change stick.",
@@ -1422,7 +1837,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led change management for a Workday HCM rollout to 18,000 employees, reaching 94% active usage within 60 days\n- Built stakeholder maps and ADKAR assessments across 40 business units for an Oracle Cloud ERP program\n- Designed a change champion network of 150 employees that resolved 60% of questions locally\n- Created communication and training plans for 4 clients, delivering 300 training sessions\n- Measured adoption with usage analytics and surveys, targeting reinforcement at 6 lagging departments"
+          "description": "- Led change management for a Workday HCM rollout to 18,000 employees, reaching 94% active usage within 60 days\n- Built stakeholder maps and ADKAR assessments across 40 business units for an Oracle Cloud ERP program\n- Designed a change champion network of 150 employees that resolved 60% of questions locally\n- Created communication and training plans for 4 clients, delivering 300 training sessions"
         },
         {
           "company": "Steel City Health Partners",
@@ -1431,7 +1846,7 @@
           "startDate": "2019-06",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Supported a nurse scheduling system change for 4,000 clinicians across 8 hospitals\n- Ran pulse surveys that cut reported change fatigue 15 points\n- Built manager toolkits and talking points for 3 system go-lives"
+          "description": "- Supported a nurse scheduling system change for 4,000 clinicians across 8 hospitals\n- Ran pulse surveys that cut reported change fatigue 15 points"
         },
         {
           "company": "Carnegie Mellon Heinz College",
@@ -1440,7 +1855,7 @@
           "startDate": "2017-09",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Studied technology adoption in 4 county agencies through interviews and surveys\n- Co-wrote a policy brief on digital service rollouts"
+          "description": "- Studied technology adoption in 4 county agencies through interviews and surveys"
         }
       ],
       "education": [
@@ -1461,10 +1876,24 @@
       "skills": [
         "Change Management: ADKAR, stakeholder analysis, change impact assessments, resistance management",
         "Enablement: communication plans, training design, change champion networks",
-        "Systems: Workday, Oracle Cloud ERP, SAP SuccessFactors",
-        "Certifications: Prosci Certified Change Practitioner, CCMP",
-        "Measurement: adoption metrics, readiness surveys, reinforcement planning"
-      ]
+        "Systems: Workday, Oracle Cloud ERP, SAP SuccessFactors"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.96,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.91,
+        "mono": 0.9,
+        "pop": 0.9
+      }
     },
     "Transformation Manager": {
       "summary": "Transformation manager with 10 years of experience in operations and consulting, leading enterprise cost and digital transformation programs at a national insurer. Runs a transformation office tracking 60 initiatives worth $95M in annual savings. Combines program governance, benefits tracking and change leadership.",
@@ -1476,7 +1905,7 @@
           "startDate": "2021-11",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run the transformation office tracking 60 initiatives worth $95M in annual run-rate savings, with $71M realized to date\n- Built stage-gate governance and a benefits register reviewed monthly by the executive committee\n- Led a claims digitization initiative that moved 65% of first notices of loss to self-service\n- Manage 4 transformation leads and coordinate 20 initiative owners\n- Coached 20 initiative owners on business cases and benefit baselines, raising forecast accuracy to within 10%"
+          "description": "- Run the transformation office tracking 60 initiatives worth $95M in annual run-rate savings, with $71M realized to date\n- Built stage-gate governance and a benefits register reviewed monthly by the executive committee\n- Led a claims digitization initiative that moved 65% of first notices of loss to self-service\n- Manage 4 transformation leads and coordinate 20 initiative owners"
         },
         {
           "company": "Scioto Advisory Group",
@@ -1494,7 +1923,7 @@
           "startDate": "2016-06",
           "endDate": "2018-01",
           "isCurrent": false,
-          "description": "- Ran Lean improvement events that reduced processing errors 30%\n- Built capacity models for 3 processing centers\n- Mapped 15 back-office processes for a bank client"
+          "description": "- Ran Lean improvement events that reduced processing errors 30%\n- Built capacity models for 3 processing centers"
         }
       ],
       "education": [
@@ -1510,9 +1939,25 @@
         "Transformation: transformation office, benefits tracking, stage-gate governance, cost programs",
         "Operations: Lean, shared services, process digitization",
         "Leadership: executive reporting, team management, change leadership",
-        "Certifications: PMP, Lean Six Sigma Black Belt",
-        "Tools: Excel, Power BI, Smartsheet, Wrike"
-      ]
+        "Certifications: PMP, Lean Six Sigma Black Belt"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.94,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.95
+      }
     },
     "Business Transformation Consultant": {
       "summary": "Business transformation consultant with 6 years of experience redesigning finance and supply chain operations around cloud ERP for manufacturing and consumer goods clients. Led process design for an SAP S/4HANA program that cut month-end close from 10 days to 5. Bridges business process, technology and organizational design.",
@@ -1524,7 +1969,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led record-to-report process design for an SAP S/4HANA program, cutting a manufacturer's month-end close from 10 days to 5\n- Defined target operating models for finance and procurement across 3 global regions\n- Ran fit-to-standard workshops with 70 process owners, limiting custom code to 12% of requirements\n- Built a value case of $28M in annual benefits used to secure board funding\n- Supported organizational design for a new finance shared-services center of 120 roles"
+          "description": "- Led record-to-report process design for an SAP S/4HANA program, cutting a manufacturer's month-end close from 10 days to 5\n- Defined target operating models for finance and procurement across 3 global regions\n- Ran fit-to-standard workshops with 70 process owners, limiting custom code to 12% of requirements\n- Built a value case of $28M in annual benefits used to secure board funding"
         },
         {
           "company": "Gulf Coast Consumer Products",
@@ -1533,7 +1978,7 @@
           "startDate": "2020-06",
           "endDate": "2022-06",
           "isCurrent": false,
-          "description": "- Standardized intercompany reconciliation across 6 entities, reducing write-offs 40%\n- Supported a BlackLine implementation for 2,000 balance sheet accounts\n- Built monthly close calendars and checklists for 6 legal entities"
+          "description": "- Standardized intercompany reconciliation across 6 entities, reducing write-offs 40%\n- Supported a BlackLine implementation for 2,000 balance sheet accounts"
         },
         {
           "company": "Bauer College Accounting Association",
@@ -1542,7 +1987,7 @@
           "startDate": "2017-08",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Managed a $30,000 student organization budget and monthly reporting\n- Organized 5 recruiting events with accounting and consulting firms"
+          "description": "- Managed a $30,000 student organization budget and monthly reporting"
         }
       ],
       "education": [
@@ -1564,9 +2009,26 @@
         "Transformation: target operating models, process redesign, value cases, fit-to-standard",
         "ERP: SAP S/4HANA, Oracle Cloud ERP, BlackLine",
         "Finance Processes: record-to-report, procure-to-pay, intercompany",
-        "Certifications: SAP Certified Application Associate (S/4HANA Finance)",
-        "Methods: fit-to-standard, process mapping, organizational design, change management"
-      ]
+        "Certifications: SAP Certified Application Associate (S/4HANA Finance)"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.93
+      }
     },
     "Portfolio Manager": {
       "summary": "Project portfolio manager with 11 years of experience in IT project delivery and portfolio governance at a hospital network. Manages a portfolio of 70 initiatives and $85M in annual investment. Introduced value-based prioritization that redirected $12M from low-return projects to clinical and patient-access priorities.",
@@ -1578,7 +2040,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a portfolio of 70 technology initiatives and $85M in annual investment across clinical, revenue cycle and corporate areas\n- Introduced value-based scoring that redirected $12M from low-return projects to patient-access priorities\n- Run quarterly portfolio reviews with the CIO, CFO and CNO, balancing demand against capacity of 400 IT staff\n- Implemented ServiceNow SPM, replacing 30 spreadsheets with a single portfolio view\n- Built a quarterly benefits review that tracks realized savings and outcomes for the 20 largest projects"
+          "description": "- Manage a portfolio of 70 technology initiatives and $85M in annual investment across clinical, revenue cycle and corporate areas\n- Introduced value-based scoring that redirected $12M from low-return projects to patient-access priorities\n- Run quarterly portfolio reviews with the CIO, CFO and CNO, balancing demand against capacity of 400 IT staff\n- Implemented ServiceNow SPM, replacing 30 spreadsheets with a single portfolio view"
         },
         {
           "company": "Valley Oak Health Network",
@@ -1587,7 +2049,7 @@
           "startDate": "2017-03",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Delivered an Epic ambulatory rollout to 45 clinics on schedule and $1.2M under budget\n- Managed a data center migration of 300 applications with no unplanned downtime\n- Led vendor selection for a $4M telehealth platform"
+          "description": "- Delivered an Epic ambulatory rollout to 45 clinics on schedule and $1.2M under budget\n- Managed a data center migration of 300 applications with no unplanned downtime"
         },
         {
           "company": "Capitol Valley Systems",
@@ -1596,7 +2058,7 @@
           "startDate": "2015-01",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Managed infrastructure projects for 6 public sector clients\n- Introduced weekly risk reviews that reduced late deliverables 30%\n- Built project status dashboards for county government clients"
+          "description": "- Managed infrastructure projects for 6 public sector clients"
         }
       ],
       "education": [
@@ -1612,9 +2074,23 @@
         "Portfolio Management: prioritization frameworks, capacity planning, investment governance, benefits tracking",
         "Tools: ServiceNow SPM, Microsoft Project, Power BI, Excel",
         "Healthcare IT: Epic, revenue cycle systems, HIPAA",
-        "Certifications: PfMP, PMP",
-        "Finance: capital and operating budgets, business cases, benefits realization"
-      ]
+        "Certifications: PfMP, PMP"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Business Process Analyst": {
       "summary": "Business process analyst with 4 years of experience mapping, measuring and improving back-office processes in banking and shared services. Redesigned an accounts payable process that cut invoice cycle time 48%. Strong in BPMN, process mining and Lean methods, with practical automation recommendations.",
@@ -1626,7 +2102,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Redesigned the accounts payable process with Celonis process mining, cutting invoice cycle time from 21 days to 11\n- Documented 35 core processes in BPMN 2.0 with controls mapped for SOX testing\n- Identified 8 automation candidates, with 3 UiPath bots now saving 6,000 hours a year\n- Facilitated Kaizen events with operations teams that removed 25% of manual handoffs\n- Built a process KPI dashboard in Power BI tracking cycle time and rework for 6 operations teams"
+          "description": "- Redesigned the accounts payable process with Celonis process mining, cutting invoice cycle time from 21 days to 11\n- Documented 35 core processes in BPMN 2.0 with controls mapped for SOX testing\n- Identified 8 automation candidates, with 3 UiPath bots now saving 6,000 hours a year\n- Facilitated Kaizen events with operations teams that removed 25% of manual handoffs"
         },
         {
           "company": "Carolina Shared Services Center",
@@ -1660,9 +2136,25 @@
         "Process Analysis: BPMN 2.0, process mining, value stream mapping, SOPs",
         "Improvement: Lean, Kaizen, root-cause analysis, automation assessment",
         "Tools: Celonis, Signavio, Visio, UiPath, Excel",
-        "Certifications: Lean Six Sigma Green Belt",
-        "Compliance: SOX controls documentation, audit support"
-      ]
+        "Certifications: Lean Six Sigma Green Belt"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Project Management Intern": {
       "summary": "Recent business graduate interning in project management at a software company, with coursework in operations, project management and analytics. Built a launch tracker that kept a 40-task release on schedule. Organized, quick with Smartsheet and Jira, and preparing for the CAPM exam.",
@@ -1683,7 +2175,7 @@
           "startDate": "2024-08",
           "endDate": "2026-05",
           "isCurrent": false,
-          "description": "- Planned 6 campus events with budgets up to $18,000 and 30 volunteers\n- Built a shared timeline in Asana that cut missed vendor deadlines to zero\n- Recruited and scheduled 30 volunteers for a 1,200-person spring festival"
+          "description": "- Planned 6 campus events with budgets up to $18,000 and 30 volunteers\n- Built a shared timeline in Asana that cut missed vendor deadlines to zero"
         },
         {
           "company": "Triangle Rental Properties",
@@ -1692,7 +2184,7 @@
           "startDate": "2023-01",
           "endDate": "2024-07",
           "isCurrent": false,
-          "description": "- Scheduled maintenance requests for 300 rental units\n- Tracked vendor work orders and invoices in AppFolio"
+          "description": "- Scheduled maintenance requests for 300 rental units"
         }
       ],
       "education": [
@@ -1703,20 +2195,22 @@
           "endDate": "2026-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Campus Food Pantry Expansion Plan",
-          "link": "",
-          "description": "Capstone project scheduling and budgeting a $45,000 pantry expansion, with a work breakdown structure, Gantt chart and risk register presented to university staff"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Project Tools: Smartsheet, Jira, Asana, Microsoft Project",
         "Methods: work breakdown structures, Gantt charts, RAID logs, Agile basics",
-        "Office: Excel, PowerPoint, Microsoft Teams",
-        "Certifications: CAPM (in progress), Google Project Management Certificate",
-        "Communication: meeting notes, status updates, stakeholder emails"
-      ]
+        "Office: Excel, PowerPoint, Microsoft Teams"
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "iron": 0.98,
+        "ginto": 0.96,
+        "quartz": 0.95,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.96
+      }
     },
     "Junior Project Manager": {
       "summary": "Junior project manager with 3 years of project experience, the last 2 running website and marketing technology projects at a digital agency. Delivers 6 to 8 small projects at a time with budgets up to $150,000. Keeps clients informed, scope controlled and teams unblocked, and recently earned the CAPM.",
@@ -1762,9 +2256,26 @@
         "Project Management: scope and change control, scheduling, budget tracking, client communication",
         "Methods: Scrum, Kanban, hybrid delivery",
         "Tools: Teamwork, Jira, HubSpot, Smartsheet, Google Workspace",
-        "Certifications: CAPM",
-        "Communication: client status reports, demos, scope conversations"
-      ]
+        "Certifications: CAPM"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.96,
+        "silk": 0.93,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "Senior Project Manager": {
       "summary": "Senior project manager with 11 years of experience leading complex technology and facilities projects for financial services firms. Delivers programs up to $25M with teams of 40, including a headquarters relocation completed 2 weeks early with zero trading disruption. Known for strong governance, vendor management and calm escalation handling.",
@@ -1776,7 +2287,7 @@
           "startDate": "2021-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led a $25M headquarters relocation for 1,100 employees, finishing 2 weeks early with zero trading-floor downtime\n- Manage 3 to 4 concurrent projects with up to 40 internal and vendor staff\n- Delivered a market data platform replacement that cut annual licensing costs $3.2M\n- Mentor 3 project managers on estimation, risk management and steering committee reporting\n- Standardized project closeout reviews, feeding 45 lessons learned into the firm's estimating templates"
+          "description": "- Led a $25M headquarters relocation for 1,100 employees, finishing 2 weeks early with zero trading-floor downtime\n- Manage 3 to 4 concurrent projects with up to 40 internal and vendor staff\n- Delivered a market data platform replacement that cut annual licensing costs $3.2M\n- Mentor 3 project managers on estimation, risk management and steering committee reporting"
         },
         {
           "company": "Hudson Clearing Services",
@@ -1794,7 +2305,7 @@
           "startDate": "2015-06",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Coordinated network upgrades for 5 financial services clients\n- Built project schedules and cost trackers in Microsoft Project\n- Tracked vendor deliverables for 12 office network rollouts"
+          "description": "- Coordinated network upgrades for 5 financial services clients\n- Built project schedules and cost trackers in Microsoft Project"
         }
       ],
       "education": [
@@ -1810,9 +2321,25 @@
         "Project Leadership: governance, steering committees, risk and issue management, vendor management",
         "Methods: waterfall, hybrid Agile, earned value, critical path",
         "Tools: Microsoft Project, Jira, ServiceNow, Smartsheet",
-        "Certifications: PMP, PRINCE2 Practitioner",
-        "Financial Services: trading operations, market data, settlement and clearing"
-      ]
+        "Certifications: PMP, PRINCE2 Practitioner"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "IT Project Manager": {
       "summary": "IT project manager with 8 years of experience delivering infrastructure, ERP and security projects for manufacturing and distribution companies. Led a Microsoft 365 and Azure migration for 3,500 users with 99% adoption and no data loss. Combines technical fluency with tight scope, budget and vendor control.",
@@ -1824,7 +2351,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led a Microsoft 365 and Azure migration for 3,500 users across 11 plants with 99% adoption and no data loss\n- Managed a $2.4M Dynamics 365 ERP upgrade delivered within 3% of budget\n- Delivered a zero-trust network access rollout that closed 14 audit findings ahead of SOC 2 review\n- Coordinate infrastructure, security and 4 vendor teams through weekly change advisory boards\n- Built a project intake and prioritization template used by IT leadership to sequence 30 requests a year"
+          "description": "- Led a Microsoft 365 and Azure migration for 3,500 users across 11 plants with 99% adoption and no data loss\n- Managed a $2.4M Dynamics 365 ERP upgrade delivered within 3% of budget\n- Delivered a zero-trust network access rollout that closed 14 audit findings ahead of SOC 2 review\n- Coordinate infrastructure, security and 4 vendor teams through weekly change advisory boards"
         },
         {
           "company": "Midwest Parts Distribution",
@@ -1842,7 +2369,7 @@
           "startDate": "2018-06",
           "endDate": "2018-12",
           "isCurrent": false,
-          "description": "- Administered Windows Server and VMware environments for 25 small business clients\n- Automated user onboarding with PowerShell scripts\n- Supported Active Directory cleanup of 600 stale accounts"
+          "description": "- Administered Windows Server and VMware environments for 25 small business clients"
         }
       ],
       "education": [
@@ -1858,9 +2385,22 @@
         "IT Delivery: infrastructure, cloud migration, ERP, cybersecurity projects",
         "Technical: Microsoft 365, Azure, Dynamics 365, VMware, networking fundamentals",
         "Governance: ITIL change management, SOC 2, vendor management",
-        "Certifications: PMP, ITIL 4 Foundation, CompTIA Project+",
-        "Methods: waterfall, Agile, hybrid delivery, cutover planning"
-      ]
+        "Certifications: PMP, ITIL 4 Foundation, CompTIA Project+"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Senior Program Manager": {
       "summary": "Senior program manager with 12 years of experience leading global programs in consumer electronics and supply chain technology. Runs a $40M program across 11 teams in 4 countries. Led the new-product program that launched a smart home device line generating $180M in first-year revenue.",
@@ -1872,7 +2412,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a $40M smart home device program across 11 teams in the US, Taiwan, China and Mexico\n- Launched a camera and doorbell line that generated $180M in first-year revenue on schedule\n- Built gated milestone reviews from EVT to mass production, cutting late-stage design changes 45%\n- Report program health to the SVP of Hardware and resolve cross-functional trade-offs on cost and schedule\n- Ran supplier and factory readiness reviews in Taiwan and Mexico, raising first-pass yield from 88% to 96%"
+          "description": "- Lead a $40M smart home device program across 11 teams in the US, Taiwan, China and Mexico\n- Launched a camera and doorbell line that generated $180M in first-year revenue on schedule\n- Built gated milestone reviews from EVT to mass production, cutting late-stage design changes 45%\n- Report program health to the SVP of Hardware and resolve cross-functional trade-offs on cost and schedule"
         },
         {
           "company": "Evercrest Electronics",
@@ -1881,7 +2421,7 @@
           "startDate": "2017-04",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Managed 3 wearable product launches with contract manufacturers in Asia\n- Reduced bill-of-materials cost 12% by coordinating supplier and design reviews\n- Led monthly business reviews with 4 contract manufacturers"
+          "description": "- Managed 3 wearable product launches with contract manufacturers in Asia\n- Reduced bill-of-materials cost 12% by coordinating supplier and design reviews"
         },
         {
           "company": "Siliconway Supply Systems",
@@ -1890,7 +2430,7 @@
           "startDate": "2014-07",
           "endDate": "2017-03",
           "isCurrent": false,
-          "description": "- Delivered warehouse management system rollouts for 5 manufacturing clients\n- Cut implementation time 20% with a reusable deployment playbook\n- Trained client warehouse staff on new scanning workflows"
+          "description": "- Delivered warehouse management system rollouts for 5 manufacturing clients"
         }
       ],
       "education": [
@@ -1911,10 +2451,24 @@
       "skills": [
         "Program Management: hardware NPI, gated milestone reviews, global team coordination, executive reporting",
         "Manufacturing: EVT/DVT/PVT, contract manufacturers, BOM cost management",
-        "Tools: Jira, Smartsheet, Arena PLM, Tableau",
-        "Certifications: PMP, PgMP",
-        "Leadership: executive reviews, global team leadership, trade-off decisions"
-      ]
+        "Tools: Jira, Smartsheet, Arena PLM, Tableau"
+      ],
+      "fit": {
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.94,
+        "mono": 0.92,
+        "pop": 0.9,
+        "cast": 0.98
+      }
     },
     "Director of Program Management": {
       "summary": "Director of program management with 16 years of experience building PMOs and leading enterprise programs in aerospace and defense. Leads 14 program managers overseeing a $650M program portfolio. Raised on-time milestone delivery from 71% to 90% by standardizing earned value management and integrated baseline reviews.",
@@ -1926,7 +2480,7 @@
           "startDate": "2020-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 14 program managers overseeing 22 defense and commercial programs worth $650M in contract value\n- Standardized EVMS aligned with EIA-748, raising on-time milestone delivery from 71% to 90%\n- Won 3 follow-on contracts worth $210M by improving CPAR ratings to Very Good or Exceptional\n- Own program risk reviews with the COO and present portfolio status to the board quarterly\n- Hired and developed 6 program managers, with 3 promoted to senior roles"
+          "description": "- Lead 14 program managers overseeing 22 defense and commercial programs worth $650M in contract value\n- Standardized EVMS aligned with EIA-748, raising on-time milestone delivery from 71% to 90%\n- Won 3 follow-on contracts worth $210M by improving CPAR ratings to Very Good or Exceptional\n- Own program risk reviews with the COO and present portfolio status to the board quarterly"
         },
         {
           "company": "Redstone Avionics",
@@ -1935,7 +2489,7 @@
           "startDate": "2014-03",
           "endDate": "2020-09",
           "isCurrent": false,
-          "description": "- Managed a $120M avionics upgrade program for a US Army customer\n- Recovered a program from a 9-month slip to on-track delivery within 18 months\n- Led quarterly program management reviews with Army customers"
+          "description": "- Managed a $120M avionics upgrade program for a US Army customer\n- Recovered a program from a 9-month slip to on-track delivery within 18 months"
         },
         {
           "company": "Tennessee Valley Engineering",
@@ -1944,7 +2498,7 @@
           "startDate": "2010-06",
           "endDate": "2014-02",
           "isCurrent": false,
-          "description": "- Led test planning for ground support equipment projects\n- Maintained integrated master schedules for 4 programs\n- Supported 2 critical design reviews with government customers"
+          "description": "- Led test planning for ground support equipment projects"
         }
       ],
       "education": [
@@ -1965,10 +2519,24 @@
       "skills": [
         "Leadership: PMO leadership, program manager development, portfolio governance, board reporting",
         "Defense Programs: EVMS (EIA-748), integrated baseline reviews, CPARS, DFARS",
-        "Tools: Deltek Cobra, Primavera P6, Microsoft Project",
-        "Certifications: PMP, DAU Program Management (Practitioner), Active Secret Clearance",
-        "Contracts: FAR/DFARS, cost-plus and fixed-price contracts, subcontract management"
-      ]
+        "Tools: Deltek Cobra, Primavera P6, Microsoft Project"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.89
+      }
     },
     "Associate Consultant": {
       "summary": "Associate consultant with 2 years of experience at a management consulting firm, supporting operations and pricing projects for healthcare and consumer clients. Built the analysis behind a pricing change worth $6M a year for a client. Strong in Excel modeling, research and clear slides, with a fast learning curve on new industries.",
@@ -2014,9 +2582,25 @@
         "Consulting: problem structuring, research synthesis, customer interviews",
         "Analysis: Excel modeling, price elasticity, staffing models, market sizing",
         "Tools: Excel, PowerPoint, ThinkCell, Alteryx, Tableau",
-        "Communication: slide writing, client presentations",
-        "Industries: healthcare services, specialty pharmacy, consumer goods"
-      ]
+        "Communication: slide writing, client presentations"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.95,
+        "minimalist": 0.89,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.9
+      }
     },
     "Engagement Manager": {
       "summary": "Engagement manager with 9 years of consulting experience leading operations and digital strategy engagements for retail and consumer goods clients. Manages client relationships and teams of 4 to 8, with $6M in annual engagement fees. Led a supply chain program that freed $90M in inventory for a national retailer.",
@@ -2028,7 +2612,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead engagements with teams of 4 to 8 consultants, owning $6M in annual fees and client relationships at the C-level\n- Led an inventory optimization program that freed $90M in working capital for a national retailer\n- Sold 3 follow-on engagements worth $2.4M through scoping and proposal work\n- Coach and evaluate 10 consultants a year, with 4 promoted\n- Built a proposal library and scoping templates adopted by the firm's retail practice"
+          "description": "- Lead engagements with teams of 4 to 8 consultants, owning $6M in annual fees and client relationships at the C-level\n- Led an inventory optimization program that freed $90M in working capital for a national retailer\n- Sold 3 follow-on engagements worth $2.4M through scoping and proposal work\n- Coach and evaluate 10 consultants a year, with 4 promoted"
         },
         {
           "company": "Sterling Grove Consulting",
@@ -2037,7 +2621,7 @@
           "startDate": "2019-08",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Led workstreams on omnichannel fulfillment and store operations for 5 clients\n- Built a labor model that cut a grocer's store labor hours 6%\n- Coached 3 analysts on modeling and slide writing"
+          "description": "- Led workstreams on omnichannel fulfillment and store operations for 5 clients\n- Built a labor model that cut a grocer's store labor hours 6%"
         },
         {
           "company": "Wabash Retail Analytics",
@@ -2046,7 +2630,7 @@
           "startDate": "2017-07",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Analyzed store performance and assortment for 6 retail clients\n- Built automated reporting in SQL and Tableau\n- Built store clustering models for 2 grocery clients"
+          "description": "- Analyzed store performance and assortment for 6 retail clients"
         }
       ],
       "education": [
@@ -2068,9 +2652,25 @@
         "Engagement Leadership: client relationship management, scoping, proposals, team leadership",
         "Retail & Supply Chain: inventory optimization, omnichannel fulfillment, labor modeling",
         "Analysis: financial modeling, SQL, Tableau, Excel",
-        "Communication: C-suite presentations, steering committees, coaching",
-        "Tools: Excel, PowerPoint, Alteryx, ThinkCell"
-      ]
+        "Communication: C-suite presentations, steering committees, coaching"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.93,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.87,
+        "cast": 0.98
+      }
     },
     "Strategy & Operations Manager": {
       "summary": "Strategy and operations manager with 7 years of experience in consulting and high-growth technology companies. Drives planning, metrics and cross-functional initiatives for the customer organization of a 900-person SaaS company. Led a support redesign that cut cost per ticket 28% while raising CSAT to 93%.",
@@ -2082,7 +2682,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own planning, headcount models and KPIs for a 280-person support, onboarding and customer success organization\n- Led a tiered support redesign that cut cost per ticket 28% while raising CSAT from 88% to 93%\n- Built a self-serve deflection business case that funded an AI help center, deflecting 35% of tickets\n- Run monthly business reviews for the Chief Customer Officer and 8 directors\n- Built a capacity model linking ticket forecasts to hiring, cutting contractor spend $1.2M a year"
+          "description": "- Own planning, headcount models and KPIs for a 280-person support, onboarding and customer success organization\n- Led a tiered support redesign that cut cost per ticket 28% while raising CSAT from 88% to 93%\n- Built a self-serve deflection business case that funded an AI help center, deflecting 35% of tickets\n- Run monthly business reviews for the Chief Customer Officer and 8 directors"
         },
         {
           "company": "Townsend Operations Advisors",
@@ -2100,7 +2700,7 @@
           "startDate": "2018-01",
           "endDate": "2019-06",
           "isCurrent": false,
-          "description": "- Delivered a customer service process review for a Denver retailer\n- Built a call volume forecast in Excel for the client team"
+          "description": "- Delivered a customer service process review for a Denver retailer"
         }
       ],
       "education": [
@@ -2116,9 +2716,22 @@
         "Strategy & Operations: planning, headcount modeling, business reviews, process redesign",
         "Customer Operations: support tiering, deflection, capacity planning, CSAT",
         "Tools: Excel, SQL, Looker, Zendesk, Salesforce",
-        "Analysis: business cases, cost modeling, KPI design",
-        "Leadership: executive business reviews, cross-functional programs, change management"
-      ]
+        "Analysis: business cases, cost modeling, KPI design"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "VP of Strategy": {
       "summary": "Vice president of strategy with 17 years of experience in consulting, corporate strategy and general management at specialty retail and consumer companies. Leads strategy, M&A and the transformation office for a $4.5B retailer. Architected the plan behind 3 acquisitions and a digital pivot that grew e-commerce from 12% to 31% of sales.",
@@ -2130,7 +2743,7 @@
           "startDate": "2020-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead strategy, corporate development and the transformation office, a team of 12 reporting to the CEO\n- Architected the 5-year plan that grew e-commerce from 12% to 31% of $4.5B in sales\n- Led 3 acquisitions totaling $420M and the integration of 2 digitally native brands\n- Present strategy to the board quarterly and set enterprise OKRs with the executive team\n- Built the transformation office that delivered $65M in annual cost savings over 3 years"
+          "description": "- Lead strategy, corporate development and the transformation office, a team of 12 reporting to the CEO\n- Architected the 5-year plan that grew e-commerce from 12% to 31% of $4.5B in sales\n- Led 3 acquisitions totaling $420M and the integration of 2 digitally native brands\n- Present strategy to the board quarterly and set enterprise OKRs with the executive team"
         },
         {
           "company": "Northern Pines Consumer Brands",
@@ -2139,7 +2752,7 @@
           "startDate": "2015-05",
           "endDate": "2020-01",
           "isCurrent": false,
-          "description": "- Built the portfolio strategy that exited 2 low-margin categories worth $250M\n- Led entry into direct-to-consumer channels, reaching $90M in annual revenue\n- Led the annual strategic planning process across 6 brands"
+          "description": "- Built the portfolio strategy that exited 2 low-margin categories worth $250M\n- Led entry into direct-to-consumer channels, reaching $90M in annual revenue"
         },
         {
           "company": "Marlowe & Kent Consulting",
@@ -2148,7 +2761,7 @@
           "startDate": "2009-08",
           "endDate": "2015-04",
           "isCurrent": false,
-          "description": "- Led growth and M&A strategy engagements for 15 retail and consumer clients\n- Built the firm's consumer practice from 2 to 9 consultants\n- Recruited and trained 12 consultants for the consumer practice"
+          "description": "- Led growth and M&A strategy engagements for 15 retail and consumer clients"
         }
       ],
       "education": [
@@ -2169,10 +2782,23 @@
       "skills": [
         "Executive Leadership: enterprise strategy, board communication, OKRs, transformation office",
         "Corporate Development: M&A, integration, portfolio exits, partnerships",
-        "Retail & Consumer: omnichannel, direct-to-consumer, brand portfolio management",
-        "Finance: valuation, capital allocation, long-range planning",
-        "Communication: board presentations, investor messaging, executive alignment"
-      ]
+        "Retail & Consumer: omnichannel, direct-to-consumer, brand portfolio management"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.94,
+        "minimalist": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.96,
+        "path": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.89,
+        "pop": 0.91,
+        "cast": 0.95
+      }
     }
   }
 }

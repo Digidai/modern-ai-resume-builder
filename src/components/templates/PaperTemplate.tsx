@@ -69,7 +69,7 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-[#fffef8] px-[16mm] pt-[13mm] pb-[12mm] font-charis text-stone-900 wrap-break-word [--accent:var(--rs-accent,#111111)]">
             <header className="border-y-4 border-double border-(--accent) py-4 text-center">
-                <h1 className="font-playfair text-[46px] leading-[1.1] font-black tracking-tight">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-playfair text-[46px] leading-[1.1] font-black tracking-tight">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-1 text-[17px] italic text-stone-700">{data.title}</p>}
             </header>
             {contacts.length > 0 && (

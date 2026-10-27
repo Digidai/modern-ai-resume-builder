@@ -12,7 +12,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Closed 2025 at 118% of a $1.9M annual quota, ranking 2nd of 11 reps\n- Opened 46 new accounts across schools, clinics and office parks through cold calls and site walks\n- Grew a regional school district account from $60k to $210k a year by consolidating 3 suppliers\n- Log all activity and quotes in Salesforce, keeping pipeline forecasts within 10% of actuals\n- Run quarterly product demos for facility teams on floor-care equipment, closing $140k in machine sales last year"
+          "description": "- Closed 2025 at 118% of a $1.9M annual quota, ranking 2nd of 11 reps\n- Opened 46 new accounts across schools, clinics and office parks through cold calls and site walks\n- Grew a regional school district account from $60k to $210k a year by consolidating 3 suppliers\n- Log all activity and quotes in Salesforce, keeping pipeline forecasts within 10% of actuals"
         },
         {
           "company": "Allegheny Office Products",
@@ -21,7 +21,7 @@
           "startDate": "2020-06",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Handled 60 inbound calls a day for reorders and quotes on office and breakroom supplies\n- Upsold service contracts to 140 customers, adding $95k in annual revenue\n- Kept a 98% order accuracy rate while quoting about 40 orders a week"
+          "description": "- Handled 60 inbound calls a day for reorders and quotes on office and breakroom supplies\n- Upsold service contracts to 140 customers, adding $95k in annual revenue"
         },
         {
           "company": "Bluff Street Bookstore",
@@ -30,7 +30,7 @@
           "startDate": "2017-09",
           "endDate": "2020-05",
           "isCurrent": false,
-          "description": "- Helped 50+ customers a shift and handled textbook orders for 12 faculty members\n- Trained 5 new associates on the register and returns"
+          "description": "- Helped 50+ customers a shift and handled textbook orders for 12 faculty members"
         }
       ],
       "education": [
@@ -46,9 +46,20 @@
         "Sales: Prospecting, cold calling, quoting, negotiation, account growth",
         "Tools: Salesforce, Microsoft Dynamics GP, Outlook, Excel",
         "Industry: Facility supplies, B2B distribution, school and healthcare buyers",
-        "Customer Service: Order follow-up, delivery coordination, account reviews",
-        "Training: Sandler Selling System fundamentals"
-      ]
+        "Customer Service: Order follow-up, delivery coordination, account reviews"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.89,
+        "cast": 0.99
+      }
     },
     "Inside Sales Representative": {
       "summary": "Inside sales representative with 5 years in phone and video sales, most recently selling SaaS to small businesses. Averaged 112% of quota over 8 quarters, closing about 35 new accounts a month. Strong at short sales cycles, discovery calls and clean CRM habits in HubSpot and Aircall.",
@@ -94,9 +105,23 @@
         "Sales: Discovery, video demos, objection handling, closing",
         "Tools: HubSpot, Aircall, Zoom, Gong, LinkedIn Sales Navigator",
         "Methods: SPIN Selling, short-cycle SMB sales",
-        "Metrics: Quota attainment, demo-to-close rate, sales cycle length",
-        "Languages: Spanish (fluent)"
-      ]
+        "Metrics: Quota attainment, demo-to-close rate, sales cycle length"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.95,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "Sales Development Representative (SDR)": {
       "summary": "Sales development representative with 2 years generating pipeline for a cybersecurity SaaS company selling to mid-market IT leaders. Booked 168 qualified meetings in 2025, 124% of goal, sourcing $3.4M in pipeline. Writes researched outbound sequences, handles cold calls well and hands off clean notes to AEs.",
@@ -108,7 +133,7 @@
           "startDate": "2024-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Booked 168 qualified meetings in 2025, 124% of annual goal, sourcing $3.4M in pipeline\n- Make 60–70 cold calls a day and run multichannel sequences in Outreach to IT directors\n- Wrote a vertical sequence for healthcare IT that lifted reply rate from 4% to 9%\n- Qualify inbound leads within 5 minutes using BANT and route them to 4 account executives\n- Research accounts in ZoomInfo and LinkedIn to tailor first lines for each persona"
+          "description": "- Booked 168 qualified meetings in 2025, 124% of annual goal, sourcing $3.4M in pipeline\n- Make 60–70 cold calls a day and run multichannel sequences in Outreach to IT directors\n- Wrote a vertical sequence for healthcare IT that lifted reply rate from 4% to 9%\n- Qualify inbound leads within 5 minutes using BANT and route them to 4 account executives"
         },
         {
           "company": "Mile Marker Rental Cars",
@@ -142,9 +167,22 @@
         "Prospecting: Cold calling, email sequencing, LinkedIn outreach, account research",
         "Tools: Salesforce, Outreach, ZoomInfo, Sales Navigator, Gong",
         "Qualification: BANT, MEDDIC basics, discovery questions",
-        "Metrics: Meetings booked, meeting-held rate, pipeline sourced",
-        "Certifications: HubSpot Inbound Sales"
-      ]
+        "Metrics: Meetings booked, meeting-held rate, pipeline sourced"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.86
+      }
     },
     "Business Development Representative (BDR)": {
       "summary": "Business development representative with 2 years in outbound prospecting for logistics software selling to shippers and 3PLs. Sourced $4.1M in pipeline last year and helped close $780k in new ARR. Builds account plans for target lists, mixes calls, email and video, and keeps every touch tracked.",
@@ -156,7 +194,7 @@
           "startDate": "2024-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Sourced $4.1M in pipeline in 2025 from 300 target accounts, contributing to $780k in closed ARR\n- Build account plans with 2 enterprise AEs, mapping 5–8 contacts per account across operations and finance\n- Use personalized Vidyard videos that raised meeting acceptance from 11% to 19%\n- Ranked first of 8 BDRs in meetings held for 3 of the last 4 quarters\n- Share a weekly competitive notes digest with the sales team from discovery calls"
+          "description": "- Sourced $4.1M in pipeline in 2025 from 300 target accounts, contributing to $780k in closed ARR\n- Build account plans with 2 enterprise AEs, mapping 5–8 contacts per account across operations and finance\n- Use personalized Vidyard videos that raised meeting acceptance from 11% to 19%\n- Ranked first of 8 BDRs in meetings held for 3 of the last 4 quarters"
         },
         {
           "company": "Midway Distribution",
@@ -190,9 +228,19 @@
         "Outbound: Account-based prospecting, cold calling, video outreach, LinkedIn",
         "Tools: Salesloft, Salesforce, Apollo, Vidyard, Gong",
         "Industry: Logistics, supply chain, 3PL buyers",
-        "Metrics: Pipeline sourced, meetings held, reply rate",
-        "Languages: Polish (fluent)"
-      ]
+        "Metrics: Pipeline sourced, meetings held, reply rate"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.88,
+        "quartz": 0.92,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.88
+      }
     },
     "SDR Manager": {
       "summary": "SDR manager with 7 years in sales development, the last 3 leading teams at a B2B HR software company. Manages 10 SDRs who sourced $28M in pipeline last year and promoted 6 reps to account executive. Builds hiring plans, coaching programs and territory rules that keep meeting quality high.",
@@ -204,7 +252,7 @@
           "startDate": "2023-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 10 SDRs who sourced $28M in qualified pipeline in 2025, 115% of team target\n- Promoted 6 SDRs to account executive in 2 years through a structured readiness program\n- Introduced weekly call reviews in Gong, raising meeting-to-opportunity conversion from 48% to 61%\n- Hire and onboard 6 reps a year, cutting time to first meeting from 4 weeks to 9 days\n- Set SDR territory and lead routing rules with RevOps, ending account disputes between reps"
+          "description": "- Lead 10 SDRs who sourced $28M in qualified pipeline in 2025, 115% of team target\n- Promoted 6 SDRs to account executive in 2 years through a structured readiness program\n- Introduced weekly call reviews in Gong, raising meeting-to-opportunity conversion from 48% to 61%\n- Hire and onboard 6 reps a year, cutting time to first meeting from 4 weeks to 9 days"
         },
         {
           "company": "Crewbase",
@@ -238,9 +286,19 @@
         "Leadership: Hiring, coaching, career pathing, call reviews",
         "Operations: Territory design, lead routing, SLA management, metrics dashboards",
         "Tools: Salesforce, Outreach, Gong, ZoomInfo, Chorus",
-        "Methods: MEDDPICC, Command of the Message",
-        "Metrics: Pipeline per rep, meeting-to-opportunity rate, ramp time"
-      ]
+        "Methods: MEDDPICC, Command of the Message"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "BDR Manager": {
       "summary": "BDR manager with 9 years in outbound sales for enterprise data and analytics software. Leads 8 enterprise BDRs who generated $41M in pipeline last year against Fortune 1000 accounts. Builds account-based plays with marketing and sales, coaches research-heavy outreach and owns forecast of pipeline coverage.",
@@ -252,7 +310,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 8 enterprise BDRs who generated $41M in pipeline in 2025 against 450 Fortune 1000 accounts\n- Partner with field marketing on account-based plays that lifted target-account meeting rate 2.1x\n- Created a research standard of 3 business triggers per account that raised reply rates to 12%\n- Report pipeline coverage weekly to the VP of Sales and adjust territories each quarter\n- Run a weekly call-coaching block in Gong for each rep, focused on executive openers"
+          "description": "- Lead 8 enterprise BDRs who generated $41M in pipeline in 2025 against 450 Fortune 1000 accounts\n- Partner with field marketing on account-based plays that lifted target-account meeting rate 2.1x\n- Created a research standard of 3 business triggers per account that raised reply rates to 12%\n- Report pipeline coverage weekly to the VP of Sales and adjust territories each quarter"
         },
         {
           "company": "Corelattice",
@@ -286,9 +344,21 @@
         "Leadership: Coaching, hiring, territory planning, pipeline forecasting",
         "Outbound: ABM, executive outreach, multithreading",
         "Tools: Salesforce, Salesloft, 6sense, LinkedIn Sales Navigator, Gong",
-        "Methods: MEDDICC, Challenger Sale",
-        "Coaching: Call reviews, email teardown sessions, career pathing"
-      ]
+        "Methods: MEDDICC, Challenger Sale"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.93,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Account Executive": {
       "summary": "Account executive with 5 years in B2B SaaS, selling marketing software to mid-sized retailers and brands. Closed $1.3M in new ARR in 2025 at 121% of quota with a 27% win rate. Runs full-cycle deals from discovery to signature, multithreads buying committees and forecasts accurately.",
@@ -334,9 +404,22 @@
         "Sales: Full-cycle selling, discovery, demos, negotiation, mutual action plans",
         "Methods: MEDDIC, Challenger, value selling",
         "Tools: Salesforce, Gong, Outreach, DocuSign, Clari",
-        "Domain: Email and SMS marketing, retail and e-commerce buyers",
-        "Training: MEDDICC Academy, Gong call-coaching program"
-      ]
+        "Domain: Email and SMS marketing, retail and e-commerce buyers"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.94,
+        "pop": 0.89
+      }
     },
     "Enterprise Account Executive": {
       "summary": "Enterprise account executive with 11 years selling complex software to Fortune 500 companies. Closed $4.2M in new ACV in fiscal 2026, including a $1.6M multi-year deal with a top-10 US bank. Leads long, multi-stakeholder cycles with procurement, security and legal, and works closely with solution engineers.",
@@ -348,7 +431,7 @@
           "startDate": "2021-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Closed $4.2M in new ACV in fiscal 2026, 132% of quota, including a $1.6M three-year deal with a top-10 US bank\n- Manage 35 named financial services accounts with 9–14 month cycles and 10+ stakeholders\n- Navigate security reviews, SOC 2 and vendor risk assessments with solution engineers and legal\n- Built executive sponsor programs that helped expand 4 accounts beyond $1M ARR each\n- Co-sell with 3 consulting partners, who influenced 35% of closed ACV last year"
+          "description": "- Closed $4.2M in new ACV in fiscal 2026, 132% of quota, including a $1.6M three-year deal with a top-10 US bank\n- Manage 35 named financial services accounts with 9–14 month cycles and 10+ stakeholders\n- Navigate security reviews, SOC 2 and vendor risk assessments with solution engineers and legal\n- Built executive sponsor programs that helped expand 4 accounts beyond $1M ARR each"
         },
         {
           "company": "Hollis Software",
@@ -382,9 +465,22 @@
         "Enterprise Sales: Complex deal strategy, executive selling, procurement, legal redlines",
         "Methods: MEDDPICC, Force Management, account planning",
         "Tools: Salesforce, Clari, Gong, LinkedIn Sales Navigator",
-        "Industry: Financial services, identity and security software",
-        "Partners: Consulting and SI co-selling, alliance programs"
-      ]
+        "Industry: Financial services, identity and security software"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Account Manager": {
       "summary": "Account manager with 6 years growing existing customers for a print and packaging manufacturer. Manages 60 accounts worth $8.5M a year and grew the book 14% in 2025 while keeping retention at 96%. Handles quoting, reorders, issue resolution and annual reviews with procurement and brand teams.",
@@ -430,9 +526,24 @@
         "Account Management: Business reviews, upselling, renewals, issue resolution",
         "Tools: Salesforce, Epicor ERP, Excel, Microsoft Teams",
         "Industry: Packaging, manufacturing, procurement negotiation",
-        "Analysis: Account profitability, pricing reviews, sales forecasts",
-        "Training: Dale Carnegie Sales Training"
-      ]
+        "Analysis: Account profitability, pricing reviews, sales forecasts"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.89,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Key Account Manager": {
       "summary": "Key account manager with 9 years in consumer packaged goods sales, managing national retail accounts. Owns a $64M beverage business with a national club and grocery customer and grew it 18% in two years. Leads joint business planning, trade spend, category reviews and supply chain coordination.",
@@ -478,9 +589,25 @@
         "Account Management: Joint business planning, category management, negotiation",
         "Analytics: Retail Link, Circana, Nielsen, Excel, Power BI",
         "Trade: Trade spend, promotion analysis, pricing",
-        "Operations: Forecasting, supply coordination",
-        "Leadership: Cross-functional account team of 6, executive presentations"
-      ]
+        "Operations: Forecasting, supply coordination"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "bronx": 0.95,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Partner Account Manager": {
       "summary": "Partner account manager with 7 years managing reseller and MSP partners for cloud backup software. Manages 45 partners producing $11M in annual recurring revenue, up 33% in two years. Drives partner business plans, enablement and co-selling with direct sales.",
@@ -526,9 +653,22 @@
         "Channel: MSP and reseller management, deal registration, joint business planning",
         "Enablement: Partner training, certification, co-selling",
         "Tools: Salesforce, Impartner PRM, Crossbeam",
-        "Industry: Data protection, managed services",
-        "Metrics: Partner-sourced ARR, certifications, deal registrations"
-      ]
+        "Industry: Data protection, managed services"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.86,
+        "quartz": 0.97,
+        "bronx": 0.91,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Sales Manager": {
       "summary": "Sales manager with 10 years in B2B sales, including 4 years leading teams in commercial insurance. Leads 9 producers who wrote $14.8M in new premium in 2025, 109% of plan. Coaches on pipeline discipline and carrier relationships and builds territory and compensation plans.",
@@ -574,9 +714,23 @@
         "Leadership: Coaching, hiring, territory planning, compensation design",
         "Sales: Commercial insurance, pipeline management, carrier negotiation",
         "Tools: Applied Epic, Salesforce, Excel",
-        "Licenses: Ohio Property & Casualty Producer, CIC",
-        "Industry: Construction, manufacturing, commercial property and casualty"
-      ]
+        "Licenses: Ohio Property & Casualty Producer, CIC"
+      ],
+      "fit": {
+        "executive": 0.98,
+        "silk": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.97,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "Sales Operations Analyst": {
       "summary": "Sales operations analyst with 3 years supporting a 70-person sales team at a fintech company. Built the forecasting dashboard leadership uses weekly and automated territory reports that saved 15 hours a week. Strong in Salesforce reporting, SQL and Excel, and careful with data quality.",
@@ -622,9 +776,21 @@
         "Analytics: SQL, Excel, Tableau, Snowflake",
         "CRM: Salesforce reports and dashboards, data hygiene, territory rules",
         "Operations: Forecast support, commissions, quota tracking",
-        "Certifications: Salesforce Certified Administrator",
-        "Documentation: Report guides, process maps, Confluence"
-      ]
+        "Certifications: Salesforce Certified Administrator"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.87
+      }
     },
     "Sales Operations Manager": {
       "summary": "Sales operations manager with 9 years running sales systems, planning and analytics for B2B software and medical device sales teams. Leads territory, quota and compensation planning for a 140-person sales organization. Improved forecast accuracy to within 5% and cut quote turnaround from 3 days to 4 hours with CPQ.",
@@ -636,7 +802,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run annual territory, quota and compensation planning for 140 reps and managers\n- Implemented Salesforce CPQ with IT, cutting quote turnaround from 3 days to 4 hours\n- Improved forecast accuracy from ±18% to ±5% with Clari and weekly inspection cadences\n- Lead 2 analysts and an administrator supporting reporting, tools and deal desk\n- Partner with finance on bookings, commissions and sales capacity in quarterly business reviews"
+          "description": "- Run annual territory, quota and compensation planning for 140 reps and managers\n- Implemented Salesforce CPQ with IT, cutting quote turnaround from 3 days to 4 hours\n- Improved forecast accuracy from ±18% to ±5% with Clari and weekly inspection cadences\n- Lead 2 analysts and an administrator supporting reporting, tools and deal desk"
         },
         {
           "company": "Northwoods Software",
@@ -670,9 +836,21 @@
         "Planning: Territory design, quota setting, capacity modeling, compensation",
         "Systems: Salesforce, Salesforce CPQ, Clari, CaptivateIQ",
         "Analytics: SQL, Tableau, Excel",
-        "Leadership: Team management, deal desk, cross-functional planning",
-        "Deal Desk: Pricing approvals, discounting rules, contract review"
-      ]
+        "Leadership: Team management, deal desk, cross-functional planning"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.96,
+        "bronx": 0.93,
+        "mono": 0.96,
+        "pop": 0.88,
+        "cast": 0.97
+      }
     },
     "Revenue Operations (RevOps) Manager": {
       "summary": "Revenue operations manager with 9 years aligning marketing, sales and customer success systems at SaaS companies. Built a unified funnel from lead to renewal across HubSpot, Salesforce and Gainsight, giving leadership one source of truth. Leads a team of 3 and owns forecasting, tooling and go-to-market data.",
@@ -718,9 +896,25 @@
         "RevOps: Funnel design, forecasting, planning, attribution, net retention reporting",
         "Systems: Salesforce, HubSpot, Gainsight, Outreach, LeanData",
         "Data: SQL, Snowflake, dbt basics, Tableau",
-        "Leadership: Team management, tool governance, executive reporting",
-        "Planning: Capacity models, targets, quarterly planning"
-      ]
+        "Leadership: Team management, tool governance, executive reporting"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.96,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Sales Enablement Manager": {
       "summary": "Sales enablement manager with 7 years building onboarding, training and content programs for sales teams at B2B software companies. Cut new AE ramp time from 7 months to 4.5 months for a 90-rep organization. Runs certification programs, manages the content platform and measures enablement against win rates.",
@@ -766,9 +960,26 @@
         "Enablement: Onboarding, certification, coaching programs, content strategy",
         "Tools: Highspot, Gong, Seismic, Lessonly, Salesforce",
         "Methods: MEDDICC, Command of the Message, adult learning design",
-        "Measurement: Ramp time, win rate, content usage",
-        "Content: Playbooks, battlecards, onboarding guides"
-      ]
+        "Measurement: Ramp time, win rate, content usage"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Sales Trainer": {
       "summary": "Sales trainer with 9 years in retail and automotive sales, the last 4 teaching consultative selling to dealership teams. Trains 300 new hires a year across 40 dealerships, and trained teams sell 17% more finance products in their first 90 days. Designs role-play workshops, e-learning and field coaching visits.",
@@ -780,7 +991,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Train 300 new sales consultants a year across 40 dealerships in a 2-week certification course\n- Trained hires sell 17% more finance and warranty products in their first 90 days than untrained peers\n- Built 18 e-learning modules in Articulate 360 on F&I compliance and needs-based selling\n- Run monthly field coaching visits and role plays for 25 sales managers\n- Track trainee results in Docebo and CDK, reporting 90-day performance to dealership general managers"
+          "description": "- Train 300 new sales consultants a year across 40 dealerships in a 2-week certification course\n- Trained hires sell 17% more finance and warranty products in their first 90 days than untrained peers\n- Built 18 e-learning modules in Articulate 360 on F&I compliance and needs-based selling\n- Run monthly field coaching visits and role plays for 25 sales managers"
         },
         {
           "company": "Gulf Coast Motors",
@@ -814,9 +1025,20 @@
         "Training: Curriculum design, role plays, workshop facilitation, field coaching",
         "Tools: Articulate 360, Docebo, Zoom, CDK Drive",
         "Sales: Consultative selling, F&I products, objection handling",
-        "Certifications: ATD Associate Professional in Talent Development",
-        "Measurement: 90-day sales results, CSI scores, certification completion"
-      ]
+        "Certifications: ATD Associate Professional in Talent Development"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.97,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Customer Success Manager": {
       "summary": "Customer success manager with 6 years managing mid-market SaaS accounts in HR and payroll. Manages 55 accounts worth $3.8M ARR with 112% net revenue retention and 94% gross retention. Runs onboarding, health scoring, business reviews and expansion plays in partnership with account executives.",
@@ -862,9 +1084,25 @@
         "Customer Success: Onboarding, QBRs, health scoring, renewals, expansion",
         "Tools: Gainsight, Salesforce, Zendesk, Pendo, Gong",
         "Metrics: NRR, GRR, adoption, CSAT, time to value",
-        "Domain: HR and payroll software, employer onboarding",
-        "Certifications: SuccessCOACHING CCSM Level 1"
-      ]
+        "Domain: HR and payroll software, employer onboarding"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Customer Success Lead": {
       "summary": "Customer success lead with 6 years in SaaS, currently leading a pod of 5 CSMs serving enterprise logistics customers. The pod holds $14M ARR at 118% net revenue retention. Coaches CSMs, owns escalations and builds the playbooks the wider team uses for onboarding and renewals.",
@@ -910,9 +1148,24 @@
         "Leadership: Coaching, escalation management, playbook design",
         "Customer Success: Enterprise renewals, expansion, executive alignment",
         "Tools: Gainsight, Salesforce, Jira, Looker",
-        "Industry: Logistics, transportation management software",
-        "Metrics: NRR, GRR, health scores, executive sponsor coverage"
-      ]
+        "Industry: Logistics, transportation management software"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "path": 0.99,
+        "quartz": 0.96,
+        "bronx": 0.95,
+        "mono": 0.98,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Customer Success Director": {
       "summary": "Customer success director with 13 years in SaaS, leading post-sale teams for healthcare technology companies. Leads 32 people across CSM, onboarding and support for a $95M ARR book, raising net retention from 104% to 116%. Builds segmentation, capacity models and renewal forecasting the executive team relies on.",
@@ -924,7 +1177,7 @@
           "startDate": "2021-11",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 32 staff across 4 CSM managers, onboarding and support for $95M ARR\n- Raised NRR from 104% to 116% and gross retention from 89% to 94% in 3 years\n- Introduced segmentation and a digital-touch program that covers 600 small accounts with 3 CSMs\n- Own renewal forecasting reviewed monthly with the CFO, accurate to within 2%\n- Manage a $4.2M customer success budget, including headcount, tools and customer events"
+          "description": "- Lead 32 staff across 4 CSM managers, onboarding and support for $95M ARR\n- Raised NRR from 104% to 116% and gross retention from 89% to 94% in 3 years\n- Introduced segmentation and a digital-touch program that covers 600 small accounts with 3 CSMs\n- Own renewal forecasting reviewed monthly with the CFO, accurate to within 2%"
         },
         {
           "company": "Medlane Health Tech",
@@ -942,7 +1195,7 @@
           "startDate": "2013-06",
           "endDate": "2017-04",
           "isCurrent": false,
-          "description": "- Implemented clinical software for 30 hospitals and clinics, aligned with HIPAA requirements\n- Trained hospital staff on clinical workflows at go-live"
+          "description": "- Implemented clinical software for 30 hospitals and clinics, aligned with HIPAA requirements"
         }
       ],
       "education": [
@@ -964,9 +1217,25 @@
         "Leadership: Org design, capacity planning, manager development, budgets",
         "Customer Success: Segmentation, renewals forecasting, digital CS, advocacy",
         "Tools: Gainsight, Salesforce, ChurnZero, Tableau",
-        "Industry: Healthcare IT, HIPAA, hospital buyers",
-        "Metrics: NRR, GRR, renewal forecast accuracy, CSAT"
-      ]
+        "Industry: Healthcare IT, HIPAA, hospital buyers"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.99,
+        "minimalist": 0.91,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.99,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.96
+      }
     },
     "Customer Success Operations Manager": {
       "summary": "Customer success operations manager with 6 years building systems and analytics for post-sale teams. Rebuilt health scoring at a 600-customer SaaS company so it predicts churn with 81% precision. Owns Gainsight, renewal processes, capacity models and CS reporting.",
@@ -1012,9 +1281,20 @@
         "Systems: Gainsight, Salesforce, Totango, Zapier",
         "Analytics: SQL, Looker, health scoring, churn analysis",
         "Operations: Renewal process, capacity planning, playbooks",
-        "Certifications: Gainsight Certified Administrator",
-        "Metrics: Health score precision, renewal forecasts, CSM capacity"
-      ]
+        "Certifications: Gainsight Certified Administrator"
+      ],
+      "fit": {
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "bronx": 0.97,
+        "mono": 0.94,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Customer Support Representative": {
       "summary": "Customer support representative with 3 years helping consumers by phone, chat and email for a home internet provider. Handles about 55 contacts a day with a 92% CSAT score and 81% first-contact resolution. Calm with frustrated customers and quick to learn billing, troubleshooting and ticketing systems.",
@@ -1062,7 +1342,22 @@
         "Metrics: CSAT, FCR, average handle time",
         "Systems: Billing systems, outage maps, remote router tools",
         "Languages: Spanish (fluent)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.93,
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Customer Support Manager": {
       "summary": "Customer support manager with 9 years in e-commerce and subscription support. Leads 3 team leads and 34 agents handling 60,000 contacts a month, and raised CSAT from 84% to 93% while cutting cost per contact 28%. Strong in workforce planning, QA programs, automation and vendor management.",
@@ -1108,9 +1403,24 @@
         "Leadership: Team management, hiring, coaching, vendor oversight",
         "Operations: Workforce management, QA programs, SLAs, budgeting",
         "Tools: Zendesk, Assembled, Klaus, Gorgias, Looker",
-        "Metrics: CSAT, FRT, cost per contact, deflection",
-        "Automation: Zendesk AI, macros, self-service help center"
-      ]
+        "Metrics: CSAT, FRT, cost per contact, deflection"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Customer Support Team Lead": {
       "summary": "Customer support team lead with 5 years in SaaS support, leading 9 agents serving small business customers of an accounting app. The team keeps first response under 1 hour and CSAT at 95%. Handles escalations, scheduling, QA reviews and coaching new agents through their first 60 days.",
@@ -1158,7 +1468,23 @@
         "Domain: Accounting software, payroll, bank feeds",
         "Metrics: CSAT, FRT, resolution time, backlog",
         "Process: Escalation paths, macros, help center updates"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.94,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Customer Experience Manager": {
       "summary": "Customer experience manager with 9 years improving service journeys for hotel and travel brands. Leads voice-of-customer and service design across 28 properties, raising NPS from 41 to 58. Combines survey analytics, frontline training and process changes that fix the root causes of complaints.",
@@ -1204,9 +1530,24 @@
         "CX: Voice of customer, journey mapping, service design, service recovery",
         "Tools: Medallia, Qualtrics, Revinate, Power BI",
         "Training: Frontline training, standards, coaching",
-        "Metrics: NPS, CSAT, complaint rate, review scores",
-        "Leadership: Analyst team management, GM partnership, executive reporting"
-      ]
+        "Metrics: NPS, CSAT, complaint rate, review scores"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Support Specialist": {
       "summary": "Support specialist with 3 years providing product and account support for a dental practice management platform. Resolves about 35 tickets and calls a day with 96% CSAT, and handles insurance claim and scheduling issues for front-office staff. Writes clear help articles and documents bugs engineers can reproduce.",
@@ -1252,9 +1593,21 @@
         "Support: Phone and ticket support, troubleshooting, bug documentation",
         "Tools: Zendesk, Jira, Loom, Confluence",
         "Domain: Dental practice management, insurance claims, HIPAA",
-        "Metrics: CSAT, first-contact resolution, ticket backlog",
-        "Compliance: Annual HIPAA privacy and security training"
-      ]
+        "Metrics: CSAT, first-contact resolution, ticket backlog"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.94,
+        "pop": 0.85
+      }
     },
     "Technical Support Engineer": {
       "summary": "Technical support engineer with 6 years supporting API and cloud infrastructure products for developer customers. Resolves complex tier-2 and tier-3 cases across Linux, networking and Kubernetes with a 94% CSAT. Writes scripts to reproduce issues, ships fixes to docs and tooling, and is the bridge between customers and engineering.",
@@ -1266,7 +1619,7 @@
           "startDate": "2023-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Resolve 60 tier-2 and tier-3 cases a month on load balancers, Kubernetes and DNS with 94% CSAT\n- Wrote Python and Bash diagnostic scripts that cut average time to diagnosis from 3 hours to 50 minutes\n- Lead incident communication for customers during Sev-1 outages with the SRE on-call team\n- Contributed 30 fixes to public docs and 4 bug patches merged into the CLI on GitHub\n- Mentor 3 tier-1 engineers on Kubernetes networking and escalation notes"
+          "description": "- Resolve 60 tier-2 and tier-3 cases a month on load balancers, Kubernetes and DNS with 94% CSAT\n- Wrote Python and Bash diagnostic scripts that cut average time to diagnosis from 3 hours to 50 minutes\n- Lead incident communication for customers during Sev-1 outages with the SRE on-call team\n- Contributed 30 fixes to public docs and 4 bug patches merged into the CLI on GitHub"
         },
         {
           "company": "Bayport Networks",
@@ -1284,7 +1637,7 @@
           "startDate": "2018-08",
           "endDate": "2020-05",
           "isCurrent": false,
-          "description": "- Solved 20 network and account tickets a day for students and staff\n- Set up and imaged 150 lab computers each semester"
+          "description": "- Solved 20 network and account tickets a day for students and staff"
         }
       ],
       "education": [
@@ -1295,20 +1648,24 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "k8s-debug-kit",
-          "link": "github.com/mnguyen/k8s-debug-kit",
-          "description": "Open-source collection of scripts for gathering cluster diagnostics in support cases"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "Technical: Linux, TCP/IP, DNS, HTTP, Kubernetes, Docker, REST APIs",
+        "Technical: Linux, TCP/IP, DNS, HTTP, Kubernetes",
         "Scripting: Python, Bash, SQL, curl, jq",
         "Tools: Zendesk, Jira, Datadog, PagerDuty, Wireshark",
-        "Certifications: CKA, AWS Certified Solutions Architect – Associate",
-        "Process: Incident response, escalation, root cause analysis"
-      ]
+        "Certifications: CKA, AWS Certified Solutions Architect – Associate"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Implementation Specialist": {
       "summary": "Implementation specialist with 4 years configuring and launching workforce management software for hospitals and senior living operators. Leads 12–15 implementations at a time and brought average go-live from 75 to 52 days. Handles data migration, system configuration and end-user training with clear, steady project communication.",
@@ -1320,7 +1677,7 @@
           "startDate": "2023-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run 12–15 concurrent implementations for hospitals and senior living groups, cutting average go-live from 75 to 52 days\n- Configure pay rules, shift templates and union rules, then validate against client payroll data\n- Migrate employee and schedule data from legacy systems using Excel and SQL imports\n- Train 1,500 managers and staff a year through live sessions and recorded walkthroughs\n- Run weekly status calls with client project leads and track tasks in Smartsheet"
+          "description": "- Run 12–15 concurrent implementations for hospitals and senior living groups, cutting average go-live from 75 to 52 days\n- Configure pay rules, shift templates and union rules, then validate against client payroll data\n- Migrate employee and schedule data from legacy systems using Excel and SQL imports\n- Train 1,500 managers and staff a year through live sessions and recorded walkthroughs"
         },
         {
           "company": "Lakefront Senior Living",
@@ -1354,9 +1711,21 @@
         "Implementation: Configuration, data migration, UAT, go-live support",
         "Tools: Salesforce, Jira, Smartsheet, UKG Kronos, Excel, SQL",
         "Training: Admin and end-user training, documentation",
-        "Domain: Healthcare scheduling, payroll rules, union contracts",
-        "Project Management: Status reporting, timelines, risk tracking"
-      ]
+        "Domain: Healthcare scheduling, payroll rules, union contracts"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Implementation Project Manager": {
       "summary": "Implementation project manager with 9 years delivering enterprise software rollouts for banks and credit unions. Manages a portfolio of 8 implementations worth $6M in services and has delivered 40 core and digital banking go-lives. Brings structured planning, vendor and risk management, and calm handling of regulatory deadlines.",
@@ -1402,9 +1771,26 @@
         "Project Management: Planning, risk and issue management, budgets, change control",
         "Tools: Smartsheet, Jira, MS Project, Salesforce",
         "Domain: Core and digital banking, data conversion, FFIEC requirements",
-        "Certifications: PMP, Certified Scrum Master",
-        "Leadership: Cross-functional teams, client executive communication"
-      ]
+        "Certifications: PMP, Certified Scrum Master"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.97,
+        "lateral": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.92,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Solution Engineer": {
       "summary": "Solution engineer with 8 years in data engineering and presales for data integration and analytics platforms. Supports 5 account executives and helped close $9.4M in new ARR in fiscal 2026. Runs discovery, custom demos and proofs of concept, and translates technical architecture into business value for data and IT leaders.",
@@ -1450,9 +1836,24 @@
         "Presales: Discovery, demos, proofs of concept, RFPs, security reviews",
         "Technical: SQL, Python, Snowflake, dbt, Airflow, REST APIs",
         "Cloud: AWS, Azure, data warehousing, ELT architecture",
-        "Tools: Salesforce, Gong, Consensus",
-        "Communication: Technical storytelling, executive presentations, RFP writing"
-      ]
+        "Tools: Salesforce, Gong, Consensus"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Sales Engineer": {
       "summary": "Sales engineer with 9 years in industrial automation, supporting sales of PLC, motion control and robotics systems to manufacturers. Designed solutions behind $18M in won projects over 3 years. Combines a controls engineering background with clear proposals, site surveys and customer demos.",
@@ -1464,7 +1865,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Designed automation solutions behind $18M in won projects over 3 years for automotive and packaging plants\n- Lead site surveys and write technical proposals with bills of materials and cycle-time estimates\n- Run live demos of PLC and robot cells at the customer center, hosting 40 customer visits a year\n- Train distributor sales staff on product selection and safety standards such as ISO 13849\n- Partner with account managers on $500k+ quotes, estimating labor and lead times"
+          "description": "- Designed automation solutions behind $18M in won projects over 3 years for automotive and packaging plants\n- Lead site surveys and write technical proposals with bills of materials and cycle-time estimates\n- Run live demos of PLC and robot cells at the customer center, hosting 40 customer visits a year\n- Train distributor sales staff on product selection and safety standards such as ISO 13849"
         },
         {
           "company": "Rouge River Controls",
@@ -1482,7 +1883,7 @@
           "startDate": "2017-05",
           "endDate": "2017-12",
           "isCurrent": false,
-          "description": "- Built test fixtures and wiring diagrams for robot cell projects\n- Assisted on site with 3 robot cell installations and safety checks"
+          "description": "- Built test fixtures and wiring diagrams for robot cell projects"
         }
       ],
       "education": [
@@ -1498,9 +1899,21 @@
         "Technical: PLC programming, motion control, robotics, HMI, industrial networks",
         "Tools: Rockwell Studio 5000, Siemens TIA Portal, AutoCAD Electrical, Salesforce",
         "Presales: Site surveys, proposals, ROI analysis, demos",
-        "Standards: ISO 13849, NFPA 79, OSHA machine guarding",
-        "Commercial: Quoting, bill of materials, ROI calculations"
-      ]
+        "Standards: ISO 13849, NFPA 79, OSHA machine guarding"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Pre-Sales Engineer": {
       "summary": "Pre-sales engineer with 5 years in network engineering and presales for network security and SD-WAN products to mid-market businesses. Delivers 30 technical demos a month and supported $5.1M in closed business last year. Builds lab environments, sizing designs and proof-of-concept plans, and hands off clean designs to deployment teams.",
@@ -1546,9 +1959,25 @@
         "Networking: Firewalls, SD-WAN, VPN, routing and switching, Zero Trust",
         "Presales: Demos, PoCs, sizing, RFP responses",
         "Tools: Wireshark, EVE-NG, Salesforce",
-        "Certifications: CCNA, Fortinet NSE 4, CompTIA Security+",
-        "Communication: Demos, technical documentation, customer workshops"
-      ]
+        "Certifications: CCNA, Fortinet NSE 4, CompTIA Security+"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.95
+      }
     },
     "Technical Account Manager": {
       "summary": "Technical account manager with 7 years serving enterprise customers of observability and cloud monitoring software. Manages 12 strategic accounts worth $11M ARR, running architecture reviews, escalations and adoption plans. Keeps critical customers stable, and has helped expand 5 accounts by more than 50%.",
@@ -1560,7 +1989,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 12 strategic accounts worth $11M ARR with 100% renewal over 3 years\n- Run quarterly architecture reviews that identified $2.4M in expansion across 5 accounts\n- Own escalations for Sev-1 issues, coordinating engineering fixes and customer updates every 30 minutes\n- Built adoption plans that raised monitored hosts per account 38% on average\n- Write monthly account reports covering incidents, usage and open roadmap requests"
+          "description": "- Manage 12 strategic accounts worth $11M ARR with 100% renewal over 3 years\n- Run quarterly architecture reviews that identified $2.4M in expansion across 5 accounts\n- Own escalations for Sev-1 issues, coordinating engineering fixes and customer updates every 30 minutes\n- Built adoption plans that raised monitored hosts per account 38% on average"
         },
         {
           "company": "Cloudmere",
@@ -1594,9 +2023,22 @@
         "Technical: Observability, Kubernetes, AWS, Linux, OpenTelemetry",
         "Account Management: Escalations, adoption plans, architecture reviews, renewals",
         "Tools: Salesforce, Jira, PagerDuty, Grafana",
-        "Certifications: AWS Certified SysOps Administrator",
-        "Communication: Executive updates, incident reports, roadmap feedback"
-      ]
+        "Certifications: AWS Certified SysOps Administrator"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Renewal Manager": {
       "summary": "Renewal manager with 7 years running renewals for B2B SaaS companies with multi-year contracts. Owns $22M in annual renewals with a 95% gross renewal rate and 6% average price uplift. Forecasts accurately, negotiates with procurement and works with CSMs early to catch risk.",
@@ -1642,9 +2084,23 @@
         "Renewals: Forecasting, negotiation, price increases, multi-year conversions",
         "Tools: Salesforce, Clari, Gainsight, DocuSign, Salesforce CPQ",
         "Commercial: Contract terms, procurement, risk management",
-        "Metrics: Gross renewal rate, price uplift, forecast accuracy",
-        "Training: Negotiation Mastery (Harvard Business School Online)"
-      ]
+        "Metrics: Gross renewal rate, price uplift, forecast accuracy"
+      ],
+      "fit": {
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Channel Sales Manager": {
       "summary": "Channel sales manager with 8 years building distributor and dealer channels for commercial HVAC and building controls equipment. Manages 30 dealers across the Southeast producing $26M in annual sales, up 24% in two years. Recruits dealers, sets targets and incentive programs and trains dealer sales teams.",
@@ -1690,9 +2146,21 @@
         "Channel: Dealer recruitment, incentive programs, co-op funds, territory planning",
         "Industry: Commercial HVAC, VRF, building controls",
         "Tools: Salesforce, Excel, Power BI",
-        "Training: Dealer sales and product training",
-        "Planning: Dealer business plans, sales forecasts, market coverage"
-      ]
+        "Training: Dealer sales and product training"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "bronx": 0.95,
+        "mono": 0.94,
+        "pop": 0.88
+      }
     },
     "Partner Manager": {
       "summary": "Partner manager with 5 years building alliances with consulting and systems integrator partners for an ERP extension vendor. Manages 18 SI partners that influenced $7.8M in new ARR last year. Builds joint go-to-market plans, partner enablement and co-selling motions with direct sales.",
@@ -1738,9 +2206,22 @@
         "Alliances: SI and consulting partners, co-selling, joint GTM plans",
         "Tools: Salesforce, Crossbeam, PartnerStack, Highspot",
         "Enablement: Certification programs, partner events",
-        "Domain: ERP, finance software, implementation services",
-        "Metrics: Partner-influenced ARR, certifications, joint pipeline"
-      ]
+        "Domain: ERP, finance software, implementation services"
+      ],
+      "fit": {
+        "executive": 0.98,
+        "silk": 0.93,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.97,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Solutions Consultant": {
       "summary": "Solutions consultant with 7 years in presales for HR and talent software. Leads discovery and demos for enterprise deals, supporting $12M in closed ARR last fiscal year. Former HR operations practitioner who maps complex hiring and compliance processes into clear, credible solution designs.",
@@ -1786,9 +2267,24 @@
         "Presales: Discovery, demos, solution design, RFPs",
         "Domain: Recruiting, onboarding, HR compliance (EEO, OFCCP, GDPR)",
         "Tools: Salesforce, Consensus, Gong, Workday, Greenhouse",
-        "Communication: Workshops, storytelling demos, executive presentations",
-        "Certifications: SHRM-CP"
-      ]
+        "Communication: Workshops, storytelling demos, executive presentations"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.96,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "prism": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Business Development Manager": {
       "summary": "Business development manager with 9 years opening new markets for a commercial laboratory testing company. Won 34 new enterprise and municipal clients worth $6.2M in annual revenue. Builds relationships with environmental, food and pharmaceutical buyers and handles RFPs, pricing and contract negotiation.",
@@ -1834,9 +2330,24 @@
         "Business Development: Prospecting, RFPs, contract negotiation, pricing",
         "Domain: Environmental, food and pharma testing, EPA and FDA methods",
         "Tools: Salesforce, LinkedIn Sales Navigator, Excel",
-        "Relationships: Quality, procurement and municipal buyers",
-        "Metrics: New revenue, win rate, client retention"
-      ]
+        "Relationships: Quality, procurement and municipal buyers"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.99,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Head of Sales": {
       "summary": "Head of sales with 14 years in B2B software sales, leading teams at growth-stage companies. Built a 45-person sales organization that grew new ARR from $8M to $27M a year. Owns hiring, sales process, forecasting and compensation, and works closely with marketing and customer success on the full revenue engine.",
@@ -1848,7 +2359,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 45 people across SDR, mid-market and enterprise teams, growing new ARR from $8M to $27M a year\n- Hired 6 sales managers and built a MEDDICC-based process that lifted win rate from 19% to 26%\n- Own the bookings forecast to the board, landing within 4% for 8 straight quarters\n- Redesigned compensation with finance to balance new logos and expansion\n- Partner with marketing and customer success on a shared pipeline and expansion plan"
+          "description": "- Lead 45 people across SDR, mid-market and enterprise teams, growing new ARR from $8M to $27M a year\n- Hired 6 sales managers and built a MEDDICC-based process that lifted win rate from 19% to 26%\n- Own the bookings forecast to the board, landing within 4% for 8 straight quarters\n- Redesigned compensation with finance to balance new logos and expansion"
         },
         {
           "company": "Arcline Commerce",
@@ -1882,9 +2393,23 @@
         "Leadership: Org building, hiring, coaching managers, board reporting",
         "Sales: Process design, forecasting, enterprise selling, compensation planning",
         "Methods: MEDDICC, Challenger, Force Management",
-        "Tools: Salesforce, Clari, Gong, Outreach",
-        "Planning: Territory design, capacity planning, quota setting"
-      ]
+        "Tools: Salesforce, Clari, Gong, Outreach"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Sales Intern": {
       "summary": "Business student at the University of Iowa graduating in May 2027, with a summer sales internship at a payroll software company and 2 years in retail sales. Booked 38 discovery meetings in a 10-week internship, the most in the intern class. Brings strong phone skills, coursework in professional selling and basic Salesforce experience.",
@@ -1914,7 +2439,7 @@
           "startDate": "2024-01",
           "endDate": "2026-05",
           "isCurrent": false,
-          "description": "- Organized 6 employer role-play nights with 70 average attendees\n- Raised $9,000 in sponsorships from 5 regional employers"
+          "description": "- Organized 6 employer role-play nights with 70 average attendees"
         }
       ],
       "education": [
@@ -1925,19 +2450,26 @@
           "endDate": "2027-05"
         }
       ],
-      "projects": [
-        {
-          "name": "National Collegiate Sales Competition",
-          "link": "",
-          "description": "Placed in the top 16 of 60 schools in role-play rounds selling a mock HR software product"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Sales: Cold calling, discovery questions, role-play, objection handling",
         "Tools: Salesforce, LinkedIn Sales Navigator, Excel, Google Workspace",
         "Coursework: Professional Selling, Sales Management, Consumer Behavior",
         "Languages: Spanish (conversational)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.91,
+        "mono": 0.93,
+        "pop": 0.89,
+        "cast": 0.96
+      }
     },
     "Sales Coordinator": {
       "summary": "Sales coordinator with 3 years supporting a 12-person outside sales team at a commercial flooring distributor. Processes about 180 quotes and orders a month and cut quote turnaround from 2 days to 4 hours. Keeps CRM records, samples, pricing and customer follow-ups organized so reps can stay in the field.",
@@ -1983,9 +2515,24 @@
         "Sales Support: Quotes, order entry, pricing, sample management",
         "Tools: Salesforce, Epicor Prophet 21, Excel, Outlook",
         "Coordination: Scheduling, reporting, customer follow-up",
-        "Reporting: Pipeline, backlog and quote reports, Excel",
-        "Certifications: Microsoft Office Specialist: Excel Associate"
-      ]
+        "Reporting: Pipeline, backlog and quote reports, Excel"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Outside Sales Representative": {
       "summary": "Outside sales representative with 7 years selling building materials and fasteners to contractors and job sites in the Mountain West. Manages a $4.6M territory with 140 active accounts and grew it 22% in 2025. Spends 4 days a week in the field, wins business on job-site service and knows the trades' buying cycles.",
@@ -1997,7 +2544,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a $4.6M territory of 140 contractor accounts, growing sales 22% in 2025\n- Visit 25–30 job sites and customer shops a week, logging every visit in Salesforce Mobile\n- Won 3 large commercial projects worth $1.2M by bidding early from Dodge project leads\n- Set up vendor-managed inventory bins for 18 contractors, lifting their repeat orders 35%\n- Partner with the inside sales team to quote large orders within 24 hours"
+          "description": "- Manage a $4.6M territory of 140 contractor accounts, growing sales 22% in 2025\n- Visit 25–30 job sites and customer shops a week, logging every visit in Salesforce Mobile\n- Won 3 large commercial projects worth $1.2M by bidding early from Dodge project leads\n- Set up vendor-managed inventory bins for 18 contractors, lifting their repeat orders 35%"
         },
         {
           "company": "Wasatch Lumber & Supply",
@@ -2015,7 +2562,7 @@
           "startDate": "2018-06",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Sold $35k in local business sponsorships for basketball season\n- Delivered sponsor signage and recap reports"
+          "description": "- Sold $35k in local business sponsorships for basketball season"
         }
       ],
       "education": [
@@ -2031,9 +2578,19 @@
         "Field Sales: Territory planning, job-site visits, bids, contractor relationships",
         "Tools: Salesforce Mobile, Dodge Construction Network, Excel",
         "Industry: Building materials, fasteners, commercial and residential construction",
-        "Credentials: OSHA 10, valid driver's license with clean record",
-        "Territory: Route planning, account prioritization, job-site follow-up"
-      ]
+        "Credentials: OSHA 10, valid driver's license with clean record"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.87
+      }
     },
     "Mid-Market Account Executive": {
       "summary": "Mid-market account executive with 7 years in B2B sales, selling procurement software to companies with 200 to 2,000 employees. Closed $1.9M in new ARR in 2025, 127% of quota, with deals averaging $64k. Runs disciplined multi-stakeholder cycles with finance and operations leaders and partners well with solution engineers.",
@@ -2079,9 +2636,25 @@
         "Sales: Full-cycle selling, ROI cases, negotiation, mutual action plans",
         "Methods: MEDDICC, value selling, multithreading",
         "Tools: Salesforce, Gong, Outreach, Clari, DocuSign",
-        "Domain: Procurement and spend management, finance buyers",
-        "Training: Command of the Message (Force Management)"
-      ]
+        "Domain: Procurement and spend management, finance buyers"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Regional Sales Manager": {
       "summary": "Regional sales manager with 11 years in medical and dental supply sales, the last 4 leading a 12-rep team across 5 Midwestern states. The region delivered $38M in 2025 sales, 108% of plan, and ranked first of 7 regions in growth. Coaches field reps, manages key distributor relationships and builds territory plans from market data.",
@@ -2093,7 +2666,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 12 field reps across 5 states delivering $38M in 2025 sales, 108% of plan\n- Ranked first of 7 regions in growth after rebalancing territories using practice-level market data\n- Ride along with each rep 2 days a month, coaching on practice-owner conversations and equipment deals\n- Negotiated a regional agreement with a 40-office dental group worth $2.6M a year\n- Partner with marketing on regional trade shows and dental study clubs"
+          "description": "- Lead 12 field reps across 5 states delivering $38M in 2025 sales, 108% of plan\n- Ranked first of 7 regions in growth after rebalancing territories using practice-level market data\n- Ride along with each rep 2 days a month, coaching on practice-owner conversations and equipment deals\n- Negotiated a regional agreement with a 40-office dental group worth $2.6M a year"
         },
         {
           "company": "Brightsmile Dental Supply",
@@ -2127,9 +2700,19 @@
         "Leadership: Field coaching, hiring, territory design, performance management",
         "Sales: Key account negotiation, equipment sales, distributor relationships",
         "Tools: Salesforce, Power BI, Excel",
-        "Industry: Dental and medical supplies, DSO buyers",
-        "Metrics: Region growth, quota attainment, account penetration"
-      ]
+        "Industry: Dental and medical supplies, DSO buyers"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "bronx": 0.93,
+        "mono": 0.91,
+        "pop": 0.85
+      }
     },
     "Sales Director": {
       "summary": "Sales director with 15 years in commercial and enterprise sales for telecommunications and managed network services. Leads 4 managers and 32 reps who booked $54M in total contract value in 2025. Owns regional strategy, large-deal reviews, forecasting and hiring, and has rebuilt two underperforming teams.",
@@ -2141,7 +2724,7 @@
           "startDate": "2021-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 4 sales managers and 32 reps who booked $54M in total contract value in 2025, 111% of plan\n- Turned around the enterprise team from 78% to 104% of quota in 18 months through hiring and deal coaching\n- Run weekly deal reviews on opportunities over $1M and close the largest contracts with executives\n- Forecast bookings to the CRO within 5% and manage a $6.5M compensation budget\n- Partner with marketing and channel teams on regional campaigns and partner pipeline"
+          "description": "- Lead 4 sales managers and 32 reps who booked $54M in total contract value in 2025, 111% of plan\n- Turned around the enterprise team from 78% to 104% of quota in 18 months through hiring and deal coaching\n- Run weekly deal reviews on opportunities over $1M and close the largest contracts with executives\n- Forecast bookings to the CRO within 5% and manage a $6.5M compensation budget"
         },
         {
           "company": "Liberty Telecom Solutions",
@@ -2150,7 +2733,7 @@
           "startDate": "2016-02",
           "endDate": "2021-04",
           "isCurrent": false,
-          "description": "- Led 10 reps selling fiber and managed WAN, growing bookings 60% in 4 years\n- Built a partner referral program with 25 IT consultancies\n- Coached 3 reps to President's Club in 2019"
+          "description": "- Led 10 reps selling fiber and managed WAN, growing bookings 60% in 4 years\n- Built a partner referral program with 25 IT consultancies"
         },
         {
           "company": "Liberty Telecom Solutions",
@@ -2159,7 +2742,7 @@
           "startDate": "2011-06",
           "endDate": "2016-01",
           "isCurrent": false,
-          "description": "- Closed $3–5M in annual TCV selling network services to hospitals and universities\n- Won 4 hospital system contracts over $2M"
+          "description": "- Closed $3–5M in annual TCV selling network services to hospitals and universities"
         }
       ],
       "education": [
@@ -2175,9 +2758,19 @@
         "Leadership: Multi-team management, hiring, turnaround plans, compensation",
         "Sales: Enterprise deals, contract negotiation, forecasting, partner programs",
         "Tools: Salesforce, Clari, Gong, Power BI",
-        "Industry: Telecommunications, managed network services",
-        "Planning: Regional strategy, capacity planning, quota setting"
-      ]
+        "Industry: Telecommunications, managed network services"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.89
+      }
     },
     "VP of Sales": {
       "summary": "VP of sales with 16 years in B2B sales, leading revenue teams at venture-backed construction and property technology companies. Leads a 70-person sales organization that grew bookings from $22M to $61M in ARR over 3 years. Builds segmented sales motions, strong managers and a forecast the board can rely on.",
@@ -2189,7 +2782,7 @@
           "startDate": "2021-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 70-person organization across SDR, SMB, mid-market, enterprise and sales engineering\n- Grew new ARR bookings from $22M to $61M over 3 years while holding CAC payback under 18 months\n- Launched an enterprise segment that now produces 40% of new ARR with deals up to $1.4M\n- Report forecast and pipeline to the board quarterly, landing within 3% for 10 quarters\n- Partner with the CEO, CFO and CMO on annual plans, pricing and sales hiring"
+          "description": "- Lead a 70-person organization across SDR, SMB, mid-market, enterprise and sales engineering\n- Grew new ARR bookings from $22M to $61M over 3 years while holding CAC payback under 18 months\n- Launched an enterprise segment that now produces 40% of new ARR with deals up to $1.4M\n- Report forecast and pipeline to the board quarterly, landing within 3% for 10 quarters"
         },
         {
           "company": "Corbel Property Cloud",
@@ -2198,7 +2791,7 @@
           "startDate": "2016-08",
           "endDate": "2021-09",
           "isCurrent": false,
-          "description": "- Built and led 3 regional teams of 25 reps, exceeding annual plan 4 of 5 years\n- Partnered with product on packaging that raised average deal size 33%\n- Hired and coached 4 sales managers"
+          "description": "- Built and led 3 regional teams of 25 reps, exceeding annual plan 4 of 5 years\n- Partnered with product on packaging that raised average deal size 33%"
         },
         {
           "company": "Concord Building Software",
@@ -2207,7 +2800,7 @@
           "startDate": "2010-06",
           "endDate": "2016-07",
           "isCurrent": false,
-          "description": "- Sold estimating software to general contractors, finishing above quota 3 years running\n- Promoted in 2013 to lead the regional team, growing bookings 50% in 3 years"
+          "description": "- Sold estimating software to general contractors, finishing above quota 3 years running"
         }
       ],
       "education": [
@@ -2223,9 +2816,20 @@
         "Leadership: Org design, executive hiring, board reporting, compensation strategy",
         "Go-to-market: Segmentation, enterprise motion, pricing and packaging",
         "Operations: Forecasting, capacity planning, CAC payback",
-        "Tools: Salesforce, Clari, Gong, Tableau",
-        "Team Building: Manager hiring, enablement, sales operations"
-      ]
+        "Tools: Salesforce, Clari, Gong, Tableau"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.89
+      }
     },
     "Customer Success Associate": {
       "summary": "Customer success associate with 3 years supporting small business customers of an email marketing platform. Manages a pooled book of 600 accounts through onboarding calls, webinars and digital outreach, keeping logo retention at 91%. Organized, quick to learn the product and comfortable spotting accounts at risk early.",
@@ -2271,9 +2875,22 @@
         "Customer Success: Onboarding, webinars, health monitoring, renewals support",
         "Tools: ChurnZero, HubSpot, Intercom, Zoom",
         "Metrics: Logo retention, adoption, CSAT",
-        "Onboarding: Group webinars, help articles, setup checklists",
-        "Languages: Korean (fluent)"
-      ]
+        "Onboarding: Group webinars, help articles, setup checklists"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.96,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Customer Onboarding Specialist": {
       "summary": "Customer onboarding specialist with 3 years getting new customers live on a restaurant ordering and delivery platform. Onboards about 25 restaurants a month and cut average time to first order from 19 days to 8. Sets up menus, payments and integrations, trains staff and hands customers to account management with clean notes.",
@@ -2319,9 +2936,22 @@
         "Onboarding: Account setup, configuration, training, launch planning",
         "Tools: Salesforce, Zendesk, Toast, Square, Loom",
         "Domain: Restaurant operations, online ordering, payments",
-        "Training: Live sessions, recorded walkthroughs, launch checklists",
-        "Certifications: ServSafe Manager"
-      ]
+        "Training: Live sessions, recorded walkthroughs, launch checklists"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.94
+      }
     },
     "Call Center Representative": {
       "summary": "Call center representative with 5 years handling inbound calls, most recently for a health insurance carrier. Answers about 70 member calls a day on benefits, claims and prior authorizations with a 93% quality score. Patient, accurate with HIPAA verification and skilled at resolving calls without transfers.",
@@ -2333,7 +2963,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Handle about 70 inbound member calls a day on benefits, claims and prior authorizations\n- Hold a 93% quality score and 84% first-call resolution, both above center targets\n- Verify identity on every call under HIPAA rules with zero privacy findings in 2 annual audits\n- Picked as a peer mentor for 2 new-hire classes of 15 representatives\n- Document every call in Salesforce Health Cloud with accurate codes and next steps"
+          "description": "- Handle about 70 inbound member calls a day on benefits, claims and prior authorizations\n- Hold a 93% quality score and 84% first-call resolution, both above center targets\n- Verify identity on every call under HIPAA rules with zero privacy findings in 2 annual audits\n- Picked as a peer mentor for 2 new-hire classes of 15 representatives"
         },
         {
           "company": "Route 66 Utilities",
@@ -2367,9 +2997,18 @@
         "Call Handling: Inbound calls, de-escalation, first-call resolution, documentation",
         "Tools: Genesys Cloud, Salesforce Health Cloud, Facets",
         "Compliance: HIPAA verification, call recording standards",
-        "Typing: 60 WPM",
-        "Domain: Health insurance benefits, claims, prior authorizations"
-      ]
+        "Typing: 60 WPM"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Call Center Supervisor": {
       "summary": "Call center supervisor with 8 years in contact centers, the last 4 supervising inbound teams for a national utility and energy retailer. Leads 18 agents who handle 22,000 calls a month and lifted the team from bottom quartile to top 3 of 14 teams on quality. Strong in coaching, real-time adherence and escalation handling.",
@@ -2381,7 +3020,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Supervise 18 agents handling 22,000 calls a month on billing, moves and outages\n- Moved the team from bottom quartile to top 3 of 14 on quality within a year through weekly side-by-side coaching\n- Manage real-time adherence in NICE IEX, keeping service level at 80/30 during storm surges\n- Handle supervisor escalations and complaint calls, resolving 90% without regulatory complaints\n- Run weekly calibration sessions with QA and train new-hire classes of 12"
+          "description": "- Supervise 18 agents handling 22,000 calls a month on billing, moves and outages\n- Moved the team from bottom quartile to top 3 of 14 on quality within a year through weekly side-by-side coaching\n- Manage real-time adherence in NICE IEX, keeping service level at 80/30 during storm surges\n- Handle supervisor escalations and complaint calls, resolving 90% without regulatory complaints"
         },
         {
           "company": "Lumina Energy Services",
@@ -2399,7 +3038,7 @@
           "startDate": "2018-03",
           "endDate": "2020-01",
           "isCurrent": false,
-          "description": "- Answered 65 calls a day with top-quartile customer satisfaction\n- Resolved 85% of escalated billing disputes on the first call"
+          "description": "- Answered 65 calls a day with top-quartile customer satisfaction"
         }
       ],
       "education": [
@@ -2415,9 +3054,19 @@
         "Leadership: Coaching, QA calibration, attendance and performance management",
         "Workforce: NICE IEX, real-time adherence, service level, schedule adherence",
         "Tools: Genesys, Salesforce Service Cloud, Verint",
-        "Metrics: AHT, FCR, CSAT, quality score",
-        "Training: New-hire classes, side-by-side coaching, QA calibration"
-      ]
+        "Metrics: AHT, FCR, CSAT, quality score"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.89,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.89
+      }
     },
     "Medical Device Sales Representative": {
       "summary": "Medical device sales representative with 7 years in medical device sales, covering orthopedic and spine procedures in hospitals and ambulatory surgery centers. Grew a $3.1M territory to $4.4M in two years and earned President's Club in 2025. Supports cases in the operating room, trains staff and works through value analysis committees.",
@@ -2429,7 +3078,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew a $3.1M orthopedic trauma territory to $4.4M in 2 years, earning President's Club in 2025\n- Support 8–12 cases a week in the OR, advising surgeons and staff on implant and instrument use\n- Won formulary approval at 4 hospitals through value analysis committee presentations\n- Converted 6 surgeons from a competitor system using cadaver labs and case data\n- Train OR staff and sterile processing teams on instrument sets and reprocessing"
+          "description": "- Grew a $3.1M orthopedic trauma territory to $4.4M in 2 years, earning President's Club in 2025\n- Support 8–12 cases a week in the OR, advising surgeons and staff on implant and instrument use\n- Won formulary approval at 4 hospitals through value analysis committee presentations\n- Converted 6 surgeons from a competitor system using cadaver labs and case data"
         },
         {
           "company": "Kestrel Orthopedics",
@@ -2438,7 +3087,7 @@
           "startDate": "2020-05",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Covered cases, managed loaner sets and inventory for 3 senior reps\n- Completed company surgical training and certification in 9 months\n- Covered weekend trauma call for 3 hospitals with a 30-minute response standard"
+          "description": "- Covered cases, managed loaner sets and inventory for 3 senior reps\n- Completed company surgical training and certification in 9 months"
         },
         {
           "company": "Carolina Medical Supply",
@@ -2447,7 +3096,7 @@
           "startDate": "2019-06",
           "endDate": "2020-04",
           "isCurrent": false,
-          "description": "- Sold disposables to clinics and surgery centers, reaching 112% of quota\n- Grew clinic reorders 20% with a quarterly restock program"
+          "description": "- Sold disposables to clinics and surgery centers, reaching 112% of quota"
         }
       ],
       "education": [
@@ -2462,10 +3111,17 @@
       "skills": [
         "Clinical: OR case coverage, implant systems, sterile technique, aseptic protocols",
         "Sales: Surgeon relationships, value analysis committees, competitive conversions",
-        "Tools: Salesforce, inventory tracking systems",
-        "Credentials: Vendor credentialing (Vendormate, Symplr), AdvaMed Code compliance",
-        "Industry: Orthopedic trauma, spine, ambulatory surgery centers"
-      ]
+        "Tools: Salesforce, inventory tracking systems"
+      ],
+      "fit": {
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "bronx": 0.93,
+        "mono": 0.97,
+        "pop": 0.95
+      }
     }
   }
 }

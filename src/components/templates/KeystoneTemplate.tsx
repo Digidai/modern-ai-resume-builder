@@ -43,7 +43,7 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <header className="flex items-end justify-between gap-x-8 border-b-[3px] border-(--accent) pb-[12px] break-inside-avoid">
                     {(name || title) && (
                         <div className="min-w-0 flex-1">
-                            {name && <h1 className="font-source-serif text-[34px] font-semibold leading-[1.1] text-slate-900 wrap-break-word">{name}</h1>}
+                            {name && <div role="heading" aria-level={1} className="font-source-serif text-[34px] font-semibold leading-[1.1] text-slate-900 wrap-break-word">{name}</div>}
                             {title && <p className="mt-[5px] text-[16px] font-bold leading-snug text-(--accent) wrap-break-word">{title}</p>}
                         </div>
                     )}

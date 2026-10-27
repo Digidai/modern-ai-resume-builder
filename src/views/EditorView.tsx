@@ -29,10 +29,10 @@ import { sanitizeResumeData } from '../utils/resumeData';
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
   const content =
     status === 'saving'
-      ? { icon: <LoaderIcon className="h-3.5 w-3.5 animate-spin" />, text: 'Saving…', tone: 'text-slate-500 dark:text-slate-400' }
+      ? { icon: <LoaderIcon className="h-3.5 w-3.5 animate-spin" />, text: 'Saving…', tone: 'text-muted' }
       : status === 'error'
-        ? { icon: <AlertIcon className="h-3.5 w-3.5" />, text: 'Not saved', tone: 'text-red-600 dark:text-red-400' }
-        : { icon: <CloudCheckIcon className="h-3.5 w-3.5" />, text: 'Saved in this browser', tone: 'text-slate-500 dark:text-slate-400' };
+        ? { icon: <AlertIcon className="h-3.5 w-3.5" />, text: 'Not saved', tone: 'text-danger' }
+        : { icon: <CloudCheckIcon className="h-3.5 w-3.5" />, text: 'Saved in this browser', tone: 'text-muted' };
   return (
     <span className={`inline-flex items-center gap-1.5 text-xs ${content.tone}`} role="status" aria-live="polite" title={content.text}>
       {content.icon}
@@ -76,10 +76,10 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
       {open && (
         <div
           role="menu"
-          className="animate-enter absolute right-0 top-full z-40 mt-2 w-64 overflow-hidden rounded-xl border border-slate-200 bg-white p-1 shadow-xl dark:border-slate-800 dark:bg-slate-900"
+          className="animate-enter absolute right-0 top-full z-40 mt-2 w-64 overflow-hidden rounded-[2px] border border-rule bg-surface p-1 shadow-sheet"
         >
           {items.map((group, groupIndex) => (
-            <div key={groupIndex} className={groupIndex > 0 ? 'mt-1 border-t border-slate-100 pt-1 dark:border-slate-800' : ''}>
+            <div key={groupIndex} className={groupIndex > 0 ? 'mt-1 border-t border-rule pt-1' : ''}>
               {group.map((item) => (
                 <button
                   key={item.label}
@@ -89,12 +89,12 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
                     setOpen(false);
                     item.onSelect();
                   }}
-                  className="flex w-full items-start gap-3 rounded-lg px-3 py-2 text-left hover:bg-slate-100 focus-visible:bg-slate-100 focus-visible:outline-none dark:hover:bg-slate-800 dark:focus-visible:bg-slate-800"
+                  className="flex w-full items-start gap-3 rounded-[2px] px-3 py-2 text-left hover:bg-ink/5 focus-visible:bg-ink/5 focus-visible:outline-none"
                 >
-                  <span className="mt-0.5 text-slate-500 dark:text-slate-400">{item.icon}</span>
+                  <span className="mt-0.5 text-muted">{item.icon}</span>
                   <span>
-                    <span className="block text-sm font-medium text-slate-800 dark:text-slate-100">{item.label}</span>
-                    {item.description && <span className="block text-xs text-slate-500 dark:text-slate-400">{item.description}</span>}
+                    <span className="block text-sm font-medium text-ink">{item.label}</span>
+                    {item.description && <span className="block text-xs text-muted">{item.description}</span>}
                   </span>
                 </button>
               ))}
@@ -120,6 +120,10 @@ const EditorView: React.FC = () => {
     saveStatus,
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
+  const isBlankResume =
+    !resumeData.fullName.trim() &&
+    !resumeData.summary.trim() &&
+    resumeData.experience.every((e) => !e.role.trim() && !e.company.trim() && !e.description.trim());
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -225,10 +229,10 @@ const EditorView: React.FC = () => {
       type="button"
       onClick={() => setMobileView(view)}
       aria-pressed={mobileView === view}
-      className={`rounded-md px-3 py-1 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+      className={`rounded-[2px] border px-3 py-1 text-sm font-medium transition-colors focus-ring ${
         mobileView === view
-          ? 'bg-white text-slate-900 shadow-sm dark:bg-slate-700 dark:text-white'
-          : 'text-slate-500 dark:text-slate-400'
+          ? 'border-rule bg-surface text-ink'
+          : 'border-transparent text-muted'
       }`}
     >
       {label}
@@ -236,21 +240,21 @@ const EditorView: React.FC = () => {
   );
 
   return (
-    <div className="flex h-dvh flex-col overflow-hidden bg-slate-100 font-sans text-slate-900 dark:bg-slate-950 dark:text-slate-100 print:h-auto print:bg-white">
-      <header className="z-30 flex h-14 shrink-0 items-center gap-2 border-b border-slate-200 bg-white px-2 sm:px-4 dark:border-slate-800 dark:bg-slate-950 print:hidden">
+    <div className="flex h-dvh flex-col overflow-hidden bg-paper font-sans text-ink print:h-auto print:bg-white">
+      <header className="z-30 flex h-14 shrink-0 items-center gap-2 border-b border-rule bg-paper px-2 sm:px-4 print:hidden">
         <Link
           to="/"
-          className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-semibold text-slate-900 hover:bg-slate-100 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-white dark:hover:bg-slate-800"
+          className="flex items-center gap-2 rounded-[2px] px-2 py-1.5 text-sm font-semibold text-ink hover:bg-ink/5 focus-ring"
           aria-label="Back to home"
         >
-          <ArrowLeftIcon className="h-4 w-4 text-slate-500" />
+          <ArrowLeftIcon className="h-4 w-4 text-muted" />
           <span className="hidden sm:inline">ModernCV</span>
         </Link>
-        <span className="hidden h-5 w-px bg-slate-200 sm:block dark:bg-slate-800" />
+        <span className="hidden h-5 w-px bg-tint sm:block" />
         <SaveIndicator status={saveStatus} />
 
         <div className="flex flex-1 justify-center md:hidden">
-          <div className="flex rounded-lg bg-slate-100 p-0.5 dark:bg-slate-800" role="group" aria-label="View">
+          <div className="flex rounded-[2px] bg-paper p-0.5" role="group" aria-label="View">
             {segment('edit', 'Edit')}
             {segment('preview', 'Preview')}
           </div>
@@ -265,7 +269,7 @@ const EditorView: React.FC = () => {
           onClick={handleDownloadPdf}
           isLoading={isExportingPdf}
           leftIcon={<DownloadIcon className="h-4 w-4" />}
-          className="max-sm:h-9 max-sm:w-9 max-sm:rounded-full max-sm:px-0"
+          className="max-sm:h-9 max-sm:w-9 max-sm:px-0"
           aria-label="Download PDF"
         >
           <span className="max-sm:sr-only">{isExportingPdf ? 'Exporting…' : 'Download PDF'}</span>
@@ -285,12 +289,12 @@ const EditorView: React.FC = () => {
 
       <div className="flex min-h-0 flex-1">
         <aside
-          className={`custom-scrollbar w-full shrink-0 overflow-y-auto bg-slate-50 md:w-[460px] md:border-r md:border-slate-200 lg:w-[520px] dark:bg-slate-950 md:dark:border-slate-800 print:hidden ${
+          className={`custom-scrollbar w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
             mobileView === 'preview' ? 'max-md:hidden' : ''
           }`}
         >
           {saveError && (
-            <div role="alert" className="m-4 mb-0 flex gap-2 rounded-lg border border-red-200 bg-red-50 px-3 py-2 text-sm text-red-700 dark:border-red-900 dark:bg-red-950/40 dark:text-red-300">
+            <div role="alert" className="m-4 mb-0 flex gap-2 rounded-[2px] border border-danger/40 bg-danger/5 px-3 py-2 text-sm text-danger">
               <AlertIcon className="mt-0.5 h-4 w-4 shrink-0" />
               <span>
                 Changes can't be saved in this browser ({saveError}). Use <strong>More → Save backup</strong> to keep a copy.
@@ -304,17 +308,23 @@ const EditorView: React.FC = () => {
 
         {/* Kept mounted (just visually hidden) on mobile so PDF export can always read the preview. */}
         <main
-          className={`custom-scrollbar flex-1 overflow-y-auto bg-slate-200/70 px-3 py-4 sm:p-8 lg:p-10 dark:bg-slate-900 print:overflow-visible print:bg-white print:p-0 ${
+          className={`custom-scrollbar flex-1 overflow-y-auto bg-tint px-3 py-4 sm:p-8 lg:p-10 print:overflow-visible print:bg-white print:p-0 ${
             mobileView === 'edit' ? 'max-md:pointer-events-none max-md:invisible max-md:absolute max-md:inset-x-0 max-md:h-0 max-md:overflow-hidden' : ''
           }`}
           aria-label="Resume preview"
         >
-          <div className="mx-auto w-full max-w-[210mm] shadow-xl ring-1 ring-slate-900/5 print:max-w-none print:shadow-none print:ring-0">
+          <div className="relative mx-auto w-full max-w-[210mm] bg-white shadow-sheet print:max-w-none print:shadow-none">
             <SectionErrorBoundary sectionName="Resume Preview">
               <ScaledResumePreview data={resumeData} mode="page" exportable />
             </SectionErrorBoundary>
+            {isBlankResume && (
+              // Sits over the empty page, outside the exported element, so it never reaches the PDF.
+              <p className="pointer-events-none absolute inset-x-0 top-[18%] px-8 text-center font-display text-lg text-[#6E695F] print:hidden" aria-hidden="true">
+                Your resume will appear here. Start with your name on the left.
+              </p>
+            )}
           </div>
-          <p className="mt-4 text-center text-xs text-slate-500 dark:text-slate-400 print:hidden">
+          <p className="mt-4 text-center text-xs text-muted print:hidden">
             Dashed lines mark A4 page breaks. They aren't printed.
           </p>
         </main>

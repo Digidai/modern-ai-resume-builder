@@ -3,52 +3,40 @@ import { Link, useNavigate } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { ScaledResumePreview } from '../components/ScaledResumePreview';
 import { LazyResumePreview } from '../components/LazyResumePreview';
-import { SparklesIcon, DownloadIcon, LayoutIcon, CheckIcon, EditIcon, BriefcaseIcon, ChevronDownIcon } from '../components/Icons';
+import { ChevronDownIcon } from '../components/Icons';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
 import { useResume } from '../contexts/ResumeContext';
 import { SectionErrorBoundary } from '../components/ErrorBoundary';
 import { buildHomeSeoKeywords, buildHomeFaqSchema, HOME_FAQ_ITEMS } from '../utils/seo';
 import { INITIAL_RESUME_DATA, type ResumeData } from '../types';
 import { TEMPLATES } from '../constants/templates';
+import jobTitlesData from '../data/jobTitles.json';
 
 const SHOWCASE_TEMPLATE_IDS = ['classic', 'modern', 'vanguard', 'timeline', 'banking', 'sidebar', 'creative', 'duo'];
 
-const FEATURES = [
-  {
-    icon: <LayoutIcon className="h-5 w-5" />,
-    title: `${TEMPLATES.length} recruiter-ready templates`,
-    body: 'From quiet and classic to bold and modern. Switch any time without retyping a word.',
-  },
-  {
-    icon: <SparklesIcon className="h-5 w-5" />,
-    title: 'AI writing help',
-    body: 'Draft a summary or tighten a bullet in one click, in the language you write in. You stay in control.',
-  },
-  {
-    icon: <DownloadIcon className="h-5 w-5" />,
-    title: 'Pixel-perfect PDF',
-    body: 'Export a crisp A4 PDF with selectable text — exactly what you see in the preview.',
-  },
-  {
-    icon: <CheckIcon className="h-5 w-5" />,
-    title: 'Private by default',
-    body: 'No sign-up. Your resume is saved in your browser and never stored on our servers.',
-  },
+const ATS_COUNT = TEMPLATES.filter((t) => t.atsFriendly).length;
+const EXAMPLE_COUNT = (jobTitlesData as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0);
+
+const FACTS = [
+  { title: `${TEMPLATES.length} templates`, body: `${ATS_COUNT} single-column and ATS-friendly, the rest two-column or expressive.` },
+  { title: `${EXAMPLE_COUNT} resume examples`, body: 'One complete example and writing guide per job title.' },
+  { title: 'A4 vector PDF', body: 'Selectable text and embedded fonts, matching the preview.' },
+  { title: 'Stays in your browser', body: 'No account. Your draft is saved locally until you delete it.' },
 ];
 
 const STEPS = [
-  { title: 'Fill in your details', body: 'Start from the sample or a blank page. Autosave keeps every change.' },
-  { title: 'Pick a template', body: 'Preview your own content in every design, live.' },
-  { title: 'Download and apply', body: 'Get a print-ready PDF and a backup file you can edit later.' },
+  { title: 'Fill in your details', body: 'Start from the sample or a blank page. Changes save as you type.' },
+  { title: 'Pick a template', body: 'Every design previews your own content, so you can compare them side by side.' },
+  { title: 'Download the PDF', body: 'Export an A4 PDF, plus a JSON backup if you want to edit it later.' },
 ];
 
 const isSampleResume = (data: ResumeData) =>
   JSON.stringify({ ...data, templateId: '' }) === JSON.stringify({ ...INITIAL_RESUME_DATA, templateId: '' });
 
 const primaryLinkClass =
-  'inline-flex h-12 items-center justify-center gap-2 rounded-xl bg-indigo-600 px-6 text-base font-semibold text-white shadow-lg shadow-indigo-600/20 transition hover:bg-indigo-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:bg-indigo-500 dark:hover:bg-indigo-400 dark:focus-visible:ring-offset-slate-950';
+  'focus-ring inline-flex h-11 items-center justify-center rounded-[2px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors hover:bg-ink-hover';
 const secondaryLinkClass =
-  'inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-300 bg-white px-6 text-base font-semibold text-slate-800 transition hover:border-slate-400 hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 focus-visible:ring-offset-2 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100 dark:hover:bg-slate-800 dark:focus-visible:ring-offset-slate-950';
+  'focus-ring inline-flex h-11 items-center justify-center rounded-[2px] border border-ink px-5 text-[15px] font-medium text-ink transition-colors hover:bg-ink/5';
 
 const HomeView: React.FC = () => {
   const navigate = useNavigate();
@@ -58,7 +46,7 @@ const HomeView: React.FC = () => {
   const siteUrl = getSiteUrl();
   const orgId = `${siteUrl}/#organization`;
   const websiteId = `${siteUrl}/#website`;
-  const homeOgImage = '/og/home.png';
+  const homeOgImage = '/og-image.png';
   const homeOgImageUrl = `${siteUrl}${homeOgImage}`;
 
   useSeo({
@@ -125,169 +113,145 @@ const HomeView: React.FC = () => {
     navigate('/editor');
   };
 
+  const heroTemplate = TEMPLATES.find((t) => t.id === resumeData.templateId) ?? TEMPLATES.find((t) => t.id === 'modern');
+
   return (
-    <div className="flex min-h-screen flex-col bg-white font-sans text-slate-900 dark:bg-slate-950 dark:text-slate-100">
+    <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
       <SiteHeader ctaLabel={hasOwnResume ? 'Continue editing' : 'Create resume'} />
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="relative overflow-hidden">
-          <div
-            className="pointer-events-none absolute inset-0 -z-0 bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.14),transparent_55%)] dark:bg-[radial-gradient(ellipse_at_top_right,rgba(99,102,241,0.22),transparent_55%)]"
-            aria-hidden="true"
-          />
-          <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
-            <div>
-              <p className="inline-flex items-center gap-2 rounded-full border border-indigo-200 bg-indigo-50 px-3 py-1 text-xs font-medium text-indigo-700 dark:border-indigo-900 dark:bg-indigo-950/60 dark:text-indigo-300">
-                <SparklesIcon className="h-3.5 w-3.5" />
-                Free · No sign-up · AI writing help
-              </p>
-              <h1 className="mt-5 text-4xl font-bold tracking-tight text-slate-900 sm:text-5xl lg:text-6xl dark:text-white">
-                A resume that gets you <span className="text-indigo-600 dark:text-indigo-400">the interview.</span>
-              </h1>
-              <p className="mt-5 max-w-xl text-lg leading-relaxed text-slate-600 dark:text-slate-300">
-                Write it once, see it in {TEMPLATES.length} professional designs, and download a polished PDF in minutes.
-                Everything stays in your browser.
-              </p>
-              <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-                <Link to="/editor" className={primaryLinkClass}>
-                  <EditIcon className="h-4 w-4" />
-                  {hasOwnResume ? 'Continue editing' : 'Create my resume'}
-                </Link>
-                <Link to="/directory" className={secondaryLinkClass}>
-                  <BriefcaseIcon className="h-4 w-4" />
-                  Examples by job title
-                </Link>
-              </div>
-              <ul className="mt-8 flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 dark:text-slate-400">
-                {['ATS-friendly layouts', 'Selectable-text PDF', 'Works on your phone'].map((item) => (
-                  <li key={item} className="flex items-center gap-1.5">
-                    <CheckIcon className="h-4 w-4 text-emerald-600 dark:text-emerald-400" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-md lg:max-w-none">
-              <div className="absolute -right-4 top-6 hidden w-[72%] rotate-6 overflow-hidden rounded-lg bg-white opacity-90 shadow-xl ring-1 ring-slate-900/5 sm:block" aria-hidden="true">
-                <ScaledResumePreview data={resumeData} templateId={resumeData.templateId === 'creative' ? 'sidebar' : 'creative'} />
-              </div>
-              {/* The overlay link is a sibling, not a wrapper: the resume itself contains links. */}
-              <div className="group relative overflow-hidden rounded-lg bg-white shadow-2xl ring-1 ring-slate-900/10 transition hover:-translate-y-1 has-[a:focus-visible]:ring-2 has-[a:focus-visible]:ring-indigo-500 sm:w-[88%]">
-                <SectionErrorBoundary sectionName="Resume Preview">
-                  <ScaledResumePreview data={resumeData} />
-                </SectionErrorBoundary>
-                <Link
-                  to="/editor"
-                  className="absolute inset-0 flex items-end justify-center bg-gradient-to-t from-slate-900/70 via-transparent to-transparent pb-5 text-sm font-medium text-white opacity-0 transition hover:opacity-100 focus-visible:opacity-100 focus-visible:outline-none"
-                  aria-label={hasOwnResume ? 'Continue editing your resume' : 'Open the sample resume in the editor'}
-                >
-                  {hasOwnResume ? 'Continue editing →' : 'Edit this resume →'}
-                </Link>
-              </div>
-              {hasOwnResume && (
-                <p className="mt-3 text-center text-xs text-slate-500 sm:w-[88%] dark:text-slate-400">Your resume, saved in this browser</p>
-              )}
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20 lg:pb-24">
+          <div>
+            <p className="kicker text-muted">Free · No account · A4 vector PDF</p>
+            <h1 className="mt-5 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink sm:text-5xl sm:leading-[54px] lg:text-[56px] lg:leading-[60px]">
+              Write your resume once. Set it in any of {TEMPLATES.length} templates.
+            </h1>
+            <p className="mt-6 max-w-xl text-[17px] leading-[28px] text-muted">
+              Type your experience on the left and see it typeset on an A4 page on the right. Download a PDF with selectable text when it reads
+              well. Nothing to sign up for; your draft is saved in this browser.
+            </p>
+            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+              <Link to="/editor" className={primaryLinkClass}>
+                {hasOwnResume ? 'Continue editing' : 'Create my resume'}
+              </Link>
+              <Link to="/directory" className={secondaryLinkClass}>
+                Browse examples by job
+              </Link>
             </div>
           </div>
+
+          <figure className="mx-auto w-full max-w-md lg:max-w-[460px]">
+            {/* The overlay link is a sibling, not a wrapper: the resume itself contains links. */}
+            <div className="group relative bg-white shadow-sheet has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-accent">
+              <SectionErrorBoundary sectionName="Resume Preview">
+                <ScaledResumePreview data={resumeData} />
+              </SectionErrorBoundary>
+              <Link
+                to="/editor"
+                className="absolute inset-0 focus-visible:outline-none"
+                aria-label={hasOwnResume ? 'Continue editing your resume' : 'Open the sample resume in the editor'}
+              />
+            </div>
+            <figcaption className="mt-4 flex items-baseline justify-between gap-4 text-muted">
+              <span className="kicker">
+                {hasOwnResume ? 'Your resume' : 'Sample'} · {heroTemplate?.name}
+              </span>
+              <span className="kicker">210 × 297 mm</span>
+            </figcaption>
+          </figure>
         </section>
 
-        {/* Features */}
-        <section className="border-y border-slate-200 bg-slate-50 dark:border-slate-800 dark:bg-slate-900/40">
-          <div className="mx-auto grid max-w-6xl gap-8 px-4 py-14 sm:grid-cols-2 sm:px-6 lg:grid-cols-4">
-            {FEATURES.map((feature) => (
-              <div key={feature.title}>
-                <span className="flex h-10 w-10 items-center justify-center rounded-lg bg-indigo-600/10 text-indigo-600 dark:bg-indigo-400/10 dark:text-indigo-400">
-                  {feature.icon}
-                </span>
-                <h2 className="mt-4 font-semibold text-slate-900 dark:text-white">{feature.title}</h2>
-                <p className="mt-1.5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{feature.body}</p>
+        {/* Facts */}
+        <section className="border-y border-rule" aria-label="What you get">
+          <dl className="mx-auto grid max-w-6xl gap-px bg-rule sm:grid-cols-2 lg:grid-cols-4">
+            {FACTS.map((fact) => (
+              <div key={fact.title} className="bg-paper px-4 py-6 sm:px-6 lg:py-8">
+                <dt className="font-display text-xl font-semibold tracking-display text-ink">{fact.title}</dt>
+                <dd className="mt-1.5 text-sm leading-6 text-muted">{fact.body}</dd>
               </div>
             ))}
-          </div>
+          </dl>
         </section>
 
         {/* Templates */}
-        <section id="templates" className="mx-auto max-w-6xl scroll-mt-32 px-4 md:scroll-mt-20 py-16 sm:px-6 lg:py-24">
+        <section id="templates" className="mx-auto max-w-6xl scroll-mt-32 px-4 py-16 sm:px-6 md:scroll-mt-20 lg:py-24">
           <div className="flex flex-col justify-between gap-4 sm:flex-row sm:items-end">
             <div>
-              <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Pick a look. Keep your words.</h2>
-              <p className="mt-2 text-slate-600 dark:text-slate-400">
-                {hasOwnResume ? 'Previews use your own resume.' : 'Every template is shown with the same sample content.'} Click one to start editing.
+              <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">The same resume, eight ways</h2>
+              <p className="mt-3 max-w-2xl text-base leading-[26px] text-muted">
+                {hasOwnResume ? 'These previews use your own resume.' : 'Each design below shows the same sample content.'} Choose one to open it in the editor.
               </p>
             </div>
-            <Link to="/templates/" className="text-sm font-semibold text-indigo-600 hover:text-indigo-700 dark:text-indigo-400 dark:hover:text-indigo-300">
-              See all {TEMPLATES.length} templates →
+            <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2">
+              All {TEMPLATES.length} templates
             </Link>
           </div>
-          <div className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
+          <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
             {SHOWCASE_TEMPLATE_IDS.map((id) => {
               const template = TEMPLATES.find((t) => t.id === id);
               if (!template) return null;
               return (
                 // The button overlays the card instead of wrapping it: previews contain their own links.
-                <div key={id} className="group relative">
-                  <div className="overflow-hidden rounded-lg bg-white shadow-md ring-1 ring-slate-900/5 transition group-hover:-translate-y-1 group-hover:shadow-xl group-has-[:focus-visible]:ring-2 group-has-[:focus-visible]:ring-indigo-500 dark:ring-white/10">
+                <li key={id} className="group relative">
+                  <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
                     <LazyResumePreview data={resumeData} templateId={id} />
                   </div>
-                  <span className="mt-3 flex items-center justify-between text-sm font-medium text-slate-800 dark:text-slate-200">
-                    {template.name}
-                    <span className="text-indigo-600 opacity-0 transition group-hover:opacity-100 group-has-[:focus-visible]:opacity-100 dark:text-indigo-400">Use →</span>
-                  </span>
+                  <p className="mt-3 flex items-baseline justify-between gap-2">
+                    <span className="font-display text-base font-semibold text-ink">{template.name}</span>
+                    {template.atsFriendly && <span className="kicker text-muted">ATS</span>}
+                  </p>
+                  <p className="mt-0.5 text-sm leading-5 text-muted">{template.description}</p>
                   <button
                     type="button"
                     onClick={() => useTemplate(id)}
                     aria-label={`Use the ${template.name} template`}
-                    className="absolute inset-0 cursor-pointer rounded-lg focus-visible:outline-none"
+                    className="absolute inset-0 cursor-pointer focus-visible:outline-none"
                   />
-                </div>
+                </li>
               );
             })}
-          </div>
+          </ul>
         </section>
 
         {/* How it works */}
-        <section className="bg-slate-50 dark:bg-slate-900/40">
-          <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
-            <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Done in three steps</h2>
-            <ol className="mt-10 grid gap-6 md:grid-cols-3">
-              {STEPS.map((step, index) => (
-                <li key={step.title} className="rounded-2xl border border-slate-200 bg-white p-6 dark:border-slate-800 dark:bg-slate-900">
-                  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-slate-900 text-sm font-semibold text-white dark:bg-white dark:text-slate-900">
-                    {index + 1}
-                  </span>
-                  <h3 className="mt-4 font-semibold text-slate-900 dark:text-white">{step.title}</h3>
-                  <p className="mt-1.5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{step.body}</p>
-                </li>
-              ))}
-            </ol>
-          </div>
+        <section className="mx-auto max-w-6xl px-4 sm:px-6">
+          <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">How it works</h2>
+          <ol className="mt-8 grid border-y border-rule md:grid-cols-3">
+            {STEPS.map((step, index) => (
+              <li key={step.title} className={`py-6 md:px-6 ${index === 0 ? 'md:pl-0' : 'border-t border-rule md:border-l md:border-t-0'}`}>
+                <span className="kicker text-accent">{String(index + 1).padStart(2, '0')}</span>
+                <h3 className="mt-2 font-display text-xl font-semibold tracking-display text-ink">{step.title}</h3>
+                <p className="mt-1.5 text-[15px] leading-6 text-muted">{step.body}</p>
+              </li>
+            ))}
+          </ol>
         </section>
 
         {/* FAQ */}
-        <section id="faq" className="mx-auto max-w-3xl scroll-mt-32 px-4 md:scroll-mt-20 py-16 sm:px-6 lg:py-24">
-          <h2 className="text-center text-3xl font-bold tracking-tight text-slate-900 dark:text-white">Questions</h2>
-          <div className="mt-10 divide-y divide-slate-200 rounded-2xl border border-slate-200 dark:divide-slate-800 dark:border-slate-800">
+        <section id="faq" className="mx-auto grid max-w-6xl scroll-mt-32 gap-8 px-4 py-16 sm:px-6 md:scroll-mt-20 lg:grid-cols-[1fr_2fr] lg:gap-16 lg:py-24">
+          <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">Questions</h2>
+          <div className="border-t border-rule">
             {HOME_FAQ_ITEMS.map((item) => (
-              <details key={item.question} className="group px-5 [&_summary::-webkit-details-marker]:hidden">
-                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 py-4 font-medium text-slate-900 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-white">
+              <details key={item.question} className="group border-b border-rule [&_summary::-webkit-details-marker]:hidden">
+                <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[17px] font-medium text-ink">
                   {item.question}
-                  <ChevronDownIcon className="h-4 w-4 shrink-0 text-slate-400 transition-transform group-open:rotate-180" />
+                  <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180" />
                 </summary>
-                <p className="pb-5 text-sm leading-relaxed text-slate-600 dark:text-slate-400">{item.answer}</p>
+                <p className="-mt-1 pb-6 text-base leading-[26px] text-muted">{item.answer}</p>
               </details>
             ))}
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="px-4 pb-20 sm:px-6">
-          <div className="mx-auto max-w-6xl rounded-3xl bg-slate-900 px-6 py-14 text-center dark:bg-indigo-950/60 dark:ring-1 dark:ring-indigo-900">
-            <h2 className="text-3xl font-bold tracking-tight text-white">Your next job starts with one page.</h2>
-            <p className="mx-auto mt-3 max-w-xl text-slate-300">It's free, it takes minutes, and you can download it as many times as you like.</p>
-            <Link to="/editor" className={`${primaryLinkClass} mt-8`}>
-              {hasOwnResume ? 'Continue editing' : 'Build my resume'}
+        <section className="border-t border-rule bg-surface">
+          <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center">
+            <p className="max-w-2xl font-display text-2xl font-semibold leading-8 tracking-display text-ink">
+              It's free, there is no account, and you can download the PDF as often as you like.
+            </p>
+            <Link to="/editor" className={`${primaryLinkClass} shrink-0`}>
+              {hasOwnResume ? 'Continue editing' : 'Start my resume'}
             </Link>
           </div>
         </section>

@@ -12,7 +12,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own a $1.4M annual program budget across paid search, LinkedIn, webinars and trade shows, growing marketing-sourced pipeline from $9.8M to $16.1M\n- Manage a team of 3 specialists and 2 agencies, setting quarterly OKRs and weekly pipeline reviews with the VP of Sales\n- Launched a payroll-compliance webinar series that produced 2,300 registrants and 140 sales-accepted opportunities in its first year\n- Rebuilt HubSpot lead scoring with sales ops, raising MQL-to-SQL conversion from 14% to 23%\n- Cut agency fees 22% by moving paid social and email production in-house without losing volume"
+          "description": "- Own a $1.4M annual program budget across paid search, LinkedIn, webinars and trade shows, growing marketing-sourced pipeline from $9.8M to $16.1M\n- Manage a team of 3 specialists and 2 agencies, setting quarterly OKRs and weekly pipeline reviews with the VP of Sales\n- Launched a payroll-compliance webinar series that produced 2,300 registrants and 140 sales-accepted opportunities in its first year\n- Rebuilt HubSpot lead scoring with sales ops, raising MQL-to-SQL conversion from 14% to 23%"
         },
         {
           "company": "Clearfold Software",
@@ -21,7 +21,7 @@
           "startDate": "2019-06",
           "endDate": "2022-02",
           "isCurrent": false,
-          "description": "- Ran campaign calendars for 3 product lines, coordinating 60+ launches, emails and landing pages per year\n- Cut cost per lead 31% by shifting spend from display to intent-based LinkedIn audiences\n- Wrote the first campaign brief template and QA checklist used across the marketing team"
+          "description": "- Ran campaign calendars for 3 product lines, coordinating 60+ launches, emails and landing pages per year\n- Cut cost per lead 31% by shifting spend from display to intent-based LinkedIn audiences"
         },
         {
           "company": "Pinecrest Media Group",
@@ -30,7 +30,7 @@
           "startDate": "2018-01",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Produced weekly client newsletters for 18,000 subscribers with a 29% average open rate\n- Coordinated booths at 9 regional trade shows, tracking 1,100 leads into Salesforce\n- Built a trade show lead follow-up email sequence that booked 35 demos in its first year"
+          "description": "- Produced weekly client newsletters for 18,000 subscribers with a 29% average open rate"
         }
       ],
       "education": [
@@ -45,10 +45,22 @@
       "skills": [
         "Channels: Paid search, LinkedIn Ads, webinars, events, email nurture",
         "Tools: HubSpot, Salesforce, Google Ads, Looker Studio, Asana",
-        "Planning: Budget management, campaign briefs, attribution, OKRs",
-        "Leadership: Agency management, coaching, sales alignment",
-        "Analysis: Excel, pipeline reporting, cohort and channel ROI"
-      ]
+        "Planning: Budget management, campaign briefs, attribution, OKRs"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.99,
+        "quartz": 0.99,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.89,
+        "cast": 0.98
+      }
     },
     "Digital Marketing Specialist": {
       "summary": "Digital marketing specialist with 5 years running paid, email and SEO programs for regional healthcare and wellness brands. Lowered cost per booked appointment by 38% for a 22-clinic network. Hands-on with Google Ads, Meta and GA4, and comfortable building landing pages and reports without developer help.",
@@ -60,7 +72,7 @@
           "startDate": "2023-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage $45k monthly across Google Ads and Meta for 22 clinics, reducing cost per booked appointment from $61 to $38\n- Built location landing pages in WordPress and Unbounce, lifting form conversion from 3.1% to 5.4%\n- Set up GA4 events and CallRail tracking so 100% of phone bookings attribute to campaign source\n- Send monthly patient-reactivation emails in Mailchimp that bring back roughly 400 lapsed patients a quarter\n- Test new ad copy and offers every two weeks, documenting results in a shared test log"
+          "description": "- Manage $45k monthly across Google Ads and Meta for 22 clinics, reducing cost per booked appointment from $61 to $38\n- Built location landing pages in WordPress and Unbounce, lifting form conversion from 3.1% to 5.4%\n- Set up GA4 events and CallRail tracking so 100% of phone bookings attribute to campaign source\n- Send monthly patient-reactivation emails in Mailchimp that bring back roughly 400 lapsed patients a quarter"
         },
         {
           "company": "Brightwater Agency",
@@ -78,7 +90,7 @@
           "startDate": "2020-05",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Built a member directory page in WordPress that drew 6,000 visits in its first month\n- Ran Facebook ads for a summer festival on a $1,500 budget, selling 900 tickets"
+          "description": "- Built a member directory page in WordPress that drew 6,000 visits in its first month"
         }
       ],
       "education": [
@@ -94,9 +106,26 @@
         "Paid Media: Google Ads, Meta Ads Manager, Performance Max",
         "Analytics: GA4, Google Tag Manager, CallRail, Looker Studio",
         "Content & Web: WordPress, Unbounce, Canva, Mailchimp",
-        "SEO: Local SEO, Google Business Profile, Semrush",
-        "Certifications: Google Ads Search, Google Analytics"
-      ]
+        "SEO: Local SEO, Google Business Profile, Semrush"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.97,
+        "silk": 0.96,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "minimalist": 0.89,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Performance Marketing Manager": {
       "summary": "Performance marketing manager with 8 years scaling paid acquisition for DTC subscription brands. Took a meal-kit brand from $250k to $1.1M in monthly spend while holding blended CAC under target. Combines channel depth in Meta, Google and TikTok with incrementality testing and a clean modeling of payback.",
@@ -108,7 +137,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Scaled paid spend from $250k to $1.1M a month across Meta, Google, TikTok and YouTube while keeping blended CAC under $72\n- Ran geo-holdout incrementality tests that showed branded search was 70% non-incremental, freeing $90k a month for prospecting\n- Lead 2 media buyers and a creative strategist, shipping 40+ new ad concepts a month with a structured testing roadmap\n- Built a 12-month payback model with finance used to set weekly spend caps by channel\n- Negotiated a creator whitelisting program with 30 food creators that lowered prospecting CPA 18%"
+          "description": "- Scaled paid spend from $250k to $1.1M a month across Meta, Google, TikTok and YouTube while keeping blended CAC under $72\n- Ran geo-holdout incrementality tests that showed branded search was 70% non-incremental, freeing $90k a month for prospecting\n- Lead 2 media buyers and a creative strategist, shipping 40+ new ad concepts a month with a structured testing roadmap\n- Built a 12-month payback model with finance used to set weekly spend caps by channel"
         },
         {
           "company": "Lumen Skincare",
@@ -117,7 +146,7 @@
           "startDate": "2019-08",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Managed $180k monthly on Meta and Google Shopping, improving ROAS from 2.1 to 3.4 in 18 months\n- Launched TikTok as a channel, reaching 9% of new customers within two quarters\n- Rebuilt Google Shopping feeds and campaign structure, lifting Shopping revenue 44%"
+          "description": "- Managed $180k monthly on Meta and Google Shopping, improving ROAS from 2.1 to 3.4 in 18 months\n- Launched TikTok as a channel, reaching 9% of new customers within two quarters"
         },
         {
           "company": "Fieldstone Digital",
@@ -126,7 +155,7 @@
           "startDate": "2018-06",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Built and optimized search campaigns for 8 e-commerce clients with combined spend of $120k a month\n- Built weekly creative performance reports that set the next round of briefs"
+          "description": "- Built and optimized search campaigns for 8 e-commerce clients with combined spend of $120k a month"
         }
       ],
       "education": [
@@ -142,9 +171,24 @@
         "Channels: Meta Ads, Google Ads, TikTok Ads, YouTube, Pinterest",
         "Measurement: Incrementality testing, MMM, Northbeam, GA4",
         "Analysis: SQL, Excel modeling, CAC payback, cohort LTV",
-        "Creative: Testing frameworks, briefing, UGC programs",
-        "Leadership: Media buyer coaching, budget forecasting, finance partnership"
-      ]
+        "Creative: Testing frameworks, briefing, UGC programs"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.99,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Growth Marketer": {
       "summary": "Growth marketer with 5 years at consumer fintech startups, owning experiments across acquisition, onboarding and referral. Designed a referral program that now drives 27% of new funded accounts. Works fluently in SQL, Amplitude and Braze, and ships tests quickly with engineers and designers.",
@@ -156,7 +200,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Designed a two-sided referral program in Braze and Branch that drives 27% of new funded accounts at a $19 effective CAC\n- Run 6–8 experiments a month across app-store pages, onboarding and paywall, with 35% shipping as winners\n- Cut onboarding drop-off at identity verification from 41% to 29% by reordering steps and adding progress cues\n- Built Amplitude funnels and a weekly growth review used by product and finance leaders\n- Partner with 2 engineers and a designer in two-week sprints, owning test specs and launch QA"
+          "description": "- Designed a two-sided referral program in Braze and Branch that drives 27% of new funded accounts at a $19 effective CAC\n- Run 6–8 experiments a month across app-store pages, onboarding and paywall, with 35% shipping as winners\n- Cut onboarding drop-off at identity verification from 41% to 29% by reordering steps and adding progress cues\n- Built Amplitude funnels and a weekly growth review used by product and finance leaders"
         },
         {
           "company": "Stackwise",
@@ -165,7 +209,7 @@
           "startDate": "2021-03",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Managed Apple Search Ads and Google App campaigns at $60k a month, reducing cost per install 22%\n- Wrote SQL reports in Snowflake to track activation cohorts by acquisition channel\n- Ran app-store screenshot and keyword tests that raised store conversion from 28% to 35%"
+          "description": "- Managed Apple Search Ads and Google App campaigns at $60k a month, reducing cost per install 22%\n- Wrote SQL reports in Snowflake to track activation cohorts by acquisition channel"
         },
         {
           "company": "Commonwealth Ventures Fund",
@@ -174,7 +218,7 @@
           "startDate": "2020-07",
           "endDate": "2021-02",
           "isCurrent": false,
-          "description": "- Built market sizing models for 12 consumer fintech investment memos\n- Tracked portfolio company acquisition metrics in a monthly investor report"
+          "description": "- Built market sizing models for 12 consumer fintech investment memos"
         }
       ],
       "education": [
@@ -185,20 +229,27 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Referral program teardown",
-          "link": "copperleaf.blog/referrals",
-          "description": "Public write-up of the referral experiment design, reward tests and fraud controls"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Experimentation: A/B testing, Statsig, sample sizing, funnel analysis",
         "Tools: Amplitude, Braze, Branch, Snowflake, SQL",
         "Acquisition: Apple Search Ads, Google App Campaigns, referral programs",
-        "Collaboration: Product specs, copywriting, Figma basics",
-        "Compliance: Fintech marketing disclosures, referral terms, fraud controls"
-      ]
+        "Collaboration: Product specs, copywriting, Figma basics"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Growth Manager": {
       "summary": "Growth manager with 9 years across marketplaces and SaaS, leading a cross-functional team focused on activation and expansion. Raised trial-to-paid conversion from 9% to 14% at a scheduling software company. Brings a strong experiment cadence, sound statistics and the ability to align product, marketing and sales on one growth model.",
@@ -210,7 +261,7 @@
           "startDate": "2022-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 7-person growth squad of engineers, a designer, an analyst and 2 marketers focused on self-serve revenue\n- Raised trial-to-paid conversion from 9% to 14% through onboarding checklists, in-app prompts and pricing page tests\n- Introduced a product-qualified lead model that routes 600 accounts a month to sales, adding $2.3M in annual expansion\n- Built the growth model in Looker that ties experiments to ARR forecasts reviewed by the CFO\n- Ran a pricing page and packaging test with finance that lifted average plan value 12%"
+          "description": "- Lead a 7-person growth squad of engineers, a designer, an analyst and 2 marketers focused on self-serve revenue\n- Raised trial-to-paid conversion from 9% to 14% through onboarding checklists, in-app prompts and pricing page tests\n- Introduced a product-qualified lead model that routes 600 accounts a month to sales, adding $2.3M in annual expansion\n- Built the growth model in Looker that ties experiments to ARR forecasts reviewed by the CFO"
         },
         {
           "company": "Hearthly",
@@ -219,7 +270,7 @@
           "startDate": "2019-09",
           "endDate": "2022-06",
           "isCurrent": false,
-          "description": "- Grew host supply in 14 new cities through localized paid and referral campaigns, reaching 3,800 active listings\n- Ran 120+ experiments with a documented hypothesis library that the team still uses\n- Built a host referral loop that drove 30% of new listings in launch cities"
+          "description": "- Grew host supply in 14 new cities through localized paid and referral campaigns, reaching 3,800 active listings\n- Ran 120+ experiments with a documented hypothesis library that the team still uses"
         },
         {
           "company": "Brazos Analytics",
@@ -228,7 +279,7 @@
           "startDate": "2018-01",
           "endDate": "2019-08",
           "isCurrent": false,
-          "description": "- Built attribution reports in Tableau for a $4M marketing budget across 6 channels\n- Automated weekly channel reports in Tableau, saving the team 8 hours a week"
+          "description": "- Built attribution reports in Tableau for a $4M marketing budget across 6 channels"
         }
       ],
       "education": [
@@ -244,9 +295,23 @@
         "Growth: PLG, activation, PQL models, pricing tests, lifecycle",
         "Analytics: SQL, Looker, Amplitude, Optimizely, causal inference basics",
         "Leadership: Squad leadership, roadmap planning, executive reporting",
-        "Tools: Segment, HubSpot, Intercom, Figma",
-        "Experiment Process: Hypothesis backlogs, ICE scoring, results reviews"
-      ]
+        "Tools: Segment, HubSpot, Intercom, Figma"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Growth Hacker": {
       "summary": "Growth hacker with 5 years at seed and Series A startups, using scrappy, technical tactics to find early acquisition channels. Built a programmatic SEO system that produced 1.2M monthly visits for a developer tool. Codes in Python and JavaScript, automates outreach and kills ideas fast when the data says so.",
@@ -258,7 +323,7 @@
           "startDate": "2023-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Built a programmatic SEO engine in Next.js generating 18,000 integration pages, reaching 1.2M monthly organic visits\n- Automated GitHub and Product Hunt outreach with Python scripts, adding 4,500 sign-ups at near-zero cost\n- Launched a free CLI tool as a lead magnet that converts 6% of users to paid workspaces\n- Ran 50+ channel tests in 18 months, documenting cost and volume for each in a shared scorecard\n- Built a lightweight attribution model in PostHog that showed which free tools drove paid conversion"
+          "description": "- Built a programmatic SEO engine in Next.js generating 18,000 integration pages, reaching 1.2M monthly organic visits\n- Automated GitHub and Product Hunt outreach with Python scripts, adding 4,500 sign-ups at near-zero cost\n- Launched a free CLI tool as a lead magnet that converts 6% of users to paid workspaces\n- Ran 50+ channel tests in 18 months, documenting cost and volume for each in a shared scorecard"
         },
         {
           "company": "Tallyhoo",
@@ -267,7 +332,7 @@
           "startDate": "2021-08",
           "endDate": "2023-03",
           "isCurrent": false,
-          "description": "- Grew a waitlist from 2,000 to 41,000 through a referral leaderboard and Reddit community seeding\n- Wrote Zapier and Clearbit workflows that enriched and routed 100% of inbound sign-ups\n- Scraped and qualified 6,000 prospect accounts for founder-led outbound tests"
+          "description": "- Grew a waitlist from 2,000 to 41,000 through a referral leaderboard and Reddit community seeding\n- Wrote Zapier and Clearbit workflows that enriched and routed 100% of inbound sign-ups"
         },
         {
           "company": "Aggie Ventures Lab",
@@ -276,7 +341,7 @@
           "startDate": "2019-09",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Helped 8 student startups set up landing pages and launch waitlists\n- Ran a campus referral contest that brought 1,300 users to a ride-share app pilot"
+          "description": "- Helped 8 student startups set up landing pages and launch waitlists"
         }
       ],
       "education": [
@@ -287,20 +352,27 @@
           "endDate": "2021-06"
         }
       ],
-      "projects": [
-        {
-          "name": "Pagesmith",
-          "link": "github.com/rkoval/pagesmith",
-          "description": "Open-source template kit for programmatic SEO pages, 900+ GitHub stars"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Technical: Python, JavaScript, Next.js, APIs, web scraping",
         "Growth: Programmatic SEO, referral loops, community seeding, product-led hooks",
         "Tools: Zapier, Clearbit, PostHog, Webflow, Ahrefs",
-        "Analysis: SQL, funnel analysis, channel scorecards",
-        "Content: Launch posts, Hacker News and Reddit community writing"
-      ]
+        "Analysis: SQL, funnel analysis, channel scorecards"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Content Strategist": {
       "summary": "Content strategist with 8 years in journalism and content, planning editorial programs for financial services and insurance brands. Restructured a 2,400-page content library around customer questions, doubling organic quote starts in a year. Combines audience research, information architecture and compliance-aware editorial standards that legal teams sign off on quickly.",
@@ -312,7 +384,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Audited 2,400 pages and consolidated them to 900 using a topic-cluster model, doubling organic quote starts in 12 months\n- Built a content governance process with legal and compliance that cut review time from 15 days to 6\n- Interviewed 30 policyholders and agents to create 4 audience personas used across marketing and product\n- Lead a calendar of 20 articles, guides and tools a month written by 2 in-house writers and 6 freelancers\n- Set content KPIs by funnel stage and report quarterly results to the marketing director"
+          "description": "- Audited 2,400 pages and consolidated them to 900 using a topic-cluster model, doubling organic quote starts in 12 months\n- Built a content governance process with legal and compliance that cut review time from 15 days to 6\n- Interviewed 30 policyholders and agents to create 4 audience personas used across marketing and product\n- Lead a calendar of 20 articles, guides and tools a month written by 2 in-house writers and 6 freelancers"
         },
         {
           "company": "Harborline Bank",
@@ -321,7 +393,7 @@
           "startDate": "2019-05",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Wrote and edited 150+ articles on mortgages and savings, growing blog traffic from 40k to 210k monthly visits\n- Created plain-language style guidelines adopted by 3 marketing teams\n- Ran a reader survey of 1,400 customers that reshaped the blog's topic plan"
+          "description": "- Wrote and edited 150+ articles on mortgages and savings, growing blog traffic from 40k to 210k monthly visits\n- Created plain-language style guidelines adopted by 3 marketing teams"
         },
         {
           "company": "The Westerly Sun",
@@ -330,7 +402,7 @@
           "startDate": "2018-06",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Reported 4–5 local business and government stories a week on tight daily deadlines\n- Wrote a weekly small-business profile column for the Sunday edition"
+          "description": "- Reported 4–5 local business and government stories a week on tight daily deadlines"
         }
       ],
       "education": [
@@ -345,10 +417,20 @@
       "skills": [
         "Strategy: Content audits, topic clusters, personas, information architecture",
         "Editorial: Style guides, editing, compliance review, freelancer management",
-        "Tools: Contentful, Semrush, GA4, Airtable, Hotjar",
-        "Research: Customer interviews, search intent analysis, journey mapping",
-        "Measurement: Organic conversions, content scoring, quarterly content reviews"
-      ]
+        "Tools: Contentful, Semrush, GA4, Airtable, Hotjar"
+      ],
+      "fit": {
+        "opal": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "symmetry": 0.98,
+        "bronx": 0.94,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Content Marketing Manager": {
       "summary": "Content marketing manager with 9 years building B2B content engines for cybersecurity and IT companies. Grew content-attributed pipeline to $5.4M a year through research reports, webinars and SEO. Leads writers and freelancers, partners closely with product marketing and measures content by pipeline, not pageviews.",
@@ -360,7 +442,7 @@
           "startDate": "2022-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 2 writers, a video producer and 8 freelancers producing 25 assets a month\n- Launched an annual threat report surveying 1,200 IT leaders that generated 3,100 leads and 210 press mentions\n- Grew content-attributed pipeline from $1.9M to $5.4M a year by mapping assets to buying stages in HubSpot\n- Built a webinar program with security engineers averaging 480 registrants and 42% attendance\n- Launched a customer story video series that sales uses in 40% of enterprise deals"
+          "description": "- Lead a team of 2 writers, a video producer and 8 freelancers producing 25 assets a month\n- Launched an annual threat report surveying 1,200 IT leaders that generated 3,100 leads and 210 press mentions\n- Grew content-attributed pipeline from $1.9M to $5.4M a year by mapping assets to buying stages in HubSpot\n- Built a webinar program with security engineers averaging 480 registrants and 42% attendance"
         },
         {
           "company": "Cobaltline IT",
@@ -369,7 +451,7 @@
           "startDate": "2019-07",
           "endDate": "2022-08",
           "isCurrent": false,
-          "description": "- Wrote 80+ blog posts, 12 e-books and 6 case studies for managed IT buyers\n- Raised organic traffic 140% in two years through keyword-led refreshes of older posts\n- Interviewed 20 engineers and customers to source technical stories and quotes"
+          "description": "- Wrote 80+ blog posts, 12 e-books and 6 case studies for managed IT buyers\n- Raised organic traffic 140% in two years through keyword-led refreshes of older posts"
         },
         {
           "company": "Magnolia Creative Co.",
@@ -378,7 +460,7 @@
           "startDate": "2018-01",
           "endDate": "2019-06",
           "isCurrent": false,
-          "description": "- Wrote web and email copy for 20+ regional clients in healthcare, hospitality and real estate\n- Wrote 12 property listing campaigns and hotel email series"
+          "description": "- Wrote web and email copy for 20+ regional clients in healthcare, hospitality and real estate"
         }
       ],
       "education": [
@@ -389,20 +471,25 @@
           "endDate": "2017-05"
         }
       ],
-      "projects": [
-        {
-          "name": "2026 State of SMB Security report",
-          "link": "vaultreach.com/research",
-          "description": "Original survey report of 1,200 IT leaders, including methodology, charts and launch campaign"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Content: Research reports, webinars, case studies, SEO articles, video",
         "Tools: HubSpot, WordPress, Semrush, Wistia, ON24",
         "Measurement: Content attribution, pipeline reporting, GA4",
-        "Management: Editorial calendars, freelancer budgets, SME interviews",
-        "Writing: Long-form editing, technical storytelling, executive bylines"
-      ]
+        "Management: Editorial calendars, freelancer budgets, SME interviews"
+      ],
+      "fit": {
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.86
+      }
     },
     "Content Marketing Specialist": {
       "summary": "Content marketing specialist with 4 years writing and distributing content for HR and workplace software. Wrote a guide series that ranks on page one for 60+ keywords and drives 1,100 trial sign-ups a year. Strong writer and interviewer who handles briefs, drafts, on-page SEO and social distribution end to end.",
@@ -414,7 +501,7 @@
           "startDate": "2024-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Write 6–8 long-form articles a month on HR compliance and scheduling, each optimized from a Surfer SEO brief\n- Produced a 12-part guide series on FLSA overtime rules that ranks on page one for 60+ keywords\n- Repurpose each article into LinkedIn posts and a newsletter segment, growing subscribers from 4,000 to 11,500\n- Interview customers for 2 case studies a quarter used by the sales team in late-stage deals\n- Update 10 older articles a month with current regulations and stats, lifting their clicks 40% on average"
+          "description": "- Write 6–8 long-form articles a month on HR compliance and scheduling, each optimized from a Surfer SEO brief\n- Produced a 12-part guide series on FLSA overtime rules that ranks on page one for 60+ keywords\n- Repurpose each article into LinkedIn posts and a newsletter segment, growing subscribers from 4,000 to 11,500\n- Interview customers for 2 case studies a quarter used by the sales team in late-stage deals"
         },
         {
           "company": "Lakeshore Staffing Partners",
@@ -432,7 +519,7 @@
           "startDate": "2019-09",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Wrote 2–3 campus news and feature stories a week for print and web\n- Grew the section's newsletter to 5,000 readers with weekly roundups"
+          "description": "- Wrote 2–3 campus news and feature stories a week for print and web"
         }
       ],
       "education": [
@@ -448,9 +535,22 @@
         "Writing: Long-form articles, case studies, newsletters, social copy",
         "SEO: Surfer SEO, Ahrefs, on-page optimization, internal linking",
         "Tools: WordPress, HubSpot, Canva, Grammarly, Google Docs",
-        "Distribution: LinkedIn, email newsletters, content repurposing",
-        "Research: Customer interviews, subject expert interviews, regulation research"
-      ]
+        "Distribution: LinkedIn, email newsletters, content repurposing"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Content SEO Specialist": {
       "summary": "Content SEO specialist with 7 years growing organic traffic for travel and outdoor publishers. Lifted a booking site's non-branded clicks 118% by rebuilding briefs around search intent and refreshing decaying pages. Bridges writers and SEO data, turning keyword research into briefs that editors want to use.",
@@ -462,7 +562,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew non-branded organic clicks 118% in 2 years across 1,800 destination guides\n- Built a content-decay dashboard in Looker Studio from Search Console data, prioritizing 40 refreshes a month\n- Write SEO briefs for 12 freelance writers covering intent, entities, headings and internal links\n- Added FAQ and HowTo structured data to 600 pages, winning 230 new featured snippets\n- Train editors on search intent and internal linking in a quarterly workshop"
+          "description": "- Grew non-branded organic clicks 118% in 2 years across 1,800 destination guides\n- Built a content-decay dashboard in Looker Studio from Search Console data, prioritizing 40 refreshes a month\n- Write SEO briefs for 12 freelance writers covering intent, entities, headings and internal links\n- Added FAQ and HowTo structured data to 600 pages, winning 230 new featured snippets"
         },
         {
           "company": "Cascadia Outdoor Journal",
@@ -471,7 +571,7 @@
           "startDate": "2020-02",
           "endDate": "2022-03",
           "isCurrent": false,
-          "description": "- Edited 30 articles a month for search and readability, raising average position from 14 to 8\n- Ran keyword research for a gear-review section that reached 300k monthly visits\n- Built an internal linking map that lifted gear-review traffic 25%"
+          "description": "- Edited 30 articles a month for search and readability, raising average position from 14 to 8\n- Ran keyword research for a gear-review section that reached 300k monthly visits"
         },
         {
           "company": "Evergreen State Press",
@@ -480,7 +580,7 @@
           "startDate": "2019-06",
           "endDate": "2020-01",
           "isCurrent": false,
-          "description": "- Fact-checked and formatted 15 web articles a week for the regional news desk\n- Worked with photo editors to add alt text to 3,000 images"
+          "description": "- Fact-checked and formatted 15 web articles a week for the regional news desk"
         }
       ],
       "education": [
@@ -495,10 +595,19 @@
       "skills": [
         "SEO: Keyword research, search intent, content briefs, structured data",
         "Tools: Google Search Console, Ahrefs, Clearscope, Screaming Frog, Looker Studio",
-        "Editorial: Editing, freelancer management, content refreshes",
-        "CMS: WordPress, Contentful",
-        "Analysis: Search Console exports, content decay scoring, Google Sheets"
-      ]
+        "Editorial: Editing, freelancer management, content refreshes"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "bronx": 0.98,
+        "mono": 0.97,
+        "pop": 0.91
+      }
     },
     "SEO Specialist": {
       "summary": "SEO specialist with 5 years improving organic visibility for home services and local businesses. Grew organic leads 74% for a 40-location HVAC company through local SEO, technical fixes and service-area content. Works across keyword research, on-page optimization and reporting, with steady link-building results.",
@@ -510,7 +619,7 @@
           "startDate": "2023-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew organic leads 74% across 40 locations by rebuilding service-area pages and Google Business Profiles\n- Fixed 1,900 crawl errors and redirect chains found in Screaming Frog, raising indexed pages from 62% to 94%\n- Earned 85 local links through sponsorships and supplier partnerships in 18 months\n- Report monthly rankings and lead volume by market in Looker Studio for regional managers\n- Wrote 60 service and city pages with the content team, each targeting a mapped keyword set"
+          "description": "- Grew organic leads 74% across 40 locations by rebuilding service-area pages and Google Business Profiles\n- Fixed 1,900 crawl errors and redirect chains found in Screaming Frog, raising indexed pages from 62% to 94%\n- Earned 85 local links through sponsorships and supplier partnerships in 18 months\n- Report monthly rankings and lead volume by market in Looker Studio for regional managers"
         },
         {
           "company": "Saguaro Search Marketing",
@@ -528,7 +637,7 @@
           "startDate": "2020-06",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Updated page titles and meta descriptions for 300 university department pages\n- Fixed 450 broken links found in monthly site crawls"
+          "description": "- Updated page titles and meta descriptions for 300 university department pages"
         }
       ],
       "education": [
@@ -544,9 +653,22 @@
         "SEO: Local SEO, on-page optimization, keyword research, link building",
         "Tools: Screaming Frog, Semrush, BrightLocal, Google Search Console, GA4",
         "Technical: Redirects, XML sitemaps, schema markup, Core Web Vitals",
-        "Reporting: Looker Studio, rank tracking",
-        "Content: Service-area pages, local landing pages, review response guidelines"
-      ]
+        "Reporting: Looker Studio, rank tracking"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "SEO Manager": {
       "summary": "SEO manager with 10 years leading organic growth for e-commerce retailers with large catalogs. Grew organic revenue from $18M to $31M a year at a home furnishings retailer. Leads technical, content and link strategy, manages a team of 4 and translates SEO priorities into engineering tickets that actually ship.",
@@ -558,7 +680,7 @@
           "startDate": "2021-10",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew organic revenue from $18M to $31M a year across a 60,000-SKU catalog\n- Lead 2 SEO specialists, a content writer and an agency, owning a $420k annual budget\n- Partnered with engineering to fix faceted-navigation crawl waste, cutting crawled URLs 58% and speeding indexing of new products\n- Launched 300 category buying guides that now drive 14% of organic sessions\n- Built a BigQuery and Looker forecast of SEO revenue used in annual planning"
+          "description": "- Grew organic revenue from $18M to $31M a year across a 60,000-SKU catalog\n- Lead 2 SEO specialists, a content writer and an agency, owning a $420k annual budget\n- Partnered with engineering to fix faceted-navigation crawl waste, cutting crawled URLs 58% and speeding indexing of new products\n- Launched 300 category buying guides that now drive 14% of organic sessions"
         },
         {
           "company": "Trailmart Outdoors",
@@ -567,7 +689,7 @@
           "startDate": "2018-04",
           "endDate": "2021-09",
           "isCurrent": false,
-          "description": "- Led a site migration of 45,000 URLs with zero lasting traffic loss\n- Improved Core Web Vitals pass rate from 31% to 88% working with the front-end team\n- Rolled out product schema across 38,000 product pages, winning rich results for 70% of products"
+          "description": "- Led a site migration of 45,000 URLs with zero lasting traffic loss\n- Improved Core Web Vitals pass rate from 31% to 88% working with the front-end team"
         },
         {
           "company": "Piedmont Digital",
@@ -576,7 +698,7 @@
           "startDate": "2016-06",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Managed SEO programs for 10 retail and B2B clients, growing average organic traffic 45%\n- Wrote monthly SEO reports and roadmaps for 10 client accounts"
+          "description": "- Managed SEO programs for 10 retail and B2B clients, growing average organic traffic 45%"
         }
       ],
       "education": [
@@ -591,10 +713,17 @@
       "skills": [
         "Strategy: E-commerce SEO, site migrations, faceted navigation, content planning",
         "Tools: Botify, Screaming Frog, Ahrefs, Google Search Console, BigQuery",
-        "Technical: JavaScript SEO, structured data, Core Web Vitals, log file analysis",
-        "Leadership: Team management, agency oversight, engineering prioritization",
-        "Reporting: SEO revenue forecasting, Looker, executive dashboards"
-      ]
+        "Technical: JavaScript SEO, structured data, Core Web Vitals, log file analysis"
+      ],
+      "fit": {
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "bronx": 0.96,
+        "mono": 0.95,
+        "pop": 0.93
+      }
     },
     "Technical SEO Specialist": {
       "summary": "Technical SEO specialist with 7 years solving crawl, rendering and indexing problems for large JavaScript sites. Recovered 2.1M monthly visits for a classifieds marketplace after a React migration. Reads server logs, writes Python audits and works inside engineering sprints rather than handing over spreadsheets.",
@@ -606,7 +735,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Diagnosed client-side rendering gaps after a React rebuild and moved key templates to server-side rendering, recovering 2.1M monthly visits\n- Analyze 40M monthly log lines in BigQuery to track Googlebot crawl budget across 9M URLs\n- Built Python checks in CI that block releases removing canonical tags, hreflang or structured data\n- Cut average LCP from 4.2s to 2.1s on listing pages with front-end engineers\n- Write SEO acceptance criteria for engineering tickets and review pull requests that touch templates"
+          "description": "- Diagnosed client-side rendering gaps after a React rebuild and moved key templates to server-side rendering, recovering 2.1M monthly visits\n- Analyze 40M monthly log lines in BigQuery to track Googlebot crawl budget across 9M URLs\n- Built Python checks in CI that block releases removing canonical tags, hreflang or structured data\n- Cut average LCP from 4.2s to 2.1s on listing pages with front-end engineers"
         },
         {
           "company": "Northgate Retail Group",
@@ -624,7 +753,7 @@
           "startDate": "2018-06",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Built WordPress and Shopify sites for 14 small-business clients\n- Added on-page SEO basics and sitemaps to every new client build"
+          "description": "- Built WordPress and Shopify sites for 14 small-business clients"
         }
       ],
       "education": [
@@ -635,20 +764,26 @@
           "endDate": "2018-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Log Lens",
-          "link": "github.com/tpatel/log-lens",
-          "description": "Open-source Python tool that parses server logs and charts bot crawl by template"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Technical SEO: Rendering, crawl budget, canonicals, hreflang, structured data",
         "Tools: Screaming Frog, Botify, Sitebulb, Google Search Console, Lighthouse",
         "Code: Python, JavaScript, SQL, BigQuery, regex",
-        "Web: Next.js, React, CDN and redirect configuration",
-        "Process: Engineering tickets, release QA, SEO acceptance criteria"
-      ]
+        "Web: Next.js, React, CDN and redirect configuration"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.88,
+        "cast": 0.96
+      }
     },
     "SEM Specialist": {
       "summary": "SEM specialist with 5 years managing Google and Microsoft Ads for B2B software and professional services. Improved cost per qualified demo 34% for a legal tech company by tightening match types and adding offline conversion imports. Strong in account structure, bidding strategy and keyword research.",
@@ -660,7 +795,7 @@
           "startDate": "2023-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage $85k monthly across Google Ads and Microsoft Ads, cutting cost per qualified demo from $410 to $270\n- Imported Salesforce opportunity stages as offline conversions so Smart Bidding optimizes toward pipeline\n- Rebuilt account structure from 140 ad groups to 38 themed groups, raising Quality Score average from 5 to 7\n- Run monthly search-term reviews that add 200+ negatives and remove wasted spend of about $6k\n- Launched competitor and category campaigns that now produce 18% of qualified demos"
+          "description": "- Manage $85k monthly across Google Ads and Microsoft Ads, cutting cost per qualified demo from $410 to $270\n- Imported Salesforce opportunity stages as offline conversions so Smart Bidding optimizes toward pipeline\n- Rebuilt account structure from 140 ad groups to 38 themed groups, raising Quality Score average from 5 to 7\n- Run monthly search-term reviews that add 200+ negatives and remove wasted spend of about $6k"
         },
         {
           "company": "Liberty Bell Marketing",
@@ -669,7 +804,7 @@
           "startDate": "2021-06",
           "endDate": "2022-12",
           "isCurrent": false,
-          "description": "- Built and maintained search campaigns for 11 clients with budgets from $3k to $40k a month\n- Wrote responsive search ad variations that raised average CTR from 3.8% to 5.6%\n- Set up conversion tracking in Google Tag Manager for all 11 client accounts"
+          "description": "- Built and maintained search campaigns for 11 clients with budgets from $3k to $40k a month\n- Wrote responsive search ad variations that raised average CTR from 3.8% to 5.6%"
         },
         {
           "company": "Fishtown Bike Works",
@@ -678,7 +813,7 @@
           "startDate": "2020-06",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Launched the shop's first Google Ads campaign at $800 a month, booking 60 tune-ups\n- Set up Google Business Profile posts and photo updates"
+          "description": "- Launched the shop's first Google Ads campaign at $800 a month, booking 60 tune-ups"
         }
       ],
       "education": [
@@ -694,9 +829,21 @@
         "Search: Google Ads, Microsoft Advertising, Smart Bidding, RSAs",
         "Tracking: Google Tag Manager, offline conversion import, GA4",
         "Analysis: Excel, Google Ads Editor, Looker Studio",
-        "Certifications: Google Ads Search, Microsoft Advertising Certified Professional",
-        "Strategy: Keyword research, match types, negative keyword lists, landing page tests"
-      ]
+        "Certifications: Google Ads Search, Microsoft Advertising Certified Professional"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.95,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "CRO Specialist": {
       "summary": "CRO specialist with 5 years running experiments on e-commerce and subscription checkout flows. Raised a pet supplies brand's checkout conversion from 2.6% to 3.4% through 30 structured tests. Combines heatmap and survey research with sound test design and clear write-ups that teams act on.",
@@ -708,7 +855,7 @@
           "startDate": "2023-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Ran 30 A/B tests in VWO on product, cart and checkout pages, lifting checkout conversion from 2.6% to 3.4%\n- Built a research backlog from Hotjar recordings, 1,800 exit-survey responses and 12 usability sessions\n- Increased subscribe-and-save adoption from 18% to 26% with a redesigned plan selector\n- Write test plans with sample sizes and stopping rules, preventing early calls on noisy results\n- Share a monthly experiment readout with merchandising, design and the e-commerce director"
+          "description": "- Ran 30 A/B tests in VWO on product, cart and checkout pages, lifting checkout conversion from 2.6% to 3.4%\n- Built a research backlog from Hotjar recordings, 1,800 exit-survey responses and 12 usability sessions\n- Increased subscribe-and-save adoption from 18% to 26% with a redesigned plan selector\n- Write test plans with sample sizes and stopping rules, preventing early calls on noisy results"
         },
         {
           "company": "Coastline Conversion Lab",
@@ -742,9 +889,24 @@
         "Experimentation: A/B and multivariate testing, sample sizing, hypothesis backlogs",
         "Research: Hotjar, FullStory, surveys, usability testing",
         "Tools: VWO, Google Optimize alternatives, GA4, Shopify Plus",
-        "Analysis: Excel, SQL basics, Looker Studio",
-        "Communication: Test briefs, readouts, stakeholder presentations"
-      ]
+        "Analysis: Excel, SQL basics, Looker Studio"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "CRO Manager": {
       "summary": "CRO manager with 9 years leading experimentation programs for travel and hospitality brands. Built a testing program that runs 120 tests a year and added $6.8M in incremental annual booking revenue. Manages analysts and developers, sets experimentation standards and keeps product, brand and legal aligned on what ships.",
@@ -756,7 +918,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 2 analysts, a front-end developer and a UX researcher running 120 tests a year in Optimizely\n- Added $6.8M in incremental annual booking revenue, validated with holdout groups\n- Introduced a prioritization model and experiment review board that raised test win rate from 18% to 31%\n- Redesigned the room-selection step with product, lifting booking completion 9% on mobile\n- Built a central test library in Confluence with 400 results searchable by page and theme"
+          "description": "- Lead a team of 2 analysts, a front-end developer and a UX researcher running 120 tests a year in Optimizely\n- Added $6.8M in incremental annual booking revenue, validated with holdout groups\n- Introduced a prioritization model and experiment review board that raised test win rate from 18% to 31%\n- Redesigned the room-selection step with product, lifting booking completion 9% on mobile"
         },
         {
           "company": "Sunpass Travel",
@@ -765,7 +927,7 @@
           "startDate": "2019-03",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Designed and analyzed 70+ tests on search and checkout pages for 3M monthly visitors\n- Built a Bayesian results calculator adopted by product teams\n- Reduced test cycle time from 5 weeks to 3 by templating QA and analysis"
+          "description": "- Designed and analyzed 70+ tests on search and checkout pages for 3M monthly visitors\n- Built a Bayesian results calculator adopted by product teams"
         },
         {
           "company": "Gulfstream Interactive",
@@ -774,7 +936,7 @@
           "startDate": "2017-06",
           "endDate": "2019-02",
           "isCurrent": false,
-          "description": "- Implemented Adobe Analytics tagging and reporting for 5 hospitality clients\n- Built weekly traffic and conversion dashboards for 5 clients"
+          "description": "- Implemented Adobe Analytics tagging and reporting for 5 hospitality clients"
         }
       ],
       "education": [
@@ -796,9 +958,25 @@
         "Experimentation: Optimizely, holdout testing, Bayesian and frequentist methods",
         "Analytics: Adobe Analytics, GA4, SQL, Tableau",
         "Research: Usability testing, Contentsquare, surveys",
-        "Leadership: Program governance, roadmap prioritization, stakeholder management",
-        "Tools: Optimizely, Contentsquare, Confluence, Jira"
-      ]
+        "Leadership: Program governance, roadmap prioritization, stakeholder management"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.92,
+        "opal": 0.99,
+        "minimalist": 0.91,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.98
+      }
     },
     "Paid Search Specialist": {
       "summary": "Paid search specialist with 4 years managing Google Shopping and search campaigns for apparel and footwear retailers. Grew a footwear brand's Shopping revenue 52% while holding ROAS above 4.0. Detail-focused on feed quality, negative keywords and bid strategy testing.",
@@ -810,7 +988,7 @@
           "startDate": "2024-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage $70k monthly across Google Shopping, Performance Max and search, growing paid revenue 52% at 4.3 ROAS\n- Cleaned the product feed in Feedonomics, fixing titles and attributes on 4,800 SKUs and cutting disapprovals 90%\n- Split Performance Max by margin tier so high-margin styles receive 60% of budget\n- Test bidding strategies with campaign experiments before rolling changes across accounts\n- Report weekly revenue, ROAS and feed health to the e-commerce manager"
+          "description": "- Manage $70k monthly across Google Shopping, Performance Max and search, growing paid revenue 52% at 4.3 ROAS\n- Cleaned the product feed in Feedonomics, fixing titles and attributes on 4,800 SKUs and cutting disapprovals 90%\n- Split Performance Max by margin tier so high-margin styles receive 60% of budget\n- Test bidding strategies with campaign experiments before rolling changes across accounts"
         },
         {
           "company": "Music Row Digital",
@@ -844,9 +1022,22 @@
         "Paid Search: Google Ads, Performance Max, Google Shopping, Microsoft Ads",
         "Feeds: Google Merchant Center, Feedonomics, product attributes",
         "Analysis: Google Ads Editor, Excel, GA4",
-        "Certifications: Google Ads Shopping, Google Ads Search",
-        "Reporting: Looker Studio, weekly pacing, product-level ROAS"
-      ]
+        "Certifications: Google Ads Shopping, Google Ads Search"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "bronx": 0.91,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Paid Search Manager": {
       "summary": "Paid search manager with 9 years leading search programs for insurance and financial services. Manages $1.6M in monthly spend and cut cost per policy issued 27% at an auto insurer. Leads specialists, owns forecasting with finance and is fluent in compliance-friendly ad copy for regulated categories.",
@@ -858,7 +1049,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own $1.6M monthly on Google and Microsoft Ads, reducing cost per policy issued 27% in 18 months\n- Lead 3 paid search specialists, setting test roadmaps and account standards\n- Integrated quote-to-bind data into value-based bidding so campaigns optimize toward 12-month premium\n- Forecast spend and policy volume by state with finance for monthly planning\n- Rebuilt state-level campaign structure to match filing and pricing rules in 32 states"
+          "description": "- Own $1.6M monthly on Google and Microsoft Ads, reducing cost per policy issued 27% in 18 months\n- Lead 3 paid search specialists, setting test roadmaps and account standards\n- Integrated quote-to-bind data into value-based bidding so campaigns optimize toward 12-month premium\n- Forecast spend and policy volume by state with finance for monthly planning"
         },
         {
           "company": "Lone Star Lending",
@@ -876,7 +1067,7 @@
           "startDate": "2017-07",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Built campaigns and reporting for 12 B2C clients across finance and education\n- Audited 12 client accounts and documented quick wins for account leads"
+          "description": "- Built campaigns and reporting for 12 B2C clients across finance and education"
         }
       ],
       "education": [
@@ -892,9 +1083,23 @@
         "Paid Search: Google Ads, Microsoft Ads, value-based bidding, SA360",
         "Analytics: SQL, Excel forecasting, GA4, Tableau",
         "Regulated Marketing: Insurance and lending ad compliance",
-        "Leadership: Team management, budget planning, agency review",
-        "Planning: State-level forecasts, seasonality models, budget reallocations"
-      ]
+        "Leadership: Team management, budget planning, agency review"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.96,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Paid Social Specialist": {
       "summary": "Paid social specialist with 4 years running Meta, TikTok and Snapchat campaigns for beauty and wellness DTC brands. Cut cost per purchase 29% for a haircare brand by restructuring campaigns and refreshing creative weekly. Comfortable with creative testing, audience strategy and pixel and CAPI troubleshooting.",
@@ -940,9 +1145,26 @@
         "Platforms: Meta Ads Manager, TikTok Ads, Snapchat Ads, Pinterest Ads",
         "Creative: UGC briefs, hook testing, ad iteration, Canva, CapCut",
         "Tracking: Conversions API, pixels, Triple Whale, GA4",
-        "Analysis: Excel, cohort and creative reporting",
-        "Audiences: Broad targeting, lookalikes, retargeting, exclusions"
-      ]
+        "Analysis: Excel, cohort and creative reporting"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.97,
+        "opal": 0.94,
+        "minimalist": 0.89,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Paid Social Manager": {
       "summary": "Paid social manager with 8 years leading social acquisition for consumer apps and subscription media. Scaled a streaming service's paid social from $300k to $1.4M a month while improving trial-to-paid conversion. Leads buyers and creative strategists and runs disciplined lift tests to prove what social actually adds.",
@@ -954,7 +1176,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Scaled paid social from $300k to $1.4M monthly across Meta, TikTok, Snapchat and Reddit at a stable $34 cost per paid subscriber\n- Lead 3 media buyers and 2 creative strategists, producing 150 ad assets a month from show trailers and creator content\n- Ran Meta conversion lift studies showing 38% incremental lift, which secured a 25% budget increase\n- Built a launch playbook for new seasons that cut time to full spend from 10 days to 3\n- Partner with the content team to cut trailer edits into 6, 15 and 30-second social formats"
+          "description": "- Scaled paid social from $300k to $1.4M monthly across Meta, TikTok, Snapchat and Reddit at a stable $34 cost per paid subscriber\n- Lead 3 media buyers and 2 creative strategists, producing 150 ad assets a month from show trailers and creator content\n- Ran Meta conversion lift studies showing 38% incremental lift, which secured a 25% budget increase\n- Built a launch playbook for new seasons that cut time to full spend from 10 days to 3"
         },
         {
           "company": "Fablepress Audio",
@@ -972,7 +1194,7 @@
           "startDate": "2018-06",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Ran organic and paid social for 6 restaurant and retail clients\n- Built monthly social reports for 6 restaurant and retail clients"
+          "description": "- Ran organic and paid social for 6 restaurant and retail clients"
         }
       ],
       "education": [
@@ -988,9 +1210,22 @@
         "Platforms: Meta, TikTok, Snapchat, Reddit, YouTube",
         "Measurement: Conversion lift, MMPs (AppsFlyer), incrementality, cohort LTV",
         "Creative: Creative strategy, creator partnerships, asset tagging",
-        "Leadership: Team management, budget planning, cross-team launches",
-        "Planning: Season launch calendars, budget pacing, forecasting"
-      ]
+        "Leadership: Team management, budget planning, cross-team launches"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Paid Media Manager": {
       "summary": "Paid media manager with 9 years managing multichannel budgets for healthcare and higher education. Oversees $9M a year across search, social, programmatic and connected TV, lowering cost per enrolled student 22%. Brings strong vendor management, HIPAA-aware tracking and clear spend planning tied to enrollment and revenue goals.",
@@ -1002,7 +1237,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage a $9M annual paid budget across Google, Meta, LinkedIn, programmatic and CTV for 40 online degree programs\n- Cut cost per enrolled student from $3,100 to $2,420 by reallocating spend to high-yield programs\n- Lead a programmatic agency and 2 in-house specialists, running quarterly business reviews against enrollment targets\n- Rebuilt tracking with server-side tagging to keep student data compliant with FERPA\n- Launched CTV campaigns with a brand lift study showing a 7-point rise in program awareness"
+          "description": "- Manage a $9M annual paid budget across Google, Meta, LinkedIn, programmatic and CTV for 40 online degree programs\n- Cut cost per enrolled student from $3,100 to $2,420 by reallocating spend to high-yield programs\n- Lead a programmatic agency and 2 in-house specialists, running quarterly business reviews against enrollment targets\n- Rebuilt tracking with server-side tagging to keep student data compliant with FERPA"
         },
         {
           "company": "Mercy Valley Health",
@@ -1020,7 +1255,7 @@
           "startDate": "2017-07",
           "endDate": "2019-03",
           "isCurrent": false,
-          "description": "- Planned and bought digital and radio media for 9 regional clients\n- Managed media vendor contracts and billing reconciliations"
+          "description": "- Planned and bought digital and radio media for 9 regional clients"
         }
       ],
       "education": [
@@ -1036,9 +1271,24 @@
         "Channels: Google Ads, Meta, LinkedIn, The Trade Desk, CTV, YouTube",
         "Measurement: Server-side tagging, GA4, enrollment attribution, MMM basics",
         "Compliance: HIPAA, FERPA, consent management",
-        "Management: Budget pacing, agency oversight, media planning",
-        "Reporting: Tableau, enrollment funnels, quarterly business reviews"
-      ]
+        "Management: Budget pacing, agency oversight, media planning"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Acquisition Manager": {
       "summary": "Acquisition manager with 7 years growing new customers for residential solar and home energy companies. Owns a $7M annual acquisition budget across paid, affiliates and direct mail, and lowered cost per installed system 19%. Strong in funnel economics, partner management and lead-quality controls.",
@@ -1050,7 +1300,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own a $7M annual budget across paid search, Meta, lead aggregators and direct mail, reducing cost per installed system from $2,650 to $2,140\n- Built lead-quality scoring with sales ops that rejects 15% of vendor leads before they reach reps\n- Negotiated pay-per-appointment terms with 6 lead partners, saving $480k a year\n- Launched a utility-bill direct mail program that generates 900 appointments a quarter\n- Report weekly cost per appointment and install rates by channel to the VP of sales"
+          "description": "- Own a $7M annual budget across paid search, Meta, lead aggregators and direct mail, reducing cost per installed system from $2,650 to $2,140\n- Built lead-quality scoring with sales ops that rejects 15% of vendor leads before they reach reps\n- Negotiated pay-per-appointment terms with 6 lead partners, saving $480k a year\n- Launched a utility-bill direct mail program that generates 900 appointments a quarter"
         },
         {
           "company": "Evolve Home Energy",
@@ -1084,9 +1334,26 @@
         "Acquisition: Paid search, paid social, lead aggregators, direct mail",
         "Analytics: Funnel economics, SQL, Tableau, Salesforce reports",
         "Partners: Vendor negotiation, lead-quality controls, contract terms",
-        "Tools: Google Ads, Meta Ads, Five9, HubSpot",
-        "Compliance: TCPA consent, Do Not Call lists, partner audits"
-      ]
+        "Tools: Google Ads, Meta Ads, Five9, HubSpot"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "User Acquisition Manager": {
       "summary": "User acquisition manager with 8 years scaling mobile games and apps across ad networks. Grew a puzzle game to 900k monthly installs at a 120-day ROAS above 105%. Expert in AppLovin, Unity Ads, Google App Campaigns and MMP data, with strong creative testing and SKAdNetwork measurement experience.",
@@ -1098,7 +1365,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Scale spend of $1.2M monthly across AppLovin, Unity, Google, Meta and TikTok, reaching 900k installs a month\n- Hold 120-day ROAS above 105% using cohort-based bid caps by country and network\n- Run 30 playable and video creative tests a month with the art team, lifting IPM 26%\n- Rebuilt iOS measurement around SKAdNetwork conversion values, restoring daily optimization on 40% of spend\n- Forecast weekly spend and payback by title with finance and the game producers"
+          "description": "- Scale spend of $1.2M monthly across AppLovin, Unity, Google, Meta and TikTok, reaching 900k installs a month\n- Hold 120-day ROAS above 105% using cohort-based bid caps by country and network\n- Run 30 playable and video creative tests a month with the art team, lifting IPM 26%\n- Rebuilt iOS measurement around SKAdNetwork conversion values, restoring daily optimization on 40% of spend"
         },
         {
           "company": "Tidepool Apps",
@@ -1132,9 +1399,23 @@
         "Networks: AppLovin, Unity Ads, ironSource, Google App Campaigns, Meta, TikTok",
         "Measurement: AppsFlyer, SKAdNetwork, cohort ROAS, LTV prediction",
         "Creative: Playables, video testing, IPM optimization",
-        "Analysis: SQL, Looker, Excel",
-        "Planning: Soft launches, country tiering, spend forecasting"
-      ]
+        "Analysis: SQL, Looker, Excel"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Social Media Manager": {
       "summary": "Social media manager with 7 years running brand channels for restaurant and food brands. Grew a 300-location fast-casual chain's Instagram and TikTok audience from 120k to 610k followers. Leads content calendars, creators and community response, and ties social activity to app downloads and loyalty sign-ups.",
@@ -1146,7 +1427,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew combined Instagram and TikTok followers from 120k to 610k in 3 years with a weekly short-video series\n- Lead a social coordinator and a community specialist, publishing 45 posts a week across 5 channels\n- Ran a creator program with 60 local food creators that drove 38,000 loyalty-app sign-ups in one quarter\n- Cut average comment response time from 9 hours to 50 minutes using Sprout Social workflows\n- Manage a $25k monthly paid social budget that promotes menu launches and loyalty offers"
+          "description": "- Grew combined Instagram and TikTok followers from 120k to 610k in 3 years with a weekly short-video series\n- Lead a social coordinator and a community specialist, publishing 45 posts a week across 5 channels\n- Ran a creator program with 60 local food creators that drove 38,000 loyalty-app sign-ups in one quarter\n- Cut average comment response time from 9 hours to 50 minutes using Sprout Social workflows"
         },
         {
           "company": "Olentangy Brewing",
@@ -1155,7 +1436,7 @@
           "startDate": "2019-08",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Planned and shot content for taproom events, growing Instagram engagement rate from 2.1% to 4.8%\n- Managed $8k monthly boosted-post budget for event ticket sales\n- Launched a TikTok account that reached 40,000 followers in its first year"
+          "description": "- Planned and shot content for taproom events, growing Instagram engagement rate from 2.1% to 4.8%\n- Managed $8k monthly boosted-post budget for event ticket sales"
         },
         {
           "company": "Short North Creative",
@@ -1164,7 +1445,7 @@
           "startDate": "2019-01",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Drafted captions and scheduled posts for 6 small-business clients\n- Wrote 3 weeks of scheduled posts a month for client approval"
+          "description": "- Drafted captions and scheduled posts for 6 small-business clients"
         }
       ],
       "education": [
@@ -1179,10 +1460,20 @@
       "skills": [
         "Platforms: Instagram, TikTok, Facebook, X, YouTube Shorts",
         "Tools: Sprout Social, Later, CapCut, Adobe Premiere Rush, Canva",
-        "Strategy: Content calendars, creator programs, community management, crisis response",
-        "Measurement: Engagement rate, social-to-app attribution, Sprout reporting",
-        "Paid Social: Meta Ads, TikTok Promote, boosted posts"
-      ]
+        "Strategy: Content calendars, creator programs, community management, crisis response"
+      ],
+      "fit": {
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.95,
+        "berlin": 0.89,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.96,
+        "bronx": 0.96,
+        "mono": 0.97,
+        "pop": 0.87
+      }
     },
     "Social Media Strategist": {
       "summary": "Social media strategist with 6 years shaping social programs for B2B technology and professional services firms. Built an executive LinkedIn program that now generates 22% of inbound demo requests. Combines audience research, platform strategy and editorial planning with clear performance reporting.",
@@ -1194,7 +1485,7 @@
           "startDate": "2023-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Designed an executive LinkedIn program for 14 partners, growing their combined followers from 18k to 96k\n- Attributed 22% of inbound demo requests to social through UTM discipline and HubSpot self-reported attribution\n- Set quarterly social strategy by audience and platform, cutting low-performing channels from 6 to 3\n- Write a monthly social insights report covering share of voice, engagement and pipeline influence\n- Run social listening in Brandwatch to track client competitors and industry conversations"
+          "description": "- Designed an executive LinkedIn program for 14 partners, growing their combined followers from 18k to 96k\n- Attributed 22% of inbound demo requests to social through UTM discipline and HubSpot self-reported attribution\n- Set quarterly social strategy by audience and platform, cutting low-performing channels from 6 to 3\n- Write a monthly social insights report covering share of voice, engagement and pipeline influence"
         },
         {
           "company": "Prairie Lane Communications",
@@ -1203,7 +1494,7 @@
           "startDate": "2021-01",
           "endDate": "2023-01",
           "isCurrent": false,
-          "description": "- Ran social for 7 B2B clients, building content pillars and posting calendars\n- Raised a SaaS client's LinkedIn engagement rate from 1.4% to 3.9%\n- Wrote ghostwritten LinkedIn posts for 9 executives"
+          "description": "- Ran social for 7 B2B clients, building content pillars and posting calendars\n- Raised a SaaS client's LinkedIn engagement rate from 1.4% to 3.9%"
         },
         {
           "company": "Wrigleyville Arts Collective",
@@ -1212,7 +1503,7 @@
           "startDate": "2020-07",
           "endDate": "2020-12",
           "isCurrent": false,
-          "description": "- Planned virtual event promotion across Instagram and Facebook for 14 online shows\n- Grew the Instagram account from 3,200 to 7,900 followers"
+          "description": "- Planned virtual event promotion across Instagram and Facebook for 14 online shows"
         }
       ],
       "education": [
@@ -1228,9 +1519,19 @@
         "Strategy: Platform strategy, content pillars, executive social, social listening",
         "Tools: Sprout Social, Brandwatch, Shield, HubSpot, Canva",
         "Measurement: Share of voice, UTM tracking, pipeline influence",
-        "Content: LinkedIn copywriting, carousels, short video planning",
-        "Listening: Brandwatch, keyword tracking, competitor benchmarking"
-      ]
+        "Content: LinkedIn copywriting, carousels, short video planning"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Community Manager": {
       "summary": "Community manager with 5 years building online communities for developer and creator tools. Grew a Discord community from 3,000 to 28,000 members with 4,500 weekly active participants. Runs programs, moderation and feedback loops that turn community members into advocates and product input.",
@@ -1242,7 +1543,7 @@
           "startDate": "2023-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew the Discord community from 3,000 to 28,000 members with 4,500 weekly active participants\n- Launched an ambassador program of 45 power users who host 20 workshops a month\n- Route 300+ feature requests a quarter to product through a tagged Linear feedback pipeline\n- Wrote moderation guidelines and trained 12 volunteer moderators, keeping first response under 2 hours\n- Run monthly community challenges that generate 1,500+ user-made templates"
+          "description": "- Grew the Discord community from 3,000 to 28,000 members with 4,500 weekly active participants\n- Launched an ambassador program of 45 power users who host 20 workshops a month\n- Route 300+ feature requests a quarter to product through a tagged Linear feedback pipeline\n- Wrote moderation guidelines and trained 12 volunteer moderators, keeping first response under 2 hours"
         },
         {
           "company": "Pixelgrove",
@@ -1276,9 +1577,22 @@
         "Community: Discord, Discourse, Circle, ambassador programs, moderation",
         "Engagement: Livestreams, workshops, meetups, challenges",
         "Tools: Linear, Notion, Common Room, Zapier",
-        "Measurement: Active members, retention, community-sourced feedback",
-        "Content: Livestream hosting, community newsletters, spotlight posts"
-      ]
+        "Measurement: Active members, retention, community-sourced feedback"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Community Lead": {
       "summary": "Community lead with 9 years building customer communities for B2B SaaS. Built a 40,000-member customer community that deflects 18% of support tickets and influences $3.2M in expansion revenue. Leads a team of 4, owns events and champion programs, and reports community impact in revenue terms.",
@@ -1290,7 +1604,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a team of 4 running a 40,000-member Discourse community, user groups in 22 cities and an annual user conference\n- Cut support volume 18% by building a peer-answer program where champions resolve 2,100 questions a month\n- Linked community engagement to Salesforce, showing $3.2M in influenced expansion revenue last fiscal year\n- Manage a $650k annual budget for events, swag, platform and champion rewards\n- Present quarterly community results to the CCO and CMO with ARR and support metrics"
+          "description": "- Lead a team of 4 running a 40,000-member Discourse community, user groups in 22 cities and an annual user conference\n- Cut support volume 18% by building a peer-answer program where champions resolve 2,100 questions a month\n- Linked community engagement to Salesforce, showing $3.2M in influenced expansion revenue last fiscal year\n- Manage a $650k annual budget for events, swag, platform and champion rewards"
         },
         {
           "company": "Quillstack",
@@ -1299,7 +1613,7 @@
           "startDate": "2019-04",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Launched a certification program completed by 6,500 users\n- Grew user-group chapters from 4 to 18 with volunteer leaders\n- Designed the community platform migration to Discourse with zero lost posts"
+          "description": "- Launched a certification program completed by 6,500 users\n- Grew user-group chapters from 4 to 18 with volunteer leaders"
         },
         {
           "company": "Mesa Labs Online",
@@ -1308,7 +1622,7 @@
           "startDate": "2017-09",
           "endDate": "2019-03",
           "isCurrent": false,
-          "description": "- Managed forums and social channels for a learning platform with 200k users\n- Ran monthly learner AMAs averaging 600 attendees"
+          "description": "- Managed forums and social channels for a learning platform with 200k users"
         }
       ],
       "education": [
@@ -1324,9 +1638,21 @@
         "Community: Discourse, Khoros, Bevy, champion programs, user groups",
         "Programs: Events, certification, advocacy, peer support",
         "Measurement: Ticket deflection, influenced revenue, Salesforce, Common Room",
-        "Leadership: Team management, budget ownership, executive reporting",
-        "Events: User conferences, regional user groups, virtual meetups"
-      ]
+        "Leadership: Team management, budget ownership, executive reporting"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.85
+      }
     },
     "Email Marketing Specialist": {
       "summary": "Email marketing specialist with 5 years building campaigns and automated flows for e-commerce brands. Grew email-attributed revenue from 19% to 31% of online sales for a home goods retailer. Skilled in Klaviyo segmentation, HTML email builds, deliverability and disciplined subject-line testing.",
@@ -1338,7 +1664,7 @@
           "startDate": "2023-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew email and SMS share of online revenue from 19% to 31% on a list of 420,000 subscribers\n- Built 14 Klaviyo flows including browse abandonment, replenishment and win-back, adding $1.1M a year\n- Raised inbox placement from 82% to 97% by authenticating with DMARC and sunsetting unengaged contacts\n- Send 12 campaigns a month with A/B tested subject lines and send times\n- Set up SMS in Attentive with TCPA-compliant opt-ins, reaching 60,000 subscribers"
+          "description": "- Grew email and SMS share of online revenue from 19% to 31% on a list of 420,000 subscribers\n- Built 14 Klaviyo flows including browse abandonment, replenishment and win-back, adding $1.1M a year\n- Raised inbox placement from 82% to 97% by authenticating with DMARC and sunsetting unengaged contacts\n- Send 12 campaigns a month with A/B tested subject lines and send times"
         },
         {
           "company": "Plaza Goods Co.",
@@ -1372,9 +1698,23 @@
         "Email: Klaviyo, Attentive, flows, segmentation, A/B testing",
         "Build: HTML/CSS email, Litmus, Figma handoff",
         "Deliverability: SPF, DKIM, DMARC, list hygiene",
-        "Analytics: Shopify reports, GA4, Excel",
-        "SMS: Attentive, opt-in flows, TCPA compliance"
-      ]
+        "Analytics: Shopify reports, GA4, Excel"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     },
     "Lifecycle Marketing Manager": {
       "summary": "Lifecycle marketing manager with 9 years owning onboarding, retention and win-back programs for subscription apps. Lifted 90-day retention from 34% to 43% at a fitness app through behavior-based journeys. Leads CRM strategy across email, push and in-app, and partners with data science on churn models.",
@@ -1386,7 +1726,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lifted 90-day subscriber retention from 34% to 43% with behavior-triggered onboarding in Braze\n- Built a churn-risk audience with data science that reaches users 14 days before likely cancellation, saving $2.6M a year\n- Lead 2 CRM specialists running 60+ email, push and in-app journeys across 4 markets\n- Use global holdout groups to measure incremental lifecycle revenue reported monthly to the CFO\n- Ran a pricing reminder test before renewal that cut involuntary churn 15%"
+          "description": "- Lifted 90-day subscriber retention from 34% to 43% with behavior-triggered onboarding in Braze\n- Built a churn-risk audience with data science that reaches users 14 days before likely cancellation, saving $2.6M a year\n- Lead 2 CRM specialists running 60+ email, push and in-app journeys across 4 markets\n- Use global holdout groups to measure incremental lifecycle revenue reported monthly to the CFO"
         },
         {
           "company": "Dog-Ear Reading",
@@ -1404,7 +1744,7 @@
           "startDate": "2018-01",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Built and scheduled 20 promotional emails a month for an apparel retailer\n- Created the email QA checklist still used by the team"
+          "description": "- Built and scheduled 20 promotional emails a month for an apparel retailer"
         }
       ],
       "education": [
@@ -1420,9 +1760,21 @@
         "Lifecycle: Onboarding, retention, win-back, churn prevention",
         "Tools: Braze, Iterable, Amplitude, Snowflake, SQL",
         "Measurement: Holdout testing, incremental revenue, cohort retention",
-        "Channels: Email, push, in-app, SMS",
-        "Strategy: Journey mapping, segmentation, churn modeling partnership"
-      ]
+        "Channels: Email, push, in-app, SMS"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Demand Generation Manager": {
       "summary": "Demand generation manager with 9 years building pipeline programs for B2B SaaS selling to finance teams. Grew marketing-sourced pipeline from $11M to $24M in two years. Owns paid, webinars, content syndication and ABM plays, and works from sales capacity targets back to channel plans.",
@@ -1434,7 +1786,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew marketing-sourced pipeline from $11M to $24M a year against a $2.2M program budget\n- Built account-based plays in 6sense for 600 target accounts, raising opportunity creation in those accounts 2.3x\n- Run 8 webinars and 2 virtual summits a year with CFO speakers, sourcing 30% of enterprise pipeline\n- Plan quarterly from sales capacity, working with RevOps to set MQL and SQL targets by segment\n- Lead a demand gen specialist and a paid media agency with clear weekly targets"
+          "description": "- Grew marketing-sourced pipeline from $11M to $24M a year against a $2.2M program budget\n- Built account-based plays in 6sense for 600 target accounts, raising opportunity creation in those accounts 2.3x\n- Run 8 webinars and 2 virtual summits a year with CFO speakers, sourcing 30% of enterprise pipeline\n- Plan quarterly from sales capacity, working with RevOps to set MQL and SQL targets by segment"
         },
         {
           "company": "Tallyforge",
@@ -1452,7 +1804,7 @@
           "startDate": "2018-01",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Coordinated campaigns and lead uploads for a 40-person sales team\n- Uploaded and deduplicated 40,000 event leads a year in Salesforce"
+          "description": "- Coordinated campaigns and lead uploads for a 40-person sales team"
         }
       ],
       "education": [
@@ -1468,9 +1820,21 @@
         "Programs: ABM, paid social, content syndication, webinars, nurture",
         "Tools: Marketo, Salesforce, 6sense, LinkedIn Campaign Manager, ON24",
         "Planning: Pipeline modeling, funnel targets, budget allocation",
-        "Measurement: Multi-touch attribution, Bizible, cost per SQL",
-        "Leadership: Specialist coaching, agency management, QBR presentations"
-      ]
+        "Measurement: Multi-touch attribution, Bizible, cost per SQL"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Marketing Operations Manager": {
       "summary": "Marketing operations manager with 9 years running martech stacks for B2B software companies. Led a Marketo-to-HubSpot migration of 1.8M records and rebuilt attribution the board now uses. Owns lead management, data quality and reporting, and manages a team of 3 operations specialists.",
@@ -1482,7 +1846,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led migration of 1.8M records, 300 programs and 60 forms from Marketo to HubSpot in 5 months with no lead loss\n- Rebuilt lead routing with LeanData, cutting speed to lead from 26 hours to 12 minutes\n- Designed W-shaped attribution in Salesforce reported to the board each quarter\n- Manage 3 specialists and a $380k martech budget, retiring 7 redundant tools\n- Set data governance rules for field naming and enrichment, raising complete records from 64% to 91%"
+          "description": "- Led migration of 1.8M records, 300 programs and 60 forms from Marketo to HubSpot in 5 months with no lead loss\n- Rebuilt lead routing with LeanData, cutting speed to lead from 26 hours to 12 minutes\n- Designed W-shaped attribution in Salesforce reported to the board each quarter\n- Manage 3 specialists and a $380k martech budget, retiring 7 redundant tools"
         },
         {
           "company": "Northshore Analytics",
@@ -1516,9 +1880,23 @@
         "Platforms: HubSpot, Marketo, Salesforce, LeanData, ZoomInfo",
         "Operations: Lead scoring, routing, attribution, data hygiene",
         "Compliance: GDPR, CAN-SPAM, consent management",
-        "Certifications: Marketo Certified Expert, HubSpot Marketing Hub",
-        "Data: Enrichment, deduplication, field governance, Salesforce reports"
-      ]
+        "Certifications: Marketo Certified Expert, HubSpot Marketing Hub"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "path": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Marketing Operations Specialist": {
       "summary": "Marketing operations specialist with 4 years building campaigns and maintaining data in HubSpot and Salesforce. Cleaned a 260,000-contact database, cutting duplicate records 85% and improving routing accuracy. Reliable at campaign builds, list management, reporting dashboards and documenting processes others can follow.",
@@ -1564,9 +1942,25 @@
         "Platforms: HubSpot, Salesforce, Zapier, ZoomInfo",
         "Operations: Workflows, list management, UTM governance, data hygiene",
         "Reporting: HubSpot dashboards, Salesforce reports, Excel",
-        "Certifications: HubSpot Marketing Hub Software, Salesforce Associate",
-        "Documentation: Process guides, naming conventions, campaign QA"
-      ]
+        "Certifications: HubSpot Marketing Hub Software, Salesforce Associate"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.96,
+        "silk": 0.95,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Product Marketing Manager": {
       "summary": "Product marketing manager with 9 years positioning and launching B2B data and analytics products. Led 14 launches, including a usage-based pricing tier that added $4.8M ARR in its first year. Brings rigorous customer and competitor research, sharp messaging and enablement that sales teams actually use.",
@@ -1578,7 +1972,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led positioning and launch for a usage-based pricing tier that added $4.8M ARR in 12 months\n- Interviewed 45 customers and lost prospects to rebuild messaging, raising demo-to-close rate from 19% to 24%\n- Built competitive battlecards for 5 rivals in Highspot, used in 70% of late-stage deals\n- Partner with 3 product managers on roadmap themes and quarterly release narratives\n- Brief analyst firms twice a year, contributing to a strong placement in a major vendor evaluation"
+          "description": "- Led positioning and launch for a usage-based pricing tier that added $4.8M ARR in 12 months\n- Interviewed 45 customers and lost prospects to rebuild messaging, raising demo-to-close rate from 19% to 24%\n- Built competitive battlecards for 5 rivals in Highspot, used in 70% of late-stage deals\n- Partner with 3 product managers on roadmap themes and quarterly release narratives"
         },
         {
           "company": "Datacrest",
@@ -1612,9 +2006,24 @@
         "Product Marketing: Positioning, messaging, pricing and packaging, launches",
         "Research: Win-loss interviews, competitive intelligence, surveys",
         "Enablement: Battlecards, pitch decks, Highspot, Gong insights",
-        "Tools: Salesforce, HubSpot, Figma, Notion",
-        "Analyst Relations: Analyst briefings, vendor evaluations, research inquiries"
-      ]
+        "Tools: Salesforce, HubSpot, Figma, Notion"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Brand Manager": {
       "summary": "Brand manager with 8 years in consumer packaged goods, managing snack and beverage brands through retail growth. Owns a $38M brand P&L and grew sales 21% with a pack redesign and two line extensions. Strong in shopper insights, Nielsen data, agency management and cross-functional launches with sales and R&D.",
@@ -1626,7 +2035,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Own the P&L for a $38M crackers brand, growing net sales 21% in 2 years\n- Led a pack redesign tested with 1,200 shoppers that lifted velocity 11% in Nielsen-tracked grocery\n- Launched 2 line extensions with R&D and sales, gaining distribution in 6,500 new stores\n- Manage a $6M marketing budget across creative, media and shopper agencies\n- Partner with sales on customer presentations for 4 national retailers each year"
+          "description": "- Own the P&L for a $38M crackers brand, growing net sales 21% in 2 years\n- Led a pack redesign tested with 1,200 shoppers that lifted velocity 11% in Nielsen-tracked grocery\n- Launched 2 line extensions with R&D and sales, gaining distribution in 6,500 new stores\n- Manage a $6M marketing budget across creative, media and shopper agencies"
         },
         {
           "company": "Lakewood Beverage Co.",
@@ -1666,9 +2075,27 @@
         "Brand: P&L ownership, positioning, innovation, packaging",
         "Insights: Nielsen, SPINS, Circana, shopper research, concept testing",
         "Execution: Agency management, trade marketing, retail launches",
-        "Analysis: Excel, PowerPoint, forecasting",
-        "Leadership: Cross-functional teams, agency briefs, retailer presentations"
-      ]
+        "Analysis: Excel, PowerPoint, forecasting"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "meridian": 0.99,
+        "minimalist": 0.9,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.9,
+        "symmetry": 0.97,
+        "path": 0.93,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.88,
+        "cast": 0.93
+      }
     },
     "Brand Marketing Manager": {
       "summary": "Brand marketing manager with 8 years building awareness campaigns for consumer tech and outdoor gear. Led a national campaign that raised aided awareness from 22% to 35% in 9 months. Brings strong creative direction, brand tracking and integrated planning across video, OOH, social and partnerships.",
@@ -1680,7 +2107,7 @@
           "startDate": "2022-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led a national campaign across CTV, OOH and social that raised aided awareness from 22% to 35% in 9 months\n- Direct 2 creative agencies on a $4.5M annual brand budget, from briefs to final production\n- Built quarterly brand tracking with a research vendor covering awareness, consideration and NPS\n- Launched an athlete partnership series that earned 48M organic views\n- Present campaign results and brand health to the executive team each quarter"
+          "description": "- Led a national campaign across CTV, OOH and social that raised aided awareness from 22% to 35% in 9 months\n- Direct 2 creative agencies on a $4.5M annual brand budget, from briefs to final production\n- Built quarterly brand tracking with a research vendor covering awareness, consideration and NPS\n- Launched an athlete partnership series that earned 48M organic views"
         },
         {
           "company": "Basecamp Outfitters",
@@ -1698,7 +2125,7 @@
           "startDate": "2018-06",
           "endDate": "2020-02",
           "isCurrent": false,
-          "description": "- Coordinated campaign timelines and budgets for 5 consumer brand clients\n- Coordinated photo and video shoots for 3 client catalogs"
+          "description": "- Coordinated campaign timelines and budgets for 5 consumer brand clients"
         }
       ],
       "education": [
@@ -1709,20 +2136,24 @@
           "endDate": "2018-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Sound Outside campaign",
-          "link": "ridgelineaudio.com/soundoutside",
-          "description": "Integrated national campaign with athlete films, OOH and retail activations"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Brand: Campaign strategy, creative direction, brand guidelines, partnerships",
         "Media: CTV, OOH, YouTube, paid social",
         "Research: Brand lift, brand tracking, consumer insights",
-        "Management: Agency briefs, budget ownership, production timelines",
-        "Production: Shoot planning, budgets, creative review"
-      ]
+        "Management: Agency briefs, budget ownership, production timelines"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.88
+      }
     },
     "Brand Strategist": {
       "summary": "Brand strategist with 9 years at branding and advertising agencies, building positioning and brand architecture for healthcare, finance and hospitality clients. Led a rebrand for a 14-hospital system that lifted unaided awareness 9 points. Turns research into sharp positioning, naming and creative briefs.",
@@ -1734,7 +2165,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Led positioning and brand architecture for a 14-hospital system rebrand, lifting unaided awareness from 18% to 27%\n- Run stakeholder interviews, workshops and quant studies of 1,000+ respondents for 6 clients a year\n- Wrote creative briefs that guided campaigns across 3 agency offices\n- Developed naming for 9 products and services, each cleared with trademark counsel\n- Mentor 2 junior strategists on research design and presenting to clients"
+          "description": "- Led positioning and brand architecture for a 14-hospital system rebrand, lifting unaided awareness from 18% to 27%\n- Run stakeholder interviews, workshops and quant studies of 1,000+ respondents for 6 clients a year\n- Wrote creative briefs that guided campaigns across 3 agency offices\n- Developed naming for 9 products and services, each cleared with trademark counsel"
         },
         {
           "company": "Ironwood Brand Partners",
@@ -1752,7 +2183,7 @@
           "startDate": "2018-01",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Gathered consumer insights and social listening data for retail and food clients\n- Wrote insight summaries that shaped 3 retail campaign briefs"
+          "description": "- Gathered consumer insights and social listening data for retail and food clients"
         }
       ],
       "education": [
@@ -1768,9 +2199,19 @@
         "Strategy: Positioning, brand architecture, naming, messaging frameworks",
         "Research: Qualitative interviews, surveys, competitive audits, social listening",
         "Facilitation: Workshops, stakeholder alignment, presentations",
-        "Tools: Qualtrics, Brandwatch, Miro, Keynote",
-        "Writing: Brand platforms, voice guides, creative briefs"
-      ]
+        "Tools: Qualtrics, Brandwatch, Miro, Keynote"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Partnerships Manager": {
       "summary": "Partnerships manager with 7 years building technology and reseller partnerships for HR and payroll software. Grew partner-sourced revenue from $1.2M to $5.6M ARR by launching an integration marketplace and accounting-firm referral program. Brings deal structuring, partner enablement and clear joint business planning.",
@@ -1782,7 +2223,7 @@
           "startDate": "2022-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew partner-sourced ARR from $1.2M to $5.6M through 40 technology integrations and 180 referral firms\n- Negotiated revenue-share agreements with 3 accounting software platforms, each with co-marketing commitments\n- Built a partner portal in Crossbeam and PartnerStack that tracks referrals, payouts and account overlaps\n- Run quarterly business reviews with the top 15 partners against joint pipeline targets\n- Partner with product on 5 new integrations prioritized by partner revenue potential"
+          "description": "- Grew partner-sourced ARR from $1.2M to $5.6M through 40 technology integrations and 180 referral firms\n- Negotiated revenue-share agreements with 3 accounting software platforms, each with co-marketing commitments\n- Built a partner portal in Crossbeam and PartnerStack that tracks referrals, payouts and account overlaps\n- Run quarterly business reviews with the top 15 partners against joint pipeline targets"
         },
         {
           "company": "Clearwater Benefits",
@@ -1791,7 +2232,7 @@
           "startDate": "2019-09",
           "endDate": "2022-05",
           "isCurrent": false,
-          "description": "- Sourced and closed 25 broker partnerships generating $900k in first-year revenue\n- Trained partner reps on product demos and pricing\n- Built a broker onboarding kit that cut time to first referral to 3 weeks"
+          "description": "- Sourced and closed 25 broker partnerships generating $900k in first-year revenue\n- Trained partner reps on product demos and pricing"
         },
         {
           "company": "Cougar Capital Club",
@@ -1800,7 +2241,7 @@
           "startDate": "2017-09",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Secured $40k in sponsorships from 9 firms for a student investing conference\n- Managed relationships with 15 alumni speakers"
+          "description": "- Secured $40k in sponsorships from 9 firms for a student investing conference"
         }
       ],
       "education": [
@@ -1816,9 +2257,20 @@
         "Partnerships: Technology integrations, referral programs, reseller agreements",
         "Tools: Crossbeam, PartnerStack, Salesforce, HubSpot",
         "Commercial: Deal structuring, revenue share, joint business planning",
-        "Enablement: Partner training, co-marketing, partner portals",
-        "Analysis: Partner pipeline reporting, revenue forecasting, Excel"
-      ]
+        "Enablement: Partner training, co-marketing, partner portals"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Partnership Marketing Manager": {
       "summary": "Partnership marketing manager with 7 years running co-marketing and brand partnerships for travel and loyalty programs. Built 35 co-branded partnerships that bring in 140,000 new members a year. Plans joint campaigns, negotiates value exchange and measures partner programs on incremental bookings.",
@@ -1830,7 +2282,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage 35 co-marketing partnerships with airlines, card issuers and retailers, acquiring 140,000 members a year\n- Launched a points-earning partnership with a rideshare app that added $3.4M in incremental bookings\n- Negotiate value exchange and marketing commitments, keeping partner cost per member 40% below paid media\n- Run joint campaigns across email, in-app and social with partner marketing teams\n- Report partner program results monthly to the VP of loyalty"
+          "description": "- Manage 35 co-marketing partnerships with airlines, card issuers and retailers, acquiring 140,000 members a year\n- Launched a points-earning partnership with a rideshare app that added $3.4M in incremental bookings\n- Negotiate value exchange and marketing commitments, keeping partner cost per member 40% below paid media\n- Run joint campaigns across email, in-app and social with partner marketing teams"
         },
         {
           "company": "Bayside Hotels Group",
@@ -1864,9 +2316,24 @@
         "Partnerships: Co-marketing, loyalty partnerships, sponsorships, value exchange",
         "Campaigns: Email, in-app, social, promo codes",
         "Tools: Impact, Salesforce Marketing Cloud, Tableau",
-        "Measurement: Incremental bookings, partner ROI, member acquisition cost",
-        "Negotiation: Contract terms, marketing commitments, renewal reviews"
-      ]
+        "Measurement: Incremental bookings, partner ROI, member acquisition cost"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "PR Manager": {
       "summary": "PR manager with 9 years leading media relations for consumer health and wellness brands. Secured 600+ placements in two years, including national TV and top-tier print, and led crisis response for a product recall. Manages agencies and spokespeople and ties earned media to search lift and site traffic.",
@@ -1878,7 +2345,7 @@
           "startDate": "2022-01",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Secured 620 media placements in 2 years, including national morning TV and 30 top-tier print outlets\n- Led recall communications with legal and quality teams, coordinating FDA-aligned statements within 6 hours\n- Manage a PR agency retainer of $25k a month and prepare 4 executive spokespeople\n- Tied earned coverage to branded search lift, showing a 19% average increase in launch weeks\n- Built a product launch press kit and media tour that delivered 85 placements in two weeks"
+          "description": "- Secured 620 media placements in 2 years, including national morning TV and 30 top-tier print outlets\n- Led recall communications with legal and quality teams, coordinating FDA-aligned statements within 6 hours\n- Manage a PR agency retainer of $25k a month and prepare 4 executive spokespeople\n- Tied earned coverage to branded search lift, showing a 19% average increase in launch weeks"
         },
         {
           "company": "Linden Public Relations",
@@ -1887,7 +2354,7 @@
           "startDate": "2018-09",
           "endDate": "2021-12",
           "isCurrent": false,
-          "description": "- Ran media relations for 5 health and beauty clients, averaging 25 placements a month\n- Pitched and booked 40 broadcast segments for client experts\n- Managed media monitoring and monthly coverage reports for clients"
+          "description": "- Ran media relations for 5 health and beauty clients, averaging 25 placements a month\n- Pitched and booked 40 broadcast segments for client experts"
         },
         {
           "company": "Hudson Valley Herald",
@@ -1896,7 +2363,7 @@
           "startDate": "2017-06",
           "endDate": "2018-08",
           "isCurrent": false,
-          "description": "- Wrote health and lifestyle features for a regional daily and its website\n- Wrote a weekly health column read by 40,000 print subscribers"
+          "description": "- Wrote health and lifestyle features for a regional daily and its website"
         }
       ],
       "education": [
@@ -1912,9 +2379,20 @@
         "PR: Media relations, crisis communications, press releases, spokesperson training",
         "Tools: Cision, Muck Rack, Meltwater, Google Trends",
         "Management: Agency oversight, budget planning, launch planning",
-        "Writing: Press materials, talking points, bylined articles",
-        "Measurement: Share of voice, branded search lift, coverage quality scoring"
-      ]
+        "Writing: Press materials, talking points, bylined articles"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "PR Specialist": {
       "summary": "PR specialist with 4 years supporting media relations for technology startups at a boutique agency. Pitched and placed 140 stories, including funding announcements in national business outlets. Writes clean press releases fast, builds targeted media lists and keeps coverage reporting accurate.",
@@ -1960,9 +2438,24 @@
         "Media Relations: Pitching, press releases, media lists, briefing docs",
         "Tools: Muck Rack, Cision, Meltwater, Google Alerts",
         "Writing: AP style, bylines, social copy",
-        "Events: Press events, analyst briefings, panels",
-        "Research: Reporter research, trend monitoring, competitor coverage"
-      ]
+        "Events: Press events, analyst briefings, panels"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "path": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Communications Manager": {
       "summary": "Communications manager with 8 years leading internal and external communications for utilities and public-sector organizations. Ran communications for a $1.2B grid modernization program, keeping 2,000 employees and 600,000 customers informed. Strong writer and planner, steady in outages and public meetings.",
@@ -1974,7 +2467,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead communications for a $1.2B grid modernization program reaching 600,000 customers and 2,000 employees\n- Direct a team of 3 across media relations, employee news and social media\n- Run storm-outage communications with operations, sending updates within 30 minutes of major events\n- Launched a weekly employee newsletter with a 71% open rate and a quarterly town hall\n- Manage a $450k communications budget for advertising, print and events"
+          "description": "- Lead communications for a $1.2B grid modernization program reaching 600,000 customers and 2,000 employees\n- Direct a team of 3 across media relations, employee news and social media\n- Run storm-outage communications with operations, sending updates within 30 minutes of major events\n- Launched a weekly employee newsletter with a 71% open rate and a quarterly town hall"
         },
         {
           "company": "City of Madison",
@@ -2008,9 +2501,23 @@
         "Communications: Internal comms, media relations, crisis and outage communications",
         "Writing: Speeches, newsletters, press releases, executive messages",
         "Tools: Staffbase, Cision, Sprout Social, Adobe InDesign",
-        "Stakeholders: Public meetings, regulators, community outreach",
-        "Leadership: Team management, budget planning, executive counsel"
-      ]
+        "Stakeholders: Public meetings, regulators, community outreach"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Marketing Communications Specialist": {
       "summary": "Marketing communications specialist with 5 years producing collateral, web content and campaigns for industrial manufacturers. Rebuilt a product catalog and spec sheet library of 220 documents used by 300 distributors. Organized, quick with Adobe tools and a steady writer of technical copy for engineers and buyers.",
@@ -2056,9 +2563,25 @@
         "Content: Technical copywriting, case studies, press releases, catalogs",
         "Design: Adobe InDesign, Illustrator, Photoshop, Canva",
         "Tools: WordPress, HubSpot, Bynder",
-        "Events: Trade show logistics, lead capture, follow-up campaigns",
-        "Coordination: Trade shows, translation vendors, print vendors"
-      ]
+        "Events: Trade show logistics, lead capture, follow-up campaigns"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.95
+      }
     },
     "Event Marketing Manager": {
       "summary": "Event marketing manager with 9 years running conferences, roadshows and customer events for enterprise software. Produces a 3,500-attendee annual user conference that sources $9M in pipeline. Owns budgets, vendors and agendas and measures every event against pipeline and attendee experience.",
@@ -2070,7 +2593,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Produce a 3,500-attendee annual user conference on a $2.1M budget, sourcing $9M in pipeline\n- Run 20 executive dinners and roadshow stops a year with sales leaders in key regions\n- Negotiated venue and AV contracts that saved $310k over 2 years\n- Track attendee journeys in Cvent and Salesforce, reporting pipeline and NPS for every event\n- Lead an events specialist and a production agency for the annual conference"
+          "description": "- Produce a 3,500-attendee annual user conference on a $2.1M budget, sourcing $9M in pipeline\n- Run 20 executive dinners and roadshow stops a year with sales leaders in key regions\n- Negotiated venue and AV contracts that saved $310k over 2 years\n- Track attendee journeys in Cvent and Salesforce, reporting pipeline and NPS for every event"
         },
         {
           "company": "Pathrow Software",
@@ -2104,9 +2627,21 @@
         "Events: Conferences, roadshows, trade shows, executive dinners, hybrid events",
         "Tools: Cvent, Bizzabo, Salesforce, Asana",
         "Operations: Vendor contracts, budgets, run-of-show, AV",
-        "Certifications: Certified Meeting Professional (CMP)",
-        "Measurement: Event pipeline, attendee NPS, cost per meeting"
-      ]
+        "Certifications: Certified Meeting Professional (CMP)"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Field Marketing Manager": {
       "summary": "Field marketing manager with 8 years supporting regional sales teams for cloud infrastructure software. Supports 25 account executives in the Central US and drove $14M in sourced and influenced pipeline last year. Plans regional events, ABM plays and partner campaigns tied to territory targets.",
@@ -2152,9 +2687,26 @@
         "Field Marketing: Regional events, ABM, partner MDF, direct mail",
         "Tools: Salesforce, Marketo, Demandbase, Outreach, Cvent",
         "Sales Alignment: Territory planning, SDR plays, pipeline reviews",
-        "Measurement: Sourced and influenced pipeline, event ROI",
-        "Events: Executive roundtables, workshops, partner events"
-      ]
+        "Measurement: Sourced and influenced pipeline, event ROI"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Influencer Marketing Manager": {
       "summary": "Influencer marketing manager with 8 years running creator programs for beauty and fashion brands. Built an always-on program of 400 creators that drives $5.2M in tracked annual revenue. Handles sourcing, contracts, FTC disclosure compliance and whitelisting, and measures creators on sales, not just views.",
@@ -2200,9 +2752,26 @@
         "Creator Programs: Sourcing, negotiation, gifting, whitelisting, affiliate deals",
         "Tools: Grin, CreatorIQ, Shopify, Meta and TikTok Spark Ads",
         "Compliance: FTC endorsement guides, usage rights, contracts",
-        "Measurement: Promo codes, tracked revenue, cost per acquisition",
-        "Negotiation: Rate cards, usage rights, exclusivity terms"
-      ]
+        "Measurement: Promo codes, tracked revenue, cost per acquisition"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.92
+      }
     },
     "Affiliate Marketing Manager": {
       "summary": "Affiliate marketing manager with 9 years running affiliate and publisher programs for retail and financial services. Grew a mattress brand's affiliate channel from $6M to $17M in annual revenue. Expert in Impact and CJ, commission structures, publisher recruitment and fraud controls.",
@@ -2248,9 +2817,25 @@
         "Affiliate: Impact, CJ, Rakuten, ShareASale, publisher recruitment",
         "Commercial: Commission design, tenancy deals, negotiation",
         "Risk: Fraud detection, compliance review, brand bidding enforcement",
-        "Analysis: Excel, GA4, incrementality analysis",
-        "Tools: Impact, CJ, Forensiq, Looker"
-      ]
+        "Analysis: Excel, GA4, incrementality analysis"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.95,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.95,
+        "mono": 0.91,
+        "pop": 0.89,
+        "cast": 0.92
+      }
     },
     "CMO": {
       "summary": "Chief marketing officer with 15 years leading marketing for B2B and B2B2C software companies from Series B to public. Built a 70-person marketing organization that grew ARR from $60M to $210M. Leads brand, demand, product marketing and communications, and runs marketing as a revenue function with the CFO and CRO.",
@@ -2262,7 +2847,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 70-person marketing organization and $28M budget through ARR growth from $60M to $210M\n- Repositioned the company from point solution to platform, raising average deal size 46%\n- Built a pipeline model with the CRO and CFO that sets spend by segment and payback\n- Directed IPO communications and an investor day attended by 140 analysts\n- Lead brand, demand, product marketing, communications and marketing operations through 6 direct reports"
+          "description": "- Lead a 70-person marketing organization and $28M budget through ARR growth from $60M to $210M\n- Repositioned the company from point solution to platform, raising average deal size 46%\n- Built a pipeline model with the CRO and CFO that sets spend by segment and payback\n- Directed IPO communications and an investor day attended by 140 analysts"
         },
         {
           "company": "Bridgeway Systems",
@@ -2271,7 +2856,7 @@
           "startDate": "2016-03",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Grew marketing-sourced pipeline 4x while expanding the team from 12 to 35\n- Launched a brand refresh and analyst relations program that earned a Leader position in a major analyst report\n- Introduced a customer advisory board of 15 enterprise CIOs"
+          "description": "- Grew marketing-sourced pipeline 4x while expanding the team from 12 to 35\n- Launched a brand refresh and analyst relations program that earned a Leader position in a major analyst report"
         },
         {
           "company": "Tessera Software",
@@ -2280,7 +2865,7 @@
           "startDate": "2011-06",
           "endDate": "2016-02",
           "isCurrent": false,
-          "description": "- Built the demand generation team from scratch and launched the first ABM program\n- Managed a $3M program budget across paid, events and content"
+          "description": "- Built the demand generation team from scratch and launched the first ABM program"
         }
       ],
       "education": [
@@ -2302,9 +2887,26 @@
         "Leadership: Org design, budget ownership, executive and board reporting",
         "Strategy: Positioning, brand, category design, pricing",
         "Growth: Demand generation, ABM, PLG, partner marketing",
-        "Communications: Investor relations support, analyst relations, crisis communications",
-        "Industry: Healthcare software, health system buyers, HIPAA-aware marketing"
-      ]
+        "Communications: Investor relations support, analyst relations, crisis communications"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.95,
+        "lateral": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.91,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "symmetry": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.86,
+        "cast": 0.96
+      }
     },
     "Marketing Intern": {
       "summary": "Marketing student at Indiana University's Kelley School of Business graduating in May 2027, with a consumer marketing internship and nonprofit communications experience. Wrote a campus ambassador campaign that drove 1,400 app sign-ups in six weeks. Brings coursework in consumer behavior and analytics plus working skills in Canva, GA4 and HubSpot.",
@@ -2325,7 +2927,7 @@
           "startDate": "2025-01",
           "endDate": "2025-12",
           "isCurrent": false,
-          "description": "- Wrote monthly donor emails to 3,000 contacts with a 41% open rate\n- Designed flyers for a fall food drive that collected 18,000 pounds of food\n- Helped plan a student volunteer drive that signed up 80 volunteers"
+          "description": "- Wrote monthly donor emails to 3,000 contacts with a 41% open rate\n- Designed flyers for a fall food drive that collected 18,000 pounds of food"
         },
         {
           "company": "Kelley Marketing Association",
@@ -2334,7 +2936,7 @@
           "startDate": "2024-01",
           "endDate": "2026-05",
           "isCurrent": false,
-          "description": "- Grew the club's Instagram from 600 to 2,100 followers\n- Organized 4 employer speaker events with 90 average attendees"
+          "description": "- Grew the club's Instagram from 600 to 2,100 followers"
         }
       ],
       "education": [
@@ -2345,19 +2947,22 @@
           "endDate": "2027-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Brand audit: regional coffee chain",
-          "link": "",
-          "description": "Class project analyzing positioning, social presence and customer survey data (n=210), presented to the chain's owner"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Tools: Canva, HubSpot, GA4, Google Sheets, CapCut",
         "Marketing: Social content, email copy, campaign reporting, surveys",
-        "Certifications: HubSpot Inbound Marketing, Google Analytics Certification",
-        "Languages: Spanish (conversational)"
-      ]
+        "Certifications: HubSpot Inbound Marketing, Google Analytics Certification"
+      ],
+      "fit": {
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.91,
+        "ginto": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.93
+      }
     },
     "Marketing Assistant": {
       "summary": "Marketing assistant with 2 years supporting a regional real estate brokerage's marketing team. Produces listing materials, social posts and email campaigns for 85 agents and cut listing-flyer turnaround from 3 days to same day. Organized, quick in Canva and Mailchimp and comfortable juggling many small requests.",
@@ -2369,7 +2974,7 @@
           "startDate": "2024-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Produce listing flyers, social posts and open-house signage for 85 agents, cutting turnaround from 3 days to same day\n- Send 2 monthly Mailchimp newsletters to 14,000 past clients with a 38% open rate\n- Maintain brand templates in Canva so agents create compliant materials on their own\n- Schedule 25 social posts a week and track engagement in a monthly report\n- Coordinate printing and mailing of 4,000 just-listed postcards a month"
+          "description": "- Produce listing flyers, social posts and open-house signage for 85 agents, cutting turnaround from 3 days to same day\n- Send 2 monthly Mailchimp newsletters to 14,000 past clients with a 38% open rate\n- Maintain brand templates in Canva so agents create compliant materials on their own\n- Schedule 25 social posts a week and track engagement in a monthly report"
         },
         {
           "company": "Queen City Dental Partners",
@@ -2403,9 +3008,22 @@
         "Tools: Canva, Mailchimp, Meta Business Suite, Google Workspace",
         "Marketing: Collateral, social scheduling, email campaigns, event support",
         "Admin: Request intake, vendor orders, brand templates",
-        "Real Estate: Listing marketing, MLS photo uploads, Fair Housing ad rules",
-        "Certifications: HubSpot Social Media Marketing"
-      ]
+        "Real Estate: Listing marketing, MLS photo uploads, Fair Housing ad rules"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Marketing Coordinator": {
       "summary": "Marketing coordinator with 4 years in marketing roles, currently at a B2B construction software company, running the campaign calendar, webinars and trade show logistics. Coordinated 14 events last year that produced 1,900 leads. Keeps projects on schedule in Asana and builds emails and landing pages in HubSpot.",
@@ -2451,9 +3069,23 @@
         "Tools: HubSpot, Asana, Canva, Zoom Webinars, Salesforce",
         "Coordination: Event logistics, campaign calendars, vendor management",
         "Marketing: Email builds, landing pages, social scheduling",
-        "Certifications: HubSpot Email Marketing",
-        "Reporting: HubSpot dashboards, event ROI, Excel"
-      ]
+        "Certifications: HubSpot Email Marketing"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "path": 0.97,
+        "bronx": 0.95,
+        "mono": 0.96,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Marketing Specialist": {
       "summary": "Marketing specialist with 7 years in marketing, the last 4 running multichannel campaigns for a regional credit union. Manages email, paid social, branch promotions and the website, and grew new checking accounts 34% in two years. Brings a balance of copywriting, campaign execution and reporting, with NCUA and fair lending review experience.",
@@ -2465,7 +3097,7 @@
           "startDate": "2022-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Run campaigns across email, Meta, YouTube and 18 branches that grew new checking accounts 34% in 2 years\n- Wrote and launched a first-time homebuyer campaign that brought in $42M in mortgage applications\n- Maintain website content in Drupal and review all copy with compliance under NCUA and Reg Z rules\n- Report campaign results monthly to the CMO using Salesforce and GA4 data\n- Coordinate branch promotions and print materials with 18 branch managers"
+          "description": "- Run campaigns across email, Meta, YouTube and 18 branches that grew new checking accounts 34% in 2 years\n- Wrote and launched a first-time homebuyer campaign that brought in $42M in mortgage applications\n- Maintain website content in Drupal and review all copy with compliance under NCUA and Reg Z rules\n- Report campaign results monthly to the CMO using Salesforce and GA4 data"
         },
         {
           "company": "Truckee Meadows Health",
@@ -2499,9 +3131,26 @@
         "Channels: Email, Meta Ads, YouTube, branch merchandising, website",
         "Tools: Salesforce Marketing Cloud, Drupal, GA4, Adobe Express",
         "Compliance: NCUA advertising rules, Reg Z, Reg DD",
-        "Skills: Copywriting, campaign planning, reporting",
-        "Print: Branch signage, direct mail, print vendor management"
-      ]
+        "Skills: Copywriting, campaign planning, reporting"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Digital Marketing Manager": {
       "summary": "Digital marketing manager with 9 years leading web, SEO, paid and email for multi-location service businesses. Oversees a $3M digital budget for a 90-location veterinary group and lifted online bookings 61%. Leads a team of 4 and an agency, setting priorities by cost per booked visit.",
@@ -2513,7 +3162,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead digital marketing for 90 hospitals on a $3M budget, lifting online bookings 61% in 2 years\n- Manage a team of 4 specialists and a paid media agency, with goals set by cost per booked visit\n- Launched a new site on Webflow with location pages and online scheduling, raising conversion from 2.8% to 4.6%\n- Built a reputation program that grew average Google rating from 4.2 to 4.7 across locations\n- Set quarterly digital priorities with regional operations leaders"
+          "description": "- Lead digital marketing for 90 hospitals on a $3M budget, lifting online bookings 61% in 2 years\n- Manage a team of 4 specialists and a paid media agency, with goals set by cost per booked visit\n- Launched a new site on Webflow with location pages and online scheduling, raising conversion from 2.8% to 4.6%\n- Built a reputation program that grew average Google rating from 4.2 to 4.7 across locations"
         },
         {
           "company": "Suncoast Dental Group",
@@ -2531,7 +3180,7 @@
           "startDate": "2017-06",
           "endDate": "2019-01",
           "isCurrent": false,
-          "description": "- Managed social and email campaigns for 8 local healthcare clients\n- Built monthly campaign reports for 8 healthcare clients"
+          "description": "- Managed social and email campaigns for 8 local healthcare clients"
         }
       ],
       "education": [
@@ -2547,9 +3196,21 @@
         "Digital: SEO, paid search, paid social, email, website management",
         "Tools: Webflow, Google Ads, Yext, Birdeye, GA4, Looker Studio",
         "Leadership: Team and agency management, budget planning",
-        "Measurement: Cost per booking, location reporting, call tracking",
-        "Web: Online scheduling, location pages, Core Web Vitals"
-      ]
+        "Measurement: Cost per booking, location reporting, call tracking"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.87,
+        "cast": 0.97
+      }
     },
     "Email Marketing Manager": {
       "summary": "Email marketing manager with 9 years running email programs for publishers and subscription media. Leads newsletters and paid-conversion email for a 3.1M-subscriber list, growing email-driven subscriptions 48%. Strong in deliverability, segmentation, testing and managing a team of email producers.",
@@ -2561,7 +3222,7 @@
           "startDate": "2022-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Manage email for 3.1M subscribers across 22 newsletters, growing email-driven paid subscriptions 48%\n- Lead 3 email producers, setting send cadence, templates and a weekly testing plan\n- Raised Gmail inbox placement from 79% to 96% through authentication, BIMI and list hygiene\n- Built a propensity-based upsell series with data science that converts 2.4% of engaged readers\n- Set newsletter strategy with the editorial team, launching 4 new newsletters"
+          "description": "- Manage email for 3.1M subscribers across 22 newsletters, growing email-driven paid subscriptions 48%\n- Lead 3 email producers, setting send cadence, templates and a weekly testing plan\n- Raised Gmail inbox placement from 79% to 96% through authentication, BIMI and list hygiene\n- Built a propensity-based upsell series with data science that converts 2.4% of engaged readers"
         },
         {
           "company": "Capitol Policy Network",
@@ -2595,9 +3256,22 @@
         "Email: Newsletters, segmentation, automation, testing",
         "Platforms: Salesforce Marketing Cloud, Sailthru, Litmus, Validity Everest",
         "Deliverability: SPF, DKIM, DMARC, BIMI, list hygiene",
-        "Leadership: Team management, program strategy, reporting",
-        "Editorial: Newsletter strategy, subject lines, editorial calendars"
-      ]
+        "Leadership: Team management, program strategy, reporting"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "CRM Manager": {
       "summary": "CRM manager with 9 years running customer relationship programs for retail and hospitality brands. Rebuilt a 4.5M-member loyalty program's segmentation, adding $8.6M in incremental annual revenue. Owns the CRM roadmap, data quality and campaign strategy across email, SMS and app.",
@@ -2643,9 +3317,26 @@
         "CRM: Loyalty programs, RFM segmentation, journeys, offer strategy",
         "Platforms: Salesforce Marketing Cloud, Braze, Segment, Punchh",
         "Analytics: SQL, Tableau, holdout testing",
-        "Compliance: TCPA, CAN-SPAM, CCPA",
-        "Reporting: Tableau, incremental revenue, member growth"
-      ]
+        "Compliance: TCPA, CAN-SPAM, CCPA"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.96,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Social Media Coordinator": {
       "summary": "Social media coordinator with 2 years running day-to-day social channels for a minor league baseball team and a local arts venue. Grew the team's TikTok from 4,000 to 92,000 followers with game-day video. Fast at filming, editing and posting, and steady at community replies and weekly reporting.",
@@ -2691,9 +3382,23 @@
         "Platforms: TikTok, Instagram, X, Facebook, YouTube Shorts",
         "Content: Mobile video, CapCut, Adobe Premiere Pro, Canva",
         "Community: Comment moderation, DMs, fan engagement",
-        "Reporting: Meta Business Suite, TikTok Analytics, Later",
-        "Sports: Game-day coverage, sponsor content, fan promotions"
-      ]
+        "Reporting: Meta Business Suite, TikTok Analytics, Later"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "E-commerce Marketing Manager": {
       "summary": "E-commerce marketing manager with 9 years growing online sales for home and kitchen brands on Shopify and Amazon. Took a cookware brand's direct site from $9M to $21M in annual revenue. Manages paid, email, merchandising and promotions, with a sharp eye on contribution margin and inventory.",
@@ -2739,9 +3444,25 @@
         "E-commerce: Shopify Plus, Amazon Seller Central, merchandising, promotions",
         "Marketing: Paid search, paid social, Klaviyo, affiliates",
         "Analytics: Contribution margin, AOV, GA4, Triple Whale",
-        "Operations: Inventory planning, pricing, product launches",
-        "Amazon: Seller Central, Sponsored Products, A+ content"
-      ]
+        "Operations: Inventory planning, pricing, product launches"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.97,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Marketing Director": {
       "summary": "Marketing director with 12 years leading marketing for professional services and B2B firms. Directs a 14-person team and $5M budget at a national engineering firm, growing qualified opportunities 52%. Owns brand, proposals, digital and events, and works directly with practice leaders on growth targets.",
@@ -2753,7 +3474,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 14-person team across brand, digital, proposals and events on a $5M budget\n- Grew qualified opportunities 52% in 3 years with sector campaigns in energy, water and transportation\n- Rebuilt the proposal process with a content library in Qvidian, raising win rate from 31% to 38%\n- Set annual marketing plans with 9 practice leaders and report results to the executive committee\n- Manage a $1.5M event and conference budget across 30 industry events"
+          "description": "- Lead a 14-person team across brand, digital, proposals and events on a $5M budget\n- Grew qualified opportunities 52% in 3 years with sector campaigns in energy, water and transportation\n- Rebuilt the proposal process with a content library in Qvidian, raising win rate from 31% to 38%\n- Set annual marketing plans with 9 practice leaders and report results to the executive committee"
         },
         {
           "company": "Galveston Bay Consulting",
@@ -2762,7 +3483,7 @@
           "startDate": "2017-03",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Launched the firm's first thought-leadership program, producing 12 research reports\n- Managed a website relaunch that doubled inbound inquiries\n- Implemented the firm's first Salesforce CRM, tracking 2,300 client contacts"
+          "description": "- Launched the firm's first thought-leadership program, producing 12 research reports\n- Managed a website relaunch that doubled inbound inquiries"
         },
         {
           "company": "Lonestar Architects",
@@ -2771,7 +3492,7 @@
           "startDate": "2014-05",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Managed RFP responses and award submissions for a 200-person design firm\n- Wrote award submissions that won 6 regional design awards"
+          "description": "- Managed RFP responses and award submissions for a 200-person design firm"
         }
       ],
       "education": [
@@ -2792,10 +3513,23 @@
       "skills": [
         "Leadership: Team management, budget ownership, executive reporting",
         "Marketing: Brand, digital, thought leadership, events, account-based marketing",
-        "Business Development: Proposals, RFP strategy, win-loss analysis",
-        "Tools: Salesforce, HubSpot, Qvidian, Deltek Vantagepoint",
-        "Industry: Engineering, energy, water and transportation clients"
-      ]
+        "Business Development: Proposals, RFP strategy, win-loss analysis"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.93,
+        "cast": 0.98
+      }
     },
     "VP of Marketing": {
       "summary": "VP of marketing with 14 years building marketing teams at venture-backed SaaS companies. Scaled marketing from 6 to 32 people and grew pipeline 3.5x as the company went from $25M to $90M ARR. Leads demand generation, product marketing, brand and operations with tight alignment to sales and finance.",
@@ -2807,7 +3541,7 @@
           "startDate": "2021-09",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 32-person marketing team and $12M budget as ARR grew from $25M to $90M\n- Grew marketing-sourced pipeline 3.5x with ABM, partner programs and an annual industry event\n- Hired 5 directors across demand, product marketing, brand, content and marketing operations\n- Built a shared revenue model with the CRO and CFO that sets quarterly pipeline targets by segment\n- Report marketing results to the CEO and board each quarter"
+          "description": "- Lead a 32-person marketing team and $12M budget as ARR grew from $25M to $90M\n- Grew marketing-sourced pipeline 3.5x with ABM, partner programs and an annual industry event\n- Hired 5 directors across demand, product marketing, brand, content and marketing operations\n- Built a shared revenue model with the CRO and CFO that sets quarterly pipeline targets by segment"
         },
         {
           "company": "Trellis Workforce",
@@ -2825,7 +3559,7 @@
           "startDate": "2012-07",
           "endDate": "2017-04",
           "isCurrent": false,
-          "description": "- Launched 3 products and a new pricing model that lifted average deal size 30%\n- Rebuilt sales messaging for 2 product suites based on 60 win-loss interviews"
+          "description": "- Launched 3 products and a new pricing model that lifted average deal size 30%"
         }
       ],
       "education": [
@@ -2841,9 +3575,21 @@
         "Leadership: Org building, hiring, budget planning, board updates",
         "Go-to-market: Demand generation, ABM, product marketing, partner marketing",
         "Operations: Revenue modeling, attribution, marketing tech",
-        "Tools: Salesforce, HubSpot, 6sense, Tableau",
-        "Brand: Positioning, rebrand, website, analyst relations"
-      ]
+        "Tools: Salesforce, HubSpot, 6sense, Tableau"
+      ],
+      "fit": {
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Head of Growth": {
       "summary": "Head of growth with 11 years leading acquisition, activation and monetization for consumer subscription apps. Grew a language learning app from 180k to 1.1M paying subscribers in three years. Leads a 15-person team of marketers, engineers and analysts and runs growth as a portfolio of measured bets.",
@@ -2855,7 +3601,7 @@
           "startDate": "2022-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Grew paying subscribers from 180k to 1.1M in 3 years while keeping blended payback under 9 months\n- Lead a 15-person growth team spanning paid acquisition, lifecycle, growth engineering and analytics\n- Redesigned paywall and trial offers through 40 pricing experiments, lifting revenue per install 37%\n- Own a $22M annual acquisition budget and the growth forecast shared with the board\n- Launched 4 new markets with localized pricing and creative"
+          "description": "- Grew paying subscribers from 180k to 1.1M in 3 years while keeping blended payback under 9 months\n- Lead a 15-person growth team spanning paid acquisition, lifecycle, growth engineering and analytics\n- Redesigned paywall and trial offers through 40 pricing experiments, lifting revenue per install 37%\n- Own a $22M annual acquisition budget and the growth forecast shared with the board"
         },
         {
           "company": "Moodmap",
@@ -2864,7 +3610,7 @@
           "startDate": "2018-06",
           "endDate": "2022-01",
           "isCurrent": false,
-          "description": "- Scaled installs from 2M to 9M a year across paid and referral channels\n- Built the first growth engineering pod and experiment platform\n- Launched referral rewards that drove 20% of new installs"
+          "description": "- Scaled installs from 2M to 9M a year across paid and referral channels\n- Built the first growth engineering pod and experiment platform"
         },
         {
           "company": "Clicktrail Labs",
@@ -2873,7 +3619,7 @@
           "startDate": "2016-01",
           "endDate": "2018-05",
           "isCurrent": false,
-          "description": "- Ran paid acquisition and app-store optimization for 3 consumer apps\n- Ran App Store creative tests that lifted page conversion from 31% to 39%"
+          "description": "- Ran paid acquisition and app-store optimization for 3 consumer apps"
         }
       ],
       "education": [
@@ -2889,9 +3635,20 @@
         "Growth: Acquisition, activation, monetization, pricing, retention",
         "Leadership: Cross-functional teams, portfolio planning, board reporting",
         "Analytics: Experimentation, LTV modeling, SQL, Amplitude",
-        "Channels: Paid social, ASO, referral, lifecycle, partnerships",
-        "Monetization: Pricing tests, paywalls, trial offers"
-      ]
+        "Channels: Paid social, ASO, referral, lifecycle, partnerships"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.86
+      }
     }
   }
 }

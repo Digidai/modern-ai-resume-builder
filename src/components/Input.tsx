@@ -1,13 +1,13 @@
 import React, { useId, useLayoutEffect, useRef } from 'react';
 
 export const fieldClass = (error?: string) =>
-  `w-full rounded-lg border px-3 py-2 text-sm text-slate-900 placeholder:text-slate-400 shadow-sm transition-colors
-   focus:outline-none focus:ring-2 focus:ring-indigo-500/40 focus:border-indigo-500
-   disabled:cursor-not-allowed disabled:bg-slate-100 disabled:text-slate-400
-   dark:text-slate-100 dark:placeholder:text-slate-500 dark:disabled:bg-slate-900 ${
+  `w-full rounded-[2px] border px-3 py-2 text-sm text-ink placeholder:text-muted transition-colors
+   focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent
+   disabled:cursor-not-allowed disabled:bg-paper disabled:text-muted
+   ${
      error
-       ? 'border-red-400 bg-red-50/50 dark:border-red-500/60 dark:bg-red-950/30'
-       : 'border-slate-300 bg-white hover:border-slate-400 dark:border-slate-700 dark:bg-slate-900 dark:hover:border-slate-600'
+       ? 'border-danger bg-danger/5'
+       : 'border-rule bg-surface hover:border-muted'
    }`;
 
 interface FieldShellProps {
@@ -24,19 +24,19 @@ interface FieldShellProps {
 const FieldShell: React.FC<FieldShellProps> = ({ id, label, hint, error, actions, className = '', children }) => (
   <div className={`flex flex-col gap-1.5 ${className}`}>
     <div className="flex min-h-6 items-center justify-between gap-2">
-      <label htmlFor={id} className="text-sm font-medium text-slate-700 dark:text-slate-300">
+      <label htmlFor={id} className="text-sm font-medium text-ink">
         {label}
       </label>
       {actions}
     </div>
     {children}
     {error ? (
-      <p id={`${id}-error`} className="text-xs text-red-600 dark:text-red-400">
+      <p id={`${id}-error`} className="text-xs text-danger">
         {error}
       </p>
     ) : (
       hint && (
-        <p id={`${id}-hint`} className="text-xs text-slate-500 dark:text-slate-400">
+        <p id={`${id}-hint`} className="text-xs text-muted">
           {hint}
         </p>
       )

@@ -42,10 +42,10 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasSide = skillGroups.length > 0 || data.education.length > 0;
 
     return (
-        <div className="flex flex-1 flex-col gap-[7mm] px-[14mm] py-[13mm] font-roboto text-[#222222] [--accent:var(--rs-accent,#6B3E6E)]">
+        <div className="flex flex-1 flex-col gap-[7mm] px-[14mm] py-[13mm] font-roboto text-[#222222] [--accent:var(--rs-accent,#1F6E73)]">
             {(name || title || contacts.length > 0) && (
                 <header className="break-inside-avoid">
-                    {name && <h1 className="text-[36px] font-bold uppercase leading-[1.08] tracking-[0.01em] text-[#222222] wrap-break-word">{name}</h1>}
+                    {name && <div role="heading" aria-level={1} className="text-[36px] font-bold uppercase leading-[1.08] tracking-[0.01em] text-[#222222] wrap-break-word">{name}</div>}
                     {title && <p className="mt-[4px] text-[17px] font-medium leading-snug text-(--accent) wrap-break-word">{title}</p>}
                     {contacts.length > 0 && (
                         <div className="mt-[9px] flex flex-wrap gap-x-[18px] gap-y-[4px] text-[13px] text-[#444444]">

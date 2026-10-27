@@ -65,7 +65,7 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex-1 flex flex-col bg-(--accent)/4 text-slate-800 font-serif text-[14px] leading-[1.55] px-[17mm] pt-[14mm] pb-[12mm] [--accent:var(--rs-accent,#475569)]">
             <header className="text-center mb-6">
                 {data.fullName && (
-                    <h1 className="font-playfair text-[38px] tracking-wide text-slate-900 leading-[1.15] wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="font-playfair text-[38px] tracking-wide text-slate-900 leading-[1.15] wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title && (
                     <p className="text-[12.5px] uppercase tracking-[0.28em] text-(--accent) mt-2 wrap-break-word">{data.title}</p>

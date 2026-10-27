@@ -32,19 +32,22 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Timesheet editor redesign",
-          "link": "dribbble.com/case/timesheet-editor",
-          "description": "Case study covering research synthesis, three prototype rounds and the 35% time-on-task improvement"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: interaction design, wireframing, prototyping, visual design, accessibility (WCAG 2.1)",
         "Research: usability testing, interviews, card sorting, survey design",
         "Tools: Figma, FigJam, Maze, Amplitude, Jira",
         "Collaboration: design critique, design QA, spec writing"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.88,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.89
+      }
     },
     "Senior Product Designer": {
       "summary": "Senior product designer with 8 years in fintech and marketplace products, owning end-to-end experiences from discovery to launch. Led a checkout redesign that recovered $2.4M in annual abandoned revenue. Known for framing ambiguous problems, mentoring designers and aligning product and engineering on evidence.",
@@ -74,7 +77,7 @@
           "startDate": "2016-06",
           "endDate": "2018-06",
           "isCurrent": false,
-          "description": "- Designed responsive marketing sites and dashboards for 12 agency clients\n- Built clickable prototypes in InVision for client reviews, shortening approval cycles by a week"
+          "description": "- Designed responsive marketing sites and dashboards for 12 agency clients"
         }
       ],
       "education": [
@@ -91,7 +94,23 @@
         "Research & data: interviews, usability testing, A/B testing, funnel analysis",
         "Tools: Figma, ProtoPie, Optimizely, Mixpanel, Looker",
         "Leadership: mentoring, critique facilitation, stakeholder alignment"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.94,
+        "minimalist": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Lead Product Designer": {
       "summary": "Lead product designer with 10 years of experience, currently guiding a team of 5 designers across a logistics platform. Set the design direction for a carrier app adopted by 40k drivers with a 4.7 store rating. Combines hands-on craft with planning, hiring and cross-functional roadmap influence.",
@@ -121,7 +140,7 @@
           "startDate": "2016-03",
           "endDate": "2018-04",
           "isCurrent": false,
-          "description": "- Designed banking portal features for 3 regional credit union clients\n- Delivered usability findings that reduced login failures by 30%"
+          "description": "- Designed banking portal features for 3 regional credit union clients"
         }
       ],
       "education": [
@@ -138,7 +157,21 @@
         "Design: mobile and web product design, service blueprints, prototyping, design systems",
         "Research: field studies, contextual inquiry, usability benchmarking",
         "Tools: Figma, Dovetail, Jira, Amplitude"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Principal Product Designer": {
       "summary": "Principal product designer with 13 years of experience setting cross-product design strategy in enterprise software. Defined the unified workspace model behind a platform consolidation that grew multi-product adoption by 31%. Works as a peer to staff engineers and directors, raising craft and decision quality across the org.",
@@ -150,7 +183,7 @@
           "startDate": "2021-06",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Defined the unified workspace and navigation model for 4 products, lifting multi-product adoption by 31%\n- Authored a 3-year experience vision adopted in annual planning by the CPO and 6 product leads\n- Coach 14 designers through craft reviews and pairing on the hardest interaction problems\n- Partnered with staff engineers on a permissions framework that cut setup time for admins by 45%"
+          "description": "- Defined the unified workspace and navigation model for 4 products, lifting multi-product adoption by 31%\n- Authored a 3-year experience vision adopted in annual planning by the CPO and 6 product leads\n- Coach 14 designers through craft reviews and pairing on the hardest interaction problems"
         },
         {
           "company": "Quarry Analytics",
@@ -159,7 +192,7 @@
           "startDate": "2017-04",
           "endDate": "2021-05",
           "isCurrent": false,
-          "description": "- Led dashboard builder design used by 3,000 enterprise accounts, raising weekly report creation by 52%\n- Created interaction patterns for data tables later standardized in the company design system\n- Facilitated design sprints with sales and support to prioritize the top 10 customer pain points"
+          "description": "- Led dashboard builder design used by 3,000 enterprise accounts, raising weekly report creation by 52%\n- Created interaction patterns for data tables later standardized in the company design system"
         },
         {
           "company": "Sound Studio Labs",
@@ -168,7 +201,7 @@
           "startDate": "2013-07",
           "endDate": "2017-03",
           "isCurrent": false,
-          "description": "- Designed desktop and tablet workflows for a clinical documentation tool used in 40 hospitals\n- Reduced charting clicks per encounter from 26 to 15 through task analysis"
+          "description": "- Designed desktop and tablet workflows for a clinical documentation tool used in 40 hospitals"
         }
       ],
       "education": [
@@ -189,9 +222,22 @@
       "skills": [
         "Strategy: experience vision, platform design, systems thinking, roadmap influence",
         "Craft: complex interaction design, data visualization, enterprise UX, accessibility",
-        "Influence: executive communication, mentorship, cross-org facilitation",
-        "Tools: Figma, ProtoPie, Miro, Notion"
-      ]
+        "Influence: executive communication, mentorship, cross-org facilitation"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.9,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "symmetry": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.91
+      }
     },
     "Product Design Lead": {
       "summary": "Product design lead with 9 years of experience owning design for a consumer subscription app and its 3-person design pod. Drove a paywall and plan picker overhaul that raised annual plan mix from 28% to 44%. Blends hands-on design with roadmap planning, research prioritization and growth experimentation.",
@@ -221,7 +267,7 @@
           "startDate": "2017-01",
           "endDate": "2019-02",
           "isCurrent": false,
-          "description": "- Designed e-commerce flows for 8 retail clients on Shopify Plus\n- Improved mobile checkout completion by 15% for the agency's largest client"
+          "description": "- Designed e-commerce flows for 8 retail clients on Shopify Plus"
         }
       ],
       "education": [
@@ -238,7 +284,20 @@
         "Experimentation: A/B testing, hypothesis framing, Statsig, Amplitude",
         "Leadership: pod leadership, research prioritization, critique",
         "Tools: Figma, Principle, Dovetail, Linear"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.89,
+        "cast": 0.97
+      }
     },
     "UX Designer": {
       "summary": "UX designer with 4 years of experience designing task flows for insurance and benefits portals. Simplified a claims submission journey that cut call center volume by 21%. Grounds every decision in research, writes clear specs and works closely with developers on accessible, standards-based interfaces.",
@@ -276,19 +335,23 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Claims journey redesign",
-          "link": "",
-          "description": "Journey map, prototype and test results for the 8-step claims flow; presented to the VP of member experience"
-        }
-      ],
+      "projects": [],
       "skills": [
         "UX: user flows, wireframing, information architecture, prototyping, accessibility",
         "Research: usability testing, tree testing, journey mapping, heuristic evaluation",
         "Tools: Figma, Axure RP, UserTesting, Optimal Workshop",
         "Standards: WCAG 2.1 AA, Section 508"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.95,
+        "berlin": 0.88,
+        "iron": 0.95,
+        "ginto": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.99,
+        "pop": 0.97
+      }
     },
     "Senior UX Designer": {
       "summary": "Senior UX designer with 9 years of experience in healthcare and government digital services. Led the redesign of a Medicaid renewal portal that raised online completion from 48% to 71%. Pairs rigorous research and plain-language content with accessible design that holds up under regulatory scrutiny.",
@@ -318,7 +381,7 @@
           "startDate": "2015-06",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Designed and built WordPress sites for 20 small-business clients\n- Ran analytics reviews that guided layout changes and raised lead form submissions by 18%"
+          "description": "- Designed and built WordPress sites for 20 small-business clients"
         }
       ],
       "education": [
@@ -335,7 +398,21 @@
         "Research: inclusive recruiting, moderated testing, interviews, synthesis",
         "Standards: USWDS, Section 508, WCAG 2.2, HIPAA-aware design",
         "Tools: Figma, Dovetail, Lookback, Mural"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "UX Researcher": {
       "summary": "UX researcher with 6 years of mixed-methods experience in productivity and collaboration software. Delivered a churn study whose findings shaped a retention roadmap credited with a 12% drop in seat loss. Translates qualitative and survey evidence into clear priorities that product teams act on.",
@@ -373,19 +450,24 @@
           "endDate": "2018-06"
         }
       ],
-      "projects": [
-        {
-          "name": "Admin onboarding diary study",
-          "link": "",
-          "description": "Three-week study with 20 admins; findings reduced setup steps from 11 to 6 in the next release"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "Methods: interviews, usability testing, diary studies, surveys, concept testing, SUS benchmarking",
+        "Methods: interviews, usability testing, diary studies, surveys, concept testing",
         "Analysis: thematic analysis, R, Qualtrics, basic SQL",
         "Tools: Dovetail, UserTesting, Maze, Figma",
         "Communication: research readouts, insight workshops, research repositories"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.9
+      }
     },
     "User Researcher": {
       "summary": "User researcher with 5 years of experience studying consumer travel and booking behavior through field and remote methods. Uncovered price-transparency issues that led to a fee display change lifting booking conversion by 7%. Brings fast, rigorous studies and recommendations tied to product decisions.",
@@ -429,7 +511,18 @@
         "Analysis: affinity mapping, journey mapping, Qualtrics, Excel",
         "Tools: UserZoom, Lookback, Dovetail, Miro",
         "Languages: English, Spanish (professional)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "swiss": 0.97,
+        "berlin": 0.9,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.99,
+        "pop": 0.94
+      }
     },
     "Research Operations Manager": {
       "summary": "Research operations manager with 8 years in UX research and ops, building the infrastructure that lets 40 researchers and designers run studies quickly and ethically. Cut participant recruiting time from 3 weeks to 6 days. Brings vendor management, consent governance and repository practices that scale.",
@@ -459,7 +552,7 @@
           "startDate": "2017-06",
           "endDate": "2019-01",
           "isCurrent": false,
-          "description": "- Scheduled and screened participants for 200+ client sessions per year\n- Managed incentive payments and NDAs for consumer and B2B studies"
+          "description": "- Scheduled and screened participants for 200+ client sessions per year"
         }
       ],
       "education": [
@@ -476,7 +569,23 @@
         "Governance: GDPR, CCPA, consent management, data retention",
         "Operations: vendor management, budgeting, process design, team supervision",
         "Tools: User Interviews, Rally, Dovetail, Tremendous, Airtable"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "creative": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "UI Designer": {
       "summary": "UI designer with 4 years of experience crafting polished interfaces for fitness and wellness apps. Delivered a visual refresh that raised App Store rating from 4.1 to 4.6. Strong in typography, layout, iconography and component libraries, with a habit of checking work in code alongside engineers.",
@@ -508,19 +617,21 @@
           "endDate": "2021-04"
         }
       ],
-      "projects": [
-        {
-          "name": "Dark mode system",
-          "link": "behance.net/pulse-dark-mode",
-          "description": "Token-based color system and contrast checks for a full dark theme across 200 screens"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Visual design: typography, layout, color systems, iconography, micro-interactions",
         "Systems: component libraries, design tokens, dark mode, platform guidelines (HIG, Material 3)",
         "Tools: Figma, Illustrator, After Effects, Lottie",
         "Handoff: design QA, redlines, Zeplin"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "ginto": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "pop": 0.97
+      }
     },
     "Senior UI Designer": {
       "summary": "Senior UI designer with 8 years of experience leading visual design for e-commerce and retail apps. Directed a storefront UI overhaul that increased mobile add-to-cart rate by 14%. Brings high craft, scalable component thinking and the ability to guide brand, product and engineering toward one visual language.",
@@ -567,7 +678,22 @@
         "Systems: responsive layouts, component libraries, multi-brand theming",
         "Tools: Figma, Photoshop, Illustrator, After Effects, Unity UI",
         "Leadership: design reviews, brand partnership, mentoring"
-      ]
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.94
+      }
     },
     "UI/UX Designer": {
       "summary": "UI/UX designer with 3 years of experience covering research, wireframes and final visuals for startup SaaS products. Redesigned an invoicing dashboard that cut time-to-first-invoice by 40%. Comfortable owning a feature end to end in a small team, from interviews to pixel-perfect handoff.",
@@ -611,7 +737,18 @@
         "UI: visual design, responsive layouts, design systems, iconography",
         "Tools: Figma, Webflow, Maze, Notion",
         "Basics: HTML, CSS"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "Interaction Designer": {
       "summary": "Interaction designer with 7 years of experience designing complex, multi-step interactions for automotive and connected-device software. Designed an in-vehicle navigation interaction model that cut glance time per task by 30%. Specializes in state modeling, prototyping with real motion and testing in realistic contexts.",
@@ -632,7 +769,7 @@
           "startDate": "2018-07",
           "endDate": "2021-03",
           "isCurrent": false,
-          "description": "- Designed setup and pairing flows for smart thermostats, cutting setup support calls by 27%\n- Created interaction specs for companion iOS and Android apps\n- Tested on-device prototypes in 12 participant homes"
+          "description": "- Designed setup and pairing flows for smart thermostats, cutting setup support calls by 27%\n- Created interaction specs for companion iOS and Android apps"
         }
       ],
       "education": [
@@ -649,19 +786,19 @@
           "endDate": "2016-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Glance-time study",
-          "link": "",
-          "description": "Simulator study with 24 drivers comparing three navigation layouts; results set the production pattern"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Interaction design: state modeling, multimodal input, motion, microinteractions",
         "Prototyping: ProtoPie, Figma, Framer, Arduino basics",
-        "Research: simulator testing, in-home studies, task analysis",
-        "Standards: NHTSA driver distraction guidelines, WCAG"
-      ]
+        "Research: simulator testing, in-home studies, task analysis"
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.98,
+        "berlin": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.87
+      }
     },
     "Service Designer": {
       "summary": "Service designer with 7 years of experience redesigning end-to-end services across banking branches, call centers and digital channels. Led a small-business account opening redesign that cut time-to-open from 9 days to 2. Brings service blueprints, co-design workshops and the operational rigor to make changes stick.",
@@ -705,7 +842,19 @@
         "Operations: process mapping, KPI definition, change management, Lean basics",
         "Research: ethnography, stakeholder interviews, shadowing",
         "Tools: Miro, Figma, Smaply, Excel"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "creative": 0.97,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.96
+      }
     },
     "UX Architect": {
       "summary": "UX architect with 12 years of experience structuring large enterprise and content-heavy platforms. Rebuilt the information architecture of a 40,000-page support center, raising self-service resolution by 19%. Specializes in taxonomies, navigation systems and interaction frameworks that scale across products and teams.",
@@ -726,7 +875,7 @@
           "startDate": "2016-05",
           "endDate": "2020-08",
           "isCurrent": false,
-          "description": "- Restructured a provider directory and clinical content site with 12,000 pages\n- Ran card sorts and tree tests with 400 participants to validate taxonomy\n- Improved provider search success in testing from 54% to 82%"
+          "description": "- Restructured a provider directory and clinical content site with 12,000 pages\n- Ran card sorts and tree tests with 400 participants to validate taxonomy"
         },
         {
           "company": "Oakmont Interactive",
@@ -735,7 +884,7 @@
           "startDate": "2014-02",
           "endDate": "2016-04",
           "isCurrent": false,
-          "description": "- Produced sitemaps, wireframes and content models for university websites\n- Led a CMS migration plan for a 5,000-page site with zero broken redirects"
+          "description": "- Produced sitemaps, wireframes and content models for university websites"
         }
       ],
       "education": [
@@ -750,9 +899,19 @@
       "skills": [
         "Architecture: information architecture, taxonomy, content modeling, navigation systems, object modeling",
         "Research: card sorting, tree testing, search log analysis, findability benchmarks",
-        "Tools: Optimal Workshop, Figma, Axure RP, Elasticsearch, Contentful",
-        "Leadership: frameworks and standards, cross-product alignment"
-      ]
+        "Tools: Optimal Workshop, Figma, Axure RP, Elasticsearch, Contentful"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.99,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.9
+      }
     },
     "UX Strategist": {
       "summary": "UX strategist with 10 years of experience linking customer experience to business goals for retail and consumer brands. Built a CX measurement program that tied UX improvements to $6M in incremental annual revenue. Brings research-backed strategy, experience roadmaps and executive-ready business cases.",
@@ -773,7 +932,7 @@
           "startDate": "2017-03",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Led e-commerce UX for a $300M apparel brand, raising mobile conversion by 0.6 points\n- Introduced NPS and task success tracking tied to quarterly business reviews\n- Defined personas and jobs-to-be-done used across marketing and product"
+          "description": "- Led e-commerce UX for a $300M apparel brand, raising mobile conversion by 0.6 points\n- Introduced NPS and task success tracking tied to quarterly business reviews"
         },
         {
           "company": "Rosewood Digital",
@@ -782,7 +941,7 @@
           "startDate": "2015-01",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Designed sites and apps for 9 consumer brands\n- Ran usability studies that informed checkout changes for 3 clients"
+          "description": "- Designed sites and apps for 9 consumer brands"
         }
       ],
       "education": [
@@ -799,7 +958,18 @@
         "Measurement: NPS, task success, conversion analysis, Google Analytics 4, Contentsquare",
         "Facilitation: executive workshops, vision sprints, stakeholder interviews",
         "Tools: Figma, Miro, Qualtrics, Looker Studio"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Design Strategist": {
       "summary": "Design strategist with 8 years of experience using research and foresight to define new products and ventures. Led the discovery that launched a senior caregiving service now generating $4M in annual revenue. Moves fluidly between ethnography, opportunity framing and concept prototyping with business teams.",
@@ -820,7 +990,7 @@
           "startDate": "2018-06",
           "endDate": "2021-01",
           "isCurrent": false,
-          "description": "- Conducted foresight research that informed 3 new product lines in personal care\n- Ran concept tests with 1,200 consumers to prioritize product ideas\n- Created trend reports presented to the executive innovation council"
+          "description": "- Conducted foresight research that informed 3 new product lines in personal care\n- Ran concept tests with 1,200 consumers to prioritize product ideas"
         }
       ],
       "education": [
@@ -841,9 +1011,13 @@
       "skills": [
         "Strategy: opportunity framing, foresight, business model design, venture design",
         "Research: ethnography, concept testing, co-creation",
-        "Facilitation: design sprints, executive workshops, storytelling",
-        "Tools: Miro, Figma, Keynote, Qualtrics"
-      ]
+        "Facilitation: design sprints, executive workshops, storytelling"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "quartz": 0.97,
+        "bronx": 0.87
+      }
     },
     "UX Engineer": {
       "summary": "UX engineer with 6 years of experience bridging design and front-end engineering in React and TypeScript. Built a coded component library that cut UI build time for new features by about 40%. Turns Figma intent into accessible, performant production components and high-fidelity prototypes.",
@@ -875,19 +1049,22 @@
           "endDate": "2020-06"
         }
       ],
-      "projects": [
-        {
-          "name": "Token pipeline",
-          "link": "github.com/mkline/figma-token-sync",
-          "description": "Open-source script that exports Figma variables to CSS custom properties and TypeScript"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Front end: React, TypeScript, CSS, Vue, Framer Motion",
         "Design systems: Storybook, Style Dictionary, design tokens, Figma variables",
         "Quality: WCAG 2.2, axe-core, Chromatic, Playwright",
         "Prototyping: coded prototypes, Figma, ProtoPie"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.97,
+        "ginto": 0.92,
+        "quartz": 0.93,
+        "bronx": 0.91,
+        "pop": 0.98
+      }
     },
     "Design Systems Designer": {
       "summary": "Design systems designer with 7 years of experience, the last 4 owning a multi-platform system for a fintech company. Grew system adoption from 35% to 88% of production screens. Combines component craft, documentation and governance with close engineering partnership to keep design and code in sync.",
@@ -925,7 +1102,17 @@
         "Accessibility: WCAG 2.2, focus management, screen reader annotation",
         "Tools: Figma (variables, branching), Storybook, Zeroheight, Tokens Studio",
         "Collaboration: contribution models, adoption tracking, engineering pairing"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.92
+      }
     },
     "Visual Designer": {
       "summary": "Visual designer with 6 years of experience creating product marketing, launch and in-app visuals for a consumer tech brand. Produced a launch campaign system that cut asset production time by 35% across 9 channels. Brings sharp layout, illustration and art direction instincts with a strong grasp of brand standards.",
@@ -969,7 +1156,20 @@
         "Production: campaign systems, templates, asset versioning, print and digital specs",
         "Tools: Figma, Illustrator, Photoshop, After Effects, Blender basics",
         "Brand: brand guidelines, visual identity application"
-      ]
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.98
+      }
     },
     "Brand Designer": {
       "summary": "Brand designer with 7 years of experience building and evolving visual identities for growth-stage companies. Led a rebrand rolled out across 400 touchpoints in 10 weeks, followed by a 22% lift in aided brand awareness. Brings identity systems, guidelines and practical toolkits that marketing teams actually use.",
@@ -1007,7 +1207,15 @@
         "Production: print prep, Pantone matching, vendor proofs, template systems",
         "Tools: Illustrator, InDesign, Photoshop, Figma, Canva",
         "Strategy: brand workshops, positioning input, creative briefs"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "pop": 0.92
+      }
     },
     "Graphic Designer": {
       "summary": "Graphic designer with 5 years of experience producing print and digital work for a regional healthcare system. Redesigned patient education materials in plain-language format, cutting print costs by $48k a year. Fast, organized and fluent in Adobe Creative Cloud, with strong prepress and brand consistency skills.",
@@ -1045,7 +1253,15 @@
         "Production: prepress, CMYK and Pantone, large-format print, accessibility for print",
         "Tools: InDesign, Illustrator, Photoshop, Acrobat Pro, Asana",
         "Standards: brand guidelines, ADA signage requirements"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.91,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.96
+      }
     },
     "Motion Designer": {
       "summary": "Motion designer with 6 years of experience creating product animation and UI motion for software brands. Built a Lottie animation system used across 3 apps that lifted onboarding completion by 8%. Pairs a strong sense of timing and easing with production habits that keep files light and engineers happy.",
@@ -1089,7 +1305,20 @@
         "Tools: After Effects, Cinema 4D, Lottie/Bodymovin, Rive, Premiere Pro",
         "Product: motion specs, easing tokens, prototype motion in Figma",
         "Production: storyboarding, file optimization, render management"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Content Designer": {
       "summary": "Content designer with 6 years of experience shaping words, structure and flows in financial products. Rewrote error and verification messaging that cut identity-check support contacts by 31%. Works inside product squads from discovery onward, with strong research, voice-and-tone and content systems skills.",
@@ -1127,7 +1356,15 @@
         "Research: comprehension testing, highlighter tests, card sorting",
         "Systems: style guides, terminology, voice and tone, content patterns",
         "Tools: Figma, Ditto, Hemingway, Contentful"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.98,
+        "ginto": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "pop": 0.97
+      }
     },
     "UX Writer": {
       "summary": "UX writer with 4 years of experience writing interface copy for consumer mobile apps. Rewrote push notification and paywall copy that raised notification opt-in from 46% to 58%. Writes concise, on-voice microcopy and tests it, working directly in Figma alongside designers and PMs.",
@@ -1171,7 +1408,18 @@
         "Systems: voice and tone, string management, localization prep",
         "Testing: A/B copy tests, preference tests",
         "Tools: Figma, Ditto, Lokalise, Amplitude"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.97,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "mono": 0.98,
+        "pop": 0.9
+      }
     },
     "Design Manager": {
       "summary": "Design manager with 10 years in product design, the last 4 managing a team of 7 designers for a B2B HR platform. Rebuilt the team's hiring and career framework, cutting regretted attrition to zero over 2 years. Combines people leadership with hands-on critique and close planning with product and engineering partners.",
@@ -1218,7 +1466,20 @@
         "Planning: OKRs, roadmap partnership, resourcing, critique programs",
         "Design: B2B product design, design systems, research practice",
         "Tools: Figma, Lattice, Jira, Productboard"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "Product Design Manager": {
       "summary": "Product design manager with 11 years of experience, leading 6 designers on a consumer marketplace serving 3M buyers. Drove a search and discovery overhaul that increased buyer conversion by 11%. Balances team health and hiring with deep involvement in product strategy, critique and quality bars.",
@@ -1265,7 +1526,20 @@
         "Product: marketplace design, search and discovery, trust and safety, experimentation",
         "Operations: quality scorecards, critique rituals, quarterly planning",
         "Tools: Figma, Amplitude, Dovetail, Linear"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Design Operations Manager": {
       "summary": "Design operations manager with 8 years of experience in design and program management, supporting a 35-person design org. Consolidated tools and licensing to save $210k a year while speeding handoff. Brings process design, tooling strategy and team rituals that let designers spend more time designing.",
@@ -1312,7 +1586,21 @@
         "Program management: planning, headcount tracking, intake, prioritization",
         "Tools: Figma admin, Jira, Confluence, Airtable, Asana",
         "Certifications: PMP"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Design Director": {
       "summary": "Design director with 14 years of experience leading product and brand design for consumer health and wellness companies. Leads 18 designers, researchers and writers across 3 product lines. Shaped a unified app experience that grew paid members from 400k to 1.1M while raising design quality and team maturity.",
@@ -1342,7 +1630,7 @@
           "startDate": "2012-06",
           "endDate": "2017-04",
           "isCurrent": false,
-          "description": "- Designed apps and sites for entertainment and lifestyle brands\n- Led design on an award-winning streaming companion app"
+          "description": "- Designed apps and sites for entertainment and lifestyle brands"
         }
       ],
       "education": [
@@ -1359,7 +1647,20 @@
         "Strategy: experience vision, brand and product alignment, roadmap influence",
         "Craft: consumer product design, health UX, design systems",
         "Partnership: executive communication, agency management"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.98,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "VP of Design": {
       "summary": "VP of design with 17 years of experience building design organizations at high-growth SaaS companies. Scaled a design org from 9 to 42 people through Series C to IPO readiness. Owns experience strategy, brand and research, and sits on the product leadership team shaping roadmap and investment.",
@@ -1406,7 +1707,19 @@
         "Strategy: experience strategy, brand, research, design systems",
         "Operating: OKRs, design quality metrics, cross-functional planning",
         "Domains: enterprise SaaS, workflow software, analytics"
-      ]
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.86
+      }
     },
     "Product Manager": {
       "summary": "Product manager with 5 years of experience owning B2B SaaS features from discovery through launch. Shipped a self-serve reporting module adopted by 62% of accounts within 6 months. Works from customer evidence and clear metrics, writing crisp specs and keeping engineering, design and go-to-market teams aligned.",
@@ -1444,7 +1757,15 @@
         "Data: SQL, Mixpanel, Looker, A/B testing",
         "Delivery: Agile/Scrum, Jira, Confluence, Productboard",
         "Certifications: Certified Scrum Product Owner (CSPO)"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.94
+      }
     },
     "Technical Product Manager": {
       "summary": "Technical product manager with 7 years of experience, including 3 as a backend engineer, owning API and developer platform products. Led a public API v2 launch that grew active integrations from 1,200 to 3,800. Speaks fluently with engineers about architecture tradeoffs while keeping developer experience and business outcomes central.",
@@ -1491,7 +1812,19 @@
         "Technical: REST, webhooks, OpenAPI, OAuth 2.0, SQL, system design basics",
         "Tools: Postman, Datadog, Jira, Readme.com, Looker",
         "Practices: API versioning, SLAs, incident reviews"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Growth Product Manager": {
       "summary": "Growth product manager with 6 years of experience running acquisition, activation and monetization experiments for consumer apps. Ran a program of 60+ experiments in 2025 that added $3.1M in annualized revenue. Combines rigorous experiment design and SQL with sharp user insight and fast iteration.",
@@ -1538,7 +1871,18 @@
         "Experimentation: A/B testing, power analysis, Statsig, Optimizely",
         "Data: SQL, Amplitude, Python (pandas), LTV and cohort analysis",
         "Delivery: pod leadership, rapid iteration, experiment documentation"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Senior Product Manager": {
       "summary": "Senior product manager with 9 years of experience owning revenue-critical areas of e-commerce platforms. Led a subscription and replenishment product that reached $28M in annual GMV within 2 years. Brings strong strategy, customer discovery and data skills, and a track record of aligning several teams around one roadmap.",
@@ -1559,7 +1903,7 @@
           "startDate": "2018-04",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Owned product detail pages and reviews for a $400M outdoor retailer\n- Launched fit recommendations that cut apparel return rate by 11%\n- Ran 25 A/B tests per year with the optimization team"
+          "description": "- Owned product detail pages and reviews for a $400M outdoor retailer\n- Launched fit recommendations that cut apparel return rate by 11%"
         },
         {
           "company": "Puget Consulting Group",
@@ -1568,7 +1912,7 @@
           "startDate": "2016-07",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Gathered requirements for retail ERP implementations\n- Built process maps and test plans for 4 client go-lives"
+          "description": "- Gathered requirements for retail ERP implementations"
         }
       ],
       "education": [
@@ -1589,9 +1933,19 @@
       "skills": [
         "Product strategy: roadmaps, business cases, pricing, subscription models",
         "Discovery: customer interviews, jobs-to-be-done, opportunity solution trees",
-        "Data: SQL, Looker, A/B testing, GMV and churn analysis",
-        "Leadership: multi-squad alignment, executive reviews"
-      ]
+        "Data: SQL, Looker, A/B testing, GMV and churn analysis"
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.93
+      }
     },
     "Group Product Manager": {
       "summary": "Group product manager with 12 years of experience leading product for payments and financial operations. Manages 4 product managers across 6 squads and a $45M revenue line. Drove a merchant payouts overhaul that cut payout support tickets by 52% while growing instant-payout revenue 3x.",
@@ -1638,7 +1992,21 @@
         "Domain: payments, payouts, disputes, reconciliation, PCI DSS, 1099-K",
         "Strategy: P&L ownership, pricing, multi-year roadmaps",
         "Data: SQL, Looker, financial modeling"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "path": 0.99,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Principal Product Manager": {
       "summary": "Principal product manager with 13 years of experience setting cross-team product strategy for enterprise security software. Defined the identity platform strategy behind a new SKU that reached $19M ARR in 18 months. Operates as an individual contributor with org-wide influence on architecture, pricing and multi-year bets.",
@@ -1668,7 +2036,7 @@
           "startDate": "2013-06",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Managed user administration and audit logging features\n- Grew admin console NPS from 10 to 35"
+          "description": "- Managed user administration and audit logging features"
         }
       ],
       "education": [
@@ -1685,7 +2053,20 @@
         "Domain: identity and access management, SSO, MFA, SOC 2, FedRAMP",
         "Influence: strategy narratives, executive reviews, PM mentorship",
         "Technical: APIs, policy engines, cloud architecture basics"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Director of Product": {
       "summary": "Director of product with 14 years of experience leading product for vertical SaaS in hospitality. Leads 6 PMs and owns a portfolio generating $60M ARR. Rebuilt the product strategy around a unified guest platform that lifted net revenue retention from 104% to 117% in 2 years.",
@@ -1732,7 +2113,19 @@
         "Strategy: portfolio strategy, NRR growth, pricing, board-level planning",
         "Domain: hospitality tech, booking engines, payments, revenue management",
         "Data: product scorecards, SQL, Looker"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.89,
+        "cast": 0.97
+      }
     },
     "Director of Product Management": {
       "summary": "Director of product management with 15 years of experience building PM teams and practices in healthcare technology. Manages 8 PMs across clinical and revenue cycle products serving 1,400 hospitals. Built the PM career framework and discovery practice behind a 40% increase in roadmap items shipped on target.",
@@ -1753,7 +2146,7 @@
           "startDate": "2015-04",
           "endDate": "2020-09",
           "isCurrent": false,
-          "description": "- Owned claims scrubbing and denial management for 600 hospitals\n- Cut first-pass denial rates for clients by 18% with rules engine improvements\n- Managed ICD-10 code set updates and payer edits each release"
+          "description": "- Owned claims scrubbing and denial management for 600 hospitals\n- Cut first-pass denial rates for clients by 18% with rules engine improvements"
         },
         {
           "company": "Plains Medical Software",
@@ -1762,7 +2155,7 @@
           "startDate": "2011-06",
           "endDate": "2015-03",
           "isCurrent": false,
-          "description": "- Wrote requirements for EHR scheduling and billing modules\n- Supported 15 hospital go-lives as implementation analyst"
+          "description": "- Wrote requirements for EHR scheduling and billing modules"
         }
       ],
       "education": [
@@ -1783,9 +2176,22 @@
       "skills": [
         "PM leadership: career frameworks, hiring loops, coaching, planning processes",
         "Healthcare: revenue cycle, clinical documentation, HL7 FHIR, ONC certification, HIPAA",
-        "Operating: quarterly planning, dependency management, roadmap governance",
-        "Tools: Aha!, Jira Align, Tableau"
-      ]
+        "Operating: quarterly planning, dependency management, roadmap governance"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "mono": 0.9,
+        "pop": 0.91,
+        "cast": 0.98
+      }
     },
     "VP of Product": {
       "summary": "VP of product with 16 years of experience leading product organizations in B2B marketing software. Leads 22 product managers, designers and analysts responsible for $140M ARR. Repositioned the product suite around AI-assisted campaigns, driving 30% new logo growth in 2025 and a successful multi-product pricing launch.",
@@ -1838,7 +2244,27 @@
         "Strategy: positioning, pricing and packaging, AI product strategy, portfolio management",
         "Commercial: ARR growth, expansion revenue, go-to-market alignment",
         "Domain: marketing automation, email, attribution"
-      ]
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.94,
+        "silk": 0.93,
+        "lateral": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.9,
+        "creative": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "path": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
+      }
     },
     "Platform Product Manager": {
       "summary": "Platform product manager with 7 years of experience owning internal developer platforms and shared services. Led an internal platform roadmap that cut service provisioning from 5 days to 20 minutes for 300 engineers. Treats internal teams as customers, with clear adoption metrics and strong partnership with infrastructure engineering.",
@@ -1876,7 +2302,17 @@
         "Technical: AWS, Kubernetes, Backstage, CI/CD, observability (Datadog)",
         "Metrics: adoption, DORA metrics, developer satisfaction, cloud cost",
         "Practices: internal customer research, deprecation planning, roadmap communication"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.93
+      }
     },
     "Mobile Product Manager": {
       "summary": "Mobile product manager with 6 years of experience owning iOS and Android apps for retail banking and commerce. Led a mobile app rebuild that lifted App Store rating from 3.2 to 4.7 and grew monthly active users by 38%. Knows store policies, release trains and mobile analytics in depth.",
@@ -1914,7 +2350,14 @@
         "Analytics: Firebase, Amplitude, Crashlytics, Braze",
         "Domain: mobile banking, payments, loyalty, Reg E",
         "Delivery: Agile, Jira, TestFlight, Google Play Console"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.96
+      }
     },
     "Data Product Manager": {
       "summary": "Data product manager with 7 years of experience in analytics engineering and product, owning data platforms and customer-facing insights. Launched an embedded analytics product that generated $5.4M in new ARR. Bridges data engineering, governance and business users to ship trustworthy data products people rely on.",
@@ -1952,7 +2395,15 @@
         "Technical: SQL, dbt, Snowflake, Airflow, Looker, Python",
         "Product: roadmapping, pricing input, customer discovery",
         "Governance: data quality, lineage, access controls"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.96
+      }
     },
     "AI Product Manager": {
       "summary": "AI product manager with 6 years in product, the last 3 shipping LLM-powered features in customer support software. Launched an AI reply assistant that now drafts 45% of agent responses and cut handle time by 28%. Strong on evaluation design, model tradeoffs, guardrails and measuring real customer value.",
@@ -1984,19 +2435,23 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Support eval harness",
-          "link": "",
-          "description": "Rubric-based evaluation pipeline scoring tone, accuracy and policy compliance for each model candidate"
-        }
-      ],
+      "projects": [],
       "skills": [
         "AI product: LLM features, RAG, evaluation design, guardrails, human-in-the-loop",
         "Technical: prompt design, model selection, embeddings, Python basics, SQL",
         "Metrics: handle time, containment, acceptance rate, cost per inference",
         "Governance: PII handling, responsible AI reviews, SOC 2"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.92,
+        "ginto": 0.86,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.97,
+        "pop": 0.92
+      }
     },
     "Associate Product Manager": {
       "summary": "Associate product manager with 2 years of experience in a rotational APM program at a consumer travel company. Owned a trip-sharing feature that grew invited travelers per booking by 19%. Brings SQL fluency, structured problem solving and a computer science background that makes engineering collaboration easy.",
@@ -2040,7 +2495,18 @@
         "Data: SQL, Amplitude, Excel, basic Python",
         "Tools: Jira, Figma, Notion",
         "Foundations: data structures, web development, A/B testing"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.88
+      }
     },
     "Product Owner": {
       "summary": "Product owner with 7 years of experience in Scrum teams delivering insurance and claims software. Owns the backlog for 2 teams and improved sprint predictability from 62% to 88%. Turns stakeholder needs into well-groomed stories and acceptance criteria, keeping delivery steady and stakeholders informed.",
@@ -2078,7 +2544,15 @@
         "Domain: claims, policy administration, Guidewire ClaimCenter",
         "Tools: Jira, Confluence, Azure DevOps, Miro",
         "Certifications: Professional Scrum Product Owner (PSPO I), SAFe POPM"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
     },
     "Product Operations Manager": {
       "summary": "Product operations manager with 8 years of experience across program management and product ops in SaaS. Built the product operating rhythm for a 60-person product and engineering org. Introduced feedback and launch systems that cut launch slippage by 35% and gave leadership one trusted view of roadmap health.",
@@ -2125,7 +2599,21 @@
         "Tools: Productboard, Jira, Salesforce, Pendo, Looker",
         "Program management: dependencies, release calendars, risk tracking",
         "Leadership: process design, analyst management"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Product Operations Analyst": {
       "summary": "Product operations analyst with 3 years of experience supporting product teams with data, tooling and process. Built a product health dashboard used weekly by 14 PMs and leadership. Brings SQL and analytics skills, careful tool administration and a knack for turning messy feedback into structured insight.",
@@ -2163,7 +2651,14 @@
         "Product ops: feedback tagging, release notes, tool administration, process documentation",
         "Tools: Jira, Productboard, Zapier, Confluence",
         "Communication: dashboards, insight summaries"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "pop": 0.97
+      }
     },
     "Creative Director": {
       "summary": "Creative director with 15 years in agency and in-house roles, leading integrated campaigns for consumer brands. Leads a 16-person team of designers, writers and producers. Directed a brand platform relaunch that lifted unaided awareness by 9 points and earned two One Show merits.",
@@ -2210,7 +2705,19 @@
         "Craft: art direction, concepting, copy review, production oversight",
         "Business: budget management, client relationships, agency P&L input",
         "Tools: Adobe Creative Cloud, Figma, Frame.io"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "mono": 0.96,
+        "pop": 0.9,
+        "cast": 0.97
+      }
     },
     "Art Director": {
       "summary": "Art director with 8 years of experience creating campaigns across social, digital and print for lifestyle and apparel brands. Concepted a spring campaign that delivered a 3.4x return on ad spend. Brings strong visual concepting, shoot direction and close collaboration with copywriters and producers.",
@@ -2248,7 +2755,15 @@
         "Channels: social, digital display, out-of-home, print",
         "Tools: Photoshop, Illustrator, InDesign, After Effects, Figma",
         "Collaboration: copy partnerships, client presentations, producer coordination"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.94,
+        "ginto": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "pop": 0.92
+      }
     },
     "Head of Product": {
       "summary": "Head of product with 12 years of experience, now leading product at a Series B climate tech startup. Built the product function from scratch, growing ARR from $4M to $18M in 3 years. Combines hands-on discovery with strategy, hiring and investor-facing roadmap communication.",
@@ -2295,7 +2810,18 @@
         "Strategy: product vision, roadmap, pricing, investor communication",
         "Domain: carbon accounting, GHG Protocol, CSRD, energy data",
         "Execution: discovery, PRDs, launch, analytics"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.86
+      }
     },
     "Chief Product Officer (CPO)": {
       "summary": "Chief product officer with 19 years of experience leading product, design and data at growth-stage and public software companies. Leads a 75-person organization and helped grow revenue from $90M to $310M over 5 years. Sets company strategy alongside the CEO and board, with a record of platform bets, acquisitions and disciplined portfolio management.",
@@ -2348,7 +2874,26 @@
         "Strategy: portfolio management, platform strategy, M&A, pricing",
         "Commercial: revenue growth, go-to-market alignment, investor communication",
         "Operating: OKRs, R&D investment reviews, org design"
-      ]
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.95,
+        "minimalist": 0.9,
+        "creative": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.88
+      }
     },
     "Product Design Intern": {
       "summary": "Interaction design student entering senior year with one product design internship and three end-to-end studio projects. Redesigned a campus shuttle tracker used by 4,000 students during a summer internship. Brings Figma fluency, a habit of testing early with real users, and clear written rationale for design decisions.",
@@ -2380,24 +2925,21 @@
           "endDate": "2027-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Pantry share app",
-          "link": "jchen.design/pantry-share",
-          "description": "Studio project connecting student food pantry inventory with pickup reservations; tested with 12 students"
-        },
-        {
-          "name": "Library booking redesign",
-          "link": "jchen.design/library-rooms",
-          "description": "Reduced room booking steps from 7 to 3 in a concept tested with 10 participants"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: wireframing, prototyping, visual design, interaction design",
         "Research: usability testing, interviews, affinity mapping",
         "Tools: Figma, FigJam, Adobe Illustrator, ProtoPie",
         "Coursework: Interaction Design Studio, Design for Accessibility, Intro to HCI"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "pop": 0.97
+      }
     },
     "Junior Product Designer": {
       "summary": "Junior product designer with 1.5 years of experience at a healthtech startup and a design bootcamp background after 3 years in hospitality. Designed a prescription refill reminder that raised on-time refills by 12%. Brings empathy from customer-facing work, solid Figma craft and eagerness to learn from critique.",
@@ -2435,19 +2977,19 @@
           "endDate": "2021-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Hotel guest messaging concept",
-          "link": "mlopez.design/guest-chat",
-          "description": "Bootcamp capstone for in-stay requests via SMS, tested with 9 hotel guests"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: user flows, wireframes, high-fidelity UI, prototyping",
         "Research: usability testing, interviews, accessibility checks",
         "Tools: Figma, Maze, Miro, Notion",
         "Languages: English, Spanish"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.87
+      }
     },
     "Junior UX Designer": {
       "summary": "Junior UX designer with 1 year of agency experience designing websites and portals for local government and nonprofit clients. Restructured a county parks reservation site that cut booking-related calls by 30%. Strong in wireframing, information architecture and accessibility, with a psychology background in research methods.",
@@ -2491,7 +3033,18 @@
         "Research: card sorting, interviews, survey design",
         "Tools: Figma, Optimal Workshop, Google Analytics 4, WordPress",
         "Accessibility: WCAG 2.1 AA, screen reader testing (VoiceOver)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.85
+      }
     },
     "Senior UX Researcher": {
       "summary": "Senior UX researcher with 9 years of experience leading strategic and evaluative research for enterprise cloud products. Led a pricing and packaging study that informed a tier change worth $8M in new annual revenue. Drives research roadmaps with product leadership and mentors junior researchers in mixed methods.",
@@ -2538,7 +3091,23 @@
         "Analysis: SPSS, R, Qualtrics, thematic analysis",
         "Strategy: research roadmaps, pricing research, executive storytelling",
         "Leadership: mentoring, research standards, advisory councils"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.96,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.95
+      }
     },
     "Web Designer": {
       "summary": "Web designer with 6 years of experience designing and building marketing websites in Webflow and WordPress. Rebuilt a B2B company site that doubled organic demo requests within 9 months. Covers layout, responsive design, CMS setup and on-page SEO, delivering fast, accessible sites marketing teams can update themselves.",
@@ -2570,19 +3139,22 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Logistics site rebuild",
-          "link": "clearwaterweb.co/work/tidelane-logistics",
-          "description": "Webflow rebuild with new IA, 40 CMS pages and schema markup; 2x organic demos"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Web design: responsive layout, landing pages, typography, conversion design",
         "Build: Webflow, WordPress, HTML, CSS, basic JavaScript",
         "SEO and performance: on-page SEO, schema markup, Core Web Vitals, GA4",
         "Tools: Figma, Photoshop, Google Search Console"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.96
+      }
     },
     "Industrial Designer": {
       "summary": "Industrial designer with 7 years of experience taking consumer electronics and housewares from sketch to mass production. Designed a countertop blender line that sold 380,000 units in its first year. Combines form development, CAD, rapid prototyping and DFM collaboration with overseas manufacturing partners.",
@@ -2614,19 +3186,21 @@
           "endDate": "2019-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Blender control dial",
-          "link": "behance.net/rpatel-blender",
-          "description": "Ergonomic dial and lid concept from foam models to production, with use-study findings"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Design: sketching, form development, CMF, ergonomics, user research",
         "CAD and visualization: SolidWorks, Rhino, KeyShot, Fusion 360",
         "Prototyping: 3D printing, foam models, CNC basics",
         "Manufacturing: DFM, injection molding, tooling reviews, supplier communication"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.97,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.96
+      }
     },
     "Senior Graphic Designer": {
       "summary": "Senior graphic designer with 9 years of experience leading print and digital design for a national nonprofit. Redesigned the annual fundraising campaign system that helped raise $3.2M, a 17% increase over the prior year. Leads 2 designers, owns brand consistency and manages printers, photographers and freelancers.",
@@ -2656,7 +3230,7 @@
           "startDate": "2016-01",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Produced flyers, signage and business collateral for small businesses\n- Managed preflight and press checks for offset print jobs"
+          "description": "- Produced flyers, signage and business collateral for small businesses"
         }
       ],
       "education": [
@@ -2673,7 +3247,20 @@
         "Leadership: design reviews, freelancer management, budget management",
         "Tools: InDesign, Illustrator, Photoshop, Acrobat, Canva admin",
         "Production: offset and digital print, press checks, vendor management"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Junior Graphic Designer": {
       "summary": "Junior graphic designer with 1 year of in-house experience at a craft brewery and a BFA in graphic design. Designed can labels for 6 seasonal releases sold across 3 states. Brings solid typography and layout skills, clean print-ready files and comfort juggling social, packaging and event work.",
@@ -2717,7 +3304,18 @@
         "Tools: Illustrator, Photoshop, InDesign, Canva, Procreate",
         "Production: print prep, dielines, CMYK and spot color",
         "Coursework: Typography II, Packaging Design, Brand Identity"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.93,
+        "berlin": 0.9,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.97,
+        "pop": 0.85
+      }
     },
     "Product Management Intern": {
       "summary": "MBA candidate with 4 years of prior experience in management consulting and a summer product management internship at a fintech company. Scoped and launched a savings goal feature tested with 5,000 users. Brings structured problem solving, SQL and customer interview skills, and a strong interest in consumer finance products.",
@@ -2738,7 +3336,7 @@
           "startDate": "2021-08",
           "endDate": "2025-07",
           "isCurrent": false,
-          "description": "- Led workstreams on digital strategy projects for 6 banking and insurance clients\n- Built a customer journey analysis that informed a $12M mobile banking investment\n- Managed 2 analysts on market sizing and competitive benchmarking"
+          "description": "- Led workstreams on digital strategy projects for 6 banking and insurance clients\n- Built a customer journey analysis that informed a $12M mobile banking investment"
         }
       ],
       "education": [
@@ -2755,19 +3353,20 @@
           "endDate": "2021-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Stern product lab",
-          "link": "",
-          "description": "Semester-long product discovery for a startup's budgeting app; prototype tested with 20 students"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Product: PRDs, discovery interviews, prioritization, success metrics",
         "Data: SQL, Mode, Excel modeling, A/B test analysis",
-        "Consulting: market sizing, journey mapping, executive presentations",
-        "Tools: Jira, Figma, Notion"
-      ]
+        "Consulting: market sizing, journey mapping, executive presentations"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "iron": 0.99,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.99
+      }
     },
     "Lead Product Manager": {
       "summary": "Lead product manager with 10 years of experience owning end-to-end product areas in e-learning and edtech. Leads a product area of 3 squads and 1 associate PM. Drove a learning path redesign that raised course completion from 23% to 36% and grew enterprise renewals by $6M.",
@@ -2814,7 +3413,20 @@
         "Domain: e-learning, K-12, LTI 1.3, FERPA, COPPA",
         "Data: SQL, Amplitude, experimentation, retention analysis",
         "Stakeholders: sales and customer success alignment, executive reviews"
-      ]
+      ],
+      "fit": {
+        "silk": 0.96,
+        "minimalist": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.92,
+        "mono": 0.98,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     }
   }
 }

@@ -31,9 +31,9 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex-1 flex flex-col bg-white text-neutral-900 font-charis px-[12.7mm] py-[12.7mm] [--accent:var(--rs-accent,#111111)]">
             <header className="text-center break-inside-avoid">
                 {data.fullName.trim() && (
-                    <h1 className="text-[33px] font-bold leading-[1.1] [font-variant-caps:small-caps] tracking-[0.01em] wrap-break-word">
+                    <div role="heading" aria-level={1} className="text-[33px] font-bold leading-[1.1] [font-variant-caps:small-caps] tracking-[0.01em] wrap-break-word">
                         {data.fullName}
-                    </h1>
+                    </div>
                 )}
                 {data.title.trim() && <p className="mt-[3px] text-[14.67px] italic leading-snug text-neutral-800 wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (

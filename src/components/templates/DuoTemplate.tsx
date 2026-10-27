@@ -34,10 +34,10 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
             {hasHeader && (
                 <header className="-mx-[13mm] mb-[6mm] border-b border-(--accent)/40 px-[13mm] pb-[4mm] text-center">
                     {name && (
-                        <h1 className="text-[52px] leading-[1.15] text-[#2B2B2B] wrap-break-word">
+                        <div role="heading" aria-level={1} className="text-[52px] leading-[1.15] text-[#2B2B2B] wrap-break-word">
                             {firstName && <span className="font-light">{firstName} </span>}
                             <span className="font-normal">{lastName}</span>
-                        </h1>
+                        </div>
                     )}
                     {data.title.trim() && (
                         <p className="mt-1 font-raleway text-[14px] font-medium uppercase tracking-[0.16em] text-(--accent) wrap-break-word">{data.title}</p>

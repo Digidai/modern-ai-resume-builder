@@ -27,10 +27,10 @@ const ACTION_DURATION = 7000;
 const MAX_TOASTS = 3;
 
 const iconColor: Record<ToastType, string> = {
-  success: 'text-emerald-400',
-  error: 'text-red-400',
-  info: 'text-indigo-300',
-  warning: 'text-amber-300',
+  success: 'text-paper',
+  error: 'text-paper',
+  info: 'text-paper/80',
+  warning: 'text-paper',
 };
 
 const ICON_PATHS: Record<ToastType, string> = {
@@ -77,7 +77,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
           <div
             key={toast.id}
             role={toast.type === 'error' ? 'alert' : 'status'}
-            className="pointer-events-auto w-full sm:w-auto sm:max-w-sm flex items-center gap-3 pl-4 pr-2 py-2.5 rounded-xl shadow-lg shadow-slate-900/20 bg-slate-900 text-white ring-1 ring-white/10 dark:bg-slate-800 animate-enter"
+            className="pointer-events-auto w-full sm:w-auto sm:max-w-sm flex items-center gap-3 pl-4 pr-2 py-2.5 rounded-[2px] shadow-sheet bg-ink text-paper animate-enter"
           >
             <svg className={`w-5 h-5 shrink-0 ${iconColor[toast.type]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={ICON_PATHS[toast.type]} />
@@ -89,14 +89,14 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
                   toast.action?.onClick();
                   removeToast(toast.id);
                 }}
-                className="shrink-0 rounded-md px-2.5 py-1 text-sm font-semibold text-indigo-300 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+                className="focus-ring shrink-0 rounded-[2px] px-2.5 py-1 text-sm font-semibold text-paper underline underline-offset-4 hover:bg-paper/10"
               >
                 {toast.action.label}
               </button>
             )}
             <button
               onClick={() => removeToast(toast.id)}
-              className="shrink-0 rounded-md p-1.5 text-slate-400 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+              className="focus-ring shrink-0 rounded-[2px] p-1.5 text-paper/70 hover:text-paper hover:bg-paper/10"
               aria-label="Dismiss notification"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

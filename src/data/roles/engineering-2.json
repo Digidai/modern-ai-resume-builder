@@ -30,7 +30,7 @@
           "startDate": "2018-06",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Executed manual test plans for 3 quarterly releases and logged 400+ defects in Jira with reproducible steps\n- Wrote first Cypress smoke tests for login and billing, adopted as the team's nightly check"
+          "description": "- Executed manual test plans for 3 quarterly releases and logged 400+ defects in Jira with reproducible steps"
         }
       ],
       "education": [
@@ -41,19 +41,26 @@
           "endDate": "2018-05"
         }
       ],
-      "projects": [
-        {
-          "name": "flake-hunter",
-          "link": "github.com/qa-dev/flake-hunter",
-          "description": "CLI that reruns failing Playwright specs and clusters failures by stack trace to flag likely flaky tests"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Automation: Playwright, Cypress, Selenium WebDriver, REST Assured, Pact",
         "Languages: TypeScript, Java, Python",
-        "CI/CD: GitHub Actions, Jenkins, Docker, Allure reports",
-        "Practices: Test pyramid design, page object model, BDD with Cucumber, risk-based testing"
-      ]
+        "CI/CD: GitHub Actions, Jenkins, Docker, Allure reports"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "academic": 0.99,
+        "opal": 0.97,
+        "minimalist": 0.91,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "symmetry": 0.99,
+        "bronx": 0.98,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Performance Engineer": {
       "summary": "Performance engineer with 10 years of experience load testing and tuning high-traffic web and payment systems. Led capacity work that carried a ticketing platform through a 14x launch-day spike without downtime. Combines load modeling, JVM and database profiling, and clear reporting that engineering leaders act on.",
@@ -74,7 +81,7 @@
           "startDate": "2018-04",
           "endDate": "2021-06",
           "isCurrent": false,
-          "description": "- Built JMeter and Gatling suites for card authorization APIs, validating 4,000 TPS ahead of holiday peaks\n- Identified garbage collection pauses in the fraud scoring service and moved it to G1GC, trimming tail latency 45%\n- Published monthly capacity reports used to plan $1.2M in annual infrastructure spend"
+          "description": "- Built JMeter and Gatling suites for card authorization APIs, validating 4,000 TPS ahead of holiday peaks\n- Identified garbage collection pauses in the fraud scoring service and moved it to G1GC, trimming tail latency 45%"
         },
         {
           "company": "Northloop Media",
@@ -83,7 +90,7 @@
           "startDate": "2016-06",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Developed Java services for the video catalog and added caching that reduced origin requests by 60%\n- Ran first load tests for the streaming API, finding a thread pool limit before a major sports event"
+          "description": "- Developed Java services for the video catalog and added caching that reduced origin requests by 60%"
         }
       ],
       "education": [
@@ -98,9 +105,21 @@
       "skills": [
         "Load Testing: k6, Gatling, JMeter, Locust",
         "Profiling: async-profiler, JFR, perf, flame graphs, pg_stat_statements",
-        "Observability: Grafana, Prometheus, Datadog APM, OpenTelemetry",
-        "Platforms: Java/JVM, Go, PostgreSQL, Redis, Kubernetes, AWS"
-      ]
+        "Observability: Grafana, Prometheus, Datadog APM, OpenTelemetry"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "symmetry": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.9,
+        "mono": 0.93,
+        "pop": 0.89
+      }
     },
     "Observability Engineer": {
       "summary": "Observability engineer with 9 years in infrastructure and SRE roles, focused on metrics, tracing and logging platforms for microservice fleets. Rolled out OpenTelemetry across 220 services and cut mean time to detect from 18 to 4 minutes. Brings cost-aware telemetry design and SLO-driven alerting.",
@@ -130,7 +149,7 @@
           "startDate": "2017-06",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Replaced Nagios checks with Prometheus exporters for 300 Linux hosts\n- Centralized syslog into an ELK stack, shortening incident investigations from hours to minutes"
+          "description": "- Replaced Nagios checks with Prometheus exporters for 300 Linux hosts"
         }
       ],
       "education": [
@@ -141,19 +160,30 @@
           "endDate": "2017-05"
         }
       ],
-      "projects": [
-        {
-          "name": "slo-generator-templates",
-          "link": "github.com/obs-eng/slo-templates",
-          "description": "Jsonnet library that generates multi-window burn-rate alerts and Grafana panels from a single SLO spec"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "Telemetry: OpenTelemetry, Prometheus, Grafana Mimir, Loki, Tempo, Jaeger",
+        "Telemetry: OpenTelemetry, Prometheus, Grafana Mimir, Loki, Tempo",
         "Vendors: Datadog, Honeycomb, PagerDuty",
         "Infrastructure: Kubernetes, Terraform, Helm, AWS",
         "Practices: SLOs and error budgets, alert design, incident review, telemetry cost control"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "CI/CD Engineer": {
       "summary": "CI/CD engineer with 8 years of experience designing build and deployment pipelines for polyglot monorepos and Kubernetes platforms. Cut median pipeline time from 38 to 11 minutes for 300 developers. Brings deep GitHub Actions and Argo CD expertise, supply-chain security practices and reusable pipeline templates.",
@@ -183,7 +213,7 @@
           "startDate": "2018-06",
           "endDate": "2019-08",
           "isCurrent": false,
-          "description": "- Maintained nightly Maven builds and artifact publishing to Nexus for 12 Java services\n- Scripted release notes generation from Jira, saving release managers 3 hours per cycle"
+          "description": "- Maintained nightly Maven builds and artifact publishing to Nexus for 12 Java services"
         }
       ],
       "education": [
@@ -200,7 +230,23 @@
         "Delivery: Argo CD, Argo Rollouts, Helm, Kustomize, feature flags",
         "Build: Bazel, Gradle, Maven, Docker BuildKit, Nexus, Artifactory",
         "Supply Chain: Sigstore/cosign, SLSA, Syft SBOMs, Trivy, Dependabot"
-      ]
+      ],
+      "fit": {
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "professional": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Build Engineer": {
       "summary": "Build engineer with 10 years of experience owning large C++ and Java build systems for game and desktop software. Migrated a 9-million-line codebase to Bazel and cut clean builds from 95 to 22 minutes. Brings distributed caching, toolchain management and a developer-experience mindset.",
@@ -230,7 +276,7 @@
           "startDate": "2016-07",
           "endDate": "2018-02",
           "isCurrent": false,
-          "description": "- Maintained Makefiles and Jenkins jobs for embedded Linux images\n- Introduced ccache across build agents, trimming nightly build duration by 35%"
+          "description": "- Maintained Makefiles and Jenkins jobs for embedded Linux images"
         }
       ],
       "education": [
@@ -247,7 +293,22 @@
         "Caching and Execution: BuildBarn, ccache, Gradle Enterprise, Incredibuild",
         "Toolchains: Clang/LLVM, MSVC, GCC, console SDKs",
         "Automation: Python, Bash, Jenkins, TeamCity, Perforce, Git"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Release Engineer": {
       "summary": "Release engineer with 8 years of experience coordinating and automating releases for mobile and web products with millions of users. Moved a banking app from monthly to weekly store releases while lowering hotfix rates. Brings release train design, versioning discipline and calm handling of release-day risk.",
@@ -277,7 +338,7 @@
           "startDate": "2018-01",
           "endDate": "2019-04",
           "isCurrent": false,
-          "description": "- Packaged and deployed quarterly on-premise releases to 60 customer sites\n- Documented upgrade runbooks that cut customer upgrade tickets by 30%"
+          "description": "- Packaged and deployed quarterly on-premise releases to 60 customer sites"
         }
       ],
       "education": [
@@ -292,9 +353,19 @@
       "skills": [
         "Release Tooling: fastlane, GitHub Actions, Bitrise, LaunchDarkly, Firebase App Distribution",
         "Version Control: Git branching strategies, trunk-based development, semantic versioning",
-        "Quality Gates: Crashlytics, Sentry, phased rollouts, canary analysis",
-        "Process: Release trains, change management, SOX controls, release runbooks"
-      ]
+        "Quality Gates: Crashlytics, Sentry, phased rollouts, canary analysis"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.87
+      }
     },
     "Security Engineer": {
       "summary": "Security engineer with 9 years of experience securing cloud-native SaaS platforms across detection, hardening and secure development. Cut critical vulnerabilities open past SLA by 85% through automated remediation workflows. Brings hands-on AWS security, threat modeling and the ability to make secure defaults easy for developers.",
@@ -340,9 +411,25 @@
         "Cloud Security: AWS IAM, GuardDuty, Security Hub, Wiz, KMS",
         "AppSec: Semgrep, Snyk, threat modeling (STRIDE), secure code review",
         "Automation: Python, Terraform, Ansible",
-        "Compliance: SOC 2, ISO 27001, CIS Benchmarks",
-        "Certifications: OSCP, AWS Certified Security - Specialty"
-      ]
+        "Compliance: SOC 2, ISO 27001, CIS Benchmarks"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.89,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Application Security Engineer": {
       "summary": "Application security engineer with 8 years of experience embedding security into product engineering for web and API platforms. Scaled a security champions program to 22 teams and halved high-severity findings per release. Brings secure code review, scanner tuning that developers trust, and practical threat modeling.",
@@ -372,7 +459,7 @@
           "startDate": "2018-06",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Built PHP and React client sites and added CSP headers and parameterized queries across legacy code\n- Fixed 40 vulnerabilities found in a client audit within a 3-week window"
+          "description": "- Built PHP and React client sites and added CSP headers and parameterized queries across legacy code"
         }
       ],
       "education": [
@@ -387,10 +474,19 @@
       "skills": [
         "Testing: Burp Suite Pro, OWASP ZAP, manual code review, API security testing",
         "Tooling: Snyk, Semgrep, CodeQL, GitHub Advanced Security, HackerOne",
-        "Languages: Java, Python, JavaScript/TypeScript, Go",
-        "Frameworks: OWASP ASVS, OWASP Top 10, STRIDE, OAuth 2.0/OIDC",
-        "Certifications: GWEB, OSWE"
-      ]
+        "Languages: Java, Python, JavaScript/TypeScript, Go"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "bronx": 0.96,
+        "mono": 0.93,
+        "pop": 0.88
+      }
     },
     "DevSecOps Engineer": {
       "summary": "DevSecOps engineer with 9 years of experience building security controls into CI/CD and Kubernetes delivery for regulated workloads. Shifted container scanning, policy and secrets checks into pipelines for 160 services without slowing deploys. Brings infrastructure-as-code security, policy-as-code and FedRAMP-aligned automation.",
@@ -436,9 +532,25 @@
         "Pipeline Security: Trivy, Checkov, Gitleaks, SonarQube, cosign",
         "Policy and Secrets: Kyverno, OPA Gatekeeper, HashiCorp Vault, AWS KMS",
         "Infrastructure: Kubernetes (EKS), Terraform, GitLab CI, Ansible",
-        "Compliance: FedRAMP, NIST 800-53, DISA STIGs",
-        "Certifications: CKS, Security+, AWS Certified DevOps Engineer"
-      ]
+        "Compliance: FedRAMP, NIST 800-53, DISA STIGs"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "executive": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "path": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Security Architect": {
       "summary": "Security architect with 13 years in security engineering and architecture across financial services and SaaS. Designed the zero trust architecture that retired a legacy VPN for 6,500 employees. Brings enterprise reference architectures, risk-based decision making and the ability to align engineering, audit and executives on security direction.",
@@ -468,7 +580,7 @@
           "startDate": "2013-06",
           "endDate": "2016-07",
           "isCurrent": false,
-          "description": "- Managed Palo Alto firewalls and segmentation for 40 offices\n- Rebuilt DMZ architecture, reducing internet-exposed services from 75 to 18"
+          "description": "- Managed Palo Alto firewalls and segmentation for 40 offices"
         }
       ],
       "education": [
@@ -482,11 +594,27 @@
       "projects": [],
       "skills": [
         "Architecture: Zero trust, cloud landing zones, IAM, data protection, threat modeling",
-        "Platforms: AWS, Azure, Okta, Zscaler, Palo Alto, CyberArk",
+        "Platforms: AWS, Azure, Okta, Zscaler, Palo Alto",
         "Frameworks: NIST CSF, SABSA, PCI DSS 4.0, NYDFS Part 500, ISO 27001",
-        "Leadership: Architecture review boards, risk acceptance, executive briefings",
-        "Certifications: CISSP-ISSAP, CCSP"
-      ]
+        "Leadership: Architecture review boards, risk acceptance, executive briefings"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.96,
+        "opal": 0.94,
+        "minimalist": 0.91,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Cloud Security Engineer": {
       "summary": "Cloud security engineer with 8 years of experience protecting AWS and GCP environments for high-growth SaaS companies. Reduced public cloud misconfigurations by 78% through preventive guardrails rather than tickets. Brings CSPM tuning, identity hardening and infrastructure-as-code reviews that keep delivery fast.",
@@ -516,7 +644,7 @@
           "startDate": "2018-07",
           "endDate": "2020-02",
           "isCurrent": false,
-          "description": "- Resolved 900+ customer tickets on EC2, IAM and networking issues with a 96% satisfaction score\n- Wrote knowledge base articles on least-privilege IAM that cut repeat tickets 25%"
+          "description": "- Resolved 900+ customer tickets on EC2, IAM and networking issues with a 96% satisfaction score"
         }
       ],
       "education": [
@@ -532,9 +660,24 @@
         "Cloud: AWS Organizations, IAM, SCPs, GCP org policies, VPC security",
         "Tooling: Prisma Cloud, Wiz, tfsec, OPA, Steampipe, Splunk",
         "Automation: Python, Terraform, AWS Lambda, EventBridge",
-        "Frameworks: CIS AWS Foundations, CSA CCM, SOC 2",
-        "Certifications: AWS Certified Security - Specialty, CCSK"
-      ]
+        "Frameworks: CIS AWS Foundations, CSA CCM, SOC 2"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.98,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.99
+      }
     },
     "IAM Engineer": {
       "summary": "Identity and access management engineer with 9 years of experience running workforce and privileged access programs for enterprises of 10,000+ users. Automated joiner-mover-leaver provisioning that cut access removal from 5 days to under 1 hour. Brings Okta, SailPoint and CyberArk depth plus audit-ready access governance.",
@@ -564,7 +707,7 @@
           "startDate": "2017-01",
           "endDate": "2018-09",
           "isCurrent": false,
-          "description": "- Administered Active Directory and Group Policy for 900 users across 22 branches\n- Cleaned up 1,400 stale accounts and nested groups ahead of an NCUA examination"
+          "description": "- Administered Active Directory and Group Policy for 900 users across 22 branches"
         }
       ],
       "education": [
@@ -580,9 +723,21 @@
         "Identity Platforms: Okta, Microsoft Entra ID, Active Directory, Ping Identity",
         "Governance: SailPoint IdentityNow, access certifications, RBAC, SoD rules",
         "Privileged Access: CyberArk PAM, BeyondTrust, just-in-time access",
-        "Protocols: SAML 2.0, OIDC, OAuth 2.0, SCIM, LDAP",
-        "Certifications: Okta Certified Professional, SailPoint IdentityNow Engineer, CISSP"
-      ]
+        "Protocols: SAML 2.0, OIDC, OAuth 2.0, SCIM, LDAP"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Security Operations Engineer": {
       "summary": "Security operations engineer with 8 years in SOC and detection engineering for e-commerce and SaaS environments. Automated 70% of tier-1 alert triage with SOAR playbooks, freeing analysts for real investigations. Brings SIEM engineering, detection content development and incident handling across cloud and endpoint.",
@@ -628,9 +783,25 @@
         "SIEM and SOAR: Splunk ES, Microsoft Sentinel, Tines, Cortex XSOAR",
         "Endpoint and Cloud: CrowdStrike Falcon, AWS GuardDuty, Okta logs",
         "Detection: Sigma, KQL, SPL, MITRE ATT&CK, YARA",
-        "Scripting: Python, PowerShell",
-        "Certifications: GCIH, GCDA, Security+"
-      ]
+        "Scripting: Python, PowerShell"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "Security Analyst": {
       "summary": "Security analyst with 6 years of experience monitoring, investigating and reporting on threats for a mid-size financial services firm. Reduced phishing click rates from 14% to 3% through targeted simulations and fast mailbox remediation. Brings SIEM investigation skills, vulnerability tracking and clear incident write-ups for non-technical stakeholders.",
@@ -676,9 +847,23 @@
         "Monitoring: Microsoft Sentinel, Defender for Endpoint, KQL",
         "Vulnerability Management: Qualys VMDR, Tenable.io",
         "Awareness and Email: KnowBe4, Proofpoint",
-        "Frameworks: NIST CSF, MITRE ATT&CK, HIPAA, GLBA",
-        "Certifications: CompTIA Security+, CySA+"
-      ]
+        "Frameworks: NIST CSF, MITRE ATT&CK, HIPAA, GLBA"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.99
+      }
     },
     "Threat Intelligence Analyst": {
       "summary": "Threat intelligence analyst with nearly 7 years of experience producing strategic and tactical intelligence for retail and financial organizations. Built a priority intelligence requirements program that turned feed noise into 40 actionable detections per quarter. Brings ransomware and fraud actor tracking, dark web research and concise executive briefings.",
@@ -720,10 +905,21 @@
       "skills": [
         "Intelligence Platforms: MISP, Recorded Future, ThreatConnect, VirusTotal",
         "Analysis: Diamond Model, Cyber Kill Chain, MITRE ATT&CK, structured analytic techniques",
-        "Research: OSINT, dark web monitoring, malware infrastructure pivoting",
-        "Technical: Python, STIX/TAXII, Splunk, YARA",
-        "Certifications: GCTI, CTIA"
-      ]
+        "Research: OSINT, dark web monitoring, malware infrastructure pivoting"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "opal": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.93
+      }
     },
     "Vulnerability Management Analyst": {
       "summary": "Vulnerability management analyst with 8 years of experience running scanning, prioritization and remediation programs across hybrid estates of 10,000+ assets. Shifted prioritization to exploitability data and cut critical exposure windows from 45 to 12 days. Brings scanner administration, risk-based reporting and patient follow-through with infrastructure teams.",
@@ -753,7 +949,7 @@
           "startDate": "2018-06",
           "endDate": "2019-07",
           "isCurrent": false,
-          "description": "- Deployed Windows patches via WSUS to 600 workstations for managed clients\n- Imaged and configured 150 laptops per quarter"
+          "description": "- Deployed Windows patches via WSUS to 600 workstations for managed clients"
         }
       ],
       "education": [
@@ -768,10 +964,19 @@
       "skills": [
         "Scanning: Tenable.sc, Nessus, Qualys VMDR, Rapid7 InsightVM, Claroty",
         "Prioritization: CVSS, EPSS, CISA KEV, asset criticality scoring",
-        "Reporting: Power BI, ServiceNow VR, Excel",
-        "Remediation: SCCM/Intune patching, configuration baselines, exception management",
-        "Certifications: CompTIA CySA+, Tenable Certified Nessus Auditor"
-      ]
+        "Reporting: Power BI, ServiceNow VR, Excel"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "bronx": 0.93,
+        "mono": 0.93,
+        "pop": 0.96
+      }
     },
     "Digital Forensics Analyst": {
       "summary": "Digital forensics analyst with nearly 8 years of experience conducting computer, mobile and cloud investigations for corporate legal, HR and incident response cases. Examined devices in 180+ matters with evidence that held up in litigation and arbitration. Brings rigorous chain of custody, timeline analysis and expert-quality reports.",
@@ -808,9 +1013,18 @@
         "Forensic Tools: Magnet AXIOM, EnCase, FTK, Cellebrite UFED, X-Ways",
         "Artifacts: Windows registry, event logs, APFS, iOS/Android, Microsoft 365 audit logs",
         "Incident Response: KAPE, Velociraptor, memory analysis with Volatility",
-        "Legal Process: Chain of custody, e-discovery support, expert reports, testimony",
-        "Certifications: EnCE, GCFE, Cellebrite Certified Mobile Examiner"
-      ]
+        "Legal Process: Chain of custody, e-discovery support, expert reports, testimony"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.91
+      }
     },
     "Malware Analyst": {
       "summary": "Malware analyst with 7 years of experience reverse engineering Windows and Linux threats for an endpoint security vendor. Analyzed 1,500+ samples and authored detections protecting 3 million endpoints. Brings static and dynamic analysis, unpacking of obfuscated loaders and clear technical write-ups for customers and researchers.",
@@ -853,9 +1067,23 @@
         "Reverse Engineering: IDA Pro, Ghidra, x64dbg, dnSpy, Binary Ninja",
         "Dynamic Analysis: CAPE sandbox, Procmon, Wireshark, Frida",
         "Detection: YARA, Sigma, Suricata",
-        "Languages: Python, C, x86/x64 assembly",
-        "Certifications: GREM"
-      ]
+        "Languages: Python, C, x86/x64 assembly"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.9,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.85
+      }
     },
     "GRC Analyst": {
       "summary": "GRC analyst with 5 years of experience running compliance programs for SaaS companies selling to enterprise and healthcare buyers. Led SOC 2 Type II and ISO 27001 audits to clean opinions while cutting evidence collection effort in half. Brings control mapping, risk registers, vendor reviews and fast security questionnaire turnaround.",
@@ -891,10 +1119,16 @@
       "skills": [
         "Frameworks: SOC 2, ISO 27001, HIPAA, NIST CSF, CIS Controls",
         "Tools: Vanta, Drata, OneTrust, Jira, Confluence",
-        "Risk: Risk registers, vendor risk management, policy writing, control testing",
-        "Audit: Evidence management, auditor coordination, gap assessments",
-        "Certifications: CISA (in progress), ISO 27001 Lead Implementer"
-      ]
+        "Risk: Risk registers, vendor risk management, policy writing, control testing"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.98,
+        "ginto": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.87,
+        "pop": 0.99
+      }
     },
     "Penetration Tester": {
       "summary": "Penetration tester with nearly 7 years of offensive security experience across web applications, internal networks and Active Directory for clients in healthcare, retail and finance. Delivered 120+ engagements, including domain compromise paths that drove client segmentation projects. Brings methodical testing, clean exploit documentation and remediation guidance developers can act on.",
@@ -924,7 +1158,7 @@
           "startDate": "2018-07",
           "endDate": "2019-12",
           "isCurrent": false,
-          "description": "- Maintained switches and wireless for 14 school buildings serving 9,000 students\n- Rolled out 802.1X authentication on staff networks with zero classroom downtime"
+          "description": "- Maintained switches and wireless for 14 school buildings serving 9,000 students"
         }
       ],
       "education": [
@@ -935,20 +1169,24 @@
           "endDate": "2018-05"
         }
       ],
-      "projects": [
-        {
-          "name": "adcs-recon",
-          "link": "github.com/redteam-notes/adcs-recon",
-          "description": "Python helper that enumerates vulnerable certificate templates and maps them to ESC1-ESC8 attack paths for reporting"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "Offensive Tools: Burp Suite Pro, Metasploit, Cobalt Strike, BloodHound, Impacket, Nmap",
+        "Offensive Tools: Burp Suite Pro, Metasploit, Cobalt Strike, BloodHound, Impacket",
         "Testing Scope: Web apps, APIs, Active Directory, internal and external networks, wireless",
-        "Scripting: Python, PowerShell, Bash",
-        "Methodologies: PTES, OWASP WSTG, PCI DSS segmentation testing",
-        "Certifications: OSCP, OSEP, GPEN"
-      ]
+        "Scripting: Python, PowerShell, Bash"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "quartz": 0.98,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.89
+      }
     },
     "SOC Analyst": {
       "summary": "SOC analyst with 4 years of experience monitoring and triaging alerts for a managed security provider covering 40 client environments. Handles 50+ alerts per shift with a 97% SLA attainment and a low false escalation rate. Brings SIEM and EDR investigation skills, clean ticket notes and steady performance on a 24/7 rotation.",
@@ -978,7 +1216,7 @@
           "startDate": "2021-05",
           "endDate": "2021-08",
           "isCurrent": false,
-          "description": "- Reviewed firewall logs weekly and flagged 6 misconfigured remote access rules\n- Built a phishing report mailbox workflow that routed user reports to IT within minutes"
+          "description": "- Reviewed firewall logs weekly and flagged 6 misconfigured remote access rules"
         }
       ],
       "education": [
@@ -995,7 +1233,20 @@
         "Investigation: Email header analysis, log correlation, IOC enrichment, VirusTotal, URLScan",
         "Frameworks: MITRE ATT&CK, NIST incident handling lifecycle",
         "Certifications: CompTIA Security+, CySA+, Splunk Core Certified User"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Incident Response Analyst": {
       "summary": "Incident response analyst with 7 years of experience investigating ransomware, business email compromise and insider cases for healthcare and manufacturing clients. Led scoping and containment on 60+ incidents, restoring operations for a hospital network in under 72 hours. Brings DFIR tooling, calm crisis communication and evidence handling suited to legal and insurance review.",
@@ -1035,11 +1286,23 @@
       ],
       "projects": [],
       "skills": [
-        "DFIR Tools: Velociraptor, KAPE, Volatility, Plaso, Eric Zimmerman tools, CrowdStrike RTR",
+        "DFIR Tools: Velociraptor, KAPE, Volatility, Plaso, Eric Zimmerman tools",
         "Analysis: Windows and Linux forensics, memory analysis, Microsoft 365 and Azure AD log review",
-        "Process: NIST 800-61, chain of custody, tabletop exercises, executive briefings",
-        "Certifications: GCFA, GCIH"
-      ]
+        "Process: NIST 800-61, chain of custody, tabletop exercises, executive briefings"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.93
+      }
     },
     "Machine Learning Engineer": {
       "summary": "Machine learning engineer with 8 years of experience building and serving ranking and risk models in production. Shipped a credit decisioning model that cut loss rates by 18% at constant approval volume. Brings end-to-end ownership from feature pipelines to low-latency serving, plus rigorous offline and online evaluation.",
@@ -1069,7 +1332,7 @@
           "startDate": "2018-07",
           "endDate": "2019-08",
           "isCurrent": false,
-          "description": "- Analyzed bid landscape data to set floor prices, adding $1.1M in annual publisher revenue\n- Productionized first Python scoring service with the platform team"
+          "description": "- Analyzed bid landscape data to set floor prices, adding $1.1M in annual publisher revenue"
         }
       ],
       "education": [
@@ -1090,9 +1353,24 @@
       "skills": [
         "Modeling: XGBoost, LightGBM, PyTorch, TensorFlow, scikit-learn",
         "Data and Features: Spark, Airflow, Feast, Snowflake, Kafka",
-        "Serving: FastAPI, Docker, Kubernetes, SageMaker, MLflow",
-        "Evaluation: A/B testing, calibration, SHAP explainability, fairness testing"
-      ]
+        "Serving: FastAPI, Docker, Kubernetes, SageMaker, MLflow"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.96,
+        "minimalist": 0.87,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "symmetry": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.89
+      }
     },
     "Deep Learning Engineer": {
       "summary": "Deep learning engineer with 7 years of experience training and optimizing neural networks for speech recognition at scale. Led a conformer model rewrite that cut word error rate by 21% on noisy call audio. Brings distributed training on multi-node GPU clusters, mixed-precision optimization and careful experiment design.",
@@ -1130,19 +1408,24 @@
           "endDate": "2017-05"
         }
       ],
-      "projects": [
-        {
-          "name": "Streaming ASR distillation write-up",
-          "link": "github.com/dl-speech/streaming-distill",
-          "description": "Open-source recipe and benchmarks for distilling conformer ASR models into streaming-friendly students"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Frameworks: PyTorch, PyTorch Lightning, JAX, Hugging Face Transformers",
         "Training at Scale: FSDP, DeepSpeed, mixed precision, Slurm, NCCL",
-        "Optimization: Quantization, distillation, ONNX Runtime, TensorRT",
-        "Domain: Speech recognition, audio signal processing, sequence models"
-      ]
+        "Optimization: Quantization, distillation, ONNX Runtime, TensorRT"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "iron": 0.92,
+        "ginto": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.91,
+        "mono": 0.99,
+        "pop": 0.96
+      }
     },
     "NLP Engineer": {
       "summary": "NLP engineer with 7 years of experience building text classification, extraction and search systems for legal and customer service documents. Launched a clause extraction model that reduced contract review time by 60% for 400 law firm users. Brings transformer fine-tuning, annotation program design and production-grade evaluation.",
@@ -1154,7 +1437,7 @@
           "startDate": "2022-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Fine-tuned DeBERTa models to extract 45 clause types from contracts at 0.91 F1, cutting attorney review time 60%\n- Built a hybrid BM25 and dense retrieval search over 12M documents, improving recall@10 from 0.62 to 0.84\n- Designed annotation guidelines and a Label Studio workflow with 6 paralegals, reaching 0.87 inter-annotator agreement\n- Added PII redaction to the ingestion pipeline to meet client confidentiality requirements"
+          "description": "- Fine-tuned DeBERTa models to extract 45 clause types from contracts at 0.91 F1, cutting attorney review time 60%\n- Built a hybrid BM25 and dense retrieval search over 12M documents, improving recall@10 from 0.62 to 0.84\n- Designed annotation guidelines and a Label Studio workflow with 6 paralegals, reaching 0.87 inter-annotator agreement"
         },
         {
           "company": "Harbor Call Analytics",
@@ -1172,21 +1455,22 @@
           "degree": "M.S. Computer Sciences",
           "startDate": "2017-09",
           "endDate": "2019-05"
-        },
-        {
-          "school": "University of Minnesota",
-          "degree": "B.A. Linguistics and Computer Science",
-          "startDate": "2013-09",
-          "endDate": "2017-05"
         }
       ],
       "projects": [],
       "skills": [
         "NLP: Transformers, spaCy, sentence-transformers, named entity recognition, text classification",
         "Search: Elasticsearch, BM25, FAISS, hybrid retrieval, reranking",
-        "Tooling: PyTorch, Hugging Face, Label Studio, Weights & Biases",
-        "Production: FastAPI, Docker, AWS SageMaker, evaluation with precision/recall/F1"
-      ]
+        "Tooling: PyTorch, Hugging Face, Label Studio, Weights & Biases"
+      ],
+      "fit": {
+        "berlin": 0.99,
+        "iron": 0.93,
+        "ginto": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.87,
+        "pop": 0.94
+      }
     },
     "Computer Vision Engineer": {
       "summary": "Computer vision engineer with 7 years of experience deploying detection and segmentation models on edge devices for agriculture and robotics. Built a weed detection system running on 300 sprayers that reduced herbicide use by 62%. Brings dataset strategy, model optimization for Jetson hardware and field validation discipline.",
@@ -1216,7 +1500,7 @@
           "startDate": "2018-06",
           "endDate": "2018-08",
           "isCurrent": false,
-          "description": "- Built a synthetic data generator in Blender that added 20,000 labeled parcel images\n- Benchmarked 4 pose estimation models on in-house parcels"
+          "description": "- Built a synthetic data generator in Blender that added 20,000 labeled parcel images"
         }
       ],
       "education": [
@@ -1237,9 +1521,27 @@
       "skills": [
         "Vision: Object detection, instance segmentation, stereo depth, multi-camera calibration",
         "Frameworks: PyTorch, OpenCV, Ultralytics YOLO, Detectron2",
-        "Edge Deployment: NVIDIA Jetson, TensorRT, ONNX, DeepStream, C++",
-        "Data: CVAT, active learning, synthetic data with Blender"
-      ]
+        "Edge Deployment: NVIDIA Jetson, TensorRT, ONNX, DeepStream, C++"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.96,
+        "lateral": 0.99,
+        "opal": 0.95,
+        "minimalist": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.95
+      }
     },
     "MLOps Engineer": {
       "summary": "MLOps engineer with 8 years in DevOps and ML platform roles, building the infrastructure data scientists use to train, ship and monitor models. Cut time from trained model to production from 6 weeks to 3 days for 40 data scientists. Brings Kubernetes, reproducible pipelines and drift monitoring for regulated insurance models.",
@@ -1269,7 +1571,7 @@
           "startDate": "2018-01",
           "endDate": "2019-05",
           "isCurrent": false,
-          "description": "- Automated server builds with Ansible for 200 Linux hosts\n- Maintained Docker registry and image cleanup jobs"
+          "description": "- Automated server builds with Ansible for 200 Linux hosts"
         }
       ],
       "education": [
@@ -1284,10 +1586,19 @@
       "skills": [
         "ML Platform: Kubeflow Pipelines, MLflow, BentoML, Feast, Evidently",
         "Infrastructure: Kubernetes (EKS), Terraform, Argo CD, Helm, GPU scheduling",
-        "Languages: Python, Bash, Go",
-        "Governance: Model registry, lineage tracking, NAIC model risk guidance",
-        "Certifications: CKA, AWS Certified Machine Learning - Specialty"
-      ]
+        "Languages: Python, Bash, Go"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.94,
+        "quartz": 0.98,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.92
+      }
     },
     "AI Engineer": {
       "summary": "AI engineer with 7 years of software experience, including nearly 3 years shipping LLM-powered features in a B2B support platform. Launched an AI reply assistant now drafting 1.2M responses a month with a 41% reduction in handle time. Brings product-minded engineering, retrieval pipelines, evaluation suites and cost control for model APIs.",
@@ -1317,7 +1628,7 @@
           "startDate": "2019-07",
           "endDate": "2021-07",
           "isCurrent": false,
-          "description": "- Developed Python shipment tracking APIs integrating 18 carrier feeds\n- Added OCR-based bill of lading parsing that saved dispatchers 15 hours weekly"
+          "description": "- Developed Python shipment tracking APIs integrating 18 carrier feeds"
         }
       ],
       "education": [
@@ -1334,7 +1645,22 @@
         "Retrieval: pgvector, Elasticsearch, embeddings, rerankers",
         "Evaluation: LLM-as-judge rubrics, golden datasets, Langfuse tracing",
         "Engineering: TypeScript, Python, Node.js, PostgreSQL, AWS"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "AI Research Engineer": {
       "summary": "AI research engineer with 4 years of experience turning research ideas into reliable experiments on efficient language model training. Co-authored 3 workshop and conference papers and built the training codebase used by a 12-person research group. Brings fast prototyping, reproducible experimentation and strong systems skills for large GPU runs.",
@@ -1372,19 +1698,24 @@
           "endDate": "2021-06"
         }
       ],
-      "projects": [
-        {
-          "name": "moe-lite",
-          "link": "github.com/ar-eng/moe-lite",
-          "description": "Minimal JAX implementation of top-2 mixture-of-experts layers with load balancing loss and benchmark scripts"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Research: Language model pretraining, mixture of experts, data selection, ablation design",
         "Frameworks: JAX, Flax, PyTorch, Triton kernels",
-        "Systems: TPU and GPU clusters, Slurm, sharded checkpointing, Weights & Biases",
-        "Publications: ICLR 2025, NeurIPS 2024 workshop, EMNLP 2023 findings"
-      ]
+        "Systems: TPU and GPU clusters, Slurm, sharded checkpointing, Weights & Biases"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.99,
+        "ginto": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.96
+      }
     },
     "Prompt Engineer": {
       "summary": "Prompt engineer with 3 years of LLM product experience following 4 years as a technical writer in software documentation. Designed prompts and evaluation sets behind an AI drafting tool used by 25,000 marketers, lifting acceptance rates by 32%. Brings systematic prompt iteration, rubric-based evaluation and clear guidance for product teams.",
@@ -1422,7 +1753,18 @@
         "Evaluation: Rubric design, LLM-as-judge, A/B testing, promptfoo, Langfuse",
         "Models and APIs: OpenAI, Anthropic Claude, Gemini, function calling",
         "Technical: Python, SQL, Jupyter, Markdown documentation"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "LLM Engineer": {
       "summary": "LLM engineer with 8 years of backend and ML experience, now focused on fine-tuning and serving open-weight language models. Moved a healthcare summarization workload from a hosted API to a fine-tuned 8B model, cutting cost by 80% at equal quality. Brings vLLM serving, LoRA fine-tuning and safety evaluation for regulated data.",
@@ -1452,7 +1794,7 @@
           "startDate": "2018-06",
           "endDate": "2020-07",
           "isCurrent": false,
-          "description": "- Developed Python and Go services for a scheduling product with 1,500 clinics\n- Reduced API error rates from 1.8% to 0.2% through retries and idempotency keys"
+          "description": "- Developed Python and Go services for a scheduling product with 1,500 clinics"
         }
       ],
       "education": [
@@ -1465,11 +1807,20 @@
       ],
       "projects": [],
       "skills": [
-        "LLMs: Llama, Mistral, Qwen, LoRA/QLoRA, DPO, prompt and context engineering",
+        "LLMs: Llama, Mistral, Qwen, LoRA/QLoRA, DPO",
         "Serving: vLLM, TGI, Ray Serve, quantization (AWQ, GPTQ)",
-        "Evaluation and Safety: Faithfulness scoring, red teaming, guardrails, human annotation",
-        "Engineering: Python, Go, PyTorch, Hugging Face, Kubernetes, AWS"
-      ]
+        "Evaluation and Safety: Faithfulness scoring, red teaming, guardrails, human annotation"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.89,
+        "ginto": 0.93,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.92
+      }
     },
     "Cloud Architect": {
       "summary": "Cloud architect with 12 years in infrastructure and architecture roles, leading enterprise migrations to AWS and Azure. Directed the move of 900 applications out of two data centers, saving $11M over three years. Brings landing zone design, FinOps governance and the ability to align application, security and finance leaders on one roadmap.",
@@ -1499,7 +1850,7 @@
           "startDate": "2014-06",
           "endDate": "2017-03",
           "isCurrent": false,
-          "description": "- Managed VMware clusters hosting 600 VMs for 40 clients\n- Consolidated storage arrays, reducing hardware maintenance costs 30%"
+          "description": "- Managed VMware clusters hosting 600 VMs for 40 clients"
         }
       ],
       "education": [
@@ -1515,9 +1866,21 @@
         "Cloud Platforms: AWS, Microsoft Azure, hybrid connectivity, VMware Cloud",
         "Architecture: Landing zones, migration strategy (7 Rs), DR design, Well-Architected reviews",
         "Governance: FinOps, tagging, policy as code, HIPAA and HITRUST",
-        "Tooling: Terraform, Control Tower, Azure Policy, CloudHealth",
-        "Certifications: AWS Solutions Architect - Professional, Azure Solutions Architect Expert, TOGAF"
-      ]
+        "Tooling: Terraform, Control Tower, Azure Policy, CloudHealth"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "opal": 0.97,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85
+      }
     },
     "Cloud Solutions Architect": {
       "summary": "Cloud solutions architect with 10 years of experience designing customer-facing cloud solutions for a managed services provider. Led architecture for 70+ client projects, converting assessments into $14M in signed migration and managed services work. Brings pre-sales discovery, reference architectures and hands-on proofs of concept across AWS and GCP.",
@@ -1547,7 +1910,7 @@
           "startDate": "2016-01",
           "endDate": "2018-02",
           "isCurrent": false,
-          "description": "- Supported Windows and Linux servers for 500 users across 3 offices\n- Implemented site-to-site VPNs and backup policies with 15-minute RPO"
+          "description": "- Supported Windows and Linux servers for 500 users across 3 offices"
         }
       ],
       "education": [
@@ -1563,9 +1926,22 @@
         "Platforms: AWS, Google Cloud, Kubernetes, serverless",
         "Solutioning: Discovery workshops, TCO models, statements of work, reference architectures",
         "Delivery: Terraform, migration tooling, landing zones, DR runbooks",
-        "Communication: Executive presentations, whiteboarding, technical proposals",
-        "Certifications: AWS Solutions Architect - Professional, Google Professional Cloud Architect"
-      ]
+        "Communication: Executive presentations, whiteboarding, technical proposals"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.92,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "AWS Solutions Architect": {
       "summary": "AWS solutions architect with 9 years in cloud engineering and architecture, specializing in serverless and data platforms on AWS. Designed an event-driven order platform that handles 25x holiday peaks at 40% lower cost than the EC2 design it replaced. Brings Well-Architected reviews, cost modeling and hands-on CDK and Terraform delivery.",
@@ -1595,7 +1971,7 @@
           "startDate": "2017-06",
           "endDate": "2018-12",
           "isCurrent": false,
-          "description": "- Moved build servers and staging environments from on-premise VMware to EC2\n- Automated nightly RDS snapshots and restore testing"
+          "description": "- Moved build servers and staging environments from on-premise VMware to EC2"
         }
       ],
       "education": [
@@ -1608,11 +1984,21 @@
       ],
       "projects": [],
       "skills": [
-        "AWS Services: Lambda, EventBridge, DynamoDB, ECS, EKS, S3, Aurora, CloudFront, Route 53",
+        "AWS Services: Lambda, EventBridge, DynamoDB, ECS, EKS",
         "Architecture: Well-Architected Framework, event-driven design, multi-Region DR, cost optimization",
-        "IaC: AWS CDK, Terraform, CloudFormation",
-        "Certifications: AWS Solutions Architect - Professional, AWS Certified Data Engineer - Associate"
-      ]
+        "IaC: AWS CDK, Terraform, CloudFormation"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "bronx": 0.96,
+        "mono": 0.95,
+        "pop": 0.88
+      }
     },
     "Azure Solutions Architect": {
       "summary": "Azure solutions architect with 11 years in Microsoft infrastructure and cloud, designing secure Azure platforms for manufacturers and public sector agencies. Led a 450-server migration to Azure that closed a data center two months early. Brings hub-and-spoke networking, Entra ID integration and governance through Azure Policy at enterprise scale.",
@@ -1642,7 +2028,7 @@
           "startDate": "2015-06",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Managed Windows Server, Hyper-V and backups for 35 small business clients\n- Standardized onboarding scripts in PowerShell, saving 3 hours per new user"
+          "description": "- Managed Windows Server, Hyper-V and backups for 35 small business clients"
         }
       ],
       "education": [
@@ -1658,9 +2044,25 @@
         "Azure: Landing zones, ExpressRoute, Azure Firewall, AKS, Azure SQL, Azure Virtual Desktop",
         "Identity and Security: Entra ID, Conditional Access, Defender for Cloud, Azure Policy",
         "IaC and Automation: Bicep, Terraform, PowerShell, Azure DevOps",
-        "Frameworks: Cloud Adoption Framework, Azure Well-Architected",
-        "Certifications: Azure Solutions Architect Expert, Azure Security Engineer Associate"
-      ]
+        "Frameworks: Cloud Adoption Framework, Azure Well-Architected"
+      ],
+      "fit": {
+        "modern": 0.92,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.95,
+        "minimalist": 0.91,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
+      }
     },
     "Cloud Engineer": {
       "summary": "Cloud engineer with 5 years of experience building and operating AWS infrastructure for a growing SaaS company. Codified 100% of production infrastructure in Terraform and cut monthly cloud costs by 27% through right-sizing and scheduling. Brings reliable automation, solid networking fundamentals and practical on-call experience.",
@@ -1692,19 +2094,23 @@
           "endDate": "2021-05"
         }
       ],
-      "projects": [
-        {
-          "name": "terraform-aws-baseline",
-          "link": "github.com/cloudops-nc/aws-baseline",
-          "description": "Terraform module that bootstraps an AWS account with CloudTrail, GuardDuty, budgets and baseline IAM roles"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "AWS: EC2, ECS Fargate, RDS, S3, VPC, Transit Gateway, IAM, CloudWatch",
+        "AWS: EC2, ECS Fargate, RDS, S3, VPC",
         "IaC and CI: Terraform, GitHub Actions, Atlantis",
         "Scripting: Python, Bash",
         "Certifications: AWS Solutions Architect - Associate, HashiCorp Terraform Associate"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.96,
+        "ginto": 0.94,
+        "quartz": 0.97,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.95
+      }
     },
     "AWS Cloud Engineer": {
       "summary": "AWS cloud engineer with 6 years of experience running containerized and serverless workloads for media and fintech companies. Built the EKS platform that hosts 90 services with 99.97% availability. Brings deep AWS networking and IAM knowledge, Terraform discipline and steady cost and security hygiene.",
@@ -1738,12 +2144,20 @@
       ],
       "projects": [],
       "skills": [
-        "AWS: EKS, Lambda, Step Functions, Batch, CloudFront, S3, IAM, VPC, KMS",
+        "AWS: EKS, Lambda, Step Functions, Batch, CloudFront, S3",
         "Kubernetes: Karpenter, Helm, Argo CD, IRSA",
         "IaC: Terraform, AWS CDK",
-        "Monitoring: CloudWatch, Datadog, AWS Cost Explorer",
-        "Certifications: AWS DevOps Engineer - Professional, AWS SysOps Administrator - Associate"
-      ]
+        "Monitoring: CloudWatch, Datadog, AWS Cost Explorer"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "pop": 0.95
+      }
     },
     "Azure Cloud Engineer": {
       "summary": "Azure cloud engineer with 6 years of experience supporting Microsoft-centric enterprises, moving from Windows administration to Azure infrastructure. Automated environment provisioning with Bicep and Azure DevOps, cutting new environment setup from 3 weeks to 2 days. Brings AKS, Azure networking and hands-on cost governance.",
@@ -1781,7 +2195,18 @@
         "Automation: Bicep, Terraform, PowerShell, Azure DevOps Pipelines",
         "Operations: Azure Monitor, Log Analytics, KQL, Cost Management",
         "Certifications: AZ-104 Azure Administrator, AZ-400 DevOps Engineer Expert"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.97,
+        "pop": 0.89
+      }
     },
     "Google Cloud Engineer": {
       "summary": "Google Cloud engineer with 5 years of experience building data-heavy platforms on GCP for adtech and retail analytics. Migrated a 400 TB Hadoop estate to BigQuery and Dataproc Serverless, cutting query costs by 45%. Brings GKE operations, IAM design and Terraform-driven project factories.",
@@ -1819,7 +2244,17 @@
         "Security: IAM, Workload Identity, Binary Authorization, Organization Policies",
         "IaC and CI: Terraform, Cloud Build, GitHub Actions",
         "Certifications: Google Professional Cloud Architect, Professional Data Engineer"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.91,
+        "ginto": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.88
+      }
     },
     "DevOps Engineer": {
       "summary": "DevOps engineer with 8 years of experience automating delivery and infrastructure for SaaS products. Took a team from biweekly manual releases to 40 automated deploys a day with fewer failed changes. Brings CI/CD, Kubernetes and Terraform skills plus a collaborative style that gets developers owning their own pipelines.",
@@ -1865,9 +2300,22 @@
         "CI/CD: GitHub Actions, Jenkins, Argo CD, Helm",
         "Infrastructure: AWS, Kubernetes (EKS), Terraform, Ansible, Docker",
         "Observability: Prometheus, Grafana, Datadog, PagerDuty",
-        "Languages: Python, Bash, Go",
-        "Certifications: CKA, AWS DevOps Engineer - Professional"
-      ]
+        "Languages: Python, Bash, Go"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Site Reliability Engineer (SRE)": {
       "summary": "Site reliability engineer with 8 years of experience keeping consumer-scale payment and marketplace systems available. Raised checkout availability from 99.9% to 99.99% while deploy frequency doubled. Brings SLO-based operations, incident command, capacity planning and the coding skills to automate toil away instead of absorbing it.",
@@ -1897,7 +2345,7 @@
           "startDate": "2018-03",
           "endDate": "2019-01",
           "isCurrent": false,
-          "description": "- Managed Linux fleets of 1,200 hosts with Puppet\n- Built automated disk and memory remediation that cut overnight pages by 30%"
+          "description": "- Managed Linux fleets of 1,200 hosts with Puppet"
         }
       ],
       "education": [
@@ -1914,7 +2362,21 @@
         "Infrastructure: Kubernetes, AWS, Terraform, Envoy, PostgreSQL, Kafka",
         "Observability: Prometheus, Grafana, OpenTelemetry, PagerDuty",
         "Languages: Go, Python, Bash"
-      ]
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85
+      }
     },
     "Reliability Engineer": {
       "summary": "Reliability engineer with 9 years in manufacturing maintenance and reliability, focused on rotating equipment in food and beverage plants. Lifted overall equipment effectiveness from 68% to 81% on 6 packaging lines through predictive maintenance and root cause work. Brings RCM, vibration analysis and CMMS discipline that turns breakdowns into planned work.",
@@ -1944,7 +2406,7 @@
           "startDate": "2017-06",
           "endDate": "2018-01",
           "isCurrent": false,
-          "description": "- Managed 15 capital repair projects up to $250K on paper machine drives\n- Coordinated shutdown work for 60 contractors with zero recordable injuries"
+          "description": "- Managed 15 capital repair projects up to $250K on paper machine drives"
         }
       ],
       "education": [
@@ -1961,7 +2423,23 @@
         "Condition Monitoring: Vibration analysis, ultrasound, infrared thermography, oil analysis",
         "Systems: SAP PM, Maximo, OSIsoft PI",
         "Certifications: CMRP, Vibration Analyst Category II (ISO 18436)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.94,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.96
+      }
     },
     "Platform Engineer": {
       "summary": "Platform engineer with nearly 8 years in infrastructure and developer tooling, building internal platforms that let product teams ship without filing tickets. Launched a self-service developer portal that cut new service setup from 2 weeks to 20 minutes. Brings Kubernetes, golden paths and a product mindset toward internal developers.",
@@ -2008,7 +2486,24 @@
         "Infrastructure: AWS, Terraform, Vault, Istio",
         "Languages: Go, TypeScript, Python",
         "Practices: Golden paths, platform as a product, developer experience metrics, DORA metrics"
-      ]
+      ],
+      "fit": {
+        "modern": 0.91,
+        "tech": 0.99,
+        "silk": 0.98,
+        "opal": 0.96,
+        "minimalist": 0.89,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Infrastructure Engineer": {
       "summary": "Infrastructure engineer with 10 years of experience running hybrid data center and cloud infrastructure for a fast-growing fintech. Led a colocation refresh and AWS expansion that improved recovery time objectives from 24 hours to 1. Brings Linux, networking, storage and automation skills across physical and cloud environments.",
@@ -2054,9 +2549,22 @@
         "Compute and Storage: VMware vSphere, Linux, Pure Storage, Veeam, MAAS",
         "Cloud: AWS, Direct Connect, Transit Gateway",
         "Automation: Terraform, Ansible, Packer, Python",
-        "Compliance: PCI DSS, SOC 1, disaster recovery testing",
-        "Certifications: VCP-DCV, RHCE, AWS SysOps Administrator"
-      ]
+        "Compliance: PCI DSS, SOC 1, disaster recovery testing"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Kubernetes Engineer": {
       "summary": "Kubernetes engineer with nearly 8 years in infrastructure roles, 7 of them running production Kubernetes. Operates 28 clusters with 6,000 nodes and completed a multi-version upgrade program with zero customer-facing incidents. Brings cluster lifecycle automation, networking with Cilium and multi-tenant security hardening.",
@@ -2086,7 +2594,7 @@
           "startDate": "2019-01",
           "endDate": "2019-09",
           "isCurrent": false,
-          "description": "- Maintained 300 CentOS servers and Docker hosts\n- Automated certificate renewals, ending expired-cert outages"
+          "description": "- Maintained 300 CentOS servers and Docker hosts"
         }
       ],
       "education": [
@@ -2097,20 +2605,24 @@
           "endDate": "2019-06"
         }
       ],
-      "projects": [
-        {
-          "name": "tenant-operator",
-          "link": "github.com/k8s-ops/tenant-operator",
-          "description": "Kubebuilder operator that provisions namespaces, quotas, RBAC and network policies from a single Tenant resource"
-        }
-      ],
+      "projects": [],
       "skills": [
-        "Kubernetes: Cluster API, kubeadm, EKS, operators, CRDs, Helm",
+        "Kubernetes: Cluster API, kubeadm, EKS, operators, CRDs",
         "Networking: Cilium, eBPF, Envoy, CoreDNS, ingress controllers",
         "Security: Kyverno, Pod Security Standards, RBAC, Falco",
-        "Languages: Go, Python, Bash",
-        "Certifications: CKA, CKAD, CKS"
-      ]
+        "Languages: Go, Python, Bash"
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.9
+      }
     },
     "Network Engineer": {
       "summary": "Network engineer with 11 years of experience designing and operating enterprise campus, data center and WAN networks. Led an SD-WAN rollout to 85 branches that cut circuit costs by $900K a year and improved application performance. Brings deep routing and switching expertise, automation with Python and Ansible, and careful change management.",
@@ -2140,7 +2652,7 @@
           "startDate": "2015-06",
           "endDate": "2017-06",
           "isCurrent": false,
-          "description": "- Monitored and troubleshot OSPF and BGP issues for 300 business customers\n- Cut average ticket resolution time 25% with a new triage runbook"
+          "description": "- Monitored and troubleshot OSPF and BGP issues for 300 business customers"
         }
       ],
       "education": [
@@ -2153,11 +2665,22 @@
       ],
       "projects": [],
       "skills": [
-        "Routing and Switching: BGP, OSPF, VXLAN EVPN, VRFs, STP, QoS",
+        "Routing and Switching: BGP, OSPF, VXLAN EVPN, VRFs, STP",
         "Platforms: Cisco Catalyst and Nexus, Arista, Cisco SD-WAN, Palo Alto, Aruba",
-        "Automation: Python, Netmiko, Ansible, NetBox",
-        "Certifications: CCNP Enterprise, CCNP Data Center, PCNSE"
-      ]
+        "Automation: Python, Netmiko, Ansible, NetBox"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "mono": 0.95,
+        "pop": 0.9
+      }
     },
     "Network Administrator": {
       "summary": "Network administrator with more than 5 years of experience maintaining networks for a multi-campus college and a managed services provider. Keeps 140 switches, 600 access points and 4 firewalls running at 99.95% uptime for 12,000 users. Brings hands-on troubleshooting, firewall management and well-documented, repeatable changes.",
@@ -2178,7 +2701,7 @@
           "startDate": "2021-03",
           "endDate": "2022-07",
           "isCurrent": false,
-          "description": "- Configured switches, VPNs and firewalls for 50 small business clients\n- Resolved 25 network tickets weekly with a 92% first-contact resolution rate\n- Replaced 70 aging switches at a manufacturing client over 4 weekend cutovers without missed shifts"
+          "description": "- Configured switches, VPNs and firewalls for 50 small business clients\n- Resolved 25 network tickets weekly with a 92% first-contact resolution rate"
         }
       ],
       "education": [
@@ -2191,11 +2714,16 @@
       ],
       "projects": [],
       "skills": [
-        "Networking: VLANs, OSPF, 802.1X, DHCP, DNS, site-to-site VPN",
+        "Networking: VLANs, OSPF, 802.1X, DHCP, DNS",
         "Equipment: FortiGate, Cisco Catalyst, Aruba Central, Meraki",
-        "Tools: SolarWinds NPM, Wireshark, NetBox, PRTG",
-        "Certifications: CCNA, CompTIA Network+, Fortinet NSE 4"
-      ]
+        "Tools: SolarWinds NPM, Wireshark, NetBox, PRTG"
+      ],
+      "fit": {
+        "iron": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.86,
+        "pop": 0.97
+      }
     },
     "Systems Engineer": {
       "summary": "Systems engineer with nearly 8 years of experience running Windows, VMware and Microsoft 365 environments for a multi-site engineering firm. Consolidated 3 server rooms into one hyperconverged cluster and cut hardware support costs by 40%. Brings virtualization, identity, backup and scripting skills with a habit of documenting everything.",
@@ -2241,9 +2769,24 @@
         "Infrastructure: VMware vSphere, Nutanix AHV, Windows Server, Hyper-V",
         "Identity and Collaboration: Active Directory, Entra ID, Microsoft 365, Intune",
         "Backup and Monitoring: Veeam, PRTG, Windows Admin Center",
-        "Automation: PowerShell, Group Policy",
-        "Certifications: Microsoft 365 Administrator Expert, VCP-DCV"
-      ]
+        "Automation: PowerShell, Group Policy"
+      ],
+      "fit": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.86,
+        "cast": 0.96
+      }
     },
     "Linux System Administrator": {
       "summary": "Linux system administrator with nearly 9 years of experience managing large RHEL and Ubuntu fleets for research computing and hosting. Keeps 2,500 servers patched and compliant using configuration management instead of hand edits. Brings shell and Ansible automation, performance troubleshooting and dependable on-call judgment.",
@@ -2273,7 +2816,7 @@
           "startDate": "2018-01",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Resolved Linux hosting tickets for DNS, email and SSL issues\n- Earned promotion after 3 months for fastest ticket resolution on the team"
+          "description": "- Resolved Linux hosting tickets for DNS, email and SSL issues"
         }
       ],
       "education": [
@@ -2288,10 +2831,19 @@
       "skills": [
         "Operating Systems: RHEL, Rocky Linux, Ubuntu, systemd, SELinux",
         "Automation: Ansible, Red Hat Satellite, Bash, Python, Git",
-        "Services: Slurm, Lustre, NFS, Apache, Nginx, LDAP/FreeIPA",
-        "Monitoring: Prometheus, Grafana, Nagios",
-        "Certifications: RHCSA, RHCE"
-      ]
+        "Services: Slurm, Lustre, NFS, Apache, Nginx"
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.93
+      }
     },
     "Database Administrator": {
       "summary": "Database administrator with 10 years of experience supporting SQL Server and Oracle for healthcare and insurance systems. Maintains 220 production databases at 99.99% availability and cut average report query times by 70%. Brings high availability design, performance tuning, backup testing and HIPAA-aligned access control.",
@@ -2337,9 +2889,22 @@
         "Databases: Microsoft SQL Server, Oracle 19c, PostgreSQL",
         "Availability: Always On AGs, Oracle RAC, Data Guard, log shipping",
         "Performance: Query Store, execution plans, AWR, index strategy",
-        "Security: TDE, auditing, role-based access, HIPAA",
-        "Certifications: Oracle Database Administration Certified Professional, Azure Database Administrator Associate"
-      ]
+        "Security: TDE, auditing, role-based access, HIPAA"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Database Engineer": {
       "summary": "Database engineer with 8 years of experience designing and scaling PostgreSQL and MySQL for high-write SaaS products. Led a zero-downtime sharding project that took the primary database from 9 TB to balanced 1 TB shards. Brings schema design, migration tooling and the automation that lets product teams change databases safely.",
@@ -2386,7 +2951,23 @@
         "Tooling: PgBouncer, pg_repack, Patroni, Debezium, AWS DMS",
         "Automation: Python, Go, Terraform, Kubernetes operators",
         "Practices: Schema design, sharding, online migrations, capacity planning"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Data Engineer": {
       "summary": "Data engineer with 5 years of experience building batch and streaming pipelines for e-commerce analytics. Rebuilt the core order pipeline in dbt and Airflow, cutting data delivery from next-day to under 30 minutes. Brings solid SQL and Python, data modeling and testing habits that keep dashboards trustworthy.",
@@ -2425,7 +3006,16 @@
         "Languages: SQL, Python",
         "Quality: dbt tests, Great Expectations, data contracts",
         "Certifications: SnowPro Core, dbt Analytics Engineering"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.97,
+        "berlin": 0.88,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "pop": 0.92
+      }
     },
     "Senior Data Engineer": {
       "summary": "Senior data engineer with 9 years of experience designing data platforms for fintech and healthcare. Led a lakehouse migration that cut warehouse spend by $1.1M a year while doubling data freshness. Brings architecture ownership, mentoring of 5 engineers and strong partnership with analytics, ML and compliance teams.",
@@ -2455,7 +3045,7 @@
           "startDate": "2017-06",
           "endDate": "2018-07",
           "isCurrent": false,
-          "description": "- Developed SSIS packages loading point-of-sale data from 400 stores\n- Reduced nightly load window from 6 hours to 3"
+          "description": "- Developed SSIS packages loading point-of-sale data from 400 stores"
         }
       ],
       "education": [
@@ -2470,10 +3060,20 @@
       "skills": [
         "Platforms: Databricks, Delta Lake, Unity Catalog, Snowflake, AWS",
         "Processing: Spark, PySpark, Structured Streaming, Kafka, Debezium",
-        "Orchestration and Quality: Airflow, dbt, Great Expectations, Monte Carlo",
-        "Languages: Python, SQL, Scala",
-        "Certifications: Databricks Certified Data Engineer Professional"
-      ]
+        "Orchestration and Quality: Airflow, dbt, Great Expectations, Monte Carlo"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.88,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.88
+      }
     },
     "Big Data Engineer": {
       "summary": "Big data engineer with 8 years of experience processing petabyte-scale event data for telecom and adtech. Optimized Spark jobs over 3 PB of network data, cutting cluster costs by 48%. Brings distributed systems tuning, streaming architecture and the patience to debug skewed joins and shuffle failures.",
@@ -2513,11 +3113,23 @@
       ],
       "projects": [],
       "skills": [
-        "Processing: Apache Spark, Flink, Kafka, Hadoop, Hive, Presto/Trino",
+        "Processing: Apache Spark, Flink, Kafka, Hadoop, Hive",
         "Storage: Apache Iceberg, HDFS, S3, Parquet",
         "Platforms: AWS EMR, Kubernetes, Airflow",
         "Languages: Scala, Python, SQL, Java"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "ginto": 0.95,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.97
+      }
     },
     "ETL Engineer": {
       "summary": "ETL engineer with 9 years of experience moving and transforming data between ERP, CRM and warehouse systems for manufacturers and distributors. Replaced 140 fragile SSIS packages with Azure Data Factory pipelines and cut nightly load failures by 85%. Brings SQL depth, incremental loading patterns and clear data lineage documentation.",
@@ -2564,7 +3176,23 @@
         "Data Platforms: SQL Server, Azure Synapse, Snowflake, Microsoft Purview",
         "Source Systems: SAP ECC, Salesforce, NetSuite, flat files and EDI",
         "Languages: T-SQL, Python, PowerShell"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.94
+      }
     },
     "DataOps Engineer": {
       "summary": "DataOps engineer with 6 years in data and DevOps roles, bringing CI/CD, testing and observability to analytics pipelines. Cut data incidents reaching business users by 72% and moved dbt releases from weekly to on-merge. Brings pipeline automation, data observability and environment management that let analysts ship safely.",
@@ -2596,19 +3224,23 @@
           "endDate": "2020-05"
         }
       ],
-      "projects": [
-        {
-          "name": "dbt-slim-ci-action",
-          "link": "github.com/dataops-kit/dbt-slim-ci",
-          "description": "GitHub Action that runs state-based dbt builds against cloned Snowflake schemas and posts diff summaries to pull requests"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Data Stack: dbt, Snowflake, Airflow (Astronomer), Fivetran",
         "DataOps: CI/CD for data, data observability, data contracts, environment cloning",
         "Tooling: GitHub Actions, Terraform, Docker, Monte Carlo, Great Expectations",
         "Languages: SQL, Python"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.93
+      }
     },
     "Data Platform Engineer": {
       "summary": "Data platform engineer with 8 years of experience building the shared infrastructure behind analytics and machine learning at a logistics company. Built a self-service ingestion platform that onboards new sources in hours instead of weeks for 150 data users. Brings Kubernetes, Kafka and lakehouse expertise with a strong focus on governance and cost.",
@@ -2646,7 +3278,16 @@
         "Infrastructure: Kubernetes, Terraform, AWS, Helm",
         "Governance: DataHub, access policies, data retention, cost controls",
         "Languages: Python, Java, SQL"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
     },
     "Embedded Systems Engineer": {
       "summary": "Embedded systems engineer with 7 years of experience developing C and C++ software for connected medical and industrial devices. Led embedded development for an infusion pump controller cleared through FDA 510(k). Brings RTOS design, hardware bring-up, low-power optimization and IEC 62304 documentation discipline.",
@@ -2688,10 +3329,17 @@
       "skills": [
         "Languages: C, C++, Python, ARM assembly",
         "Platforms: STM32, NXP i.MX RT, FreeRTOS, Zephyr",
-        "Interfaces: SPI, I2C, UART, CAN, Modbus, BLE",
-        "Tools: JTAG/SWD, oscilloscopes, logic analyzers, HIL testing, Jenkins",
-        "Standards: IEC 62304, ISO 14971, MISRA C"
-      ]
+        "Interfaces: SPI, I2C, UART, CAN, Modbus"
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "ginto": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.99
+      }
     },
     "Firmware Engineer": {
       "summary": "Firmware engineer with 6 years of experience writing low-level firmware for consumer wearables and smart home devices. Built the secure over-the-air update system now running on 2.3M devices with a 99.8% success rate. Brings bootloaders, BLE stacks, power optimization and a strong debugging toolkit.",
@@ -2723,19 +3371,23 @@
           "endDate": "2020-06"
         }
       ],
-      "projects": [
-        {
-          "name": "nrf-coredump-tools",
-          "link": "github.com/fw-notes/nrf-coredump",
-          "description": "Scripts that decode compressed Cortex-M coredumps from field devices into GDB-readable backtraces"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Languages: C, C++, Python",
         "Platforms: Nordic nRF52/nRF53, ESP32, ARM Cortex-M, Zephyr, FreeRTOS",
         "Connectivity: BLE, Wi-Fi, Thread, Matter",
         "Tools: GDB, Segger J-Link, Saleae, power profilers, MCUboot"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.97
+      }
     },
     "API Engineer": {
       "summary": "API engineer with 6 years of experience designing and running public and partner APIs for a payments platform. Owns REST and webhook APIs handling 900M calls a month at 99.99% availability. Brings OpenAPI-first design, versioning strategy, rate limiting and developer documentation that reduces support load.",
@@ -2773,7 +3425,17 @@
         "Gateways and Security: Kong, OAuth 2.0, mTLS, rate limiting, idempotency",
         "Languages: Go, TypeScript, Node.js, Java",
         "Tooling: Spectral, Postman, Stoplight, OpenAPI Generator"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.94
+      }
     },
     "Integration Engineer": {
       "summary": "Integration engineer with 9 years of experience connecting ERP, CRM, e-commerce and logistics systems for mid-market companies. Delivered 60+ integrations on MuleSoft and Boomi, removing 4,000 hours a year of manual data entry. Brings API and EDI expertise, error handling that operations teams trust, and clear communication with business stakeholders.",
@@ -2819,9 +3481,23 @@
         "Integration Platforms: MuleSoft Anypoint, Dell Boomi, Azure Logic Apps",
         "Standards: REST, SOAP, X12 EDI, HL7, AS2, SFTP",
         "Systems: NetSuite, Salesforce, Shopify, SAP Business One",
-        "Languages: DataWeave, Java, SQL, JavaScript",
-        "Certifications: MuleSoft Certified Developer Level 1, Boomi Professional Developer"
-      ]
+        "Languages: DataWeave, Java, SQL, JavaScript"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Microservices Engineer": {
       "summary": "Microservices engineer with 7 years of backend experience, 5 of them decomposing monoliths into event-driven services for retail and travel platforms. Split a 1.2M-line Java monolith into 34 services and cut lead time for changes from 3 weeks to 2 days. Brings domain-driven design, Kafka messaging and resilience patterns that hold up under peak traffic.",
@@ -2857,10 +3533,13 @@
       "skills": [
         "Languages: Java, Kotlin, Go",
         "Frameworks: Spring Boot, Spring Cloud, gRPC, Resilience4j",
-        "Messaging and Data: Kafka, RabbitMQ, PostgreSQL, Redis, outbox pattern",
-        "Architecture: Domain-driven design, event storming, strangler fig, sagas",
-        "Platform: Kubernetes, Istio, Docker, Jaeger"
-      ]
+        "Messaging and Data: Kafka, RabbitMQ, PostgreSQL, Redis, outbox pattern"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.96,
+        "bronx": 0.89
+      }
     },
     "Software Architect": {
       "summary": "Software architect with 13 years of software engineering experience, the last 5 setting architecture direction for a B2B SaaS product used by 3,000 companies. Led a modular platform redesign that let the team scale from 40 to 120 engineers without slowing delivery. Brings pragmatic design decisions, architecture decision records and hands-on prototyping.",
@@ -2890,7 +3569,7 @@
           "startDate": "2013-06",
           "endDate": "2017-02",
           "isCurrent": false,
-          "description": "- Built C# services for a laboratory information system used by 200 labs\n- Cut nightly batch runtime 60% by rewriting critical queries"
+          "description": "- Built C# services for a laboratory information system used by 200 labs"
         }
       ],
       "education": [
@@ -2906,9 +3585,23 @@
         "Architecture: Modular monoliths, microservices, event-driven design, multi-tenancy, C4 model",
         "Languages: C#, TypeScript, Java, SQL",
         "Platforms: AWS, PostgreSQL, OpenSearch, Kafka, Kubernetes",
-        "Practices: ADRs, fitness functions, design reviews, technical debt roadmaps",
-        "Certifications: AWS Solutions Architect - Professional"
-      ]
+        "Practices: ADRs, fitness functions, design reviews, technical debt roadmaps"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97
+      }
     },
     "Enterprise Architect": {
       "summary": "Enterprise architect with 16 years in IT, including 7 shaping technology strategy for a $4B regional utility. Built the target-state architecture that retired 140 redundant applications and saved $9M a year. Brings business capability mapping, portfolio rationalization and governance that connects board-level strategy to engineering roadmaps.",
@@ -2938,7 +3631,7 @@
           "startDate": "2010-06",
           "endDate": "2014-04",
           "isCurrent": false,
-          "description": "- Led requirements and design for online banking and core system upgrades\n- Managed vendor evaluation for a $3M loan origination system"
+          "description": "- Led requirements and design for online banking and core system upgrades"
         }
       ],
       "education": [
@@ -2959,10 +3652,25 @@
       "skills": [
         "Frameworks: TOGAF, ArchiMate, business capability modeling, Zachman",
         "Tools: LeanIX, Sparx Enterprise Architect, ServiceNow APM",
-        "Domains: ERP (SAP S/4HANA), integration, cloud strategy, OT/IT convergence",
-        "Leadership: Architecture governance, investment planning, executive communication",
-        "Certifications: TOGAF 10 Certified, ITIL 4 Foundation"
-      ]
+        "Domains: ERP (SAP S/4HANA), integration, cloud strategy, OT/IT convergence"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.96,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "path": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.92,
+        "cast": 0.97
+      }
     },
     "Technical Architect": {
       "summary": "Technical architect with 11 years of experience leading the technical design of digital commerce and CMS implementations for an agency's enterprise clients. Owned architecture for 15 large implementations, delivering a headless commerce replatform that cut page load time by 58%. Brings solution design, estimation, and hands-on guidance for delivery teams of 10 to 25 engineers.",
@@ -2992,7 +3700,7 @@
           "startDate": "2015-06",
           "endDate": "2017-01",
           "isCurrent": false,
-          "description": "- Built Java and JavaScript sites for regional retailers and nonprofits\n- Integrated payment gateways for 12 online stores"
+          "description": "- Built Java and JavaScript sites for regional retailers and nonprofits"
         }
       ],
       "education": [
@@ -3007,9 +3715,20 @@
       "skills": [
         "Platforms: Salesforce Commerce Cloud, Adobe Experience Manager, Contentful, commercetools",
         "Front End: Next.js, React, headless architecture, CDN strategy",
-        "Delivery: Solution design, estimation, technical scoping, code review",
-        "Certifications: Salesforce B2C Commerce Architect, AEM Sites Architect"
-      ]
+        "Delivery: Solution design, estimation, technical scoping, code review"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.88,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "bronx": 0.94,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Solutions Architect": {
       "summary": "Solutions architect with 10 years of experience bridging customer needs and product capabilities at a data integration software company. Supports a $30M enterprise sales territory, with a 62% technical win rate on competitive deals. Brings discovery, demo and proof-of-concept skills plus deep knowledge of data, cloud and security requirements.",
@@ -3039,7 +3758,7 @@
           "startDate": "2016-06",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Built Informatica pipelines for claims and policy reporting\n- Automated actuarial data extracts that previously took 2 days each month"
+          "description": "- Built Informatica pipelines for claims and policy reporting"
         }
       ],
       "education": [
@@ -3053,11 +3772,24 @@
       "projects": [],
       "skills": [
         "Pre-Sales: Discovery, technical demos, proofs of concept, RFP and security questionnaires",
-        "Technology: Snowflake, Databricks, Kafka, AWS, Azure, REST APIs",
+        "Technology: Snowflake, Databricks, Kafka, AWS, Azure",
         "Security: SSO, private networking, encryption, SOC 2 reviews",
-        "Communication: Executive presentations, solution diagrams, technical proposals",
-        "Certifications: AWS Solutions Architect - Associate, SnowPro Advanced Architect"
-      ]
+        "Communication: Executive presentations, solution diagrams, technical proposals"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "opal": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Technical Lead": {
       "summary": "Technical lead with 9 years of software engineering experience, currently leading a team of 7 engineers building scheduling and dispatch software for field service companies. Delivered a route optimization feature that cut technician drive time by 17% for 1,200 customers. Brings hands-on coding, delivery planning and steady mentoring.",
@@ -3087,7 +3819,7 @@
           "startDate": "2017-06",
           "endDate": "2019-02",
           "isCurrent": false,
-          "description": "- Developed patient scheduling features in Ruby on Rails for 400 clinics\n- Fixed N+1 queries that cut calendar load times 65%"
+          "description": "- Developed patient scheduling features in Ruby on Rails for 400 clinics"
         }
       ],
       "education": [
@@ -3104,7 +3836,20 @@
         "Systems: Node.js, React, PostgreSQL, AWS, Google OR-Tools",
         "Leadership: Sprint planning, RFCs, code review, mentoring, incident ownership",
         "Practices: Test-driven development, trunk-based development, CI/CD"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.99
+      }
     },
     "Engineering Manager": {
       "summary": "Engineering manager with 11 years in software, including 5 managing product engineering teams at a consumer fintech. Leads 3 teams of 18 engineers that grew deploy frequency 4x while cutting attrition to 6%. Brings hiring, performance coaching, delivery planning and close partnership with product and design.",
@@ -3151,7 +3896,21 @@
         "Delivery: Quarterly planning, OKRs, DORA metrics, incident management",
         "Technical: Python, Go, AWS, Kubernetes, payments systems",
         "Collaboration: Product and design partnership, stakeholder updates, budgeting"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Director of Engineering": {
       "summary": "Director of engineering with 15 years in software, including 7 leading multi-team organizations at B2B SaaS companies. Runs a 55-person organization across 7 teams and a $9M annual budget, and led the platform rebuild behind a move upmarket to enterprise customers. Brings org design, manager development and delivery predictability tied to business goals.",
@@ -3181,7 +3940,7 @@
           "startDate": "2011-06",
           "endDate": "2017-07",
           "isCurrent": false,
-          "description": "- Built the core Java scheduling engine used by 4,000 customers\n- Led a team of 5 through the move from on-premise releases to monthly SaaS deploys"
+          "description": "- Built the core Java scheduling engine used by 4,000 customers"
         }
       ],
       "education": [
@@ -3196,9 +3955,22 @@
       "skills": [
         "Leadership: Org design, manager coaching, hiring plans, performance calibration",
         "Planning and Finance: Headcount and vendor budgets, quarterly planning, OKRs, build-vs-buy decisions",
-        "Delivery: DORA metrics, incident management, SOC 2 and HIPAA programs",
-        "Technical: Java, TypeScript, AWS, PostgreSQL, distributed systems"
-      ]
+        "Delivery: DORA metrics, incident management, SOC 2 and HIPAA programs"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "opal": 0.96,
+        "minimalist": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.97,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.87
+      }
     },
     "VP of Engineering": {
       "summary": "VP of engineering with 18 years in software and 9 in engineering leadership, scaling teams at growth-stage marketplaces. Grew an engineering organization from 40 to 140 people across 3 locations while doubling release velocity and keeping availability above 99.95%. Brings executive partnership, budget ownership and a calm operating cadence through hypergrowth.",
@@ -3228,7 +4000,7 @@
           "startDate": "2008-06",
           "endDate": "2016-03",
           "isCurrent": false,
-          "description": "- Grew from engineer to manager of 12, building search and listings for a travel site\n- Moved the team from quarterly releases to continuous delivery"
+          "description": "- Grew from engineer to manager of 12, building search and listings for a travel site"
         }
       ],
       "education": [
@@ -3243,9 +4015,20 @@
       "skills": [
         "Executive Leadership: Org scaling, director development, board reporting, distributed teams",
         "Operations: Budgeting, vendor negotiation, cloud cost management, incident programs",
-        "Strategy: Technology roadmaps, M&A diligence, platform investments, compliance",
-        "Technical: Marketplaces, payments, search, AWS, Kubernetes"
-      ]
+        "Strategy: Technology roadmaps, M&A diligence, platform investments, compliance"
+      ],
+      "fit": {
+        "silk": 0.93,
+        "opal": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "bronx": 0.93,
+        "mono": 0.92,
+        "pop": 0.88
+      }
     },
     "CTO": {
       "summary": "CTO with 20 years in software, including 6 as technology executive for a venture-backed logistics software company. Took the platform from 300 to 4,200 customers and from Series A to $85M ARR, with technology central to two funding rounds. Brings product and architecture vision, security and compliance ownership, and a 180-person technology organization built to last.",
@@ -3257,7 +4040,7 @@
           "startDate": "2020-03",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 180-person engineering, data, security and IT organization with a $42M annual budget\n- Scaled the platform from 300 to 4,200 customers and $85M ARR, leading technical diligence for Series C and D rounds\n- Launched an ML-based ETA product now included in 60% of new enterprise contracts\n- Established the security program that achieved SOC 2 Type II and ISO 27001 within 18 months"
+          "description": "- Lead a 180-person engineering, data, security and IT organization with a $42M annual budget\n- Scaled the platform from 300 to 4,200 customers and $85M ARR, leading technical diligence for Series C and D rounds\n- Launched an ML-based ETA product now included in 60% of new enterprise contracts"
         },
         {
           "company": "Midland Freight Systems",
@@ -3275,7 +4058,7 @@
           "startDate": "2006-06",
           "endDate": "2014-08",
           "isCurrent": false,
-          "description": "- Architected order management software used by 900 retailers\n- Led a team of 8 building the company's first public API"
+          "description": "- Architected order management software used by 900 retailers"
         }
       ],
       "education": [
@@ -3296,9 +4079,21 @@
       "skills": [
         "Executive: Technology strategy, board and investor relations, M&A, budget ownership",
         "Organization: Engineering, data, security and IT leadership, executive hiring",
-        "Technology: Cloud architecture (AWS), data and ML platforms, APIs, logistics systems",
-        "Governance: SOC 2, ISO 27001, risk management, vendor strategy"
-      ]
+        "Technology: Cloud architecture (AWS), data and ML platforms, APIs, logistics systems"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.88
+      }
     },
     "Help Desk Technician": {
       "summary": "Help desk technician with 4 years of tier-1 support experience in a university IT service desk and a regional clinic network. Resolves 30+ tickets a day with an 88% first-contact resolution rate and 4.8/5 satisfaction. Brings patient troubleshooting, Microsoft 365 and Active Directory basics, and clear knowledge base writing.",
@@ -3333,10 +4128,16 @@
       "projects": [],
       "skills": [
         "Support: Ticket triage, remote support, hardware and printer troubleshooting, escalation",
-        "Systems: Windows 11, macOS, Microsoft 365, Active Directory, Entra ID, Intune",
-        "Tools: ServiceNow, TeamViewer, MDT, Zoom Rooms",
-        "Certifications: CompTIA A+, Microsoft 365 Fundamentals"
-      ]
+        "Systems: Windows 11, macOS, Microsoft 365, Active Directory, Entra ID",
+        "Tools: ServiceNow, TeamViewer, MDT, Zoom Rooms"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.94,
+        "ginto": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.87
+      }
     },
     "IT Support Specialist": {
       "summary": "IT support specialist with 4 years of experience supporting a 450-person architecture and engineering firm across 5 offices. Owns endpoint management, onboarding and tier-2 escalations, and cut new-hire setup time from 2 days to 3 hours. Brings Intune and Jamf administration, scripting for repeat tasks and a service mindset with non-technical users.",
@@ -3374,7 +4175,17 @@
         "Systems: Microsoft 365, Entra ID, Exchange Online, Teams Rooms",
         "Scripting and Tools: PowerShell, Freshservice, Lansweeper",
         "Certifications: CompTIA A+, Network+, Jamf Certified Admin"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.97,
+        "pop": 0.92
+      }
     },
     "Desktop Support Technician": {
       "summary": "Desktop support technician with 3 years of on-site support for a hospital system and a law firm. Supports 1,600 workstations, clinical carts and peripherals with a 4-hour average resolution on hardware issues. Brings hands-on imaging, hardware repair and calm support in time-sensitive clinical and courtroom settings.",
@@ -3412,7 +4223,18 @@
         "Deployment: SCCM/MECM, Windows 11 imaging, Active Directory, Group Policy",
         "Applications: Epic workstation setup, Microsoft 365, iManage",
         "Certifications: CompTIA A+, Dell and HP warranty technician certified"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
+      }
     },
     "Systems Administrator": {
       "summary": "Systems administrator with 6 years of experience running Windows and Linux servers, virtualization and backups for a county government. Keeps 210 servers patched and recoverable, with backup restores verified monthly. Brings VMware, Active Directory, scripting and dependable change management for public-sector environments.",
@@ -3449,9 +4271,17 @@
         "Servers: Windows Server, RHEL, VMware vSphere, Hyper-V",
         "Identity and Services: Active Directory, DNS, DHCP, Group Policy, Google Workspace",
         "Automation and Backup: PowerShell, Ansible, Veeam, WSUS",
-        "Compliance: CJIS Security Policy, change management",
-        "Certifications: CompTIA Server+, Security+, VCP-DCV"
-      ]
+        "Compliance: CJIS Security Policy, change management"
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "pop": 0.95
+      }
     },
     "IT Manager": {
       "summary": "IT manager with 11 years in IT, including 4 leading internal IT for a 900-employee manufacturer across 3 plants. Manages a team of 6 and a $2.8M budget, and led an ERP infrastructure upgrade and cybersecurity overhaul with no unplanned production downtime. Brings vendor management, service desk leadership and practical security for operations-heavy businesses.",
@@ -3481,7 +4311,7 @@
           "startDate": "2015-06",
           "endDate": "2018-03",
           "isCurrent": false,
-          "description": "- Installed networks and firewalls for 40 small business clients\n- Handled after-hours support with 95% SLA attainment"
+          "description": "- Installed networks and firewalls for 40 small business clients"
         }
       ],
       "education": [
@@ -3496,10 +4326,19 @@
       "skills": [
         "Leadership: Team management, IT budgeting, vendor and contract management, IT roadmaps",
         "Infrastructure: VMware, Microsoft 365, Cisco Meraki, Epicor ERP, Veeam",
-        "Security: MFA, CrowdStrike, security awareness training, cyber insurance requirements",
-        "Service: ITIL processes, Freshservice, SLA reporting",
-        "Certifications: ITIL 4 Foundation, CompTIA Security+"
-      ]
+        "Security: MFA, CrowdStrike, security awareness training, cyber insurance requirements"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.95,
+        "berlin": 0.89,
+        "iron": 0.86,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.86
+      }
     },
     "Director of IT": {
       "summary": "Director of IT with 16 years in information technology, including more than 11 leading IT for multi-site healthcare and professional services organizations. Runs a 24-person department and a $11M budget supporting 3,200 employees. Brings IT strategy, cloud migration, security governance and service delivery that business leaders trust.",
@@ -3529,7 +4368,7 @@
           "startDate": "2010-06",
           "endDate": "2015-02",
           "isCurrent": false,
-          "description": "- Supported EHR servers and Citrix for 60 clinics\n- Led the disaster recovery site build with 4-hour RTO"
+          "description": "- Supported EHR servers and Citrix for 60 clinics"
         }
       ],
       "education": [
@@ -3550,9 +4389,21 @@
       "skills": [
         "Leadership: IT strategy, department budgeting, vendor management, executive reporting",
         "Infrastructure: Azure, Microsoft 365, SD-WAN, Citrix, ServiceNow",
-        "Governance: HIPAA, NIST CSF, ITIL 4, business continuity planning",
-        "Certifications: PMP, ITIL 4 Managing Professional, CISSP"
-      ]
+        "Governance: HIPAA, NIST CSF, ITIL 4, business continuity planning"
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.91,
+        "cast": 0.98
+      }
     },
     "Chief Information Security Officer (CISO)": {
       "summary": "Chief information security officer with 19 years in security, including 6 as security executive for a publicly traded insurer. Leads a 45-person security organization and $18M budget, and raised the company's NIST CSF maturity from 2.1 to 3.6. Brings board-level risk communication, regulatory command of NYDFS and SEC disclosure rules, and calm incident leadership.",
@@ -3564,7 +4415,7 @@
           "startDate": "2020-05",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead a 45-person security organization and $18M budget protecting 7,000 employees and 4M policyholders\n- Raised NIST CSF maturity from 2.1 to 3.6 through a 3-year roadmap funded by the board\n- Report quarterly to the board risk committee and own SEC cybersecurity disclosure and NYDFS Part 500 certification\n- Directed response to a vendor breach, completing notification and containment with no regulatory penalties"
+          "description": "- Lead a 45-person security organization and $18M budget protecting 7,000 employees and 4M policyholders\n- Raised NIST CSF maturity from 2.1 to 3.6 through a 3-year roadmap funded by the board\n- Report quarterly to the board risk committee and own SEC cybersecurity disclosure and NYDFS Part 500 certification"
         },
         {
           "company": "James River Financial",
@@ -3582,7 +4433,7 @@
           "startDate": "2007-06",
           "endDate": "2013-12",
           "isCurrent": false,
-          "description": "- Secured federal systems under FISMA and NIST 800-53\n- Led authorization packages for 12 systems"
+          "description": "- Secured federal systems under FISMA and NIST 800-53"
         }
       ],
       "education": [
@@ -3603,10 +4454,21 @@
       "skills": [
         "Executive: Board reporting, risk appetite, security budgeting, cyber insurance strategy",
         "Programs: SOC, IAM, third-party risk, incident response, security awareness",
-        "Regulation: NYDFS Part 500, SEC cybersecurity rules, PCI DSS, SOX, GLBA",
-        "Frameworks: NIST CSF 2.0, ISO 27001, FAIR risk quantification",
-        "Certifications: CISSP, CISM, CRISC"
-      ]
+        "Regulation: NYDFS Part 500, SEC cybersecurity rules, PCI DSS, SOX, GLBA"
+      ],
+      "fit": {
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.89
+      }
     },
     "Information Security Manager": {
       "summary": "Information security manager with 10 years in security operations and governance, now leading security for a 2,500-employee logistics company. Manages a team of 5 and cut mean time to contain incidents from 9 hours to 50 minutes. Brings program building, policy and risk management, and hands-on depth in detection and cloud security.",
@@ -3653,7 +4515,20 @@
         "Operations: SIEM, MDR oversight, incident response, vulnerability management",
         "Risk and Compliance: ISO 27001, HIPAA, third-party risk, FFIEC",
         "Certifications: CISM, CISSP"
-      ]
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.86,
+        "cast": 0.97
+      }
     },
     "Junior DevOps Engineer": {
       "summary": "Junior DevOps engineer with 1.5 years of professional experience plus a cloud internship, supporting CI/CD and AWS infrastructure for a SaaS startup. Containerized 12 services and cut average build time by 45%. Brings working Terraform, Docker and GitHub Actions skills, a home lab habit and eagerness to learn from on-call work.",
@@ -3685,19 +4560,20 @@
           "endDate": "2024-12"
         }
       ],
-      "projects": [
-        {
-          "name": "homelab-k3s",
-          "link": "github.com/jrdevops/homelab-k3s",
-          "description": "Three-node k3s cluster on Raspberry Pi with Argo CD, Prometheus and automated TLS, managed entirely from Git"
-        }
-      ],
+      "projects": [],
       "skills": [
         "Cloud and IaC: AWS (EC2, S3, RDS, IAM), Terraform",
         "Containers and CI: Docker, GitHub Actions, k3s, Argo CD",
         "Scripting: Bash, Python, Git",
         "Certifications: AWS Cloud Practitioner, AWS Solutions Architect - Associate"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.98,
+        "ginto": 0.96,
+        "bronx": 0.95,
+        "pop": 0.97
+      }
     },
     "Senior DevOps Engineer": {
       "summary": "Senior DevOps engineer with 10 years of experience in systems and DevOps roles, leading infrastructure for regulated healthcare SaaS. Led the move to multi-region Kubernetes that took availability from 99.8% to 99.97% while cutting cloud spend 30%. Brings architecture ownership, mentoring of 4 engineers and HITRUST-aligned automation.",
@@ -3743,9 +4619,19 @@
         "Infrastructure: AWS, EKS, Terraform, Helm, Karpenter, multi-region design",
         "CI/CD: GitLab CI, GitHub Actions, Argo CD",
         "Observability: Prometheus, Grafana, Datadog, PagerDuty",
-        "Compliance: HITRUST, HIPAA, SOC 2",
-        "Certifications: CKA, AWS DevOps Engineer - Professional"
-      ]
+        "Compliance: HITRUST, HIPAA, SOC 2"
+      ],
+      "fit": {
+        "minimalist": 0.93,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.91
+      }
     },
     "Senior QA Engineer": {
       "summary": "Senior QA engineer with 9 years of experience leading quality for web and mobile healthcare apps. Owns test strategy for 4 squads and cut escaped defects per release by 62%. Brings risk-based test planning, automation in Cypress and Appium, and the judgment to know what not to automate.",
@@ -3793,7 +4679,20 @@
         "Accessibility: WCAG 2.1, axe, VoiceOver, TalkBack",
         "Tools: Jira, TestRail, GitHub Actions",
         "Certifications: ISTQB Advanced Test Analyst"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
     },
     "Electrical Engineer": {
       "summary": "Electrical engineer with 7 years of experience designing power distribution and controls for industrial and commercial facilities. Designed electrical systems for 30+ projects up to 15 MVA and holds a PE license in Ohio and Michigan. Brings NEC and arc flash expertise, ETAP studies and field commissioning experience.",
@@ -3831,7 +4730,18 @@
         "Software: ETAP, AutoCAD Electrical, Revit MEP, SKM PowerTools",
         "Codes and Standards: NEC, NFPA 70E, IEEE 1584, UL 508A",
         "Licenses: Professional Engineer (Ohio, Michigan)"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.98,
+        "pop": 0.91
+      }
     },
     "Mechanical Engineer": {
       "summary": "Mechanical engineer with 6 years of experience designing and validating components for agricultural and off-highway equipment. Led the redesign of a hydraulic valve bracket that cut weight 22% and warranty claims by 70%. Brings SolidWorks and FEA, GD&T, design for manufacturing and close work with suppliers and test labs.",
@@ -3869,7 +4779,18 @@
         "Analysis: ANSYS Mechanical, FEA, tolerance stack-ups, fatigue analysis",
         "Process: DFMEA, DFM, PLM (Windchill), engineering change management",
         "Certifications: EIT (Iowa), Certified SolidWorks Professional"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.86,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.9
+      }
     },
     "Hardware Engineer": {
       "summary": "Hardware engineer with 8 years of experience designing boards for networking and IoT products from schematic through production. Led 12 board designs into mass production, including a 16-layer switch board with 25 Gbps SerDes links. Brings high-speed layout review, signal and power integrity analysis, and EMC compliance experience.",
@@ -3881,7 +4802,7 @@
           "startDate": "2021-04",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Designed a 16-layer switch main board with 25 Gbps SerDes links, passing compliance on the second spin\n- Ran HyperLynx SI and PI analysis, cutting board respins from an average of 3 to 1.5 per product\n- Led FCC Part 15 and CE EMC testing for 4 products with contract manufacturers in Taiwan\n- Reduced bill of materials cost 18% through component consolidation and second-source qualification"
+          "description": "- Designed a 16-layer switch main board with 25 Gbps SerDes links, passing compliance on the second spin\n- Ran HyperLynx SI and PI analysis, cutting board respins from an average of 3 to 1.5 per product\n- Led FCC Part 15 and CE EMC testing for 4 products with contract manufacturers in Taiwan"
         },
         {
           "company": "Nimbus Home Devices",
@@ -3899,21 +4820,19 @@
           "degree": "M.S. Electrical Engineering and Computer Sciences",
           "startDate": "2017-08",
           "endDate": "2018-05"
-        },
-        {
-          "school": "University of California, Berkeley",
-          "degree": "B.S. Electrical Engineering and Computer Sciences",
-          "startDate": "2013-08",
-          "endDate": "2017-05"
         }
       ],
       "projects": [],
       "skills": [
         "Design: Schematic capture, PCB layout review, high-speed digital, power supply design",
         "Tools: Altium Designer, Cadence Allegro, HyperLynx, SPICE",
-        "Lab: Oscilloscopes, VNAs, spectrum analyzers, thermal chambers",
-        "Compliance: FCC Part 15, CE, UL 62368-1, DFM and DFT"
-      ]
+        "Lab: Oscilloscopes, VNAs, spectrum analyzers, thermal chambers"
+      ],
+      "fit": {
+        "ginto": 0.96,
+        "quartz": 0.98,
+        "bronx": 0.89
+      }
     },
     "Controls Engineer": {
       "summary": "Controls engineer with 7 years of experience programming PLCs and HMIs for automotive and packaging production lines. Commissioned 25 automated cells and raised line throughput 19% on a robotic welding line. Brings Allen-Bradley and Siemens programming, machine safety design and reliable start-ups under tight launch schedules.",
@@ -3951,7 +4870,17 @@
         "Robotics and Motion: FANUC, servo drives, VFDs, EtherNet/IP, PROFINET",
         "Safety: ISO 13849, NFPA 79, risk assessments, safety PLCs",
         "Software: Ignition SCADA, AutoCAD Electrical, Studio 5000"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.91
+      }
     },
     "Mechanical Engineering Intern": {
       "summary": "Mechanical engineering student at Purdue University graduating in May 2027, with a 3.6 GPA and one prior internship at an HVAC equipment manufacturer. Designed and tested a fixture that cut assembly time 20% on a production line. Brings SolidWorks CAD, hands-on prototyping from Formula SAE and solid fundamentals in thermodynamics and machine design.",
@@ -4000,7 +4929,23 @@
         "Fabrication: 3D printing, CNC basics, manual mill and lathe",
         "Coursework: Thermodynamics, heat transfer, machine design, fluid mechanics",
         "Certifications: Certified SolidWorks Associate"
-      ]
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.89,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.98
+      }
     }
   }
 }

@@ -98,13 +98,14 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
   const isCustom = design.accent !== '' && !ACCENT_PRESETS.some((p) => p.value.toLowerCase() === design.accent.toLowerCase());
   const isDefault = design.accent === DEFAULT_DESIGN.accent && design.font === DEFAULT_DESIGN.font && design.scale === DEFAULT_DESIGN.scale;
 
-  const swatch = 'relative h-8 w-8 rounded-full ring-offset-2 ring-offset-white transition focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:ring-offset-slate-900';
+  // Every swatch has a hairline outline so dark presets (Black, Graphite) stay visible on the dark editor.
+  const swatch = 'relative h-8 w-8 rounded-full ring-1 ring-ink/25 ring-offset-2 ring-offset-surface transition focus-ring';
 
   return (
-    <div className="space-y-6 rounded-xl border border-slate-200 bg-slate-50/60 p-4 dark:border-slate-800 dark:bg-slate-900/40">
+    <div className="space-y-6 rounded-[2px] border border-rule bg-surface p-4">
       <fieldset>
-        <legend className="text-sm font-medium text-slate-800 dark:text-slate-200">Accent colour</legend>
-        <div className="mt-3 flex flex-wrap items-center gap-2.5" role="radiogroup" aria-label="Accent colour">
+        <legend className="text-sm font-medium text-ink">Accent colour</legend>
+        <div className="mt-3 grid w-fit grid-cols-6 gap-3" role="radiogroup" aria-label="Accent colour">
           <button
             id="accent-0"
             type="button"
@@ -114,8 +115,8 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             onKeyDown={(e) => onAccentKeyDown(e, 0)}
             onClick={() => onChange({ accent: '' })}
             title="Template default"
-            className={`${swatch} flex items-center justify-center border border-dashed border-slate-300 bg-white text-[10px] font-semibold text-slate-500 dark:border-slate-600 dark:bg-slate-800 dark:text-slate-300 ${
-              design.accent === '' ? 'ring-2 ring-indigo-600' : ''
+            className={`${swatch} flex items-center justify-center border border-dashed border-muted bg-surface text-[10px] font-semibold text-muted ${
+              design.accent === '' ? 'ring-2 ring-accent' : ''
             }`}
           >
             Auto
@@ -134,7 +135,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
                 aria-label={p.name}
                 title={p.name}
                 onClick={() => onChange({ accent: p.value })}
-                className={`${swatch} ${selected ? 'ring-2 ring-indigo-600' : ''}`}
+                className={`${swatch} ${selected ? 'ring-2 ring-accent' : ''}`}
                 style={{ backgroundColor: p.value }}
               >
                 {selected && <CheckIcon className="absolute inset-0 m-auto h-4 w-4 text-white" />}
@@ -142,13 +143,13 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             );
           })}
           <label
-            className={`${swatch} cursor-pointer overflow-hidden bg-[conic-gradient(#ef4444,#f59e0b,#22c55e,#06b6d4,#6366f1,#d946ef,#ef4444)] ${isCustom ? 'ring-2 ring-indigo-600' : ''}`}
+            className={`${swatch} cursor-pointer overflow-hidden bg-[conic-gradient(#ef4444,#f59e0b,#22c55e,#06b6d4,#3b82f6,#ec4899,#ef4444)] ${isCustom ? 'ring-2 ring-accent' : ''}`}
             title="Custom colour"
           >
             <span className="sr-only">Custom colour</span>
             <input
               type="color"
-              value={HEX.test(design.accent) ? design.accent : '#4338ca'}
+              value={HEX.test(design.accent) ? design.accent : '#A3361F'}
               onChange={(e) => onChange({ accent: e.target.value.toUpperCase() })}
               className="absolute inset-0 h-full w-full cursor-pointer opacity-0"
             />
@@ -168,17 +169,17 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
               if (HEX.test(v)) onChange({ accent: v.toUpperCase() });
               else if (v === '') onChange({ accent: '' });
             }}
-            className="w-32 rounded-md border border-slate-300 aria-invalid:border-amber-500 bg-white px-2.5 py-1.5 font-mono text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+            className="w-32 rounded-[2px] border border-rule aria-invalid:border-amber-600 bg-surface px-2.5 py-1.5 font-label text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           />
           {hexInvalid && (
-            <span id="accent-hex-status" className="text-xs text-amber-700 dark:text-amber-400">
+            <span id="accent-hex-status" className="text-xs text-amber-800 dark:text-amber-300">
               Use 6 hex digits, like #2F5A8A
             </span>
           )}
           {contrast !== null && (
             <span
               id="accent-hex-status"
-              className={`text-xs ${contrast >= 4.5 ? 'text-emerald-700 dark:text-emerald-400' : 'text-amber-700 dark:text-amber-400'}`}
+              className={`text-xs ${contrast >= 4.5 ? 'text-success' : 'text-amber-800 dark:text-amber-300'}`}
             >
               {contrast >= 4.5 ? `Readable · ${contrast.toFixed(1)}:1` : `Low contrast · ${contrast.toFixed(1)}:1 — pick a darker shade`}
             </span>
@@ -187,14 +188,14 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
       </fieldset>
 
       <div>
-        <label htmlFor="design-font" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+        <label htmlFor="design-font" className="text-sm font-medium text-ink">
           Font
         </label>
         <select
           id="design-font"
           value={design.font}
           onChange={(e) => onChange({ font: e.target.value })}
-          className="mt-2 block w-full rounded-md border border-slate-300 bg-white px-3 py-2 text-sm text-slate-900 focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-slate-700 dark:bg-slate-900 dark:text-white"
+          className="mt-2 block w-full rounded-[2px] border border-rule bg-surface px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
         >
           {FONT_PRESETS.map((f) => (
             <option key={f.id} value={f.id}>
@@ -206,10 +207,10 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
 
       <div>
         <div className="flex items-baseline justify-between">
-          <label htmlFor="design-scale" className="text-sm font-medium text-slate-800 dark:text-slate-200">
+          <label htmlFor="design-scale" className="text-sm font-medium text-ink">
             Text size
           </label>
-          <span className="text-xs tabular-nums text-slate-500 dark:text-slate-400">{Math.round(design.scale * 100)}%</span>
+          <span className="text-xs tabular-nums text-muted">{Math.round(design.scale * 100)}%</span>
         </div>
         <input
           id="design-scale"
@@ -219,10 +220,10 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
           step={SCALE_STEP}
           value={design.scale}
           onChange={(e) => onChange({ scale: round(Number(e.target.value)) })}
-          className="mt-2 w-full accent-indigo-600"
+          className="mt-2 w-full accent-[var(--site-ink)]"
         />
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
-          <span className="text-xs text-slate-500 dark:text-slate-400" aria-live="polite">
+          <span className="text-xs text-muted" aria-live="polite">
             {pageCount === null ? '' : pageCount === 1 ? 'Fits on 1 page' : `${pageCount} pages`}
           </span>
           <div className="flex gap-2">
@@ -231,7 +232,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
                 type="button"
                 disabled={fitting || design.scale <= SCALE_MIN}
                 onClick={startFit}
-                className="rounded-md bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white shadow-sm hover:bg-indigo-500 disabled:opacity-50"
+                className="focus-ring h-8 rounded-[2px] bg-ink px-3 text-xs font-medium text-paper hover:bg-ink-hover disabled:opacity-50"
               >
                 {fitting ? 'Fitting…' : design.scale <= SCALE_MIN ? 'At minimum size' : 'Fit to one page'}
               </button>
@@ -240,7 +241,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
               <button
                 type="button"
                 onClick={() => onChange(DEFAULT_DESIGN)}
-                className="rounded-md px-3 py-1.5 text-xs font-medium text-slate-600 ring-1 ring-slate-300 hover:bg-white dark:text-slate-300 dark:ring-slate-700 dark:hover:bg-slate-800"
+                className="focus-ring h-8 rounded-[2px] border border-ink px-3 text-xs font-medium text-ink hover:bg-ink/5"
               >
                 Reset style
               </button>
@@ -248,7 +249,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
           </div>
         </div>
         {fitNote && (
-          <p className="mt-2 text-xs leading-relaxed text-amber-700 dark:text-amber-400" role="status">
+          <p className="mt-2 text-xs leading-relaxed text-amber-800 dark:text-amber-300" role="status">
             {fitNote}
           </p>
         )}

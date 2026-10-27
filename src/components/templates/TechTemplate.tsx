@@ -21,13 +21,13 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
     const skillGroups = groupSkills(data.skills);
 
     return (
-        <div className="flex flex-1 flex-col gap-6 font-sans text-slate-800 [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex flex-1 flex-col gap-6 font-sans text-slate-800 [--accent:var(--rs-accent,#3E6B4F)]">
             <header>
                 {data.fullName.trim() && (
-                    <h1 className="font-mono text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-slate-900 wrap-break-word">
+                    <div role="heading" aria-level={1} className="font-mono text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-slate-900 wrap-break-word">
                         {data.fullName}
                         <span aria-hidden="true" className="ml-1.5 inline-block h-[0.78em] w-[0.42em] translate-y-[0.08em] bg-(--accent)" />
-                    </h1>
+                    </div>
                 )}
                 {data.title.trim() && (
                     <p className="mt-1.5 font-mono text-[15px] text-slate-600 wrap-break-word">

@@ -1,3 +1,4 @@
+import { validateUrl } from '../../utils/validation';
 import React from 'react';
 import { ResumeData } from '../../types';
 import {
@@ -116,10 +117,10 @@ export const getContactEntries = (data: ResumeData): ContactEntry[] => {
     if (email) entries.push({ id: 'email', key: 'email', label: 'Email', icon: MailIcon, value: email, href: `mailto:${email}` });
     if (phone) entries.push({ id: 'phone', key: 'phone', label: 'Phone', icon: PhoneIcon, value: phone, href: `tel:${phone.replace(/[^\d+]/g, '')}` });
     if (data.location.trim()) entries.push({ id: 'location', key: 'location', label: 'Location', icon: MapPinIcon, value: data.location.trim() });
-    if (data.website.trim()) entries.push({ id: 'website', key: 'website', label: 'Website', icon: GlobeIcon, value: displayUrl(data.website), href: toHref(data.website) });
-    if (data.linkedin.trim()) entries.push({ id: 'linkedin', key: 'linkedin', label: 'LinkedIn', icon: LinkedinIcon, value: displayUrl(data.linkedin), href: toHref(data.linkedin) });
+    if (data.website.trim() && validateUrl(data.website)) entries.push({ id: 'website', key: 'website', label: 'Website', icon: GlobeIcon, value: displayUrl(data.website), href: toHref(data.website) });
+    if (data.linkedin.trim() && validateUrl(data.linkedin)) entries.push({ id: 'linkedin', key: 'linkedin', label: 'LinkedIn', icon: LinkedinIcon, value: displayUrl(data.linkedin), href: toHref(data.linkedin) });
     (data.links ?? []).forEach((link, index) => {
-        if (!link.url.trim()) return;
+        if (!link.url.trim() || !validateUrl(link.url)) return;
         const { label, icon } = describeLink(link);
         entries.push({ id: `link-${link.id || index}`, key: 'link', label, icon, value: displayUrl(link.url), href: toHref(link.url) });
     });
@@ -211,7 +212,7 @@ export const groupSkills = (skills: string[]): SkillGroup[] => {
     for (const raw of skills) {
         const match = /^([^:]{1,40}):\s*(.+)$/.exec(raw.trim());
         if (match) {
-            groups.push({ category: match[1].trim(), items: match[2].split(/\s*[,;·•]\s*/).filter(Boolean) });
+            groups.push({ category: match[1].trim(), items: match[2].split(/\s*[,;·•]\s*(?![^()]*\))/).filter(Boolean) });
         } else if (raw.trim()) {
             plain.push(raw.trim());
         }

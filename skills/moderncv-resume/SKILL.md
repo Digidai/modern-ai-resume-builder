@@ -7,16 +7,16 @@ description: Write, design and export a professional resume with ModernCV (40 te
 
 ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 PDF in one of 40 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
-If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_resume_schema`, `list_templates`, `render_preview`, `render_pdf`, `create_editor_link`). Otherwise use the HTTP API below with `curl`.
+If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `render_preview`, `render_pdf`, `create_editor_link`). Otherwise use the HTTP API below with `curl`.
 
 ## Workflow
 
 1. **Gather facts.** Ask for the target job title and the user's real history: roles, employers, dates, achievements with numbers, education, skills, links. Never invent employers, dates, degrees or metrics; if a number is missing, ask or leave it out.
-2. **Read the guide.** `GET /api/agent/guide?job_title=<title>` returns section order, length, skills to feature, metrics to quantify, example bullets and recommended templates.
+2. **Read the guide and an example.** `GET /api/agent/guide?job_title=<title>` returns section order, length, skills to feature, metrics to quantify, example bullets and recommended templates. `GET /api/agent/example?job_title=<title>` returns a complete example resume for that role (use it for structure and tone only; never copy its employers, dates or numbers).
 3. **Draft the resume JSON** (shape below). Write 3–5 bullets per recent role, each starting with an action verb and ending with a result. Mirror keywords from the job posting if the user shared one.
 4. **Choose a template.** Prefer an ATS-friendly one (`classic`, `modern`, `ivy`, `banking` (Ledger), `meridian`, `keystone`, `vital`, `vanguard`, `timeline`, `executive`, `compact`, …) for online applications. `GET /api/agent/templates?ats_only=true` lists them.
 5. **Check the fit.** `POST /api/agent/preview` returns page 1 as PNG; the `x-resume-pages` header gives the page count. If it is over one page and the user wants one, shorten bullets, set `"scale": 0.9`, or switch to `compact`.
-6. **Deliver.** `POST /api/agent/pdf` for the PDF file, and `POST /api/agent/link` for a link that opens the editor with the resume loaded so the user can tweak it. Give the user both.
+6. **Deliver.** `POST /api/agent/pdf` for the PDF file, and always `POST /api/agent/link` for a link that opens the editor with the resume loaded so the user can tweak it. Give the user both.
 
 ## HTTP API
 
@@ -24,8 +24,9 @@ Base URL: `https://genedai.cv`. JSON in, JSON/PDF/PNG out. CORS is open. Renderi
 
 | Method and path | Body / query | Returns |
 |---|---|---|
-| `GET /api/agent/templates` | `?ats_only=true` | `{ templates: [{ id, name, description, bestFor, atsFriendly, preview }] }` |
+| `GET /api/agent/templates` | `?ats_only=true` | `{ templates: [{ id, name, description, bestFor, atsFriendly, preview, page }] }` |
 | `GET /api/agent/guide` | `?job_title=Data Analyst` | Writing guide JSON |
+| `GET /api/agent/example` | `?job_title=Registered Nurse (RN)` | `{ jobTitle, family, page, resume }`; `resume` is render-ready (placeholder name, no contact details) |
 | `POST /api/agent/link` | `{ resume, template?, accent?, font?, scale? }` | `{ url, template, warnings }` |
 | `POST /api/agent/preview` | same | `image/png` of page 1; headers `x-resume-pages`, `x-resume-warnings` |
 | `POST /api/agent/pdf` | same | `application/pdf` (A4, selectable text) |

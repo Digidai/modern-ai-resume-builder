@@ -88,7 +88,22 @@
         "Installation: EMT and rigid conduit bending, wire pulling, device and fixture trim-out",
         "Codes: NEC 2023 (coursework), box fill and conductor ampacity",
         "Tools: Klein hand benders, Greenlee pullers, Fluke T6 tester, Milwaukee press tools"
-      ]
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.95,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.94,
+        "pop": 0.94,
+        "cast": 0.98
+      }
     },
     "Journeyman Electrician": {
       "summary": "Licensed Colorado journeyman electrician with 8 years in commercial and light industrial work, from 480V service to fire alarm and lighting controls. Ran a 4-person crew on a $3.2M medical office build-out that passed final inspection first time, and brings strong code knowledge and clean, inspection-ready installs.",
@@ -126,7 +141,18 @@
         "Systems: 480/277V and 208/120V distribution, MCCs, VFDs, fire alarm, lighting controls",
         "Codes: NEC 2023, local amendments, ADA device heights",
         "Tools: Fluke 87V and 1587 insulation tester, Greenlee hydraulic benders, Bluebeam Revu"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.85
+      }
     },
     "Master Electrician": {
       "summary": "Texas Master Electrician with 17 years in the trade and 6 as master of record for a 40-electrician contractor. Oversees permitting, code compliance and estimating on $18M a year of commercial and industrial work, and cut failed inspections to under 2% while growing service revenue 35%.",
@@ -138,7 +164,7 @@
           "startDate": "2020-02",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Serve as master of record on 120+ permits a year, signing off design-build installs from 200A services to 4,000A switchgear\n- Standardized pre-inspection checklists across 9 foremen, dropping failed city inspections from 7% to 1.8%\n- Built a service and maintenance division with 6 vans and annual infrared scanning contracts, growing service revenue 35% in two years\n- Estimate and review bids up to $2.5M in Accubid, holding average job margin at 18%"
+          "description": "- Serve as master of record on 120+ permits a year, signing off design-build installs from 200A services to 4,000A switchgear\n- Standardized pre-inspection checklists across 9 foremen, dropping failed city inspections from 7% to 1.8%\n- Built a service and maintenance division with 6 vans and annual infrared scanning contracts, growing service revenue 35% in two years"
         },
         {
           "company": "Alamo Industrial Electric",
@@ -171,9 +197,20 @@
       "skills": [
         "Licenses: Master Electrician (TDLR, Texas), OSHA 30 Construction, NFPA 70E",
         "Leadership: permitting, code review, crew scheduling, apprentice training",
-        "Estimating: Accubid, Bluebeam Revu, ConEst",
-        "Systems: switchgear to 4,000A, generators and ATS, VFDs, infrared thermography"
-      ]
+        "Estimating: Accubid, Bluebeam Revu, ConEst"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.97,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "bronx": 0.92,
+        "mono": 0.95,
+        "pop": 0.91
+      }
     },
     "Industrial Electrician": {
       "summary": "Industrial electrician with 10 years maintaining high-speed packaging and processing lines in 24/7 food plants. Troubleshoots 480V motor circuits, VFDs and Allen-Bradley PLCs, and cut electrical downtime on a 6-line plant by 38% through root-cause fixes and better spares control.",
@@ -211,7 +248,21 @@
         "Controls: Allen-Bradley ControlLogix, Studio 5000, PanelView HMIs, PowerFlex 525/755 VFDs",
         "Maintenance: motor testing (Megger), infrared thermography, hazardous locations",
         "Systems: SAP PM, Fluke 1587, root-cause analysis (5 Whys)"
-      ]
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.93,
+        "pop": 0.85
+      }
     },
     "Lineman": {
       "summary": "Journeyman lineman with 9 years building and maintaining overhead and underground distribution for an electric cooperative. Works energized lines up to 25 kV with rubber gloves and hot sticks, and led storm crews that restored 14,000 customers in 72 hours after a 2024 ice storm with no recordable injuries.",
@@ -249,7 +300,18 @@
         "Line work: energized work to 25 kV, rubber glove and hot stick methods, URD terminations, transformer banking",
         "Equipment: digger derricks, bucket trucks, tensioners, pole climbing",
         "Safety: tailboards, grounding and bonding, pole-top and bucket rescue"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.85
+      }
     },
     "Welder": {
       "summary": "AWS-certified structural and pipe welder with 7 years in heavy fabrication, running SMAW, FCAW and GTAW in all positions. Holds a sub-1% X-ray reject rate on pressure piping and brings fast, clean blueprint-to-weld work on carbon and stainless steel.",
@@ -287,7 +349,18 @@
         "Processes: SMAW, FCAW, GMAW, GTAW, air arc gouging, plasma and oxy-fuel cutting",
         "Materials: carbon steel, 304/316 stainless, chrome-moly",
         "Fabrication: blueprint and weld symbol reading, fit-up, Lincoln and Miller machines"
-      ]
+      ],
+      "fit": {
+        "creative": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.97,
+        "pop": 0.88
+      }
     },
     "Welding Inspector": {
       "summary": "AWS Certified Welding Inspector with 13 years in welding and QA, including 6 inspecting pressure piping and structural steel for refinery and power projects. Manages weld maps, WPS/PQR records and NDE scheduling, and reduced a fabricator's repair rate from 4.1% to 1.3%.",
@@ -332,9 +405,21 @@
       "skills": [
         "Certifications: AWS CWI, ASNT SNT-TC-1A Level II (VT, MT, PT), API 577 Welding Inspection, OSHA 30",
         "Codes: ASME B31.3, B31.1, Section VIII and IX, AWS D1.1",
-        "Inspection: weld maps, WPS/PQR review, PMI, hardness testing, NDE coordination",
-        "Tools: Fischer coating gauges, Bridge Cam and Hi-Lo gauges, Excel traceability logs"
-      ]
+        "Inspection: weld maps, WPS/PQR review, PMI, hardness testing, NDE coordination"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.98,
+        "bronx": 0.98,
+        "mono": 0.95,
+        "pop": 0.88
+      }
     },
     "Pipefitter": {
       "summary": "Journeyman pipefitter with 11 years installing process, steam and medical gas piping in hospitals, pharma plants and data centers. Reads isometrics and P&IDs, rigs and sets equipment, and led a 6-fitter crew on a $4.8M chilled-water plant delivered with zero hydro test failures.",
@@ -370,9 +455,16 @@
       "skills": [
         "Certifications: ASSE 6010 Medical Gas Installer, UA Star Pipefitter, OSHA 30 Construction, NCCER Rigger",
         "Piping: carbon and stainless steel, copper brazing, grooved and press systems, steam and condensate",
-        "Codes: ASME B31.1 and B31.3, NFPA 99, ASME Section IX",
-        "Field skills: isometric and P&ID reading, hydro and pneumatic testing, rigging and signaling"
-      ]
+        "Codes: ASME B31.1 and B31.3, NFPA 99, ASME Section IX"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.91,
+        "ginto": 0.88,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "pop": 0.92
+      }
     },
     "Sheet Metal Worker": {
       "summary": "Journeyman sheet metal worker with 8 years fabricating and installing commercial HVAC duct. Builds rectangular, spiral and grease duct to SMACNA standards, and cut field rework on a 220,000 sq ft school project by 30% by shop-fabricating from coordinated 3D models.",
@@ -410,7 +502,15 @@
         "Fabrication: plasma cutting, press brake, layout and pattern development, TIG and MIG on light gauge",
         "Standards: SMACNA HVAC Duct Construction Standards, NFPA 90A and 96",
         "Software: AutoCAD MEP, Revit, Navisworks for coordination"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.91,
+        "pop": 0.87
+      }
     },
     "Millwright": {
       "summary": "Industrial millwright with 12 years installing, aligning and rebuilding rotating equipment in paper and steel mills. Specializes in laser shaft alignment, gearbox rebuilds and vibration analysis, and extended mean time between failures on a paper machine's critical drives from 7 to 16 months.",
@@ -446,9 +546,17 @@
       "skills": [
         "Certifications: NCCER Millwright, Vibration Analyst Category I (ISO 18436-2), OSHA 10 General Industry, forklift and overhead crane",
         "Mechanical: laser and dial indicator alignment, bearing and seal replacement, gearbox rebuilds, hydraulics",
-        "Predictive maintenance: vibration analysis, ultrasound, oil analysis",
-        "Tools: Easy-Laser and Fixturlaser, SKF Microlog, precision levels, rigging gear"
-      ]
+        "Predictive maintenance: vibration analysis, ultrasound, oil analysis"
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "pop": 0.94
+      }
     },
     "CNC Operator": {
       "summary": "CNC operator with 3 years running Haas and Okuma mills and lathes in a high-mix aerospace job shop. Sets work offsets, swaps tooling and inspects parts to print, and keeps first-article approval above 97% while running two machines at once on second shift.",
@@ -486,7 +594,15 @@
         "Machines: Haas VF-2 and ST-20, Okuma LB3000, bar feeders",
         "Inspection: micrometers, calipers, height gauges, thread and pin gauges, blueprint reading, basic GD&T",
         "Quality: AS9100 travelers, first-article inspection, SPC check sheets"
-      ]
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.9,
+        "pop": 0.9
+      }
     },
     "CNC Machinist": {
       "summary": "CNC machinist with 9 years setting up and running 3- and 5-axis mills and multi-axis lathes for medical and defense parts. Holds tolerances to ±0.0002 in. in titanium and Inconel, and cut setup time on a 40-part family by 45% with standardized fixtures and tool libraries.",
@@ -524,7 +640,17 @@
         "Machines: DMG Mori DMU 50, Mazak Integrex, Citizen L20 Swiss, Haas UMC-750",
         "Programming: Mastercam, G-code and M-code editing, Fanuc and Siemens controls",
         "Quality: GD&T (ASME Y14.5), CMM reports, ISO 13485, AS9100, ITAR"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.92,
+        "quartz": 0.88,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.91
+      }
     },
     "CNC Programmer": {
       "summary": "CNC programmer with 12 years in machining and 6 writing CAM programs for 5-axis mills and mill-turn centers. Builds verified toolpaths in Mastercam and Vericut, and cut cycle times on a shop's top 25 part numbers by an average of 28%, adding about $410K a year in capacity.",
@@ -562,7 +688,18 @@
         "Controls: Fanuc, Okuma OSP, Heidenhain, Haas NGC, post-processor editing",
         "Machining: titanium, aluminum, 15-5 stainless, high-efficiency milling, workholding design",
         "Quality: GD&T (ASME Y14.5), AS9100, first-article inspection (AS9102)"
-      ]
+      ],
+      "fit": {
+        "creative": 0.99,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.88
+      }
     },
     "Tool and Die Maker": {
       "summary": "Journeyman tool and die maker with 15 years building and maintaining progressive and transfer dies for automotive stampings. Designs repairs, runs wire EDM and surface grinders, and cut die-related press downtime 35% at a 22-press stamping plant through a structured die maintenance program.",
@@ -607,9 +744,20 @@
       "skills": [
         "Certifications: Journeyman Tool and Die Maker (DOL), OSHA 10 General Industry, overhead crane",
         "Machining: wire and sinker EDM, CNC milling, surface and jig grinding",
-        "Die work: progressive and transfer dies, tryout, shimming, die setting",
-        "Quality: PPAP, AutoForm reports, CMM, blueprint and die design reading"
-      ]
+        "Die work: progressive and transfer dies, tryout, shimming, die setting"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.88,
+        "bronx": 0.98,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.98
+      }
     },
     "Machine Operator": {
       "summary": "Machine operator with 4 years running injection molding and packaging equipment in a high-volume plastics plant. Handles startups, changeovers and in-line quality checks, keeps scrap under 2%, and helped cut mold changeover time 25% with zero recordable injuries.",
@@ -647,7 +795,19 @@
         "Equipment: Engel and Arburg injection molders, robots and conveyors, case erectors",
         "Quality: visual inspection, go/no-go gauges, MES defect logging, SPC charts",
         "Practices: SMED changeovers, 5S, LOTO, GMP basics"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "creative": 0.96,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.89
+      }
     },
     "Assembly Technician": {
       "summary": "Electromechanical assembly technician with 5 years of regulated production experience building industrial control panels and medical capital equipment. Works from wiring diagrams and work instructions, solders to IPC standards, and has kept a 99.2% first-pass test yield on 1,100 assembled units.",
@@ -685,7 +845,19 @@
         "Assembly: wire harnessing, crimping, soldering, torque control, UL 508A panels",
         "Documentation: work instructions, DHRs, Arena PLM, ISO 13485",
         "Test: multimeters, hipot and continuity testers, functional test stations"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.89
+      }
     },
     "Manufacturing Technician": {
       "summary": "Manufacturing technician with 6 years supporting semiconductor and electronics production lines. Sustains process tools, runs DOEs with engineers and writes SOPs, and helped lift yield on a wafer-level packaging line from 92.5% to 96.8% by tightening process controls.",
@@ -723,7 +895,16 @@
         "Process tools: plasma etch, PVD sputter, reflow, SMT pick-and-place, AOI",
         "Quality: SPC, OCAP, DOE support, 8D problem solving",
         "Systems: MES (Camstar), JMP, SAP"
-      ]
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
     },
     "Quality Technician": {
       "summary": "ASQ Certified Quality Technician with 7 years in automotive and industrial manufacturing. Programs CMMs, runs SPC and MSA studies and supports PPAP submissions, and cut customer PPM from 210 to 45 at a Tier 1 supplier through better gauging and containment.",
@@ -761,7 +942,18 @@
         "Inspection: Zeiss CMM (Calypso), Keyence vision, height gauges, surface finish, hardness",
         "Quality tools: SPC, MSA and gauge R&R, PPAP, FMEA, control plans, 8D",
         "Software: InfinityQS, Minitab, Excel"
-      ]
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.95,
+        "pop": 0.9
+      }
     },
     "Maintenance Technician": {
       "summary": "Multi-craft maintenance technician with 6 years keeping bottling and packaging lines running in a 3-shift beverage plant. Troubleshoots electrical, pneumatic and mechanical faults, and helped raise line OEE from 61% to 74% by finishing PMs on time and fixing chronic jams.",
@@ -799,7 +991,19 @@
         "Electrical: 480V three-phase, motor controls, VFDs, Allen-Bradley PLC troubleshooting",
         "Mechanical: pneumatics, hydraulics, gearboxes, bearings, conveyors, welding basics",
         "Systems: Fiix CMMS, PM planning, root-cause analysis"
-      ]
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.9
+      }
     },
     "Industrial Maintenance Mechanic": {
       "summary": "Industrial maintenance mechanic with 11 years repairing heavy rotating, hydraulic and conveying equipment in steel service centers and automotive plants. Rebuilds hydraulic power units and press drives, fabricates replacement parts, and led a press-line reliability push that cut breakdown hours 42%.",
@@ -837,7 +1041,19 @@
         "Mechanical: hydraulics, pneumatics, gearboxes, power transmission, crane maintenance",
         "Fabrication: MIG and stick welding, manual lathe and mill, oxy-fuel cutting",
         "Systems: IBM Maximo, TPM, vibration and oil analysis basics"
-      ]
+      ],
+      "fit": {
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.92
+      }
     },
     "Maintenance Planner": {
       "summary": "Maintenance planner with 14 years in plant maintenance, the last 5 planning and scheduling work for a 450-employee chemical plant. Builds job plans, kits parts and runs weekly schedules in SAP PM, and raised planned work from 48% to 81% of total maintenance hours while reducing overtime 22%.",
@@ -882,9 +1098,21 @@
       "skills": [
         "Certifications: SMRP Certified Maintenance & Reliability Professional (CMRP), OSHA 30 General Industry, TWIC",
         "Planning: job plans, work order backlog management, weekly scheduling, kitting, turnaround planning",
-        "Systems: SAP PM, Primavera P6, Excel, Power BI",
-        "Process safety: OSHA 1910.119 PSM, MOC, permit to work"
-      ]
+        "Systems: SAP PM, Primavera P6, Excel, Power BI"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "symmetry": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.94,
+        "mono": 0.93,
+        "pop": 0.86
+      }
     },
     "Maintenance Supervisor": {
       "summary": "Maintenance supervisor with 15 years in food and consumer goods manufacturing, leading 18 technicians across 3 shifts. Runs a $2.4M maintenance budget, moved the plant from reactive to planned maintenance, and lifted OEE from 64% to 78% while cutting maintenance spend per case 12%.",
@@ -896,7 +1124,7 @@
           "startDate": "2020-08",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Lead 18 mechanics, electricians and a planner across 3 shifts supporting 7 fryer and packaging lines\n- Manage a $2.4M annual maintenance budget, cutting maintenance cost per case 12% through PM optimization and vendor consolidation\n- Launched TPM and a weekly reliability review that raised plant OEE from 64% to 78% in 2 years\n- Hired and developed 6 technicians, promoting 3 into lead roles, and held turnover under 10%\n- Kept SQF audits free of maintenance-related nonconformances for 4 consecutive years"
+          "description": "- Lead 18 mechanics, electricians and a planner across 3 shifts supporting 7 fryer and packaging lines\n- Manage a $2.4M annual maintenance budget, cutting maintenance cost per case 12% through PM optimization and vendor consolidation\n- Launched TPM and a weekly reliability review that raised plant OEE from 64% to 78% in 2 years\n- Hired and developed 6 technicians, promoting 3 into lead roles, and held turnover under 10%"
         },
         {
           "company": "Heartland Dairy Cooperative",
@@ -929,9 +1157,20 @@
       "skills": [
         "Certifications: OSHA 30 General Industry, SMRP CMRP, SQF Practitioner, NFPA 70E",
         "Leadership: 3-shift scheduling, hiring, coaching, budget management, vendor contracts",
-        "Reliability: TPM, PM optimization, RCA, OEE tracking, critical spares",
-        "Systems: UpKeep, SAP PM, Power BI"
-      ]
+        "Reliability: TPM, PM optimization, RCA, OEE tracking, critical spares"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.93,
+        "pop": 0.92
+      }
     },
     "Instrumentation Technician": {
       "summary": "Instrumentation and controls technician with 9 years calibrating and troubleshooting field instruments and DCS loops in refining and power generation. Maintains 1,800 instruments to a calibration schedule, and cut nuisance trips on a gas turbine unit by 70% after redesigning transmitter installations.",
@@ -967,9 +1206,17 @@
       "skills": [
         "Certifications: ISA Certified Control Systems Technician (CCST) Level II, OSHA 10, TWIC, NFPA 70E",
         "Instruments: Rosemount, Yokogawa, Endress+Hauser transmitters, Fisher and Masoneilan valves, analyzers",
-        "Controls: Emerson DeltaV, Honeywell Experion, HART, Foundation Fieldbus, 4-20 mA loops",
-        "Tools: Fluke 754 calibrator, AMS Device Manager, P&ID and loop sheet reading"
-      ]
+        "Controls: Emerson DeltaV, Honeywell Experion, HART, Foundation Fieldbus, 4-20 mA loops"
+      ],
+      "fit": {
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.94,
+        "ginto": 0.9,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "pop": 0.93
+      }
     },
     "Refrigeration Technician": {
       "summary": "Industrial refrigeration technician with 8 years maintaining ammonia and Freon systems in cold storage and food processing. Holds EPA 608 Universal and RETA CIRO credentials, and cut energy use at a 22 million cubic-foot cold storage site 14% through compressor sequencing and condenser upgrades.",
@@ -1005,9 +1252,19 @@
       "skills": [
         "Certifications: EPA Section 608 Universal, RETA Certified Industrial Refrigeration Operator (CIRO), 24-hour HAZWOPER, OSHA 10",
         "Systems: ammonia screw and reciprocating compressors, evaporative condensers, recirculated and DX systems, rack refrigeration",
-        "Compliance: OSHA 1910.119 PSM, IIAR 6 and 7, CARB refrigerant management",
-        "Controls: Frick Quantum HD, Logix-based refrigeration controls, VFDs"
-      ]
+        "Compliance: OSHA 1910.119 PSM, IIAR 6 and 7, CARB refrigerant management"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.86
+      }
     },
     "Production Associate": {
       "summary": "Production associate with 2 years on a high-volume automotive parts assembly line and an MSSC Certified Production Technician credential. Rotates across 6 stations, meets takt time consistently and earned a plant safety award for reporting and fixing 9 near-miss hazards.",
@@ -1028,7 +1285,7 @@
           "startDate": "2023-10",
           "endDate": "2024-01",
           "isCurrent": false,
-          "description": "- Packed and labeled up to 900 orders per shift with 99.8% accuracy during peak season\n- Earned an early contract extension for attendance and accuracy\n- Cross-trained on returns processing and scanner troubleshooting within the first month"
+          "description": "- Packed and labeled up to 900 orders per shift with 99.8% accuracy during peak season\n- Earned an early contract extension for attendance and accuracy"
         }
       ],
       "education": [
@@ -1049,9 +1306,18 @@
       "skills": [
         "Certifications: MSSC Certified Production Technician (CPT 4.0), OSHA 10 General Industry, forklift (stand-up and sit-down)",
         "Production: assembly to work instructions, takt time, torque tools, scanners",
-        "Quality and safety: visual inspection, error-proofing checks, 5S, LOTO awareness",
-        "Continuous improvement: kaizen events, standard work"
-      ]
+        "Quality and safety: visual inspection, error-proofing checks, 5S, LOTO awareness"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.98
+      }
     }
   }
 }

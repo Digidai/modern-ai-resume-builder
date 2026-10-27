@@ -35,10 +35,10 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasSidebar = skillGroups.length > 0 || data.projects.length > 0;
 
     return (
-        <div className="flex-1 flex flex-col bg-white text-slate-700 font-source-sans text-[14px] leading-[1.5] px-[14mm] py-[13mm] [--accent:var(--rs-accent,#4338CA)]">
+        <div className="flex-1 flex flex-col bg-white text-slate-700 font-source-sans text-[14px] leading-[1.5] px-[14mm] py-[13mm] [--accent:var(--rs-accent,#7A5A12)]">
             <header className="pl-9 mb-8">
                 {data.fullName && (
-                    <h1 className="font-raleway text-[34px] font-bold tracking-tight leading-[1.15] text-(--accent) wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="font-raleway text-[34px] font-bold tracking-tight leading-[1.15] text-(--accent) wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title && <p className="font-raleway text-[17px] font-semibold text-slate-800 mt-1 leading-snug wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (

@@ -3,16 +3,16 @@ import type { ResumeDesign } from '../types';
 
 /** Accent presets; every one has ≥ 4.5:1 contrast on white, so it is safe for text. */
 export const ACCENT_PRESETS = [
-  { name: 'Indigo', value: '#4338CA' },
   { name: 'Ocean', value: '#2F5A8A' },
   { name: 'Teal', value: '#1F6E73' },
   { name: 'Forest', value: '#3E6B4F' },
-  { name: 'Plum', value: '#6B3E6E' },
   { name: 'Wine', value: '#8A2C3F' },
   { name: 'Rust', value: '#A0442A' },
   { name: 'Ochre', value: '#7A5A12' },
   { name: 'Graphite', value: '#3B3F45' },
   { name: 'Black', value: '#111111' },
+  { name: 'Indigo', value: '#4338CA' },
+  { name: 'Plum', value: '#6B3E6E' },
 ] as const;
 
 /** Paper font families that a preset can stand in for (all non-monospace families). */

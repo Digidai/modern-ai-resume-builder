@@ -22,7 +22,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex-1 flex flex-col bg-white text-neutral-900 font-inter text-[14px] leading-[1.5] [--accent:var(--rs-accent,#111111)] [--accent-light:color-mix(in_oklab,var(--accent)_38%,white)]">
             <header className="bg-neutral-950 text-white px-[14mm] pt-[13mm] pb-[9mm] border-b-[6px] border-(--accent)">
                 {data.fullName && (
-                    <h1 className="font-montserrat text-[42px] font-black uppercase tracking-tight leading-[1.05] wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="font-montserrat text-[42px] font-black uppercase tracking-tight leading-[1.05] wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title && (
                     <p className="font-montserrat text-[15px] font-bold uppercase tracking-[0.18em] text-(--accent-light) mt-3 leading-snug wrap-break-word">{data.title}</p>

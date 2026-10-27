@@ -799,34 +799,6 @@ const buildJobOgSvg = ({ title, templateName }) => {
   return buildOgSvgShell(content);
 };
 
-const buildHomeOgSvg = ({ templateName }) => {
-  const templateLabel = truncateText(`${templateName} Template`, 22);
-  const content = `
-  <text class="brand" x="72" y="80">ModernCV</text>
-  <text class="eyebrow" x="72" y="128">AI Resume Builder</text>
-  <text class="title" x="72" y="195">Build a resume in minutes</text>
-  <text class="subtitle" x="72" y="245">Choose a template, tailor content, export PDF.</text>
-  <g transform="translate(700 90)">
-    <rect x="0" y="0" width="420" height="470" rx="18" fill="#ffffff" stroke="#e2e8f0" />
-    <rect x="0" y="0" width="420" height="8" rx="4" fill="#6366f1" />
-    <rect x="32" y="30" width="200" height="18" rx="6" fill="#0f172a" />
-    <rect x="32" y="56" width="150" height="10" rx="5" fill="#94a3b8" />
-    <rect x="32" y="82" width="356" height="2" fill="#e2e8f0" />
-    <rect x="32" y="104" width="110" height="10" rx="5" fill="#cbd5e1" />
-    <rect x="32" y="128" width="320" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="146" width="300" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="164" width="330" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="200" width="120" height="8" rx="4" fill="#cbd5e1" />
-    <rect x="32" y="220" width="310" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="238" width="280" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="256" width="320" height="8" rx="4" fill="#e2e8f0" />
-    <rect x="32" y="396" width="160" height="28" rx="14" fill="#eef2ff" />
-    <text x="48" y="415" class="template-label">${escapeHtml(templateLabel)}</text>
-  </g>`;
-
-  return buildOgSvgShell(content);
-};
-
 const buildEditorOgSvg = () => {
   const content = `
   <text class="brand" x="72" y="80">ModernCV</text>
@@ -859,7 +831,7 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
   const roleLinks = featuredTitles
     .map((title) => {
       const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
-      return `<li><a class="text-indigo-600 hover:underline" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
+      return `<li><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
     })
     .join('\n');
 
@@ -873,7 +845,7 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
       <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">ModernCV AI Resume Builder</h1>
       <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Build a professional resume in minutes with modern templates, AI suggestions, and instant PDF export.</p>
       <div class="mt-6 flex flex-wrap gap-4">
-        <a class="inline-flex items-center justify-center rounded-xl bg-indigo-600 px-5 py-3 text-white font-semibold hover:bg-indigo-500 transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
+        <a class="inline-flex h-10 items-center justify-center rounded-[2px] bg-ink px-5 text-paper font-medium hover:bg-ink-hover transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
         <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse job titles</a>
       </div>
     </header>
@@ -901,7 +873,7 @@ const renderDirectoryRoot = (categories, toPath) => {
       const links = category.titles
         .map((title) => {
           const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
-          return `<li><a class="text-indigo-600 hover:underline" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
+          return `<li><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
         })
         .join('\n');
       return `
@@ -917,7 +889,7 @@ const renderDirectoryRoot = (categories, toPath) => {
     <header class="mb-10">
       <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Browse Resume Templates by Job Title</h1>
       <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Pick your role to preview templates, then open the editor to customize content and export to PDF.</p>
-      <p class="mt-4"><a class="text-indigo-600 hover:underline" href="${escapeAttr(toPath('/'))}">Back to ModernCV</a></p>
+      <p class="mt-4"><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(toPath('/'))}">Back to ModernCV</a></p>
     </header>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
       ${categoryCards}
@@ -1008,7 +980,7 @@ const renderEditorRoot = (toPath) => `
   <main class="max-w-3xl mx-auto p-6 md:p-10">
     <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">ModernCV Resume Editor</h1>
     <p class="mt-4 text-slate-600 dark:text-slate-400">This interactive editor requires JavaScript. If you're looking for templates, start in the directory.</p>
-    <p class="mt-6"><a class="text-indigo-600 hover:underline" href="${escapeAttr(toPath('/directory'))}">Browse templates by job title</a></p>
+    <p class="mt-6"><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(toPath('/directory'))}">Browse templates by job title</a></p>
     <noscript>
       <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the editor.</p>
     </noscript>
@@ -1122,6 +1094,7 @@ const buildOpenApi = (siteUrl, templates) => {
         `${siteUrl}/mcp.`,
     },
     servers: [{ url: siteUrl }],
+    security: [],
     paths: {
       '/api/agent/templates': {
         get: {
@@ -1137,6 +1110,35 @@ const buildOpenApi = (siteUrl, templates) => {
           summary: 'Resume writing guide for a job title',
           parameters: [{ name: 'job_title', in: 'query', required: true, schema: { type: 'string' }, example: 'Data Analyst' }],
           responses: { 200: { description: 'Guide', content: { 'application/json': { schema: { type: 'object' } } } }, 400: error },
+        },
+      },
+      '/api/agent/example': {
+        get: {
+          operationId: 'getExampleResume',
+          summary: 'A complete example resume for a job title; its `resume` field is render-ready',
+          parameters: [{ name: 'job_title', in: 'query', required: true, schema: { type: 'string' }, example: 'Registered Nurse (RN)' }],
+          responses: {
+            200: {
+              description: 'Example',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      jobTitle: { type: 'string' },
+                      family: { type: 'string' },
+                      page: { type: 'string' },
+                      resume: { type: 'object' },
+                      matchedTitle: { type: 'string' },
+                      exact: { type: 'boolean' },
+                    },
+                  },
+                },
+              },
+            },
+            400: error,
+            404: error,
+          },
         },
       },
       '/api/agent/link': {
@@ -1216,7 +1218,7 @@ Key facts:
 
 - [Agent setup guide](${siteUrl}/agents/): MCP client config, skill install, copy-paste prompts.
 - MCP server (Streamable HTTP, no auth): \`${siteUrl}/mcp\`. Tools: ${MCP_TOOLS.map(([n]) => n).join(', ')}.
-- [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, link, preview, pdf).
+- [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, example, link, preview, pdf).
 - [Agent skill](${siteUrl}/skills/moderncv-resume/SKILL.md): step-by-step workflow for drafting, checking and exporting a resume.
 - Editor handoff link: ${siteUrl}/editor/#resume=<payload> opens the editor with a resume loaded. The payload is base64url-encoded resume JSON (or URL-encoded JSON); POST /api/agent/link builds a compact one. It stays in the URL fragment and never reaches the server.
 - [Template catalog (JSON)](${siteUrl}/templates.json): ids, names, descriptions, ATS status, preview images and editor links.
@@ -1436,16 +1438,11 @@ const main = async () => {
   const defaultTemplateName = templates.find((template) => template.id === 'modern')?.name
     ?? templates[0]?.name
     ?? 'Modern';
-  const homeOgPath = '/og/home.png';
+  // Home uses the designed share card in public/og-image.png.
+  const homeOgPath = DEFAULT_OG_IMAGE;
   const editorOgPath = '/og/editor.png';
   const directoryOgPath = '/og/directory.png';
   const defaultJobOgPath = '/og/resume_tmpl/default.png';
-
-  await writeOgImage({
-    relativePath: homeOgPath,
-    svg: buildHomeOgSvg({ templateName: defaultTemplateName }),
-    publicDirReady,
-  });
 
   await writeOgImage({
     relativePath: editorOgPath,

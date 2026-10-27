@@ -39,7 +39,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-stone-50 px-[18mm] pt-[14mm] pb-[13mm] font-source-sans text-stone-800 wrap-break-word [--accent:var(--rs-accent,#57534E)]">
             <header className="mb-6 text-center">
-                <h1 className="font-garamond text-[42px] leading-tight italic text-stone-900">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-garamond text-[42px] leading-tight italic text-stone-900">{data.fullName}</div>
                 {data.title.trim() && (
                     <p className="mt-1.5 text-[13px] font-semibold tracking-[0.28em] uppercase text-stone-600">{data.title}</p>
                 )}

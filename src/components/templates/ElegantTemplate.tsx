@@ -23,7 +23,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-col flex-1 font-lato text-[14px] leading-normal text-stone-800 [--accent:var(--rs-accent,#92400E)]">
             <header className="pb-5 mb-6 border-b border-stone-300">
-                <h1 className="font-playfair text-[42px] font-normal tracking-tight leading-[1.1] text-stone-900 wrap-break-word">{data.fullName}</h1>
+                <div role="heading" aria-level={1} className="font-playfair text-[42px] font-normal tracking-tight leading-[1.1] text-stone-900 wrap-break-word">{data.fullName}</div>
                 {data.title && <p className="font-playfair italic text-[19px] text-(--accent) mt-1.5 wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (
                     <ul className="mt-3.5 flex flex-wrap gap-x-6 gap-y-1 text-[13px] text-stone-600 leading-snug">

@@ -24,7 +24,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
         >
             <header className="bg-(--accent-dark) text-white px-[13mm] pt-[11mm] pb-[10mm] flex justify-between items-center gap-8 border-b-4 border-(--accent)">
                 <div className="min-w-0 flex-1">
-                    <h1 className="text-[32px] font-bold tracking-tight leading-tight wrap-break-word">{data.fullName}</h1>
+                    <div role="heading" aria-level={1} className="text-[32px] font-bold tracking-tight leading-tight wrap-break-word">{data.fullName}</div>
                     {data.title && <p className="text-(--accent-light) text-[16px] font-medium mt-1.5 wrap-break-word">{data.title}</p>}
                 </div>
                 {contacts.length > 0 && (
