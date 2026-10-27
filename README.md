@@ -96,7 +96,11 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 
 ## Preview
 
-![ModernCV Preview](./public/og-image.png)
+![ModernCV home page: a resume preview next to the "A resume that gets you the interview" headline](./docs/images/home.png)
+
+| Editor with style controls | Template gallery | Writing guide on a job page |
+|:--:|:--:|:--:|
+| ![Editor: accent colour, font and text size controls beside a live resume preview](./docs/images/editor.png) | ![Template gallery with an ATS filter and template cards](./docs/images/templates.png) | ![Software Engineer writing guide: sections, skills, example bullets and recruiter tips](./docs/images/role-guide.png) |
 
 ## Features
 
