@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { MemoryRouter, Route, Routes } from 'react-router-dom';
+import { MemoryRouter, Route, Routes } from 'react-router';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import TemplateSelector from './TemplateSelector';
 import { INITIAL_RESUME_DATA } from '../types';
@@ -19,10 +19,7 @@ const renderTemplateSelector = () => {
   const onUseTemplate = vi.fn();
 
   render(
-    <MemoryRouter
-      initialEntries={['/resume_tmpl/software-engineer']}
-      future={{ v7_startTransition: true, v7_relativeSplatPath: true }}
-    >
+    <MemoryRouter initialEntries={['/resume_tmpl/software-engineer']}>
       <ThemeProvider>
         <ToastProvider>
           <ResumeProvider>
@@ -59,7 +56,8 @@ describe('TemplateSelector', () => {
 
     renderTemplateSelector();
 
-    expect(await screen.findByText(/Template: Sidebar/i)).toBeInTheDocument();
+    const templateLabels = await screen.findAllByText((_, element) => element?.tagName === 'P' && element.textContent === 'Template: Sidebar');
+    expect(templateLabels.length).toBeGreaterThan(0);
     const previewNameMatches = await screen.findAllByText('Pat User');
     expect(previewNameMatches.length).toBeGreaterThan(0);
   });

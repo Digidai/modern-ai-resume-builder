@@ -1,11 +1,11 @@
 import React, { useState, useMemo, useEffect } from 'react';
-import { Link, useParams, useNavigate } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router';
 import { ResumeData } from '../types';
-import ResumePreview from './ResumePreview';
 import { ScaledResumePreview } from './ScaledResumePreview';
+import { LazyResumePreview } from './LazyResumePreview';
 import { Button } from './Button';
-import { ArrowLeftIcon, CheckIcon } from './Icons';
-import ThemeToggle from './ThemeToggle';
+import { CheckIcon } from './Icons';
+import { SiteHeader, SiteFooter } from './SiteHeader';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import jobTitlesData from '../data/jobTitles.json';
 import { findJobTitleBySlug, humanizeSlug, slugifyJobTitle } from '../utils/slug';
@@ -73,31 +73,6 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             navigate(`/resume_tmpl/${canonicalSlug}`, { replace: true });
         }
     }, [canonicalSlug, jobTitle, navigate]);
-
-    // Keyboard navigation for template selection
-    useEffect(() => {
-        const handleKeyDown = (e: KeyboardEvent) => {
-            try {
-                if (!TEMPLATES || TEMPLATES.length === 0) return;
-
-                const currentIndex = TEMPLATES.findIndex(t => t.id === selectedTemplateId);
-                if (currentIndex === -1) return;
-
-                if (e.key === 'ArrowLeft' && currentIndex > 0) {
-                    setSelectedTemplateId(TEMPLATES[currentIndex - 1].id);
-                    e.preventDefault();
-                } else if (e.key === 'ArrowRight' && currentIndex < TEMPLATES.length - 1) {
-                    setSelectedTemplateId(TEMPLATES[currentIndex + 1].id);
-                    e.preventDefault();
-                }
-            } catch (error) {
-                console.error('Error handling keyboard navigation:', error);
-            }
-        };
-
-        window.addEventListener('keydown', handleKeyDown);
-        return () => window.removeEventListener('keydown', handleKeyDown);
-    }, [selectedTemplateId]);
 
     useEffect(() => {
         if (!resumeData.templateId) return;
@@ -186,119 +161,95 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
             .slice(0, 8);
     }, [categoryName, normalizedSlug]);
 
+    const selectedTemplate = TEMPLATES.find((t) => t.id === selectedTemplateId);
+    const useSelected = () => onUseTemplate(resolvedJobTitle, selectedTemplateId);
+
+    // Roving focus for the template radiogroup (arrow keys move and select).
+    const handleTemplateKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
+        const delta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+        if (!delta) return;
+        event.preventDefault();
+        const next = TEMPLATES[(index + delta + TEMPLATES.length) % TEMPLATES.length];
+        setSelectedTemplateId(next.id);
+        document.getElementById(`template-${next.id}`)?.focus();
+    };
+
     return (
-        <div className="min-h-screen flex flex-col md:flex-row bg-slate-100 dark:bg-slate-950 font-sans transition-colors duration-300">
+        <div className="flex min-h-screen flex-col bg-slate-50 font-sans dark:bg-slate-950">
+            <SiteHeader />
 
-            {/* Left Panel: Preview */}
-            <div className="w-full md:w-3/5 lg:w-2/3 h-[50vh] md:h-screen flex flex-col border-r border-slate-200 dark:border-slate-800 bg-slate-200/50 dark:bg-slate-900/50">
-                <header className="p-4 flex items-center gap-4 bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 shrink-0">
-                    <Button
-                        onClick={() => navigate('/directory')}
-                        variant="icon"
-                        className="-ml-2"
-                        title="Back to Directory"
-                    >
-                        <ArrowLeftIcon className="w-5 h-5" />
-                    </Button>
-                    <div>
-                        <h2 className="text-lg font-bold text-slate-800 dark:text-white">
-                            Previewing: {resolvedJobTitle}
-                        </h2>
-                        <p className="text-xs text-slate-500">Template: {TEMPLATES.find(t => t.id === selectedTemplateId)?.name || 'Template'}</p>
+            <main className="mx-auto grid w-full max-w-7xl flex-1 gap-8 px-4 pb-28 pt-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_400px] lg:pb-12 xl:grid-cols-[minmax(0,1fr)_460px]">
+                <div className="lg:col-start-2 lg:row-start-1">
+                    <nav aria-label="Breadcrumb" className="text-sm text-slate-500 dark:text-slate-400">
+                        <Link className="hover:text-slate-900 dark:hover:text-white" to="/">Home</Link>
+                        <span className="mx-2" aria-hidden="true">/</span>
+                        <Link className="hover:text-slate-900 dark:hover:text-white" to="/directory">Resume examples</Link>
+                        <span className="mx-2" aria-hidden="true">/</span>
+                        <span className="text-slate-700 dark:text-slate-200" aria-current="page">{resolvedJobTitle}</span>
+                    </nav>
+                    <h1 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
+                        {resolvedJobTitle} resume templates
+                    </h1>
+                    <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
+                        See your resume as a {resolvedJobTitle} in every design. Pick one, then edit the content and download a PDF.
+                    </p>
+
+                    <div className="mx-auto mt-6 w-full max-w-sm overflow-hidden rounded-md shadow-lg ring-1 ring-slate-900/5 lg:hidden">
+                        <ScaledResumePreview data={previewData} />
                     </div>
 
-                    <div className="ml-auto flex items-center gap-2">
-                        <ThemeToggle />
-                        <Button
-                            onClick={() => onUseTemplate(resolvedJobTitle, selectedTemplateId)}
-                            variant="primary"
-                            leftIcon={<CheckIcon className="w-4 h-4" />}
-                        >
-                            Use This Template
-                        </Button>
-                    </div>
-                </header>
-
-                <div className="flex-1 overflow-y-auto custom-scrollbar p-4 md:p-8 lg:p-12 flex justify-center items-start">
-                    <div className="w-full max-w-[210mm] shadow-2xl bg-white origin-top transition-transform duration-200">
-                        <ResumePreview data={previewData} />
-                    </div>
-                </div>
-            </div>
-
-            {/* Right Panel: Template List */}
-            <div className="w-full md:w-2/5 lg:w-1/3 h-auto md:h-screen overflow-visible md:overflow-y-auto bg-white dark:bg-slate-900 custom-scrollbar border-l border-slate-200 dark:border-slate-800">
-                <div className="p-6 md:p-8 max-w-xl mx-auto pb-24 md:pb-8">
-                    <div className="mb-6">
-                        <nav aria-label="Breadcrumb" className="text-xs text-slate-500 dark:text-slate-400 mb-3">
-                            <Link className="text-indigo-600 hover:underline" to="/">Home</Link>
-                            <span className="mx-2">/</span>
-                            <Link className="text-indigo-600 hover:underline" to="/directory">Job Directory</Link>
-                            <span className="mx-2">/</span>
-                            <span className="text-slate-700 dark:text-slate-200">{resolvedJobTitle}</span>
-                        </nav>
-                        <h1 className="text-2xl font-bold text-slate-900 dark:text-white">
-                            Resume Templates for {resolvedJobTitle}
-                        </h1>
-                        <p className="mt-2 text-slate-500 dark:text-slate-400 text-sm">
-                            Preview layouts tailored for {resolvedJobTitle}. Pick a template, then customize and export to PDF.
+                    <div className="mt-6 hidden items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-3 pl-4 lg:flex dark:border-slate-800 dark:bg-slate-900">
+                        <p className="text-sm text-slate-600 dark:text-slate-400">
+                            Template: <span className="font-semibold text-slate-900 dark:text-white">{selectedTemplate?.name}</span>
                         </p>
+                        <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use this template</Button>
                     </div>
 
-                    <div className="mb-8">
-                        <h2 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Select a Template</h2>
-                        <p className="text-slate-500 dark:text-slate-400 text-sm">Choose a design that fits your style. Content is preserved across templates.</p>
-                    </div>
-
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6" role="radiogroup" aria-label="Resume template options">
-                        {TEMPLATES.map((t) => (
-                            <button
-                                key={t.id}
-                                id={`template-${t.id}`}
-                                role="radio"
-                                aria-checked={selectedTemplateId === t.id}
-                                aria-pressed={selectedTemplateId === t.id}
-                                aria-label={`${t.name} template${selectedTemplateId === t.id ? ', selected' : ''}`}
-                                onClick={() => setSelectedTemplateId(t.id)}
-                                className={`relative p-4 rounded-2xl border-2 transition-all duration-200 text-left group hover:border-indigo-300 hover:shadow-lg w-full aspect-[210/297] flex flex-col
-                            ${selectedTemplateId === t.id
-                                        ? 'border-indigo-600 bg-indigo-50/50 dark:bg-indigo-900/20 ring-1 ring-indigo-600 shadow-md'
-                                        : 'border-slate-100 dark:border-slate-800 bg-slate-50 dark:bg-slate-800/50'
-                                    }
-                        `}
-                            >
-                                <div className="flex-1 w-full bg-slate-50 rounded-lg shadow-sm border border-slate-200 overflow-hidden mb-3 relative group-hover:shadow-md transition-shadow p-3 flex justify-center items-start">
-                                    <ScaledResumePreview data={previewData} templateId={t.id} />
-                                </div>
-
-                                <div className="flex items-center justify-between">
-                                    <div className="flex items-center gap-2">
-                                        <div className={`w-6 h-6 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-[10px] font-bold`}>
-                                            {t.name?.[0] || 'T'}
-                                        </div>
-                                        <span className={`font-semibold text-sm ${selectedTemplateId === t.id ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
-                                            {t.name}
-                                        </span>
+                    <div className="mt-6 grid grid-cols-3 gap-x-3 gap-y-4 sm:grid-cols-4 lg:grid-cols-3" role="radiogroup" aria-label="Resume templates">
+                        {TEMPLATES.map((t, index) => {
+                            const selected = selectedTemplateId === t.id;
+                            return (
+                                <button
+                                    key={t.id}
+                                    id={`template-${t.id}`}
+                                    type="button"
+                                    role="radio"
+                                    aria-checked={selected}
+                                    tabIndex={selected ? 0 : -1}
+                                    onClick={() => setSelectedTemplateId(t.id)}
+                                    onKeyDown={(event) => handleTemplateKeyDown(event, index)}
+                                    className="group text-left focus-visible:outline-none"
+                                >
+                                    <div
+                                        className={`relative overflow-hidden rounded-md bg-white shadow-sm ring-1 transition group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-indigo-500 ${
+                                            selected ? 'ring-2 ring-indigo-600 dark:ring-indigo-400' : 'ring-slate-200 dark:ring-slate-700'
+                                        }`}
+                                    >
+                                        <LazyResumePreview data={previewData} templateId={t.id} />
+                                        {selected && (
+                                            <span className="absolute right-1.5 top-1.5 flex h-5 w-5 items-center justify-center rounded-full bg-indigo-600 text-white shadow">
+                                                <CheckIcon className="h-3 w-3" />
+                                            </span>
+                                        )}
                                     </div>
-                                    {selectedTemplateId === t.id && (
-                                        <div className="w-2 h-2 bg-indigo-600 rounded-full" aria-hidden="true"></div>
-                                    )}
-                                </div>
-                            </button>
-                        ))}
+                                    <span className={`mt-1.5 block truncate text-center text-xs ${selected ? 'font-semibold text-indigo-600 dark:text-indigo-400' : 'text-slate-600 dark:text-slate-400'}`} title={t.description}>
+                                        {t.name}
+                                        {t.atsFriendly && <span className="ml-1 font-semibold text-emerald-700 dark:text-emerald-400">· ATS</span>}
+                                    </span>
+                                </button>
+                            );
+                        })}
                     </div>
 
                     {relatedTitles.length > 0 && (
                         <div className="mt-10">
-                            <h2 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">
-                                Related roles
-                            </h2>
+                            <h2 className="text-sm font-semibold text-slate-900 dark:text-white">Related roles</h2>
                             <div className="mt-3 flex flex-wrap gap-2">
                                 {relatedTitles.map((title) => (
                                     <Link
                                         key={title}
                                         to={`/resume_tmpl/${slugifyJobTitle(title)}`}
-                                        className="px-3 py-1 text-xs rounded-full bg-slate-100 dark:bg-slate-800 text-slate-700 dark:text-slate-200 hover:text-indigo-600 dark:hover:text-indigo-400 transition-colors"
+                                        className="rounded-full border border-slate-200 bg-white px-3 py-1 text-xs text-slate-700 transition-colors hover:border-indigo-300 hover:text-indigo-700 dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300 dark:hover:text-indigo-300"
                                     >
                                         {title}
                                     </Link>
@@ -307,18 +258,23 @@ const TemplateSelector: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) =>
                         </div>
                     )}
                 </div>
-                <div className="fixed bottom-4 left-4 right-4 z-20 md:hidden">
-                    <Button
-                        onClick={() => onUseTemplate(resolvedJobTitle, selectedTemplateId)}
-                        variant="primary"
-                        className="w-full shadow-xl"
-                        leftIcon={<CheckIcon className="w-4 h-4" />}
-                    >
-                        Use This Template
-                    </Button>
+
+                <div className="hidden lg:col-start-1 lg:row-start-1 lg:block">
+                    <div className="mx-auto w-full max-w-[210mm] shadow-xl ring-1 ring-slate-900/5 lg:sticky lg:top-24">
+                        <ScaledResumePreview data={previewData} mode="page" />
+                    </div>
+                </div>
+            </main>
+
+            <div className="fixed inset-x-0 bottom-0 z-20 border-t border-slate-200 bg-white/95 p-3 backdrop-blur lg:hidden dark:border-slate-800 dark:bg-slate-950/95">
+                <div className="mx-auto flex max-w-xl items-center gap-3">
+                    <p className="min-w-0 flex-1 truncate text-sm text-slate-600 dark:text-slate-400">
+                        Template: <span className="font-semibold text-slate-900 dark:text-white">{selectedTemplate?.name}</span>
+                    </p>
+                    <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use template</Button>
                 </div>
             </div>
-
+            <SiteFooter />
         </div>
     );
 };

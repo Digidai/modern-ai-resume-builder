@@ -1,12 +1,14 @@
-# Copy to .dev.vars for local Worker development.
-# Do not commit real secrets.
+# Copy to .dev.vars for local Worker development (`npx wrangler dev`).
+# Do not commit real secrets. AI runs on Cloudflare Workers AI via the `AI` binding,
+# so no model API key is needed; `wrangler dev` proxies AI calls to your account.
 
-GEMINI_API_KEY=YOUR_GEMINI_API_KEY
-GEMINI_SIGNING_SECRET=YOUR_SIGNING_SECRET
+# Signs AI session tokens. Any long random string, e.g. `openssl rand -base64 32`.
+AI_SIGNING_SECRET=YOUR_SIGNING_SECRET
 
-# Optional overrides.
+# Optional overrides (defaults live in wrangler.jsonc "vars").
 # ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
-# GEMINI_MODEL=gemini-2.0-flash-exp
+# AI_MODEL=@cf/zai-org/glm-5.3-flash
+# AI_REASONING_EFFORT=low
 # AI_RATE_LIMIT_PER_MINUTE=20
 # AI_PER_SESSION_RATE_LIMIT_PER_MINUTE=20
 # AI_GLOBAL_RATE_LIMIT_PER_MINUTE=240

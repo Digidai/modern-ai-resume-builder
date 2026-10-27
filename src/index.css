@@ -1,11 +1,81 @@
 @import "tailwindcss" source(none);
 @source "../src";
 @source "../index.html";
-@custom-variant dark (&:is(.dark *));
+/* Font families. Resume templates pick one of these (font-inter, font-lato, …) or the generic
+   font-sans / font-serif / font-mono, which map to web fonts inside `.resume-paper`.
+   The user's font preset overrides every non-mono family on the paper (see ResumePreview). */
+:root {
+  /* Base stacks; `--font-*` below point here so a preset can swap them without cycles. */
+  --rf-inter: "Inter Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --rf-source-sans: "Source Sans 3 Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-roboto: "Roboto Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-lato: "Lato", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-raleway: "Raleway Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-montserrat: "Montserrat Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-source-serif: "Source Serif 4 Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-garamond: "EB Garamond Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-playfair: "Playfair Display Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-tinos: "Tinos", "Times New Roman", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-charis: "Charis SIL", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-plex-serif: "IBM Plex Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-jetbrains: "JetBrains Mono Variable", ui-monospace, "PingFang SC", "Noto Sans CJK SC", monospace;
+}
+
+@theme static {
+  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-inter: var(--rf-inter);
+  --font-source-sans: var(--rf-source-sans);
+  --font-roboto: var(--rf-roboto);
+  --font-lato: var(--rf-lato);
+  --font-raleway: var(--rf-raleway);
+  --font-montserrat: var(--rf-montserrat);
+  --font-source-serif: var(--rf-source-serif);
+  --font-garamond: var(--rf-garamond);
+  --font-playfair: var(--rf-playfair);
+  --font-tinos: var(--rf-tinos);
+  --font-charis: var(--rf-charis);
+  --font-plex-serif: var(--rf-plex-serif);
+  --font-jetbrains: var(--rf-jetbrains);
+}
+
+/* Dark mode never reaches the resume paper (`.resume-paper`), which always prints light. */
+@custom-variant dark (&:where(.dark, .dark *):not(.resume-paper, .resume-paper *));
+
+@keyframes enter {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Subtle entrance for panels, menus, and toasts. */
+@utility animate-enter {
+  animation: enter 180ms ease-out both;
+}
 
 @layer base {
+  html.dark {
+    color-scheme: dark;
+  }
+
+  /* Inside the paper, the generic families resolve to bundled web fonts (never system fonts). */
+  .resume-paper {
+    color-scheme: light;
+    --font-sans: var(--font-inter);
+    --font-serif: var(--font-source-serif);
+    --font-mono: var(--font-jetbrains);
+    font-family: var(--font-sans);
+    font-variant-ligatures: common-ligatures;
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
-    @apply transition-colors duration-300;
+    @apply bg-slate-50 text-slate-900 antialiased dark:bg-slate-950 dark:text-slate-100;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *, ::before, ::after {
+      animation-duration: 0.01ms !important;
+      transition-duration: 0.01ms !important;
+    }
   }
 
   @media print {

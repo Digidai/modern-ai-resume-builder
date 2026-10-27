@@ -1,554 +1,763 @@
-import { useState, useCallback, type KeyboardEvent } from 'react';
-import { ResumeData, Experience, Education, Project } from '../types';
-import { SparklesIcon, PlusIcon, TrashIcon, LoaderIcon } from './Icons';
+import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
+import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN } from '../types';
+import {
+  SparklesIcon,
+  PlusIcon,
+  TrashIcon,
+  LoaderIcon,
+  ChevronDownIcon,
+  ArrowUpIcon,
+  ArrowDownIcon,
+  XIcon,
+  CheckIcon,
+} from './Icons';
 import { Button } from './Button';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
-import { Input } from './Input';
+import { Input, Textarea } from './Input';
 import { LazyResumePreview } from './LazyResumePreview';
+import { DesignControls } from './DesignControls';
 import { useAiActions } from '../hooks/useAiActions';
+import { createId } from '../utils/resumeData';
+import { formatDateRange } from './templates/shared';
 
 interface ResumeEditorProps {
   data: ResumeData;
-  onChange: (data: ResumeData) => void;
-  onError?: (message: string) => void;
+  onChange: Dispatch<SetStateAction<ResumeData>>;
 }
 
-const EDITOR_TABS = ['basics', 'experience', 'skills', 'design'] as const;
-type ResumeEditorTab = (typeof EDITOR_TABS)[number];
+const EDITOR_TABS = [
+  { id: 'profile', label: 'Profile' },
+  { id: 'experience', label: 'Experience' },
+  { id: 'skills', label: 'Skills' },
+  { id: 'design', label: 'Template' },
+] as const;
+type ResumeEditorTab = (typeof EDITOR_TABS)[number]['id'];
 
-const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange, onError }) => {
-  const [activeTab, setActiveTab] = useState<ResumeEditorTab>('basics');
-  const { showError: showToastError } = useToast();
+type ListKey = 'experience' | 'education' | 'projects';
+type ListItem<K extends ListKey> = ResumeData[K][number];
 
-  const showError = useCallback((message: string) => {
-    if (onError) {
-      onError(message);
-    } else {
-      showToastError(message);
-    }
-  }, [onError, showToastError]);
+/* ---------- small building blocks ---------- */
 
-  const {
-    aiStatus,
-    isLoadingField,
-    improveField,
-    generateField,
-    generateSummaryField,
-  } = useAiActions({ onError: showError });
+const Section = ({
+  title,
+  description,
+  action,
+  children,
+}: {
+  title: string;
+  description?: string;
+  action?: ReactNode;
+  children: ReactNode;
+}) => (
+  <section className="space-y-4">
+    <div className="flex items-start justify-between gap-3">
+      <div>
+        <h2 className="text-base font-semibold text-slate-900 dark:text-white">{title}</h2>
+        {description && <p className="mt-0.5 text-sm text-slate-500 dark:text-slate-400">{description}</p>}
+      </div>
+      {action}
+    </div>
+    {children}
+  </section>
+);
 
-  const handleTabKeyDown = useCallback(
-    (event: KeyboardEvent<HTMLButtonElement>, tab: ResumeEditorTab) => {
-      const currentIndex = EDITOR_TABS.indexOf(tab);
-      if (currentIndex === -1) return;
+const EmptyState = ({ children, onAdd, addLabel }: { children: ReactNode; onAdd: () => void; addLabel: string }) => (
+  <div className="flex flex-col items-center gap-3 rounded-xl border-2 border-dashed border-slate-200 px-4 py-8 text-center text-sm text-slate-500 dark:border-slate-800 dark:text-slate-400">
+    <p>{children}</p>
+    <Button variant="secondary" size="sm" onClick={onAdd} leftIcon={<PlusIcon className="h-4 w-4" />}>
+      {addLabel}
+    </Button>
+  </div>
+);
 
-      if (event.key === 'ArrowRight') {
-        event.preventDefault();
-        const next = EDITOR_TABS[(currentIndex + 1) % EDITOR_TABS.length];
-        setActiveTab(next);
-      } else if (event.key === 'ArrowLeft') {
-        event.preventDefault();
-        const prev = EDITOR_TABS[(currentIndex - 1 + EDITOR_TABS.length) % EDITOR_TABS.length];
-        setActiveTab(prev);
-      } else if (event.key === 'Home') {
-        event.preventDefault();
-        setActiveTab(EDITOR_TABS[0]);
-      } else if (event.key === 'End') {
-        event.preventDefault();
-        setActiveTab(EDITOR_TABS[EDITOR_TABS.length - 1]);
-      }
-    },
-    []
+interface ItemCardProps {
+  title: string;
+  subtitle?: string;
+  placeholderTitle: string;
+  isOpen: boolean;
+  onToggle: () => void;
+  onRemove: () => void;
+  onMoveUp?: () => void;
+  onMoveDown?: () => void;
+  children: ReactNode;
+}
+
+/** Collapsible card for one experience / education / project entry. */
+const ItemCard = ({
+  title,
+  subtitle,
+  placeholderTitle,
+  isOpen,
+  onToggle,
+  onRemove,
+  onMoveUp,
+  onMoveDown,
+  children,
+}: ItemCardProps) => {
+  const label = title.trim() || placeholderTitle;
+  return (
+    <div className="rounded-xl border border-slate-200 bg-white shadow-sm transition-colors dark:border-slate-800 dark:bg-slate-900">
+      <div className="flex items-center gap-1 py-1.5 pl-1.5 pr-2">
+        <button
+          type="button"
+          onClick={onToggle}
+          aria-expanded={isOpen}
+          className="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 py-1.5 text-left hover:bg-slate-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-800/60"
+        >
+          <ChevronDownIcon
+            className={`h-4 w-4 shrink-0 text-slate-400 transition-transform ${isOpen ? '' : '-rotate-90'}`}
+          />
+          <span className="min-w-0">
+            <span
+              className={`block truncate text-sm font-medium ${
+                title.trim() ? 'text-slate-900 dark:text-slate-100' : 'text-slate-400 dark:text-slate-500'
+              }`}
+            >
+              {label}
+            </span>
+            {subtitle && <span className="block truncate text-xs text-slate-500 dark:text-slate-400">{subtitle}</span>}
+          </span>
+        </button>
+        <div className="flex shrink-0 items-center">
+          {onMoveUp && (
+            <Button variant="icon" size="icon" className="h-8 w-8" onClick={onMoveUp} aria-label={`Move ${label} up`} title="Move up">
+              <ArrowUpIcon className="h-4 w-4" />
+            </Button>
+          )}
+          {onMoveDown && (
+            <Button variant="icon" size="icon" className="h-8 w-8" onClick={onMoveDown} aria-label={`Move ${label} down`} title="Move down">
+              <ArrowDownIcon className="h-4 w-4" />
+            </Button>
+          )}
+          <Button
+            variant="danger-ghost"
+            size="icon"
+            className="h-8 w-8"
+            onClick={onRemove}
+            aria-label={`Remove ${label}`}
+            title="Remove"
+          >
+            <TrashIcon className="h-4 w-4" />
+          </Button>
+        </div>
+      </div>
+      {isOpen && <div className="space-y-4 border-t border-slate-100 p-4 dark:border-slate-800">{children}</div>}
+    </div>
   );
+};
 
-  const handleInputChange = useCallback(<K extends keyof ResumeData>(
-    field: K,
-    value: ResumeData[K]
-  ) => {
-    onChange({ ...data, [field]: value });
-  }, [data, onChange]);
+const AiButton = ({
+  onClick,
+  loading,
+  disabled,
+  children,
+  label,
+}: {
+  onClick: () => void;
+  loading: boolean;
+  disabled?: boolean;
+  children: ReactNode;
+  label: string;
+}) => (
+  <button
+    type="button"
+    onClick={onClick}
+    disabled={disabled || loading}
+    aria-label={label}
+    title={label}
+    className="inline-flex h-7 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-indigo-600 transition-colors hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 disabled:pointer-events-none disabled:opacity-40 dark:text-indigo-400 dark:hover:bg-indigo-950/50"
+  >
+    {loading ? <LoaderIcon className="h-3.5 w-3.5 animate-spin" /> : <SparklesIcon className="h-3.5 w-3.5" />}
+    {children}
+  </button>
+);
 
-  const addExperience = useCallback(() => {
-    const newExp: Experience = {
-      id: Date.now().toString(),
-      company: '',
-      role: '',
-      startDate: '',
-      endDate: '',
-      isCurrent: false,
-      description: ''
-    };
-    onChange({ ...data, experience: [newExp, ...data.experience] });
-  }, [data, onChange]);
+/** Tag input: Enter or comma adds a skill, Backspace on an empty field removes the last one. */
+const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills: string[]) => void }) => {
+  const [draft, setDraft] = useState('');
 
-  const updateExperience = useCallback(<K extends keyof Experience>(
-    id: string,
-    field: K,
-    value: Experience[K]
-  ) => {
-    const updated = data.experience.map(exp =>
-      exp.id === id ? { ...exp, [field]: value } : exp
-    );
-    onChange({ ...data, experience: updated });
-  }, [data, onChange]);
+  const add = (raw: string) => {
+    const incoming = raw.split(/[,\n]/).map((s) => s.trim()).filter(Boolean);
+    if (!incoming.length) return;
+    const seen = new Set(skills.map((s) => s.toLowerCase()));
+    const next = [...skills];
+    for (const skill of incoming) {
+      if (!seen.has(skill.toLowerCase())) {
+        seen.add(skill.toLowerCase());
+        next.push(skill);
+      }
+    }
+    onChange(next);
+    setDraft('');
+  };
 
-  const removeExperience = useCallback((id: string) => {
-    onChange({ ...data, experience: data.experience.filter(exp => exp.id !== id) });
-  }, [data, onChange]);
-
-  const addEducation = useCallback(() => {
-    const newEdu: Education = {
-      id: Date.now().toString(),
-      school: '',
-      degree: '',
-      startDate: '',
-      endDate: ''
-    };
-    onChange({ ...data, education: [...data.education, newEdu] });
-  }, [data, onChange]);
-
-  const updateEducation = useCallback(<K extends keyof Education>(
-    id: string,
-    field: K,
-    value: Education[K]
-  ) => {
-    const updated = data.education.map(edu =>
-      edu.id === id ? { ...edu, [field]: value } : edu
-    );
-    onChange({ ...data, education: updated });
-  }, [data, onChange]);
-
-  const removeEducation = useCallback((id: string) => {
-    onChange({ ...data, education: data.education.filter(edu => edu.id !== id) });
-  }, [data, onChange]);
-
-  const handleSkillsChange = useCallback((val: string) => {
-    const cleaned = val.split(',').map(s => s.trim()).filter(Boolean);
-    onChange({ ...data, skills: cleaned });
-  }, [data, onChange]);
-
-  const addProject = useCallback(() => {
-    const newProj: Project = {
-      id: Date.now().toString(),
-      name: '',
-      link: '',
-      description: ''
-    };
-    onChange({ ...data, projects: [...data.projects, newProj] });
-  }, [data, onChange]);
-
-  const updateProject = useCallback(<K extends keyof Project>(
-    id: string,
-    field: K,
-    value: Project[K]
-  ) => {
-    const updated = data.projects.map(p =>
-      p.id === id ? { ...p, [field]: value } : p
-    );
-    onChange({ ...data, projects: updated });
-  }, [data, onChange]);
-
-  const removeProject = useCallback((id: string) => {
-    onChange({ ...data, projects: data.projects.filter(p => p.id !== id) });
-  }, [data, onChange]);
+  const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter' || event.key === ',') {
+      event.preventDefault();
+      add(draft);
+    } else if (event.key === 'Backspace' && !draft && skills.length) {
+      onChange(skills.slice(0, -1));
+    }
+  };
 
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-slate-900 rounded-lg shadow-sm border border-slate-200 dark:border-slate-800 overflow-hidden transition-colors">
-      <div className="flex-shrink-0 border-b border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 overflow-x-auto no-scrollbar transition-colors" role="tablist" aria-label="Resume editor sections">
-        {EDITOR_TABS.map(tab => (
-          <button
-            key={tab}
-            id={`tab-${tab}`}
-            role="tab"
-            aria-selected={activeTab === tab}
-            aria-controls={`panel-${tab}`}
-            tabIndex={activeTab === tab ? 0 : -1}
-            onKeyDown={(event) => handleTabKeyDown(event, tab)}
-            onClick={() => setActiveTab(tab)}
-            className={`px-5 py-3 text-sm font-medium capitalize focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 transition-colors whitespace-nowrap ${activeTab === tab
-              ? 'text-indigo-600 dark:text-indigo-400 border-b-2 border-indigo-600 dark:border-indigo-400 bg-white dark:bg-slate-800'
-              : 'text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-200 hover:bg-slate-100 dark:hover:bg-slate-800'
-              }`}
+    <div className="space-y-2">
+      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-lg border border-slate-300 bg-white p-1.5 shadow-sm transition-colors focus-within:border-indigo-500 focus-within:ring-2 focus-within:ring-indigo-500/40 dark:border-slate-700 dark:bg-slate-900">
+        {skills.map((skill, index) => (
+          <span
+            key={`${skill}-${index}`}
+            className="inline-flex items-center gap-1 rounded-md bg-slate-100 py-1 pl-2.5 pr-1 text-sm text-slate-800 dark:bg-slate-800 dark:text-slate-200"
           >
-            {tab}
-          </button>
+            {skill}
+            <button
+              type="button"
+              onClick={() => onChange(skills.filter((_, i) => i !== index))}
+              className="rounded p-0.5 text-slate-400 hover:bg-slate-200 hover:text-slate-700 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-700 dark:hover:text-slate-200"
+              aria-label={`Remove ${skill}`}
+            >
+              <XIcon className="h-3.5 w-3.5" />
+            </button>
+          </span>
         ))}
+        <input
+          id="skills-input"
+          value={draft}
+          onChange={(e) => {
+            const value = e.target.value;
+            // Pasting "a, b, c" adds all three at once.
+            if (value.includes(',')) add(value);
+            else setDraft(value);
+          }}
+          onKeyDown={handleKeyDown}
+          onBlur={() => add(draft)}
+          placeholder={skills.length ? 'Add another…' : 'e.g. Figma, React, User research'}
+          className="min-w-[8rem] flex-1 bg-transparent px-1.5 py-1 text-sm text-slate-900 placeholder:text-slate-400 focus:outline-none dark:text-slate-100 dark:placeholder:text-slate-500"
+          aria-label="Add a skill"
+          aria-describedby="skills-hint"
+        />
+      </div>
+      <p id="skills-hint" className="text-xs text-slate-500 dark:text-slate-400">
+        Press Enter or comma to add. Put your strongest skills first.
+      </p>
+    </div>
+  );
+};
+
+/* ---------- editor ---------- */
+
+const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
+  const [activeTab, setActiveTab] = useState<ResumeEditorTab>('profile');
+  // Entries are collapsed by default except new ones. Keys are `${list}:${id}` (ids can repeat across lists).
+  const [openIds, setOpenIds] = useState<Set<string>>(() => new Set());
+  const { showError, showToast } = useToast();
+  const { isLoadingField, improveField, generateField, generateSummaryField } = useAiActions({ onError: showError });
+
+  const toggleOpen = useCallback((id: string) => {
+    setOpenIds((prev) => {
+      const next = new Set(prev);
+      if (next.has(id)) next.delete(id);
+      else next.add(id);
+      return next;
+    });
+  }, []);
+
+  // All updates are functional so late async results (AI) never overwrite newer edits.
+  const setField = useCallback(
+    <K extends keyof ResumeData>(field: K, value: ResumeData[K]) => onChange((prev) => ({ ...prev, [field]: value })),
+    [onChange]
+  );
+
+  const updateDesign = useCallback(
+    (patch: Partial<ResumeDesign>) =>
+      onChange((prev) => ({ ...prev, design: { ...(prev.design ?? DEFAULT_DESIGN), ...patch } })),
+    [onChange]
+  );
+
+  const updateItem = useCallback(
+    <K extends ListKey>(key: K, id: string, patch: Partial<ListItem<K>>) =>
+      onChange((prev) => ({
+        ...prev,
+        [key]: (prev[key] as ListItem<K>[]).map((item) => (item.id === id ? { ...item, ...patch } : item)),
+      })),
+    [onChange]
+  );
+
+  const addItem = useCallback(
+    <K extends ListKey>(key: K, item: ListItem<K>, position: 'start' | 'end') => {
+      onChange((prev) => {
+        const list = prev[key] as ListItem<K>[];
+        return { ...prev, [key]: position === 'start' ? [item, ...list] : [...list, item] };
+      });
+      setOpenIds((prev) => new Set(prev).add(`${key}:${item.id}`));
+    },
+    [onChange]
+  );
+
+  const removeItem = useCallback(
+    <K extends ListKey>(key: K, id: string, label: string) => {
+      let removed: { item: ListItem<K>; index: number } | null = null;
+      onChange((prev) => {
+        const list = prev[key] as ListItem<K>[];
+        const index = list.findIndex((item) => item.id === id);
+        if (index === -1) return prev;
+        removed = { item: list[index], index };
+        return { ...prev, [key]: list.filter((item) => item.id !== id) };
+      });
+      showToast(`Removed ${label}.`, 'info', {
+        action: {
+          label: 'Undo',
+          onClick: () =>
+            onChange((prev) => {
+              if (!removed) return prev;
+              const list = [...(prev[key] as ListItem<K>[])];
+              list.splice(Math.min(removed.index, list.length), 0, removed.item);
+              return { ...prev, [key]: list };
+            }),
+        },
+      });
+    },
+    [onChange, showToast]
+  );
+
+  const moveItem = useCallback(
+    (key: ListKey, index: number, delta: -1 | 1) =>
+      onChange((prev) => {
+        const list = [...prev[key]] as ListItem<ListKey>[];
+        const target = index + delta;
+        if (target < 0 || target >= list.length) return prev;
+        [list[index], list[target]] = [list[target], list[index]];
+        return { ...prev, [key]: list };
+      }),
+    [onChange]
+  );
+
+  /** Runs an AI rewrite and offers to restore the original text. */
+  const applyAi = useCallback(
+    (original: string, apply: (value: string) => void) => (value: string) => {
+      apply(value);
+      if (original.trim()) {
+        showToast('Updated with AI. Review it before exporting.', 'success', {
+          action: { label: 'Undo', onClick: () => apply(original) },
+        });
+      }
+    },
+    [showToast]
+  );
+
+  const handleTabKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const last = EDITOR_TABS.length - 1;
+    const next =
+      event.key === 'ArrowRight' ? (index + 1) % EDITOR_TABS.length
+      : event.key === 'ArrowLeft' ? (index - 1 + EDITOR_TABS.length) % EDITOR_TABS.length
+      : event.key === 'Home' ? 0
+      : event.key === 'End' ? last
+      : -1;
+    if (next === -1) return;
+    event.preventDefault();
+    setActiveTab(EDITOR_TABS[next].id);
+    document.getElementById(`tab-${EDITOR_TABS[next].id}`)?.focus();
+  };
+
+  const polishButton = (fieldId: string, text: string, context: string, apply: (value: string) => void) => (
+    <AiButton
+      onClick={() => improveField({ fieldId, text, context, onUpdate: applyAi(text, apply) })}
+      loading={isLoadingField(fieldId)}
+      disabled={!text.trim()}
+      label={`Improve ${context.toLowerCase()} with AI`}
+    >
+      Improve
+    </AiButton>
+  );
+
+  const descriptionHint = 'One achievement per line. Start with a verb and add a number where you can.';
+
+  return (
+    <div className="flex h-full flex-col">
+      <div
+        className="sticky top-0 z-10 flex shrink-0 gap-1 border-b border-slate-200 bg-slate-50/95 px-3 pt-2 backdrop-blur dark:border-slate-800 dark:bg-slate-950/95"
+        role="tablist"
+        aria-label="Resume sections"
+      >
+        {EDITOR_TABS.map((tab, index) => {
+          const selected = activeTab === tab.id;
+          return (
+            <button
+              key={tab.id}
+              id={`tab-${tab.id}`}
+              type="button"
+              role="tab"
+              aria-selected={selected}
+              aria-controls={`panel-${tab.id}`}
+              tabIndex={selected ? 0 : -1}
+              onKeyDown={(event) => handleTabKeyDown(event, index)}
+              onClick={() => setActiveTab(tab.id)}
+              className={`relative flex-1 whitespace-nowrap rounded-t-lg px-2 py-2.5 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-indigo-500 ${
+                selected
+                  ? 'text-indigo-600 dark:text-indigo-400'
+                  : 'text-slate-500 hover:text-slate-900 dark:text-slate-400 dark:hover:text-slate-100'
+              }`}
+            >
+              {tab.label}
+              {selected && <span className="absolute inset-x-2 -bottom-px h-0.5 rounded-full bg-indigo-600 dark:bg-indigo-400" />}
+            </button>
+          );
+        })}
       </div>
 
-      <div className="flex-1 overflow-y-auto p-6 space-y-8 custom-scrollbar">
-        {activeTab !== 'design' && (
-          <div className="sticky top-0 z-20 -mx-6 px-6 pb-3 pt-1 bg-white/95 dark:bg-slate-900/95 backdrop-blur">
-            <div
-              className="rounded-lg border border-amber-200 bg-amber-50 text-amber-900 px-4 py-3 text-xs leading-relaxed"
-              role="note"
-            >
-              AI features send selected text to Google Gemini for processing. Do not submit confidential or regulated personal data.
-            </div>
-            {aiStatus.state !== 'idle' && (
-              <div
-                className={`mt-2 rounded-lg border px-4 py-2 text-xs leading-relaxed ${
-                  aiStatus.state === 'error'
-                    ? 'border-red-200 bg-red-50 text-red-800'
-                    : aiStatus.state === 'success'
-                    ? 'border-emerald-200 bg-emerald-50 text-emerald-800'
-                    : 'border-blue-200 bg-blue-50 text-blue-800'
-                }`}
-                role={aiStatus.state === 'error' ? 'alert' : 'status'}
-                aria-live="polite"
-              >
-                {aiStatus.message}
-              </div>
-            )}
-          </div>
-        )}
-
-        {activeTab === 'design' && (
-          <div id="panel-design" role="tabpanel" aria-labelledby="tab-design" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
-            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Select Template</h3>
-            <div className="grid grid-cols-2 gap-4" role="radiogroup" aria-label="Resume templates">
-              {TEMPLATES.map(t => (
-                <button
-                  key={t.id}
-                  role="radio"
-                  aria-checked={data.templateId === t.id}
-                  onClick={() => handleInputChange('templateId', t.id)}
-                  className={`relative p-4 rounded-xl border-2 transition-all text-left group hover:border-indigo-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 ${data.templateId === t.id
-                    ? 'border-indigo-600 bg-indigo-50 dark:bg-indigo-900/30 ring-1 ring-indigo-600'
-                    : 'border-slate-200 dark:border-slate-700 bg-white dark:bg-slate-800'
-                    }`}
-                >
-                  <div className={`flex items-center gap-3 mb-2`}>
-                    <div className={`w-8 h-8 rounded-full ${t.color} shadow-sm flex items-center justify-center text-white text-xs font-bold`}>
-                      {t.name?.[0] || 'T'}
-                    </div>
-                    <span className={`font-semibold ${data.templateId === t.id ? 'text-indigo-900 dark:text-indigo-300' : 'text-slate-700 dark:text-slate-300'}`}>
-                      {t.name}
-                    </span>
-                  </div>
-                  <div className="w-full h-32 bg-slate-100 rounded-md overflow-hidden opacity-80 group-hover:opacity-100 transition-opacity relative pointer-events-none">
-                    <LazyResumePreview data={{ ...data, templateId: t.id }} templateId={t.id} />
-                  </div>
-                  {data.templateId === t.id && (
-                    <div className="absolute top-2 right-2 w-2 h-2 bg-indigo-600 rounded-full" aria-hidden="true" />
-                  )}
-                </button>
-              ))}
-            </div>
-            <div className="mt-8 p-4 bg-yellow-50 text-yellow-800 text-sm rounded-lg border border-yellow-200" role="note">
-              <p><strong>Tip:</strong> Templates change the layout and typography. Your content remains the same.</p>
-            </div>
-          </div>
-        )}
-
-        {activeTab === 'basics' && (
-          <div id="panel-basics" role="tabpanel" aria-labelledby="tab-basics" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
-            <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Personal Details</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <Input label="Full Name" value={data.fullName} onChange={(v) => handleInputChange('fullName', v)} />
-              <Input label="Job Title" value={data.title} onChange={(v) => handleInputChange('title', v)} />
-              <Input
-                label="Email"
-                type="email"
-                value={data.email}
-                onChange={(v) => handleInputChange('email', v)}
-                error={getEmailError(data.email)}
-              />
-              <Input
-                label="Phone"
-                type="tel"
-                value={data.phone}
-                onChange={(v) => handleInputChange('phone', v)}
-                error={getPhoneError(data.phone)}
-              />
-              <Input label="Location" value={data.location} onChange={(v) => handleInputChange('location', v)} />
-              <Input
-                label="Website"
-                type="url"
-                value={data.website}
-                onChange={(v) => handleInputChange('website', v)}
-                error={getUrlError(data.website)}
-              />
-              <Input
-                label="LinkedIn"
-                type="url"
-                value={data.linkedin}
-                onChange={(v) => handleInputChange('linkedin', v)}
-                error={getUrlError(data.linkedin)}
-              />
-            </div>
-
-            <div className="space-y-2">
-              <div className="flex justify-between items-center">
-                <label id="summary-label" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Professional Summary</label>
-                <Button
-                  onClick={() =>
-                    generateField({
-                      fieldId: 'summary',
-                      generator: () => generateSummaryField(data.title, data.skills || []),
-                      onUpdate: (val) => handleInputChange('summary', val),
-                    })
-                  }
-                  variant="ghost"
-                  size="sm"
-                  className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 px-2"
-                  disabled={isLoadingField('summary')}
-                  leftIcon={isLoadingField('summary') ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
-                >
-                  Generate with AI
-                </Button>
-              </div>
-              <div className="relative">
-                <textarea
-                  aria-labelledby="summary-label"
-                  className="w-full min-h-[120px] p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm leading-relaxed disabled:opacity-50"
-                  value={data.summary}
-                  onChange={(e) => handleInputChange('summary', e.target.value)}
-                  placeholder="Briefly describe your professional background..."
-                  disabled={isLoadingField('summary-polish')}
+      <div className="flex-1 space-y-10 px-4 py-6 sm:px-6" id={`panel-${activeTab}`} role="tabpanel" aria-labelledby={`tab-${activeTab}`}>
+        {activeTab === 'profile' && (
+          <>
+            <Section title="Personal details" description="How recruiters will reach you.">
+              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                <Input label="Full name" value={data.fullName} onChange={(v) => setField('fullName', v)} placeholder="Alex Sterling" autoComplete="name" />
+                <Input label="Job title" value={data.title} onChange={(v) => setField('title', v)} placeholder="Senior Product Designer" autoComplete="organization-title" />
+                <Input
+                  label="Email"
+                  type="email"
+                  value={data.email}
+                  onChange={(v) => setField('email', v)}
+                  error={getEmailError(data.email)}
+                  placeholder="you@example.com"
+                  autoComplete="email"
                 />
-                {isLoadingField('summary-polish') && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
-                    <LoaderIcon className="animate-spin w-6 h-6 text-indigo-600" />
-                  </div>
-                )}
-                <Button
-                  onClick={() =>
-                    improveField({
-                      fieldId: 'summary-polish',
-                      text: data.summary || '',
-                      context: 'Professional Summary',
-                      onUpdate: (val) => handleInputChange('summary', val),
-                    })
-                  }
-                  disabled={isLoadingField('summary-polish') || !data.summary}
-                  variant="ghost"
-                  size="sm"
-                  className="absolute bottom-2 right-2 h-auto py-1 px-2 border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600 bg-white"
-                  title="Polish Text"
-                  aria-label="Polish summary with AI"
-                >
-                  {isLoadingField('summary-polish') ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
-                </Button>
+                <Input
+                  label="Phone"
+                  type="tel"
+                  value={data.phone}
+                  onChange={(v) => setField('phone', v)}
+                  error={getPhoneError(data.phone)}
+                  placeholder="+1 555 012 3456"
+                  autoComplete="tel"
+                />
+                <Input label="Location" value={data.location} onChange={(v) => setField('location', v)} placeholder="City, Country" autoComplete="address-level2" />
+                <Input
+                  label="Website"
+                  type="url"
+                  value={data.website}
+                  onChange={(v) => setField('website', v)}
+                  error={getUrlError(data.website)}
+                  placeholder="yourname.com"
+                  autoComplete="url"
+                />
+                <Input
+                  label="LinkedIn"
+                  type="url"
+                  value={data.linkedin}
+                  onChange={(v) => setField('linkedin', v)}
+                  error={getUrlError(data.linkedin)}
+                  placeholder="linkedin.com/in/yourname"
+                  className="sm:col-span-2"
+                />
               </div>
-            </div>
+            </Section>
 
-            <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Education</h3>
-                <Button onClick={addEducation} variant="ghost" size="sm" className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50" leftIcon={<PlusIcon className="w-4 h-4" />}>
-                  Add
-                </Button>
-              </div>
-              <div className="space-y-6">
-                {data.education.map((edu) => (
-                  <div key={edu.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative group">
-                    <Button
-                      onClick={() => removeEducation(edu.id)}
-                      variant="icon"
-                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50"
-                      size="icon"
-                      aria-label={`Remove ${edu.school || 'education'}`}
+            <Section title="Summary" description="Two or three sentences on who you are and what you're great at.">
+              <Textarea
+                label="Professional summary"
+                value={data.summary}
+                onChange={(v) => setField('summary', v)}
+                placeholder="Product designer with 6 years of experience turning complex workflows into simple tools…"
+                minRows={4}
+                disabled={isLoadingField('summary') || isLoadingField('summary-polish')}
+                hint={
+                  data.title.trim()
+                    ? 'AI can draft one from your job title and skills.'
+                    : 'Add a job title (and skills) so AI can draft one for you.'
+                }
+                actions={
+                  <div className="flex items-center gap-0.5">
+                    <AiButton
+                      onClick={() =>
+                        generateField({
+                          fieldId: 'summary',
+                          generator: () => generateSummaryField(data.title, data.skills || []),
+                          onUpdate: applyAi(data.summary, (v) => setField('summary', v)),
+                        })
+                      }
+                      loading={isLoadingField('summary')}
+                      disabled={!data.title.trim()}
+                      label="Write a summary with AI"
                     >
-                      <TrashIcon className="w-4 h-4" />
-                    </Button>
-                    <div className="grid grid-cols-1 gap-3">
-                      <Input label="School / University" value={edu.school} onChange={(v) => updateEducation(edu.id, 'school', v)} />
-                      <Input label="Degree / Field of Study" value={edu.degree} onChange={(v) => updateEducation(edu.id, 'degree', v)} />
-                      <div className="grid grid-cols-2 gap-3">
-                        <Input label="Start Date" type="month" value={edu.startDate} onChange={(v) => updateEducation(edu.id, 'startDate', v)} />
-                        <Input label="End Date" type="month" value={edu.endDate} onChange={(v) => updateEducation(edu.id, 'endDate', v)} />
-                      </div>
-                    </div>
+                      Write
+                    </AiButton>
+                    {polishButton('summary-polish', data.summary, 'Professional Summary', (v) => setField('summary', v))}
                   </div>
-                ))}
-              </div>
-            </div>
-          </div>
+                }
+              />
+            </Section>
+          </>
         )}
 
         {activeTab === 'experience' && (
-          <div id="panel-experience" role="tabpanel" aria-labelledby="tab-experience" tabIndex={0} className="space-y-6 animate-in fade-in duration-300">
-            <div className="flex justify-between items-center">
-              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Work History</h3>
-              <Button onClick={addExperience} variant="primary" size="sm" leftIcon={<PlusIcon className="w-4 h-4" />}>
-                Add Position
-              </Button>
-            </div>
-
-            <div className="space-y-6">
-              {data.experience.map((exp) => (
-                <div key={exp.id} className="p-5 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
-                  <div className="absolute top-4 right-4 flex gap-2">
-                    <Button
-                      onClick={() => removeExperience(exp.id)}
-                      variant="icon"
-                      className="text-slate-400 hover:text-red-500 hover:bg-red-50"
-                      size="icon"
-                      aria-label={`Remove ${exp.role || 'position'} at ${exp.company || 'company'}`}
+          <>
+            <Section
+              title="Work experience"
+              description="Most recent first."
+              action={
+                data.experience.length > 0 && (
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    leftIcon={<PlusIcon className="h-4 w-4" />}
+                    onClick={() =>
+                      addItem('experience', { id: createId(), company: '', role: '', startDate: '', endDate: '', isCurrent: false, description: '' } satisfies Experience, 'start')
+                    }
+                  >
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {data.experience.length === 0 ? (
+                <EmptyState
+                  addLabel="Add a position"
+                  onAdd={() =>
+                    addItem('experience', { id: createId(), company: '', role: '', startDate: '', endDate: '', isCurrent: false, description: '' }, 'start')
+                  }
+                >
+                  No positions yet. Internships and freelance work count too.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {data.experience.map((exp, index) => (
+                    <ItemCard
+                      key={exp.id}
+                      title={[exp.role, exp.company].filter((s) => s.trim()).join(' · ')}
+                      subtitle={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                      placeholderTitle="New position"
+                      isOpen={openIds.has(`experience:${exp.id}`)}
+                      onToggle={() => toggleOpen(`experience:${exp.id}`)}
+                      onRemove={() => removeItem('experience', exp.id, exp.role || 'position')}
+                      onMoveUp={index > 0 ? () => moveItem('experience', index, -1) : undefined}
+                      onMoveDown={index < data.experience.length - 1 ? () => moveItem('experience', index, 1) : undefined}
                     >
-                      <TrashIcon className="w-4 h-4" />
-                    </Button>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
-                    <Input label="Job Title" value={exp.role} onChange={(v) => updateExperience(exp.id, 'role', v)} />
-                    <Input label="Company" value={exp.company} onChange={(v) => updateExperience(exp.id, 'company', v)} />
-                    <Input label="Start Date" type="month" value={exp.startDate} onChange={(v) => updateExperience(exp.id, 'startDate', v)} />
-                    <div className="flex flex-col gap-1">
-                      <Input
-                        label="End Date"
-                        type="month"
-                        value={exp.endDate}
-                        onChange={(v) => updateExperience(exp.id, 'endDate', v)}
-                        disabled={exp.isCurrent}
-                      />
-                      <label className="flex items-center gap-2 mt-1">
-                        <input
-                          type="checkbox"
-                          checked={exp.isCurrent}
-                          onChange={(e) => updateExperience(exp.id, 'isCurrent', e.target.checked)}
-                          className="rounded border-slate-300 text-indigo-600 focus:ring-indigo-500"
-                        />
-                        <span className="text-xs text-slate-600 dark:text-slate-400">I currently work here</span>
-                      </label>
-                    </div>
-                  </div>
-
-                  <div className="relative">
-                    <label className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Description</label>
-                    <textarea
-                      className="w-full min-h-[100px] p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-sm disabled:opacity-50"
-                      value={exp.description}
-                      onChange={(e) => updateExperience(exp.id, 'description', e.target.value)}
-                      placeholder="• Achieved X by doing Y..."
-                      disabled={isLoadingField(`exp-${exp.id}`)}
-                    />
-                    {isLoadingField(`exp-${exp.id}`) && (
-                      <div className="absolute inset-0 top-6 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
-                        <LoaderIcon className="animate-spin w-6 h-6 text-indigo-600" />
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <Input label="Job title" value={exp.role} onChange={(v) => updateItem('experience', exp.id, { role: v })} placeholder="Product Designer" />
+                        <Input label="Company" value={exp.company} onChange={(v) => updateItem('experience', exp.id, { company: v })} placeholder="Acme Inc." />
+                        <Input label="Start" type="month" value={exp.startDate} onChange={(v) => updateItem('experience', exp.id, { startDate: v })} placeholder="YYYY-MM" />
+                        <div className="space-y-2">
+                          <Input
+                            label="End"
+                            type={exp.isCurrent ? 'text' : 'month'}
+                            value={exp.isCurrent ? 'Present' : exp.endDate}
+                            onChange={(v) => updateItem('experience', exp.id, { endDate: v })}
+                            disabled={exp.isCurrent}
+                            placeholder="YYYY-MM"
+                          />
+                          <label className="flex cursor-pointer items-center gap-2 text-sm text-slate-600 dark:text-slate-400">
+                            <input
+                              type="checkbox"
+                              checked={exp.isCurrent}
+                              onChange={(e) => updateItem('experience', exp.id, { isCurrent: e.target.checked })}
+                              className="h-4 w-4 rounded border-slate-300 text-indigo-600 accent-indigo-600 focus:ring-indigo-500"
+                            />
+                            I currently work here
+                          </label>
+                        </div>
                       </div>
-                    )}
-                    <Button
-                      onClick={() =>
-                        improveField({
-                          fieldId: `exp-${exp.id}`,
-                          text: exp.description,
-                          context: 'Job Description',
-                          onUpdate: (val) => updateExperience(exp.id, 'description', val),
-                        })
-                      }
-                      disabled={isLoadingField(`exp-${exp.id}`) || !exp.description}
-                      className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
-                      variant="ghost"
-                      size="sm"
-                      title="Polish with AI"
-                      aria-label="Polish description with AI"
-                    >
-                      {isLoadingField(`exp-${exp.id}`) ? <LoaderIcon className="animate-spin w-4 h-4" /> : <SparklesIcon className="w-4 h-4" />}
-                    </Button>
-                  </div>
-                </div>
-              ))}
-              {data.experience.length === 0 && (
-                <div className="text-center py-10 text-slate-400 border-2 border-dashed border-slate-200 rounded-lg">
-                  No experience added yet.
+                      <Textarea
+                        label="What you did"
+                        value={exp.description}
+                        onChange={(v) => updateItem('experience', exp.id, { description: v })}
+                        placeholder={'- Led the redesign of onboarding, lifting activation by 18%\n- Built a design system used by 4 product teams'}
+                        hint={descriptionHint}
+                        minRows={4}
+                        disabled={isLoadingField(`exp-${exp.id}`)}
+                        actions={polishButton(`exp-${exp.id}`, exp.description, 'Job Description', (v) =>
+                          updateItem('experience', exp.id, { description: v })
+                        )}
+                      />
+                    </ItemCard>
+                  ))}
                 </div>
               )}
-            </div>
-          </div>
+            </Section>
+
+            <Section
+              title="Education"
+              action={
+                data.education.length > 0 && (
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    leftIcon={<PlusIcon className="h-4 w-4" />}
+                    onClick={() => addItem('education', { id: createId(), school: '', degree: '', startDate: '', endDate: '' } satisfies Education, 'end')}
+                  >
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {data.education.length === 0 ? (
+                <EmptyState
+                  addLabel="Add education"
+                  onAdd={() => addItem('education', { id: createId(), school: '', degree: '', startDate: '', endDate: '' }, 'end')}
+                >
+                  Degrees, bootcamps and certifications.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {data.education.map((edu, index) => (
+                    <ItemCard
+                      key={edu.id}
+                      title={edu.school}
+                      subtitle={[edu.degree, formatDateRange(edu.startDate, edu.endDate)].filter(Boolean).join(' · ')}
+                      placeholderTitle="New education"
+                      isOpen={openIds.has(`education:${edu.id}`)}
+                      onToggle={() => toggleOpen(`education:${edu.id}`)}
+                      onRemove={() => removeItem('education', edu.id, edu.school || 'education')}
+                      onMoveUp={index > 0 ? () => moveItem('education', index, -1) : undefined}
+                      onMoveDown={index < data.education.length - 1 ? () => moveItem('education', index, 1) : undefined}
+                    >
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <Input label="School" value={edu.school} onChange={(v) => updateItem('education', edu.id, { school: v })} placeholder="University of Washington" className="sm:col-span-2" />
+                        <Input label="Degree / field" value={edu.degree} onChange={(v) => updateItem('education', edu.id, { degree: v })} placeholder="BSc Computer Science" className="sm:col-span-2" />
+                        <Input label="Start" type="month" value={edu.startDate} onChange={(v) => updateItem('education', edu.id, { startDate: v })} placeholder="YYYY-MM" />
+                        <Input label="End" type="month" value={edu.endDate} onChange={(v) => updateItem('education', edu.id, { endDate: v })} placeholder="YYYY-MM" hint="Expected date is fine." />
+                      </div>
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+          </>
         )}
 
         {activeTab === 'skills' && (
-          <div id="panel-skills" role="tabpanel" aria-labelledby="tab-skills" tabIndex={0} className="space-y-8 animate-in fade-in duration-300">
-            <div>
-              <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100 mb-4">Skills</h3>
-              <div className="space-y-2">
-                <label id="skills-label" className="block text-sm font-medium text-slate-700 dark:text-slate-300">Comma separated list</label>
-                <textarea
-                  aria-labelledby="skills-label"
-                  value={data.skills.join(', ')}
-                  onChange={(e) => handleSkillsChange(e.target.value)}
-                  className="w-full p-3 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md focus:ring-2 focus:ring-indigo-500 text-sm"
-                  rows={3}
-                  placeholder="Design, Figma, React, TypeScript..."
-                />
-              </div>
-            </div>
+          <>
+            <Section title="Skills" description="Tools, methods and languages you'd want to be asked about.">
+              <SkillsInput skills={data.skills} onChange={(skills) => setField('skills', skills)} />
+            </Section>
 
-            <div className="border-t border-slate-200 dark:border-slate-700 pt-6">
-              <div className="flex justify-between items-center mb-4">
-                <h3 className="text-lg font-bold text-slate-800 dark:text-slate-100">Projects</h3>
-                <Button onClick={addProject} variant="ghost" size="sm" className="text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50" leftIcon={<PlusIcon className="w-4 h-4" />}>
-                  Add
-                </Button>
-              </div>
-              <div className="space-y-4">
-                {data.projects.map(proj => (
-                  <div key={proj.id} className="p-4 bg-slate-50 dark:bg-slate-800/50 rounded-lg border border-slate-200 dark:border-slate-700 relative">
-                    <Button
-                      onClick={() => removeProject(proj.id)}
-                      variant="icon"
-                      className="absolute top-2 right-2 text-slate-400 hover:text-red-500 hover:bg-red-50"
-                      size="icon"
-                      aria-label={`Remove ${proj.name || 'project'}`}
+            <Section
+              title="Projects"
+              description="Side projects, open source or case studies."
+              action={
+                data.projects.length > 0 && (
+                  <Button
+                    variant="secondary"
+                    size="sm"
+                    leftIcon={<PlusIcon className="h-4 w-4" />}
+                    onClick={() => addItem('projects', { id: createId(), name: '', link: '', description: '' } satisfies Project, 'end')}
+                  >
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {data.projects.length === 0 ? (
+                <EmptyState addLabel="Add a project" onAdd={() => addItem('projects', { id: createId(), name: '', link: '', description: '' }, 'end')}>
+                  Optional, but great for showing real work.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {data.projects.map((proj, index) => (
+                    <ItemCard
+                      key={proj.id}
+                      title={proj.name}
+                      subtitle={proj.link}
+                      placeholderTitle="New project"
+                      isOpen={openIds.has(`projects:${proj.id}`)}
+                      onToggle={() => toggleOpen(`projects:${proj.id}`)}
+                      onRemove={() => removeItem('projects', proj.id, proj.name || 'project')}
+                      onMoveUp={index > 0 ? () => moveItem('projects', index, -1) : undefined}
+                      onMoveDown={index < data.projects.length - 1 ? () => moveItem('projects', index, 1) : undefined}
                     >
-                      <TrashIcon className="w-4 h-4" />
-                    </Button>
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-3">
-                      <Input label="Project Name" value={proj.name} onChange={(v) => updateProject(proj.id, 'name', v)} />
-                      <Input
-                        label="Link (optional)"
-                        type="url"
-                        value={proj.link}
-                        onChange={(v) => updateProject(proj.id, 'link', v)}
-                        error={getUrlError(proj.link)}
-                      />
-                    </div>
-                    <div className="relative">
-                      <textarea
-                        className="w-full p-2 border border-slate-300 dark:border-slate-700 bg-white dark:bg-slate-800 text-slate-900 dark:text-slate-100 rounded-md text-sm disabled:opacity-50"
-                        placeholder="Project description..."
-                        rows={2}
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
+                        <Input label="Name" value={proj.name} onChange={(v) => updateItem('projects', proj.id, { name: v })} placeholder="Open-source design tokens" />
+                        <Input
+                          label="Link"
+                          type="url"
+                          value={proj.link}
+                          onChange={(v) => updateItem('projects', proj.id, { link: v })}
+                          error={getUrlError(proj.link)}
+                          placeholder="github.com/you/project"
+                          hint="Optional"
+                        />
+                      </div>
+                      <Textarea
+                        label="Description"
                         value={proj.description}
-                        onChange={(e) => updateProject(proj.id, 'description', e.target.value)}
+                        onChange={(v) => updateItem('projects', proj.id, { description: v })}
+                        placeholder="What it is, your role, and the result."
+                        minRows={3}
                         disabled={isLoadingField(`proj-${proj.id}`)}
+                        actions={polishButton(`proj-${proj.id}`, proj.description, 'Project Description', (v) =>
+                          updateItem('projects', proj.id, { description: v })
+                        )}
                       />
-                      {isLoadingField(`proj-${proj.id}`) && (
-                        <div className="absolute inset-0 flex items-center justify-center bg-white/50 dark:bg-slate-800/50 rounded-md">
-                          <LoaderIcon className="animate-spin w-5 h-5 text-indigo-600" />
-                        </div>
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+          </>
+        )}
+
+        {activeTab === 'design' && (
+          <>
+          <Section title="Style" description="Accent colour, font and size apply to every template.">
+            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} />
+          </Section>
+          <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
+            <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">
+              {TEMPLATES.map((t) => {
+                const selected = data.templateId === t.id;
+                return (
+                  <button
+                    key={t.id}
+                    type="button"
+                    role="radio"
+                    aria-checked={selected}
+                    onClick={() => setField('templateId', t.id)}
+                    className="group text-left focus-visible:outline-none"
+                  >
+                    <div
+                      className={`relative overflow-hidden rounded-lg bg-white shadow-sm ring-1 transition group-hover:-translate-y-0.5 group-hover:shadow-md group-focus-visible:ring-2 group-focus-visible:ring-indigo-500 ${
+                        selected ? 'ring-2 ring-indigo-600 dark:ring-indigo-400' : 'ring-slate-200 dark:ring-slate-700'
+                      }`}
+                    >
+                      <LazyResumePreview data={data} templateId={t.id} />
+                      {selected && (
+                        <span className="absolute right-2 top-2 flex h-6 w-6 items-center justify-center rounded-full bg-indigo-600 text-white shadow">
+                          <CheckIcon className="h-3.5 w-3.5" />
+                        </span>
                       )}
-                      <Button
-                        onClick={() =>
-                          improveField({
-                            fieldId: `proj-${proj.id}`,
-                            text: proj.description,
-                            context: 'Project Description',
-                            onUpdate: (val) => updateProject(proj.id, 'description', val),
-                          })
-                        }
-                        disabled={isLoadingField(`proj-${proj.id}`) || !proj.description}
-                        className="absolute bottom-2 right-2 h-auto py-1 px-2 bg-white border border-slate-200 shadow-sm text-slate-500 hover:text-indigo-600"
-                        variant="ghost"
-                        size="sm"
-                        aria-label="Polish project description with AI"
-                      >
-                        {isLoadingField(`proj-${proj.id}`) ? <LoaderIcon className="animate-spin w-3 h-3" /> : <SparklesIcon className="w-3 h-3" />}
-                      </Button>
                     </div>
-                  </div>
-                ))}
-              </div>
+                    <span className="mt-2 flex items-center justify-center gap-1.5">
+                      <span
+                        className={`text-sm ${
+                          selected ? 'font-semibold text-indigo-600 dark:text-indigo-400' : 'font-medium text-slate-700 dark:text-slate-300'
+                        }`}
+                      >
+                        {t.name}
+                      </span>
+                      {t.atsFriendly && (
+                        <span className="rounded bg-emerald-50 px-1 py-px text-[10px] font-semibold uppercase tracking-wide text-emerald-700 ring-1 ring-emerald-600/20 dark:bg-emerald-500/10 dark:text-emerald-300">
+                          ATS
+                        </span>
+                      )}
+                    </span>
+                    <span className="mt-0.5 block text-center text-xs leading-snug text-slate-500 dark:text-slate-400">{t.description}</span>
+                  </button>
+                );
+              })}
             </div>
-          </div>
+          </Section>
+          </>
+        )}
+
+        {activeTab !== 'design' && (
+          <p className="flex items-start gap-2 text-xs leading-relaxed text-slate-400 dark:text-slate-500">
+            <SparklesIcon className="mt-0.5 h-3.5 w-3.5 shrink-0" />
+            AI suggestions run on Cloudflare Workers AI and only see the text you choose to improve. Always review them — AI never knows your real numbers.
+          </p>
         )}
       </div>
     </div>
   );
 };
-
-
-
 
 export default ResumeEditor;

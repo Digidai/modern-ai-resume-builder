@@ -1,9 +1,8 @@
-export const GEMINI_ACTIONS = ['improve', 'summary'] as const;
-export type GeminiAction = (typeof GEMINI_ACTIONS)[number];
+export const AI_ACTIONS = ['improve', 'summary'] as const;
+export type AiAction = (typeof AI_ACTIONS)[number];
 
-export const GEMINI_ERROR_CODES = [
-  'API_KEY_REQUIRED',
-  'SERVER_KEY_MISSING',
+export const AI_ERROR_CODES = [
+  'AI_NOT_CONFIGURED',
   'AUTH_REQUIRED',
   'CLIENT_TOKEN_REQUIRED',
   'INVALID_CLIENT_TOKEN',
@@ -19,7 +18,6 @@ export const GEMINI_ERROR_CODES = [
   'RATE_LIMITED',
   'UPSTREAM_RATE_LIMIT',
   'UPSTREAM_UNAVAILABLE',
-  'UPSTREAM_ERROR',
   'UPSTREAM_TIMEOUT',
   'EMPTY_RESPONSE',
   'NETWORK_ERROR',
@@ -27,48 +25,48 @@ export const GEMINI_ERROR_CODES = [
   'UNKNOWN_ERROR',
 ] as const;
 
-export type GeminiErrorCode = (typeof GEMINI_ERROR_CODES)[number];
+export type AiErrorCode = (typeof AI_ERROR_CODES)[number];
 
-export interface GeminiImproveRequest {
+export interface AiImproveRequest {
   action: 'improve';
   text: string;
   context?: string;
 }
 
-export interface GeminiSummaryRequest {
+export interface AiSummaryRequest {
   action: 'summary';
   role: string;
   skills: string[];
 }
 
-export type GeminiRequest = GeminiImproveRequest | GeminiSummaryRequest;
+export type AiRequest = AiImproveRequest | AiSummaryRequest;
 
-export interface GeminiApiResponse {
+export interface AiApiResponse {
   text?: string;
 }
 
-export interface GeminiSessionResponse {
+export interface AiSessionResponse {
   token?: string;
   expiresAt?: number;
 }
 
-export interface GeminiErrorEnvelope {
-  code?: GeminiErrorCode;
+export interface AiErrorEnvelope {
+  code?: AiErrorCode;
   error?: string;
 }
 
-export const isGeminiErrorCode = (value: unknown): value is GeminiErrorCode =>
-  typeof value === 'string' && (GEMINI_ERROR_CODES as readonly string[]).includes(value);
+export const isAiErrorCode = (value: unknown): value is AiErrorCode =>
+  typeof value === 'string' && (AI_ERROR_CODES as readonly string[]).includes(value);
 
-export const isGeminiApiResponse = (value: unknown): value is GeminiApiResponse => {
+export const isAiApiResponse = (value: unknown): value is AiApiResponse => {
   if (!value || typeof value !== 'object') return false;
-  const text = (value as GeminiApiResponse).text;
+  const text = (value as AiApiResponse).text;
   return text === undefined || typeof text === 'string';
 };
 
-export const isGeminiSessionResponse = (value: unknown): value is GeminiSessionResponse => {
+export const isAiSessionResponse = (value: unknown): value is AiSessionResponse => {
   if (!value || typeof value !== 'object') return false;
-  const payload = value as GeminiSessionResponse;
+  const payload = value as AiSessionResponse;
   const tokenValid = payload.token === undefined || typeof payload.token === 'string';
   const expiresValid = payload.expiresAt === undefined || typeof payload.expiresAt === 'number';
   return tokenValid && expiresValid;

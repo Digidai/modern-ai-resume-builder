@@ -9,11 +9,11 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.8-3178C6?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind-4.x-38B2AC?logo=tailwindcss&logoColor=white)](https://tailwindcss.com/)
 [![Vite](https://img.shields.io/badge/Vite-6.x-646CFF?logo=vite&logoColor=white)](https://vite.dev/)
-[![Gemini AI](https://img.shields.io/badge/Gemini-AI_Powered-8E75B2?logo=google&logoColor=white)](https://ai.google.dev/)
+[![Workers AI](https://img.shields.io/badge/Cloudflare-Workers_AI-F38020?logo=cloudflare&logoColor=white)](https://developers.cloudflare.com/workers-ai/)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is an AI-powered resume builder with 28 templates, real-time preview, and 640 job-title pages for SEO.**
+**ModernCV is an AI-powered resume builder with 34 templates, real-time preview, and 640 job-title pages for SEO.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -54,21 +54,23 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 28 professionally designed resume templates.
+- 34 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy) and 21 ATS-friendly single-column layouts.
+- Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - 640 job titles with SEO-friendly, pre-rendered pages.
-- Gemini AI assistance for summaries and experience bullet improvements.
+- AI writing help (Cloudflare Workers AI) for summaries and experience bullets.
 - Local-first data storage with debounced segmented persistence for resume editing.
-- Optional AI proxy via Cloudflare Worker for server-side Gemini key handling.
-- Print-ready A4 layout and PDF export via browser print.
+- AI runs through the Cloudflare Worker's Workers AI binding; no API keys in the browser.
+- Vector PDF export rendered by Cloudflare Browser Rendering (selectable text, embedded fonts), with an in-browser image fallback.
 - JSON export for portability or integration with other tools.
 - Light and dark themes.
 
 ## 功能特性
 
-- **28 套专业模板** - 涵盖多种行业和风格的精心设计模板
+- **34 套专业模板** - 吸收 Jake's、Harvard、Awesome-CV、moderncv、Deedy 等经典设计，其中 21 套为 ATS 友好单栏
+- **样式控制** - 强调色（含对比度检查）、10 种自托管字体、字号与一键压缩到一页
 - **640 个职位页面** - SEO 优化的职位目录页面
 - **实时预览** - 输入内容时即时查看简历更新
-- **AI 智能优化** - 使用 Google Gemini AI 优化和润色简历文本
+- **AI 智能优化** - 使用 Cloudflare Workers AI 优化和润色简历文本
 - **自动生成摘要** - 根据职位和技能自动生成专业摘要
 - **本地数据存储** - 数据优先保存在浏览器（分片存储 + 自动保存）
 - **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
@@ -78,9 +80,11 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 28 templates:
+ModernCV ships with 34 templates. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal.
 
-Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, Academic, Elegant, Swiss, Opal, Wireframe, Berlin, Lateral, Iron, Ginto, Symmetry, Bronx, Path, Quartz, Silk, Mono, Pop, Noir, Paper, Cast, Moda.
+Two-column and expressive: Minimalist, Duo, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
+
+Every template reads `--rs-accent` and the paper font variables, so the editor's accent, font and size controls apply everywhere.
 
 ## Preview
 
@@ -91,15 +95,15 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 ### Resume Builder
 - Real-time editor + preview with responsive layout.
 - Template selector with instant style changes.
-- PDF export via `pdf-lib`.
+- PDF export: `/api/pdf` prints the exact preview with Cloudflare Browser Rendering (`BROWSER` binding); falls back to an image PDF built with `pdf-lib`.
 - JSON export for backup or reuse.
 
-### AI Assistance (Gemini)
+### AI Assistance (Cloudflare Workers AI)
 - Generate a professional summary based on role and skills.
 - Improve experience bullets with action verbs and measurable impact.
-- Frontend uses a Worker-injected `ai-client-token` to request a short-lived signed session via `/api/gemini/session`, then calls `/api/gemini`.
-- Worker enforces origin checks, client-token verification, session+request-id verification, and multi-dimensional rate limits (IP + session + global, backed by Durable Object) before hitting Gemini.
-- Gemini API key is managed server-side only. Users no longer need to enter personal keys in the UI.
+- Frontend uses a Worker-injected `ai-client-token` to request a short-lived signed session via `/api/ai/session`, then calls `/api/ai`.
+- Worker enforces origin checks, client-token verification, session+request-id verification, and multi-dimensional rate limits (IP + session + global, backed by Durable Object) before calling Workers AI (`env.AI.run`).
+- The model is set by the `AI_MODEL` Worker var (default `@cf/zai-org/glm-5.3-flash`). No API key is needed; billing goes to the Cloudflare account.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (640 titles).
@@ -107,9 +111,9 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 - Structured data (JSON-LD) on directory and job pages.
 
 ### Privacy and Data
-- Resume data is persisted in segmented browser storage (`resumeData:v2:*`) with debounced writes; sensitive fields default to session scope.
-- AI requests send selected text to Google Gemini for processing.
-- AI requests use server-side credentials only; no personal Gemini key is stored in the browser.
+- Resume data is persisted in browser localStorage (`resumeData:v2:*`) with debounced writes. Backups can be exported/imported as JSON.
+- AI requests send only the selected text to Cloudflare Workers AI for processing.
+- No API keys are stored in the browser.
 
 ## SEO & Social Sharing
 
@@ -156,8 +160,8 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 | Build Tool | Vite 6 |
 | Styling | Tailwind CSS 4 |
 | Routing | React Router 6 |
-| AI | Google Gemini API |
-| PDF | pdf-lib |
+| AI | Cloudflare Workers AI |
+| PDF | Cloudflare Browser Rendering (`@cloudflare/puppeteer`), pdf-lib fallback |
 | SEO | JSON-LD, sitemap + OG images (sharp) |
 | Deployment | Cloudflare Pages/Workers |
 
@@ -167,7 +171,7 @@ Modern, Minimalist, Sidebar, Executive, Creative, Compact, Tech, Professional, A
 
 - Node.js 18+ recommended
 - npm
-- Optional for self-hosting AI features: Gemini API key (configured server-side only)
+- Optional for AI features: a Cloudflare account with Workers AI
 
 ### Quick Start
 
@@ -184,7 +188,7 @@ npm install
 # Start development server
 npm run dev
 
-# Open http://localhost:5173 in your browser
+# Open http://localhost:3000 in your browser
 ```
 
 ### Environment Variables
@@ -193,7 +197,7 @@ Create a `.env.local` file if needed:
 
 ```env
 # Optional: frontend override for AI proxy endpoint
-# Defaults to /api/gemini
+# Defaults to /api/ai
 VITE_AI_PROXY_URL=
 
 # Optional: runtime canonical site URL for SEO tags
@@ -211,10 +215,9 @@ Notes:
 - Do not store service keys in `VITE_` variables.
 - For local Worker development, copy `.dev.vars.example` to `.dev.vars` and set secrets there.
 - For Cloudflare Worker deployments, set a server secret:
-  - `wrangler secret put GEMINI_API_KEY`
-  - `wrangler secret put GEMINI_SIGNING_SECRET`
+  - `wrangler secret put AI_SIGNING_SECRET`
 - For local AI proxy testing, run Worker dev and point the frontend to it:
-  - `VITE_AI_PROXY_URL=http://127.0.0.1:8787/api/gemini`
+  - `VITE_AI_PROXY_URL=http://127.0.0.1:8787/api/ai`
   - `npx wrangler dev`
 - Optional Worker vars:
   - `ALLOWED_ORIGINS` (comma-separated origins allowed to request AI sessions)
@@ -224,7 +227,7 @@ Notes:
   - `AI_SESSION_RATE_LIMIT_PER_MINUTE`
   - `AI_SESSION_TTL_SECONDS`
   - `AI_CLIENT_TOKEN_TTL_SECONDS`
-- The app now requires `GEMINI_API_KEY` to be configured on the server (Worker secret) for AI features.
+- AI features require the `AI` binding (see `wrangler.jsonc`) and the `AI_SIGNING_SECRET` Worker secret. `AI_MODEL` and `AI_REASONING_EFFORT` vars choose the model.
 - `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference
@@ -255,7 +258,7 @@ modern-ai-resume-builder/
 │   ├── contexts/               # React contexts
 │   ├── data/                   # Job titles, personas, role examples
 │   ├── hooks/                  # Custom React hooks
-│   ├── services/               # Gemini AI integration
+│   ├── services/               # AI client (Workers AI via the Worker)
 │   ├── utils/                  # Utility functions
 │   ├── App.tsx                 # Routes and page layout
 │   └── types.ts                # TypeScript types
@@ -299,8 +302,8 @@ npm run jobtitles:import -- --input titles.csv --format csv
 ### Cloudflare Workers
 
 ```bash
-# First-time only: configure server-side Gemini key
-wrangler secret put GEMINI_API_KEY
+# First-time only: session signing secret for AI
+wrangler secret put AI_SIGNING_SECRET
 
 # Build and deploy
 npm run build:deploy
@@ -309,11 +312,11 @@ npm run build:deploy
 ### Other Platforms
 
 The `dist` folder can be deployed to any static hosting (Vercel, Netlify, GitHub Pages, S3 + CloudFront) for core resume editing.
-If you need AI features, deploy an API endpoint compatible with `/api/gemini` and set `VITE_AI_PROXY_URL` when needed.
+If you need AI features, deploy an API endpoint compatible with `/api/ai` and set `VITE_AI_PROXY_URL` when needed.
 
 ## API Reference
 
-### Gemini Service
+### AI Service (`src/services/aiService.ts`)
 
 ```typescript
 // Improve existing text with AI
@@ -350,7 +353,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 ## Acknowledgments
 
-- Google Gemini for AI capabilities
+- Cloudflare Workers AI for AI capabilities
 - Tailwind CSS for styling
 - Vite for the build tool
 - Cloudflare for hosting

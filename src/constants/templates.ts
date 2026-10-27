@@ -6,42 +6,50 @@
 export interface TemplateConfig {
   id: string;
   name: string;
-  color: string;
+  /** One-line summary shown in the template picker. */
+  description: string;
+  /** Single column, standard headings, real text in reading order: safe for applicant tracking systems. */
+  atsFriendly: boolean;
   /** Whether the template handles its own full-bleed layout */
   isFullBleed: boolean;
-  /** Whether vector PDF export is supported */
-  supportsPdfVector: boolean;
 }
 
+/** Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs. */
 const TEMPLATE_CATALOG = [
-  { id: 'modern', name: 'Modern', color: 'bg-indigo-500', isFullBleed: false, supportsPdfVector: true },
-  { id: 'minimalist', name: 'Minimalist', color: 'bg-slate-200', isFullBleed: false, supportsPdfVector: true },
-  { id: 'sidebar', name: 'Sidebar', color: 'bg-slate-800', isFullBleed: true, supportsPdfVector: true },
-  { id: 'executive', name: 'Executive', color: 'bg-slate-600', isFullBleed: false, supportsPdfVector: false },
-  { id: 'creative', name: 'Creative', color: 'bg-emerald-600', isFullBleed: true, supportsPdfVector: false },
-  { id: 'compact', name: 'Compact', color: 'bg-blue-400', isFullBleed: false, supportsPdfVector: false },
-  { id: 'tech', name: 'Tech', color: 'bg-gray-900', isFullBleed: false, supportsPdfVector: false },
-  { id: 'professional', name: 'Professional', color: 'bg-blue-800', isFullBleed: true, supportsPdfVector: false },
-  { id: 'academic', name: 'Academic', color: 'bg-slate-100 border border-slate-400 !text-slate-800', isFullBleed: false, supportsPdfVector: false },
-  { id: 'elegant', name: 'Elegant', color: 'bg-stone-200', isFullBleed: false, supportsPdfVector: false },
-  { id: 'swiss', name: 'Swiss', color: 'bg-slate-900 border-2 border-white', isFullBleed: false, supportsPdfVector: false },
-  { id: 'opal', name: 'Opal', color: 'bg-slate-50', isFullBleed: true, supportsPdfVector: false },
-  { id: 'wireframe', name: 'Wireframe', color: 'bg-white border border-slate-300', isFullBleed: true, supportsPdfVector: false },
-  { id: 'berlin', name: 'Berlin', color: 'bg-white border-t-4 border-black', isFullBleed: true, supportsPdfVector: false },
-  { id: 'lateral', name: 'Lateral', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
-  { id: 'iron', name: 'Iron', color: 'bg-black', isFullBleed: true, supportsPdfVector: false },
-  { id: 'ginto', name: 'Ginto', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
-  { id: 'symmetry', name: 'Symmetry', color: 'bg-slate-50', isFullBleed: true, supportsPdfVector: false },
-  { id: 'bronx', name: 'Bronx', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
-  { id: 'path', name: 'Path', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
-  { id: 'quartz', name: 'Quartz', color: 'bg-white border border-slate-900', isFullBleed: true, supportsPdfVector: false },
-  { id: 'silk', name: 'Silk', color: 'bg-stone-50', isFullBleed: true, supportsPdfVector: false },
-  { id: 'mono', name: 'Mono', color: 'bg-slate-900', isFullBleed: true, supportsPdfVector: false },
-  { id: 'pop', name: 'Pop', color: 'bg-gradient-to-r from-indigo-100 to-pink-100', isFullBleed: true, supportsPdfVector: false },
-  { id: 'noir', name: 'Noir', color: 'bg-zinc-900', isFullBleed: true, supportsPdfVector: false },
-  { id: 'paper', name: 'Paper', color: 'bg-[#fffef8] border border-slate-300', isFullBleed: true, supportsPdfVector: false },
-  { id: 'cast', name: 'Cast', color: 'bg-[#fafafa] font-mono', isFullBleed: true, supportsPdfVector: false },
-  { id: 'moda', name: 'Moda', color: 'bg-white', isFullBleed: true, supportsPdfVector: false },
+  { id: 'classic', name: 'Classic', description: "Jake's-style LaTeX classic: small caps and hairline rules", atsFriendly: true, isFullBleed: true },
+  { id: 'modern', name: 'Modern', description: "Clean single column with accent headings and rules", atsFriendly: true, isFullBleed: false },
+  { id: 'ivy', name: 'Ivy', description: "Harvard-style Times layout with centered headings", atsFriendly: true, isFullBleed: true },
+  { id: 'banking', name: 'Ledger', description: "moderncv banking: accent name, bold dates on the right", atsFriendly: true, isFullBleed: true },
+  { id: 'vanguard', name: 'Vanguard', description: "Bold display name, accent-led headings with line rules", atsFriendly: true, isFullBleed: true },
+  { id: 'timeline', name: 'Timeline', description: "Clean accent layout with a dated career timeline", atsFriendly: true, isFullBleed: true },
+  { id: 'executive', name: 'Executive', description: "Centered executive layout with serif headings", atsFriendly: true, isFullBleed: false },
+  { id: 'compact', name: 'Compact', description: "Dense single column that fits long histories", atsFriendly: true, isFullBleed: false },
+  { id: 'academic', name: 'Academic', description: "Scholarly CV with small-caps headings and rules", atsFriendly: true, isFullBleed: false },
+  { id: 'tech', name: 'Tech', description: "Developer style: mono headings and tags, sans body", atsFriendly: true, isFullBleed: false },
+  { id: 'silk', name: 'Silk', description: "Elegant Garamond serif with centered hairline headings", atsFriendly: true, isFullBleed: true },
+  { id: 'lateral', name: 'Lateral', description: "Calm side-label grid with one quiet accent rule", atsFriendly: true, isFullBleed: true },
+  { id: 'opal', name: 'Opal', description: "Soft, centered layout with an accent timeline", atsFriendly: true, isFullBleed: true },
+  { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", atsFriendly: false, isFullBleed: false },
+  { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", atsFriendly: false, isFullBleed: true },
+  { id: 'sidebar', name: 'Sidebar', description: "Dark accent sidebar beside a timeline main column", atsFriendly: false, isFullBleed: true },
+  { id: 'creative', name: 'Creative', description: "Bold accent header band with a tinted sidebar", atsFriendly: false, isFullBleed: true },
+  { id: 'professional', name: 'Professional', description: "Dark header band with a tinted skills sidebar", atsFriendly: false, isFullBleed: true },
+  { id: 'elegant', name: 'Elegant', description: "Playfair serif headings, refined two-column layout", atsFriendly: false, isFullBleed: false },
+  { id: 'swiss', name: 'Swiss', description: "Bold grid with a solid name block", atsFriendly: false, isFullBleed: false },
+  { id: 'berlin', name: 'Berlin', description: "Oversized name, strict rules, black and white", atsFriendly: false, isFullBleed: true },
+  { id: 'iron', name: 'Iron', description: "Bold black header bar with heavy block labels", atsFriendly: false, isFullBleed: true },
+  { id: 'ginto', name: 'Ginto', description: "Numbered sections, big name, timeline dots", atsFriendly: false, isFullBleed: true },
+  { id: 'symmetry', name: 'Symmetry', description: "Centered serif layout with hairline dividers", atsFriendly: false, isFullBleed: true },
+  { id: 'path', name: 'Path', description: "Timeline career path with a skills sidebar", atsFriendly: false, isFullBleed: true },
+  { id: 'wireframe', name: 'Wireframe', description: "Blueprint frame with mono labels and dot grid", atsFriendly: false, isFullBleed: true },
+  { id: 'quartz', name: 'Quartz', description: "Framed two-panel grid with mono labels", atsFriendly: false, isFullBleed: true },
+  { id: 'bronx', name: 'Bronx', description: "Poster-size name, sidebar and date tags", atsFriendly: false, isFullBleed: true },
+  { id: 'paper', name: 'Paper', description: "Newspaper masthead with a Playfair name and drop cap", atsFriendly: false, isFullBleed: true },
+  { id: 'moda', name: 'Moda', description: "Fashion-editorial masthead with a skills sidebar", atsFriendly: false, isFullBleed: true },
+  { id: 'noir', name: 'Noir', description: "Dark editorial layout with a light Raleway name", atsFriendly: false, isFullBleed: true },
+  { id: 'mono', name: 'Mono', description: "Dark code-editor resume set in JetBrains Mono", atsFriendly: false, isFullBleed: true },
+  { id: 'pop', name: 'Pop', description: "Playful rounded cards with two-tone accent pills", atsFriendly: false, isFullBleed: true },
+  { id: 'cast', name: 'Cast', description: "Screenplay-style resume with scene headings", atsFriendly: false, isFullBleed: true },
 ] as const satisfies readonly TemplateConfig[];
 
 export type TemplateId = (typeof TEMPLATE_CATALOG)[number]['id'];
@@ -59,11 +67,6 @@ export const FULL_BLEED_TEMPLATE_IDS: TemplateId[] = TEMPLATES
   .filter((template) => template.isFullBleed)
   .map((template) => template.id) as TemplateId[];
 
-/** Template IDs that support vector PDF export */
-export const PDF_VECTOR_TEMPLATE_IDS: TemplateId[] = TEMPLATES
-  .filter((template) => template.supportsPdfVector)
-  .map((template) => template.id) as TemplateId[];
-
 /** Default template ID */
 export const DEFAULT_TEMPLATE_ID: TemplateId = 'modern';
 
@@ -79,11 +82,4 @@ export const getTemplateById = (id: string): TemplateConfig | undefined => {
  */
 export const isFullBleedTemplate = (templateId: string): boolean => {
   return FULL_BLEED_TEMPLATE_IDS.includes(templateId as TemplateId);
-};
-
-/**
- * Check if a template supports vector PDF export
- */
-export const supportsPdfVector = (templateId: string): boolean => {
-  return PDF_VECTOR_TEMPLATE_IDS.includes(templateId as TemplateId);
 };

@@ -1,96 +1,119 @@
 import React from 'react';
-import { TemplateProps } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+
+/** A milestone on the timeline: a solid accent node + section heading. */
+const Milestone: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
+    <section className="relative pl-9">
+        <span className="absolute left-0 top-[3px] w-4 h-4 rounded-full bg-(--accent) ring-4 ring-white" aria-hidden="true" />
+        <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3.5 leading-[22px] break-after-avoid">{title}</h2>
+        {children}
+    </section>
+);
+
+/** A small stop on the timeline for an individual entry. */
+const Stop: React.FC = () => (
+    <span className="absolute -left-[32px] top-[7px] w-2.5 h-2.5 rounded-full bg-white border-2 border-(--accent) ring-[3px] ring-white" aria-hidden="true" />
+);
+
+/** Second entry line: organisation on the left, the date pill on the right — the template's one date slot. */
+const SubLine: React.FC<{ left?: string; dates?: string }> = ({ left, dates }) =>
+    left || dates ? (
+        <div className="flex flex-wrap justify-between items-baseline gap-x-4 gap-y-0.5 mt-0.5">
+            <div className="text-slate-600 font-semibold min-w-0 wrap-break-word">{left}</div>
+            {dates && (
+                <div className="text-[12px] font-semibold text-(--accent) bg-(--accent)/8 px-2 py-px rounded tabular-nums whitespace-nowrap">{dates}</div>
+            )}
+        </div>
+    ) : null;
+
+const BULLETS = 'list-disc pl-4 space-y-1 marker:text-(--accent)/50';
 
 export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
+    const contacts = getContactEntries(data);
+    const skillGroups = groupSkills(data.skills);
+    const hasTimeline = Boolean(data.summary.trim()) || data.experience.length > 0 || data.education.length > 0;
+    const hasSidebar = skillGroups.length > 0 || data.projects.length > 0;
+
     return (
-        <div className="flex flex-col h-full bg-white text-slate-800 font-sans p-10">
-            <header className="pl-[29px]"> {/* Align with timeline line */}
-                <h1 className="text-4xl font-bold text-indigo-600 mb-2">{data.fullName}</h1>
-                <p className="text-xl font-medium text-slate-700 mb-6">{data.title}</p>
-                <div className="flex flex-wrap gap-x-6 gap-y-2 text-sm text-slate-500 mb-10">
-                    {[data.email, data.phone].filter(Boolean).map((t, i) => (
-                        <div key={i} className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
-                            {t}
-                        </div>
-                    ))}
-                    {data.location && (
-                        <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
-                            {data.location}
-                        </div>
-                    )}
-                    {data.website && (
-                        <div className="flex items-center gap-2">
-                            <div className="w-1.5 h-1.5 bg-indigo-200 rounded-full"></div>
-                            {data.website}
-                        </div>
-                    )}
-                </div>
+        <div className="flex-1 flex flex-col bg-white text-slate-700 font-source-sans text-[14px] leading-[1.5] px-[14mm] py-[13mm] [--accent:var(--rs-accent,#4338CA)]">
+            <header className="pl-9 mb-8">
+                {data.fullName && (
+                    <h1 className="font-raleway text-[34px] font-bold tracking-tight leading-[1.15] text-(--accent) wrap-break-word">{data.fullName}</h1>
+                )}
+                {data.title && <p className="font-raleway text-[17px] font-semibold text-slate-800 mt-1 leading-snug wrap-break-word">{data.title}</p>}
+                {contacts.length > 0 && (
+                    <ul className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4 text-[13px] text-slate-600">
+                        {contacts.map((entry) => {
+                            const Icon = entry.icon;
+                            return (
+                                <li key={entry.key} className="flex items-center gap-1.5 min-w-0 max-w-full">
+                                    <Icon className="w-3.5 h-3.5 shrink-0 text-(--accent)/70" />
+                                    <ContactLink entry={entry} className="wrap-anywhere min-w-0" />
+                                </li>
+                            );
+                        })}
+                    </ul>
+                )}
             </header>
 
-            <div className="flex gap-10 h-full">
-                {/* Timeline Column */}
-                <div className="flex-1 relative">
-                    <div className="absolute left-[7px] top-0 bottom-0 w-0.5 bg-indigo-100"></div>
+            <div className="flex flex-1 gap-9">
+                {hasTimeline && (
+                    <div className="flex-1 min-w-0">
+                        <div className="relative flex flex-col gap-8">
+                            <div className="absolute left-[7px] top-2 bottom-1 w-0.5 bg-(--accent)/15" aria-hidden="true" />
+                            {data.summary.trim() && (
+                                <Milestone title="Profile">
+                                    <p className="text-slate-700 wrap-break-word">{data.summary}</p>
+                                </Milestone>
+                            )}
 
-                    <div className="flex flex-col gap-10 pb-10">
-                        {data.summary && (
-                            <div className="relative pl-10">
-                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-2">Profile</h2>
-                                <p className="text-slate-600 leading-relaxed">{data.summary}</p>
-                            </div>
-                        )}
+                            {data.experience.length > 0 && (
+                                <Milestone title="Experience">
+                                    <div className="flex flex-col gap-5">
+                                        {data.experience.map((exp) => (
+                                            <article key={exp.id} className="relative break-inside-avoid">
+                                                <Stop />
+                                                {exp.role && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{exp.role}</h3>}
+                                                <SubLine left={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                                <RichText text={exp.description} className="mt-1.5 text-slate-700 wrap-break-word" listClassName={BULLETS} />
+                                            </article>
+                                        ))}
+                                    </div>
+                                </Milestone>
+                            )}
 
-                        {data.experience.length > 0 && (
-                            <div className="relative pl-10">
-                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-6">Experience Path</h2>
-                                <div className="flex flex-col gap-8">
-                                    {data.experience.map(exp => (
-                                        <div key={exp.id} className="relative">
-                                            <div className="absolute -left-[45px] top-1.5 w-2 h-2 rounded-full bg-indigo-200 border-2 border-white"></div>
-                                            <div className="font-bold text-slate-900 text-lg">{exp.role}</div>
-                                            <div className="flex justify-between items-baseline mb-2">
-                                                <div className="text-indigo-600 font-medium">{exp.company}</div>
-                                                <div className="text-xs font-mono text-slate-400 bg-slate-50 px-2 py-0.5 rounded">{exp.startDate} - {exp.isCurrent ? 'Now' : exp.endDate}</div>
-                                            </div>
-                                            <p className="text-sm text-slate-600 leading-relaxed">{exp.description}</p>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
-
-                        {data.education.length > 0 && (
-                            <div className="relative pl-10">
-                                <div className="absolute left-0 top-1.5 w-4 h-4 rounded-full border-4 border-white bg-indigo-600 shadow-sm z-10"></div>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-6">Education</h2>
-                                <div className="flex flex-col gap-6">
-                                    {data.education.map(edu => (
-                                        <div key={edu.id} className="relative">
-                                            <div className="absolute -left-[45px] top-1.5 w-2 h-2 rounded-full bg-indigo-200 border-2 border-white"></div>
-                                            <div className="font-bold text-slate-900">{edu.school}</div>
-                                            <div className="text-sm text-slate-600">{edu.degree}</div>
-                                            <div className="text-xs text-slate-400 mt-1">{edu.startDate} - {edu.endDate}</div>
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
-                        )}
+                            {data.education.length > 0 && (
+                                <Milestone title="Education">
+                                    <div className="flex flex-col gap-4">
+                                        {data.education.map((edu) => (
+                                            <article key={edu.id} className="relative break-inside-avoid">
+                                                <Stop />
+                                                {edu.school && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{edu.school}</h3>}
+                                                <SubLine left={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                            </article>
+                                        ))}
+                                    </div>
+                                </Milestone>
+                            )}
+                        </div>
                     </div>
-                </div>
+                )}
 
-                {/* Sidebar Column */}
-                <div className="w-1/3 pt-1">
-                    <div className="sticky top-10 flex flex-col gap-10">
-                        {data.skills.length > 0 && (
-                            <section className="bg-slate-50 p-6 rounded-2xl">
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-4">Skills</h2>
-                                <div className="flex flex-wrap gap-2">
-                                    {data.skills.map((s, i) => (
-                                        <span key={i} className="bg-white border border-indigo-100 px-3 py-1 rounded-full text-xs font-medium text-indigo-800 shadow-sm">{s}</span>
+                {hasSidebar && (
+                    <aside className={hasTimeline ? 'w-[33%] shrink-0 flex flex-col gap-7' : 'flex-1 flex flex-col gap-7'}>
+                        {skillGroups.length > 0 && (
+                            <section className="bg-slate-50 border border-slate-100 p-5 rounded-2xl break-inside-avoid">
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3 break-after-avoid">Skills</h2>
+                                <div className="flex flex-col gap-3">
+                                    {skillGroups.map((group, gi) => (
+                                        <div key={gi} className="min-w-0">
+                                            {group.category && <div className="text-[12px] font-semibold text-slate-500 mb-1 wrap-break-word">{group.category}</div>}
+                                            <ul className="flex flex-wrap gap-1.5">
+                                                {group.items.map((skill, i) => (
+                                                    <li key={i} className="bg-white border border-(--accent)/20 px-2.5 py-px rounded-full text-[13px] font-semibold text-slate-800 wrap-break-word max-w-full">{skill}</li>
+                                                ))}
+                                            </ul>
+                                        </div>
                                     ))}
                                 </div>
                             </section>
@@ -98,20 +121,25 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.projects.length > 0 && (
                             <section>
-                                <h2 className="text-sm font-bold uppercase tracking-widest text-indigo-900 mb-4 pl-2">Projects</h2>
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3 break-after-avoid">Projects</h2>
                                 <div className="flex flex-col gap-4">
-                                    {data.projects.map(proj => (
-                                        <div key={proj.id} className="border-l-2 border-indigo-100 pl-4 py-1 hover:border-indigo-400 transition-colors">
-                                            <div className="font-bold text-slate-800">{proj.name}</div>
-                                            <p className="text-xs text-slate-500 mt-1">{proj.description}</p>
-                                        </div>
+                                    {data.projects.map((proj) => (
+                                        <article key={proj.id} className="border-l-2 border-(--accent)/30 pl-4 py-0.5 break-inside-avoid">
+                                            {proj.name && <h3 className="text-[15px] font-bold text-slate-900 leading-snug wrap-break-word">{proj.name}</h3>}
+                                            {proj.link.trim() && (
+                                                <a href={toHref(proj.link)} target="_blank" rel="noopener noreferrer" className="block text-[12px] text-(--accent) mt-0.5 hover:underline underline-offset-2 wrap-anywhere">
+                                                    {displayUrl(proj.link)}
+                                                </a>
+                                            )}
+                                            <RichText text={proj.description} className="mt-1 text-[13.5px] text-slate-700 wrap-break-word" listClassName={BULLETS} />
+                                        </article>
                                     ))}
                                 </div>
                             </section>
                         )}
-                    </div>
-                </div>
+                    </aside>
+                )}
             </div>
         </div>
-    )
-}
+    );
+};

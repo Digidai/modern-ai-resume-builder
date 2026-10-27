@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { getCspNonce } from '../utils/csp';
 
 type SeoConfig = {
   title: string;
@@ -127,8 +128,7 @@ const ensureLdJson = (payload: string) => {
     script.setAttribute('data-seo-managed', 'true');
     document.head.appendChild(script);
   }
-  const nonceMeta = document.head.querySelector<HTMLMetaElement>('meta[name="csp-nonce"]');
-  const nonce = nonceMeta?.getAttribute('content');
+  const nonce = getCspNonce();
   if (nonce) {
     script.setAttribute('nonce', nonce);
   }

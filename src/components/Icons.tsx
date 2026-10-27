@@ -68,3 +68,20 @@ export const SearchIcon = ({ className }: { className?: string }) => (
 export const BriefcaseIcon = ({ className }: { className?: string }) => (
   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect width="20" height="14" x="2" y="7" rx="2" ry="2" /><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" /></svg>
 );
+const icon = (paths: React.ReactNode) =>
+  ({ className }: { className?: string }) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">{paths}</svg>
+  );
+
+export const MoreIcon = icon(<><circle cx="12" cy="5" r="1" /><circle cx="12" cy="12" r="1" /><circle cx="12" cy="19" r="1" /></>);
+export const UploadIcon = icon(<><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" /><polyline points="17 8 12 3 7 8" /><line x1="12" x2="12" y1="3" y2="15" /></>);
+export const FileIcon = icon(<><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" /><polyline points="14 2 14 8 20 8" /></>);
+export const RotateIcon = icon(<><path d="M3 12a9 9 0 1 0 3-6.7L3 8" /><path d="M3 3v5h5" /></>);
+export const XIcon = icon(<><path d="M18 6 6 18" /><path d="m6 6 12 12" /></>);
+export const ChevronDownIcon = icon(<path d="m6 9 6 6 6-6" />);
+export const ArrowUpIcon = icon(<><path d="m5 12 7-7 7 7" /><path d="M12 19V5" /></>);
+export const ArrowDownIcon = icon(<><path d="M12 5v14" /><path d="m19 12-7 7-7-7" /></>);
+export const EyeIcon = icon(<><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" /><circle cx="12" cy="12" r="3" /></>);
+export const CloudCheckIcon = icon(<><path d="M17.5 19a4.5 4.5 0 1 0-1.4-8.8A7 7 0 1 0 4 15.3" /><path d="m9 17 2 2 4-4" /></>);
+export const AlertIcon = icon(<><circle cx="12" cy="12" r="10" /><path d="M12 8v4" /><path d="M12 16h.01" /></>);
+export const LayoutIcon = icon(<><rect width="18" height="18" x="3" y="3" rx="2" /><path d="M3 9h18" /><path d="M9 21V9" /></>);

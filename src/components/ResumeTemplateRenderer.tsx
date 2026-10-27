@@ -45,6 +45,12 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   paper: () => import('./templates/PaperTemplate').then((module) => ({ default: module.PaperTemplate })),
   cast: () => import('./templates/CastTemplate').then((module) => ({ default: module.CastTemplate })),
   moda: () => import('./templates/ModaTemplate').then((module) => ({ default: module.ModaTemplate })),
+  classic: () => import('./templates/ClassicTemplate').then((module) => ({ default: module.ClassicTemplate })),
+  ivy: () => import('./templates/IvyTemplate').then((module) => ({ default: module.IvyTemplate })),
+  banking: () => import('./templates/LedgerTemplate').then((module) => ({ default: module.LedgerTemplate })),
+  vanguard: () => import('./templates/VanguardTemplate').then((module) => ({ default: module.VanguardTemplate })),
+  duo: () => import('./templates/DuoTemplate').then((module) => ({ default: module.DuoTemplate })),
+  timeline: () => import('./templates/TimelineTemplate').then((module) => ({ default: module.TimelineTemplate })),
 };
 
 const resolveTemplateId = (templateId: string): TemplateId => {

@@ -1,7 +1,8 @@
+import puppeteer from '@cloudflare/puppeteer';
 import {
-  type GeminiErrorCode,
-  type GeminiRequest,
-} from '../src/shared/geminiContract';
+  type AiErrorCode,
+  type AiRequest,
+} from '../src/shared/aiContract';
 
 interface Env {
   ASSETS: {
@@ -13,9 +14,16 @@ interface Env {
       fetch: (input: RequestInfo | URL, init?: RequestInit) => Promise<Response>;
     };
   };
-  GEMINI_API_KEY?: string;
-  GEMINI_MODEL?: string;
-  GEMINI_SIGNING_SECRET?: string;
+  /** Workers AI binding (`"ai": { "binding": "AI" }` in wrangler.jsonc). */
+  AI?: {
+    run: (model: string, input: Record<string, unknown>) => Promise<unknown>;
+  };
+  /** Cloudflare Browser Rendering binding, used to print resumes to vector PDF. */
+  BROWSER?: Parameters<typeof puppeteer.launch>[0];
+  AI_MODEL?: string;
+  /** Sent as `reasoning_effort` when set; leave empty for models that don't accept it. */
+  AI_REASONING_EFFORT?: string;
+  AI_SIGNING_SECRET?: string;
   ALLOWED_ORIGINS?: string;
   AI_RATE_LIMIT_PER_MINUTE?: string;
   AI_PER_SESSION_RATE_LIMIT_PER_MINUTE?: string;
@@ -71,12 +79,16 @@ interface DurableObjectStateLike {
   };
 }
 
-const API_PATH = '/api/gemini';
-const SESSION_PATH = '/api/gemini/session';
+const API_PATH = '/api/ai';
+const PDF_PATH = '/api/pdf';
+const MAX_PDF_BODY_BYTES = 6 * 1024 * 1024;
+const PDF_TIMEOUT_MS = 45000;
+const SESSION_PATH = '/api/ai/session';
 const RATE_LIMIT_DO_PATH = 'https://rate-limiter/consume';
 const MAX_BODY_BYTES = 64 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
-const DEFAULT_MODEL = 'gemini-2.0-flash-exp';
+const DEFAULT_MODEL = '@cf/zai-org/glm-5.3-flash';
+const MAX_OUTPUT_TOKENS = 600;
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE = 240;
@@ -109,7 +121,7 @@ const jsonResponse = (body: JsonObject, status = 200): Response =>
     },
   });
 
-const errorResponse = (status: number, code: GeminiErrorCode, message: string): Response =>
+const errorResponse = (status: number, code: AiErrorCode, message: string): Response =>
   jsonResponse({ code, error: message }, status);
 
 const normalizeText = (value: unknown): string =>
@@ -426,7 +438,7 @@ const getClientIp = (request: Request): string => {
 };
 
 const getSigningSecret = (env: Env): string => {
-  return normalizeText(env.GEMINI_SIGNING_SECRET) || normalizeText(env.GEMINI_API_KEY);
+  return normalizeText(env.AI_SIGNING_SECRET);
 };
 
 const signSessionPayload = async (payload: string, secret: string): Promise<string> => {
@@ -510,7 +522,7 @@ const issueClientToken = async (
 
   return {
     token: `${encodedPayload}.${signature}`,
-    cookie: `${CLIENT_TOKEN_COOKIE_NAME}=${clientId}; Max-Age=${ttlSeconds}; Path=${API_PATH}; HttpOnly; Secure; SameSite=Strict`,
+    cookie: `${CLIENT_TOKEN_COOKIE_NAME}=${clientId}; Max-Age=${ttlSeconds}; Path=/api; HttpOnly; Secure; SameSite=Strict`,
   };
 };
 
@@ -518,7 +530,7 @@ const verifyClientToken = async (
   request: Request,
   token: string,
   env: Env
-): Promise<{ valid: true } | { valid: false; code: GeminiErrorCode; message: string }> => {
+): Promise<{ valid: true } | { valid: false; code: AiErrorCode; message: string }> => {
   const secret = getSigningSecret(env);
   if (!secret) {
     return { valid: false, code: 'SIGNING_SECRET_MISSING', message: 'Session signing secret is not configured.' };
@@ -597,7 +609,7 @@ const verifySessionToken = async (
   token: string,
   env: Env
 ): Promise<
-  { valid: true; sidHash: string } | { valid: false; code: GeminiErrorCode; message: string }
+  { valid: true; sidHash: string } | { valid: false; code: AiErrorCode; message: string }
 > => {
   const secret = getSigningSecret(env);
   if (!secret) {
@@ -671,48 +683,55 @@ const isHtmlNavigationRequest = (request: Request): boolean => {
   return accept.includes('text/html');
 };
 
-const buildPrompt = (payload: GeminiRequest): string => {
+const SYSTEM_PROMPT = [
+  'You are an expert resume writer and career coach.',
+  'Write in the same language as the user-provided text.',
+  'Never invent employers, numbers, metrics, or placeholders such as [X] or X%; only use facts that are given.',
+  'Return only the final text: no preamble, no quotes, no markdown, no bullet symbols.',
+].join(' ');
+
+const buildUserPrompt = (payload: AiRequest): string => {
   if (payload.action === 'improve') {
-    return `
-You are an expert resume writer and career coach.
-Rewrite the text below to be concise, measurable, and professional.
-Use active voice and keep the original meaning.
-
-Context: ${payload.context || 'resume'} section.
-Original text:
-"${payload.text}"
-
-Return only the rewritten text.
-    `.trim();
+    return [
+      `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
+      'Use strong action verbs and active voice, keep the original meaning, and keep a similar length.',
+      'Preserve line breaks if the original has multiple lines.',
+      '',
+      payload.text,
+    ].join('\n');
   }
 
   const skills = payload.skills.filter(Boolean).join(', ');
-  return `
-Write a professional resume summary in at most 3 sentences for a ${payload.role || 'professional'}.
-Highlight these skills when relevant: ${skills || 'communication, ownership, collaboration'}.
-Keep it modern and outcome-oriented.
-
-Return only the summary text.
-  `.trim();
-};
-
-const parseGeminiText = (data: JsonObject): string => {
-  const candidates = Array.isArray(data.candidates) ? data.candidates : [];
-  const first = candidates[0] as JsonObject | undefined;
-  const content = (first?.content as JsonObject | undefined) ?? {};
-  const parts = Array.isArray(content.parts) ? content.parts : [];
-  return parts
-    .map((part) =>
-      part && typeof part === 'object'
-        ? normalizeText((part as JsonObject).text)
-        : ''
-    )
+  return [
+    `Write a professional resume summary of 2-3 sentences for a ${payload.role || 'professional'}.`,
+    skills ? `Weave in the most relevant of these skills: ${skills}.` : '',
+    'Make it confident and outcome-oriented, written without first-person pronouns.',
+  ]
     .filter(Boolean)
-    .join('\n')
-    .trim();
+    .join('\n');
 };
 
-const validateRequest = (body: unknown): GeminiRequest | null => {
+/** Strips wrappers models sometimes add despite instructions (quotes, bullets, think blocks). */
+const cleanModelText = (text: string): string =>
+  text
+    .replace(/<think>[\s\S]*?<\/think>/gi, '')
+    .trim()
+    .replace(/^["“”']+|["“”']+$/g, '')
+    .replace(/^\s*(?:[-*•]\s+)/gm, '')
+    .trim();
+
+/** Workers AI returns OpenAI-style `choices` for newer models and `{ response }` for older ones. */
+const parseAiText = (data: unknown): string => {
+  if (!data || typeof data !== 'object') return '';
+  const value = data as JsonObject;
+  if (typeof value.response === 'string') return cleanModelText(value.response);
+
+  const choices = Array.isArray(value.choices) ? value.choices : [];
+  const message = (choices[0] as JsonObject | undefined)?.message as JsonObject | undefined;
+  return typeof message?.content === 'string' ? cleanModelText(message.content) : '';
+};
+
+const validateRequest = (body: unknown): AiRequest | null => {
   if (!body || typeof body !== 'object') return null;
   const value = body as Record<string, unknown>;
 
@@ -742,14 +761,14 @@ const validateRequest = (body: unknown): GeminiRequest | null => {
   return null;
 };
 
-const parseJsonBody = async (request: Request): Promise<unknown> => {
+const parseJsonBody = async (request: Request, maxBytes = MAX_BODY_BYTES): Promise<unknown> => {
   const contentLength = Number(request.headers.get('content-length') || '0');
-  if (Number.isFinite(contentLength) && contentLength > MAX_BODY_BYTES) {
+  if (Number.isFinite(contentLength) && contentLength > maxBytes) {
     throw new Error('REQUEST_TOO_LARGE');
   }
 
   const raw = await request.text();
-  if (raw.length > MAX_BODY_BYTES) {
+  if (raw.length > maxBytes) {
     throw new Error('REQUEST_TOO_LARGE');
   }
 
@@ -760,53 +779,115 @@ const parseJsonBody = async (request: Request): Promise<unknown> => {
   }
 };
 
-const callGemini = async (prompt: string, apiKey: string, model: string): Promise<string> => {
-  const controller = new AbortController();
-  const timeoutId = setTimeout(() => controller.abort(), REQUEST_TIMEOUT_MS);
+const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
+  if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
+
+  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+  const reasoningEffort = normalizeText(env.AI_REASONING_EFFORT);
+  const input: Record<string, unknown> = {
+    messages: [
+      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'user', content: buildUserPrompt(payload) },
+    ],
+    max_tokens: MAX_OUTPUT_TOKENS,
+    ...(reasoningEffort ? { reasoning_effort: reasoningEffort } : {}),
+  };
+
+  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  const timeout = new Promise<never>((_, reject) => {
+    timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), REQUEST_TIMEOUT_MS);
+  });
 
   try {
-    const response = await fetch(
-      `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`,
-      {
-        method: 'POST',
-        headers: {
-          'content-type': 'application/json',
-        },
-        body: JSON.stringify({
-          contents: [{ role: 'user', parts: [{ text: prompt }] }],
-        }),
-        signal: controller.signal,
-      }
-    );
-
-    const data = (await response.json().catch(() => ({}))) as JsonObject;
-    if (!response.ok) {
-      const upstreamError = (data.error as JsonObject | undefined) ?? {};
-      const upstreamMessage = normalizeText(upstreamError.message) || 'Gemini request failed.';
-
-      if (response.status === 429) {
-        throw new Error(`UPSTREAM_RATE_LIMIT:${upstreamMessage}`);
-      }
-      if (response.status >= 500) {
-        throw new Error(`UPSTREAM_UNAVAILABLE:${upstreamMessage}`);
-      }
-      throw new Error(`UPSTREAM_ERROR:${upstreamMessage}`);
-    }
-
-    const text = parseGeminiText(data);
-    if (!text) {
-      throw new Error('EMPTY_RESPONSE');
-    }
-
-    return text;
+    const result = await Promise.race([env.AI.run(model, input), timeout]);
+    const text = parseAiText(result);
+    if (!text) throw new Error('EMPTY_RESPONSE');
+    // Keep the user's bullet format: templates render "- " lines as lists.
+    const inputWasBullets = payload.action === 'improve' && /^\s*[-*•]\s+/m.test(payload.text);
+    return inputWasBullets
+      ? text.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => `- ${line}`).join('\n')
+      : text;
   } catch (error) {
-    if (error instanceof Error && error.name === 'AbortError') {
-      throw new Error('UPSTREAM_TIMEOUT');
+    const message = error instanceof Error ? error.message : String(error);
+    if (message === 'UPSTREAM_TIMEOUT' || message === 'EMPTY_RESPONSE') throw error;
+    console.error('[ai] Workers AI call failed', { model, message });
+    // Workers AI reports capacity/rate limits as errors mentioning 429 or "capacity".
+    if (/\b429\b|rate limit|capacity/i.test(message)) {
+      throw new Error('UPSTREAM_RATE_LIMIT:AI is busy right now. Please try again in a moment.');
     }
-
-    throw error;
+    throw new Error('UPSTREAM_UNAVAILABLE:AI service is temporarily unavailable. Please try again.');
   } finally {
     clearTimeout(timeoutId);
+  }
+};
+
+/**
+ * Renders a resume snapshot to a vector PDF with Cloudflare Browser Rendering.
+ * The client sends the paper's HTML and the CSS it needs (fonts inlined as data: URLs). The
+ * document is sandboxed: a CSP meta tag blocks scripts and every network request, so the
+ * browser can only lay out the given markup. Nothing is stored.
+ */
+const PDF_SANDBOX_CSP = "default-src 'none'; style-src 'unsafe-inline'; font-src data:; img-src data:";
+
+const buildPdfDocument = (html: string, css: string): string =>
+  `<!doctype html><html><head><meta charset="utf-8">` +
+  `<meta http-equiv="Content-Security-Policy" content="${PDF_SANDBOX_CSP}">` +
+  // `</style` can't appear inside the CSS we were given; neutralize it if it does.
+  `<style>${css.replace(/<\/style/gi, '<\\/style')}</style></head>` +
+  `<body style="margin:0">${html.replace(/<script[\s\S]*?<\/script>/gi, '')}</body></html>`;
+
+const handlePdfRequest = async (request: Request, env: Env): Promise<Response> => {
+  if (request.method !== 'POST') {
+    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
+  }
+  const caller = await authorizeCaller(request, env, 'pdf', { ip: 10, session: 10, global: 120 });
+  if (!caller.ok) return caller.response;
+  if (!env.BROWSER) {
+    return errorResponse(503, 'UPSTREAM_UNAVAILABLE', 'PDF rendering is not configured on the server.');
+  }
+
+  let body: unknown;
+  try {
+    body = await parseJsonBody(request, MAX_PDF_BODY_BYTES);
+  } catch (error) {
+    return error instanceof Error && error.message === 'REQUEST_TOO_LARGE'
+      ? errorResponse(413, 'REQUEST_TOO_LARGE', 'Resume is too large to render.')
+      : errorResponse(400, 'INVALID_JSON', 'Request body must be valid JSON.');
+  }
+  const { html, css } = (body ?? {}) as { html?: unknown; css?: unknown };
+  if (typeof html !== 'string' || typeof css !== 'string' || !html.trim()) {
+    return errorResponse(400, 'INVALID_REQUEST', 'Missing resume markup.');
+  }
+
+  let browser: Awaited<ReturnType<typeof puppeteer.launch>> | undefined;
+  let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  try {
+    const render = (async () => {
+      browser = await puppeteer.launch(env.BROWSER!);
+      const page = await browser.newPage();
+      await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
+      await page.evaluate(() => document.fonts.ready.then(() => undefined));
+      return page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
+    })();
+    const timeout = new Promise<never>((_, reject) => {
+      timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), PDF_TIMEOUT_MS);
+    });
+    const pdf = await Promise.race([render, timeout]);
+    return appendRateLimitHeaders(
+      new Response(new Uint8Array(pdf), { headers: { 'content-type': 'application/pdf', 'cache-control': 'no-store' } }),
+      caller.globalRateLimit
+    );
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    console.error('[pdf] render failed', { message });
+    if (message === 'UPSTREAM_TIMEOUT') return errorResponse(504, 'UPSTREAM_TIMEOUT', 'PDF rendering timed out.');
+    if (/\b429\b|limit/i.test(message)) {
+      return errorResponse(429, 'UPSTREAM_RATE_LIMIT', 'PDF rendering is busy. Please try again shortly.');
+    }
+    return errorResponse(503, 'UPSTREAM_UNAVAILABLE', 'PDF rendering is temporarily unavailable.');
+  } finally {
+    clearTimeout(timeoutId);
+    await browser?.close().catch(() => undefined);
   }
 };
 
@@ -868,7 +949,7 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
     const sessionHeaders = new Headers(sessionResponse.headers);
     sessionHeaders.append(
       'set-cookie',
-      `${SESSION_COOKIE_NAME}=${session.sessionId}; Max-Age=${ttlSeconds}; Path=${API_PATH}; HttpOnly; Secure; SameSite=Strict`
+      `${SESSION_COOKIE_NAME}=${session.sessionId}; Max-Age=${ttlSeconds}; Path=/api; HttpOnly; Secure; SameSite=Strict`
     );
 
     return appendRateLimitHeaders(
@@ -889,93 +970,104 @@ const handleSessionRequest = async (request: Request, env: Env): Promise<Respons
   }
 };
 
-const handleGeminiRequest = async (request: Request, env: Env): Promise<Response> => {
-  if (request.method !== 'POST') {
-    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
-  }
+interface CallerLimits {
+  ip: number;
+  session: number;
+  global: number;
+}
 
+type CallerCheck = { ok: true; globalRateLimit: RateLimitResult } | { ok: false; response: Response };
+
+/** Origin, signed session token, replay and rate-limit checks shared by /api/ai and /api/pdf. */
+const authorizeCaller = async (request: Request, env: Env, scope: 'ai' | 'pdf', limits: CallerLimits): Promise<CallerCheck> => {
   if (!isAllowedOriginRequest(request, env)) {
-    console.warn('[ai] blocked origin', {
+    console.warn(`[${scope}] blocked origin`, {
       origin: request.headers.get('origin'),
       referer: request.headers.get('referer'),
       ip: getClientIp(request),
     });
-    return errorResponse(403, 'FORBIDDEN_ORIGIN', 'Cross-origin requests are not allowed.');
+    return { ok: false, response: errorResponse(403, 'FORBIDDEN_ORIGIN', 'Cross-origin requests are not allowed.') };
   }
 
   const token = normalizeText(request.headers.get('x-ai-session-token'));
   if (!token) {
-    return errorResponse(401, 'AUTH_REQUIRED', 'Missing AI session token.');
+    return { ok: false, response: errorResponse(401, 'AUTH_REQUIRED', 'Missing AI session token.') };
   }
 
   const requestId = normalizeText(request.headers.get(REQUEST_ID_HEADER));
   if (!requestId || requestId.length > REQUEST_ID_MAX_BYTES || !/^[a-zA-Z0-9._-]+$/.test(requestId)) {
-    return errorResponse(400, 'INVALID_REQUEST', 'Missing or invalid AI request id.');
+    return { ok: false, response: errorResponse(400, 'INVALID_REQUEST', 'Missing or invalid AI request id.') };
   }
 
   if (!reserveRequestId(requestId)) {
-    return errorResponse(409, 'INVALID_REQUEST', 'Duplicate AI request detected. Retry with a new request id.');
+    return { ok: false, response: errorResponse(409, 'INVALID_REQUEST', 'Duplicate AI request detected. Retry with a new request id.') };
   }
 
   const tokenVerification = await verifySessionToken(request, token, env);
   if (!tokenVerification.valid) {
-    console.warn('[ai] invalid session token', {
+    console.warn(`[${scope}] invalid session token`, {
       ip: getClientIp(request),
       code: tokenVerification.code,
     });
-    return errorResponse(401, tokenVerification.code, tokenVerification.message);
+    return { ok: false, response: errorResponse(401, tokenVerification.code, tokenVerification.message) };
   }
 
   const ip = getClientIp(request);
-  const ipRateLimitLimit = parseInteger(env.AI_RATE_LIMIT_PER_MINUTE, DEFAULT_RATE_LIMIT_PER_MINUTE, 5, 240);
-  const sessionRateLimitLimit = parseInteger(
-    env.AI_PER_SESSION_RATE_LIMIT_PER_MINUTE,
-    DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE,
-    3,
-    120
-  );
-  const globalRateLimitLimit = parseInteger(
-    env.AI_GLOBAL_RATE_LIMIT_PER_MINUTE,
-    DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE,
-    30,
-    3000
-  );
+  const ipRateLimitLimit = limits.ip;
+  const sessionRateLimitLimit = limits.session;
+  const globalRateLimitLimit = limits.global;
 
-  const ipRateLimit = await consumeRateLimit(env, `ai:ip:${ip}`, ipRateLimitLimit);
+  const ipRateLimit = await consumeRateLimit(env, `${scope}:ip:${ip}`, ipRateLimitLimit);
   if (!ipRateLimit.allowed) {
-    console.warn('[ai] rate limited', { ip, scope: 'ip', limit: ipRateLimitLimit });
-    return appendRateLimitHeaders(
-      errorResponse(429, 'RATE_LIMITED', 'AI rate limit reached. Please wait and try again.'),
+    console.warn(`[${scope}] rate limited`, { ip, scope: 'ip', limit: ipRateLimitLimit });
+    return { ok: false, response: appendRateLimitHeaders(
+      errorResponse(429, 'RATE_LIMITED', 'Rate limit reached. Please wait a minute and try again.'),
       ipRateLimit
-    );
+    ) };
   }
 
   const sessionRateLimit = await consumeRateLimit(
     env,
-    `ai:session:${tokenVerification.sidHash}`,
+    `${scope}:session:${tokenVerification.sidHash}`,
     sessionRateLimitLimit
   );
   if (!sessionRateLimit.allowed) {
-    console.warn('[ai] rate limited', {
+    console.warn(`[${scope}] rate limited`, {
       ip,
       scope: 'session',
       limit: sessionRateLimitLimit,
       sidHash: tokenVerification.sidHash,
     });
-    return appendRateLimitHeaders(
-      errorResponse(429, 'RATE_LIMITED', 'AI session limit reached. Please wait and try again.'),
+    return { ok: false, response: appendRateLimitHeaders(
+      errorResponse(429, 'RATE_LIMITED', 'Too many requests from this session. Please wait and try again.'),
       sessionRateLimit
-    );
+    ) };
   }
 
-  const globalRateLimit = await consumeRateLimit(env, 'ai:global', globalRateLimitLimit);
+  const globalRateLimit = await consumeRateLimit(env, `${scope}:global`, globalRateLimitLimit);
   if (!globalRateLimit.allowed) {
-    console.warn('[ai] rate limited', { ip, scope: 'global', limit: globalRateLimitLimit });
-    return appendRateLimitHeaders(
-      errorResponse(429, 'RATE_LIMITED', 'AI service is busy. Please retry shortly.'),
+    console.warn(`[${scope}] rate limited`, { ip, scope: 'global', limit: globalRateLimitLimit });
+    return { ok: false, response: appendRateLimitHeaders(
+      errorResponse(429, 'RATE_LIMITED', 'The service is busy. Please retry shortly.'),
       globalRateLimit
-    );
+    ) };
   }
+
+  return { ok: true, globalRateLimit };
+};
+
+const handleAiRequest = async (request: Request, env: Env): Promise<Response> => {
+  if (request.method !== 'POST') {
+    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
+  }
+
+  const caller = await authorizeCaller(request, env, 'ai', {
+    ip: parseInteger(env.AI_RATE_LIMIT_PER_MINUTE, DEFAULT_RATE_LIMIT_PER_MINUTE, 5, 240),
+    session: parseInteger(env.AI_PER_SESSION_RATE_LIMIT_PER_MINUTE, DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE, 3, 120),
+    global: parseInteger(env.AI_GLOBAL_RATE_LIMIT_PER_MINUTE, DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE, 30, 3000),
+  });
+  if (!caller.ok) return caller.response;
+  const { globalRateLimit } = caller;
 
   let body: unknown;
   try {
@@ -1001,19 +1093,8 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
     );
   }
 
-  const model = normalizeText(env.GEMINI_MODEL) || DEFAULT_MODEL;
-  const apiKey = normalizeText(env.GEMINI_API_KEY);
-  if (!apiKey) {
-    return appendRateLimitHeaders(
-      errorResponse(500, 'SERVER_KEY_MISSING', 'AI service is not configured. Missing GEMINI_API_KEY on the server.'),
-      globalRateLimit
-    );
-  }
-
-  const prompt = buildPrompt(payload);
-
   try {
-    const text = await callGemini(prompt, apiKey, model);
+    const text = await callAi(env, payload);
     return appendRateLimitHeaders(jsonResponse({ text }), globalRateLimit);
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Unknown error';
@@ -1030,9 +1111,9 @@ const handleGeminiRequest = async (request: Request, env: Env): Promise<Response
         globalRateLimit
       );
     }
-    if (message.startsWith('UPSTREAM_ERROR:')) {
+    if (message === 'AI_NOT_CONFIGURED') {
       return appendRateLimitHeaders(
-        errorResponse(502, 'UPSTREAM_ERROR', message.replace('UPSTREAM_ERROR:', '').trim()),
+        errorResponse(500, 'AI_NOT_CONFIGURED', 'AI service is not configured on the server.'),
         globalRateLimit
       );
     }
@@ -1094,7 +1175,7 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
         `style-src 'self' 'nonce-${nonce}'`,
         "img-src 'self' data: blob:",
         "font-src 'self' data:",
-        "connect-src 'self'",
+        "connect-src 'self' data:",
         "object-src 'none'",
         "base-uri 'self'",
         "form-action 'self'",
@@ -1188,7 +1269,7 @@ export class RateLimiter {
       resetAt: bucket.resetAt,
     };
 
-    return jsonResponse(result as JsonObject, 200);
+    return jsonResponse({ ...result }, 200);
   }
 
   async alarm(): Promise<void> {
@@ -1200,7 +1281,7 @@ export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
 
-    if ((url.pathname === SESSION_PATH || url.pathname === API_PATH) && request.method === 'OPTIONS') {
+    if ((url.pathname === SESSION_PATH || url.pathname === API_PATH || url.pathname === PDF_PATH) && request.method === 'OPTIONS') {
       const preflight = isAllowedOriginRequest(request, env)
         ? new Response(null, { status: 204 })
         : errorResponse(403, 'FORBIDDEN_ORIGIN', 'Cross-origin requests are not allowed.');
@@ -1214,7 +1295,12 @@ export default {
     }
 
     if (url.pathname === API_PATH) {
-      response = await handleGeminiRequest(request, env);
+      response = await handleAiRequest(request, env);
+      return finalizeResponse(request, env, response);
+    }
+
+    if (url.pathname === PDF_PATH) {
+      response = await handlePdfRequest(request, env);
       return finalizeResponse(request, env, response);
     }
 

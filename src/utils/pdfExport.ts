@@ -1,7 +1,6 @@
 import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
-import { exportResumeVectorPdf, supportsVectorTemplate } from './pdfVectorExport';
 
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
@@ -68,25 +67,24 @@ export const exportResumeToPdf = async ({
 
   const safeName = sanitizeFileName(rawFileName) || 'resume';
 
-  // Try Vector Export for supported templates
-  if (supportsVectorTemplate(data.templateId)) {
-    try {
-      const blob = await exportResumeVectorPdf(data);
-      downloadBlob(blob, `${safeName}.pdf`);
-      return;
-    } catch (error) {
-      console.warn('Vector PDF export failed/skipped, falling back to image export.', error);
-      // Fallthrough to image export
-    }
+  // Best path: the server prints the exact preview to a vector PDF (selectable text, all templates).
+  try {
+    const { renderPdfOnServer } = await import('./serverPdf');
+    downloadBlob(await renderPdfOnServer(element), `${safeName}.pdf`);
+    return;
+  } catch (error) {
+    console.warn('Server PDF rendering unavailable, exporting in the browser instead.', error);
   }
 
+  // Browser fallback: an image-based PDF that reproduces the preview exactly.
   // Preserve the on-screen layout (padding/backgrounds) for higher fidelity.
   const marginPt = 0;
   const contentWidth = A4_WIDTH_PT;
   const contentHeight = A4_HEIGHT_PT;
 
   const clone = element.cloneNode(true) as HTMLElement;
-  const baseWidth = element.getBoundingClientRect().width || element.scrollWidth;
+  // offsetWidth is the layout width; the on-screen preview may be visually scaled with a transform.
+  const baseWidth = element.offsetWidth || element.scrollWidth;
   const fallbackWidth = element.scrollWidth || 794;
   const safeWidth = Math.max(1, Math.round(baseWidth || fallbackWidth));
   clone.style.boxShadow = 'none';
@@ -157,7 +155,7 @@ export const exportResumeToPdf = async ({
     }
 
     const pdfBytes = await pdfDoc.save();
-    const blob = new Blob([pdfBytes], { type: 'application/pdf' });
+    const blob = new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' });
     downloadBlob(blob, `${safeName}.pdf`);
   } catch (error) {
     throw new Error(`Failed to create PDF: ${error instanceof Error ? error.message : 'Unknown error'}`);

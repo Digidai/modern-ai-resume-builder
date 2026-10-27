@@ -1,88 +1,123 @@
-import { createContext, useContext, useState, useCallback, useMemo, ReactNode, ComponentType } from 'react';
+import { createContext, useContext, useState, useCallback, useMemo, ReactNode } from 'react';
 import type { Dispatch, SetStateAction, FC } from 'react';
-import { ResumeData } from '../types';
+import { INITIAL_RESUME_DATA, ResumeData } from '../types';
 import { useResumeData, type ResumeSaveStatus } from '../hooks/useResumeData';
-import { exportResumeToPdf } from '../utils/pdfExport';
 import { useToast } from '../components/Toast';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
+import { BLANK_RESUME_DATA, sanitizeResumeData } from '../utils/resumeData';
 
 interface ResumeContextValue {
   resumeData: ResumeData;
   setResumeData: Dispatch<SetStateAction<ResumeData>>;
-  resetData: () => void;
   saveError: string | null;
   saveStatus: ResumeSaveStatus;
   isExportingPdf: boolean;
   handleDownloadPdf: () => Promise<void>;
   handleExportJson: () => void;
+  /** Loads a JSON backup; returns false (and shows an error) if the file isn't a resume. */
+  importJson: (file: File) => Promise<boolean>;
+  /** Replaces the resume with a blank or sample one; the previous version can be restored from the toast. */
+  startOver: (kind: 'blank' | 'sample') => void;
 }
 
 const ResumeContext = createContext<ResumeContextValue | null>(null);
 
-interface ResumeProviderProps {
-  children: ReactNode;
-}
+const toFileBase = (name: string) =>
+  (name.trim() || 'resume').replace(/\s+/g, '_').replace(/[<>:"/\\|?*\u0000-\u001F]/g, '');
 
-const ResumeProviderInner: FC<ResumeProviderProps> = ({ children }) => {
-  const { resumeData, setResumeData, resetData, saveError, saveStatus } = useResumeData();
+export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
+  const { resumeData, setResumeData, replaceData, saveError, saveStatus } = useResumeData();
   const [isExportingPdf, setIsExportingPdf] = useState(false);
-  const { showError, showSuccess } = useToast();
+  const { showError, showSuccess, showToast } = useToast();
 
   const handleDownloadPdf = useCallback(async () => {
     if (isExportingPdf) return;
 
     setIsExportingPdf(true);
     try {
-      await preloadResumeTemplate(resumeData.templateId);
-      const fileBase = resumeData.fullName.trim() || 'resume';
+      // PDF libraries (pdf-lib, html-to-image) are large; load them on demand.
+      const [{ exportResumeToPdf }] = await Promise.all([
+        import('../utils/pdfExport'),
+        preloadResumeTemplate(resumeData.templateId),
+      ]);
       await exportResumeToPdf({
-        rawFileName: fileBase,
+        rawFileName: resumeData.fullName.trim() || 'resume',
         data: resumeData,
         previewElementId: 'resume-preview-container',
       });
-      showSuccess('PDF exported successfully.');
+      showSuccess('PDF downloaded.');
     } catch (error) {
       console.error(error);
-      const message = error instanceof Error && error.message ? error.message : 'Failed to export PDF. Please try again.';
-      showError(message);
+      showError(error instanceof Error && error.message ? error.message : 'Failed to export PDF. Please try again.');
     } finally {
       setIsExportingPdf(false);
     }
   }, [isExportingPdf, resumeData, showError, showSuccess]);
 
   const handleExportJson = useCallback(() => {
-    const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(resumeData, null, 2));
-    const downloadAnchorNode = document.createElement('a');
-    downloadAnchorNode.setAttribute("href", dataStr);
-    downloadAnchorNode.setAttribute("download", `${(resumeData.fullName || 'resume').replace(/\s+/g, '_').toLowerCase()}.json`);
-    document.body.appendChild(downloadAnchorNode);
-    downloadAnchorNode.click();
-    downloadAnchorNode.remove();
-    showSuccess('Resume data exported as JSON.');
+    const blob = new Blob([JSON.stringify(resumeData, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `${toFileBase(resumeData.fullName).toLowerCase()}-resume-backup.json`;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+    showSuccess('Backup saved. Use “Import backup” to restore it on any device.');
   }, [resumeData, showSuccess]);
 
-  const value = useMemo(() => ({
-    resumeData,
-    setResumeData,
-    resetData,
-    saveError,
-    saveStatus,
-    isExportingPdf,
-    handleDownloadPdf,
-    handleExportJson,
-  }), [resumeData, setResumeData, resetData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson]);
-
-  return (
-    <ResumeContext.Provider value={value}>
-      {children}
-    </ResumeContext.Provider>
+  const replaceWithUndo = useCallback(
+    (next: ResumeData, message: string) => {
+      const previous = resumeData;
+      replaceData(next);
+      showToast(message, 'success', { action: { label: 'Undo', onClick: () => replaceData(previous) } });
+    },
+    [replaceData, resumeData, showToast]
   );
-};
 
-export const ResumeProvider: FC<ResumeProviderProps> = ({ children }) => {
-  return (
-    <ResumeProviderInner>{children}</ResumeProviderInner>
+  const importJson = useCallback(
+    async (file: File) => {
+      try {
+        const parsed = sanitizeResumeData(JSON.parse(await file.text()));
+        if (!parsed) throw new Error('not a resume');
+        replaceWithUndo(parsed, 'Backup imported.');
+        return true;
+      } catch {
+        showError('That file is not a ModernCV backup (.json).');
+        return false;
+      }
+    },
+    [replaceWithUndo, showError]
   );
+
+  const startOver = useCallback(
+    (kind: 'blank' | 'sample') => {
+      const base = kind === 'blank' ? BLANK_RESUME_DATA : INITIAL_RESUME_DATA;
+      replaceWithUndo(
+        { ...base, templateId: resumeData.templateId },
+        kind === 'blank' ? 'Started a blank resume.' : 'Sample resume restored.'
+      );
+    },
+    [replaceWithUndo, resumeData.templateId]
+  );
+
+  const value = useMemo(
+    () => ({
+      resumeData,
+      setResumeData,
+      saveError,
+      saveStatus,
+      isExportingPdf,
+      handleDownloadPdf,
+      handleExportJson,
+      importJson,
+      startOver,
+    }),
+    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson, importJson, startOver]
+  );
+
+  return <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>;
 };
 
 export const useResume = (): ResumeContextValue => {

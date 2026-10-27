@@ -37,7 +37,7 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 ## AI Prompts
 
-- Prompts live in `src/services/geminiService.ts`.
+- Prompts live in `worker/index.ts` (system prompt) and `src/services/aiService.ts`.
 - Keep prompts concise and resume-focused.
 
 ## Pull Requests

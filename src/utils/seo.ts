@@ -117,7 +117,7 @@ export const buildJobSeoKeywords = (jobTitle: string, categoryName?: string) => 
   ]);
 };
 
-const HOME_FAQ_ITEMS = [
+export const HOME_FAQ_ITEMS = [
   {
     question: 'Is ModernCV free to use?',
     answer:

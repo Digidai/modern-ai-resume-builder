@@ -23,8 +23,21 @@ export interface Project {
   description: string;
 }
 
+/** Presentation settings layered on top of a template. Empty/default values mean "use the template's own". */
+export interface ResumeDesign {
+  /** Hex accent colour, or '' for the template default. */
+  accent: string;
+  /** Font preset id (see constants/design.ts), or 'template'. */
+  font: string;
+  /** Uniform text/layout scale, 0.85–1.15 (1 = template default). */
+  scale: number;
+}
+
+export const DEFAULT_DESIGN: ResumeDesign = { accent: '', font: 'template', scale: 1 };
+
 export interface ResumeData {
   templateId: string;
+  design: ResumeDesign;
   fullName: string;
   title: string;
   email: string;
@@ -41,6 +54,7 @@ export interface ResumeData {
 
 export const INITIAL_RESUME_DATA: ResumeData = {
   templateId: 'modern',
+  design: DEFAULT_DESIGN,
   fullName: "Alex Sterling",
   title: "Senior Product Designer",
   email: "alex.sterling@example.com",
@@ -57,7 +71,7 @@ export const INITIAL_RESUME_DATA: ResumeData = {
       startDate: "2021-03",
       endDate: "",
       isCurrent: true,
-      description: "Leading the design system initiative, reducing development time by 30%. Collaborating with cross-functional teams to launch major feature updates for the SaaS platform."
+      description: "- Led the company-wide design system, cutting UI development time by 30%\n- Shipped 4 major SaaS releases with product and engineering partners\n- Mentored 3 designers and set up a weekly design critique"
     },
     {
       id: '2',
@@ -66,7 +80,7 @@ export const INITIAL_RESUME_DATA: ResumeData = {
       startDate: "2018-06",
       endDate: "2021-02",
       isCurrent: false,
-      description: "Designed responsive websites and mobile apps for diverse clients in fintech and healthcare. Conducted user research and usability testing to iterate on high-fidelity prototypes."
+      description: "- Designed responsive web and mobile apps for fintech and healthcare clients\n- Ran usability tests with 60+ participants to validate high-fidelity prototypes"
     }
   ],
   education: [
@@ -84,7 +98,13 @@ export const INITIAL_RESUME_DATA: ResumeData = {
       id: '1',
       name: "EcoTrack App",
       link: "github.com/alex/ecotrack",
-      description: "A mobile application helping users track their carbon footprint with gamified challenges."
+      description: "Mobile app that helps people track their carbon footprint with weekly challenges; 12k downloads."
+    },
+    {
+      id: '2',
+      name: "Open Design Tokens",
+      link: "github.com/alex/design-tokens",
+      description: "Open-source toolkit that syncs Figma variables to CSS and Tailwind themes."
     }
   ]
 };

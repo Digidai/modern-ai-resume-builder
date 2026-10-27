@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { improveText, generateSummary, GeminiError } from '../services/geminiService';
+import { improveText, generateSummary, AiError } from '../services/aiService';
 
 interface UseAiActionsOptions {
   onError: (message: string) => void;
@@ -28,11 +28,11 @@ export interface AiStatus {
 }
 
 const getAiErrorMessage = (error: unknown): { message: string } => {
-  if (!(error instanceof GeminiError)) {
+  if (!(error instanceof AiError)) {
     return { message: error instanceof Error ? error.message : 'Failed to process AI request.' };
   }
 
-  if (error.code === 'SERVER_KEY_MISSING' || error.code === 'API_KEY_REQUIRED') {
+  if (error.code === 'AI_NOT_CONFIGURED' || error.code === 'SIGNING_SECRET_MISSING') {
     return { message: 'AI service is not configured on the server. Please contact support.' };
   }
 

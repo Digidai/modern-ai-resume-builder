@@ -1,8 +1,8 @@
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
-  __resetGeminiSessionCacheForTests,
+  __resetAiSessionCacheForTests,
   improveText,
-} from './geminiService';
+} from './aiService';
 
 const jsonResponse = (body: unknown, status = 200) =>
   new Response(JSON.stringify(body), {
@@ -12,11 +12,11 @@ const jsonResponse = (body: unknown, status = 200) =>
     },
   });
 
-describe('geminiService', () => {
+describe('aiService', () => {
   const fetchMock = vi.fn<typeof fetch>();
 
   beforeEach(() => {
-    __resetGeminiSessionCacheForTests();
+    __resetAiSessionCacheForTests();
     vi.stubGlobal('fetch', fetchMock);
     document.head.innerHTML = '<meta name="ai-client-token" content="test-client-token" />';
   });
@@ -40,7 +40,7 @@ describe('geminiService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(2);
     expect(fetchMock).toHaveBeenNthCalledWith(
       1,
-      '/api/gemini/session',
+      '/api/ai/session',
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
@@ -50,7 +50,7 @@ describe('geminiService', () => {
     );
     expect(fetchMock).toHaveBeenNthCalledWith(
       2,
-      '/api/gemini',
+      '/api/ai',
       expect.objectContaining({
         method: 'POST',
         headers: expect.objectContaining({
@@ -81,7 +81,7 @@ describe('geminiService', () => {
     expect(fetchMock).toHaveBeenCalledTimes(4);
     expect(fetchMock).toHaveBeenNthCalledWith(
       4,
-      '/api/gemini',
+      '/api/ai',
       expect.objectContaining({
         headers: expect.objectContaining({
           'x-ai-session-token': 'fresh-token',

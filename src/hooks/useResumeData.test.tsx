@@ -36,13 +36,27 @@ describe('useResumeData', () => {
       }));
     });
 
-    expect(sessionStorage.getItem(FULL_NAME_KEY)).toBeNull();
+    expect(localStorage.getItem(FULL_NAME_KEY)).toBeNull();
 
     act(() => {
       vi.advanceTimersByTime(350);
     });
 
-    expect(sessionStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
+    expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
+  });
+
+  it('migrates fields saved in sessionStorage by older versions to localStorage', () => {
+    sessionStorage.setItem(FULL_NAME_KEY, JSON.stringify('Legacy Name'));
+
+    const { result } = renderHook(() => useResumeData());
+    expect(result.current.resumeData.fullName).toBe('Legacy Name');
+
+    act(() => {
+      vi.advanceTimersByTime(350);
+    });
+
+    expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Legacy Name'));
+    expect(sessionStorage.getItem(FULL_NAME_KEY)).toBeNull();
   });
 
   it('syncs field updates from other tabs through storage events', () => {

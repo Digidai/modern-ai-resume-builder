@@ -1,87 +1,160 @@
 import React from 'react';
-import { TemplateProps } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
+const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <h2 className="mb-3 flex items-center gap-2.5 font-mono text-[13.5px] font-bold uppercase tracking-[0.06em] text-slate-900 break-after-avoid">
+        <span className="text-(--accent)" aria-hidden="true">
+            #
+        </span>
+        <span className="shrink-0">{children}</span>
+        <span className="h-px flex-1 bg-slate-200" aria-hidden="true" />
+    </h2>
+);
+
+const bodyText = 'text-[14px] leading-[1.5] text-slate-700 wrap-break-word';
+const listClass = 'list-[square] pl-[1.1em] space-y-[3px] marker:text-(--accent)';
+const metaClass = 'font-mono text-[12.5px] tabular-nums text-slate-500';
+
+/** Developer-flavoured single column: monospace name, headings, dates and tags over a readable sans body. */
 export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
+    const contacts = getContactEntries(data);
+    const skillGroups = groupSkills(data.skills);
+
     return (
-        <div className="flex flex-col min-h-[297mm] gap-6 font-mono text-sm text-slate-800">
-            <header className="mb-4">
-                <h1 className="text-2xl font-bold text-indigo-600 mb-2">{`> ${data.fullName}`}</h1>
-                <p className="text-slate-600 mb-4">{`// ${data.title}`}</p>
-                <div className="text-xs text-slate-500 flex flex-wrap gap-x-4 gap-y-1">
-                    {data.email && <span>{`const email = "${data.email}";`}</span>}
-                    {data.phone && <span>{`const phone = "${data.phone}";`}</span>}
-                    {data.location && <span>{`const loc = "${data.location}";`}</span>}
-                </div>
+        <div className="flex flex-1 flex-col gap-6 font-sans text-slate-800 [--accent:var(--rs-accent,#4338CA)]">
+            <header>
+                {data.fullName.trim() && (
+                    <h1 className="font-mono text-[30px] font-bold leading-[1.15] tracking-[-0.02em] text-slate-900 wrap-break-word">
+                        {data.fullName}
+                        <span aria-hidden="true" className="ml-1.5 inline-block h-[0.78em] w-[0.42em] translate-y-[0.08em] bg-(--accent)" />
+                    </h1>
+                )}
+                {data.title.trim() && (
+                    <p className="mt-1.5 font-mono text-[15px] text-slate-600 wrap-break-word">
+                        <span className="text-(--accent)" aria-hidden="true">
+                            {'// '}
+                        </span>
+                        {data.title}
+                    </p>
+                )}
+                {contacts.length > 0 && (
+                    <ul className="mt-3.5 flex flex-wrap gap-x-5 gap-y-1 rounded border border-slate-200 bg-slate-50 px-3 py-2 font-mono text-[12.5px] text-slate-800 print:bg-transparent">
+                        {contacts.map((entry) => (
+                            <li key={entry.key} className="min-w-0 wrap-anywhere">
+                                <span className="text-(--accent)">{entry.key}</span>
+                                <span className="text-slate-500">: </span>
+                                <ContactLink entry={entry} />
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </header>
 
-            {data.summary && (
+            {data.summary.trim() && (
                 <section>
-                    <h2 className="text-indigo-600 font-bold mb-2">/* SUMMARY */</h2>
-                    <p className="text-slate-700 leading-relaxed border-l-2 border-slate-200 pl-3">{data.summary}</p>
+                    <SectionHeading>Summary</SectionHeading>
+                    <p className={`${bodyText} border-l-2 border-(--accent)/30 pl-3 whitespace-pre-line`}>{data.summary.trim()}</p>
                 </section>
             )}
 
-            {data.skills.length > 0 && (
-                <section>
-                    <h2 className="text-indigo-600 font-bold mb-2">/* SKILLS */</h2>
-                    <div className="bg-slate-50 p-3 rounded border border-slate-200 text-xs leading-6">
-                        <span className="text-purple-600">export default</span> [
-                        {data.skills.map((s, i) => (
-                            <span key={i} className="text-slate-700"> "{s}"{i < data.skills.length - 1 ? ',' : ''}</span>
-                        ))}
-                        ]
-                    </div>
-                </section>
-            )}
-
-            {data.experience.length > 0 && (
-                <section>
-                    <h2 className="text-indigo-600 font-bold mb-4">/* EXPERIENCE */</h2>
-                    <div className="flex flex-col gap-6">
-                        {data.experience.map(exp => (
-                            <div key={exp.id}>
-                                <div className="flex items-baseline gap-2 mb-1">
-                                    <span className="font-bold text-slate-900">{exp.role}</span>
-                                    <span className="text-purple-600">@</span>
-                                    <span className="font-bold text-slate-900">{exp.company}</span>
-                                </div>
-                                <div className="text-xs text-slate-400 mb-2">{`{ ${exp.startDate} ... ${exp.isCurrent ? 'NOW' : exp.endDate} }`}</div>
-                                <p className="text-slate-700 whitespace-pre-wrap leading-relaxed">{exp.description}</p>
+            {skillGroups.length > 0 && (
+                <section className="break-inside-avoid">
+                    <SectionHeading>Skills</SectionHeading>
+                    <div className="flex flex-col gap-2">
+                        {skillGroups.map((group, groupIndex) => (
+                            <div key={groupIndex} className="flex flex-wrap items-baseline gap-1.5">
+                                {group.category && <h3 className="mr-1 font-mono text-[12.5px] font-bold text-(--accent) wrap-break-word">{group.category}:</h3>}
+                                {group.items.map((skill, index) => (
+                                    <span
+                                        key={index}
+                                        className="max-w-full rounded border border-slate-200 bg-slate-50 px-1.5 py-px font-mono text-[12.5px] text-slate-800 wrap-break-word print:bg-transparent"
+                                    >
+                                        {skill}
+                                    </span>
+                                ))}
                             </div>
                         ))}
                     </div>
                 </section>
             )}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-                {data.projects.length > 0 && (
-                    <section>
-                        <h2 className="text-indigo-600 font-bold mb-3">/* PROJECTS */</h2>
-                        <div className="flex flex-col gap-4">
-                            {data.projects.map(proj => (
-                                <div key={proj.id}>
-                                    <div className="font-bold text-slate-800">{proj.name}</div>
-                                    <p className="text-slate-600 text-xs mt-1">{proj.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                )}
-                {data.education.length > 0 && (
-                    <section>
-                        <h2 className="text-indigo-600 font-bold mb-3">/* EDUCATION */</h2>
-                        <div className="flex flex-col gap-4">
-                            {data.education.map(edu => (
-                                <div key={edu.id}>
-                                    <div className="font-bold text-slate-800">{edu.school}</div>
-                                    <div className="text-xs text-slate-600">{edu.degree}</div>
-                                    <div className="text-xs text-slate-400">{edu.startDate} - {edu.endDate}</div>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                )}
-            </div>
+            {data.experience.length > 0 && (
+                <section>
+                    <SectionHeading>Experience</SectionHeading>
+                    <div className="flex flex-col gap-[18px]">
+                        {data.experience.map((exp) => {
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const role = exp.role.trim();
+                            const company = exp.company.trim();
+                            return (
+                                <article key={exp.id} className="break-inside-avoid">
+                                    {(role || company || dates) && (
+                                        <div className="flex items-baseline justify-between gap-4">
+                                            <h3 className="min-w-0 text-[15px] leading-snug wrap-break-word">
+                                                {role && <span className="font-bold text-slate-900">{role}</span>}
+                                                {role && company && <span className="font-mono text-(--accent)"> @ </span>}
+                                                {company && <span className="font-semibold text-slate-700">{company}</span>}
+                                            </h3>
+                                            {dates && <span className={`shrink-0 whitespace-nowrap ${metaClass}`}>{dates}</span>}
+                                        </div>
+                                    )}
+                                    <RichText text={exp.description} className={`mt-1.5 ${bodyText}`} listClassName={listClass} />
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
+
+            {data.projects.length > 0 && (
+                <section>
+                    <SectionHeading>Projects</SectionHeading>
+                    <div className="flex flex-col gap-3.5">
+                        {data.projects.map((proj) => (
+                            <article key={proj.id} className="break-inside-avoid">
+                                {(proj.name.trim() || proj.link.trim()) && (
+                                    <div className="flex flex-wrap items-baseline gap-x-3">
+                                        {proj.name.trim() && <h3 className="min-w-0 text-[15px] font-bold leading-snug text-slate-900 wrap-break-word">{proj.name}</h3>}
+                                        {proj.link.trim() && (
+                                            <a
+                                                href={toHref(proj.link)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="min-w-0 font-mono text-[12.5px] text-(--accent) wrap-anywhere hover:underline underline-offset-2"
+                                            >
+                                                {displayUrl(proj.link)}
+                                            </a>
+                                        )}
+                                    </div>
+                                )}
+                                <RichText text={proj.description} className={`mt-1 ${bodyText}`} listClassName={listClass} />
+                            </article>
+                        ))}
+                    </div>
+                </section>
+            )}
+
+            {data.education.length > 0 && (
+                <section>
+                    <SectionHeading>Education</SectionHeading>
+                    <div className="flex flex-col gap-2.5">
+                        {data.education.map((edu) => {
+                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const heading = edu.school.trim() || edu.degree.trim();
+                            const degree = edu.school.trim() ? edu.degree.trim() : '';
+                            return (
+                                <article key={edu.id} className="break-inside-avoid">
+                                    <div className="flex items-baseline justify-between gap-4">
+                                        <h3 className="min-w-0 text-[15px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>
+                                        {dates && <span className={`shrink-0 whitespace-nowrap ${metaClass}`}>{dates}</span>}
+                                    </div>
+                                    {degree && <div className="text-[14px] text-slate-600 wrap-break-word">{degree}</div>}
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
         </div>
-    )
-}
+    );
+};

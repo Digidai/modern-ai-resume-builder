@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback, useRef } from 'react';
 import { ResumeData, INITIAL_RESUME_DATA } from '../types';
+import { sanitizeDesign } from '../utils/resumeData';
 
 const LEGACY_STORAGE_KEY = 'resumeData';
 const STORAGE_PREFIX = 'resumeData:v2';
@@ -12,6 +13,7 @@ export type ResumeSaveStatus = 'idle' | 'saving' | 'saved' | 'error';
 
 const RESUME_FIELDS: Array<keyof ResumeData> = [
   'templateId',
+  'design',
   'fullName',
   'title',
   'email',
@@ -26,7 +28,9 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'projects',
 ];
 
-const SESSION_SCOPED_FIELDS = new Set<keyof ResumeData>([
+// Earlier versions kept personal fields in sessionStorage, which lost the resume when
+// the tab closed. Everything now lives in localStorage; old session values are migrated.
+const LEGACY_SESSION_FIELDS: Array<keyof ResumeData> = [
   'fullName',
   'email',
   'phone',
@@ -37,10 +41,7 @@ const SESSION_SCOPED_FIELDS = new Set<keyof ResumeData>([
   'experience',
   'education',
   'projects',
-]);
-
-const getStorageForField = (field: keyof ResumeData): Storage =>
-  SESSION_SCOPED_FIELDS.has(field) ? sessionStorage : localStorage;
+];
 
 const isValidResumeData = (data: unknown): data is Partial<ResumeData> => {
   if (typeof data !== 'object' || data === null) return false;
@@ -58,6 +59,7 @@ const isValidResumeData = (data: unknown): data is Partial<ResumeData> => {
 const mergeResumeData = (data: Partial<ResumeData>): ResumeData => ({
   ...INITIAL_RESUME_DATA,
   ...data,
+  design: sanitizeDesign(data.design),
 });
 
 const getFieldStorageKey = (field: keyof ResumeData): string => `${STORAGE_PREFIX}:${field}`;
@@ -83,6 +85,8 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
     case 'skills':
     case 'projects':
       return Array.isArray(value);
+    case 'design':
+      return typeof value === 'object' && value !== null && !Array.isArray(value);
     default:
       return false;
   }
@@ -90,7 +94,10 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
 
 const clearSegmentedStorage = (): void => {
   for (const field of RESUME_FIELDS) {
-    getStorageForField(field).removeItem(getFieldStorageKey(field));
+    localStorage.removeItem(getFieldStorageKey(field));
+  }
+  for (const field of LEGACY_SESSION_FIELDS) {
+    sessionStorage.removeItem(getFieldStorageKey(field));
   }
   localStorage.removeItem(STORAGE_VERSION_KEY);
 };
@@ -100,8 +107,13 @@ const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
   let hasAnyField = false;
 
   for (const field of RESUME_FIELDS) {
-    const storage = getStorageForField(field);
-    const raw = storage.getItem(getFieldStorageKey(field));
+    const key = getFieldStorageKey(field);
+    let storage: Storage = localStorage;
+    let raw = localStorage.getItem(key);
+    if (raw === null && LEGACY_SESSION_FIELDS.includes(field)) {
+      storage = sessionStorage;
+      raw = sessionStorage.getItem(key);
+    }
     if (raw === null) continue;
 
     hasAnyField = true;
@@ -113,7 +125,8 @@ const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
         continue;
       }
 
-      nextData[field] = parsed as ResumeData[typeof field];
+      // `field` is a union, so TS can't correlate it with the value type; isValidFieldValue checked it.
+      (nextData as Record<keyof ResumeData, unknown>)[field] = parsed;
     } catch {
       storage.removeItem(getFieldStorageKey(field));
     }
@@ -162,7 +175,9 @@ const loadFromStorage = (): ResumeData => {
 const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>): boolean => {
   try {
     for (const field of fields) {
-      getStorageForField(field).setItem(getFieldStorageKey(field), JSON.stringify(data[field]));
+      const key = getFieldStorageKey(field);
+      localStorage.setItem(key, JSON.stringify(data[field]));
+      sessionStorage.removeItem(key);
     }
 
     localStorage.setItem(STORAGE_VERSION_KEY, STORAGE_VERSION);
@@ -225,6 +240,7 @@ export const useResumeData = () => {
       ? RESUME_FIELDS.filter((field) => !Object.is(previousDataRef.current[field], resumeData[field]))
       : [...RESUME_FIELDS];
 
+    const isInitialSync = !hasInitializedRef.current;
     previousDataRef.current = resumeData;
     hasInitializedRef.current = true;
 
@@ -234,7 +250,8 @@ export const useResumeData = () => {
       pendingFieldsRef.current.add(field);
     }
 
-    setSaveStatus('saving');
+    // The first sync just re-persists what was loaded; don't flash "Saving…" on page load.
+    if (!isInitialSync) setSaveStatus('saving');
 
     if (saveTimerRef.current !== null) {
       window.clearTimeout(saveTimerRef.current);
@@ -285,8 +302,7 @@ export const useResumeData = () => {
       const fieldName = event.key.slice(`${STORAGE_PREFIX}:`.length);
       if (!isKnownField(fieldName)) return;
 
-      const expectedStorage = getStorageForField(fieldName);
-      if (event.storageArea && event.storageArea !== expectedStorage) {
+      if (event.storageArea && event.storageArea !== localStorage) {
         return;
       }
 
@@ -322,32 +338,22 @@ export const useResumeData = () => {
     return () => window.removeEventListener('storage', handleStorage);
   }, []);
 
-  const resetData = useCallback(() => {
-    if (!window.confirm('Are you sure you want to reset all data to defaults? This cannot be undone.')) {
-      return;
-    }
-
+  /** Replaces the whole resume (import, start from blank, restore sample) and persists it. */
+  const replaceData = useCallback((next: ResumeData) => {
     if (saveTimerRef.current !== null) {
       window.clearTimeout(saveTimerRef.current);
       saveTimerRef.current = null;
-    }
-
-    if (saveStatusTimerRef.current !== null) {
-      window.clearTimeout(saveStatusTimerRef.current);
-      saveStatusTimerRef.current = null;
     }
 
     pendingFieldsRef.current.clear();
     clearSegmentedStorage();
     localStorage.removeItem(LEGACY_STORAGE_KEY);
 
-    previousDataRef.current = INITIAL_RESUME_DATA;
-    latestDataRef.current = INITIAL_RESUME_DATA;
+    // Treat the next effect run as an initial sync, which persists every field.
     hasInitializedRef.current = false;
 
-    setResumeData(INITIAL_RESUME_DATA);
+    setResumeData(mergeResumeData(next));
     setSaveError(null);
-    setSaveStatus('idle');
   }, []);
 
   useEffect(() => {
@@ -361,7 +367,7 @@ export const useResumeData = () => {
   return {
     resumeData,
     setResumeData,
-    resetData,
+    replaceData,
     saveError,
     saveStatus,
   };

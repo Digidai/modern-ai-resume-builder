@@ -1,86 +1,150 @@
 import React from 'react';
-import { TemplateProps } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
+const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
+    <h2 className="mb-2 border-b border-(--accent)/40 pb-[3px] text-[12.5px] font-bold uppercase tracking-[0.14em] text-(--accent) break-after-avoid">
+        {children}
+    </h2>
+);
+
+const bodyText = 'text-[14px] leading-[1.42] text-slate-700 wrap-break-word';
+const listClass = 'list-disc pl-[1.05em] space-y-px marker:text-slate-400';
+const dateClass = 'shrink-0 whitespace-nowrap text-[12.5px] tabular-nums text-slate-500';
+
+/** Dense single column for long histories: tight rhythm, one-line entry headers, dates on the right. */
 export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
+    const contacts = getContactEntries(data);
+    const skillGroups = groupSkills(data.skills);
+
     return (
-        <div className="flex flex-col gap-5 text-sm">
-            <header className="flex justify-between items-start border-b-2 border-slate-800 pb-4">
-                <div>
-                    <h1 className="text-3xl font-bold text-slate-900 uppercase leading-none">{data.fullName}</h1>
-                    <p className="text-lg text-slate-600 font-medium mt-1">{data.title}</p>
-                </div>
-                <div className="text-right text-xs text-slate-500 leading-tight">
-                    {data.email && <div>{data.email}</div>}
-                    {data.phone && <div>{data.phone}</div>}
-                    {data.location && <div>{data.location}</div>}
-                    {data.website && <div>{data.website}</div>}
-                    {data.linkedin && <div>{data.linkedin}</div>}
-                </div>
+        <div className="flex flex-1 flex-col gap-4 font-source-sans text-[14px] leading-[1.42] text-slate-800 [--accent:var(--rs-accent,#1D4ED8)]">
+            <header className="flex items-end justify-between gap-6 border-b-2 border-(--accent) pb-3">
+                {(data.fullName.trim() || data.title.trim()) && (
+                    <div className="min-w-0 flex-1">
+                        {data.fullName.trim() && (
+                            <h1 className="text-[30px] font-bold leading-[1.05] tracking-[-0.01em] text-slate-900 wrap-break-word">{data.fullName}</h1>
+                        )}
+                        {data.title.trim() && <p className="mt-1 text-[16px] font-semibold text-(--accent) wrap-break-word">{data.title}</p>}
+                    </div>
+                )}
+                {contacts.length > 0 && (
+                    <ul className="max-w-[48%] shrink-0 text-right text-[13px] leading-[1.45] text-slate-600">
+                        {contacts.map((entry) => (
+                            <li key={entry.key} className="wrap-anywhere">
+                                <ContactLink entry={entry} />
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </header>
 
-            {data.summary && (
+            {data.summary.trim() && (
                 <section>
-                    <h3 className="text-xs font-bold uppercase text-slate-400 mb-1">Summary</h3>
-                    <p className="text-slate-800 leading-snug">{data.summary}</p>
+                    <SectionHeading>Summary</SectionHeading>
+                    <p className={`${bodyText} whitespace-pre-line`}>{data.summary.trim()}</p>
                 </section>
             )}
 
-            <div className="grid grid-cols-1 gap-1">
-                {data.skills.length > 0 && (
-                    <section className="mb-2">
-                        <h3 className="text-xs font-bold uppercase text-slate-400 mb-1">Skills</h3>
-                        <p className="text-slate-800 font-medium text-xs">{data.skills.join(' • ')}</p>
-                    </section>
-                )}
+            {skillGroups.length > 0 && (
+                <section className="break-inside-avoid">
+                    <SectionHeading>Skills</SectionHeading>
+                    <div className="flex flex-col gap-0.5">
+                        {skillGroups.map((group, groupIndex) => (
+                            <p key={groupIndex} className="text-slate-800 wrap-break-word">
+                                {group.category && <span className="font-bold text-slate-900">{group.category}: </span>}
+                                {group.items.join(', ')}
+                            </p>
+                        ))}
+                    </div>
+                </section>
+            )}
 
-                {data.experience.length > 0 && (
-                    <section>
-                        <h3 className="text-xs font-bold uppercase text-slate-400 mb-2 border-b border-slate-200">Experience</h3>
-                        <div className="flex flex-col gap-3">
-                            {data.experience.map(exp => (
-                                <div key={exp.id}>
-                                    <div className="flex justify-between items-baseline">
-                                        <div className="font-bold text-slate-900">{exp.role} <span className="font-normal text-slate-600">at {exp.company}</span></div>
-                                        <div className="text-xs text-slate-500 whitespace-nowrap">{exp.startDate} – {exp.isCurrent ? 'Present' : exp.endDate}</div>
-                                    </div>
-                                    <p className="text-slate-700 mt-0.5 leading-snug text-xs">{exp.description}</p>
-                                </div>
-                            ))}
-                        </div>
-                    </section>
-                )}
+            {data.experience.length > 0 && (
+                <section>
+                    <SectionHeading>Experience</SectionHeading>
+                    <div className="flex flex-col gap-3">
+                        {data.experience.map((exp) => {
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const role = exp.role.trim();
+                            const company = exp.company.trim();
+                            return (
+                                <article key={exp.id} className="break-inside-avoid">
+                                    {(role || company || dates) && (
+                                        <div className="flex items-baseline justify-between gap-4">
+                                            <h3 className="min-w-0 wrap-break-word">
+                                                {role && <span className="font-bold text-slate-900">{role}</span>}
+                                                {role && company && (
+                                                    <span className="mx-1.5 text-slate-400" aria-hidden="true">
+                                                        |
+                                                    </span>
+                                                )}
+                                                {company && <span className="font-semibold text-slate-600">{company}</span>}
+                                            </h3>
+                                            {dates && <span className={dateClass}>{dates}</span>}
+                                        </div>
+                                    )}
+                                    <RichText text={exp.description} className={`mt-0.5 ${bodyText} space-y-0.5`} listClassName={listClass} />
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
 
-                <div className="grid grid-cols-2 gap-4 mt-2">
-                    {data.projects.length > 0 && (
-                        <section>
-                            <h3 className="text-xs font-bold uppercase text-slate-400 mb-2 border-b border-slate-200">Projects</h3>
-                            <div className="flex flex-col gap-2">
-                                {data.projects.map(proj => (
-                                    <div key={proj.id}>
-                                        <div className="font-bold text-slate-900 text-xs">{proj.name}</div>
-                                        <p className="text-slate-600 leading-tight text-xs">{proj.description}</p>
+            {data.projects.length > 0 && (
+                <section>
+                    <SectionHeading>Projects</SectionHeading>
+                    <div className="flex flex-col gap-2.5">
+                        {data.projects.map((proj) => (
+                            <article key={proj.id} className="break-inside-avoid">
+                                {(proj.name.trim() || proj.link.trim()) && (
+                                    <div className="flex flex-wrap items-baseline gap-x-2.5">
+                                        {proj.name.trim() && <h3 className="min-w-0 font-bold text-slate-900 wrap-break-word">{proj.name}</h3>}
+                                        {proj.link.trim() && (
+                                            <a
+                                                href={toHref(proj.link)}
+                                                target="_blank"
+                                                rel="noopener noreferrer"
+                                                className="min-w-0 text-[13px] text-(--accent) wrap-anywhere hover:underline underline-offset-2"
+                                            >
+                                                {displayUrl(proj.link)}
+                                            </a>
+                                        )}
                                     </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
+                                )}
+                                <RichText text={proj.description} className={`mt-0.5 ${bodyText} space-y-0.5`} listClassName={listClass} />
+                            </article>
+                        ))}
+                    </div>
+                </section>
+            )}
 
-                    {data.education.length > 0 && (
-                        <section>
-                            <h3 className="text-xs font-bold uppercase text-slate-400 mb-2 border-b border-slate-200">Education</h3>
-                            <div className="flex flex-col gap-2">
-                                {data.education.map(edu => (
-                                    <div key={edu.id}>
-                                        <div className="font-bold text-slate-900 text-xs">{edu.school}</div>
-                                        <div className="text-slate-600 text-xs">{edu.degree}</div>
-                                        <div className="text-slate-400 text-[10px]">{edu.startDate} – {edu.endDate}</div>
-                                    </div>
-                                ))}
-                            </div>
-                        </section>
-                    )}
-                </div>
-            </div>
+            {data.education.length > 0 && (
+                <section>
+                    <SectionHeading>Education</SectionHeading>
+                    <div className="flex flex-col gap-1.5">
+                        {data.education.map((edu) => {
+                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const school = edu.school.trim();
+                            const degree = edu.degree.trim();
+                            return (
+                                <article key={edu.id} className="flex items-baseline justify-between gap-4 break-inside-avoid">
+                                    <h3 className="min-w-0 wrap-break-word">
+                                        {school && <span className="font-bold text-slate-900">{school}</span>}
+                                        {school && degree && (
+                                            <span className="mx-1.5 text-slate-400" aria-hidden="true">
+                                                |
+                                            </span>
+                                        )}
+                                        {degree && <span className="text-slate-700">{degree}</span>}
+                                    </h3>
+                                    {dates && <span className={dateClass}>{dates}</span>}
+                                </article>
+                            );
+                        })}
+                    </div>
+                </section>
+            )}
         </div>
-    )
-}
+    );
+};

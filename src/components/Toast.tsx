@@ -1,95 +1,105 @@
-import { useState, useEffect, createContext, useContext, useCallback, ReactNode } from 'react';
+import { useState, createContext, useContext, useCallback, useMemo, useRef, ReactNode } from 'react';
 
 type ToastType = 'success' | 'error' | 'info' | 'warning';
 
-interface Toast {
+interface ToastOptions {
+  /** Optional inline action, e.g. Undo. Clicking it also dismisses the toast. */
+  action?: { label: string; onClick: () => void };
+  duration?: number;
+}
+
+interface Toast extends ToastOptions {
   id: string;
   message: string;
   type: ToastType;
 }
 
 interface ToastContextValue {
-  showToast: (message: string, type?: ToastType) => void;
+  showToast: (message: string, type?: ToastType, options?: ToastOptions) => void;
   showSuccess: (message: string) => void;
   showError: (message: string) => void;
 }
 
 const ToastContext = createContext<ToastContextValue | null>(null);
 
-const TOAST_DURATION = 4000;
+const DEFAULT_DURATION = 4000;
+const ACTION_DURATION = 7000;
+const MAX_TOASTS = 3;
 
-const toastStyles: Record<ToastType, string> = {
-  success: 'bg-emerald-600 text-white',
-  error: 'bg-red-600 text-white',
-  info: 'bg-indigo-600 text-white',
-  warning: 'bg-amber-500 text-white',
+const iconColor: Record<ToastType, string> = {
+  success: 'text-emerald-400',
+  error: 'text-red-400',
+  info: 'text-indigo-300',
+  warning: 'text-amber-300',
 };
 
-const toastIcons: Record<ToastType, ReactNode> = {
-  success: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-    </svg>
-  ),
-  error: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-    </svg>
-  ),
-  info: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-    </svg>
-  ),
-  warning: (
-    <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z" />
-    </svg>
-  ),
+const ICON_PATHS: Record<ToastType, string> = {
+  success: 'M5 13l4 4L19 7',
+  error: 'M12 9v4m0 4h.01M10.3 3.9L1.8 18a2 2 0 001.7 3h17a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z',
+  info: 'M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+  warning: 'M12 9v2m0 4h.01M5.1 19h13.8c1.5 0 2.5-1.7 1.7-3L13.7 4c-.8-1.3-2.7-1.3-3.5 0L3.3 16c-.8 1.3.2 3 1.8 3z',
 };
 
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
+  const timers = useRef(new Map<string, number>());
 
   const removeToast = useCallback((id: string) => {
-    setToasts(prev => prev.filter(t => t.id !== id));
+    window.clearTimeout(timers.current.get(id));
+    timers.current.delete(id);
+    setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
 
-  const showToast = useCallback((message: string, type: ToastType = 'info') => {
-    const id = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
-    setToasts(prev => [...prev, { id, message, type }]);
-    setTimeout(() => removeToast(id), TOAST_DURATION);
-  }, [removeToast]);
+  const showToast = useCallback(
+    (message: string, type: ToastType = 'info', options: ToastOptions = {}) => {
+      const id = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
+      // Replace an identical visible message instead of stacking duplicates.
+      setToasts((prev) => [...prev.filter((t) => t.message !== message), { id, message, type, ...options }].slice(-MAX_TOASTS));
+      const duration = options.duration ?? (options.action ? ACTION_DURATION : DEFAULT_DURATION);
+      timers.current.set(id, window.setTimeout(() => removeToast(id), duration));
+    },
+    [removeToast]
+  );
 
   const showSuccess = useCallback((message: string) => showToast(message, 'success'), [showToast]);
   const showError = useCallback((message: string) => showToast(message, 'error'), [showToast]);
+  const value = useMemo(() => ({ showToast, showSuccess, showError }), [showToast, showSuccess, showError]);
 
   return (
-    <ToastContext.Provider value={{ showToast, showSuccess, showError }}>
+    <ToastContext.Provider value={value}>
       {children}
-      <div 
-        className="fixed bottom-4 right-4 z-50 flex flex-col gap-2 pointer-events-none"
+      <div
+        className="fixed inset-x-4 bottom-4 sm:inset-x-auto sm:right-6 sm:bottom-6 z-[60] flex flex-col items-center sm:items-end gap-2 pointer-events-none print:hidden"
         role="region"
         aria-label="Notifications"
       >
-        {toasts.map(toast => (
+        {toasts.map((toast) => (
           <div
             key={toast.id}
-            role="alert"
-            className={`
-              pointer-events-auto flex items-center gap-3 px-4 py-3 rounded-lg shadow-lg
-              animate-in slide-in-from-right fade-in duration-300
-              ${toastStyles[toast.type]}
-            `}
+            role={toast.type === 'error' ? 'alert' : 'status'}
+            className="pointer-events-auto w-full sm:w-auto sm:max-w-sm flex items-center gap-3 pl-4 pr-2 py-2.5 rounded-xl shadow-lg shadow-slate-900/20 bg-slate-900 text-white ring-1 ring-white/10 dark:bg-slate-800 animate-enter"
           >
-            <span className="flex-shrink-0">{toastIcons[toast.type]}</span>
-            <p className="text-sm font-medium">{toast.message}</p>
+            <svg className={`w-5 h-5 shrink-0 ${iconColor[toast.type]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={ICON_PATHS[toast.type]} />
+            </svg>
+            <p className="text-sm flex-1 py-0.5">{toast.message}</p>
+            {toast.action && (
+              <button
+                onClick={() => {
+                  toast.action?.onClick();
+                  removeToast(toast.id);
+                }}
+                className="shrink-0 rounded-md px-2.5 py-1 text-sm font-semibold text-indigo-300 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
+              >
+                {toast.action.label}
+              </button>
+            )}
             <button
               onClick={() => removeToast(toast.id)}
-              className="flex-shrink-0 ml-2 hover:opacity-80 transition-opacity"
+              className="shrink-0 rounded-md p-1.5 text-slate-400 hover:text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-indigo-400"
               aria-label="Dismiss notification"
             >
-              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               </svg>
             </button>
