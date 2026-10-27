@@ -13,6 +13,12 @@ export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
     location: 'São Paulo, Brazil (Remote, open to relocation)',
     website: 'https://www.maximiliana-wojcik-fernandez-portfolio.dev/',
     linkedin: 'https://www.linkedin.com/in/maximiliana-wojcik-fernandez-engineer/',
+    links: [
+      { id: 'lk1', label: '', url: 'https://github.com/maximiliana-wojcik-fernandez' },
+      { id: 'lk2', label: '', url: 'x.com/maxwojcikdev' },
+      { id: 'lk3', label: '', url: 'scholar.google.com/citations?user=AbCdEf123' },
+      { id: 'lk4', label: 'Conference talks', url: 'speakerdeck.com/maximiliana' },
+    ],
     summary:
       'Principal engineer with 14 years of experience designing distributed systems that serve hundreds of millions of requests per day. Led platform teams through two hyper-growth phases, migrating monoliths to event-driven services without downtime. Known for pragmatic architecture, strong written communication, and growing senior engineers into technical leaders across time zones.',
     experience: [
@@ -103,6 +109,7 @@ export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
     location: '',
     website: '',
     linkedin: '',
+    links: [],
     summary: '',
     experience: [
       {

@@ -1,0 +1,1057 @@
+{
+  "family": "Skilled Trades & Manufacturing",
+  "guide": {
+    "focus": "the licences you hold, the equipment and systems you work on, and how your work improved safety, uptime, quality or output",
+    "skills": [
+      "Blueprint and schematic reading",
+      "Licences and trade certifications",
+      "Safety compliance (OSHA, NFPA 70E, LOTO)",
+      "Troubleshooting and diagnostics",
+      "Preventive maintenance",
+      "PLCs and controls",
+      "Precision measurement and GD&T",
+      "Welding and fabrication",
+      "CMMS (Maximo, Fiix, UpKeep)",
+      "Lean manufacturing and 5S"
+    ],
+    "sections": [
+      "Summary",
+      "Certifications",
+      "Experience",
+      "Skills",
+      "Education"
+    ],
+    "metrics": [
+      "equipment uptime",
+      "scrap rate",
+      "OEE",
+      "first-pass yield",
+      "safety record",
+      "work orders completed"
+    ],
+    "bullets": [
+      "Rebuilt the PM schedule for 14 injection molders in Fiix, cutting unplanned downtime from 9% to 4% in six months",
+      "Passed 3G and 4G AWS D1.1 bend tests and held a weld reject rate under 1% on structural steel",
+      "Wired 120 kVA of new service and panels to NEC 2023 with zero failed inspections across 30 commercial jobs"
+    ],
+    "tips": [
+      "Put licences and certifications near the top with the issuing body, state and number of hours or expiry date where relevant.",
+      "Name the machines, controls and processes you know (Haas, Fanuc, Allen-Bradley, GTAW) because hiring managers and ATS filters search for them.",
+      "Quantify safety and quality as well as output: incident-free hours, scrap, rework and inspection pass rates all count."
+    ],
+    "templates": [
+      "classic",
+      "compact",
+      "modern"
+    ]
+  },
+  "titles": {
+    "Apprentice Electrician": {
+      "summary": "Third-year registered electrical apprentice with 5,600 of 8,000 on-the-job hours logged across commercial tenant build-outs and multifamily rough-in. Pulled wire and bent conduit on 18 projects without a recordable injury, and brings OSHA 10, NEC 2023 coursework and a clean driving record.",
+      "experience": [
+        {
+          "company": "Brightline Electrical Contractors",
+          "role": "Electrical Apprentice (3rd Year)",
+          "location": "Austin, TX",
+          "startDate": "2024-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Bend and install EMT and rigid conduit up to 2 in. for office build-outs, averaging 250 ft per shift under journeyman supervision\n- Rough in 40+ apartment units per phase, setting boxes and pulling NM-B to plan before inspection\n- Terminate 120/208V branch circuits and label panel schedules, helping the crew pass 12 consecutive city rough-in inspections\n- Stage material and track usage in the job trailer, reducing wire offcut waste by roughly 15% on two jobs"
+        },
+        {
+          "company": "Cedar Park Home Services",
+          "role": "Electrical Helper",
+          "location": "Cedar Park, TX",
+          "startDate": "2023-03",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Assisted on 150+ residential service calls including panel swaps, GFCI and AFCI upgrades and ceiling fan installs\n- Kept the service van stocked against a parts checklist, cutting return trips to the supply house"
+        }
+      ],
+      "education": [
+        {
+          "school": "Austin Community College",
+          "degree": "Electrical Apprenticeship Program (TDLR-registered, in progress)",
+          "startDate": "2024-08",
+          "endDate": ""
+        },
+        {
+          "school": "Leander High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: TDLR Apprentice Electrician (Texas), OSHA 10 Construction",
+        "Installation: EMT and rigid conduit bending, wire pulling, device and fixture trim-out",
+        "Codes: NEC 2023 (coursework), box fill and conductor ampacity",
+        "Tools: Klein hand benders, Greenlee pullers, Fluke T6 tester, Milwaukee press tools"
+      ]
+    },
+    "Journeyman Electrician": {
+      "summary": "Licensed Colorado journeyman electrician with 8 years in commercial and light industrial work, from 480V service to fire alarm and lighting controls. Ran a 4-person crew on a $3.2M medical office build-out that passed final inspection first time, and brings strong code knowledge and clean, inspection-ready installs.",
+      "experience": [
+        {
+          "company": "Front Range Power & Light Contractors",
+          "role": "Journeyman Electrician / Crew Lead",
+          "location": "Denver, CO",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 4-person crew installing 480/277V distribution, MCCs and lighting for medical and retail build-outs valued up to $3.2M\n- Laid out conduit runs from Revit-coordinated drawings, cutting clashes with mechanical trades and saving about 60 labor hours per project\n- Commissioned nLight lighting controls and occupancy sensors across 85,000 sq ft to meet the owner's energy code targets\n- Mentored 3 apprentices through rough-in and trim, with each passing their next-year assessment on schedule"
+        },
+        {
+          "company": "Mile High Electric Co.",
+          "role": "Electrical Apprentice",
+          "location": "Aurora, CO",
+          "startDate": "2018-01",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Completed 8,000 OJT hours on tilt-up warehouses and strip retail, installing feeders up to 400A\n- Pulled and terminated fire alarm and data cabling for 20 tenant suites with no failed inspections"
+        }
+      ],
+      "education": [
+        {
+          "school": "IEC Rocky Mountain",
+          "degree": "4-Year Electrical Apprenticeship Certificate",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Journeyman Electrician (Colorado State Electrical Board), OSHA 30 Construction, NFPA 70E Qualified Person",
+        "Systems: 480/277V and 208/120V distribution, MCCs, VFDs, fire alarm, lighting controls",
+        "Codes: NEC 2023, local amendments, ADA device heights",
+        "Tools: Fluke 87V and 1587 insulation tester, Greenlee hydraulic benders, Bluebeam Revu"
+      ]
+    },
+    "Master Electrician": {
+      "summary": "Texas Master Electrician with 17 years in the trade and 6 as master of record for a 40-electrician contractor. Oversees permitting, code compliance and estimating on $18M a year of commercial and industrial work, and cut failed inspections to under 2% while growing service revenue 35%.",
+      "experience": [
+        {
+          "company": "Lone Oak Electrical Group",
+          "role": "Master Electrician & Field Operations Manager",
+          "location": "San Antonio, TX",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve as master of record on 120+ permits a year, signing off design-build installs from 200A services to 4,000A switchgear\n- Standardized pre-inspection checklists across 9 foremen, dropping failed city inspections from 7% to 1.8%\n- Built a service and maintenance division with 6 vans and annual infrared scanning contracts, growing service revenue 35% in two years\n- Estimate and review bids up to $2.5M in Accubid, holding average job margin at 18%"
+        },
+        {
+          "company": "Alamo Industrial Electric",
+          "role": "Journeyman Electrician / Foreman",
+          "location": "San Antonio, TX",
+          "startDate": "2013-05",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Ran crews of up to 12 on food plant and distribution center projects, including 2,000A switchboards and 75 VFD-driven motors\n- Coordinated arc flash studies and labeling for 3 plants to NFPA 70E, supporting zero arc-flash incidents"
+        },
+        {
+          "company": "Hill Country Electric",
+          "role": "Electrical Apprentice",
+          "location": "New Braunfels, TX",
+          "startDate": "2009-06",
+          "endDate": "2013-04",
+          "isCurrent": false,
+          "description": "- Completed residential and light commercial apprenticeship, passing the Texas journeyman exam on the first attempt"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas State Technical College",
+          "degree": "Certificate, Electrical Construction",
+          "startDate": "2009-01",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Master Electrician (TDLR, Texas), OSHA 30 Construction, NFPA 70E",
+        "Leadership: permitting, code review, crew scheduling, apprentice training",
+        "Estimating: Accubid, Bluebeam Revu, ConEst",
+        "Systems: switchgear to 4,000A, generators and ATS, VFDs, infrared thermography"
+      ]
+    },
+    "Industrial Electrician": {
+      "summary": "Industrial electrician with 10 years maintaining high-speed packaging and processing lines in 24/7 food plants. Troubleshoots 480V motor circuits, VFDs and Allen-Bradley PLCs, and cut electrical downtime on a 6-line plant by 38% through root-cause fixes and better spares control.",
+      "experience": [
+        {
+          "company": "Prairie Harvest Foods",
+          "role": "Industrial Electrician",
+          "location": "Omaha, NE",
+          "startDate": "2019-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Troubleshoot 480V motor controls, PowerFlex VFDs and ControlLogix PLCs on 6 packaging lines running 24/7\n- Led root-cause analysis on recurring photo-eye and encoder faults, reducing electrical downtime 38% year over year\n- Installed and commissioned 2 new case packers with OEM techs, reaching rated speed of 22 cases per minute in 3 weeks\n- Maintain LOTO procedures for 140 machines and audit them quarterly under OSHA 1910.147"
+        },
+        {
+          "company": "Midlands Grain Processing",
+          "role": "Maintenance Electrician",
+          "location": "Council Bluffs, IA",
+          "startDate": "2016-03",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Maintained conveyors, bucket elevators and dust collection in a Class II, Division 1 grain environment\n- Replaced 30 motor starters with soft starters, eliminating belt slippage trips on high-inertia loads\n- Rewired 12 conveyor control panels to current NFPA 79 practice, cutting nuisance trips during harvest season by half"
+        }
+      ],
+      "education": [
+        {
+          "school": "Metropolitan Community College",
+          "degree": "AAS, Electrical Technology",
+          "startDate": "2013-08",
+          "endDate": "2015-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Journeyman Electrician (Nebraska), NFPA 70E Qualified Person, OSHA 10 General Industry",
+        "Controls: Allen-Bradley ControlLogix, Studio 5000, PanelView HMIs, PowerFlex 525/755 VFDs",
+        "Maintenance: motor testing (Megger), infrared thermography, hazardous locations",
+        "Systems: SAP PM, Fluke 1587, root-cause analysis (5 Whys)"
+      ]
+    },
+    "Lineman": {
+      "summary": "Journeyman lineman with 9 years building and maintaining overhead and underground distribution for an electric cooperative. Works energized lines up to 25 kV with rubber gloves and hot sticks, and led storm crews that restored 14,000 customers in 72 hours after a 2024 ice storm with no recordable injuries.",
+      "experience": [
+        {
+          "company": "Bluestem Electric Cooperative",
+          "role": "Journeyman Lineman",
+          "location": "Tulsa, OK",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build, upgrade and repair 12.47 kV and 25 kV overhead distribution, setting poles, framing crossarms and hanging transformers\n- Led a 5-person storm crew through a 2024 ice storm, helping restore 14,000 members within 72 hours\n- Converted 6 miles of aging overhead line to underground URD with directional-bore subcontractors, cutting outage calls on the circuit by 40%\n- Hold a 6-year record without a recordable injury, leading daily tailboards under OSHA 1910.269"
+        },
+        {
+          "company": "Redbud Utility Services",
+          "role": "Apprentice Lineman",
+          "location": "Oklahoma City, OK",
+          "startDate": "2017-03",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Completed a 7,000-hour DOL-registered apprenticeship on contract distribution and transmission crews\n- Operated digger derricks and bucket trucks for 300+ pole changeouts across rural service territory"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwest Lineman College",
+          "degree": "Electrical Lineworker Certificate",
+          "startDate": "2016-08",
+          "endDate": "2016-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class A, Journeyman Lineman (DOL-registered), OSHA 1910.269 trained, First Aid/CPR",
+        "Line work: energized work to 25 kV, rubber glove and hot stick methods, URD terminations, transformer banking",
+        "Equipment: digger derricks, bucket trucks, tensioners, pole climbing",
+        "Safety: tailboards, grounding and bonding, pole-top and bucket rescue"
+      ]
+    },
+    "Welder": {
+      "summary": "AWS-certified structural and pipe welder with 7 years in heavy fabrication, running SMAW, FCAW and GTAW in all positions. Holds a sub-1% X-ray reject rate on pressure piping and brings fast, clean blueprint-to-weld work on carbon and stainless steel.",
+      "experience": [
+        {
+          "company": "Ironbridge Fabrication",
+          "role": "Combination Welder",
+          "location": "Baton Rouge, LA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Weld carbon and 316 stainless pipe from 2 to 24 in. to ASME B31.3 using GTAW root and SMAW fill and cap\n- Maintain a 0.8% radiographic reject rate across 1,900 inspected joints over three years\n- Fit and weld structural skids from shop drawings, holding tolerances within 1/16 in. on 40 skid packages\n- Train 2 helpers on bevel prep and fit-up, raising the shop's daily joint count by about 12%"
+        },
+        {
+          "company": "Gulfway Steel Works",
+          "role": "Structural Welder",
+          "location": "Lafayette, LA",
+          "startDate": "2019-02",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Ran FCAW on beams, columns and stair stringers to AWS D1.1 for commercial buildings up to 6 stories\n- Cut weld rework hours by 20% by standardizing preheat and interpass checks with a temp stick log"
+        }
+      ],
+      "education": [
+        {
+          "school": "Baton Rouge Community College",
+          "degree": "Certificate of Technical Studies, Welding",
+          "startDate": "2018-01",
+          "endDate": "2018-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: AWS D1.1 3G/4G (SMAW, FCAW), ASME Section IX 6G (GTAW/SMAW), TWIC, OSHA 10",
+        "Processes: SMAW, FCAW, GMAW, GTAW, air arc gouging, plasma and oxy-fuel cutting",
+        "Materials: carbon steel, 304/316 stainless, chrome-moly",
+        "Fabrication: blueprint and weld symbol reading, fit-up, Lincoln and Miller machines"
+      ]
+    },
+    "Welding Inspector": {
+      "summary": "AWS Certified Welding Inspector with 13 years in welding and QA, including 6 inspecting pressure piping and structural steel for refinery and power projects. Manages weld maps, WPS/PQR records and NDE scheduling, and reduced a fabricator's repair rate from 4.1% to 1.3%.",
+      "experience": [
+        {
+          "company": "Keystone Inspection Partners",
+          "role": "Senior Welding Inspector (CWI)",
+          "location": "Houston, TX",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Inspect weld fit-up, in-process and final welds to ASME B31.3 and AWS D1.1 on refinery turnarounds and new-build skids\n- Review WPS, PQR and welder qualification records for 9 contractors, rejecting 14 nonconforming procedures before production\n- Coordinate RT, UT and PMI with NDE subcontractors, keeping inspection backlog under 48 hours on a 4,000-joint project\n- Coached a client fabricator on root-cause trends, cutting its weld repair rate from 4.1% to 1.3%"
+        },
+        {
+          "company": "Bayou Fabricators",
+          "role": "QC Inspector",
+          "location": "Pasadena, TX",
+          "startDate": "2017-01",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Performed VT, MT and PT on pressure vessels and piping spools, maintaining ASME U-stamp shop records\n- Built weld maps and traceability logs in Excel for 300+ spools per month"
+        },
+        {
+          "company": "Bayou Fabricators",
+          "role": "Pipe Welder",
+          "location": "Pasadena, TX",
+          "startDate": "2013-05",
+          "endDate": "2016-12",
+          "isCurrent": false,
+          "description": "- Welded 6G carbon and stainless pipe with a radiographic pass rate above 98%"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Jacinto College",
+          "degree": "AAS, Welding Technology",
+          "startDate": "2011-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: AWS CWI, ASNT SNT-TC-1A Level II (VT, MT, PT), API 577 Welding Inspection, OSHA 30",
+        "Codes: ASME B31.3, B31.1, Section VIII and IX, AWS D1.1",
+        "Inspection: weld maps, WPS/PQR review, PMI, hardness testing, NDE coordination",
+        "Tools: Fischer coating gauges, Bridge Cam and Hi-Lo gauges, Excel traceability logs"
+      ]
+    },
+    "Pipefitter": {
+      "summary": "Journeyman pipefitter with 11 years installing process, steam and medical gas piping in hospitals, pharma plants and data centers. Reads isometrics and P&IDs, rigs and sets equipment, and led a 6-fitter crew on a $4.8M chilled-water plant delivered with zero hydro test failures.",
+      "experience": [
+        {
+          "company": "Northgate Mechanical",
+          "role": "Journeyman Pipefitter / Foreman",
+          "location": "Columbus, OH",
+          "startDate": "2019-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 6-fitter crew on chilled-water, steam and condensate systems for hospitals and a 30 MW data center\n- Installed 2,400 ft of 12 in. chilled-water header for a $4.8M central plant, passing every hydrostatic test first time\n- Fabricated spools from isometrics in the shop, cutting field labor on two projects by roughly 900 hours\n- Brazed and verified medical gas lines to NFPA 99 for a 120-bed tower, cleared on first third-party verification"
+        },
+        {
+          "company": "Scioto Valley Piping",
+          "role": "Pipefitter",
+          "location": "Dayton, OH",
+          "startDate": "2015-06",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Installed stainless process piping to ASME B31.3 in a pharmaceutical clean-room expansion\n- Rigged and set pumps, heat exchangers and a 400-ton chiller using chain falls and come-alongs"
+        }
+      ],
+      "education": [
+        {
+          "school": "UA Local 189 Training Center",
+          "degree": "5-Year Pipefitter Apprenticeship",
+          "startDate": "2010-08",
+          "endDate": "2015-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ASSE 6010 Medical Gas Installer, UA Star Pipefitter, OSHA 30 Construction, NCCER Rigger",
+        "Piping: carbon and stainless steel, copper brazing, grooved and press systems, steam and condensate",
+        "Codes: ASME B31.1 and B31.3, NFPA 99, ASME Section IX",
+        "Field skills: isometric and P&ID reading, hydro and pneumatic testing, rigging and signaling"
+      ]
+    },
+    "Sheet Metal Worker": {
+      "summary": "Journeyman sheet metal worker with 8 years fabricating and installing commercial HVAC duct. Builds rectangular, spiral and grease duct to SMACNA standards, and cut field rework on a 220,000 sq ft school project by 30% by shop-fabricating from coordinated 3D models.",
+      "experience": [
+        {
+          "company": "Lakeshore Air Systems",
+          "role": "Journeyman Sheet Metal Worker",
+          "location": "Milwaukee, WI",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install rectangular and spiral supply and return duct, VAV boxes and fire dampers on schools and office towers\n- Shop-fabricated fittings from coordinated Revit and AutoCAD MEP models on a 220,000 sq ft school, cutting field rework 30%\n- Built and welded 16-gauge grease duct to NFPA 96 for 4 commercial kitchens, all passing fire marshal inspection\n- Seal and pressure-test duct to SMACNA leakage class, hitting targets on every tested section since 2022"
+        },
+        {
+          "company": "Kettle Moraine Sheet Metal",
+          "role": "Sheet Metal Apprentice",
+          "location": "Waukesha, WI",
+          "startDate": "2016-08",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Ran plasma table, brake and Pittsburgh lock former in the shop, producing 150 fittings per week\n- Hung duct and installed diffusers on 25 tenant improvement jobs"
+        }
+      ],
+      "education": [
+        {
+          "school": "SMART Local 18 JATC",
+          "degree": "Sheet Metal Apprenticeship Certificate",
+          "startDate": "2016-08",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA 30 Construction, NFPA 96 grease duct trained, aerial and scissor lift certified",
+        "Fabrication: plasma cutting, press brake, layout and pattern development, TIG and MIG on light gauge",
+        "Standards: SMACNA HVAC Duct Construction Standards, NFPA 90A and 96",
+        "Software: AutoCAD MEP, Revit, Navisworks for coordination"
+      ]
+    },
+    "Millwright": {
+      "summary": "Industrial millwright with 12 years installing, aligning and rebuilding rotating equipment in paper and steel mills. Specializes in laser shaft alignment, gearbox rebuilds and vibration analysis, and extended mean time between failures on a paper machine's critical drives from 7 to 16 months.",
+      "experience": [
+        {
+          "company": "Northwoods Paper Mill",
+          "role": "Millwright",
+          "location": "Green Bay, WI",
+          "startDate": "2018-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuild gearboxes, pumps and dryer section bearings on a 300-ton-per-day paper machine during planned outages\n- Introduced laser alignment and soft-foot checks on 40 critical drives, raising MTBF from 7 to 16 months\n- Collect route-based vibration data with an SKF analyzer and flag bearing faults an average of 5 weeks before failure\n- Planned and led a 72-hour outage rebuild of the press section, finishing 8 hours ahead of schedule"
+        },
+        {
+          "company": "Lakefront Steel",
+          "role": "Apprentice Millwright",
+          "location": "Gary, IN",
+          "startDate": "2014-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Installed and leveled conveyors, roll stands and hydraulic units on a hot strip mill\n- Precision-set 14 new motors and couplings to within 0.002 in. using dial indicators"
+        }
+      ],
+      "education": [
+        {
+          "school": "Millwright Training Fund (Indiana)",
+          "degree": "4-Year Millwright Apprenticeship",
+          "startDate": "2014-06",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: NCCER Millwright, Vibration Analyst Category I (ISO 18436-2), OSHA 10 General Industry, forklift and overhead crane",
+        "Mechanical: laser and dial indicator alignment, bearing and seal replacement, gearbox rebuilds, hydraulics",
+        "Predictive maintenance: vibration analysis, ultrasound, oil analysis",
+        "Tools: Easy-Laser and Fixturlaser, SKF Microlog, precision levels, rigging gear"
+      ]
+    },
+    "CNC Operator": {
+      "summary": "CNC operator with 3 years running Haas and Okuma mills and lathes in a high-mix aerospace job shop. Sets work offsets, swaps tooling and inspects parts to print, and keeps first-article approval above 97% while running two machines at once on second shift.",
+      "experience": [
+        {
+          "company": "Ridgecrest Precision Machining",
+          "role": "CNC Operator (2nd Shift)",
+          "location": "Wichita, KS",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run 2 Haas VF-2 mills and an Okuma lathe at once, producing aluminum and 17-4 stainless brackets to AS9100 travelers\n- Set work and tool length offsets and replace worn inserts, holding first-article approval at 97% across 600 jobs\n- Inspect with micrometers, height gauges and pin gauges each hour, cutting scrap on recurring part families by 22%\n- Keep cells to a 5S standard that scored highest in the shop's 2025 audits"
+        },
+        {
+          "company": "Plainsview Manufacturing",
+          "role": "Machine Operator / Deburr Technician",
+          "location": "Wichita, KS",
+          "startDate": "2023-02",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Deburred and inspected 1,500 parts per week and loaded parts on a Haas ST-20 lathe\n- Learned basic G-code edits and offset entry, earning promotion to CNC operator in 10 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "WSU Tech",
+          "degree": "Certificate, CNC Machining",
+          "startDate": "2022-01",
+          "endDate": "2022-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: NIMS Level I Measurement, Materials and Safety, NIMS CNC Milling Operations, OSHA 10",
+        "Machines: Haas VF-2 and ST-20, Okuma LB3000, bar feeders",
+        "Inspection: micrometers, calipers, height gauges, thread and pin gauges, blueprint reading, basic GD&T",
+        "Quality: AS9100 travelers, first-article inspection, SPC check sheets"
+      ]
+    },
+    "CNC Machinist": {
+      "summary": "CNC machinist with 9 years setting up and running 3- and 5-axis mills and multi-axis lathes for medical and defense parts. Holds tolerances to ±0.0002 in. in titanium and Inconel, and cut setup time on a 40-part family by 45% with standardized fixtures and tool libraries.",
+      "experience": [
+        {
+          "company": "Copperline Medical Machining",
+          "role": "Lead CNC Machinist",
+          "location": "Minneapolis, MN",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Set up and run DMG Mori 5-axis mills and Citizen Swiss lathes holding ±0.0002 in. tolerances on titanium spinal implants\n- Designed modular fixtures and a shared tool library that cut setup time on a 40-part family by 45%\n- Prove out new programs from Mastercam, editing feeds and speeds to raise tool life in Inconel 718 by 30%\n- Train 4 operators on offsets and in-process inspection under ISO 13485, lifting first-pass yield from 91% to 97%"
+        },
+        {
+          "company": "Twin Rivers Defense Components",
+          "role": "CNC Machinist",
+          "location": "St. Paul, MN",
+          "startDate": "2017-04",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Machined aluminum and steel housings on Haas and Mazak equipment from GD&T drawings to ASME Y14.5\n- Completed ITAR-controlled first articles with a 98% customer acceptance rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hennepin Technical College",
+          "degree": "AAS, Machine Tool Technology",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: NIMS CNC Milling and Turning (Programming, Setup and Operations), OSHA 10 General Industry",
+        "Machines: DMG Mori DMU 50, Mazak Integrex, Citizen L20 Swiss, Haas UMC-750",
+        "Programming: Mastercam, G-code and M-code editing, Fanuc and Siemens controls",
+        "Quality: GD&T (ASME Y14.5), CMM reports, ISO 13485, AS9100, ITAR"
+      ]
+    },
+    "CNC Programmer": {
+      "summary": "CNC programmer with 12 years in machining and 6 writing CAM programs for 5-axis mills and mill-turn centers. Builds verified toolpaths in Mastercam and Vericut, and cut cycle times on a shop's top 25 part numbers by an average of 28%, adding about $410K a year in capacity.",
+      "experience": [
+        {
+          "company": "Highpoint Aerostructures",
+          "role": "Senior CNC Programmer",
+          "location": "Seattle, WA",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Program 5-axis and mill-turn parts in Mastercam and NX CAM for titanium and aluminum aircraft brackets and fittings\n- Rewrote toolpaths with dynamic milling on the top 25 part numbers, cutting cycle times 28% and freeing about $410K a year in capacity\n- Introduced Vericut simulation for every new program, eliminating machine crashes for 30 straight months\n- Created standard post-processors and setup sheets for 14 machines, cutting new-job prove-out from 2 shifts to 1"
+        },
+        {
+          "company": "Puget Sound Precision",
+          "role": "CNC Machinist / Programmer",
+          "location": "Everett, WA",
+          "startDate": "2014-05",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Programmed and ran Haas and Okuma machines for 300+ new jobs a year from 3D models\n- Built a tool library in Mastercam that standardized 180 tools across the shop"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lake Washington Institute of Technology",
+          "degree": "AAS, Machining Technology",
+          "startDate": "2012-09",
+          "endDate": "2014-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "CAM software: Mastercam (Mill 5-axis, Mill-Turn), Siemens NX CAM, Vericut, SolidWorks",
+        "Controls: Fanuc, Okuma OSP, Heidenhain, Haas NGC, post-processor editing",
+        "Machining: titanium, aluminum, 15-5 stainless, high-efficiency milling, workholding design",
+        "Quality: GD&T (ASME Y14.5), AS9100, first-article inspection (AS9102)"
+      ]
+    },
+    "Tool and Die Maker": {
+      "summary": "Journeyman tool and die maker with 15 years building and maintaining progressive and transfer dies for automotive stampings. Designs repairs, runs wire EDM and surface grinders, and cut die-related press downtime 35% at a 22-press stamping plant through a structured die maintenance program.",
+      "experience": [
+        {
+          "company": "Great Lakes Stamping",
+          "role": "Lead Tool and Die Maker",
+          "location": "Toledo, OH",
+          "startDate": "2018-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build, try out and maintain progressive and transfer dies for 400- to 1,200-ton presses supplying automotive Tier 1 parts\n- Launched a hit-count-based die PM program across 160 dies, cutting die-related press downtime 35%\n- Machine punches, forms and inserts on wire EDM, CNC mills and surface grinders, holding tolerances of ±0.0001 in. on critical details\n- Supported 8 new-model die launches through PPAP, meeting customer run-at-rate dates on all 8"
+        },
+        {
+          "company": "Maumee Tool & Die",
+          "role": "Tool and Die Maker",
+          "location": "Perrysburg, OH",
+          "startDate": "2011-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Built 25+ progressive dies from design to tryout for appliance and HVAC brackets\n- Reduced average die repair turnaround from 3 days to 1.5 days with a spare-detail inventory"
+        },
+        {
+          "company": "Maumee Tool & Die",
+          "role": "Tool and Die Apprentice",
+          "location": "Perrysburg, OH",
+          "startDate": "2007-06",
+          "endDate": "2011-05",
+          "isCurrent": false,
+          "description": "- Completed a 4-year, 8,000-hour DOL-registered apprenticeship in die build and repair"
+        }
+      ],
+      "education": [
+        {
+          "school": "Owens Community College",
+          "degree": "Certificate, Tool and Die Technology",
+          "startDate": "2007-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: Journeyman Tool and Die Maker (DOL), OSHA 10 General Industry, overhead crane",
+        "Machining: wire and sinker EDM, CNC milling, surface and jig grinding",
+        "Die work: progressive and transfer dies, tryout, shimming, die setting",
+        "Quality: PPAP, AutoForm reports, CMM, blueprint and die design reading"
+      ]
+    },
+    "Machine Operator": {
+      "summary": "Machine operator with 4 years running injection molding and packaging equipment in a high-volume plastics plant. Handles startups, changeovers and in-line quality checks, keeps scrap under 2%, and helped cut mold changeover time 25% with zero recordable injuries.",
+      "experience": [
+        {
+          "company": "Crestwood Plastics",
+          "role": "Machine Operator II",
+          "location": "Charlotte, NC",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate 4 Engel and Arburg injection molding presses producing 60,000 closures per shift\n- Perform SMED changeovers with the setup tech, reducing average mold change from 80 to 60 minutes\n- Run hourly visual and gauge checks and log defects in the MES, keeping scrap below the 2% target\n- Train 5 new hires on startup, purge and LOTO steps under the plant's OSHA 1910.147 program"
+        },
+        {
+          "company": "Piedmont Packaging Solutions",
+          "role": "Production Operator",
+          "location": "Gastonia, NC",
+          "startDate": "2022-01",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Ran a case erector and shrink-wrap line at 30 cases per minute with 99% on-time order fulfillment\n- Earned forklift certification and handled raw material staging for 2 lines\n- Logged downtime reasons on every stop, giving maintenance the data to fix a recurring glue-gun fault"
+        }
+      ],
+      "education": [
+        {
+          "school": "Central Piedmont Community College",
+          "degree": "Manufacturing Production Technician Certificate (MSSC CPT)",
+          "startDate": "2021-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: MSSC Certified Production Technician (CPT), OSHA 10 General Industry, forklift (sit-down)",
+        "Equipment: Engel and Arburg injection molders, robots and conveyors, case erectors",
+        "Quality: visual inspection, go/no-go gauges, MES defect logging, SPC charts",
+        "Practices: SMED changeovers, 5S, LOTO, GMP basics"
+      ]
+    },
+    "Assembly Technician": {
+      "summary": "Electromechanical assembly technician with 5 years of regulated production experience building industrial control panels and medical capital equipment. Works from wiring diagrams and work instructions, solders to IPC standards, and has kept a 99.2% first-pass test yield on 1,100 assembled units.",
+      "experience": [
+        {
+          "company": "Brookhaven Medical Systems",
+          "role": "Assembly Technician II",
+          "location": "Salt Lake City, UT",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assemble and wire patient-monitoring carts and power modules from controlled work instructions under ISO 13485 and FDA 21 CFR 820\n- Maintain 99.2% first-pass functional test yield across 1,100 units built since 2022\n- Proposed a torque-sequence fixture that cut fastener rework 40% on the main chassis line\n- Complete device history records in Arena PLM with zero documentation findings in two FDA-style internal audits"
+        },
+        {
+          "company": "Wasatch Controls",
+          "role": "Panel Assembler",
+          "location": "Ogden, UT",
+          "startDate": "2021-02",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Built 200+ UL 508A control panels with PLCs, VFDs and terminal blocks from AutoCAD Electrical drawings\n- Crimped, labeled and point-to-point tested wiring, passing internal QC on 98% of panels first time\n- Flagged 3 drawing errors to engineering through ECO requests, preventing a batch of 40 miswired panels"
+        }
+      ],
+      "education": [
+        {
+          "school": "Salt Lake Community College",
+          "degree": "Certificate of Proficiency, Electronics Technology",
+          "startDate": "2019-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: IPC J-STD-001 Certified Specialist, IPC/WHMA-A-620, ESD control trained",
+        "Assembly: wire harnessing, crimping, soldering, torque control, UL 508A panels",
+        "Documentation: work instructions, DHRs, Arena PLM, ISO 13485",
+        "Test: multimeters, hipot and continuity testers, functional test stations"
+      ]
+    },
+    "Manufacturing Technician": {
+      "summary": "Manufacturing technician with 6 years supporting semiconductor and electronics production lines. Sustains process tools, runs DOEs with engineers and writes SOPs, and helped lift yield on a wafer-level packaging line from 92.5% to 96.8% by tightening process controls.",
+      "experience": [
+        {
+          "company": "Mesa Ridge Semiconductor",
+          "role": "Manufacturing Technician III",
+          "location": "Chandler, AZ",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sustain plasma etch, sputter and wafer-bumping tools on a 24/7 wafer-level packaging line, owning 9 tools per shift\n- Ran a 16-run DOE with process engineers on reflow profiles, helping raise line yield from 92.5% to 96.8%\n- Wrote and revised 30 SOPs and OCAPs, reducing out-of-control SPC events by 35%\n- Cut mean time to repair on bumping tools from 5.2 to 3.4 hours with a parts kit and troubleshooting tree"
+        },
+        {
+          "company": "Desert Sun Electronics",
+          "role": "Production Technician",
+          "location": "Tempe, AZ",
+          "startDate": "2020-01",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Ran SMT pick-and-place and reflow ovens building 3,000 PCBAs per week\n- Performed AOI review and rework to IPC-A-610 Class 2 workmanship standards\n- Cut stencil-related solder defects 30% by setting up a paste inspection check at line start"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chandler-Gilbert Community College",
+          "degree": "AAS, Semiconductor Manufacturing Technology",
+          "startDate": "2017-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: IPC-A-610 Certified IPC Specialist, Six Sigma Yellow Belt, cleanroom gowning",
+        "Process tools: plasma etch, PVD sputter, reflow, SMT pick-and-place, AOI",
+        "Quality: SPC, OCAP, DOE support, 8D problem solving",
+        "Systems: MES (Camstar), JMP, SAP"
+      ]
+    },
+    "Quality Technician": {
+      "summary": "ASQ Certified Quality Technician with 7 years in automotive and industrial manufacturing. Programs CMMs, runs SPC and MSA studies and supports PPAP submissions, and cut customer PPM from 210 to 45 at a Tier 1 supplier through better gauging and containment.",
+      "experience": [
+        {
+          "company": "Riverbend Automotive Components",
+          "role": "Quality Technician",
+          "location": "Greenville, SC",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Program and run Zeiss CMMs in Calypso for machined aluminum housings, inspecting 200+ parts per week\n- Built PPAP packages for 18 new part numbers, all approved first time by the OEM customer\n- Ran gauge R&R studies on 35 critical gauges, replacing 6 that failed and cutting customer PPM from 210 to 45\n- Lead containment and 8D data collection on customer complaints, closing average 8Ds in 21 days"
+        },
+        {
+          "company": "Upstate Industrial Castings",
+          "role": "Quality Inspector",
+          "location": "Spartanburg, SC",
+          "startDate": "2019-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Inspected castings by dimensional layout, hardness and visual standards under IATF 16949\n- Maintained SPC charts in InfinityQS for 12 critical characteristics\n- Calibrated 120 shop gauges on a tracked schedule with no overdue items in 2 IATF surveillance audits"
+        }
+      ],
+      "education": [
+        {
+          "school": "Greenville Technical College",
+          "degree": "AAS, Industrial Engineering Technology",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ASQ Certified Quality Technician (CQT), IATF 16949 Internal Auditor, Six Sigma Green Belt",
+        "Inspection: Zeiss CMM (Calypso), Keyence vision, height gauges, surface finish, hardness",
+        "Quality tools: SPC, MSA and gauge R&R, PPAP, FMEA, control plans, 8D",
+        "Software: InfinityQS, Minitab, Excel"
+      ]
+    },
+    "Maintenance Technician": {
+      "summary": "Multi-craft maintenance technician with 6 years keeping bottling and packaging lines running in a 3-shift beverage plant. Troubleshoots electrical, pneumatic and mechanical faults, and helped raise line OEE from 61% to 74% by finishing PMs on time and fixing chronic jams.",
+      "experience": [
+        {
+          "company": "Silver Creek Beverage",
+          "role": "Maintenance Technician II",
+          "location": "Atlanta, GA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Troubleshoot fillers, labelers and palletizers across 4 bottling lines, closing 70+ work orders a month in Fiix\n- Kept PM compliance above 95% for 2 years, supporting a line OEE rise from 61% to 74%\n- Redesigned a guide rail and photo-eye setup on the labeler, cutting jam-related stops by about 60%\n- Replace bearings, belts, motors and pneumatic valves under LOTO with zero safety incidents"
+        },
+        {
+          "company": "Chattahoochee Corrugated",
+          "role": "Maintenance Mechanic",
+          "location": "Marietta, GA",
+          "startDate": "2020-04",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Maintained corrugators and flexo folder-gluers, rebuilding gearboxes and hydraulic units\n- Built a critical spares list of 150 parts that cut wait-for-parts time by a third\n- Rebuilt a slotter head with the OEM tech, restoring the folder-gluer to its 18,000-sheet-per-hour rated speed"
+        }
+      ],
+      "education": [
+        {
+          "school": "Atlanta Technical College",
+          "degree": "Diploma, Industrial Systems Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA 10 General Industry, NFPA 70E, EPA 608 Type II, forklift and scissor lift",
+        "Electrical: 480V three-phase, motor controls, VFDs, Allen-Bradley PLC troubleshooting",
+        "Mechanical: pneumatics, hydraulics, gearboxes, bearings, conveyors, welding basics",
+        "Systems: Fiix CMMS, PM planning, root-cause analysis"
+      ]
+    },
+    "Industrial Maintenance Mechanic": {
+      "summary": "Industrial maintenance mechanic with 11 years repairing heavy rotating, hydraulic and conveying equipment in steel service centers and automotive plants. Rebuilds hydraulic power units and press drives, fabricates replacement parts, and led a press-line reliability push that cut breakdown hours 42%.",
+      "experience": [
+        {
+          "company": "Ohio Valley Steel Processing",
+          "role": "Senior Maintenance Mechanic",
+          "location": "Louisville, KY",
+          "startDate": "2019-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Repair slitter lines, cut-to-length lines and overhead cranes in a 400,000 sq ft steel service center\n- Rebuilt 3 hydraulic power units and replaced cylinders on a 600-ton press, cutting press-line breakdown hours 42%\n- Fabricate guards, brackets and shafts with MIG welding and a manual lathe, saving about $60K a year on outside work\n- Perform monthly crane inspections to OSHA 1910.179 and log findings in Maximo"
+        },
+        {
+          "company": "Bluegrass Axle Assembly",
+          "role": "Maintenance Mechanic",
+          "location": "Georgetown, KY",
+          "startDate": "2015-03",
+          "endDate": "2019-04",
+          "isCurrent": false,
+          "description": "- Maintained conveyors, robotic weld cells and lift assists on a 2-shift axle assembly line\n- Supported TPM teams that raised autonomous maintenance checks from 40% to 90% completion"
+        }
+      ],
+      "education": [
+        {
+          "school": "Jefferson Community and Technical College",
+          "degree": "Diploma, Industrial Maintenance Technology",
+          "startDate": "2013-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA 30 General Industry, NCCER Industrial Maintenance Mechanic, overhead crane inspector, forklift",
+        "Mechanical: hydraulics, pneumatics, gearboxes, power transmission, crane maintenance",
+        "Fabrication: MIG and stick welding, manual lathe and mill, oxy-fuel cutting",
+        "Systems: IBM Maximo, TPM, vibration and oil analysis basics"
+      ]
+    },
+    "Maintenance Planner": {
+      "summary": "Maintenance planner with 14 years in plant maintenance, the last 5 planning and scheduling work for a 450-employee chemical plant. Builds job plans, kits parts and runs weekly schedules in SAP PM, and raised planned work from 48% to 81% of total maintenance hours while reducing overtime 22%.",
+      "experience": [
+        {
+          "company": "Coastal Bend Chemicals",
+          "role": "Maintenance Planner / Scheduler",
+          "location": "Corpus Christi, TX",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan and schedule 900+ work orders a month for 38 craft workers across mechanical, electrical and instrument teams\n- Raised planned and scheduled work from 48% to 81% of total hours, cutting craft overtime 22%\n- Built 260 standard job plans with parts, permits and labor estimates in SAP PM\n- Coordinated a $3.1M, 21-day turnaround of 1,400 jobs that finished on schedule with no recordables"
+        },
+        {
+          "company": "Coastal Bend Chemicals",
+          "role": "Mechanical Technician",
+          "location": "Corpus Christi, TX",
+          "startDate": "2016-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Repaired centrifugal pumps, compressors and valves in a PSM-covered process unit\n- Served on the reliability team that cut repeat pump failures 30% with seal upgrades"
+        },
+        {
+          "company": "Gulf Shore Fabricators",
+          "role": "Millwright Helper",
+          "location": "Ingleside, TX",
+          "startDate": "2012-06",
+          "endDate": "2015-12",
+          "isCurrent": false,
+          "description": "- Assisted with pump alignment, rigging and equipment setting on refinery projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "Del Mar College",
+          "degree": "AAS, Process Technology",
+          "startDate": "2012-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: SMRP Certified Maintenance & Reliability Professional (CMRP), OSHA 30 General Industry, TWIC",
+        "Planning: job plans, work order backlog management, weekly scheduling, kitting, turnaround planning",
+        "Systems: SAP PM, Primavera P6, Excel, Power BI",
+        "Process safety: OSHA 1910.119 PSM, MOC, permit to work"
+      ]
+    },
+    "Maintenance Supervisor": {
+      "summary": "Maintenance supervisor with 15 years in food and consumer goods manufacturing, leading 18 technicians across 3 shifts. Runs a $2.4M maintenance budget, moved the plant from reactive to planned maintenance, and lifted OEE from 64% to 78% while cutting maintenance spend per case 12%.",
+      "experience": [
+        {
+          "company": "Golden Prairie Snacks",
+          "role": "Maintenance Supervisor",
+          "location": "Kansas City, MO",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 18 mechanics, electricians and a planner across 3 shifts supporting 7 fryer and packaging lines\n- Manage a $2.4M annual maintenance budget, cutting maintenance cost per case 12% through PM optimization and vendor consolidation\n- Launched TPM and a weekly reliability review that raised plant OEE from 64% to 78% in 2 years\n- Hired and developed 6 technicians, promoting 3 into lead roles, and held turnover under 10%\n- Kept SQF audits free of maintenance-related nonconformances for 4 consecutive years"
+        },
+        {
+          "company": "Heartland Dairy Cooperative",
+          "role": "Maintenance Lead",
+          "location": "Lenexa, KS",
+          "startDate": "2014-02",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Led a 6-person shift team on fillers, CIP systems and ammonia refrigeration\n- Rolled out UpKeep CMMS and cut emergency work orders from 45% to 20% of total"
+        },
+        {
+          "company": "Midwest Can Works",
+          "role": "Maintenance Technician",
+          "location": "Kansas City, KS",
+          "startDate": "2011-05",
+          "endDate": "2014-01",
+          "isCurrent": false,
+          "description": "- Maintained high-speed can-making presses and conveyors running 2,000 cans per minute"
+        }
+      ],
+      "education": [
+        {
+          "school": "Johnson County Community College",
+          "degree": "AAS, Industrial Maintenance Technology",
+          "startDate": "2009-08",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA 30 General Industry, SMRP CMRP, SQF Practitioner, NFPA 70E",
+        "Leadership: 3-shift scheduling, hiring, coaching, budget management, vendor contracts",
+        "Reliability: TPM, PM optimization, RCA, OEE tracking, critical spares",
+        "Systems: UpKeep, SAP PM, Power BI"
+      ]
+    },
+    "Instrumentation Technician": {
+      "summary": "Instrumentation and controls technician with 9 years calibrating and troubleshooting field instruments and DCS loops in refining and power generation. Maintains 1,800 instruments to a calibration schedule, and cut nuisance trips on a gas turbine unit by 70% after redesigning transmitter installations.",
+      "experience": [
+        {
+          "company": "Neches River Power Station",
+          "role": "I&C Technician",
+          "location": "Beaumont, TX",
+          "startDate": "2020-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Calibrate pressure, flow, level and temperature transmitters and control valves for a 750 MW combined-cycle plant\n- Diagnosed impulse-line freezing and redesigned tracing on 22 transmitters, cutting gas turbine nuisance trips 70%\n- Perform loop checks and HART configuration with a Fluke 754 and AMS Device Manager, closing 95% of PM work orders on time\n- Support SIS proof testing to IEC 61511, documenting 140 safety functions with no audit findings"
+        },
+        {
+          "company": "Port Arthur Refining Services",
+          "role": "Instrument Technician",
+          "location": "Port Arthur, TX",
+          "startDate": "2017-03",
+          "endDate": "2020-10",
+          "isCurrent": false,
+          "description": "- Maintained Rosemount and Yokogawa transmitters and Fisher valves on crude and coker units\n- Commissioned 300 loops on a DeltaV DCS migration during a 30-day turnaround"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lamar Institute of Technology",
+          "degree": "AAS, Instrumentation Technology",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ISA Certified Control Systems Technician (CCST) Level II, OSHA 10, TWIC, NFPA 70E",
+        "Instruments: Rosemount, Yokogawa, Endress+Hauser transmitters, Fisher and Masoneilan valves, analyzers",
+        "Controls: Emerson DeltaV, Honeywell Experion, HART, Foundation Fieldbus, 4-20 mA loops",
+        "Tools: Fluke 754 calibrator, AMS Device Manager, P&ID and loop sheet reading"
+      ]
+    },
+    "Refrigeration Technician": {
+      "summary": "Industrial refrigeration technician with 8 years maintaining ammonia and Freon systems in cold storage and food processing. Holds EPA 608 Universal and RETA CIRO credentials, and cut energy use at a 22 million cubic-foot cold storage site 14% through compressor sequencing and condenser upgrades.",
+      "experience": [
+        {
+          "company": "Polar Point Cold Storage",
+          "role": "Refrigeration Technician II",
+          "location": "Fresno, CA",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate and maintain a 1,600-ton ammonia system with 9 screw compressors serving 22 million cubic feet of frozen storage\n- Retuned compressor sequencing and replaced 2 evaporative condenser fans with VFDs, cutting refrigeration energy use 14%\n- Perform PSM mechanical integrity inspections and logs under OSHA 1910.119 and IIAR 6, with zero findings in the 2025 Cal/OSHA audit\n- Respond to ammonia leak alarms as part of the site HAZMAT team, completing annual 24-hour HAZWOPER refreshers"
+        },
+        {
+          "company": "Valley Fresh Packing",
+          "role": "Refrigeration Mechanic",
+          "location": "Visalia, CA",
+          "startDate": "2018-04",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Serviced R-404A and R-448A rack systems, walk-in coolers and blast freezers across 3 packing sheds\n- Cut refrigerant leak rate below the CARB threshold by repairing and logging leaks on 40 systems"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fresno City College",
+          "degree": "Certificate, Air Conditioning and Refrigeration",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: EPA Section 608 Universal, RETA Certified Industrial Refrigeration Operator (CIRO), 24-hour HAZWOPER, OSHA 10",
+        "Systems: ammonia screw and reciprocating compressors, evaporative condensers, recirculated and DX systems, rack refrigeration",
+        "Compliance: OSHA 1910.119 PSM, IIAR 6 and 7, CARB refrigerant management",
+        "Controls: Frick Quantum HD, Logix-based refrigeration controls, VFDs"
+      ]
+    },
+    "Production Associate": {
+      "summary": "Production associate with 2 years on a high-volume automotive parts assembly line and an MSSC Certified Production Technician credential. Rotates across 6 stations, meets takt time consistently and earned a plant safety award for reporting and fixing 9 near-miss hazards.",
+      "experience": [
+        {
+          "company": "Bluewater Seating Systems",
+          "role": "Production Associate",
+          "location": "Spartanburg, SC",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assemble seat frames and harnesses across 6 cross-trained stations at a 58-second takt time on a 2-shift line\n- Hit 100% of hourly production targets in 2025 while keeping station defects under 0.5%\n- Reported and helped correct 9 near-miss hazards, earning the plant's quarterly safety award\n- Join weekly kaizen events, suggesting a parts-presentation change that saved 4 seconds per cycle"
+        },
+        {
+          "company": "Carolina Fulfillment Partners",
+          "role": "Seasonal Packer",
+          "location": "Greer, SC",
+          "startDate": "2023-10",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Packed and labeled up to 900 orders per shift with 99.8% accuracy during peak season\n- Earned an early contract extension for attendance and accuracy\n- Cross-trained on returns processing and scanner troubleshooting within the first month"
+        }
+      ],
+      "education": [
+        {
+          "school": "Spartanburg Community College",
+          "degree": "Certificate, MSSC Certified Production Technician",
+          "startDate": "2024-01",
+          "endDate": "2024-06"
+        },
+        {
+          "school": "Dorman High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: MSSC Certified Production Technician (CPT 4.0), OSHA 10 General Industry, forklift (stand-up and sit-down)",
+        "Production: assembly to work instructions, takt time, torque tools, scanners",
+        "Quality and safety: visual inspection, error-proofing checks, 5S, LOTO awareness",
+        "Continuous improvement: kaizen events, standard work"
+      ]
+    }
+  }
+}

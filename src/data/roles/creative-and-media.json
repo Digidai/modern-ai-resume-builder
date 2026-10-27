@@ -1,0 +1,1545 @@
+{
+  "family": "Creative & Media",
+  "guide": null,
+  "titles": {
+    "Content Writer": {
+      "summary": "Content writer with 5 years of experience producing SEO blog posts, guides and landing pages for B2B software. Wrote a cluster of 40 articles that grew organic traffic from 18k to 95k monthly sessions. Combines keyword research, interviews with subject experts and clean, scannable writing that earns rankings and demos.",
+      "experience": [
+        {
+          "company": "Stackwise HR Software",
+          "role": "Content Writer",
+          "location": "Remote",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Wrote a 40-article topic cluster on payroll compliance, growing organic sessions from 18k to 95k a month\n- Publish 8 to 10 long-form pieces a month, each briefed with Ahrefs keyword and SERP research\n- Interview HR and tax experts to add original quotes, lifting average time on page by 40%\n- Refreshed 60 underperforming posts, recovering 22 first-page rankings"
+        },
+        {
+          "company": "Wordhouse Content Agency",
+          "role": "Junior Content Writer",
+          "location": "Atlanta, GA",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Wrote blogs, case studies and email copy for 15 SaaS and healthcare clients\n- Met a 12-piece monthly quota with a 95% first-draft approval rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Georgia",
+          "degree": "BA, English",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Payroll compliance hub",
+          "link": "stackwise.io/guides/payroll-compliance",
+          "description": "Pillar page and 40 supporting articles; now drives 30% of the site's organic sign-ups"
+        }
+      ],
+      "skills": [
+        "Writing: long-form articles, guides, case studies, landing pages, editing",
+        "SEO: keyword research, content briefs, on-page optimization, content refreshes",
+        "Tools: Ahrefs, Semrush, Google Search Console, WordPress, Surfer",
+        "Research: subject-matter interviews, source verification"
+      ]
+    },
+    "Copywriter": {
+      "summary": "Copywriter with 6 years of agency and in-house experience writing ads, email and web copy for consumer brands. Wrote a welcome email series that lifted first-purchase conversion by 21%. Writes in many brand voices, tests relentlessly and partners closely with art directors from concept to final cut.",
+      "experience": [
+        {
+          "company": "Juniper & Oak Home Goods",
+          "role": "Copywriter",
+          "location": "Philadelphia, PA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rewrote the welcome email series, raising first-purchase conversion by 21%\n- Write copy for 25+ Meta and TikTok ads a month, testing hooks with the performance team\n- Produced product page copy for 300 SKUs aligned to a new brand voice guide\n- Partner with 2 art directors on seasonal campaigns from concept through launch"
+        },
+        {
+          "company": "Broad Street Creative",
+          "role": "Junior Copywriter",
+          "location": "Philadelphia, PA",
+          "startDate": "2019-07",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Wrote radio, out-of-home and social copy for regional banks, hospitals and restaurants\n- Concepted a hospital recruiting campaign that increased nurse applications by 30%\n- Presented scripts in client reviews alongside creative directors"
+        }
+      ],
+      "education": [
+        {
+          "school": "Temple University",
+          "degree": "BA, Advertising",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Copywriting: ads, email, web, product descriptions, scripts, taglines",
+        "Strategy: brand voice, messaging hierarchies, creative briefs",
+        "Testing: A/B subject lines, ad hook testing, landing page experiments",
+        "Tools: Klaviyo, Meta Ads Manager, Google Docs, Figma"
+      ]
+    },
+    "Technical Writer": {
+      "summary": "Technical writer with 7 years of experience documenting APIs, SDKs and admin features for developer tools. Rebuilt a docs site in a docs-as-code workflow that cut documentation-related support tickets by 34%. Works directly with engineers in Git, writes clear task-based content and maintains style and information architecture standards.",
+      "experience": [
+        {
+          "company": "Conduit Developer Tools",
+          "role": "Technical Writer",
+          "location": "Remote",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt developer docs in a docs-as-code workflow with Markdown, Git and Docusaurus, cutting doc-related tickets by 34%\n- Document REST and GraphQL APIs from OpenAPI specs, covering 180 endpoints\n- Wrote quickstarts for 5 SDKs that reduced median time-to-first-API-call by half\n- Review engineering pull requests for docs impact across 6 teams"
+        },
+        {
+          "company": "Midland Industrial Systems",
+          "role": "Technical Writer",
+          "location": "Cleveland, OH",
+          "startDate": "2018-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Wrote installation and maintenance manuals for factory automation equipment\n- Converted 2,000 pages of legacy manuals to DITA in Oxygen XML\n- Aligned safety content with ANSI Z535 warning standards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Case Western Reserve University",
+          "degree": "BA, English (minor in Computer Science)",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "API quickstart series",
+          "link": "docs.conduit.dev/quickstarts",
+          "description": "Five language quickstarts with runnable samples tested in CI"
+        }
+      ],
+      "skills": [
+        "Documentation: API references, tutorials, how-to guides, release notes, information architecture",
+        "Docs-as-code: Markdown, Git, Docusaurus, OpenAPI, Vale linting",
+        "Structured authoring: DITA, Oxygen XML, MadCap Flare",
+        "Technical: REST, GraphQL, Python and JavaScript samples"
+      ]
+    },
+    "Editor": {
+      "summary": "Editor with 8 years of experience shaping features and service journalism for digital lifestyle publications. Edits a 12-writer roster and grew section pageviews by 48% in 2 years. Brings sharp structural editing, headline and SEO instincts, and steady management of deadlines, freelancers and budgets.",
+      "experience": [
+        {
+          "company": "Hearth & Table Magazine",
+          "role": "Editor",
+          "location": "New York, NY",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Edit the food and travel section, managing 12 staff and freelance writers and 40 stories a month\n- Grew section pageviews by 48% in 2 years through service packages and SEO-led headlines\n- Manage a $180k annual freelance budget and contracts\n- Commissioned a reported regional series that won a James Beard Media Award nomination"
+        },
+        {
+          "company": "Metro Weekend",
+          "role": "Associate Editor",
+          "location": "Brooklyn, NY",
+          "startDate": "2018-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Edited 15 stories a week for a city culture site with 3M monthly readers\n- Launched a weekend newsletter that reached 85k subscribers\n- Fact-checked and line-edited features up to 5,000 words"
+        },
+        {
+          "company": "Metro Weekend",
+          "role": "Editorial Assistant",
+          "location": "Brooklyn, NY",
+          "startDate": "2017-01",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Wrote event listings and managed the CMS publishing calendar\n- Coordinated photo permissions for 20 stories a month"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbia University",
+          "degree": "BA, Comparative Literature",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Editing: structural edits, line editing, headlines, commissioning, fact-checking",
+        "Audience: SEO, newsletters, analytics (Chartbeat, GA4)",
+        "Management: freelancer budgets, editorial calendars, writer development",
+        "Style: AP Stylebook, Chicago Manual of Style, WordPress VIP"
+      ]
+    },
+    "Copy Editor": {
+      "summary": "Copy editor with 6 years of experience at a regional daily newspaper and a nonfiction book publisher. Edits up to 25,000 words a day under deadline with accuracy above newsroom benchmarks. Brings deep command of AP and Chicago style, careful fact-checking and headline writing that respects both readers and search.",
+      "experience": [
+        {
+          "company": "The Lakeside Courier",
+          "role": "Copy Editor",
+          "location": "Milwaukee, WI",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Copy edit 20 to 30 news and sports stories per shift for print and digital editions\n- Write headlines and SEO titles, lifting average search click-through by 15%\n- Reduced published corrections by 40% by introducing a pre-publish names and numbers checklist\n- Maintain the newsroom's local style guide of 600 entries"
+        },
+        {
+          "company": "Northwoods Press",
+          "role": "Production Copy Editor",
+          "location": "Madison, WI",
+          "startDate": "2019-09",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Copy edited 22 nonfiction manuscripts using Chicago Manual of Style\n- Built style sheets and queried authors on 3,000+ issues per title\n- Proofread typeset pages against final edits"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin-Madison",
+          "degree": "BA, Journalism and Mass Communication",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Editing: copy editing, fact-checking, headline writing, proofreading",
+        "Style: AP Stylebook, Chicago Manual of Style, house style sheets",
+        "Tools: Arc XP, InCopy, Microsoft Word track changes, PerfectIt",
+        "Newsroom: deadline editing, corrections policy, SEO headlines"
+      ]
+    },
+    "Proofreader": {
+      "summary": "Proofreader with 5 years of experience checking marketing, regulatory and published materials for accuracy and consistency. Reviews about 400 pages a week with a tracked error-escape rate under 0.2%. Brings meticulous attention to typography, style guides and pharmaceutical labeling rules, with fast turnaround under pressure.",
+      "experience": [
+        {
+          "company": "Clarion Health Communications",
+          "role": "Proofreader",
+          "location": "Parsippany, NJ",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Proofread about 400 pages a week of pharma marketing, patient leaflets and HCP materials\n- Keep error escapes under 0.2% of reviewed pages, tracked in the agency's QC log\n- Check references, claims and Important Safety Information against FDA-approved labeling\n- Annotate PDFs in Veeva PromoMats for medical, legal and regulatory review"
+        },
+        {
+          "company": "Garden State Publishing Services",
+          "role": "Freelance Proofreader",
+          "location": "Remote",
+          "startDate": "2021-01",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Proofread 30 trade and academic titles for 4 publishers\n- Marked typeset pages with standard proof marks and Chicago style queries"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rutgers University",
+          "degree": "BA, English",
+          "startDate": "2016-09",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "UC San Diego Extension",
+          "degree": "Copyediting Certificate",
+          "startDate": "2020-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Proofreading: typographic checks, consistency, reference checking, proof marks",
+        "Style: AMA Manual of Style, Chicago Manual of Style, AP Stylebook",
+        "Regulatory: FDA promotional labeling basics, ISI review",
+        "Tools: Adobe Acrobat, Veeva PromoMats, InDesign, Microsoft Word"
+      ]
+    },
+    "Journalist": {
+      "summary": "Investigative journalist with 9 years of experience covering government, housing and public money for regional newsrooms. A 2024 series on eviction filings prompted a state law change and won a regional Edward R. Murrow Award. Brings public records expertise, data reporting and source-driven narrative writing.",
+      "experience": [
+        {
+          "company": "The Valley Ledger",
+          "role": "Investigative Reporter",
+          "location": "Phoenix, AZ",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Reported a 6-part series on 90,000 eviction filings that led to a 2025 state law change\n- Filed 140 public records requests and analyzed court data in Python and Excel\n- Produce 2 major investigations and 30 news stories a year across print, web and audio\n- Mentor 3 early-career reporters on records requests and interview technique"
+        },
+        {
+          "company": "Sonoran Public Radio",
+          "role": "Government Reporter",
+          "location": "Tucson, AZ",
+          "startDate": "2018-01",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Covered city council, county budget and state legislature for daily newscasts\n- Broke a story on $4M in misused grant funds that triggered an audit\n- Produced 3- to 5-minute features for statewide broadcast"
+        },
+        {
+          "company": "Desert Sun Weekly",
+          "role": "Staff Writer",
+          "location": "Flagstaff, AZ",
+          "startDate": "2016-06",
+          "endDate": "2017-12",
+          "isCurrent": false,
+          "description": "- Wrote 5 to 8 stories a week on education, tribal affairs and local business\n- Photographed and posted stories to social channels"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "BA, Journalism and Mass Communication",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Reporting: investigative reporting, public records (FOIA), source development, interviewing",
+        "Data journalism: Excel, Python (pandas), SQL basics, Datawrapper",
+        "Formats: long-form, breaking news, radio features, podcasts",
+        "Ethics and law: SPJ Code of Ethics, libel and media law basics"
+      ]
+    },
+    "Video Editor": {
+      "summary": "Video editor with 6 years of experience cutting branded content, YouTube series and social video. Edited a weekly YouTube series that grew from 40k to 610k subscribers in 2 years. Fast in Premiere Pro and DaVinci Resolve, with strong story instincts, color and audio finishing, and organized post workflows.",
+      "experience": [
+        {
+          "company": "Loop & Lantern Media",
+          "role": "Video Editor",
+          "location": "Los Angeles, CA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Edit a weekly YouTube cooking series that grew from 40k to 610k subscribers in 2 years\n- Cut 15 to 20 short-form vertical clips a week, raising average Shorts retention to 78%\n- Color grade in DaVinci Resolve and mix dialogue to -14 LUFS delivery specs\n- Built a shared project template in Premiere Pro that cut turnaround from 5 days to 3"
+        },
+        {
+          "company": "Brightframe Productions",
+          "role": "Assistant Editor",
+          "location": "Burbank, CA",
+          "startDate": "2019-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ingested, synced and organized footage for 30 commercial and documentary projects\n- Prepared conform and turnover packages for color and sound vendors\n- Cut social teasers that ran on client paid campaigns"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chapman University",
+          "degree": "BFA, Film Production (Editing)",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Cooking series reel",
+          "link": "vimeo.com/dreyes/editreel",
+          "description": "Two-minute reel of long-form, short-form and branded edits"
+        }
+      ],
+      "skills": [
+        "Editing: story editing, pacing, multicam, short-form vertical, documentary",
+        "Finishing: color grading, audio mixing, captions, deliverables",
+        "Tools: Premiere Pro, DaVinci Resolve, After Effects, Avid Media Composer, Frame.io",
+        "Workflow: media management, proxies, conform, turnovers"
+      ]
+    },
+    "Videographer": {
+      "summary": "Videographer with 7 years of experience shooting corporate, event and documentary video. Shot and edited a hospital recruitment campaign that contributed to a 35% increase in nursing applications. Owns a full Sony cinema kit and handles lighting, audio, drone work and edits as a one-person crew or as part of a team.",
+      "experience": [
+        {
+          "company": "Clearview Visuals",
+          "role": "Videographer",
+          "location": "Denver, CO",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Shoot 60+ projects a year for healthcare, outdoor brands and nonprofits on Sony FX6 and FX3\n- Produced a hospital recruitment campaign tied to a 35% rise in nursing applications\n- Fly FAA Part 107 drone shoots for real estate and tourism clients\n- Manage shoot budgets up to $40k, crewing gaffers and audio techs as needed"
+        },
+        {
+          "company": "Rocky Mountain Events Co.",
+          "role": "Event Videographer",
+          "location": "Boulder, CO",
+          "startDate": "2018-05",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Filmed 120 weddings, conferences and concerts with multi-camera setups\n- Delivered same-day highlight edits for corporate events\n- Captured clean lavalier and boom audio in live environments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado State University",
+          "degree": "BA, Journalism and Media Communication",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: cinematography, lighting, interview setup, multicam, gimbal work",
+        "Audio: lavalier, boom, Zoom F6 recording",
+        "Post: Premiere Pro, DaVinci Resolve, basic After Effects",
+        "Licenses: FAA Part 107 Remote Pilot Certificate"
+      ]
+    },
+    "Animator": {
+      "summary": "2D animator with 6 years of experience on children's television series and branded shorts. Animated 140+ shots across two seasons of a preschool series streamed in 30 countries. Brings strong acting, timing and weight, clean Toon Boom Harmony rigs and reliable footage quotas under production schedules.",
+      "experience": [
+        {
+          "company": "Paper Moon Animation",
+          "role": "Animator",
+          "location": "Burbank, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Animated 140+ shots across 2 seasons of a preschool series streamed in 30 countries\n- Consistently meet a quota of 20 to 25 seconds of finished animation per week in Toon Boom Harmony\n- Built and fixed character rigs used by a 12-animator team\n- Address director and supervisor notes within 1 revision round on most shots"
+        },
+        {
+          "company": "Hopscotch Studios",
+          "role": "Junior Animator",
+          "location": "Glendale, CA",
+          "startDate": "2019-09",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Animated explainer and social shorts for 15 brand clients\n- Cleaned up key poses and in-betweens for senior animators\n- Created lip-sync for 40 dialogue shots"
+        }
+      ],
+      "education": [
+        {
+          "school": "California Institute of the Arts",
+          "degree": "BFA, Character Animation",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Animation reel",
+          "link": "vimeo.com/tkim/reel-2026",
+          "description": "Ninety-second reel of acting, walk cycles and lip-sync shots"
+        }
+      ],
+      "skills": [
+        "Animation: acting, timing, lip-sync, walk cycles, effects animation",
+        "Tools: Toon Boom Harmony, Adobe Animate, After Effects, TVPaint, Storyboard Pro",
+        "Rigging: Harmony cut-out rigs, deformers",
+        "Production: footage quotas, ShotGrid, retakes"
+      ]
+    },
+    "Motion Graphics Designer": {
+      "summary": "Motion graphics designer with 5 years of experience creating broadcast packages, social content and explainer videos. Designed a sports network graphics package used on 200+ live broadcasts. Fluent in After Effects and Cinema 4D, with strong typography, templating and on-time delivery for live and fast-turn content.",
+      "experience": [
+        {
+          "company": "Fieldhouse Sports Network",
+          "role": "Motion Graphics Designer",
+          "location": "Charlotte, NC",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed the network's college basketball graphics package used on 200+ live broadcasts\n- Built Vizrt and Mogrt templates that let producers update lower thirds in under a minute\n- Create 30 social motion pieces a month, contributing to 25% follower growth on Instagram\n- Animate 3D logo stings and bumpers in Cinema 4D with Redshift"
+        },
+        {
+          "company": "Piedmont Creative Group",
+          "role": "Motion Designer",
+          "location": "Raleigh, NC",
+          "startDate": "2020-07",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Produced explainer videos and animated ads for 20 tech and healthcare clients\n- Cut production time per explainer by 30% with a reusable asset library"
+        }
+      ],
+      "education": [
+        {
+          "school": "Savannah College of Art and Design",
+          "degree": "BFA, Motion Media Design",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Broadcast package",
+          "link": "behance.net/jwatts-fieldhouse",
+          "description": "Opens, scorebugs, transitions and lower thirds for a live sports package"
+        }
+      ],
+      "skills": [
+        "Motion: broadcast design, kinetic typography, 3D motion, explainer animation",
+        "Tools: After Effects, Cinema 4D, Redshift, Premiere Pro, Illustrator",
+        "Broadcast: Vizrt, Mogrt templates, live graphics workflows",
+        "Design: typography, layout, brand systems"
+      ]
+    },
+    "3D Artist": {
+      "summary": "3D artist with 6 years of experience creating hard-surface and environment assets for console and PC games. Delivered 300+ game-ready assets for a shipped AA title rated Very Positive on Steam. Strong in modeling, PBR texturing and optimization, with a careful eye on polycount and performance budgets.",
+      "experience": [
+        {
+          "company": "Ironvale Games",
+          "role": "3D Environment Artist",
+          "location": "Austin, TX",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built 300+ game-ready props and modular kits for a shipped AA title on PC and consoles\n- Textured assets in Substance Painter and Designer using a PBR metal-rough workflow\n- Reduced draw calls by 25% in key levels through trim sheets and LOD setup in Unreal Engine 5\n- Collaborate with level designers and 2 outsourcing vendors on asset reviews"
+        },
+        {
+          "company": "Polyfield Studio",
+          "role": "3D Artist",
+          "location": "Dallas, TX",
+          "startDate": "2019-06",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Modeled product visualizations and AR assets for 25 retail clients\n- Created photoreal renders in Blender Cycles and V-Ray\n- Optimized AR models to under 50k triangles for mobile"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Texas",
+          "degree": "BFA, Digital Art",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Abandoned rail yard",
+          "link": "artstation.com/lmorales/railyard",
+          "description": "UE5 environment with modular kit, trim sheets and Nanite foliage tests"
+        }
+      ],
+      "skills": [
+        "3D: hard-surface modeling, environment art, UVs, retopology, LODs",
+        "Texturing: Substance Painter, Substance Designer, PBR workflows",
+        "Tools: Maya, Blender, ZBrush, Unreal Engine 5, Marmoset Toolbag",
+        "Pipeline: Perforce, performance budgets, asset reviews"
+      ]
+    },
+    "Illustrator": {
+      "summary": "Illustrator with 8 years of experience creating editorial, picture book and packaging illustration. Illustrated 6 published children's books, including one that sold 45,000 copies. Brings a distinctive painterly digital style, reliable deadlines and clear communication with art directors, editors and brand teams.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Freelance Illustrator",
+          "location": "Portland, OR",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Illustrated 6 picture books for 3 publishers; one title has sold 45,000 copies\n- Create 25 to 30 editorial illustrations a year for magazines and newspapers, typically on 48-hour deadlines\n- Designed packaging illustration for a tea brand's 12-flavor line sold in 900 stores\n- Negotiate contracts, licensing terms and usage rights with clients"
+        },
+        {
+          "company": "Willow Lane Greetings",
+          "role": "Staff Illustrator",
+          "location": "Seattle, WA",
+          "startDate": "2017-06",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Illustrated 200+ greeting cards and gift wrap designs\n- Created a holiday line that became the top-selling collection in 2018"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific Northwest College of Art",
+          "degree": "BFA, Illustration",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Portfolio",
+          "link": "hnakamura-illustration.com",
+          "description": "Selected picture book spreads, editorial work and packaging"
+        }
+      ],
+      "skills": [
+        "Illustration: picture books, editorial, packaging, character design, lettering",
+        "Tools: Procreate, Photoshop, Illustrator, gouache and watercolor",
+        "Business: licensing and usage rights, contracts, invoicing",
+        "Production: print-ready files, color proofs, art director feedback cycles"
+      ]
+    },
+    "Graphic Artist": {
+      "summary": "Graphic artist with 5 years of experience producing signage, vehicle wraps and promotional graphics for a sign and print shop. Lays out about 600 jobs a year with a reprint rate under 1%. Skilled in vector artwork, large-format production and translating rough customer ideas into clean, production-ready files.",
+      "experience": [
+        {
+          "company": "Signal Peak Signs & Graphics",
+          "role": "Graphic Artist",
+          "location": "Boise, ID",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Create artwork for about 600 jobs a year, from banners and storefront signage to fleet wraps\n- Keep reprint rate under 1% by preflighting files and checking vehicle templates\n- Vectorize customer logos and prepare files for Roland and HP Latex printers and vinyl plotters\n- Present mockups to walk-in customers, closing 70% of quotes on first review"
+        },
+        {
+          "company": "Treasure Valley Screen Print",
+          "role": "Production Artist",
+          "location": "Nampa, ID",
+          "startDate": "2020-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Separated colors and output films for screen-printed apparel orders\n- Designed shirts for 40 schools and local businesses each season"
+        }
+      ],
+      "education": [
+        {
+          "school": "College of Western Idaho",
+          "degree": "AAS, Graphic Design",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: vector illustration, signage layout, vehicle wrap design, apparel graphics",
+        "Production: large-format print, vinyl cutting, color separations, preflight",
+        "Tools: Illustrator, CorelDRAW, Photoshop, FlexiSIGN, VersaWorks",
+        "Customer: mockups, quoting support, proof approvals"
+      ]
+    },
+    "Photographer": {
+      "summary": "Commercial photographer with 9 years of experience shooting product, food and lifestyle work for brands and agencies. Shot an e-commerce image system that lifted a client's product page conversion by 12%. Runs shoots end to end, from pre-production and crew to lighting, retouching and asset delivery.",
+      "experience": [
+        {
+          "company": "Northlight Photo Studio",
+          "role": "Owner and Commercial Photographer",
+          "location": "Minneapolis, MN",
+          "startDate": "2019-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Shoot 70+ commercial projects a year for food, outdoor and home brands with budgets up to $60k\n- Built an e-commerce image system for a cookware client that lifted product page conversion by 12%\n- Manage crews of up to 6 including stylists, assistants and digital techs\n- Deliver retouched assets in Capture One and Photoshop within 5 business days"
+        },
+        {
+          "company": "Great Lakes Retail Group",
+          "role": "Staff Photographer",
+          "location": "St. Paul, MN",
+          "startDate": "2016-06",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Photographed 4,000 SKUs a year for web and catalog in an in-house studio\n- Standardized lighting setups, cutting reshoot rates by 30%\n- Assisted on lifestyle location shoots for seasonal catalogs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Minneapolis College of Art and Design",
+          "degree": "BFA, Photography",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Photography: product, food, lifestyle, studio and location lighting",
+        "Post: Capture One, Lightroom, Photoshop retouching, color management",
+        "Gear: Phase One and Canon systems, Profoto strobes, tethered capture",
+        "Business: estimates, usage licensing, crew management, client relations"
+      ]
+    },
+    "Creative Producer": {
+      "summary": "Creative producer with 8 years of experience producing integrated campaigns, shoots and branded content for consumer brands. Produces 40+ deliverables per campaign across video, photo and social with budgets up to $750k. Keeps creative ambition and budgets aligned, managing vendors, schedules and talent from bid to delivery.",
+      "experience": [
+        {
+          "company": "Marigold Brand Studio",
+          "role": "Creative Producer",
+          "location": "New York, NY",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produce integrated campaigns with budgets up to $750k, delivering 40+ assets each across video, photo and social\n- Bid and manage production companies, editors and post houses, bringing campaigns in 6% under budget on average\n- Coordinate SAG-AFTRA talent bookings, usage and clearances with business affairs\n- Built a production tracker in Airtable used by 3 creative teams"
+        },
+        {
+          "company": "Hudson Yard Agency",
+          "role": "Associate Producer",
+          "location": "New York, NY",
+          "startDate": "2018-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Produced 50 social and digital video shoots for beauty and spirits clients\n- Managed call sheets, permits and location logistics\n- Tracked actualized costs against estimates"
+        }
+      ],
+      "education": [
+        {
+          "school": "Syracuse University",
+          "degree": "BS, Television, Radio and Film",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: bidding, budgeting, scheduling, vendor management, post-production oversight",
+        "Talent and legal: SAG-AFTRA, usage rights, clearances, releases",
+        "Tools: Airtable, Frame.io, Wrapbook, Google Workspace",
+        "Formats: commercial video, photo, social, experiential"
+      ]
+    },
+    "Producer (Film/TV)": {
+      "summary": "Film and television producer with 12 years of experience on unscripted series and feature documentaries. Produced 3 seasons of a cable docuseries averaging 1.2M viewers per episode. Manages budgets up to $6M, crews of 40 and the full path from development and financing through delivery to networks and streamers.",
+      "experience": [
+        {
+          "company": "Longshot Pictures",
+          "role": "Producer",
+          "location": "Los Angeles, CA",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produced 3 seasons of a cable docuseries averaging 1.2M viewers per episode\n- Manage series budgets up to $6M and crews of up to 40 across 4 states\n- Developed and pitched 8 formats, selling 2 to streaming platforms\n- Oversee network deliverables, E&O insurance, music licensing and clearances"
+        },
+        {
+          "company": "True North Documentary",
+          "role": "Co-Producer",
+          "location": "Atlanta, GA",
+          "startDate": "2016-04",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Co-produced a feature documentary that premiered at a top-tier festival and sold to a streamer\n- Managed archival licensing for 600 clips and stills\n- Built shooting schedules for 90 production days"
+        },
+        {
+          "company": "Peachtree Media",
+          "role": "Associate Producer",
+          "location": "Atlanta, GA",
+          "startDate": "2014-01",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Researched and booked cast for 2 reality series\n- Wrote story notes and logged field interviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Southern California",
+          "degree": "BA, Cinema and Media Studies",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Producing: development, pitching, financing, budgeting, scheduling",
+        "Legal and delivery: clearances, E&O insurance, music licensing, network deliverables",
+        "Tools: Movie Magic Budgeting, Movie Magic Scheduling, Final Draft",
+        "Leadership: crew hiring, union agreements, showrunner partnership"
+      ]
+    },
+    "Digital Content Producer": {
+      "summary": "Digital content producer with 6 years of experience producing web, social and newsletter content for a public media organization. Grew the station's TikTok and Instagram audiences to 420k combined followers. Juggles writing, short video, scheduling and analytics to turn broadcast stories into formats audiences actually finish.",
+      "experience": [
+        {
+          "company": "Bayline Public Media",
+          "role": "Digital Content Producer",
+          "location": "San Francisco, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Adapt radio and TV stories into web articles, vertical video and carousels, producing 50+ pieces a week\n- Grew TikTok and Instagram audiences from 90k to 420k combined followers in 3 years\n- Launched a daily morning newsletter that reached 65k subscribers with a 46% open rate\n- Track performance in Chartbeat and Sprout Social and share weekly learnings with editors"
+        },
+        {
+          "company": "Golden Coast News",
+          "role": "Web Producer",
+          "location": "Oakland, CA",
+          "startDate": "2019-09",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Published 20 stories a shift in the CMS with headlines, images and SEO metadata\n- Live-blogged breaking news events including wildfire coverage"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Francisco State University",
+          "degree": "BA, Journalism",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Content: web writing, short-form video, newsletters, social packaging",
+        "Tools: Premiere Pro, CapCut, Canva, WordPress, Mailchimp",
+        "Analytics: Chartbeat, Sprout Social, GA4",
+        "News: AP style, live blogging, breaking news workflows"
+      ]
+    },
+    "Podcast Producer": {
+      "summary": "Podcast producer with 6 years of experience producing narrative and interview shows. Produced a narrative series that reached 4.5M downloads and the top 20 of the Apple Podcasts charts. Handles booking, story structure, tape syncs, editing and mixing, plus launch plans that build audiences for each new season.",
+      "experience": [
+        {
+          "company": "Lanternfish Audio",
+          "role": "Podcast Producer",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produced a 10-episode narrative series with 4.5M downloads that reached the Apple Podcasts top 20\n- Produce a weekly interview show, booking guests and editing 50-minute episodes in Pro Tools\n- Script and structure episodes with hosts, cutting 3 hours of tape to 40-minute stories\n- Mix to -16 LUFS and manage feeds, show notes and dynamic ad insertion"
+        },
+        {
+          "company": "Riverside Community Radio",
+          "role": "Associate Producer",
+          "location": "Chicago, IL",
+          "startDate": "2019-08",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Produced segments and promos for a daily local news show\n- Edited listener voice memos into a weekly feature\n- Grew the station's podcast feed from 5k to 30k monthly downloads"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University",
+          "degree": "BS, Journalism",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: booking, interviewing, scripting, story editing, tape syncs",
+        "Audio: Pro Tools, Adobe Audition, Descript, iZotope RX, loudness standards",
+        "Distribution: Megaphone, Apple Podcasts Connect, Spotify for Podcasters, dynamic ad insertion",
+        "Growth: launch plans, cross-promotion, audience analytics"
+      ]
+    },
+    "Audio Engineer": {
+      "summary": "Audio engineer with 10 years of experience in recording, mixing and live sound for music and broadcast. Engineered and mixed 3 albums released by independent labels, one of which charted on Billboard's Heatseekers list. Brings Pro Tools expertise, strong signal-flow troubleshooting and calm under live broadcast pressure.",
+      "experience": [
+        {
+          "company": "Riverbank Recording Studios",
+          "role": "Staff Audio Engineer",
+          "location": "Nashville, TN",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Track and mix 150+ sessions a year for artists, film scoring and voiceover clients\n- Engineered 3 independent-label albums, one charting on Billboard Heatseekers\n- Maintain the studio's SSL console, outboard gear and Pro Tools HDX systems\n- Train 2 assistant engineers on mic technique and session setup"
+        },
+        {
+          "company": "Volunteer State Broadcasting",
+          "role": "Broadcast Audio Engineer",
+          "location": "Nashville, TN",
+          "startDate": "2017-03",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Mixed live audio for daily news and 30 live concert broadcasts a year\n- Kept on-air audio within loudness standards under the CALM Act\n- Configured Dante networks and wireless frequency plans"
+        },
+        {
+          "company": "Exit Ramp Live",
+          "role": "Live Sound Technician",
+          "location": "Memphis, TN",
+          "startDate": "2015-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Ran front-of-house and monitors for 200 club shows a year\n- Set up and struck PA systems for touring acts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "BS, Audio Production",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Engineering: tracking, mixing, editing, live sound, broadcast audio",
+        "Tools: Pro Tools HDX, SSL consoles, Logic Pro, Waves and UAD plug-ins, iZotope RX",
+        "Systems: Dante, signal flow, wireless frequency coordination, studio maintenance",
+        "Certifications: Avid Pro Tools Certified Operator, Dante Level 2"
+      ]
+    },
+    "Sound Designer": {
+      "summary": "Sound designer with 7 years of experience creating sound effects, ambiences and interactive audio for games. Designed and implemented 2,500+ sounds for a shipped action title praised for its audio in launch reviews. Combines field recording and synthesis with Wwise implementation and close work with gameplay engineers.",
+      "experience": [
+        {
+          "company": "Emberfall Interactive",
+          "role": "Sound Designer",
+          "location": "Seattle, WA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed and implemented 2,500+ sounds for a shipped action RPG on PC and consoles\n- Built Wwise switch, RTPC and state systems for weapons, footsteps and dynamic weather\n- Cut audio memory use by 30% on consoles through bank optimization and streaming setup\n- Recorded custom foley and field sessions across 6 locations"
+        },
+        {
+          "company": "Sonic Grove Post",
+          "role": "Assistant Sound Designer",
+          "location": "Los Angeles, CA",
+          "startDate": "2019-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Cut sound effects and backgrounds for 2 animated series and 30 commercials\n- Edited dialogue and built clean M&E stems for international delivery"
+        }
+      ],
+      "education": [
+        {
+          "school": "Berklee College of Music",
+          "degree": "BM, Electronic Production and Design",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Gameplay audio reel",
+          "link": "vimeo.com/aokafor/game-audio",
+          "description": "Re-designed gameplay captures showing weapons, creatures and ambience systems"
+        }
+      ],
+      "skills": [
+        "Sound design: SFX creation, foley, ambiences, synthesis, field recording",
+        "Implementation: Wwise, FMOD, Unreal Engine 5 audio, profiling",
+        "Tools: Reaper, Pro Tools, Soundminer, iZotope RX",
+        "Post: dialogue editing, M&E stems, loudness specs"
+      ]
+    },
+    "Music Producer": {
+      "summary": "Music producer with 9 years of experience producing pop, R&B and sync music for artists, brands and TV. Produced tracks with 120M combined streams and 40+ sync placements. Brings songwriting and arrangement skill, fast Ableton and Logic workflows and the business sense to manage splits, publishing and deadlines.",
+      "experience": [
+        {
+          "company": "Neon Harbor Music",
+          "role": "Music Producer",
+          "location": "Atlanta, GA",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produced and co-wrote tracks with 120M combined streams across Spotify and Apple Music\n- Landed 40+ sync placements in TV series, ads and trailers through 2 music libraries\n- Run 3 to 4 studio sessions a week with artists, writers and session musicians\n- Manage split sheets, PRO registrations and stem deliveries for every release"
+        },
+        {
+          "company": "Midtown Beat Lab",
+          "role": "Staff Producer",
+          "location": "Atlanta, GA",
+          "startDate": "2017-01",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Produced 60 tracks for a production music catalog of 2,000 titles\n- Delivered custom jingles for 15 regional brands on 1-week turnarounds"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "BS, Music Management",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: beat making, arrangement, vocal production, songwriting, sound selection",
+        "Tools: Ableton Live, Logic Pro, Pro Tools, Serum, Melodyne",
+        "Business: split sheets, publishing, PRO registration (BMI, ASCAP), sync licensing",
+        "Mixing: rough mixes, stem prep, mix revisions"
+      ]
+    },
+    "Content Creator": {
+      "summary": "Independent content creator with 5 years of experience building a personal finance channel across YouTube, TikTok and a newsletter. Grew to 380k YouTube subscribers and 52k newsletter readers while running a business earning $410k in 2025. Handles scripting, filming, editing, sponsorships and analytics as a small studio of one plus two contractors.",
+      "experience": [
+        {
+          "company": "Money on Monday (independent channel)",
+          "role": "Founder and Content Creator",
+          "location": "Remote",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Grew a personal finance YouTube channel to 380k subscribers and 48M lifetime views\n- Built a 52k-subscriber newsletter on beehiiv with a 51% average open rate\n- Generated $410k in 2025 revenue from AdSense, 20 brand sponsorships and a budgeting course\n- Manage 2 contract editors and a weekly publishing calendar of 1 long video and 5 shorts"
+        },
+        {
+          "company": "Fairmount Credit Union",
+          "role": "Member Education Specialist",
+          "location": "Philadelphia, PA",
+          "startDate": "2018-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Taught 80 financial literacy workshops for members and local schools\n- Wrote and filmed short explainer videos for the credit union's social accounts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pennsylvania State University",
+          "degree": "BS, Finance",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Content: scripting, on-camera hosting, YouTube long-form, Shorts, TikTok, newsletters",
+        "Production: Premiere Pro, CapCut, Descript, lighting and audio setup",
+        "Growth: YouTube Studio analytics, thumbnail testing, SEO titles, retention analysis",
+        "Business: sponsorship negotiation, FTC disclosure, course launches, contractor management"
+      ]
+    },
+    "Social Media Content Creator": {
+      "summary": "Social media content creator with 3 years of in-house experience making short-form video for a beauty brand. Created a TikTok series that drove 9M views and sold out a new serum in 4 days. Plans, films, edits and posts trend-aware content daily while staying on brand and on top of performance data.",
+      "experience": [
+        {
+          "company": "Dewdrop Beauty",
+          "role": "Social Media Content Creator",
+          "location": "Miami, FL",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Film and edit 25 to 30 TikToks, Reels and Stories a week on iPhone and CapCut\n- Created a get-ready-with-me series with 9M views that sold out a serum launch in 4 days\n- Grew TikTok from 60k to 310k followers and raised average engagement rate to 7.2%\n- Coordinate 15 creator collaborations a quarter with the influencer team"
+        },
+        {
+          "company": "Biscayne Bistro Group",
+          "role": "Social Media Coordinator",
+          "location": "Miami, FL",
+          "startDate": "2022-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Shot and posted content for 4 restaurant accounts\n- Increased Instagram reservations link clicks by 35% with menu reels"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Miami",
+          "degree": "BS, Communication (Media Management)",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Content: short-form video, on-camera presence, trend research, captions and hooks",
+        "Platforms: TikTok, Instagram Reels, YouTube Shorts, Pinterest",
+        "Tools: CapCut, Premiere Rush, Canva, Later, TikTok Creative Center",
+        "Analytics: retention, engagement rate, Sprout Social reporting"
+      ]
+    },
+    "Creative Strategist": {
+      "summary": "Creative strategist with 6 years of experience turning performance data and customer research into ad concepts for DTC brands. Built a creative testing framework that cut cost per acquisition by 32% on $8M in annual Meta spend. Bridges media buyers, designers and editors with clear briefs grounded in audience insight.",
+      "experience": [
+        {
+          "company": "Velvet Rope Growth",
+          "role": "Creative Strategist",
+          "location": "Remote",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a creative testing framework for $8M in annual Meta spend, cutting CPA by 32%\n- Write 40+ creative briefs a month grounded in reviews, surveys and competitor ad libraries\n- Analyze hook rate, hold rate and ROAS by concept with media buyers each week\n- Developed a UGC script library used by 60 creators across 7 brands"
+        },
+        {
+          "company": "Copper Coast Agency",
+          "role": "Brand Strategist",
+          "location": "San Diego, CA",
+          "startDate": "2019-09",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Led audience research and positioning for 12 consumer clients\n- Wrote creative platforms for 4 brand campaigns\n- Ran focus groups and surveys with 1,500 consumers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at Austin",
+          "degree": "BS, Advertising",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: creative briefs, audience insight, messaging angles, concept testing",
+        "Performance: Meta Ads, TikTok Ads, hook and hold rate analysis, ROAS, CPA",
+        "Research: review mining, surveys, competitor ad libraries, focus groups",
+        "Tools: Motion, Foreplay, Triple Whale, Google Sheets"
+      ]
+    },
+    "Scriptwriter": {
+      "summary": "Scriptwriter with 7 years of experience writing scripts for branded video, explainers and corporate training. Wrote a safety training series viewed by 60,000 employees that reduced reportable incidents by 18%. Translates complex subjects into clear, human scripts with strong structure, voice and timing for narration and on-camera talent.",
+      "experience": [
+        {
+          "company": "Brightreel Learning Studio",
+          "role": "Scriptwriter",
+          "location": "Remote",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Wrote a 14-episode OSHA-aligned safety series viewed by 60,000 employees, tied to an 18% drop in incidents\n- Script 60 to 80 explainer and training videos a year for healthcare, logistics and software clients\n- Interview subject matter experts and turn findings into 2- to 8-minute scripts with shot notes\n- Hold revisions to 2 rounds on 90% of scripts through clear outlines and table reads"
+        },
+        {
+          "company": "Crosstown Video Co.",
+          "role": "Writer and Producer",
+          "location": "Kansas City, MO",
+          "startDate": "2018-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Wrote scripts for 40 commercials and brand stories for regional clients\n- Directed voiceover sessions and supervised edits"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri",
+          "degree": "BJ, Journalism (Strategic Communication)",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Writing: video scripts, narration, dialogue, storyboards, treatments",
+        "Formats: explainers, training, commercials, documentary-style brand stories",
+        "Process: SME interviews, outlining, table reads, VO direction",
+        "Tools: Final Draft, Celtx, Google Docs, Articulate Rise"
+      ]
+    },
+    "Screenwriter": {
+      "summary": "Screenwriter with 8 years of experience in television writers' rooms and feature development. Staff writer turned story editor on two streaming drama series, with 3 produced episodes. Brings sharp character work, strong structure and breaking skills, plus a sold original feature currently in development.",
+      "experience": [
+        {
+          "company": "Wildfire Television",
+          "role": "Story Editor",
+          "location": "Los Angeles, CA",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Break story for a 10-episode streaming drama in a 7-writer room\n- Wrote 2 produced episodes and punched up dialogue across the season\n- Deliver outlines and drafts on 3-week episode cycles alongside the showrunner\n- Attend production meetings and revise pages for schedule and budget constraints"
+        },
+        {
+          "company": "Bluegate Studios",
+          "role": "Staff Writer",
+          "location": "Los Angeles, CA",
+          "startDate": "2021-06",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Pitched story arcs and character beats for 2 seasons\n- Co-wrote 1 produced episode in season 2\n- Sold original feature spec to an independent production company in 2023"
+        },
+        {
+          "company": "Bluegate Studios",
+          "role": "Writers' Assistant",
+          "location": "Los Angeles, CA",
+          "startDate": "2018-09",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Took room notes and maintained story documents for 2 series\n- Wrote script coverage for 150 submissions"
+        }
+      ],
+      "education": [
+        {
+          "school": "UCLA School of Theater, Film and Television",
+          "degree": "MFA, Screenwriting",
+          "startDate": "2016-09",
+          "endDate": "2018-06"
+        },
+        {
+          "school": "Wesleyan University",
+          "degree": "BA, Film Studies",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Writing: TV drama, features, pilots, outlines, rewrites, dialogue",
+        "Room skills: breaking story, pitching, punch-up, notes implementation",
+        "Tools: Final Draft, WriterDuet, Highland",
+        "Industry: WGA member, coverage, development process"
+      ]
+    },
+    "Editorial Assistant": {
+      "summary": "Editorial assistant with 1.5 years of experience at a trade book publisher, supporting 2 senior editors across 30 titles a year. Built a submissions tracking system that cut manuscript response time from 10 weeks to 4. Brings careful reading, organized production support and an English degree with publishing coursework.",
+      "experience": [
+        {
+          "company": "Brindle House Books",
+          "role": "Editorial Assistant",
+          "location": "New York, NY",
+          "startDate": "2025-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 2 senior editors on about 30 fiction and nonfiction titles a year\n- Built a submissions tracker in Airtable, cutting agent response time from 10 weeks to 4\n- Write reader reports on 15 to 20 manuscripts a month\n- Draft jacket and catalog copy and route manuscripts through copyediting and proofs"
+        },
+        {
+          "company": "Ridgeline Literary Journal",
+          "role": "Editorial Intern",
+          "location": "Ithaca, NY",
+          "startDate": "2023-09",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Screened 400 fiction and poetry submissions for a student-run quarterly\n- Proofread 2 issues and coordinated author contracts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ithaca College",
+          "degree": "BA, English (Publishing minor)",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        },
+        {
+          "school": "Columbia Publishing Course",
+          "degree": "Certificate",
+          "startDate": "2024-06",
+          "endDate": "2024-07"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Editorial: reader reports, manuscript evaluation, jacket copy, proofreading",
+        "Production: transmittals, schedules, permissions, contracts routing",
+        "Tools: Airtable, Microsoft Word track changes, Adobe Acrobat, Biblio",
+        "Style: Chicago Manual of Style"
+      ]
+    },
+    "Junior Copywriter": {
+      "summary": "Junior copywriter with 1 year of agency experience writing social, email and display copy for restaurant, retail and tourism clients. Wrote a tourism campaign line that ran across 40 billboards and lifted site visits by 26%. Brings a portfolio school foundation, quick drafts and an ear for brand voice.",
+      "experience": [
+        {
+          "company": "Red Clay Creative",
+          "role": "Junior Copywriter",
+          "location": "Birmingham, AL",
+          "startDate": "2025-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Wrote a tourism campaign line used on 40 billboards and paid social, lifting site visits by 26%\n- Draft social captions, emails and display ads for 9 clients each month\n- Pair with an art director on concepts for 3 new business pitches\n- Turn around client edits within 24 hours on most rush jobs"
+        },
+        {
+          "company": "Magic City Marketing",
+          "role": "Copywriting Intern",
+          "location": "Birmingham, AL",
+          "startDate": "2024-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Wrote 60 social posts and 4 blog articles for a regional hospital\n- Proofread print ads and brochures before press"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Alabama",
+          "degree": "BA, Advertising",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Spec campaign: city bike share",
+          "link": "ttucker-copy.com/bikeshare",
+          "description": "Portfolio campaign with headlines, radio script and social series for a bike-share launch"
+        }
+      ],
+      "skills": [
+        "Copywriting: headlines, social captions, email, display ads, radio scripts",
+        "Concepting: campaign ideas, taglines, brand voice",
+        "Tools: Google Docs, Canva, Meta Ads Manager, Grammarly",
+        "Coursework: Copywriting I and II, Creative Portfolio, Consumer Behavior"
+      ]
+    },
+    "Senior Copywriter": {
+      "summary": "Senior copywriter with 10 years of experience concepting and writing integrated campaigns for automotive, telecom and financial brands. Wrote a national TV and digital campaign credited with a 14% lift in brand consideration. Leads copy on accounts, mentors juniors and sells ideas confidently to senior clients.",
+      "experience": [
+        {
+          "company": "Tall Pines Advertising",
+          "role": "Senior Copywriter",
+          "location": "Detroit, MI",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead copy on an automotive account with $30M in annual media, writing TV, radio, digital and dealer work\n- Wrote a national campaign credited with a 14% lift in brand consideration in tracking studies\n- Mentor 2 junior copywriters through script reviews and pitch prep\n- Co-led 4 new business pitches, winning 2 accounts worth $3.5M in fees"
+        },
+        {
+          "company": "Great Lakes Agency",
+          "role": "Copywriter",
+          "location": "Chicago, IL",
+          "startDate": "2017-05",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Wrote integrated campaigns for a regional telecom and 2 credit unions\n- Scripted 25 broadcast spots and attended shoots and edits\n- Wrote a switch-and-save campaign that grew new lines by 9%"
+        },
+        {
+          "company": "Second City Digital",
+          "role": "Junior Copywriter",
+          "location": "Chicago, IL",
+          "startDate": "2015-07",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Wrote banner, email and social copy for retail clients\n- Contributed lines to a student-loan campaign that won a local ADDY"
+        }
+      ],
+      "education": [
+        {
+          "school": "Miami Ad School",
+          "degree": "Portfolio Program, Copywriting",
+          "startDate": "2014-01",
+          "endDate": "2015-06"
+        },
+        {
+          "school": "Michigan State University",
+          "degree": "BA, Advertising",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Copywriting: TV and radio scripts, long-form, digital, social, brand manifestos",
+        "Concepting: campaign platforms, pitches, presenting to clients",
+        "Leadership: mentoring, script reviews, shoot and edit supervision",
+        "Compliance: automotive disclaimer and financial services copy review"
+      ]
+    },
+    "Managing Editor": {
+      "summary": "Managing editor with 11 years of experience running daily operations for a digital news and features site with 8M monthly readers. Manages a 14-person editorial staff and a $1.1M budget. Rebuilt the publishing workflow to cut time-to-publish by 40% while keeping standards, corrections and legal review tight.",
+      "experience": [
+        {
+          "company": "The Northline Report",
+          "role": "Managing Editor",
+          "location": "Chicago, IL",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 14 editors, reporters and producers publishing 60 stories a day for 8M monthly readers\n- Own a $1.1M editorial budget covering staff, freelancers and syndication\n- Rebuilt publishing workflow in Arc XP, cutting time-to-publish by 40%\n- Oversee standards, corrections and pre-publication legal review with outside counsel"
+        },
+        {
+          "company": "Prairie Business Journal",
+          "role": "Deputy Editor",
+          "location": "Chicago, IL",
+          "startDate": "2017-02",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Edited enterprise stories and managed 6 reporters on the business desk\n- Launched a paid newsletter that reached 12k subscribers\n- Coordinated coverage plans for elections and earnings seasons"
+        },
+        {
+          "company": "Prairie Business Journal",
+          "role": "Reporter",
+          "location": "Chicago, IL",
+          "startDate": "2014-06",
+          "endDate": "2017-01",
+          "isCurrent": false,
+          "description": "- Covered banking and real estate, filing 4 to 6 stories a week\n- Broke a story on a $200M development deal later picked up nationally"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University",
+          "degree": "MSJ, Journalism",
+          "startDate": "2013-06",
+          "endDate": "2014-06"
+        },
+        {
+          "school": "University of Iowa",
+          "degree": "BA, Journalism and Political Science",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Editorial management: staffing, scheduling, budgets, workflow design, coverage planning",
+        "Standards: corrections policy, legal review, sourcing standards, AP style",
+        "Tools: Arc XP, Chartbeat, Slack, Google Workspace, Trello",
+        "Audience: newsletters, paid subscriptions, SEO and homepage programming"
+      ]
+    },
+    "Editor-in-Chief": {
+      "summary": "Editor-in-chief with 18 years of experience leading magazine and digital editorial brands. Leads a 30-person team across print, digital, video and events for a home and design title. Repositioned the brand around subscriptions and events, growing digital revenue from $4M to $11M while winning two National Magazine Award nominations.",
+      "experience": [
+        {
+          "company": "Dwelling Quarterly",
+          "role": "Editor-in-Chief",
+          "location": "New York, NY",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 30-person editorial, video and design team across print, web, social and events\n- Grew digital revenue from $4M to $11M by launching a membership program and paid design guides\n- Set editorial vision for 4 print issues a year and 2M monthly digital readers\n- Earned 2 National Magazine Award nominations and serve as the brand's public voice"
+        },
+        {
+          "company": "Urban Living Media",
+          "role": "Executive Editor",
+          "location": "New York, NY",
+          "startDate": "2014-09",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Ran day-to-day editorial for a lifestyle site with 5M monthly readers\n- Built a video unit that produced 200 episodes a year\n- Launched a branded content studio generating $2.5M annually"
+        },
+        {
+          "company": "Gotham Style Magazine",
+          "role": "Features Editor",
+          "location": "New York, NY",
+          "startDate": "2008-06",
+          "endDate": "2014-08",
+          "isCurrent": false,
+          "description": "- Commissioned and edited 80 features a year\n- Edited a cover story that became the issue's best-selling newsstand edition in 5 years"
+        }
+      ],
+      "education": [
+        {
+          "school": "Brown University",
+          "degree": "BA, English and American Literature",
+          "startDate": "2004-09",
+          "endDate": "2008-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: editorial vision, team building, budgets, cross-platform strategy",
+        "Revenue: subscriptions and memberships, events, branded content partnerships",
+        "Editorial: features, commissioning, cover strategy, video and social",
+        "External: press interviews, panel moderation, advertiser relationships"
+      ]
+    },
+    "Senior Video Editor": {
+      "summary": "Senior video editor with 11 years of experience cutting commercials, documentary series and branded campaigns. Edited a national campaign that won a Silver Clio and a docuseries streamed in 50 countries. Leads post teams, shapes story from raw footage and manages finishing with color, sound and VFX vendors.",
+      "experience": [
+        {
+          "company": "Cutline Post",
+          "role": "Senior Video Editor",
+          "location": "New York, NY",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Edit commercials and campaigns for automotive, sports and tech brands, including a Silver Clio winner\n- Cut a 6-episode docuseries from 900 hours of footage, now streaming in 50 countries\n- Lead 3 assistant editors on media management, stringouts and conform\n- Supervise finishing with color, mix and VFX vendors to hit air dates"
+        },
+        {
+          "company": "Hudson River Films",
+          "role": "Video Editor",
+          "location": "Brooklyn, NY",
+          "startDate": "2016-04",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Edited 2 feature documentaries and 40 branded films\n- Built Avid shared-storage workflows for a 6-editor team\n- Cut festival trailers and social versions on tight deadlines"
+        },
+        {
+          "company": "Midtown Media House",
+          "role": "Assistant Editor",
+          "location": "New York, NY",
+          "startDate": "2013-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Synced dailies and prepped bins for 3 reality series\n- Prepared EDLs and AAFs for online and mix"
+        }
+      ],
+      "education": [
+        {
+          "school": "NYU Tisch School of the Arts",
+          "degree": "BFA, Film and Television",
+          "startDate": "2009-09",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Editing: commercial, documentary, long-form narrative, trailers",
+        "Tools: Avid Media Composer, Premiere Pro, DaVinci Resolve, After Effects",
+        "Post leadership: assistant editor supervision, shared storage, conform, vendor management",
+        "Delivery: broadcast specs, closed captions, international versions"
+      ]
+    },
+    "Reporter": {
+      "summary": "Local news reporter with 4 years of experience covering city hall, schools and public safety for a daily newspaper and its website. Files 6 to 8 stories a week on deadline and broke a school bus contract story that led to a $1.4M refund to the district. Brings fast, accurate reporting, records requests and multimedia skills.",
+      "experience": [
+        {
+          "company": "The Ridgeview Daily",
+          "role": "Reporter",
+          "location": "Spokane, WA",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cover city hall and schools, filing 6 to 8 stories a week for print and web\n- Broke a school bus contract story that led to a $1.4M refund to the district\n- File public records requests and analyze budget documents in Excel\n- Shoot photos and short video for social versions of breaking stories"
+        },
+        {
+          "company": "Palouse Weekly News",
+          "role": "Reporter",
+          "location": "Moscow, ID",
+          "startDate": "2022-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Wrote news and features on agriculture, local government and the university\n- Covered 3 county commission meetings a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washington State University",
+          "degree": "BA, Journalism and Media Production",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Reporting: beat reporting, interviewing, breaking news, public records requests",
+        "Multimedia: photography, smartphone video, social posts",
+        "Data: Excel, Google Sheets, Datawrapper",
+        "Standards: AP Stylebook, SPJ Code of Ethics, open meetings law"
+      ]
+    },
+    "Photo Editor": {
+      "summary": "Photo editor with 8 years of experience selecting, commissioning and producing photography for national news and magazine outlets. Assigns 300+ shoots a year on a $400k photography budget. Combines a strong visual eye with ethics, rights management and fast turnaround on breaking news and long-form packages.",
+      "experience": [
+        {
+          "company": "The National Weekly",
+          "role": "Photo Editor",
+          "location": "Washington, DC",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assign and edit 300+ shoots a year from a network of 80 contract photographers\n- Manage a $400k photography budget, rates and usage contracts\n- Select and sequence images for 50 long-form features, 2 of which won Pictures of the Year International awards\n- Enforce NPPA ethics and caption accuracy standards across the desk"
+        },
+        {
+          "company": "Capital Wire Service",
+          "role": "Assistant Photo Editor",
+          "location": "Washington, DC",
+          "startDate": "2017-09",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Edited and transmitted 200 images a day on breaking news shifts\n- Toned photos and wrote captions to wire standards\n- Researched archive images for anniversary packages"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "BS, Visual Communication (Photojournalism)",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Photo editing: image selection, sequencing, commissioning, toning, captioning",
+        "Rights: licensing, usage contracts, model releases, archive research",
+        "Tools: Photo Mechanic, Lightroom, Photoshop, Getty and AP image platforms",
+        "Ethics: NPPA Code of Ethics, digital manipulation standards"
+      ]
+    },
+    "Production Assistant": {
+      "summary": "Production assistant with 2 years of experience on commercial, music video and episodic TV sets. Worked 60+ shoot days in office, set and locations roles. Reliable with call sheets, walkies, lock-ups and paperwork, and recently completed a film degree with a focus on producing.",
+      "experience": [
+        {
+          "company": "Sunbelt Production Services",
+          "role": "Set Production Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Worked 45 shoot days on 2 episodic TV series and 6 commercials\n- Distribute call sheets, sides and walkies to crews of up to 120\n- Manage background holding and lock-ups for exterior city locations\n- Collect and file daily paperwork including releases and time cards"
+        },
+        {
+          "company": "Peach State Films",
+          "role": "Office Production Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2024-06",
+          "endDate": "2025-02",
+          "isCurrent": false,
+          "description": "- Supported the production office on a 30-day indie feature\n- Ran errands, tracked deliveries and updated crew lists and contact sheets"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "BA, Film and Media (Producing concentration)",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Student short: The Long Drive",
+          "link": "vimeo.com/cbrooks/long-drive",
+          "description": "Produced a 12-minute thesis film with a crew of 15 and a $6k budget"
+        }
+      ],
+      "skills": [
+        "Set operations: call sheets, walkie etiquette, lock-ups, background wrangling",
+        "Office: crew lists, paperwork, deliveries, scheduling support",
+        "Tools: Google Workspace, StudioBinder, Movie Magic Scheduling basics",
+        "Certifications: OSHA 10 (General Industry), valid driver's license"
+      ]
+    }
+  }
+}

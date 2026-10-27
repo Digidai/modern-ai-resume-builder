@@ -63,7 +63,7 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {contacts.length > 0 && (
                         <p className="mt-[8px] flex flex-wrap gap-x-[18px] gap-y-[3px] text-[14.67px] leading-snug text-neutral-800">
                             {contacts.map((entry) => (
-                                <ContactItem key={entry.key} entry={entry} iconClassName="w-[13px] h-[13px] text-(--accent)" />
+                                <ContactItem key={entry.id} entry={entry} iconClassName="w-[13px] h-[13px] text-(--accent)" />
                             ))}
                         </p>
                     )}

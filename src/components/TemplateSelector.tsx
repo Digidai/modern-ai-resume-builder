@@ -16,6 +16,13 @@ import roleGuideData from '../data/roleGuides.json';
 import { buildRoleGuide } from '../shared/roleGuide.mjs';
 import { RoleGuide } from './RoleGuide';
 import NotFoundView from '../views/NotFoundView';
+import { RoleExampleArticle } from './RoleExampleArticle';
+import { AgentPromptCard } from './AgentPromptCard';
+import { buildAgentPrompt } from '../shared/agentPrompt.mjs';
+import { loadRoleExample, type RoleExample } from '../data/roleExamples';
+import { buildJobPageTitle, describeExample, exampleToResume } from '../shared/roleExample.mjs';
+import { getPersonaFullNameForJobTitle } from '../data/personas';
+import { BLANK_RESUME_DATA, createId } from '../utils/resumeData';
 
 interface JobTitleCategory {
     name: string;
@@ -32,7 +39,7 @@ interface TemplateSelectorProps {
 const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => {
     const { jobTitle } = useParams<{ jobTitle: string }>();
     const navigate = useNavigate();
-    const { resumeData } = useResume();
+    const { resumeData, loadResume } = useResume();
     const [selectedTemplateId, setSelectedTemplateId] = useState(() => resumeData.templateId || 'modern');
 
     const { resolvedJobTitle, canonicalSlug } = useMemo(() => {
@@ -71,7 +78,25 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
         : '/og/resume_tmpl/default.png';
     const ogImageAlt = `Resume templates for ${resolvedJobTitle}`;
     const ogImageUrl = `${siteUrl}${ogImagePath}`;
-    const seoDescription = buildJobSeoDescription(resolvedJobTitle, categoryName);
+    // The role's example resume (lazy-loaded per job family); previews show it instead of the user's own data.
+    const [example, setExample] = useState<RoleExample | null>(null);
+    useEffect(() => {
+        let cancelled = false;
+        void loadRoleExample(resolvedJobTitle, categoryName).then((found) => {
+            if (!cancelled) setExample(found);
+        });
+        return () => {
+            cancelled = true;
+        };
+    }, [resolvedJobTitle, categoryName]);
+    const personaName = useMemo(() => getPersonaFullNameForJobTitle(resolvedJobTitle), [resolvedJobTitle]);
+    const exampleResume = useMemo(
+        () => (example ? exampleToResume({ title: resolvedJobTitle, fullName: personaName, example, makeId: createId }) : null),
+        [example, resolvedJobTitle, personaName]
+    );
+    const seoDescription = example
+        ? describeExample(resolvedJobTitle, example, TEMPLATES.length)
+        : buildJobSeoDescription(resolvedJobTitle, categoryName);
     const seoKeywords = buildJobSeoKeywords(resolvedJobTitle, categoryName);
 
     // Canonicalize legacy/odd slugs to a single SEO-friendly URL.
@@ -88,7 +113,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     }, [resumeData.templateId]);
 
     useSeo({
-        title: `Resume Templates for ${resolvedJobTitle} | ModernCV`,
+        title: buildJobPageTitle(resolvedJobTitle),
         description: seoDescription,
         keywords: seoKeywords,
         canonical: canonicalPath,
@@ -139,6 +164,13 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                     },
                 },
                 {
+                    '@type': 'Occupation',
+                    '@id': `${pageUrl}#occupation`,
+                    name: resolvedJobTitle,
+                    ...(categoryName ? { occupationalCategory: categoryName } : {}),
+                    skills: guide.skills.join(', '),
+                },
+                {
                     '@type': 'FAQPage',
                     '@id': `${pageUrl}#faq`,
                     mainEntity: guide.faqs.map((faq) => ({
@@ -160,14 +192,15 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
         },
     });
 
-    // Preview should reflect the user's actual resume content to avoid template-state drift.
+    // Previews show the role's example (with the user's style settings); without one, the user's own resume.
     const previewData: ResumeData = useMemo(() => {
+        if (exampleResume) return { ...BLANK_RESUME_DATA, ...exampleResume, design: resumeData.design, templateId: selectedTemplateId };
         return {
             ...resumeData,
             title: resolvedJobTitle || resumeData.title,
             templateId: selectedTemplateId,
         };
-    }, [resumeData, resolvedJobTitle, selectedTemplateId]);
+    }, [exampleResume, resumeData, resolvedJobTitle, selectedTemplateId]);
 
     const relatedTitles = useMemo(() => {
         if (!categoryName) return [];
@@ -180,6 +213,14 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
 
     const selectedTemplate = TEMPLATES.find((t) => t.id === selectedTemplateId);
     const useSelected = () => onUseTemplate(resolvedJobTitle, selectedTemplateId);
+    const startFromExample = () => {
+        if (!exampleResume) return;
+        loadResume(
+            { ...BLANK_RESUME_DATA, ...exampleResume, design: resumeData.design, templateId: selectedTemplateId },
+            `Opened the ${resolvedJobTitle} example. Replace the details with your own.`
+        );
+        navigate('/editor');
+    };
 
     // Roving focus for the template radiogroup (arrow keys move and select).
     const handleTemplateKeyDown = (event: React.KeyboardEvent<HTMLButtonElement>, index: number) => {
@@ -205,21 +246,33 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                         <span className="text-slate-700 dark:text-slate-200" aria-current="page">{resolvedJobTitle}</span>
                     </nav>
                     <h1 className="mt-4 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl dark:text-white">
-                        {resolvedJobTitle} resume templates
+                        {resolvedJobTitle} resume example &amp; templates
                     </h1>
                     <p className="mt-2 text-sm leading-relaxed text-slate-600 dark:text-slate-400">
-                        See your resume as a {resolvedJobTitle} in every design. Pick one, edit the content, and download a PDF. <a href="#guide" className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">Writing guide ↓</a>
+                        {example
+                            ? `A realistic ${resolvedJobTitle} resume shown in all ${TEMPLATES.length} designs. Pick a design, then start from the example or use it with your own resume.`
+                            : `See your resume as a ${resolvedJobTitle} in every design. Pick one, edit the content, and download a PDF.`}{' '}
+                        {example && <a href="#example" className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">Read the example ↓</a>}
+                        {example && <span aria-hidden="true"> · </span>}
+                        <a href="#guide" className="font-medium text-indigo-600 hover:underline dark:text-indigo-400">Writing guide ↓</a>
                     </p>
 
                     <div className="mx-auto mt-6 w-full max-w-sm overflow-hidden rounded-md shadow-lg ring-1 ring-slate-900/5 lg:hidden">
                         <ScaledResumePreview data={previewData} />
                     </div>
 
-                    <div className="mt-6 hidden items-center justify-between gap-3 rounded-xl border border-slate-200 bg-white p-3 pl-4 lg:flex dark:border-slate-800 dark:bg-slate-900">
+                    <div className="mt-6 hidden flex-col gap-3 rounded-xl border border-slate-200 bg-white p-3 pl-4 lg:flex dark:border-slate-800 dark:bg-slate-900">
                         <p className="text-sm text-slate-600 dark:text-slate-400">
                             Template: <span className="font-semibold text-slate-900 dark:text-white">{selectedTemplate?.name}</span>
                         </p>
-                        <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use this template</Button>
+                        {exampleResume ? (
+                            <div className="flex gap-2">
+                                <Button variant="secondary" className="flex-1" onClick={useSelected}>Use with my resume</Button>
+                                <Button className="flex-1" onClick={startFromExample} leftIcon={<CheckIcon className="h-4 w-4" />}>Start from example</Button>
+                            </div>
+                        ) : (
+                            <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use this template</Button>
+                        )}
                     </div>
 
                     <div className="mt-6 grid grid-cols-3 gap-x-3 gap-y-4 sm:grid-cols-4 lg:grid-cols-3" role="radiogroup" aria-label="Resume templates">
@@ -285,6 +338,17 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                 </div>
             </main>
 
+            {example && exampleResume && (
+                <RoleExampleArticle title={resolvedJobTitle} fullName={personaName} example={example} onStart={startFromExample} />
+            )}
+
+            <div className="mx-auto w-full max-w-7xl px-4 pt-8 sm:px-6">
+                <AgentPromptCard
+                    subject={`your ${resolvedJobTitle} resume`}
+                    prompt={buildAgentPrompt({ siteUrl, jobTitle: resolvedJobTitle, template: selectedTemplate ?? null })}
+                />
+            </div>
+
             <RoleGuide
                 title={resolvedJobTitle}
                 guide={guide}
@@ -295,12 +359,21 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
             />
 
             <div className="fixed inset-x-0 bottom-0 z-20 border-t border-slate-200 bg-white/95 p-3 backdrop-blur lg:hidden dark:border-slate-800 dark:bg-slate-950/95">
-                <div className="mx-auto flex max-w-xl items-center gap-3">
-                    <p className="min-w-0 flex-1 truncate text-sm text-slate-600 dark:text-slate-400">
-                        Template: <span className="font-semibold text-slate-900 dark:text-white">{selectedTemplate?.name}</span>
-                    </p>
-                    <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use template</Button>
-                </div>
+                {exampleResume ? (
+                    <div className="mx-auto flex max-w-xl items-center gap-2">
+                        <Button variant="secondary" className="flex-1" onClick={useSelected} aria-label={`Use ${selectedTemplate?.name} with my resume`}>My resume</Button>
+                        <Button className="flex-[1.4]" onClick={startFromExample} leftIcon={<CheckIcon className="h-4 w-4" />} aria-label={`Start from the example in ${selectedTemplate?.name}`}>
+                            Use example
+                        </Button>
+                    </div>
+                ) : (
+                    <div className="mx-auto flex max-w-xl items-center gap-3">
+                        <p className="min-w-0 flex-1 truncate text-sm text-slate-600 dark:text-slate-400">
+                            Template: <span className="font-semibold text-slate-900 dark:text-white">{selectedTemplate?.name}</span>
+                        </p>
+                        <Button onClick={useSelected} leftIcon={<CheckIcon className="h-4 w-4" />}>Use template</Button>
+                    </div>
+                )}
             </div>
             {/* Room for the fixed mobile "Use template" bar so it never covers the footer. */}
             <div className="pb-20 lg:pb-0">

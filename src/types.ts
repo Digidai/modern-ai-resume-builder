@@ -16,6 +16,13 @@ export interface Education {
   endDate: string;
 }
 
+/** An extra profile or link (GitHub, portfolio, X, Google Scholar…). An empty label means "detect from the URL". */
+export interface ResumeLink {
+  id: string;
+  label: string;
+  url: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -45,6 +52,8 @@ export interface ResumeData {
   location: string;
   website: string;
   linkedin: string;
+  /** Additional profiles and links shown with the contact details. */
+  links: ResumeLink[];
   summary: string;
   experience: Experience[];
   education: Education[];
@@ -62,6 +71,7 @@ export const INITIAL_RESUME_DATA: ResumeData = {
   location: "San Francisco, CA",
   website: "www.alexsterling.design",
   linkedin: "linkedin.com/in/alexsterling",
+  links: [{ id: 'link1', label: '', url: 'dribbble.com/alexsterling' }],
   summary: "Creative and detail-oriented Product Designer with over 6 years of experience in building user-centric digital products. Proven track record of improving user engagement and streamlining workflows. Adept at bridging the gap between engineering and design to deliver seamless web applications.",
   experience: [
     {

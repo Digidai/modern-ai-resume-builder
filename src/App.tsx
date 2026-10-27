@@ -9,6 +9,7 @@ import TemplatesView from './views/TemplatesView';
 import TemplateDetailView from './views/TemplateDetailView';
 import NotFoundView from './views/NotFoundView';
 import RenderView from './views/RenderView';
+import AgentsView from './views/AgentsView';
 import { lazy, Suspense, useEffect } from 'react';
 
 // Dev-only template gallery; `import.meta.env.DEV` is false in production builds, so it is tree-shaken.
@@ -61,6 +62,7 @@ function AppRoutes() {
       <Route path="/templates" element={<TemplatesView />} />
       <Route path="/templates/:templateId" element={<TemplateDetailView />} />
       <Route path="/editor" element={<EditorView />} />
+      <Route path="/agents" element={<AgentsView />} />
       <Route path="/render" element={<RenderView />} />
       {DevTemplateGallery && (
         <Route path="/dev/templates" element={<Suspense fallback={null}><DevTemplateGallery /></Suspense>} />

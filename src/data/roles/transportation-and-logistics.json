@@ -1,0 +1,1057 @@
+{
+  "family": "Transportation & Logistics",
+  "guide": {
+    "focus": "the licences and ratings you hold, the vehicles, aircraft or routes you run, and your record on safety, on-time performance and compliance",
+    "skills": [
+      "CDL, FAA or FRA licences and endorsements",
+      "DOT and FMCSA compliance",
+      "Hours of service and ELD use",
+      "Route planning",
+      "Pre-trip and pre-flight inspections",
+      "Hazardous materials handling",
+      "Dispatch and load planning",
+      "Fleet and aircraft maintenance",
+      "Customer service",
+      "Safety management systems (SMS)"
+    ],
+    "sections": [
+      "Summary",
+      "Certifications",
+      "Experience",
+      "Skills",
+      "Education"
+    ],
+    "metrics": [
+      "accident-free miles",
+      "on-time performance",
+      "miles or flight hours",
+      "fuel efficiency (MPG)",
+      "CSA and inspection results",
+      "loads or stops per day"
+    ],
+    "bullets": [
+      "Drove 1.1M accident-free miles in 9 years on a CDL-A with Hazmat and Tanker endorsements, holding 99% on-time delivery",
+      "Cut empty miles from 18% to 11% by rebuilding lane plans and backhaul matches for a 60-truck fleet",
+      "Logged 6,200 flight hours as an A320 first officer with zero FAA violations and a 98% on-time departure rate"
+    ],
+    "tips": [
+      "List each licence with its class, endorsements, ratings and issuing body (for example \"CDL Class A, Hazmat and Tanker endorsements\" or \"FAA ATP, A320 type rating\").",
+      "Lead with safety numbers such as accident-free miles, clean inspections or violation-free years, because employers screen on them first.",
+      "Name the equipment, aircraft, routes and systems you know (Samsara ELDs, McLeod, Sabre, Boeing 737) so recruiters can match you quickly."
+    ],
+    "templates": [
+      "classic",
+      "compact",
+      "professional"
+    ]
+  },
+  "titles": {
+    "Truck Driver": {
+      "summary": "CDL-A over-the-road and regional driver with 9 years and 1.1 million accident-free miles hauling dry van, reefer and tanker freight. Holds Hazmat and Tanker endorsements, keeps a clean MVR and CSA record, and averages 99% on-time delivery across 48 states.",
+      "experience": [
+        {
+          "company": "Granite Peak Freight Lines",
+          "role": "Regional Truck Driver (CDL-A)",
+          "location": "Indianapolis, IN",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Haul refrigerated grocery loads on a 5-state regional network, averaging 2,600 miles and 12 stops a week\n- Maintain 99% on-time delivery and a clean CSA record across 9 DOT roadside inspections since 2021\n- Raised average fuel economy from 6.8 to 7.6 MPG through progressive shifting and idle reduction, earning 2 fuel bonuses\n- Run reefer temperature checks and Samsara ELD logs with zero hours-of-service violations"
+        },
+        {
+          "company": "Crossroads Tank Carriers",
+          "role": "Tanker Driver (CDL-A, Hazmat/Tanker)",
+          "location": "Louisville, KY",
+          "startDate": "2017-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Delivered fuel and liquid chemicals to 300+ customer sites, completing loading and unloading under 49 CFR hazmat rules\n- Earned the carrier's Million-Mile safety award with no preventable accidents"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ivy Tech Community College",
+          "degree": "CDL Class A Training Certificate",
+          "startDate": "2017-01",
+          "endDate": "2017-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class A with H, N and T endorsements (X), DOT medical card, TWIC",
+        "Equipment: dry van, reefer, tanker, doubles, Freightliner Cascadia and Peterbilt 579",
+        "Compliance: FMCSA hours of service, ELDs (Samsara, Omnitracs), pre- and post-trip inspections, hazmat placarding",
+        "Skills: defensive driving (Smith System), load securement, trip planning"
+      ]
+    },
+    "Delivery Driver": {
+      "summary": "Non-CDL delivery driver with 4 years running box-truck and cargo-van routes for appliance and parcel delivery. Completes 120+ stops a day with a 99.6% delivery success rate, holds a DOT medical card and a clean driving record, and earns strong customer ratings on in-home installs.",
+      "experience": [
+        {
+          "company": "Cornerstone Home Delivery",
+          "role": "Delivery Driver / Installer",
+          "location": "Charlotte, NC",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Drive a 26-ft box truck (under 26,001 lbs GVWR) delivering and installing appliances at 14 to 18 homes a day\n- Hold a 4.9 of 5 customer rating across 3,000+ deliveries with damage claims under 0.3%\n- Complete DOT pre-trip inspections and route manifests in the Descartes app, keeping on-time windows at 97%\n- Trained 4 new helpers on lifting, dolly use and appliance hookups with no lost-time injuries"
+        },
+        {
+          "company": "Swiftpath Parcel Services",
+          "role": "Delivery Associate",
+          "location": "Concord, NC",
+          "startDate": "2022-05",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Delivered 120 to 180 parcels per day by cargo van with a 99.6% successful delivery rate\n- Used handheld scanners and route optimization to finish routes an average of 25 minutes early"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hickory Ridge High School",
+          "degree": "High School Diploma",
+          "startDate": "2017-08",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Class C driver's license (clean MVR), DOT medical card",
+        "Vehicles: 26-ft box trucks, cargo vans, liftgates, appliance dollies",
+        "Tools: Descartes and Route4Me apps, handheld scanners, proof-of-delivery photos",
+        "Customer service: in-home installs, delivery scheduling, damage reporting"
+      ]
+    },
+    "Courier": {
+      "summary": "Medical courier with 5 years transporting lab specimens, pharmaceuticals and legal documents across the Chicago metro. Maintains chain of custody and temperature control on 40+ stops a day, with zero lost or compromised specimens and a 98.5% on-time record.",
+      "experience": [
+        {
+          "company": "Lakefront Medical Logistics",
+          "role": "Medical Courier",
+          "location": "Chicago, IL",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Pick up and deliver lab specimens and STAT pharmacy orders for 25 clinics and 3 hospitals, averaging 45 stops per shift\n- Maintain ambient, refrigerated and frozen specimen temperatures with logged checks, with zero compromised specimens in 3 years\n- Hold a 98.5% on-time rate on STAT runs with a 60-minute delivery window\n- Follow HIPAA, OSHA bloodborne pathogens and IATA-aligned UN3373 packaging rules on every handoff"
+        },
+        {
+          "company": "Windy City Legal Couriers",
+          "role": "Courier",
+          "location": "Chicago, IL",
+          "startDate": "2021-04",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Delivered court filings and contracts for 60 law firms, logging signatures for chain of custody\n- Handled 30 same-day rush filings a week with no missed court deadlines\n- Kept a clean driving record across 70,000 urban miles with no parking-related delivery failures"
+        }
+      ],
+      "education": [
+        {
+          "school": "Harold Washington College",
+          "degree": "Coursework, Business Administration",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA Bloodborne Pathogens, HIPAA training, UN3373 specimen packaging",
+        "Operations: chain of custody, temperature-controlled transport, STAT routing",
+        "Tools: OnTime 360, mobile POD apps, GPS routing",
+        "Licenses: Class D driver's license (Illinois), clean MVR"
+      ]
+    },
+    "Bus Driver": {
+      "summary": "Transit bus operator with 7 years driving fixed routes for a city transit agency and 2 years on school routes. Holds a CDL Class B with Passenger and School Bus endorsements, carries 900+ riders a day with a 92% on-time rate, and has 7 years without a preventable accident.",
+      "experience": [
+        {
+          "company": "Capital Area Metro Transit",
+          "role": "Transit Bus Operator",
+          "location": "Sacramento, CA",
+          "startDate": "2019-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate 40-ft diesel and battery-electric buses on high-ridership urban routes, carrying 900+ passengers a day\n- Maintain 92% on-time performance against a 2-minute window, above the agency average of 86%\n- Completed 7 years with zero preventable accidents and earned the agency's Safe Operator award 5 times\n- Assist riders using wheelchair ramps and securements under ADA rules, with zero accessibility complaints in 2025"
+        },
+        {
+          "company": "Delta Valley School Transportation",
+          "role": "School Bus Driver",
+          "location": "Elk Grove, CA",
+          "startDate": "2017-08",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Transported 70 students on 2 daily routes and field trips with a clean CHP inspection record\n- Held student behavior incidents to 3 a year through clear rules and parent communication"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cosumnes River College",
+          "degree": "Coursework, General Education",
+          "startDate": "2014-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class B with P and S endorsements, air brake qualified, California SPAB certificate, DOT medical card",
+        "Operations: fixed-route service, schedule adherence, fare collection, radio communication",
+        "Safety: defensive driving, pre-trip inspections, emergency evacuation, de-escalation",
+        "Accessibility: ADA ramps and securement, rider assistance"
+      ]
+    },
+    "Driver Trainer": {
+      "summary": "CDL-A driver trainer with 12 years behind the wheel and 5 coaching new drivers for a 450-truck carrier. Listed on the FMCSA Training Provider Registry, has trained 140 entry-level drivers with an 88% first-attempt skills-test pass rate, and helped cut first-year preventable accidents 31%.",
+      "experience": [
+        {
+          "company": "Ironhorse Transport",
+          "role": "Lead Driver Trainer",
+          "location": "Dallas, TX",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver ELDT theory and behind-the-wheel training under 49 CFR Part 380, graduating 140 drivers with an 88% first-attempt CDL skills pass rate\n- Ride along on 4-week over-the-road placements, coaching backing, space management and hours-of-service planning\n- Built a Lytx DriveCam coaching program for first-year drivers that cut preventable accidents 31% in 18 months\n- Lowered 90-day driver turnover from 42% to 29% by pairing graduates with mentors and weekly check-ins"
+        },
+        {
+          "company": "Ironhorse Transport",
+          "role": "OTR Truck Driver (CDL-A)",
+          "location": "Dallas, TX",
+          "startDate": "2017-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Drove dry van freight across 40 states, logging 480,000 accident-free miles\n- Selected as a mentor driver for 12 student drivers based on safety scores"
+        },
+        {
+          "company": "Lone Star Flatbed",
+          "role": "Flatbed Driver (CDL-A)",
+          "location": "Fort Worth, TX",
+          "startDate": "2014-01",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Hauled steel and building materials, securing loads to FMCSA cargo securement rules with zero shifted-load citations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tarrant County College",
+          "degree": "CDL Class A Training Certificate",
+          "startDate": "2013-09",
+          "endDate": "2013-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class A with H, N and T endorsements, DOT medical card, FMCSA Training Provider Registry (instructor)",
+        "Training: ELDT curriculum, behind-the-wheel coaching, skills-test prep, Smith System instructor",
+        "Safety: Lytx DriveCam, CSA BASICs, cargo securement, hours of service",
+        "Tools: Samsara ELD, Tenstreet, Excel tracking"
+      ]
+    },
+    "Truck Dispatcher": {
+      "summary": "Truck dispatcher with 5 years running 35 to 50 trucks for an asset-based dry van and reefer carrier. Books freight on DAT and direct shipper lanes, keeps drivers legal on hours of service, and raised fleet revenue per mile from $2.18 to $2.46 while cutting deadhead from 16% to 10%.",
+      "experience": [
+        {
+          "company": "Bridgewater Carriers",
+          "role": "Senior Truck Dispatcher",
+          "location": "Atlanta, GA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Dispatch 45 dry van and reefer trucks across the Southeast, planning loads and relays in McLeod LoadMaster\n- Lifted fleet revenue per mile from $2.18 to $2.46 by mixing contract lanes with spot loads from DAT and Truckstop\n- Cut deadhead miles from 16% to 10% with backhaul planning and broker relationships\n- Monitor Samsara ELD clocks to keep drivers legal, with zero HOS violations tied to dispatch planning in 2025"
+        },
+        {
+          "company": "Peachtree Logistics Group",
+          "role": "Dispatcher",
+          "location": "Marietta, GA",
+          "startDate": "2021-02",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Dispatched 30 owner-operators, negotiating spot rates and handling rate confirmations and BOLs\n- Resolved 20+ daily delivery exceptions with shippers and receivers, holding on-time delivery at 96%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "BBA, Managerial Sciences",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dispatch: load planning, relays, HOS management, driver communication, detention and lumper handling",
+        "Systems: McLeod LoadMaster, DAT One, Truckstop, Samsara, TMW Suite",
+        "Freight: dry van, reefer, rate negotiation, BOLs and rate confirmations",
+        "Compliance: FMCSA hours of service, ELD rules, CSA awareness"
+      ]
+    },
+    "Dispatch Supervisor": {
+      "summary": "Dispatch supervisor with 11 years in trucking operations, leading a 9-person dispatch and planning team for a 220-truck LTL and truckload carrier. Owns daily service and driver utilization, and raised on-time pickup from 91% to 97% while growing loaded miles per truck 14%.",
+      "experience": [
+        {
+          "company": "Northstar Freightways",
+          "role": "Dispatch Supervisor",
+          "location": "Columbus, OH",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 9 dispatchers and planners covering 220 trucks across 3 terminals on a 24/7 rotation\n- Raised on-time pickup from 91% to 97% with a daily service huddle and exception dashboard in Power BI\n- Grew loaded miles per truck per week 14% by redesigning driver-to-load assignment rules in TMW\n- Cut dispatcher turnover from 38% to 15% with a 6-week onboarding plan and clear career levels"
+        },
+        {
+          "company": "Northstar Freightways",
+          "role": "Senior Dispatcher",
+          "location": "Columbus, OH",
+          "startDate": "2017-03",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Dispatched 55 regional drivers and handled 300 daily customer status updates\n- Built a driver home-time calendar that lowered driver complaints 40%\n- Covered night dispatch for 6 months, handling breakdowns and service failures for the full 160-truck fleet"
+        },
+        {
+          "company": "Buckeye Freight Brokers",
+          "role": "Logistics Assistant",
+          "location": "Dublin, OH",
+          "startDate": "2015-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Tracked 80 loads a day and entered carrier paperwork for billing"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "BBA, Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: shift scheduling, coaching, KPI reviews, escalation handling",
+        "Operations: load assignment, driver utilization, service recovery, capacity planning",
+        "Systems: TMW Suite, Trimble, Samsara, Power BI, Excel",
+        "Compliance: FMCSA hours of service, driver qualification awareness, CSA"
+      ]
+    },
+    "Freight Broker": {
+      "summary": "Freight broker with 6 years building a book of business in truckload and flatbed freight. Manages 28 active shipper accounts generating $9.4M in annual revenue at a 16% average gross margin, vetting carriers through Highway and carrier packets to keep claims under 0.2%.",
+      "experience": [
+        {
+          "company": "Summit Lane Logistics",
+          "role": "Senior Freight Broker",
+          "location": "Chicago, IL",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 28 shipper accounts in manufacturing and building materials, generating $9.4M in revenue in 2025\n- Hold average gross margin at 16% while covering 3,800 loads a year on dry van and flatbed\n- Won 6 new accounts through RFPs and cold outreach, including a $2.1M dedicated flatbed lane\n- Vet carriers through Highway and FMCSA SAFER checks, keeping cargo claims below 0.2% of loads"
+        },
+        {
+          "company": "Midway Transportation Services",
+          "role": "Carrier Sales Representative",
+          "location": "Chicago, IL",
+          "startDate": "2020-01",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Covered 15 to 20 loads a day for the brokerage's top accounts, negotiating rates on DAT and Truckstop\n- Grew a carrier network of 400 vetted trucking companies\n- Recovered 35 failed loads in a single quarter by rebooking backup carriers within 2 hours"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Chicago",
+          "degree": "BS, Marketing",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Brokerage: shipper sales, rate negotiation, RFPs, carrier vetting, claims handling",
+        "Systems: McLeod PowerBroker, DAT One, Truckstop, Highway, Salesforce",
+        "Freight: truckload, flatbed, partial and expedited",
+        "Compliance: FMCSA broker authority rules, carrier insurance and authority checks"
+      ]
+    },
+    "DOT Compliance Specialist": {
+      "summary": "DOT compliance specialist with 6 years managing FMCSA safety programs for a 300-driver fleet. Runs driver qualification files, drug and alcohol testing and HOS audits, and brought the carrier from an Alert in the Unsafe Driving BASIC to below threshold in all BASICs ahead of a clean compliance review.",
+      "experience": [
+        {
+          "company": "Redline Haulage",
+          "role": "DOT Compliance Specialist",
+          "location": "Nashville, TN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Maintain driver qualification files for 300 CDL drivers under 49 CFR Part 391, holding audit accuracy at 99%\n- Administer the drug and alcohol program under Parts 40 and 382, including Clearinghouse queries and random pool selection\n- Audit ELD logs weekly against Part 395, cutting HOS violations 58% and moving all CSA BASICs below intervention thresholds\n- Led preparation for an FMCSA compliance review that ended with a Satisfactory rating and no violations"
+        },
+        {
+          "company": "Cumberland Waste Services",
+          "role": "Safety and Compliance Coordinator",
+          "location": "Murfreesboro, TN",
+          "startDate": "2020-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Tracked annual vehicle inspections and maintenance files for 110 refuse trucks under Part 396\n- Filed DataQs challenges that removed 14 incorrect inspection violations from the carrier's profile"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "BS, Aerospace and Transportation Management",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: NSC DOT Reasonable Suspicion Supervisor Training, OSHA 10",
+        "Regulations: 49 CFR Parts 40, 382, 383, 391, 395 and 396, CSA BASICs, DataQs",
+        "Systems: Tenstreet, J. J. Keller Encompass, Samsara, FMCSA Clearinghouse and SAFER",
+        "Programs: driver onboarding, MVR monitoring, accident registers, audit preparation"
+      ]
+    },
+    "Terminal Manager": {
+      "summary": "Terminal manager with 16 years in trucking, the last 6 running a 180-driver truckload and dedicated terminal. Owns P&L, safety and service for $42M in annual revenue, and lifted operating ratio from 96 to 89 while cutting driver turnover from 78% to 44%.",
+      "experience": [
+        {
+          "company": "Westbound Express",
+          "role": "Terminal Manager",
+          "location": "Salt Lake City, UT",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a terminal with 180 drivers, 14 office staff and a 22-bay shop, accountable for $42M in annual revenue\n- Improved operating ratio from 96 to 89 through lane pricing reviews, idle reduction and tighter shop parts control\n- Cut driver turnover from 78% to 44% with predictable home time, a driver advisory board and faster pay disputes\n- Reduced DOT recordable accidents 35% with Lytx coaching and monthly safety meetings\n- Won 2 dedicated accounts worth $6M a year with customer-facing service reviews"
+        },
+        {
+          "company": "Westbound Express",
+          "role": "Operations Manager",
+          "location": "Boise, ID",
+          "startDate": "2015-02",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Managed dispatch and customer service for 90 trucks, raising on-time delivery from 92% to 97%\n- Launched a drop-trailer program with 4 key shippers that cut detention hours 50%"
+        },
+        {
+          "company": "Snake River Freight",
+          "role": "Dispatcher",
+          "location": "Twin Falls, ID",
+          "startDate": "2010-06",
+          "endDate": "2015-01",
+          "isCurrent": false,
+          "description": "- Dispatched 40 regional trucks hauling agricultural and food freight"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boise State University",
+          "degree": "BBA, Supply Chain Management",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: P&L ownership, staff of 190+, hiring, labor relations, customer reviews",
+        "Operations: dispatch, dedicated fleet, shop management, drop-trailer programs, operating ratio",
+        "Safety and compliance: FMCSA regulations, CSA, Lytx, accident review",
+        "Systems: McLeod, Trimble TMT, Power BI, Excel"
+      ]
+    },
+    "Diesel Mechanic": {
+      "summary": "ASE-certified diesel mechanic with 8 years diagnosing and repairing Class 8 trucks and trailers. Works on Cummins, Detroit and PACCAR engines and aftertreatment systems, and cut average road-call repair time 30% at a 140-truck fleet shop through better diagnostics and parts staging.",
+      "experience": [
+        {
+          "company": "Highline Fleet Services",
+          "role": "Diesel Technician III",
+          "location": "Kansas City, MO",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Diagnose and repair Cummins X15, Detroit DD15 and PACCAR MX-13 engines, transmissions and brakes for a 140-truck fleet\n- Resolve DPF, SCR and EGR faults with INSITE and DiagnosticLink, cutting aftertreatment comebacks 40%\n- Perform FMCSA annual inspections as a qualified inspector under 49 CFR 396.19 and 396.25, completing 300+ a year\n- Cut average road-call repair time 30% by building pre-staged parts kits for the 10 most common failures"
+        },
+        {
+          "company": "Midwest Truck & Trailer Repair",
+          "role": "Diesel Mechanic",
+          "location": "Olathe, KS",
+          "startDate": "2018-05",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Repaired air brake systems, suspensions and reefer units on customer trucks, billing 115% of flat-rate hours\n- Rebuilt 25 in-frame engines with no warranty returns"
+        }
+      ],
+      "education": [
+        {
+          "school": "WyoTech",
+          "degree": "Diploma, Diesel Technology",
+          "startDate": "2017-01",
+          "endDate": "2018-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ASE T2, T3, T4, T6 and T8, EPA Section 609 MVAC, FMCSA qualified inspector and brake inspector, CDL Class A",
+        "Engines and systems: Cummins, Detroit, PACCAR, Allison and Eaton transmissions, air brakes, DPF/SCR/EGR aftertreatment",
+        "Diagnostics: Cummins INSITE, Detroit DiagnosticLink, PACCAR DAVIE4, Noregon JPRO",
+        "Shop: Fleetio and TMT work orders, PM programs, welding and fabrication"
+      ]
+    },
+    "Automotive Technician": {
+      "summary": "ASE Master Automotive Technician with 10 years in Toyota dealership and independent repair shops, specializing in drivability, electrical diagnostics and hybrid systems. Produces 2,600+ flat-rate hours a year at a 135% efficiency rate with a comeback rate under 1.5%.",
+      "experience": [
+        {
+          "company": "Orange Blossom Toyota",
+          "role": "Master Technician",
+          "location": "Orlando, FL",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Diagnose drivability, CAN-bus and hybrid high-voltage faults, producing 2,600+ flat-rate hours a year at 135% efficiency\n- Hold a comeback rate under 1.5% across 1,800 repair orders a year\n- Mentor 3 lube and line technicians, two of whom earned ASE A-series certifications within 18 months\n- Performed 400+ ADAS camera and radar calibrations after collision and windshield repairs"
+        },
+        {
+          "company": "Sunbelt Auto Care",
+          "role": "Automotive Technician",
+          "location": "Kissimmee, FL",
+          "startDate": "2016-04",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Repaired brakes, suspension, HVAC and engine performance on domestic and import vehicles\n- Raised shop electrical-diagnosis revenue 25% by taking on complex no-start and parasitic-draw jobs\n- Completed 600+ scheduled maintenance services a year with accurate multi-point inspection reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "Universal Technical Institute",
+          "degree": "Diploma, Automotive Technology",
+          "startDate": "2015-03",
+          "endDate": "2016-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ASE Master Automotive Technician (A1–A8), ASE L1 Advanced Engine Performance, EPA Section 609 MVAC",
+        "Diagnostics: Toyota Techstream, Snap-on Zeus, PicoScope, scan tools, wiring diagrams",
+        "Systems: hybrid and EV high-voltage, ADAS calibration, CAN-bus, engine performance",
+        "Shop: flat-rate, repair order write-ups, CDK DMS"
+      ]
+    },
+    "Flight Instructor": {
+      "summary": "FAA Certified Flight Instructor (CFI, CFII, MEI) with 1,150 total hours, 880 of them dual given, now eligible for a restricted ATP through an aviation degree. Has signed off 21 students for checkrides with a 90% first-time pass rate, and teaches with a scenario-based, safety-first approach.",
+      "experience": [
+        {
+          "company": "Skyhaven Flight Academy",
+          "role": "Certified Flight Instructor (CFI/CFII/MEI)",
+          "location": "Phoenix, AZ",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Instruct private, instrument and commercial students in Cessna 172S and Piper Seminole aircraft under Part 141 and Part 61\n- Recommended 21 students for FAA practical tests with a 90% first-time pass rate against a school average of 78%\n- Deliver 120+ hours of ground school a year on ACS standards, weather, airspace and risk management\n- Fly 40 to 50 hours a month in busy Class B and Class C airspace with zero incidents or FAA violations"
+        },
+        {
+          "company": "Purdue University Airport",
+          "role": "Flight Operations Dispatcher (Student)",
+          "location": "West Lafayette, IN",
+          "startDate": "2022-08",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Scheduled aircraft and instructors for a 30-aircraft training fleet, supporting 400+ flights a month\n- Tracked aircraft squawks and 100-hour inspections with maintenance to keep fleet availability above 90%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Purdue University",
+          "degree": "BS, Professional Flight Technology",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certificates: FAA Commercial Pilot (ASEL, AMEL, Instrument), CFI, CFII, MEI, FAA First-Class Medical, R-ATP eligible (1,000-hour bachelor degree authorization)",
+        "Aircraft: Cessna 172S (G1000), Piper PA-44 Seminole, Diamond DA42",
+        "Instruction: ACS standards, scenario-based training, stage checks, endorsements and logbook reviews",
+        "Systems: Flight Schedule Pro, ForeFlight, Garmin G1000 NXi"
+      ]
+    },
+    "First Officer": {
+      "summary": "Regional airline first officer with 3,600 total hours, including 2,300 in the Embraer E175, flying 76-seat Part 121 operations across the Midwest and Northeast. Holds an ATP certificate and E175 type rating, with a clean checkride record and recognition for strong CRM and standard callouts.",
+      "experience": [
+        {
+          "company": "Horizon Bay Regional Airlines",
+          "role": "First Officer, Embraer E175",
+          "location": "Detroit, MI",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Fly scheduled Part 121 service on the E175 to 40+ airports, logging about 55 block hours a month\n- Passed initial and 3 recurrent checkrides and line checks on the first attempt, with no FAA violations\n- Manage FMS programming, performance calculations and radio work in complex airspace including ORD, LGA and BOS\n- Serve as a pilot-union safety committee volunteer, submitting ASAP reports that led to 2 procedure changes"
+        },
+        {
+          "company": "Great Lakes Aviation Institute",
+          "role": "Certified Flight Instructor (CFI/CFII/MEI)",
+          "location": "Grand Rapids, MI",
+          "startDate": "2021-01",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Logged 1,100 hours of dual instruction, preparing 26 students for private, instrument and commercial checkrides\n- Served as assistant chief instructor for 9 months, running stage checks and standardization"
+        }
+      ],
+      "education": [
+        {
+          "school": "Western Michigan University",
+          "degree": "BS, Aviation Flight Science",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certificates: FAA Airline Transport Pilot (AMEL), ERJ-170 type rating, CFI/CFII/MEI, FAA First-Class Medical, FCC Restricted Radiotelephone Operator Permit",
+        "Aircraft: Embraer E175, Cessna 172, Piper Seminole",
+        "Operations: Part 121, CRM and TEM, FMS, RNAV/RNP approaches, winter operations and deicing",
+        "Safety: ASAP and FOQA programs, SMS"
+      ]
+    },
+    "Airline Pilot": {
+      "summary": "Airline captain with 15,500 total hours, including 6,900 as pilot in command of the Airbus A320 family, flying mainline domestic and Caribbean routes. Holds an ATP certificate with A320 and ERJ-170 type ratings, serves as a line check airman, and has 22 years of flying without an incident or FAA violation.",
+      "experience": [
+        {
+          "company": "Meridian Air Lines",
+          "role": "Captain, Airbus A320 / Line Check Airman",
+          "location": "Charlotte, NC",
+          "startDate": "2018-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Command A319, A320 and A321 flights carrying up to 190 passengers on domestic and Caribbean routes\n- Conduct 60+ line checks and IOE trips a year as an FAA-approved check airman, standardizing new captains\n- Maintain a 97% on-time departure rate on the pairings flown while meeting all fuel-efficiency targets\n- Helped write the carrier's updated stabilized-approach policy, cutting unstable approaches 35% in FOQA data"
+        },
+        {
+          "company": "Meridian Air Lines",
+          "role": "First Officer, Airbus A320",
+          "location": "Charlotte, NC",
+          "startDate": "2013-03",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Flew 4,200 hours on the A320 family, serving as a recurrent training study-group lead\n- Upgraded to captain after 5 years, ahead of the fleet average of 7"
+        },
+        {
+          "company": "Appalachian Connection Airlines",
+          "role": "Captain and First Officer, Embraer E175",
+          "location": "Charlotte, NC",
+          "startDate": "2007-06",
+          "endDate": "2013-02",
+          "isCurrent": false,
+          "description": "- Upgraded to captain in 3 years and logged 3,400 hours on regional routes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Embry-Riddle Aeronautical University",
+          "degree": "BS, Aeronautical Science",
+          "startDate": "2000-08",
+          "endDate": "2004-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certificates: FAA Airline Transport Pilot (AMEL), A320 and ERJ-170 type ratings, FAA First-Class Medical, line check airman",
+        "Aircraft: Airbus A319/A320/A321, Embraer E175",
+        "Operations: Part 121, extended overwater operations, CRM and TEM, low-visibility operations, EFB",
+        "Safety and training: FOQA, ASAP, IOE, AQP"
+      ]
+    },
+    "Flight Attendant": {
+      "summary": "FAA-certified flight attendant with 6 years on domestic and long-haul international routes, the last 2 as lead (purser) on Boeing 787 flights. Qualified on the Boeing 787, Boeing 737 and Airbus A320 family, fluent in Spanish, and consistently in the top 10% for customer satisfaction scores in a 3,500-person in-flight base.",
+      "experience": [
+        {
+          "company": "Pacific Crest Airways",
+          "role": "Flight Attendant / International Purser",
+          "location": "Los Angeles, CA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead cabin crews of up to 10 on Boeing 787 flights to Asia and Latin America, managing safety briefings, service flow and reports\n- Rank in the top 10% of a 3,500-person base for post-flight customer satisfaction scores in 2024 and 2025\n- Handled 12 in-flight medical events using AED, oxygen and MedLink guidance, with 2 commendations from passengers\n- Complete annual recurrent training on evacuations, firefighting and security under FAA Part 121 with 100% scores"
+        },
+        {
+          "company": "Sunward Airlines",
+          "role": "Flight Attendant",
+          "location": "Denver, CO",
+          "startDate": "2020-02",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Worked domestic Airbus A320 and A321 flights, serving 150+ passengers per leg on up to 4 legs a day\n- Served as Spanish-language speaker on Mexico routes and handled onboard sales of $1,500+ a month"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Denver",
+          "degree": "BA, Communication",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FAA Certificate of Demonstrated Proficiency (Flight Attendant), CPR/AED, aviation first aid",
+        "Aircraft: Boeing 787-9, Boeing 737, Airbus A320 and A321",
+        "Safety: emergency evacuation, firefighting, security procedures, Part 121 cabin compliance",
+        "Service: premium cabin service, conflict de-escalation, Spanish (fluent)"
+      ]
+    },
+    "Aircraft Mechanic": {
+      "summary": "FAA-certificated A&P mechanic with Inspection Authorization and 11 years in Part 121 line and heavy maintenance on Boeing 737NG and MAX aircraft. Holds RII and engine run-up authorizations, and helped cut maintenance-related delays at a 90-departure station by 28% through better troubleshooting and parts planning.",
+      "experience": [
+        {
+          "company": "Cascadia Airways",
+          "role": "Lead Aircraft Maintenance Technician",
+          "location": "Seattle, WA",
+          "startDate": "2020-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 7-person night line crew servicing 30+ Boeing 737NG and 737 MAX overnights, completing A-checks and deferred items to the GMM\n- Troubleshoot CFM56-7B and LEAP-1B engine, hydraulic and flight-control faults using the AMM, FIM and Boeing Toolbox\n- Cut maintenance-caused delays at the station 28% by pre-staging rotables for the top 15 repeat MEL items\n- Sign off required inspection items as an RII inspector with zero findings in 3 FAA and internal audits"
+        },
+        {
+          "company": "Boundary Bay Aero Overhaul",
+          "role": "Aircraft Maintenance Technician",
+          "location": "Everett, WA",
+          "startDate": "2015-06",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Performed C-check structural repairs, corrosion treatment and landing gear changes under 14 CFR Part 145\n- Completed 900+ task cards per check with a quality-escape rate under 0.5%"
+        }
+      ],
+      "education": [
+        {
+          "school": "South Seattle College",
+          "degree": "AAS, Aviation Maintenance Technology (Part 147)",
+          "startDate": "2013-09",
+          "endDate": "2015-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certificates: FAA Airframe and Powerplant (A&P), Inspection Authorization (IA), FCC Restricted Radiotelephone Permit, RII and engine run authorization",
+        "Aircraft and engines: Boeing 737NG and 737 MAX, CFM56-7B, LEAP-1B",
+        "Regulations: 14 CFR Parts 43, 65, 121 and 145, MEL deferrals, AD compliance",
+        "Tools: AMM, IPC and FIM, Boeing Toolbox, AMOS and TRAX maintenance systems, borescope, NDT (eddy current, dye penetrant)"
+      ]
+    },
+    "Avionics Technician": {
+      "summary": "Avionics technician with 9 years installing, troubleshooting and certifying avionics in business jets and turboprops at a Part 145 repair station. Leads Garmin and Collins retrofit programs, and has completed 60+ ADS-B Out and flight deck upgrades with an on-time delivery rate of 94%.",
+      "experience": [
+        {
+          "company": "Bluesky Avionics & Interiors",
+          "role": "Lead Avionics Technician",
+          "location": "Wichita, KS",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead Garmin G1000 NXi and G5000 retrofits on King Air and Citation aircraft, each worth $250K to $900K\n- Completed 60+ ADS-B Out installs meeting 14 CFR 91.227, with zero failed post-install performance reports\n- Build and test wiring harnesses from engineering drawings and STCs, cutting rework hours 25% with a pre-install checklist\n- Prepare FAA Form 337 and return-to-service records, delivering 94% of aircraft on the quoted date"
+        },
+        {
+          "company": "Air Capital Aircraft Services",
+          "role": "Avionics Installer",
+          "location": "Wichita, KS",
+          "startDate": "2017-03",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Troubleshot autopilot, radar and communication faults on Pilatus PC-12 and Beechcraft aircraft\n- Ran pitot-static and transponder checks under 14 CFR 91.411 and 91.413 for 200+ aircraft"
+        }
+      ],
+      "education": [
+        {
+          "school": "National Center for Aviation Training (WSU Tech)",
+          "degree": "AAS, Avionics Technology",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FCC GROL with Radar Endorsement, NCATT Aircraft Electronics Technician (AET), FAA Airframe certificate",
+        "Systems: Garmin G1000 NXi and G5000, Collins Pro Line 21, ADS-B, TCAS, weather radar, autopilots",
+        "Regulations: 14 CFR Parts 43, 91 and 145, STC and Form 337 documentation",
+        "Tools: Barfield pitot-static and transponder test sets, IFR 6000, harness fabrication, wiring diagrams"
+      ]
+    },
+    "Air Traffic Controller": {
+      "summary": "FAA Certified Professional Controller with 10 years of radar and tower experience, now working a level 12 TRACON handling 2,000+ daily operations. Qualified on all 9 sectors, serves as an on-the-job training instructor, and has certified 5 developmental controllers with no operational errors on watch.",
+      "experience": [
+        {
+          "company": "Federal Aviation Administration (Denver TRACON)",
+          "role": "Certified Professional Controller / OJTI",
+          "location": "Denver, CO",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Provide approach and departure radar control across 9 sectors for a TRACON averaging 2,000+ operations a day\n- Certified as on-the-job training instructor and trained 5 developmental controllers to full certification\n- Maintain a record of zero operational errors since certification, using STARS automation and RNAV arrivals\n- Serve on the facility's Partnership for Safety team, revising 3 letters of agreement to reduce sector handoff conflicts"
+        },
+        {
+          "company": "Federal Aviation Administration (Colorado Springs Tower)",
+          "role": "Air Traffic Controller (Tower and TRACON)",
+          "location": "Colorado Springs, CO",
+          "startDate": "2016-09",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Certified on local, ground, clearance delivery and radar positions in a combined tower and TRACON with mixed military and civil traffic\n- Handled peak traffic of 60 operations an hour during military surge periods"
+        }
+      ],
+      "education": [
+        {
+          "school": "Metropolitan State University of Denver",
+          "degree": "BS, Aviation and Aerospace Science (AT-CTI)",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        },
+        {
+          "school": "FAA Academy",
+          "degree": "Air Traffic Basics and Terminal Qualification Training",
+          "startDate": "2016-01",
+          "endDate": "2016-08"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FAA Certified Professional Controller (CPC), Control Tower Operator certificate, OJTI qualified, Class II medical clearance",
+        "Positions: approach and departure radar, local, ground, clearance delivery",
+        "Systems: STARS, ERAM interfaces, ASDE-X, ATIS",
+        "Procedures: FAA Order JO 7110.65, letters of agreement, RNAV/RNP arrivals, traffic management initiatives"
+      ]
+    },
+    "Aircraft Dispatcher": {
+      "summary": "FAA-certificated aircraft dispatcher with 7 years in Part 121 operational control, sharing release authority with captains for up to 35 flights a shift. Plans domestic and ETOPS flights in Lido and Sabre, and saved an estimated $1.4M in fuel in 2025 through cost-index and tankering decisions.",
+      "experience": [
+        {
+          "company": "Magnolia Air",
+          "role": "Senior Aircraft Dispatcher",
+          "location": "Atlanta, GA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan and release up to 35 Boeing 737 and 757 flights a shift, including ETOPS Caribbean and transatlantic legs\n- Apply MEL and CDL restrictions, weather, NOTAMs and performance limits to every release under 14 CFR 121.533\n- Saved about $1.4M in fuel in 2025 through cost-index tuning, tankering analysis and reroutes around convective weather\n- Lead the dispatch team in irregular operations, rebuilding 180 flights during a 2024 hurricane with no regulatory exceptions"
+        },
+        {
+          "company": "Kentucky Skies Regional",
+          "role": "Aircraft Dispatcher",
+          "location": "Lexington, KY",
+          "startDate": "2019-05",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Dispatched 25 CRJ-900 flights per shift for a regional carrier, monitoring flights and providing in-flight updates\n- Rolled out a de-icing holdover checklist that cut winter delay minutes 18%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Sheffield School of Aeronautics",
+          "degree": "FAA Aircraft Dispatcher Certificate Course",
+          "startDate": "2019-01",
+          "endDate": "2019-03"
+        },
+        {
+          "school": "University of Kentucky",
+          "degree": "BS, Geography (Meteorology focus)",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certificates: FAA Aircraft Dispatcher (14 CFR Part 65), ETOPS dispatch qualified, annual jumpseat familiarization",
+        "Flight planning: Lido Flight, Sabre Flight Plan Manager, Jeppesen charts, weight and balance, performance",
+        "Regulations: 14 CFR Part 121 operational control, MEL/CDL, NOTAMs, ETOPS",
+        "Weather: convective forecasting, turbulence and icing analysis, de-icing holdover times"
+      ]
+    },
+    "Ramp Agent": {
+      "summary": "Airline ramp agent with 3 years loading, marshalling and pushing back narrowbody aircraft at a busy hub. Certified on tugs, belt loaders and pushback tractors, works 10 to 14 turns a shift, and helped the crew hit 35-minute turn times on 96% of departures with zero aircraft damage events.",
+      "experience": [
+        {
+          "company": "Skyport Ground Services",
+          "role": "Ramp Agent / Crew Chief Trainee",
+          "location": "Dallas, TX",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Load and unload bags, cargo and mail on 10 to 14 Boeing 737 and Airbus A321 turns a shift, following weight-and-balance load plans\n- Helped the crew complete 35-minute turns on 96% of departures in 2025, above the station goal of 92%\n- Marshal arrivals and operate pushback tractors and towbarless tugs with zero aircraft damage or ground incidents\n- Screen bags for dangerous goods labels under IATA DGR awareness rules and report 20+ hazmat finds to supervisors"
+        },
+        {
+          "company": "Lone Star Parcel Hub",
+          "role": "Package Handler",
+          "location": "Fort Worth, TX",
+          "startDate": "2022-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Loaded 1,100+ packages per hour into trailers on a night sort with a 99.7% mis-sort-free rate\n- Earned forklift and tugger certification and trained 8 seasonal hires"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tarrant County College",
+          "degree": "Coursework, Aviation Maintenance",
+          "startDate": "2021-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: airport SIDA badge, ramp driving permit, pushback and towbarless tug, IATA DGR awareness, forklift",
+        "Equipment: belt loaders, tugs and carts, GPUs, lavatory and water trucks",
+        "Operations: aircraft marshalling, wing walking, load plans, FOD prevention, turn coordination",
+        "Safety: hearing protection and jet blast zones, lightning holds, hand signals"
+      ]
+    },
+    "Gate Agent": {
+      "summary": "Airline gate agent with 4 years boarding and closing out mainline flights at a large hub. Works Sabre and the airline's DCS to manage standby lists, upgrades and irregular operations, and kept on-time departure (D0) above 85% on assigned gates while lifting customer scores 9 points.",
+      "experience": [
+        {
+          "company": "Northwind Airlines",
+          "role": "Customer Service Agent, Gates",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Board and close out 8 to 10 Airbus A320 and Boeing 757 flights a shift, managing standby, upgrades and seat changes in Sabre\n- Held D0 on-time departures at 86% on assigned gates against a station average of 79%\n- Rebooked 200+ passengers during weather cancellations, offering hotel and meal vouchers per policy\n- Lifted gate customer satisfaction scores 9 points by announcing earlier and pre-boarding customers needing assistance"
+        },
+        {
+          "company": "Northwind Airlines",
+          "role": "Ticket Counter Agent",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Checked in 300+ passengers a shift, verifying international travel documents and collecting bag fees\n- Processed TSA-compliant bag acceptance and handled lost-item claims\n- Resolved fare and baggage disputes at the counter, cutting supervisor escalations by about a quarter"
+        }
+      ],
+      "education": [
+        {
+          "school": "Minneapolis Community and Technical College",
+          "degree": "AAS, Hospitality Management",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Systems: Sabre, departure control system, baggage tracking, Microsoft Teams",
+        "Operations: boarding, standby and upgrade lists, weight and balance inputs, irregular operations",
+        "Compliance: TSA and CBP document checks, ADA passenger assistance, SIDA badge",
+        "Service: rebooking, de-escalation, multi-language announcements (Somali, English)"
+      ]
+    },
+    "Airport Operations Manager": {
+      "summary": "Airport operations manager with 13 years in airside operations, now leading a 24-person team at a medium hub with 9 million annual passengers. AAAE Certified Member, owns FAA Part 139 compliance and the airfield SMS, and has led 4 consecutive Part 139 inspections with zero discrepancies.",
+      "experience": [
+        {
+          "company": "Riverside International Airport Authority",
+          "role": "Airport Operations Manager",
+          "location": "Pittsburgh, PA",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 24 operations supervisors and agents covering airfield inspections, wildlife control, NOTAMs and the airport communications center\n- Directed 4 consecutive FAA Part 139 annual inspections with zero discrepancies\n- Rolled out an airfield SMS with hazard reporting that cut runway incursions by vehicles from 6 to 1 a year\n- Coordinated snow removal across 3 runways with a $3.8M fleet, keeping average runway closure under 25 minutes per event\n- Manage a $5.2M operations budget and the airport's emergency plan, running a full-scale triennial exercise"
+        },
+        {
+          "company": "Riverside International Airport Authority",
+          "role": "Airport Operations Supervisor",
+          "location": "Pittsburgh, PA",
+          "startDate": "2016-04",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Supervised shift airfield checks, issued NOTAMs and escorted construction crews on active movement areas\n- Updated the wildlife hazard management plan, cutting bird strikes 30%"
+        },
+        {
+          "company": "Lake Erie Regional Airport",
+          "role": "Airport Operations Agent",
+          "location": "Erie, PA",
+          "startDate": "2013-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Performed Part 139 self-inspections, ARFF coordination and lighting checks for a regional airport"
+        }
+      ],
+      "education": [
+        {
+          "school": "Embry-Riddle Aeronautical University",
+          "degree": "BS, Aviation Business Administration",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: AAAE Certified Member (C.M.), AAAE Airport Certified Employee (ACE) Operations, FAA Part 139 trained, NIMS ICS-300",
+        "Operations: Part 139 compliance, airfield inspections, NOTAMs, wildlife hazard management, snow and ice control",
+        "Safety: airport SMS, emergency planning, runway incursion prevention",
+        "Leadership: 24-person team, $5.2M budget, union labor scheduling, tenant coordination"
+      ]
+    },
+    "Locomotive Engineer": {
+      "summary": "FRA-certified locomotive engineer with 12 years in freight rail, operating unit coal, intermodal and manifest trains up to 12,000 tons. Runs PTC- and Trip Optimizer-equipped trains with a clean decertification record, and cut fuel use on assigned territory 8% through train-handling practices.",
+      "experience": [
+        {
+          "company": "Great Plains Railway",
+          "role": "Locomotive Engineer",
+          "location": "North Platte, NE",
+          "startDate": "2018-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate intermodal, unit coal and manifest trains up to 12,000 tons and 2 miles long across 260 miles of mainline\n- Hold an 8-year record with no FRA decertifying events, operating under PTC and General Code of Operating Rules\n- Cut fuel burn 8% on assigned territory using Trip Optimizer and dynamic braking, above the division target of 5%\n- Serve as a peer trainer, coaching 6 engineer trainees through Part 240 certification rides"
+        },
+        {
+          "company": "Great Plains Railway",
+          "role": "Freight Conductor",
+          "location": "North Platte, NE",
+          "startDate": "2014-03",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Managed train consists, hazmat paperwork and switching moves for manifest trains\n- Completed 4 years without a personal injury or FRA reportable incident"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mid-Plains Community College",
+          "degree": "Certificate, Railroad Operations",
+          "startDate": "2013-08",
+          "endDate": "2014-02"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FRA Locomotive Engineer (49 CFR Part 240), FRA Conductor (Part 242), Railroad Hazmat",
+        "Operations: train handling, air brake tests, distributed power, PTC, Trip Optimizer",
+        "Rules: GCOR, FRA Part 232 brake rules, track warrants, timetable and special instructions",
+        "Safety: job briefings, red zone awareness, fatigue management"
+      ]
+    },
+    "Train Conductor": {
+      "summary": "FRA-certified freight conductor with 5 years on road and yard assignments, responsible for train makeup, hazmat documentation and crew safety. Has completed 1,400+ trips without a personal injury or FRA reportable incident, and cut yard switching times 15% on a key local job.",
+      "experience": [
+        {
+          "company": "Tidewater Southern Railroad",
+          "role": "Freight Conductor",
+          "location": "Norfolk, VA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead road and local assignments, verifying consists, hazmat documents and restrictions before every departure\n- Completed 1,400+ trips with zero personal injuries and zero FRA reportable incidents\n- Planned switching moves for a 22-industry local job, cutting average job time 15% and reducing customer missed spots\n- Perform Class I air brake tests and car inspections under FRA Part 232, setting out 40+ defective cars a year"
+        },
+        {
+          "company": "Tidewater Southern Railroad",
+          "role": "Conductor Trainee / Yard Brakeman",
+          "location": "Portsmouth, VA",
+          "startDate": "2021-03",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Completed 6-month conductor training, qualifying on 3 subdivisions and 2 yards\n- Built 30+ outbound trains in the hump yard following switch lists and blue flag protection"
+        }
+      ],
+      "education": [
+        {
+          "school": "Old Dominion University",
+          "degree": "BS, Maritime and Supply Chain Management",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FRA Conductor (49 CFR Part 242), Railroad Hazmat, Remote Control Operator, CPR",
+        "Operations: train makeup, switching, hand and radio signals, track authorities, blue flag protection",
+        "Rules: GCOR, FRA Parts 218 and 232, hazmat placarding and documentation",
+        "Equipment: hand brakes, EOT devices, remote control locomotives"
+      ]
+    }
+  }
+}

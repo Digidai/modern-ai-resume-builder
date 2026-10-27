@@ -33,7 +33,7 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-4 flex w-full flex-wrap justify-center gap-x-6 gap-y-1 border-y border-(--accent) py-2 text-[13.5px] text-slate-700">
                         {contacts.map((entry) => (
-                            <ContactLink key={entry.key} entry={entry} className="min-w-0 wrap-anywhere" />
+                            <ContactLink key={entry.id} entry={entry} className="min-w-0 wrap-anywhere" />
                         ))}
                     </div>
                 )}

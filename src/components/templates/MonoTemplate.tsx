@@ -64,7 +64,7 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
                             <span className="text-slate-400">= {'{'}</span>
                         </div>
                         {contacts.map((entry) => (
-                            <div key={entry.key} className="flex pl-5">
+                            <div key={entry.id} className="flex pl-5">
                                 <span className="shrink-0 text-slate-400">{entry.key}:&nbsp;</span>
                                 <span className="min-w-0 text-slate-100">
                                     "<ContactLink entry={entry} className="wrap-anywhere" />"<span className="text-slate-400">,</span>

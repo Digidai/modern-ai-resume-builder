@@ -49,7 +49,7 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div className="overflow-hidden mt-2.5">
                             <ul className="flex flex-wrap gap-y-1 -ml-6 text-[12.5px] font-semibold text-neutral-700">
                                 {contacts.map((entry) => (
-                                    <li key={entry.key} className="relative pl-6 min-w-0 max-w-full before:content-['/'] before:absolute before:left-2 before:text-neutral-400">
+                                    <li key={entry.id} className="relative pl-6 min-w-0 max-w-full before:content-['/'] before:absolute before:left-2 before:text-neutral-400">
                                         <ContactLink entry={entry} className="wrap-anywhere" />
                                     </li>
                                 ))}

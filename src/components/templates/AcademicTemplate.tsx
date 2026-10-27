@@ -38,7 +38,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <ul className="max-w-[48%] shrink-0 flex flex-col items-end text-right text-[13px] text-slate-700 leading-[1.45]">
                         {contacts.map((entry) => (
-                            <li key={entry.key} className="min-w-0 max-w-full wrap-anywhere">
+                            <li key={entry.id} className="min-w-0 max-w-full wrap-anywhere">
                                 <ContactLink entry={entry} />
                             </li>
                         ))}

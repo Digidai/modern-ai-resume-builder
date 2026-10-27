@@ -34,7 +34,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-1 text-[12.5px] text-slate-700">
                         {contacts.map((entry) => (
-                            <ContactItem key={entry.key} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)/70" />
+                            <ContactItem key={entry.id} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)/70" />
                         ))}
                     </div>
                 )}

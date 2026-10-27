@@ -1,0 +1,2178 @@
+{
+  "family": "Business & Strategy",
+  "guide": null,
+  "titles": {
+    "Chief of Staff": {
+      "summary": "Chief of staff with 11 years of experience in strategy consulting and operating roles, currently running the operating cadence for a 600-person software company’s COO organization. Led the annual planning overhaul that aligned 14 teams on 5 company priorities. Brings structured problem solving, crisp executive communication and follow-through on cross-functional initiatives.",
+      "experience": [
+        {
+          "company": "Northwind Payroll Software",
+          "role": "Chief of Staff to the COO",
+          "location": "Boston, MA",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the operating cadence for a 600-person COO organization, including weekly staff meetings, quarterly business reviews and OKR tracking\n- Redesigned annual planning, aligning 14 teams on 5 company priorities and cutting the planning cycle from 10 weeks to 6\n- Led a vendor consolidation that saved $2.4M a year across support and operations tooling\n- Prepare board materials and executive briefs for the COO each quarter\n- Drove a 90-day integration plan for an acquired support team of 80, hitting all retention and SLA targets"
+        },
+        {
+          "company": "Charles River Strategy Partners",
+          "role": "Engagement Manager",
+          "location": "Boston, MA",
+          "startDate": "2019-09",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Led 4-person teams on operating-model and cost programs for 6 software and services clients\n- Identified $18M in savings for a B2B services company through span-of-control redesign\n- Built the transformation office tracker used by a client's executive committee"
+        },
+        {
+          "company": "Beacon Hill Advisory",
+          "role": "Business Analyst",
+          "location": "Boston, MA",
+          "startDate": "2015-07",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Built market-sizing and financial models for 10 growth-strategy engagements\n- Synthesized 80 customer interviews into recommendations for client leadership teams\n- Drafted 30 client-ready slides a week for partner reviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Harvard Business School",
+          "degree": "MBA",
+          "startDate": "2017-09",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Tufts University",
+          "degree": "B.A. in Economics",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operating Cadence: OKRs, QBRs, annual planning, executive staff meetings",
+        "Strategy: problem structuring, business cases, financial modeling",
+        "Communication: board materials, executive briefs, cross-functional alignment",
+        "Tools: Excel, Google Workspace, Notion, Asana, Tableau",
+        "Execution: special projects, integration planning, decision tracking"
+      ]
+    },
+    "Chief of Staff to CEO": {
+      "summary": "Chief of staff to the CEO with 10 years of experience across investment banking, corporate strategy and startup operations. Partners with the CEO of a 250-person Series C health-tech company on priorities, board management and special projects. Led the operating plan behind a $90M fundraise and a 2.5x revenue increase.",
+      "experience": [
+        {
+          "company": "Kindred Care Platforms",
+          "role": "Chief of Staff to the CEO",
+          "location": "New York, NY",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage the CEO’s priorities, executive team agenda and quarterly board meetings for a 250-person Series C company\n- Built the operating plan and data room supporting a $90M Series C raise\n- Led a cross-functional pricing and packaging project that contributed to 2.5x revenue growth in 2 years\n- Stood up an internal communications rhythm, including monthly all-hands and written CEO updates\n- Run the CEO's weekly decision log and follow-up tracker, closing 95% of executive actions within agreed dates"
+        },
+        {
+          "company": "Fulton Street Health",
+          "role": "Director of Corporate Strategy",
+          "location": "New York, NY",
+          "startDate": "2019-04",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Led the 3-year strategic plan and evaluated 12 acquisition targets with corporate development\n- Built a market-entry case for 3 new states that added $40M in annual revenue\n- Prepared quarterly strategy updates for the CEO and board of directors"
+        },
+        {
+          "company": "Greenwich Harbor Capital",
+          "role": "Investment Banking Analyst",
+          "location": "New York, NY",
+          "startDate": "2016-07",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Built LBO and merger models for 9 healthcare transactions totaling $3.1B\n- Drafted confidential information memoranda and management presentations\n- Supported sell-side diligence for 2 healthcare services companies"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wharton School, University of Pennsylvania",
+          "degree": "B.S. in Economics (Finance concentration)",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Partnership: CEO priorities, board management, executive team operations",
+        "Strategy & Finance: operating plans, fundraising, M&A evaluation, pricing",
+        "Communication: all-hands, investor updates, written strategy memos",
+        "Tools: Excel, PowerPoint, Carta, Notion",
+        "Operations: hiring executive search, offsite planning, OKR tracking"
+      ]
+    },
+    "Project Manager": {
+      "summary": "PMP-certified project manager with 7 years of experience delivering software implementation and process projects for healthcare and insurance clients. Delivered 22 projects worth $14M with 95% on time and on budget. Strong in hybrid Agile and waterfall delivery, risk management and keeping sponsors informed without surprises.",
+      "experience": [
+        {
+          "company": "Meadowbrook Health IT Services",
+          "role": "Project Manager",
+          "location": "Indianapolis, IN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 4 to 6 concurrent EHR integration projects with budgets up to $1.8M and teams of 12\n- Delivered 22 projects worth $14M with 95% on time and within 5% of budget\n- Built a RAID log and weekly status template adopted across the 9-person PM team\n- Recovered a delayed lab-interface rollout by re-baselining scope, going live 3 weeks ahead of the revised plan\n- Facilitated go-live readiness reviews with clinical, IT and vendor teams, achieving zero rollbacks across 22 launches"
+        },
+        {
+          "company": "Crossroads Insurance Group",
+          "role": "Associate Project Manager",
+          "location": "Carmel, IN",
+          "startDate": "2019-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Coordinated a policy administration upgrade for 40 users across underwriting and billing\n- Managed vendor deliverables and change requests worth $600K\n- Wrote test schedules and tracked 400 defects to closure during user acceptance testing"
+        },
+        {
+          "company": "Butler University Office of IT",
+          "role": "Student Project Assistant",
+          "location": "Indianapolis, IN",
+          "startDate": "2017-08",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Coordinated classroom technology upgrades in 30 lecture rooms\n- Maintained project schedules and vendor contacts in Smartsheet"
+        }
+      ],
+      "education": [
+        {
+          "school": "Butler University",
+          "degree": "B.S. in Business Administration (Management Information Systems)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Project Management: scope, schedule and budget control, RAID management, change control",
+        "Methods: hybrid Agile and waterfall, Scrum, critical path",
+        "Tools: Microsoft Project, Jira, Smartsheet, Confluence",
+        "Certifications: PMP",
+        "Domains: EHR integration, HL7 interfaces, insurance policy systems"
+      ]
+    },
+    "Project Coordinator": {
+      "summary": "Project coordinator with 3 years of experience supporting construction-technology and marketing projects. Keeps schedules, budgets and documentation current for portfolios of up to 12 projects. Known for organized trackers, clear meeting notes and catching issues before they become delays.",
+      "experience": [
+        {
+          "company": "Bricklane Facilities Software",
+          "role": "Project Coordinator",
+          "location": "Charlotte, NC",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate schedules, budgets and documentation for 12 customer implementation projects at a time\n- Built a Smartsheet portfolio tracker that cut weekly status preparation from 4 hours to 1\n- Schedule and document 15 client meetings a week, tracking 200 action items to closure\n- Processed 60 change orders and vendor invoices a quarter with no billing errors\n- Prepare weekly portfolio status reports for 4 project managers and the Director of Implementation"
+        },
+        {
+          "company": "Queen City Creative Agency",
+          "role": "Project Assistant",
+          "location": "Charlotte, NC",
+          "startDate": "2022-08",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Supported 3 project managers on 25 campaign launches for retail and banking clients\n- Maintained asset approval logs that reduced late creative handoffs 30%\n- Organized kickoff meetings and shared folders for each new client campaign"
+        },
+        {
+          "company": "Niner Events Board",
+          "role": "Event Planning Chair",
+          "location": "Charlotte, NC",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Planned 12 student events with budgets up to $8,000\n- Managed timelines and assignments for 15 volunteers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Charlotte",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coordination: scheduling, meeting facilitation, action tracking, document control",
+        "Tools: Smartsheet, Asana, Microsoft 365, Jira, Teams",
+        "Finance: change orders, invoice processing, budget tracking",
+        "Certifications: CAPM (Certified Associate in Project Management)",
+        "Communication: meeting minutes, status reports, client correspondence"
+      ]
+    },
+    "Program Manager": {
+      "summary": "Program manager with 9 years of experience running multi-team programs in medical devices and digital health. Led a $12M connected-device program across 7 teams from concept to FDA clearance and launch. Excels at integrated planning, dependency management and keeping executives aligned on trade-offs.",
+      "experience": [
+        {
+          "company": "Pulsepoint Medical Devices",
+          "role": "Program Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a $12M connected glucose monitor program spanning hardware, firmware, app, clinical, regulatory and manufacturing teams\n- Built an integrated master schedule of 1,400 tasks, guiding the program through FDA 510(k) clearance on target date\n- Ran monthly steering committees with 6 vice presidents, escalating trade-offs with clear options and cost impacts\n- Reduced design-transfer issues 40% by adding manufacturing readiness gates under ISO 13485\n- Coordinated 3 clinical sites and 2 contract manufacturers to keep pilot builds on a 6-week cadence"
+        },
+        {
+          "company": "Northland Health Apps",
+          "role": "Project Manager",
+          "location": "St. Paul, MN",
+          "startDate": "2018-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Delivered 3 patient-engagement app releases used by 400,000 members\n- Coordinated HIPAA security reviews and penetration tests with vendors\n- Built a release-readiness checklist that cut post-launch hotfixes 30%"
+        },
+        {
+          "company": "Lakeland Contract Manufacturing",
+          "role": "Project Engineer",
+          "location": "Plymouth, MN",
+          "startDate": "2017-06",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Managed new product introduction for 4 customer devices\n- Cut first-article inspection failures 25% through supplier reviews\n- Coordinated engineering change orders with 6 suppliers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "B.S. in Biomedical Engineering",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program Management: integrated master schedules, dependency and risk management, steering committees",
+        "Regulated Delivery: FDA 510(k), ISO 13485, design controls, HIPAA",
+        "Tools: Microsoft Project, Jira, Smartsheet, Jama Connect",
+        "Certifications: PMP, PgMP",
+        "Leadership: executive communication, cross-functional alignment, vendor management"
+      ]
+    },
+    "Program Coordinator": {
+      "summary": "Program coordinator with 4 years of experience supporting grant-funded community health and workforce programs at nonprofits. Manages logistics, data and reporting for programs serving 1,200 participants a year. Keeps funders, partners and staff aligned with organized systems and accurate, on-time reports.",
+      "experience": [
+        {
+          "company": "Riverside Community Health Alliance",
+          "role": "Program Coordinator",
+          "location": "Baltimore, MD",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate a $1.4M grant-funded chronic disease program serving 1,200 participants a year across 6 partner sites\n- Built a Salesforce Nonprofit Cloud tracker that improved funder data completeness from 78% to 98%\n- Schedule 90 workshops a quarter and manage logistics for 25 community health workers\n- Prepare quarterly reports for 3 funders, all submitted on time since 2023\n- Manage a $95,000 program supply and stipend budget with monthly reconciliation for the finance office"
+        },
+        {
+          "company": "Chesapeake Workforce Partnership",
+          "role": "Program Assistant",
+          "location": "Baltimore, MD",
+          "startDate": "2022-01",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Enrolled 300 job seekers in training programs and tracked placement outcomes\n- Organized 4 employer hiring fairs with 60 participating companies\n- Wrote participant success stories used in 2 grant renewals"
+        },
+        {
+          "company": "Towson University Health Center",
+          "role": "Peer Health Educator",
+          "location": "Towson, MD",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Delivered 40 wellness workshops to student groups\n- Tracked attendance and survey results for the center's annual report"
+        }
+      ],
+      "education": [
+        {
+          "school": "Towson University",
+          "degree": "B.S. in Health Science",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program Operations: event logistics, participant enrollment, partner coordination",
+        "Reporting: grant reporting, outcome tracking, data quality",
+        "Tools: Salesforce Nonprofit Cloud, Excel, Microsoft 365, SurveyMonkey",
+        "Languages: English, Spanish (professional working)",
+        "Budget: grant budget tracking, stipend processing, invoice reconciliation"
+      ]
+    },
+    "Technical Program Manager": {
+      "summary": "Technical program manager with 10 years of experience leading infrastructure and platform programs at cloud software companies. Drove a multi-region migration of 140 services that improved availability to 99.99%. Brings engineering depth, sharp dependency management and the ability to make technical trade-offs clear to leadership.",
+      "experience": [
+        {
+          "company": "Nimbusway Data Cloud",
+          "role": "Senior Technical Program Manager",
+          "location": "Seattle, WA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a multi-region active-active migration of 140 services across 16 engineering teams, raising availability from 99.9% to 99.99%\n- Built dependency maps and milestone reviews that cut cross-team blockers resolution time from 9 days to 3\n- Drove a Kubernetes cost program that reduced compute spend $5M a year\n- Ran incident postmortem reviews and tracked 200 reliability action items to completion\n- Wrote launch plans and rollback criteria for 25 region cutovers, completing all with no customer-facing incidents"
+        },
+        {
+          "company": "Fernhill Commerce Platform",
+          "role": "Technical Program Manager",
+          "location": "Portland, OR",
+          "startDate": "2019-03",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Delivered PCI DSS 4.0 readiness across 9 payment services ahead of audit\n- Coordinated a checkout API migration for 3,000 merchants with zero critical incidents\n- Ran weekly cross-team syncs with 12 engineering leads and security"
+        },
+        {
+          "company": "Brightwater Systems",
+          "role": "Software Engineer",
+          "location": "Portland, OR",
+          "startDate": "2016-07",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Built backend services in Java for an order-management product\n- Led the team's move to automated deployments with Jenkins\n- Wrote design documents for 3 order-service features"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical Domains: cloud infrastructure, Kubernetes, distributed systems, reliability engineering",
+        "Program Management: dependency management, milestone reviews, risk tracking, executive reporting",
+        "Compliance: PCI DSS, SOC 2",
+        "Tools: Jira, Confluence, Google Workspace, Grafana",
+        "Engineering Background: Java, REST APIs, AWS, CI/CD pipelines"
+      ]
+    },
+    "PMO Manager": {
+      "summary": "PMO manager with 12 years of experience in project delivery and portfolio governance for utilities and engineering firms. Runs a PMO overseeing 45 projects and $220M in capital spend. Improved on-budget delivery from 68% to 88% by standardizing stage gates, reporting and project manager development.",
+      "experience": [
+        {
+          "company": "Great Plains Power Cooperative",
+          "role": "PMO Manager",
+          "location": "Omaha, NE",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a PMO of 8 project managers and analysts overseeing 45 projects and $220M in annual capital spend\n- Standardized stage gates and earned value reporting, raising on-budget delivery from 68% to 88%\n- Implemented Planview portfolio management, giving executives one view of capacity and spend\n- Built a project manager development program that certified 6 PMPs in 2 years\n- Reduced average project intake-to-approval time from 9 weeks to 4 with a standard business case template"
+        },
+        {
+          "company": "Missouri Valley Engineering",
+          "role": "Senior Project Manager",
+          "location": "Kansas City, MO",
+          "startDate": "2017-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Managed substation and transmission projects worth up to $30M\n- Cut average change-order cost 20% through earlier design reviews\n- Led a team of 4 project engineers on transmission line rebuilds"
+        },
+        {
+          "company": "Heartland Grid Services",
+          "role": "Project Controls Specialist",
+          "location": "Lincoln, NE",
+          "startDate": "2014-06",
+          "endDate": "2016-12",
+          "isCurrent": false,
+          "description": "- Maintained Primavera P6 schedules and cost reports for 12 capital projects\n- Built monthly variance reports for the engineering director\n- Built resource loading reports in P6 for construction crews"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nebraska-Lincoln",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Portfolio Governance: stage gates, capacity planning, earned value management, executive dashboards",
+        "Tools: Planview, Primavera P6, Microsoft Project, Power BI",
+        "Leadership: PM development, standards, steering committees",
+        "Certifications: PMP, PfMP",
+        "Utilities: capital project delivery, substation and transmission programs, regulatory filings"
+      ]
+    },
+    "PMO Analyst": {
+      "summary": "PMO analyst with 3 years of experience supporting portfolio reporting and governance at a regional bank. Automated portfolio status reporting for 60 projects and cut monthly reporting time 70%. Comfortable with project data, financial tracking and helping project managers follow standards without friction.",
+      "experience": [
+        {
+          "company": "Cumberland Valley Bank",
+          "role": "PMO Analyst",
+          "location": "Harrisburg, PA",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Automated portfolio status reporting for 60 projects with Power BI and Smartsheet, cutting monthly reporting time 70%\n- Track $28M in project budgets and flag variances over 10% to the PMO manager\n- Audit project artifacts against gate criteria, raising compliance from 74% to 93%\n- Maintain the resource capacity plan for 90 IT and business staff\n- Coordinate monthly portfolio review meetings and track 40 decisions and actions for the steering committee"
+        },
+        {
+          "company": "Susquehanna Health Partners",
+          "role": "Project Analyst",
+          "location": "Lancaster, PA",
+          "startDate": "2022-06",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Supported 3 project managers on a patient billing system upgrade\n- Maintained schedules and meeting minutes for 20 workstream meetings a month\n- Tracked vendor deliverables and invoices against the project budget"
+        },
+        {
+          "company": "Penn State IST Help Desk",
+          "role": "Student Support Technician",
+          "location": "Middletown, PA",
+          "startDate": "2019-09",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Resolved 25 student and staff IT tickets a week in ServiceNow\n- Wrote 15 knowledge base articles for common issues"
+        }
+      ],
+      "education": [
+        {
+          "school": "Penn State Harrisburg",
+          "degree": "B.S. in Information Sciences and Technology",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "PMO Operations: portfolio reporting, gate reviews, resource capacity planning",
+        "Financials: budget tracking, variance analysis, capitalization",
+        "Tools: Smartsheet, Power BI, Excel, Microsoft Project, ServiceNow SPM",
+        "Certifications: CAPM",
+        "Governance: project gate criteria, artifact audits, steering committee support"
+      ]
+    },
+    "Scrum Master": {
+      "summary": "Certified Scrum Master with 5 years of experience coaching software teams at an insurance carrier and a SaaS company. Helped 3 teams raise sprint predictability from 60% to 88%. Facilitates focused ceremonies, removes blockers quickly and helps teams improve flow with simple, visible metrics.",
+      "experience": [
+        {
+          "company": "Prairie Shield Insurance",
+          "role": "Scrum Master",
+          "location": "Des Moines, IA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve 3 Scrum teams of 22 engineers building policyholder and agent portals\n- Raised sprint predictability from 60% to 88% through backlog refinement and WIP limits\n- Cut average cycle time from 11 days to 6 by visualizing flow in Jira and splitting stories smaller\n- Facilitate PI planning sessions with 6 teams and track cross-team dependencies\n- Coached 2 product owners on backlog ordering and story slicing, reducing carryover work 40%"
+        },
+        {
+          "company": "Hawkeye Scheduling Software",
+          "role": "QA Analyst and Scrum Master",
+          "location": "Cedar Rapids, IA",
+          "startDate": "2021-01",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Led Scrum ceremonies for a 7-person team while handling test planning\n- Introduced retrospectives with tracked actions that cut escaped defects 35%\n- Wrote test plans for 4 releases of a scheduling app used by 300 clinics"
+        },
+        {
+          "company": "Cyclone Software Club",
+          "role": "Team Lead",
+          "location": "Ames, IA",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Led a 6-student team building a campus parking app using 2-week sprints\n- Ran demos for 80 students at the spring showcase"
+        }
+      ],
+      "education": [
+        {
+          "school": "Iowa State University",
+          "degree": "B.S. in Management Information Systems",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Agile Practices: Scrum, Kanban, backlog refinement, retrospectives, PI planning",
+        "Metrics: velocity, cycle time, sprint predictability, cumulative flow",
+        "Tools: Jira, Confluence, Miro, Azure DevOps",
+        "Certifications: PSM II, CSM, SAFe Scrum Master",
+        "Facilitation: sprint ceremonies, conflict resolution, team working agreements"
+      ]
+    },
+    "Agile Coach": {
+      "summary": "Enterprise agile coach with 12 years of experience in software delivery, including 8 years coaching teams and leaders through agile transformations at banks and retailers. Coached a 40-team transformation that cut lead time 55%. Works with executives on operating models while staying close to teams and their real impediments.",
+      "experience": [
+        {
+          "company": "Longs Peak Financial",
+          "role": "Enterprise Agile Coach",
+          "location": "Denver, CO",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coach 40 teams and 12 leaders through a product operating model shift, cutting idea-to-release lead time 55%\n- Designed a value-stream funding pilot that replaced annual project budgets for 3 portfolios\n- Built an internal coaching guild that certified 18 Scrum Masters and 10 product owners\n- Introduced flow metrics dashboards used in quarterly business reviews\n- Coached 12 senior leaders on outcome-based OKRs, reducing in-flight initiatives from 85 to 40"
+        },
+        {
+          "company": "Rocky Ridge Outfitters",
+          "role": "Agile Coach",
+          "location": "Boulder, CO",
+          "startDate": "2018-02",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Coached 9 e-commerce teams adopting Scrum and Kanban during a replatform\n- Facilitated quarterly planning that cut cross-team dependency delays 40%\n- Trained 70 staff on agile basics through a 4-session internal course"
+        },
+        {
+          "company": "Front Range Software Group",
+          "role": "Scrum Master",
+          "location": "Denver, CO",
+          "startDate": "2014-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Led Scrum for 2 product teams building logistics software\n- Moved release cadence from quarterly to biweekly\n- Introduced automated testing goals that cut regression time 50%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado State University",
+          "degree": "B.S. in Computer Information Systems",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coaching: leadership coaching, team coaching, facilitation, organizational change",
+        "Frameworks: Scrum, Kanban, SAFe, LeSS, OKRs, value stream management",
+        "Metrics: flow metrics, lead time, DORA metrics",
+        "Certifications: ICAgile Certified Expert in Agile Coaching (ICE-AC), SAFe SPC, CSP-SM",
+        "Leadership: executive workshops, coaching programs, organizational design"
+      ]
+    },
+    "Delivery Manager": {
+      "summary": "Delivery manager with 9 years of experience leading digital services delivery for government and public sector clients. Accountable for 5 teams and a $9M annual delivery budget. Shipped a benefits application service that cut processing time from 30 days to 7 while meeting Section 508 and FedRAMP requirements.",
+      "experience": [
+        {
+          "company": "Civic Path Digital",
+          "role": "Delivery Manager",
+          "location": "Washington, DC",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own delivery for 5 multidisciplinary teams on a $9M annual federal contract\n- Shipped an online benefits application service that cut average processing from 30 days to 7 for 250,000 applicants a year\n- Meet Section 508 accessibility and FedRAMP Moderate requirements with zero audit findings in 2025\n- Run contract reporting, risk reviews and sprint demos with agency product owners\n- Grew team capacity from 3 to 5 squads while keeping delivery predictability above 85%"
+        },
+        {
+          "company": "Capitol Digital Services",
+          "role": "Project Manager",
+          "location": "Arlington, VA",
+          "startDate": "2018-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Delivered a state licensing portal used by 60,000 professionals\n- Managed 3 subcontractors and reduced invoice disputes to zero\n- Ran weekly risk reviews with state officials and the vendor team"
+        },
+        {
+          "company": "Potomac Research Group",
+          "role": "Business Analyst",
+          "location": "Alexandria, VA",
+          "startDate": "2017-01",
+          "endDate": "2018-07",
+          "isCurrent": false,
+          "description": "- Wrote requirements and user stories for a case management system\n- Conducted 30 user interviews with caseworkers\n- Mapped 12 caseworker workflows for system design"
+        }
+      ],
+      "education": [
+        {
+          "school": "George Mason University",
+          "degree": "B.S. in Information Technology",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Delivery: Agile delivery, release planning, risk and dependency management, contract reporting",
+        "Public Sector: Section 508, FedRAMP, federal acquisition, user-centered design",
+        "Tools: Jira, Confluence, GitHub, Mural",
+        "Certifications: PMP, PMI-ACP",
+        "Leadership: team health, hiring, stakeholder management, budget tracking"
+      ]
+    },
+    "Business Operations Manager": {
+      "summary": "Business operations manager with 8 years of experience in consulting and SaaS operations, owning planning, metrics and cross-functional process for a 300-person go-to-market organization. Rebuilt the quota and territory process that lifted rep attainment from 54% to 71%. Combines financial modeling with a bias toward fixing broken processes.",
+      "experience": [
+        {
+          "company": "Brightpath Procurement Cloud",
+          "role": "Business Operations Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own annual planning, headcount models and KPI reporting for a 300-person go-to-market organization\n- Rebuilt quota and territory design with sales leadership, raising reps at or above quota from 54% to 71%\n- Launched a weekly business review with 12 leaders, replacing 6 overlapping status meetings\n- Negotiated renewals for 14 GTM tools, saving $850K a year\n- Built a headcount and hiring plan for 85 roles tied to bookings targets and approved by the CFO"
+        },
+        {
+          "company": "Midtown Software Group",
+          "role": "Senior Business Operations Analyst",
+          "location": "Atlanta, GA",
+          "startDate": "2020-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Built the company's first capacity model for support and onboarding teams\n- Automated board KPI packs in Tableau, saving 3 days each quarter\n- Designed an onboarding capacity model that reduced customer time-to-live by 2 weeks"
+        },
+        {
+          "company": "Peachtree Consulting Partners",
+          "role": "Analyst",
+          "location": "Atlanta, GA",
+          "startDate": "2018-07",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Built cost and process models for 5 operations-improvement engagements\n- Prepared steering committee materials for client executives\n- Interviewed 40 client staff to map process pain points"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Business Operations: annual planning, headcount modeling, operating cadence, vendor management",
+        "GTM Operations: quota and territory design, capacity planning, pipeline metrics",
+        "Tools: Excel, Salesforce, Tableau, Anaplan, SQL",
+        "Analysis: financial modeling, process improvement, KPI design",
+        "Communication: executive business reviews, board KPI packs, written plans"
+      ]
+    },
+    "Operations Analyst": {
+      "summary": "Operations analyst with 3 years of experience improving fulfillment and customer operations processes at an e-commerce company. Built a labor planning model that cut overtime 19% while holding same-day ship rates above 98%. Uses SQL, Excel and process mapping to find and fix operational bottlenecks.",
+      "experience": [
+        {
+          "company": "Cobalt Pet Supply",
+          "role": "Operations Analyst",
+          "location": "Columbus, OH",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a labor planning model from order forecasts, cutting fulfillment overtime 19% while holding same-day ship rates above 98%\n- Mapped the returns process end to end, removing 3 handoffs and reducing refund time from 9 days to 4\n- Track daily KPIs for 2 fulfillment centers in Looker and lead the morning operations huddle readout\n- Analyzed carrier invoices, recovering $140K in service-failure refunds\n- Built a slotting analysis that moved 400 fast-moving SKUs closer to packing, cutting pick travel 14%"
+        },
+        {
+          "company": "Riverfront Customer Care",
+          "role": "Workforce Coordinator",
+          "location": "Cincinnati, OH",
+          "startDate": "2022-06",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Built weekly agent schedules for a 120-person contact center\n- Monitored intraday service levels and adjusted breaks to hit an 80/30 target\n- Built a staffing forecast in Excel for seasonal call volume peaks"
+        },
+        {
+          "company": "Bearcat Supply Chain Club",
+          "role": "Case Competition Lead",
+          "location": "Cincinnati, OH",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Led a 4-student team to second place in a regional supply chain case competition\n- Built a warehouse layout model in Excel for the final presentation"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Cincinnati",
+          "degree": "B.B.A. in Operations Management",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: labor planning, process mapping, root-cause analysis, KPI tracking",
+        "Tools: SQL, Excel, Looker, Smartsheet, NetSuite",
+        "Methods: Lean, value stream mapping, workforce management",
+        "Certifications: Lean Six Sigma Green Belt",
+        "Communication: daily huddles, operations reviews, SOP documentation"
+      ]
+    },
+    "Business Consultant": {
+      "summary": "Business consultant with 10 years of experience in commercial lending and advisory work for small and midsize companies on growth, operations and financial performance. Has delivered 40 engagements across manufacturing, professional services and retail, including a turnaround that restored a client to profitability within a year. Practical, numbers-first advice that owners can implement.",
+      "experience": [
+        {
+          "company": "Main Street Growth Advisors",
+          "role": "Senior Business Consultant",
+          "location": "Nashville, TN",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise 8 to 10 owner-led companies at a time with revenue of $5M to $60M on pricing, operations and cash flow\n- Led a turnaround for a $14M machine shop, moving EBITDA from -4% to 9% within 12 months\n- Built 13-week cash flow models that helped 6 clients secure bank financing\n- Run strategic planning retreats that set annual goals and scorecards for leadership teams\n- Implemented weekly KPI scorecards for 12 clients, giving owners a 1-page view of cash, sales and capacity"
+        },
+        {
+          "company": "Volunteer State Small Business Center",
+          "role": "Business Advisor",
+          "location": "Knoxville, TN",
+          "startDate": "2020-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Counseled 150 small businesses on business plans, SBA loans and marketing\n- Helped clients secure $9M in financing, including PPP and SBA 7(a) loans\n- Delivered 20 workshops on pricing, bookkeeping and marketing to small business owners"
+        },
+        {
+          "company": "Smoky Mountain Credit Union",
+          "role": "Commercial Lending Analyst",
+          "location": "Knoxville, TN",
+          "startDate": "2016-06",
+          "endDate": "2018-07",
+          "isCurrent": false,
+          "description": "- Analyzed financial statements for 120 small business loan applications\n- Prepared credit memos for loans up to $2M"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vanderbilt University, Owen Graduate School of Management",
+          "degree": "MBA",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "University of Tennessee, Knoxville",
+          "degree": "B.S. in Business Administration (Finance)",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Advisory: strategic planning, turnarounds, pricing, operating scorecards",
+        "Finance: cash flow forecasting, unit economics, SBA lending",
+        "Tools: Excel, QuickBooks, PowerPoint, HubSpot",
+        "Methods: EOS (Entrepreneurial Operating System), process improvement",
+        "Industries: manufacturing, professional services, specialty retail"
+      ]
+    },
+    "Management Consultant": {
+      "summary": "Management consultant with 6 years at a strategy and operations firm, focused on cost transformation and operating model design for healthcare and industrial clients. Led workstreams that identified $65M in savings across 9 engagements. Brings hypothesis-driven problem solving, crisp slides and strong client relationships at the VP level.",
+      "experience": [
+        {
+          "company": "Halstead & Rowe Consulting",
+          "role": "Consultant",
+          "location": "Chicago, IL",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead workstreams on cost transformation for health systems and manufacturers, identifying $65M in savings across 9 engagements\n- Redesigned the procurement operating model for a $4B hospital network, consolidating 14 buying teams into 3 centers of excellence\n- Manage 2 business analysts and present findings to client VPs and steering committees\n- Built a zero-based budgeting model adopted by a client CFO for 2025 planning\n- Built implementation roadmaps and KPI trackers that clients used to realize 70% of savings within a year"
+        },
+        {
+          "company": "Halstead & Rowe Consulting",
+          "role": "Business Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2020-08",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Conducted 60 stakeholder interviews and benchmarks for operations diagnostics\n- Built spend cubes covering $1.2B in client third-party spend\n- Built benchmarking databases covering 40 hospital supply chains"
+        },
+        {
+          "company": "Notre Dame Student Consulting Group",
+          "role": "Project Lead",
+          "location": "Notre Dame, IN",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Led 3 pro bono projects for South Bend nonprofits and small businesses\n- Built a volunteer staffing model adopted by a local food bank"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Notre Dame",
+          "degree": "B.B.A. in Finance, Minor in Engineering Corporate Practice",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Consulting: hypothesis-driven problem solving, operating model design, cost transformation",
+        "Analysis: zero-based budgeting, spend analysis, benchmarking, financial modeling",
+        "Communication: executive presentations, workshop facilitation, steering committees",
+        "Tools: Excel, PowerPoint, Alteryx, Tableau",
+        "Industries: health systems, industrial manufacturing, procurement"
+      ]
+    },
+    "Strategy Consultant": {
+      "summary": "Strategy consultant with 5 years of experience advising consumer, retail and technology clients on growth strategy, market entry and portfolio choices. Built the market-entry case behind a client's $120M expansion into Canada. Strong in market sizing, customer research and turning analysis into a clear recommendation for CEOs.",
+      "experience": [
+        {
+          "company": "Larchmont Strategy Group",
+          "role": "Senior Consultant",
+          "location": "New York, NY",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built the market-entry strategy for a specialty retailer's $120M expansion into Canada, including site prioritization for 35 stores\n- Led a 3,000-respondent conjoint study that set pricing for a consumer subscription launch\n- Developed growth strategies for 6 clients, presenting directly to CEOs and boards\n- Coach 3 analysts on structuring, modeling and slide writing\n- Built a portfolio prioritization model that helped a software client reallocate $35M in R&D spend"
+        },
+        {
+          "company": "Larchmont Strategy Group",
+          "role": "Associate",
+          "location": "New York, NY",
+          "startDate": "2021-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Sized addressable markets for 8 technology and consumer engagements\n- Interviewed 70 customers and experts to test growth hypotheses\n- Built 15 client models covering pricing, channel economics and store performance"
+        },
+        {
+          "company": "Hoya Strategy Group",
+          "role": "Student Consultant",
+          "location": "Washington, DC",
+          "startDate": "2019-01",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Delivered market-entry research for 2 DC-area startups\n- Interviewed 25 customers to test a meal-delivery pricing model"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgetown University",
+          "degree": "B.S. in Business Administration (Strategic Management)",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: growth strategy, market entry, portfolio strategy, competitive analysis",
+        "Research: market sizing, conjoint analysis, expert interviews, customer surveys",
+        "Tools: Excel, PowerPoint, Qualtrics, Tableau, ThinkCell",
+        "Languages: English, French (professional working)",
+        "Industries: specialty retail, consumer subscriptions, B2B software"
+      ]
+    },
+    "Strategy Analyst": {
+      "summary": "Strategy analyst with 3 years of experience supporting corporate strategy at a consumer goods company. Built the category attractiveness model used to rank 18 adjacent markets in the 5-year plan. Strong in Excel modeling, market research and concise slides that leadership can decide from.",
+      "experience": [
+        {
+          "company": "Sunfield Brands",
+          "role": "Strategy Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a category attractiveness model ranking 18 adjacent markets, informing the 5-year strategic plan\n- Analyzed Nielsen and Circana data to size a $2.3B snacking adjacency for the executive team\n- Prepared monthly competitor briefs on 12 rivals for the Chief Strategy Officer\n- Supported due diligence on 2 bolt-on acquisitions with revenue and synergy models\n- Built quarterly strategic initiative trackers covering 15 projects for the executive leadership team"
+        },
+        {
+          "company": "Lakes Region Consulting",
+          "role": "Summer Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Researched market trends for a food manufacturer's channel strategy\n- Built a store-level sales model in Excel covering 4,000 retail doors\n- Prepared a competitor channel map covering 25 food brands"
+        },
+        {
+          "company": "Carlson Consulting Enterprise",
+          "role": "Student Consultant",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-09",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Delivered 2 growth strategy projects for Minnesota consumer companies\n- Built pricing and volume scenarios for a regional beverage brand"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota, Carlson School of Management",
+          "degree": "B.S.B. in Finance and Marketing",
+          "startDate": "2019-09",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: market sizing, competitive analysis, strategic planning support, due diligence",
+        "Data: Nielsen, Circana, Euromonitor, Excel, SQL basics",
+        "Communication: executive slides, competitor briefs",
+        "Tools: Excel, PowerPoint, ThinkCell, Tableau",
+        "Industries: consumer packaged goods, food and beverage, retail channels"
+      ]
+    },
+    "Strategy Manager": {
+      "summary": "Strategy manager with 10 years of experience in consulting and in-house strategy at a healthcare services company. Leads strategic initiatives from analysis to launch, including a virtual care business now generating $45M a year. Combines rigorous analysis with the project leadership needed to get decisions implemented.",
+      "experience": [
+        {
+          "company": "Oakmont Health Services",
+          "role": "Strategy Manager",
+          "location": "Dallas, TX",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led the business case and launch plan for a virtual care service that now generates $45M in annual revenue\n- Run the annual strategic planning process across 5 business units with the Chief Strategy Officer\n- Manage 2 strategy associates and coordinate cross-functional launch teams of 20\n- Evaluated 6 partnership options for behavioral health, recommending a joint venture approved by the board\n- Built the KPI framework and monthly scorecard used by the executive team to track 8 strategic initiatives"
+        },
+        {
+          "company": "Trinity Advisory Group",
+          "role": "Senior Consultant",
+          "location": "Dallas, TX",
+          "startDate": "2018-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Delivered growth and network strategies for 10 provider and payer clients\n- Built a service-line profitability model used in a $200M capital plan\n- Led client workshops with hospital executives to prioritize service-line investments"
+        },
+        {
+          "company": "Lone Star Health Analytics",
+          "role": "Analyst",
+          "location": "Houston, TX",
+          "startDate": "2016-07",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Analyzed market share and referral patterns for hospital clients\n- Built demand forecasts for 3 new outpatient sites\n- Prepared referral and market reports for 6 hospital clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Baylor University",
+          "degree": "B.B.A. in Economics",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: strategic planning, business cases, partnership evaluation, new business launch",
+        "Analysis: financial modeling, market assessment, service-line profitability",
+        "Leadership: team management, cross-functional initiatives, executive presentations",
+        "Healthcare: virtual care, payer and provider economics, CMS reimbursement",
+        "Tools: Excel, PowerPoint, Tableau, Definitive Healthcare"
+      ]
+    },
+    "Strategy Director": {
+      "summary": "Strategy director with 13 years of experience across management consulting and corporate strategy in industrial technology. Leads a 6-person strategy team and owns the 5-year plan for a $2.8B business. Shaped a portfolio shift toward software and services that raised gross margin 6 points.",
+      "experience": [
+        {
+          "company": "Ardent Industrial Technologies",
+          "role": "Director of Strategy",
+          "location": "Milwaukee, WI",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 6-person strategy team and own the 5-year strategic plan for a $2.8B industrial technology company\n- Shaped a portfolio shift toward software and services, raising gross margin from 34% to 40% over 4 years\n- Led the strategic review that resulted in divesting a $300M low-growth product line\n- Present strategy and progress reviews to the CEO and board twice a year\n- Built an annual strategy refresh process that links 5 business unit plans to capital allocation"
+        },
+        {
+          "company": "Ardent Industrial Technologies",
+          "role": "Senior Manager, Corporate Strategy",
+          "location": "Milwaukee, WI",
+          "startDate": "2018-03",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Built the business case for an IoT services platform that reached $90M revenue\n- Ran competitor and technology scans that informed 3 acquisitions\n- Managed 2 strategy associates and the annual competitor review"
+        },
+        {
+          "company": "Whitmore Partners",
+          "role": "Engagement Manager",
+          "location": "Chicago, IL",
+          "startDate": "2013-08",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Led strategy engagements for 12 industrial and automotive clients\n- Built a pricing program that added $40M in annual margin for a components maker\n- Coached 8 consultants on modeling and client communication"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University, Kellogg School of Management",
+          "degree": "MBA",
+          "startDate": "2011-09",
+          "endDate": "2013-06"
+        },
+        {
+          "school": "University of Wisconsin-Madison",
+          "degree": "B.S. in Mechanical Engineering",
+          "startDate": "2005-09",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: long-range planning, portfolio strategy, divestitures, competitive strategy",
+        "Leadership: team leadership, board communication, executive alignment",
+        "Finance: valuation, business cases, margin analysis",
+        "Industry: industrial automation, IoT, software and services models",
+        "Tools: Excel, PowerPoint, Capital IQ, Tableau"
+      ]
+    },
+    "Corporate Strategy Manager": {
+      "summary": "Corporate strategy manager with 7 years of experience in investment banking and corporate strategy at a consumer fintech. Leads company-level planning, market analysis and strategic initiatives for the executive team. Built the strategy behind a small-business lending product that reached $400M in originations in its second year.",
+      "experience": [
+        {
+          "company": "Ledgerly Financial",
+          "role": "Corporate Strategy Manager",
+          "location": "San Francisco, CA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built the strategy and business case for small-business lending, which reached $400M in originations in year 2\n- Lead the company's annual strategy offsite and 3-year plan with the CEO and CFO\n- Assess build, buy and partner options for 5 new products, with 2 approved for investment\n- Track strategic initiative progress in a monthly executive scorecard\n- Built a competitor and regulatory monitoring brief sent monthly to 20 senior leaders"
+        },
+        {
+          "company": "Embarcadero Capital Advisors",
+          "role": "Investment Banking Associate",
+          "location": "San Francisco, CA",
+          "startDate": "2019-07",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Executed 7 fintech M&A and private placement transactions totaling $1.6B\n- Built valuation models using DCF, trading comps and precedent transactions\n- Prepared board and investor presentations for 4 fintech clients"
+        },
+        {
+          "company": "Haas Investment Fund",
+          "role": "Analyst",
+          "location": "Berkeley, CA",
+          "startDate": "2017-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Pitched 4 technology stocks to the fund's investment committee\n- Built DCF and comparable company models for each pitch"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Berkeley",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Corporate Strategy: long-range planning, market analysis, build-buy-partner decisions",
+        "Finance: valuation, DCF, business cases, unit economics",
+        "Fintech: lending, payments, regulatory considerations",
+        "Tools: Excel, PowerPoint, SQL, PitchBook",
+        "Communication: executive offsites, strategy memos, board materials"
+      ]
+    },
+    "Competitive Intelligence Analyst": {
+      "summary": "Competitive intelligence analyst with 5 years of experience tracking competitors for B2B software and medical technology companies. Built battlecards that raised competitive win rates from 38% to 49%. Combines primary research, win-loss interviews and market monitoring into timely, actionable intelligence for sales and product teams.",
+      "experience": [
+        {
+          "company": "Clearline Security Software",
+          "role": "Competitive Intelligence Analyst",
+          "location": "Austin, TX",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built and maintain battlecards for 8 competitors in Klue, raising competitive win rate from 38% to 49%\n- Run 60 win-loss interviews a year and share quarterly findings with product and sales leadership\n- Monitor competitor pricing, releases and hiring signals, publishing a weekly digest read by 400 employees\n- Trained 150 account executives on competitive positioning and objection handling\n- Built a competitor pricing tracker covering 120 public price points, informing 2 packaging changes"
+        },
+        {
+          "company": "Stellar Surgical Systems",
+          "role": "Market Intelligence Associate",
+          "location": "Houston, TX",
+          "startDate": "2021-06",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Tracked FDA clearances and clinical trial filings for 15 competing devices\n- Built a competitor product comparison used in 3 hospital value-analysis committees\n- Briefed sales leaders monthly on competitor contract wins and losses"
+        },
+        {
+          "company": "Longhorn Business Review",
+          "role": "Research Editor",
+          "location": "Austin, TX",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Edited 20 student articles on industry trends and company strategy\n- Fact-checked financial data against SEC filings"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at Austin",
+          "degree": "B.A. in Economics, Business Foundations Certificate",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Intelligence: competitor monitoring, win-loss analysis, battlecards, primary research",
+        "Tools: Klue, Crayon, Gong, Salesforce, PitchBook",
+        "Enablement: sales training, positioning, objection handling",
+        "Ethics & Standards: SCIP code of ethics, public-source research",
+        "Analysis: pricing analysis, market mapping, SWOT, SEC filings review"
+      ]
+    },
+    "Corporate Development Manager": {
+      "summary": "Corporate development manager with 8 years of experience in M&A advisory and in-house corporate development at a vertical software company. Led sourcing, diligence and integration planning for 5 acquisitions worth $320M. Strong in valuation, deal negotiation support and building relationships with founders and bankers.",
+      "experience": [
+        {
+          "company": "Crestview Vertical Software",
+          "role": "Corporate Development Manager",
+          "location": "Denver, CO",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led sourcing, valuation and diligence for 5 acquisitions totaling $320M, all closed within planned timelines\n- Maintain a pipeline of 150 targets and meet 40 founders a year\n- Built integration plans with 8 functional leads, retaining 92% of acquired key employees after one year\n- Present deal recommendations and post-close performance reviews to the board\n- Built the acquisition integration playbook used for all deals since 2023"
+        },
+        {
+          "company": "Larimer Street Partners",
+          "role": "M&A Associate",
+          "location": "Denver, CO",
+          "startDate": "2019-07",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Executed 9 sell-side software transactions with total value of $1.1B\n- Drafted management presentations and coordinated data rooms\n- Built buyer outreach materials and managed process timelines with management teams"
+        },
+        {
+          "company": "Larimer Street Partners",
+          "role": "M&A Analyst",
+          "location": "Denver, CO",
+          "startDate": "2018-07",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Built LBO and accretion-dilution models for software buyers\n- Screened 300 potential acquirers for client processes\n- Prepared industry research on vertical software markets"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "B.S. in Finance",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Corporate Development: target sourcing, valuation, due diligence, integration planning",
+        "Finance: DCF, LBO, accretion-dilution, comparable companies",
+        "Tools: Excel, PitchBook, Capital IQ, DealRoom",
+        "Relationships: founder outreach, banker coverage, board communication",
+        "Legal & Diligence: LOIs, purchase agreements, quality of earnings coordination"
+      ]
+    },
+    "M&A Analyst": {
+      "summary": "M&A analyst with 2 years of experience at a middle-market investment bank covering business services and healthcare. Supported 6 closed transactions worth $940M, owning models, buyer lists and data rooms. Strong in three-statement modeling, valuation and fast, accurate turnaround under deal deadlines.",
+      "experience": [
+        {
+          "company": "Crestline Merchant Partners",
+          "role": "M&A Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2024-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supported 6 closed sell-side and buy-side transactions totaling $940M in business services and healthcare\n- Built three-statement, DCF and LBO models used in management presentations and bid evaluations\n- Compiled buyer lists of 120 strategic and sponsor targets and tracked outreach for 4 processes\n- Managed virtual data rooms with 2,500 documents and coordinated 300 diligence requests\n- Prepared buyer comparison analyses of 14 indications of interest for client management teams"
+        },
+        {
+          "company": "Lakeshore Valuation Group",
+          "role": "Valuation Intern",
+          "location": "Chicago, IL",
+          "startDate": "2023-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Prepared comparable company analyses for 5 fairness opinion and 409A engagements\n- Built a precedent transaction database of 200 healthcare deals\n- Wrote industry summaries on 3 healthcare services subsectors"
+        },
+        {
+          "company": "Ross Investment Club",
+          "role": "Sector Analyst, Healthcare",
+          "location": "Ann Arbor, MI",
+          "startDate": "2021-09",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Pitched 3 healthcare stocks with DCF and comparable company models\n- Led weekly market update meetings for 30 members"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Michigan, Ross School of Business",
+          "degree": "B.B.A., Concentration in Finance",
+          "startDate": "2020-09",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Financial Modeling: three-statement models, DCF, LBO, accretion-dilution",
+        "Valuation: trading comparables, precedent transactions, sum-of-the-parts",
+        "Tools: Excel, PowerPoint, Capital IQ, PitchBook, Datasite",
+        "Certifications: SIE, FINRA Series 79",
+        "Industries: business services, healthcare services, physician practice management"
+      ]
+    },
+    "Product Strategy Manager": {
+      "summary": "Product strategy manager with 8 years of experience in product management and strategy at B2B software companies. Shapes portfolio and pricing decisions for a $260M product line. Led the packaging redesign that grew average contract value 23% and set the multi-year product vision adopted by the executive team.",
+      "experience": [
+        {
+          "company": "Sightline Analytics Software",
+          "role": "Product Strategy Manager",
+          "location": "Boston, MA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Shape portfolio strategy and pricing for a $260M product line spanning 4 products\n- Led a good-better-best packaging redesign that grew average contract value 23% in the first year\n- Wrote the 3-year product vision with the CPO, aligning 9 product managers on 4 investment themes\n- Ran 45 customer and analyst interviews to size 3 AI feature opportunities\n- Built a portfolio investment model that shifted 15% of R&D capacity toward the fastest-growing product"
+        },
+        {
+          "company": "Copley Workflow Systems",
+          "role": "Senior Product Manager",
+          "location": "Cambridge, MA",
+          "startDate": "2019-04",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Launched a reporting module adopted by 2,200 customers in 12 months\n- Led a pricing test that increased upsell conversion 17%\n- Ran 30 customer interviews to shape the reporting module roadmap"
+        },
+        {
+          "company": "Fenway Digital Consulting",
+          "role": "Associate Consultant",
+          "location": "Boston, MA",
+          "startDate": "2018-07",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Supported product strategy projects for 3 software clients\n- Built competitive feature matrices and market models\n- Presented findings to client product leadership teams"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston College",
+          "degree": "B.S. in Management (Information Systems and Economics)",
+          "startDate": "2014-09",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product Strategy: portfolio planning, packaging and pricing, product vision, market sizing",
+        "Research: customer interviews, win-loss analysis, Van Westendorp pricing",
+        "Tools: Excel, Productboard, Amplitude, Salesforce",
+        "Leadership: executive alignment, PM coaching, investment cases",
+        "Analysis: SQL, cohort analysis, pricing elasticity, market sizing"
+      ]
+    },
+    "Growth Strategy Manager": {
+      "summary": "Growth strategy manager with 7 years of experience in consulting and consumer subscription businesses. Identifies and launches new growth levers, including a referral and partnerships program that delivered 180,000 new subscribers. Combines market analysis, unit economics and hands-on launch management.",
+      "experience": [
+        {
+          "company": "Greenleaf Meal Plans",
+          "role": "Growth Strategy Manager",
+          "location": "Remote",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built and launched referral and employer-partnership channels that delivered 180,000 new subscribers at 30% lower CAC\n- Prioritize growth bets with a payback and LTV model reviewed monthly by the CEO\n- Led entry into 2 new metro regions, reaching breakeven in 14 months\n- Coordinate a cross-functional growth council with marketing, product and finance leads\n- Ran a pricing test across 3 plan tiers that raised average order value 8% with no change in churn"
+        },
+        {
+          "company": "Brightwell Consulting Group",
+          "role": "Consultant",
+          "location": "Philadelphia, PA",
+          "startDate": "2019-07",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Built growth strategies for 7 consumer and retail clients\n- Developed a loyalty program business case that added $22M in annual client revenue\n- Ran customer research with 2,000 survey responses for a consumer brand"
+        },
+        {
+          "company": "Villanova Consulting Club",
+          "role": "Analyst",
+          "location": "Villanova, PA",
+          "startDate": "2017-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Built a membership growth plan for a local fitness studio\n- Sized the student market for a campus meal subscription"
+        }
+      ],
+      "education": [
+        {
+          "school": "Villanova University",
+          "degree": "B.S. in Business Administration (Finance and Marketing)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Growth Strategy: new channel development, market entry, partnership programs",
+        "Economics: LTV, CAC payback, cohort modeling, pricing",
+        "Tools: Excel, SQL, Looker, Amplitude",
+        "Execution: launch management, cross-functional leadership",
+        "Research: customer surveys, market sizing, competitive benchmarking"
+      ]
+    },
+    "Strategic Partnerships Manager": {
+      "summary": "Strategic partnerships manager with 7 years of experience building technology and channel partnerships for fintech and payments companies. Owns 15 strategic partners generating $38M in annual partner-sourced revenue. Skilled at structuring deals, negotiating terms and running joint go-to-market plans that partners actually execute.",
+      "experience": [
+        {
+          "company": "Paygrid Business Banking",
+          "role": "Strategic Partnerships Manager",
+          "location": "San Francisco, CA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own 15 strategic partners, including accounting platforms and payroll providers, generating $38M in annual partner-sourced revenue\n- Negotiated a revenue-share integration deal with a top accounting software provider that added 9,000 customers in year one\n- Built joint business plans and quarterly reviews with partner executives\n- Partnered with product to prioritize 6 integrations based on partner revenue potential\n- Led contract renewals with 4 partners, increasing revenue share terms by an average of 2 points"
+        },
+        {
+          "company": "Coinbridge Payments",
+          "role": "Partnerships Associate",
+          "location": "Oakland, CA",
+          "startDate": "2019-08",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Managed 40 reseller partners and launched a partner portal in PartnerStack\n- Grew partner-sourced pipeline from $3M to $11M\n- Built partner onboarding playbooks that cut time to first referral from 90 days to 45"
+        },
+        {
+          "company": "Bronco Ventures Club",
+          "role": "Partnerships Lead",
+          "location": "Santa Clara, CA",
+          "startDate": "2017-09",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Secured 8 sponsors for a student startup pitch event\n- Negotiated sponsorship packages totaling $25,000"
+        }
+      ],
+      "education": [
+        {
+          "school": "Santa Clara University",
+          "degree": "B.S. in Commerce (Finance)",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Partnerships: deal structuring, revenue share, joint business planning, partner QBRs",
+        "Negotiation: term sheets, commercial agreements, executive relationships",
+        "Tools: Salesforce, PartnerStack, Crossbeam, Excel",
+        "Domain: fintech, payments, embedded finance, integrations",
+        "Program Management: partner tiers, partner enablement, co-marketing"
+      ]
+    },
+    "Partnerships Analyst": {
+      "summary": "Partnerships analyst with 3 years of experience supporting partner programs at a travel technology company. Built partner performance reporting that identified $1.6M in underperforming commitments. Brings strong Excel and Salesforce skills, contract tracking and clear analysis that helps partner managers prioritize.",
+      "experience": [
+        {
+          "company": "Compass Point Travel Tech",
+          "role": "Partnerships Analyst",
+          "location": "Orlando, FL",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built partner performance dashboards for 80 hotel and airline partners, flagging $1.6M in underperforming marketing commitments\n- Track contract terms, renewals and incentive payouts for 120 agreements in Salesforce\n- Modeled commission scenarios that supported renegotiation of 12 partner contracts\n- Prepare quarterly business review decks for 4 partner managers\n- Built a partner onboarding tracker that cut average setup time for new hotel partners from 6 weeks to 4"
+        },
+        {
+          "company": "Sunshine Coast Resorts",
+          "role": "Revenue Management Intern",
+          "location": "Orlando, FL",
+          "startDate": "2022-05",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Analyzed booking-channel mix for 3 resort properties\n- Built a weekly online travel agency rate-parity report\n- Prepared competitor rate snapshots for weekly revenue meetings"
+        },
+        {
+          "company": "UCF Rosen College Events",
+          "role": "Student Events Coordinator",
+          "location": "Orlando, FL",
+          "startDate": "2021-01",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Coordinated 10 industry networking events with hotel and airline sponsors\n- Tracked sponsor commitments and deliverables in Excel"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Central Florida",
+          "degree": "B.S. in Hospitality Management, Minor in Business Analytics",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Partner Analytics: performance reporting, commission modeling, incentive tracking",
+        "Contract Management: renewals, terms tracking, compliance",
+        "Tools: Salesforce, Excel, Tableau, Google Slides",
+        "Domain: hotel and airline distribution, travel marketplaces",
+        "Communication: QBR decks, partner reports, contract summaries"
+      ]
+    },
+    "Business Development Analyst": {
+      "summary": "Business development analyst with 3 years of experience supporting enterprise sales and market expansion at a logistics software company. Built a target account model that helped the team open 22 new enterprise accounts. Combines market research, CRM analysis and polished proposal support.",
+      "experience": [
+        {
+          "company": "Freightwise Software",
+          "role": "Business Development Analyst",
+          "location": "Nashville, TN",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a target account scoring model in Salesforce that helped open 22 new enterprise accounts worth $4.1M in ARR\n- Researched 3 new verticals, sizing cold-chain logistics as a $600M opportunity now in pilot\n- Prepared 35 RFP responses and proposals with sales and solutions teams\n- Track pipeline health and win rates in a weekly report for the VP of Business Development\n- Built competitive comparisons used in 18 enterprise deals, contributing to a 6-point win-rate increase"
+        },
+        {
+          "company": "Cumberland Trucking Group",
+          "role": "Sales Operations Coordinator",
+          "location": "Murfreesboro, TN",
+          "startDate": "2022-06",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Maintained CRM data for 1,500 shipper accounts\n- Built lane-pricing quote templates that cut quote turnaround from 2 days to 4 hours\n- Prepared monthly sales reports for 12 account managers"
+        },
+        {
+          "company": "MTSU Supply Chain Association",
+          "role": "Vice President",
+          "location": "Murfreesboro, TN",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Organized 6 employer site visits with regional logistics companies\n- Grew chapter membership from 35 to 70 students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "B.B.A. in Supply Chain Management",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Business Development: account targeting, market research, RFPs and proposals",
+        "Analytics: pipeline analysis, win-rate tracking, market sizing",
+        "Tools: Salesforce, ZoomInfo, Excel, PowerPoint, LinkedIn Sales Navigator",
+        "Domain: freight, logistics software, supply chain",
+        "Communication: proposals, executive briefs, sales presentations"
+      ]
+    },
+    "Change Management Consultant": {
+      "summary": "Change management consultant with 7 years of experience leading the people side of ERP, HR system and reorganization programs. Drove adoption for a Workday rollout to 18,000 employees that reached 94% usage within 60 days. Uses Prosci ADKAR, stakeholder analysis and training plans to make change stick.",
+      "experience": [
+        {
+          "company": "Keystone Change Partners",
+          "role": "Senior Change Management Consultant",
+          "location": "Pittsburgh, PA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led change management for a Workday HCM rollout to 18,000 employees, reaching 94% active usage within 60 days\n- Built stakeholder maps and ADKAR assessments across 40 business units for an Oracle Cloud ERP program\n- Designed a change champion network of 150 employees that resolved 60% of questions locally\n- Created communication and training plans for 4 clients, delivering 300 training sessions\n- Measured adoption with usage analytics and surveys, targeting reinforcement at 6 lagging departments"
+        },
+        {
+          "company": "Steel City Health Partners",
+          "role": "Organizational Change Specialist",
+          "location": "Pittsburgh, PA",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Supported a nurse scheduling system change for 4,000 clinicians across 8 hospitals\n- Ran pulse surveys that cut reported change fatigue 15 points\n- Built manager toolkits and talking points for 3 system go-lives"
+        },
+        {
+          "company": "Carnegie Mellon Heinz College",
+          "role": "Graduate Research Assistant",
+          "location": "Pittsburgh, PA",
+          "startDate": "2017-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Studied technology adoption in 4 county agencies through interviews and surveys\n- Co-wrote a policy brief on digital service rollouts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Carnegie Mellon University",
+          "degree": "M.S. in Public Policy and Management",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Allegheny College",
+          "degree": "B.A. in Psychology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Change Management: ADKAR, stakeholder analysis, change impact assessments, resistance management",
+        "Enablement: communication plans, training design, change champion networks",
+        "Systems: Workday, Oracle Cloud ERP, SAP SuccessFactors",
+        "Certifications: Prosci Certified Change Practitioner, CCMP",
+        "Measurement: adoption metrics, readiness surveys, reinforcement planning"
+      ]
+    },
+    "Transformation Manager": {
+      "summary": "Transformation manager with 10 years of experience in operations and consulting, leading enterprise cost and digital transformation programs at a national insurer. Runs a transformation office tracking 60 initiatives worth $95M in annual savings. Combines program governance, benefits tracking and change leadership.",
+      "experience": [
+        {
+          "company": "Heartwood Mutual Insurance",
+          "role": "Transformation Manager",
+          "location": "Columbus, OH",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the transformation office tracking 60 initiatives worth $95M in annual run-rate savings, with $71M realized to date\n- Built stage-gate governance and a benefits register reviewed monthly by the executive committee\n- Led a claims digitization initiative that moved 65% of first notices of loss to self-service\n- Manage 4 transformation leads and coordinate 20 initiative owners\n- Coached 20 initiative owners on business cases and benefit baselines, raising forecast accuracy to within 10%"
+        },
+        {
+          "company": "Scioto Advisory Group",
+          "role": "Manager, Operations Consulting",
+          "location": "Columbus, OH",
+          "startDate": "2018-02",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Led operations transformation projects for 8 insurance and banking clients\n- Designed a shared-services model that cut a client's back-office costs 22%\n- Built benefit tracking models for 3 client transformation offices"
+        },
+        {
+          "company": "Buckeye Business Services",
+          "role": "Operations Analyst",
+          "location": "Dublin, OH",
+          "startDate": "2016-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Ran Lean improvement events that reduced processing errors 30%\n- Built capacity models for 3 processing centers\n- Mapped 15 back-office processes for a bank client"
+        }
+      ],
+      "education": [
+        {
+          "school": "The Ohio State University, Fisher College of Business",
+          "degree": "B.S. in Business Administration (Operations and Logistics)",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Transformation: transformation office, benefits tracking, stage-gate governance, cost programs",
+        "Operations: Lean, shared services, process digitization",
+        "Leadership: executive reporting, team management, change leadership",
+        "Certifications: PMP, Lean Six Sigma Black Belt",
+        "Tools: Excel, Power BI, Smartsheet, Wrike"
+      ]
+    },
+    "Business Transformation Consultant": {
+      "summary": "Business transformation consultant with 6 years of experience redesigning finance and supply chain operations around cloud ERP for manufacturing and consumer goods clients. Led process design for an SAP S/4HANA program that cut month-end close from 10 days to 5. Bridges business process, technology and organizational design.",
+      "experience": [
+        {
+          "company": "Bayou Ridge Advisory",
+          "role": "Senior Consultant, Business Transformation",
+          "location": "Houston, TX",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led record-to-report process design for an SAP S/4HANA program, cutting a manufacturer's month-end close from 10 days to 5\n- Defined target operating models for finance and procurement across 3 global regions\n- Ran fit-to-standard workshops with 70 process owners, limiting custom code to 12% of requirements\n- Built a value case of $28M in annual benefits used to secure board funding\n- Supported organizational design for a new finance shared-services center of 120 roles"
+        },
+        {
+          "company": "Gulf Coast Consumer Products",
+          "role": "Finance Process Analyst",
+          "location": "Houston, TX",
+          "startDate": "2020-06",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Standardized intercompany reconciliation across 6 entities, reducing write-offs 40%\n- Supported a BlackLine implementation for 2,000 balance sheet accounts\n- Built monthly close calendars and checklists for 6 legal entities"
+        },
+        {
+          "company": "Bauer College Accounting Association",
+          "role": "Vice President of Finance",
+          "location": "Houston, TX",
+          "startDate": "2017-08",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Managed a $30,000 student organization budget and monthly reporting\n- Organized 5 recruiting events with accounting and consulting firms"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University, Mays Business School",
+          "degree": "Master of Science in Management Information Systems",
+          "startDate": "2019-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "University of Houston",
+          "degree": "B.B.A. in Accounting",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Transformation: target operating models, process redesign, value cases, fit-to-standard",
+        "ERP: SAP S/4HANA, Oracle Cloud ERP, BlackLine",
+        "Finance Processes: record-to-report, procure-to-pay, intercompany",
+        "Certifications: SAP Certified Application Associate (S/4HANA Finance)",
+        "Methods: fit-to-standard, process mapping, organizational design, change management"
+      ]
+    },
+    "Portfolio Manager": {
+      "summary": "Project portfolio manager with 11 years of experience in IT project delivery and portfolio governance at a hospital network. Manages a portfolio of 70 initiatives and $85M in annual investment. Introduced value-based prioritization that redirected $12M from low-return projects to clinical and patient-access priorities.",
+      "experience": [
+        {
+          "company": "Valley Oak Health Network",
+          "role": "IT Portfolio Manager",
+          "location": "Sacramento, CA",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a portfolio of 70 technology initiatives and $85M in annual investment across clinical, revenue cycle and corporate areas\n- Introduced value-based scoring that redirected $12M from low-return projects to patient-access priorities\n- Run quarterly portfolio reviews with the CIO, CFO and CNO, balancing demand against capacity of 400 IT staff\n- Implemented ServiceNow SPM, replacing 30 spreadsheets with a single portfolio view\n- Built a quarterly benefits review that tracks realized savings and outcomes for the 20 largest projects"
+        },
+        {
+          "company": "Valley Oak Health Network",
+          "role": "Senior IT Project Manager",
+          "location": "Sacramento, CA",
+          "startDate": "2017-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Delivered an Epic ambulatory rollout to 45 clinics on schedule and $1.2M under budget\n- Managed a data center migration of 300 applications with no unplanned downtime\n- Led vendor selection for a $4M telehealth platform"
+        },
+        {
+          "company": "Capitol Valley Systems",
+          "role": "IT Project Manager",
+          "location": "Roseville, CA",
+          "startDate": "2015-01",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Managed infrastructure projects for 6 public sector clients\n- Introduced weekly risk reviews that reduced late deliverables 30%\n- Built project status dashboards for county government clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Sacramento",
+          "degree": "B.S. in Business Administration (Management Information Systems)",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Portfolio Management: prioritization frameworks, capacity planning, investment governance, benefits tracking",
+        "Tools: ServiceNow SPM, Microsoft Project, Power BI, Excel",
+        "Healthcare IT: Epic, revenue cycle systems, HIPAA",
+        "Certifications: PfMP, PMP",
+        "Finance: capital and operating budgets, business cases, benefits realization"
+      ]
+    },
+    "Business Process Analyst": {
+      "summary": "Business process analyst with 4 years of experience mapping, measuring and improving back-office processes in banking and shared services. Redesigned an accounts payable process that cut invoice cycle time 48%. Strong in BPMN, process mining and Lean methods, with practical automation recommendations.",
+      "experience": [
+        {
+          "company": "Tri-County Federal Savings",
+          "role": "Business Process Analyst",
+          "location": "Charlotte, NC",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the accounts payable process with Celonis process mining, cutting invoice cycle time from 21 days to 11\n- Documented 35 core processes in BPMN 2.0 with controls mapped for SOX testing\n- Identified 8 automation candidates, with 3 UiPath bots now saving 6,000 hours a year\n- Facilitated Kaizen events with operations teams that removed 25% of manual handoffs\n- Built a process KPI dashboard in Power BI tracking cycle time and rework for 6 operations teams"
+        },
+        {
+          "company": "Carolina Shared Services Center",
+          "role": "Process Improvement Associate",
+          "location": "Greensboro, NC",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Measured cycle times for 12 HR and finance processes\n- Built standard operating procedures that cut new-hire training time 30%\n- Supported a Workday HCM rollout by documenting 20 future-state processes"
+        },
+        {
+          "company": "App State Lean Lab",
+          "role": "Student Process Analyst",
+          "location": "Boone, NC",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Mapped the university's textbook ordering process and found 4 delays\n- Recommended changes that cut ordering cycle time by 2 weeks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Appalachian State University",
+          "degree": "B.S. in Business Administration (Supply Chain Management)",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Process Analysis: BPMN 2.0, process mining, value stream mapping, SOPs",
+        "Improvement: Lean, Kaizen, root-cause analysis, automation assessment",
+        "Tools: Celonis, Signavio, Visio, UiPath, Excel",
+        "Certifications: Lean Six Sigma Green Belt",
+        "Compliance: SOX controls documentation, audit support"
+      ]
+    },
+    "Project Management Intern": {
+      "summary": "Recent business graduate interning in project management at a software company, with coursework in operations, project management and analytics. Built a launch tracker that kept a 40-task release on schedule. Organized, quick with Smartsheet and Jira, and preparing for the CAPM exam.",
+      "experience": [
+        {
+          "company": "Lumen Ridge Software",
+          "role": "Project Management Intern",
+          "location": "Raleigh, NC",
+          "startDate": "2026-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Smartsheet launch tracker for a 40-task product release, helping the team hit its go-live date\n- Took notes and tracked 120 action items across 10 weekly project meetings\n- Drafted a RAID log template now used on 3 customer onboarding projects\n- Built a Jira dashboard showing open bugs by severity for the release team's daily standup"
+        },
+        {
+          "company": "Wolfpack Student Government",
+          "role": "Events Coordinator (Volunteer)",
+          "location": "Raleigh, NC",
+          "startDate": "2024-08",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Planned 6 campus events with budgets up to $18,000 and 30 volunteers\n- Built a shared timeline in Asana that cut missed vendor deadlines to zero\n- Recruited and scheduled 30 volunteers for a 1,200-person spring festival"
+        },
+        {
+          "company": "Triangle Rental Properties",
+          "role": "Office Assistant (Part-Time)",
+          "location": "Raleigh, NC",
+          "startDate": "2023-01",
+          "endDate": "2024-07",
+          "isCurrent": false,
+          "description": "- Scheduled maintenance requests for 300 rental units\n- Tracked vendor work orders and invoices in AppFolio"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University, Poole College of Management",
+          "degree": "B.S. in Business Administration (Coursework: Project Management, Operations Management, Business Analytics)",
+          "startDate": "2022-08",
+          "endDate": "2026-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Campus Food Pantry Expansion Plan",
+          "link": "",
+          "description": "Capstone project scheduling and budgeting a $45,000 pantry expansion, with a work breakdown structure, Gantt chart and risk register presented to university staff"
+        }
+      ],
+      "skills": [
+        "Project Tools: Smartsheet, Jira, Asana, Microsoft Project",
+        "Methods: work breakdown structures, Gantt charts, RAID logs, Agile basics",
+        "Office: Excel, PowerPoint, Microsoft Teams",
+        "Certifications: CAPM (in progress), Google Project Management Certificate",
+        "Communication: meeting notes, status updates, stakeholder emails"
+      ]
+    },
+    "Junior Project Manager": {
+      "summary": "Junior project manager with 3 years of project experience, the last 2 running website and marketing technology projects at a digital agency. Delivers 6 to 8 small projects at a time with budgets up to $150,000. Keeps clients informed, scope controlled and teams unblocked, and recently earned the CAPM.",
+      "experience": [
+        {
+          "company": "Harborlight Digital Agency",
+          "role": "Junior Project Manager",
+          "location": "Portland, ME",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 6 to 8 website and CRM projects at a time with budgets up to $150,000 and teams of 3 to 6\n- Delivered 14 projects in 2025, 12 on time and all within 10% of budget\n- Introduced a change-request form that recovered $38,000 in previously unbilled scope\n- Run sprint planning and client demos for 2 HubSpot implementation teams\n- Built a resource calendar for 12 designers and developers, reducing double-booked staff to zero"
+        },
+        {
+          "company": "Harborlight Digital Agency",
+          "role": "Project Coordinator",
+          "location": "Portland, ME",
+          "startDate": "2024-02",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Maintained Teamwork schedules and budgets for 20 active client projects\n- Prepared weekly client status reports for 3 project managers\n- Organized client UAT sessions and tracked feedback for 8 website launches"
+        },
+        {
+          "company": "Casco Bay Events",
+          "role": "Event Coordinator",
+          "location": "Portland, ME",
+          "startDate": "2023-06",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Coordinated vendors and timelines for 15 corporate events\n- Tracked event budgets up to $60,000"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Southern Maine",
+          "degree": "B.S. in Business Administration (Marketing)",
+          "startDate": "2019-09",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Project Management: scope and change control, scheduling, budget tracking, client communication",
+        "Methods: Scrum, Kanban, hybrid delivery",
+        "Tools: Teamwork, Jira, HubSpot, Smartsheet, Google Workspace",
+        "Certifications: CAPM",
+        "Communication: client status reports, demos, scope conversations"
+      ]
+    },
+    "Senior Project Manager": {
+      "summary": "Senior project manager with 11 years of experience leading complex technology and facilities projects for financial services firms. Delivers programs up to $25M with teams of 40, including a headquarters relocation completed 2 weeks early with zero trading disruption. Known for strong governance, vendor management and calm escalation handling.",
+      "experience": [
+        {
+          "company": "Brightwater Asset Management",
+          "role": "Senior Project Manager",
+          "location": "New York, NY",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a $25M headquarters relocation for 1,100 employees, finishing 2 weeks early with zero trading-floor downtime\n- Manage 3 to 4 concurrent projects with up to 40 internal and vendor staff\n- Delivered a market data platform replacement that cut annual licensing costs $3.2M\n- Mentor 3 project managers on estimation, risk management and steering committee reporting\n- Standardized project closeout reviews, feeding 45 lessons learned into the firm's estimating templates"
+        },
+        {
+          "company": "Hudson Clearing Services",
+          "role": "Project Manager",
+          "location": "Jersey City, NJ",
+          "startDate": "2017-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Delivered T+1 settlement readiness work across 8 operations teams\n- Managed vendor contracts worth $6M with 3 technology suppliers\n- Ran daily cutover calls with 8 operations teams during settlement changes"
+        },
+        {
+          "company": "Palisades Technology Consulting",
+          "role": "Associate Project Manager",
+          "location": "Hoboken, NJ",
+          "startDate": "2015-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Coordinated network upgrades for 5 financial services clients\n- Built project schedules and cost trackers in Microsoft Project\n- Tracked vendor deliverables for 12 office network rollouts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Stevens Institute of Technology",
+          "degree": "B.E. in Engineering Management",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Project Leadership: governance, steering committees, risk and issue management, vendor management",
+        "Methods: waterfall, hybrid Agile, earned value, critical path",
+        "Tools: Microsoft Project, Jira, ServiceNow, Smartsheet",
+        "Certifications: PMP, PRINCE2 Practitioner",
+        "Financial Services: trading operations, market data, settlement and clearing"
+      ]
+    },
+    "IT Project Manager": {
+      "summary": "IT project manager with 8 years of experience delivering infrastructure, ERP and security projects for manufacturing and distribution companies. Led a Microsoft 365 and Azure migration for 3,500 users with 99% adoption and no data loss. Combines technical fluency with tight scope, budget and vendor control.",
+      "experience": [
+        {
+          "company": "Prairie Steelworks",
+          "role": "IT Project Manager",
+          "location": "Kansas City, MO",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a Microsoft 365 and Azure migration for 3,500 users across 11 plants with 99% adoption and no data loss\n- Managed a $2.4M Dynamics 365 ERP upgrade delivered within 3% of budget\n- Delivered a zero-trust network access rollout that closed 14 audit findings ahead of SOC 2 review\n- Coordinate infrastructure, security and 4 vendor teams through weekly change advisory boards\n- Built a project intake and prioritization template used by IT leadership to sequence 30 requests a year"
+        },
+        {
+          "company": "Midwest Parts Distribution",
+          "role": "IT Project Coordinator",
+          "location": "Overland Park, KS",
+          "startDate": "2019-01",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Coordinated warehouse Wi-Fi and scanner upgrades across 6 distribution centers\n- Tracked IT project budgets totaling $5M and reported variances monthly\n- Wrote cutover plans for 4 site upgrades with no shipping downtime"
+        },
+        {
+          "company": "Sunflower IT Services",
+          "role": "Systems Administrator",
+          "location": "Wichita, KS",
+          "startDate": "2018-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Administered Windows Server and VMware environments for 25 small business clients\n- Automated user onboarding with PowerShell scripts\n- Supported Active Directory cleanup of 600 stale accounts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kansas State University",
+          "degree": "B.S. in Information Technology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "IT Delivery: infrastructure, cloud migration, ERP, cybersecurity projects",
+        "Technical: Microsoft 365, Azure, Dynamics 365, VMware, networking fundamentals",
+        "Governance: ITIL change management, SOC 2, vendor management",
+        "Certifications: PMP, ITIL 4 Foundation, CompTIA Project+",
+        "Methods: waterfall, Agile, hybrid delivery, cutover planning"
+      ]
+    },
+    "Senior Program Manager": {
+      "summary": "Senior program manager with 12 years of experience leading global programs in consumer electronics and supply chain technology. Runs a $40M program across 11 teams in 4 countries. Led the new-product program that launched a smart home device line generating $180M in first-year revenue.",
+      "experience": [
+        {
+          "company": "Haloway Smart Home",
+          "role": "Senior Program Manager",
+          "location": "San Jose, CA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a $40M smart home device program across 11 teams in the US, Taiwan, China and Mexico\n- Launched a camera and doorbell line that generated $180M in first-year revenue on schedule\n- Built gated milestone reviews from EVT to mass production, cutting late-stage design changes 45%\n- Report program health to the SVP of Hardware and resolve cross-functional trade-offs on cost and schedule\n- Ran supplier and factory readiness reviews in Taiwan and Mexico, raising first-pass yield from 88% to 96%"
+        },
+        {
+          "company": "Evercrest Electronics",
+          "role": "Program Manager",
+          "location": "Sunnyvale, CA",
+          "startDate": "2017-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Managed 3 wearable product launches with contract manufacturers in Asia\n- Reduced bill-of-materials cost 12% by coordinating supplier and design reviews\n- Led monthly business reviews with 4 contract manufacturers"
+        },
+        {
+          "company": "Siliconway Supply Systems",
+          "role": "Project Manager",
+          "location": "Fremont, CA",
+          "startDate": "2014-07",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Delivered warehouse management system rollouts for 5 manufacturing clients\n- Cut implementation time 20% with a reusable deployment playbook\n- Trained client warehouse staff on new scanning workflows"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Jose State University",
+          "degree": "M.S. in Engineering Management",
+          "startDate": "2012-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "University of California, Santa Cruz",
+          "degree": "B.S. in Electrical Engineering",
+          "startDate": "2008-09",
+          "endDate": "2012-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program Management: hardware NPI, gated milestone reviews, global team coordination, executive reporting",
+        "Manufacturing: EVT/DVT/PVT, contract manufacturers, BOM cost management",
+        "Tools: Jira, Smartsheet, Arena PLM, Tableau",
+        "Certifications: PMP, PgMP",
+        "Leadership: executive reviews, global team leadership, trade-off decisions"
+      ]
+    },
+    "Director of Program Management": {
+      "summary": "Director of program management with 16 years of experience building PMOs and leading enterprise programs in aerospace and defense. Leads 14 program managers overseeing a $650M program portfolio. Raised on-time milestone delivery from 71% to 90% by standardizing earned value management and integrated baseline reviews.",
+      "experience": [
+        {
+          "company": "Sentinel Aerostructures",
+          "role": "Director of Program Management",
+          "location": "Huntsville, AL",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 14 program managers overseeing 22 defense and commercial programs worth $650M in contract value\n- Standardized EVMS aligned with EIA-748, raising on-time milestone delivery from 71% to 90%\n- Won 3 follow-on contracts worth $210M by improving CPAR ratings to Very Good or Exceptional\n- Own program risk reviews with the COO and present portfolio status to the board quarterly\n- Hired and developed 6 program managers, with 3 promoted to senior roles"
+        },
+        {
+          "company": "Redstone Avionics",
+          "role": "Senior Program Manager",
+          "location": "Huntsville, AL",
+          "startDate": "2014-03",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Managed a $120M avionics upgrade program for a US Army customer\n- Recovered a program from a 9-month slip to on-track delivery within 18 months\n- Led quarterly program management reviews with Army customers"
+        },
+        {
+          "company": "Tennessee Valley Engineering",
+          "role": "Project Engineer",
+          "location": "Chattanooga, TN",
+          "startDate": "2010-06",
+          "endDate": "2014-02",
+          "isCurrent": false,
+          "description": "- Led test planning for ground support equipment projects\n- Maintained integrated master schedules for 4 programs\n- Supported 2 critical design reviews with government customers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Alabama in Huntsville",
+          "degree": "M.S. in Systems Engineering",
+          "startDate": "2011-08",
+          "endDate": "2013-12"
+        },
+        {
+          "school": "Auburn University",
+          "degree": "B.S. in Aerospace Engineering",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: PMO leadership, program manager development, portfolio governance, board reporting",
+        "Defense Programs: EVMS (EIA-748), integrated baseline reviews, CPARS, DFARS",
+        "Tools: Deltek Cobra, Primavera P6, Microsoft Project",
+        "Certifications: PMP, DAU Program Management (Practitioner), Active Secret Clearance",
+        "Contracts: FAR/DFARS, cost-plus and fixed-price contracts, subcontract management"
+      ]
+    },
+    "Associate Consultant": {
+      "summary": "Associate consultant with 2 years of experience at a management consulting firm, supporting operations and pricing projects for healthcare and consumer clients. Built the analysis behind a pricing change worth $6M a year for a client. Strong in Excel modeling, research and clear slides, with a fast learning curve on new industries.",
+      "experience": [
+        {
+          "company": "Bayview Partners Consulting",
+          "role": "Associate Consultant",
+          "location": "San Francisco, CA",
+          "startDate": "2024-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a price-elasticity analysis for a specialty pharmacy client, supporting a pricing change worth $6M a year\n- Interviewed 35 customers and experts and synthesized findings into steering committee slides\n- Modeled staffing scenarios for a 12-site clinic network, identifying $2.1M in labor savings\n- Supported 4 engagements across healthcare and consumer goods in 2 years\n- Built market maps of 40 competitors for a consumer goods client's category growth project"
+        },
+        {
+          "company": "Golden Gate Consulting Club",
+          "role": "Project Leader",
+          "location": "Berkeley, CA",
+          "startDate": "2023-01",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Led 4-student teams on pro bono strategy projects for 3 local nonprofits\n- Delivered a donor retention plan that a nonprofit client adopted\n- Built a donor segmentation in Excel for a youth sports nonprofit"
+        },
+        {
+          "company": "Golden Bear Economics Lab",
+          "role": "Research Assistant",
+          "location": "Berkeley, CA",
+          "startDate": "2022-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Cleaned and analyzed housing price data in Stata for a faculty study\n- Built charts for a working paper on rent control"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Berkeley",
+          "degree": "B.A. in Economics, Minor in Data Science",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Consulting: problem structuring, research synthesis, customer interviews",
+        "Analysis: Excel modeling, price elasticity, staffing models, market sizing",
+        "Tools: Excel, PowerPoint, ThinkCell, Alteryx, Tableau",
+        "Communication: slide writing, client presentations",
+        "Industries: healthcare services, specialty pharmacy, consumer goods"
+      ]
+    },
+    "Engagement Manager": {
+      "summary": "Engagement manager with 9 years of consulting experience leading operations and digital strategy engagements for retail and consumer goods clients. Manages client relationships and teams of 4 to 8, with $6M in annual engagement fees. Led a supply chain program that freed $90M in inventory for a national retailer.",
+      "experience": [
+        {
+          "company": "Sterling Grove Consulting",
+          "role": "Engagement Manager",
+          "location": "Chicago, IL",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead engagements with teams of 4 to 8 consultants, owning $6M in annual fees and client relationships at the C-level\n- Led an inventory optimization program that freed $90M in working capital for a national retailer\n- Sold 3 follow-on engagements worth $2.4M through scoping and proposal work\n- Coach and evaluate 10 consultants a year, with 4 promoted\n- Built a proposal library and scoping templates adopted by the firm's retail practice"
+        },
+        {
+          "company": "Sterling Grove Consulting",
+          "role": "Senior Consultant",
+          "location": "Chicago, IL",
+          "startDate": "2019-08",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Led workstreams on omnichannel fulfillment and store operations for 5 clients\n- Built a labor model that cut a grocer's store labor hours 6%\n- Coached 3 analysts on modeling and slide writing"
+        },
+        {
+          "company": "Wabash Retail Analytics",
+          "role": "Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2017-07",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Analyzed store performance and assortment for 6 retail clients\n- Built automated reporting in SQL and Tableau\n- Built store clustering models for 2 grocery clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Chicago Booth School of Business",
+          "degree": "MBA (Part-Time)",
+          "startDate": "2019-09",
+          "endDate": "2022-06"
+        },
+        {
+          "school": "Indiana University Bloomington",
+          "degree": "B.S. in Business (Operations and Economic Consulting)",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Engagement Leadership: client relationship management, scoping, proposals, team leadership",
+        "Retail & Supply Chain: inventory optimization, omnichannel fulfillment, labor modeling",
+        "Analysis: financial modeling, SQL, Tableau, Excel",
+        "Communication: C-suite presentations, steering committees, coaching",
+        "Tools: Excel, PowerPoint, Alteryx, ThinkCell"
+      ]
+    },
+    "Strategy & Operations Manager": {
+      "summary": "Strategy and operations manager with 7 years of experience in consulting and high-growth technology companies. Drives planning, metrics and cross-functional initiatives for the customer organization of a 900-person SaaS company. Led a support redesign that cut cost per ticket 28% while raising CSAT to 93%.",
+      "experience": [
+        {
+          "company": "Clearwater HR Software",
+          "role": "Strategy & Operations Manager, Customer Organization",
+          "location": "Remote",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own planning, headcount models and KPIs for a 280-person support, onboarding and customer success organization\n- Led a tiered support redesign that cut cost per ticket 28% while raising CSAT from 88% to 93%\n- Built a self-serve deflection business case that funded an AI help center, deflecting 35% of tickets\n- Run monthly business reviews for the Chief Customer Officer and 8 directors\n- Built a capacity model linking ticket forecasts to hiring, cutting contractor spend $1.2M a year"
+        },
+        {
+          "company": "Townsend Operations Advisors",
+          "role": "Consultant",
+          "location": "Denver, CO",
+          "startDate": "2019-08",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Delivered operating-model and cost projects for 7 technology clients\n- Built a capacity model that cut a client's contact center overtime 30%\n- Built cost benchmarks for 5 client support organizations"
+        },
+        {
+          "company": "Daniels Consulting Collaborative",
+          "role": "Student Consultant",
+          "location": "Denver, CO",
+          "startDate": "2018-01",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Delivered a customer service process review for a Denver retailer\n- Built a call volume forecast in Excel for the client team"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Denver, Daniels College of Business",
+          "degree": "B.S.B.A. in Business Analytics",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy & Operations: planning, headcount modeling, business reviews, process redesign",
+        "Customer Operations: support tiering, deflection, capacity planning, CSAT",
+        "Tools: Excel, SQL, Looker, Zendesk, Salesforce",
+        "Analysis: business cases, cost modeling, KPI design",
+        "Leadership: executive business reviews, cross-functional programs, change management"
+      ]
+    },
+    "VP of Strategy": {
+      "summary": "Vice president of strategy with 17 years of experience in consulting, corporate strategy and general management at specialty retail and consumer companies. Leads strategy, M&A and the transformation office for a $4.5B retailer. Architected the plan behind 3 acquisitions and a digital pivot that grew e-commerce from 12% to 31% of sales.",
+      "experience": [
+        {
+          "company": "Copperfield Specialty Retail",
+          "role": "Vice President, Strategy",
+          "location": "Minneapolis, MN",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead strategy, corporate development and the transformation office, a team of 12 reporting to the CEO\n- Architected the 5-year plan that grew e-commerce from 12% to 31% of $4.5B in sales\n- Led 3 acquisitions totaling $420M and the integration of 2 digitally native brands\n- Present strategy to the board quarterly and set enterprise OKRs with the executive team\n- Built the transformation office that delivered $65M in annual cost savings over 3 years"
+        },
+        {
+          "company": "Northern Pines Consumer Brands",
+          "role": "Senior Director, Corporate Strategy",
+          "location": "St. Paul, MN",
+          "startDate": "2015-05",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Built the portfolio strategy that exited 2 low-margin categories worth $250M\n- Led entry into direct-to-consumer channels, reaching $90M in annual revenue\n- Led the annual strategic planning process across 6 brands"
+        },
+        {
+          "company": "Marlowe & Kent Consulting",
+          "role": "Principal",
+          "location": "Chicago, IL",
+          "startDate": "2009-08",
+          "endDate": "2015-04",
+          "isCurrent": false,
+          "description": "- Led growth and M&A strategy engagements for 15 retail and consumer clients\n- Built the firm's consumer practice from 2 to 9 consultants\n- Recruited and trained 12 consultants for the consumer practice"
+        }
+      ],
+      "education": [
+        {
+          "school": "Stanford Graduate School of Business",
+          "degree": "MBA",
+          "startDate": "2007-09",
+          "endDate": "2009-06"
+        },
+        {
+          "school": "Carleton College",
+          "degree": "B.A. in Economics",
+          "startDate": "2001-09",
+          "endDate": "2005-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Leadership: enterprise strategy, board communication, OKRs, transformation office",
+        "Corporate Development: M&A, integration, portfolio exits, partnerships",
+        "Retail & Consumer: omnichannel, direct-to-consumer, brand portfolio management",
+        "Finance: valuation, capital allocation, long-range planning",
+        "Communication: board presentations, investor messaging, executive alignment"
+      ]
+    }
+  }
+}

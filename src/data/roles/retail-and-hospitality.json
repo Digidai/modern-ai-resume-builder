@@ -1,0 +1,1597 @@
+{
+  "family": "Retail & Hospitality",
+  "guide": null,
+  "titles": {
+    "Store Manager": {
+      "summary": "Store manager with 10 years in specialty and big-box retail, running a $14M location with 60 associates. Grew comparable sales 9% in 2025 while cutting shrink to 0.9%. Brings P&L ownership, labor scheduling and a coaching style that develops assistant managers into store leaders.",
+      "experience": [
+        {
+          "company": "Hearth & Field Home Stores",
+          "role": "Store Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a $14M store with 60 associates, 3 assistant managers and full P&L responsibility\n- Grew comparable sales 9% in 2025 by reworking the front-of-store layout and adding weekend design consults\n- Cut shrink from 1.8% to 0.9% of sales with daily high-risk counts and refreshed loss prevention training\n- Promoted 4 associates to department lead and 2 assistants to store manager in 3 years\n- Hold payroll within 0.5% of budget by building weekly schedules in Kronos around traffic counts"
+        },
+        {
+          "company": "Riverside Outfitters",
+          "role": "Assistant Store Manager",
+          "location": "Greenville, SC",
+          "startDate": "2017-06",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Managed operations, receiving and scheduling for a $9M sporting goods store\n- Lifted loyalty sign-ups 35% through register coaching and weekly contests\n- Ran the holiday hiring plan, onboarding 25 seasonal associates in 3 weeks"
+        },
+        {
+          "company": "Carolina Shoe Company",
+          "role": "Department Supervisor",
+          "location": "Columbia, SC",
+          "startDate": "2015-08",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Supervised 12 associates in footwear sales and stockroom\n- Raised units per transaction from 1.4 to 1.7 with add-on selling training\n- Organized the stockroom by category, cutting time to find backstock in half"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Carolina",
+          "degree": "B.S. in Retailing",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Store Leadership: P&L management, labor scheduling, hiring, associate development",
+        "Sales: Comparable sales growth, conversion, units per transaction, loyalty programs",
+        "Operations: Shrink control, inventory counts, visual standards, safety compliance",
+        "Systems: Oracle Xstore POS, Kronos, Excel",
+        "Certifications: ServSafe Food Handler (café department), CPR/First Aid"
+      ]
+    },
+    "Assistant Store Manager": {
+      "summary": "Assistant store manager with 6 years in apparel and beauty retail, overseeing operations for an $8M store. Lifted conversion 4 points through floor zoning and cut payroll overspend to zero for 6 straight quarters. Brings scheduling, merchandising execution and hands-on team coaching. Ready to take on a store of their own after leading 3 holiday seasons.",
+      "experience": [
+        {
+          "company": "Mirabel Beauty",
+          "role": "Assistant Store Manager",
+          "location": "Scottsdale, AZ",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Co-lead an $8M store with 35 beauty advisors, owning scheduling, operations and the stockroom\n- Raised conversion from 22% to 26% by zoning advisors by category during peak hours\n- Kept payroll on budget for 6 straight quarters while covering 3 holiday seasons\n- Trained 20 new hires on POS, clienteling and product knowledge in their first 30 days\n- Run weekly inventory counts on high-shrink fragrance and skincare, cutting unknown loss 30%"
+        },
+        {
+          "company": "Thread & Needle Apparel",
+          "role": "Key Holder",
+          "location": "Tempe, AZ",
+          "startDate": "2020-03",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Opened and closed the store, handling cash, deposits and alarm procedures\n- Led floor sets for 4 seasonal launches, completing each 2 hours ahead of schedule\n- Coached 6 associates on clienteling, raising appointment bookings 25%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.A. in Communication",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: Scheduling, payroll control, stockroom management, cash handling",
+        "Sales: Conversion, clienteling, floor zoning, KPI coaching",
+        "Merchandising: Floor sets, planograms, seasonal launches",
+        "Systems: Salesforce Commerce Cloud POS, UKG, Google Workspace",
+        "Leadership: Associate coaching, onboarding, shift delegation, performance feedback"
+      ]
+    },
+    "Retail Operations Manager": {
+      "summary": "Retail operations manager with 11 years in multi-unit specialty retail, standardizing processes for 75 stores. Cut store labor hours 8% without hurting service scores and led a POS rollout across the chain. Brings SOP design, labor modeling and close work with field leaders and store teams.",
+      "experience": [
+        {
+          "company": "Pinecrest Outdoor Supply",
+          "role": "Retail Operations Manager",
+          "location": "Denver, CO",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own store operating standards, labor model and task management for 75 stores and $420M in sales\n- Cut store labor hours 8% through a new labor model while holding NPS at 72\n- Led an Oracle Xstore POS rollout to all stores in 9 months with under 1% transaction downtime\n- Rewrote 40 SOPs into a mobile task app, raising audit compliance from 78% to 94%\n- Run monthly operations calls with 9 district managers, tracking audit scores and corrective actions"
+        },
+        {
+          "company": "Front Range Running Co.",
+          "role": "District Operations Specialist",
+          "location": "Boulder, CO",
+          "startDate": "2016-09",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Supported 14 stores with inventory, payroll and compliance audits\n- Reduced store receiving time 30% by introducing pre-ticketed shipments\n- Built a store audit checklist that 14 stores used for weekly self-checks"
+        },
+        {
+          "company": "Alpine Gear Exchange",
+          "role": "Store Manager",
+          "location": "Fort Collins, CO",
+          "startDate": "2015-01",
+          "endDate": "2016-08",
+          "isCurrent": false,
+          "description": "- Managed a $4M store with 18 associates\n- Grew used-gear trade-in revenue 50% in the first year\n- Rebuilt the stockroom layout and cut daily replenishment time 20%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: SOP design, labor modeling, task management, store audits",
+        "Technology: Oracle Xstore POS, Zipline, UKG, Tableau",
+        "Field Partnership: District manager collaboration, store communication, change management",
+        "Finance: Labor budgets, operating expense control, shrink analysis",
+        "Leadership: Cross-functional projects, field training, vendor management"
+      ]
+    },
+    "Retail Sales Associate": {
+      "summary": "Retail sales associate with 3 years in consumer electronics and home goods, consistently ranking in the top 10% for sales per hour. Sold $640K in 2025 with a 28% protection plan attach rate. Brings product knowledge, friendly service and steady performance during weekend and holiday rushes. Bilingual in English and Spanish, with weekend and holiday availability.",
+      "experience": [
+        {
+          "company": "Voltage Avenue Electronics",
+          "role": "Retail Sales Associate",
+          "location": "Orlando, FL",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sold $640K in laptops, TVs and smart home products in 2025, ranking 3rd of 28 associates\n- Hold a 28% protection plan attach rate against a store average of 19%\n- Resolve 15 to 20 customer questions a shift on setup, returns and financing options\n- Help restock and reset 3 departments a month to new planograms\n- Run in-store pickup for about 40 online orders a shift with accurate ID checks and order staging"
+        },
+        {
+          "company": "Palm Coast Home Goods",
+          "role": "Sales Associate",
+          "location": "Kissimmee, FL",
+          "startDate": "2023-02",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Assisted 80+ customers a day at the register and on the floor\n- Signed up 220 new loyalty members during the holiday season\n- Kept the appliance aisle faced and priced during weekly promotional changes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Valencia College",
+          "degree": "A.A. in General Studies",
+          "startDate": "2021-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Needs-based selling, add-on sales, protection plans, loyalty sign-ups",
+        "Service: Returns and exchanges, product demos, phone and online order pickup",
+        "Operations: POS, cash handling, restocking, planogram resets",
+        "Product Knowledge: Laptops, TVs, smart home, home theater, mobile accessories",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Cashier": {
+      "summary": "Cashier with 2 years in grocery and pharmacy retail, processing about 250 transactions a shift with a 99.9% cash accuracy record. Recognized twice as employee of the month for fast, friendly checkout. Brings reliable cash handling, register troubleshooting and a calm approach to busy lines. Trusted with EBT, WIC and age-restricted sales and available evenings and weekends.",
+      "experience": [
+        {
+          "company": "Fresh Basket Market",
+          "role": "Cashier",
+          "location": "Milwaukee, WI",
+          "startDate": "2025-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process about 250 transactions a shift, including EBT, WIC and coupons, with 99.9% drawer accuracy\n- Keep an average scan rate of 28 items per minute, among the top 5 of 22 cashiers\n- Signed up 140 shoppers for the store rewards app in 3 months\n- Named employee of the month twice in 2025 for customer compliments\n- Balance the drawer at each shift end and support closing tasks, including bagging-area cleanup and cart returns"
+        },
+        {
+          "company": "Corner Care Pharmacy",
+          "role": "Front Store Clerk",
+          "location": "West Allis, WI",
+          "startDate": "2024-06",
+          "endDate": "2025-01",
+          "isCurrent": false,
+          "description": "- Ran the front register and checked ID for age-restricted sales with zero compliance misses\n- Faced and restocked 6 aisles each shift\n- Answered pharmacy pickup questions and routed prescription issues to the pharmacist"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rufus King High School",
+          "degree": "High School Diploma",
+          "startDate": "2020-09",
+          "endDate": "2024-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Checkout: POS operation, cash handling, EBT and WIC, coupons and refunds",
+        "Service: Customer greetings, price checks, loyalty sign-ups",
+        "Compliance: Age-restricted sales, drawer balancing",
+        "Availability: Weekends, evenings, holidays",
+        "Teamwork: Covering breaks, training new cashiers, helping stock checkout lanes"
+      ]
+    },
+    "Shift Supervisor": {
+      "summary": "Shift supervisor with 4 years in quick-service and coffee retail, leading crews of up to 12 per shift. Cut average drive-thru time by 40 seconds and kept food safety audits at 100%. Brings cash management, crew deployment and coaching that keeps service fast and the team steady. ServSafe Manager certified and trusted to open the store solo.",
+      "experience": [
+        {
+          "company": "Sunrise Bagel & Coffee",
+          "role": "Shift Supervisor",
+          "location": "Columbus, OH",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead crews of 8 to 12 on opening shifts at a café serving 900 guests a day\n- Cut average drive-thru time from 3:40 to 3:00 by repositioning crew roles during the 7–9 a.m. rush\n- Score 100% on 4 consecutive health and brand food safety audits\n- Count drawers, prepare deposits and manage $6K in daily cash with no variances in 2025\n- Train 3 to 4 new crew members a month on drink builds, register and food safety steps"
+        },
+        {
+          "company": "Buckeye Burger Co.",
+          "role": "Crew Trainer",
+          "location": "Dublin, OH",
+          "startDate": "2022-01",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Trained 25 new crew members on grill, register and food safety stations\n- Helped raise guest satisfaction scores from 78 to 86\n- Covered opening shifts and stocked the line before the 6 a.m. rush"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbus State Community College",
+          "degree": "Coursework in Business Management",
+          "startDate": "2021-08",
+          "endDate": "2022-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Crew deployment, shift planning, training, conflict resolution",
+        "Operations: Cash handling, deposits, inventory counts, opening and closing",
+        "Food Safety: Temperature logs, sanitation, allergen procedures",
+        "Customer Service: Guest recovery, order accuracy, drive-thru speed",
+        "Certifications: ServSafe Manager"
+      ]
+    },
+    "Customer Service Representative": {
+      "summary": "Customer service representative with 4 years supporting retail and e-commerce shoppers by phone, chat and email. Handles about 60 contacts a day with a 94% satisfaction score and 82% first-contact resolution. Brings order and returns expertise, patience with upset customers and clean case notes. Writes clear case notes and macros that teammates reuse.",
+      "experience": [
+        {
+          "company": "Maple Hollow Home Direct",
+          "role": "Customer Service Representative",
+          "location": "Remote",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle about 60 phone, chat and email contacts a day on orders, deliveries, returns and damages\n- Hold a 94% CSAT and 82% first-contact resolution, both above team targets\n- Process replacements and refunds in Zendesk and Shopify, keeping goodwill credits 15% under budget\n- Wrote 12 macro templates for common delivery issues, cutting average handle time 45 seconds\n- Flag recurring delivery problems to the logistics team each week, helping cut damage claims 12%"
+        },
+        {
+          "company": "Great Lakes Sporting Goods",
+          "role": "Customer Service Associate",
+          "location": "Grand Rapids, MI",
+          "startDate": "2022-02",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Ran the service desk for returns, special orders and price adjustments\n- Resolved escalations in-store, reducing manager calls 30%\n- Processed 30 special orders a day and called customers when items arrived"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grand Valley State University",
+          "degree": "B.A. in Psychology",
+          "startDate": "2017-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Support Channels: Phone, live chat, email, social messaging",
+        "Systems: Zendesk, Shopify, Gorgias, Google Workspace",
+        "Service: De-escalation, returns and refunds, order tracking, case documentation",
+        "Metrics: CSAT, first-contact resolution, average handle time",
+        "Collaboration: Logistics and warehouse teams, quality feedback loops, peer coaching"
+      ]
+    },
+    "Customer Service Associate": {
+      "summary": "Customer service associate with 2 years at the service desk of a home improvement store, handling returns, special orders and pickups. Processes about 90 customer interactions a shift with a 4.8 out of 5 survey score. Brings friendly problem solving, accurate refunds and quick POS work. Bilingual in English and Spanish and studying business part time.",
+      "experience": [
+        {
+          "company": "Builder's Barn Home Center",
+          "role": "Customer Service Associate",
+          "location": "San Antonio, TX",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle about 90 returns, exchanges, special orders and online pickups each shift\n- Earn a 4.8 out of 5 average on post-visit customer surveys, top of the 9-person service team\n- Cut online pickup wait time from 9 to 4 minutes by pre-staging orders before peak hours\n- Answer the store phone line and route 150 calls a day to the right department\n- Help train 4 new service desk associates on return policies and fraud red flags"
+        },
+        {
+          "company": "Alamo City Craft Supply",
+          "role": "Cashier",
+          "location": "San Antonio, TX",
+          "startDate": "2023-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Processed 200 transactions a day with accurate drawer counts\n- Helped customers find class supplies and signed up 90 for workshop newsletters\n- Built a quick-reference sheet for class supplies and workshop dates"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Antonio College",
+          "degree": "A.A. in Business (in progress)",
+          "startDate": "2024-01",
+          "endDate": "2026-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Service: Returns and exchanges, special orders, online order pickup, phone support",
+        "Systems: POS, order management, Microsoft Teams",
+        "Strengths: Problem solving, calm under pressure, accurate cash handling",
+        "Policies: Return and exchange rules, fraud prevention, price adjustments",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Restaurant Manager": {
+      "summary": "Restaurant manager with 9 years in full-service casual and upscale dining, running a $5.2M, 180-seat restaurant. Brought prime cost from 66% to 60% while lifting guest scores to 4.7 stars. Brings P&L discipline, hiring and training systems and a hands-on presence on the floor during service.",
+      "experience": [
+        {
+          "company": "Oak & Ember Grill",
+          "role": "Restaurant Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 180-seat restaurant with $5.2M in annual sales, 70 staff and 3 assistant managers\n- Reduced prime cost from 66% to 60% through menu engineering, ordering pars and labor scheduling in 7shifts\n- Raised average guest rating from 4.3 to 4.7 across Google and OpenTable over 2 years\n- Cut hourly turnover from 110% to 65% with a structured training path and monthly one-on-ones\n- Run weekly inventory and ordering with chefs, holding food cost at 29% and beverage cost at 21%"
+        },
+        {
+          "company": "Peachtree Social House",
+          "role": "Assistant General Manager",
+          "location": "Decatur, GA",
+          "startDate": "2017-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Managed front-of-house operations for a 140-seat brasserie\n- Grew private dining revenue from $180K to $420K a year\n- Built a server training manual and wine list cheat sheet used by 45 staff"
+        },
+        {
+          "company": "Magnolia Table Bistro",
+          "role": "Server and Shift Lead",
+          "location": "Savannah, GA",
+          "startDate": "2015-06",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Led floor shifts and trained 15 new servers\n- Drove wine sales up 20% with tableside pairing suggestions\n- Opened and closed the dining room as manager on duty on weekends"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "B.B.A. in Hospitality Administration",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Management: P&L, prime cost, labor scheduling, inventory and ordering",
+        "Guest Experience: Service standards, reviews management, private events",
+        "Systems: Toast POS, 7shifts, OpenTable, MarginEdge",
+        "Leadership: Hiring, training paths, one-on-ones, staff scheduling",
+        "Certifications: ServSafe Manager, ServSafe Alcohol"
+      ]
+    },
+    "Restaurant Supervisor": {
+      "summary": "Restaurant supervisor with 4 years in high-volume casual dining, leading floor shifts of 15 to 20 staff. Cut ticket times 12% and lifted check averages $3.40 with menu coaching. Brings shift leadership, guest recovery skills and a dependable read on how to run a packed Friday night. Holds ServSafe and California RBS certification and trains new servers.",
+      "experience": [
+        {
+          "company": "Harbor Lights Seafood Kitchen",
+          "role": "Restaurant Supervisor",
+          "location": "San Diego, CA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead dinner shifts of 15 to 20 servers, bartenders and hosts in a 220-seat restaurant serving 600 covers on weekends\n- Cut average ticket time 12% by pacing seating with the kitchen and adjusting section sizes\n- Raised average check $3.40 through a 2-month server coaching program on starters and desserts\n- Resolve guest complaints at the table, keeping comps under 1.2% of sales\n- Count out server banks and run end-of-night reports with the closing manager"
+        },
+        {
+          "company": "Gaslamp Taqueria",
+          "role": "Lead Server",
+          "location": "San Diego, CA",
+          "startDate": "2021-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Served 6-table sections and trained 12 new servers\n- Sold the most margarita flights on staff for 8 straight months\n- Ran pre-shift lineups on specials and featured cocktails"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Diego State University",
+          "degree": "B.S. in Hospitality and Tourism Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Floor Leadership: Shift planning, section assignment, pacing, staff breaks",
+        "Guest Service: Complaint resolution, VIP handling, reservations",
+        "Systems: Toast POS, SevenRooms, HotSchedules",
+        "Operations: Opening and closing, cash-outs, side work checklists, inventory counts",
+        "Certifications: ServSafe Food Handler, California RBS Certification"
+      ]
+    },
+    "Chef": {
+      "summary": "Chef with 11 years in seasonal American and Mediterranean kitchens, leading a 14-person brigade at a 120-seat restaurant. Brought food cost from 34% to 28% while earning a local best-new-restaurant award. Brings menu development, supplier relationships with regional farms and steady kitchen leadership.",
+      "experience": [
+        {
+          "company": "Saltgrass & Fig",
+          "role": "Chef",
+          "location": "Portland, OR",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 14-person kitchen for a 120-seat restaurant doing $3.8M a year in food sales\n- Write 4 seasonal menus a year sourced from 12 regional farms and fisheries\n- Cut food cost from 34% to 28% with whole-animal butchery, yield testing and tighter ordering pars\n- Named best new restaurant of 2022 by a regional dining guide\n- Hire, train and schedule the kitchen team, keeping BOH labor at 13% of sales"
+        },
+        {
+          "company": "Willamette Bistro",
+          "role": "Sous Chef",
+          "location": "Portland, OR",
+          "startDate": "2017-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Ran daily service and the prep schedule for a 9-person line\n- Built a fermentation program that added 6 house-made condiments to the menu\n- Built the prep schedule and order guide for a 9-cook line"
+        },
+        {
+          "company": "Columbia Gorge Lodge",
+          "role": "Line Cook",
+          "location": "Hood River, OR",
+          "startDate": "2015-05",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Worked sauté and grill stations for 250 covers a night in peak season\n- Trained 6 seasonal cooks on station setup\n- Prepped and cooked banquet menus for weddings of up to 180 guests"
+        }
+      ],
+      "education": [
+        {
+          "school": "Culinary Institute of America",
+          "degree": "A.O.S. in Culinary Arts",
+          "startDate": "2013-01",
+          "endDate": "2014-10"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Culinary: Menu development, seasonal cooking, butchery, fermentation, plating",
+        "Kitchen Management: Food cost, ordering, prep systems, staff training",
+        "Sourcing: Farm and fishery partnerships, product specs, invoice review",
+        "Certifications: ServSafe Manager, Allergen Awareness"
+      ]
+    },
+    "Sous Chef": {
+      "summary": "Sous chef with 7 years in upscale and hotel kitchens, running daily service for a 160-seat restaurant. Cut waste 22% and built prep systems that hold ticket times under 14 minutes. Brings station training, inventory control and a calm voice on the pass during 300-cover nights.",
+      "experience": [
+        {
+          "company": "The Larkspur Hotel Dining Room",
+          "role": "Sous Chef",
+          "location": "Boston, MA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run daily service and lead a 10-cook line for a 160-seat dining room doing up to 300 covers\n- Hold ticket times under 14 minutes by redesigning prep lists and station par sheets\n- Cut food waste 22% by tracking trim and spoilage daily and repurposing items into staff meals and specials\n- Manage weekly ordering of $18K in proteins, produce and dairy within budget\n- Train new cooks on station setup and plating standards, cutting ramp-up time from 3 weeks to 2"
+        },
+        {
+          "company": "Back Bay Oyster Room",
+          "role": "Junior Sous Chef",
+          "location": "Boston, MA",
+          "startDate": "2020-02",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Led the raw bar and garde manger stations\n- Trained 8 cooks on shellfish handling and HACCP logs\n- Ran Saturday service as acting chef de cuisine"
+        },
+        {
+          "company": "Cape Ann Grill",
+          "role": "Line Cook",
+          "location": "Gloucester, MA",
+          "startDate": "2019-04",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Worked grill and fry stations for 200 covers a night\n- Prepped 40 lb of fresh fish daily\n- Broke down 30 lb of whole fish a day for the raw bar and specials"
+        }
+      ],
+      "education": [
+        {
+          "school": "Johnson & Wales University",
+          "degree": "A.S. in Culinary Arts",
+          "startDate": "2017-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Culinary: Sauces, fish butchery, garde manger, plating",
+        "Kitchen Operations: Expediting, prep lists, par sheets, waste tracking",
+        "Food Safety: HACCP logs, shellfish tagging, temperature control",
+        "Certifications: ServSafe Manager"
+      ]
+    },
+    "Line Cook": {
+      "summary": "Line cook with 3 years on high-volume grill and sauté stations at casual and upscale-casual restaurants. Handles 150+ plates a shift and keeps station tickets under 12 minutes. Brings clean, consistent execution, knife skills and dependable prep so every shift starts set up and stocked. ServSafe certified and able to cover grill, sauté or fry on short notice.",
+      "experience": [
+        {
+          "company": "Ironside Tavern",
+          "role": "Line Cook",
+          "location": "Chicago, IL",
+          "startDate": "2024-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the grill station for 150 to 200 plates a shift in a 140-seat tavern\n- Keep station tickets under 12 minutes on weekend nights by batching proteins to ticket flow\n- Prep daily mise en place for 3 stations, including stocks, sauces and portioned proteins\n- Cross-trained on sauté and fry, covering any station on short notice\n- Close the line nightly with full breakdown, cleaning and labeled prep for the morning crew"
+        },
+        {
+          "company": "Logan Square Noodle Bar",
+          "role": "Prep Cook",
+          "location": "Chicago, IL",
+          "startDate": "2023-01",
+          "endDate": "2024-02",
+          "isCurrent": false,
+          "description": "- Prepared 60 lb of noodle dough and 30 quarts of broth each day\n- Labeled and rotated walk-in stock with FIFO, passing every city health inspection\n- Batch-cooked staff meals for 30 employees twice a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kennedy-King College, Washburne Culinary Institute",
+          "degree": "Certificate in Culinary Arts",
+          "startDate": "2022-01",
+          "endDate": "2022-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stations: Grill, sauté, fry, prep",
+        "Technique: Knife skills, sauces, portioning, plating to spec",
+        "Kitchen Practice: FIFO rotation, labeling, sanitation, station breakdown",
+        "Teamwork: Communication on the line, covering stations, following ticket calls",
+        "Certifications: ServSafe Food Handler, Illinois Allergen Awareness"
+      ]
+    },
+    "Kitchen Manager": {
+      "summary": "Kitchen manager with 8 years in multi-unit casual dining, running back-of-house for a $4M restaurant. Lowered food cost 4 points and passed every health inspection with top scores. Brings ordering and inventory systems, BOH scheduling and recipe consistency across a 22-person kitchen team. ServSafe Manager certified, with recipe cards in use across 3 locations.",
+      "experience": [
+        {
+          "company": "Copper Creek Grill & Taphouse",
+          "role": "Kitchen Manager",
+          "location": "Kansas City, MO",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run back-of-house for a $4M restaurant with 22 cooks, prep staff and dishwashers\n- Lowered food cost from 32% to 28% using weekly inventory in MarketMan and recipe costing\n- Score 98+ on every city health inspection since 2022 with daily line checks\n- Build BOH schedules within 14% labor cost while covering 7 days of lunch and dinner\n- Hire and train about 15 cooks and dishwashers a year, cutting BOH turnover from 90% to 55%"
+        },
+        {
+          "company": "Plaza Barbecue Company",
+          "role": "Assistant Kitchen Manager",
+          "location": "Overland Park, KS",
+          "startDate": "2018-03",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Managed smoking schedules for 1,200 lb of meat a week\n- Wrote recipe cards for 45 menu items used across 3 locations\n- Ordered $12K a week in meat, produce and dry goods from 4 suppliers"
+        }
+      ],
+      "education": [
+        {
+          "school": "Johnson County Community College",
+          "degree": "A.A.S. in Chef Apprenticeship",
+          "startDate": "2015-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Kitchen Management: Ordering, inventory, recipe costing, BOH scheduling",
+        "Quality: Line checks, recipe standards, plate presentation",
+        "Systems: MarketMan, Toast KDS, 7shifts",
+        "Leadership: Hiring, training, scheduling, kitchen safety",
+        "Certifications: ServSafe Manager"
+      ]
+    },
+    "Food and Beverage Manager": {
+      "summary": "Food and beverage manager with 10 years in full-service hotels and resorts, overseeing 3 outlets and in-room dining with $9M in annual revenue. Grew F&B profit margin 6 points and lifted outlet guest scores into the brand's top quartile. Brings beverage programs, cost control and strong team development.",
+      "experience": [
+        {
+          "company": "Seabrook Island Resort",
+          "role": "Food and Beverage Manager",
+          "location": "Charleston, SC",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Oversee a restaurant, pool bar, lobby lounge and in-room dining with $9M in revenue and 85 staff\n- Grew F&B departmental profit from 24% to 30% through menu engineering and labor forecasting\n- Rebuilt the cocktail and wine lists, lifting beverage revenue 18% in the first year\n- Moved outlet guest satisfaction into the brand's top quartile for 6 straight quarters\n- Lead weekly F&B meetings with the executive chef and outlet managers on forecasts, staffing and events"
+        },
+        {
+          "company": "Lowcountry Grand Hotel",
+          "role": "Outlet Manager",
+          "location": "Savannah, GA",
+          "startDate": "2017-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Managed a 150-seat signature restaurant and bar\n- Cut beverage cost from 24% to 19% with weekly bar inventories and pour-cost tracking\n- Trained 25 bartenders on new cocktail specs and responsible service"
+        },
+        {
+          "company": "Hilton Head Marina Club",
+          "role": "Assistant Restaurant Manager",
+          "location": "Hilton Head Island, SC",
+          "startDate": "2015-05",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Supervised 30 front-of-house staff in a seasonal waterfront restaurant\n- Launched a brunch service that added $250K a year\n- Built a server upsell program for wine and desserts"
+        }
+      ],
+      "education": [
+        {
+          "school": "College of Charleston",
+          "degree": "B.S. in Hospitality and Tourism Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "F&B Operations: Multi-outlet management, in-room dining, menu engineering, labor forecasting",
+        "Beverage: Cocktail and wine programs, pour-cost control, vendor negotiations",
+        "Systems: Oracle MICROS Simphony, Birchstreet, Avero",
+        "Leadership: Outlet manager coaching, hiring, labor forecasting",
+        "Certifications: WSET Level 2, ServSafe Manager, TIPS"
+      ]
+    },
+    "Catering Manager": {
+      "summary": "Catering manager with 7 years selling and running off-site and venue catering for weddings, corporate events and nonprofits. Books about 220 events and $2.6M in revenue a year with 96% positive client reviews. Brings proposals, menu planning and on-site event execution for groups of 20 to 1,200. Equally comfortable on a sales call and running a 1,200-guest event floor.",
+      "experience": [
+        {
+          "company": "Bluebonnet Catering Co.",
+          "role": "Catering Manager",
+          "location": "Austin, TX",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Book and manage about 220 events a year worth $2.6M, from 20-guest dinners to 1,200-guest galas\n- Grew corporate catering revenue 34% by launching recurring office lunch contracts with 15 companies\n- Build BEOs in Tripleseat and coordinate chefs, rentals and staffing for up to 6 events a day\n- Hold 96% positive reviews across The Knot and Google with a documented post-event follow-up\n- Price menus and staffing for each event, holding food cost at 30% and labor at 24% of revenue"
+        },
+        {
+          "company": "Hill Country Event Hall",
+          "role": "Catering Sales Coordinator",
+          "location": "San Marcos, TX",
+          "startDate": "2019-04",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ran site tours and tastings for 150 prospective clients a year\n- Raised tour-to-booking conversion from 30% to 42%\n- Built a wedding package menu that became the hall's top seller"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas State University",
+          "degree": "B.S. in Hospitality Management",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Catering Sales: Proposals, tastings, contracts, upselling packages",
+        "Event Operations: BEOs, staffing, rentals, timelines, on-site management",
+        "Systems: Tripleseat, Caterease, Google Workspace",
+        "Finance: Event pricing, deposits, invoicing, food and labor cost control",
+        "Certifications: ServSafe Manager, TABC Seller-Server"
+      ]
+    },
+    "Barista": {
+      "summary": "Barista with 3 years at specialty coffee shops serving 400+ drinks on busy mornings. Trained 9 new baristas on espresso dialing and milk texturing. Brings consistent drink quality, quick and friendly service and solid knowledge of brewing methods, single origins and café cleanliness standards. SCA-trained, with a habit of dialing in espresso before the first customer arrives.",
+      "experience": [
+        {
+          "company": "Ridgeline Coffee Roasters",
+          "role": "Barista",
+          "location": "Seattle, WA",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare 400+ espresso, pour-over and cold brew drinks on weekday morning shifts\n- Dial in espresso at opening each day for 2 rotating single origins\n- Trained 9 new baristas on milk texturing, latte art and recipe standards\n- Grew retail bean sales at the counter 20% by offering tasting notes and brew tips\n- Keep the espresso machine and grinders clean and calibrated, logging daily backflush and weekly descale"
+        },
+        {
+          "company": "Fremont Corner Café",
+          "role": "Barista and Cashier",
+          "location": "Seattle, WA",
+          "startDate": "2023-03",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Handled register, drinks and pastry case for 250 guests a day\n- Kept health inspection scores perfect through closing checklists\n- Rang up 150 orders a day and kept the pastry case fresh and labeled"
+        }
+      ],
+      "education": [
+        {
+          "school": "Seattle Central College",
+          "degree": "Coursework in Culinary Arts",
+          "startDate": "2022-09",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coffee: Espresso extraction, milk texturing, latte art, pour-over, cold brew",
+        "Service: Order accuracy, upselling, regular-guest rapport",
+        "Operations: POS (Square), opening and closing, inventory restock",
+        "Teamwork: Training new baristas, covering stations, opening and closing duties",
+        "Certifications: SCA Barista Skills Foundation, Washington Food Worker Card"
+      ]
+    },
+    "Hotel Front Desk Agent": {
+      "summary": "Hotel front desk agent with 3 years at full-service and select-service properties, handling 80+ check-ins a shift. Ranked first in loyalty enrollments at a 280-room hotel and maintains a 4.7 guest service score. Brings PMS fluency, calm problem solving and accurate cash and credit handling. Experienced on both day shifts and solo night audit in Oracle Opera.",
+      "experience": [
+        {
+          "company": "Harborview Grand Hotel",
+          "role": "Front Desk Agent",
+          "location": "Baltimore, MD",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Check in and out 80+ guests per shift at a 280-room downtown hotel using Opera PMS\n- Rank first of 14 agents in loyalty enrollments, averaging 45 sign-ups a month\n- Hold a 4.7 out of 5 guest service score by resolving room issues before guests reach a manager\n- Upsell room upgrades worth $3,800 a month in incremental revenue\n- Handle 30 guest calls a shift on reservations, billing questions and wake-up requests"
+        },
+        {
+          "company": "Inner Harbor Suites",
+          "role": "Night Auditor",
+          "location": "Baltimore, MD",
+          "startDate": "2023-02",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Ran night audit, balanced cash and credit reports and posted room charges\n- Handled late arrivals and guest calls on a solo overnight shift\n- Posted 400 nightly room charges and reconciled the cash drawer"
+        }
+      ],
+      "education": [
+        {
+          "school": "Community College of Baltimore County",
+          "degree": "A.A.S. in Hospitality Management",
+          "startDate": "2021-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Front Office: Check-in and check-out, reservations, room assignments, night audit",
+        "Systems: Oracle Opera PMS, Micros, payment terminals",
+        "Guest Service: Complaint resolution, upselling, loyalty enrollment",
+        "Cash Handling: Deposits, folio adjustments, credit authorizations",
+        "Languages: English, French (conversational)"
+      ]
+    },
+    "Guest Services Agent": {
+      "summary": "Guest services agent with 3 years at a destination resort, handling arrivals, activity bookings and guest requests for 450 rooms. Booked $210K in spa and excursion revenue in 2025 and keeps response time to app requests under 5 minutes. Brings warm service, multitasking and strong local knowledge. Bilingual in English and Spanish with a hospitality management degree.",
+      "experience": [
+        {
+          "company": "Coral Dunes Resort & Spa",
+          "role": "Guest Services Agent",
+          "location": "Naples, FL",
+          "startDate": "2023-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Welcome arrivals and handle requests for a 450-room resort averaging 85% occupancy\n- Booked $210K in spa, golf and excursion reservations in 2025, top of the 10-person team\n- Answer guest app and text requests in under 5 minutes on average using ALICE\n- Coordinate VIP amenities and special occasions for 60 guests a month with housekeeping and F&B\n- Assist with check-in and luggage coordination during peak arrival times of up to 220 rooms a day"
+        },
+        {
+          "company": "Gulf Shore Visitor Center",
+          "role": "Visitor Information Associate",
+          "location": "Fort Myers, FL",
+          "startDate": "2022-06",
+          "endDate": "2023-10",
+          "isCurrent": false,
+          "description": "- Helped 120 visitors a day with attractions, dining and transport options\n- Built a seasonal events guide used by 4 nearby hotels\n- Answered visitor calls and emails about events and lodging"
+        }
+      ],
+      "education": [
+        {
+          "school": "Florida Gulf Coast University",
+          "degree": "B.S. in Resort and Hospitality Management",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Guest Services: Arrivals, activity booking, VIP amenities, special requests",
+        "Systems: Oracle Opera PMS, ALICE, Book4Time",
+        "Service: Local recommendations, issue resolution, cross-department coordination",
+        "Local Knowledge: Dining, beaches, golf, tours, transportation options",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Front Desk Manager": {
+      "summary": "Front desk manager with 8 years in upscale hotels, leading a 22-person front office at a 340-room property. Raised guest satisfaction for check-in from 82 to 91 and drove $380K a year in upsell revenue. Brings staff training, PMS administration and steady judgment during sold-out nights.",
+      "experience": [
+        {
+          "company": "The Graylock Hotel",
+          "role": "Front Desk Manager",
+          "location": "Chicago, IL",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 22 front desk agents, night auditors and supervisors at a 340-room upscale hotel\n- Raised check-in satisfaction from 82 to 91 by rebuilding training and adding a pre-arrival text program\n- Drove $380K a year in upgrade and early check-in revenue through a points-based incentive plan\n- Manage overbooking walks and group arrivals of up to 250 rooms with no service failures in 2025\n- Hire and train about 12 new agents a year, building a 4-week onboarding program with shadow shifts"
+        },
+        {
+          "company": "Lakefront Commons Hotel",
+          "role": "Front Office Supervisor",
+          "location": "Milwaukee, WI",
+          "startDate": "2017-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Supervised evening shifts of 5 agents and handled escalations\n- Cut check-in wait times 30% by adding mobile key and pre-assigned rooms\n- Trained agents on Opera upgrades and loyalty program changes"
+        },
+        {
+          "company": "Riverwalk Inn",
+          "role": "Front Desk Agent",
+          "location": "Milwaukee, WI",
+          "startDate": "2016-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Checked in 60 guests per shift at a 150-room hotel\n- Earned 25 guest-named mentions in reviews in one year\n- Handled guest complaints and rebooked walk-in guests"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Stout",
+          "degree": "B.S. in Hotel, Restaurant and Tourism Management",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Front Office: Staff scheduling, training, overbooking management, group arrivals",
+        "Revenue: Upsell programs, rate integrity, loyalty performance",
+        "Systems: Oracle Opera Cloud, Duetto, Medallia",
+        "Leadership: Hiring, onboarding, scheduling, performance reviews",
+        "Certifications: AHLEI Certified Front Desk Supervisor"
+      ]
+    },
+    "Housekeeper": {
+      "summary": "Hotel housekeeper with 4 years cleaning guest rooms and suites at full-service hotels. Cleans 14 to 16 rooms a shift while passing 98% of supervisor inspections. Brings efficient, thorough work, safe chemical handling and respect for guest privacy. Speaks English, Tagalog and Ilocano and kept perfect attendance through peak season.",
+      "experience": [
+        {
+          "company": "Monarch Bay Hotel",
+          "role": "Housekeeper",
+          "location": "Honolulu, HI",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean 14 to 16 guest rooms and suites per shift at a 410-room oceanfront hotel\n- Pass 98% of supervisor room inspections, above the 92% department average\n- Report maintenance issues through HotSOS, averaging 12 work orders a week\n- Recognized in 30 guest reviews by name during 2025\n- Turn checkout suites within 45 minutes during peak arrival days to support early check-ins"
+        },
+        {
+          "company": "Waikiki Garden Inn",
+          "role": "Room Attendant",
+          "location": "Honolulu, HI",
+          "startDate": "2022-02",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Cleaned 16 standard rooms a shift and restocked amenities\n- Kept perfect attendance for 12 months\n- Reported lost-and-found items within 1 hour of discovery"
+        }
+      ],
+      "education": [
+        {
+          "school": "Farrington High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Housekeeping: Room and suite cleaning, bed making, amenity restocking, deep cleaning",
+        "Safety: Chemical handling (SDS), bloodborne pathogens awareness, safe lifting",
+        "Systems: HotSOS, room status updates",
+        "Teamwork: Covering sections, helping with deep-clean projects, shift handoffs",
+        "Languages: English, Tagalog, Ilocano"
+      ]
+    },
+    "Housekeeping Supervisor": {
+      "summary": "Housekeeping supervisor with 6 years in full-service hotels, leading 25 room attendants and housemen on day shift. Raised room inspection scores from 87% to 96% and cut linen loss 30%. Brings staff scheduling, inspection standards and close coordination with the front desk to get rooms ready on time. Bilingual in English and Spanish and promoted from room attendant in 14 months.",
+      "experience": [
+        {
+          "company": "Grand Prairie Hotel & Conference Center",
+          "role": "Housekeeping Supervisor",
+          "location": "Dallas, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 25 room attendants and housemen cleaning up to 380 rooms a day\n- Raised room inspection pass rate from 87% to 96% with daily checklists and on-the-job coaching\n- Cut linen loss 30% through par-level tracking and weekly linen counts\n- Coordinate room releases with the front desk, reducing early check-in wait times 25%\n- Build daily room assignments and schedules for 25 staff based on occupancy forecasts"
+        },
+        {
+          "company": "Las Colinas Suites",
+          "role": "Room Attendant",
+          "location": "Irving, TX",
+          "startDate": "2020-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Cleaned 15 suites a shift and trained 10 new attendants\n- Promoted to inspector after 14 months\n- Inspected 40 rooms a day and logged results in the PMS"
+        }
+      ],
+      "education": [
+        {
+          "school": "Dallas College",
+          "degree": "Certificate in Hospitality Management",
+          "startDate": "2021-01",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Supervision: Scheduling, room assignments, training, performance coaching",
+        "Housekeeping: Room inspections, deep-clean rotations, linen and supply pars",
+        "Systems: Opera PMS housekeeping module, HotSOS",
+        "Safety: Chemical safety (SDS), ergonomics, bloodborne pathogens training",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Hotel Manager": {
+      "summary": "Hotel manager with 13 years in select-service and full-service hotels, running a 220-room property with $16M in annual revenue. Raised RevPAR index from 98 to 112 and gross operating profit 5 points. Brings revenue strategy, team leadership across all departments and owner-ready financial reporting.",
+      "experience": [
+        {
+          "company": "Copperline Hotel Downtown",
+          "role": "Hotel Manager",
+          "location": "Nashville, TN",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 220-room hotel with $16M in annual revenue, 95 employees and 6 department heads\n- Raised RevPAR index from 98 to 112 against the comp set by rebalancing group and transient mix with Duetto\n- Grew gross operating profit margin from 34% to 39% through labor planning and energy retrofits\n- Lifted guest satisfaction scores into the top 10% of the management company's 40 hotels\n- Prepare annual budgets and monthly owner reports with forecasts and variance explanations"
+        },
+        {
+          "company": "Music Row Suites",
+          "role": "Assistant General Manager",
+          "location": "Nashville, TN",
+          "startDate": "2016-07",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Oversaw front office, housekeeping and maintenance for a 160-room hotel\n- Led a $4M room renovation while keeping 70% of rooms sellable\n- Cut housekeeping labor 8% with productivity standards and room-attendant scheduling"
+        },
+        {
+          "company": "Smoky Ridge Lodge",
+          "role": "Front Office Manager",
+          "location": "Gatlinburg, TN",
+          "startDate": "2013-05",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Managed 15 front office staff at a 200-room resort\n- Grew direct bookings 22% with a website booking incentive\n- Lifted online review scores from 4.1 to 4.5"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Memphis",
+          "degree": "B.S. in Hospitality and Resort Management",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hotel Operations: All-department leadership, budgeting, owner reporting, renovations",
+        "Revenue: RevPAR, ADR, segmentation, Duetto, STR reports",
+        "Systems: Oracle Opera Cloud, M3 accounting, Medallia",
+        "Leadership: Department head coaching, hiring, labor planning",
+        "Certifications: AHLEI Certified Hotel Administrator (CHA)"
+      ]
+    },
+    "Concierge": {
+      "summary": "Hotel concierge with 6 years at luxury properties in Manhattan, arranging dining, theater and private experiences for VIP guests. Handles 70+ requests a day and holds a 98% positive guest feedback rate. Brings deep city knowledge, strong vendor relationships and composure with demanding requests. Speaks Italian and French and is preparing for Les Clefs d'Or membership.",
+      "experience": [
+        {
+          "company": "The Ellery Park Hotel",
+          "role": "Concierge",
+          "location": "New York, NY",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle 70+ guest requests a day for a 190-room luxury hotel, from restaurant bookings to private tours\n- Secure same-day tables at sought-after restaurants through relationships with 40 dining partners\n- Earn 98% positive feedback in post-stay surveys, with 150 guest-named mentions in 2025\n- Plan multi-day itineraries for 12 to 15 VIP families a month, coordinating cars, guides and tickets\n- Manage relationships with car services, tour guides and ticket brokers, negotiating preferred guest rates"
+        },
+        {
+          "company": "Midtown Regent Hotel",
+          "role": "Assistant Concierge",
+          "location": "New York, NY",
+          "startDate": "2020-02",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Booked Broadway tickets, transfers and dining for 40 guests a day\n- Built a shared recommendation guide of 300 venues for the concierge team\n- Handled 20 restaurant and spa reservation requests a day by phone and email"
+        }
+      ],
+      "education": [
+        {
+          "school": "New York University",
+          "degree": "B.S. in Hotel and Tourism Management",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Concierge Services: Dining reservations, theater and events, itineraries, transportation",
+        "Relationships: Restaurant, venue and tour partner network",
+        "Systems: GoConcierge, Opera PMS, Resy and OpenTable",
+        "Languages: English, Italian (fluent), French (conversational)",
+        "Memberships: Les Clefs d'Or USA (candidate)"
+      ]
+    },
+    "Reservation Agent": {
+      "summary": "Reservation agent with 3 years in a resort central reservations office, booking stays, packages and group blocks by phone and email. Converts 38% of calls to bookings and sold $1.4M in room revenue in 2025. Brings rate knowledge, persuasive phone skills and careful handling of guest details and payments. Handles group blocks and package sales with careful, PCI-compliant payment handling.",
+      "experience": [
+        {
+          "company": "Blue Ridge Mountain Resorts",
+          "role": "Reservation Agent",
+          "location": "Asheville, NC",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Book stays and packages for 3 resort properties, handling about 70 calls and emails a day\n- Convert 38% of inquiry calls to bookings against a 30% team target\n- Sold $1.4M in room revenue in 2025, including $160K in spa and dining package upgrades\n- Modify and cancel reservations in Opera following deposit and cancellation policies with no audit errors\n- Hold group blocks of 10 to 40 rooms for weddings and family reunions, tracking pick-up and release dates"
+        },
+        {
+          "company": "Biltmore Avenue Inn",
+          "role": "Front Desk and Reservations Clerk",
+          "location": "Asheville, NC",
+          "startDate": "2022-03",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Handled check-ins and reservations for a 45-room inn\n- Kept OTA availability in sync through SiteMinder\n- Answered 40 guest calls a day about availability, rates and local events"
+        }
+      ],
+      "education": [
+        {
+          "school": "Western Carolina University",
+          "degree": "B.S. in Hospitality and Tourism",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Reservations: Room and package sales, group blocks, modifications, deposits",
+        "Systems: Oracle Opera PMS, SiteMinder, Five9",
+        "Sales: Call conversion, upselling, rate knowledge",
+        "Service: Phone etiquette, accurate data entry, PCI-compliant payment handling",
+        "Communication: Phone and email etiquette, written confirmations, guest follow-up"
+      ]
+    },
+    "Travel Agent": {
+      "summary": "Travel agent with 7 years planning leisure and destination wedding travel, specializing in Europe and the Caribbean. Books about $1.9M in annual sales with a 70% repeat client rate. Brings itinerary design, supplier relationships with cruise lines and resorts, and calm problem solving when trips go sideways. Certified Travel Associate and Sandals specialist working remotely with clients nationwide.",
+      "experience": [
+        {
+          "company": "Wayfarer & Compass Travel",
+          "role": "Travel Agent",
+          "location": "Remote",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Book about $1.9M a year in leisure travel, with 70% of clients returning within 2 years\n- Plan 25 to 30 destination weddings and group trips a year, coordinating up to 90 guests each\n- Rebooked 140 clients within 48 hours during 2024 European air disruptions with no out-of-pocket losses\n- Earn preferred-supplier commissions averaging 14% through resort and cruise partner programs\n- Market services through a monthly email newsletter to 2,800 past clients with a 41% open rate"
+        },
+        {
+          "company": "Coastal Getaways Agency",
+          "role": "Travel Consultant",
+          "location": "Tampa, FL",
+          "startDate": "2019-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Sold Caribbean resort and cruise packages to walk-in and phone clients\n- Grew travel insurance attach rate from 35% to 60%\n- Booked 300 cruise and resort packages a year for walk-in and phone clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Central Florida",
+          "degree": "B.S. in Hospitality Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Travel Planning: Custom itineraries, destination weddings, group travel, cruises",
+        "Systems: Sabre GDS, TravelJoy, Travefy, supplier booking portals",
+        "Sales: Client consultations, travel insurance, supplier commissions",
+        "Destinations: Western Europe, Caribbean, Mexico, Alaska cruises",
+        "Certifications: CTA (Certified Travel Associate), Sandals Certified Specialist"
+      ]
+    },
+    "Event Planner": {
+      "summary": "Event planner with 8 years producing corporate conferences, incentive trips and galas for up to 2,500 guests. Manages $3M+ in annual event budgets and delivers programs an average of 6% under budget. Brings venue negotiation, run-of-show planning and vendor management that keeps complex events on schedule.",
+      "experience": [
+        {
+          "company": "Brightside Events Collective",
+          "role": "Senior Event Planner",
+          "location": "Las Vegas, NV",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan 18 to 22 corporate conferences, incentive trips and galas a year for clients in tech and pharma\n- Manage $3M+ in annual budgets, delivering programs an average of 6% under budget\n- Negotiated hotel contracts that cut attrition exposure 40% and secured $180K in concessions in 2025\n- Produced a 2,500-guest sales kickoff with 40 breakouts, scoring 4.8 out of 5 on attendee surveys\n- Manage 25 to 40 vendors per program, including AV, décor, transportation and entertainment"
+        },
+        {
+          "company": "Silver State Meetings",
+          "role": "Event Planner",
+          "location": "Henderson, NV",
+          "startDate": "2018-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Ran logistics for 40 meetings a year of 50 to 600 attendees\n- Moved registration to Cvent, cutting manual attendee data entry 80%\n- Planned 12 executive board dinners a year for 20 to 60 guests"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nevada, Las Vegas",
+          "degree": "B.S. in Hospitality Management, Meetings and Events",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Annual Sales Kickoff 2025",
+          "link": "",
+          "description": "3-day, 2,500-guest program with 40 breakouts, an awards dinner and hybrid streaming to 1,200 remote employees"
+        }
+      ],
+      "skills": [
+        "Event Planning: Conferences, incentive trips, galas, hybrid events, run of show",
+        "Contracts: Hotel and venue negotiation, attrition and force majeure clauses, vendor agreements",
+        "Systems: Cvent, Bizzabo, Social Tables, Smartsheet",
+        "Budgeting: Event budgets, vendor bids, cost reconciliation",
+        "Certifications: CMP (Certified Meeting Professional)"
+      ]
+    },
+    "Event Coordinator": {
+      "summary": "Event coordinator with 3 years supporting university and nonprofit events, from 30-person workshops to 800-guest fundraisers. Coordinates about 90 events a year and helped a spring gala raise a record $640K. Brings registration, vendor follow-up and day-of logistics that let event leads focus on guests. Organized with Asana timelines and confident leading 60-volunteer crews.",
+      "experience": [
+        {
+          "company": "Riverside Children's Foundation",
+          "role": "Event Coordinator",
+          "location": "Sacramento, CA",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate about 40 fundraising and donor events a year, including an 800-guest spring gala\n- Managed registration, seating and auction logistics for the 2025 gala, which raised a record $640K\n- Track 30+ vendor contracts, deposits and timelines in Asana, with no missed deadlines in 2025\n- Recruit and brief 60 volunteers per major event using SignUpGenius\n- Produce run-of-show documents and floor plans for each event and brief staff before doors open"
+        },
+        {
+          "company": "Sacramento State Student Affairs",
+          "role": "Events Assistant",
+          "location": "Sacramento, CA",
+          "startDate": "2022-08",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Supported 50 campus events a year, from workshops to orientation fairs\n- Built room setup diagrams in Social Tables for 20 recurring events\n- Answered 40 event inquiries a week from students and staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Sacramento",
+          "degree": "B.A. in Recreation, Parks and Tourism Administration",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Event Logistics: Registration, seating, run sheets, setup and teardown",
+        "Vendor Coordination: Contracts, deposits, catering, AV, rentals",
+        "Systems: Eventbrite, Givebutter, Social Tables, Asana",
+        "Volunteer Management: Recruitment, scheduling, day-of briefings",
+        "Communication: Donor and guest communications, vendor follow-up, volunteer briefings"
+      ]
+    },
+    "Banquet Manager": {
+      "summary": "Banquet manager with 9 years in convention hotels, running 650+ banquet events and $7M in annual banquet revenue. Raised banquet labor productivity 12% while lifting meeting planner scores to 4.8 out of 5. Brings BEO execution, captain and server training and tight coordination with culinary and sales.",
+      "experience": [
+        {
+          "company": "Riverfront Convention Hotel",
+          "role": "Banquet Manager",
+          "location": "St. Louis, MO",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run banquet operations for 650+ events a year across 45,000 sq ft of meeting space and $7M in revenue\n- Lead 6 captains and a pool of 80 banquet servers and housemen\n- Raised labor productivity 12% by building staffing guides tied to BEO covers and service style\n- Lifted meeting planner satisfaction from 4.4 to 4.8 out of 5 with pre-event walkthroughs\n- Attend weekly BEO meetings with sales and culinary to confirm menus, setups and timelines"
+        },
+        {
+          "company": "Gateway Plaza Hotel",
+          "role": "Banquet Captain",
+          "location": "St. Louis, MO",
+          "startDate": "2017-03",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Led service teams of 25 for weddings and corporate dinners of up to 900 guests\n- Trained 40 servers on plated and French service standards\n- Led 6 wedding receptions a month and handled vendor arrivals"
+        },
+        {
+          "company": "Forest Park Country Club",
+          "role": "Banquet Server",
+          "location": "Clayton, MO",
+          "startDate": "2015-05",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Served weddings, galas and member events of 50 to 400 guests\n- Promoted to lead server after 1 year\n- Served plated dinners for up to 400 guests"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri",
+          "degree": "B.S. in Hospitality Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Banquet Operations: BEO execution, room sets, plated and buffet service, staffing guides",
+        "Leadership: Captain and server training, scheduling, labor productivity",
+        "Systems: Delphi.fdc, Social Tables, HotSchedules",
+        "Communication: Client walkthroughs, BEO meetings, on-site event changes",
+        "Certifications: ServSafe Manager, TIPS"
+      ]
+    },
+    "Visual Merchandiser": {
+      "summary": "Visual merchandiser with 6 years creating windows, floor sets and fixtures for fashion and home retailers. Leads seasonal visual rollouts for 24 stores and helped lift featured-product sales 18%. Brings planogram fluency, display construction and a sharp eye for how layout drives customers through a store.",
+      "experience": [
+        {
+          "company": "Linden & Loom",
+          "role": "Visual Merchandiser",
+          "location": "Los Angeles, CA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design and install windows and floor sets for a flagship store and guide rollouts to 24 regional stores\n- Lifted sales of featured collections 18% by moving focal tables to the first 15 feet of the entry\n- Build visual direction guides in Adobe InDesign, cutting store floor-set time from 10 hours to 6\n- Manage a $90K annual props and fixtures budget, reusing 40% of materials across seasons\n- Train store managers on visual standards through quarterly calls and photo audits of each store"
+        },
+        {
+          "company": "Silverlake Home & Design",
+          "role": "Visual Merchandising Associate",
+          "location": "Pasadena, CA",
+          "startDate": "2020-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Styled room vignettes and table displays in a 20,000 sq ft store\n- Reset 8 departments to new planograms each quarter\n- Installed seasonal signage and mannequin outfits in 4 departments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fashion Institute of Design & Merchandising",
+          "degree": "A.A. in Visual Communications",
+          "startDate": "2018-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Holiday Window Series 2025",
+          "link": "",
+          "description": "Three-window paper-craft installation for the flagship store, featured in local press and adapted for 24 stores"
+        }
+      ],
+      "skills": [
+        "Visual Merchandising: Windows, floor sets, planograms, fixture layouts, signage",
+        "Design Tools: Adobe InDesign, Photoshop, SketchUp, Canva",
+        "Construction: Prop building, lighting, mannequin styling",
+        "Operations: Rollout guides, props budgets, store communication",
+        "Collaboration: Merchants, marketing, store managers, vendors"
+      ]
+    },
+    "Server": {
+      "summary": "Restaurant server with 4 years in upscale-casual and fine dining, handling 6-table sections on 250-cover nights. Averages $68 per guest against a $58 house average through wine and course pairings. Brings menu knowledge, allergy care and smooth pacing that keeps tables turning without rushing guests. WSET Level 1 certified and trusted with private dining parties of up to 30.",
+      "experience": [
+        {
+          "company": "Juniper Hall Kitchen",
+          "role": "Server",
+          "location": "Denver, CO",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve 6-table sections in a 150-seat upscale-casual restaurant doing 250 covers on weekends\n- Average a $68 check per guest against a $58 house average by suggesting wine pairings and shared starters\n- Track allergies and dietary needs on every ticket in Toast, with zero allergen incidents in 2025\n- Train new servers on menu tasting notes and steps of service during their first 2 weeks\n- Run large-party service for groups of 12 to 30 in the private dining room with fixed menus"
+        },
+        {
+          "company": "Larimer Street Trattoria",
+          "role": "Server Assistant",
+          "location": "Denver, CO",
+          "startDate": "2022-03",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Supported 4 servers with table resets, bread service and running plates\n- Promoted to server after 9 months\n- Reset tables and polished glassware for 150 covers a night"
+        }
+      ],
+      "education": [
+        {
+          "school": "Metropolitan State University of Denver",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Service: Steps of service, course pacing, wine and cocktail pairings, large parties",
+        "Guest Care: Allergy and dietary tracking, table-side problem solving",
+        "Systems: Toast POS, Resy",
+        "Wine and Spirits: Pairings, by-the-glass list, cocktail specs, tableside service",
+        "Certifications: Colorado Responsible Vendor (TIPS), ServSafe Food Handler, WSET Level 1"
+      ]
+    },
+    "Bartender": {
+      "summary": "Bartender with 6 years behind high-volume cocktail and hotel bars, serving 300+ drinks on a busy night. Designed a seasonal cocktail menu that lifted bar sales 16% and keeps pour cost at 18%. Brings speed, classic and modern cocktail technique, responsible service and a strong regular following.",
+      "experience": [
+        {
+          "company": "The Brass Lantern",
+          "role": "Lead Bartender",
+          "location": "New Orleans, LA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 30-seat cocktail bar serving 300+ drinks on weekend nights with a team of 3\n- Created 2 seasonal cocktail menus a year that lifted bar sales 16% over the prior year\n- Keep pour cost at 18% through jigger standards, batching and weekly inventory counts\n- Train barbacks and new bartenders on classic specs, ice program and responsible service\n- Run private events at the bar for groups of up to 80, building batch cocktails and pricing packages"
+        },
+        {
+          "company": "Magazine Street Hotel Bar",
+          "role": "Bartender",
+          "location": "New Orleans, LA",
+          "startDate": "2020-04",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Served hotel guests and locals at a 40-seat lobby bar and 2 event bars\n- Built a regular base that made up 35% of weeknight bar sales\n- Trained 3 barbacks on bar setup and garnish prep"
+        }
+      ],
+      "education": [
+        {
+          "school": "Loyola University New Orleans",
+          "degree": "B.A. in Music Industry Studies",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Bartending: Classic and modern cocktails, batching, ice program, high-volume service",
+        "Bar Management: Inventory counts, pour-cost control, ordering, menu development",
+        "Systems: Toast POS, BevSpot",
+        "Service: Guest rapport, regulars program, speed during peak nights",
+        "Certifications: Louisiana Responsible Vendor (Bar Card), BarSmarts, ServSafe Alcohol"
+      ]
+    },
+    "Executive Chef": {
+      "summary": "Executive chef with 16 years in hotel and multi-concept restaurant kitchens, leading culinary for 3 outlets and banquets with $12M in food revenue. Cut food cost 3.5 points while earning regional critic recognition. Brings menu strategy, kitchen leadership of 45 cooks, budget ownership and strong food safety culture.",
+      "experience": [
+        {
+          "company": "Alder & Stone Hotel",
+          "role": "Executive Chef",
+          "location": "San Francisco, CA",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead culinary for a signature restaurant, café, in-room dining and 18,000 sq ft of banquets with $12M in food revenue\n- Manage 45 cooks, 4 sous chefs and a pastry chef with a $4.2M labor budget\n- Cut food cost from 31.5% to 28% through supplier consolidation, butchery in-house and menu engineering\n- Signature restaurant named to a regional top-100 list in 2023 and 2025\n- Run weekly menu and cost meetings with the F&B director and partner on banquet menus with catering sales"
+        },
+        {
+          "company": "Marina Group Restaurants",
+          "role": "Chef de Cuisine",
+          "location": "Oakland, CA",
+          "startDate": "2014-09",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Ran the flagship of a 4-restaurant group with 160 seats and $5M in sales\n- Developed the menu for a second location that opened on schedule in 2018\n- Trained 4 sous chefs who now lead kitchens in the group"
+        },
+        {
+          "company": "Napa Valley Wine Country Inn",
+          "role": "Sous Chef",
+          "location": "Yountville, CA",
+          "startDate": "2010-04",
+          "endDate": "2014-08",
+          "isCurrent": false,
+          "description": "- Led a 12-cook line for a tasting-menu dining room\n- Built a garden-to-table program with the inn's 2-acre farm\n- Ran the garden harvest calendar for the tasting menu"
+        }
+      ],
+      "education": [
+        {
+          "school": "Culinary Institute of America at Greystone",
+          "degree": "A.O.S. in Culinary Arts",
+          "startDate": "2007-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Culinary Leadership: Multi-outlet menus, banquets, tasting menus, recipe standards",
+        "Business: Food and labor budgets, P&L review, supplier negotiation, menu engineering",
+        "People: Chef development, hiring, kitchen culture",
+        "Sustainability: Local sourcing, waste reduction, composting programs",
+        "Certifications: ServSafe Manager, California Food Protection Manager"
+      ]
+    },
+    "Pastry Chef": {
+      "summary": "Pastry chef with 8 years in restaurant and hotel pastry kitchens, running desserts, breads and viennoiserie for 2 outlets. Grew dessert attachment from 22% to 34% of checks and launched a bakery counter worth $380K a year. Brings lamination, plated dessert design, costing and a well-trained 5-person pastry team. Builds pastry programs that pay for themselves through careful recipe costing.",
+      "experience": [
+        {
+          "company": "Fernwood Hotel & Bakery",
+          "role": "Pastry Chef",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 5-person pastry team producing plated desserts, breads and viennoiserie for a restaurant and lobby café\n- Raised dessert attachment from 22% to 34% of checks with a rotating seasonal menu of 6 plated desserts\n- Launched a lobby bakery counter that now earns $380K a year\n- Hold pastry food cost at 21% by costing every recipe and cross-using components\n- Train 2 pastry cooks in lamination and plating, building a production schedule that covers 7 days"
+        },
+        {
+          "company": "Mill District Patisserie",
+          "role": "Pastry Cook",
+          "location": "Minneapolis, MN",
+          "startDate": "2018-03",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Laminated 1,200 croissants and morning pastries a day\n- Developed 3 wedding cake designs that became top-selling packages\n- Produced 40 wedding and celebration cakes a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "Saint Paul College",
+          "degree": "A.A.S. in Baking and Pastry Arts",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Pastry: Lamination, viennoiserie, plated desserts, bread, chocolate and sugar work",
+        "Kitchen Management: Recipe costing, production schedules, team training",
+        "Food Safety: Allergen labeling, temperature control",
+        "Leadership: Pastry team training, scheduling, production planning",
+        "Certifications: ServSafe Manager"
+      ]
+    },
+    "District Manager": {
+      "summary": "Retail district manager with 14 years in specialty and convenience retail, leading 12 stores with $78M in annual sales and 260 employees. Grew district comp sales 7% in 2025 and cut store manager turnover in half. Brings multi-unit P&L management, field coaching and disciplined operating routines.",
+      "experience": [
+        {
+          "company": "Trailhead Market Stores",
+          "role": "District Manager",
+          "location": "Phoenix, AZ",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 12 stores with $78M in annual sales, 12 store managers and about 260 employees\n- Grew district comparable sales 7% in 2025, ranking 2nd of 11 districts\n- Cut store manager turnover from 42% to 20% by building a manager-in-training pipeline\n- Reduced district shrink from 2.1% to 1.3% through targeted audits and refreshed loss prevention routines\n- Run weekly district calls and monthly business reviews with each store manager"
+        },
+        {
+          "company": "Desert Bloom Pharmacy & Goods",
+          "role": "Store Manager",
+          "location": "Mesa, AZ",
+          "startDate": "2015-04",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Managed a $9M store and 40 associates\n- Turned a bottom-quartile store into the top performer in its district within 2 years\n- Ran inventory counts with shrink below 1% for 4 years"
+        },
+        {
+          "company": "Sonoran Shoe Outlet",
+          "role": "Assistant Store Manager",
+          "location": "Tucson, AZ",
+          "startDate": "2012-06",
+          "endDate": "2015-03",
+          "isCurrent": false,
+          "description": "- Ran scheduling, receiving and visual standards for a $3M store\n- Lifted conversion 5 points with greeting and fitting-room standards\n- Trained 5 associates who were later promoted to key holder"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Arizona",
+          "degree": "B.S. in Retailing and Consumer Sciences",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Multi-Unit Leadership: District P&L, store visits, manager coaching, succession planning",
+        "Sales: Comparable sales growth, conversion, promotions execution",
+        "Operations: Shrink control, labor budgets, compliance audits",
+        "Systems: Oracle Retail, UKG, Tableau, Zipline",
+        "Talent: Manager-in-training programs, performance reviews, succession planning"
+      ]
+    },
+    "Stock Associate": {
+      "summary": "Stock associate with 2 years on overnight and early-morning receiving crews at apparel and grocery stores. Unloads and works about 1,500 units a shift with 99% location accuracy. Brings fast, safe stocking, reliable inventory counts and steady availability for early shifts and holiday peaks. Comfortable with RF scanners and pallet jacks and available for early and overnight shifts.",
+      "experience": [
+        {
+          "company": "Hartfield Department Store",
+          "role": "Stock Associate",
+          "location": "Philadelphia, PA",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Unload trucks and process about 1,500 units per shift on a 5 a.m. receiving crew\n- Hang, tag and move apparel to the sales floor before opening, meeting the 9 a.m. floor-ready target 98% of days\n- Keep backroom location accuracy at 99% with RF scanner put-away and weekly bin audits\n- Helped complete 3 holiday floor resets ahead of schedule\n- Break down 80 cartons a shift and recycle cardboard to keep the backroom clear and safe"
+        },
+        {
+          "company": "Fresh Harvest Grocers",
+          "role": "Overnight Stocker",
+          "location": "Camden, NJ",
+          "startDate": "2024-04",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Stocked 4 aisles of dry grocery per night using FIFO rotation\n- Pulled 60+ expired items a week, cutting customer complaints about dates\n- Faced and rotated dairy and frozen sections before opening"
+        }
+      ],
+      "education": [
+        {
+          "school": "Abraham Lincoln High School",
+          "degree": "High School Diploma",
+          "startDate": "2020-09",
+          "endDate": "2024-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stocking: Truck unloading, put-away, floor replenishment, FIFO rotation",
+        "Inventory: RF scanners, cycle counts, backroom organization",
+        "Safety: Safe lifting, pallet jack operation, box cutter safety",
+        "Availability: Early mornings, overnights, weekends",
+        "Teamwork: Crew communication, covering tasks, holiday reset support"
+      ]
+    },
+    "Assistant Restaurant Manager": {
+      "summary": "Assistant restaurant manager with 5 years in high-volume casual dining, running shifts for a $3.6M, 200-seat restaurant. Cut labor cost 2 points through smarter scheduling and raised guest scores to 4.6 stars. Brings floor leadership, hiring and training, inventory and a strong partnership with the kitchen.",
+      "experience": [
+        {
+          "company": "Lone Oak Smokehouse",
+          "role": "Assistant Restaurant Manager",
+          "location": "Houston, TX",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run lunch and dinner shifts for a 200-seat restaurant with $3.6M in sales and 55 hourly staff\n- Cut front-of-house labor from 17% to 15% of sales by forecasting covers in 7shifts\n- Raised average guest rating from 4.2 to 4.6 stars through table-touch standards and faster recovery on errors\n- Hire and onboard about 30 hourly staff a year and lead weekly liquor and supply inventories\n- Close out nightly sales, tips and cash reports in Toast and Restaurant365 with zero variances in 2025"
+        },
+        {
+          "company": "Bayou City Burger Bar",
+          "role": "Shift Leader",
+          "location": "Houston, TX",
+          "startDate": "2021-04",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Led shifts of 10 to 14 staff and closed out cash and sales reports\n- Launched an online ordering pickup station that handled 18% of sales\n- Trained 20 new staff on POS and online order flow"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Houston, Conrad N. Hilton College",
+          "degree": "B.S. in Hotel and Restaurant Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Management: Shift leadership, labor scheduling, hiring and training, inventory",
+        "Guest Experience: Table touches, service recovery, online reviews",
+        "Systems: Toast POS, 7shifts, Restaurant365",
+        "Operations: Opening and closing, cash reconciliation, food safety checks",
+        "Certifications: ServSafe Manager, TABC Seller-Server"
+      ]
+    },
+    "Hotel Sales Manager": {
+      "summary": "Hotel sales manager with 7 years selling group and corporate business for upscale hotels. Books $5.4M in annual room and catering revenue and exceeded quota 3 years running. Brings account prospecting, contract negotiation and close work with revenue management on group displacement and rates. CHSP certified and fluent in Delphi.fdc, Cvent and displacement analysis.",
+      "experience": [
+        {
+          "company": "Capital Crossing Hotel",
+          "role": "Hotel Sales Manager",
+          "location": "Washington, DC",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sell group and corporate business for a 360-room upscale hotel with 22,000 sq ft of meeting space\n- Book $5.4M a year in room and catering revenue, reaching 112%, 108% and 115% of quota in 2023–2025\n- Grew association and government group room nights 24% by targeting 60 accounts with Cvent RFP responses\n- Partner with revenue management on displacement analysis, holding group ADR 6% above budget\n- Host 8 to 10 site visits a month with meeting planners and run quarterly client appreciation events"
+        },
+        {
+          "company": "Arlington Gateway Hotel",
+          "role": "Sales Coordinator",
+          "location": "Arlington, VA",
+          "startDate": "2019-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Prepared proposals and contracts for 3 sales managers\n- Converted 45 small-meeting leads a year into $600K in bookings\n- Built the weekly sales pace report for the director of sales"
+        }
+      ],
+      "education": [
+        {
+          "school": "James Madison University",
+          "degree": "B.B.A. in Hospitality Management",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Group and corporate sales, prospecting, RFP responses, negotiation",
+        "Revenue: Displacement analysis, group pricing, pace reports",
+        "Systems: Delphi.fdc, Cvent Supplier Network, Salesforce, Opera",
+        "Relationships: Meeting planners, associations, DMOs, corporate travel managers",
+        "Certifications: CHSP (Certified Hospitality Sales Professional)"
+      ]
+    }
+  }
+}

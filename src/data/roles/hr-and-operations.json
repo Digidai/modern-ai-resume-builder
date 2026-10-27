@@ -1,0 +1,2228 @@
+{
+  "family": "HR & Operations",
+  "guide": null,
+  "titles": {
+    "HR Manager": {
+      "summary": "HR Manager with 9 years of experience running people operations for multi-site manufacturing and distribution businesses of 400–900 employees. Cut voluntary turnover from 31% to 19% at a three-plant operation through pay-band redesign and supervisor coaching. Brings steady employee relations judgment, clean compliance records and practical HR programs that frontline managers actually use.",
+      "experience": [
+        {
+          "company": "Granite Ridge Fabrication",
+          "role": "HR Manager",
+          "location": "Columbus, OH",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a team of 4 HR staff supporting 780 employees across three plants, owning employee relations, leave, onboarding and policy\n- Redesigned hourly pay bands using regional market data, cutting voluntary turnover from 31% to 19% within 18 months\n- Investigated and resolved 60+ employee relations cases a year with zero EEOC charges sustained since 2021\n- Rolled out UKG Pro for timekeeping and leave tracking, eliminating 25 hours of weekly manual payroll corrections\n- Built a 6-session supervisor academy completed by 48 frontline leads, raising engagement survey manager scores 14 points"
+        },
+        {
+          "company": "Lakeshore Cold Storage",
+          "role": "HR Generalist",
+          "location": "Toledo, OH",
+          "startDate": "2017-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Administered FMLA, ADA accommodations and workers' compensation for 420 warehouse and driver employees\n- Rewrote the employee handbook for Ohio and Michigan compliance, approved by outside counsel with no material revisions\n- Coordinated open enrollment for 380 benefit-eligible staff, lifting HSA participation from 22% to 37%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "B.B.A. in Human Resource Management",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Operations: employee relations, investigations, FMLA/ADA administration, policy development, workforce planning",
+        "Compliance: FLSA, Title VII, OSHA recordkeeping, EEO-1 reporting, I-9/E-Verify",
+        "Systems: UKG Pro, Workday, Lattice, Excel (pivot tables, XLOOKUP)",
+        "Certifications: SHRM-CP, PHR"
+      ]
+    },
+    "HR Generalist": {
+      "summary": "HR Generalist with 5 years of experience supporting 250–600 employee healthcare and services organizations across onboarding, benefits, leave and employee relations. Reduced new-hire paperwork errors by 70% after rebuilding onboarding in BambooHR. Known for fast, accurate answers to employee questions and well-documented case files.",
+      "experience": [
+        {
+          "company": "Meridian Home Health Partners",
+          "role": "HR Generalist",
+          "location": "Charlotte, NC",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve as HR point of contact for 540 clinical and office employees across 7 branch locations\n- Rebuilt onboarding workflows in BambooHR, cutting new-hire paperwork errors by 70% and time-to-first-shift from 9 to 5 days\n- Manage 45 active leave cases a year under FMLA, ADA and North Carolina state rules, with every return-to-work documented\n- Conduct first-level employee relations investigations and draft findings memos for the HR Manager and legal review\n- Partner with branch managers on 30 annual performance reviews and corrective action plans, coaching them on documentation standards"
+        },
+        {
+          "company": "Pinecrest Facility Services",
+          "role": "HR Coordinator",
+          "location": "Raleigh, NC",
+          "startDate": "2020-01",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Processed 300+ new hires a year including background checks, I-9 verification and E-Verify cases\n- Audited 900 personnel files ahead of a DOL review, closing 120 documentation gaps with no findings issued\n- Coordinated benefits open enrollment sessions for 3 shifts, raising on-time elections to 96%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Greensboro",
+          "degree": "B.S. in Business Administration, Human Resources concentration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Generalist HR: onboarding, offboarding, leave administration, employee relations, HR policy",
+        "Benefits: open enrollment, COBRA, carrier reconciliation, 401(k) eligibility",
+        "Tools: BambooHR, ADP Workforce Now, DocuSign, Google Workspace, Excel",
+        "Certifications: SHRM-CP"
+      ]
+    },
+    "HR Business Partner": {
+      "summary": "HR Business Partner with 8 years of experience advising engineering and go-to-market leaders at high-growth software companies. Partnered with a 320-person R&D organization through a reorg and two acquisitions while holding regretted attrition under 6%. Combines data-backed talent reviews, sound employee relations judgment and direct coaching for senior managers.",
+      "experience": [
+        {
+          "company": "Brightline Analytics",
+          "role": "Senior HR Business Partner",
+          "location": "Seattle, WA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise the CTO and 28 people managers across a 320-person R&D organization on org design, performance and retention\n- Led people integration of two acquired teams (64 employees), retaining 94% through the first year\n- Ran calibrated talent reviews in Workday, cutting regretted attrition from 11% to 5.8% in two cycles\n- Coached 9 first-time directors through structured 90-day plans, with 8 rated effective on 360 feedback\n- Designed a manager effectiveness pulse survey in Culture Amp, lifting manager scores 9 points across R&D in one year"
+        },
+        {
+          "company": "Cascade Payments",
+          "role": "HR Business Partner",
+          "location": "Portland, OR",
+          "startDate": "2018-09",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Supported sales and customer success teams of 210 employees through 2x headcount growth\n- Redesigned the sales promotion framework with leveled competencies, reducing promotion appeals by 60%\n- Managed 35 performance improvement plans with documented outcomes and zero litigated terminations"
+        },
+        {
+          "company": "Evergreen Mutual Credit Union",
+          "role": "HR Generalist",
+          "location": "Tacoma, WA",
+          "startDate": "2016-06",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Handled employee relations and leave for 260 branch staff across 14 locations\n- Launched exit interview reporting that identified scheduling as the top driver of teller turnover"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "B.A. in Psychology",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Partnering: org design, talent reviews, succession planning, executive coaching, change management",
+        "Employee Relations: investigations, performance management, RIF planning, WARN Act compliance",
+        "Analytics: Workday reporting, Visier, attrition and engagement analysis, Excel",
+        "Certifications: SHRM-SCP, Hogan Assessment Certified"
+      ]
+    },
+    "HR Coordinator": {
+      "summary": "HR Coordinator with 3 years of experience keeping onboarding, HRIS records and compliance paperwork accurate for a 450-person hospitality group. Coordinated 380 hires in one peak season with 99% I-9 compliance. Brings organized processes, quick turnaround on employee requests and solid working knowledge of ADP and BambooHR.",
+      "experience": [
+        {
+          "company": "Harborview Hospitality Group",
+          "role": "HR Coordinator",
+          "location": "San Diego, CA",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate onboarding for 380 seasonal and year-round hires across 5 hotels and restaurants each year\n- Maintain HRIS data for 450 employees in ADP Workforce Now, holding a 99% accuracy rate on quarterly audits\n- Achieved 99% I-9 compliance on an external audit by building a 3-day follow-up tracker for Section 2 documents\n- Schedule 40+ interviews a week for hiring managers and send offer letters within 24 hours of approval\n- Coordinate monthly benefits orientation for new hires, raising first-30-day enrollment completion from 81% to 97%"
+        },
+        {
+          "company": "Sunset Coast Staffing",
+          "role": "HR Assistant",
+          "location": "San Diego, CA",
+          "startDate": "2022-01",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Processed background checks and drug screens for 60 temporary placements a month\n- Digitized 2,000 paper personnel files into BambooHR, cutting file retrieval time from days to minutes\n- Answered 25 employee calls a day on assignments, pay and timekeeping for the branch HR desk"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Diego State University",
+          "degree": "B.A. in Communication",
+          "startDate": "2017-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Administration: onboarding, I-9/E-Verify, personnel files, HRIS data entry, offer letters",
+        "Compliance: California labor law postings, Cal/OSHA logs, EEO record keeping",
+        "Tools: ADP Workforce Now, BambooHR, Greenhouse, Microsoft 365",
+        "Certifications: aPHR"
+      ]
+    },
+    "HR Assistant": {
+      "summary": "HR Assistant with 2 years of experience supporting a 300-person regional bank's HR team with records, onboarding logistics and employee inquiries. Answers about 60 employee questions a week with same-day response. Recent business graduate who brings careful file management, discretion with confidential data and fluency in Workday self-service.",
+      "experience": [
+        {
+          "company": "Prairie State Bank & Trust",
+          "role": "HR Assistant",
+          "location": "Springfield, IL",
+          "startDate": "2024-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Respond to about 60 employee questions a week on PTO, benefits and pay stubs, resolving 85% without escalation\n- Prepare new-hire packets and day-one schedules for 8–12 new employees a month across 11 branches\n- Maintain confidential personnel and medical files, passing an internal records audit with no exceptions\n- Update job changes and terminations in Workday within 24 hours of approval\n- Track mandatory compliance training for 300 employees, sending weekly reminders that lifted on-time completion to 97%"
+        },
+        {
+          "company": "University of Illinois Springfield",
+          "role": "Student Assistant, Human Resources Office",
+          "location": "Springfield, IL",
+          "startDate": "2022-09",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Scanned and indexed 3,500 employment records into the university document management system\n- Coordinated room bookings and materials for 20 new-employee orientation sessions\n- Prepared offer letter drafts and reference check summaries for 2 HR generalists"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Springfield",
+          "degree": "B.B.A. in Management",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Support: onboarding logistics, records management, employee inquiries, data entry",
+        "Systems: Workday, Microsoft Excel, Outlook, Teams, DocuSign",
+        "Knowledge: FMLA basics, I-9 procedures, confidentiality standards",
+        "Certifications: aPHR (in progress)"
+      ]
+    },
+    "Recruiter": {
+      "summary": "Full-cycle Recruiter with 4 years of experience hiring for operations, finance and customer support roles at mid-size companies. Filled 78 requisitions in 2025 with a 34-day average time to fill and 92% offer acceptance. Brings disciplined pipeline management in Greenhouse, sharp phone screens and candid hiring manager partnerships.",
+      "experience": [
+        {
+          "company": "Northstar Freight Systems",
+          "role": "Recruiter",
+          "location": "Dallas, TX",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 18–25 open requisitions at a time across operations, finance and customer support for 12 hiring managers\n- Filled 78 roles in 2025 with a 34-day average time to fill, down from 49 days before joining\n- Raised offer acceptance to 92% by adding compensation pre-closes to every first-round screen\n- Built structured interview kits in Greenhouse for 9 job families, cutting interviewer no-decision rates by half\n- Host monthly calibration sessions with hiring managers to review pass-through rates and adjust screening criteria"
+        },
+        {
+          "company": "Bluebonnet Talent Partners",
+          "role": "Associate Recruiter",
+          "location": "Austin, TX",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Placed 41 contract and direct-hire candidates in accounting and admin roles for agency clients\n- Sourced through LinkedIn Recruiter and Indeed, reaching a 28% InMail response rate\n- Managed candidate pipelines for 12 open roles at a time in Bullhorn with weekly client updates"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas State University",
+          "degree": "B.A. in Psychology",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Recruiting: full-cycle recruiting, intake meetings, phone screens, offer negotiation, candidate experience",
+        "Sourcing: LinkedIn Recruiter, Indeed, Boolean search, referral programs",
+        "Tools: Greenhouse, Gem, Calendly, Excel",
+        "Compliance: OFCCP basics, EEO data collection, pay transparency rules"
+      ]
+    },
+    "Senior Recruiter": {
+      "summary": "Senior Recruiter with 8 years of experience hiring product, go-to-market and leadership roles for venture-backed SaaS companies. Closed 32 director-and-above hires over two years while holding a 90% hiring manager satisfaction score. Brings market mapping, executive-level closing and the ability to train newer recruiters on structured hiring.",
+      "experience": [
+        {
+          "company": "Ledgerly",
+          "role": "Senior Recruiter",
+          "location": "New York, NY",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own hiring for product, marketing and sales leadership, closing 32 director-and-above roles since 2024\n- Built talent maps of 600+ fintech product leaders, cutting average senior time to fill from 82 to 51 days\n- Negotiated offers up to $410k total compensation with a 91% acceptance rate\n- Mentor 3 recruiters on intake rigor and debrief facilitation, each now carrying 15+ requisitions\n- Partner with the People Analytics team on quarterly funnel reviews, removing 2 low-signal interview stages"
+        },
+        {
+          "company": "Copperleaf Software",
+          "role": "Recruiter",
+          "location": "Boston, MA",
+          "startDate": "2019-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Hired 110 account executives, SDRs and customer success managers during growth from 180 to 450 employees\n- Launched a sales assessment exercise that raised 12-month quota attainment of new hires by 18%\n- Increased women in quota-carrying roles from 24% to 38% through diverse slate requirements"
+        },
+        {
+          "company": "Harbor Search Group",
+          "role": "Recruiting Consultant",
+          "location": "Boston, MA",
+          "startDate": "2017-07",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Billed $420k in placement fees across 38 mid-level sales and marketing placements\n- Developed 14 repeat client accounts from cold outreach"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston College",
+          "degree": "B.A. in Economics",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Recruiting: executive and leadership hiring, market mapping, compensation negotiation, structured interviewing",
+        "Sourcing: LinkedIn Recruiter, Gem, SeekOut, Boolean and X-ray search",
+        "Systems: Ashby, Greenhouse, Pave, Looker dashboards",
+        "Leadership: recruiter mentoring, hiring manager training, interview calibration"
+      ]
+    },
+    "Technical Recruiter": {
+      "summary": "Technical Recruiter with 5 years of experience hiring software, data and infrastructure engineers for product companies. Made 64 engineering hires in 2025, including 11 staff-level engineers, with a 3.8:1 onsite-to-offer ratio. Brings enough technical fluency to screen for system design depth and an outreach approach engineers actually answer.",
+      "experience": [
+        {
+          "company": "Quantra Health",
+          "role": "Technical Recruiter",
+          "location": "Remote",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Hire backend, ML and platform engineers for a 140-person engineering org, closing 64 hires in 2025\n- Improved onsite-to-offer ratio from 6:1 to 3.8:1 by adding calibrated technical screens with engineering leads\n- Sourced 70% of hires directly via GitHub, LinkedIn and Gem sequences with a 31% reply rate\n- Partnered with engineering to replace take-homes with paired exercises, raising candidate NPS from 22 to 61\n- Run quarterly hiring plan reviews with 6 engineering managers, rebalancing 20 requisitions against shifting product priorities"
+        },
+        {
+          "company": "Riverbend Digital",
+          "role": "Recruiter",
+          "location": "Denver, CO",
+          "startDate": "2020-08",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Recruited frontend, QA and DevOps engineers for 20+ client projects at a digital agency\n- Cut time to fill for React developers from 45 to 28 days by building a referral pipeline from local meetups\n- Coordinated 4 campus hackathons that produced 9 junior engineering hires"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "B.A. in Sociology",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical Recruiting: engineering hiring, technical screening, leveling calibration, offer strategy",
+        "Technical Fluency: backend and frontend stacks, cloud platforms, ML roles, system design concepts",
+        "Sourcing: Gem, LinkedIn Recruiter, GitHub, Stack Overflow, Boolean search",
+        "Tools: Greenhouse, Lever, CoderPad, Google Sheets"
+      ]
+    },
+    "Recruiting Coordinator": {
+      "summary": "Recruiting Coordinator with 3 years of experience scheduling high-volume interview loops for tech and corporate roles. Coordinates about 120 interviews a week with a 2% reschedule rate. Brings precise calendar management, a polished candidate experience and process improvements that save recruiters hours every week.",
+      "experience": [
+        {
+          "company": "Fernway Labs",
+          "role": "Recruiting Coordinator",
+          "location": "San Francisco, CA",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Schedule about 120 interviews a week across engineering, sales and G&A for 6 recruiters and 90 interviewers\n- Reduced reschedules to 2% by building interviewer availability blocks and backup panels in GoodTime\n- Built Greenhouse email templates and auto-advance rules, saving recruiters roughly 6 hours a week\n- Coordinate onsite travel and accommodations for 15–20 finalists a month within a $9k monthly budget\n- Collect interviewer feedback within 24 hours for 95% of loops by sending automated Slack reminders"
+        },
+        {
+          "company": "Bayside Medical Group",
+          "role": "Talent Acquisition Assistant",
+          "location": "Oakland, CA",
+          "startDate": "2022-02",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Scheduled interviews and coordinated pre-employment health screens for 50 clinical hires a month\n- Kept candidate status current in iCIMS, lifting data accuracy on weekly reports to 98%\n- Built an interview confirmation checklist that cut candidate no-shows by 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Santa Cruz",
+          "degree": "B.A. in Psychology",
+          "startDate": "2017-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coordination: interview scheduling, panel logistics, candidate communication, travel booking",
+        "Systems: Greenhouse, GoodTime, iCIMS, Google Calendar, Zoom",
+        "Operations: offer letter preparation, background check initiation, recruiting reports",
+        "Candidate Experience: onsite hosting, survey follow-up, feedback collection"
+      ]
+    },
+    "Sourcer": {
+      "summary": "Talent Sourcer with 4 years of experience building pipelines for engineering, data and design roles. Sourced 46% of all technical hires at a 600-person company in 2025 using Boolean search and personalized multi-step outreach. Brings research depth, clean pipeline data and messaging that consistently beats response benchmarks.",
+      "experience": [
+        {
+          "company": "Orbital Commerce",
+          "role": "Technical Sourcer",
+          "location": "Chicago, IL",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Source for 30+ engineering, data and design requisitions, delivering 46% of technical hires in 2025\n- Run Gem outreach sequences averaging a 38% reply rate versus a 22% team baseline\n- Built talent maps of 1,200 engineers at 40 target companies to support new office planning in Denver\n- Raised underrepresented candidates in first-round slates from 21% to 36% through community partnerships\n- Train 4 recruiters on Boolean search strings and Gem sequence design in monthly sourcing workshops"
+        },
+        {
+          "company": "Prairie Talent Solutions",
+          "role": "Research Associate",
+          "location": "Chicago, IL",
+          "startDate": "2021-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Researched candidate lists for 25 retained finance and operations searches\n- Maintained a 9,000-record candidate database with consistent tags and notes\n- Delivered weekly market maps summarizing compensation and availability for each search"
+        }
+      ],
+      "education": [
+        {
+          "school": "Loyola University Chicago",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sourcing: Boolean and X-ray search, talent mapping, competitive intelligence, diversity sourcing",
+        "Platforms: LinkedIn Recruiter, Gem, SeekOut, GitHub, Dribbble",
+        "Outreach: personalized sequences, A/B tested subject lines, nurture campaigns",
+        "Tools: Greenhouse, Airtable, Google Sheets"
+      ]
+    },
+    "Talent Acquisition Specialist": {
+      "summary": "Talent Acquisition Specialist with 5 years of experience running high-volume and professional hiring for healthcare and logistics employers. Hired 240+ employees in 2025 across nursing support, warehouse and administrative roles while cutting cost per hire 22%. Brings strong job board strategy, hiring events and reliable data in iCIMS.",
+      "experience": [
+        {
+          "company": "Riverside Regional Health",
+          "role": "Talent Acquisition Specialist",
+          "location": "Richmond, VA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Recruit patient care technicians, CNAs and support staff for 2 hospitals, hiring 240+ employees in 2025\n- Cut cost per hire 22% by shifting spend from generic job boards to Indeed Sponsored Jobs and school partnerships\n- Organized 14 hiring events with same-day offers, filling 96 roles at a 71% show rate\n- Built iCIMS dashboards for time to fill and source of hire reviewed monthly by nursing leadership\n- Partner with nursing leaders on 3 CNA-to-RN career pathway cohorts, filling 45 seats from internal applicants"
+        },
+        {
+          "company": "Chesapeake Logistics",
+          "role": "Recruiter",
+          "location": "Norfolk, VA",
+          "startDate": "2020-09",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Hired 300+ warehouse associates and CDL drivers during peak seasons\n- Reduced 90-day turnover from 44% to 32% by adding realistic job previews to the interview process\n- Scheduled 120 interviews a week across 4 warehouses during peak hiring"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Commonwealth University",
+          "degree": "B.S. in Business, Human Resource Management",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Talent Acquisition: high-volume hiring, hiring events, employer branding, school partnerships",
+        "Systems: iCIMS, Indeed, LinkedIn Recruiter, Paradox (Olivia) chatbot",
+        "Analytics: time to fill, cost per hire, source-of-hire reporting in Excel",
+        "Certifications: SHRM-CP"
+      ]
+    },
+    "Talent Acquisition Manager": {
+      "summary": "Talent Acquisition Manager with 10 years of experience, the last 4 leading recruiting teams at multi-state retail and services companies. Runs a 7-person team that hired 1,100 employees in 2025 within a $1.2M budget. Brings workforce planning, vendor management and recruiting analytics that tie hiring speed to store performance.",
+      "experience": [
+        {
+          "company": "Sunfield Markets",
+          "role": "Talent Acquisition Manager",
+          "location": "Phoenix, AZ",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 7 recruiters and coordinators hiring 1,100 store, distribution and corporate employees a year across 4 states\n- Manage a $1.2M recruiting budget, cutting agency spend 40% by building an in-house hourly hiring program\n- Implemented Workday Recruiting and Paradox text-to-apply, reducing hourly time to hire from 12 to 5 days\n- Partnered with finance on quarterly headcount plans, holding store vacancy rates under 4%\n- Launched a manager hiring scorecard that cut 90-day store turnover from 38% to 27% across 60 locations"
+        },
+        {
+          "company": "Desert Sky Services",
+          "role": "Senior Talent Acquisition Partner",
+          "location": "Tempe, AZ",
+          "startDate": "2018-05",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Recruited district managers, field technicians and corporate staff, averaging 95 hires a year\n- Launched an employee referral program that grew to 27% of hires with a $500 bonus per placement\n- Trained 60 hiring managers on behavioral interviewing and legal question guidelines"
+        },
+        {
+          "company": "Canyon Staffing Group",
+          "role": "Recruiter",
+          "location": "Phoenix, AZ",
+          "startDate": "2016-06",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Filled 200+ light industrial and clerical placements a year for 15 client accounts\n- Ranked top 3 of 22 recruiters for gross margin in 2017"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.S. in Organizational Leadership",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: team management, workforce planning, budget ownership, vendor and agency management",
+        "Talent Acquisition: high-volume hourly hiring, employer branding, referral programs, campus recruiting",
+        "Systems: Workday Recruiting, Paradox, Indeed, LinkedIn Talent Insights, Tableau",
+        "Certifications: SHRM-SCP, AIRS Certified Diversity Recruiter"
+      ]
+    },
+    "Recruiting Manager": {
+      "summary": "Recruiting Manager with 9 years of experience, including 3 managing technical and corporate recruiting teams at SaaS companies. Leads 5 recruiters who closed 140 hires in 2025 at a 4.2:1 onsite-to-offer ratio. Brings structured hiring design, recruiter coaching and forecasting that keeps hiring plans aligned with revenue targets.",
+      "experience": [
+        {
+          "company": "Tidewater Cloud",
+          "role": "Recruiting Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 5 recruiters and 1 coordinator hiring across engineering, sales and G&A, closing 140 hires in 2025\n- Introduced scorecards and interviewer certification, improving onsite-to-offer ratio from 6.5:1 to 4.2:1\n- Built a capacity model in Ashby that forecasts recruiter load against quarterly hiring plans within 10%\n- Cut agency spend from $380k to $95k a year by expanding direct sourcing and referrals\n- Present monthly recruiting metrics and risks to the executive team, including offer acceptance and diversity of slates"
+        },
+        {
+          "company": "Peachtree Insights",
+          "role": "Senior Technical Recruiter",
+          "location": "Atlanta, GA",
+          "startDate": "2019-08",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Hired 85 engineers and data scientists during growth from 120 to 380 employees\n- Designed the company's first engineering leveling rubric with the VP of Engineering\n- Partnered with 12 hiring managers to build structured interview questions for data roles"
+        },
+        {
+          "company": "Magnolia Staffing",
+          "role": "Recruiter",
+          "location": "Savannah, GA",
+          "startDate": "2017-06",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Placed 120 IT contractors and help desk staff for regional clients\n- Maintained 94% contractor assignment completion rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "B.B.A. in Managerial Sciences",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: recruiter coaching, capacity planning, hiring plan forecasting, stakeholder management",
+        "Process: structured interviewing, scorecards, interviewer training, offer approval workflows",
+        "Systems: Ashby, Greenhouse, Gem, LinkedIn Recruiter, Looker",
+        "Metrics: time to fill, pass-through rates, offer acceptance, quality of hire"
+      ]
+    },
+    "People Operations Manager": {
+      "summary": "People Operations Manager with 7 years of experience building HR infrastructure for startups between 80 and 400 employees. Implemented Rippling, a leveling framework and a performance cycle at a 260-person company within one year. Brings a systems mindset, multi-state compliance knowledge and employee-facing programs that scale without adding headcount.",
+      "experience": [
+        {
+          "company": "Kitewing Robotics",
+          "role": "People Operations Manager",
+          "location": "Pittsburgh, PA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own people operations for 260 employees in 14 states, leading 2 specialists across onboarding, benefits, leave and HRIS\n- Migrated HRIS, payroll and benefits to Rippling in 10 weeks, cutting monthly admin hours by 60%\n- Launched semiannual performance reviews in Lattice with 97% on-time completion in the first cycle\n- Registered and maintained payroll tax and leave compliance in 14 states with zero penalty notices\n- Built an employee handbook and policy library in Notion covering 14 states, reviewed annually with outside counsel"
+        },
+        {
+          "company": "Allegheny Bio",
+          "role": "People Operations Specialist",
+          "location": "Pittsburgh, PA",
+          "startDate": "2019-05",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Supported growth from 70 to 210 employees, running onboarding for 150+ hires\n- Built the company's first job architecture with 6 levels across 9 job families\n- Renegotiated benefits broker terms, holding 2022 premium increase to 4% against a 9% quote"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Pittsburgh",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "People Ops: HRIS administration, onboarding design, performance cycles, leveling frameworks, policy",
+        "Compliance: multi-state payroll registration, FMLA and state leave laws, ACA reporting",
+        "Systems: Rippling, Lattice, Greenhouse, Notion, Google Workspace",
+        "Certifications: SHRM-CP"
+      ]
+    },
+    "People Operations Specialist": {
+      "summary": "People Operations Specialist with 3 years of experience running onboarding, HRIS data and employee support at a fully remote software company. Handles about 150 employee tickets a month with a 1-day median resolution time. Brings tidy systems, clear documentation and a friendly, accurate first point of contact for employees in 20+ states.",
+      "experience": [
+        {
+          "company": "Lumen Ledger",
+          "role": "People Operations Specialist",
+          "location": "Remote",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Resolve about 150 employee tickets a month in Zendesk with a 1-day median resolution and 4.8/5 satisfaction\n- Run onboarding for 8–15 remote hires a month, including equipment shipping and first-week schedules\n- Audit HiBob records quarterly for 340 employees, keeping manager and cost-center data 99% accurate\n- Wrote 45 help-center articles on leave, benefits and expenses, cutting repeat questions by 30%\n- Coordinate quarterly benefits and payroll audits with finance, resolving 40 enrollment and deduction mismatches in 2025"
+        },
+        {
+          "company": "Harvest Table Co.",
+          "role": "HR Assistant",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-03",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Supported HR for 220 restaurant and commissary staff, processing new hires and status changes\n- Coordinated monthly anniversary and recognition events across 6 locations\n- Built a new-hire checklist in Google Sheets that cut missed day-one paperwork by half"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "B.A. in Global Studies",
+          "startDate": "2017-09",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "People Ops: onboarding, offboarding, HRIS data integrity, employee support, knowledge base writing",
+        "Systems: HiBob, Zendesk, Greenhouse, Slack, Notion, Google Sheets",
+        "Compliance: I-9 remote verification, multi-state new-hire reporting, leave basics",
+        "Certifications: aPHR"
+      ]
+    },
+    "People Operations Director": {
+      "summary": "People Operations Director with 12 years of HR experience, the last 5 leading people functions at fintech and SaaS companies of 300–1,000 employees. Built a 9-person team covering operations, total rewards and HR technology, and scaled the function through a Series D. Brings strategic workforce planning, board-ready reporting and calm execution during rapid change.",
+      "experience": [
+        {
+          "company": "Vaultline Financial",
+          "role": "Director of People Operations",
+          "location": "Charlotte, NC",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 9-person team across people operations, total rewards and HR technology for 820 employees\n- Scaled HR through growth from 340 to 820 employees while holding HR-to-employee ratio at 1:90\n- Redesigned the compensation philosophy and equity bands, saving $1.4M in off-cycle adjustments in 2024\n- Built quarterly board people metrics in Workday Prism covering attrition, hiring and engagement\n- Led a 2023 restructuring of 60 roles with WARN-compliant notices and no litigation"
+        },
+        {
+          "company": "Queen City Software",
+          "role": "Senior Manager, People Operations",
+          "location": "Charlotte, NC",
+          "startDate": "2017-04",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Managed a 4-person operations team supporting 450 employees in the US and Canada\n- Implemented Workday HCM, replacing 3 legacy systems and cutting reporting time from days to hours\n- Launched a parental leave program that raised 12-month return rates from 72% to 93%"
+        },
+        {
+          "company": "Carolina Mutual Insurance",
+          "role": "HR Generalist",
+          "location": "Durham, NC",
+          "startDate": "2014-06",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Supported 380 claims and underwriting employees on employee relations and leave\n- Coordinated annual benefits enrollment and carrier file audits"
+        }
+      ],
+      "education": [
+        {
+          "school": "Duke University",
+          "degree": "Master of Management Studies",
+          "startDate": "2013-07",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "Wake Forest University",
+          "degree": "B.A. in Psychology",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: HR strategy, team building, board reporting, change management, restructuring",
+        "Total Rewards: compensation philosophy, equity programs, benefits strategy",
+        "Systems: Workday HCM, Workday Prism, Greenhouse, Culture Amp",
+        "Certifications: SHRM-SCP, SPHR"
+      ]
+    },
+    "People Analyst": {
+      "summary": "People Analyst with 4 years of experience turning HRIS, recruiting and survey data into decisions for HR and business leaders. Built an attrition risk model at a 2,000-employee company that flagged 70% of regretted exits a quarter early. Brings SQL, Python and Tableau skills plus careful handling of sensitive employee data.",
+      "experience": [
+        {
+          "company": "Copperline Retail Group",
+          "role": "People Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a logistic regression attrition model in Python that flagged 70% of regretted exits one quarter early\n- Created Tableau dashboards on headcount, turnover and DEI representation used by 40 HR and business leaders\n- Automated monthly headcount reporting with SQL and dbt, reducing prep time from 3 days to 2 hours\n- Analyzed engagement survey drivers for 2,000 employees, informing a scheduling policy change that cut store turnover 9%\n- Partner with finance on monthly headcount reconciliation, closing gaps between Workday and the budget model within 1%"
+        },
+        {
+          "company": "North Loop Consulting",
+          "role": "HR Data Analyst",
+          "location": "St. Paul, MN",
+          "startDate": "2021-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Ran pay equity regressions for 6 client organizations under attorney-client privilege\n- Cleaned and merged HRIS extracts from Workday and ADP for 15 benchmarking projects\n- Presented findings to client CHROs alongside senior consultants on 4 engagements"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "M.A. in Human Resources and Industrial Relations",
+          "startDate": "2019-09",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "St. Olaf College",
+          "degree": "B.A. in Economics",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Internal Mobility Dashboard",
+          "link": "",
+          "description": "Tableau view of promotion and transfer rates by tenure and level, used to set a 30% internal fill target"
+        }
+      ],
+      "skills": [
+        "Analytics: SQL, Python (pandas, scikit-learn), R, survey analysis, regression, pay equity analysis",
+        "Visualization: Tableau, Workday reporting, Excel",
+        "Data: dbt, Snowflake, HRIS data modeling, data privacy controls",
+        "People Metrics: attrition, engagement, headcount planning, DEI representation"
+      ]
+    },
+    "HR Operations Specialist": {
+      "summary": "HR Operations Specialist with 5 years of experience processing transactions, maintaining HR data and improving workflows in Workday for a 3,000-employee healthcare system. Processes about 400 HR transactions a month at 99.5% accuracy. Brings process documentation, audit readiness and a habit of automating repeat work.",
+      "experience": [
+        {
+          "company": "Bluewater Health System",
+          "role": "HR Operations Specialist",
+          "location": "Tampa, FL",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process about 400 hires, transfers and terminations a month in Workday at 99.5% accuracy\n- Rebuilt the license verification workflow for 1,100 nurses, eliminating 18 expired-license incidents a year\n- Wrote 30 standard operating procedures adopted across a 6-person shared services team\n- Supported a SOC 1 audit of HR controls with zero exceptions noted\n- Respond to 70 ServiceNow HR cases a week on job data and verifications, meeting a 2-day SLA 97% of the time"
+        },
+        {
+          "company": "Gulfstream Staffing Services",
+          "role": "HR Coordinator",
+          "location": "St. Petersburg, FL",
+          "startDate": "2021-01",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Processed onboarding for 70 contract workers a month across 12 client sites\n- Built an Excel tracker for E-Verify tentative nonconfirmations, closing all cases within deadlines\n- Answered employment verification requests for 3,000 former contractors"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "B.S. in Management",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Operations: transaction processing, data audits, SOP writing, shared services",
+        "Systems: Workday HCM, ServiceNow HR Service Delivery, Excel (Power Query), SharePoint",
+        "Compliance: I-9, E-Verify, licensure tracking, records retention",
+        "Certifications: PHR"
+      ]
+    },
+    "HRIS Analyst": {
+      "summary": "HRIS Analyst with 5 years of experience configuring and supporting Workday HCM, Absence and Benefits for organizations of 1,500–5,000 employees. Delivered 14 integrations and business process redesigns in 2025 with no payroll-impacting defects. Brings strong configuration skills, careful testing and clear communication with HR end users.",
+      "experience": [
+        {
+          "company": "Sterling Valley Manufacturing",
+          "role": "HRIS Analyst",
+          "location": "Milwaukee, WI",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Configure Workday HCM, Absence and Benefits for 4,200 employees, closing about 60 support tickets a month\n- Built 14 EIB and Workday Studio integrations to carriers and payroll with zero payroll-impacting defects in 2025\n- Redesigned the hire business process, cutting approval steps from 9 to 5 and time to hire entry by 2 days\n- Delivered 80+ custom reports and dashboards, retiring 30 manual spreadsheets\n- Train 40 HR partners on Workday reporting and self-service tasks through quarterly workshops and recorded guides"
+        },
+        {
+          "company": "Lakefront University",
+          "role": "HR Systems Specialist",
+          "location": "Chicago, IL",
+          "startDate": "2020-07",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Supported PeopleSoft HR for 6,000 faculty and staff, handling security role requests\n- Tested quarterly patches with 150 scripted test cases and documented results for IT audit\n- Built 25 Cognos reports for payroll and HR leadership"
+        }
+      ],
+      "education": [
+        {
+          "school": "Marquette University",
+          "degree": "B.S. in Information Systems",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Workday: HCM, Absence, Benefits, business processes, calculated fields, EIB, Studio, security",
+        "Reporting: Workday advanced reports, Prism Analytics, Excel, SQL",
+        "Delivery: requirements gathering, test scripts, release management, ServiceNow",
+        "Certifications: Workday Pro HCM, Workday Pro Integrations"
+      ]
+    },
+    "HRIS Manager": {
+      "summary": "HRIS Manager with 11 years of HR technology experience, including 5 leading HRIS teams through Workday and SAP SuccessFactors implementations. Leads a 4-person team supporting 9,000 employees and a $1.6M annual HR tech budget. Brings roadmap ownership, vendor management and secure, well-governed data that HR and finance trust.",
+      "experience": [
+        {
+          "company": "Harmon Distribution Group",
+          "role": "HRIS Manager",
+          "location": "Indianapolis, IN",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 analysts supporting Workday, UKG Dimensions and 22 integrations for 9,000 employees\n- Own a $1.6M HR technology budget, consolidating 5 point tools into Workday and saving $310k a year\n- Directed Workday Recruiting and Learning go-lives on time across 40 distribution centers\n- Established SOX-aligned security role reviews, cutting excess access findings from 37 to 2\n- Present a quarterly HR technology roadmap to the CHRO and CIO, prioritizing 30+ requests by impact and effort"
+        },
+        {
+          "company": "Crossroads Insurance",
+          "role": "Senior HRIS Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2017-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Served as functional lead on a SAP SuccessFactors Employee Central implementation for 2,800 employees\n- Built benefits carrier integrations that cut eligibility errors by 85%\n- Mentored 2 junior analysts on SuccessFactors configuration, testing and release documentation"
+        },
+        {
+          "company": "Hoosier Health Network",
+          "role": "HRIS Analyst",
+          "location": "Fort Wayne, IN",
+          "startDate": "2015-06",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Maintained Lawson HR tables and position management for 3,500 employees\n- Automated monthly turnover reports with Crystal Reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "Indiana University Bloomington",
+          "degree": "B.S. in Business, Operations Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Technology: Workday HCM, UKG Dimensions, SAP SuccessFactors, integrations, security governance",
+        "Leadership: roadmap planning, vendor management, budget ownership, team development",
+        "Governance: SOX controls, data privacy, access reviews, change management",
+        "Certifications: Workday Pro HCM, PMP"
+      ]
+    },
+    "Compensation & Benefits Specialist": {
+      "summary": "Compensation and Benefits Specialist with 5 years of experience administering salary programs and benefits for 1,200–2,500 employee organizations. Ran an annual merit cycle covering $95M in base pay and cut benefit invoice discrepancies by 90%. Brings market pricing, accurate plan administration and clear employee communication.",
+      "experience": [
+        {
+          "company": "Redwood Valley Utilities",
+          "role": "Compensation & Benefits Specialist",
+          "location": "Sacramento, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Administer the annual merit and bonus cycle for 1,400 employees covering $95M in base pay\n- Price 120 jobs a year against Radford and Mercer surveys, keeping 92% of salaries within range\n- Reconcile monthly invoices for 6 benefit carriers, cutting discrepancies by 90% and recovering $64k\n- Coordinate open enrollment communications, lifting dependent verification completion to 98%\n- Respond to about 80 employee pay and benefit questions a month with a 2-day average turnaround"
+        },
+        {
+          "company": "Golden State Credit Union",
+          "role": "Benefits Coordinator",
+          "location": "Sacramento, CA",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Managed enrollment, COBRA and life events for 900 employees\n- Prepared Form 5500 and ACA 1095-C data with zero IRS notices\n- Coordinated annual open enrollment fairs for 3 office locations"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Sacramento",
+          "degree": "B.S. in Business Administration, Human Resources",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Compensation: job pricing, salary structures, merit cycles, incentive plans, FLSA classification",
+        "Benefits: health and welfare plans, 401(k), COBRA, ACA reporting, leave coordination",
+        "Systems: Workday Compensation, Radford, Mercer WIN, Excel",
+        "Certifications: CCP (in progress), CEBS"
+      ]
+    },
+    "Compensation Analyst": {
+      "summary": "Compensation Analyst with 4 years of experience in market pricing, salary structure design and pay equity analysis for technology and life sciences companies. Built new salary ranges for 300 jobs that supported pay transparency compliance in 4 states. Brings strong Excel modeling, survey data fluency and well-reasoned recommendations.",
+      "experience": [
+        {
+          "company": "Helix Therapeutics",
+          "role": "Compensation Analyst",
+          "location": "Cambridge, MA",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Priced 300 benchmark jobs using Radford and Pave data to build ranges compliant with CA, CO, NY and WA posting laws\n- Modeled the 2026 merit budget scenarios at 3.5–4.5%, adopted by the CFO at 4.0%\n- Ran pay equity regressions across 1,100 employees, identifying $420k in adjustments approved for 48 people\n- Reviewed 400 offers a year for range fit, holding new-hire compa-ratio between 0.95 and 1.05\n- Built a Tableau dashboard of compa-ratio and range penetration by department used by 25 HR business partners"
+        },
+        {
+          "company": "Northbridge Compensation Advisors",
+          "role": "Associate Consultant",
+          "location": "Boston, MA",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Built executive pay peer groups and proxy analyses for 12 public company clients\n- Prepared board-ready compensation committee materials under senior consultant review\n- Benchmarked board and executive pay against 15-company peer groups"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston University",
+          "degree": "B.S. in Business Administration, Finance",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Compensation: market pricing, salary structures, job leveling, merit modeling, equity guidelines",
+        "Analysis: pay equity regression, Excel (INDEX/MATCH, data tables), R",
+        "Data Sources: Radford, Pave, Mercer, Carta Total Comp",
+        "Certifications: CCP"
+      ]
+    },
+    "Benefits Manager": {
+      "summary": "Benefits Manager with 10 years of experience running health, welfare and retirement programs for self-funded employers of 2,000–6,000 employees. Held medical cost trend to 3.1% a year over three years against an 8% industry trend. Brings vendor negotiation, ERISA compliance and benefit designs that employees understand and use.",
+      "experience": [
+        {
+          "company": "Midland Regional Hospital",
+          "role": "Benefits Manager",
+          "location": "Kansas City, MO",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage $48M in self-funded medical, dental and retirement plans for 5,200 employees with a team of 3\n- Held medical cost trend to 3.1% a year since 2022 through a narrow-network option and pharmacy carve-out\n- Rebid stop-loss and PBM contracts with a consultant, saving $2.3M over three years\n- Lead annual nondiscrimination testing, Form 5500 filings and SPD updates with zero DOL findings\n- Launched a benefits decision-support tool during open enrollment, moving 1,100 employees to better-fit plans"
+        },
+        {
+          "company": "Plains Agricultural Cooperative",
+          "role": "Benefits Analyst",
+          "location": "Omaha, NE",
+          "startDate": "2016-05",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Administered fully insured plans and a 401(k) for 2,100 employees in 5 states\n- Launched a wellness incentive with 64% participation and a $180k premium credit\n- Reconciled monthly carrier invoices and resolved eligibility errors with 4 vendors"
+        },
+        {
+          "company": "Gateway Benefits Group",
+          "role": "Account Coordinator",
+          "location": "St. Louis, MO",
+          "startDate": "2014-06",
+          "endDate": "2016-04",
+          "isCurrent": false,
+          "description": "- Supported renewals for 30 small and mid-size employer clients\n- Prepared plan comparison exhibits for broker presentations"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri",
+          "degree": "B.S. in Business Administration, Management",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Benefits Strategy: self-funded plans, stop-loss, PBM contracting, plan design, wellness programs",
+        "Compliance: ERISA, ACA, HIPAA privacy, COBRA, Form 5500, nondiscrimination testing",
+        "Systems: Workday Benefits, Businessolver, Excel",
+        "Certifications: CEBS, SHRM-SCP"
+      ]
+    },
+    "Payroll Specialist": {
+      "summary": "Payroll Specialist with 5 years of experience processing multi-state biweekly and weekly payrolls of up to 1,800 employees in ADP and UKG. Maintains 99.8% payroll accuracy and cut off-cycle checks by 65%. Brings reliable tax compliance, clean reconciliations and patient answers to employee pay questions.",
+      "experience": [
+        {
+          "company": "Copper Canyon Logistics",
+          "role": "Payroll Specialist",
+          "location": "Denver, CO",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process weekly and biweekly payrolls for 1,800 employees in 9 states totaling $96M a year\n- Maintain 99.8% accuracy and cut off-cycle checks by 65% by adding pre-close timecard audits in UKG\n- Reconcile payroll to the general ledger monthly and prepare quarterly 941 and state filings with no penalties\n- Administer garnishments, union dues and fringe benefits for 220 Teamsters-covered drivers\n- Answer about 90 employee pay questions a month, resolving most within one business day"
+        },
+        {
+          "company": "Front Range Dental Partners",
+          "role": "Payroll Coordinator",
+          "location": "Aurora, CO",
+          "startDate": "2020-09",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Ran biweekly payroll for 340 employees across 18 dental offices in ADP Workforce Now\n- Built a bonus calculation template that cut production bonus errors to zero\n- Calculated collections-based pay for 9 associate dentists each pay period with no disputed checks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Metropolitan State University of Denver",
+          "degree": "B.S. in Accounting",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Payroll: multi-state processing, garnishments, union payroll, fringe benefits, off-cycle payments",
+        "Tax & Compliance: Form 941, W-2, state unemployment, FLSA overtime, local taxes",
+        "Systems: UKG Pro, ADP Workforce Now, NetSuite GL, Excel",
+        "Certifications: Certified Payroll Professional (CPP)"
+      ]
+    },
+    "Payroll Manager": {
+      "summary": "Payroll Manager with 11 years of experience, including 5 leading payroll for multi-entity companies with US and Canadian employees. Manages a 4-person team paying 6,500 employees $420M a year with 99.9% accuracy. Brings strong controls, system implementation experience and tight partnership with tax, accounting and HR.",
+      "experience": [
+        {
+          "company": "Northern Pines Hospitality",
+          "role": "Payroll Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 4-person team paying 6,500 employees across 3 entities in the US and Canada, $420M annually\n- Led the ADP to Workday Payroll conversion with 3 parallel runs and zero missed pay dates\n- Designed SOX payroll controls, closing all 2023 audit findings and passing 2024 and 2025 testing clean\n- Implemented tip-credit and service-charge processing for 2,400 hourly staff in 7 states\n- Partner with HR and benefits on quarterly audits of deductions for 6,500 employees, recovering $48k in missed premiums"
+        },
+        {
+          "company": "Lakeland Foods",
+          "role": "Payroll Supervisor",
+          "location": "St. Paul, MN",
+          "startDate": "2017-03",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Supervised 2 specialists processing union and salaried payrolls for 2,200 employees\n- Cut payroll tax notices from 40 a year to 6 through jurisdiction set-up audits\n- Trained 15 managers on timecard approval deadlines to cut late adjustments"
+        },
+        {
+          "company": "Twin Cities Medical Supply",
+          "role": "Payroll Specialist",
+          "location": "Bloomington, MN",
+          "startDate": "2015-01",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Processed biweekly payroll for 600 employees in Ceridian Dayforce\n- Prepared year-end W-2 reconciliations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Minnesota State University, Mankato",
+          "degree": "B.S. in Accounting",
+          "startDate": "2010-08",
+          "endDate": "2014-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Payroll Leadership: multi-entity payroll, team management, payroll implementation, year-end close",
+        "Compliance: SOX controls, multi-state and Canadian payroll tax, FLSA, tip credit rules",
+        "Systems: Workday Payroll, ADP, Ceridian Dayforce, Oracle GL, Excel",
+        "Certifications: CPP, Certified Payroll Professional (Canada) PCP"
+      ]
+    },
+    "Learning and Development Manager": {
+      "summary": "Learning and Development Manager with 9 years of experience designing leadership, onboarding and compliance programs for organizations of 1,000–4,000 employees. Built a manager development curriculum that 260 leaders completed, lifting internal promotion rates from 28% to 41%. Brings needs analysis, blended program design and measurable business impact.",
+      "experience": [
+        {
+          "company": "Silverline Insurance Group",
+          "role": "Learning and Development Manager",
+          "location": "Hartford, CT",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-person L&D team and a $650k budget serving 3,100 employees in claims, underwriting and sales\n- Launched a 6-month manager program completed by 260 leaders, raising internal promotion rate from 28% to 41%\n- Redesigned claims adjuster onboarding, cutting time to full caseload from 16 to 10 weeks\n- Moved compliance training to Cornerstone with 99% on-time completion across 14 state licensing requirements"
+        },
+        {
+          "company": "Riverstone Bank",
+          "role": "Training Specialist",
+          "location": "Providence, RI",
+          "startDate": "2017-05",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Delivered teller and personal banker training to 400 new hires across 35 branches\n- Built 20 Articulate Rise modules that reduced classroom days from 10 to 6"
+        },
+        {
+          "company": "Bayside Retail Outlets",
+          "role": "Store Training Coordinator",
+          "location": "Warwick, RI",
+          "startDate": "2015-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Coordinated new-hire training for 12 stores and 300 seasonal associates\n- Created a cashier certification checklist adopted chainwide"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Connecticut",
+          "degree": "M.A. in Adult Learning",
+          "startDate": "2018-09",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "University of Rhode Island",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Learning Strategy: needs analysis, leadership development, onboarding design, Kirkpatrick evaluation",
+        "Design: ADDIE, blended learning, facilitation, Articulate 360, Camtasia",
+        "Systems: Cornerstone OnDemand, Workday Learning, Qualtrics",
+        "Certifications: ATD Certified Professional in Talent Development (CPTD), DiSC Certified Facilitator"
+      ]
+    },
+    "Learning and Development Specialist": {
+      "summary": "Learning and Development Specialist with 4 years of experience building e-learning, facilitating workshops and running LMS operations for a 1,500-employee company. Produced 35 courses in Articulate 360 with a 4.6/5 average learner rating. Brings instructional design fundamentals, engaging facilitation and steady administration of training data.",
+      "experience": [
+        {
+          "company": "Oakmont Senior Living",
+          "role": "Learning and Development Specialist",
+          "location": "Nashville, TN",
+          "startDate": "2022-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design and update 35 e-learning courses in Articulate 360 for 1,500 caregivers and community staff\n- Facilitate 8 virtual and in-person workshops a month on resident safety, dementia care and customer service\n- Administer Relias LMS assignments and reporting, keeping state-required training at 98% completion\n- Built a new-hire microlearning path that cut first-90-day caregiver turnover by 12%\n- Analyze post-course surveys and quiz results quarterly, retiring 6 low-rated modules and rewriting 4 others"
+        },
+        {
+          "company": "Cumberland Community College",
+          "role": "Training Coordinator, Workforce Development",
+          "location": "Nashville, TN",
+          "startDate": "2021-01",
+          "endDate": "2022-10",
+          "isCurrent": false,
+          "description": "- Coordinated 60 employer-sponsored courses a year for 900 adult learners\n- Converted 12 classroom courses to Canvas, retaining 90% completion rates\n- Scheduled instructors and rooms for 3 campus locations each term"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "B.S. in Organizational Communication",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Fall Prevention Simulation",
+          "link": "",
+          "description": "Branching Storyline scenario on resident fall response, completed by 1,200 staff and tied to a 15% drop in reportable falls"
+        }
+      ],
+      "skills": [
+        "Instructional Design: ADDIE, storyboarding, microlearning, assessment writing",
+        "Facilitation: virtual and in-person workshops, train-the-trainer",
+        "Tools: Articulate 360, Camtasia, Canva, Relias LMS, Canvas",
+        "Certifications: ATD Instructional Design Certificate"
+      ]
+    },
+    "Training Specialist": {
+      "summary": "Training Specialist with 6 years of experience delivering technical and safety training in manufacturing and field service environments. Trains about 300 employees a year on equipment, lockout/tagout and quality procedures, with recordable injuries down 38% at the main plant. Brings hands-on facilitation, clear job aids and audit-ready training records.",
+      "experience": [
+        {
+          "company": "Ironbridge Components",
+          "role": "Training Specialist",
+          "location": "Greenville, SC",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver equipment, lockout/tagout and quality training to about 300 production employees a year across 3 shifts\n- Built a skills matrix for 85 machine operations, cutting operator qualification time from 8 to 5 weeks\n- Partnered with EHS on refresher training that reduced plant recordable injuries 38% over two years\n- Maintain ISO 9001 and IATF 16949 training records with zero audit findings in four surveillance audits\n- Coach 12 shift leads as certified trainers, expanding on-the-job training capacity without adding headcount"
+        },
+        {
+          "company": "Palmetto HVAC Services",
+          "role": "Field Training Coordinator",
+          "location": "Columbia, SC",
+          "startDate": "2019-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Ran a 4-week apprentice program for 45 new HVAC technicians a year\n- Created 30 illustrated job aids that cut repeat service calls by 11%\n- Tracked technician certifications for EPA 608 and manufacturer programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "B.S. in Industrial Management",
+          "startDate": "2014-08",
+          "endDate": "2018-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Training Delivery: classroom and on-the-job training, train-the-trainer, skills assessments",
+        "Safety & Quality: OSHA 30, lockout/tagout, ISO 9001, IATF 16949 training requirements",
+        "Tools: SAP SuccessFactors Learning, PowerPoint, Articulate Rise, SnagIt",
+        "Certifications: OSHA 30 General Industry, CPTD (in progress)"
+      ]
+    },
+    "Organizational Development Consultant": {
+      "summary": "Organizational Development Consultant with 8 years of experience leading culture, team effectiveness and change initiatives for healthcare and public sector organizations. Facilitated a redesign of 14 nursing units that raised engagement scores 11 points. Brings diagnostic rigor, strong facilitation and coaching that helps leaders act on survey data.",
+      "experience": [
+        {
+          "company": "Summit Valley Health",
+          "role": "Organizational Development Consultant",
+          "location": "Salt Lake City, UT",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Consult with executives and 120 department leaders across a 7,000-employee health system on culture and team effectiveness\n- Led action planning for 14 nursing units after Press Ganey engagement results, raising scores 11 points in a year\n- Designed a change framework for an Epic go-live, training 180 change champions across 3 hospitals\n- Coach 12 directors a year using Hogan and 360 feedback, with 85% reporting goals met at 6 months\n- Facilitated 2 executive team offsites on decision rights, producing a RACI adopted by 9 vice presidents"
+        },
+        {
+          "company": "Wasatch County Government",
+          "role": "Training and OD Specialist",
+          "location": "Heber City, UT",
+          "startDate": "2018-03",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Facilitated strategic planning retreats for 9 county departments\n- Redesigned the supervisor performance review, lifting completion from 61% to 94%\n- Coordinated the county employee engagement survey with 1,100 respondents"
+        },
+        {
+          "company": "Bonneville Consulting Partners",
+          "role": "Associate Consultant",
+          "location": "Salt Lake City, UT",
+          "startDate": "2016-06",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Ran employee focus groups and survey analysis for 10 client culture assessments\n- Drafted findings reports reviewed by principal consultants"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Utah",
+          "degree": "M.S. in Industrial/Organizational Psychology",
+          "startDate": "2014-08",
+          "endDate": "2016-05"
+        },
+        {
+          "school": "Utah State University",
+          "degree": "B.S. in Psychology",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "OD Practice: organizational diagnosis, team effectiveness, change management, culture assessment",
+        "Facilitation: strategic planning, action planning, appreciative inquiry, focus groups",
+        "Assessment: Hogan, 360 feedback, Press Ganey and Qualtrics surveys",
+        "Certifications: Prosci Change Practitioner, ICF Associate Certified Coach (ACC)"
+      ]
+    },
+    "Employee Relations Specialist": {
+      "summary": "Employee Relations Specialist with 6 years of experience investigating workplace complaints and advising managers on discipline and policy in unionized and non-union settings. Closes about 90 investigations a year with an average 21-day cycle time. Brings impartial investigations, thorough documentation and practical guidance that reduces legal risk.",
+      "experience": [
+        {
+          "company": "Metro Transit Authority of Riverton",
+          "role": "Employee Relations Specialist",
+          "location": "Philadelphia, PA",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Investigate about 90 complaints a year involving harassment, discrimination and conduct for 4,500 employees\n- Cut average investigation cycle time from 38 to 21 days with a standardized intake and interview protocol\n- Advise managers on progressive discipline under 2 collective bargaining agreements, supporting 25 grievance hearings a year\n- Analyze case trends quarterly, leading to targeted respect-in-the-workplace training for 3 depots\n- Co-facilitate quarterly manager training on documentation and respectful workplace standards for 150 supervisors"
+        },
+        {
+          "company": "Liberty Bell Health Plans",
+          "role": "HR Generalist",
+          "location": "Philadelphia, PA",
+          "startDate": "2019-01",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Handled employee relations, leave and accommodations for 700 call center employees\n- Drafted responses to 8 PHRC and EEOC charges with counsel, none resulting in findings\n- Maintained the case log and reported quarterly trends to the HR director"
+        }
+      ],
+      "education": [
+        {
+          "school": "Temple University",
+          "degree": "B.B.A. in Human Resource Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Employee Relations: workplace investigations, progressive discipline, grievance handling, policy interpretation",
+        "Legal Framework: Title VII, ADA, ADEA, FMLA, NLRA, collective bargaining agreements",
+        "Tools: HR Acuity, Workday, Excel case trend reporting",
+        "Certifications: SHRM-CP, AWI Certificate in Workplace Investigations"
+      ]
+    },
+    "DEI Manager": {
+      "summary": "DEI Manager with 8 years of experience in talent and inclusion programs at consumer and technology companies of 1,500–5,000 employees. Increased representation of women in director-and-above roles from 27% to 36% over three years. Brings data-driven strategy, legally sound program design and partnership with business leaders on hiring and promotion practices.",
+      "experience": [
+        {
+          "company": "Brightwater Brands",
+          "role": "DEI Manager",
+          "location": "Chicago, IL",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead inclusion strategy for 3,800 employees with a $400k program budget, reporting to the Chief People Officer\n- Raised women in director-and-above roles from 27% to 36% through structured promotion panels and sponsorship\n- Partnered with legal to review all programs for compliance after 2023 case law changes, keeping them open to all employees\n- Support 8 employee resource groups with 1,400 members, tying each to a measurable business or talent goal\n- Publish an annual workforce representation report to employees and the board, built from Workday and survey data"
+        },
+        {
+          "company": "Lakeview Software",
+          "role": "Talent Programs Manager",
+          "location": "Chicago, IL",
+          "startDate": "2018-09",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Built a campus recruiting program with 12 universities, hiring 70 interns a year\n- Introduced structured interview training for 300 managers, narrowing pass-through gaps across groups by 40%\n- Partnered with 4 historically Black colleges on internship pipelines yielding 22 interns a year"
+        },
+        {
+          "company": "Midway Consulting Group",
+          "role": "HR Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2016-07",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Prepared EEO-1 and affirmative action plan data for 3 federal contractor clients\n- Built representation dashboards in Excel for client HR teams"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University",
+          "degree": "B.A. in Sociology",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inclusion Strategy: workforce representation analysis, inclusive hiring, promotion equity, ERG governance",
+        "Compliance: Title VII, EEO-1, affirmative action plans, pay equity reviews with counsel",
+        "Analytics: Workday reporting, Tableau, Culture Amp surveys",
+        "Certifications: Cornell Diversity and Inclusion Certificate, SHRM-SCP"
+      ]
+    },
+    "Office Manager": {
+      "summary": "Office Manager with 7 years of experience running day-to-day operations for professional services offices of 40–120 people. Manages a $380k annual office budget and cut vendor costs 18% through contract consolidation. Brings calm problem solving, organized vendor and facilities management and a welcoming office that runs without surprises.",
+      "experience": [
+        {
+          "company": "Hollister & Reyes Architects",
+          "role": "Office Manager",
+          "location": "Los Angeles, CA",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run office operations for a 95-person firm, managing a $380k budget for supplies, services and events\n- Consolidated 14 vendors into 6 contracts, reducing annual office spend 18%\n- Coordinated a 22,000 sq ft office move with no lost workdays and a 2-week early completion\n- Supervise 2 receptionists and manage IT asset tracking for 140 laptops and plotters with a managed service provider\n- Coordinate onboarding logistics for about 25 new hires a year, including desks, equipment and building access"
+        },
+        {
+          "company": "Ventura Wealth Advisors",
+          "role": "Office Administrator",
+          "location": "Pasadena, CA",
+          "startDate": "2018-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Managed front office, mail and supply ordering for 40 advisors and staff\n- Organized 25 client events a year for 50–200 guests within budget\n- Managed the front desk calendar and conference room bookings for 3 floors"
+        },
+        {
+          "company": "Glendale Family Dental",
+          "role": "Front Desk Coordinator",
+          "location": "Glendale, CA",
+          "startDate": "2016-06",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Scheduled 60+ patient appointments a day across 4 providers\n- Reduced no-shows 20% by launching text reminders"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Northridge",
+          "degree": "B.A. in Business Administration",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Office Operations: budget management, vendor contracts, office moves, space planning, event planning",
+        "Administration: purchasing, invoice approval, asset tracking, visitor management",
+        "Tools: QuickBooks Online, Envoy, Microsoft 365, Google Workspace, Asana",
+        "Supervision: front desk staffing, scheduling, onboarding logistics"
+      ]
+    },
+    "Facilities Coordinator": {
+      "summary": "Facilities Coordinator with 4 years of experience supporting corporate campuses and lab buildings up to 350,000 sq ft. Manages about 180 work orders a month with a 96% on-time completion rate. Brings vendor coordination, preventive maintenance tracking and quick, clear communication with occupants during disruptions.",
+      "experience": [
+        {
+          "company": "Corvallis Life Sciences",
+          "role": "Facilities Coordinator",
+          "location": "San Diego, CA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate about 180 work orders a month in ServiceNow for a 350,000 sq ft office and lab campus at 96% on time\n- Schedule preventive maintenance with 12 vendors for HVAC, fire life safety and generators\n- Managed 9 workspace moves for 260 employees over a weekend each with no lab downtime\n- Track a $1.1M service contract budget and reconcile monthly vendor invoices\n- Coordinate quarterly fire drills and emergency evacuation training for 900 occupants with the EHS team"
+        },
+        {
+          "company": "Pacific Crest Property Management",
+          "role": "Building Operations Assistant",
+          "location": "Irvine, CA",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Handled tenant requests and access badges for 3 office buildings with 40 tenants\n- Maintained certificates of insurance for 55 vendors in Yardi\n- Processed 70 tenant service requests a week through the building portal"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Irvine",
+          "degree": "B.A. in Urban Studies",
+          "startDate": "2017-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Facilities: work order management, preventive maintenance, space and move planning, vendor coordination",
+        "Safety: fire drills, emergency response plans, Cal/OSHA basics",
+        "Systems: ServiceNow, Yardi, Brivo access control, Excel",
+        "Certifications: IFMA Facility Management Professional (FMP) in progress"
+      ]
+    },
+    "Executive Assistant": {
+      "summary": "Executive Assistant with 8 years of experience supporting C-suite leaders at healthcare and private equity firms. Manages the calendar, travel and board logistics for a CEO overseeing 2,400 employees. Brings sound judgment with confidential information, anticipatory planning and the ability to keep a busy executive focused on priorities.",
+      "experience": [
+        {
+          "company": "Clearwater Behavioral Health",
+          "role": "Executive Assistant to the CEO",
+          "location": "Nashville, TN",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage the CEO's calendar, inbox triage and priorities across 30–40 meetings a week\n- Coordinate quarterly board meetings, preparing 120-page board books on deadline every quarter\n- Plan domestic travel to 26 facilities a year, keeping travel spend 15% under budget\n- Track executive team action items in Asana, raising on-time follow-through from 60% to 90%\n- Draft CEO correspondence and prepare briefing notes for 10 external meetings a month with partners and regulators"
+        },
+        {
+          "company": "Riverbend Capital Partners",
+          "role": "Executive Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2017-08",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Supported 3 partners with scheduling, expense reports and investor meeting logistics\n- Organized the annual investor meeting for 180 attendees within a $90k budget\n- Booked complex travel for 3 partners across 25 trips a year"
+        },
+        {
+          "company": "Peachtree Orthopedics",
+          "role": "Administrative Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2016-01",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Supported the practice administrator and 8 physicians with scheduling and correspondence\n- Maintained credentialing files for 12 providers"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Southern University",
+          "degree": "B.A. in Communication Arts",
+          "startDate": "2011-08",
+          "endDate": "2015-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Support: calendar management, board meeting preparation, travel planning, correspondence",
+        "Operations: expense reporting, action-item tracking, event planning, vendor coordination",
+        "Tools: Microsoft 365, Concur, Asana, Diligent Boards, Zoom",
+        "Certifications: Certified Administrative Professional (CAP)"
+      ]
+    },
+    "Executive Business Partner": {
+      "summary": "Executive Business Partner with 9 years of experience supporting founders and C-level leaders at venture-backed technology companies. Runs the operating rhythm for a CTO and a 450-person engineering organization, from offsites to quarterly planning. Brings strategic prioritization, cross-functional project management and discreet handling of sensitive information.",
+      "experience": [
+        {
+          "company": "Arcadia Data Systems",
+          "role": "Executive Business Partner to the CTO",
+          "location": "San Francisco, CA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the operating cadence for the CTO and a 12-person leadership team overseeing 450 engineers\n- Own quarterly planning logistics and OKR tracking, cutting planning cycle time from 5 weeks to 3\n- Planned 2 annual engineering offsites for 400 attendees each within a $650k budget\n- Manage the CTO's calendar, protecting 8 hours of weekly focus time and pre-reading for every decision meeting"
+        },
+        {
+          "company": "Sparrow Health",
+          "role": "Executive Assistant to the Co-Founders",
+          "location": "San Francisco, CA",
+          "startDate": "2018-04",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Supported 2 co-founders through Series B and C fundraising, coordinating 150+ investor meetings\n- Built the company's first all-hands and leadership meeting cadence as headcount grew from 40 to 280\n- Managed confidential hiring logistics for 6 executive searches"
+        },
+        {
+          "company": "Golden Gate Law Group",
+          "role": "Legal Administrative Assistant",
+          "location": "Oakland, CA",
+          "startDate": "2016-09",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Supported 3 attorneys with calendaring, court filings and client correspondence\n- Maintained docket deadlines with zero missed filings"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "B.A. in English",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Partnership: operating cadence, OKR tracking, leadership meetings, offsite planning",
+        "Project Management: cross-functional initiatives, stakeholder communication, budget tracking",
+        "Tools: Google Workspace, Notion, Asana, Slack, Navan, Carta",
+        "Confidentiality: board materials, executive hiring, M&A logistics"
+      ]
+    },
+    "Administrative Assistant": {
+      "summary": "Administrative Assistant with 4 years of experience supporting departments of 15–60 people in higher education and nonprofit settings. Handles scheduling, purchasing and records for a 40-person department, processing $250k a year in purchase orders. Brings organized, reliable follow-through and strong Microsoft 365 skills.",
+      "experience": [
+        {
+          "company": "Riverside Community Foundation",
+          "role": "Administrative Assistant",
+          "location": "Sacramento, CA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Provide administrative support to a 40-person program department, including scheduling for 4 directors\n- Process about $250k a year in purchase orders and reconcile monthly P-card statements in Blackbaud\n- Coordinate logistics for 30 grantee workshops a year with 20–80 participants\n- Built a SharePoint document library that cut time spent locating grant files by an estimated 3 hours a week\n- Draft meeting agendas and minutes for monthly department and board committee meetings"
+        },
+        {
+          "company": "American River College",
+          "role": "Office Assistant, Admissions and Records",
+          "location": "Sacramento, CA",
+          "startDate": "2021-01",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Answered 70+ student calls and emails a day about enrollment and transcripts\n- Processed transcript requests in PeopleSoft with a 2-day turnaround\n- Maintained the front office schedule for 6 student workers"
+        }
+      ],
+      "education": [
+        {
+          "school": "American River College",
+          "degree": "A.A. in Business Administration",
+          "startDate": "2018-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Administration: calendar management, meeting logistics, purchasing, records management, minutes",
+        "Software: Microsoft 365 (Excel, Outlook, SharePoint), Blackbaud, PeopleSoft, Zoom",
+        "Communication: phone and email support, correspondence drafting, professional etiquette",
+        "Typing: 70 WPM"
+      ]
+    },
+    "Operations Manager": {
+      "summary": "Operations Manager with 10 years of experience running service and fulfillment operations for growing mid-market companies. Oversees a 65-person operation and a $9M operating budget, improving on-time delivery from 88% to 97%. Brings lean process improvement, KPI management and people leadership that holds results across shifts.",
+      "experience": [
+        {
+          "company": "Fieldstone Home Services",
+          "role": "Operations Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 65-person operation of dispatchers, technicians and coordinators with a $9M operating budget\n- Raised on-time appointment arrival from 88% to 97% by rebuilding dispatch zones in ServiceTitan\n- Cut repeat service visits 23% through a technician quality checklist and weekly callback reviews\n- Built a weekly KPI scorecard covering cost per job, utilization and customer satisfaction used by the leadership team"
+        },
+        {
+          "company": "Carolina Parcel Fulfillment",
+          "role": "Operations Supervisor",
+          "location": "Concord, NC",
+          "startDate": "2017-02",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Supervised 3 shifts of 80 associates shipping 12,000 e-commerce orders a day\n- Led kaizen events that improved pick rates 19% and cut mis-ships to 0.2%\n- Reduced overtime spend $210k a year by matching labor to volume forecasts"
+        },
+        {
+          "company": "Blue Ridge Distributors",
+          "role": "Operations Analyst",
+          "location": "Asheville, NC",
+          "startDate": "2015-06",
+          "endDate": "2017-01",
+          "isCurrent": false,
+          "description": "- Built daily throughput and labor reports for 2 distribution centers\n- Supported a WMS upgrade with process maps and user testing"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: process improvement, capacity planning, KPI management, budgeting, vendor management",
+        "Methods: Lean, Six Sigma Green Belt, root cause analysis, standard work",
+        "Systems: ServiceTitan, NetSuite, Power BI, Excel",
+        "Leadership: multi-shift supervision, hiring, coaching, performance management"
+      ]
+    },
+    "Operations Coordinator": {
+      "summary": "Operations Coordinator with 3 years of experience keeping scheduling, inventory and vendor processes running for a regional event and production company. Coordinates logistics for about 25 events a month and cut equipment loss by 40%. Brings organized multitasking, clear documentation and quick problem solving under deadline pressure.",
+      "experience": [
+        {
+          "company": "Brightstage Productions",
+          "role": "Operations Coordinator",
+          "location": "Las Vegas, NV",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate crew schedules, trucking and equipment for about 25 corporate events a month\n- Introduced barcode check-in and check-out for 4,000 equipment items, cutting annual equipment loss 40%\n- Track vendor purchase orders and invoices up to $60k a month in QuickBooks\n- Maintain operations SOPs in Notion, used to onboard 6 new crew leads\n- Coordinate post-event damage reports with clients, recovering $18k in equipment repair charges in 2025"
+        },
+        {
+          "company": "Silver State Rentals",
+          "role": "Operations Assistant",
+          "location": "Henderson, NV",
+          "startDate": "2022-01",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Scheduled 40 equipment deliveries a week and confirmed customer site details\n- Updated rental availability in Point of Rental, reducing double bookings to near zero\n- Answered 50 customer calls a day on delivery windows and rental extensions"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nevada, Las Vegas",
+          "degree": "B.S. in Hospitality Management",
+          "startDate": "2017-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: scheduling, logistics coordination, inventory control, vendor management, SOP writing",
+        "Tools: QuickBooks Online, Notion, Point of Rental, Google Sheets, Sortly",
+        "Communication: client coordination, crew briefings, issue escalation",
+        "Certifications: OSHA 10"
+      ]
+    },
+    "Chief People Officer": {
+      "summary": "Chief People Officer with 18 years of HR experience, including 7 as head of people for technology companies scaling from 300 to 3,000 employees. Led the people function through an IPO and two acquisitions while holding engagement above the 75th percentile benchmark. Brings executive-team partnership, board-level talent strategy and pragmatic leadership of a global HR organization.",
+      "experience": [
+        {
+          "company": "Meridian Cloud Software",
+          "role": "Chief People Officer",
+          "location": "Austin, TX",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 48-person people organization supporting 2,900 employees in 11 countries, reporting to the CEO\n- Prepared people functions for the 2023 IPO, including SOX controls, equity plan administration and proxy disclosures\n- Integrated 2 acquisitions totaling 420 employees with 91% one-year retention\n- Present talent, succession and compensation strategy to the board's compensation committee quarterly\n- Held engagement above the 75th percentile Culture Amp benchmark through two years of restructuring"
+        },
+        {
+          "company": "Longhorn Logistics Technology",
+          "role": "VP of People",
+          "location": "Austin, TX",
+          "startDate": "2016-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Built the HR function from 3 to 18 people as the company grew from 300 to 1,100 employees\n- Introduced leveling, equity refresh and performance frameworks adopted company-wide\n- Built the first people analytics function, delivering monthly attrition and hiring dashboards to the executive team"
+        },
+        {
+          "company": "Gulf Coast Energy Services",
+          "role": "Director, HR Business Partners",
+          "location": "Houston, TX",
+          "startDate": "2010-07",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Led 6 HR business partners supporting 5,000 field and corporate employees\n- Managed workforce reductions during the 2015 downturn in compliance with WARN Act requirements"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cornell University",
+          "degree": "M.S. in Industrial and Labor Relations",
+          "startDate": "2006-08",
+          "endDate": "2008-05"
+        },
+        {
+          "school": "University of Texas at Austin",
+          "degree": "B.A. in Government",
+          "startDate": "2002-08",
+          "endDate": "2006-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Leadership: people strategy, board and compensation committee reporting, organizational design",
+        "Transactions: IPO readiness, M&A integration, restructuring, global expansion",
+        "Talent: succession planning, executive hiring, performance and rewards philosophy",
+        "Certifications: SHRM-SCP, SPHR"
+      ]
+    },
+    "COO": {
+      "summary": "Chief Operating Officer with 17 years of operations leadership in healthcare services and multi-site businesses, the last 6 as COO. Oversees 1,800 employees across 60 clinics and grew EBITDA margin from 9% to 15% in four years. Brings disciplined operating systems, capital allocation and leadership development that scale with acquisitions.",
+      "experience": [
+        {
+          "company": "Alder Physical Therapy Partners",
+          "role": "Chief Operating Officer",
+          "location": "Denver, CO",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run operations for 60 outpatient clinics and 1,800 employees in 5 states, reporting to the CEO and a private equity board\n- Raised EBITDA margin from 9% to 15% by standardizing scheduling, staffing ratios and payer collections\n- Integrated 22 acquired clinics using a 100-day playbook, reaching target margins within 9 months on average\n- Implemented a clinic scorecard covering visits per day, cancellations and NPS, reviewed monthly by 8 regional directors\n- Lead a capital plan of $14M a year for clinic buildouts, equipment and technology across the network"
+        },
+        {
+          "company": "Peak Urgent Care",
+          "role": "Vice President of Operations",
+          "location": "Colorado Springs, CO",
+          "startDate": "2015-02",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Led operations for 28 urgent care centers with $140M in revenue\n- Cut average door-to-door patient time from 74 to 48 minutes through triage redesign\n- Opened 9 de novo centers on schedule and within $1.8M average build budgets"
+        },
+        {
+          "company": "Rocky Mountain Diagnostic Labs",
+          "role": "Regional Operations Manager",
+          "location": "Denver, CO",
+          "startDate": "2009-06",
+          "endDate": "2015-01",
+          "isCurrent": false,
+          "description": "- Managed 14 patient service centers and 160 staff\n- Reduced specimen rejection rates 35% through courier and handling standards"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Denver, Daniels College of Business",
+          "degree": "MBA",
+          "startDate": "2011-09",
+          "endDate": "2013-06"
+        },
+        {
+          "school": "Colorado State University",
+          "degree": "B.S. in Health and Exercise Science",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Operations: P&L ownership, operating cadence, KPI scorecards, multi-site management",
+        "Growth: M&A integration, de novo expansion, capital planning, private equity reporting",
+        "Healthcare: payer contracting, revenue cycle, HIPAA compliance, clinical staffing models",
+        "Leadership: regional director development, change management, board communication"
+      ]
+    },
+    "HR Intern": {
+      "summary": "Human resources student at the University of Wisconsin–Madison, graduating in May 2027, with a summer HR internship and two years of campus employment. Built an onboarding feedback survey that 210 new hires completed during the internship. Brings coursework in employment law and compensation, Excel skills and careful handling of confidential information.",
+      "experience": [
+        {
+          "company": "Badger State Mutual Insurance",
+          "role": "Human Resources Intern",
+          "location": "Madison, WI",
+          "startDate": "2026-05",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Built an onboarding feedback survey in Qualtrics completed by 210 new hires, summarizing 5 improvement themes for the HR team\n- Audited 400 personnel files for I-9 and policy acknowledgment completeness, flagging 37 gaps for correction\n- Scheduled 90 interviews for 6 recruiters and prepared candidate packets"
+        },
+        {
+          "company": "University of Wisconsin–Madison Recreation & Wellbeing",
+          "role": "Student Staff Scheduler",
+          "location": "Madison, WI",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build weekly shift schedules for 75 student employees across 3 facilities using When I Work\n- Cut unfilled shifts from 12% to 3% by launching a shift-swap request process\n- Train 10 new student staff each semester on scheduling software, shift policies and call-out procedures"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Madison",
+          "degree": "B.B.A. in Management and Human Resources (expected May 2027); coursework: Employment Law, Compensation, Organizational Behavior",
+          "startDate": "2023-09",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Campus Pay Equity Case Study",
+          "link": "",
+          "description": "Team analysis of a 300-record anonymized salary dataset in Excel, identifying unexplained gaps and recommending a structured review process"
+        }
+      ],
+      "skills": [
+        "HR Fundamentals: onboarding, recruiting coordination, records audits, survey design",
+        "Tools: Excel (pivot tables, XLOOKUP), Qualtrics, Workday (student access), When I Work",
+        "Coursework: employment law, compensation, organizational behavior, HR analytics",
+        "Memberships: SHRM Student Chapter, Vice President"
+      ]
+    },
+    "HR Specialist": {
+      "summary": "HR Specialist with 4 years of experience in a federal contractor environment, focused on recruitment compliance, leave administration and HR records. Supported an OFCCP compliance review that closed with no violations. Brings precise documentation, solid knowledge of federal employment regulations and responsive support for 900 employees.",
+      "experience": [
+        {
+          "company": "Patriot Systems Engineering",
+          "role": "HR Specialist",
+          "location": "Huntsville, AL",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 900 engineering and program employees on leave, policy and benefit questions for a federal defense contractor\n- Prepared applicant flow and AAP data for a 2024 OFCCP compliance review closed with no violations\n- Administer 50+ FMLA and military leave cases a year under USERRA with complete documentation\n- Coordinate security clearance onboarding steps with the facility security officer for 120 hires a year\n- Lead quarterly HR policy refreshers for 40 program managers on leave, timekeeping and DCAA labor charging rules"
+        },
+        {
+          "company": "Tennessee Valley Engineering Services",
+          "role": "HR Assistant",
+          "location": "Decatur, AL",
+          "startDate": "2021-01",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Processed new-hire paperwork and E-Verify for 15–20 hires a month\n- Maintained training records for 300 employees in Deltek Costpoint\n- Answered 30 employee questions a day on benefits enrollment and timesheets"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Alabama in Huntsville",
+          "degree": "B.S. in Business Administration, Management",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Compliance: OFCCP, affirmative action plans, EEO-1, VEVRAA, USERRA, FMLA",
+        "HR Services: leave administration, policy guidance, onboarding, records management",
+        "Systems: Deltek Costpoint, UKG Pro, Excel, SharePoint",
+        "Certifications: PHR"
+      ]
+    },
+    "HR Director": {
+      "summary": "HR Director with 14 years of human resources experience, including 6 leading HR for multi-site manufacturing and food production companies of 1,500–3,000 employees. Reduced annual turnover from 52% to 34% while supporting a union contract renewal. Brings labor relations depth, workforce planning and an HR team that plant leaders rely on.",
+      "experience": [
+        {
+          "company": "Heartland Poultry Processing",
+          "role": "HR Director",
+          "location": "Des Moines, IA",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead an 11-person HR team supporting 2,600 employees across 4 plants and a corporate office\n- Reduced annual turnover from 52% to 34% through attendance policy redesign, shift premiums and a 90-day mentor program\n- Served on the bargaining team for a 3-year UFCW contract settled without a work stoppage\n- Cut OSHA recordable rate 27% in partnership with EHS through ergonomics training and early reporting\n- Own a $2.1M HR operating budget and annual workforce plan with plant general managers"
+        },
+        {
+          "company": "Cornbelt Packaging",
+          "role": "HR Manager",
+          "location": "Cedar Rapids, IA",
+          "startDate": "2016-04",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Managed HR for a 650-employee plant with 3 direct reports\n- Launched bilingual onboarding in Spanish and Swahili, lifting 90-day retention 18%\n- Resolved 40 grievances a year with 3 reaching arbitration"
+        },
+        {
+          "company": "Mississippi River Foods",
+          "role": "HR Generalist",
+          "location": "Davenport, IA",
+          "startDate": "2012-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Supported HR for 500 production employees including leave and workers' compensation\n- Coordinated weekly hiring for 30–40 production roles"
+        }
+      ],
+      "education": [
+        {
+          "school": "Drake University",
+          "degree": "MBA",
+          "startDate": "2014-08",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "Iowa State University",
+          "degree": "B.S. in Management",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HR Leadership: workforce planning, HR budget, team development, policy strategy",
+        "Labor Relations: collective bargaining, grievance and arbitration, NLRA compliance",
+        "Compliance: OSHA, FMLA, ADA, Title VII, I-9 and immigration programs",
+        "Certifications: SPHR, SHRM-SCP"
+      ]
+    },
+    "VP of Human Resources": {
+      "summary": "Vice President of Human Resources with 16 years of experience, including 8 leading HR for financial services and insurance organizations of 2,000–6,000 employees. Redesigned total rewards for 4,800 employees within a flat budget while cutting regretted attrition 30%. Brings executive advisory, regulatory awareness and an HR operating model built for scale.",
+      "experience": [
+        {
+          "company": "Keystone Life & Annuity",
+          "role": "Vice President of Human Resources",
+          "location": "Des Moines, IA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 34-person HR organization supporting 4,800 employees, reporting to the CEO\n- Redesigned total rewards within a flat $520M compensation budget, cutting regretted attrition 30% in two years\n- Moved HR to a centers-of-excellence model with a shared service center, lowering HR cost per employee 17%\n- Built a succession program covering 85 critical roles, with 70% of executive vacancies filled internally since 2023\n- Partner with the CFO on annual workforce and compensation planning, aligning hiring to a 3-year growth plan"
+        },
+        {
+          "company": "Prairie Wind Bancorp",
+          "role": "Senior Director, Human Resources",
+          "location": "Omaha, NE",
+          "startDate": "2016-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Led HR business partners and talent acquisition for 2,300 employees across 90 branches\n- Directed people integration of a 400-employee bank acquisition in 6 months\n- Launched an incentive plan review aligned to CFPB guidance on sales practices"
+        },
+        {
+          "company": "Great Plains Casualty",
+          "role": "HR Business Partner",
+          "location": "Lincoln, NE",
+          "startDate": "2010-06",
+          "endDate": "2015-12",
+          "isCurrent": false,
+          "description": "- Partnered with claims and underwriting leaders supporting 900 employees\n- Led a performance management redesign adopted company-wide"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nebraska–Lincoln",
+          "degree": "M.A. in Human Resources and Leadership",
+          "startDate": "2010-08",
+          "endDate": "2012-12"
+        },
+        {
+          "school": "Creighton University",
+          "degree": "B.S.B.A. in Management",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive HR: HR operating model, total rewards strategy, succession planning, executive coaching",
+        "Financial Services: incentive compensation governance, regulatory alignment, M&A integration",
+        "Systems: Workday, Visier, Glint",
+        "Certifications: SPHR, SHRM-SCP, CCP"
+      ]
+    },
+    "Onboarding Specialist": {
+      "summary": "Onboarding Specialist with 3 years of experience running new-hire onboarding for a fast-growing fintech hiring 40–60 people a month. Redesigned the first-week experience and raised new-hire satisfaction from 3.9 to 4.7 out of 5. Brings organized pre-boarding workflows, cross-team coordination with IT and payroll, and a warm candidate-to-employee handoff.",
+      "experience": [
+        {
+          "company": "Tallgrass Payments",
+          "role": "Onboarding Specialist",
+          "location": "Kansas City, MO",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Onboard 40–60 new hires a month from offer acceptance through day 30 in a hybrid workforce\n- Redesigned week-one agendas and buddy matching, raising new-hire satisfaction from 3.9 to 4.7 out of 5\n- Automated pre-boarding tasks in Rippling with IT and payroll, achieving 99% day-one laptop and system access\n- Track 30-, 60- and 90-day check-ins, contributing to a drop in first-year attrition from 18% to 12%\n- Facilitate a weekly 2-hour virtual orientation covering company history, values and benefits for each new-hire cohort"
+        },
+        {
+          "company": "Union Station Staffing",
+          "role": "Staffing Coordinator",
+          "location": "Kansas City, MO",
+          "startDate": "2022-03",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Onboarded 80 temporary associates a month including background checks and safety orientation\n- Built an orientation checklist that cut first-day no-shows by 25%\n- Coordinated safety orientation for 6 client warehouses with site supervisors"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri–Kansas City",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2017-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Onboarding: pre-boarding, orientation facilitation, buddy programs, new-hire surveys",
+        "Systems: Rippling, Greenhouse Onboarding, Okta, Slack, Google Workspace",
+        "Compliance: I-9 and E-Verify, background check (FCRA) process, policy acknowledgments",
+        "Communication: presentation skills, cross-functional coordination with IT and payroll"
+      ]
+    },
+    "Workforce Planning Analyst": {
+      "summary": "Workforce Planning Analyst with 5 years of experience forecasting headcount, labor cost and staffing needs for healthcare and contact center operations. Built a nurse staffing model that cut premium agency labor $3.2M in a year. Brings strong forecasting skills in Excel and Python, clean position data and planning cycles that finance and HR agree on.",
+      "experience": [
+        {
+          "company": "Lone Star Health Network",
+          "role": "Workforce Planning Analyst",
+          "location": "San Antonio, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Forecast staffing for 4 hospitals and 9,500 employees, building annual headcount and labor cost plans with finance\n- Built a unit-level nurse staffing model using census and acuity data, cutting agency labor spend $3.2M in one year\n- Reconciled 11,000 Workday positions to budget, lowering unbudgeted open positions from 340 to 60\n- Produce a monthly vacancy, overtime and turnover report in Power BI for the CNO and CFO\n- Run scenario models for 2 service line expansions, estimating 140 new FTEs and $16M in annual labor cost"
+        },
+        {
+          "company": "Alamo Customer Solutions",
+          "role": "Workforce Management Analyst",
+          "location": "San Antonio, TX",
+          "startDate": "2020-08",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Forecast call volume and scheduled 600 agents in NICE IEX, holding service level at 80/30 on 90% of days\n- Reduced overstaffing cost $410k a year with intraday reforecasting\n- Built weekly attendance and shrinkage reports for 12 team managers"
+        }
+      ],
+      "education": [
+        {
+          "school": "Trinity University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Workforce Planning: headcount forecasting, labor cost modeling, position management, scenario planning",
+        "Analytics: Excel (Solver, Power Query), Python (pandas, statsmodels), SQL",
+        "Systems: Workday, Power BI, Kronos, NICE IEX",
+        "Domain: nurse staffing ratios, contact center Erlang models, budget variance analysis"
+      ]
+    },
+    "Employee Engagement Manager": {
+      "summary": "Employee Engagement Manager with 8 years of experience in internal communications, recognition and engagement programs for retail and consumer companies of 5,000+ employees. Lifted engagement survey participation from 58% to 86% and the overall score by 9 points. Brings survey analytics, manager action planning and programs that reach frontline and corporate staff alike.",
+      "experience": [
+        {
+          "company": "Coastal Outfitters",
+          "role": "Employee Engagement Manager",
+          "location": "Portland, ME",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead engagement strategy for 6,200 employees across 140 stores, 2 distribution centers and headquarters\n- Raised survey participation from 58% to 86% with mobile access and store huddles, lifting engagement 9 points\n- Launched a peer recognition program on Workhuman with 78% monthly active usage and a $350k annual budget\n- Coach 40 district managers on action planning, with 70% of stores improving on their lowest-scoring item\n- Plan the annual employee appreciation week across all sites with a $120k budget and 72% participation"
+        },
+        {
+          "company": "Casco Bay Foods",
+          "role": "Internal Communications Specialist",
+          "location": "Portland, ME",
+          "startDate": "2018-09",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Produced the weekly employee newsletter and quarterly town halls for 2,000 employees\n- Introduced digital signage in 3 plants, reaching shift workers without email access\n- Wrote 40 leadership messages a year for the CEO and plant managers"
+        },
+        {
+          "company": "Pine Tree Marketing Group",
+          "role": "Account Coordinator",
+          "location": "Bangor, ME",
+          "startDate": "2016-06",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Coordinated content calendars and events for 8 regional clients\n- Drafted press releases and social posts approved with minimal edits"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Maine",
+          "degree": "B.A. in Communication",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Engagement: survey strategy, action planning, recognition programs, internal communications",
+        "Analytics: Glint and Culture Amp survey analysis, Excel, driver analysis",
+        "Tools: Workhuman, Staffbase, Canva, Microsoft Viva",
+        "Certifications: Prosci Change Practitioner"
+      ]
+    },
+    "Receptionist": {
+      "summary": "Receptionist with 3 years of experience as the front desk lead for a busy law firm and a corporate office. Greets about 60 visitors and routes 120 calls a day while managing conference room bookings. Brings a professional, friendly manner, accurate message handling and organized front-office routines that keep the office running smoothly.",
+      "experience": [
+        {
+          "company": "Whitaker Lane & Moss LLP",
+          "role": "Receptionist",
+          "location": "Boston, MA",
+          "startDate": "2023-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Greet about 60 clients and visitors a day for a 70-attorney firm and manage visitor badges in Envoy\n- Answer and route 120 calls a day on a multi-line phone system with accurate, same-hour messages\n- Manage bookings for 9 conference rooms, including catering for 15 client meetings a week\n- Built a front-desk procedures binder used to train 3 backup receptionists\n- Order office and kitchen supplies weekly within a $2,500 monthly budget and track deliveries"
+        },
+        {
+          "company": "Beacon Hill Property Group",
+          "role": "Front Desk Associate",
+          "location": "Boston, MA",
+          "startDate": "2022-06",
+          "endDate": "2023-09",
+          "isCurrent": false,
+          "description": "- Welcomed tenants and guests and logged 40 package deliveries a day\n- Tracked maintenance requests and followed up until closed\n- Maintained the building directory and visitor log for 30 tenant companies"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bunker Hill Community College",
+          "degree": "A.A. in Business Administration",
+          "startDate": "2020-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Front Desk: visitor management, multi-line phones, conference room scheduling, mail and deliveries",
+        "Tools: Envoy, Microsoft Outlook, Teams, Excel, Robin room booking",
+        "Communication: client service, message taking, professional etiquette",
+        "Languages: English, Portuguese (fluent)"
+      ]
+    },
+    "Office Administrator": {
+      "summary": "Office Administrator with 5 years of experience handling bookkeeping support, office operations and vendor coordination for small engineering and medical offices. Runs administration for a 28-person firm, including accounts payable of about $90k a month. Brings dependable organization, QuickBooks skills and the flexibility to cover whatever the office needs.",
+      "experience": [
+        {
+          "company": "Sandoval Civil Engineering",
+          "role": "Office Administrator",
+          "location": "Albuquerque, NM",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run office administration for a 28-person engineering firm, from supplies to vendor contracts\n- Enter and pay about $90k a month in vendor bills in QuickBooks Online and prepare monthly AR aging\n- Track professional engineer license renewals and continuing education for 14 PEs with no lapses\n- Coordinate IT support and phone systems with an outside provider, cutting average ticket resolution to 1 day\n- Coordinate the annual business license, insurance and vehicle registrations for the firm's 6 company trucks"
+        },
+        {
+          "company": "Mesa Vista Family Medicine",
+          "role": "Administrative Assistant",
+          "location": "Albuquerque, NM",
+          "startDate": "2019-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Handled scheduling, insurance verification and patient records for 3 providers\n- Reduced claim denials from missing eligibility checks by 30%\n- Prepared patient intake packets and scanned records into eClinicalWorks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Central New Mexico Community College",
+          "degree": "A.A.S. in Business Administration",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Administration: office operations, vendor management, license tracking, records management",
+        "Bookkeeping: accounts payable, invoicing, AR aging, expense reconciliation",
+        "Tools: QuickBooks Online, Microsoft 365, Bill.com, Adobe Acrobat",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Administrative Coordinator": {
+      "summary": "Administrative Coordinator with 5 years of experience supporting academic and research departments with scheduling, budgets and event logistics. Coordinates administration for a 35-faculty department and tracks $1.8M in grant-funded spending. Brings organized project tracking, policy knowledge and dependable support for faculty, staff and students.",
+      "experience": [
+        {
+          "company": "Rocky Ridge University School of Engineering",
+          "role": "Administrative Coordinator",
+          "location": "Fort Collins, CO",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate administration for a department of 35 faculty, 20 staff and 180 graduate students\n- Track $1.8M in grant-funded purchases and travel against sponsor rules, with no disallowed costs in two audits\n- Plan the annual research symposium for 300 attendees and a 12-speaker seminar series\n- Manage faculty search logistics for 4 hires a year, scheduling 2-day campus visits for 16 finalists\n- Supervise 3 student office assistants, setting weekly schedules and front-desk procedures"
+        },
+        {
+          "company": "Larimer County Extension Office",
+          "role": "Administrative Assistant",
+          "location": "Loveland, CO",
+          "startDate": "2020-02",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Supported 12 program staff with registrations for 80 community workshops a year\n- Processed program fee payments and deposits, reconciling monthly with county finance\n- Updated program listings on the county website each season"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Northern Colorado",
+          "degree": "B.A. in Interdisciplinary Studies",
+          "startDate": "2015-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coordination: calendar management, event planning, faculty search logistics, meeting minutes",
+        "Finance Admin: grant expense tracking, purchasing, travel reimbursement, budget reconciliation",
+        "Systems: Kuali Financials, Concur, Microsoft 365, Qualtrics, Smartsheet",
+        "Policy: Uniform Guidance cost principles, university travel policy"
+      ]
+    },
+    "Virtual Assistant": {
+      "summary": "Virtual Assistant with 4 years of experience supporting founders, coaches and small e-commerce businesses remotely. Supports 4 retained clients with inbox, calendar, bookkeeping and customer service tasks, saving each owner about 10 hours a week. Brings reliable async communication, organized systems and quick learning of new tools.",
+      "experience": [
+        {
+          "company": "Self-employed (Clearpath Virtual Support)",
+          "role": "Virtual Assistant",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 4 retained clients for 10–15 hours a week each, managing inbox, calendar and travel bookings\n- Handle Shopify customer service for a candle brand, answering 250 tickets a month with a 4-hour response time\n- Reconcile monthly transactions in QuickBooks Online and Xero for 2 clients ahead of CPA review\n- Built Zapier automations for lead intake and invoicing, saving one coaching client 6 hours a week\n- Manage social media scheduling in Buffer for 2 clients, posting 40 items a month from approved content"
+        },
+        {
+          "company": "Northshore Realty Group",
+          "role": "Real Estate Assistant",
+          "location": "Tampa, FL",
+          "startDate": "2020-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Coordinated 60 transactions a year from contract to close for 3 agents\n- Created MLS listings and scheduled showings, photographers and inspections\n- Maintained transaction files in Dotloop for broker compliance review"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hillsborough Community College",
+          "degree": "A.A. in General Studies",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Remote Support: inbox and calendar management, travel booking, customer service, research",
+        "Tools: Google Workspace, Microsoft 365, Shopify, Gorgias, Zapier, Canva, Calendly",
+        "Bookkeeping: QuickBooks Online, Xero, invoicing, receipt tracking",
+        "Communication: Slack, Loom, Asana, Trello"
+      ]
+    },
+    "Data Entry Clerk": {
+      "summary": "Data Entry Clerk with 3 years of experience entering and verifying orders, invoices and records for distribution and insurance operations. Keys about 900 records a day at 99.7% accuracy and 75 WPM. Brings consistent speed, careful verification and familiarity with ERP and document imaging systems.",
+      "experience": [
+        {
+          "company": "Great Lakes Auto Parts Supply",
+          "role": "Data Entry Clerk",
+          "location": "Detroit, MI",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Enter about 900 sales orders and vendor invoices a day into Epicor at 99.7% accuracy\n- Verify part numbers and pricing against contracts, catching about $8k a month in invoice discrepancies\n- Scan and index 1,500 documents a week into the imaging system with consistent naming rules\n- Cleared a 6-week backlog of 11,000 returns records in 3 weeks during peak season\n- Run end-of-day batch totals against source documents, correcting mismatches before nightly ERP posting"
+        },
+        {
+          "company": "Motor City Mutual Insurance",
+          "role": "Claims Data Entry Clerk (Temporary)",
+          "location": "Southfield, MI",
+          "startDate": "2022-09",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Keyed 600 first-notice-of-loss claims a day into Guidewire ClaimCenter\n- Flagged incomplete submissions for adjuster follow-up, cutting rework requests 20%\n- Indexed 400 claim documents a day into the imaging system"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wayne County Community College District",
+          "degree": "Certificate in Office Administration",
+          "startDate": "2021-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Data Entry: 75 WPM, 12,000 KPH 10-key, order and invoice entry, document indexing",
+        "Systems: Epicor ERP, Guidewire ClaimCenter, Excel, Adobe Acrobat",
+        "Quality: double-entry verification, error logging, confidentiality handling",
+        "Office: scanning, filing, records retention"
+      ]
+    }
+  }
+}

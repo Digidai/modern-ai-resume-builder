@@ -1,0 +1,2820 @@
+{
+  "family": "Design & Product",
+  "guide": null,
+  "titles": {
+    "Product Designer": {
+      "summary": "Product designer with 5 years of experience shaping web and mobile flows for B2B SaaS. Redesigned a self-serve onboarding path that lifted trial-to-paid conversion by 18%. Brings tight research loops, clean Figma systems and close partnership with engineers to ship complete, measurable work.",
+      "experience": [
+        {
+          "company": "Brightline Payroll",
+          "role": "Product Designer",
+          "location": "Austin, TX",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned self-serve onboarding across 9 screens, raising trial-to-paid conversion from 11% to 13% within two quarters\n- Ran 24 moderated usability sessions on the timesheet editor, cutting average entry time by 35%\n- Built 40 reusable Figma components with engineering, reducing UI handoff questions by roughly half\n- Partnered with the PM to define success metrics in Amplitude before each launch"
+        },
+        {
+          "company": "Fernway Health Apps",
+          "role": "Junior Product Designer",
+          "location": "Dallas, TX",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Designed appointment reminder flows for a patient app with 120k monthly users, lowering no-shows by 9%\n- Produced annotated specs and prototypes in Figma for 3 squads shipping biweekly releases\n- Audited color contrast against WCAG 2.1 AA and fixed 60+ accessibility issues"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at Austin",
+          "degree": "BS, Design",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Timesheet editor redesign",
+          "link": "dribbble.com/case/timesheet-editor",
+          "description": "Case study covering research synthesis, three prototype rounds and the 35% time-on-task improvement"
+        }
+      ],
+      "skills": [
+        "Design: interaction design, wireframing, prototyping, visual design, accessibility (WCAG 2.1)",
+        "Research: usability testing, interviews, card sorting, survey design",
+        "Tools: Figma, FigJam, Maze, Amplitude, Jira",
+        "Collaboration: design critique, design QA, spec writing"
+      ]
+    },
+    "Senior Product Designer": {
+      "summary": "Senior product designer with 8 years in fintech and marketplace products, owning end-to-end experiences from discovery to launch. Led a checkout redesign that recovered $2.4M in annual abandoned revenue. Known for framing ambiguous problems, mentoring designers and aligning product and engineering on evidence.",
+      "experience": [
+        {
+          "company": "Copperleaf Lending",
+          "role": "Senior Product Designer",
+          "location": "Chicago, IL",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led checkout and loan application redesign, cutting abandonment from 41% to 29% and recovering $2.4M in yearly revenue\n- Framed the income verification problem with 18 user interviews, shaping a roadmap adopted by 3 squads\n- Mentored 2 mid-level designers through weekly critiques; both promoted within 18 months\n- Defined A/B test plans with data science in Optimizely, running 14 experiments in 2025"
+        },
+        {
+          "company": "Harvest Row Marketplace",
+          "role": "Product Designer",
+          "location": "Chicago, IL",
+          "startDate": "2018-07",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Redesigned seller listing creation, raising completed listings per seller by 22%\n- Introduced a shared Figma library adopted across web and iOS, saving about 6 hours per sprint\n- Shipped a dispute resolution flow that reduced support tickets by 17%"
+        },
+        {
+          "company": "Northgate Interactive",
+          "role": "UI Designer",
+          "location": "Milwaukee, WI",
+          "startDate": "2016-06",
+          "endDate": "2018-06",
+          "isCurrent": false,
+          "description": "- Designed responsive marketing sites and dashboards for 12 agency clients\n- Built clickable prototypes in InVision for client reviews, shortening approval cycles by a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product design: end-to-end flows, information architecture, prototyping, design systems",
+        "Research & data: interviews, usability testing, A/B testing, funnel analysis",
+        "Tools: Figma, ProtoPie, Optimizely, Mixpanel, Looker",
+        "Leadership: mentoring, critique facilitation, stakeholder alignment"
+      ]
+    },
+    "Lead Product Designer": {
+      "summary": "Lead product designer with 10 years of experience, currently guiding a team of 5 designers across a logistics platform. Set the design direction for a carrier app adopted by 40k drivers with a 4.7 store rating. Combines hands-on craft with planning, hiring and cross-functional roadmap influence.",
+      "experience": [
+        {
+          "company": "Freightwise",
+          "role": "Lead Product Designer",
+          "location": "Atlanta, GA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 5 designers across shipper, carrier and billing squads, setting quarterly design goals with product leadership\n- Directed the carrier mobile app redesign, growing weekly active drivers from 22k to 40k\n- Established a design review cadence and quality rubric, cutting post-launch UI bugs by 38%\n- Hired 3 designers and built an onboarding plan that shortened ramp-up to 6 weeks"
+        },
+        {
+          "company": "Pinecrest Software",
+          "role": "Senior Product Designer",
+          "location": "Atlanta, GA",
+          "startDate": "2018-05",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Owned scheduling and dispatch experiences for 900 field service customers\n- Ran field studies with 15 dispatchers, informing a drag-and-drop board that saved 25 minutes per shift\n- Co-led migration from Sketch to Figma for a 12-person design org"
+        },
+        {
+          "company": "Bluewater Digital",
+          "role": "Product Designer",
+          "location": "Charlotte, NC",
+          "startDate": "2016-03",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Designed banking portal features for 3 regional credit union clients\n- Delivered usability findings that reduced login failures by 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "BS, Industrial Design",
+          "startDate": "2011-08",
+          "endDate": "2015-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: team planning, hiring, design reviews, career coaching",
+        "Design: mobile and web product design, service blueprints, prototyping, design systems",
+        "Research: field studies, contextual inquiry, usability benchmarking",
+        "Tools: Figma, Dovetail, Jira, Amplitude"
+      ]
+    },
+    "Principal Product Designer": {
+      "summary": "Principal product designer with 13 years of experience setting cross-product design strategy in enterprise software. Defined the unified workspace model behind a platform consolidation that grew multi-product adoption by 31%. Works as a peer to staff engineers and directors, raising craft and decision quality across the org.",
+      "experience": [
+        {
+          "company": "Ledgerline Systems",
+          "role": "Principal Product Designer",
+          "location": "Remote",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Defined the unified workspace and navigation model for 4 products, lifting multi-product adoption by 31%\n- Authored a 3-year experience vision adopted in annual planning by the CPO and 6 product leads\n- Coach 14 designers through craft reviews and pairing on the hardest interaction problems\n- Partnered with staff engineers on a permissions framework that cut setup time for admins by 45%"
+        },
+        {
+          "company": "Quarry Analytics",
+          "role": "Staff Product Designer",
+          "location": "Seattle, WA",
+          "startDate": "2017-04",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Led dashboard builder design used by 3,000 enterprise accounts, raising weekly report creation by 52%\n- Created interaction patterns for data tables later standardized in the company design system\n- Facilitated design sprints with sales and support to prioritize the top 10 customer pain points"
+        },
+        {
+          "company": "Sound Studio Labs",
+          "role": "Senior Interaction Designer",
+          "location": "Seattle, WA",
+          "startDate": "2013-07",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Designed desktop and tablet workflows for a clinical documentation tool used in 40 hospitals\n- Reduced charting clicks per encounter from 26 to 15 through task analysis"
+        }
+      ],
+      "education": [
+        {
+          "school": "Carnegie Mellon University",
+          "degree": "MDes, Interaction Design",
+          "startDate": "2011-08",
+          "endDate": "2013-05"
+        },
+        {
+          "school": "University of Washington",
+          "degree": "BA, Psychology",
+          "startDate": "2007-09",
+          "endDate": "2011-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: experience vision, platform design, systems thinking, roadmap influence",
+        "Craft: complex interaction design, data visualization, enterprise UX, accessibility",
+        "Influence: executive communication, mentorship, cross-org facilitation",
+        "Tools: Figma, ProtoPie, Miro, Notion"
+      ]
+    },
+    "Product Design Lead": {
+      "summary": "Product design lead with 9 years of experience owning design for a consumer subscription app and its 3-person design pod. Drove a paywall and plan picker overhaul that raised annual plan mix from 28% to 44%. Blends hands-on design with roadmap planning, research prioritization and growth experimentation.",
+      "experience": [
+        {
+          "company": "Kindle & Crust Meal Kits",
+          "role": "Product Design Lead",
+          "location": "Denver, CO",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-designer pod covering acquisition, menu selection and retention for 600k subscribers\n- Overhauled paywall and plan picker, shifting annual plan mix from 28% to 44% in 6 months\n- Launched a pause-instead-of-cancel flow that reduced monthly churn by 1.4 points\n- Built a research backlog with the insights team, delivering 2 studies per quarter tied to OKRs"
+        },
+        {
+          "company": "Trailmark Outdoors",
+          "role": "Senior Product Designer",
+          "location": "Boulder, CO",
+          "startDate": "2019-03",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Redesigned the gear rental booking app, increasing completed bookings by 26%\n- Ran 30+ A/B tests with growth engineers, documenting learnings in a shared playbook\n- Introduced design tokens that aligned iOS, Android and web styling"
+        },
+        {
+          "company": "Redstone Creative",
+          "role": "Product Designer",
+          "location": "Denver, CO",
+          "startDate": "2017-01",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Designed e-commerce flows for 8 retail clients on Shopify Plus\n- Improved mobile checkout completion by 15% for the agency's largest client"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "BA, Communication Design",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product design: growth design, subscription UX, mobile apps, design tokens",
+        "Experimentation: A/B testing, hypothesis framing, Statsig, Amplitude",
+        "Leadership: pod leadership, research prioritization, critique",
+        "Tools: Figma, Principle, Dovetail, Linear"
+      ]
+    },
+    "UX Designer": {
+      "summary": "UX designer with 4 years of experience designing task flows for insurance and benefits portals. Simplified a claims submission journey that cut call center volume by 21%. Grounds every decision in research, writes clear specs and works closely with developers on accessible, standards-based interfaces.",
+      "experience": [
+        {
+          "company": "Granite Mutual Insurance",
+          "role": "UX Designer",
+          "location": "Hartford, CT",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Simplified online claims submission from 14 steps to 8, reducing claims-related calls by 21%\n- Conducted 20 remote usability tests in UserTesting, prioritizing fixes with a severity matrix\n- Created user flows and wireframes for a benefits enrollment portal serving 250k members\n- Fixed 45 WCAG 2.1 AA issues flagged in an external accessibility audit"
+        },
+        {
+          "company": "Harborview Digital Agency",
+          "role": "Junior UX Designer",
+          "location": "Boston, MA",
+          "startDate": "2021-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Produced wireframes and sitemaps for 6 nonprofit and higher-ed websites\n- Ran tree tests in Optimal Workshop that improved navigation findability by 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bentley University",
+          "degree": "MS, Human Factors in Information Design",
+          "startDate": "2019-09",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "University of Connecticut",
+          "degree": "BA, Cognitive Science",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Claims journey redesign",
+          "link": "",
+          "description": "Journey map, prototype and test results for the 8-step claims flow; presented to the VP of member experience"
+        }
+      ],
+      "skills": [
+        "UX: user flows, wireframing, information architecture, prototyping, accessibility",
+        "Research: usability testing, tree testing, journey mapping, heuristic evaluation",
+        "Tools: Figma, Axure RP, UserTesting, Optimal Workshop",
+        "Standards: WCAG 2.1 AA, Section 508"
+      ]
+    },
+    "Senior UX Designer": {
+      "summary": "Senior UX designer with 9 years of experience in healthcare and government digital services. Led the redesign of a Medicaid renewal portal that raised online completion from 48% to 71%. Pairs rigorous research and plain-language content with accessible design that holds up under regulatory scrutiny.",
+      "experience": [
+        {
+          "company": "Civic Thread Consulting",
+          "role": "Senior UX Designer",
+          "location": "Washington, DC",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led UX for a state Medicaid renewal portal, lifting online completion from 48% to 71% for 1.1M residents\n- Ran research with 60 participants including low-vision and Spanish-speaking users\n- Applied USWDS components and Section 508 standards, passing a third-party accessibility audit first time\n- Coached 3 designers on research synthesis and stakeholder readouts"
+        },
+        {
+          "company": "Meridian Health Network",
+          "role": "UX Designer",
+          "location": "Baltimore, MD",
+          "startDate": "2017-08",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Designed MyChart-integrated scheduling flows that increased online bookings by 34%\n- Created a patient journey map used to prioritize 12 digital front door initiatives\n- Partnered with compliance to embed HIPAA consent patterns into intake forms"
+        },
+        {
+          "company": "Chesapeake Web Studio",
+          "role": "Web Designer",
+          "location": "Annapolis, MD",
+          "startDate": "2015-06",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Designed and built WordPress sites for 20 small-business clients\n- Ran analytics reviews that guided layout changes and raised lead form submissions by 18%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Maryland, College Park",
+          "degree": "MS, Human-Computer Interaction",
+          "startDate": "2013-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "UX: service journeys, form design, plain language, prototyping, accessibility",
+        "Research: inclusive recruiting, moderated testing, interviews, synthesis",
+        "Standards: USWDS, Section 508, WCAG 2.2, HIPAA-aware design",
+        "Tools: Figma, Dovetail, Lookback, Mural"
+      ]
+    },
+    "UX Researcher": {
+      "summary": "UX researcher with 6 years of mixed-methods experience in productivity and collaboration software. Delivered a churn study whose findings shaped a retention roadmap credited with a 12% drop in seat loss. Translates qualitative and survey evidence into clear priorities that product teams act on.",
+      "experience": [
+        {
+          "company": "Taskwell",
+          "role": "UX Researcher",
+          "location": "San Francisco, CA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a churn study of 35 interviews plus a 1,800-response survey, informing a roadmap that reduced seat loss by 12%\n- Built a quarterly SUS benchmark across 4 core workflows, tracking a 9-point improvement since 2023\n- Ran diary studies with 20 team admins to uncover permission setup pain points\n- Trained 6 PMs and designers to run lightweight usability tests"
+        },
+        {
+          "company": "Clearpath Learning",
+          "role": "Associate UX Researcher",
+          "location": "Oakland, CA",
+          "startDate": "2020-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Ran 50+ usability sessions with teachers and students on an assessment platform\n- Analyzed survey data in R, identifying grading workflow issues behind 25% of support tickets\n- Built a research repository in Dovetail used by 30 colleagues"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Michigan",
+          "degree": "MS, Information (UX Research)",
+          "startDate": "2018-09",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "UC Davis",
+          "degree": "BS, Psychology",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Admin onboarding diary study",
+          "link": "",
+          "description": "Three-week study with 20 admins; findings reduced setup steps from 11 to 6 in the next release"
+        }
+      ],
+      "skills": [
+        "Methods: interviews, usability testing, diary studies, surveys, concept testing, SUS benchmarking",
+        "Analysis: thematic analysis, R, Qualtrics, basic SQL",
+        "Tools: Dovetail, UserTesting, Maze, Figma",
+        "Communication: research readouts, insight workshops, research repositories"
+      ]
+    },
+    "User Researcher": {
+      "summary": "User researcher with 5 years of experience studying consumer travel and booking behavior through field and remote methods. Uncovered price-transparency issues that led to a fee display change lifting booking conversion by 7%. Brings fast, rigorous studies and recommendations tied to product decisions.",
+      "experience": [
+        {
+          "company": "Wayfarer Stays",
+          "role": "User Researcher",
+          "location": "Remote",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Ran a pricing perception study with 28 travelers, prompting an all-in fee display that lifted booking conversion by 7%\n- Conducted unmoderated tests across 6 markets, localizing flows for Spanish and Portuguese speakers\n- Partnered with analytics to pair session data with interview themes for host onboarding\n- Delivered 18 studies in 2025, each with a decision log tracked to outcome"
+        },
+        {
+          "company": "Metro Transit Authority Digital Team",
+          "role": "Research Analyst",
+          "location": "Philadelphia, PA",
+          "startDate": "2021-01",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Conducted intercept interviews with 150 riders to shape a trip planning app\n- Ran accessibility sessions with riders using screen readers, informing 20 fixes before launch"
+        }
+      ],
+      "education": [
+        {
+          "school": "Drexel University",
+          "degree": "MS, Digital Media (User Experience)",
+          "startDate": "2019-09",
+          "endDate": "2021-06"
+        },
+        {
+          "school": "Temple University",
+          "degree": "BA, Anthropology",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: field research, intercept interviews, unmoderated testing, concept evaluation",
+        "Analysis: affinity mapping, journey mapping, Qualtrics, Excel",
+        "Tools: UserZoom, Lookback, Dovetail, Miro",
+        "Languages: English, Spanish (professional)"
+      ]
+    },
+    "Research Operations Manager": {
+      "summary": "Research operations manager with 8 years in UX research and ops, building the infrastructure that lets 40 researchers and designers run studies quickly and ethically. Cut participant recruiting time from 3 weeks to 6 days. Brings vendor management, consent governance and repository practices that scale.",
+      "experience": [
+        {
+          "company": "Orbit Collaboration Cloud",
+          "role": "Research Operations Manager",
+          "location": "New York, NY",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built an in-house participant panel of 9,000 customers, cutting average recruiting time from 3 weeks to 6 days\n- Manage a $420k annual budget for incentives, tools and recruiting vendors, saving 18% through consolidation\n- Rolled out GDPR and CCPA consent templates and data retention rules across all studies\n- Supervise 2 research coordinators supporting 120 studies per year"
+        },
+        {
+          "company": "Brookfield Media Group",
+          "role": "Senior UX Researcher",
+          "location": "New York, NY",
+          "startDate": "2019-02",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Led audience research for news apps reaching 4M monthly readers\n- Launched a Dovetail repository with tagging taxonomy adopted by 5 product teams\n- Created study templates that halved planning time for new researchers"
+        },
+        {
+          "company": "Insight Loop Research",
+          "role": "Research Coordinator",
+          "location": "Jersey City, NJ",
+          "startDate": "2017-06",
+          "endDate": "2019-01",
+          "isCurrent": false,
+          "description": "- Scheduled and screened participants for 200+ client sessions per year\n- Managed incentive payments and NDAs for consumer and B2B studies"
+        }
+      ],
+      "education": [
+        {
+          "school": "New York University",
+          "degree": "BA, Psychology",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "ResearchOps: participant panels, recruiting, incentives, research repositories, templates",
+        "Governance: GDPR, CCPA, consent management, data retention",
+        "Operations: vendor management, budgeting, process design, team supervision",
+        "Tools: User Interviews, Rally, Dovetail, Tremendous, Airtable"
+      ]
+    },
+    "UI Designer": {
+      "summary": "UI designer with 4 years of experience crafting polished interfaces for fitness and wellness apps. Delivered a visual refresh that raised App Store rating from 4.1 to 4.6. Strong in typography, layout, iconography and component libraries, with a habit of checking work in code alongside engineers.",
+      "experience": [
+        {
+          "company": "Pulseline Fitness",
+          "role": "UI Designer",
+          "location": "Los Angeles, CA",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a visual refresh of iOS and Android apps, lifting App Store rating from 4.1 to 4.6\n- Designed 120 custom icons and a type scale applied across workout, nutrition and sleep features\n- Maintained a Figma component library with light and dark modes used by 4 designers\n- Ran weekly design QA with engineers, closing 90% of visual bugs before release"
+        },
+        {
+          "company": "Sunset Pixel Studio",
+          "role": "Junior UI Designer",
+          "location": "Pasadena, CA",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Designed screens and marketing assets for 10 startup mobile apps\n- Built style guides that let client developers implement UI with fewer revision rounds"
+        }
+      ],
+      "education": [
+        {
+          "school": "ArtCenter College of Design",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2017-09",
+          "endDate": "2021-04"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Dark mode system",
+          "link": "behance.net/pulse-dark-mode",
+          "description": "Token-based color system and contrast checks for a full dark theme across 200 screens"
+        }
+      ],
+      "skills": [
+        "Visual design: typography, layout, color systems, iconography, micro-interactions",
+        "Systems: component libraries, design tokens, dark mode, platform guidelines (HIG, Material 3)",
+        "Tools: Figma, Illustrator, After Effects, Lottie",
+        "Handoff: design QA, redlines, Zeplin"
+      ]
+    },
+    "Senior UI Designer": {
+      "summary": "Senior UI designer with 8 years of experience leading visual design for e-commerce and retail apps. Directed a storefront UI overhaul that increased mobile add-to-cart rate by 14%. Brings high craft, scalable component thinking and the ability to guide brand, product and engineering toward one visual language.",
+      "experience": [
+        {
+          "company": "Maison Verde Home",
+          "role": "Senior UI Designer",
+          "location": "New York, NY",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Directed storefront UI overhaul across web and apps, raising mobile add-to-cart rate by 14%\n- Defined a responsive grid and type system covering 3 breakpoints and 2 sub-brands\n- Reviewed UI work from 5 designers, keeping visual quality consistent across 4 squads\n- Partnered with brand on seasonal campaign templates that cut production time by 40%"
+        },
+        {
+          "company": "Arcade Lane Games",
+          "role": "UI Designer",
+          "location": "Brooklyn, NY",
+          "startDate": "2018-04",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Designed HUDs, menus and store screens for 3 mobile titles with 5M combined installs\n- Built a sprite and component kit in Figma and Unity that sped up UI implementation\n- Improved in-game store layout, increasing purchase conversion by 9%"
+        },
+        {
+          "company": "Hudson Print & Web",
+          "role": "Graphic Designer",
+          "location": "Hoboken, NJ",
+          "startDate": "2016-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Produced web banners, email templates and print collateral for retail clients\n- Managed file prep for 300+ print jobs with zero reprints in 2017"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pratt Institute",
+          "degree": "BFA, Communications Design",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Visual design: UI craft, typography, grids, motion, art direction",
+        "Systems: responsive layouts, component libraries, multi-brand theming",
+        "Tools: Figma, Photoshop, Illustrator, After Effects, Unity UI",
+        "Leadership: design reviews, brand partnership, mentoring"
+      ]
+    },
+    "UI/UX Designer": {
+      "summary": "UI/UX designer with 3 years of experience covering research, wireframes and final visuals for startup SaaS products. Redesigned an invoicing dashboard that cut time-to-first-invoice by 40%. Comfortable owning a feature end to end in a small team, from interviews to pixel-perfect handoff.",
+      "experience": [
+        {
+          "company": "Sproutbooks",
+          "role": "UI/UX Designer",
+          "location": "Phoenix, AZ",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the invoicing dashboard, cutting median time-to-first-invoice from 15 to 9 minutes\n- Interviewed 16 freelancers and small-business owners to map billing workflows\n- Designed marketing site pages in Webflow that raised demo requests by 23%\n- Created the startup's first Figma design system with 60 components"
+        },
+        {
+          "company": "Desert Bloom Studio",
+          "role": "Design Intern",
+          "location": "Tempe, AZ",
+          "startDate": "2022-05",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Produced wireframes and mockups for 5 client web apps\n- Ran guerrilla usability tests that informed navigation changes on a restaurant ordering app"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "BSD, Visual Communication Design",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Invoicing dashboard case study",
+          "link": "sproutbooks-design.webflow.io/invoicing",
+          "description": "Problem framing, interview themes, iterations and the 40% time savings after launch"
+        }
+      ],
+      "skills": [
+        "UX: interviews, user flows, wireframes, usability testing",
+        "UI: visual design, responsive layouts, design systems, iconography",
+        "Tools: Figma, Webflow, Maze, Notion",
+        "Basics: HTML, CSS"
+      ]
+    },
+    "Interaction Designer": {
+      "summary": "Interaction designer with 7 years of experience designing complex, multi-step interactions for automotive and connected-device software. Designed an in-vehicle navigation interaction model that cut glance time per task by 30%. Specializes in state modeling, prototyping with real motion and testing in realistic contexts.",
+      "experience": [
+        {
+          "company": "Velocity Mobility Systems",
+          "role": "Interaction Designer",
+          "location": "Detroit, MI",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed in-vehicle navigation interactions that cut average glance time per task by 30% in simulator testing\n- Modeled 140 states and transitions for the infotainment system, eliminating dead-end flows before build\n- Prototyped touch, voice and steering-wheel controls in ProtoPie for driving-simulator studies\n- Aligned designs with NHTSA distraction guidelines alongside the safety team"
+        },
+        {
+          "company": "Homewise Devices",
+          "role": "UX Designer",
+          "location": "Ann Arbor, MI",
+          "startDate": "2018-07",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Designed setup and pairing flows for smart thermostats, cutting setup support calls by 27%\n- Created interaction specs for companion iOS and Android apps\n- Tested on-device prototypes in 12 participant homes"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Michigan",
+          "degree": "MS, Information (HCI)",
+          "startDate": "2016-09",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "Michigan State University",
+          "degree": "BA, Media and Information",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Glance-time study",
+          "link": "",
+          "description": "Simulator study with 24 drivers comparing three navigation layouts; results set the production pattern"
+        }
+      ],
+      "skills": [
+        "Interaction design: state modeling, multimodal input, motion, microinteractions",
+        "Prototyping: ProtoPie, Figma, Framer, Arduino basics",
+        "Research: simulator testing, in-home studies, task analysis",
+        "Standards: NHTSA driver distraction guidelines, WCAG"
+      ]
+    },
+    "Service Designer": {
+      "summary": "Service designer with 7 years of experience redesigning end-to-end services across banking branches, call centers and digital channels. Led a small-business account opening redesign that cut time-to-open from 9 days to 2. Brings service blueprints, co-design workshops and the operational rigor to make changes stick.",
+      "experience": [
+        {
+          "company": "Prairie State Bank",
+          "role": "Service Designer",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned small-business account opening across branch, phone and web, cutting time-to-open from 9 days to 2\n- Mapped 6 service blueprints with operations, compliance and IT, exposing 23 handoff failures\n- Facilitated co-design workshops with 40 frontline staff, informing new KYC document checklists\n- Defined service KPIs now reported monthly to the COO"
+        },
+        {
+          "company": "Northstar Public Services Lab",
+          "role": "Service Design Consultant",
+          "location": "St. Paul, MN",
+          "startDate": "2019-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Redesigned county benefits intake, reducing average wait time from 75 to 30 minutes\n- Ran journey mapping with residents and caseworkers across 3 counties\n- Prototyped paper and digital forms tested in live service settings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Savannah College of Art and Design",
+          "degree": "MFA, Service Design",
+          "startDate": "2017-09",
+          "endDate": "2019-06"
+        },
+        {
+          "school": "University of Minnesota",
+          "degree": "BA, Sociology",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Service design: service blueprints, journey mapping, co-design, prototyping services",
+        "Operations: process mapping, KPI definition, change management, Lean basics",
+        "Research: ethnography, stakeholder interviews, shadowing",
+        "Tools: Miro, Figma, Smaply, Excel"
+      ]
+    },
+    "UX Architect": {
+      "summary": "UX architect with 12 years of experience structuring large enterprise and content-heavy platforms. Rebuilt the information architecture of a 40,000-page support center, raising self-service resolution by 19%. Specializes in taxonomies, navigation systems and interaction frameworks that scale across products and teams.",
+      "experience": [
+        {
+          "company": "Corvid Enterprise Software",
+          "role": "UX Architect",
+          "location": "Raleigh, NC",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt IA for a 40,000-page support center, lifting self-service resolution from 58% to 69%\n- Defined a shared navigation and object model for 7 products, removing 300 duplicate menu items\n- Created interaction frameworks for tables, filters and bulk actions used by 25 designers\n- Partnered with search engineers to tune Elasticsearch synonyms using query log analysis"
+        },
+        {
+          "company": "Triangle Health Partners",
+          "role": "Senior Information Architect",
+          "location": "Durham, NC",
+          "startDate": "2016-05",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Restructured a provider directory and clinical content site with 12,000 pages\n- Ran card sorts and tree tests with 400 participants to validate taxonomy\n- Improved provider search success in testing from 54% to 82%"
+        },
+        {
+          "company": "Oakmont Interactive",
+          "role": "UX Designer",
+          "location": "Richmond, VA",
+          "startDate": "2014-02",
+          "endDate": "2016-04",
+          "isCurrent": false,
+          "description": "- Produced sitemaps, wireframes and content models for university websites\n- Led a CMS migration plan for a 5,000-page site with zero broken redirects"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Chapel Hill",
+          "degree": "MS, Information Science",
+          "startDate": "2012-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Architecture: information architecture, taxonomy, content modeling, navigation systems, object modeling",
+        "Research: card sorting, tree testing, search log analysis, findability benchmarks",
+        "Tools: Optimal Workshop, Figma, Axure RP, Elasticsearch, Contentful",
+        "Leadership: frameworks and standards, cross-product alignment"
+      ]
+    },
+    "UX Strategist": {
+      "summary": "UX strategist with 10 years of experience linking customer experience to business goals for retail and consumer brands. Built a CX measurement program that tied UX improvements to $6M in incremental annual revenue. Brings research-backed strategy, experience roadmaps and executive-ready business cases.",
+      "experience": [
+        {
+          "company": "Lumen & Pine Consulting",
+          "role": "UX Strategist",
+          "location": "Remote",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built CX measurement program for a home goods retailer, linking UX fixes to $6M in incremental yearly revenue\n- Created 18-month experience roadmaps for 5 retail and hospitality clients\n- Led competitive UX audits across 12 rivals, shaping a loyalty app pitch that won a $1.2M engagement\n- Facilitated executive vision workshops with C-suite and digital leaders"
+        },
+        {
+          "company": "Crescent Outfitters",
+          "role": "Senior UX Designer",
+          "location": "Portland, OR",
+          "startDate": "2017-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Led e-commerce UX for a $300M apparel brand, raising mobile conversion by 0.6 points\n- Introduced NPS and task success tracking tied to quarterly business reviews\n- Defined personas and jobs-to-be-done used across marketing and product"
+        },
+        {
+          "company": "Rosewood Digital",
+          "role": "UX Designer",
+          "location": "Portland, OR",
+          "startDate": "2015-01",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Designed sites and apps for 9 consumer brands\n- Ran usability studies that informed checkout changes for 3 clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Oregon",
+          "degree": "BA, Product Design",
+          "startDate": "2010-09",
+          "endDate": "2014-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: experience roadmaps, business cases, competitive analysis, jobs-to-be-done",
+        "Measurement: NPS, task success, conversion analysis, Google Analytics 4, Contentsquare",
+        "Facilitation: executive workshops, vision sprints, stakeholder interviews",
+        "Tools: Figma, Miro, Qualtrics, Looker Studio"
+      ]
+    },
+    "Design Strategist": {
+      "summary": "Design strategist with 8 years of experience using research and foresight to define new products and ventures. Led the discovery that launched a senior caregiving service now generating $4M in annual revenue. Moves fluidly between ethnography, opportunity framing and concept prototyping with business teams.",
+      "experience": [
+        {
+          "company": "Fieldnote Innovation Studio",
+          "role": "Design Strategist",
+          "location": "San Diego, CA",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led discovery for a caregiving service launched by an insurer client, now earning $4M in annual revenue\n- Ran ethnographic research in 30 households, synthesizing 8 opportunity areas for leadership\n- Facilitated concept sprints producing 14 testable prototypes in 6 weeks\n- Built business model canvases and sizing with client strategy teams"
+        },
+        {
+          "company": "Pacific Rim Consumer Goods",
+          "role": "Innovation Researcher",
+          "location": "Irvine, CA",
+          "startDate": "2018-06",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Conducted foresight research that informed 3 new product lines in personal care\n- Ran concept tests with 1,200 consumers to prioritize product ideas\n- Created trend reports presented to the executive innovation council"
+        }
+      ],
+      "education": [
+        {
+          "school": "Illinois Institute of Technology",
+          "degree": "MDes, Institute of Design",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "UC San Diego",
+          "degree": "BS, Cognitive Science",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: opportunity framing, foresight, business model design, venture design",
+        "Research: ethnography, concept testing, co-creation",
+        "Facilitation: design sprints, executive workshops, storytelling",
+        "Tools: Miro, Figma, Keynote, Qualtrics"
+      ]
+    },
+    "UX Engineer": {
+      "summary": "UX engineer with 6 years of experience bridging design and front-end engineering in React and TypeScript. Built a coded component library that cut UI build time for new features by about 40%. Turns Figma intent into accessible, performant production components and high-fidelity prototypes.",
+      "experience": [
+        {
+          "company": "Helix Commerce Cloud",
+          "role": "UX Engineer",
+          "location": "Seattle, WA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a React and TypeScript component library of 70 components, cutting new feature UI build time by about 40%\n- Synced Figma variables to code tokens with Style Dictionary, removing manual color and spacing drift\n- Added axe-core and Storybook visual tests to CI, catching 150 accessibility regressions in 2025\n- Prototyped drag-and-drop merchandising in code to validate interaction with 12 merchants"
+        },
+        {
+          "company": "Cascade Learning Labs",
+          "role": "Front-End Developer",
+          "location": "Portland, OR",
+          "startDate": "2020-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Implemented course player UI in Vue used by 300k learners\n- Improved Largest Contentful Paint from 4.1s to 2.2s through image and bundle optimization\n- Paired with designers weekly to refine animation and responsive behavior"
+        }
+      ],
+      "education": [
+        {
+          "school": "Oregon State University",
+          "degree": "BS, Computer Science",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Token pipeline",
+          "link": "github.com/mkline/figma-token-sync",
+          "description": "Open-source script that exports Figma variables to CSS custom properties and TypeScript"
+        }
+      ],
+      "skills": [
+        "Front end: React, TypeScript, CSS, Vue, Framer Motion",
+        "Design systems: Storybook, Style Dictionary, design tokens, Figma variables",
+        "Quality: WCAG 2.2, axe-core, Chromatic, Playwright",
+        "Prototyping: coded prototypes, Figma, ProtoPie"
+      ]
+    },
+    "Design Systems Designer": {
+      "summary": "Design systems designer with 7 years of experience, the last 4 owning a multi-platform system for a fintech company. Grew system adoption from 35% to 88% of production screens. Combines component craft, documentation and governance with close engineering partnership to keep design and code in sync.",
+      "experience": [
+        {
+          "company": "Silverstone Payments",
+          "role": "Design Systems Designer",
+          "location": "New York, NY",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Raised design system adoption from 35% to 88% of production screens across web, iOS and Android\n- Designed and documented 95 components with variants, states and accessibility notes\n- Ran a contribution model with monthly office hours, merging 40 proposals from product teams\n- Shipped a theming layer that enabled a white-label product for 3 bank partners"
+        },
+        {
+          "company": "Tidewater Insurance Tech",
+          "role": "Product Designer",
+          "location": "Jersey City, NJ",
+          "startDate": "2019-04",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Designed quoting and policy flows for small-business insurance\n- Started the company's first shared Figma library, adopted by 8 designers\n- Partnered with front-end leads on a button and form audit that removed 22 duplicate patterns"
+        }
+      ],
+      "education": [
+        {
+          "school": "Parsons School of Design",
+          "degree": "BFA, Communication Design",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Systems: component architecture, design tokens, theming, documentation, governance",
+        "Accessibility: WCAG 2.2, focus management, screen reader annotation",
+        "Tools: Figma (variables, branching), Storybook, Zeroheight, Tokens Studio",
+        "Collaboration: contribution models, adoption tracking, engineering pairing"
+      ]
+    },
+    "Visual Designer": {
+      "summary": "Visual designer with 6 years of experience creating product marketing, launch and in-app visuals for a consumer tech brand. Produced a launch campaign system that cut asset production time by 35% across 9 channels. Brings sharp layout, illustration and art direction instincts with a strong grasp of brand standards.",
+      "experience": [
+        {
+          "company": "Echo Audio",
+          "role": "Visual Designer",
+          "location": "San Francisco, CA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a modular launch campaign system, cutting asset production time by 35% across 9 channels\n- Designed in-app promo cards and onboarding illustrations seen by 2M monthly users\n- Art directed 4 product photo shoots with an external studio within a $90k budget\n- Created motion specs for social cutdowns with the video team"
+        },
+        {
+          "company": "Golden Gate Creative Co.",
+          "role": "Junior Visual Designer",
+          "location": "Oakland, CA",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Designed landing pages, email templates and ad sets for 15 tech clients\n- Developed an illustration library that the agency reused on 30+ projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "California College of the Arts",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Launch toolkit",
+          "link": "behance.net/echo-launch-kit",
+          "description": "Template and grid system for product launches across web, social, retail and email"
+        }
+      ],
+      "skills": [
+        "Visual design: layout, typography, illustration, color, art direction",
+        "Production: campaign systems, templates, asset versioning, print and digital specs",
+        "Tools: Figma, Illustrator, Photoshop, After Effects, Blender basics",
+        "Brand: brand guidelines, visual identity application"
+      ]
+    },
+    "Brand Designer": {
+      "summary": "Brand designer with 7 years of experience building and evolving visual identities for growth-stage companies. Led a rebrand rolled out across 400 touchpoints in 10 weeks, followed by a 22% lift in aided brand awareness. Brings identity systems, guidelines and practical toolkits that marketing teams actually use.",
+      "experience": [
+        {
+          "company": "Fable & Fern Skincare",
+          "role": "Brand Designer",
+          "location": "Brooklyn, NY",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a full rebrand across packaging, site and retail displays, covering 400 touchpoints in 10 weeks\n- Contributed to a 22% lift in aided brand awareness measured in the 2025 brand tracker\n- Built Canva and Figma templates that let 12 marketers produce on-brand assets without design tickets\n- Directed packaging updates for 28 SKUs with print vendors and regulatory label review"
+        },
+        {
+          "company": "Northpoint Branding",
+          "role": "Designer",
+          "location": "New York, NY",
+          "startDate": "2019-01",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Designed identities for 14 clients in hospitality, fintech and consumer goods\n- Wrote brand guideline books ranging from 40 to 90 pages\n- Presented concepts directly to founders and CMOs"
+        }
+      ],
+      "education": [
+        {
+          "school": "School of Visual Arts",
+          "degree": "BFA, Design",
+          "startDate": "2014-09",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Brand: identity systems, logo design, brand guidelines, packaging, typography",
+        "Production: print prep, Pantone matching, vendor proofs, template systems",
+        "Tools: Illustrator, InDesign, Photoshop, Figma, Canva",
+        "Strategy: brand workshops, positioning input, creative briefs"
+      ]
+    },
+    "Graphic Designer": {
+      "summary": "Graphic designer with 5 years of experience producing print and digital work for a regional healthcare system. Redesigned patient education materials in plain-language format, cutting print costs by $48k a year. Fast, organized and fluent in Adobe Creative Cloud, with strong prepress and brand consistency skills.",
+      "experience": [
+        {
+          "company": "Riverbend Health System",
+          "role": "Graphic Designer",
+          "location": "Columbus, OH",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned 120 patient education handouts in plain-language layouts, saving $48k a year in printing\n- Produce 60+ assets a month including signage, social graphics and annual report spreads\n- Manage the design request queue in Asana, holding average turnaround to 3 business days\n- Updated wayfinding signage for 2 hospitals to ADA-compliant standards"
+        },
+        {
+          "company": "Buckeye Print Collective",
+          "role": "Production Designer",
+          "location": "Columbus, OH",
+          "startDate": "2020-07",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Prepared print-ready files for brochures, banners and direct mail for 40 local clients\n- Caught preflight errors that cut reprint rates from 4% to under 1%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbus College of Art & Design",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: layout, typography, infographics, signage, social graphics",
+        "Production: prepress, CMYK and Pantone, large-format print, accessibility for print",
+        "Tools: InDesign, Illustrator, Photoshop, Acrobat Pro, Asana",
+        "Standards: brand guidelines, ADA signage requirements"
+      ]
+    },
+    "Motion Designer": {
+      "summary": "Motion designer with 6 years of experience creating product animation and UI motion for software brands. Built a Lottie animation system used across 3 apps that lifted onboarding completion by 8%. Pairs a strong sense of timing and easing with production habits that keep files light and engineers happy.",
+      "experience": [
+        {
+          "company": "Waveform Apps",
+          "role": "Motion Designer",
+          "location": "Los Angeles, CA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Created a Lottie animation system for onboarding across 3 apps, lifting completion by 8%\n- Defined motion principles and easing tokens adopted by 9 product designers\n- Produced 25 product launch videos in After Effects and Cinema 4D for web and social\n- Reduced average animation file size by 60% by optimizing Bodymovin exports"
+        },
+        {
+          "company": "Kinetic Frame Studio",
+          "role": "Junior Motion Designer",
+          "location": "Burbank, CA",
+          "startDate": "2020-02",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Animated explainers and social spots for 20 brand clients\n- Built reusable rigs that cut character animation time by about a third"
+        }
+      ],
+      "education": [
+        {
+          "school": "Otis College of Art and Design",
+          "degree": "BFA, Digital Media",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Motion principles guide",
+          "link": "waveform.design/motion",
+          "description": "Public guide to timing, easing tokens and Lottie export rules used by the product team"
+        }
+      ],
+      "skills": [
+        "Motion: UI animation, product videos, 2D animation, kinetic typography",
+        "Tools: After Effects, Cinema 4D, Lottie/Bodymovin, Rive, Premiere Pro",
+        "Product: motion specs, easing tokens, prototype motion in Figma",
+        "Production: storyboarding, file optimization, render management"
+      ]
+    },
+    "Content Designer": {
+      "summary": "Content designer with 6 years of experience shaping words, structure and flows in financial products. Rewrote error and verification messaging that cut identity-check support contacts by 31%. Works inside product squads from discovery onward, with strong research, voice-and-tone and content systems skills.",
+      "experience": [
+        {
+          "company": "Keystone Credit Union Digital",
+          "role": "Content Designer",
+          "location": "Pittsburgh, PA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rewrote identity verification and error flows, reducing related support contacts by 31%\n- Built a content style guide and terminology list of 300 terms used by 5 squads\n- Ran comprehension tests on fee disclosures, raising correct understanding from 52% to 84%\n- Partnered with legal on Regulation E and TILA disclosures written at an 8th-grade level"
+        },
+        {
+          "company": "Allegheny Public Media",
+          "role": "Web Content Editor",
+          "location": "Pittsburgh, PA",
+          "startDate": "2020-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Restructured membership and donation pages, increasing online gifts by 15%\n- Edited 40 web articles a month and maintained the CMS taxonomy"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Pittsburgh",
+          "degree": "BA, English Writing",
+          "startDate": "2015-08",
+          "endDate": "2019-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Content design: UX writing, content structure, information hierarchy, plain language",
+        "Research: comprehension testing, highlighter tests, card sorting",
+        "Systems: style guides, terminology, voice and tone, content patterns",
+        "Tools: Figma, Ditto, Hemingway, Contentful"
+      ]
+    },
+    "UX Writer": {
+      "summary": "UX writer with 4 years of experience writing interface copy for consumer mobile apps. Rewrote push notification and paywall copy that raised notification opt-in from 46% to 58%. Writes concise, on-voice microcopy and tests it, working directly in Figma alongside designers and PMs.",
+      "experience": [
+        {
+          "company": "Tumbleweed Language App",
+          "role": "UX Writer",
+          "location": "Remote",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rewrote permission and paywall copy, lifting notification opt-in from 46% to 58%\n- Wrote microcopy for 200+ screens across iOS and Android in 2025\n- Created voice-and-tone guidelines and a string library in Ditto used by 7 designers\n- Prepared strings and context notes for localization into 11 languages"
+        },
+        {
+          "company": "Bayside Retail Group",
+          "role": "Copywriter",
+          "location": "San Diego, CA",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Wrote email, site and in-store copy for a 90-store home goods retailer\n- Tested subject lines that raised email open rates by 4 points"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Diego State University",
+          "degree": "BA, Journalism and Media Studies",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Notification copy experiment",
+          "link": "",
+          "description": "Four-variant A/B test of permission prompts with 400k users; winning variant shipped globally"
+        }
+      ],
+      "skills": [
+        "Writing: microcopy, onboarding, error messages, notifications, paywalls",
+        "Systems: voice and tone, string management, localization prep",
+        "Testing: A/B copy tests, preference tests",
+        "Tools: Figma, Ditto, Lokalise, Amplitude"
+      ]
+    },
+    "Design Manager": {
+      "summary": "Design manager with 10 years in product design, the last 4 managing a team of 7 designers for a B2B HR platform. Rebuilt the team's hiring and career framework, cutting regretted attrition to zero over 2 years. Combines people leadership with hands-on critique and close planning with product and engineering partners.",
+      "experience": [
+        {
+          "company": "Peoplegrid",
+          "role": "Design Manager",
+          "location": "Boston, MA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 7 product designers and 1 researcher across payroll, benefits and time tracking\n- Introduced a career ladder and calibration process; zero regretted attrition since 2024\n- Hired 4 designers with a structured portfolio review and work sample\n- Set team OKRs tied to activation and support-ticket goals, hitting 5 of 6 in 2025"
+        },
+        {
+          "company": "Clover Ridge Software",
+          "role": "Senior Product Designer",
+          "location": "Cambridge, MA",
+          "startDate": "2018-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Led design for a scheduling product used by 2,000 clinics\n- Ran critique and mentoring for 3 junior designers\n- Redesigned the calendar view, reducing double-booking incidents by 40%"
+        },
+        {
+          "company": "Commonwealth Interactive",
+          "role": "Product Designer",
+          "location": "Boston, MA",
+          "startDate": "2016-01",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Designed web apps for higher-ed and nonprofit clients\n- Led discovery workshops for 6 client engagements"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rhode Island School of Design",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2011-09",
+          "endDate": "2015-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: hiring, career ladders, performance reviews, 1:1 coaching",
+        "Planning: OKRs, roadmap partnership, resourcing, critique programs",
+        "Design: B2B product design, design systems, research practice",
+        "Tools: Figma, Lattice, Jira, Productboard"
+      ]
+    },
+    "Product Design Manager": {
+      "summary": "Product design manager with 11 years of experience, leading 6 designers on a consumer marketplace serving 3M buyers. Drove a search and discovery overhaul that increased buyer conversion by 11%. Balances team health and hiring with deep involvement in product strategy, critique and quality bars.",
+      "experience": [
+        {
+          "company": "Thriftlane",
+          "role": "Product Design Manager",
+          "location": "Remote",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 6 designers across buyer search, checkout and trust and safety for 3M buyers\n- Directed search and discovery overhaul, raising buyer conversion by 11% year over year\n- Partner with 3 product managers and 2 engineering managers on quarterly planning\n- Started a design quality scorecard reviewed at monthly product leadership meetings"
+        },
+        {
+          "company": "Gallery Row Prints",
+          "role": "Lead Product Designer",
+          "location": "Austin, TX",
+          "startDate": "2018-09",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Led 3 designers on an art print marketplace with 40k artists\n- Redesigned artist storefronts, growing repeat purchase rate by 13%\n- Built the first design system and research cadence"
+        },
+        {
+          "company": "Lone Star Digital",
+          "role": "Product Designer",
+          "location": "Austin, TX",
+          "startDate": "2015-06",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Designed mobile apps for retail and media clients\n- Delivered a ticketing app redesign that cut checkout time by 40%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas State University",
+          "degree": "BFA, Communication Design",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: team management, hiring, coaching, performance management",
+        "Product: marketplace design, search and discovery, trust and safety, experimentation",
+        "Operations: quality scorecards, critique rituals, quarterly planning",
+        "Tools: Figma, Amplitude, Dovetail, Linear"
+      ]
+    },
+    "Design Operations Manager": {
+      "summary": "Design operations manager with 8 years of experience in design and program management, supporting a 35-person design org. Consolidated tools and licensing to save $210k a year while speeding handoff. Brings process design, tooling strategy and team rituals that let designers spend more time designing.",
+      "experience": [
+        {
+          "company": "Summit Travel Group",
+          "role": "Design Operations Manager",
+          "location": "Denver, CO",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support a 35-person design and research org across 9 product teams\n- Consolidated design tooling and licenses, saving $210k a year\n- Rolled out Figma branching and a review workflow that cut handoff defects by 30%\n- Run quarterly design org planning, headcount tracking and onboarding for 12 new hires in 2025"
+        },
+        {
+          "company": "Rockledge Software",
+          "role": "Design Program Manager",
+          "location": "Denver, CO",
+          "startDate": "2019-04",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Coordinated design work across 5 squads with shared intake and prioritization in Jira\n- Launched a design onboarding program that shortened time to first shipped work from 8 to 4 weeks\n- Organized quarterly design weeks and critique calendars"
+        },
+        {
+          "company": "Front Range Agency",
+          "role": "Designer and Project Coordinator",
+          "location": "Boulder, CO",
+          "startDate": "2017-06",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Designed digital campaigns while managing timelines for 10 concurrent projects\n- Built resourcing spreadsheets that improved on-time delivery to 92%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Denver",
+          "degree": "BA, Studio Art and Business",
+          "startDate": "2013-09",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "DesignOps: tooling strategy, licensing, workflows, onboarding, design rituals",
+        "Program management: planning, headcount tracking, intake, prioritization",
+        "Tools: Figma admin, Jira, Confluence, Airtable, Asana",
+        "Certifications: PMP"
+      ]
+    },
+    "Design Director": {
+      "summary": "Design director with 14 years of experience leading product and brand design for consumer health and wellness companies. Leads 18 designers, researchers and writers across 3 product lines. Shaped a unified app experience that grew paid members from 400k to 1.1M while raising design quality and team maturity.",
+      "experience": [
+        {
+          "company": "Balance Bay Health",
+          "role": "Design Director",
+          "location": "San Francisco, CA",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 18 designers, researchers and content designers across 3 product lines and brand\n- Unified 2 legacy apps into one member experience, supporting growth from 400k to 1.1M paid members\n- Own a $2.6M design budget including headcount, agencies and research\n- Built a design leadership bench of 3 managers and set org-wide quality standards"
+        },
+        {
+          "company": "Restwell Sleep",
+          "role": "Head of Product Design",
+          "location": "San Francisco, CA",
+          "startDate": "2017-05",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Grew design team from 3 to 10 while launching a sleep coaching subscription\n- Led app redesign that lifted 30-day retention from 22% to 31%\n- Partnered with marketing on brand refresh across product and packaging"
+        },
+        {
+          "company": "Golden Hour Interactive",
+          "role": "Senior Designer",
+          "location": "Los Angeles, CA",
+          "startDate": "2012-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Designed apps and sites for entertainment and lifestyle brands\n- Led design on an award-winning streaming companion app"
+        }
+      ],
+      "education": [
+        {
+          "school": "UCLA",
+          "degree": "BA, Design Media Arts",
+          "startDate": "2008-09",
+          "endDate": "2012-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: org design, manager development, hiring, budget ownership",
+        "Strategy: experience vision, brand and product alignment, roadmap influence",
+        "Craft: consumer product design, health UX, design systems",
+        "Partnership: executive communication, agency management"
+      ]
+    },
+    "VP of Design": {
+      "summary": "VP of design with 17 years of experience building design organizations at high-growth SaaS companies. Scaled a design org from 9 to 42 people through Series C to IPO readiness. Owns experience strategy, brand and research, and sits on the product leadership team shaping roadmap and investment.",
+      "experience": [
+        {
+          "company": "Vantage Workflow",
+          "role": "VP of Design",
+          "location": "New York, NY",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Scaled design, research and content org from 9 to 42 people across 4 product lines and brand\n- Own a $7M annual budget for headcount, tools and agencies\n- Set a 3-year experience strategy that drove enterprise NPS from 24 to 47\n- Co-led platform redesign with the CTO that reduced time-to-value for new customers by 35%"
+        },
+        {
+          "company": "Brightwater Analytics",
+          "role": "Director of Design",
+          "location": "New York, NY",
+          "startDate": "2016-08",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Built a 14-person team spanning product design, research and design systems\n- Launched the company's design system and research practice\n- Partnered with sales on enterprise UX reviews that supported $20M in renewals"
+        },
+        {
+          "company": "Metropolitan Digital Partners",
+          "role": "Design Manager",
+          "location": "New York, NY",
+          "startDate": "2009-06",
+          "endDate": "2016-07",
+          "isCurrent": false,
+          "description": "- Managed 6 designers delivering financial services portals\n- Led design for a brokerage platform used by 500k investors"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cornell University",
+          "degree": "BS, Design and Environmental Analysis",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive leadership: org scaling, budget, hiring leaders, board and investor reviews",
+        "Strategy: experience strategy, brand, research, design systems",
+        "Operating: OKRs, design quality metrics, cross-functional planning",
+        "Domains: enterprise SaaS, workflow software, analytics"
+      ]
+    },
+    "Product Manager": {
+      "summary": "Product manager with 5 years of experience owning B2B SaaS features from discovery through launch. Shipped a self-serve reporting module adopted by 62% of accounts within 6 months. Works from customer evidence and clear metrics, writing crisp specs and keeping engineering, design and go-to-market teams aligned.",
+      "experience": [
+        {
+          "company": "Fieldgate Construction Software",
+          "role": "Product Manager",
+          "location": "Nashville, TN",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Shipped a self-serve reporting module adopted by 62% of accounts within 6 months of launch\n- Lead a squad of 6 engineers and 1 designer, running two-week sprints in Jira\n- Interviewed 40 general contractors to prioritize the change order workflow, cutting approval time by 3 days\n- Partnered with sales and support on launch plans, enablement and release notes"
+        },
+        {
+          "company": "Music City Health Tech",
+          "role": "Associate Product Manager",
+          "location": "Nashville, TN",
+          "startDate": "2021-01",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Owned patient intake form builder used by 300 clinics\n- Wrote user stories and acceptance criteria for 50+ features\n- Analyzed funnel data in Mixpanel, raising form completion by 12%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vanderbilt University",
+          "degree": "BS, Engineering Science",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product: discovery, roadmapping, prioritization (RICE), user stories, launch planning",
+        "Data: SQL, Mixpanel, Looker, A/B testing",
+        "Delivery: Agile/Scrum, Jira, Confluence, Productboard",
+        "Certifications: Certified Scrum Product Owner (CSPO)"
+      ]
+    },
+    "Technical Product Manager": {
+      "summary": "Technical product manager with 7 years of experience, including 3 as a backend engineer, owning API and developer platform products. Led a public API v2 launch that grew active integrations from 1,200 to 3,800. Speaks fluently with engineers about architecture tradeoffs while keeping developer experience and business outcomes central.",
+      "experience": [
+        {
+          "company": "Relay Logistics API",
+          "role": "Technical Product Manager",
+          "location": "Chicago, IL",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led public API v2 launch, growing active partner integrations from 1,200 to 3,800\n- Defined versioning, rate-limit and deprecation policies with platform engineering\n- Cut developer time-to-first-call from 2 days to 40 minutes with OpenAPI docs and sandbox keys\n- Owned webhooks reliability roadmap, raising delivery success to 99.95%"
+        },
+        {
+          "company": "Lakeshore Data Systems",
+          "role": "Product Manager, Integrations",
+          "location": "Chicago, IL",
+          "startDate": "2019-09",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Managed 25 ERP and CRM connectors including NetSuite and Salesforce\n- Prioritized connector backlog by revenue impact, influencing $3M in new ARR"
+        },
+        {
+          "company": "Lakeshore Data Systems",
+          "role": "Backend Engineer",
+          "location": "Chicago, IL",
+          "startDate": "2016-07",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Built REST services in Java and PostgreSQL for data sync pipelines\n- Reduced sync job failures by 60% through retry and idempotency design"
+        }
+      ],
+      "education": [
+        {
+          "school": "Purdue University",
+          "degree": "BS, Computer Science",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product: API products, developer experience, platform roadmaps, pricing input",
+        "Technical: REST, webhooks, OpenAPI, OAuth 2.0, SQL, system design basics",
+        "Tools: Postman, Datadog, Jira, Readme.com, Looker",
+        "Practices: API versioning, SLAs, incident reviews"
+      ]
+    },
+    "Growth Product Manager": {
+      "summary": "Growth product manager with 6 years of experience running acquisition, activation and monetization experiments for consumer apps. Ran a program of 60+ experiments in 2025 that added $3.1M in annualized revenue. Combines rigorous experiment design and SQL with sharp user insight and fast iteration.",
+      "experience": [
+        {
+          "company": "Budgetbird",
+          "role": "Growth Product Manager",
+          "location": "Remote",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Ran 60+ experiments in 2025 across onboarding and paywall, adding $3.1M in annualized revenue\n- Redesigned activation flow with bank-linking nudges, raising day-7 activation from 34% to 45%\n- Built an experiment review ritual and power calculator with data science\n- Lead a growth pod of 4 engineers, 1 designer and 1 analyst"
+        },
+        {
+          "company": "Snapcart Grocery",
+          "role": "Product Manager, Growth",
+          "location": "San Francisco, CA",
+          "startDate": "2020-03",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Owned referral program that drove 18% of new customers at 40% lower CAC than paid\n- Tested first-order incentives across 6 metros, improving payback period by 2 months"
+        },
+        {
+          "company": "Snapcart Grocery",
+          "role": "Growth Analyst",
+          "location": "San Francisco, CA",
+          "startDate": "2018-08",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Built cohort and LTV models in SQL and Python\n- Identified promo abuse patterns saving $400k a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "UC Berkeley",
+          "degree": "BA, Economics",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Growth: activation, retention, monetization, referral loops, paywalls",
+        "Experimentation: A/B testing, power analysis, Statsig, Optimizely",
+        "Data: SQL, Amplitude, Python (pandas), LTV and cohort analysis",
+        "Delivery: pod leadership, rapid iteration, experiment documentation"
+      ]
+    },
+    "Senior Product Manager": {
+      "summary": "Senior product manager with 9 years of experience owning revenue-critical areas of e-commerce platforms. Led a subscription and replenishment product that reached $28M in annual GMV within 2 years. Brings strong strategy, customer discovery and data skills, and a track record of aligning several teams around one roadmap.",
+      "experience": [
+        {
+          "company": "Petpantry",
+          "role": "Senior Product Manager",
+          "location": "Seattle, WA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Launched subscribe-and-save, reaching $28M in annual GMV and 210k active subscriptions in 2 years\n- Own the strategy and roadmap for 2 squads totaling 14 engineers\n- Reduced subscription churn by 3.2 points with skip, swap and pause features\n- Present quarterly business reviews to the VP of Product and finance"
+        },
+        {
+          "company": "Evergreen Outdoor Co.",
+          "role": "Product Manager",
+          "location": "Seattle, WA",
+          "startDate": "2018-04",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Owned product detail pages and reviews for a $400M outdoor retailer\n- Launched fit recommendations that cut apparel return rate by 11%\n- Ran 25 A/B tests per year with the optimization team"
+        },
+        {
+          "company": "Puget Consulting Group",
+          "role": "Business Analyst",
+          "location": "Bellevue, WA",
+          "startDate": "2016-07",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Gathered requirements for retail ERP implementations\n- Built process maps and test plans for 4 client go-lives"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "MBA",
+          "startDate": "2014-09",
+          "endDate": "2016-06"
+        },
+        {
+          "school": "Washington State University",
+          "degree": "BA, Business Administration",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product strategy: roadmaps, business cases, pricing, subscription models",
+        "Discovery: customer interviews, jobs-to-be-done, opportunity solution trees",
+        "Data: SQL, Looker, A/B testing, GMV and churn analysis",
+        "Leadership: multi-squad alignment, executive reviews"
+      ]
+    },
+    "Group Product Manager": {
+      "summary": "Group product manager with 12 years of experience leading product for payments and financial operations. Manages 4 product managers across 6 squads and a $45M revenue line. Drove a merchant payouts overhaul that cut payout support tickets by 52% while growing instant-payout revenue 3x.",
+      "experience": [
+        {
+          "company": "Paywise Commerce",
+          "role": "Group Product Manager",
+          "location": "San Francisco, CA",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 4 PMs owning payouts, disputes, reconciliation and tax across 6 squads\n- Own strategy for a $45M payments revenue line, growing instant-payout revenue 3x since 2022\n- Led payouts overhaul that cut payout-related support tickets by 52%\n- Partner with risk and compliance on PCI DSS and 1099-K reporting requirements"
+        },
+        {
+          "company": "Ledgerleaf Accounting",
+          "role": "Senior Product Manager",
+          "location": "Mountain View, CA",
+          "startDate": "2017-06",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Owned bank reconciliation for 150k small businesses\n- Shipped auto-matching rules that saved customers an estimated 4 hours per month\n- Grew feature NPS from 18 to 41"
+        },
+        {
+          "company": "Bayline Financial",
+          "role": "Product Manager",
+          "location": "San Jose, CA",
+          "startDate": "2014-05",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Managed online bill pay for a regional bank's 300k digital customers\n- Launched mobile check deposit, adopted by 38% of active users in year one"
+        }
+      ],
+      "education": [
+        {
+          "school": "Stanford University",
+          "degree": "BS, Management Science and Engineering",
+          "startDate": "2010-09",
+          "endDate": "2014-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: managing PMs, portfolio planning, hiring, coaching",
+        "Domain: payments, payouts, disputes, reconciliation, PCI DSS, 1099-K",
+        "Strategy: P&L ownership, pricing, multi-year roadmaps",
+        "Data: SQL, Looker, financial modeling"
+      ]
+    },
+    "Principal Product Manager": {
+      "summary": "Principal product manager with 13 years of experience setting cross-team product strategy for enterprise security software. Defined the identity platform strategy behind a new SKU that reached $19M ARR in 18 months. Operates as an individual contributor with org-wide influence on architecture, pricing and multi-year bets.",
+      "experience": [
+        {
+          "company": "Bastion Identity",
+          "role": "Principal Product Manager",
+          "location": "Remote",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Defined identity governance strategy and launched a new SKU reaching $19M ARR in 18 months\n- Set the shared policy engine roadmap used by 5 product teams and 60 engineers\n- Led pricing and packaging work with finance, raising average deal size by 22%\n- Mentor 6 PMs on discovery, written strategy docs and executive communication"
+        },
+        {
+          "company": "Sentinel Cloud Security",
+          "role": "Senior Product Manager",
+          "location": "Austin, TX",
+          "startDate": "2017-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Owned SSO and MFA products for 4,000 enterprise customers\n- Shipped FIDO2 passkey support, cutting account takeover incidents by 70% for adopters\n- Led SOC 2 and FedRAMP Moderate product requirements with compliance"
+        },
+        {
+          "company": "Hillcountry Software",
+          "role": "Product Manager",
+          "location": "Austin, TX",
+          "startDate": "2013-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Managed user administration and audit logging features\n- Grew admin console NPS from 10 to 35"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rice University",
+          "degree": "BS, Computer Science",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Strategy: platform strategy, multi-year roadmaps, pricing and packaging, competitive analysis",
+        "Domain: identity and access management, SSO, MFA, SOC 2, FedRAMP",
+        "Influence: strategy narratives, executive reviews, PM mentorship",
+        "Technical: APIs, policy engines, cloud architecture basics"
+      ]
+    },
+    "Director of Product": {
+      "summary": "Director of product with 14 years of experience leading product for vertical SaaS in hospitality. Leads 6 PMs and owns a portfolio generating $60M ARR. Rebuilt the product strategy around a unified guest platform that lifted net revenue retention from 104% to 117% in 2 years.",
+      "experience": [
+        {
+          "company": "Innkeep Cloud",
+          "role": "Director of Product",
+          "location": "Orlando, FL",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 6 product managers across booking, guest messaging, payments and revenue management\n- Own a $60M ARR portfolio; raised net revenue retention from 104% to 117% in 2 years\n- Set a unified guest platform strategy adopted in the board-approved 3-year plan\n- Introduced quarterly discovery reviews and product scorecards for the exec team"
+        },
+        {
+          "company": "Suncoast Reservations",
+          "role": "Senior Product Manager",
+          "location": "Tampa, FL",
+          "startDate": "2016-09",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Owned the channel manager integrating 40 OTAs for 6,000 properties\n- Launched dynamic pricing that increased RevPAR for adopters by 8%\n- Managed 2 PMs during a platform rewrite"
+        },
+        {
+          "company": "Gulfside Systems",
+          "role": "Product Manager",
+          "location": "Tampa, FL",
+          "startDate": "2012-05",
+          "endDate": "2016-08",
+          "isCurrent": false,
+          "description": "- Managed point-of-sale features for restaurant chains\n- Delivered EMV payment support across 2,500 terminals"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Florida",
+          "degree": "BS, Industrial and Systems Engineering",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: PM team management, hiring, product reviews, org design",
+        "Strategy: portfolio strategy, NRR growth, pricing, board-level planning",
+        "Domain: hospitality tech, booking engines, payments, revenue management",
+        "Data: product scorecards, SQL, Looker"
+      ]
+    },
+    "Director of Product Management": {
+      "summary": "Director of product management with 15 years of experience building PM teams and practices in healthcare technology. Manages 8 PMs across clinical and revenue cycle products serving 1,400 hospitals. Built the PM career framework and discovery practice behind a 40% increase in roadmap items shipped on target.",
+      "experience": [
+        {
+          "company": "Carelink Systems",
+          "role": "Director of Product Management",
+          "location": "Kansas City, MO",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 8 PMs and 2 group leads across clinical documentation and revenue cycle products\n- Built a PM career framework, interview loop and onboarding, hiring 5 PMs since 2023\n- Raised roadmap items delivered on target by 40% through quarterly planning and dependency reviews\n- Steer ONC certification and HL7 FHIR interoperability roadmap with regulatory affairs"
+        },
+        {
+          "company": "Heartland Revenue Cycle",
+          "role": "Senior Product Manager",
+          "location": "Overland Park, KS",
+          "startDate": "2015-04",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Owned claims scrubbing and denial management for 600 hospitals\n- Cut first-pass denial rates for clients by 18% with rules engine improvements\n- Managed ICD-10 code set updates and payer edits each release"
+        },
+        {
+          "company": "Plains Medical Software",
+          "role": "Business Analyst",
+          "location": "Omaha, NE",
+          "startDate": "2011-06",
+          "endDate": "2015-03",
+          "isCurrent": false,
+          "description": "- Wrote requirements for EHR scheduling and billing modules\n- Supported 15 hospital go-lives as implementation analyst"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kansas",
+          "degree": "MBA",
+          "startDate": "2013-08",
+          "endDate": "2015-05"
+        },
+        {
+          "school": "University of Nebraska-Lincoln",
+          "degree": "BS, Information Systems",
+          "startDate": "2007-08",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "PM leadership: career frameworks, hiring loops, coaching, planning processes",
+        "Healthcare: revenue cycle, clinical documentation, HL7 FHIR, ONC certification, HIPAA",
+        "Operating: quarterly planning, dependency management, roadmap governance",
+        "Tools: Aha!, Jira Align, Tableau"
+      ]
+    },
+    "VP of Product": {
+      "summary": "VP of product with 16 years of experience leading product organizations in B2B marketing software. Leads 22 product managers, designers and analysts responsible for $140M ARR. Repositioned the product suite around AI-assisted campaigns, driving 30% new logo growth in 2025 and a successful multi-product pricing launch.",
+      "experience": [
+        {
+          "company": "Signalpath Marketing Cloud",
+          "role": "VP of Product",
+          "location": "Boston, MA",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 22 PMs, designers and product analysts across a $140M ARR marketing suite\n- Repositioned roadmap around AI-assisted campaigns, contributing to 30% new logo growth in 2025\n- Launched tiered multi-product pricing with finance, raising expansion revenue by $11M\n- Report to the CEO and present product strategy at quarterly board meetings"
+        },
+        {
+          "company": "Openreach Email",
+          "role": "Director of Product",
+          "location": "Boston, MA",
+          "startDate": "2016-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Built a product team of 9 through Series B and C\n- Launched automation workflows used by 70% of customers within a year\n- Partnered on the acquisition and integration of an SMS marketing startup"
+        },
+        {
+          "company": "Bay State Analytics",
+          "role": "Senior Product Manager",
+          "location": "Waltham, MA",
+          "startDate": "2010-07",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Owned attribution reporting for 800 enterprise customers\n- Grew attribution add-on revenue from $2M to $9M"
+        }
+      ],
+      "education": [
+        {
+          "school": "MIT Sloan School of Management",
+          "degree": "MBA",
+          "startDate": "2008-09",
+          "endDate": "2010-06"
+        },
+        {
+          "school": "Boston College",
+          "degree": "BA, Economics",
+          "startDate": "2002-09",
+          "endDate": "2006-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive leadership: product org building, board communication, M&A integration",
+        "Strategy: positioning, pricing and packaging, AI product strategy, portfolio management",
+        "Commercial: ARR growth, expansion revenue, go-to-market alignment",
+        "Domain: marketing automation, email, attribution"
+      ]
+    },
+    "Platform Product Manager": {
+      "summary": "Platform product manager with 7 years of experience owning internal developer platforms and shared services. Led an internal platform roadmap that cut service provisioning from 5 days to 20 minutes for 300 engineers. Treats internal teams as customers, with clear adoption metrics and strong partnership with infrastructure engineering.",
+      "experience": [
+        {
+          "company": "Gridstone Energy Software",
+          "role": "Platform Product Manager",
+          "location": "Houston, TX",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own the internal developer platform used by 300 engineers across 35 teams\n- Cut new service provisioning from 5 days to 20 minutes with golden-path templates on Backstage\n- Raised platform adoption from 40% to 85% of services by running quarterly developer surveys\n- Prioritized observability and cost tooling that lowered AWS spend by $1.1M a year"
+        },
+        {
+          "company": "Bayou Commerce",
+          "role": "Product Manager, Shared Services",
+          "location": "Houston, TX",
+          "startDate": "2019-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Managed authentication, notifications and feature flag services for 12 product teams\n- Consolidated 3 notification systems into one, reducing incidents by 45%\n- Defined internal SLAs and a deprecation process"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University",
+          "degree": "BS, Computer Engineering",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Platform product: internal developer platforms, golden paths, shared services, SLAs",
+        "Technical: AWS, Kubernetes, Backstage, CI/CD, observability (Datadog)",
+        "Metrics: adoption, DORA metrics, developer satisfaction, cloud cost",
+        "Practices: internal customer research, deprecation planning, roadmap communication"
+      ]
+    },
+    "Mobile Product Manager": {
+      "summary": "Mobile product manager with 6 years of experience owning iOS and Android apps for retail banking and commerce. Led a mobile app rebuild that lifted App Store rating from 3.2 to 4.7 and grew monthly active users by 38%. Knows store policies, release trains and mobile analytics in depth.",
+      "experience": [
+        {
+          "company": "Heritage Federal Bank",
+          "role": "Mobile Product Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led mobile banking app rebuild in Swift and Kotlin, raising App Store rating from 3.2 to 4.7\n- Grew monthly active users by 38% to 1.3M with card controls and Zelle integration\n- Run a biweekly release train with phased rollouts and crash-free sessions above 99.8%\n- Partner with compliance on ADA and Reg E requirements for in-app disclosures"
+        },
+        {
+          "company": "Queen City Retail",
+          "role": "Associate Product Manager, Mobile",
+          "location": "Charlotte, NC",
+          "startDate": "2019-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Owned loyalty and mobile ordering features for a 200-store retailer\n- Launched push personalization in Braze that lifted repeat orders by 10%\n- Managed App Store and Google Play review submissions"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "BS, Business Administration (Information Technology)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Mobile product: iOS and Android, release trains, phased rollouts, app store optimization",
+        "Analytics: Firebase, Amplitude, Crashlytics, Braze",
+        "Domain: mobile banking, payments, loyalty, Reg E",
+        "Delivery: Agile, Jira, TestFlight, Google Play Console"
+      ]
+    },
+    "Data Product Manager": {
+      "summary": "Data product manager with 7 years of experience in analytics engineering and product, owning data platforms and customer-facing insights. Launched an embedded analytics product that generated $5.4M in new ARR. Bridges data engineering, governance and business users to ship trustworthy data products people rely on.",
+      "experience": [
+        {
+          "company": "Harborlight Retail Analytics",
+          "role": "Data Product Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Launched an embedded analytics product for retail clients generating $5.4M in new ARR\n- Defined data contracts and SLAs for 40 core tables with data engineering\n- Cut metric definition disputes by consolidating 120 KPIs into a governed semantic layer in dbt\n- Prioritized roadmap using usage telemetry from Snowflake and customer interviews"
+        },
+        {
+          "company": "Twin Lakes Insurance",
+          "role": "Analytics Engineer",
+          "location": "St. Paul, MN",
+          "startDate": "2019-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Built dbt models feeding claims and underwriting dashboards for 400 users\n- Migrated reporting from on-prem SQL Server to Snowflake, cutting query times by 70%\n- Wrote data quality tests that caught 30 upstream issues before reporting"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin-Madison",
+          "degree": "BS, Statistics",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Data product: semantic layers, data contracts, embedded analytics, data governance",
+        "Technical: SQL, dbt, Snowflake, Airflow, Looker, Python",
+        "Product: roadmapping, pricing input, customer discovery",
+        "Governance: data quality, lineage, access controls"
+      ]
+    },
+    "AI Product Manager": {
+      "summary": "AI product manager with 6 years in product, the last 3 shipping LLM-powered features in customer support software. Launched an AI reply assistant that now drafts 45% of agent responses and cut handle time by 28%. Strong on evaluation design, model tradeoffs, guardrails and measuring real customer value.",
+      "experience": [
+        {
+          "company": "Helpdeck",
+          "role": "AI Product Manager",
+          "location": "San Francisco, CA",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Launched an LLM reply assistant now drafting 45% of agent responses and cutting average handle time by 28%\n- Built an offline evaluation set of 3,000 labeled tickets with ML engineers to gate model releases\n- Defined guardrails for PII redaction and hallucination checks, keeping flagged replies under 0.5%\n- Balanced cost and latency across model providers, cutting inference spend per ticket by 40%"
+        },
+        {
+          "company": "Clearline Telecom",
+          "role": "Product Manager, Self-Service",
+          "location": "Denver, CO",
+          "startDate": "2020-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Owned chatbot and help center, raising self-service containment from 22% to 37%\n- Ran intent taxonomy redesign with support operations across 1.5M monthly contacts\n- Shipped article recommendations powered by search relevance tuning"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Southern California",
+          "degree": "BS, Computer Science and Business Administration",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Support eval harness",
+          "link": "",
+          "description": "Rubric-based evaluation pipeline scoring tone, accuracy and policy compliance for each model candidate"
+        }
+      ],
+      "skills": [
+        "AI product: LLM features, RAG, evaluation design, guardrails, human-in-the-loop",
+        "Technical: prompt design, model selection, embeddings, Python basics, SQL",
+        "Metrics: handle time, containment, acceptance rate, cost per inference",
+        "Governance: PII handling, responsible AI reviews, SOC 2"
+      ]
+    },
+    "Associate Product Manager": {
+      "summary": "Associate product manager with 2 years of experience in a rotational APM program at a consumer travel company. Owned a trip-sharing feature that grew invited travelers per booking by 19%. Brings SQL fluency, structured problem solving and a computer science background that makes engineering collaboration easy.",
+      "experience": [
+        {
+          "company": "Roamly Travel",
+          "role": "Associate Product Manager",
+          "location": "Boston, MA",
+          "startDate": "2024-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Owned trip-sharing feature end to end, growing invited travelers per booking by 19%\n- Wrote PRDs and user stories for a squad of 5 engineers through 2 rotations\n- Analyzed booking funnels in SQL and Amplitude, surfacing a date-picker bug costing 2% of mobile bookings\n- Ran 12 customer interviews to shape the group itinerary roadmap"
+        },
+        {
+          "company": "Backbay Fintech",
+          "role": "Product Management Intern",
+          "location": "Boston, MA",
+          "startDate": "2023-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Researched small-business expense workflows and presented 3 opportunity areas to the CPO\n- Drafted specs for receipt capture improvements shipped that fall"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northeastern University",
+          "degree": "BS, Computer Science and Business",
+          "startDate": "2020-09",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Campus dining wait-time app",
+          "link": "github.com/anguyen/dinewait",
+          "description": "Student project using crowd-sourced check-ins; 1,500 users in the first semester"
+        }
+      ],
+      "skills": [
+        "Product: PRDs, user stories, prioritization, customer interviews",
+        "Data: SQL, Amplitude, Excel, basic Python",
+        "Tools: Jira, Figma, Notion",
+        "Foundations: data structures, web development, A/B testing"
+      ]
+    },
+    "Product Owner": {
+      "summary": "Product owner with 7 years of experience in Scrum teams delivering insurance and claims software. Owns the backlog for 2 teams and improved sprint predictability from 62% to 88%. Turns stakeholder needs into well-groomed stories and acceptance criteria, keeping delivery steady and stakeholders informed.",
+      "experience": [
+        {
+          "company": "Liberty Ridge Insurance",
+          "role": "Product Owner",
+          "location": "Columbus, OH",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own backlog for 2 Scrum teams building claims intake and adjuster tools\n- Raised sprint predictability from 62% to 88% by tightening refinement and Definition of Ready\n- Delivered first notice of loss web form, cutting phone-based claims intake by 26%\n- Run sprint reviews with claims operations, underwriting and IT stakeholders"
+        },
+        {
+          "company": "Midwest Mutual Group",
+          "role": "Business Systems Analyst",
+          "location": "Dayton, OH",
+          "startDate": "2018-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Wrote requirements for Guidewire ClaimCenter configuration changes\n- Built UAT plans and coordinated testing with 30 business users\n- Mapped claims processes that informed an automation roadmap"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "BBA, Management Information Systems",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Agile: backlog management, user stories, acceptance criteria, sprint planning, SAFe",
+        "Domain: claims, policy administration, Guidewire ClaimCenter",
+        "Tools: Jira, Confluence, Azure DevOps, Miro",
+        "Certifications: Professional Scrum Product Owner (PSPO I), SAFe POPM"
+      ]
+    },
+    "Product Operations Manager": {
+      "summary": "Product operations manager with 8 years of experience across program management and product ops in SaaS. Built the product operating rhythm for a 60-person product and engineering org. Introduced feedback and launch systems that cut launch slippage by 35% and gave leadership one trusted view of roadmap health.",
+      "experience": [
+        {
+          "company": "Crestview HR Cloud",
+          "role": "Product Operations Manager",
+          "location": "Remote",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built the planning and review rhythm for a 60-person product and engineering org\n- Cut launch slippage by 35% with a tiered launch process and readiness checklists\n- Centralized 9,000 customer feedback items in Productboard, linked to Salesforce revenue\n- Manage 1 product operations analyst and the product tooling budget"
+        },
+        {
+          "company": "Brightpath Billing",
+          "role": "Technical Program Manager",
+          "location": "Salt Lake City, UT",
+          "startDate": "2019-01",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Ran cross-team programs including a payments processor migration for 20k customers\n- Built release calendars and dependency trackers for 8 squads\n- Reduced missed dependencies by half through weekly program reviews"
+        },
+        {
+          "company": "Wasatch Consulting",
+          "role": "Business Analyst",
+          "location": "Salt Lake City, UT",
+          "startDate": "2017-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Supported CRM implementations for 5 mid-market clients\n- Documented processes and training guides"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Utah",
+          "degree": "BS, Information Systems",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product ops: planning cadences, launch management, feedback systems, roadmap reporting",
+        "Tools: Productboard, Jira, Salesforce, Pendo, Looker",
+        "Program management: dependencies, release calendars, risk tracking",
+        "Leadership: process design, analyst management"
+      ]
+    },
+    "Product Operations Analyst": {
+      "summary": "Product operations analyst with 3 years of experience supporting product teams with data, tooling and process. Built a product health dashboard used weekly by 14 PMs and leadership. Brings SQL and analytics skills, careful tool administration and a knack for turning messy feedback into structured insight.",
+      "experience": [
+        {
+          "company": "Sparrow Scheduling",
+          "role": "Product Operations Analyst",
+          "location": "Raleigh, NC",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a product health dashboard in Looker covering adoption, retention and bugs for 14 PMs\n- Tagged and analyzed 4,500 feedback items in Productboard, surfacing top 10 themes each quarter\n- Administer Jira and Pendo, cleaning up 200 stale workflows and fields\n- Automated weekly release notes from Jira, saving PMs about 3 hours a week"
+        },
+        {
+          "company": "Oak City Analytics",
+          "role": "Data Analyst Intern",
+          "location": "Durham, NC",
+          "startDate": "2022-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Cleaned and modeled survey data for 3 client reports\n- Built Tableau charts used in a client board presentation"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "BS, Business Analytics",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analytics: SQL, Looker, Tableau, Excel, Pendo analytics",
+        "Product ops: feedback tagging, release notes, tool administration, process documentation",
+        "Tools: Jira, Productboard, Zapier, Confluence",
+        "Communication: dashboards, insight summaries"
+      ]
+    },
+    "Creative Director": {
+      "summary": "Creative director with 15 years in agency and in-house roles, leading integrated campaigns for consumer brands. Leads a 16-person team of designers, writers and producers. Directed a brand platform relaunch that lifted unaided awareness by 9 points and earned two One Show merits.",
+      "experience": [
+        {
+          "company": "Ironbridge Creative",
+          "role": "Creative Director",
+          "location": "Chicago, IL",
+          "startDate": "2020-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 16 designers, copywriters and producers on campaigns for food, beverage and retail clients\n- Directed a beverage brand platform relaunch that lifted unaided awareness by 9 points\n- Manage annual production budgets up to $4M across TV, digital and out-of-home\n- Won 2 One Show merits and retained 3 accounts worth $8M in fees"
+        },
+        {
+          "company": "Windy City Partners",
+          "role": "Associate Creative Director",
+          "location": "Chicago, IL",
+          "startDate": "2016-04",
+          "endDate": "2020-10",
+          "isCurrent": false,
+          "description": "- Led art and copy teams on a national retail account\n- Developed a holiday campaign that drove a 14% sales lift in Q4\n- Pitched and helped win 5 new business accounts"
+        },
+        {
+          "company": "Lakefront Studio",
+          "role": "Senior Art Director",
+          "location": "Chicago, IL",
+          "startDate": "2011-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Art directed print, digital and broadcast work for 12 clients\n- Directed photo and video shoots across 3 states"
+        }
+      ],
+      "education": [
+        {
+          "school": "School of the Art Institute of Chicago",
+          "degree": "BFA, Visual Communication",
+          "startDate": "2007-09",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Creative leadership: brand platforms, integrated campaigns, team leadership, pitching",
+        "Craft: art direction, concepting, copy review, production oversight",
+        "Business: budget management, client relationships, agency P&L input",
+        "Tools: Adobe Creative Cloud, Figma, Frame.io"
+      ]
+    },
+    "Art Director": {
+      "summary": "Art director with 8 years of experience creating campaigns across social, digital and print for lifestyle and apparel brands. Concepted a spring campaign that delivered a 3.4x return on ad spend. Brings strong visual concepting, shoot direction and close collaboration with copywriters and producers.",
+      "experience": [
+        {
+          "company": "Bold Sparrow Agency",
+          "role": "Art Director",
+          "location": "Los Angeles, CA",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Concepted a spring apparel campaign that delivered a 3.4x return on ad spend across Meta and TikTok\n- Directed 14 photo and video shoots with budgets from $25k to $180k\n- Partner with 2 copywriters on concepts from brief to final delivery\n- Guide 2 junior designers on layouts, retouching and asset versioning"
+        },
+        {
+          "company": "Sunrise Collective",
+          "role": "Junior Art Director",
+          "location": "Santa Monica, CA",
+          "startDate": "2018-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Designed social and display campaigns for 8 beauty and wellness brands\n- Built a modular ad template system that cut resizing time by 50%\n- Assisted on location scouting and casting for brand shoots"
+        }
+      ],
+      "education": [
+        {
+          "school": "ArtCenter College of Design",
+          "degree": "BFA, Advertising",
+          "startDate": "2013-09",
+          "endDate": "2017-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Art direction: concepting, campaign design, shoot direction, casting, retouching direction",
+        "Channels: social, digital display, out-of-home, print",
+        "Tools: Photoshop, Illustrator, InDesign, After Effects, Figma",
+        "Collaboration: copy partnerships, client presentations, producer coordination"
+      ]
+    },
+    "Head of Product": {
+      "summary": "Head of product with 12 years of experience, now leading product at a Series B climate tech startup. Built the product function from scratch, growing ARR from $4M to $18M in 3 years. Combines hands-on discovery with strategy, hiring and investor-facing roadmap communication.",
+      "experience": [
+        {
+          "company": "Carbonly",
+          "role": "Head of Product",
+          "location": "Remote",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built the product function, hiring 4 PMs and 3 designers as ARR grew from $4M to $18M\n- Defined product strategy for carbon accounting software aligned to GHG Protocol and CSRD reporting\n- Launched supplier emissions module now used by 60% of enterprise customers\n- Present roadmap and metrics to the board and investors each quarter"
+        },
+        {
+          "company": "Solaris Grid Analytics",
+          "role": "Senior Product Manager",
+          "location": "Oakland, CA",
+          "startDate": "2018-02",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Owned forecasting dashboards for 40 utility customers\n- Shipped load forecasting features that cut customer planning errors by 15%\n- Led product during the Series A to Series C growth stage"
+        },
+        {
+          "company": "Golden State Software",
+          "role": "Product Manager",
+          "location": "San Francisco, CA",
+          "startDate": "2014-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Managed reporting features for a field operations app\n- Grew weekly active admins by 35%"
+        }
+      ],
+      "education": [
+        {
+          "school": "UC Berkeley",
+          "degree": "BS, Environmental Economics and Policy",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: building product teams, hiring, startup operating cadence",
+        "Strategy: product vision, roadmap, pricing, investor communication",
+        "Domain: carbon accounting, GHG Protocol, CSRD, energy data",
+        "Execution: discovery, PRDs, launch, analytics"
+      ]
+    },
+    "Chief Product Officer (CPO)": {
+      "summary": "Chief product officer with 19 years of experience leading product, design and data at growth-stage and public software companies. Leads a 75-person organization and helped grow revenue from $90M to $310M over 5 years. Sets company strategy alongside the CEO and board, with a record of platform bets, acquisitions and disciplined portfolio management.",
+      "experience": [
+        {
+          "company": "Northwind Commerce Platform",
+          "role": "Chief Product Officer",
+          "location": "New York, NY",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead product management, design, research and data science, a 75-person organization\n- Helped grow revenue from $90M to $310M through platform expansion and new payments products\n- Led diligence and integration for 2 acquisitions totaling $140M\n- Introduced portfolio investment reviews that reallocated 20% of R&D to growth bets"
+        },
+        {
+          "company": "Harbor Point Software",
+          "role": "VP of Product",
+          "location": "New York, NY",
+          "startDate": "2015-03",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Built a 25-person product and design team through IPO preparation\n- Launched marketplace and API products that reached 35% of revenue\n- Owned product messaging for investor relations and analyst days"
+        },
+        {
+          "company": "Empire Retail Systems",
+          "role": "Director of Product Management",
+          "location": "Stamford, CT",
+          "startDate": "2007-06",
+          "endDate": "2015-02",
+          "isCurrent": false,
+          "description": "- Led 6 PMs for point-of-sale and inventory products\n- Transitioned on-prem products to SaaS, growing recurring revenue to 60%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbia Business School",
+          "degree": "MBA",
+          "startDate": "2005-09",
+          "endDate": "2007-05"
+        },
+        {
+          "school": "University of Pennsylvania",
+          "degree": "BSE, Systems Engineering",
+          "startDate": "1999-09",
+          "endDate": "2003-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive leadership: product, design and data org leadership, board partnership",
+        "Strategy: portfolio management, platform strategy, M&A, pricing",
+        "Commercial: revenue growth, go-to-market alignment, investor communication",
+        "Operating: OKRs, R&D investment reviews, org design"
+      ]
+    },
+    "Product Design Intern": {
+      "summary": "Interaction design student entering senior year with one product design internship and three end-to-end studio projects. Redesigned a campus shuttle tracker used by 4,000 students during a summer internship. Brings Figma fluency, a habit of testing early with real users, and clear written rationale for design decisions.",
+      "experience": [
+        {
+          "company": "Transitly",
+          "role": "Product Design Intern",
+          "location": "Pittsburgh, PA",
+          "startDate": "2026-05",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Redesigned the arrival-time screen for a shuttle tracking app used by 4,000 students and staff\n- Ran 8 hallway usability tests and iterated through 3 prototype rounds in Figma\n- Presented final designs and a prioritized fix list to the CEO and 2 engineers"
+        },
+        {
+          "company": "Inclusive Interfaces Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "Pittsburgh, PA",
+          "startDate": "2025-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Recruit and moderate study sessions for an accessibility research lab\n- Code interview transcripts in Dovetail for a study on screen reader navigation\n- Prototyped an accessible navigation pattern in Figma used as a study stimulus with 14 participants"
+        }
+      ],
+      "education": [
+        {
+          "school": "Carnegie Mellon University",
+          "degree": "BDes, Communication and Interaction Design (expected)",
+          "startDate": "2023-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Pantry share app",
+          "link": "jchen.design/pantry-share",
+          "description": "Studio project connecting student food pantry inventory with pickup reservations; tested with 12 students"
+        },
+        {
+          "name": "Library booking redesign",
+          "link": "jchen.design/library-rooms",
+          "description": "Reduced room booking steps from 7 to 3 in a concept tested with 10 participants"
+        }
+      ],
+      "skills": [
+        "Design: wireframing, prototyping, visual design, interaction design",
+        "Research: usability testing, interviews, affinity mapping",
+        "Tools: Figma, FigJam, Adobe Illustrator, ProtoPie",
+        "Coursework: Interaction Design Studio, Design for Accessibility, Intro to HCI"
+      ]
+    },
+    "Junior Product Designer": {
+      "summary": "Junior product designer with 1.5 years of experience at a healthtech startup and a design bootcamp background after 3 years in hospitality. Designed a prescription refill reminder that raised on-time refills by 12%. Brings empathy from customer-facing work, solid Figma craft and eagerness to learn from critique.",
+      "experience": [
+        {
+          "company": "Medley Pharmacy App",
+          "role": "Junior Product Designer",
+          "location": "Miami, FL",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed refill reminder flow that increased on-time prescription refills by 12%\n- Built 25 screens and states for insurance card scanning with a senior designer's guidance\n- Ran 6 usability sessions with older adults, fixing tap-target and contrast issues\n- Maintained annotated handoff files for 3 front-end engineers"
+        },
+        {
+          "company": "Coral Key Hotels",
+          "role": "Front Desk Supervisor",
+          "location": "Miami Beach, FL",
+          "startDate": "2021-06",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Supervised 6 front desk agents at a 220-room hotel\n- Redesigned the check-in checklist, cutting average check-in time by 3 minutes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Designlab",
+          "degree": "UX Academy Certificate",
+          "startDate": "2024-06",
+          "endDate": "2024-12"
+        },
+        {
+          "school": "Florida International University",
+          "degree": "BS, Hospitality Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Hotel guest messaging concept",
+          "link": "mlopez.design/guest-chat",
+          "description": "Bootcamp capstone for in-stay requests via SMS, tested with 9 hotel guests"
+        }
+      ],
+      "skills": [
+        "Design: user flows, wireframes, high-fidelity UI, prototyping",
+        "Research: usability testing, interviews, accessibility checks",
+        "Tools: Figma, Maze, Miro, Notion",
+        "Languages: English, Spanish"
+      ]
+    },
+    "Junior UX Designer": {
+      "summary": "Junior UX designer with 1 year of agency experience designing websites and portals for local government and nonprofit clients. Restructured a county parks reservation site that cut booking-related calls by 30%. Strong in wireframing, information architecture and accessibility, with a psychology background in research methods.",
+      "experience": [
+        {
+          "company": "Riverstone Civic Design",
+          "role": "Junior UX Designer",
+          "location": "Sacramento, CA",
+          "startDate": "2025-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Restructured a county parks reservation site, reducing booking-related phone calls by 30%\n- Produced sitemaps, wireframes and clickable prototypes for 4 public sector clients\n- Ran 2 card sorts with 60 residents to inform navigation labels\n- Checked designs against WCAG 2.1 AA before every client review"
+        },
+        {
+          "company": "Sacramento Food Bank",
+          "role": "UX Design Volunteer",
+          "location": "Sacramento, CA",
+          "startDate": "2025-01",
+          "endDate": "2025-07",
+          "isCurrent": false,
+          "description": "- Redesigned volunteer sign-up form, lifting completions by 25%\n- Interviewed 8 volunteer coordinators to map scheduling pain points"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Sacramento",
+          "degree": "BA, Psychology (minor in Design)",
+          "startDate": "2020-08",
+          "endDate": "2024-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Volunteer scheduling redesign",
+          "link": "",
+          "description": "Form simplification and confirmation flow for a regional food bank, measured with Google Analytics"
+        }
+      ],
+      "skills": [
+        "UX: information architecture, wireframing, prototyping, usability testing",
+        "Research: card sorting, interviews, survey design",
+        "Tools: Figma, Optimal Workshop, Google Analytics 4, WordPress",
+        "Accessibility: WCAG 2.1 AA, screen reader testing (VoiceOver)"
+      ]
+    },
+    "Senior UX Researcher": {
+      "summary": "Senior UX researcher with 9 years of experience leading strategic and evaluative research for enterprise cloud products. Led a pricing and packaging study that informed a tier change worth $8M in new annual revenue. Drives research roadmaps with product leadership and mentors junior researchers in mixed methods.",
+      "experience": [
+        {
+          "company": "Stratus Data Cloud",
+          "role": "Senior UX Researcher",
+          "location": "Seattle, WA",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a pricing and packaging study combining 30 interviews and a MaxDiff survey, informing a tier change worth $8M ARR\n- Own the research roadmap for 3 product areas, set quarterly with directors of product\n- Built a benchmark of 12 admin tasks, tracking task success rising from 61% to 79%\n- Mentor 2 researchers on study design, synthesis and executive readouts"
+        },
+        {
+          "company": "Evergreen Workplace Tools",
+          "role": "UX Researcher",
+          "location": "Redmond, WA",
+          "startDate": "2018-02",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Ran 40+ studies across contextual inquiry, usability and surveys\n- Identified file-sharing permission confusion behind 20% of support tickets\n- Launched quarterly customer advisory sessions with 15 enterprise accounts"
+        },
+        {
+          "company": "Puget Sound Market Research",
+          "role": "Research Analyst",
+          "location": "Tacoma, WA",
+          "startDate": "2016-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Designed and analyzed consumer surveys for retail and healthcare clients\n- Built crosstabs and segmentation models in SPSS"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "MS, Human Centered Design & Engineering",
+          "startDate": "2014-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: contextual inquiry, interviews, usability benchmarking, MaxDiff, conjoint, surveys",
+        "Analysis: SPSS, R, Qualtrics, thematic analysis",
+        "Strategy: research roadmaps, pricing research, executive storytelling",
+        "Leadership: mentoring, research standards, advisory councils"
+      ]
+    },
+    "Web Designer": {
+      "summary": "Web designer with 6 years of experience designing and building marketing websites in Webflow and WordPress. Rebuilt a B2B company site that doubled organic demo requests within 9 months. Covers layout, responsive design, CMS setup and on-page SEO, delivering fast, accessible sites marketing teams can update themselves.",
+      "experience": [
+        {
+          "company": "Clearwater Web Collective",
+          "role": "Web Designer",
+          "location": "Tampa, FL",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design and build 15 to 20 marketing sites a year in Webflow and WordPress for B2B and healthcare clients\n- Rebuilt a logistics client's site, doubling organic demo requests within 9 months\n- Raised average Lighthouse performance scores from 54 to 92 through image and script cleanup\n- Set up CMS collections and trained client marketers to publish without developer help"
+        },
+        {
+          "company": "Sunshine State Realty Group",
+          "role": "Digital Designer",
+          "location": "St. Petersburg, FL",
+          "startDate": "2019-05",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Designed listing landing pages and email campaigns for 120 agents\n- Built a WordPress theme that cut new page build time from 2 days to 3 hours"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "BA, Mass Communications (Advertising)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Logistics site rebuild",
+          "link": "clearwaterweb.co/work/tidelane-logistics",
+          "description": "Webflow rebuild with new IA, 40 CMS pages and schema markup; 2x organic demos"
+        }
+      ],
+      "skills": [
+        "Web design: responsive layout, landing pages, typography, conversion design",
+        "Build: Webflow, WordPress, HTML, CSS, basic JavaScript",
+        "SEO and performance: on-page SEO, schema markup, Core Web Vitals, GA4",
+        "Tools: Figma, Photoshop, Google Search Console"
+      ]
+    },
+    "Industrial Designer": {
+      "summary": "Industrial designer with 7 years of experience taking consumer electronics and housewares from sketch to mass production. Designed a countertop blender line that sold 380,000 units in its first year. Combines form development, CAD, rapid prototyping and DFM collaboration with overseas manufacturing partners.",
+      "experience": [
+        {
+          "company": "Hearthstone Home Appliances",
+          "role": "Industrial Designer",
+          "location": "Grand Rapids, MI",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a countertop blender line that sold 380,000 units in year one at retail partners\n- Developed forms in SolidWorks and KeyShot from concept sketches through tooling release\n- Worked with Shenzhen contract manufacturer on DFM, cutting part count by 18% and unit cost by $2.40\n- Ran in-home use studies with 20 households to refine controls and cleaning"
+        },
+        {
+          "company": "Lakeshore Product Studio",
+          "role": "Junior Industrial Designer",
+          "location": "Chicago, IL",
+          "startDate": "2019-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Created concepts and 3D-printed prototypes for 9 client products including speakers and toys\n- Prepared CMF boards and renders for client presentations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Western Michigan University",
+          "degree": "BS, Industrial Design",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Blender control dial",
+          "link": "behance.net/rpatel-blender",
+          "description": "Ergonomic dial and lid concept from foam models to production, with use-study findings"
+        }
+      ],
+      "skills": [
+        "Design: sketching, form development, CMF, ergonomics, user research",
+        "CAD and visualization: SolidWorks, Rhino, KeyShot, Fusion 360",
+        "Prototyping: 3D printing, foam models, CNC basics",
+        "Manufacturing: DFM, injection molding, tooling reviews, supplier communication"
+      ]
+    },
+    "Senior Graphic Designer": {
+      "summary": "Senior graphic designer with 9 years of experience leading print and digital design for a national nonprofit. Redesigned the annual fundraising campaign system that helped raise $3.2M, a 17% increase over the prior year. Leads 2 designers, owns brand consistency and manages printers, photographers and freelancers.",
+      "experience": [
+        {
+          "company": "Open Fields Conservancy",
+          "role": "Senior Graphic Designer",
+          "location": "Washington, DC",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the year-end fundraising campaign system that helped raise $3.2M, up 17% year over year\n- Lead 2 designers and a pool of 5 freelancers, reviewing roughly 80 deliverables a month\n- Manage a $150k print and production budget across direct mail, reports and event materials\n- Updated brand guidelines and built 60 templates for 20 regional chapters"
+        },
+        {
+          "company": "Capitol Ink Studio",
+          "role": "Graphic Designer",
+          "location": "Arlington, VA",
+          "startDate": "2017-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Designed reports, infographics and campaign materials for advocacy and trade associations\n- Laid out 12 annual reports averaging 64 pages\n- Cut proofing rounds from 4 to 2 with a structured feedback form"
+        },
+        {
+          "company": "Potomac Print Works",
+          "role": "Junior Designer",
+          "location": "Alexandria, VA",
+          "startDate": "2016-01",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Produced flyers, signage and business collateral for small businesses\n- Managed preflight and press checks for offset print jobs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Commonwealth University",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: campaign systems, editorial layout, infographics, direct mail, brand guidelines",
+        "Leadership: design reviews, freelancer management, budget management",
+        "Tools: InDesign, Illustrator, Photoshop, Acrobat, Canva admin",
+        "Production: offset and digital print, press checks, vendor management"
+      ]
+    },
+    "Junior Graphic Designer": {
+      "summary": "Junior graphic designer with 1 year of in-house experience at a craft brewery and a BFA in graphic design. Designed can labels for 6 seasonal releases sold across 3 states. Brings solid typography and layout skills, clean print-ready files and comfort juggling social, packaging and event work.",
+      "experience": [
+        {
+          "company": "Copper Kettle Brewing",
+          "role": "Junior Graphic Designer",
+          "location": "Asheville, NC",
+          "startDate": "2025-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed can labels for 6 seasonal beers distributed across 3 states, meeting TTB label requirements\n- Create 30+ social posts and stories a month, helping grow Instagram followers by 4,000\n- Produced taproom menus, event posters and merchandise graphics\n- Prepared print-ready files for label and screen-print vendors"
+        },
+        {
+          "company": "Blue Ridge Visitor Bureau",
+          "role": "Design Intern",
+          "location": "Asheville, NC",
+          "startDate": "2024-05",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Designed a 24-page visitor guide spread and 15 social graphics\n- Retouched photos and resized ads for 4 regional publications"
+        }
+      ],
+      "education": [
+        {
+          "school": "Appalachian State University",
+          "degree": "BFA, Graphic Design",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Seasonal label series",
+          "link": "behance.net/kwalsh-labels",
+          "description": "Illustrated label system for 6 releases with shared grid and color coding"
+        }
+      ],
+      "skills": [
+        "Design: typography, layout, packaging, social graphics, illustration",
+        "Tools: Illustrator, Photoshop, InDesign, Canva, Procreate",
+        "Production: print prep, dielines, CMYK and spot color",
+        "Coursework: Typography II, Packaging Design, Brand Identity"
+      ]
+    },
+    "Product Management Intern": {
+      "summary": "MBA candidate with 4 years of prior experience in management consulting and a summer product management internship at a fintech company. Scoped and launched a savings goal feature tested with 5,000 users. Brings structured problem solving, SQL and customer interview skills, and a strong interest in consumer finance products.",
+      "experience": [
+        {
+          "company": "Nestegg Money",
+          "role": "Product Management Intern",
+          "location": "New York, NY",
+          "startDate": "2026-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Scoped and launched a savings goal feature to 5,000 users, lifting weekly deposits for the test group by 9%\n- Interviewed 15 customers and synthesized findings into a PRD approved by the product director\n- Wrote SQL queries in Mode to size the opportunity and define success metrics\n- Extended into a part-time fall internship to run the feature's 8-week retention readout"
+        },
+        {
+          "company": "Granite Peak Consulting",
+          "role": "Senior Consultant",
+          "location": "Boston, MA",
+          "startDate": "2021-08",
+          "endDate": "2025-07",
+          "isCurrent": false,
+          "description": "- Led workstreams on digital strategy projects for 6 banking and insurance clients\n- Built a customer journey analysis that informed a $12M mobile banking investment\n- Managed 2 analysts on market sizing and competitive benchmarking"
+        }
+      ],
+      "education": [
+        {
+          "school": "NYU Stern School of Business",
+          "degree": "MBA, Technology and Product Management (expected)",
+          "startDate": "2025-08",
+          "endDate": "2027-05"
+        },
+        {
+          "school": "Boston University",
+          "degree": "BS, Business Administration",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Stern product lab",
+          "link": "",
+          "description": "Semester-long product discovery for a startup's budgeting app; prototype tested with 20 students"
+        }
+      ],
+      "skills": [
+        "Product: PRDs, discovery interviews, prioritization, success metrics",
+        "Data: SQL, Mode, Excel modeling, A/B test analysis",
+        "Consulting: market sizing, journey mapping, executive presentations",
+        "Tools: Jira, Figma, Notion"
+      ]
+    },
+    "Lead Product Manager": {
+      "summary": "Lead product manager with 10 years of experience owning end-to-end product areas in e-learning and edtech. Leads a product area of 3 squads and 1 associate PM. Drove a learning path redesign that raised course completion from 23% to 36% and grew enterprise renewals by $6M.",
+      "experience": [
+        {
+          "company": "Brightpeak Learning",
+          "role": "Lead Product Manager",
+          "location": "Remote",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead the learner experience area across 3 squads, coaching 1 associate PM\n- Redesigned learning paths and nudges, raising course completion from 23% to 36%\n- Contributed to $6M in enterprise renewals by shipping manager progress reports\n- Run quarterly roadmap reviews with sales, customer success and engineering leadership"
+        },
+        {
+          "company": "Classroom Compass",
+          "role": "Senior Product Manager",
+          "location": "Denver, CO",
+          "startDate": "2018-08",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Owned the teacher gradebook used in 4,000 K-12 schools\n- Built LTI 1.3 integrations with Canvas and Schoology, growing district adoption by 30%\n- Led FERPA and COPPA compliance requirements with legal"
+        },
+        {
+          "company": "Mile High EdTech",
+          "role": "Product Manager",
+          "location": "Denver, CO",
+          "startDate": "2016-01",
+          "endDate": "2018-07",
+          "isCurrent": false,
+          "description": "- Managed a test prep mobile app with 200k students\n- Launched adaptive quizzes that increased weekly practice sessions by 22%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "BS, Applied Mathematics",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product leadership: area ownership, multi-squad roadmaps, PM coaching",
+        "Domain: e-learning, K-12, LTI 1.3, FERPA, COPPA",
+        "Data: SQL, Amplitude, experimentation, retention analysis",
+        "Stakeholders: sales and customer success alignment, executive reviews"
+      ]
+    }
+  }
+}

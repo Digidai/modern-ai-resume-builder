@@ -1,0 +1,1248 @@
+{
+  "family": "Science & Research",
+  "guide": {
+    "focus": "the questions you investigated, the methods and instruments you mastered, and the data, publications or products your work produced",
+    "skills": [
+      "Experimental design",
+      "Laboratory techniques and instrumentation",
+      "Statistical analysis (R, Python, GraphPad Prism)",
+      "Data integrity (ALCOA+)",
+      "GLP and GMP compliance",
+      "Method development and validation",
+      "Scientific writing and publishing",
+      "Grant writing",
+      "Literature review",
+      "Cross-functional collaboration"
+    ],
+    "sections": [
+      "Summary",
+      "Experience",
+      "Education",
+      "Projects",
+      "Skills",
+      "Certifications"
+    ],
+    "metrics": [
+      "assay throughput",
+      "method precision (CV%)",
+      "turnaround time",
+      "publications and citations",
+      "grant funding secured",
+      "cost per sample"
+    ],
+    "bullets": [
+      "Developed an LC-MS/MS method for 14 metabolites with under 6% CV, replacing two legacy assays and cutting run time by 40%",
+      "Co-authored 5 peer-reviewed papers, including a first-author study in Journal of Biological Chemistry cited 60+ times",
+      "Wrote the preliminary-data section of an NIH R01 renewal that secured $2.4M over five years"
+    ],
+    "tips": [
+      "Name the techniques, instruments and software you used hands-on (qPCR, HPLC, flow cytometry, ImageJ) because hiring managers screen for exact methods.",
+      "List publications, posters and patents in a short selected list and link to ORCID or Google Scholar rather than pasting a full CV.",
+      "For industry roles, translate research into outcomes such as programs advanced, methods transferred or batches released, not only papers."
+    ],
+    "templates": [
+      "academic",
+      "classic",
+      "ivy"
+    ]
+  },
+  "titles": {
+    "Research Intern": {
+      "summary": "Senior biochemistry undergraduate with two years of wet-lab research in protein expression and purification. Built a high-throughput solubility screen during a 2026 internship that is now part of the lab's standard workflow. Brings careful notebook practice, solid aseptic technique and fluency in Python for plate-reader data.",
+      "experience": [
+        {
+          "company": "University of Wisconsin–Madison, Ostrowski Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "Madison, WI",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cloned 12 enzyme mutants by site-directed mutagenesis and confirmed them by Sanger sequencing\n- Ran kinetic assays and fit Michaelis-Menten curves in GraphPad Prism for a manuscript in preparation\n- Prepare buffers, competent cells and media for a 9-person lab and track reagent inventory in Quartzy\n- Present monthly progress updates at lab meeting and mentor 2 first-year students on cloning workflows"
+        },
+        {
+          "company": "Lindqvist Biologics",
+          "role": "Research Intern, Protein Sciences",
+          "location": "South San Francisco, CA",
+          "startDate": "2026-06",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Built a 96-well solubility screen for 48 antibody fragment variants, cutting construct triage from three weeks to five days\n- Purified 30+ His-tagged proteins on an ÄKTA pure using IMAC and size-exclusion chromatography\n- Wrote a Python script that parsed plate-reader exports and flagged outliers, saving scientists about 4 hours per week"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Madison",
+          "degree": "B.S. Biochemistry, minor in Data Science (expected May 2027), GPA 3.8",
+          "startDate": "2023-09",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Thermal Stability of Engineered Lipases",
+          "link": "",
+          "description": "Senior thesis comparing melting temperatures of 12 lipase variants by differential scanning fluorimetry; poster at the 2026 UW Undergraduate Symposium"
+        }
+      ],
+      "skills": [
+        "Lab techniques: PCR, site-directed mutagenesis, SDS-PAGE, Western blot, IMAC, SEC",
+        "Instruments: ÄKTA pure, NanoDrop, plate readers, qPCR thermocyclers",
+        "Data: Python (pandas, matplotlib), GraphPad Prism, Benchling ELN",
+        "Coursework: Physical Biochemistry, Molecular Genetics, Biostatistics",
+        "Safety and compliance: BSL-2 training, chemical hygiene, CITI responsible conduct of research"
+      ]
+    },
+    "Research Assistant": {
+      "summary": "Research assistant with two years in a university neuroscience lab supporting rodent behavior and histology studies. Ran 600+ behavioral sessions with complete, audit-ready records for an NIH-funded project. Brings reliable protocol execution, IACUC compliance and the data-handling skills to keep a busy lab on schedule.",
+      "experience": [
+        {
+          "company": "Halvorsen Institute for Neuroscience",
+          "role": "Research Assistant",
+          "location": "Boston, MA",
+          "startDate": "2024-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Ran 600+ open-field and Morris water maze sessions across three cohorts, following IACUC-approved protocols with zero compliance findings\n- Sectioned and immunostained 1,200 brain slices and quantified c-Fos labeling in ImageJ/Fiji using a blinded scoring scheme\n- Maintained colony records for 180 mice in SoftMouse, cutting breeding-cage waste by 20%\n- Organized raw data and metadata on the lab server, enabling the PI to submit a dataset to DANDI on time\n- Prepared figures and methods sections for 2 manuscripts and a poster presented at Society for Neuroscience 2025"
+        },
+        {
+          "company": "Tufts University, Department of Psychology",
+          "role": "Undergraduate Research Assistant",
+          "location": "Medford, MA",
+          "startDate": "2023-01",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Coded video from 90 infant attention sessions with inter-rater reliability above 0.9\n- Recruited and scheduled 140 study families while keeping consent forms complete\n- Entered and double-checked 4,000 questionnaire records in REDCap with a 0.2% error rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tufts University",
+          "degree": "B.S. Psychology and Biology",
+          "startDate": "2020-09",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Honors Thesis: Language Exposure and Infant Attention",
+          "link": "",
+          "description": "Analyzed looking-time data from 90 infants in R with mixed-effects models; presented at the 2024 Tufts Undergraduate Research Symposium"
+        }
+      ],
+      "skills": [
+        "Lab techniques: rodent handling, behavioral testing, perfusion, cryosectioning, immunohistochemistry",
+        "Software: ImageJ/Fiji, EthoVision XT, GraphPad Prism, R (tidyverse)",
+        "Compliance: IACUC protocols, CITI training, biosafety level 2 practices",
+        "Operations: colony management, inventory ordering, lab notebook documentation",
+        "Lab operations: ordering in Quartzy, equipment scheduling, SOP updates, onboarding new students"
+      ]
+    },
+    "Laboratory Technician": {
+      "summary": "Laboratory technician with five years in contract testing labs running wet chemistry and instrumental analysis under ISO/IEC 17025. Processes 60+ samples a day with a 99.6% first-pass QC rate. Brings dependable bench work, thorough documentation and practical instrument troubleshooting.",
+      "experience": [
+        {
+          "company": "Redstone Analytical Services",
+          "role": "Laboratory Technician II",
+          "location": "Denver, CO",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare and analyze 60+ water and soil samples daily for metals by ICP-OES and anions by ion chromatography under EPA methods\n- Maintain a 99.6% first-pass QC rate across blanks, spikes and duplicates over 18 months\n- Cut instrument downtime by 30% by setting up a preventive-maintenance log and stocking critical spare parts\n- Trained 4 new technicians on sample login in LabWare LIMS and chain-of-custody procedures\n- Review peer data packages before release, catching 25+ transcription and calculation errors a quarter"
+        },
+        {
+          "company": "Front Range Food Labs",
+          "role": "Laboratory Technician",
+          "location": "Greeley, CO",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Ran moisture, fat and protein tests on 40 food samples per shift for USDA-regulated clients\n- Calibrated balances, pH meters and ovens daily, passing two ISO/IEC 17025 surveillance audits with no findings\n- Prepared standards and reagents for 6 analysts and kept the reagent log current for audits"
+        },
+        {
+          "company": "University of Northern Colorado, Department of Chemistry",
+          "role": "Undergraduate Teaching Assistant",
+          "location": "Greeley, CO",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Prepared reagents and set up instruments for 10 general chemistry lab sections a week\n- Graded lab reports for 120 students and enforced lab safety rules"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Northern Colorado",
+          "degree": "B.S. Chemistry",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruments: ICP-OES, ion chromatography, UV-Vis, Kjeldahl, analytical balances",
+        "Methods: EPA 200.7, EPA 300.0, AOAC methods, titrations, sample digestion",
+        "Quality: ISO/IEC 17025, chain of custody, control charts, CAPA documentation",
+        "Software: LabWare LIMS, Excel, Empower basics",
+        "Safety: OSHA HAZWOPER 40, chemical hygiene and waste handling"
+      ]
+    },
+    "Research Associate": {
+      "summary": "Research associate with five years in biotech discovery labs specializing in cell-based assays and flow cytometry. Built a multiplexed T-cell activation assay that now screens every candidate in the company's immuno-oncology pipeline. Brings rigorous assay development, automation experience and clear communication with project teams.",
+      "experience": [
+        {
+          "company": "Corvane Therapeutics",
+          "role": "Research Associate II, Immunology",
+          "location": "Cambridge, MA",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Developed a 12-color flow cytometry panel for T-cell activation, now the primary screen for 40+ bispecific candidates a year\n- Moved the assay onto a Hamilton STAR, raising throughput from 2 to 8 plates per day with under 10% CV\n- Analyzed data in FlowJo and Spotfire and presented results at weekly project meetings for three programs\n- Wrote assay SOPs and trained 3 associates, enabling a smooth handoff to the translational group\n- Optimized a PBMC cryopreservation workflow that raised post-thaw viability from 78% to 91%"
+        },
+        {
+          "company": "Meridian Cell Sciences",
+          "role": "Research Associate I",
+          "location": "Waltham, MA",
+          "startDate": "2021-06",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Maintained 25 primary and immortalized cell lines with zero mycoplasma-positive events over two years\n- Ran ELISA and MSD cytokine assays supporting 2 IND-enabling studies\n- Isolated PBMCs from 150 donor leukopaks and banked aliquots for 3 program teams"
+        },
+        {
+          "company": "Quillon Biosciences",
+          "role": "Research Co-op, Cell Biology",
+          "location": "Boston, MA",
+          "startDate": "2019-07",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Ran 200+ cell viability assays supporting a lead optimization campaign\n- Automated plate-map generation in Excel, cutting setup errors by half"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northeastern University",
+          "degree": "B.S. Biology, concentration in Cell and Molecular Biology",
+          "startDate": "2016-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Assays: multicolor flow cytometry, ELISA, MSD, cytotoxicity, cell proliferation",
+        "Cell culture: primary T cells, PBMC isolation, CRISPR knockout lines, aseptic technique",
+        "Automation and data: Hamilton STAR, FlowJo, TIBCO Spotfire, GraphPad Prism",
+        "Documentation: Benchling ELN, SOP authoring, GLP awareness",
+        "Statistics: dose-response curve fitting, EC50 estimation, assay robustness (Z-prime)"
+      ]
+    },
+    "Associate Scientist": {
+      "summary": "Associate scientist with an M.S. in analytical chemistry and six years in small-molecule pharmaceutical development. Owns HPLC method development for two Phase 2 programs and has supported three regulatory filings. Brings ICH-compliant method validation, Empower expertise and a habit of sharing results early.",
+      "experience": [
+        {
+          "company": "Tidewell Pharmaceuticals",
+          "role": "Associate Scientist, Analytical Development",
+          "location": "Raleigh, NC",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Developed and validated 6 stability-indicating HPLC methods to ICH Q2(R1), supporting two Phase 2 programs\n- Authored analytical sections for 3 IND amendments, with no FDA information requests on methods\n- Ran forced-degradation studies that identified a light-sensitive impurity and drove a packaging change before Phase 3\n- Moved routine release testing into Empower custom fields, cutting data review time by 35%\n- Led method transfer of 3 HPLC assays to a contract lab, with all comparative results within acceptance criteria"
+        },
+        {
+          "company": "Carolina Pharma Services",
+          "role": "Chemist I",
+          "location": "Durham, NC",
+          "startDate": "2020-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Performed GMP release and stability testing on 200+ lots of oral solid dosage forms\n- Investigated 15 OOS results using root-cause tools, closing all within 30-day targets\n- Trained 5 analysts on Empower data processing and system suitability review"
+        },
+        {
+          "company": "North Carolina State University, Department of Chemistry",
+          "role": "Graduate Research Assistant",
+          "location": "Raleigh, NC",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Developed a capillary electrophoresis method for chiral impurities, published in Electrophoresis\n- Taught 4 sections of quantitative analysis lab"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "M.S. Chemistry (Analytical)",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "Appalachian State University",
+          "degree": "B.S. Chemistry",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Techniques: HPLC/UPLC, LC-MS, dissolution, Karl Fischer, forced degradation",
+        "Regulatory: ICH Q2, Q1A stability, 21 CFR Part 11, cGMP",
+        "Software: Waters Empower 3, ChemStation, JMP, MasterControl",
+        "Writing: method validation reports, IND CMC sections, technical transfer protocols",
+        "Collaboration: CMC team meetings, CRO and CDMO coordination, peer data review"
+      ]
+    },
+    "Research Scientist": {
+      "summary": "Research scientist with a Ph.D. in molecular biology and four years in industry gene-therapy research. Led capsid engineering work that produced an AAV variant with 5x improved muscle transduction, now in IND-enabling studies. Brings hands-on vector design, NGS-based screening and a steady record of shipping data that moves programs forward.",
+      "experience": [
+        {
+          "company": "Arbor Genomic Medicines",
+          "role": "Research Scientist, Vector Engineering",
+          "location": "San Diego, CA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed and screened a 2M-variant AAV capsid library in mice, identifying a lead with 5x higher skeletal muscle transduction\n- Built an NGS barcode analysis pipeline in Python with a bioinformatician, cutting screen readout from 6 weeks to 10 days\n- Supervise 2 research associates and plan experiments across in vitro and in vivo studies\n- Co-inventor on 1 filed patent application and presenter at ASGCT 2025\n- Designed in vivo dosing studies with toxicology and secured IACUC approval for 4 new protocols"
+        },
+        {
+          "company": "University of California, San Diego",
+          "role": "Graduate Researcher, Molecular Biology",
+          "location": "La Jolla, CA",
+          "startDate": "2017-09",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Discovered a splicing regulator controlling muscle stem cell quiescence, published as first author in Cell Reports\n- Secured an NIH F31 fellowship worth $135k and mentored 4 undergraduate researchers\n- Presented findings at 3 national conferences, including a platform talk at the ISSCR annual meeting"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, San Diego",
+          "degree": "Ph.D. Biological Sciences",
+          "startDate": "2017-09",
+          "endDate": "2022-08"
+        },
+        {
+          "school": "Rice University",
+          "degree": "B.S. Biochemistry and Cell Biology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Muscle-Tropic Capsid Program",
+          "link": "",
+          "description": "Lead scientist for capsid discovery from library design through nonhuman primate confirmation; candidate nominated for IND-enabling studies in 2026"
+        }
+      ],
+      "skills": [
+        "Molecular biology: cloning, AAV production, ddPCR, RNA-seq library prep, CRISPR",
+        "In vivo: mouse dosing, tissue harvest, biodistribution studies",
+        "Data: Python, R, Geneious, Benchling, NGS analysis",
+        "Communication: patent disclosures, program reviews, conference presentations",
+        "Statistics: R (DESeq2, ggplot2), mixed-effects models, power analysis for animal studies"
+      ]
+    },
+    "Senior Research Scientist": {
+      "summary": "Senior research scientist with eight years in battery materials R&D across a national-lab spinout and a cell manufacturer. Led the cathode coating work behind a 12% cycle-life gain now in pilot production. Brings deep electrochemistry and materials characterization, team leadership and experience moving lab results into manufacturing.",
+      "experience": [
+        {
+          "company": "Voltreach Energy",
+          "role": "Senior Research Scientist, Cathode Materials",
+          "location": "Fremont, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 5-person team developing surface coatings for high-nickel NMC cathodes on a $3.2M annual budget\n- Delivered an ALD alumina coating that improved 1,000-cycle capacity retention by 12%, now running on the pilot line\n- Defined the characterization plan combining XPS, SEM-EDS and ICP-MS, cutting material qualification time by 30%\n- Co-authored 4 patents and partnered with process engineering on a 50 kg/day scale-up\n- Present quarterly technical reviews to the CTO and translate results into go or no-go recommendations"
+        },
+        {
+          "company": "Lumora Materials",
+          "role": "Research Scientist",
+          "location": "Berkeley, CA",
+          "startDate": "2018-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Synthesized and screened 120+ solid electrolyte compositions, finding 2 candidates above 1 mS/cm ionic conductivity\n- Contributed to a $1.5M DOE ARPA-E award by writing the technical approach section\n- Built an automated cycling data pipeline in Python that cut analysis time from days to hours"
+        },
+        {
+          "company": "University of Michigan",
+          "role": "Graduate Research Assistant, Materials Science",
+          "location": "Ann Arbor, MI",
+          "startDate": "2013-09",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Studied lithium dendrite growth with in situ optical microscopy, resulting in 3 first-author publications\n- Taught materials characterization lab sections to 60 undergraduates"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Michigan",
+          "degree": "Ph.D. Materials Science and Engineering",
+          "startDate": "2013-09",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "Purdue University",
+          "degree": "B.S. Chemical Engineering",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Electrochemistry: coin and pouch cell build, EIS, GITT, cycling analysis",
+        "Characterization: XRD, XPS, SEM-EDS, ICP-MS, TGA",
+        "Process: atomic layer deposition, sol-gel synthesis, design of experiments",
+        "Leadership: team management, budget planning, IP strategy, DOE grant writing",
+        "Software: Python (pandas, SciPy), JMP, Origin, MATLAB"
+      ]
+    },
+    "Principal Scientist": {
+      "summary": "Principal scientist with 14 years in biologics discovery and CMC, leading antibody engineering strategy for a mid-size biotech. Advanced four molecules into the clinic, including one now in Phase 3. Brings scientific judgment across discovery and development, cross-site leadership and credibility with regulators and partners.",
+      "experience": [
+        {
+          "company": "Kestrel Biotherapeutics",
+          "role": "Principal Scientist, Antibody Engineering",
+          "location": "Seattle, WA",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Set the developability strategy for an 8-program antibody portfolio and lead 11 scientists across two sites\n- Advanced 3 bispecific antibodies into Phase 1 on schedule, each clearing FDA review without CMC holds\n- Introduced an in silico developability screen that cut late-stage aggregation failures by 60%\n- Represent discovery on partnering diligence, supporting a $45M upfront licensing deal in 2024\n- Mentor 4 senior scientists, two of whom were promoted to group leader within two years"
+        },
+        {
+          "company": "Cascadia Protein Therapeutics",
+          "role": "Senior Scientist, Protein Engineering",
+          "location": "Bothell, WA",
+          "startDate": "2015-08",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Led affinity maturation of an anti-IL-23 antibody that entered the clinic and is now in Phase 3\n- Built a yeast display platform used by 4 project teams and supervised 3 scientists\n- Co-authored 9 publications and 5 patents on antibody engineering methods"
+        },
+        {
+          "company": "Stanford University School of Medicine",
+          "role": "Postdoctoral Fellow, Structural Biology",
+          "location": "Stanford, CA",
+          "startDate": "2012-09",
+          "endDate": "2015-07",
+          "isCurrent": false,
+          "description": "- Solved 6 antibody–antigen crystal structures, published in Nature Communications and PNAS\n- Mentored 2 graduate students in protein crystallography"
+        }
+      ],
+      "education": [
+        {
+          "school": "Johns Hopkins University",
+          "degree": "Ph.D. Biophysics",
+          "startDate": "2007-09",
+          "endDate": "2012-08"
+        },
+        {
+          "school": "University of Minnesota",
+          "degree": "B.S. Biochemistry",
+          "startDate": "2003-09",
+          "endDate": "2007-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Science: antibody engineering, bispecific formats, developability, structural biology",
+        "Platforms: yeast and phage display, BLI/SPR, HDX-MS, Rosetta and MOE",
+        "Development: CMC strategy, IND authoring, tech transfer to CDMOs",
+        "Leadership: portfolio strategy, scientist mentoring, partnering diligence",
+        "Regulatory: FDA Type B meetings, ICH Q5 and Q6B, BLA readiness"
+      ]
+    },
+    "Postdoctoral Researcher": {
+      "summary": "Postdoctoral researcher in computational ecology with three years studying climate effects on pollinator networks. First author on four papers, including a 2025 Ecology Letters study covered by national press. Brings Bayesian modeling, large-scale field data integration and a growing record of independent funding.",
+      "experience": [
+        {
+          "company": "University of Arizona, School of Natural Resources",
+          "role": "Postdoctoral Research Associate",
+          "location": "Tucson, AZ",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built hierarchical Bayesian models in Stan linking 20 years of pollinator surveys to temperature and drought data across 140 sites\n- Published 2 first-author papers, including Ecology Letters 2025, and co-authored 3 more\n- Won a $95k USDA NIFA postdoctoral fellowship and co-wrote an NSF proposal funded at $780k\n- Mentor 2 Ph.D. students and 3 undergraduates on R workflows and field sampling design\n- Peer-review 8 manuscripts a year for journals including Ecology and Global Change Biology"
+        },
+        {
+          "company": "University of Colorado Boulder",
+          "role": "Graduate Research Assistant, Ecology and Evolutionary Biology",
+          "location": "Boulder, CO",
+          "startDate": "2018-08",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Led 4 field seasons at alpine sites, recording 18,000 plant–pollinator interactions with a crew of 6\n- Released a cleaned dataset and R package used by 3 external research groups\n- Taught 3 semesters of introductory ecology lab to 75 students with 4.6/5 evaluations"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "Ph.D. Ecology and Evolutionary Biology",
+          "startDate": "2018-08",
+          "endDate": "2023-08"
+        },
+        {
+          "school": "Oregon State University",
+          "degree": "B.S. Fisheries, Wildlife and Conservation Sciences",
+          "startDate": "2013-09",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "pollnet R package",
+          "link": "github.com/pollnet-lab/pollnet",
+          "description": "Open-source tools for building and comparing interaction networks; 2,400 CRAN downloads"
+        }
+      ],
+      "skills": [
+        "Modeling: hierarchical Bayesian models (Stan, brms), GLMMs, network analysis",
+        "Data: R, Python, Git, Google Earth Engine, climate reanalysis datasets",
+        "Field methods: transect surveys, specimen curation, experimental warming plots",
+        "Academic: grant writing (NSF, USDA), peer review for 6 journals, course co-teaching",
+        "Communication: conference talks (ESA, BES), science outreach, public data releases"
+      ]
+    },
+    "Principal Investigator": {
+      "summary": "Principal investigator and associate professor leading a 12-person cancer biology lab focused on tumor metabolism. Maintains $3.8M in active NIH and foundation funding with 45 publications and an h-index of 28. Brings an established research program, strong mentoring record and collaborations that turn discoveries into translational studies.",
+      "experience": [
+        {
+          "company": "Vanderbilt University Medical Center",
+          "role": "Associate Professor and Principal Investigator, Department of Cell Biology",
+          "location": "Nashville, TN",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Direct a lab of 3 postdocs, 5 Ph.D. students and 4 staff studying glutamine metabolism in pancreatic cancer\n- Hold $3.8M in active funding, including an NIH R01 and an R21, plus a Lustgarten Foundation award\n- Published 14 papers since 2021, including senior-author studies in Cancer Cell and Nature Metabolism\n- Co-lead a metabolic imaging study with radiology now enrolling 60 patients\n- Teach 2 graduate courses a year and serve on the Cancer Biology Ph.D. admissions committee"
+        },
+        {
+          "company": "Vanderbilt University Medical Center",
+          "role": "Assistant Professor and Principal Investigator",
+          "location": "Nashville, TN",
+          "startDate": "2016-01",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Launched the lab with a $1.1M startup package and won a first R01 within three years\n- Trained 4 Ph.D. graduates, all now in postdoctoral or industry science roles\n- Built shared mass spectrometry access with the metabolomics core, now used by 15 labs"
+        },
+        {
+          "company": "Eastbridge Cancer Research Institute",
+          "role": "Postdoctoral Fellow",
+          "location": "New York, NY",
+          "startDate": "2011-09",
+          "endDate": "2015-12",
+          "isCurrent": false,
+          "description": "- Identified a KRAS-driven nutrient scavenging pathway published in Nature and earned an NCI K99/R00 award\n- Co-authored 7 additional papers on Ras signaling and autophagy"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washington University in St. Louis",
+          "degree": "Ph.D. Molecular Cell Biology",
+          "startDate": "2005-08",
+          "endDate": "2011-08"
+        },
+        {
+          "school": "Emory University",
+          "degree": "B.S. Chemistry",
+          "startDate": "2001-08",
+          "endDate": "2005-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Research: cancer metabolism, stable isotope tracing, mouse models, organoids",
+        "Funding: NIH R01, R21, K99/R00, foundation grants, study section service",
+        "Leadership: lab management, mentoring, IRB and IACUC protocols, budgets",
+        "Service: NIH TME study section ad hoc reviewer, editorial board of Cancer Research",
+        "Methods: LC-MS metabolomics, 13C tracing, CRISPR screens, genetically engineered mouse models"
+      ]
+    },
+    "Director of Research": {
+      "summary": "Director of research with 17 years in agricultural biotechnology, leading a 40-person R&D organization developing biological crop inputs. Brought five products to market that now generate $65M in annual revenue. Brings portfolio strategy, regulatory experience with EPA and USDA, and a record of building teams that deliver on stage-gate timelines.",
+      "experience": [
+        {
+          "company": "Fieldmark Biosciences",
+          "role": "Director of Research",
+          "location": "St. Louis, MO",
+          "startDate": "2020-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 40 scientists across microbiology, formulation and field trials with an $11M annual R&D budget\n- Launched 3 microbial biostimulants through EPA and state registration, adding $28M in revenue by 2025\n- Rebuilt the stage-gate process with commercial and regulatory teams, cutting discovery-to-launch time from 7 to 5 years\n- Negotiated 2 university research partnerships and a co-development agreement worth $6M\n- Lead hiring and career frameworks for the R&D organization, cutting first-year scientist attrition from 18% to 7%"
+        },
+        {
+          "company": "Prairie Crop Sciences",
+          "role": "Research Manager, Plant Microbiome",
+          "location": "Research Triangle Park, NC",
+          "startDate": "2014-05",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Built a microbial strain library of 30,000 isolates and the screening pipeline that yielded 2 commercial products\n- Managed 12 scientists and 300+ field trial sites per season across 9 states\n- Led EPA data package preparation for 2 microbial product registrations"
+        },
+        {
+          "company": "Prairie Crop Sciences",
+          "role": "Senior Scientist",
+          "location": "Research Triangle Park, NC",
+          "startDate": "2009-08",
+          "endDate": "2014-04",
+          "isCurrent": false,
+          "description": "- Developed greenhouse assays for nitrogen-fixing bacteria and co-authored 6 patents\n- Mentored 4 junior scientists and managed a 2,000 sq ft greenhouse facility"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cornell University",
+          "degree": "Ph.D. Plant Pathology and Plant-Microbe Biology",
+          "startDate": "2004-08",
+          "endDate": "2009-08"
+        },
+        {
+          "school": "Iowa State University",
+          "degree": "B.S. Agronomy",
+          "startDate": "2000-08",
+          "endDate": "2004-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Science: plant microbiome, microbial fermentation, formulation, field trial design",
+        "Regulatory: EPA FIFRA registration, USDA APHIS, state fertilizer registrations",
+        "Leadership: R&D portfolio strategy, stage-gate governance, budgeting, hiring",
+        "Partnerships: university collaborations, licensing, co-development agreements",
+        "Science communication: grower meetings, investor updates, board technology reviews"
+      ]
+    },
+    "Laboratory Manager": {
+      "summary": "Laboratory manager with 12 years running academic and core research labs, currently overseeing a 30-user genomics core. Grew service revenue 45% while holding turnaround under 10 business days. Brings safety compliance, budget ownership, instrument fleet management and a service mindset toward investigators.",
+      "experience": [
+        {
+          "company": "University of Utah Health Sciences",
+          "role": "Laboratory Manager, Genomics Core Facility",
+          "location": "Salt Lake City, UT",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 6 technicians and a $2.1M annual budget for a core serving 30 labs and 4 external clients\n- Grew recharge revenue 45% by adding single-cell and long-read sequencing services\n- Held median turnaround under 10 business days for 4,500 samples a year\n- Led the core through 3 EHS inspections and a biosafety audit with zero findings\n- Replaced 3 aging instruments through a $750k NIH S10 shared instrumentation grant written with the faculty director"
+        },
+        {
+          "company": "Wasatch Institute for Biomedical Research",
+          "role": "Lab Manager, Molecular Immunology Lab",
+          "location": "Salt Lake City, UT",
+          "startDate": "2016-06",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Ran operations for a 15-person lab, including ordering, inventory and an $800k equipment fleet\n- Negotiated vendor pricing that saved $60k a year on reagents and consumables\n- Wrote lab safety plans and trained 40 new members a year on chemical and biological hazards"
+        },
+        {
+          "company": "Wasatch Institute for Biomedical Research",
+          "role": "Research Technician",
+          "location": "Salt Lake City, UT",
+          "startDate": "2014-07",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Performed qPCR, ELISA and tissue culture supporting 2 NIH-funded projects\n- Kept lab notebooks and sample records organized for annual NIH progress reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "Utah State University",
+          "degree": "M.S. Biology",
+          "startDate": "2012-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: core facility management, recharge rate setting, iLab billing, inventory",
+        "Instruments: Illumina NovaSeq, PacBio Revio, 10x Chromium, Agilent TapeStation",
+        "Compliance: OSHA lab standard, biosafety (BSL-2), chemical hygiene, NIH grant rules",
+        "Leadership: staff scheduling, training programs, vendor negotiation",
+        "Systems: iLab Solutions, Quartzy, Clustal LIMS, Excel budgeting"
+      ]
+    },
+    "Biologist": {
+      "summary": "Field biologist with six years conducting wildlife and habitat surveys for environmental consulting and state agencies. Has led surveys for 40+ projects with ESA Section 7 consultations completed on schedule. Brings species identification expertise, GIS mapping and clear, defensible technical reports.",
+      "experience": [
+        {
+          "company": "Sagebrush Environmental Consulting",
+          "role": "Wildlife Biologist",
+          "location": "Boise, ID",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead protocol surveys for sage-grouse, raptors and bats on 40+ energy and transportation projects across Idaho and Nevada\n- Write biological assessments supporting ESA Section 7 consultations, all accepted by USFWS without major revisions\n- Map habitat and survey data in ArcGIS Pro and Survey123, cutting report preparation time by 25%\n- Supervise field crews of up to 5 technicians during peak season\n- Train seasonal technicians on survey protocols and data QA, cutting field data corrections by 35%"
+        },
+        {
+          "company": "Idaho Department of Fish and Game",
+          "role": "Biological Technician",
+          "location": "Nampa, ID",
+          "startDate": "2020-03",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Captured and radio-collared 60 mule deer for a migration study and managed telemetry data\n- Conducted 120 vegetation transects to assess post-fire habitat recovery\n- Entered and verified telemetry locations in ArcGIS for the department's annual migration report"
+        },
+        {
+          "company": "U.S. Fish and Wildlife Service",
+          "role": "Seasonal Biological Technician",
+          "location": "Burns, OR",
+          "startDate": "2019-05",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Completed 300 point counts for breeding birds on a national wildlife refuge\n- Entered and proofed survey data in the regional database each week"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Idaho",
+          "degree": "B.S. Wildlife Resources",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field methods: point counts, mist netting, acoustic bat surveys, telemetry, vegetation transects",
+        "Regulatory: ESA Section 7, NEPA, Migratory Bird Treaty Act, Clean Water Act Section 404",
+        "Tools: ArcGIS Pro, Survey123, R, Kaleidoscope Pro",
+        "Certifications: USFWS bat survey qualification, wilderness first aid, UTV safety",
+        "Species expertise: Great Basin birds, bats, rare plants, sagebrush ecology"
+      ]
+    },
+    "Molecular Biologist": {
+      "summary": "Molecular biologist with six years in diagnostics R&D designing PCR and NGS assays for infectious disease. Designed a multiplex respiratory panel that received FDA 510(k) clearance in 2025. Brings primer and probe design, assay optimization under design control and practical bioinformatics skills.",
+      "experience": [
+        {
+          "company": "Helixpoint Diagnostics",
+          "role": "Molecular Biologist II, Assay Development",
+          "location": "Salt Lake City, UT",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed primers and probes for a 15-target respiratory RT-qPCR panel cleared by FDA 510(k) in 2025\n- Optimized multiplex conditions to reach a limit of detection of 50 copies/mL across all targets\n- Ran analytical verification studies under ISO 13485 design controls, authoring 12 verification reports\n- Built an in silico inclusivity check in Python against 80,000 GISAID and NCBI sequences, flagging 3 primer mismatches early\n- Supported 2 design transfer meetings with manufacturing and wrote 4 risk analysis inputs for the DHF"
+        },
+        {
+          "company": "Beehive Genomics",
+          "role": "Research Associate, Molecular Biology",
+          "location": "Lehi, UT",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Prepared 3,000+ NGS libraries for SARS-CoV-2 genomic surveillance with a 97% pass rate\n- Automated nucleic acid extraction on a KingFisher Flex, doubling daily capacity\n- Validated a new extraction kit across 400 clinical samples with 99% concordance"
+        }
+      ],
+      "education": [
+        {
+          "school": "Brigham Young University",
+          "degree": "M.S. Microbiology and Molecular Biology",
+          "startDate": "2018-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "M.S. Thesis: Isothermal Detection of Antibiotic Resistance Genes",
+          "link": "",
+          "description": "Designed a LAMP assay for 3 carbapenemase genes with 95% sensitivity against PCR on 120 clinical isolates"
+        }
+      ],
+      "skills": [
+        "Molecular: RT-qPCR, ddPCR, multiplex assay design, NGS library prep, Sanger sequencing",
+        "Tools: Primer3, Geneious, Python (Biopython), QuantStudio software",
+        "Quality: ISO 13485, design controls, FDA 510(k) analytical studies, CLSI EP17",
+        "Lab: nucleic acid extraction automation, BSL-2 handling",
+        "Bioinformatics: BLAST, sequence alignment, variant tracking for primer inclusivity"
+      ]
+    },
+    "Microbiologist": {
+      "summary": "Microbiologist with seven years in pharmaceutical QC and food safety labs, specializing in environmental monitoring and sterility testing. Led a contamination investigation that cut cleanroom excursions by 55%. Brings cGMP microbiology expertise, data-driven trend analysis and audit-ready documentation.",
+      "experience": [
+        {
+          "company": "Bluestem Sterile Manufacturing",
+          "role": "Senior QC Microbiologist",
+          "location": "Indianapolis, IN",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run environmental monitoring for 14 ISO 5–8 cleanrooms, analyzing 2,000+ samples a month\n- Led an investigation into recurring mold excursions that cut alert-level events by 55% in one year\n- Validated a rapid sterility method with growth-direct technology, shortening release by 7 days per batch\n- Supported 2 FDA inspections and an EMA audit with no microbiology observations\n- Train 8 aseptic operators a year on gowning qualification and EM sampling technique"
+        },
+        {
+          "company": "Heartland Food Safety Labs",
+          "role": "Microbiologist",
+          "location": "Columbus, OH",
+          "startDate": "2019-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Tested 80 food and swab samples daily for Listeria, Salmonella and E. coli under AOAC and FDA BAM methods\n- Maintained ISO/IEC 17025 accreditation through proficiency testing with 100% satisfactory scores\n- Validated a rapid PCR Listeria screen that cut time to result from 72 to 30 hours"
+        },
+        {
+          "company": "The Ohio State University, Department of Food Science",
+          "role": "Undergraduate Laboratory Assistant",
+          "location": "Columbus, OH",
+          "startDate": "2017-08",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Prepared media and maintained 200 bacterial reference strains for a food safety lab\n- Ran plate counts for a Listeria persistence study published in 2019"
+        }
+      ],
+      "education": [
+        {
+          "school": "The Ohio State University",
+          "degree": "B.S. Microbiology",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Microbiology: environmental monitoring, sterility testing, endotoxin (LAL), bioburden, microbial ID (MALDI-TOF)",
+        "Regulatory: cGMP, USP <71>, <61>, <85>, EU GMP Annex 1, FDA BAM",
+        "Quality: deviation investigations, CAPA, trend reports, method validation",
+        "Software: LIMS, TrackWise, Minitab",
+        "Aseptic practice: gowning qualification, media fills, cleanroom disinfectant efficacy studies"
+      ]
+    },
+    "Chemist": {
+      "summary": "Synthetic chemist with six years in specialty chemicals R&D developing polymers and additives for coatings. Invented a low-VOC dispersant now sold to 20+ customers with $4M in annual sales. Brings organic synthesis, polymer characterization and the habit of designing experiments with scale-up in mind.",
+      "experience": [
+        {
+          "company": "Lakeview Specialty Chemicals",
+          "role": "Chemist II, Coatings Additives",
+          "location": "Cleveland, OH",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Synthesized and screened 150+ acrylic copolymer dispersants using design of experiments, cutting iterations by 40%\n- Invented a low-VOC dispersant that reached $4M in annual sales within 18 months of launch\n- Scaled 3 products from 1 L to 2,000 L batches with plant engineering, holding specifications on first run\n- Characterize polymers by GPC, DSC and FTIR and write customer technical data sheets\n- Support 12 key customers with application testing and troubleshooting, retaining a $1.5M account at risk"
+        },
+        {
+          "company": "Erie Polymer Labs",
+          "role": "Associate Chemist",
+          "location": "Akron, OH",
+          "startDate": "2020-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Prepared 200+ coating formulations and ran adhesion, gloss and humidity tests per ASTM methods\n- Kept SDS and TSCA records current for 60 raw materials\n- Reduced raw material qualification time by 20% with a standardized FTIR identity library"
+        },
+        {
+          "company": "Case Western Reserve University, Department of Macromolecular Science",
+          "role": "Undergraduate Researcher",
+          "location": "Cleveland, OH",
+          "startDate": "2018-05",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Synthesized block copolymers by RAFT polymerization and characterized them by GPC and NMR\n- Co-authored a poster at the 2019 ACS Fall Meeting"
+        }
+      ],
+      "education": [
+        {
+          "school": "Case Western Reserve University",
+          "degree": "B.S. Chemistry",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Chemistry: free-radical polymerization, organic synthesis, formulation, scale-up",
+        "Characterization: GPC, DSC, FTIR, NMR, rheology, particle sizing",
+        "Methods and compliance: ASTM D3359, D523, TSCA, GHS SDS authoring",
+        "Tools: JMP (DoE), ChemDraw, Excel, ELN",
+        "Safety: process hazard reviews, reactive chemistry handling, OSHA HazCom"
+      ]
+    },
+    "Analytical Chemist": {
+      "summary": "Analytical chemist with eight years in environmental and contract labs specializing in trace organics by mass spectrometry. Brought PFAS testing online under EPA Method 1633, adding $1.8M in annual lab revenue. Brings LC-MS/MS and GC-MS method expertise, rigorous QA/QC and calm troubleshooting under client deadlines.",
+      "experience": [
+        {
+          "company": "Clearline Environmental Laboratories",
+          "role": "Senior Analytical Chemist, LC-MS/MS",
+          "location": "Sacramento, CA",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Implemented EPA Method 1633 for 40 PFAS compounds, achieving state accreditation in 5 months and adding $1.8M yearly revenue\n- Run and review data for 300+ samples a week on Sciex 6500+ and Agilent 6470 systems\n- Cut reruns by 35% by redesigning solid-phase extraction cleanup for high-matrix wastewater\n- Mentor 3 chemists on data review, integration rules and manual-integration documentation\n- Wrote 9 SOPs and passed 2 state accreditation audits with no method-related findings"
+        },
+        {
+          "company": "Golden State Analytical",
+          "role": "Analytical Chemist",
+          "location": "Rancho Cordova, CA",
+          "startDate": "2018-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Analyzed pesticides and semivolatiles by GC-MS under EPA 8270 for 25 consulting clients\n- Maintained a sub-2% QC failure rate across method blanks and laboratory control samples\n- Performed preventive maintenance on 4 GC-MS systems, cutting unplanned downtime by 25%"
+        },
+        {
+          "company": "Delta Water Quality Laboratory",
+          "role": "Laboratory Assistant (part-time)",
+          "location": "Stockton, CA",
+          "startDate": "2016-06",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Prepared samples and glassware for 40 drinking water tests a day\n- Logged samples and chain-of-custody forms into LIMS"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "B.S. Chemistry",
+          "startDate": "2014-09",
+          "endDate": "2018-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruments: LC-MS/MS (Sciex, Agilent), GC-MS, HRMS, SPE automation",
+        "Methods: EPA 1633, 537.1, 8270E, method detection limit studies",
+        "Quality: TNI and ELAP accreditation, QA/QC review, data defensibility",
+        "Software: Analyst, MassHunter, Chromeleon, Element LIMS",
+        "Data review: manual integration policy, MDL and LOQ studies, control charting"
+      ]
+    },
+    "Quality Control Chemist": {
+      "summary": "Quality control chemist with three years testing raw materials and finished products in a cGMP nutraceutical and OTC plant. Cut lab turnaround from 6 to 4 days by reorganizing testing queues. Brings reliable compendial testing, clean GMP documentation and a practical approach to investigations.",
+      "experience": [
+        {
+          "company": "Sunvale Health Products",
+          "role": "Quality Control Chemist",
+          "location": "Ogden, UT",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Test 25+ raw materials and finished lots weekly by HPLC, FTIR, UV-Vis and USP wet chemistry\n- Reduced average release turnaround from 6 to 4 days by batching tests and prioritizing by shipment date\n- Investigated 9 OOS results, documenting root cause and CAPA in MasterControl within 30 days\n- Qualified 2 new HPLC systems with IQ/OQ/PQ protocols\n- Updated 6 test methods to current USP monographs and trained 2 technicians on the changes"
+        },
+        {
+          "company": "Weber State University Chemistry Department",
+          "role": "Undergraduate Laboratory Assistant",
+          "location": "Ogden, UT",
+          "startDate": "2021-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Prepared reagents and instruments for 12 general chemistry lab sections per week\n- Maintained hazardous waste logs that passed university EHS inspection\n- Tutored 20 students a semester in general and organic chemistry"
+        }
+      ],
+      "education": [
+        {
+          "school": "Weber State University",
+          "degree": "B.S. Chemistry",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Heavy Metals in Herbal Supplements",
+          "link": "",
+          "description": "Undergraduate research project screening 45 retail supplements for lead and cadmium by ICP-OES; 3 exceeded Proposition 65 limits"
+        }
+      ],
+      "skills": [
+        "Testing: HPLC, FTIR identity, UV-Vis, Karl Fischer, dissolution, USP monographs",
+        "Compliance: 21 CFR 111 and 211, cGMP documentation, data integrity (ALCOA+)",
+        "Quality systems: OOS investigations, CAPA, instrument qualification",
+        "Software: Empower 3, MasterControl, Excel",
+        "Lab practices: reference standard management, sample retention, stability chamber monitoring"
+      ]
+    },
+    "Biochemist": {
+      "summary": "Biochemist with seven years in enzyme discovery for industrial biotech, focused on high-throughput screening and enzyme kinetics. Identified an engineered cellulase that lowered customer enzyme dosing by 20%. Brings assay design, protein characterization and close collaboration with fermentation and application teams.",
+      "experience": [
+        {
+          "company": "Novasyn Enzymes",
+          "role": "Biochemist, Enzyme Discovery",
+          "location": "Davis, CA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Screen 5,000 enzyme variants per month with colorimetric and fluorescent assays on a Biomek i7 workcell\n- Characterized kinetics and thermostability of 60 leads, identifying a cellulase that cut customer dosing by 20%\n- Partnered with fermentation scientists to raise expression of 2 leads from 2 to 9 g/L in 10 L runs\n- Present screening results to product managers each quarter to prioritize the pipeline\n- Built an LC-based product assay that replaced a slow reducing-sugar method and doubled screening capacity"
+        },
+        {
+          "company": "University of California, Davis",
+          "role": "Graduate Researcher, Biochemistry",
+          "location": "Davis, CA",
+          "startDate": "2019-09",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Determined substrate specificity of 3 glycoside hydrolases, published in Biochemistry\n- Taught 4 sections of undergraduate biochemistry lab\n- Expressed and purified 40 enzymes from E. coli and Pichia for kinetic studies"
+        },
+        {
+          "company": "Cascade Fermentation Company",
+          "role": "Process Development Intern",
+          "location": "Corvallis, OR",
+          "startDate": "2018-06",
+          "endDate": "2018-09",
+          "isCurrent": false,
+          "description": "- Ran 12 shake-flask and 2 L fermentations to compare media for enzyme expression\n- Measured enzyme activity in 300 samples and summarized results for the process team"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "M.S. Biochemistry, Molecular, Cellular and Developmental Biology",
+          "startDate": "2019-09",
+          "endDate": "2022-02"
+        },
+        {
+          "school": "University of Oregon",
+          "degree": "B.S. Biochemistry",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Biochemistry: enzyme kinetics, protein purification, DSF, circular dichroism",
+        "Screening: Biomek i7, plate-based assays, LC-based product analysis",
+        "Data: Python, Spotfire, GraphPad Prism, Benchling",
+        "Collaboration: fermentation scale-up handoffs, application testing",
+        "Expression systems: E. coli, Pichia pastoris, Aspergillus, 10 L bioreactor support"
+      ]
+    },
+    "Environmental Scientist": {
+      "summary": "Environmental scientist with seven years in site investigation and remediation for consulting firms and a state regulator. Managed 25 contaminated-site projects that reached regulatory closure, saving clients a combined $3M through risk-based approaches. Brings field sampling leadership, data validation and clear communication with regulators and property owners.",
+      "experience": [
+        {
+          "company": "Tributary Environmental Group",
+          "role": "Environmental Scientist III",
+          "location": "Portland, OR",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage Phase I and II assessments and remediation for 25 sites, with 12 reaching DEQ no-further-action status\n- Designed risk-based cleanup levels that cut excavation volumes by 40%, saving clients about $3M combined\n- Lead groundwater, soil vapor and sediment sampling crews of 3–4 and validate lab data against EPA guidance\n- Prepared 30+ technical reports and presented results at 6 community meetings\n- Prepare cost-to-complete estimates and bill 1,600+ hours a year at 92% utilization"
+        },
+        {
+          "company": "Washington State Department of Ecology",
+          "role": "Environmental Specialist",
+          "location": "Olympia, WA",
+          "startDate": "2019-01",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Reviewed 50+ cleanup reports under the Model Toxics Control Act and issued technical comments\n- Inspected 35 stormwater-permitted facilities, prompting corrective action at 8\n- Wrote 20 site hazard assessments used to rank sites for state cleanup funding"
+        },
+        {
+          "company": "Salish Sea Water Monitoring Program",
+          "role": "Field Technician",
+          "location": "Bellingham, WA",
+          "startDate": "2018-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Collected surface water and sediment samples at 35 stream and marine sites\n- Calibrated YSI sondes and entered data into the state EIM database"
+        }
+      ],
+      "education": [
+        {
+          "school": "Western Washington University",
+          "degree": "B.S. Environmental Science",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field: groundwater and soil sampling, low-flow purging, soil vapor, sediment coring",
+        "Regulatory: CERCLA, RCRA, Clean Water Act, NPDES, ASTM E1527-21 Phase I",
+        "Data and GIS: ArcGIS Pro, EQuIS, ProUCL, data validation",
+        "Certifications: OSHA HAZWOPER 40-hour, Registered Environmental Professional (in progress)",
+        "Project delivery: proposals, budgets, subcontractor oversight, client communication"
+      ]
+    },
+    "Physicist": {
+      "summary": "Experimental physicist with a Ph.D. and five years in optics and laser R&D for semiconductor metrology. Designed an interferometric sensor that improved overlay measurement precision by 30% on a shipping tool. Brings optical design, precision instrumentation, Python data analysis and the ability to take a concept from bench prototype to product.",
+      "experience": [
+        {
+          "company": "Quantrix Metrology Systems",
+          "role": "Physicist, Optical Systems",
+          "location": "Hillsboro, OR",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a heterodyne interferometric sensor that improved overlay precision by 30%, now shipping in a production metrology tool\n- Modeled optical paths in Zemax and stray-light performance in FRED before building 3 bench prototypes\n- Wrote Python and LabVIEW control and analysis code used by a 9-person systems team\n- Diagnosed field drift issues at 2 fab customers, cutting service escalations by 40%\n- Filed 2 patent applications on sensor calibration and wrote the tool's optical subsystem requirements"
+        },
+        {
+          "company": "University of Colorado Boulder, JILA",
+          "role": "Graduate Research Assistant, Atomic Physics",
+          "location": "Boulder, CO",
+          "startDate": "2016-08",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Built a laser-cooling apparatus and frequency stabilization system with sub-kHz linewidth\n- Published 3 papers, including a first-author Physical Review Letters article\n- Mentored 3 undergraduate researchers on optics alignment and data analysis"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "Ph.D. Physics",
+          "startDate": "2016-08",
+          "endDate": "2021-08"
+        },
+        {
+          "school": "Carleton College",
+          "degree": "B.A. Physics",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Ph.D. Thesis: Compact Optical Frequency Reference",
+          "link": "",
+          "description": "Built a portable cavity-stabilized laser with 1e-14 fractional stability, now used in two follow-on clock experiments"
+        }
+      ],
+      "skills": [
+        "Physics: interferometry, laser stabilization, atomic physics, noise analysis",
+        "Design: Zemax OpticStudio, FRED, SolidWorks basics",
+        "Software: Python (NumPy, SciPy), LabVIEW, MATLAB",
+        "Hardware: vacuum systems, photodetectors, FPGA-based data acquisition",
+        "Methods: Allan deviation, uncertainty budgets, design of experiments, root-cause analysis"
+      ]
+    },
+    "Geologist": {
+      "summary": "Geologist with eight years in hydrogeology and geotechnical investigations across mining and water-supply projects. Led drilling programs totaling 25,000 feet and built the groundwater model supporting a mine permit approval. Brings field leadership, 3D subsurface modeling and Professional Geologist licensure.",
+      "experience": [
+        {
+          "company": "Basin & Range Geoscience",
+          "role": "Senior Hydrogeologist",
+          "location": "Reno, NV",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead drilling and aquifer testing programs totaling 25,000 feet for mining and municipal water clients\n- Built a MODFLOW 6 groundwater model that supported BLM approval of a mine expansion under NEPA\n- Manage project budgets up to $1.2M and coordinate drillers, labs and subcontractors\n- Mentor 3 staff geologists on core logging, well design and reporting\n- Wrote technical sections for 5 water rights and mine permit applications reviewed by state engineers"
+        },
+        {
+          "company": "Silver State Engineering",
+          "role": "Staff Geologist",
+          "location": "Las Vegas, NV",
+          "startDate": "2018-06",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Logged 400+ geotechnical boreholes and test pits for transportation and commercial projects\n- Built 3D geologic models in Leapfrog that reduced foundation redesigns on 4 projects\n- Managed field schedules for drill rigs and lab testing on projects up to $250k"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nevada, Reno",
+          "degree": "M.S. Hydrogeology",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "University of New Mexico",
+          "degree": "B.S. Earth and Planetary Sciences",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "M.S. Thesis: Mountain-Front Recharge in a Basin-and-Range Aquifer",
+          "link": "",
+          "description": "Combined stable isotopes and chloride mass balance to estimate recharge across 12 watersheds; published in Hydrogeology Journal"
+        }
+      ],
+      "skills": [
+        "Geoscience: hydrogeology, aquifer testing, core logging, structural geology",
+        "Modeling: MODFLOW 6, Groundwater Vistas, Leapfrog Geo, AQTESOLV",
+        "Field: drilling oversight, well installation, geophysical logging",
+        "Licenses: Professional Geologist (PG), OSHA HAZWOPER 40-hour, MSHA Part 48",
+        "Regulatory: NEPA, state water rights, Nevada Division of Environmental Protection permitting"
+      ]
+    },
+    "Formulation Scientist": {
+      "summary": "Formulation scientist with six years developing oral solid and liquid dosage forms in pharmaceutical development. Led formulation for a pediatric suspension approved by FDA in 2025. Brings preformulation, QbD-based development and tech-transfer experience with CDMOs.",
+      "experience": [
+        {
+          "company": "Larkspur Pharma",
+          "role": "Formulation Scientist II",
+          "location": "Princeton, NJ",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led formulation development of a taste-masked pediatric suspension approved under an NDA in 2025\n- Applied QbD and DoE to define a design space, reducing scale-up batch failures to zero across 5 GMP lots\n- Transferred 2 processes to a CDMO, writing batch records and supporting 3 engineering runs on site\n- Authored drug product sections of Module 3 for one NDA and two IND amendments\n- Mentor 2 associate scientists and run monthly formulation reviews for the drug product team"
+        },
+        {
+          "company": "Ridgeway Generics",
+          "role": "Associate Scientist, Formulation",
+          "location": "Piscataway, NJ",
+          "startDate": "2020-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Developed 4 immediate-release tablet formulations matching reference dissolution profiles (f2 above 60)\n- Ran roller compaction and tablet press trials, cutting granulation variability by 25%\n- Ran excipient compatibility studies for 6 APIs using stressed binary mixtures"
+        },
+        {
+          "company": "Garden State Pharma Labs",
+          "role": "Formulation Development Intern",
+          "location": "New Brunswick, NJ",
+          "startDate": "2018-06",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Prepared 30 trial tablet batches and ran hardness, friability and dissolution tests\n- Summarized excipient screening results for the formulation team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rutgers University",
+          "degree": "M.S. Pharmaceutical Science",
+          "startDate": "2017-09",
+          "endDate": "2019-12"
+        },
+        {
+          "school": "Rutgers University",
+          "degree": "B.S. Chemistry",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Formulation: suspensions, IR and ER tablets, taste masking, excipient compatibility",
+        "Process: high-shear granulation, roller compaction, tablet compression, coating",
+        "Regulatory: ICH Q8–Q10, CTD Module 3, cGMP batch records",
+        "Tools: JMP, Design-Expert, dissolution systems, particle size analysis",
+        "Collaboration: analytical development, clinical supply, CDMO project management"
+      ]
+    },
+    "Bioinformatics Scientist": {
+      "summary": "Bioinformatics scientist with six years building genomic analysis pipelines in academic and biotech settings. Built the single-cell RNA-seq platform that now processes 300+ samples a quarter for a precision oncology company. Brings scalable workflow engineering, statistical genomics and the ability to translate analyses for bench scientists.",
+      "experience": [
+        {
+          "company": "Talus Precision Oncology",
+          "role": "Bioinformatics Scientist",
+          "location": "Remote",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Nextflow single-cell RNA-seq pipeline on AWS Batch processing 300+ samples per quarter at $4 per sample\n- Identified a resistance-associated cell state in 120 patient biopsies that redirected one program's biomarker strategy\n- Containerized 15 tools with Docker and added automated QC reports, cutting analyst setup time by 60%\n- Train 20 bench scientists a year on interpreting differential expression and cell-type annotation\n- Partner with clinical science on biomarker analysis plans for 2 Phase 1 trials"
+        },
+        {
+          "company": "Puget Sound Cancer Research Center",
+          "role": "Bioinformatics Analyst",
+          "location": "Seattle, WA",
+          "startDate": "2020-07",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Processed whole-exome data for 1,500 tumor–normal pairs with GATK best practices\n- Co-authored 5 publications, contributing variant calling and survival analyses\n- Developed a Snakemake RNA-seq workflow adopted by 6 labs at the center"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "M.S. Genome Sciences",
+          "startDate": "2018-09",
+          "endDate": "2020-06"
+        },
+        {
+          "school": "University of California, Santa Cruz",
+          "degree": "B.S. Bioinformatics",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "scqc-report",
+          "link": "github.com/talus-bio/scqc-report",
+          "description": "Open-source HTML QC report for single-cell datasets, used by 3 academic labs"
+        }
+      ],
+      "skills": [
+        "Genomics: scRNA-seq, WES/WGS variant calling, bulk RNA-seq, spatial transcriptomics",
+        "Languages: Python (Scanpy), R (Seurat, DESeq2), Bash, SQL",
+        "Workflow and cloud: Nextflow, Snakemake, Docker, AWS Batch, Git",
+        "Statistics: mixed models, survival analysis, multiple-testing correction",
+        "Data management: AWS S3, SQL, metadata standards, reproducible notebooks"
+      ]
+    }
+  }
+}

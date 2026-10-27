@@ -46,7 +46,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1 text-[13.5px] text-stone-700">
                         {contacts.map((entry) => (
-                            <ContactLink key={entry.key} entry={entry} className="min-w-0 border-b border-(--accent)/25 pb-px wrap-anywhere" />
+                            <ContactLink key={entry.id} entry={entry} className="min-w-0 border-b border-(--accent)/25 pb-px wrap-anywhere" />
                         ))}
                     </div>
                 )}

@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is a free, local-first AI resume builder with 34 templates, a vector PDF export, and 640 job-title writing guides.**
+**ModernCV is a free, local-first AI resume builder with 40 templates, a vector PDF export, 930 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -55,11 +55,12 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 34 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy) and 21 ATS-friendly single-column layouts.
+- 40 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy, AltaCV) and 16 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - A template gallery (`/templates/`) with an ATS filter and a detail page per template.
-- 640 job titles with pre-rendered pages, each with a writing guide (sections, skills, example bullets, recruiter tips) and FAQ.
-- Agent-friendly: `llms.txt`, `llms-full.txt`, a machine-readable template catalog, a resume import JSON Schema, and editor deep links.
+- 930 job titles in 19 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
+- Social and custom links: up to 8 extra links (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, …) with auto-detected icons in every template.
+- Built for AI agents: a remote MCP server (`/mcp`), an installable agent skill, an HTTP API with an OpenAPI spec, copy-paste prompts on every template and job page, plus `llms.txt`, `llms-full.txt`, a template catalog and a resume JSON Schema. See [`/agents/`](https://genedai.cv/agents/).
 - Imports [JSON Resume](https://jsonresume.org/) files as well as ModernCV backups.
 - AI writing help (Cloudflare Workers AI) for summaries and experience bullets.
 - Local-first data storage with debounced segmented persistence for resume editing.
@@ -70,11 +71,12 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## 功能特性
 
-- **34 套专业模板** - 吸收 Jake's、Harvard、Awesome-CV、moderncv、Deedy 等经典设计，其中 21 套为 ATS 友好单栏
+- **40 套专业模板** - 吸收 Jake's、Harvard、Awesome-CV、moderncv、Deedy、AltaCV 等经典设计，其中 16 套为 ATS 友好单栏
 - **样式控制** - 强调色（含对比度检查）、10 种自托管字体、字号与一键压缩到一页
 - **模板画廊** - `/templates/` 支持 ATS 筛选，每套模板都有独立详情页
-- **640 个职位页面** - 每个职位都有预渲染的写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ
-- **对 AI Agent 友好** - 提供 `llms.txt`、`llms-full.txt`、模板目录 JSON、简历导入 JSON Schema，以及 `/editor/?template=<id>` 深链接
+- **930 个职位页面（19 个职业大类）** - 每个职位都有按岗位和级别撰写的真实示例简历、预渲染写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ，可一键“从示例开始”编辑
+- **社交与自定义链接** - 最多 8 个额外链接（GitHub、作品集、X、Dribbble、Behance、Google Scholar 等），自动识别图标，所有模板都会展示
+- **AI Agent 可直接使用** - 远程 MCP 服务（`/mcp`）、可安装的 Agent Skill、带 OpenAPI 的 HTTP API，每个模板和职位页都有可复制的 Prompt；另有 `llms.txt`、`llms-full.txt`、模板目录 JSON、简历 JSON Schema。详见 [`/agents/`](https://genedai.cv/agents/)
 - **JSON Resume 导入** - 可直接导入 JSON Resume 标准格式或本站备份文件
 - **实时预览** - 输入内容时即时查看简历更新
 - **AI 智能优化** - 使用 Cloudflare Workers AI 优化和润色简历文本
@@ -88,9 +90,9 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 34 templates. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal.
+ModernCV ships with 40 templates. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital.
 
-Two-column and expressive: Minimalist, Duo, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
+Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 
 Every template reads `--rs-accent` and the paper font variables, so the editor's accent, font and size controls apply everywhere.
 
@@ -98,9 +100,9 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 
 ![ModernCV home page: a resume preview next to the "A resume that gets you the interview" headline](./docs/images/home.png)
 
-| Editor with style controls | Template gallery | Writing guide on a job page |
+| Editor with style controls | Template gallery | Example resume on a job page |
 |:--:|:--:|:--:|
-| ![Editor: accent colour, font and text size controls beside a live resume preview](./docs/images/editor.png) | ![Template gallery with an ATS filter and template cards](./docs/images/templates.png) | ![Software Engineer writing guide: sections, skills, example bullets and recruiter tips](./docs/images/role-guide.png) |
+| ![Editor: accent colour, font and text size controls beside a live resume preview](./docs/images/editor.png) | ![Template gallery with an ATS filter and template cards](./docs/images/templates.png) | ![Software Engineer job page: a full example resume beside the template picker with Start from example](./docs/images/job-page.png) |
 
 ## Features
 
@@ -118,10 +120,10 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 - The model is set by the `AI_MODEL` Worker var (default `@cf/zai-org/glm-5.3-flash`). No API key is needed; billing goes to the Cloudflare account.
 
 ### Job Title Directory and SEO
-- `/directory` route with searchable categories (640 titles).
-- `/resume_tmpl/<slug>/` pages: preview every template with role-specific sample content, plus a writing guide and five FAQs generated from `src/data/roleGuides.json` (14 job families × seniority levels).
+- `/directory` route with searchable categories (930 titles in 19 families).
+- `/resume_tmpl/<slug>/` pages: a complete example resume written for that title (`src/data/roles/*.json`), shown in every template and pre-rendered as readable text, with "Copy text", "Start from example" and "Use with my resume", plus a writing guide and five FAQs generated from `src/data/roleGuides.json`.
 - `/templates/` gallery and `/templates/<id>/` detail pages with "best for" roles, similar templates and an editor deep link.
-- SEO postbuild script pre-renders every page (home, directory, templates, 640 job pages) with meta tags, JSON-LD (WebApplication, FAQPage, BreadcrumbList, CreativeWork, ItemList) and a 677-URL sitemap.
+- SEO postbuild script pre-renders every page (home, directory, templates, agents, 930 job pages) with unique titles and descriptions drawn from each example, JSON-LD (WebApplication, Occupation, FAQPage, BreadcrumbList, CreativeWork, ItemList, TechArticle, WebAPI) and a 974-URL sitemap.
 - Unknown URLs return a real `404` with `x-robots-tag: noindex` instead of redirecting to home.
 
 ### Privacy and Data
@@ -139,7 +141,27 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 
 ## For AI Agents and LLMs
 
-The build publishes plain files so assistants and agents can answer questions about the site or help a user build a resume:
+ModernCV can be used directly by AI agents (Claude, ChatGPT, Cursor, Amp, …). Setup instructions for each client are on [`/agents/`](https://genedai.cv/agents/), and every template and job page has a **copy-paste prompt** that tells an agent to build the resume in that exact template through ModernCV.
+
+**MCP server** (Streamable HTTP, no auth): `https://genedai.cv/mcp`
+
+```bash
+claude mcp add --transport http moderncv https://genedai.cv/mcp
+```
+
+| Tool | What it does |
+|------|--------------|
+| `list_templates` | All templates with description, best-for roles, ATS status and preview image |
+| `get_writing_guide` | Section order, skills, metrics, example bullets and FAQs for a job title |
+| `get_example_resume` | A complete example resume for a job title, in render-ready JSON |
+| `get_resume_schema` | JSON Schema of the resume object |
+| `render_preview` | Page 1 as a PNG plus the page count |
+| `render_pdf` | An A4 vector PDF with selectable text and embedded fonts |
+| `create_editor_link` | A link that opens the editor with the resume loaded (kept in the URL fragment) |
+
+**Agent skill:** [`/skills/moderncv-resume/SKILL.md`](https://genedai.cv/skills/moderncv-resume/SKILL.md) (source in `skills/`). **HTTP API:** the same tools under `/api/agent/` ([`/openapi.json`](https://genedai.cv/openapi.json)); rendering is limited to 6 requests per minute per IP and resumes are not stored.
+
+The build also publishes plain files:
 
 | File | Contents |
 |------|----------|
@@ -147,6 +169,7 @@ The build publishes plain files so assistants and agents can answer questions ab
 | [`/llms-full.txt`](https://genedai.cv/llms-full.txt) | All templates, writing guides per job family and FAQs in one file |
 | [`/templates.json`](https://genedai.cv/templates.json) | Template catalog: id, name, description, ATS status, best-for roles, preview images, editor link |
 | [`/resume.schema.json`](https://genedai.cv/resume.schema.json) | JSON Schema for the import format |
+| `/examples/<job-slug>.json` | The example resume of every job page, e.g. [`software-engineer.json`](https://genedai.cv/examples/software-engineer.json) |
 
 An agent can draft a resume as JSON matching the schema (or as a JSON Resume document), have the user import it from **Editor → More actions → Import backup**, and open `/editor/?template=<id>` to preselect a template. Resume data never leaves the browser except for the text sent to AI actions.
 
@@ -174,7 +197,7 @@ An agent can draft a resume as JSON matching the schema (or as a JSON Resume doc
 
 | Section | Description |
 |---------|-------------|
-| **Personal Info** | Name, title, contact details, website, LinkedIn |
+| **Personal Info** | Name, title, contact details, website, LinkedIn, and up to 8 social or custom links |
 | **Summary** | Professional summary (AI-generated or custom) |
 | **Experience** | Work history with company, role, dates, and descriptions |
 | **Education** | Schools, degrees, and graduation dates |
@@ -272,6 +295,7 @@ Notes:
 | `npm run test:watch` | Run tests in watch mode |
 | `npm run seo:postbuild` | Run SEO postbuild only |
 | `npm run jobtitles:validate` | Validate job titles (duplicates, slug collisions) |
+| `npm run roles:sync` | Merge `src/data/roles/*.json` into `jobTitles.json` and `roleGuides.json` (`--check` reports missing examples, duplicates, collisions) |
 | `npm run jobtitles:import` | Bulk import job titles |
 | `npm run deploy` | Deploy to Cloudflare Workers |
 | `npm run build:deploy` | Build and deploy in one command |
@@ -295,7 +319,8 @@ modern-ai-resume-builder/
 │   ├── utils/                  # Utility functions
 │   ├── App.tsx                 # Routes and page layout
 │   └── types.ts                # TypeScript types
-├── worker/                     # Cloudflare Worker: AI, PDF, CSP, 404s
+├── skills/                     # Agent skill (SKILL.md), also published at /skills/
+├── worker/                     # Cloudflare Worker: AI, PDF, MCP server + agent API, CSP, 404s
 ├── ARCHITECTURE.md             # Architecture details
 ├── CHANGELOG.md                # Version history
 ├── CONTRIBUTING.md             # Contribution guide
@@ -306,12 +331,12 @@ modern-ai-resume-builder/
 
 ## Adding Job Titles
 
-Job titles power the `/directory` page and generate SEO pages under `/resume_tmpl/<slug>`.
+Job titles power the `/directory` page and generate SEO pages under `/resume_tmpl/<slug>`. Each title has an example resume in `src/data/roles/<family>.json`, which is the source of truth.
 
-### Quick Add (Manual)
+### Add a title with its example
 
-1. Edit `src/data/jobTitles.json`
-2. Validate: `npm run jobtitles:validate`
+1. Add the title and its example (`summary`, `experience`, `education`, `projects`, `skills`) to the family file in `src/data/roles/`. A new family file also needs a `guide` object (see `roleGuides.json`).
+2. Sync and check: `npm run roles:sync`, then `npm run jobtitles:validate`
 3. Build: `npm run build`
 
 ### Bulk Import

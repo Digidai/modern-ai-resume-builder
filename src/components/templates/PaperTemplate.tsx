@@ -75,7 +75,7 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
             {contacts.length > 0 && (
                 <div className="flex flex-wrap justify-center gap-x-6 gap-y-1 border-b border-stone-300 py-2 text-[13px] text-stone-700">
                     {contacts.map((entry) => (
-                        <ContactLink key={entry.key} entry={entry} className="min-w-0 wrap-anywhere" />
+                        <ContactLink key={entry.id} entry={entry} className="min-w-0 wrap-anywhere" />
                     ))}
                 </div>
             )}

@@ -143,7 +143,39 @@
       "Engineering Manager",
       "Director of Engineering",
       "VP of Engineering",
-      "CTO"
+      "CTO",
+      "Associate Software Engineer",
+      "Junior Frontend Developer",
+      "Junior Web Developer",
+      "Junior Python Developer",
+      "Senior Java Developer",
+      "Lead Frontend Developer",
+      "Senior iOS Developer",
+      "Senior Android Developer",
+      "Magento Developer",
+      "Game Programmer",
+      "Unreal Engine Developer",
+      "Graphics Engineer",
+      "Embedded Software Engineer",
+      "Robotics Software Engineer",
+      "Senior Machine Learning Engineer",
+      "Machine Learning Intern",
+      "Help Desk Technician",
+      "IT Support Specialist",
+      "Desktop Support Technician",
+      "Systems Administrator",
+      "IT Manager",
+      "Director of IT",
+      "Chief Information Security Officer (CISO)",
+      "Information Security Manager",
+      "Junior DevOps Engineer",
+      "Senior DevOps Engineer",
+      "Senior QA Engineer",
+      "Electrical Engineer",
+      "Mechanical Engineer",
+      "Hardware Engineer",
+      "Controls Engineer",
+      "Mechanical Engineering Intern"
     ]
   },
   {
@@ -200,7 +232,17 @@
       "Creative Director",
       "Art Director",
       "Head of Product",
-      "Chief Product Officer (CPO)"
+      "Chief Product Officer (CPO)",
+      "Product Design Intern",
+      "Junior Product Designer",
+      "Junior UX Designer",
+      "Senior UX Researcher",
+      "Web Designer",
+      "Industrial Designer",
+      "Senior Graphic Designer",
+      "Junior Graphic Designer",
+      "Product Management Intern",
+      "Lead Product Manager"
     ]
   },
   {
@@ -247,7 +289,17 @@
       "Data Science Director",
       "Data Engineering Manager",
       "Chief Data Officer (CDO)",
-      "Director of Data"
+      "Director of Data",
+      "Data Analyst Intern",
+      "Junior Data Analyst",
+      "Data Science Intern",
+      "Junior Data Scientist",
+      "Staff Data Scientist",
+      "Principal Data Scientist",
+      "Senior Business Analyst",
+      "Healthcare Data Analyst",
+      "Power BI Developer",
+      "Tableau Developer"
     ]
   },
   {
@@ -299,7 +351,19 @@
       "Field Marketing Manager",
       "Influencer Marketing Manager",
       "Affiliate Marketing Manager",
-      "CMO"
+      "CMO",
+      "Marketing Intern",
+      "Marketing Assistant",
+      "Marketing Coordinator",
+      "Marketing Specialist",
+      "Digital Marketing Manager",
+      "Email Marketing Manager",
+      "CRM Manager",
+      "Social Media Coordinator",
+      "E-commerce Marketing Manager",
+      "Marketing Director",
+      "VP of Marketing",
+      "Head of Growth"
     ]
   },
   {
@@ -343,7 +407,19 @@
       "Partner Manager",
       "Solutions Consultant",
       "Business Development Manager",
-      "Head of Sales"
+      "Head of Sales",
+      "Sales Intern",
+      "Sales Coordinator",
+      "Outside Sales Representative",
+      "Mid-Market Account Executive",
+      "Regional Sales Manager",
+      "Sales Director",
+      "VP of Sales",
+      "Customer Success Associate",
+      "Customer Onboarding Specialist",
+      "Call Center Representative",
+      "Call Center Supervisor",
+      "Medical Device Sales Representative"
     ]
   },
   {
@@ -388,7 +464,19 @@
       "Operations Manager",
       "Operations Coordinator",
       "Chief People Officer",
-      "COO"
+      "COO",
+      "HR Intern",
+      "HR Specialist",
+      "HR Director",
+      "VP of Human Resources",
+      "Onboarding Specialist",
+      "Workforce Planning Analyst",
+      "Employee Engagement Manager",
+      "Receptionist",
+      "Office Administrator",
+      "Administrative Coordinator",
+      "Virtual Assistant",
+      "Data Entry Clerk"
     ]
   },
   {
@@ -431,7 +519,20 @@
       "Litigation Support Specialist",
       "Intellectual Property (IP) Counsel",
       "Employment Counsel",
-      "Paralegal"
+      "Paralegal",
+      "Accounting Intern",
+      "Staff Accountant",
+      "Accounting Manager",
+      "Audit Associate",
+      "Tax Preparer",
+      "Bank Teller",
+      "Personal Banker",
+      "Insurance Underwriter",
+      "Claims Adjuster",
+      "Financial Advisor",
+      "Associate Attorney",
+      "Legal Secretary",
+      "General Counsel"
     ]
   },
   {
@@ -470,7 +571,17 @@
       "Transformation Manager",
       "Business Transformation Consultant",
       "Portfolio Manager",
-      "Business Process Analyst"
+      "Business Process Analyst",
+      "Project Management Intern",
+      "Junior Project Manager",
+      "Senior Project Manager",
+      "IT Project Manager",
+      "Senior Program Manager",
+      "Director of Program Management",
+      "Associate Consultant",
+      "Engagement Manager",
+      "Strategy & Operations Manager",
+      "VP of Strategy"
     ]
   },
   {
@@ -513,7 +624,15 @@
       "EHS Manager",
       "Lean Six Sigma Black Belt",
       "Operations Director",
-      "Continuous Improvement Manager"
+      "Continuous Improvement Manager",
+      "Procurement Manager",
+      "Materials Manager",
+      "Production Supervisor",
+      "Quality Engineer",
+      "Supply Chain Intern",
+      "Category Manager",
+      "VP of Supply Chain",
+      "Inventory Control Specialist"
     ]
   },
   {
@@ -559,7 +678,22 @@
       "Medical Biller",
       "Health Information Technician",
       "Health Coach",
-      "Mental Health Counselor"
+      "Mental Health Counselor",
+      "New Graduate Nurse",
+      "ICU Nurse",
+      "Emergency Room Nurse",
+      "Travel Nurse",
+      "Labor and Delivery Nurse",
+      "Operating Room Nurse",
+      "Director of Nursing",
+      "Respiratory Therapist",
+      "Physical Therapist Assistant",
+      "Speech-Language Pathologist",
+      "Surgical Technologist",
+      "Phlebotomist",
+      "Clinical Pharmacist",
+      "Medical Office Manager",
+      "Dental Office Manager"
     ]
   },
   {
@@ -599,7 +733,17 @@
       "Education Consultant",
       "Education Technology Specialist",
       "eLearning Developer",
-      "Youth Program Coordinator"
+      "Youth Program Coordinator",
+      "Student Teacher",
+      "Kindergarten Teacher",
+      "Middle School Teacher",
+      "Math Teacher",
+      "English Teacher",
+      "ESL Teacher",
+      "Reading Specialist",
+      "Adjunct Professor",
+      "Registrar",
+      "School Superintendent"
     ]
   },
   {
@@ -631,7 +775,16 @@
       "Social Media Content Creator",
       "Creative Strategist",
       "Scriptwriter",
-      "Screenwriter"
+      "Screenwriter",
+      "Editorial Assistant",
+      "Junior Copywriter",
+      "Senior Copywriter",
+      "Managing Editor",
+      "Editor-in-Chief",
+      "Senior Video Editor",
+      "Reporter",
+      "Photo Editor",
+      "Production Assistant"
     ]
   },
   {
@@ -666,7 +819,15 @@
       "Event Planner",
       "Event Coordinator",
       "Banquet Manager",
-      "Visual Merchandiser"
+      "Visual Merchandiser",
+      "Server",
+      "Bartender",
+      "Executive Chef",
+      "Pastry Chef",
+      "District Manager",
+      "Stock Associate",
+      "Assistant Restaurant Manager",
+      "Hotel Sales Manager"
     ]
   },
   {
@@ -706,7 +867,161 @@
       "Surveyor",
       "Land Surveyor",
       "Estimator",
-      "Construction Estimator"
+      "Construction Estimator",
+      "Assistant Project Manager",
+      "Field Engineer",
+      "Construction Management Intern",
+      "Assistant Property Manager",
+      "Escrow Officer",
+      "Real Estate Transaction Coordinator",
+      "Preconstruction Manager",
+      "Real Estate Asset Manager"
+    ]
+  },
+  {
+    "name": "Government & Public Service",
+    "titles": [
+      "Policy Intern",
+      "Policy Analyst",
+      "Senior Policy Analyst",
+      "Policy Advisor",
+      "Legislative Assistant",
+      "Legislative Director",
+      "City Planner",
+      "Transportation Planner",
+      "Planning Director",
+      "Budget Analyst",
+      "Management Analyst",
+      "Program Analyst",
+      "Contract Specialist",
+      "Public Affairs Specialist",
+      "Intelligence Analyst",
+      "Emergency Management Specialist",
+      "Economic Development Specialist",
+      "Code Enforcement Officer",
+      "Police Officer",
+      "Firefighter",
+      "Probation Officer",
+      "City Clerk",
+      "Assistant City Manager",
+      "City Manager"
+    ]
+  },
+  {
+    "name": "Nonprofit & Social Services",
+    "titles": [
+      "Social Work Intern",
+      "Licensed Master Social Worker (LMSW)",
+      "Licensed Clinical Social Worker (LCSW)",
+      "Child Welfare Caseworker",
+      "Substance Abuse Counselor",
+      "Peer Support Specialist",
+      "Direct Support Professional",
+      "Family Support Specialist",
+      "Victim Advocate",
+      "Housing Navigator",
+      "Residential Counselor",
+      "Community Health Worker",
+      "Community Outreach Coordinator",
+      "Volunteer Coordinator",
+      "Development Associate",
+      "Grant Writer",
+      "Grants Manager",
+      "Annual Giving Manager",
+      "Major Gifts Officer",
+      "Development Director",
+      "Program Director",
+      "Social Services Director",
+      "Executive Director"
+    ]
+  },
+  {
+    "name": "Science & Research",
+    "titles": [
+      "Research Intern",
+      "Research Assistant",
+      "Laboratory Technician",
+      "Research Associate",
+      "Associate Scientist",
+      "Research Scientist",
+      "Senior Research Scientist",
+      "Principal Scientist",
+      "Postdoctoral Researcher",
+      "Principal Investigator",
+      "Director of Research",
+      "Laboratory Manager",
+      "Biologist",
+      "Molecular Biologist",
+      "Microbiologist",
+      "Chemist",
+      "Analytical Chemist",
+      "Quality Control Chemist",
+      "Biochemist",
+      "Environmental Scientist",
+      "Physicist",
+      "Geologist",
+      "Formulation Scientist",
+      "Bioinformatics Scientist"
+    ]
+  },
+  {
+    "name": "Skilled Trades & Manufacturing",
+    "titles": [
+      "Apprentice Electrician",
+      "Journeyman Electrician",
+      "Master Electrician",
+      "Industrial Electrician",
+      "Lineman",
+      "Welder",
+      "Welding Inspector",
+      "Pipefitter",
+      "Sheet Metal Worker",
+      "Millwright",
+      "CNC Operator",
+      "CNC Machinist",
+      "CNC Programmer",
+      "Tool and Die Maker",
+      "Machine Operator",
+      "Assembly Technician",
+      "Manufacturing Technician",
+      "Quality Technician",
+      "Maintenance Technician",
+      "Industrial Maintenance Mechanic",
+      "Maintenance Planner",
+      "Maintenance Supervisor",
+      "Instrumentation Technician",
+      "Refrigeration Technician",
+      "Production Associate"
+    ]
+  },
+  {
+    "name": "Transportation & Logistics",
+    "titles": [
+      "Truck Driver",
+      "Delivery Driver",
+      "Courier",
+      "Bus Driver",
+      "Driver Trainer",
+      "Truck Dispatcher",
+      "Dispatch Supervisor",
+      "Freight Broker",
+      "DOT Compliance Specialist",
+      "Terminal Manager",
+      "Diesel Mechanic",
+      "Automotive Technician",
+      "Flight Instructor",
+      "First Officer",
+      "Airline Pilot",
+      "Flight Attendant",
+      "Aircraft Mechanic",
+      "Avionics Technician",
+      "Air Traffic Controller",
+      "Aircraft Dispatcher",
+      "Ramp Agent",
+      "Gate Agent",
+      "Airport Operations Manager",
+      "Locomotive Engineer",
+      "Train Conductor"
     ]
   }
 ]

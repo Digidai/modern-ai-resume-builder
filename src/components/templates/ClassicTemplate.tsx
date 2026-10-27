@@ -5,7 +5,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 // small-caps headings over a hairline rule, two-row entries with right-aligned dates.
 // Accent (default near-black) drives the headings, their rules and link underlines.
 
-const CONTACT_ORDER = ['phone', 'email', 'linkedin', 'website', 'location'] as const;
+const CONTACT_ORDER = ['phone', 'email', 'linkedin', 'website', 'link', 'location'] as const;
 
 const linkClass = 'underline decoration-(--accent)/70 decoration-[0.75px] underline-offset-[3px] wrap-anywhere';
 
@@ -39,7 +39,7 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <p className="mt-[5px] text-[13.33px] leading-[1.5] text-neutral-900 text-balance">
                         {contacts.map((entry, index) => (
-                            <React.Fragment key={entry.key}>
+                            <React.Fragment key={entry.id}>
                                 {index > 0 && ' '}
                                 <span className="inline-block max-w-full">
                                     <ContactLink entry={entry} className={entry.href && entry.key !== 'phone' ? linkClass : 'wrap-anywhere'} />

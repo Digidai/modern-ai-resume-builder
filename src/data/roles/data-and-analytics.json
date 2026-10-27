@@ -1,0 +1,2868 @@
+{
+  "family": "Data & Analytics",
+  "guide": null,
+  "titles": {
+    "Data Scientist": {
+      "summary": "Data scientist with 5 years of experience building churn, demand and propensity models for subscription and e-commerce businesses. Shipped a retention model that saved $2.1M in annual recurring revenue. Brings strong Python and SQL, careful experiment design and a habit of turning model output into decisions product teams act on.",
+      "experience": [
+        {
+          "company": "Brightloop Subscriptions",
+          "role": "Data Scientist",
+          "location": "Denver, CO",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a gradient-boosted churn model in XGBoost scoring 1.4M subscribers weekly, enabling save offers that retained $2.1M in annual recurring revenue\n- Designed 14 A/B tests with product managers, using CUPED variance reduction to cut required sample sizes by 30%\n- Productionized models with MLflow and Airflow, reducing retraining time from 2 days to 3 hours\n- Partnered with finance to forecast quarterly subscriber counts within 2.5% error using Prophet and hierarchical reconciliation\n- Explained model drivers to customer success leads with SHAP summaries, turning risk scores into 3 targeted outreach playbooks"
+        },
+        {
+          "company": "Cartsmith Commerce",
+          "role": "Associate Data Scientist",
+          "location": "Chicago, IL",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Developed a product-recommendation model using implicit-feedback matrix factorization, lifting add-to-cart rate 6% in a 4-week test\n- Automated weekly demand forecasts for 3,200 SKUs, reducing stockouts 18% across two warehouses\n- Built Looker dashboards tracking model drift and business KPIs for 40 merchandising users"
+        },
+        {
+          "company": "Prairie Analytics Lab",
+          "role": "Data Science Intern",
+          "location": "Champaign, IL",
+          "startDate": "2020-05",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Built a customer lifetime value model for a regional retailer using BG/NBD and gamma-gamma methods\n- Presented segment-level findings to the client's marketing director"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "M.S. in Statistics",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "Purdue University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Uplift Modeling Toolkit",
+          "link": "github.com/rmendez/uplift-kit",
+          "description": "Open-source Python package for two-model and class-transformation uplift estimation, with Qini curves and 300+ GitHub stars"
+        }
+      ],
+      "skills": [
+        "Languages: Python, SQL, R",
+        "Modeling: XGBoost, scikit-learn, PyTorch, Prophet, causal inference",
+        "Data & MLOps: Snowflake, dbt, Airflow, MLflow, Docker",
+        "Analysis: A/B testing, CUPED, survival analysis, Looker",
+        "Communication: model explainability, stakeholder readouts, technical documentation"
+      ]
+    },
+    "Senior Data Scientist": {
+      "summary": "Senior data scientist with 9 years in fintech, specializing in credit risk and pricing models deployed at scale. Led the underwriting model rebuild that cut loss rates 22% while approving 11% more applicants. Mentors junior scientists and owns models end to end, from problem framing to monitoring in production.",
+      "experience": [
+        {
+          "company": "Keystone Lending Group",
+          "role": "Senior Data Scientist",
+          "location": "New York, NY",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led rebuild of the personal-loan underwriting model in LightGBM, reducing 12-month loss rates 22% while raising approvals 11% on $900M annual originations\n- Established SHAP-based adverse-action reason codes that passed ECOA and model risk review on first submission\n- Mentored 4 data scientists and set team standards for feature stores, code review and model cards\n- Built a real-time pricing model serving 25,000 quotes daily at under 80 ms on SageMaker\n- Partnered with compliance to run quarterly disparate-impact testing across 6 protected classes, documenting results for regulators"
+        },
+        {
+          "company": "Harborview Payments",
+          "role": "Data Scientist",
+          "location": "Boston, MA",
+          "startDate": "2019-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Developed a merchant fraud model that flagged 68% of losses before first payout, saving $3.4M a year\n- Designed a sequential testing framework adopted by 6 product teams, shortening test cycles by 9 days\n- Migrated feature pipelines from cron jobs to Airflow, cutting pipeline failures 75%"
+        },
+        {
+          "company": "Northgate Insurance Analytics",
+          "role": "Analyst, Predictive Modeling",
+          "location": "Hartford, CT",
+          "startDate": "2017-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Built GLM claim-frequency models in R for auto policies covering 400,000 drivers\n- Automated monthly model performance reports, saving 30 analyst hours per month\n- Presented quarterly model performance results to the chief actuary and pricing committee"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbia University",
+          "degree": "M.A. in Statistics",
+          "startDate": "2015-09",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "University of Connecticut",
+          "degree": "B.S. in Economics",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Modeling: LightGBM, logistic regression, survival models, SHAP, Bayesian methods",
+        "Engineering: Python, SQL, PySpark, SageMaker, Airflow, Feast",
+        "Risk & Compliance: ECOA adverse action, SR 11-7 model risk, fair lending testing",
+        "Leadership: mentoring, model review, roadmap planning",
+        "Communication: model documentation, regulator and audit readouts"
+      ]
+    },
+    "Applied Scientist": {
+      "summary": "Applied scientist with a PhD in computer science and 5 years of industry experience in search ranking and natural language processing. Shipped a learning-to-rank system that raised search conversion 9% for 30M monthly users. Combines research depth with production engineering in PyTorch and distributed training.",
+      "experience": [
+        {
+          "company": "Meridian Marketplace",
+          "role": "Applied Scientist II",
+          "location": "Seattle, WA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a transformer-based learning-to-rank model for product search, lifting search conversion 9% across 30M monthly users\n- Built query-intent classification with distilled BERT, serving 4,000 requests per second at 12 ms p99\n- Created an offline evaluation suite with NDCG and interleaving that predicted online wins in 8 of 10 launches\n- Published 2 papers at SIGIR and KDD workshops based on production ranking work\n- Mentored 2 interns whose query-rewriting project shipped to 15% of traffic with a 2% add-to-cart lift"
+        },
+        {
+          "company": "Corvid Labs",
+          "role": "Applied Scientist",
+          "location": "San Francisco, CA",
+          "startDate": "2021-01",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Fine-tuned sequence-to-sequence models for support ticket summarization, cutting agent handle time 14%\n- Built a weak-supervision labeling pipeline with Snorkel, producing 200,000 training labels in 3 weeks\n- Evaluated summary quality with human raters and ROUGE, reaching 87% agent acceptance in pilot"
+        },
+        {
+          "company": "Allegheny Language Systems",
+          "role": "Research Intern",
+          "location": "Pittsburgh, PA",
+          "startDate": "2019-05",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Prototyped dense passage retrieval for customer FAQ search, improving recall@10 by 14 points\n- Wrote an internal report adopted as the team's retrieval baseline"
+        }
+      ],
+      "education": [
+        {
+          "school": "Carnegie Mellon University",
+          "degree": "Ph.D. in Computer Science (Language Technologies)",
+          "startDate": "2015-08",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "University of Michigan",
+          "degree": "B.S.E. in Computer Science",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Neural Ranking Benchmark",
+          "link": "github.com/achen/rank-bench",
+          "description": "Reproducible benchmark of 12 neural ranking models on public e-commerce datasets, cited in 3 follow-up papers"
+        }
+      ],
+      "skills": [
+        "ML: PyTorch, Hugging Face Transformers, learning to rank, NLP, contrastive learning",
+        "Systems: Python, Spark, Ray, distributed training, ONNX Runtime",
+        "Evaluation: NDCG, interleaving, A/B testing, offline replay",
+        "Research: SIGIR and KDD publications, experimental design",
+        "Languages: Python, C++, SQL"
+      ]
+    },
+    "Machine Learning Scientist": {
+      "summary": "Machine learning scientist with 6 years of experience in computer vision and generative models for medical imaging and retail. Developed a lesion-detection model cleared through FDA 510(k) with 94% sensitivity. Strong in model architecture research, rigorous validation and collaborating with engineers to bring models into regulated products.",
+      "experience": [
+        {
+          "company": "Lumina Diagnostics",
+          "role": "Machine Learning Scientist",
+          "location": "Boston, MA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Developed a 3D convolutional lesion-detection model for CT scans achieving 94% sensitivity, supporting a successful FDA 510(k) submission\n- Designed multi-site validation across 11 hospitals and 18,000 studies to measure performance drift by scanner vendor\n- Reduced annotation cost 40% with active learning that prioritized uncertain cases for radiologist review\n- Authored model documentation aligned with FDA Good Machine Learning Practice principles\n- Built calibration and subgroup analyses by age, sex and scanner, closing 2 performance gaps before submission"
+        },
+        {
+          "company": "Aisle Vision Systems",
+          "role": "Machine Learning Engineer",
+          "location": "Pittsburgh, PA",
+          "startDate": "2020-07",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Trained shelf-gap detection models deployed to 600 grocery stores, improving on-shelf availability 5 points\n- Compressed models with quantization and pruning for edge devices, cutting inference latency 3x\n- Labeled and curated 250,000 shelf images with a vendor team, raising label agreement from 82% to 95%"
+        },
+        {
+          "company": "Georgia Tech Machine Learning Center",
+          "role": "Graduate Research Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2019-01",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Researched semi-supervised segmentation for retinal images, co-authoring a MICCAI workshop paper\n- Maintained the lab's shared GPU training pipeline for 8 students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "M.S. in Computer Science (Machine Learning)",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "Rutgers University",
+          "degree": "B.S. in Electrical Engineering",
+          "startDate": "2014-09",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Diffusion Augmentation for Rare Findings",
+          "link": "",
+          "description": "Research project using latent diffusion to synthesize rare lesion examples, improving minority-class recall 7 points; presented at MICCAI workshop"
+        }
+      ],
+      "skills": [
+        "Deep Learning: PyTorch, MONAI, CNNs, vision transformers, diffusion models",
+        "Methods: active learning, uncertainty estimation, model compression",
+        "Tooling: Python, Weights & Biases, Docker, AWS",
+        "Regulatory: FDA 510(k), Good Machine Learning Practice, HIPAA",
+        "Collaboration: radiologist annotation programs, cross-functional product and clinical teams"
+      ]
+    },
+    "Data Analyst": {
+      "summary": "Data analyst with 4 years of experience in retail and logistics, turning messy operational data into dashboards and analyses that drive weekly decisions. Built a delivery performance model that cut late shipments 17%. Fluent in SQL, Tableau and Python, with a knack for explaining findings to non-technical managers.",
+      "experience": [
+        {
+          "company": "Redline Freight Partners",
+          "role": "Data Analyst",
+          "location": "Dallas, TX",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Analyzed 2M shipment records to identify carrier and lane delays, informing routing changes that cut late deliveries 17%\n- Built Tableau dashboards for 60 operations managers covering on-time rate, cost per mile and claims\n- Automated weekly KPI reporting with SQL and Python, saving 10 analyst hours per week\n- Partnered with finance to model fuel surcharge scenarios, supporting $1.2M in contract renegotiations\n- Trained 12 dispatchers to use self-serve Tableau filters, cutting one-off data requests by a third"
+        },
+        {
+          "company": "Pinecrest Home Goods",
+          "role": "Junior Data Analyst",
+          "location": "Fort Worth, TX",
+          "startDate": "2022-01",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Cleaned and reconciled point-of-sale data from 85 stores, raising report accuracy to 99%\n- Built a markdown analysis that reduced end-of-season clearance losses 8%\n- Built a weekly store traffic report used by 10 district managers to plan staffing"
+        },
+        {
+          "company": "Brazos Valley Food Bank",
+          "role": "Data Analytics Intern",
+          "location": "Bryan, TX",
+          "startDate": "2021-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Mapped food distribution against county need data, informing 2 new mobile pantry routes\n- Cleaned 5 years of donation records in Excel for annual grant reporting"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University",
+          "degree": "B.S. in Statistics",
+          "startDate": "2017-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Texas Freight Lane Benchmark",
+          "link": "github.com/jwalker/tx-freight-lanes",
+          "description": "Public Tableau dashboard comparing truckload spot rates across 40 Texas lanes using DAT market data, updated weekly with a Python scheduler"
+        }
+      ],
+      "skills": [
+        "Analysis: SQL, Python (pandas), Excel, regression, cohort analysis",
+        "Visualization: Tableau, Power BI",
+        "Data: Snowflake, PostgreSQL, data cleaning and validation",
+        "Certifications: Tableau Desktop Specialist",
+        "Communication: dashboard training, stakeholder presentations, written findings"
+      ]
+    },
+    "Senior Data Analyst": {
+      "summary": "Senior data analyst with 8 years of experience in healthcare and SaaS, owning metrics definitions and executive reporting. Rebuilt a company KPI framework now used in every board deck and cut reporting disputes to near zero. Leads analysis projects end to end and coaches analysts on SQL, dbt and storytelling.",
+      "experience": [
+        {
+          "company": "Clearwell Health Software",
+          "role": "Senior Data Analyst",
+          "location": "Nashville, TN",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Defined 45 governed company metrics in dbt and Looker, ending conflicting revenue figures across finance, sales and product\n- Led a retention deep dive across 1,100 clinic accounts that informed a pricing tier change worth $1.8M ARR\n- Coached 3 analysts on SQL review, documentation and presenting findings to directors\n- Reduced executive dashboard load time from 40 seconds to 6 by restructuring aggregate tables in Snowflake\n- Built a dbt-tested renewal forecast that finance now uses for monthly ARR projections"
+        },
+        {
+          "company": "Gateway Regional Medical Group",
+          "role": "Data Analyst",
+          "location": "Louisville, KY",
+          "startDate": "2019-02",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Analyzed patient scheduling data for 24 clinics, reducing no-show rates 12% through targeted reminder timing\n- Built HIPAA-compliant Tableau reports on quality measures used for CMS reporting\n- Analyzed referral leakage across 24 clinics, recovering an estimated $900K in in-network visits"
+        },
+        {
+          "company": "Bluegrass Benefits Administrators",
+          "role": "Reporting Specialist",
+          "location": "Lexington, KY",
+          "startDate": "2018-01",
+          "endDate": "2019-01",
+          "isCurrent": false,
+          "description": "- Produced monthly claims reports for 30 employer clients using SQL Server and Excel\n- Automated 12 recurring reports with SSRS, freeing 15 hours per month\n- Reconciled claims extracts with carrier files, catching $120K in duplicate payments"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kentucky",
+          "degree": "B.S. in Mathematical Economics",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analysis: SQL, Python, statistical testing, retention and cohort analysis",
+        "Data Stack: Snowflake, dbt, Looker, Tableau, Fivetran",
+        "Domain: SaaS metrics, healthcare quality measures, HIPAA",
+        "Leadership: metric governance, analyst coaching, executive communication",
+        "Certifications: Tableau Certified Data Analyst, dbt Analytics Engineering Certification"
+      ]
+    },
+    "Product Analyst": {
+      "summary": "Product analyst with 4 years of experience in consumer mobile apps, partnering with product managers on funnels, experiments and feature adoption. Identified an onboarding drop-off that, once fixed, lifted day-7 retention 5 points. Strong in SQL, Amplitude and experiment analysis, with clear written recommendations.",
+      "experience": [
+        {
+          "company": "Fieldnote Fitness",
+          "role": "Product Analyst",
+          "location": "Los Angeles, CA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Diagnosed a permissions-screen drop-off in onboarding funnels, leading to a redesign that lifted day-7 retention from 31% to 36%\n- Analyzed 22 A/B tests per quarter in Statsig, writing decision memos for 4 product squads\n- Built an Amplitude feature-adoption dashboard tracking 30 events across iOS and Android\n- Defined a north-star metric of weekly active workouts, adopted in quarterly planning\n- Built a paywall conversion model that informed a pricing test raising trial-to-paid conversion 9%"
+        },
+        {
+          "company": "Tandem Language App",
+          "role": "Data Analyst, Product",
+          "location": "Remote",
+          "startDate": "2021-07",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Segmented 900,000 learners by engagement pattern, informing a streak feature that raised weekly sessions 11%\n- Cleaned event tracking with engineers, reducing duplicate or missing events 60%\n- Created a weekly product health report in Mode that replaced 3 ad-hoc spreadsheets"
+        },
+        {
+          "company": "UC San Diego Design Lab",
+          "role": "Research Assistant",
+          "location": "San Diego, CA",
+          "startDate": "2020-06",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Analyzed usability test data from 60 participants for a campus wayfinding app\n- Built survey dashboards in Google Data Studio for the lab's faculty lead"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, San Diego",
+          "degree": "B.S. in Cognitive Science (Design and Interaction)",
+          "startDate": "2017-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Habit App Retention Teardown",
+          "link": "medium.com/@kfoster/habit-app-retention",
+          "description": "Published analysis of public cohort benchmarks for 12 fitness apps, outlining 5 retention levers; read by 18,000 product practitioners"
+        }
+      ],
+      "skills": [
+        "Product Analytics: Amplitude, Mixpanel, funnel and retention analysis",
+        "Experimentation: Statsig, A/B test design, power analysis",
+        "Technical: SQL, BigQuery, Python, Mode",
+        "Communication: decision memos, metric definitions, stakeholder reviews",
+        "Product: funnel instrumentation, event taxonomy design, mobile app analytics"
+      ]
+    },
+    "Marketing Analyst": {
+      "summary": "Marketing analyst with 5 years of experience measuring paid, email and lifecycle channels for direct-to-consumer brands. Rebuilt attribution reporting that shifted $1.4M of spend to higher-return channels. Combines SQL and marketing mix modeling with a practical sense of what campaign teams need each week.",
+      "experience": [
+        {
+          "company": "Sundial Skincare",
+          "role": "Marketing Analyst",
+          "location": "Miami, FL",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a marketing mix model in Robyn covering $9M annual spend, reallocating $1.4M toward channels with 35% higher ROAS\n- Designed geo-holdout tests for Meta and TikTok that measured true incremental lift for the first time\n- Automated channel performance reporting in Looker Studio, replacing 6 manual spreadsheets\n- Segmented email subscribers by purchase recency, raising campaign revenue per send 19%\n- Forecast holiday demand by channel, helping the team hit a $3.2M Q4 revenue target with 8% less spend"
+        },
+        {
+          "company": "Peakline Outdoor Co.",
+          "role": "Marketing Coordinator, Analytics",
+          "location": "Atlanta, GA",
+          "startDate": "2021-01",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Tracked campaign UTMs and GA4 conversions across 40 monthly campaigns\n- Analyzed customer acquisition cost by channel, informing a paid search budget cut that saved $180K\n- Built a monthly marketing scorecard in Google Sheets reviewed by the VP of Marketing"
+        },
+        {
+          "company": "Bulldog Sports Marketing",
+          "role": "Marketing Analytics Intern",
+          "location": "Athens, GA",
+          "startDate": "2019-06",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Analyzed season-ticket renewal surveys from 2,400 fans\n- Reported social campaign engagement weekly for 3 sports programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Georgia",
+          "degree": "B.B.A. in Marketing, Minor in Statistics",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Open-Source MMM Starter",
+          "link": "github.com/lgreene/mmm-starter",
+          "description": "Notebook template for running Robyn on Shopify and ad-platform exports, with calibration against geo-test results"
+        }
+      ],
+      "skills": [
+        "Measurement: marketing mix modeling, geo-holdout testing, multi-touch attribution",
+        "Tools: SQL, GA4, Looker Studio, Robyn, Excel",
+        "Channels: Meta Ads, Google Ads, Klaviyo, TikTok Ads",
+        "Certifications: Google Analytics Certification",
+        "Analysis: incrementality testing, customer segmentation, CAC and LTV analysis"
+      ]
+    },
+    "Business Analyst": {
+      "summary": "Business analyst with 5 years of experience gathering requirements and improving processes for insurance and banking operations. Led requirements for a claims intake system that cut processing time 35%. Bridges business users and engineering teams with clear user stories, process maps and data-backed recommendations.",
+      "experience": [
+        {
+          "company": "Ridgefield Mutual Insurance",
+          "role": "Business Analyst",
+          "location": "Columbus, OH",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Gathered and documented requirements for a claims intake platform, reducing average processing time from 9 days to 6\n- Mapped 18 as-is and to-be processes in Visio, removing 5 redundant approval steps\n- Wrote 140 user stories with acceptance criteria in Jira and supported UAT with 25 adjusters\n- Built SQL reports quantifying claim backlog by region, informing a staffing shift of 8 adjusters\n- Built a Power BI claims-aging dashboard that helped supervisors close 1,200 stalled claims in one quarter"
+        },
+        {
+          "company": "Erie Shore Community Bank",
+          "role": "Operations Analyst",
+          "location": "Cleveland, OH",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Analyzed loan servicing workflows, cutting payoff-quote turnaround from 3 days to 1\n- Supported a core banking upgrade by validating 50 data mappings and test scripts\n- Documented 25 standard operating procedures for the loan servicing team"
+        },
+        {
+          "company": "Buckeye Health Partners",
+          "role": "Business Analyst Intern",
+          "location": "Columbus, OH",
+          "startDate": "2019-05",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Mapped the patient referral intake process for 3 specialty clinics\n- Compiled requirements for a fax-to-digital referral pilot"
+        }
+      ],
+      "education": [
+        {
+          "school": "The Ohio State University",
+          "degree": "B.S. in Business Administration (Operations Management)",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Claims Intake Process Model",
+          "link": "",
+          "description": "BPMN model and simulation in Bizagi showing how removing 2 manual approvals would cut intake cycle time 30%, used to secure project funding"
+        }
+      ],
+      "skills": [
+        "Analysis: requirements elicitation, process mapping, gap analysis, root-cause analysis",
+        "Tools: Jira, Confluence, Visio, SQL, Excel, Power BI",
+        "Delivery: Agile/Scrum, user stories, UAT coordination",
+        "Certifications: IIBA ECBA",
+        "Domains: property and casualty claims, loan servicing, banking operations"
+      ]
+    },
+    "BI Analyst": {
+      "summary": "BI analyst with 4 years of experience building self-serve reporting for retail and consumer goods teams. Consolidated 70 legacy reports into 12 Power BI dashboards used by 300 people weekly. Skilled in data modeling, DAX and SQL, and in training business users to answer their own questions.",
+      "experience": [
+        {
+          "company": "Copperleaf Grocers",
+          "role": "BI Analyst",
+          "location": "Phoenix, AZ",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Consolidated 70 legacy Excel reports into 12 Power BI dashboards used weekly by 300 store and category managers\n- Designed a star-schema sales model in Azure SQL, reducing dashboard refresh time from 50 minutes to 8\n- Trained 120 business users on filters and drill-throughs, cutting ad-hoc data requests 40%\n- Implemented row-level security so 140 store managers see only their own locations\n- Created a weekly shrink and waste report that helped stores reduce perishable waste 11%"
+        },
+        {
+          "company": "Saguaro Beverage Distributors",
+          "role": "Reporting Analyst",
+          "location": "Tempe, AZ",
+          "startDate": "2021-08",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Built route profitability reports for 45 delivery routes, identifying 6 routes for consolidation\n- Automated monthly depletion reports with Power Query, saving 2 days per close\n- Reconciled distributor depletion data with supplier invoices, flagging $95K in billing errors"
+        },
+        {
+          "company": "Sun Devil Analytics Club",
+          "role": "Analytics Project Lead",
+          "location": "Tempe, AZ",
+          "startDate": "2020-01",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Led a 5-student team building a Power BI dashboard of campus dining traffic\n- Presented recommendations that shifted 2 dining hall opening times"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.S. in Business Data Analytics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Grocery KPI Power BI Template",
+          "link": "github.com/mortiz/grocery-kpi-pbi",
+          "description": "Reusable Power BI template with sales, margin and shrink measures in DAX, shared with 3 regional analyst teams"
+        }
+      ],
+      "skills": [
+        "BI: Power BI, DAX, Power Query, row-level security",
+        "Data: SQL, Azure SQL Database, star-schema modeling",
+        "Business: retail KPIs, category management, user training",
+        "Certifications: Microsoft Certified: Power BI Data Analyst Associate (PL-300)",
+        "Tools: Excel, SharePoint, Power Automate, Microsoft Fabric"
+      ]
+    },
+    "Business Intelligence Analyst": {
+      "summary": "Business intelligence analyst with 7 years of experience in hospital systems and health insurance, building trusted reporting on cost, quality and utilization. Delivered a readmissions dashboard that helped reduce 30-day readmissions 9%. Brings strong SQL, Tableau and data validation skills with deep familiarity with claims and EHR data.",
+      "experience": [
+        {
+          "company": "Mississippi Bend Health System",
+          "role": "Business Intelligence Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Tableau readmissions dashboard from Epic Clarity data, supporting care-transition changes that cut 30-day readmissions 9%\n- Validated quality-measure logic against CMS specifications, raising audit match rates to 99.5%\n- Developed service-line cost reports for 14 departments, informing $2.3M in supply savings\n- Documented 90 data definitions in a shared catalog used by clinical and finance analysts\n- Built an operating-room utilization dashboard that helped surgical services add 6% more cases without new staff"
+        },
+        {
+          "company": "Northstar Health Plan",
+          "role": "Data Analyst, Claims",
+          "location": "St. Paul, MN",
+          "startDate": "2019-06",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Analyzed 12M medical claims a year to flag high-cost utilization trends for care management\n- Automated HEDIS measure extracts in SQL Server, shortening reporting cycles by 5 days\n- Built a pharmacy cost trend report that informed formulary changes saving $1.1M"
+        },
+        {
+          "company": "Twin Lakes Analytics Group",
+          "role": "Analytics Intern",
+          "location": "Minneapolis, MN",
+          "startDate": "2018-06",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Cleaned survey data for 3 hospital clients and built summary reports in Excel\n- Wrote SQL queries to summarize patient satisfaction scores by hospital unit"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "B.S. in Statistics, Minor in Public Health",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Readmission Risk Explorer",
+          "link": "",
+          "description": "Tableau prototype combining LACE scores with social determinants data to help care managers prioritize 400 discharges a week"
+        }
+      ],
+      "skills": [
+        "BI & Reporting: Tableau, SQL Server, SSRS, Epic Clarity and Caboodle",
+        "Healthcare Data: claims, HEDIS, CMS quality measures, readmissions",
+        "Data Quality: validation, data dictionaries, HIPAA compliance",
+        "Certifications: Epic Clarity Data Model Certification, Tableau Certified Data Analyst",
+        "Analysis: SQL, Python, statistical process control, cost and utilization analysis"
+      ]
+    },
+    "Reporting Analyst": {
+      "summary": "Reporting analyst with 3 years of experience producing accurate recurring reports for finance and operations leaders in a manufacturing environment. Automated month-end reporting that previously took 4 days down to 1. Known for reliable delivery, careful reconciliation and clean Excel and Power BI deliverables.",
+      "experience": [
+        {
+          "company": "Cream City Fabrication",
+          "role": "Reporting Analyst",
+          "location": "Milwaukee, WI",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Automated month-end operations reporting with Power Query and SQL, cutting preparation from 4 days to 1\n- Reconciled production and ERP inventory data across 3 plants, resolving $410K in unexplained variances\n- Delivered 25 recurring weekly and monthly reports to plant managers with zero missed deadlines in 2025\n- Built a scrap-rate dashboard that helped one plant lower scrap from 4.8% to 3.6%\n- Trained 9 plant supervisors to read and filter Power BI reports, cutting emailed report requests 60%"
+        },
+        {
+          "company": "Lakefront Distribution Services",
+          "role": "Operations Reporting Assistant",
+          "location": "Racine, WI",
+          "startDate": "2022-07",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Compiled daily warehouse throughput reports for 2 distribution centers\n- Standardized 8 Excel templates with data validation, reducing input errors 50%\n- Tracked on-time shipments and mis-picks for weekly operations reviews"
+        },
+        {
+          "company": "Panther Athletics Department",
+          "role": "Student Data Assistant",
+          "location": "Milwaukee, WI",
+          "startDate": "2020-09",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Compiled ticketing and attendance data for 60 home games in Excel\n- Built a monthly revenue summary for the athletics business office"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin-Milwaukee",
+          "degree": "B.B.A. in Information Technology Management",
+          "startDate": "2018-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Month-End Close Automation",
+          "link": "",
+          "description": "Power Query and SQL workflow that reconciles ERP and MES production counts automatically, replacing 14 manual Excel steps"
+        }
+      ],
+      "skills": [
+        "Reporting: Excel (Power Query, pivot tables, XLOOKUP), Power BI, SSRS",
+        "Data: SQL, ERP data (Epicor), reconciliation",
+        "Operations Metrics: OEE, scrap rate, inventory turns",
+        "Certifications: Microsoft Office Specialist: Excel Expert",
+        "Practices: report automation, data validation, documentation, deadline management"
+      ]
+    },
+    "Revenue Analyst": {
+      "summary": "Revenue analyst with 5 years of experience in B2B SaaS, covering bookings, ARR reporting and revenue forecasting. Built a bottoms-up forecast that landed within 2% of actual for six straight quarters. Works closely with finance, sales operations and accounting to keep revenue numbers consistent and ASC 606 compliant.",
+      "experience": [
+        {
+          "company": "Quarry Cloud Systems",
+          "role": "Revenue Analyst",
+          "location": "Austin, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a bottoms-up ARR forecast from Salesforce pipeline and renewal data, landing within 2% of actuals for 6 consecutive quarters\n- Reconciled bookings to billings for $85M ARR, reducing month-end revenue adjustments 70%\n- Analyzed net revenue retention by segment, informing an expansion motion that added $3.1M ARR\n- Supported ASC 606 revenue schedules for multi-element contracts with the accounting team\n- Built a renewal-risk report in Tableau that helped customer success save $1.4M in at-risk ARR"
+        },
+        {
+          "company": "Granite Point Software",
+          "role": "Financial Analyst",
+          "location": "San Antonio, TX",
+          "startDate": "2020-07",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Produced monthly bookings and churn reports for the CFO and board\n- Built a discount-approval analysis that cut average discounting from 18% to 12%\n- Supported quarterly board decks with bookings, churn and cash collection metrics"
+        },
+        {
+          "company": "Longhorn Investment Club",
+          "role": "Equity Research Analyst",
+          "location": "Austin, TX",
+          "startDate": "2018-09",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Built DCF models for 6 software companies pitched to the club's portfolio committee\n- Co-managed a $150K student-run fund that beat its benchmark by 3 points"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at Austin",
+          "degree": "B.B.A. in Finance",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "ARR Bridge Model",
+          "link": "",
+          "description": "Excel and SQL model breaking ARR change into new, expansion, contraction and churn by segment, now the standard view in board reporting"
+        }
+      ],
+      "skills": [
+        "Revenue: ARR/MRR reporting, NRR, bookings, forecasting, ASC 606",
+        "Tools: Salesforce, NetSuite, Adaptive Planning, SQL, Excel",
+        "Analysis: cohort analysis, pricing and discount analysis",
+        "Collaboration: sales operations, accounting close, board reporting",
+        "Certifications: SaaS Metrics Certification (SaaS Academy)"
+      ]
+    },
+    "Growth Analyst": {
+      "summary": "Growth analyst with 4 years of experience in marketplaces and fintech apps, focused on acquisition funnels, referral loops and activation. Found a referral reward change that cut blended CAC 21%. Pairs SQL and experimentation with fast, opinionated recommendations for growth and marketing teams.",
+      "experience": [
+        {
+          "company": "Stoop Neighborhood Marketplace",
+          "role": "Growth Analyst",
+          "location": "Brooklyn, NY",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Tested a two-sided referral reward that cut blended customer acquisition cost 21% while holding 90-day retention flat\n- Built an acquisition funnel model across 7 channels, flagging a paid social segment with 3x higher fraud for exclusion\n- Ran 30 growth experiments in Optimizely and Amplitude, with 9 shipping as wins\n- Forecast weekly new-user volume to plan $4M in quarterly marketing spend\n- Built a weekly growth accounting model splitting new, retained, resurrected and churned users for leadership reviews"
+        },
+        {
+          "company": "Penny Jar Finance",
+          "role": "Associate Analyst, Growth",
+          "location": "Remote",
+          "startDate": "2021-09",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Analyzed KYC drop-off in sign-up flows, informing changes that raised verified accounts 13%\n- Built LTV-to-CAC dashboards by channel in Mode for the growth leadership team\n- Automated daily acquisition reporting with dbt and BigQuery, retiring 4 manual spreadsheets"
+        },
+        {
+          "company": "Washington Square Ventures",
+          "role": "Growth Intern",
+          "location": "New York, NY",
+          "startDate": "2020-06",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Benchmarked acquisition costs for 15 consumer startups in the fund's portfolio\n- Built a referral program teardown used in a founder workshop"
+        }
+      ],
+      "education": [
+        {
+          "school": "New York University",
+          "degree": "B.S. in Economics",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Marketplace Liquidity Index",
+          "link": "",
+          "description": "SQL and Python index measuring buyer-seller match rates by neighborhood, used to choose 6 expansion areas"
+        }
+      ],
+      "skills": [
+        "Growth Analytics: funnel analysis, LTV/CAC, referral and viral loops, cohort retention",
+        "Experimentation: Optimizely, Amplitude Experiment, sequential testing",
+        "Technical: SQL, BigQuery, Python, Mode",
+        "Channels: paid social, paid search, app store optimization",
+        "Modeling: growth accounting, forecasting, LTV and payback models"
+      ]
+    },
+    "Customer Insights Analyst": {
+      "summary": "Customer insights analyst with 5 years of experience blending survey research, transaction data and voice-of-customer feedback for consumer brands. Built a segmentation used to redesign the loyalty program, raising member spend 14%. Strong in Qualtrics, SQL and text analytics, and in turning findings into clear stories for brand teams.",
+      "experience": [
+        {
+          "company": "Hearthstone Restaurants",
+          "role": "Customer Insights Analyst",
+          "location": "Charlotte, NC",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a k-means segmentation of 2.6M loyalty members from transaction and survey data, guiding a program redesign that raised member spend 14%\n- Ran quarterly Qualtrics brand tracking surveys with 4,000 respondents across 9 markets\n- Applied topic modeling to 120,000 open-text reviews, surfacing a wait-time issue addressed in 180 locations\n- Presented monthly insight briefs to the CMO and 6 brand managers\n- Linked survey responses to transaction data, showing guests rating service 9+ spent 22% more per year"
+        },
+        {
+          "company": "Carolina Market Research Partners",
+          "role": "Research Analyst",
+          "location": "Raleigh, NC",
+          "startDate": "2020-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Designed and analyzed 35 consumer surveys for retail and CPG clients using SPSS and MaxDiff\n- Moderated 20 focus groups and synthesized findings into client-ready reports\n- Wrote 20 client reports combining survey statistics with qualitative quotes"
+        },
+        {
+          "company": "Tar Heel Research Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "Chapel Hill, NC",
+          "startDate": "2018-09",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Coded 400 interview transcripts on consumer decision making in NVivo\n- Ran descriptive statistics in SPSS for 2 faculty publications"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Chapel Hill",
+          "degree": "B.A. in Psychology, Minor in Data Science",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Review Topic Tracker",
+          "link": "github.com/psingh/review-topics",
+          "description": "Python BERTopic pipeline classifying restaurant reviews weekly into 15 themes, feeding a Tableau view for operations leaders"
+        }
+      ],
+      "skills": [
+        "Research: survey design, MaxDiff, conjoint, focus groups, NPS analysis",
+        "Analytics: SQL, Python, segmentation, text analytics",
+        "Tools: Qualtrics, SPSS, Tableau, Medallia",
+        "Communication: insight storytelling, executive briefs",
+        "Methods: k-means segmentation, driver analysis, journey mapping"
+      ]
+    },
+    "Experimentation Analyst": {
+      "summary": "Experimentation analyst with 5 years of experience running and auditing online experiments for e-commerce and travel products. Built an experimentation review process that raised the share of trustworthy test results from 60% to 95%. Deep in statistics for A/B testing and in coaching product teams on test design.",
+      "experience": [
+        {
+          "company": "Wayfarer Travel Booking",
+          "role": "Experimentation Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Created a pre-registration and review process for 250 tests a year, raising tests with valid results from 60% to 95%\n- Implemented sample-ratio-mismatch alerts and CUPED in the in-house platform, cutting average test duration 25%\n- Analyzed a checkout test program that delivered $6.5M in incremental annual bookings\n- Ran experimentation training for 80 product managers, designers and engineers\n- Published a test results library of 600 experiments that product teams search before proposing new tests"
+        },
+        {
+          "company": "Lattice Home Furnishings",
+          "role": "Data Analyst, Optimization",
+          "location": "Milwaukee, WI",
+          "startDate": "2020-07",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Analyzed 60 site experiments in Optimizely, including a product-page redesign that lifted conversion 4%\n- Built power calculators in R that helped teams size tests correctly before launch\n- Diagnosed a tracking bug that had inflated conversion in 7 tests, prompting a re-run program"
+        },
+        {
+          "company": "Marquette Economics Department",
+          "role": "Research Assistant",
+          "location": "Milwaukee, WI",
+          "startDate": "2018-01",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Ran randomized survey experiments on 1,800 respondents for a faculty study\n- Cleaned and analyzed experiment data in R with regression models"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Chicago",
+          "degree": "M.S. in Analytics",
+          "startDate": "2019-09",
+          "endDate": "2020-06"
+        },
+        {
+          "school": "Marquette University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Sample Size Calculator",
+          "link": "github.com/dkowalski/ab-sizer",
+          "description": "Open-source Streamlit app for sizing A/B tests with CUPED and sequential boundaries, used by 3 internal teams"
+        }
+      ],
+      "skills": [
+        "Statistics: hypothesis testing, power analysis, CUPED, sequential testing, Bayesian A/B",
+        "Platforms: Optimizely, Eppo, in-house experimentation platforms",
+        "Technical: SQL, Python, R, Databricks",
+        "Enablement: test design reviews, experimentation training",
+        "Communication: experiment readouts, pre-registration templates, training workshops"
+      ]
+    },
+    "BI Developer": {
+      "summary": "BI developer with 9 years of experience designing data warehouses, ETL and enterprise reporting on the Microsoft stack. Migrated an on-premises SSAS environment to Azure and Power BI, cutting reporting costs 35%. Writes performant SQL and DAX and builds semantic models business teams can trust.",
+      "experience": [
+        {
+          "company": "Silverpine Manufacturing",
+          "role": "BI Developer",
+          "location": "Grand Rapids, MI",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Migrated on-premises SSAS cubes and 150 SSRS reports to Azure Synapse and Power BI, cutting reporting infrastructure costs 35%\n- Built Azure Data Factory pipelines loading ERP and MES data nightly with 99.7% on-time success\n- Designed shared Power BI semantic models with incremental refresh serving 500 users\n- Tuned SQL and DAX measures, reducing slowest report load from 90 seconds to 9\n- Built a Power BI usage audit that retired 140 unused reports and simplified workspace security"
+        },
+        {
+          "company": "Great Lakes Auto Parts",
+          "role": "SQL and Reporting Developer",
+          "location": "Detroit, MI",
+          "startDate": "2019-01",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Developed SSIS packages integrating 6 source systems into a Kimball-style warehouse\n- Built 60 SSRS reports for sales, purchasing and quality teams\n- Tuned warehouse indexes, cutting nightly ETL runtime from 5 hours to 2"
+        },
+        {
+          "company": "Huron Data Services",
+          "role": "Junior Database Developer",
+          "location": "Ann Arbor, MI",
+          "startDate": "2017-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Wrote T-SQL stored procedures for client reporting databases\n- Documented data lineage for 40 tables during a warehouse rebuild\n- Built unit tests for stored procedures, reducing data defects found in QA"
+        }
+      ],
+      "education": [
+        {
+          "school": "Michigan State University",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Plant Performance Semantic Model",
+          "link": "",
+          "description": "Shared Power BI model combining MES downtime, ERP output and labor data, enabling OEE reporting for 5 plants from one dataset"
+        }
+      ],
+      "skills": [
+        "Microsoft BI: Power BI, DAX, SSAS Tabular, SSRS, SSIS",
+        "Cloud Data: Azure Synapse, Azure Data Factory, Azure SQL",
+        "Modeling: Kimball dimensional modeling, T-SQL, performance tuning",
+        "Certifications: Microsoft Certified: Fabric Analytics Engineer Associate (DP-600)",
+        "Practices: Git source control, deployment pipelines, report governance"
+      ]
+    },
+    "Analytics Engineer": {
+      "summary": "Analytics engineer with 5 years of experience building modern data stacks for venture-backed SaaS companies. Rebuilt a 400-model dbt project that cut warehouse spend 38% and pipeline runtime by two thirds. Brings software engineering practices like testing, CI and code review to analytics teams.",
+      "experience": [
+        {
+          "company": "Relay HR Cloud",
+          "role": "Analytics Engineer",
+          "location": "Remote",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Refactored a 400-model dbt project into staging, intermediate and mart layers, cutting Snowflake spend 38% and runtime from 3 hours to 55 minutes\n- Added 900 dbt tests and Slim CI in GitHub Actions, reducing broken dashboards reported by users 80%\n- Built a semantic layer of 60 metrics consumed by Hex, Looker and the customer-facing analytics product\n- Onboarded 5 analysts to Git workflows, dbt conventions and code review\n- Modeled product usage events into session and account tables, enabling a usage-based pricing analysis"
+        },
+        {
+          "company": "Brightside Logistics Software",
+          "role": "Data Analyst",
+          "location": "Portland, OR",
+          "startDate": "2021-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Replaced scheduled SQL scripts with dbt models and Fivetran connectors for 12 sources\n- Built Looker explores for finance and customer success, ending weekly CSV exports\n- Wrote documentation for 80 models and published a dbt docs site for business users"
+        },
+        {
+          "company": "Beaver Industrial Engineering Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "Corvallis, OR",
+          "startDate": "2019-06",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Built a PostgreSQL database for manufacturing sensor data from 12 machines\n- Wrote Python scripts to automate weekly downtime reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "Oregon State University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "dbt Snowflake Cost Monitor",
+          "link": "github.com/kpatel/dbt-cost-monitor",
+          "description": "dbt package that attributes Snowflake credits to models and owners, used by 40+ teams"
+        }
+      ],
+      "skills": [
+        "Transformation: dbt, SQL, Jinja, dimensional modeling",
+        "Platforms: Snowflake, BigQuery, Fivetran, Airbyte",
+        "Engineering: Git, GitHub Actions, Python, data testing",
+        "BI & Semantic: Looker (LookML), Hex, dbt Semantic Layer",
+        "Practices: data modeling standards, code review, CI/CD for analytics"
+      ]
+    },
+    "Analytics Lead": {
+      "summary": "Analytics lead with 9 years of experience, currently leading a team of 5 analysts supporting commerce, operations and finance at a fast-growing retailer. Set up the company’s first metrics layer and quarterly insights program. Balances hands-on SQL and modeling with prioritization, hiring and stakeholder management.",
+      "experience": [
+        {
+          "company": "Larkspur Apparel",
+          "role": "Analytics Lead",
+          "location": "San Diego, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a team of 5 analysts supporting merchandising, operations and finance for a $340M omnichannel retailer\n- Launched a governed metrics layer in dbt and Looker, reducing conflicting KPI reports from weekly to near zero\n- Directed an inventory allocation analysis that improved full-price sell-through 6 points\n- Hired 3 analysts and introduced a quarterly planning process that ties analytics work to company OKRs\n- Built a weekly trading review with merchants that shortened markdown decisions from 10 days to 4"
+        },
+        {
+          "company": "Coastline Home Delivery",
+          "role": "Senior Data Analyst",
+          "location": "Irvine, CA",
+          "startDate": "2019-03",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Modeled delivery-window demand, informing a pricing change that added $2.4M in annual fees\n- Built operations dashboards in Tableau used daily by 25 hub managers\n- Trained 40 hub staff on reading delivery-performance dashboards"
+        },
+        {
+          "company": "Pacifica Insights Group",
+          "role": "Data Analyst",
+          "location": "Los Angeles, CA",
+          "startDate": "2017-01",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Delivered retail analytics projects for 10 clients, including store clustering and basket analysis\n- Automated client reporting in Python, saving 20 hours per month\n- Designed survey analyses for 3 retail clients' customer experience programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Irvine",
+          "degree": "B.A. in Business Economics",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Retail Metrics Glossary",
+          "link": "",
+          "description": "Company-wide metric glossary of 70 definitions with dbt lineage links, referenced in every merchandising and finance review"
+        }
+      ],
+      "skills": [
+        "Leadership: team management, hiring, roadmap prioritization, stakeholder management",
+        "Analytics: SQL, Python, forecasting, inventory and pricing analysis",
+        "Data Stack: dbt, Snowflake, Looker, Tableau",
+        "Retail: merchandising, allocation, sell-through, omnichannel KPIs",
+        "Communication: executive readouts, analytics roadmaps, written recommendations"
+      ]
+    },
+    "Data Architect": {
+      "summary": "Data architect with 12 years of experience designing enterprise data platforms for financial services and insurance. Architected a lakehouse migration that retired 4 legacy warehouses and saved $2.6M a year. Sets data modeling standards, governance patterns and cloud reference architectures that engineering teams can build on safely.",
+      "experience": [
+        {
+          "company": "Sterling Point Financial",
+          "role": "Data Architect",
+          "location": "Charlotte, NC",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Architected a Databricks lakehouse on AWS that retired 4 legacy warehouses, saving $2.6M annually\n- Defined enterprise data modeling standards, including Data Vault 2.0 for raw history and dimensional marts\n- Designed column-level security and masking with Unity Catalog to meet GLBA and SOX requirements\n- Chair the data architecture review board, approving designs for 18 delivery teams\n- Designed a near-real-time CDC pattern with Debezium and Kafka adopted for 35 source systems"
+        },
+        {
+          "company": "Palmetto Life Assurance",
+          "role": "Senior Data Engineer",
+          "location": "Columbia, SC",
+          "startDate": "2017-08",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Built a policy and claims data warehouse on Teradata serving actuarial and finance teams\n- Designed CDC pipelines with Informatica, reducing data latency from daily to 15 minutes\n- Defined conformed customer and policy dimensions shared by 5 reporting teams"
+        },
+        {
+          "company": "Carolina Systems Integrators",
+          "role": "ETL Developer",
+          "location": "Raleigh, NC",
+          "startDate": "2014-06",
+          "endDate": "2017-07",
+          "isCurrent": false,
+          "description": "- Developed Informatica mappings for 6 banking clients' regulatory reporting\n- Tuned Oracle SQL jobs, cutting nightly batch windows 40%\n- Built data validation scripts that cut regulatory report reruns 50%"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "M.S. in Computer Science",
+          "startDate": "2012-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "Clemson University",
+          "degree": "B.S. in Computer Engineering",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Lakehouse Reference Architecture",
+          "link": "",
+          "description": "Internal reference design and Terraform modules for Databricks workspaces, adopted as the default pattern for new data products"
+        }
+      ],
+      "skills": [
+        "Architecture: lakehouse, Data Vault 2.0, dimensional modeling, data mesh",
+        "Platforms: Databricks, Unity Catalog, AWS (S3, Glue, Redshift), Snowflake",
+        "Governance & Compliance: GLBA, SOX, data lineage, access control",
+        "Certifications: AWS Certified Solutions Architect – Professional, Databricks Certified Data Engineer Professional",
+        "Streaming: Kafka, Debezium, Spark Structured Streaming"
+      ]
+    },
+    "Data Modeler": {
+      "summary": "Data modeler with 8 years of experience designing conceptual, logical and physical models for healthcare payers and retail. Redesigned a member data model that removed 1.2M duplicate records and simplified 40 downstream reports. Expert in ER/Studio, normalization and dimensional design, with strong partnerships across data stewards and engineers.",
+      "experience": [
+        {
+          "company": "Evergreen Health Plans",
+          "role": "Data Modeler",
+          "location": "Portland, OR",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the member and eligibility model with a golden-record key, removing 1.2M duplicate members\n- Maintained logical and physical models for 600 tables in ER/Studio with full naming standards\n- Designed dimensional marts for claims and pharmacy, cutting analyst query complexity and runtime 50%\n- Partnered with data stewards to map HIPAA-sensitive fields and classify 2,000 attributes\n- Built model review checklists and a dbt naming convention used by 12 engineers"
+        },
+        {
+          "company": "Cascade Outfitters",
+          "role": "Database Developer",
+          "location": "Seattle, WA",
+          "startDate": "2018-05",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Modeled product, inventory and order schemas for a new e-commerce platform\n- Optimized indexes in SQL Server, reducing order lookup time 70%\n- Created a product hierarchy model that supported a new merchandising reporting suite"
+        },
+        {
+          "company": "Portland State Office of Institutional Research",
+          "role": "Student Data Assistant",
+          "location": "Portland, OR",
+          "startDate": "2016-09",
+          "endDate": "2018-06",
+          "isCurrent": false,
+          "description": "- Maintained enrollment tables in SQL Server for state reporting\n- Documented data definitions for 60 student data fields"
+        }
+      ],
+      "education": [
+        {
+          "school": "Portland State University",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Member 360 Data Model",
+          "link": "",
+          "description": "Logical model unifying eligibility, claims and care management data around a single member key, published with full ER/Studio documentation"
+        }
+      ],
+      "skills": [
+        "Modeling: conceptual, logical and physical modeling, 3NF, Kimball, Data Vault",
+        "Tools: ER/Studio, erwin, SQL Server, Snowflake, dbt",
+        "Healthcare Data: claims, eligibility, X12 837/834, HIPAA",
+        "Certifications: CDMP Associate",
+        "Practices: model reviews, metadata management, reverse engineering legacy schemas"
+      ]
+    },
+    "Statistician": {
+      "summary": "Statistician with 7 years of experience in pharmaceutical clinical trials, designing studies and producing analyses for regulatory submissions. Served as study statistician on 2 Phase III trials supporting an approved NDA. Fluent in SAS and R, CDISC standards and ICH E9 principles.",
+      "experience": [
+        {
+          "company": "Corvallis Therapeutics",
+          "role": "Senior Statistician",
+          "location": "Durham, NC",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead statistician on 2 Phase III oncology trials enrolling 1,100 patients, supporting a successful NDA submission\n- Authored statistical analysis plans with estimands aligned to ICH E9(R1)\n- Designed a group-sequential interim analysis that allowed early stopping for efficacy, saving 9 months\n- Reviewed ADaM datasets and TLFs from 2 CROs, catching 30 programming discrepancies before database lock\n- Built reusable R Shiny tools for simulation-based sample size planning used by 9 statisticians"
+        },
+        {
+          "company": "Piedmont Clinical Research Organization",
+          "role": "Biostatistician",
+          "location": "Raleigh, NC",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Performed sample size calculations and analyses for 8 Phase I–II studies\n- Programmed survival analyses and mixed models in SAS for clinical study reports\n- Supported 2 FDA meeting packages with statistical responses and sensitivity analyses"
+        },
+        {
+          "company": "UNC Gillings School of Global Public Health",
+          "role": "Graduate Research Assistant",
+          "location": "Chapel Hill, NC",
+          "startDate": "2017-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Analyzed longitudinal cohort data with mixed models for 2 epidemiology papers\n- Wrote SAS macros for data cleaning across 5 study waves"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Chapel Hill",
+          "degree": "M.S. in Biostatistics",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Duke University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Adaptive Design Simulation Study",
+          "link": "",
+          "description": "R simulation comparing 3 response-adaptive randomization designs for a rare-disease trial, presented at the Joint Statistical Meetings"
+        }
+      ],
+      "skills": [
+        "Methods: survival analysis, mixed models, group-sequential design, multiple imputation",
+        "Software: SAS, R, East, nQuery",
+        "Standards: CDISC SDTM and ADaM, ICH E9(R1), FDA submission requirements",
+        "Communication: SAP authoring, DSMB support, cross-functional study teams",
+        "Programming: SAS macros, R Shiny, simulation studies"
+      ]
+    },
+    "Data Steward": {
+      "summary": "Data steward with 6 years of experience in banking operations and data governance, owning customer and account data domains. Cut critical data errors 64% by setting quality rules and fixing root causes with source teams. Translates governance policy into practical definitions, rules and workflows business users follow.",
+      "experience": [
+        {
+          "company": "Show-Me Prairie Bank",
+          "role": "Data Steward, Customer Domain",
+          "location": "Kansas City, MO",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own definitions and quality rules for 180 customer and account data elements used in BCBS 239 risk reporting\n- Reduced critical data element failures 64% by tracing root causes to 3 onboarding systems\n- Documented business glossary terms and lineage in Collibra, adopted by 14 reporting teams\n- Run monthly data quality reviews with business owners and track remediation to closure\n- Trained 60 relationship managers on correct customer data entry, cutting address errors 40%"
+        },
+        {
+          "company": "Heartland Mortgage Services",
+          "role": "Operations Data Specialist",
+          "location": "Omaha, NE",
+          "startDate": "2020-02",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Corrected loan boarding data for 9,000 mortgages during a servicing transfer\n- Built Excel exception reports that cut HMDA reporting errors 30%\n- Logged and tracked 200 data issues through resolution with IT"
+        },
+        {
+          "company": "Mizzou Credit Union Student Branch",
+          "role": "Member Services Intern",
+          "location": "Columbia, MO",
+          "startDate": "2018-05",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Updated member records and verified KYC documents for new accounts\n- Flagged 150 incomplete member profiles for correction"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri",
+          "degree": "B.S. in Business Administration (Information Systems)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Customer Data Quality Scorecard",
+          "link": "",
+          "description": "Power BI scorecard tracking completeness and validity of 40 critical customer fields by onboarding channel, reviewed monthly with business owners"
+        }
+      ],
+      "skills": [
+        "Governance: business glossary, data lineage, critical data elements, issue management",
+        "Tools: Collibra, Informatica Data Quality, SQL, Excel",
+        "Regulatory: BCBS 239, HMDA, KYC data requirements",
+        "Certifications: CDMP Associate",
+        "Communication: data quality training, business owner reviews, policy writing"
+      ]
+    },
+    "Data Quality Analyst": {
+      "summary": "Data quality analyst with 4 years of experience profiling, monitoring and fixing data for e-commerce and supply chain systems. Built automated checks that caught 95% of data incidents before they reached dashboards. Skilled in SQL, Great Expectations and root-cause analysis with engineering teams.",
+      "experience": [
+        {
+          "company": "Willowbrook Supply Co.",
+          "role": "Data Quality Analyst",
+          "location": "Columbus, OH",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built 320 automated validation checks in Great Expectations, catching 95% of data incidents before they reached reporting\n- Profiled product master data for 48,000 SKUs, correcting unit-of-measure errors that distorted inventory value by $700K\n- Established a data incident log and weekly triage with engineering, cutting mean time to resolve from 6 days to 2\n- Published a monthly data quality scorecard across completeness, accuracy and timeliness\n- Defined data quality SLAs with 5 business owners for the most critical inventory and order tables"
+        },
+        {
+          "company": "Buckeye Online Retail",
+          "role": "Data Operations Associate",
+          "location": "Dublin, OH",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Audited product catalog feeds from 120 vendors, raising listing accuracy to 98%\n- Wrote SQL reconciliation queries between order and fulfillment systems\n- Built Excel macros that checked vendor price files before upload"
+        },
+        {
+          "company": "Bobcat Analytics Society",
+          "role": "Project Volunteer",
+          "location": "Athens, OH",
+          "startDate": "2019-09",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Cleaned and validated city open-data datasets for a student traffic-safety project\n- Presented data issues and fixes to city planning staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "B.S. in Business Analytics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "SKU Master Cleanup",
+          "link": "",
+          "description": "Profiled and deduplicated 48,000 product records with Python and fuzzy matching, merging 2,100 duplicates"
+        }
+      ],
+      "skills": [
+        "Data Quality: profiling, validation rules, reconciliation, root-cause analysis",
+        "Tools: SQL, Great Expectations, Python, Snowflake, Jira",
+        "Domains: product master data, inventory, order management",
+        "Reporting: data quality scorecards, Tableau",
+        "Methods: data profiling, matching and deduplication, data contracts basics"
+      ]
+    },
+    "Data Quality Engineer": {
+      "summary": "Data quality engineer with 6 years of experience building testing and observability into data pipelines at streaming and adtech companies. Designed a data contract framework that cut downstream breakages 70%. Writes production Python and SQL and treats data reliability with the same rigor as software reliability.",
+      "experience": [
+        {
+          "company": "Tidewater Streaming",
+          "role": "Data Quality Engineer",
+          "location": "Los Angeles, CA",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed schema-based data contracts between 25 producer services and the warehouse, cutting downstream breakages 70%\n- Built anomaly detection on 400 tables with Monte Carlo and custom Python checks, alerting owners within 15 minutes\n- Added dbt and Spark unit tests to CI, blocking 60 faulty deployments in the first year\n- Defined data SLAs for 30 critical datasets feeding royalty payments and executive reporting\n- Built a data reliability scorecard reviewed monthly by engineering directors, raising SLA attainment from 93% to 99%"
+        },
+        {
+          "company": "Brightpixel Ad Exchange",
+          "role": "QA Engineer, Data",
+          "location": "San Francisco, CA",
+          "startDate": "2020-01",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Automated validation of 3B daily bid events with PySpark, cutting billing discrepancies 45%\n- Built regression test suites for Airflow DAGs, reducing failed releases by half\n- Wrote synthetic data generators that let QA reproduce billing edge cases"
+        },
+        {
+          "company": "Gaucho Data Science Club",
+          "role": "Data Engineering Lead",
+          "location": "Santa Barbara, CA",
+          "startDate": "2017-09",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Built a scraping and validation pipeline for 50,000 campus housing listings\n- Taught 3 workshops on SQL and Python data cleaning"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Santa Barbara",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "dbt Contract Linter",
+          "link": "github.com/ykim/dbt-contract-lint",
+          "description": "Open-source CLI that checks dbt models against producer data contracts in CI, with 150 GitHub stars"
+        }
+      ],
+      "skills": [
+        "Data Reliability: data contracts, observability, anomaly detection, SLAs",
+        "Engineering: Python, SQL, PySpark, Kafka, Airflow, dbt",
+        "Tools: Monte Carlo, Great Expectations, Soda, GitHub Actions",
+        "Cloud: AWS (S3, EMR, Glue), Snowflake",
+        "Testing: unit and integration testing for data, schema validation, CI pipelines"
+      ]
+    },
+    "Data Governance Analyst": {
+      "summary": "Data governance analyst with 5 years of experience supporting governance programs in health insurance and the public sector. Catalogued 3,500 data assets and mapped PHI ahead of an external HIPAA audit that closed with zero findings. Combines policy knowledge with hands-on metadata, lineage and access-review work.",
+      "experience": [
+        {
+          "company": "Blue Ridge Community Health Plan",
+          "role": "Data Governance Analyst",
+          "location": "Richmond, VA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Catalogued 3,500 data assets in Alation with owners, definitions and sensitivity classifications\n- Mapped PHI and PII across 40 systems ahead of an external HIPAA audit that closed with zero findings\n- Coordinated quarterly access reviews for 900 users, removing 210 unneeded entitlements\n- Facilitated the monthly data governance council and tracked 60 policy exceptions to resolution\n- Built a Power BI governance dashboard tracking catalog coverage, owner assignment and open issues"
+        },
+        {
+          "company": "Old Dominion Regional Transit Authority",
+          "role": "Data Management Associate",
+          "location": "Richmond, VA",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Drafted data standards for 12 open-data datasets published on the regional open-data portal\n- Documented lineage for ridership and asset data used in federal transit reporting\n- Supported a records retention review covering 18 business systems"
+        },
+        {
+          "company": "VCU Office of Research Integrity",
+          "role": "Student Research Assistant",
+          "location": "Richmond, VA",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Tracked data use agreements for 120 research studies\n- Updated data security checklists for study teams handling PHI"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Commonwealth University",
+          "degree": "B.S. in Information Systems",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "PHI Discovery Scan",
+          "link": "",
+          "description": "Microsoft Purview scanning rollout that classified sensitive fields across 40 databases, reducing manual inventory work by 300 hours"
+        }
+      ],
+      "skills": [
+        "Governance: data cataloging, classification, lineage, policy management",
+        "Tools: Alation, Collibra, Microsoft Purview, SQL",
+        "Privacy & Compliance: HIPAA, PII/PHI mapping, access reviews",
+        "Frameworks: DAMA-DMBOK, data governance councils",
+        "Communication: council facilitation, policy documentation, training"
+      ]
+    },
+    "Data Governance Manager": {
+      "summary": "Data governance manager with 11 years in data management at insurers and banks, leading a team of 6 stewards and analysts. Built an enterprise governance program from scratch that achieved 92% ownership coverage of critical data within 18 months. Aligns business, risk and technology leaders around policies that people actually follow.",
+      "experience": [
+        {
+          "company": "Granite State Mutual",
+          "role": "Data Governance Manager",
+          "location": "Boston, MA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built the enterprise data governance program, assigning owners to 92% of 1,400 critical data elements within 18 months\n- Lead a team of 6 data stewards and governance analysts with a $1.1M annual budget\n- Selected and rolled out Collibra across 9 business units, onboarding 350 users\n- Drafted data classification and retention policies approved by the CRO and audit committee\n- Cut regulatory reporting data issues 58% through quality rules tied to NAIC filings"
+        },
+        {
+          "company": "Merrimack Trust Bank",
+          "role": "Data Governance Lead",
+          "location": "Manchester, NH",
+          "startDate": "2018-04",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Led BCBS 239 data lineage documentation for 40 risk reports\n- Established a data issue management process that closed 300 issues within SLA\n- Ran quarterly data owner forums for 25 executives across lending and deposits"
+        },
+        {
+          "company": "Seacoast Data Consulting",
+          "role": "Data Management Consultant",
+          "location": "Portsmouth, NH",
+          "startDate": "2015-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Delivered master data management assessments for 7 financial services clients\n- Designed customer matching rules that reduced duplicate records 35%\n- Wrote data governance charters for 3 client programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston University",
+          "degree": "M.S. in Information Systems",
+          "startDate": "2013-09",
+          "endDate": "2015-05"
+        },
+        {
+          "school": "University of New Hampshire",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2009-09",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Critical Data Element Framework",
+          "link": "",
+          "description": "Selection and ownership framework for critical data elements, adopted by finance, actuarial and claims as the basis for regulatory controls"
+        }
+      ],
+      "skills": [
+        "Governance: operating model design, data ownership, policy and standards, issue management",
+        "Tools: Collibra, Informatica MDM, Microsoft Purview, SQL",
+        "Regulatory: BCBS 239, NAIC reporting, GLBA, records retention",
+        "Leadership: team management, budget ownership, executive councils",
+        "Certifications: CDMP Practitioner"
+      ]
+    },
+    "Quantitative Analyst": {
+      "summary": "Quantitative analyst with 6 years of experience in derivatives pricing and risk at an asset manager and an investment bank. Built a volatility surface model that reduced hedging P&L leakage $4M a year. Strong in stochastic calculus, Python and C++, and in explaining model limits to traders and risk managers.",
+      "experience": [
+        {
+          "company": "Hollis Ridge Capital",
+          "role": "Quantitative Analyst",
+          "location": "New York, NY",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built an SVI-based equity volatility surface calibrated intraday, reducing hedging P&L leakage about $4M a year\n- Developed Monte Carlo pricing for exotic options with variance reduction, cutting runtime 85%\n- Implemented historical and stressed VaR for a $6B multi-asset portfolio\n- Documented models for SR 11-7 validation, passing review with only minor findings\n- Built a Python risk library for Greeks and scenario P&L, now used by 15 traders and risk managers"
+        },
+        {
+          "company": "Battery Wharf Securities",
+          "role": "Quantitative Analyst, Rates",
+          "location": "Jersey City, NJ",
+          "startDate": "2020-07",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Built multi-curve SOFR bootstrapping in C++ for the swaps desk during LIBOR transition\n- Automated daily risk reports for 12 traders, saving 2 hours each morning\n- Backtested hedging strategies across 5 years of swap data to support desk limits"
+        },
+        {
+          "company": "Cornell Financial Engineering Lab",
+          "role": "Undergraduate Researcher",
+          "location": "Ithaca, NY",
+          "startDate": "2018-06",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Implemented stochastic volatility calibration in Python for a faculty project\n- Compared Heston and SABR fits across 3 years of index options data"
+        }
+      ],
+      "education": [
+        {
+          "school": "Baruch College, CUNY",
+          "degree": "M.F.E. in Financial Engineering",
+          "startDate": "2019-08",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "Cornell University",
+          "degree": "B.A. in Mathematics and Economics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Rough Volatility Pricer",
+          "link": "github.com/ewu/rough-vol",
+          "description": "Python implementation of rough Bergomi pricing with GPU Monte Carlo, benchmarked against market VIX options"
+        }
+      ],
+      "skills": [
+        "Quant Methods: stochastic calculus, Monte Carlo, PDE methods, volatility modeling, VaR",
+        "Programming: Python (NumPy, pandas), C++, kdb+/q, SQL",
+        "Markets: equity derivatives, interest rate swaps, SOFR curves",
+        "Model Risk: SR 11-7 documentation, backtesting",
+        "Certifications: CFA Level II Candidate, FRM"
+      ]
+    },
+    "Operations Research Analyst": {
+      "summary": "Operations research analyst with 5 years of experience applying optimization and simulation to airline and logistics operations. Built a crew-pairing optimizer that saved $7M a year in hotel and deadhead costs. Turns messy operational constraints into solvable models and explains trade-offs to operations leaders.",
+      "experience": [
+        {
+          "company": "North Star Regional Airlines",
+          "role": "Operations Research Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a mixed-integer crew-pairing model in Gurobi covering 900 daily flights, saving $7M a year in hotel and deadhead costs\n- Developed discrete-event simulation of hub turnarounds, informing gate changes that cut average delay 4 minutes\n- Created a disruption-recovery heuristic that rebuilt schedules in under 3 minutes during storms\n- Partnered with union representatives to encode 60 contract rules as model constraints\n- Built a Tableau dashboard showing schedule cost drivers, adopted by crew planners for monthly bid reviews"
+        },
+        {
+          "company": "Interstate Parcel Network",
+          "role": "Associate Operations Research Analyst",
+          "location": "Memphis, TN",
+          "startDate": "2021-01",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Optimized sort-center staffing with linear programming, reducing overtime 12%\n- Modeled trailer load plans that improved trailer fill rates 6 points\n- Built a what-if tool in Excel and Python for peak-season planning"
+        },
+        {
+          "company": "Georgia Tech Supply Chain Lab",
+          "role": "Graduate Research Assistant",
+          "location": "Atlanta, GA",
+          "startDate": "2019-08",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Modeled hospital nurse scheduling as an integer program for a faculty study\n- Built a Python benchmark comparing 4 heuristics on 30 test cases"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "M.S. in Operations Research",
+          "startDate": "2019-08",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "Virginia Tech",
+          "degree": "B.S. in Industrial and Systems Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Open Crew Scheduling Benchmark",
+          "link": "github.com/tbrooks/crew-bench",
+          "description": "Public dataset and Pyomo models for airline crew pairing, used in 2 university OR courses"
+        }
+      ],
+      "skills": [
+        "Optimization: linear and mixed-integer programming, column generation, heuristics",
+        "Simulation: discrete-event simulation, AnyLogic, SimPy",
+        "Tools: Python, Gurobi, Pyomo, SQL",
+        "Domains: airline crew scheduling, network planning, workforce optimization",
+        "Certifications: INFORMS Associate Certified Analytics Professional (aCAP)"
+      ]
+    },
+    "Decision Scientist": {
+      "summary": "Decision scientist with 6 years of experience combining causal inference, forecasting and economics to guide marketplace and pricing decisions. Quantified incentive effects that let leadership cut driver bonuses $11M a year without hurting supply. Frames ambiguous business questions as decisions with clear options, uncertainty and expected value.",
+      "experience": [
+        {
+          "company": "Roadrunner Delivery",
+          "role": "Decision Scientist",
+          "location": "San Francisco, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Estimated driver incentive elasticity with switchback experiments, enabling an $11M annual bonus reduction with no measurable supply loss\n- Built a synthetic-control framework to evaluate city launches when randomized tests were impossible\n- Developed a decision model for minimum-order fees that raised contribution margin 3 points\n- Present quarterly decision reviews to the COO with recommendations and confidence ranges\n- Built a Bayesian structural time-series model to measure a rebrand's impact on order volume across 30 markets"
+        },
+        {
+          "company": "Brookfield Economic Advisors",
+          "role": "Economic Analyst",
+          "location": "Washington, DC",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Built difference-in-differences analyses for 9 antitrust and labor economics engagements\n- Wrote Stata and R code reviewed in expert reports for litigation\n- Built labor market datasets from public data for 4 wage studies"
+        },
+        {
+          "company": "Terrapin Economics Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "College Park, MD",
+          "startDate": "2017-06",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Cleaned and merged 10 years of county employment data in Stata\n- Replicated regression results for a faculty minimum-wage paper"
+        }
+      ],
+      "education": [
+        {
+          "school": "Johns Hopkins University",
+          "degree": "M.A. in Applied Economics",
+          "startDate": "2018-09",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "University of Maryland",
+          "degree": "B.S. in Economics",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Causal Inference Playbook",
+          "link": "",
+          "description": "Internal guide with code templates for choosing between experiments, switchbacks and synthetic control, used by 25 analysts"
+        }
+      ],
+      "skills": [
+        "Causal Inference: switchback experiments, synthetic control, difference-in-differences, IV",
+        "Modeling: forecasting, elasticity estimation, decision analysis",
+        "Tools: Python, R, Stata, SQL, Databricks",
+        "Communication: decision memos, executive reviews",
+        "Economics: marketplace design, incentive design, pricing"
+      ]
+    },
+    "Risk Analyst": {
+      "summary": "Risk analyst with 4 years of experience in credit and market risk at a regional bank. Rebuilt the commercial loan concentration report that informed a $150M reduction in high-risk CRE exposure. Strong in Excel and SQL modeling, stress testing and clear risk reporting to committees.",
+      "experience": [
+        {
+          "company": "Twin Rivers Bancorp",
+          "role": "Risk Analyst",
+          "location": "Pittsburgh, PA",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt commercial real estate concentration reporting for a $3.2B loan book, informing a $150M reduction in high-risk exposure\n- Ran quarterly CECL loss-forecast scenarios and sensitivity analyses for the allowance committee\n- Automated interest-rate risk data pulls in SQL, cutting ALCO package preparation from 5 days to 2\n- Tracked 35 key risk indicators and escalated limit breaches to the Chief Risk Officer\n- Prepared risk appetite reporting for the board risk committee covering credit, liquidity and operational risk"
+        },
+        {
+          "company": "Allegheny Federal Credit Union",
+          "role": "Credit Analyst",
+          "location": "Pittsburgh, PA",
+          "startDate": "2021-07",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Underwrote 250 consumer and small-business loans a year totaling $40M\n- Analyzed delinquency trends that led to tighter auto loan criteria and 20% fewer charge-offs\n- Reviewed borrower financials and collateral for commercial loans up to $1M"
+        },
+        {
+          "company": "Panther Investment Fund",
+          "role": "Risk Analyst (Student-Managed Fund)",
+          "location": "Pittsburgh, PA",
+          "startDate": "2019-09",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Calculated weekly VaR and sector exposure for a $250K student-managed portfolio\n- Presented risk reviews to the faculty advisory board each semester"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Pittsburgh",
+          "degree": "B.S. in Finance, Minor in Statistics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "CRE Stress Test Model",
+          "link": "",
+          "description": "Excel and SQL model stressing office and retail loan collateral values under 3 rate scenarios for the risk committee"
+        }
+      ],
+      "skills": [
+        "Risk: credit risk, interest-rate risk, CECL, stress testing, KRIs",
+        "Tools: Excel (VBA), SQL, Moody's Analytics, Python",
+        "Regulatory: CECL, CRE concentration guidance, ALCO reporting",
+        "Certifications: FRM Part I (passed)",
+        "Analysis: scenario analysis, concentration analysis, loss forecasting"
+      ]
+    },
+    "Fraud Analyst": {
+      "summary": "Fraud analyst with 4 years of experience detecting payment and account-takeover fraud at a card issuer and a payments startup. Tuned rules and investigations that cut fraud losses 31% while lowering false declines. Combines SQL pattern analysis with case investigation and close work with engineering on detection logic.",
+      "experience": [
+        {
+          "company": "Orchard Card Services",
+          "role": "Fraud Analyst",
+          "location": "Wilmington, DE",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Tuned 80 card-not-present fraud rules in Falcon, cutting fraud losses 31% while reducing false declines 18%\n- Investigated account-takeover rings using device and IP link analysis, closing 140 cases a month\n- Built SQL monitoring for emerging BIN attacks, detecting 3 attacks within an hour of onset\n- Filed SARs with the BSA team and documented findings for law enforcement requests\n- Partnered with data science to label 25,000 confirmed fraud cases used to retrain the transaction model"
+        },
+        {
+          "company": "Fernway Payments",
+          "role": "Risk Operations Specialist",
+          "location": "Remote",
+          "startDate": "2021-09",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Reviewed 60 high-risk merchant applications a day against KYB and AML criteria\n- Identified a refund-abuse pattern that saved $260K in quarterly losses\n- Wrote investigation playbooks for 4 common merchant fraud patterns"
+        },
+        {
+          "company": "Blue Hen Credit Union",
+          "role": "Fraud Operations Intern",
+          "location": "Newark, DE",
+          "startDate": "2020-06",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Reviewed debit card alerts and contacted members to verify activity\n- Logged 300 fraud claims and supported chargeback documentation"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Delaware",
+          "degree": "B.S. in Criminal Justice, Minor in Information Systems",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "BIN Attack Detector",
+          "link": "",
+          "description": "SQL and Python monitor tracking authorization spikes by BIN range and merchant, alerting the fraud team through Slack"
+        }
+      ],
+      "skills": [
+        "Fraud Detection: rule tuning, link analysis, chargebacks, account takeover",
+        "Tools: FICO Falcon, SQL, Sift, Python, Excel",
+        "Compliance: BSA/AML, SAR filing, KYC/KYB",
+        "Certifications: CFE (Certified Fraud Examiner)",
+        "Investigation: case documentation, device fingerprinting, law enforcement liaison"
+      ]
+    },
+    "Pricing Analyst": {
+      "summary": "Pricing analyst with 5 years of experience setting and monitoring prices for industrial distribution and B2B software. Led a price-realization program that added $5.8M in gross margin in one year. Combines elasticity analysis, deal desk support and clean pricing governance.",
+      "experience": [
+        {
+          "company": "Midland Industrial Supply",
+          "role": "Pricing Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led annual price-realization analysis across 60,000 SKUs, adding $5.8M in gross margin\n- Built customer-segment price bands in PROS and Excel, reducing off-band quotes from 27% to 9%\n- Supported deal desk on 400 quotes a quarter, recommending approvals within 24 hours\n- Monitored competitor pricing on 1,200 key items and flagged margin leakage to category managers\n- Built a Power BI price-waterfall dashboard showing rebates, freight and discounts by customer for 40 sales reps"
+        },
+        {
+          "company": "Circle City Software",
+          "role": "Revenue Operations Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2021-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Analyzed discounting by rep and segment, informing approval thresholds that cut average discount 5 points\n- Modeled packaging options for a new tier launched to 2,000 customers\n- Analyzed renewal uplift options that informed a 5% list price increase"
+        },
+        {
+          "company": "Hoosier Distribution Group",
+          "role": "Pricing Intern",
+          "location": "Indianapolis, IN",
+          "startDate": "2019-05",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Cleaned 3 years of invoice data to support a price-realization study\n- Built a competitor price comparison for 200 high-volume items"
+        }
+      ],
+      "education": [
+        {
+          "school": "Indiana University Bloomington",
+          "degree": "B.S. in Business (Finance and Business Analytics)",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Price Elasticity Study",
+          "link": "",
+          "description": "Regression analysis of 3 years of transaction data estimating elasticity for 25 product families, used to set annual increases"
+        }
+      ],
+      "skills": [
+        "Pricing: price elasticity, price waterfall, segmentation, deal desk",
+        "Tools: PROS, Excel, SQL, Power BI, Salesforce CPQ",
+        "Analysis: margin analysis, competitor monitoring, scenario modeling",
+        "Certifications: Certified Pricing Professional (CPP)",
+        "Communication: pricing governance, sales enablement, executive pricing reviews"
+      ]
+    },
+    "Data Visualization Specialist": {
+      "summary": "Data visualization specialist with 6 years of experience designing dashboards, interactive graphics and data stories for public health agencies and newsrooms. Created a public respiratory-illness dashboard viewed 2.4M times with accessible, mobile-friendly charts. Combines information design, D3.js and Tableau with rigorous fact-checking, plain-language explanation and WCAG accessibility.",
+      "experience": [
+        {
+          "company": "Cedar County Public Health Department",
+          "role": "Data Visualization Specialist",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a public respiratory-illness dashboard in Tableau viewed 2.4M times, meeting WCAG 2.1 AA accessibility\n- Created a chart style guide and templates adopted by 30 epidemiologists and analysts\n- Redesigned 15 internal reports with usability testing, cutting time-to-answer for program managers 40%\n- Built automated weekly data refreshes from surveillance systems with Python and Tableau Prep\n- Presented dashboard findings at 4 public board meetings, translating trends for nontechnical audiences"
+        },
+        {
+          "company": "Harbor Ledger News",
+          "role": "Graphics Reporter",
+          "location": "Baltimore, MD",
+          "startDate": "2020-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Produced 70 interactive graphics in D3.js and Datawrapper for elections, housing and schools coverage\n- Built a property-tax lookup tool used by 180,000 readers\n- Wrote methodology notes for each graphic and fact-checked data with reporters"
+        },
+        {
+          "company": "Terrapin Student Newspaper",
+          "role": "Data Editor",
+          "location": "College Park, MD",
+          "startDate": "2017-08",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Built 25 charts and maps on campus housing, tuition and crime data\n- Trained 10 student reporters on spreadsheets and public records"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Maryland",
+          "degree": "B.A. in Journalism, Minor in Statistics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Eviction Map Explorer",
+          "link": "observablehq.com/@tnguyen/eviction-map",
+          "description": "Interactive D3 map of court eviction filings by census tract, featured in a regional data journalism award shortlist"
+        }
+      ],
+      "skills": [
+        "Visualization: Tableau, D3.js, Observable, Datawrapper, Figma",
+        "Data: SQL, Python, Tableau Prep, R",
+        "Design: information design, chart style guides, WCAG 2.1 accessibility",
+        "Certifications: Tableau Certified Data Analyst",
+        "Communication: data storytelling, public presentations, methodology notes"
+      ]
+    },
+    "Analytics Manager": {
+      "summary": "Analytics manager with 10 years of experience, leading a team of 7 analysts across marketing, product and customer success at a B2B SaaS company. Built the planning and measurement process behind a 9-point gain in net revenue retention. Combines people leadership with hands-on SQL and a strong sense of which questions are worth answering.",
+      "experience": [
+        {
+          "company": "Openfield Workforce Software",
+          "role": "Analytics Manager",
+          "location": "Salt Lake City, UT",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 7 analysts supporting marketing, product and customer success for a $120M ARR platform\n- Built an account health score from usage and support data, helping lift net revenue retention from 104% to 113%\n- Introduced intake, sizing and quarterly roadmaps that cut ad-hoc request backlog 60%\n- Promoted 2 analysts to senior and ran career frameworks for the team\n- Partnered with finance on the annual plan, building the pipeline-to-bookings model behind sales capacity targets"
+        },
+        {
+          "company": "Wasatch Learning Systems",
+          "role": "Senior Analyst, Marketing Analytics",
+          "location": "Provo, UT",
+          "startDate": "2018-08",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Built multi-touch attribution across 8 channels, guiding a $2M budget shift to webinars and partners\n- Led migration of reporting from spreadsheets to Looker for 150 users\n- Built a webinar attribution model showing webinars sourced 22% of pipeline"
+        },
+        {
+          "company": "Beehive Research Associates",
+          "role": "Data Analyst",
+          "location": "Salt Lake City, UT",
+          "startDate": "2016-06",
+          "endDate": "2018-07",
+          "isCurrent": false,
+          "description": "- Analyzed customer surveys and transaction data for 12 retail and banking clients\n- Automated deliverables in R Markdown, cutting report production time in half\n- Presented quarterly findings to client marketing and finance leaders"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Utah",
+          "degree": "B.S. in Economics",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: team management, roadmap planning, hiring, career development",
+        "Analytics: SQL, Python, attribution, health scoring, retention analysis",
+        "Data Stack: Snowflake, dbt, Looker, Salesforce, Gainsight",
+        "SaaS Metrics: NRR, GRR, pipeline conversion, product adoption",
+        "Communication: executive reporting, quarterly business reviews, analytics enablement"
+      ]
+    },
+    "Analytics Director": {
+      "summary": "Analytics director with 14 years of experience building analytics organizations in retail and consumer finance. Leads 4 managers and 26 analysts and engineers with a $5M budget, covering loyalty, merchandising, pricing and digital. Built the measurement program that grew loyalty revenue $40M and earned analytics a standing seat in executive planning and quarterly business reviews.",
+      "experience": [
+        {
+          "company": "Magnolia Department Stores",
+          "role": "Director of Analytics",
+          "location": "Atlanta, GA",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 26 analysts and analytics engineers through 4 managers, owning a $5M annual budget\n- Built a personalization measurement program for 11M loyalty members that grew loyalty revenue $40M\n- Consolidated 3 BI tools into Looker, saving $600K a year and retiring 1,100 stale reports\n- Set company KPI targets with the CFO and present monthly performance reviews to the executive team\n- Launched an experimentation program running 80 tests a year across site, app and email"
+        },
+        {
+          "company": "Peachtree Consumer Finance",
+          "role": "Senior Manager, Customer Analytics",
+          "location": "Atlanta, GA",
+          "startDate": "2017-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Managed 9 analysts covering acquisition, collections and cross-sell\n- Developed collections segmentation that improved cure rates 7 points and reduced losses $8M\n- Built a model-governance process for credit and marketing models"
+        },
+        {
+          "company": "Southern Rail Outfitters",
+          "role": "Analytics Manager",
+          "location": "Birmingham, AL",
+          "startDate": "2012-07",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Built the first customer data mart and campaign response models for catalog and web\n- Grew the analytics team from 2 to 6 analysts\n- Delivered weekly sales reporting to the executive team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Emory University, Goizueta Business School",
+          "degree": "MBA",
+          "startDate": "2010-08",
+          "endDate": "2012-05"
+        },
+        {
+          "school": "Auburn University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2004-08",
+          "endDate": "2008-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: org design, manager development, budget ownership, executive communication",
+        "Strategy: KPI design, measurement programs, analytics roadmaps",
+        "Analytics: personalization measurement, segmentation, forecasting",
+        "Platforms: Snowflake, Looker, dbt, Adobe Analytics",
+        "Experimentation: test-and-learn programs, incrementality, holdout design"
+      ]
+    },
+    "Data Science Lead": {
+      "summary": "Data science lead with 8 years of experience in recommendations, ranking and ads, currently leading a pod of 4 data scientists on personalization for a streaming service with 18M subscribers. Shipped a homepage ranking model that raised viewing hours 7%. Sets technical direction, reviews modeling work and stays hands-on in Python, PyTorch and experiment design.",
+      "experience": [
+        {
+          "company": "Marquee Streaming",
+          "role": "Data Science Lead, Personalization",
+          "location": "Los Angeles, CA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 data scientists building recommendation models for 18M subscribers\n- Shipped a two-tower retrieval and ranking model for the homepage, increasing viewing hours per member 7%\n- Defined the team's offline-to-online evaluation standard, raising launch success rate from 40% to 65%\n- Partner with product and engineering leads on a quarterly personalization roadmap\n- Hired 2 data scientists and ran a weekly modeling review that cut time from prototype to A/B test by half"
+        },
+        {
+          "company": "Soundpost Audio",
+          "role": "Senior Data Scientist",
+          "location": "Santa Monica, CA",
+          "startDate": "2020-02",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Built playlist-continuation models that increased session length 11%\n- Designed a contextual bandit for podcast promotions, lifting follows 15%\n- Built audio embedding features that improved cold-start recommendations for new artists"
+        },
+        {
+          "company": "Clearview Ad Analytics",
+          "role": "Data Scientist",
+          "location": "San Diego, CA",
+          "startDate": "2018-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Built click-through prediction models for 300M daily impressions\n- Reduced model training costs 30% by moving to sparse feature hashing\n- Built automated bidding features for 40 advertiser accounts"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Los Angeles",
+          "degree": "M.S. in Statistics",
+          "startDate": "2016-09",
+          "endDate": "2018-06"
+        },
+        {
+          "school": "University of California, Davis",
+          "degree": "B.S. in Applied Mathematics",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Recommender Systems: two-tower models, ranking, contextual bandits, embeddings",
+        "ML Stack: Python, PyTorch, TensorFlow Recommenders, Spark, Kubeflow",
+        "Experimentation: A/B testing, interleaving, long-term holdouts",
+        "Leadership: technical direction, model review, mentoring",
+        "Communication: product reviews, technical writing, roadmap planning"
+      ]
+    },
+    "Data Science Manager": {
+      "summary": "Data science manager with 10 years of experience in forecasting and pricing across travel, energy and retail, managing 8 data scientists at an online travel company. Delivered a demand forecasting platform that improved partner RevPAR 4%. Builds strong teams through structured hiring and clear model ownership, and partners closely with product, revenue management and finance leaders.",
+      "experience": [
+        {
+          "company": "Tripstone Travel",
+          "role": "Data Science Manager",
+          "location": "Seattle, WA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 8 data scientists across forecasting and dynamic pricing for 40,000 partner hotels\n- Delivered a demand forecasting platform that improved partner RevPAR 4% and reduced forecast error 22%\n- Hired 5 data scientists and built an interview loop with structured take-home and case rubrics\n- Introduced model ownership and on-call rotations, cutting production incidents 50%\n- Partnered with revenue management to launch price recommendations used by 60% of partner hotels"
+        },
+        {
+          "company": "Rainier Power & Light",
+          "role": "Senior Data Scientist",
+          "location": "Bellevue, WA",
+          "startDate": "2018-03",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Built hourly load forecasts for 1.2M customers with 3.1% MAPE, supporting grid planning\n- Led a 3-person team building outage prediction models from weather data\n- Presented forecast accuracy and grid-risk results to utility planning leadership"
+        },
+        {
+          "company": "Cascade Retail Analytics",
+          "role": "Data Scientist",
+          "location": "Seattle, WA",
+          "startDate": "2016-01",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Developed store-level sales forecasts for 300 locations\n- Built promotion-lift models that improved promotional ROI 12%\n- Built a weekly forecast accuracy report for merchandising planners"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "M.S. in Applied Mathematics",
+          "startDate": "2014-09",
+          "endDate": "2015-12"
+        },
+        {
+          "school": "Washington State University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: hiring, performance management, roadmap planning, stakeholder alignment",
+        "Methods: time series forecasting, dynamic pricing, hierarchical models",
+        "Platforms: Python, Spark, Databricks, MLflow, AWS",
+        "Operations: model ownership, monitoring, incident response",
+        "Communication: executive reporting, model readouts, partner-facing explanations"
+      ]
+    },
+    "Data Science Director": {
+      "summary": "Data science director with 15 years of experience leading machine learning organizations in insurance and health technology. Leads 3 managers and 24 scientists and ML engineers. Built the claims automation program that now handles 45% of claims straight through and saves $18M a year.",
+      "experience": [
+        {
+          "company": "Bridgewater Health Technologies",
+          "role": "Director of Data Science",
+          "location": "Philadelphia, PA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 24 data scientists and ML engineers through 3 managers with a $7M annual budget\n- Built a claims automation program combining NLP and risk models that processes 45% of claims straight through, saving $18M a year\n- Established a responsible AI review covering bias testing and HIPAA safeguards for all 30 production models\n- Shape the multiyear AI roadmap with the CTO and Chief Medical Officer\n- Built a talent program with career ladders and research time, cutting annual attrition from 18% to 7%"
+        },
+        {
+          "company": "Liberty Bell Insurance",
+          "role": "Data Science Manager",
+          "location": "Philadelphia, PA",
+          "startDate": "2016-05",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Managed 7 data scientists building pricing, fraud and retention models\n- Launched telematics pricing that grew profitable auto policies 9%\n- Established model monitoring and annual validation in line with NAIC model guidance"
+        },
+        {
+          "company": "Schuylkill Analytics Partners",
+          "role": "Senior Data Scientist",
+          "location": "Philadelphia, PA",
+          "startDate": "2011-06",
+          "endDate": "2016-04",
+          "isCurrent": false,
+          "description": "- Built predictive models for 15 insurance and healthcare clients\n- Led a provider fraud model that recovered $9M for a regional payer\n- Grew client relationships that generated $4M in follow-on work"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Pennsylvania",
+          "degree": "Ph.D. in Statistics",
+          "startDate": "2006-09",
+          "endDate": "2011-05"
+        },
+        {
+          "school": "Penn State University",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2002-08",
+          "endDate": "2006-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: multi-team management, budget ownership, AI strategy, executive partnership",
+        "Machine Learning: NLP, risk modeling, fraud detection, MLOps",
+        "Governance: responsible AI, bias testing, model risk management, HIPAA",
+        "Platforms: Python, Databricks, Azure ML, Snowflake",
+        "Communication: board briefings, clinical stakeholder alignment, AI literacy programs"
+      ]
+    },
+    "Data Engineering Manager": {
+      "summary": "Data engineering manager with 11 years of experience building batch and streaming data platforms, now leading 9 engineers at a logistics technology company. Delivered a streaming platform that cut data latency from hours to seconds for 200 internal consumers. Balances platform reliability, cloud cost and delivery speed while growing engineers into senior and tech-lead roles.",
+      "experience": [
+        {
+          "company": "Conveyor Freight Tech",
+          "role": "Data Engineering Manager",
+          "location": "Chicago, IL",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 9 data engineers owning ingestion, streaming and warehouse platforms for 200 internal consumers\n- Delivered a Kafka and Flink streaming platform that cut shipment-event latency from 4 hours to under 10 seconds\n- Reduced Snowflake and AWS spend $1.3M a year through workload tuning and storage tiering\n- Raised pipeline SLA attainment from 91% to 99.5% with on-call, runbooks and observability\n- Introduced data contracts with 12 product teams, cutting breaking schema changes 75%"
+        },
+        {
+          "company": "Loop Commerce Group",
+          "role": "Senior Data Engineer",
+          "location": "Chicago, IL",
+          "startDate": "2018-04",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Built Airflow and Spark pipelines processing 2TB of order data daily\n- Tech-led a warehouse migration from Redshift to Snowflake for 400 tables\n- Built a CDC pipeline from Postgres to Snowflake with Debezium and Kafka"
+        },
+        {
+          "company": "Prairie Analytics Software",
+          "role": "Data Engineer",
+          "location": "Champaign, IL",
+          "startDate": "2015-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Developed Python ETL jobs for 20 client data integrations\n- Introduced automated testing that cut load failures 60%\n- Built client onboarding scripts that cut integration time from 6 weeks to 3"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "B.S. in Computer Engineering",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: engineering management, hiring, on-call design, roadmap planning",
+        "Streaming & Batch: Kafka, Flink, Spark, Airflow, dbt",
+        "Platforms: Snowflake, AWS (S3, EMR, MSK), Terraform",
+        "Reliability: SLAs, data observability, cost optimization",
+        "Practices: data contracts, infrastructure as code, cost governance"
+      ]
+    },
+    "Chief Data Officer (CDO)": {
+      "summary": "Chief data officer with 20 years of experience in data, analytics and AI at banks and insurers. Leads a 140-person organization spanning data engineering, governance, analytics and AI with a $38M budget. Built the data strategy that cut regulatory findings to zero and generated $60M in measured value from AI and analytics.",
+      "experience": [
+        {
+          "company": "Atlantic Crest Financial Group",
+          "role": "Chief Data Officer",
+          "location": "Charlotte, NC",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 140-person data organization with a $38M budget, reporting to the CEO and briefing the board risk committee\n- Delivered an enterprise data strategy that closed all 14 open regulatory data findings within 2 years\n- Built an AI and analytics portfolio that generated $60M in measured annual value across lending, fraud and servicing\n- Established an AI governance framework covering model risk, fair lending and generative AI use\n- Consolidated 5 data platforms into one cloud lakehouse, saving $9M a year in licensing and infrastructure"
+        },
+        {
+          "company": "James River Mutual Life",
+          "role": "Vice President, Enterprise Data and Analytics",
+          "location": "Richmond, VA",
+          "startDate": "2015-08",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Led 60 staff across data warehousing, BI and actuarial analytics\n- Moved core reporting to the cloud, cutting infrastructure costs 30%\n- Launched an enterprise data governance office with 30 stewards across business lines"
+        },
+        {
+          "company": "First Harbor Bank",
+          "role": "Director, Risk Data and Reporting",
+          "location": "Baltimore, MD",
+          "startDate": "2006-06",
+          "endDate": "2015-07",
+          "isCurrent": false,
+          "description": "- Built BCBS 239-aligned risk data aggregation for CCAR stress testing\n- Grew the risk reporting team from 5 to 22\n- Delivered regulatory reports for Federal Reserve and OCC submissions with no restatements"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Virginia, Darden School of Business",
+          "degree": "MBA",
+          "startDate": "2004-08",
+          "endDate": "2006-05"
+        },
+        {
+          "school": "College of William & Mary",
+          "degree": "B.S. in Computer Science",
+          "startDate": "1998-08",
+          "endDate": "2002-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Leadership: data strategy, board reporting, org design, $38M budget ownership",
+        "Governance & Risk: BCBS 239, CCAR, SR 11-7, fair lending, AI governance",
+        "Platforms: cloud data platforms, data mesh, MDM, enterprise BI",
+        "Value Delivery: AI portfolio management, business cases, change management",
+        "Talent: data literacy programs, leadership succession, hiring senior leaders"
+      ]
+    },
+    "Director of Data": {
+      "summary": "Director of data with 13 years of experience leading data engineering, analytics and data science at growth-stage consumer companies. Leads 18 people across 3 teams and built the data platform that supported growth from $80M to $300M revenue. Known for pragmatic platform choices, strong hiring and tying data work to company goals.",
+      "experience": [
+        {
+          "company": "Hearth & Table Meal Kits",
+          "role": "Director of Data",
+          "location": "Denver, CO",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 18 data engineers, analysts and data scientists across 3 teams with a $4M budget\n- Rebuilt the data platform on Snowflake, Fivetran and dbt, supporting revenue growth from $80M to $300M\n- Launched a demand forecast that cut food waste 23% across 4 fulfillment centers\n- Partnered with the CFO on board metrics and the first audited KPI definitions ahead of a Series D\n- Introduced a data request intake and prioritization process that cut average turnaround from 3 weeks to 6 days"
+        },
+        {
+          "company": "Front Range Outdoor Gear",
+          "role": "Head of Analytics",
+          "location": "Boulder, CO",
+          "startDate": "2017-09",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Built the analytics team from 1 to 7 and launched company-wide self-serve BI\n- Developed customer lifetime value models guiding $12M in annual acquisition spend\n- Rolled out Looker to 200 employees with training and certified dashboards"
+        },
+        {
+          "company": "Mile High Media Labs",
+          "role": "Senior Data Analyst",
+          "location": "Denver, CO",
+          "startDate": "2013-06",
+          "endDate": "2017-08",
+          "isCurrent": false,
+          "description": "- Analyzed audience engagement for 6 digital publications\n- Built subscription churn reporting adopted by the executive team\n- Built an A/B test reporting template for the editorial team"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "B.S. in Applied Mathematics",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: multi-team management, hiring, budgeting, board and executive reporting",
+        "Data Platform: Snowflake, dbt, Fivetran, Airflow, Looker",
+        "Data Science: demand forecasting, LTV modeling, experimentation",
+        "Strategy: data roadmaps, KPI governance, build-versus-buy decisions",
+        "Experimentation: A/B testing programs, incrementality, holdout design"
+      ]
+    },
+    "Data Analyst Intern": {
+      "summary": "Recent statistics graduate interning as a data analyst at a regional retailer, with coursework in regression, databases and data visualization. Built an Excel-to-SQL reporting fix that saved the merchandising team 6 hours a week. Brings solid SQL, Python and Tableau fundamentals and a habit of documenting every query.",
+      "experience": [
+        {
+          "company": "Bayside Grocery Co-op",
+          "role": "Data Analyst Intern",
+          "location": "Oakland, CA",
+          "startDate": "2026-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt a weekly category sales report from manual Excel lookups into a SQL query and Tableau view, saving merchandising 6 hours a week\n- Analyzed 18 months of promotion data for 2,400 SKUs, identifying 40 promotions that lost margin\n- Documented 25 commonly used tables in a team data dictionary in Confluence\n- Presented a 10-slide summary of promotion findings to the merchandising director and 2 category managers"
+        },
+        {
+          "company": "UC Davis Department of Statistics",
+          "role": "Undergraduate Research Assistant",
+          "location": "Davis, CA",
+          "startDate": "2025-01",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Cleaned and merged 5 years of county air-quality and hospital-visit data in R for a faculty study\n- Produced 12 publication-ready charts with ggplot2 for a conference poster\n- Wrote reproducible R Markdown reports so the lab could rerun analyses with new data"
+        },
+        {
+          "company": "Aggie Café Dining Services",
+          "role": "Student Shift Lead",
+          "location": "Davis, CA",
+          "startDate": "2023-01",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Supervised 6 student workers per shift during peak lunch service\n- Tracked daily waste logs that informed menu quantity changes"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "B.S. in Statistics (Coursework: Regression Analysis, Database Systems, Data Visualization, Probability)",
+          "startDate": "2022-09",
+          "endDate": "2026-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Bay Area Bike Share Demand Analysis",
+          "link": "github.com/mlopez/bikeshare-demand",
+          "description": "Analyzed 4M trips with SQL and Python to model station demand by weather and time, presenting rebalancing recommendations in a Tableau story"
+        }
+      ],
+      "skills": [
+        "Analysis: SQL, Python (pandas), R, Excel (pivot tables, XLOOKUP)",
+        "Visualization: Tableau, ggplot2, matplotlib",
+        "Statistics: regression, hypothesis testing, sampling",
+        "Certifications: Google Data Analytics Professional Certificate",
+        "Communication: data documentation, presentations, stakeholder updates"
+      ]
+    },
+    "Junior Data Analyst": {
+      "summary": "Junior data analyst with 1.5 years of experience supporting operations and customer service teams at a home-services company. Built a call-volume dashboard that helped cut average hold time 22%. Strong SQL and Power BI skills, quick to learn new data sources and careful about checking numbers before sharing.",
+      "experience": [
+        {
+          "company": "Hearthside Home Services",
+          "role": "Junior Data Analyst",
+          "location": "Tampa, FL",
+          "startDate": "2025-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Power BI call-center dashboard tracking volume, hold time and first-call resolution, supporting staffing changes that cut average hold time 22%\n- Wrote SQL queries answering 15 to 20 ad-hoc requests a month from operations managers\n- Validated technician job data against billing records, correcting 1,300 mismatched invoices\n- Automated a daily backlog email with Power Automate, replacing a manual 45-minute task"
+        },
+        {
+          "company": "Gulf Coast Property Management",
+          "role": "Data Analytics Intern",
+          "location": "St. Petersburg, FL",
+          "startDate": "2024-05",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Analyzed maintenance requests across 900 rental units to identify the top 10 recurring repair types\n- Built an Excel vacancy tracker used in weekly leasing meetings\n- Cleaned 3 years of rent roll data to support a lease renewal analysis"
+        },
+        {
+          "company": "USF Muma College of Business",
+          "role": "Student Data Assistant",
+          "location": "Tampa, FL",
+          "startDate": "2023-01",
+          "endDate": "2024-04",
+          "isCurrent": false,
+          "description": "- Maintained an Excel database of 900 internship placements for career services\n- Built monthly placement summaries for the associate dean"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "B.S. in Business Analytics and Information Systems",
+          "startDate": "2020-08",
+          "endDate": "2024-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Hurricane Season Insurance Claims Study",
+          "link": "github.com/dbrooks/fl-claims-analysis",
+          "description": "Capstone analysis of 10 years of public Florida claims data in Python, visualizing claim severity by county and storm category"
+        }
+      ],
+      "skills": [
+        "Analysis: SQL, Excel, Python (pandas), descriptive statistics",
+        "Visualization: Power BI, DAX basics, Excel charts",
+        "Tools: SQL Server, Power Automate, SharePoint",
+        "Certifications: Microsoft Certified: Power BI Data Analyst Associate (PL-300)",
+        "Communication: ad-hoc request intake, written summaries, manager updates"
+      ]
+    },
+    "Data Science Intern": {
+      "summary": "Recent data science master's graduate completing a data science internship at a fintech lender, with research experience in NLP and machine learning. Built a document-classification model that reached 93% accuracy on loan paperwork. Strong in Python, scikit-learn and PyTorch, with clear write-ups of methods and limits.",
+      "experience": [
+        {
+          "company": "Clearpath Lending",
+          "role": "Data Science Intern",
+          "location": "New York, NY",
+          "startDate": "2026-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a fine-tuned DistilBERT classifier that routes 9 types of loan documents with 93% accuracy, cutting manual sorting time an estimated 30%\n- Evaluated model errors by document type and presented findings to the underwriting operations team\n- Packaged the model with FastAPI and Docker for a pilot with the platform team\n- Wrote a model card covering training data, accuracy by document type and known failure modes"
+        },
+        {
+          "company": "NYU Center for Data Science",
+          "role": "Graduate Research Assistant",
+          "location": "New York, NY",
+          "startDate": "2025-01",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Built a text-classification benchmark of 50,000 consumer complaints for a faculty NLP project\n- Ran 120 hyperparameter experiments on a GPU cluster, tracking results in Weights & Biases\n- Co-authored a workshop paper comparing domain-adapted language models on complaint data"
+        },
+        {
+          "company": "Rensselaer Center for Open Source",
+          "role": "Student Developer",
+          "location": "Troy, NY",
+          "startDate": "2023-01",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Contributed data-loading features to an open-source Python geospatial library\n- Reviewed 30 pull requests from other student contributors"
+        }
+      ],
+      "education": [
+        {
+          "school": "New York University",
+          "degree": "M.S. in Data Science (Coursework: Machine Learning, Deep Learning, NLP, Big Data)",
+          "startDate": "2024-09",
+          "endDate": "2026-05"
+        },
+        {
+          "school": "Rensselaer Polytechnic Institute",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Citi Bike Demand Forecasting",
+          "link": "github.com/schen/citibike-forecast",
+          "description": "Compared gradient boosting and LSTM models on 3 years of trip data, reaching 11% MAPE on hourly station demand"
+        }
+      ],
+      "skills": [
+        "Machine Learning: scikit-learn, PyTorch, Hugging Face Transformers, XGBoost",
+        "Programming: Python, SQL, Git, Docker, FastAPI",
+        "Statistics: hypothesis testing, cross-validation, model evaluation",
+        "Tools: Jupyter, Weights & Biases, AWS SageMaker",
+        "Communication: model cards, technical write-ups, research presentations"
+      ]
+    },
+    "Junior Data Scientist": {
+      "summary": "Junior data scientist with 2 years of experience building forecasting and classification models for a utility and an energy startup. Shipped a meter-anomaly model that flags faulty meters 3 weeks earlier than manual review. Solid in Python, SQL and model evaluation, and comfortable taking models from notebook to scheduled pipeline.",
+      "experience": [
+        {
+          "company": "Riverstone Electric Cooperative",
+          "role": "Junior Data Scientist",
+          "location": "Sacramento, CA",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built an isolation-forest model on smart-meter readings that flags faulty meters 3 weeks earlier than manual review, recovering $340K in unbilled usage\n- Developed day-ahead load forecasts with LightGBM for 220,000 customers at 4.2% MAPE\n- Scheduled model scoring in Airflow and wrote validation tests for input data\n- Presented model results and limitations to field operations supervisors monthly"
+        },
+        {
+          "company": "Voltwise Energy",
+          "role": "Data Science Intern",
+          "location": "San Jose, CA",
+          "startDate": "2024-06",
+          "endDate": "2024-09",
+          "isCurrent": false,
+          "description": "- Built a churn classifier for home-battery subscribers with 0.81 AUC\n- Cleaned and joined installer, billing and support datasets for 18,000 customers\n- Presented churn drivers to the marketing team, informing a battery-warranty email campaign"
+        },
+        {
+          "company": "Berkeley Energy and Climate Institute",
+          "role": "Undergraduate Research Assistant",
+          "location": "Berkeley, CA",
+          "startDate": "2022-08",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Cleaned 5 years of utility interconnection queue data for a faculty study\n- Built Python charts of solar adoption by census tract"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Berkeley",
+          "degree": "B.A. in Data Science, Domain Emphasis in Energy and Environment",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Wildfire Smoke and Solar Output",
+          "link": "github.com/apatel/smoke-solar",
+          "description": "Modeled solar generation loss from wildfire smoke using satellite aerosol data and regression, finding 12% average output drop on heavy-smoke days"
+        }
+      ],
+      "skills": [
+        "Modeling: LightGBM, scikit-learn, isolation forest, time series forecasting",
+        "Programming: Python, SQL, Git",
+        "Data Tools: Airflow, PostgreSQL, Databricks, Tableau",
+        "Statistics: regression, cross-validation, anomaly detection",
+        "Communication: model documentation, results presentations, notebooks for reviewers"
+      ]
+    },
+    "Staff Data Scientist": {
+      "summary": "Staff data scientist with 11 years of experience setting technical direction for experimentation and causal inference at large consumer platforms. Designed the company-wide experimentation methodology used in 3,000 tests a year. Works across teams as a senior individual contributor, mentoring scientists and influencing product strategy with rigorous evidence.",
+      "experience": [
+        {
+          "company": "Hivemind Social",
+          "role": "Staff Data Scientist",
+          "location": "Menlo Park, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Set experimentation methodology for 3,000 tests a year, including variance reduction and network-effect designs\n- Led a cluster-randomized study of notification limits that reduced unsubscribes 18% with neutral engagement, shaping company policy\n- Mentor 10 data scientists across 4 orgs through design reviews and a causal inference reading group\n- Authored technical strategy for long-term holdouts adopted by the product leadership team\n- Built a metric-sensitivity library that lets teams pick guardrail metrics with known detectable effects"
+        },
+        {
+          "company": "Waypoint Rideshare",
+          "role": "Senior Data Scientist",
+          "location": "San Francisco, CA",
+          "startDate": "2018-04",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Built switchback testing for marketplace pricing, adopted across 40 cities\n- Quantified surge pricing effects that informed a $25M annual incentive reallocation\n- Mentored 5 data scientists through promotion to senior"
+        },
+        {
+          "company": "Kestrel Search",
+          "role": "Data Scientist",
+          "location": "Mountain View, CA",
+          "startDate": "2015-07",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Analyzed ads auction experiments affecting $200M in annual revenue\n- Developed query-level metrics later used in search quality reviews\n- Presented ads experiment results to product and finance leadership monthly"
+        }
+      ],
+      "education": [
+        {
+          "school": "Stanford University",
+          "degree": "Ph.D. in Statistics",
+          "startDate": "2010-09",
+          "endDate": "2015-06"
+        },
+        {
+          "school": "Harvey Mudd College",
+          "degree": "B.S. in Mathematics",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Network Effects Experimentation Paper",
+          "link": "",
+          "description": "Co-authored a KDD paper on cluster-randomized designs for social networks, cited by 40 later works"
+        }
+      ],
+      "skills": [
+        "Causal Inference: network experiments, switchbacks, long-term holdouts, synthetic control",
+        "Statistics: variance reduction, sequential testing, Bayesian modeling",
+        "Technical: Python, R, SQL, Presto, Spark",
+        "Influence: technical strategy, design reviews, mentoring across orgs",
+        "Platforms: experimentation platforms, metric layers, internal stats libraries"
+      ]
+    },
+    "Principal Data Scientist": {
+      "summary": "Principal data scientist with 14 years of experience leading high-stakes forecasting and optimization work in retail and supply chain. Architected the enterprise demand forecasting and inventory optimization system used across 1,800 stores, freeing $210M in working capital. Sets scientific standards for 60 data scientists, holds 2 patents and advises executives on AI investment priorities.",
+      "experience": [
+        {
+          "company": "Summit Home Improvement",
+          "role": "Principal Data Scientist",
+          "location": "Atlanta, GA",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Architected probabilistic demand forecasting and multi-echelon inventory optimization across 1,800 stores, freeing $210M in working capital\n- Set modeling, evaluation and documentation standards for 60 data scientists in 9 teams\n- Advised the CIO and supply chain SVP on a $15M AI investment portfolio and its sequencing\n- Filed 2 patents on hierarchical forecast reconciliation methods\n- Built an internal forecasting platform that cut new-model deployment time from 3 months to 3 weeks"
+        },
+        {
+          "company": "Riverton Wholesale Clubs",
+          "role": "Lead Data Scientist",
+          "location": "Bentonville, AR",
+          "startDate": "2016-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Led 6 scientists building markdown optimization that improved clearance margin $30M a year\n- Built store-cluster models used in assortment planning for 600 clubs\n- Presented markdown results to merchandising executives each quarter"
+        },
+        {
+          "company": "Northfield Supply Chain Analytics",
+          "role": "Senior Data Scientist",
+          "location": "Chicago, IL",
+          "startDate": "2012-06",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Developed replenishment models for 8 grocery and pharmacy clients\n- Reduced client stockouts an average of 20% through safety-stock optimization\n- Published 2 papers on intermittent-demand forecasting in operations journals"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University",
+          "degree": "Ph.D. in Industrial Engineering and Management Sciences",
+          "startDate": "2007-09",
+          "endDate": "2012-06"
+        },
+        {
+          "school": "University of Wisconsin-Madison",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2003-09",
+          "endDate": "2007-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: probabilistic forecasting, inventory optimization, stochastic programming, markdown optimization",
+        "Platforms: Python, Spark, Databricks, Gurobi, GCP Vertex AI",
+        "Leadership: scientific standards, executive advisory, patent development",
+        "Domain: multi-echelon supply chain, retail planning, assortment",
+        "Communication: executive advisory, scientific reviews, technical strategy papers"
+      ]
+    },
+    "Senior Business Analyst": {
+      "summary": "Senior business analyst with 9 years of experience leading requirements and process redesign for ERP and CRM programs in manufacturing and distribution. Led analysis for an order-to-cash redesign that cut days sales outstanding 11 days. Facilitates complex workshops, mentors analysts and keeps scope tied to measurable business value.",
+      "experience": [
+        {
+          "company": "Highmark Industrial Controls",
+          "role": "Senior Business Analyst",
+          "location": "Cincinnati, OH",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led requirements for an SAP S/4HANA order-to-cash redesign across 4 business units, cutting DSO from 52 to 41 days\n- Facilitated 40 workshops with finance, sales and logistics, resolving 120 conflicting requirements\n- Mentored 3 business analysts on BPMN modeling, user stories and traceability\n- Built a benefits-tracking model that confirmed $3.2M in first-year working capital gains\n- Built a requirements traceability matrix linking 600 requirements to test cases, cutting UAT defects 35%"
+        },
+        {
+          "company": "Tri-State Distribution Partners",
+          "role": "Business Analyst",
+          "location": "Dayton, OH",
+          "startDate": "2018-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Gathered requirements for a Salesforce Sales Cloud rollout to 220 reps\n- Redesigned returns processing, reducing credit memo cycle time 45%\n- Built Power BI reports on rep activity for the sales operations team"
+        },
+        {
+          "company": "Queen City Consulting Group",
+          "role": "Analyst",
+          "location": "Cincinnati, OH",
+          "startDate": "2017-06",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Documented current-state processes for 5 mid-market manufacturing clients\n- Built Excel cost models supporting ERP selection decisions\n- Facilitated 15 discovery workshops with client finance teams"
+        }
+      ],
+      "education": [
+        {
+          "school": "Miami University",
+          "degree": "B.S. in Business Analytics",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Order-to-Cash Process Library",
+          "link": "",
+          "description": "BPMN library of 45 future-state processes in Signavio, reused as the template for 2 later ERP rollouts"
+        }
+      ],
+      "skills": [
+        "Business Analysis: requirements management, BPMN, traceability, benefits realization",
+        "Systems: SAP S/4HANA, Salesforce, Jira, Confluence, Visio",
+        "Methods: Agile and hybrid delivery, workshop facilitation, UAT leadership",
+        "Certifications: IIBA CBAP",
+        "Analysis: SQL, Excel modeling, Power BI, process metrics"
+      ]
+    },
+    "Healthcare Data Analyst": {
+      "summary": "Healthcare data analyst with 5 years of experience analyzing EHR, claims and quality data for health systems and value-based care groups. Built a care-gap report that helped raise diabetes control measures 8 points across 40 clinics. Fluent in SQL, Epic data models, HEDIS and HIPAA-safe reporting.",
+      "experience": [
+        {
+          "company": "Lakeview Accountable Care Partners",
+          "role": "Healthcare Data Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a care-gap report from Epic Clarity and claims data, helping raise HbA1c control rates 8 points across 40 clinics\n- Produced monthly Medicare Shared Savings Program dashboards on cost, utilization and quality for 62,000 attributed patients\n- Identified 1,900 high-risk patients with a readmission risk score for care manager outreach\n- Maintained HIPAA-compliant access and de-identification for analysis datasets\n- Built a Tableau scorecard on 12 quality measures that physicians review in monthly performance meetings"
+        },
+        {
+          "company": "St. Brendan Community Hospital",
+          "role": "Clinical Data Analyst",
+          "location": "Evanston, IL",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Reported sepsis bundle compliance to CMS and the quality committee monthly\n- Analyzed emergency department throughput, supporting changes that cut door-to-provider time 14 minutes\n- Built SQL extracts from Epic for the hospital's Leapfrog safety survey"
+        },
+        {
+          "company": "Loyola Public Health Research Office",
+          "role": "Student Research Assistant",
+          "location": "Chicago, IL",
+          "startDate": "2018-01",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Entered and cleaned community health survey data for 1,200 households\n- Produced summary tables in SPSS for a county health assessment"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Chicago",
+          "degree": "M.S. in Health Informatics",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "Loyola University Chicago",
+          "degree": "B.S. in Public Health",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Diabetes Care Gap Tracker",
+          "link": "",
+          "description": "SQL and Tableau tool listing patients overdue for HbA1c tests and eye exams by clinic and provider, refreshed nightly"
+        }
+      ],
+      "skills": [
+        "Healthcare Data: Epic Clarity, claims (837/835), ICD-10, CPT, HEDIS, MSSP",
+        "Analysis: SQL, Python, risk stratification, quality measure reporting",
+        "Visualization: Tableau, Power BI",
+        "Compliance & Certifications: HIPAA, CHDA (Certified Health Data Analyst)",
+        "Communication: physician scorecards, quality committee reporting, data requests"
+      ]
+    },
+    "Power BI Developer": {
+      "summary": "Power BI developer with 6 years of experience building enterprise reports and semantic models for finance and operations teams. Delivered a Fabric-based financial reporting suite that shortened month-end close reporting from 5 days to 1. Expert in DAX, data modeling, performance tuning and Power BI governance.",
+      "experience": [
+        {
+          "company": "Keystone Building Products",
+          "role": "Power BI Developer",
+          "location": "Philadelphia, PA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Delivered a Microsoft Fabric financial reporting suite of 18 reports, cutting close reporting from 5 days to 1\n- Designed certified semantic models with calculation groups, reused by 35 report authors across the company\n- Tuned DAX and composite models, reducing the P&L report load time from 45 seconds to 4\n- Set workspace, deployment pipeline and row-level security standards for 900 Power BI users\n- Built a Power BI governance report tracking dataset refresh failures and usage across 220 workspaces"
+        },
+        {
+          "company": "Delaware Valley Logistics",
+          "role": "Reporting Developer",
+          "location": "Wilmington, DE",
+          "startDate": "2020-05",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Built 30 Power BI reports on warehouse productivity and freight costs\n- Replaced SSRS subscriptions with paginated reports, retiring 2 legacy servers\n- Built a Power BI carrier scorecard used in quarterly carrier reviews"
+        },
+        {
+          "company": "Schuylkill Valley Hospital IT",
+          "role": "IT Reporting Co-op",
+          "location": "Philadelphia, PA",
+          "startDate": "2018-04",
+          "endDate": "2018-09",
+          "isCurrent": false,
+          "description": "- Built Excel and SQL reports on help desk ticket volume for a hospital IT department\n- Automated a weekly SLA report with Power Query"
+        }
+      ],
+      "education": [
+        {
+          "school": "Drexel University",
+          "degree": "B.S. in Information Systems",
+          "startDate": "2015-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "DAX Pattern Library",
+          "link": "github.com/lnguyen/dax-patterns",
+          "description": "Public library of 40 documented DAX patterns for financial reporting, including time intelligence and allocations"
+        }
+      ],
+      "skills": [
+        "Power BI: DAX, Power Query (M), calculation groups, paginated reports, RLS",
+        "Microsoft Fabric: lakehouses, dataflows Gen2, deployment pipelines",
+        "Data: SQL Server, star-schema modeling, Tabular Editor, DAX Studio",
+        "Certifications: PL-300 Power BI Data Analyst Associate, DP-600 Fabric Analytics Engineer Associate",
+        "Governance: workspace standards, capacity monitoring, user training"
+      ]
+    },
+    "Tableau Developer": {
+      "summary": "Tableau developer with 5 years of experience designing dashboards and data sources for sales, marketing and higher education analytics. Built a Tableau Server environment of 120 dashboards used by 1,400 people. Combines performant extracts and calculated fields with clean visual design that business users adopt.",
+      "experience": [
+        {
+          "company": "Bluebonnet State University System",
+          "role": "Tableau Developer",
+          "location": "Austin, TX",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built 45 enrollment, retention and financial aid dashboards on Tableau Server used by 1,400 staff across 8 campuses\n- Designed published data sources with incremental extracts, cutting refresh time from 2 hours to 15 minutes\n- Applied FERPA-compliant row-level security with user filters and entitlement tables\n- Ran monthly Tableau office hours that grew active creators from 20 to 75\n- Migrated 60 workbooks from Tableau Server to Tableau Cloud with zero unplanned dashboard downtime"
+        },
+        {
+          "company": "Hill Country Media Group",
+          "role": "Marketing Reporting Analyst",
+          "location": "San Antonio, TX",
+          "startDate": "2021-01",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Built Tableau dashboards on ad sales pacing for 30 account executives\n- Combined Salesforce and ad server data with Tableau Prep, removing a 6-hour weekly manual merge\n- Trained 30 account executives on using pacing dashboards in weekly pipeline calls"
+        },
+        {
+          "company": "Texas State Office of Institutional Research",
+          "role": "Student Analyst",
+          "location": "San Marcos, TX",
+          "startDate": "2019-01",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Built Tableau dashboards on course enrollment for academic department chairs\n- Cleaned student survey data for annual accreditation reporting"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas State University",
+          "degree": "B.B.A. in Computer Information Systems",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Texas School Finance Viz",
+          "link": "public.tableau.com/app/profile/jramirez",
+          "description": "Tableau Public dashboard comparing per-student funding across 1,200 Texas districts, selected as a Viz of the Day"
+        }
+      ],
+      "skills": [
+        "Tableau: Desktop, Server, Prep, LOD expressions, parameters, extracts",
+        "Data: SQL, Snowflake, Salesforce data, data source governance",
+        "Design: dashboard UX, accessibility, performance tuning",
+        "Certifications: Tableau Certified Data Analyst, Tableau Server Certified Associate",
+        "Enablement: Tableau office hours, creator training, style guides"
+      ]
+    }
+  }
+}

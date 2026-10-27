@@ -1,5 +1,5 @@
 import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
-import { DEFAULT_DESIGN, type Education, type Experience, type Project, type ResumeData, type ResumeDesign } from '../types';
+import { DEFAULT_DESIGN, type Education, type Experience, type Project, type ResumeData, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
 const list = (value: unknown): Record<string, unknown>[] =>
@@ -21,6 +21,7 @@ export const BLANK_RESUME_DATA: ResumeData = {
   location: '',
   website: '',
   linkedin: '',
+  links: [],
   summary: '',
   experience: [],
   education: [],
@@ -63,6 +64,9 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
     phone: str(basics.phone),
     website: str(basics.url) || str(basics.website),
     linkedin: linkedin ? str(linkedin.url) || str(linkedin.username) : '',
+    links: profiles
+      .filter((p) => p !== linkedin && str(p.url))
+      .map((p) => ({ label: str(p.network), url: str(p.url) })),
     location: [location.city, location.region, location.countryCode].map(str).filter(Boolean).join(', '),
     summary: str(basics.summary),
     experience: list(raw.work).map((w) => ({
@@ -128,6 +132,10 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     link: str(item.link),
     description: str(item.description),
   }));
+  const links: ResumeLink[] = list(raw.links)
+    .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
+    .filter((item) => item.url)
+    .slice(0, 8);
   const skills = Array.isArray(raw.skills)
     ? raw.skills.filter((skill): skill is string => typeof skill === 'string' && skill.trim() !== '').map((skill) => skill.trim())
     : [];
@@ -142,6 +150,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     location: str(raw.location),
     website: str(raw.website),
     linkedin: str(raw.linkedin),
+    links,
     summary: str(raw.summary),
     experience,
     education,

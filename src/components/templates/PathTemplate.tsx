@@ -46,7 +46,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {contacts.map((entry) => {
                             const Icon = entry.icon;
                             return (
-                                <li key={entry.key} className="flex items-center gap-1.5 min-w-0 max-w-full">
+                                <li key={entry.id} className="flex items-center gap-1.5 min-w-0 max-w-full">
                                     <Icon className="w-3.5 h-3.5 shrink-0 text-(--accent)/70" />
                                     <ContactLink entry={entry} className="wrap-anywhere min-w-0" />
                                 </li>

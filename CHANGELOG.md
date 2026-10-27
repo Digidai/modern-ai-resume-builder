@@ -4,6 +4,13 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Job pages: 930 titles in 19 families (290 new titles and 5 new families: Science & Research, Government & Public Service, Nonprofit & Social Services, Skilled Trades & Manufacturing, Transportation & Logistics). Every title has its own realistic example resume, pre-rendered on the page with "Copy text", "Start from example" and "Use with my resume", Occupation JSON-LD, and a unique title and description. `npm run roles:sync` merges `src/data/roles/*.json` into the title list.
+- Added six templates: Meridian, Keystone and Vital (ATS-friendly), Altitude, Halo and Prism. 40 templates in total.
+- Social and custom links: up to 8 extra links with auto-detected icons (GitHub, X, Dribbble, Behance, Google Scholar and more) in every template; JSON Resume `profiles` import into them.
+- Agent mode: remote MCP server at `/mcp` (list_templates, get_writing_guide, get_example_resume, get_resume_schema, render_preview, render_pdf, create_editor_link), HTTP API under `/api/agent/` with `/openapi.json`, an agent skill at `/skills/moderncv-resume/SKILL.md`, editor handoff links (`/editor/#resume=…`), per-template and per-job copy-paste prompts, and an `/agents/` setup page.
+- Job pages fetch one small example file (`/role-examples/<slug>.json`) instead of a whole family bundle.
+- Fixed: the Government family recommended a non-existent template id (`ledger`; the Ledger template's id is `banking`); the mobile nav no longer wraps.
+
 - Added a template gallery at `/templates/` (ATS filter) and a page per template at `/templates/<id>/` with preview images, "best for" roles, similar templates and an editor deep link (`/editor/?template=<id>`).
 - Job pages now include a writing guide and five FAQs per role (sections, skills, example bullets, recruiter tips), pre-rendered at build time with FAQPage JSON-LD.
 - Agent and GEO support: `llms.txt`, `llms-full.txt`, `templates.json`, `resume.schema.json`; `robots.txt` allows AI crawlers; sitemap grows to 677 URLs.

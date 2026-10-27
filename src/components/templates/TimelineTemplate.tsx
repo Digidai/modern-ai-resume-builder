@@ -42,7 +42,7 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="mt-2.5 overflow-hidden">
                         <div className="-ml-[18px] flex flex-wrap items-center gap-y-0.5 text-[12.75px] text-[#4B5563]">
                             {contacts.map((entry) => (
-                                <span key={entry.key} className="flex min-w-0 items-baseline before:w-[18px] before:shrink-0 before:text-center before:text-[#9CA3AF] before:content-['·']">
+                                <span key={entry.id} className="flex min-w-0 items-baseline before:w-[18px] before:shrink-0 before:text-center before:text-[#9CA3AF] before:content-['·']">
                                     <ContactLink entry={entry} className="min-w-0 wrap-anywhere" />
                                 </span>
                             ))}

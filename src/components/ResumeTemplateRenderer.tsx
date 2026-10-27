@@ -51,6 +51,12 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   vanguard: () => import('./templates/VanguardTemplate').then((module) => ({ default: module.VanguardTemplate })),
   duo: () => import('./templates/DuoTemplate').then((module) => ({ default: module.DuoTemplate })),
   timeline: () => import('./templates/TimelineTemplate').then((module) => ({ default: module.TimelineTemplate })),
+  meridian: () => import('./templates/MeridianTemplate').then((module) => ({ default: module.MeridianTemplate })),
+  keystone: () => import('./templates/KeystoneTemplate').then((module) => ({ default: module.KeystoneTemplate })),
+  vital: () => import('./templates/VitalTemplate').then((module) => ({ default: module.VitalTemplate })),
+  altitude: () => import('./templates/AltitudeTemplate').then((module) => ({ default: module.AltitudeTemplate })),
+  halo: () => import('./templates/HaloTemplate').then((module) => ({ default: module.HaloTemplate })),
+  prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 
 const resolveTemplateId = (templateId: string): TemplateId => {

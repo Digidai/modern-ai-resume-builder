@@ -1,0 +1,2471 @@
+{
+  "family": "Sales & Support",
+  "guide": null,
+  "titles": {
+    "Sales Representative": {
+      "summary": "Sales representative with 6 years selling commercial cleaning and facility supplies to schools, offices and healthcare sites. Finished 2025 at 118% of a $1.9M quota and opened 46 new accounts. Builds steady relationships with facility managers and handles quoting, ordering and follow-up without hand-holding.",
+      "experience": [
+        {
+          "company": "Keystone Janitorial Supply",
+          "role": "Sales Representative",
+          "location": "Pittsburgh, PA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed 2025 at 118% of a $1.9M annual quota, ranking 2nd of 11 reps\n- Opened 46 new accounts across schools, clinics and office parks through cold calls and site walks\n- Grew a regional school district account from $60k to $210k a year by consolidating 3 suppliers\n- Log all activity and quotes in Salesforce, keeping pipeline forecasts within 10% of actuals\n- Run quarterly product demos for facility teams on floor-care equipment, closing $140k in machine sales last year"
+        },
+        {
+          "company": "Allegheny Office Products",
+          "role": "Inside Sales Associate",
+          "location": "Pittsburgh, PA",
+          "startDate": "2020-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Handled 60 inbound calls a day for reorders and quotes on office and breakroom supplies\n- Upsold service contracts to 140 customers, adding $95k in annual revenue\n- Kept a 98% order accuracy rate while quoting about 40 orders a week"
+        },
+        {
+          "company": "Bluff Street Bookstore",
+          "role": "Sales Associate (part-time)",
+          "location": "Pittsburgh, PA",
+          "startDate": "2017-09",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Helped 50+ customers a shift and handled textbook orders for 12 faculty members\n- Trained 5 new associates on the register and returns"
+        }
+      ],
+      "education": [
+        {
+          "school": "Duquesne University",
+          "degree": "BS, Business Administration",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Prospecting, cold calling, quoting, negotiation, account growth",
+        "Tools: Salesforce, Microsoft Dynamics GP, Outlook, Excel",
+        "Industry: Facility supplies, B2B distribution, school and healthcare buyers",
+        "Customer Service: Order follow-up, delivery coordination, account reviews",
+        "Training: Sandler Selling System fundamentals"
+      ]
+    },
+    "Inside Sales Representative": {
+      "summary": "Inside sales representative with 5 years in phone and video sales, most recently selling SaaS to small businesses. Averaged 112% of quota over 8 quarters, closing about 35 new accounts a month. Strong at short sales cycles, discovery calls and clean CRM habits in HubSpot and Aircall.",
+      "experience": [
+        {
+          "company": "Tabletop POS",
+          "role": "Inside Sales Representative",
+          "location": "Tampa, FL",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Averaged 112% of quota over 8 quarters, closing about 35 restaurant accounts a month\n- Run 25 discovery calls and demos a week over Zoom, with a 31% demo-to-close rate\n- Cut average sales cycle from 21 to 14 days with a two-call demo and pricing process\n- Mentor 3 new reps on objection handling and HubSpot pipeline hygiene\n- Partner with onboarding to hand off every closed account with notes on menu setup and goals"
+        },
+        {
+          "company": "Sunline Telecom",
+          "role": "Sales Associate",
+          "location": "Clearwater, FL",
+          "startDate": "2021-05",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Sold business phone and internet plans, reaching 105% of target in 2022\n- Handled 70 calls a day with an average customer satisfaction score of 4.7/5\n- Earned the regional rookie-of-the-year award in 2022"
+        },
+        {
+          "company": "University of Tampa Athletics",
+          "role": "Ticket Sales Intern",
+          "location": "Tampa, FL",
+          "startDate": "2020-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Sold $45k in season and group tickets through outbound calls\n- Followed up with 300 past buyers before each home series"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Tampa",
+          "degree": "BS, Marketing",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Discovery, video demos, objection handling, closing",
+        "Tools: HubSpot, Aircall, Zoom, Gong, LinkedIn Sales Navigator",
+        "Methods: SPIN Selling, short-cycle SMB sales",
+        "Metrics: Quota attainment, demo-to-close rate, sales cycle length",
+        "Languages: Spanish (fluent)"
+      ]
+    },
+    "Sales Development Representative (SDR)": {
+      "summary": "Sales development representative with 2 years generating pipeline for a cybersecurity SaaS company selling to mid-market IT leaders. Booked 168 qualified meetings in 2025, 124% of goal, sourcing $3.4M in pipeline. Writes researched outbound sequences, handles cold calls well and hands off clean notes to AEs.",
+      "experience": [
+        {
+          "company": "Shieldpoint Security",
+          "role": "Sales Development Representative",
+          "location": "Denver, CO",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Booked 168 qualified meetings in 2025, 124% of annual goal, sourcing $3.4M in pipeline\n- Make 60–70 cold calls a day and run multichannel sequences in Outreach to IT directors\n- Wrote a vertical sequence for healthcare IT that lifted reply rate from 4% to 9%\n- Qualify inbound leads within 5 minutes using BANT and route them to 4 account executives\n- Research accounts in ZoomInfo and LinkedIn to tailor first lines for each persona"
+        },
+        {
+          "company": "Mile Marker Rental Cars",
+          "role": "Management Trainee",
+          "location": "Aurora, CO",
+          "startDate": "2023-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Sold insurance and upgrades at the counter, ranking first of 14 trainees in revenue per rental\n- Handled 30 customer complaints a week and kept the branch's satisfaction score above region average"
+        },
+        {
+          "company": "Bear Country Apartments",
+          "role": "Leasing Agent (part-time)",
+          "location": "Greeley, CO",
+          "startDate": "2021-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Gave 15 property tours a week and signed 90 leases in a year\n- Followed up with every inquiry within 4 hours"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Northern Colorado",
+          "degree": "BS, Business Administration",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Prospecting: Cold calling, email sequencing, LinkedIn outreach, account research",
+        "Tools: Salesforce, Outreach, ZoomInfo, Sales Navigator, Gong",
+        "Qualification: BANT, MEDDIC basics, discovery questions",
+        "Metrics: Meetings booked, meeting-held rate, pipeline sourced",
+        "Certifications: HubSpot Inbound Sales"
+      ]
+    },
+    "Business Development Representative (BDR)": {
+      "summary": "Business development representative with 2 years in outbound prospecting for logistics software selling to shippers and 3PLs. Sourced $4.1M in pipeline last year and helped close $780k in new ARR. Builds account plans for target lists, mixes calls, email and video, and keeps every touch tracked.",
+      "experience": [
+        {
+          "company": "Freightlane",
+          "role": "Business Development Representative",
+          "location": "Chicago, IL",
+          "startDate": "2024-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sourced $4.1M in pipeline in 2025 from 300 target accounts, contributing to $780k in closed ARR\n- Build account plans with 2 enterprise AEs, mapping 5–8 contacts per account across operations and finance\n- Use personalized Vidyard videos that raised meeting acceptance from 11% to 19%\n- Ranked first of 8 BDRs in meetings held for 3 of the last 4 quarters\n- Share a weekly competitive notes digest with the sales team from discovery calls"
+        },
+        {
+          "company": "Midway Distribution",
+          "role": "Customer Service Coordinator",
+          "location": "Chicago, IL",
+          "startDate": "2023-06",
+          "endDate": "2024-06",
+          "isCurrent": false,
+          "description": "- Handled shipment questions for 120 retail accounts and flagged upsell leads to sales\n- Logged service issues in the TMS and cut repeat complaints for 2 large accounts"
+        },
+        {
+          "company": "Illinois State University Athletics",
+          "role": "Ticket Sales Intern",
+          "location": "Normal, IL",
+          "startDate": "2022-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Made 80 outbound calls a day to sell group tickets, reaching $28k in sales\n- Built a local business list of 600 contacts for group sales"
+        }
+      ],
+      "education": [
+        {
+          "school": "Illinois State University",
+          "degree": "BS, Business Administration",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Outbound: Account-based prospecting, cold calling, video outreach, LinkedIn",
+        "Tools: Salesloft, Salesforce, Apollo, Vidyard, Gong",
+        "Industry: Logistics, supply chain, 3PL buyers",
+        "Metrics: Pipeline sourced, meetings held, reply rate",
+        "Languages: Polish (fluent)"
+      ]
+    },
+    "SDR Manager": {
+      "summary": "SDR manager with 7 years in sales development, the last 3 leading teams at a B2B HR software company. Manages 10 SDRs who sourced $28M in pipeline last year and promoted 6 reps to account executive. Builds hiring plans, coaching programs and territory rules that keep meeting quality high.",
+      "experience": [
+        {
+          "company": "Crewbase",
+          "role": "SDR Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 10 SDRs who sourced $28M in qualified pipeline in 2025, 115% of team target\n- Promoted 6 SDRs to account executive in 2 years through a structured readiness program\n- Introduced weekly call reviews in Gong, raising meeting-to-opportunity conversion from 48% to 61%\n- Hire and onboard 6 reps a year, cutting time to first meeting from 4 weeks to 9 days\n- Set SDR territory and lead routing rules with RevOps, ending account disputes between reps"
+        },
+        {
+          "company": "Crewbase",
+          "role": "Senior SDR",
+          "location": "Atlanta, GA",
+          "startDate": "2021-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Hit 130% of meeting quota for 6 consecutive quarters\n- Built the outbound playbook used by new SDRs\n- Coached 4 new SDRs during their first 60 days"
+        },
+        {
+          "company": "Peachtree Merchant Services",
+          "role": "Sales Development Representative",
+          "location": "Atlanta, GA",
+          "startDate": "2019-07",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Booked 15 meetings a month for payment processing AEs\n- Sourced $1.8M in pipeline across 2 years"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "BBA, Marketing",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Hiring, coaching, career pathing, call reviews",
+        "Operations: Territory design, lead routing, SLA management, metrics dashboards",
+        "Tools: Salesforce, Outreach, Gong, ZoomInfo, Chorus",
+        "Methods: MEDDPICC, Command of the Message",
+        "Metrics: Pipeline per rep, meeting-to-opportunity rate, ramp time"
+      ]
+    },
+    "BDR Manager": {
+      "summary": "BDR manager with 9 years in outbound sales for enterprise data and analytics software. Leads 8 enterprise BDRs who generated $41M in pipeline last year against Fortune 1000 accounts. Builds account-based plays with marketing and sales, coaches research-heavy outreach and owns forecast of pipeline coverage.",
+      "experience": [
+        {
+          "company": "Quantwell",
+          "role": "BDR Manager",
+          "location": "New York, NY",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 8 enterprise BDRs who generated $41M in pipeline in 2025 against 450 Fortune 1000 accounts\n- Partner with field marketing on account-based plays that lifted target-account meeting rate 2.1x\n- Created a research standard of 3 business triggers per account that raised reply rates to 12%\n- Report pipeline coverage weekly to the VP of Sales and adjust territories each quarter\n- Run a weekly call-coaching block in Gong for each rep, focused on executive openers"
+        },
+        {
+          "company": "Corelattice",
+          "role": "Senior Enterprise BDR",
+          "location": "New York, NY",
+          "startDate": "2019-10",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Sourced $9M in pipeline across financial services accounts in 2 years\n- Trained 5 new BDRs on executive outreach and multithreading\n- Booked meetings with 40 VP-level buyers at top-50 banks"
+        },
+        {
+          "company": "Hudson Technology Group",
+          "role": "Account Development Rep",
+          "location": "Hoboken, NJ",
+          "startDate": "2018-01",
+          "endDate": "2019-09",
+          "isCurrent": false,
+          "description": "- Booked meetings with IT buyers for a cloud infrastructure reseller\n- Earned top-performer recognition in 3 of 6 quarters"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rutgers University",
+          "degree": "BS, Business Administration",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Coaching, hiring, territory planning, pipeline forecasting",
+        "Outbound: ABM, executive outreach, multithreading",
+        "Tools: Salesforce, Salesloft, 6sense, LinkedIn Sales Navigator, Gong",
+        "Methods: MEDDICC, Challenger Sale",
+        "Coaching: Call reviews, email teardown sessions, career pathing"
+      ]
+    },
+    "Account Executive": {
+      "summary": "Account executive with 5 years in B2B SaaS, selling marketing software to mid-sized retailers and brands. Closed $1.3M in new ARR in 2025 at 121% of quota with a 27% win rate. Runs full-cycle deals from discovery to signature, multithreads buying committees and forecasts accurately.",
+      "experience": [
+        {
+          "company": "Loopmail Commerce",
+          "role": "Account Executive",
+          "location": "Austin, TX",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed $1.3M in new ARR in 2025, 121% of a $1.07M quota, with a 27% win rate\n- Run full-cycle deals averaging $38k ACV and 62-day cycles with marketing and e-commerce leaders\n- Built mutual action plans for every deal over $50k, cutting slipped deals by roughly a third\n- Forecast within 8% of actual for 6 straight quarters\n- Source 30% of own pipeline through outbound to e-commerce directors"
+        },
+        {
+          "company": "Cartwheel Commerce",
+          "role": "Sales Development Representative",
+          "location": "Austin, TX",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Booked 210 qualified meetings in 18 months and was promoted to AE ahead of plan\n- Sourced $2.6M in pipeline from outbound to retail brands\n- Won the SDR team's top performer award for 4 of 6 quarters"
+        },
+        {
+          "company": "Texas Tech Athletics Ticket Office",
+          "role": "Inside Sales Intern",
+          "location": "Lubbock, TX",
+          "startDate": "2020-06",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Sold $60k in football mini-plans and group tickets\n- Ranked second of 10 interns in calls completed"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Tech University",
+          "degree": "BBA, Marketing",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Full-cycle selling, discovery, demos, negotiation, mutual action plans",
+        "Methods: MEDDIC, Challenger, value selling",
+        "Tools: Salesforce, Gong, Outreach, DocuSign, Clari",
+        "Domain: Email and SMS marketing, retail and e-commerce buyers",
+        "Training: MEDDICC Academy, Gong call-coaching program"
+      ]
+    },
+    "Enterprise Account Executive": {
+      "summary": "Enterprise account executive with 11 years selling complex software to Fortune 500 companies. Closed $4.2M in new ACV in fiscal 2026, including a $1.6M multi-year deal with a top-10 US bank. Leads long, multi-stakeholder cycles with procurement, security and legal, and works closely with solution engineers.",
+      "experience": [
+        {
+          "company": "Vantrel Identity",
+          "role": "Enterprise Account Executive",
+          "location": "New York, NY",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed $4.2M in new ACV in fiscal 2026, 132% of quota, including a $1.6M three-year deal with a top-10 US bank\n- Manage 35 named financial services accounts with 9–14 month cycles and 10+ stakeholders\n- Navigate security reviews, SOC 2 and vendor risk assessments with solution engineers and legal\n- Built executive sponsor programs that helped expand 4 accounts beyond $1M ARR each\n- Co-sell with 3 consulting partners, who influenced 35% of closed ACV last year"
+        },
+        {
+          "company": "Hollis Software",
+          "role": "Senior Account Executive",
+          "location": "Stamford, CT",
+          "startDate": "2018-03",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Exceeded quota 3 of 4 years, closing $2.4M in 2020\n- Won 6 competitive displacements of legacy vendors in insurance\n- Built account plans for 20 named insurance accounts"
+        },
+        {
+          "company": "Hollis Software",
+          "role": "Account Executive",
+          "location": "Stamford, CT",
+          "startDate": "2016-01",
+          "endDate": "2018-02",
+          "isCurrent": false,
+          "description": "- Sold mid-market deals averaging $45k ACV across the Northeast\n- Earned President's Club in 2017"
+        }
+      ],
+      "education": [
+        {
+          "school": "Villanova University",
+          "degree": "BS, Finance",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Enterprise Sales: Complex deal strategy, executive selling, procurement, legal redlines",
+        "Methods: MEDDPICC, Force Management, account planning",
+        "Tools: Salesforce, Clari, Gong, LinkedIn Sales Navigator",
+        "Industry: Financial services, identity and security software",
+        "Partners: Consulting and SI co-selling, alliance programs"
+      ]
+    },
+    "Account Manager": {
+      "summary": "Account manager with 6 years growing existing customers for a print and packaging manufacturer. Manages 60 accounts worth $8.5M a year and grew the book 14% in 2025 while keeping retention at 96%. Handles quoting, reorders, issue resolution and annual reviews with procurement and brand teams.",
+      "experience": [
+        {
+          "company": "Crestline Packaging",
+          "role": "Account Manager",
+          "location": "Grand Rapids, MI",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 60 accounts worth $8.5M a year, growing revenue 14% in 2025 with 96% retention\n- Lead annual business reviews with procurement and brand teams for the top 15 accounts\n- Won $1.1M in new packaging programs from existing customers by proposing sustainable materials\n- Coordinate with production planning to keep on-time delivery above 97% for key accounts\n- Resolve quality and delivery issues within 24 hours with plant and logistics teams"
+        },
+        {
+          "company": "Lakeshore Label Co.",
+          "role": "Customer Service Representative",
+          "location": "Holland, MI",
+          "startDate": "2020-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Processed 150 orders a week and resolved artwork and shipping issues\n- Built a reorder reminder process that lifted repeat orders 12%\n- Trained 2 new representatives on order entry and quoting"
+        },
+        {
+          "company": "Laker Village Apartments",
+          "role": "Leasing Consultant (part-time)",
+          "location": "Allendale, MI",
+          "startDate": "2018-08",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Renewed 82% of resident leases in 2019\n- Answered 40 resident and prospect calls a day"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grand Valley State University",
+          "degree": "BBA, Marketing",
+          "startDate": "2016-08",
+          "endDate": "2020-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Account Management: Business reviews, upselling, renewals, issue resolution",
+        "Tools: Salesforce, Epicor ERP, Excel, Microsoft Teams",
+        "Industry: Packaging, manufacturing, procurement negotiation",
+        "Analysis: Account profitability, pricing reviews, sales forecasts",
+        "Training: Dale Carnegie Sales Training"
+      ]
+    },
+    "Key Account Manager": {
+      "summary": "Key account manager with 9 years in consumer packaged goods sales, managing national retail accounts. Owns a $64M beverage business with a national club and grocery customer and grew it 18% in two years. Leads joint business planning, trade spend, category reviews and supply chain coordination.",
+      "experience": [
+        {
+          "company": "Clearspring Beverages",
+          "role": "Key Account Manager",
+          "location": "Bentonville, AR",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own a $64M national account with a club and grocery retailer, growing sales 18% in 2 years\n- Manage a $7.5M trade budget, improving trade ROI from 1.3 to 1.8 with promotion post-analysis\n- Lead joint business planning and category reviews using Retail Link and Circana data\n- Coordinate with supply chain to hold in-stock rates above 98% during summer peaks\n- Present quarterly results and innovation plans to the retailer's category and merchandising leads"
+        },
+        {
+          "company": "Ozark Snack Company",
+          "role": "Account Manager",
+          "location": "Rogers, AR",
+          "startDate": "2018-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Managed $22M across 3 regional grocery chains\n- Secured 140 new item placements through category resets\n- Negotiated annual shelf plans and trade terms with buyers"
+        },
+        {
+          "company": "Heartland Foods",
+          "role": "Sales Analyst",
+          "location": "Springdale, AR",
+          "startDate": "2017-06",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Built weekly POS and inventory reports for national account teams\n- Built a weekly out-of-stock alert used by national account managers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Arkansas",
+          "degree": "BSBA, Marketing",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Account Management: Joint business planning, category management, negotiation",
+        "Analytics: Retail Link, Circana, Nielsen, Excel, Power BI",
+        "Trade: Trade spend, promotion analysis, pricing",
+        "Operations: Forecasting, supply coordination",
+        "Leadership: Cross-functional account team of 6, executive presentations"
+      ]
+    },
+    "Partner Account Manager": {
+      "summary": "Partner account manager with 7 years managing reseller and MSP partners for cloud backup software. Manages 45 partners producing $11M in annual recurring revenue, up 33% in two years. Drives partner business plans, enablement and co-selling with direct sales.",
+      "experience": [
+        {
+          "company": "Cloudvault Backup",
+          "role": "Partner Account Manager",
+          "location": "Remote",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 45 MSP and reseller partners producing $11M in ARR, up 33% in 2 years\n- Write joint business plans with the top 12 partners, tracking pipeline and certifications quarterly\n- Ran a partner certification program completed by 380 partner engineers\n- Resolve channel conflict with direct AEs using deal registration rules in PRM\n- Build quarterly co-marketing campaigns with the top 10 partners using MDF budgets"
+        },
+        {
+          "company": "Netbridge Distribution",
+          "role": "Channel Account Representative",
+          "location": "Phoenix, AZ",
+          "startDate": "2019-08",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Supported 120 VARs selling security and storage products\n- Ran quarterly promotions that lifted partner orders 22%\n- Trained partner sales reps on new product launches each quarter"
+        },
+        {
+          "company": "Desert Sky IT",
+          "role": "Inside Sales Representative",
+          "location": "Tempe, AZ",
+          "startDate": "2018-06",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Sold managed IT services to small businesses by phone\n- Handled 70 calls a day and reached 110% of target"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University, W. P. Carey School of Business",
+          "degree": "BS, Marketing",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Channel: MSP and reseller management, deal registration, joint business planning",
+        "Enablement: Partner training, certification, co-selling",
+        "Tools: Salesforce, Impartner PRM, Crossbeam",
+        "Industry: Data protection, managed services",
+        "Metrics: Partner-sourced ARR, certifications, deal registrations"
+      ]
+    },
+    "Sales Manager": {
+      "summary": "Sales manager with 10 years in B2B sales, including 4 years leading teams in commercial insurance. Leads 9 producers who wrote $14.8M in new premium in 2025, 109% of plan. Coaches on pipeline discipline and carrier relationships and builds territory and compensation plans.",
+      "experience": [
+        {
+          "company": "Fairhaven Insurance Brokers",
+          "role": "Sales Manager",
+          "location": "Columbus, OH",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 9 commercial producers who wrote $14.8M in new premium in 2025, 109% of plan\n- Introduced weekly pipeline reviews in Applied Epic, raising quote-to-bind ratio from 26% to 34%\n- Hired and ramped 4 producers, each writing $500k+ in their first year\n- Redesigned compensation with finance to reward new business and retention\n- Partner with carrier underwriters to place complex risks for manufacturing and construction clients"
+        },
+        {
+          "company": "Fairhaven Insurance Brokers",
+          "role": "Senior Commercial Producer",
+          "location": "Columbus, OH",
+          "startDate": "2018-02",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Built a $3.2M book of construction and manufacturing clients\n- Retained 94% of accounts through annual stewardship reviews\n- Trained 3 junior producers on account rounding and renewal planning"
+        },
+        {
+          "company": "Buckeye Mutual",
+          "role": "Commercial Lines Underwriter",
+          "location": "Dublin, OH",
+          "startDate": "2016-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Underwrote small commercial package policies for 40 agencies\n- Kept loss ratios below 55% across a book of 400 policies"
+        }
+      ],
+      "education": [
+        {
+          "school": "Miami University",
+          "degree": "BS, Business (Finance)",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Coaching, hiring, territory planning, compensation design",
+        "Sales: Commercial insurance, pipeline management, carrier negotiation",
+        "Tools: Applied Epic, Salesforce, Excel",
+        "Licenses: Ohio Property & Casualty Producer, CIC",
+        "Industry: Construction, manufacturing, commercial property and casualty"
+      ]
+    },
+    "Sales Operations Analyst": {
+      "summary": "Sales operations analyst with 3 years supporting a 70-person sales team at a fintech company. Built the forecasting dashboard leadership uses weekly and automated territory reports that saved 15 hours a week. Strong in Salesforce reporting, SQL and Excel, and careful with data quality.",
+      "experience": [
+        {
+          "company": "Ledgerkind",
+          "role": "Sales Operations Analyst",
+          "location": "Charlotte, NC",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a forecast dashboard in Tableau from Salesforce and Snowflake used in weekly leadership calls\n- Automated territory and quota attainment reports, saving managers about 15 hours a week\n- Cleaned 18,000 account records and fixed ownership rules, reducing routing disputes 70%\n- Support quarterly commission calculations for 70 reps with zero payout errors in 2025\n- Answer 20+ Salesforce and reporting requests a week from reps and managers through a Jira queue"
+        },
+        {
+          "company": "Carolina Merchant Bank",
+          "role": "Business Analyst Intern",
+          "location": "Charlotte, NC",
+          "startDate": "2023-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Analyzed branch referral data and presented findings to the retail sales director\n- Built a referral dashboard in Power BI for 30 branches"
+        },
+        {
+          "company": "Davidson College Admissions",
+          "role": "Data Assistant",
+          "location": "Davidson, NC",
+          "startDate": "2021-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Cleaned and merged 12,000 applicant records in Slate\n- Built weekly yield reports for the admissions team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Davidson College",
+          "degree": "BA, Economics; minor in Data Science",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analytics: SQL, Excel, Tableau, Snowflake",
+        "CRM: Salesforce reports and dashboards, data hygiene, territory rules",
+        "Operations: Forecast support, commissions, quota tracking",
+        "Certifications: Salesforce Certified Administrator",
+        "Documentation: Report guides, process maps, Confluence"
+      ]
+    },
+    "Sales Operations Manager": {
+      "summary": "Sales operations manager with 9 years running sales systems, planning and analytics for B2B software and medical device sales teams. Leads territory, quota and compensation planning for a 140-person sales organization. Improved forecast accuracy to within 5% and cut quote turnaround from 3 days to 4 hours with CPQ.",
+      "experience": [
+        {
+          "company": "Corvex Medical",
+          "role": "Sales Operations Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run annual territory, quota and compensation planning for 140 reps and managers\n- Implemented Salesforce CPQ with IT, cutting quote turnaround from 3 days to 4 hours\n- Improved forecast accuracy from ±18% to ±5% with Clari and weekly inspection cadences\n- Lead 2 analysts and an administrator supporting reporting, tools and deal desk\n- Partner with finance on bookings, commissions and sales capacity in quarterly business reviews"
+        },
+        {
+          "company": "Northwoods Software",
+          "role": "Senior Sales Operations Analyst",
+          "location": "St. Paul, MN",
+          "startDate": "2019-02",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Built capacity models that set hiring plans for 3 sales segments\n- Moved commission calculations from spreadsheets to CaptivateIQ\n- Built territory maps from market data in Excel and Salesforce Maps"
+        },
+        {
+          "company": "Twin Cities Bancorp",
+          "role": "Business Analyst",
+          "location": "Minneapolis, MN",
+          "startDate": "2017-06",
+          "endDate": "2019-01",
+          "isCurrent": false,
+          "description": "- Produced sales performance reports for 60 branch managers\n- Automated weekly sales reports in Excel and SQL"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of St. Thomas",
+          "degree": "BS, Business Analytics",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Planning: Territory design, quota setting, capacity modeling, compensation",
+        "Systems: Salesforce, Salesforce CPQ, Clari, CaptivateIQ",
+        "Analytics: SQL, Tableau, Excel",
+        "Leadership: Team management, deal desk, cross-functional planning",
+        "Deal Desk: Pricing approvals, discounting rules, contract review"
+      ]
+    },
+    "Revenue Operations (RevOps) Manager": {
+      "summary": "Revenue operations manager with 9 years aligning marketing, sales and customer success systems at SaaS companies. Built a unified funnel from lead to renewal across HubSpot, Salesforce and Gainsight, giving leadership one source of truth. Leads a team of 3 and owns forecasting, tooling and go-to-market data.",
+      "experience": [
+        {
+          "company": "Tidewell Software",
+          "role": "Revenue Operations Manager",
+          "location": "Remote",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a unified lead-to-renewal funnel across HubSpot, Salesforce and Gainsight used in all board reporting\n- Lead 3 RevOps analysts covering marketing ops, sales ops and CS ops\n- Cut tool spend $260k a year by consolidating 11 go-to-market tools to 6\n- Introduced a quarterly planning model linking pipeline coverage, win rates and net retention to targets\n- Own the GTM data model with data engineering in Snowflake and dbt"
+        },
+        {
+          "company": "Brickyard Analytics",
+          "role": "Sales Operations Manager",
+          "location": "Indianapolis, IN",
+          "startDate": "2019-04",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Rebuilt opportunity stages and exit criteria, lifting forecast accuracy to within 7%\n- Rolled out Outreach to 45 reps with routing and sequence governance\n- Built pipeline dashboards in Tableau used by the CRO"
+        },
+        {
+          "company": "Circle City Health",
+          "role": "Sales Operations Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2017-06",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Maintained Salesforce data and weekly pipeline reports for a 30-person team\n- Built a lead routing flow in Salesforce for inbound leads"
+        }
+      ],
+      "education": [
+        {
+          "school": "Purdue University",
+          "degree": "BS, Industrial Management",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "RevOps: Funnel design, forecasting, planning, attribution, net retention reporting",
+        "Systems: Salesforce, HubSpot, Gainsight, Outreach, LeanData",
+        "Data: SQL, Snowflake, dbt basics, Tableau",
+        "Leadership: Team management, tool governance, executive reporting",
+        "Planning: Capacity models, targets, quarterly planning"
+      ]
+    },
+    "Sales Enablement Manager": {
+      "summary": "Sales enablement manager with 7 years building onboarding, training and content programs for sales teams at B2B software companies. Cut new AE ramp time from 7 months to 4.5 months for a 90-rep organization. Runs certification programs, manages the content platform and measures enablement against win rates.",
+      "experience": [
+        {
+          "company": "Opsgrid",
+          "role": "Sales Enablement Manager",
+          "location": "San Diego, CA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned AE onboarding into a 10-week certified program, cutting ramp from 7 to 4.5 months\n- Run monthly skills training for 90 reps on discovery, MEDDICC and negotiation\n- Manage 400 assets in Highspot, retiring 35% of outdated content and tracking usage by deal stage\n- Linked Gong call scoring to certification, raising discovery scores 22% in two quarters\n- Report ramp, certification and win-rate trends to the CRO each quarter"
+        },
+        {
+          "company": "Harborpoint Software",
+          "role": "Sales Trainer",
+          "location": "La Jolla, CA",
+          "startDate": "2019-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Delivered product and process training to 150 sales and support staff a year\n- Built a self-paced course library in Lessonly\n- Wrote product release training for 6 releases a year"
+        },
+        {
+          "company": "Harborpoint Software",
+          "role": "Account Executive",
+          "location": "La Jolla, CA",
+          "startDate": "2017-06",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Exceeded quota in 6 of 8 quarters selling to mid-market accounts\n- Ran discovery role plays for 12 new hires"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, San Diego",
+          "degree": "BA, Communication",
+          "startDate": "2013-09",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Enablement: Onboarding, certification, coaching programs, content strategy",
+        "Tools: Highspot, Gong, Seismic, Lessonly, Salesforce",
+        "Methods: MEDDICC, Command of the Message, adult learning design",
+        "Measurement: Ramp time, win rate, content usage",
+        "Content: Playbooks, battlecards, onboarding guides"
+      ]
+    },
+    "Sales Trainer": {
+      "summary": "Sales trainer with 9 years in retail and automotive sales, the last 4 teaching consultative selling to dealership teams. Trains 300 new hires a year across 40 dealerships, and trained teams sell 17% more finance products in their first 90 days. Designs role-play workshops, e-learning and field coaching visits.",
+      "experience": [
+        {
+          "company": "Bayou City Auto Group",
+          "role": "Sales Trainer",
+          "location": "Houston, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Train 300 new sales consultants a year across 40 dealerships in a 2-week certification course\n- Trained hires sell 17% more finance and warranty products in their first 90 days than untrained peers\n- Built 18 e-learning modules in Articulate 360 on F&I compliance and needs-based selling\n- Run monthly field coaching visits and role plays for 25 sales managers\n- Track trainee results in Docebo and CDK, reporting 90-day performance to dealership general managers"
+        },
+        {
+          "company": "Gulf Coast Motors",
+          "role": "Sales Consultant",
+          "location": "Houston, TX",
+          "startDate": "2019-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Sold an average of 16 vehicles a month and earned top-3 CSI scores\n- Mentored 6 new consultants on the showroom process\n- Led monthly team huddles on finance product sales"
+        },
+        {
+          "company": "Lone Pine Wireless",
+          "role": "Retail Sales Associate",
+          "location": "Pasadena, TX",
+          "startDate": "2018-01",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Sold phones and plans, reaching 120% of accessory targets\n- Earned the store's top salesperson award twice"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Houston–Clear Lake",
+          "degree": "BS, Communication",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Training: Curriculum design, role plays, workshop facilitation, field coaching",
+        "Tools: Articulate 360, Docebo, Zoom, CDK Drive",
+        "Sales: Consultative selling, F&I products, objection handling",
+        "Certifications: ATD Associate Professional in Talent Development",
+        "Measurement: 90-day sales results, CSI scores, certification completion"
+      ]
+    },
+    "Customer Success Manager": {
+      "summary": "Customer success manager with 6 years managing mid-market SaaS accounts in HR and payroll. Manages 55 accounts worth $3.8M ARR with 112% net revenue retention and 94% gross retention. Runs onboarding, health scoring, business reviews and expansion plays in partnership with account executives.",
+      "experience": [
+        {
+          "company": "Peoplegrid",
+          "role": "Customer Success Manager",
+          "location": "Remote",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 55 mid-market accounts worth $3.8M ARR with 112% NRR and 94% gross retention\n- Lead quarterly business reviews tied to customer goals, sourcing $520k in expansion pipeline last year\n- Built risk playbooks in Gainsight that saved 7 at-risk accounts worth $410k\n- Raised product adoption from 3.1 to 4.4 modules per account through targeted training\n- Coordinate with support and product on the top 10 bugs affecting assigned accounts, tracking fixes in Jira"
+        },
+        {
+          "company": "Benefitwise",
+          "role": "Onboarding Specialist",
+          "location": "Raleigh, NC",
+          "startDate": "2021-01",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Onboarded 90 employers in 18 months with average go-live in 34 days\n- Wrote help center guides that cut onboarding tickets 25%\n- Trained 600 HR admins on the payroll setup checklist"
+        },
+        {
+          "company": "Mountaineer Career Development",
+          "role": "Peer Career Advisor",
+          "location": "Boone, NC",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Met with 15 students a week on resumes and job search plans\n- Ran 10 workshops on LinkedIn and interviewing"
+        }
+      ],
+      "education": [
+        {
+          "school": "Appalachian State University",
+          "degree": "BS, Business Administration",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customer Success: Onboarding, QBRs, health scoring, renewals, expansion",
+        "Tools: Gainsight, Salesforce, Zendesk, Pendo, Gong",
+        "Metrics: NRR, GRR, adoption, CSAT, time to value",
+        "Domain: HR and payroll software, employer onboarding",
+        "Certifications: SuccessCOACHING CCSM Level 1"
+      ]
+    },
+    "Customer Success Lead": {
+      "summary": "Customer success lead with 6 years in SaaS, currently leading a pod of 5 CSMs serving enterprise logistics customers. The pod holds $14M ARR at 118% net revenue retention. Coaches CSMs, owns escalations and builds the playbooks the wider team uses for onboarding and renewals.",
+      "experience": [
+        {
+          "company": "Routefleet",
+          "role": "Customer Success Lead",
+          "location": "Dallas, TX",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a pod of 5 CSMs managing 40 enterprise accounts worth $14M ARR at 118% NRR\n- Own executive escalations and run recovery plans that retained $2.2M in at-risk ARR last year\n- Wrote onboarding and renewal playbooks adopted by all 22 CSMs\n- Partner with product on a customer advisory board of 12 shipping leaders\n- Report pod health, renewals and expansion forecast weekly to the CS director"
+        },
+        {
+          "company": "Routefleet",
+          "role": "Senior Customer Success Manager",
+          "location": "Dallas, TX",
+          "startDate": "2020-04",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Managed 25 accounts worth $4.5M ARR with 97% gross retention\n- Expanded a top-3 account from $300k to $900k ARR\n- Built success plans with 25 shipping leaders"
+        },
+        {
+          "company": "Plainview Logistics",
+          "role": "Account Coordinator",
+          "location": "Fort Worth, TX",
+          "startDate": "2019-01",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Coordinated freight programs and service issues for 30 shippers\n- Kept 98% on-time freight delivery for top shippers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Texas",
+          "degree": "BBA, Logistics and Supply Chain Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Coaching, escalation management, playbook design",
+        "Customer Success: Enterprise renewals, expansion, executive alignment",
+        "Tools: Gainsight, Salesforce, Jira, Looker",
+        "Industry: Logistics, transportation management software",
+        "Metrics: NRR, GRR, health scores, executive sponsor coverage"
+      ]
+    },
+    "Customer Success Director": {
+      "summary": "Customer success director with 13 years in SaaS, leading post-sale teams for healthcare technology companies. Leads 32 people across CSM, onboarding and support for a $95M ARR book, raising net retention from 104% to 116%. Builds segmentation, capacity models and renewal forecasting the executive team relies on.",
+      "experience": [
+        {
+          "company": "Clarion Care Systems",
+          "role": "Customer Success Director",
+          "location": "Nashville, TN",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 32 staff across 4 CSM managers, onboarding and support for $95M ARR\n- Raised NRR from 104% to 116% and gross retention from 89% to 94% in 3 years\n- Introduced segmentation and a digital-touch program that covers 600 small accounts with 3 CSMs\n- Own renewal forecasting reviewed monthly with the CFO, accurate to within 2%\n- Manage a $4.2M customer success budget, including headcount, tools and customer events"
+        },
+        {
+          "company": "Medlane Health Tech",
+          "role": "Senior Manager, Customer Success",
+          "location": "Franklin, TN",
+          "startDate": "2017-05",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Built the enterprise CSM team from 4 to 14 people\n- Launched executive business reviews for top 50 hospital accounts\n- Hired and coached 4 team managers"
+        },
+        {
+          "company": "Claymore EHR",
+          "role": "Implementation Consultant",
+          "location": "Brentwood, TN",
+          "startDate": "2013-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Implemented clinical software for 30 hospitals and clinics, aligned with HIPAA requirements\n- Trained hospital staff on clinical workflows at go-live"
+        }
+      ],
+      "education": [
+        {
+          "school": "Belmont University",
+          "degree": "MBA",
+          "startDate": "2014-08",
+          "endDate": "2016-05"
+        },
+        {
+          "school": "University of Tennessee, Knoxville",
+          "degree": "BS, Health Sciences",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Org design, capacity planning, manager development, budgets",
+        "Customer Success: Segmentation, renewals forecasting, digital CS, advocacy",
+        "Tools: Gainsight, Salesforce, ChurnZero, Tableau",
+        "Industry: Healthcare IT, HIPAA, hospital buyers",
+        "Metrics: NRR, GRR, renewal forecast accuracy, CSAT"
+      ]
+    },
+    "Customer Success Operations Manager": {
+      "summary": "Customer success operations manager with 6 years building systems and analytics for post-sale teams. Rebuilt health scoring at a 600-customer SaaS company so it predicts churn with 81% precision. Owns Gainsight, renewal processes, capacity models and CS reporting.",
+      "experience": [
+        {
+          "company": "Formwell Cloud",
+          "role": "Customer Success Operations Manager",
+          "location": "Indianapolis, IN",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt the health score from usage, support and survey data, predicting churn with 81% precision\n- Administer Gainsight for 45 users, launching 20 automated playbooks for onboarding and renewals\n- Built renewal and expansion forecasts in Salesforce that feed the company plan\n- Created a capacity model that guided hiring of 8 CSMs across 3 segments\n- Run quarterly CS planning with the VP of customer success on targets and coverage"
+        },
+        {
+          "company": "Hoosier Data",
+          "role": "CS Operations Analyst",
+          "location": "Carmel, IN",
+          "startDate": "2020-03",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Built NPS and adoption dashboards in Looker for CS leadership\n- Set renewal process rules that cut late renewals 40%\n- Automated renewal reminders in Salesforce for 600 accounts"
+        },
+        {
+          "company": "Bulldog Analytics Lab",
+          "role": "Research Assistant",
+          "location": "Indianapolis, IN",
+          "startDate": "2018-01",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Cleaned and analyzed survey data for 3 faculty research projects\n- Built charts and summary tables in R and Excel"
+        }
+      ],
+      "education": [
+        {
+          "school": "Butler University",
+          "degree": "BS, Business Analytics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Systems: Gainsight, Salesforce, Totango, Zapier",
+        "Analytics: SQL, Looker, health scoring, churn analysis",
+        "Operations: Renewal process, capacity planning, playbooks",
+        "Certifications: Gainsight Certified Administrator",
+        "Metrics: Health score precision, renewal forecasts, CSM capacity"
+      ]
+    },
+    "Customer Support Representative": {
+      "summary": "Customer support representative with 3 years helping consumers by phone, chat and email for a home internet provider. Handles about 55 contacts a day with a 92% CSAT score and 81% first-contact resolution. Calm with frustrated customers and quick to learn billing, troubleshooting and ticketing systems.",
+      "experience": [
+        {
+          "company": "Prairie Fiber Internet",
+          "role": "Customer Support Representative",
+          "location": "Omaha, NE",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle about 55 calls, chats and emails a day with 92% CSAT and 81% first-contact resolution\n- Troubleshoot router and Wi-Fi issues remotely, avoiding 30% of technician visits\n- Resolve billing disputes and process credits within policy limits\n- Wrote 12 internal knowledge base articles on common outages and setup steps\n- Escalate network outages to field operations with clear notes, cutting callback time 20%"
+        },
+        {
+          "company": "Platte River Pharmacy",
+          "role": "Pharmacy Clerk",
+          "location": "Omaha, NE",
+          "startDate": "2022-01",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Assisted 150 customers a shift with pickups, insurance questions and refills\n- Kept prescription pickup wait times under 5 minutes during peak hours"
+        },
+        {
+          "company": "Gateway Movie Theaters",
+          "role": "Guest Services Associate",
+          "location": "Omaha, NE",
+          "startDate": "2020-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Handled ticketing, concessions and guest complaints for 600 guests a shift\n- Trained 4 new hires on refunds and exchanges"
+        }
+      ],
+      "education": [
+        {
+          "school": "Metropolitan Community College",
+          "degree": "AA, Business",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Support: Phone, chat and email support, troubleshooting, de-escalation",
+        "Tools: Zendesk, Salesforce Service Cloud, Five9",
+        "Metrics: CSAT, FCR, average handle time",
+        "Systems: Billing systems, outage maps, remote router tools",
+        "Languages: Spanish (fluent)"
+      ]
+    },
+    "Customer Support Manager": {
+      "summary": "Customer support manager with 9 years in e-commerce and subscription support. Leads 3 team leads and 34 agents handling 60,000 contacts a month, and raised CSAT from 84% to 93% while cutting cost per contact 28%. Strong in workforce planning, QA programs, automation and vendor management.",
+      "experience": [
+        {
+          "company": "Nestbox Home",
+          "role": "Customer Support Manager",
+          "location": "Columbus, OH",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 3 team leads and 34 agents handling 60,000 contacts a month across phone, chat and email\n- Raised CSAT from 84% to 93% and cut cost per contact 28% in 2 years\n- Launched Zendesk AI and macros that resolve 22% of tickets without an agent\n- Manage a 15-seat outsourced team, holding it to the same QA scorecard as in-house staff\n- Forecast weekly contact volume and staffing in Assembled for holiday and launch peaks"
+        },
+        {
+          "company": "Freshcrate Meals",
+          "role": "Support Team Lead",
+          "location": "Columbus, OH",
+          "startDate": "2019-02",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Led 12 agents through a 3x volume spike while keeping first response under 4 hours\n- Built the QA program and weekly calibration sessions\n- Hired and onboarded 18 agents in a single quarter"
+        },
+        {
+          "company": "Scioto Telecom",
+          "role": "Customer Service Representative",
+          "location": "Dublin, OH",
+          "startDate": "2017-06",
+          "endDate": "2019-01",
+          "isCurrent": false,
+          "description": "- Handled billing and service calls, earning top quartile CSAT\n- Mentored 3 new agents on billing calls"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbus State Community College",
+          "degree": "AAS, Business Management",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Team management, hiring, coaching, vendor oversight",
+        "Operations: Workforce management, QA programs, SLAs, budgeting",
+        "Tools: Zendesk, Assembled, Klaus, Gorgias, Looker",
+        "Metrics: CSAT, FRT, cost per contact, deflection",
+        "Automation: Zendesk AI, macros, self-service help center"
+      ]
+    },
+    "Customer Support Team Lead": {
+      "summary": "Customer support team lead with 5 years in SaaS support, leading 9 agents serving small business customers of an accounting app. The team keeps first response under 1 hour and CSAT at 95%. Handles escalations, scheduling, QA reviews and coaching new agents through their first 60 days.",
+      "experience": [
+        {
+          "company": "Ledgerbee",
+          "role": "Customer Support Team Lead",
+          "location": "Boise, ID",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 9 agents handling 7,500 tickets a month with first response under 1 hour and 95% CSAT\n- Run weekly QA reviews and 1:1 coaching, cutting new-agent ramp from 10 to 6 weeks\n- Own escalations for payroll and tax issues, coordinating fixes with engineering in Jira\n- Built schedules in Zendesk WFM that cover 7am–9pm across 3 time zones\n- Report weekly CSAT, backlog and escalation trends to the support manager"
+        },
+        {
+          "company": "Ledgerbee",
+          "role": "Customer Support Specialist",
+          "location": "Boise, ID",
+          "startDate": "2021-09",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Resolved 45 tickets a day with a 96% satisfaction score\n- Became the team expert on bank feed and reconciliation issues\n- Wrote 20 help center articles on payroll setup"
+        },
+        {
+          "company": "Boise State Help Desk",
+          "role": "Student IT Support Technician",
+          "location": "Boise, ID",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Resolved 25 student and staff tech requests a day by phone and walk-up\n- Wrote 15 how-to guides for Wi-Fi and account setup"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boise State University",
+          "degree": "BA, Communication",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Coaching, QA reviews, scheduling, escalation handling",
+        "Tools: Zendesk, Jira, Slack, Intercom",
+        "Domain: Accounting software, payroll, bank feeds",
+        "Metrics: CSAT, FRT, resolution time, backlog",
+        "Process: Escalation paths, macros, help center updates"
+      ]
+    },
+    "Customer Experience Manager": {
+      "summary": "Customer experience manager with 9 years improving service journeys for hotel and travel brands. Leads voice-of-customer and service design across 28 properties, raising NPS from 41 to 58. Combines survey analytics, frontline training and process changes that fix the root causes of complaints.",
+      "experience": [
+        {
+          "company": "Bluewater Hotels & Resorts",
+          "role": "Customer Experience Manager",
+          "location": "Scottsdale, AZ",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Raised portfolio NPS from 41 to 58 across 28 properties in 3 years\n- Run voice-of-customer in Medallia covering 160,000 surveys a year, with themes reported monthly to general managers\n- Redesigned check-in and room-readiness processes that cut arrival complaints 37%\n- Trained 1,200 frontline staff on a service recovery standard with $50 empowerment credits\n- Lead a team of 2 CX analysts and partner with 28 general managers on action plans"
+        },
+        {
+          "company": "Saguaro Travel",
+          "role": "Guest Experience Analyst",
+          "location": "Phoenix, AZ",
+          "startDate": "2019-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Analyzed complaint and review data across 5 channels\n- Built a TripAdvisor response program that lifted average rating 0.3 points\n- Wrote review response standards used by 5 properties"
+        },
+        {
+          "company": "Camelback Inn Group",
+          "role": "Front Desk Supervisor",
+          "location": "Scottsdale, AZ",
+          "startDate": "2017-06",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Supervised 14 front desk agents at a 400-room resort\n- Handled guest complaints and service recovery for VIP guests"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northern Arizona University",
+          "degree": "BS, Hotel and Restaurant Management",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "CX: Voice of customer, journey mapping, service design, service recovery",
+        "Tools: Medallia, Qualtrics, Revinate, Power BI",
+        "Training: Frontline training, standards, coaching",
+        "Metrics: NPS, CSAT, complaint rate, review scores",
+        "Leadership: Analyst team management, GM partnership, executive reporting"
+      ]
+    },
+    "Support Specialist": {
+      "summary": "Support specialist with 3 years providing product and account support for a dental practice management platform. Resolves about 35 tickets and calls a day with 96% CSAT, and handles insurance claim and scheduling issues for front-office staff. Writes clear help articles and documents bugs engineers can reproduce.",
+      "experience": [
+        {
+          "company": "Smiledesk Software",
+          "role": "Support Specialist",
+          "location": "Louisville, KY",
+          "startDate": "2023-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Resolve about 35 tickets and calls a day for dental offices with 96% CSAT\n- Troubleshoot insurance claim submissions and eligibility checks, escalating clearinghouse issues within SLA\n- Wrote 40 help center articles that receive 9,000 views a month\n- Document reproducible bugs in Jira, with 85% accepted by engineering on first review\n- Train new office staff on scheduling and billing workflows during onboarding calls"
+        },
+        {
+          "company": "Derby City Dental",
+          "role": "Front Office Coordinator",
+          "location": "Louisville, KY",
+          "startDate": "2022-01",
+          "endDate": "2023-09",
+          "isCurrent": false,
+          "description": "- Scheduled 60 patients a day and verified insurance benefits\n- Trained 3 new coordinators on the practice software\n- Handled patient billing questions and payment plans"
+        },
+        {
+          "company": "Cardinal Bookstore",
+          "role": "Customer Service Associate",
+          "location": "Louisville, KY",
+          "startDate": "2019-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Answered order and return questions for 40 customers a shift\n- Processed online textbook orders and rentals"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Louisville",
+          "degree": "BA, Communication",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Support: Phone and ticket support, troubleshooting, bug documentation",
+        "Tools: Zendesk, Jira, Loom, Confluence",
+        "Domain: Dental practice management, insurance claims, HIPAA",
+        "Metrics: CSAT, first-contact resolution, ticket backlog",
+        "Compliance: Annual HIPAA privacy and security training"
+      ]
+    },
+    "Technical Support Engineer": {
+      "summary": "Technical support engineer with 6 years supporting API and cloud infrastructure products for developer customers. Resolves complex tier-2 and tier-3 cases across Linux, networking and Kubernetes with a 94% CSAT. Writes scripts to reproduce issues, ships fixes to docs and tooling, and is the bridge between customers and engineering.",
+      "experience": [
+        {
+          "company": "Hostforge Cloud",
+          "role": "Technical Support Engineer II",
+          "location": "Remote",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Resolve 60 tier-2 and tier-3 cases a month on load balancers, Kubernetes and DNS with 94% CSAT\n- Wrote Python and Bash diagnostic scripts that cut average time to diagnosis from 3 hours to 50 minutes\n- Lead incident communication for customers during Sev-1 outages with the SRE on-call team\n- Contributed 30 fixes to public docs and 4 bug patches merged into the CLI on GitHub\n- Mentor 3 tier-1 engineers on Kubernetes networking and escalation notes"
+        },
+        {
+          "company": "Bayport Networks",
+          "role": "Support Engineer",
+          "location": "Durham, NC",
+          "startDate": "2021-01",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Supported VPN and firewall deployments for 400 business customers\n- Built a log-collection tool used in 70% of escalated tickets\n- Wrote 40 troubleshooting guides for the knowledge base"
+        },
+        {
+          "company": "Wolfpack OIT Help Desk",
+          "role": "Student Support Technician",
+          "location": "Raleigh, NC",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Solved 20 network and account tickets a day for students and staff\n- Set up and imaged 150 lab computers each semester"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "BS, Computer Science",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "k8s-debug-kit",
+          "link": "github.com/mnguyen/k8s-debug-kit",
+          "description": "Open-source collection of scripts for gathering cluster diagnostics in support cases"
+        }
+      ],
+      "skills": [
+        "Technical: Linux, TCP/IP, DNS, HTTP, Kubernetes, Docker, REST APIs",
+        "Scripting: Python, Bash, SQL, curl, jq",
+        "Tools: Zendesk, Jira, Datadog, PagerDuty, Wireshark",
+        "Certifications: CKA, AWS Certified Solutions Architect – Associate",
+        "Process: Incident response, escalation, root cause analysis"
+      ]
+    },
+    "Implementation Specialist": {
+      "summary": "Implementation specialist with 4 years configuring and launching workforce management software for hospitals and senior living operators. Leads 12–15 implementations at a time and brought average go-live from 75 to 52 days. Handles data migration, system configuration and end-user training with clear, steady project communication.",
+      "experience": [
+        {
+          "company": "Carewave Scheduling",
+          "role": "Implementation Specialist",
+          "location": "Milwaukee, WI",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run 12–15 concurrent implementations for hospitals and senior living groups, cutting average go-live from 75 to 52 days\n- Configure pay rules, shift templates and union rules, then validate against client payroll data\n- Migrate employee and schedule data from legacy systems using Excel and SQL imports\n- Train 1,500 managers and staff a year through live sessions and recorded walkthroughs\n- Run weekly status calls with client project leads and track tasks in Smartsheet"
+        },
+        {
+          "company": "Lakefront Senior Living",
+          "role": "HR and Scheduling Coordinator",
+          "location": "Waukesha, WI",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Scheduled 220 caregivers across 3 communities and managed timekeeping in Kronos\n- Built schedule templates that cut overtime 12% across 3 communities"
+        },
+        {
+          "company": "Panther Recreation Center",
+          "role": "Front Desk Supervisor",
+          "location": "Milwaukee, WI",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Scheduled 30 student staff across 3 shifts\n- Trained new staff on member check-in software"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Milwaukee",
+          "degree": "BBA, Information Technology Management",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Implementation: Configuration, data migration, UAT, go-live support",
+        "Tools: Salesforce, Jira, Smartsheet, UKG Kronos, Excel, SQL",
+        "Training: Admin and end-user training, documentation",
+        "Domain: Healthcare scheduling, payroll rules, union contracts",
+        "Project Management: Status reporting, timelines, risk tracking"
+      ]
+    },
+    "Implementation Project Manager": {
+      "summary": "Implementation project manager with 9 years delivering enterprise software rollouts for banks and credit unions. Manages a portfolio of 8 implementations worth $6M in services and has delivered 40 core and digital banking go-lives. Brings structured planning, vendor and risk management, and calm handling of regulatory deadlines.",
+      "experience": [
+        {
+          "company": "Corelynk Banking Systems",
+          "role": "Implementation Project Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a portfolio of 8 digital banking implementations worth $6M in services revenue\n- Delivered 18 go-lives on schedule, including a 400,000-member credit union conversion over a single weekend\n- Lead project teams of 6–12 across configuration, integration, data and training\n- Track risks and change requests in Smartsheet, keeping projects within 5% of budget\n- Report project status, risk and budget weekly to client executives and the delivery director"
+        },
+        {
+          "company": "Summitline Core",
+          "role": "Implementation Consultant",
+          "location": "Greenville, SC",
+          "startDate": "2017-05",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Configured core banking modules for 22 community banks\n- Built conversion test scripts that cut post-launch defects 40%\n- Led weekend conversions for 6 community banks"
+        },
+        {
+          "company": "Palmetto Federal Bank",
+          "role": "Operations Analyst",
+          "location": "Columbia, SC",
+          "startDate": "2015-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Supported deposit operations and system testing for branch rollouts\n- Tested branch system updates before rollout to 30 branches"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "BS, Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Project Management: Planning, risk and issue management, budgets, change control",
+        "Tools: Smartsheet, Jira, MS Project, Salesforce",
+        "Domain: Core and digital banking, data conversion, FFIEC requirements",
+        "Certifications: PMP, Certified Scrum Master",
+        "Leadership: Cross-functional teams, client executive communication"
+      ]
+    },
+    "Solution Engineer": {
+      "summary": "Solution engineer with 8 years in data engineering and presales for data integration and analytics platforms. Supports 5 account executives and helped close $9.4M in new ARR in fiscal 2026. Runs discovery, custom demos and proofs of concept, and translates technical architecture into business value for data and IT leaders.",
+      "experience": [
+        {
+          "company": "Pipewell Data",
+          "role": "Solution Engineer",
+          "location": "Denver, CO",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 5 account executives, helping close $9.4M in new ARR in fiscal 2026\n- Run 12 proofs of concept a year with a 75% technical win rate against two main competitors\n- Build tailored demos with Snowflake, dbt and Airflow on customer sample data\n- Answer security questionnaires and architecture reviews with IT and InfoSec teams\n- Train account executives on discovery questions for data and IT buyers"
+        },
+        {
+          "company": "Cobalt Insights",
+          "role": "Data Engineer",
+          "location": "Boulder, CO",
+          "startDate": "2019-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Built ELT pipelines in Python and Airflow for 30 client data sources\n- Joined sales calls as a technical expert and moved to presales in 2022\n- Built monitoring for 50 data pipelines"
+        },
+        {
+          "company": "Frontrange Analytics",
+          "role": "BI Developer",
+          "location": "Denver, CO",
+          "startDate": "2018-06",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Built Tableau dashboards for healthcare and retail clients\n- Wrote SQL models feeding 30 client dashboards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado School of Mines",
+          "degree": "BS, Computer Science",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Presales: Discovery, demos, proofs of concept, RFPs, security reviews",
+        "Technical: SQL, Python, Snowflake, dbt, Airflow, REST APIs",
+        "Cloud: AWS, Azure, data warehousing, ELT architecture",
+        "Tools: Salesforce, Gong, Consensus",
+        "Communication: Technical storytelling, executive presentations, RFP writing"
+      ]
+    },
+    "Sales Engineer": {
+      "summary": "Sales engineer with 9 years in industrial automation, supporting sales of PLC, motion control and robotics systems to manufacturers. Designed solutions behind $18M in won projects over 3 years. Combines a controls engineering background with clear proposals, site surveys and customer demos.",
+      "experience": [
+        {
+          "company": "Ardent Automation",
+          "role": "Sales Engineer",
+          "location": "Detroit, MI",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed automation solutions behind $18M in won projects over 3 years for automotive and packaging plants\n- Lead site surveys and write technical proposals with bills of materials and cycle-time estimates\n- Run live demos of PLC and robot cells at the customer center, hosting 40 customer visits a year\n- Train distributor sales staff on product selection and safety standards such as ISO 13849\n- Partner with account managers on $500k+ quotes, estimating labor and lead times"
+        },
+        {
+          "company": "Rouge River Controls",
+          "role": "Controls Engineer",
+          "location": "Dearborn, MI",
+          "startDate": "2018-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Programmed Allen-Bradley and Siemens PLCs for 25 production lines\n- Commissioned systems on site and trained maintenance teams\n- Wrote functional specs and test plans for automation projects"
+        },
+        {
+          "company": "Great Lakes Robotics",
+          "role": "Engineering Co-op",
+          "location": "Auburn Hills, MI",
+          "startDate": "2017-05",
+          "endDate": "2017-12",
+          "isCurrent": false,
+          "description": "- Built test fixtures and wiring diagrams for robot cell projects\n- Assisted on site with 3 robot cell installations and safety checks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Michigan State University",
+          "degree": "BS, Electrical Engineering",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical: PLC programming, motion control, robotics, HMI, industrial networks",
+        "Tools: Rockwell Studio 5000, Siemens TIA Portal, AutoCAD Electrical, Salesforce",
+        "Presales: Site surveys, proposals, ROI analysis, demos",
+        "Standards: ISO 13849, NFPA 79, OSHA machine guarding",
+        "Commercial: Quoting, bill of materials, ROI calculations"
+      ]
+    },
+    "Pre-Sales Engineer": {
+      "summary": "Pre-sales engineer with 5 years in network engineering and presales for network security and SD-WAN products to mid-market businesses. Delivers 30 technical demos a month and supported $5.1M in closed business last year. Builds lab environments, sizing designs and proof-of-concept plans, and hands off clean designs to deployment teams.",
+      "experience": [
+        {
+          "company": "Fortline Networks",
+          "role": "Pre-Sales Engineer",
+          "location": "Remote",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver about 30 technical demos a month and supported $5.1M in closed business in 2025\n- Build proof-of-concept labs for firewall and SD-WAN trials, with a 68% PoC-to-close rate\n- Size hardware and licenses for 2 to 60-site networks and document designs for deployment teams\n- Answer 25 RFPs and security questionnaires a quarter with the bid team\n- Partner with 6 account executives on technical discovery for new opportunities"
+        },
+        {
+          "company": "Ridgeway IT Services",
+          "role": "Network Engineer",
+          "location": "Kansas City, MO",
+          "startDate": "2021-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Deployed and supported firewalls and switches for 70 small business clients\n- Migrated 12 clients from MPLS to SD-WAN\n- Wrote network documentation for 70 clients"
+        },
+        {
+          "company": "Roo Tech Services",
+          "role": "Student IT Technician",
+          "location": "Kansas City, MO",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Configured switches and wireless access points for 6 campus buildings\n- Resolved 30 help desk tickets a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri–Kansas City",
+          "degree": "BS, Information Technology",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Networking: Firewalls, SD-WAN, VPN, routing and switching, Zero Trust",
+        "Presales: Demos, PoCs, sizing, RFP responses",
+        "Tools: Wireshark, EVE-NG, Salesforce",
+        "Certifications: CCNA, Fortinet NSE 4, CompTIA Security+",
+        "Communication: Demos, technical documentation, customer workshops"
+      ]
+    },
+    "Technical Account Manager": {
+      "summary": "Technical account manager with 7 years serving enterprise customers of observability and cloud monitoring software. Manages 12 strategic accounts worth $11M ARR, running architecture reviews, escalations and adoption plans. Keeps critical customers stable, and has helped expand 5 accounts by more than 50%.",
+      "experience": [
+        {
+          "company": "Tracelight",
+          "role": "Technical Account Manager",
+          "location": "Seattle, WA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 12 strategic accounts worth $11M ARR with 100% renewal over 3 years\n- Run quarterly architecture reviews that identified $2.4M in expansion across 5 accounts\n- Own escalations for Sev-1 issues, coordinating engineering fixes and customer updates every 30 minutes\n- Built adoption plans that raised monitored hosts per account 38% on average\n- Write monthly account reports covering incidents, usage and open roadmap requests"
+        },
+        {
+          "company": "Cloudmere",
+          "role": "Senior Support Engineer",
+          "location": "Bellevue, WA",
+          "startDate": "2019-04",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Handled escalated tickets for top-50 customers on metrics and log pipelines\n- Led a runbook project that cut repeat escalations 30%\n- Built monitoring dashboards for top-50 customers"
+        },
+        {
+          "company": "Emerald City Hosting",
+          "role": "Systems Administrator",
+          "location": "Seattle, WA",
+          "startDate": "2017-06",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Administered 300 Linux servers and monitoring for hosting customers\n- Automated server patching for 300 hosts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washington State University",
+          "degree": "BS, Computer Science",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical: Observability, Kubernetes, AWS, Linux, OpenTelemetry",
+        "Account Management: Escalations, adoption plans, architecture reviews, renewals",
+        "Tools: Salesforce, Jira, PagerDuty, Grafana",
+        "Certifications: AWS Certified SysOps Administrator",
+        "Communication: Executive updates, incident reports, roadmap feedback"
+      ]
+    },
+    "Renewal Manager": {
+      "summary": "Renewal manager with 7 years running renewals for B2B SaaS companies with multi-year contracts. Owns $22M in annual renewals with a 95% gross renewal rate and 6% average price uplift. Forecasts accurately, negotiates with procurement and works with CSMs early to catch risk.",
+      "experience": [
+        {
+          "company": "Termwise Software",
+          "role": "Renewal Manager",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own $22M in annual renewals across 300 accounts with a 95% gross renewal rate\n- Achieved 6% average price uplift and converted 40% of annual contracts to multi-year terms\n- Forecast renewals within 2% each quarter using Clari and CSM risk reviews 120 days out\n- Negotiate with procurement teams on terms, caps and auto-renewal clauses\n- Partner with CSMs on risk plans for accounts with low usage before renewal"
+        },
+        {
+          "company": "Workloft",
+          "role": "Renewals Specialist",
+          "location": "Chicago, IL",
+          "startDate": "2019-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Managed 450 SMB renewals a year worth $6M with 91% renewal rate\n- Built renewal quote templates that cut turnaround to same day\n- Built a renewal tracker for 450 accounts"
+        },
+        {
+          "company": "Lincoln Park Leasing",
+          "role": "Account Coordinator",
+          "location": "Chicago, IL",
+          "startDate": "2018-01",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Processed equipment lease renewals and amendments for 200 clients\n- Cut renewal paperwork errors by half with a standard checklist"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Chicago",
+          "degree": "BS, Finance",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Renewals: Forecasting, negotiation, price increases, multi-year conversions",
+        "Tools: Salesforce, Clari, Gainsight, DocuSign, Salesforce CPQ",
+        "Commercial: Contract terms, procurement, risk management",
+        "Metrics: Gross renewal rate, price uplift, forecast accuracy",
+        "Training: Negotiation Mastery (Harvard Business School Online)"
+      ]
+    },
+    "Channel Sales Manager": {
+      "summary": "Channel sales manager with 8 years building distributor and dealer channels for commercial HVAC and building controls equipment. Manages 30 dealers across the Southeast producing $26M in annual sales, up 24% in two years. Recruits dealers, sets targets and incentive programs and trains dealer sales teams.",
+      "experience": [
+        {
+          "company": "Coolstream Building Systems",
+          "role": "Channel Sales Manager, Southeast",
+          "location": "Atlanta, GA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 30 dealers in 6 states producing $26M in annual sales, up 24% in 2 years\n- Recruited 7 new dealers in uncovered markets, adding $4.3M in first-year sales\n- Design quarterly incentive and co-op programs on a $900k budget\n- Run dealer training on controls and VRF systems for 200 sales and service staff a year\n- Build annual dealer business plans with targets for equipment, parts and service"
+        },
+        {
+          "company": "Peachstate Supply",
+          "role": "Territory Sales Manager",
+          "location": "Macon, GA",
+          "startDate": "2018-04",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Grew a $7M territory to $10M by adding contractor accounts\n- Ranked top 3 of 18 territory managers in 2020 and 2021\n- Trained 40 contractors on new product lines"
+        },
+        {
+          "company": "Dixie Mechanical",
+          "role": "Estimator",
+          "location": "Savannah, GA",
+          "startDate": "2016-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Estimated HVAC jobs for commercial projects up to $2M\n- Prepared 50 HVAC bids a year with a 30% win rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "BS, Mechanical Engineering",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Channel: Dealer recruitment, incentive programs, co-op funds, territory planning",
+        "Industry: Commercial HVAC, VRF, building controls",
+        "Tools: Salesforce, Excel, Power BI",
+        "Training: Dealer sales and product training",
+        "Planning: Dealer business plans, sales forecasts, market coverage"
+      ]
+    },
+    "Partner Manager": {
+      "summary": "Partner manager with 5 years building alliances with consulting and systems integrator partners for an ERP extension vendor. Manages 18 SI partners that influenced $7.8M in new ARR last year. Builds joint go-to-market plans, partner enablement and co-selling motions with direct sales.",
+      "experience": [
+        {
+          "company": "Ledgerline Apps",
+          "role": "Partner Manager",
+          "location": "Remote",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 18 consulting and SI partners that influenced $7.8M in new ARR in 2025\n- Built joint go-to-market plans with the top 6 partners, each with named target accounts\n- Launched a partner certification that trained 260 consultants in 12 months\n- Track partner-influenced pipeline in Salesforce and Crossbeam for monthly reviews\n- Co-present with partners at 6 industry events a year"
+        },
+        {
+          "company": "Northfield ERP Advisors",
+          "role": "Business Development Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2021-04",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Sourced $2M in implementation services from software vendor referrals\n- Co-presented at 8 partner events with vendor sales teams\n- Built referral programs with 4 software vendors"
+        },
+        {
+          "company": "Gopher Tax Clinic",
+          "role": "Volunteer Tax Preparer",
+          "location": "Minneapolis, MN",
+          "startDate": "2019-01",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Prepared 70 federal and state returns for low-income filers under IRS VITA rules\n- Explained credits and refunds to filers in plain language"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota, Carlson School of Management",
+          "degree": "BSB, Marketing",
+          "startDate": "2016-09",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Alliances: SI and consulting partners, co-selling, joint GTM plans",
+        "Tools: Salesforce, Crossbeam, PartnerStack, Highspot",
+        "Enablement: Certification programs, partner events",
+        "Domain: ERP, finance software, implementation services",
+        "Metrics: Partner-influenced ARR, certifications, joint pipeline"
+      ]
+    },
+    "Solutions Consultant": {
+      "summary": "Solutions consultant with 7 years in presales for HR and talent software. Leads discovery and demos for enterprise deals, supporting $12M in closed ARR last fiscal year. Former HR operations practitioner who maps complex hiring and compliance processes into clear, credible solution designs.",
+      "experience": [
+        {
+          "company": "Talentforge",
+          "role": "Senior Solutions Consultant",
+          "location": "Boston, MA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supported $12M in closed ARR in fiscal 2026 across 30 enterprise deals\n- Lead discovery workshops with HR, IT and legal stakeholders, documenting current and future-state hiring processes\n- Build scripted and custom demos covering EEO, OFCCP and GDPR compliance needs\n- Coach 4 junior consultants on discovery and storytelling demos\n- Partner with product managers to share deal feedback and competitive gaps"
+        },
+        {
+          "company": "Candorly",
+          "role": "Solutions Consultant",
+          "location": "Boston, MA",
+          "startDate": "2019-05",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Delivered 200+ demos a year for mid-market deals with a 34% win rate\n- Wrote standard RFP responses that cut response time by half\n- Built demo environments for 5 industries"
+        },
+        {
+          "company": "Bay State Medical Group",
+          "role": "HR Operations Specialist",
+          "location": "Worcester, MA",
+          "startDate": "2017-06",
+          "endDate": "2019-04",
+          "isCurrent": false,
+          "description": "- Administered the ATS and onboarding for 1,200 annual hires\n- Trained 150 hiring managers on the ATS"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Massachusetts Amherst",
+          "degree": "BBA, Management",
+          "startDate": "2013-09",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Presales: Discovery, demos, solution design, RFPs",
+        "Domain: Recruiting, onboarding, HR compliance (EEO, OFCCP, GDPR)",
+        "Tools: Salesforce, Consensus, Gong, Workday, Greenhouse",
+        "Communication: Workshops, storytelling demos, executive presentations",
+        "Certifications: SHRM-CP"
+      ]
+    },
+    "Business Development Manager": {
+      "summary": "Business development manager with 9 years opening new markets for a commercial laboratory testing company. Won 34 new enterprise and municipal clients worth $6.2M in annual revenue. Builds relationships with environmental, food and pharmaceutical buyers and handles RFPs, pricing and contract negotiation.",
+      "experience": [
+        {
+          "company": "Clearsample Labs",
+          "role": "Business Development Manager",
+          "location": "Sacramento, CA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Won 34 new clients worth $6.2M in annual revenue across food, environmental and pharma testing\n- Lead RFP responses for municipal water utilities, winning 9 of 16 bids\n- Negotiate master service agreements and pricing with procurement and quality teams\n- Represent the company at 10 industry conferences a year, managing a $120k event budget\n- Report pipeline and new-client revenue monthly to the general manager"
+        },
+        {
+          "company": "Valley Analytical Services",
+          "role": "Account Manager",
+          "location": "Fresno, CA",
+          "startDate": "2017-09",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Managed 80 agricultural and food clients worth $3.5M a year\n- Grew pesticide residue testing revenue 45% in 3 years\n- Built client testing programs for 15 growers"
+        },
+        {
+          "company": "Valley Analytical Services",
+          "role": "Laboratory Technician",
+          "location": "Fresno, CA",
+          "startDate": "2016-06",
+          "endDate": "2017-08",
+          "isCurrent": false,
+          "description": "- Ran GC-MS and ICP sample analysis under EPA methods\n- Ran about 40 samples a day under ISO/IEC 17025 quality procedures"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "BS, Chemistry",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Business Development: Prospecting, RFPs, contract negotiation, pricing",
+        "Domain: Environmental, food and pharma testing, EPA and FDA methods",
+        "Tools: Salesforce, LinkedIn Sales Navigator, Excel",
+        "Relationships: Quality, procurement and municipal buyers",
+        "Metrics: New revenue, win rate, client retention"
+      ]
+    },
+    "Head of Sales": {
+      "summary": "Head of sales with 14 years in B2B software sales, leading teams at growth-stage companies. Built a 45-person sales organization that grew new ARR from $8M to $27M a year. Owns hiring, sales process, forecasting and compensation, and works closely with marketing and customer success on the full revenue engine.",
+      "experience": [
+        {
+          "company": "Shelfwise Retail Tech",
+          "role": "Head of Sales",
+          "location": "Chicago, IL",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 45 people across SDR, mid-market and enterprise teams, growing new ARR from $8M to $27M a year\n- Hired 6 sales managers and built a MEDDICC-based process that lifted win rate from 19% to 26%\n- Own the bookings forecast to the board, landing within 4% for 8 straight quarters\n- Redesigned compensation with finance to balance new logos and expansion\n- Partner with marketing and customer success on a shared pipeline and expansion plan"
+        },
+        {
+          "company": "Arcline Commerce",
+          "role": "Director of Sales",
+          "location": "Chicago, IL",
+          "startDate": "2017-04",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Built the mid-market team from 5 to 18 reps, exceeding plan 4 of 5 years\n- Launched the first enterprise motion, closing 3 deals over $500k\n- Hired 18 reps across 2 regions"
+        },
+        {
+          "company": "Keelpoint Software",
+          "role": "Account Executive",
+          "location": "Evanston, IL",
+          "startDate": "2012-06",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Ranked top 10% of reps for 4 years, selling to retail and CPG buyers\n- Earned President's Club 4 times"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Notre Dame",
+          "degree": "BBA, Marketing",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Org building, hiring, coaching managers, board reporting",
+        "Sales: Process design, forecasting, enterprise selling, compensation planning",
+        "Methods: MEDDICC, Challenger, Force Management",
+        "Tools: Salesforce, Clari, Gong, Outreach",
+        "Planning: Territory design, capacity planning, quota setting"
+      ]
+    },
+    "Sales Intern": {
+      "summary": "Business student at the University of Iowa graduating in May 2027, with a summer sales internship at a payroll software company and 2 years in retail sales. Booked 38 discovery meetings in a 10-week internship, the most in the intern class. Brings strong phone skills, coursework in professional selling and basic Salesforce experience.",
+      "experience": [
+        {
+          "company": "Paycadence",
+          "role": "Sales Intern",
+          "location": "Des Moines, IA",
+          "startDate": "2026-06",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Booked 38 discovery meetings for account executives in 10 weeks, the most of 6 interns\n- Made 50 cold calls a day to small business owners using scripts and Salesforce sequences\n- Researched 400 target accounts and cleaned contact data before campaign launches\n- Shadowed 20 discovery calls and wrote call summaries for account executives"
+        },
+        {
+          "company": "Hawkeye Sporting Goods",
+          "role": "Sales Associate (part-time)",
+          "location": "Iowa City, IA",
+          "startDate": "2024-08",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Helped 40+ customers a shift and ranked first of 12 associates in footwear add-on sales\n- Trained 4 new associates on the register and returns process\n- Set up 3 seasonal floor displays with the store manager"
+        },
+        {
+          "company": "Tippie Sales Club",
+          "role": "Vice President of Events",
+          "location": "Iowa City, IA",
+          "startDate": "2024-01",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Organized 6 employer role-play nights with 70 average attendees\n- Raised $9,000 in sponsorships from 5 regional employers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Iowa, Tippie College of Business",
+          "degree": "BBA, Marketing; Certificate in Professional Sales (expected May 2027)",
+          "startDate": "2023-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "National Collegiate Sales Competition",
+          "link": "",
+          "description": "Placed in the top 16 of 60 schools in role-play rounds selling a mock HR software product"
+        }
+      ],
+      "skills": [
+        "Sales: Cold calling, discovery questions, role-play, objection handling",
+        "Tools: Salesforce, LinkedIn Sales Navigator, Excel, Google Workspace",
+        "Coursework: Professional Selling, Sales Management, Consumer Behavior",
+        "Languages: Spanish (conversational)"
+      ]
+    },
+    "Sales Coordinator": {
+      "summary": "Sales coordinator with 3 years supporting a 12-person outside sales team at a commercial flooring distributor. Processes about 180 quotes and orders a month and cut quote turnaround from 2 days to 4 hours. Keeps CRM records, samples, pricing and customer follow-ups organized so reps can stay in the field.",
+      "experience": [
+        {
+          "company": "Groundwork Flooring Supply",
+          "role": "Sales Coordinator",
+          "location": "Kansas City, KS",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process about 180 quotes and orders a month for 12 outside reps, cutting quote turnaround from 2 days to 4 hours\n- Maintain Salesforce opportunities and price lists for 1,400 contractor and designer accounts\n- Manage sample requests and showroom appointments, shipping 300 sample kits a quarter\n- Prepare weekly pipeline and backlog reports for the sales manager\n- Coordinate showroom visits and lunch-and-learns for 40 designers a year"
+        },
+        {
+          "company": "Overland Park Furniture",
+          "role": "Customer Service Associate",
+          "location": "Overland Park, KS",
+          "startDate": "2022-05",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Scheduled deliveries and handled order changes for 25 customers a day\n- Resolved damage claims with carriers, recovering $40k in credits\n- Processed returns and refunds for 15 customers a day"
+        },
+        {
+          "company": "Wildcat Catering",
+          "role": "Event Sales Assistant",
+          "location": "Manhattan, KS",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Prepared quotes and contracts for 120 campus and private events a year\n- Coordinated menus and setup details with the kitchen team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kansas State University",
+          "degree": "BS, Business Administration",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales Support: Quotes, order entry, pricing, sample management",
+        "Tools: Salesforce, Epicor Prophet 21, Excel, Outlook",
+        "Coordination: Scheduling, reporting, customer follow-up",
+        "Reporting: Pipeline, backlog and quote reports, Excel",
+        "Certifications: Microsoft Office Specialist: Excel Associate"
+      ]
+    },
+    "Outside Sales Representative": {
+      "summary": "Outside sales representative with 7 years selling building materials and fasteners to contractors and job sites in the Mountain West. Manages a $4.6M territory with 140 active accounts and grew it 22% in 2025. Spends 4 days a week in the field, wins business on job-site service and knows the trades' buying cycles.",
+      "experience": [
+        {
+          "company": "Ironbridge Fastener Supply",
+          "role": "Outside Sales Representative",
+          "location": "Salt Lake City, UT",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a $4.6M territory of 140 contractor accounts, growing sales 22% in 2025\n- Visit 25–30 job sites and customer shops a week, logging every visit in Salesforce Mobile\n- Won 3 large commercial projects worth $1.2M by bidding early from Dodge project leads\n- Set up vendor-managed inventory bins for 18 contractors, lifting their repeat orders 35%\n- Partner with the inside sales team to quote large orders within 24 hours"
+        },
+        {
+          "company": "Wasatch Lumber & Supply",
+          "role": "Inside Sales Representative",
+          "location": "Ogden, UT",
+          "startDate": "2019-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Quoted and took orders for 60 builders by phone and counter\n- Moved to outside sales after reaching 115% of target two years running\n- Trained 2 new counter staff on fasteners and products"
+        },
+        {
+          "company": "Weber State Athletics",
+          "role": "Sponsorship Sales Intern",
+          "location": "Ogden, UT",
+          "startDate": "2018-06",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Sold $35k in local business sponsorships for basketball season\n- Delivered sponsor signage and recap reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "Weber State University",
+          "degree": "BS, Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Sales: Territory planning, job-site visits, bids, contractor relationships",
+        "Tools: Salesforce Mobile, Dodge Construction Network, Excel",
+        "Industry: Building materials, fasteners, commercial and residential construction",
+        "Credentials: OSHA 10, valid driver's license with clean record",
+        "Territory: Route planning, account prioritization, job-site follow-up"
+      ]
+    },
+    "Mid-Market Account Executive": {
+      "summary": "Mid-market account executive with 7 years in B2B sales, selling procurement software to companies with 200 to 2,000 employees. Closed $1.9M in new ARR in 2025, 127% of quota, with deals averaging $64k. Runs disciplined multi-stakeholder cycles with finance and operations leaders and partners well with solution engineers.",
+      "experience": [
+        {
+          "company": "Spendlane",
+          "role": "Mid-Market Account Executive",
+          "location": "Denver, CO",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed $1.9M in new ARR in 2025, 127% of quota, with an average deal size of $64k\n- Run 75-day cycles with CFOs, controllers and procurement leads, using mutual action plans on every deal\n- Raised win rate from 22% to 29% by adding ROI business cases built with solution engineers\n- Named President's Club 2025 as one of 4 reps above 120% of plan\n- Co-sell with 2 accounting partners on deals in their client base"
+        },
+        {
+          "company": "Spendlane",
+          "role": "SMB Account Executive",
+          "location": "Denver, CO",
+          "startDate": "2021-04",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Closed 70 SMB deals averaging $14k ACV, finishing 2022 at 114% of quota\n- Promoted to mid-market after 6 consecutive quarters above target\n- Sourced 35% of own pipeline through outbound and accountant referrals"
+        },
+        {
+          "company": "Front Range Telecom",
+          "role": "Business Sales Representative",
+          "location": "Lakewood, CO",
+          "startDate": "2020-01",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Sold business phone and internet to local companies, reaching 108% of target\n- Kept a 95% customer retention rate on a book of 200 accounts"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Denver",
+          "degree": "BS, Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Full-cycle selling, ROI cases, negotiation, mutual action plans",
+        "Methods: MEDDICC, value selling, multithreading",
+        "Tools: Salesforce, Gong, Outreach, Clari, DocuSign",
+        "Domain: Procurement and spend management, finance buyers",
+        "Training: Command of the Message (Force Management)"
+      ]
+    },
+    "Regional Sales Manager": {
+      "summary": "Regional sales manager with 11 years in medical and dental supply sales, the last 4 leading a 12-rep team across 5 Midwestern states. The region delivered $38M in 2025 sales, 108% of plan, and ranked first of 7 regions in growth. Coaches field reps, manages key distributor relationships and builds territory plans from market data.",
+      "experience": [
+        {
+          "company": "Brightsmile Dental Supply",
+          "role": "Regional Sales Manager, Midwest",
+          "location": "Indianapolis, IN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 12 field reps across 5 states delivering $38M in 2025 sales, 108% of plan\n- Ranked first of 7 regions in growth after rebalancing territories using practice-level market data\n- Ride along with each rep 2 days a month, coaching on practice-owner conversations and equipment deals\n- Negotiated a regional agreement with a 40-office dental group worth $2.6M a year\n- Partner with marketing on regional trade shows and dental study clubs"
+        },
+        {
+          "company": "Brightsmile Dental Supply",
+          "role": "Territory Sales Representative",
+          "location": "Louisville, KY",
+          "startDate": "2017-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Grew a $2.8M territory to $4.5M in 5 years\n- Earned President's Club in 2019 and 2021\n- Won 6 new DSO accounts worth $900k a year"
+        },
+        {
+          "company": "Tristate Medical Distributors",
+          "role": "Inside Sales Representative",
+          "location": "Cincinnati, OH",
+          "startDate": "2015-06",
+          "endDate": "2016-12",
+          "isCurrent": false,
+          "description": "- Took orders and quoted supplies for 200 clinics\n- Handled 50 customer calls a day and grew clinic reorders 15%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Cincinnati",
+          "degree": "BBA, Marketing",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Field coaching, hiring, territory design, performance management",
+        "Sales: Key account negotiation, equipment sales, distributor relationships",
+        "Tools: Salesforce, Power BI, Excel",
+        "Industry: Dental and medical supplies, DSO buyers",
+        "Metrics: Region growth, quota attainment, account penetration"
+      ]
+    },
+    "Sales Director": {
+      "summary": "Sales director with 15 years in commercial and enterprise sales for telecommunications and managed network services. Leads 4 managers and 32 reps who booked $54M in total contract value in 2025. Owns regional strategy, large-deal reviews, forecasting and hiring, and has rebuilt two underperforming teams.",
+      "experience": [
+        {
+          "company": "Clearpath Networks",
+          "role": "Sales Director, East",
+          "location": "Philadelphia, PA",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 sales managers and 32 reps who booked $54M in total contract value in 2025, 111% of plan\n- Turned around the enterprise team from 78% to 104% of quota in 18 months through hiring and deal coaching\n- Run weekly deal reviews on opportunities over $1M and close the largest contracts with executives\n- Forecast bookings to the CRO within 5% and manage a $6.5M compensation budget\n- Partner with marketing and channel teams on regional campaigns and partner pipeline"
+        },
+        {
+          "company": "Liberty Telecom Solutions",
+          "role": "Senior Sales Manager",
+          "location": "King of Prussia, PA",
+          "startDate": "2016-02",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Led 10 reps selling fiber and managed WAN, growing bookings 60% in 4 years\n- Built a partner referral program with 25 IT consultancies\n- Coached 3 reps to President's Club in 2019"
+        },
+        {
+          "company": "Liberty Telecom Solutions",
+          "role": "Enterprise Account Executive",
+          "location": "King of Prussia, PA",
+          "startDate": "2011-06",
+          "endDate": "2016-01",
+          "isCurrent": false,
+          "description": "- Closed $3–5M in annual TCV selling network services to hospitals and universities\n- Won 4 hospital system contracts over $2M"
+        }
+      ],
+      "education": [
+        {
+          "school": "Penn State University",
+          "degree": "BS, Marketing",
+          "startDate": "2007-08",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Multi-team management, hiring, turnaround plans, compensation",
+        "Sales: Enterprise deals, contract negotiation, forecasting, partner programs",
+        "Tools: Salesforce, Clari, Gong, Power BI",
+        "Industry: Telecommunications, managed network services",
+        "Planning: Regional strategy, capacity planning, quota setting"
+      ]
+    },
+    "VP of Sales": {
+      "summary": "VP of sales with 16 years in B2B sales, leading revenue teams at venture-backed construction and property technology companies. Leads a 70-person sales organization that grew bookings from $22M to $61M in ARR over 3 years. Builds segmented sales motions, strong managers and a forecast the board can rely on.",
+      "experience": [
+        {
+          "company": "Groundplan Technologies",
+          "role": "VP of Sales",
+          "location": "Austin, TX",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 70-person organization across SDR, SMB, mid-market, enterprise and sales engineering\n- Grew new ARR bookings from $22M to $61M over 3 years while holding CAC payback under 18 months\n- Launched an enterprise segment that now produces 40% of new ARR with deals up to $1.4M\n- Report forecast and pipeline to the board quarterly, landing within 3% for 10 quarters\n- Partner with the CEO, CFO and CMO on annual plans, pricing and sales hiring"
+        },
+        {
+          "company": "Corbel Property Cloud",
+          "role": "Senior Director of Sales",
+          "location": "Dallas, TX",
+          "startDate": "2016-08",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Built and led 3 regional teams of 25 reps, exceeding annual plan 4 of 5 years\n- Partnered with product on packaging that raised average deal size 33%\n- Hired and coached 4 sales managers"
+        },
+        {
+          "company": "Concord Building Software",
+          "role": "Account Executive, then Regional Sales Manager",
+          "location": "Dallas, TX",
+          "startDate": "2010-06",
+          "endDate": "2016-07",
+          "isCurrent": false,
+          "description": "- Sold estimating software to general contractors, finishing above quota 3 years running\n- Promoted in 2013 to lead the regional team, growing bookings 50% in 3 years"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at Austin, McCombs School of Business",
+          "degree": "BBA, Marketing",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Org design, executive hiring, board reporting, compensation strategy",
+        "Go-to-market: Segmentation, enterprise motion, pricing and packaging",
+        "Operations: Forecasting, capacity planning, CAC payback",
+        "Tools: Salesforce, Clari, Gong, Tableau",
+        "Team Building: Manager hiring, enablement, sales operations"
+      ]
+    },
+    "Customer Success Associate": {
+      "summary": "Customer success associate with 3 years supporting small business customers of an email marketing platform. Manages a pooled book of 600 accounts through onboarding calls, webinars and digital outreach, keeping logo retention at 91%. Organized, quick to learn the product and comfortable spotting accounts at risk early.",
+      "experience": [
+        {
+          "company": "Sendhaven",
+          "role": "Customer Success Associate",
+          "location": "Atlanta, GA",
+          "startDate": "2024-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support a pooled book of 600 small business accounts with 91% logo retention\n- Run 15 onboarding calls a week and a weekly group webinar averaging 80 attendees\n- Flag at-risk accounts from usage alerts in ChurnZero, saving about 30 accounts a quarter\n- Pass 45 qualified upgrade leads a quarter to account managers\n- Track account notes and tasks in HubSpot for handoffs to account managers"
+        },
+        {
+          "company": "Sendhaven",
+          "role": "Support Representative",
+          "location": "Atlanta, GA",
+          "startDate": "2023-07",
+          "endDate": "2024-07",
+          "isCurrent": false,
+          "description": "- Answered 50 chats and tickets a day with 94% CSAT\n- Wrote 15 help articles on list imports and automation setup\n- Trained 5 new support reps on the product"
+        },
+        {
+          "company": "Owl Tutoring Center",
+          "role": "Student Success Tutor",
+          "location": "Kennesaw, GA",
+          "startDate": "2020-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Tutored 12 students a week in accounting and statistics\n- Ran exam review sessions for groups of 25"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kennesaw State University",
+          "degree": "BBA, Management",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customer Success: Onboarding, webinars, health monitoring, renewals support",
+        "Tools: ChurnZero, HubSpot, Intercom, Zoom",
+        "Metrics: Logo retention, adoption, CSAT",
+        "Onboarding: Group webinars, help articles, setup checklists",
+        "Languages: Korean (fluent)"
+      ]
+    },
+    "Customer Onboarding Specialist": {
+      "summary": "Customer onboarding specialist with 3 years getting new customers live on a restaurant ordering and delivery platform. Onboards about 25 restaurants a month and cut average time to first order from 19 days to 8. Sets up menus, payments and integrations, trains staff and hands customers to account management with clean notes.",
+      "experience": [
+        {
+          "company": "Platewise",
+          "role": "Customer Onboarding Specialist",
+          "location": "Chicago, IL",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Onboard about 25 restaurants a month, cutting average time to first online order from 19 days to 8\n- Configure menus, modifiers, payment processing and POS integrations with Toast and Square\n- Train owners and staff in 45-minute live sessions, with 4.8/5 average training rating\n- Built a self-serve launch checklist that reduced onboarding tickets 30%\n- Hand off launched accounts to account managers with notes on goals and setup"
+        },
+        {
+          "company": "Lakeview Bistro Group",
+          "role": "Restaurant Shift Manager",
+          "location": "Chicago, IL",
+          "startDate": "2022-05",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Ran front-of-house shifts for a 120-seat restaurant and managed third-party delivery tablets\n- Trained 10 staff on handling third-party delivery orders during peak hours"
+        },
+        {
+          "company": "Columbia College Box Office",
+          "role": "Box Office Associate",
+          "location": "Chicago, IL",
+          "startDate": "2019-09",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Sold tickets and resolved seating issues for 80 student shows a year\n- Set up the box office's online ticketing pages"
+        }
+      ],
+      "education": [
+        {
+          "school": "Columbia College Chicago",
+          "degree": "BA, Business and Entrepreneurship",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Onboarding: Account setup, configuration, training, launch planning",
+        "Tools: Salesforce, Zendesk, Toast, Square, Loom",
+        "Domain: Restaurant operations, online ordering, payments",
+        "Training: Live sessions, recorded walkthroughs, launch checklists",
+        "Certifications: ServSafe Manager"
+      ]
+    },
+    "Call Center Representative": {
+      "summary": "Call center representative with 5 years handling inbound calls, most recently for a health insurance carrier. Answers about 70 member calls a day on benefits, claims and prior authorizations with a 93% quality score. Patient, accurate with HIPAA verification and skilled at resolving calls without transfers.",
+      "experience": [
+        {
+          "company": "Redbud Health Plans",
+          "role": "Call Center Representative",
+          "location": "Tulsa, OK",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle about 70 inbound member calls a day on benefits, claims and prior authorizations\n- Hold a 93% quality score and 84% first-call resolution, both above center targets\n- Verify identity on every call under HIPAA rules with zero privacy findings in 2 annual audits\n- Picked as a peer mentor for 2 new-hire classes of 15 representatives\n- Document every call in Salesforce Health Cloud with accurate codes and next steps"
+        },
+        {
+          "company": "Route 66 Utilities",
+          "role": "Customer Service Representative",
+          "location": "Broken Arrow, OK",
+          "startDate": "2021-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Took 60 billing and service calls a day and set up payment arrangements\n- Kept average handle time under 6 minutes while meeting quality targets\n- Earned 3 monthly service awards for quality scores above 95%"
+        },
+        {
+          "company": "Riverside Bank",
+          "role": "Bank Teller",
+          "location": "Tulsa, OK",
+          "startDate": "2019-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Processed 120 deposits, withdrawals and loan payments a day with balanced drawers\n- Referred 45 customers to bankers for new accounts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tulsa Community College",
+          "degree": "AA, Business Administration",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Call Handling: Inbound calls, de-escalation, first-call resolution, documentation",
+        "Tools: Genesys Cloud, Salesforce Health Cloud, Facets",
+        "Compliance: HIPAA verification, call recording standards",
+        "Typing: 60 WPM",
+        "Domain: Health insurance benefits, claims, prior authorizations"
+      ]
+    },
+    "Call Center Supervisor": {
+      "summary": "Call center supervisor with 8 years in contact centers, the last 4 supervising inbound teams for a national utility and energy retailer. Leads 18 agents who handle 22,000 calls a month and lifted the team from bottom quartile to top 3 of 14 teams on quality. Strong in coaching, real-time adherence and escalation handling.",
+      "experience": [
+        {
+          "company": "Lumina Energy Services",
+          "role": "Call Center Supervisor",
+          "location": "Jacksonville, FL",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 18 agents handling 22,000 calls a month on billing, moves and outages\n- Moved the team from bottom quartile to top 3 of 14 on quality within a year through weekly side-by-side coaching\n- Manage real-time adherence in NICE IEX, keeping service level at 80/30 during storm surges\n- Handle supervisor escalations and complaint calls, resolving 90% without regulatory complaints\n- Run weekly calibration sessions with QA and train new-hire classes of 12"
+        },
+        {
+          "company": "Lumina Energy Services",
+          "role": "Senior Customer Service Representative",
+          "location": "Jacksonville, FL",
+          "startDate": "2020-02",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Handled escalated billing calls and trained 3 new-hire classes\n- Mentored representatives on de-escalation, cutting supervisor transfers 18%"
+        },
+        {
+          "company": "First Coast Telecom",
+          "role": "Customer Service Representative",
+          "location": "Orange Park, FL",
+          "startDate": "2018-03",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Answered 65 calls a day with top-quartile customer satisfaction\n- Resolved 85% of escalated billing disputes on the first call"
+        }
+      ],
+      "education": [
+        {
+          "school": "Florida State College at Jacksonville",
+          "degree": "AS, Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2017-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Coaching, QA calibration, attendance and performance management",
+        "Workforce: NICE IEX, real-time adherence, service level, schedule adherence",
+        "Tools: Genesys, Salesforce Service Cloud, Verint",
+        "Metrics: AHT, FCR, CSAT, quality score",
+        "Training: New-hire classes, side-by-side coaching, QA calibration"
+      ]
+    },
+    "Medical Device Sales Representative": {
+      "summary": "Medical device sales representative with 7 years in medical device sales, covering orthopedic and spine procedures in hospitals and ambulatory surgery centers. Grew a $3.1M territory to $4.4M in two years and earned President's Club in 2025. Supports cases in the operating room, trains staff and works through value analysis committees.",
+      "experience": [
+        {
+          "company": "Kestrel Orthopedics",
+          "role": "Medical Device Sales Representative",
+          "location": "Charlotte, NC",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Grew a $3.1M orthopedic trauma territory to $4.4M in 2 years, earning President's Club in 2025\n- Support 8–12 cases a week in the OR, advising surgeons and staff on implant and instrument use\n- Won formulary approval at 4 hospitals through value analysis committee presentations\n- Converted 6 surgeons from a competitor system using cadaver labs and case data\n- Train OR staff and sterile processing teams on instrument sets and reprocessing"
+        },
+        {
+          "company": "Kestrel Orthopedics",
+          "role": "Associate Sales Representative",
+          "location": "Charlotte, NC",
+          "startDate": "2020-05",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Covered cases, managed loaner sets and inventory for 3 senior reps\n- Completed company surgical training and certification in 9 months\n- Covered weekend trauma call for 3 hospitals with a 30-minute response standard"
+        },
+        {
+          "company": "Carolina Medical Supply",
+          "role": "Inside Sales Representative",
+          "location": "Greensboro, NC",
+          "startDate": "2019-06",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Sold disposables to clinics and surgery centers, reaching 112% of quota\n- Grew clinic reorders 20% with a quarterly restock program"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wake Forest University",
+          "degree": "BS, Health and Exercise Science",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: OR case coverage, implant systems, sterile technique, aseptic protocols",
+        "Sales: Surgeon relationships, value analysis committees, competitive conversions",
+        "Tools: Salesforce, inventory tracking systems",
+        "Credentials: Vendor credentialing (Vendormate, Symplr), AdvaMed Code compliance",
+        "Industry: Orthopedic trauma, spine, ambulatory surgery centers"
+      ]
+    }
+  }
+}

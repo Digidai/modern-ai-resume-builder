@@ -1,0 +1,2336 @@
+{
+  "family": "Education",
+  "guide": null,
+  "titles": {
+    "Teacher": {
+      "summary": "State-certified teacher with 7 years in grades 6–8 English language arts at a Title I middle school. Raised the share of students meeting grade-level reading standards from 41% to 58% in three years. Brings data-driven small-group instruction, strong classroom routines and close partnership with families.",
+      "experience": [
+        {
+          "company": "Cedar Ridge Middle School",
+          "role": "ELA Teacher and Grade-Level Team Lead",
+          "location": "San Antonio, TX",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 5 sections of 7th grade ELA to 135 students, 68% economically disadvantaged and 22% emergent bilinguals\n- Raised STAAR reading Meets Grade Level from 41% to 58% using MAP Growth data to plan weekly small groups\n- Lead a 6-teacher grade team in PLC data cycles and common assessment design\n- Cut chronic absenteeism on the team from 19% to 12% with advisory check-ins and family phone campaigns\n- Mentor 2 first-year teachers through the district induction program with biweekly observations"
+        },
+        {
+          "company": "Mission Trail Elementary",
+          "role": "4th Grade Teacher",
+          "location": "San Antonio, TX",
+          "startDate": "2019-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught a self-contained class of 24 students, shifting to Google Classroom within a week during 2020 closures\n- Grew students' average MAP reading RIT score by 11 points, above the national norm of 8\n- Co-planned interdisciplinary science and reading units with the 4th grade team"
+        },
+        {
+          "company": "Texas State University Writing Center",
+          "role": "Writing Tutor",
+          "location": "San Marcos, TX",
+          "startDate": "2017-08",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Tutored 15 undergraduate writers a week on structure, sourcing and revision\n- Led workshops on thesis statements for first-year composition sections"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at San Antonio",
+          "degree": "Master of Arts in Teaching, Literacy",
+          "startDate": "2019-06",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "Texas State University",
+          "degree": "Bachelor of Arts in English",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: differentiated instruction, guided reading, writing workshop, PLC data cycles",
+        "Assessment: STAAR, NWEA MAP Growth, formative assessment, rubric design",
+        "Technology: Google Classroom, Canvas, Nearpod, Skyward",
+        "Certifications: Texas Educator Certificate (ELAR 4–8, Core Subjects EC–6), ESL Supplemental"
+      ]
+    },
+    "Substitute Teacher": {
+      "summary": "Long-term and day-to-day substitute teacher with 3 years covering K–12 classrooms across 14 schools in a large urban district. Requested back by name by 22 teachers and led a 12-week 5th grade vacancy without missing a unit. Brings quick rapport, consistent behavior routines and faithful execution of lesson plans.",
+      "experience": [
+        {
+          "company": "Jefferson County Public Schools",
+          "role": "Day-to-Day Substitute Teacher, K–12",
+          "location": "Louisville, KY",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cover 150+ assignments a year across elementary, middle and high school classrooms, including special education\n- Requested back by name by 22 teachers for clear notes on lesson progress and behavior\n- Apply PBIS classroom routines to maintain instruction with fewer than 2 office referrals a semester\n- Cover middle school science and math classes for up to 5 consecutive days, following unit pacing guides"
+        },
+        {
+          "company": "Jefferson County Public Schools",
+          "role": "Long-Term Substitute Teacher, 5th Grade",
+          "location": "Louisville, KY",
+          "startDate": "2025-08",
+          "endDate": "2025-11",
+          "isCurrent": false,
+          "description": "- Led a 26-student classroom for 12 weeks, planning and grading full math and ELA units aligned to Kentucky Academic Standards\n- Held weekly progress calls with families, raising homework completion from 62% to 84%\n- Kept the class on pace with the district curriculum map for the incoming teacher's handoff\n- Graded 2 unit assessments and entered scores in Infinite Campus before handoff"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Louisville",
+          "degree": "Bachelor of Arts in History",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Classroom management: PBIS, restorative conversations, transitions, de-escalation",
+        "Instruction: lesson plan execution, small-group support, grading, accommodations for IEPs",
+        "Technology: Google Classroom, Infinite Campus, Smartboard",
+        "Certifications: Kentucky Emergency Substitute Certificate, CPR and First Aid"
+      ]
+    },
+    "Preschool Teacher": {
+      "summary": "Lead preschool teacher with 6 years in NAEYC-accredited early learning programs serving 3- and 4-year-olds. Raised CLASS Instructional Support scores from 2.8 to 4.1. Brings play-based, Creative Curriculum instruction, developmental screening and family partnerships that prepare children for kindergarten.",
+      "experience": [
+        {
+          "company": "Little Acorns Early Learning Center",
+          "role": "Lead Preschool Teacher, Pre-K",
+          "location": "Columbus, OH",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a classroom of 18 four-year-olds with an assistant teacher using The Creative Curriculum\n- Raised CLASS Instructional Support scores from 2.8 to 4.1 through coaching on extended conversations\n- Track development in Teaching Strategies GOLD; 92% of children met kindergarten readiness benchmarks\n- Hold 2 family conferences a year per child and share weekly learning updates in Brightwheel\n- Adapt routines and visual schedules for 3 children with IFSPs and IEPs in partnership with early intervention therapists"
+        },
+        {
+          "company": "Sunflower Child Development Center",
+          "role": "Preschool Teacher, 3-Year-Olds",
+          "location": "Dublin, OH",
+          "startDate": "2020-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Co-taught 16 three-year-olds, designing sensory and early literacy centers\n- Completed ASQ-3 screenings and referred 4 children to early intervention services\n- Led a garden project where children planted, measured and charted growth for 8 weeks"
+        },
+        {
+          "company": "Bright Beginnings Child Care",
+          "role": "Assistant Teacher, Toddlers",
+          "location": "Columbus, OH",
+          "startDate": "2018-06",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Supported 10 toddlers with routines, language-rich play and daily family reports while completing a degree"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio State University",
+          "degree": "Bachelor of Science in Human Development and Family Science",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: play-based learning, The Creative Curriculum, early literacy and numeracy, social-emotional learning",
+        "Assessment: Teaching Strategies GOLD, ASQ-3, CLASS",
+        "Family engagement: conferences, Brightwheel, home learning kits",
+        "Certifications: Ohio Early Childhood Credential (Pre-K), CDA Credential, Pediatric CPR and First Aid"
+      ]
+    },
+    "Elementary School Teacher": {
+      "summary": "Elementary school teacher with 8 years in grades 2 and 3, including 4 as grade-level chair. Moved 74% of students to on-grade-level reading by year end using structured literacy. Brings Science of Reading training, inclusive classroom routines and data-informed math intervention.",
+      "experience": [
+        {
+          "company": "Maple Grove Elementary",
+          "role": "3rd Grade Teacher and Grade-Level Chair",
+          "location": "Raleigh, NC",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach a class of 25 third graders, including 4 students with IEPs and 5 multilingual learners\n- Implemented LETRS-based structured literacy, raising students at benchmark on mCLASS DIBELS 8 from 52% to 74%\n- Chair a 5-teacher grade team, planning units and analyzing EOG and iReady data each quarter\n- Organized a family math night series attended by 140 families\n- Serve on the school MTSS team, reviewing tier 2 progress-monitoring data every 6 weeks"
+        },
+        {
+          "company": "Oak City Elementary",
+          "role": "2nd Grade Teacher",
+          "location": "Raleigh, NC",
+          "startDate": "2018-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Delivered literacy and math instruction for 22 students, adapting to remote learning in 2020\n- Grew average iReady math scores 1.4 grade levels in one year\n- Trained parents on home reading routines at 2 family literacy workshops"
+        },
+        {
+          "company": "Capital Area Youth Association",
+          "role": "After-School Program Leader",
+          "location": "Raleigh, NC",
+          "startDate": "2015-08",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Led homework help and enrichment for 20 K–5 students\n- Planned weekly STEM and literacy activities"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "Bachelor of Science in Elementary Education",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: structured literacy, guided math, small-group intervention, project-based learning",
+        "Assessment: mCLASS DIBELS 8, iReady, NC EOG, running records",
+        "Technology: Canvas, Seesaw, PowerSchool",
+        "Certifications: North Carolina Professional Educator License (Elementary K–6), LETRS Units 1–8"
+      ]
+    },
+    "High School Teacher": {
+      "summary": "High school biology and AP Environmental Science teacher with 9 years in a comprehensive public high school. Grew the AP program from 28 to 96 students while lifting the pass rate to 71%. Brings lab-based inquiry, NGSS-aligned curriculum and mentorship of student researchers.",
+      "experience": [
+        {
+          "company": "Desert Vista High School",
+          "role": "Science Teacher, Biology and AP Environmental Science",
+          "location": "Phoenix, AZ",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 5 sections of biology and AP Environmental Science to 150 students in grades 9–12\n- Expanded APES enrollment from 28 to 96 students while raising the pass rate from 52% to 71%\n- Rewrote the biology course around NGSS phenomena and labs adopted by the 7-teacher department\n- Coach the science fair team, sending 6 students to the state fair and 1 to ISEF\n- Sponsor the Environmental Club, which installed a 40-bin campus recycling program"
+        },
+        {
+          "company": "Mesa Ridge High School",
+          "role": "Biology Teacher",
+          "location": "Mesa, AZ",
+          "startDate": "2017-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Taught biology and honors biology to 140 students, raising end-of-course proficiency 12 points\n- Built a field ecology unit with a local nature preserve\n- Served on the school's NGSS adoption committee for new biology materials"
+        },
+        {
+          "company": "Sonoran Desert Learning Garden",
+          "role": "Youth Education Intern",
+          "location": "Tucson, AZ",
+          "startDate": "2015-05",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Led garden ecology tours for 1,500 K–8 students\n- Developed a pollinator lesson used by docents"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "Master of Education, Curriculum and Instruction",
+          "startDate": "2017-08",
+          "endDate": "2019-12"
+        },
+        {
+          "school": "University of Arizona",
+          "degree": "Bachelor of Science in Ecology and Evolutionary Biology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: inquiry labs, NGSS, AP curriculum, project-based learning, differentiated instruction",
+        "Assessment: AP Classroom, common assessments, standards-based grading",
+        "Technology: Canvas, Vernier probeware, PhET, Synergy",
+        "Certifications: Arizona Standard Professional Certificate (Biology 6–12), AP Summer Institute (APES)"
+      ]
+    },
+    "Special Education Teacher": {
+      "summary": "Special education teacher with 6 years in K–5 resource and inclusion settings, managing caseloads of 14–16 students with IEPs. Achieved 100% IDEA compliance on IEP timelines and grew student reading by an average of 1.3 grade levels. Brings structured literacy, behavior support and collaborative co-teaching.",
+      "experience": [
+        {
+          "company": "Brookfield Elementary School",
+          "role": "Special Education Resource Teacher",
+          "location": "Fairfax, VA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a caseload of 15 students with SLD, autism, ADHD and speech-language disabilities across grades 2–5\n- Write and lead IEP meetings with 100% on-time annual reviews and triennial reevaluations\n- Deliver Wilson Reading System intervention, with students gaining an average 1.3 grade levels a year\n- Co-teach math with 3 general educators and create behavior intervention plans from FBAs\n- Coordinate transition meetings for 5th graders moving to middle school, sharing accommodations with receiving teams"
+        },
+        {
+          "company": "Lakeside Elementary School",
+          "role": "Special Education Teacher, Inclusion",
+          "location": "Alexandria, VA",
+          "startDate": "2020-08",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Supported 14 students in inclusion classrooms, adapting curriculum and assessments\n- Trained 4 paraprofessionals on data collection and prompting hierarchies\n- Collected progress-monitoring data biweekly and shared reports with families each quarter"
+        },
+        {
+          "company": "Harrisonburg City Schools",
+          "role": "Special Education Paraprofessional",
+          "location": "Harrisonburg, VA",
+          "startDate": "2016-08",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Supported 6 students with autism in a self-contained classroom part time\n- Implemented visual schedules and token systems under teacher direction"
+        }
+      ],
+      "education": [
+        {
+          "school": "George Mason University",
+          "degree": "Master of Education, Special Education",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "James Madison University",
+          "degree": "Bachelor of Arts in Psychology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Special education: IEP development, IDEA and Section 504, FBA and BIP, progress monitoring",
+        "Instruction: Wilson Reading System, co-teaching, assistive technology, UDL",
+        "Systems: SEAS IEP, PowerSchool, Google Workspace",
+        "Licenses: Virginia Postgraduate Professional License, Special Education General Curriculum K–12"
+      ]
+    },
+    "Instructional Aide": {
+      "summary": "Instructional aide with 4 years supporting students in general and special education classrooms, grades K–5. Raised reading fluency for a 6-student intervention group by an average of 28 words per minute. Brings small-group instruction, behavior support and patient one-on-one help for students with IEPs.",
+      "experience": [
+        {
+          "company": "Valley View Elementary",
+          "role": "Instructional Aide, Special Education",
+          "location": "Fresno, CA",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 8 students with IEPs in an SDC classroom, implementing accommodations and behavior plans\n- Lead daily phonics groups for 6 students, raising average oral reading fluency by 28 words per minute\n- Collect behavior and goal data daily for the case manager's IEP progress reports\n- Supervise lunch and recess for 120 students using PBIS expectations\n- Translate classroom notes and help with parent conferences for Spanish-speaking families"
+        },
+        {
+          "company": "Sierra Vista Elementary",
+          "role": "Instructional Aide, Kindergarten",
+          "location": "Clovis, CA",
+          "startDate": "2022-08",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Assisted 2 kindergarten teachers with centers, letter-sound practice and classroom routines\n- Tutored 10 students in after-school literacy, with 8 reaching mid-year benchmarks\n- Prepared center materials and managed small-group rotations for 48 kindergartners"
+        },
+        {
+          "company": "Fresno Unified After School Program",
+          "role": "Recreation Leader",
+          "location": "Fresno, CA",
+          "startDate": "2020-08",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Led after-school homework help and games for 20 students\n- Ran a weekly reading buddies program pairing 3rd graders with kindergartners"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fresno City College",
+          "degree": "Associate of Arts in Child Development",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: small-group phonics, reading fluency practice, math support, accommodations",
+        "Behavior: PBIS, positive reinforcement, de-escalation, data collection",
+        "Tools: Google Classroom, Lexia Core5, Aeries",
+        "Certifications: CPR and First Aid",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Instructional Designer": {
+      "summary": "Instructional designer with 7 years building corporate and higher-ed learning, now leading sales enablement design at a SaaS company. Shipped a blended onboarding program that cut new-rep ramp time from 6 to 4 months. Brings ADDIE and SAM, Articulate 360 and learning measurement tied to business outcomes.",
+      "experience": [
+        {
+          "company": "Northstar Cloud Software",
+          "role": "Senior Instructional Designer",
+          "location": "Remote",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design onboarding and product training for 600 sales and customer success employees across 3 regions\n- Rebuilt new-rep onboarding as a blended program, cutting time to first closed deal from 6 to 4 months\n- Build 40+ Storyline and Rise modules a year with SCORM tracking in Docebo\n- Measure learning with Kirkpatrick Levels 1–3 and certification pass rates, reporting to the CRO quarterly\n- Partner with sales leaders and product SMEs to update 25 modules each release cycle"
+        },
+        {
+          "company": "Front Range State University",
+          "role": "Instructional Designer",
+          "location": "Denver, CO",
+          "startDate": "2019-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Partnered with 35 faculty to convert courses to online formats in Canvas meeting Quality Matters standards\n- Created an accessibility checklist that brought 120 courses into WCAG 2.1 AA conformance\n- Facilitated course design workshops for new online faculty each semester"
+        },
+        {
+          "company": "Colorado State University Online",
+          "role": "Course Development Assistant",
+          "location": "Fort Collins, CO",
+          "startDate": "2016-01",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Formatted 30 online course shells in Canvas for faculty\n- Captioned lecture videos for accessibility compliance"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Northern Colorado",
+          "degree": "Master of Arts in Educational Technology",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Colorado State University",
+          "degree": "Bachelor of Arts in Communication Studies",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Sales Onboarding Academy",
+          "link": "",
+          "description": "Blended 8-week program with Rise modules, live role plays and a certification capstone used by every new sales hire"
+        }
+      ],
+      "skills": [
+        "Design: ADDIE, SAM, needs analysis, storyboarding, scenario-based learning, assessment design",
+        "Tools: Articulate Storyline and Rise, Camtasia, Vyond, Figma",
+        "Platforms: Docebo, Canvas, SCORM, xAPI",
+        "Measurement: Kirkpatrick model, learning analytics, Quality Matters",
+        "Certifications: ATD Certified Professional in Talent Development (CPTD)"
+      ]
+    },
+    "Learning Experience Designer": {
+      "summary": "Learning experience designer with 6 years crafting human-centered digital learning for consumer edtech and corporate academies. Redesigned a coding bootcamp's first-week experience, lifting completion from 58% to 76%. Brings learner research, prototyping in Figma and interactive content that keeps adults engaged.",
+      "experience": [
+        {
+          "company": "Brightpath Learning",
+          "role": "Senior Learning Experience Designer",
+          "location": "New York, NY",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead learning design for a 16-week online data analytics program with 4,000 learners a year\n- Ran 30 learner interviews and journey maps, then redesigned week one, lifting program completion from 58% to 76%\n- Prototype interactive lessons in Figma and test them with learners before build, cutting revision cycles 40%\n- Partner with 2 product managers and 4 engineers on adaptive practice features\n- Define learning outcomes and success metrics with the product team, tracking completion and job placement"
+        },
+        {
+          "company": "Hudson Financial Group",
+          "role": "Learning Designer",
+          "location": "Jersey City, NJ",
+          "startDate": "2020-03",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Designed compliance and manager development courses for 9,000 employees\n- Replaced a 90-minute AML course with branching scenarios, raising satisfaction from 3.1 to 4.4 out of 5\n- Built a compliance course template reused for 12 regulatory topics"
+        },
+        {
+          "company": "Teachers College EdLab",
+          "role": "Graduate Assistant, Learning Design",
+          "location": "New York, NY",
+          "startDate": "2018-09",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Built interactive modules for 3 online graduate courses\n- Ran usability tests with 40 learners and summarized findings for faculty"
+        }
+      ],
+      "education": [
+        {
+          "school": "Teachers College, Columbia University",
+          "degree": "Master of Arts in Instructional Technology and Media",
+          "startDate": "2018-09",
+          "endDate": "2020-02"
+        },
+        {
+          "school": "University of Rochester",
+          "degree": "Bachelor of Arts in Psychology",
+          "startDate": "2014-09",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Data Analytics Week One Redesign",
+          "link": "brightpath.example/case-study",
+          "description": "Research-led redesign of onboarding, pacing and peer cohorts for an online certificate program"
+        }
+      ],
+      "skills": [
+        "Design: design thinking, learner journey mapping, UX research, microlearning, gamification",
+        "Tools: Figma, Articulate 360, Miro, Adobe Premiere Pro",
+        "Platforms: Canvas, LearnWorlds, xAPI",
+        "Methods: usability testing, A/B testing, learning analytics"
+      ]
+    },
+    "Curriculum Developer": {
+      "summary": "Curriculum developer with 9 years of K–12 experience, including 5 years teaching middle school math and 4 writing district and publisher curriculum. Led a grades 6–8 math rewrite adopted by 42 schools. Brings standards alignment, assessment design and teacher professional learning.",
+      "experience": [
+        {
+          "company": "Summit Learning Press",
+          "role": "Senior Curriculum Developer, Mathematics",
+          "location": "Remote",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a team of 4 writers developing a grades 6–8 math curriculum aligned to Common Core and TEKS\n- Wrote 180 lessons and unit assessments; the curriculum earned an all-green EdReports rating\n- Pilot units in 12 classrooms and revise from teacher feedback and student work samples\n- Facilitate 25 PD sessions a year for districts adopting the program\n- Align every lesson to WCAG 2.1 accessibility and Spanish translation requirements for district buyers"
+        },
+        {
+          "company": "Lakewood School District",
+          "role": "Math Curriculum Specialist",
+          "location": "Lakewood, CO",
+          "startDate": "2021-07",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Rewrote grades 6–8 math scope and sequence adopted across 42 schools\n- Built common interim assessments analyzed in Illuminate by 120 teachers\n- Facilitated 8 teacher workshops on unit internalization"
+        },
+        {
+          "company": "Lakewood School District",
+          "role": "Middle School Math Teacher",
+          "location": "Lakewood, CO",
+          "startDate": "2016-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught grades 7 and 8 math, raising CMAS proficiency on the team by 14 points"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Denver",
+          "degree": "Master of Arts in Curriculum and Instruction",
+          "startDate": "2018-06",
+          "endDate": "2020-08"
+        },
+        {
+          "school": "Colorado State University",
+          "degree": "Bachelor of Science in Mathematics",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Curriculum: backward design (UbD), standards alignment, scope and sequence, assessment design",
+        "Standards: Common Core, TEKS, NCTM practices, EdReports criteria",
+        "Tools: Google Workspace, Desmos, Illuminate, Adobe InDesign",
+        "Licenses: Colorado Professional Educator License (Mathematics 7–12)"
+      ]
+    },
+    "Academic Advisor": {
+      "summary": "Academic advisor with 5 years in public university advising, serving a caseload of 350 undergraduates in STEM majors. Raised first-to-second-year retention for advisees by 7 points through proactive outreach. Brings degree-audit expertise, appreciative advising and close partnership with faculty and student support offices.",
+      "experience": [
+        {
+          "company": "Piedmont State University",
+          "role": "Academic Advisor II, College of Engineering",
+          "location": "Macon, GA",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise a caseload of 350 undergraduates on course planning, major exploration and graduation requirements\n- Ran early-alert outreach using EAB Navigate, lifting advisee first-year retention from 84% to 91%\n- Hold 1,200+ advising appointments a year with 96% student satisfaction\n- Co-designed a transfer student orientation that cut credit evaluation complaints by half\n- Coordinate with faculty on course substitutions and change-of-major petitions for 150 students a year"
+        },
+        {
+          "company": "Coastal Georgia University",
+          "role": "Academic Advisor, First-Year Advising",
+          "location": "Savannah, GA",
+          "startDate": "2021-01",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Advised 300 first-year students and taught 2 sections of a first-year seminar\n- Cleared 500+ registration holds before priority registration each term\n- Created a degree-planning guide for undeclared students used across advising offices"
+        },
+        {
+          "company": "University of Georgia Career Center",
+          "role": "Graduate Assistant",
+          "location": "Athens, GA",
+          "startDate": "2018-08",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Advised 200 students on resumes and internship searches\n- Coordinated career fair logistics for 120 employers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Georgia",
+          "degree": "Master of Education, College Student Affairs Administration",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "Kennesaw State University",
+          "degree": "Bachelor of Science in Psychology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Advising: appreciative advising, degree planning, academic probation, major exploration",
+        "Systems: EAB Navigate, DegreeWorks, Banner, Microsoft Bookings",
+        "Compliance: FERPA, academic policy interpretation",
+        "Memberships: NACADA"
+      ]
+    },
+    "Academic Coordinator": {
+      "summary": "Academic coordinator with 6 years administering graduate programs at public and private universities. Manages scheduling for 140 courses a year and admissions for a 220-student MPH program, and delivered a CEPH self-study 2 months early. Brings curriculum logistics, accreditation reporting and responsive support for faculty and students.",
+      "experience": [
+        {
+          "company": "Twin Rivers University",
+          "role": "Academic Coordinator, School of Public Health",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate scheduling for 140 courses a year, assigning rooms, instructors and enrollment caps\n- Manage admissions for a 220-student MPH program, processing 900 applications through SOPHAS\n- Compiled data for CEPH reaccreditation self-study, delivered 2 months ahead of deadline\n- Built a Smartsheet tracker for practicum placements, reducing late placements from 15% to 3%\n- Coordinate faculty searches and adjunct hiring paperwork for 12 instructors a year"
+        },
+        {
+          "company": "Mississippi Valley College",
+          "role": "Program Assistant, Graduate Education",
+          "location": "St. Paul, MN",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Supported 3 graduate programs with registration, transcripts and student records\n- Organized commencement logistics for 400 graduates\n- Maintained student records and processed 300 forms a term in PeopleSoft"
+        },
+        {
+          "company": "University of St. Thomas Registrar's Office",
+          "role": "Student Worker",
+          "location": "St. Paul, MN",
+          "startDate": "2017-09",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Processed enrollment verifications and transcript requests\n- Answered student questions about registration deadlines"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of St. Thomas",
+          "degree": "Bachelor of Arts in Communication",
+          "startDate": "2016-09",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program administration: course scheduling, admissions, accreditation reporting, event planning",
+        "Systems: PeopleSoft Campus Solutions, SOPHAS, Canvas, Smartsheet, Slate",
+        "Compliance: FERPA, university policy",
+        "Communication: faculty liaison, student services, newsletters"
+      ]
+    },
+    "School Counselor": {
+      "summary": "Certified school counselor with 7 years in public high schools, serving a caseload of 420 students. Raised FAFSA completion from 48% to 71% and led an ASCA RAMP-recognized program. Brings college and career advising, crisis response and data-driven tier 2 support.",
+      "experience": [
+        {
+          "company": "Pine Bluff High School",
+          "role": "School Counselor",
+          "location": "Spokane, WA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve 420 students in grades 9–12 with academic, college, career and social-emotional counseling\n- Lifted FAFSA completion from 48% to 71% with senior workshops and family financial aid nights\n- Lead suicide risk screening and threat assessment with the student support team, coordinating 30+ safety plans a year\n- Run tier 2 groups on anxiety and study skills for 60 students a year\n- Coordinate 504 plans for 45 students with teachers and families, holding annual reviews on schedule"
+        },
+        {
+          "company": "Northwood Middle School",
+          "role": "School Counselor",
+          "location": "Spokane, WA",
+          "startDate": "2019-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Counseled 380 students and launched a 7th-grade career exploration unit using Xello\n- Cut chronic absenteeism among a targeted group of 40 students by 35%\n- Led small groups on friendship skills and transition to high school"
+        },
+        {
+          "company": "Gonzaga University Counseling Center",
+          "role": "Practicum Counselor",
+          "location": "Spokane, WA",
+          "startDate": "2017-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Completed 600 internship hours in elementary and high school settings\n- Led small groups on study skills and anxiety"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gonzaga University",
+          "degree": "Master of Arts in School Counseling",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Washington State University",
+          "degree": "Bachelor of Arts in Psychology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Counseling: individual and group counseling, crisis intervention, suicide risk assessment, MTSS",
+        "College and career: FAFSA, college applications, Xello, Naviance, dual credit",
+        "Program: ASCA National Model, RAMP, data-driven interventions",
+        "Certifications: Washington ESA Certificate (School Counselor), NCC"
+      ]
+    },
+    "Student Success Coach": {
+      "summary": "Student success coach with 4 years at community colleges, coaching 250 first-generation and adult learners a year. Raised fall-to-spring persistence for coached students by 9 points. Brings motivational interviewing, fast early-alert outreach and practical connections to food, childcare and emergency-aid resources that keep students enrolled.",
+      "experience": [
+        {
+          "company": "Gateway Community College",
+          "role": "Student Success Coach",
+          "location": "Phoenix, AZ",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coach a caseload of 250 students, mostly first-generation and working adults, through goal setting and course planning\n- Raised fall-to-spring persistence for coached students from 66% to 75%\n- Respond to 600+ early-alert flags a year within 48 hours using Starfish\n- Connect 180 students a year to food pantry, emergency grants and childcare support\n- Teach a 1-credit college success course each fall for 30 first-year students"
+        },
+        {
+          "company": "Rio Salado College",
+          "role": "Enrollment Advisor",
+          "location": "Tempe, AZ",
+          "startDate": "2021-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Guided 1,200 prospective students through admissions, placement and registration\n- Built a text reminder campaign that raised orientation attendance 20%\n- Answered 150 calls and chats a week from prospective students about programs and enrollment"
+        },
+        {
+          "company": "NAU Peer Mentoring Program",
+          "role": "Peer Mentor",
+          "location": "Flagstaff, AZ",
+          "startDate": "2018-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Mentored 25 first-generation students a year on campus resources\n- Ran study sessions and check-ins during midterms"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northern Arizona University",
+          "degree": "Bachelor of Science in Psychology",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coaching: motivational interviewing, goal setting, academic planning, growth mindset",
+        "Systems: Starfish, Banner, Salesforce Education Cloud, Mainstay",
+        "Support: basic-needs referrals, financial aid basics, disability services coordination",
+        "Certifications: InsideTrack Certified Coach, Mental Health First Aid"
+      ]
+    },
+    "Instructional Coach": {
+      "summary": "Instructional coach with 11 years in K–8 education, including 4 years coaching 22 teachers across two elementary schools. Coached teachers raised campus reading proficiency 13 points. Brings cycles of coaching, structured literacy expertise and PLC facilitation grounded in student data.",
+      "experience": [
+        {
+          "company": "Pine Hills Unified School District",
+          "role": "Instructional Coach, Literacy",
+          "location": "Tucson, AZ",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coach 22 K–5 teachers across 2 schools through 6-week coaching cycles with modeling, co-teaching and feedback\n- Supported a Science of Reading rollout that raised AASA ELA proficiency from 31% to 44% in 3 years\n- Facilitate weekly PLCs analyzing Acadience data and planning reteach\n- Mentor 8 first-year teachers through the state induction program, retaining 7\n- Co-design the district's K–2 literacy pacing guide used by 140 teachers"
+        },
+        {
+          "company": "Saguaro Elementary School",
+          "role": "3rd Grade Teacher",
+          "location": "Tucson, AZ",
+          "startDate": "2015-08",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Taught 3rd grade and served as literacy team lead for 3 years\n- Led grade-level data meetings that grew students' reading benchmark rate 18 points\n- Mentored 2 student teachers from the University of Arizona"
+        },
+        {
+          "company": "Flagstaff Unified School District",
+          "role": "Student Teacher, 2nd Grade",
+          "location": "Flagstaff, AZ",
+          "startDate": "2015-01",
+          "endDate": "2015-05",
+          "isCurrent": false,
+          "description": "- Completed a full-time semester teaching 24 second graders\n- Planned a 3-week integrated science and reading unit"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Arizona",
+          "degree": "Master of Education, Literacy and Reading",
+          "startDate": "2017-06",
+          "endDate": "2019-08"
+        },
+        {
+          "school": "Northern Arizona University",
+          "degree": "Bachelor of Science in Elementary Education",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Coaching: coaching cycles, modeling, observation and feedback, adult learning, teacher induction",
+        "Literacy: Science of Reading, LETRS, Acadience, small-group intervention",
+        "Data: PLC facilitation, AASA analysis, Schoolcity",
+        "Certifications: Arizona Standard Professional Certificate (Elementary), Reading Endorsement K–8, LETRS Facilitator"
+      ]
+    },
+    "School Principal": {
+      "summary": "Elementary school principal with 17 years in education, including 6 as principal of a 640-student Title I school. Moved the school from a D to a B state rating in four years. Brings instructional leadership, a $5.2M budget, staff retention and strong community trust.",
+      "experience": [
+        {
+          "company": "Hillcrest Elementary School",
+          "role": "Principal",
+          "location": "Oklahoma City, OK",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 640 students, 48 teachers and 30 support staff in a Title I school with 90% free and reduced lunch\n- Raised the state report card grade from D to B by building MTSS and weekly data teams\n- Manage a $5.2M budget including $680K in Title I funds, adding a reading interventionist and a mental health counselor\n- Improved teacher retention from 72% to 89% through mentoring and a shared leadership team\n- Built partnerships with 3 community organizations to provide after-school tutoring and a family food pantry"
+        },
+        {
+          "company": "Sooner Middle School",
+          "role": "Assistant Principal",
+          "location": "Norman, OK",
+          "startDate": "2016-07",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Oversaw discipline, attendance and master scheduling for 900 students\n- Cut suspensions 45% after introducing restorative practices and PBIS\n- Led the school's PBIS team and coordinated state testing for 900 students"
+        },
+        {
+          "company": "Sooner Middle School",
+          "role": "Math Teacher",
+          "location": "Norman, OK",
+          "startDate": "2009-08",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Taught grades 7–8 math and chaired the math department for 3 years"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Oklahoma",
+          "degree": "Master of Education, Educational Administration",
+          "startDate": "2013-06",
+          "endDate": "2015-08"
+        },
+        {
+          "school": "Oklahoma State University",
+          "degree": "Bachelor of Science in Mathematics Education",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: instructional leadership, MTSS, teacher evaluation (Marzano), school culture, community engagement",
+        "Operations: budget management, Title I compliance, master scheduling, hiring",
+        "Data: state assessments, NWEA MAP, attendance analytics",
+        "Certifications: Oklahoma Principal Certificate, Teacher Certificate (Mathematics)"
+      ]
+    },
+    "Assistant Principal": {
+      "summary": "Assistant principal with 12 years in secondary education, including 4 years supporting a 1,900-student comprehensive high school. Cut chronic absenteeism from 28% to 17% and supervises 35 teachers. Brings restorative discipline, master scheduling and instructional coaching across core content areas.",
+      "experience": [
+        {
+          "company": "Lincoln Park High School",
+          "role": "Assistant Principal",
+          "location": "Milwaukee, WI",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise and evaluate 35 teachers in math, science and CTE using the Danielson Framework\n- Lead attendance initiatives with mentors and family outreach, reducing chronic absenteeism from 28% to 17%\n- Build the master schedule for 1,900 students, cutting course conflicts by 60%\n- Implemented restorative circles that reduced out-of-school suspensions 38%\n- Oversee special education compliance and 504 meetings for 210 students"
+        },
+        {
+          "company": "Washington Heights High School",
+          "role": "Dean of Instruction",
+          "location": "Milwaukee, WI",
+          "startDate": "2020-07",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Coordinated PLCs for 9th-grade teams and expanded dual-credit offerings to 6 courses\n- Trained 25 teachers on data-driven instruction protocols"
+        },
+        {
+          "company": "Washington Heights High School",
+          "role": "Chemistry Teacher",
+          "location": "Milwaukee, WI",
+          "startDate": "2014-08",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Taught chemistry and AP Chemistry; raised AP pass rate from 38% to 61%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Marquette University",
+          "degree": "Master of Arts, Educational Policy and Leadership",
+          "startDate": "2017-06",
+          "endDate": "2019-08"
+        },
+        {
+          "school": "University of Wisconsin–Madison",
+          "degree": "Bachelor of Science in Chemistry",
+          "startDate": "2010-09",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: teacher supervision, Danielson Framework, PLCs, restorative practices, PBIS",
+        "Operations: master scheduling, attendance, safety drills, IEP and 504 oversight",
+        "Systems: Infinite Campus, Frontline, Google Workspace",
+        "Licenses: Wisconsin Principal License (51), Chemistry Teaching License"
+      ]
+    },
+    "Vice Principal": {
+      "summary": "Vice principal with 10 years in middle school education, including 3 in administration at a 1,100-student school. Lifted math proficiency 11 points and halved discipline referrals. Brings MTSS leadership, coaching for new teachers and calm, consistent student support systems.",
+      "experience": [
+        {
+          "company": "Pacific View Middle School",
+          "role": "Vice Principal",
+          "location": "Long Beach, CA",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Co-lead a 1,100-student middle school with 58 teachers, overseeing grades 7–8, discipline and attendance\n- Launched tier 2 math intervention blocks that raised CAASPP math proficiency from 29% to 40%\n- Reduced office discipline referrals 52% through PBIS, restorative conferences and lunch clubs\n- Coach 10 new teachers through induction with biweekly observations and feedback\n- Coordinate safety drills and the comprehensive school safety plan with district security"
+        },
+        {
+          "company": "Harbor Middle School",
+          "role": "Math Teacher and Department Chair",
+          "location": "Long Beach, CA",
+          "startDate": "2016-08",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Taught Math 7, Math 8 and Integrated Math I to 160 students a year\n- Chaired a 9-teacher department and led adoption of a new standards-aligned curriculum\n- Mentored 3 student teachers from CSU Long Beach"
+        },
+        {
+          "company": "Long Beach Unified School District",
+          "role": "Math Tutor",
+          "location": "Long Beach, CA",
+          "startDate": "2014-09",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Tutored 30 middle school students a week in pre-algebra\n- Helped prepare students for the district math placement test"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Long Beach",
+          "degree": "Master of Arts, Educational Administration",
+          "startDate": "2020-06",
+          "endDate": "2022-05"
+        },
+        {
+          "school": "University of California, Irvine",
+          "degree": "Bachelor of Science in Mathematics",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: MTSS, PBIS, teacher coaching, discipline, family engagement",
+        "Operations: attendance, master schedule support, safety planning, 504 coordination",
+        "Systems: Aeries, Illuminate, Google Workspace",
+        "Credentials: California Preliminary Administrative Services Credential, Single Subject Credential (Mathematics)"
+      ]
+    },
+    "Dean of Students": {
+      "summary": "Dean of students with 13 years in higher education student affairs, now leading a 28-person division at a 9,000-student university. Cut conduct case resolution time from 41 to 18 days and raised first-year retention 4 points. Brings crisis management, Title IX coordination and student-centered policy leadership.",
+      "experience": [
+        {
+          "company": "Brookstone University",
+          "role": "Dean of Students",
+          "location": "Spokane, WA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 28-person division covering conduct, case management, residence life and student organizations with a $3.4M budget\n- Redesigned the conduct process in Maxient, cutting resolution time from 41 to 18 days\n- Built a CARE team and basic-needs hub that served 1,100 students a year, contributing to a 4-point retention gain\n- Coordinate with the Title IX office and campus police on 40+ crisis and threat assessments a year\n- Advise the president's cabinet on student wellbeing, presenting annual retention and conduct trend reports"
+        },
+        {
+          "company": "Evergreen Lakes College",
+          "role": "Associate Dean of Students",
+          "location": "Tacoma, WA",
+          "startDate": "2017-06",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Oversaw student conduct and case management for 5,000 students\n- Led COVID-19 isolation housing and student support operations\n- Revised the student code of conduct after a 2-year campus-wide review"
+        },
+        {
+          "company": "Evergreen Lakes College",
+          "role": "Director of Residence Life",
+          "location": "Tacoma, WA",
+          "startDate": "2013-07",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Managed 6 residence halls housing 1,800 students and 70 resident assistants\n- Ran a 2-week August training on crisis response and community building for the resident assistant team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washington State University",
+          "degree": "Doctor of Education, Higher Education Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Oregon State University",
+          "degree": "Master of Science, College Student Services Administration",
+          "startDate": "2011-09",
+          "endDate": "2013-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Student affairs: conduct, CARE and BIT teams, crisis response, residence life, student engagement",
+        "Compliance: Title IX, Clery Act, FERPA, ADA",
+        "Systems: Maxient, Slate, Presence, Banner",
+        "Leadership: budget management, policy development, staff supervision",
+        "Memberships: NASPA, NaBITA"
+      ]
+    },
+    "School Administrator": {
+      "summary": "School administrator with 10 years in K–12 operations, now business and operations manager for a 1,200-student charter network campus. Balanced a $14M budget while funding 3 new teaching positions. Brings facilities, enrollment, compliance and HR operations that let instructional leaders focus on teaching.",
+      "experience": [
+        {
+          "company": "Bright Futures Charter Academy",
+          "role": "Director of School Operations",
+          "location": "Charlotte, NC",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage operations for a 1,200-student K–12 campus, supervising 14 staff in front office, facilities, nutrition and transportation\n- Own a $14M budget, finding $420K in savings through vendor rebids to fund 3 teaching positions\n- Run enrollment and lottery for 2,300 applications, reaching 99% of seats filled by the first day\n- Lead state reporting, E-Rate filings and charter renewal compliance with no findings\n- Manage hiring, onboarding and background checks for 40 new staff each year"
+        },
+        {
+          "company": "Mecklenburg Academy",
+          "role": "Operations Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2018-06",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Managed facilities, safety drills and student information systems for a 700-student school\n- Moved family communications and payments online, cutting front office call volume 35%\n- Coordinated bus routes for 450 students with a contracted transportation provider"
+        },
+        {
+          "company": "Mecklenburg Academy",
+          "role": "Office Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2016-08",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Ran attendance, records and front office operations"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Charlotte",
+          "degree": "Master of Public Administration",
+          "startDate": "2016-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Appalachian State University",
+          "degree": "Bachelor of Science in Business Administration",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: budgeting, facilities, transportation, child nutrition, safety and emergency planning",
+        "Compliance: state reporting, E-Rate, charter authorizer requirements, FERPA",
+        "Systems: PowerSchool, SchoolMint, Blackbaud, Google Workspace",
+        "HR: hiring, onboarding, background checks, payroll coordination"
+      ]
+    },
+    "School Secretary": {
+      "summary": "School secretary with 6 years running the front office of a 650-student elementary school. Cut attendance reporting errors to near zero and supports a principal, 45 staff and hundreds of families daily. Brings bilingual family communication, student records accuracy and calm handling of busy mornings.",
+      "experience": [
+        {
+          "company": "Sunnyside Elementary School",
+          "role": "School Secretary",
+          "location": "Salt Lake City, UT",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage the front office for 650 students and 45 staff, greeting 100+ visitors and calls a day in English and Spanish\n- Reconcile daily attendance in PowerSchool, reducing state reporting corrections from 40 a term to fewer than 3\n- Process 150 new enrollments a year, including records requests and immunization compliance\n- Coordinate the principal's calendar, staff substitutes and school event logistics\n- Maintain the emergency contact database and coordinate reunification cards for safety drills"
+        },
+        {
+          "company": "Granite Park Middle School",
+          "role": "Attendance Clerk",
+          "location": "Salt Lake City, UT",
+          "startDate": "2020-01",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Tracked attendance for 900 students and sent truancy notices per district policy\n- Managed the school's lost-and-found and student check-out procedures\n- Prepared daily absence reports for administrators and counselors"
+        },
+        {
+          "company": "Granite Credit Union",
+          "role": "Member Services Representative",
+          "location": "Salt Lake City, UT",
+          "startDate": "2018-06",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Assisted 70 members a day with accounts and transactions\n- Balanced the cash drawer daily with no variances"
+        }
+      ],
+      "education": [
+        {
+          "school": "Salt Lake Community College",
+          "degree": "Associate of Science in Business",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Office administration: scheduling, records management, enrollment, attendance, petty cash",
+        "Systems: PowerSchool, Raptor visitor management, Google Workspace, Microsoft Office",
+        "Compliance: FERPA, immunization records, emergency procedures",
+        "Languages: English, Spanish (fluent)",
+        "Certifications: CPR and First Aid"
+      ]
+    },
+    "University Professor": {
+      "summary": "Tenured associate professor of environmental engineering with 11 years of faculty experience and $4.6M in external research funding as PI. Has published 52 peer-reviewed papers on water treatment and graduated 9 PhD students. Brings an NSF CAREER-funded research program and award-winning undergraduate teaching.",
+      "experience": [
+        {
+          "company": "Rocky Mountain State University",
+          "role": "Associate Professor, Civil, Environmental and Architectural Engineering",
+          "location": "Boulder, CO",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 12-person lab studying membrane treatment of PFAS-contaminated water\n- Secured $4.6M in funding as PI from NSF, EPA and the Water Research Foundation, including an NSF CAREER award\n- Published 52 peer-reviewed papers with 3,100+ citations (h-index 29)\n- Teach water treatment design to 80 students a year, earning the college teaching award in 2024\n- Serve as associate editor for an environmental engineering journal and review for NSF panels"
+        },
+        {
+          "company": "Rocky Mountain State University",
+          "role": "Assistant Professor",
+          "location": "Boulder, CO",
+          "startDate": "2015-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Built the research lab and graduated the first 5 PhD students\n- Developed a graduate course on emerging contaminants now required in the MS program\n- Mentored 18 undergraduate researchers, with 6 continuing to graduate school"
+        },
+        {
+          "company": "Stanford University",
+          "role": "Postdoctoral Scholar",
+          "location": "Stanford, CA",
+          "startDate": "2014-07",
+          "endDate": "2015-07",
+          "isCurrent": false,
+          "description": "- Developed electrochemical oxidation methods for PFAS destruction, publishing 4 papers"
+        }
+      ],
+      "education": [
+        {
+          "school": "Stanford University",
+          "degree": "PhD, Civil and Environmental Engineering",
+          "startDate": "2009-09",
+          "endDate": "2014-06"
+        },
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "Bachelor of Science in Environmental Engineering",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "PFAS Membrane Treatment Program",
+          "link": "",
+          "description": "NSF CAREER-funded study of nanofiltration and electrochemical oxidation for PFAS removal at 3 municipal pilot plants"
+        }
+      ],
+      "skills": [
+        "Research: water treatment, membrane processes, PFAS, pilot-scale studies, grant writing",
+        "Teaching: undergraduate design, graduate seminars, PhD mentoring, curriculum development",
+        "Methods: LC-MS/MS, MATLAB, Python, statistical design of experiments",
+        "Service: journal associate editor, NSF review panels, professional engineer (PE, Colorado)"
+      ]
+    },
+    "University Lecturer": {
+      "summary": "University lecturer in economics with 8 years of full-time teaching, delivering 8 courses a year to 900+ undergraduates. Redesigned principles of macroeconomics with active learning, cutting the DFW rate from 24% to 13%. Brings strong course evaluations, open-educational-resource development and mentoring of graduate teaching assistants.",
+      "experience": [
+        {
+          "company": "Sonoran State University",
+          "role": "Senior Lecturer, Department of Economics",
+          "location": "Tempe, AZ",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 4 courses a semester including principles of macro, money and banking, and econometrics to 900+ students a year\n- Redesigned principles of macroeconomics with team-based learning, lowering D/F/W rates from 24% to 13%\n- Wrote an open-access macro textbook adopted by 6 sections, saving students $140K a year\n- Supervise and train 8 graduate teaching assistants each term\n- Coordinate assessment of 3 program learning outcomes for the department's accreditation review"
+        },
+        {
+          "company": "High Desert University",
+          "role": "Lecturer, Department of Economics",
+          "location": "Reno, NV",
+          "startDate": "2018-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Taught 3–4 sections a term of principles and intermediate economics with 4.6/5 average evaluations\n- Moved all courses online in 2020 with Canvas and Zoom, keeping pass rates stable\n- Mentored 12 undergraduate peer tutors in the economics learning center"
+        },
+        {
+          "company": "University of California, Santa Cruz",
+          "role": "Graduate Teaching Assistant, Economics",
+          "location": "Santa Cruz, CA",
+          "startDate": "2013-09",
+          "endDate": "2018-06",
+          "isCurrent": false,
+          "description": "- Led discussion sections for 600+ students in principles and intermediate economics"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Santa Cruz",
+          "degree": "PhD, Economics",
+          "startDate": "2012-09",
+          "endDate": "2018-06"
+        },
+        {
+          "school": "University of California, Davis",
+          "degree": "Bachelor of Arts in Economics",
+          "startDate": "2008-09",
+          "endDate": "2012-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Open Principles of Macroeconomics",
+          "link": "pressbooks.example/open-macro",
+          "description": "Open textbook with 14 chapters, interactive problem sets and data exercises using FRED"
+        }
+      ],
+      "skills": [
+        "Teaching: active learning, team-based learning, large-lecture management, course design",
+        "Economics: macroeconomics, econometrics, money and banking",
+        "Tools: Canvas, Top Hat, Stata, R, FRED",
+        "Professional: OER development, TA training, assessment of learning outcomes"
+      ]
+    },
+    "Teaching Assistant": {
+      "summary": "Graduate teaching assistant in a PhD program in chemistry with 3 years leading lab sections and recitations for 300+ undergraduates. Earned an outstanding TA award and lifted section exam averages above the course mean. Brings clear lab safety instruction, office-hours tutoring and fair, timely grading.",
+      "experience": [
+        {
+          "company": "University of Wisconsin–Madison",
+          "role": "Graduate Teaching Assistant, General Chemistry",
+          "location": "Madison, WI",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 3 lab sections and 2 recitations a term for 110 students in general chemistry\n- Hold 4 office hours a week; sections scored 6 points above the course mean on common exams\n- Enforce lab safety protocols with zero reportable incidents across 6 semesters\n- Grade 1,500+ lab reports a year with rubric feedback returned within 1 week\n- Mentor 4 undergraduate researchers on lab safety, sample preparation and data analysis"
+        },
+        {
+          "company": "Purdue University",
+          "role": "Undergraduate Research Assistant",
+          "location": "West Lafayette, IN",
+          "startDate": "2021-06",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Synthesized and characterized metal-organic frameworks for carbon capture in a 10-person inorganic chemistry lab\n- Co-authored 1 peer-reviewed paper and presented a poster at the ACS Spring meeting\n- Tutored 25 students a week in general and organic chemistry at the university learning center"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Madison",
+          "degree": "PhD candidate, Chemistry (expected 2028)",
+          "startDate": "2023-09",
+          "endDate": ""
+        },
+        {
+          "school": "Purdue University",
+          "degree": "Bachelor of Science in Chemistry",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "MOF Sorbents for Direct Air Capture",
+          "link": "",
+          "description": "Synthesized 14 amine-functionalized MOFs and measured CO2 uptake with TGA and BET; first-author paper in review"
+        }
+      ],
+      "skills": [
+        "Teaching: lab instruction, recitations, grading rubrics, office hours, active learning",
+        "Chemistry: synthesis, NMR, XRD, TGA, BET surface analysis",
+        "Tools: Canvas, Gradescope, ChemDraw, Python",
+        "Awards: Outstanding TA Award (2025), Teaching certificate in progress (Delta Program)"
+      ]
+    },
+    "Tutor": {
+      "summary": "Independent math and test-prep tutor with 5 years of experience coaching 150+ high school students in algebra through AP Calculus and SAT math. Students average a 120-point SAT math gain over 10 sessions. Brings diagnostic-first lesson plans, clear explanations and steady progress updates for families.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Math and SAT Tutor",
+          "location": "Seattle, WA",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Tutor 18–22 students a week in Algebra II, precalculus, AP Calculus AB/BC and digital SAT math\n- Raised SAT math scores an average of 120 points across 60 students using official College Board diagnostics\n- Helped 85% of AP Calculus students earn a 4 or 5 on the exam\n- Built a client base of 40 families through referrals, with 90% renewing each school year\n- Write custom problem sets and practice tests aligned to each student's school curriculum"
+        },
+        {
+          "company": "Puget Sound Learning Center",
+          "role": "Math Tutor",
+          "location": "Bellevue, WA",
+          "startDate": "2020-01",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Delivered small-group and one-on-one tutoring for 25 students in grades 6–12\n- Created an algebra readiness diagnostic adopted by 6 center tutors\n- Taught a 6-week SAT math bootcamp for groups of 8 students"
+        },
+        {
+          "company": "UW Math Study Center",
+          "role": "Undergraduate Tutor",
+          "location": "Seattle, WA",
+          "startDate": "2018-09",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Tutored 40 students a week in calculus and linear algebra\n- Graded weekly problem sets for a 200-student course"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "Bachelor of Science in Applied Mathematics",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Subjects: Algebra I and II, geometry, precalculus, AP Calculus AB/BC, digital SAT and ACT math",
+        "Methods: diagnostic assessment, spaced practice, error analysis, study skills coaching",
+        "Tools: Zoom, GoodNotes, Desmos, Bluebook, Khan Academy",
+        "Certifications: CRLA Level II Tutor Certification"
+      ]
+    },
+    "Librarian": {
+      "summary": "Public librarian with 9 years in adult services and branch leadership, now managing a branch with 220,000 annual visits. Grew program attendance 64% and launched a digital literacy lab serving 1,800 residents a year. Brings collection development, community partnerships and inclusive service design.",
+      "experience": [
+        {
+          "company": "Moreno Hills Public Library",
+          "role": "Branch Manager",
+          "location": "Riverside, CA",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a branch of 14 staff serving 220,000 visits and 310,000 checkouts a year\n- Grew program attendance 64% with bilingual storytimes, ESL conversation groups and author events\n- Launched a digital literacy lab funded by a $95K state grant, serving 1,800 residents a year\n- Manage a $160K collection budget, shifting 25% to e-books and Spanish-language titles based on circulation data\n- Partner with the county workforce board on job-search and resume clinics serving 600 residents a year"
+        },
+        {
+          "company": "Inland Empire Public Library",
+          "role": "Adult Services Librarian",
+          "location": "San Bernardino, CA",
+          "startDate": "2017-07",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Delivered reference and readers' advisory for 300 patrons a week and taught job-search workshops\n- Weeded and refreshed the nonfiction collection, raising turnover 30%\n- Taught 40 technology classes a year on email, smartphones and online safety"
+        },
+        {
+          "company": "UC Riverside Library",
+          "role": "Library Assistant",
+          "location": "Riverside, CA",
+          "startDate": "2013-09",
+          "endDate": "2015-06",
+          "isCurrent": false,
+          "description": "- Staffed the circulation and reference desks for 20 hours a week\n- Shelved and processed 500 items a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "San José State University",
+          "degree": "Master of Library and Information Science (ALA-accredited)",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "University of California, Riverside",
+          "degree": "Bachelor of Arts in English",
+          "startDate": "2011-09",
+          "endDate": "2015-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Library services: reference, readers' advisory, collection development, programming, outreach",
+        "Systems: Polaris ILS, OverDrive and Libby, LibCal, Springshare",
+        "Management: staff supervision, budgets, grant writing, community partnerships",
+        "Languages: English, Spanish (professional)"
+      ]
+    },
+    "School Librarian": {
+      "summary": "Certified school library media specialist with 8 years serving middle and high school students, currently running the library for a 1,400-student high school. Raised circulation 82% and co-teaches 120 research lessons a year. Brings information literacy instruction, makerspace programming and digital citizenship expertise.",
+      "experience": [
+        {
+          "company": "Fairview High School",
+          "role": "School Library Media Specialist",
+          "location": "Columbus, OH",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the library program for 1,400 students and 90 teachers, managing a $28K collection budget\n- Co-teach 120 research and information literacy lessons a year aligned to AASL standards\n- Raised annual circulation 82% by diversifying the collection and launching a student book club\n- Built a makerspace with 3D printers and podcast stations used by 40 classes a year\n- Train teachers on databases, NoodleTools citations and AI literacy lessons through 6 PD sessions a year"
+        },
+        {
+          "company": "Westerville Middle School",
+          "role": "Library Media Specialist",
+          "location": "Westerville, OH",
+          "startDate": "2018-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught digital citizenship to 750 students and led the Chromebook rollout help desk\n- Organized an annual author visit that reached 600 students\n- Partnered with ELA teachers on a Battle of the Books program for 120 students"
+        },
+        {
+          "company": "Ohio University Libraries",
+          "role": "Student Library Assistant",
+          "location": "Athens, OH",
+          "startDate": "2013-09",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Staffed circulation and helped students with database searches\n- Created displays for National Library Week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kent State University",
+          "degree": "Master of Library and Information Science, School Library Media",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "Ohio University",
+          "degree": "Bachelor of Science in Education, Language Arts 7–12",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: information literacy, research skills, digital citizenship, AASL standards",
+        "Library management: Destiny, collection development, makerspace, e-resources",
+        "Tools: Google Workspace, Canva, Sora, NoodleTools",
+        "Licenses: Ohio Professional Teaching License (Library/Media PK–12, Integrated Language Arts 7–12)"
+      ]
+    },
+    "Admissions Counselor": {
+      "summary": "Admissions counselor with 4 years recruiting for a private university, managing a territory of 4 states and 3,000 applicants a cycle. Exceeded deposit goals by 18% and grew applications from the region 27%. Brings Slate fluency, compelling school visits and personal follow-through with students and families.",
+      "experience": [
+        {
+          "company": "Harpeth Valley University",
+          "role": "Senior Admissions Counselor",
+          "location": "Nashville, TN",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage recruitment for a 4-state territory, reading 1,400 applications and advising 3,000 applicants a cycle\n- Grew territory applications 27% and exceeded the deposit goal by 18% in the 2025 cycle\n- Visit 90 high schools and 25 college fairs each fall, building relationships with 150 school counselors\n- Build Slate communication campaigns that raised admitted student visit-day attendance 22%\n- Serve on the scholarship review committee, reading 300 merit scholarship files a year"
+        },
+        {
+          "company": "Harpeth Valley University",
+          "role": "Admissions Counselor",
+          "location": "Nashville, TN",
+          "startDate": "2022-06",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Recruited in middle Tennessee and coordinated campus tours for 4,000 visitors\n- Trained 30 student tour guides and ambassadors\n- Responded to 200 prospective student emails and calls a week"
+        },
+        {
+          "company": "University of Tennessee Office of Admissions",
+          "role": "Student Ambassador",
+          "location": "Knoxville, TN",
+          "startDate": "2019-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Led 150 campus tours for prospective students and families\n- Called admitted students to encourage enrollment"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Tennessee, Knoxville",
+          "degree": "Bachelor of Arts in Communication Studies",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Recruitment: territory management, application review, school visits, yield events",
+        "Systems: Slate, Common App, Salesforce, Zoom",
+        "Advising: financial aid basics, scholarship programs, transfer credit",
+        "Communication: public speaking, email campaigns, family counseling"
+      ]
+    },
+    "College Admissions Counselor": {
+      "summary": "Independent college admissions counselor with 7 years of experience, including 3 as an admissions officer at a selective university. Guides 30 students a year through applications; 82% admitted to a top-3 choice. Brings an insider's view of holistic review, essay coaching and realistic college list building.",
+      "experience": [
+        {
+          "company": "Clearview College Consulting",
+          "role": "Founder and College Admissions Counselor",
+          "location": "Chicago, IL",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise 30 students a year from 9th grade through decision day on course planning, activities and applications\n- Coach 200+ application essays a year; 82% of students admitted to at least one top-3 choice\n- Build balanced college lists using Naviance, CDS data and campus visits to 40+ colleges\n- Deliver free financial aid and FAFSA workshops for 3 community organizations\n- Advise families on merit aid and net price, helping students secure an average of $28K a year in scholarships"
+        },
+        {
+          "company": "Lakemont College",
+          "role": "Assistant Director of Admissions",
+          "location": "Evanston, IL",
+          "startDate": "2019-07",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Read 2,000 applications a cycle in holistic, committee-based review\n- Managed recruitment in the Pacific Northwest, increasing applications 19%\n- Presented at 15 high school counselor workshops on holistic review"
+        },
+        {
+          "company": "Carleton College Admissions",
+          "role": "Senior Interviewer",
+          "location": "Northfield, MN",
+          "startDate": "2016-09",
+          "endDate": "2017-06",
+          "isCurrent": false,
+          "description": "- Conducted 120 evaluative interviews with prospective students\n- Wrote interview summaries reviewed by the admissions committee"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University",
+          "degree": "Master of Science in Higher Education Administration and Policy",
+          "startDate": "2017-09",
+          "endDate": "2019-06"
+        },
+        {
+          "school": "Carleton College",
+          "degree": "Bachelor of Arts in History",
+          "startDate": "2013-09",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Advising: college list building, essay coaching, interview prep, financial aid and merit aid",
+        "Admissions: holistic review, Common App, Coalition App, early decision strategy",
+        "Tools: Naviance, Cialfo, Google Workspace",
+        "Memberships: IECA, NACAC"
+      ]
+    },
+    "Education Coordinator": {
+      "summary": "Education coordinator with 5 years designing museum and nature center programs for K–8 audiences. Grew school field trip participation from 9,000 to 16,500 students a year. Brings NGSS-aligned program design, volunteer docent training and grant-funded outreach that brings low-income schools through the door at no cost.",
+      "experience": [
+        {
+          "company": "Gulf Coast Science Museum",
+          "role": "Education Coordinator",
+          "location": "Tampa, FL",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate field trips, camps and outreach for 16,500 students a year, up from 9,000\n- Design 12 NGSS-aligned programs on ecology and engineering with teacher guides\n- Recruit and train 45 volunteer docents, holding 85% annual retention\n- Wrote a $120K foundation grant funding free buses and admission for 40 Title I schools\n- Evaluate programs with teacher surveys and pre/post student assessments, sharing results with funders"
+        },
+        {
+          "company": "Tampa Bay Nature Center",
+          "role": "Environmental Educator",
+          "location": "St. Petersburg, FL",
+          "startDate": "2021-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Taught outdoor lessons to 4,000 K–8 students a year\n- Built a summer camp curriculum that sold out 8 weeks\n- Recruited and trained 12 seasonal camp counselors"
+        },
+        {
+          "company": "Gulf Coast Zoo Camp",
+          "role": "Camp Counselor",
+          "location": "Tampa, FL",
+          "startDate": "2018-06",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Led groups of 15 campers through animal science activities\n- Taught a daily conservation lesson to campers ages 7–10"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "Bachelor of Science in Environmental Science and Policy",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Free Field Trip Fund",
+          "link": "",
+          "description": "Grant-funded program covering buses and admission for 40 Title I schools, with pre- and post-visit classroom lessons"
+        }
+      ],
+      "skills": [
+        "Programs: informal education, NGSS, camp design, outreach, volunteer management",
+        "Operations: scheduling, budgets, grant writing, evaluation surveys",
+        "Tools: Altru, Google Workspace, Canva, SurveyMonkey",
+        "Certifications: Certified Interpretive Guide (NAI), CPR and First Aid"
+      ]
+    },
+    "Education Program Manager": {
+      "summary": "Education program manager with 9 years in nonprofit and district partnerships, leading a $2.8M college-access program serving 3,200 students. Raised college enrollment among participants from 54% to 68%. Brings program design, grant management, data systems and team leadership across 14 schools.",
+      "experience": [
+        {
+          "company": "Bridge to College Foundation",
+          "role": "Senior Program Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a $2.8M college-access program in 14 high schools serving 3,200 students with a team of 16 advisors\n- Raised participant college enrollment from 54% to 68% within one year of graduation\n- Manage 5 foundation and federal GEAR UP grants, delivering all reports on time\n- Built a Salesforce and Tableau dashboard tracking FAFSA, applications and persistence by school\n- Hire, train and coach 16 advisors with quarterly goals and observation feedback"
+        },
+        {
+          "company": "Atlanta Public Schools",
+          "role": "Program Coordinator, Career Pathways",
+          "location": "Atlanta, GA",
+          "startDate": "2018-07",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Coordinated internships for 600 students with 80 employer partners\n- Expanded dual enrollment pathways from 3 to 9 high schools\n- Built partnerships with 4 community colleges for dual enrollment credit"
+        },
+        {
+          "company": "Service Corps Atlanta",
+          "role": "AmeriCorps Team Leader",
+          "location": "Atlanta, GA",
+          "startDate": "2017-08",
+          "endDate": "2018-06",
+          "isCurrent": false,
+          "description": "- Led a team of 10 tutors supporting 150 middle school students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia State University",
+          "degree": "Master of Public Administration, Nonprofit Management",
+          "startDate": "2018-08",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "Spelman College",
+          "degree": "Bachelor of Arts in Sociology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program management: program design, logic models, KPIs, partner management, staff supervision",
+        "Funding: grant management, federal GEAR UP compliance, budgets",
+        "Data: Salesforce, Tableau, National Student Clearinghouse data",
+        "Leadership: coaching, hiring, cross-sector partnerships"
+      ]
+    },
+    "Education Consultant": {
+      "summary": "Independent education consultant with 15 years in K–12 teaching, leadership and district advising. Has led improvement work in 28 schools across 6 states, with partner schools averaging 9-point gains in reading proficiency. Brings MTSS design, leadership coaching and data-driven school improvement planning.",
+      "experience": [
+        {
+          "company": "Northbridge Education Partners",
+          "role": "Principal Consultant",
+          "location": "Remote",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise 10–12 district and charter clients a year on MTSS, literacy and school improvement planning\n- Partner schools averaged 9-point gains in state reading proficiency over 2 years\n- Coach 25 principals a year on instructional leadership and data meetings\n- Design and facilitate 40 professional learning days a year for 1,500 educators\n- Wrote 6 school improvement plans and needs assessments for districts applying for state grants"
+        },
+        {
+          "company": "Pinecrest Unified School District",
+          "role": "Director of School Improvement",
+          "location": "Sacramento, CA",
+          "startDate": "2016-07",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Oversaw improvement plans for 8 CSI-identified schools, exiting 5 from status in 3 years\n- Managed $3.1M in Title I and school improvement grants\n- Built a principal coaching program for 15 school leaders"
+        },
+        {
+          "company": "Pinecrest Unified School District",
+          "role": "Teacher and Assistant Principal",
+          "location": "Sacramento, CA",
+          "startDate": "2011-08",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Taught high school English for 3 years before 2 years as assistant principal"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Southern California",
+          "degree": "Doctor of Education (EdD), Educational Leadership",
+          "startDate": "2014-05",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "University of California, Davis",
+          "degree": "Bachelor of Arts in English",
+          "startDate": "2007-09",
+          "endDate": "2011-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Consulting: school improvement planning, MTSS, literacy strategy, needs assessments, leadership coaching",
+        "Data: state assessment analysis, Panorama, root-cause analysis",
+        "Facilitation: professional learning design, workshops, stakeholder engagement",
+        "Credentials: California Clear Administrative Services Credential, Single Subject Credential (English)"
+      ]
+    },
+    "Education Technology Specialist": {
+      "summary": "Education technology specialist with 8 years supporting K–12 districts, now leading instructional technology for 22 schools and 1,700 teachers. Drove Canvas adoption to 96% of teachers and cut device downtime by 40%. Brings teacher training, platform administration and student data privacy compliance.",
+      "experience": [
+        {
+          "company": "Mountain View School District",
+          "role": "Instructional Technology Specialist",
+          "location": "Boise, ID",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead edtech adoption for 22 schools, 1,700 teachers and 26,000 students in a 1:1 Chromebook district\n- Drove Canvas LMS adoption from 40% to 96% of teachers through a cohort training model\n- Vetted 180 apps for student data privacy, executing data agreements under COPPA and FERPA\n- Reduced Chromebook downtime 40% with a student help desk program at 6 high schools\n- Manage a $1.2M annual edtech budget and app licensing for the district"
+        },
+        {
+          "company": "Boise Valley Middle School",
+          "role": "Technology Integration Coach",
+          "location": "Boise, ID",
+          "startDate": "2018-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Coached 60 teachers to integrate Google Workspace, Pear Deck and Kami\n- Led the shift to remote learning in 2020 with 25 training webinars\n- Created a library of 80 how-to videos for teachers and families"
+        },
+        {
+          "company": "Moscow School District",
+          "role": "Student Teacher, Algebra I",
+          "location": "Moscow, ID",
+          "startDate": "2016-01",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Taught 3 sections of Algebra I with Google Classroom and Desmos\n- Created video lessons for absent students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boise State University",
+          "degree": "Master of Educational Technology",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "University of Idaho",
+          "degree": "Bachelor of Science in Secondary Education, Mathematics",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Platforms: Canvas, Google Workspace for Education, GoGuardian, Clever, Pear Deck",
+        "Administration: Google Admin console, Chromebook management, SSO, rostering",
+        "Compliance: FERPA, COPPA, student data privacy agreements, accessibility",
+        "Certifications: Google for Education Certified Trainer, ISTE Certified Educator, Canvas Certified Educator"
+      ]
+    },
+    "eLearning Developer": {
+      "summary": "eLearning developer with 5 years building interactive courses for healthcare and financial services clients. Developed 90+ SCORM and xAPI modules with 4.6/5 learner ratings. Brings Articulate Storyline JavaScript triggers, accessible design and rapid development from storyboard to LMS.",
+      "experience": [
+        {
+          "company": "Vantage Learning Studio",
+          "role": "eLearning Developer",
+          "location": "Remote",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build 20–25 Storyline and Rise courses a year for hospital and bank clients from designer storyboards\n- Develop custom JavaScript and xAPI interactions, tracking learner choices in a Learning Record Store\n- Meet WCAG 2.1 AA with screen-reader testing, keyboard navigation and captions on every course\n- Cut average build time from 6 to 4 weeks with a reusable component library\n- Test courses in SCORM Cloud and the client LMS, resolving 95% of launch defects before release"
+        },
+        {
+          "company": "Silverline Health Network",
+          "role": "eLearning Specialist",
+          "location": "Nashville, TN",
+          "startDate": "2021-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Converted 30 instructor-led clinical courses into eLearning in Cornerstone\n- Produced 50 microlearning videos in Camtasia for new EHR workflows\n- Recorded voice-over and edited audio for 40 modules"
+        },
+        {
+          "company": "MTSU Learning, Teaching and Innovative Technologies Center",
+          "role": "Student Media Assistant",
+          "location": "Murfreesboro, TN",
+          "startDate": "2018-08",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Edited lecture videos and added captions for 40 online courses\n- Built H5P interactive quizzes for faculty"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "Bachelor of Science in Media Arts, Interactive Media",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Clinical Escalation Simulator",
+          "link": "github.com/eldev-sim/clinical-escalation",
+          "description": "Branching Storyline scenario with xAPI tracking that lets nurses practice SBAR escalation decisions"
+        }
+      ],
+      "skills": [
+        "Development: Articulate Storyline 360, Rise 360, Adobe Captivate, JavaScript, HTML/CSS",
+        "Standards: SCORM 1.2 and 2004, xAPI, cmi5, WCAG 2.1 AA",
+        "Media: Camtasia, Vyond, Adobe Premiere Pro, Audition",
+        "Platforms: Cornerstone, Docebo, SCORM Cloud"
+      ]
+    },
+    "Youth Program Coordinator": {
+      "summary": "Youth program coordinator with 4 years running after-school and summer programs for ages 8–16. Grew average daily attendance from 45 to 110 youth and secured $180K in new grant funding. Brings activity planning, staff and volunteer supervision, and safe, welcoming spaces for young people.",
+      "experience": [
+        {
+          "company": "Eastside Community Youth Center",
+          "role": "Youth Program Coordinator",
+          "location": "Detroit, MI",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run after-school and summer programs for 110 youth a day with 8 part-time staff and 20 volunteers\n- Grew average daily attendance from 45 to 110 with STEM clubs, sports leagues and a teen leadership council\n- Wrote grants securing $180K from 21st Century Community Learning Centers and local foundations\n- Track outcomes in Apricot, reporting attendance, school-day grades and SEL survey gains to funders\n- Recruit, screen and schedule 20 volunteers a term, including college mentors and local professionals"
+        },
+        {
+          "company": "Great Lakes Youth Club",
+          "role": "Youth Development Professional",
+          "location": "Dearborn, MI",
+          "startDate": "2021-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Led homework help and recreation for 40 youth a day\n- Planned a summer field trip series for 120 participants\n- Supervised daily snack and safety procedures for youth"
+        },
+        {
+          "company": "Detroit Parks and Recreation",
+          "role": "Recreation Aide",
+          "location": "Detroit, MI",
+          "startDate": "2018-06",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Supervised summer day camp groups of 20 children\n- Organized sports tournaments and field days"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wayne State University",
+          "degree": "Bachelor of Social Work",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Programming: after-school, summer camp, STEM clubs, social-emotional learning, youth leadership",
+        "Operations: staff and volunteer supervision, budgets, scheduling, family communication",
+        "Data and funding: Apricot, grant writing, outcome reporting",
+        "Certifications: Youth Mental Health First Aid, CPR and First Aid, Michigan child care background clearance"
+      ]
+    },
+    "Student Teacher": {
+      "summary": "Elementary education senior completing a full-year residency in a 2nd grade classroom, with 600+ hours of supervised teaching. Planned and led a 3-week independent teaching unit that raised students' fluency benchmark rate from 55% to 70%. Brings structured literacy training, bilingual Spanish skills and steady classroom routines.",
+      "experience": [
+        {
+          "company": "Willow Creek Elementary School",
+          "role": "Student Teacher, 2nd Grade",
+          "location": "Austin, TX",
+          "startDate": "2025-08",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Co-taught 22 second graders alongside a mentor teacher, taking full responsibility for 3 weeks of instruction\n- Designed a phonics and fluency unit with decodable texts, raising DIBELS 8 fluency benchmark rate from 55% to 70%\n- Led daily guided math groups for 6 students below grade level using CRA manipulatives\n- Wrote bilingual weekly newsletters for families, with 18 of 22 families responding to conference invitations\n- Collaborated with the campus special education teacher to adapt lessons for 2 students with IEPs"
+        },
+        {
+          "company": "Austin Parks and Recreation",
+          "role": "Summer Camp Counselor",
+          "location": "Austin, TX",
+          "startDate": "2023-06",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Supervised groups of 15 campers ages 6–9 and planned daily literacy and STEM activities\n- Trained 8 junior counselors on behavior expectations and transitions\n- Planned a science-themed summer week attended by 45 campers"
+        }
+      ],
+      "education": [
+        {
+          "school": "The University of Texas at Austin",
+          "degree": "Bachelor of Science in Applied Learning and Development, EC–6 Bilingual Generalist",
+          "startDate": "2022-08",
+          "endDate": "2026-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Fluency Unit: Animal Habitats",
+          "link": "",
+          "description": "Three-week integrated literacy and science unit with decodable passages, repeated reading charts and a family read-aloud night"
+        }
+      ],
+      "skills": [
+        "Instruction: lesson planning, structured literacy, guided math, classroom routines",
+        "Assessment: DIBELS 8, running records, exit tickets",
+        "Technology: Seesaw, Google Classroom, Nearpod",
+        "Certifications: Texas Educator Certificate (Core Subjects EC–6, Bilingual Spanish) – TExES passed, CPR",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Kindergarten Teacher": {
+      "summary": "Kindergarten teacher with 6 years in a public elementary school, teaching classes of 22–24 five-year-olds. Raised the share of students meeting end-of-year letter-sound benchmarks from 68% to 91%. Brings play-based literacy, social-emotional routines and warm, consistent communication with families.",
+      "experience": [
+        {
+          "company": "Brookhaven Elementary School",
+          "role": "Kindergarten Teacher",
+          "location": "Charlotte, NC",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach a class of 23 kindergartners, including 5 multilingual learners and 2 students with IEPs\n- Implemented UFLI Foundations phonics, raising end-of-year letter-sound benchmark mastery from 68% to 91%\n- Built Conscious Discipline routines that cut classroom behavior referrals by half\n- Lead kindergarten registration and screening for 120 incoming students each spring\n- Partner with the school speech-language pathologist on language-rich centers for 6 students"
+        },
+        {
+          "company": "Mallard Creek Elementary",
+          "role": "Kindergarten Teacher",
+          "location": "Charlotte, NC",
+          "startDate": "2020-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught kindergarten in hybrid and remote formats using Seesaw\n- Kept 95% family engagement with daily video lessons and weekly calls\n- Assessed 23 students three times a year on early literacy screening"
+        },
+        {
+          "company": "Mallard Creek Elementary",
+          "role": "Student Teacher, Kindergarten",
+          "location": "Charlotte, NC",
+          "startDate": "2020-01",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Completed a full-time student teaching semester in a 22-student kindergarten classroom"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Charlotte",
+          "degree": "Bachelor of Arts in Elementary Education",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: phonics (UFLI Foundations), play-based centers, early numeracy, read-alouds",
+        "Social-emotional learning: Conscious Discipline, classroom community, family partnership",
+        "Assessment: mCLASS DIBELS 8, kindergarten entry assessment",
+        "Technology: Seesaw, Class Dojo, PowerSchool",
+        "Licenses: North Carolina Professional Educator License (Elementary K–6)"
+      ]
+    },
+    "Middle School Teacher": {
+      "summary": "Middle school social studies teacher with 8 years in grades 6–8, including 3 as department chair. Students' civics assessment pass rate rose from 64% to 82% under a redesigned curriculum. Brings inquiry-based instruction, advisory leadership and reliable classroom systems for early adolescents.",
+      "experience": [
+        {
+          "company": "Coral Springs Middle School",
+          "role": "Social Studies Teacher and Department Chair",
+          "location": "Fort Lauderdale, FL",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 5 sections of 7th grade civics to 145 students and chair a 7-teacher department\n- Redesigned civics units around primary sources and mock trials, lifting Civics EOC pass rates from 64% to 82%\n- Coach the History Day team, with 9 students advancing to state competition\n- Run a 20-student advisory focused on organization skills and goal setting\n- Mentor 2 new social studies teachers with monthly lesson observations and planning sessions"
+        },
+        {
+          "company": "Pompano Beach Middle School",
+          "role": "6th Grade World Cultures Teacher",
+          "location": "Pompano Beach, FL",
+          "startDate": "2018-08",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Taught 150 students a year and built a cross-curricular geography project with ELA\n- Moved all units to Canvas during 2020 school closures\n- Coached the school's geography bee team"
+        },
+        {
+          "company": "Broward County Public Schools",
+          "role": "Student Teacher, 7th Grade Civics",
+          "location": "Fort Lauderdale, FL",
+          "startDate": "2018-01",
+          "endDate": "2018-05",
+          "isCurrent": false,
+          "description": "- Taught 4 sections of civics under a mentor teacher\n- Designed a mock election unit"
+        }
+      ],
+      "education": [
+        {
+          "school": "Florida Atlantic University",
+          "degree": "Bachelor of Arts in History, Social Science Education",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: inquiry-based learning, primary source analysis, project-based learning, advisory",
+        "Assessment: Florida Civics EOC, common formative assessments, DBQs",
+        "Technology: Canvas, Nearpod, iCivics, Focus SIS",
+        "Certifications: Florida Professional Educator Certificate (Social Science 6–12, Middle Grades Integrated)"
+      ]
+    },
+    "Math Teacher": {
+      "summary": "High school math teacher with 10 years teaching Algebra I through AP Calculus BC. Lifted the Algebra I end-of-course pass rate from 58% to 77% and grew AP Calculus enrollment threefold. Brings standards-aligned instruction, Desmos-based modeling and targeted intervention for struggling learners.",
+      "experience": [
+        {
+          "company": "Riverview High School",
+          "role": "Math Teacher and Algebra I Team Lead",
+          "location": "Richmond, VA",
+          "startDate": "2019-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach Algebra I, Algebra II and AP Calculus BC to 150 students a year\n- Led a 5-teacher Algebra I team that raised SOL pass rates from 58% to 77% using weekly common assessments\n- Grew AP Calculus enrollment from 22 to 68 students while sustaining a 74% pass rate\n- Created a 9th-grade math lab for 40 students a year, recovering 85% of failing first-quarter grades\n- Mentor student teachers from VCU and lead the math honor society chapter"
+        },
+        {
+          "company": "Henrico Middle School",
+          "role": "Math Teacher, Grade 8",
+          "location": "Henrico, VA",
+          "startDate": "2016-08",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Taught 8th grade math and Algebra I to 130 students a year\n- Ran an after-school MATHCOUNTS club with 25 members\n- Taught a summer Algebra I bridge course for 30 rising 9th graders"
+        },
+        {
+          "company": "UVA Math Tutoring Center",
+          "role": "Peer Tutor",
+          "location": "Charlottesville, VA",
+          "startDate": "2013-08",
+          "endDate": "2015-05",
+          "isCurrent": false,
+          "description": "- Tutored 20 students a week in calculus and statistics\n- Led review sessions before exams"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Virginia",
+          "degree": "Master of Teaching, Secondary Mathematics",
+          "startDate": "2015-08",
+          "endDate": "2016-05"
+        },
+        {
+          "school": "University of Virginia",
+          "degree": "Bachelor of Science in Mathematics",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: Algebra I and II, precalculus, AP Calculus AB/BC, modeling, intervention",
+        "Assessment: Virginia SOL, AP Classroom, common assessments",
+        "Technology: Desmos, TI-84, Canvas, Delta Math",
+        "Licenses: Virginia Postgraduate Professional License (Mathematics 6–12)"
+      ]
+    },
+    "English Teacher": {
+      "summary": "High school English teacher with 9 years teaching 10th grade English and AP Language and Composition. Raised the AP Lang pass rate from 49% to 72% and launched a schoolwide writing center. Brings writing workshop pedagogy, rhetorical analysis and inclusive text selection that gets reluctant readers reading.",
+      "experience": [
+        {
+          "company": "Lakeview High School",
+          "role": "English Teacher",
+          "location": "Minneapolis, MN",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 10th grade English and AP Language and Composition to 140 students a year\n- Raised the AP Lang pass rate from 49% to 72% with weekly timed writes and student-led rubric calibration\n- Founded a peer writing center staffed by 18 trained student tutors, logging 900 sessions a year\n- Rebuilt the 10th grade reading list with 6 contemporary titles, doubling independent reading logs\n- Serve on the district ELA curriculum committee selecting texts and writing assessments"
+        },
+        {
+          "company": "Twin Cities Academy",
+          "role": "English Teacher, Grades 9–10",
+          "location": "St. Paul, MN",
+          "startDate": "2017-08",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Taught 9th and 10th grade English to 125 students a year and advised the student newspaper\n- Raised MCA reading proficiency among 10th graders by 8 points\n- Coached 6 students to top-3 placements at state speech and debate"
+        },
+        {
+          "company": "St. Olaf Writing Center",
+          "role": "Writing Tutor",
+          "location": "Northfield, MN",
+          "startDate": "2014-09",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Tutored 12 students a week on essay drafts\n- Trained new tutors on feedback techniques"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "Master of Education, English Education",
+          "startDate": "2016-06",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "St. Olaf College",
+          "degree": "Bachelor of Arts in English",
+          "startDate": "2012-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: writing workshop, rhetorical analysis, literature circles, AP Language and Composition",
+        "Assessment: MCA reading, AP Classroom, rubric calibration, portfolios",
+        "Technology: Schoology, Turnitin, NoRedInk, Google Docs",
+        "Licenses: Minnesota Tier 4 Teaching License (Communication Arts and Literature 5–12)"
+      ]
+    },
+    "ESL Teacher": {
+      "summary": "ESL teacher with 7 years supporting multilingual learners in K–8, serving a caseload of 55 students speaking 11 languages. Raised the share of students exiting EL status annually from 9% to 17%. Brings WIDA-aligned co-teaching, sheltered instruction and strong partnerships with newcomer families.",
+      "experience": [
+        {
+          "company": "Prairie Path School District",
+          "role": "ESL Teacher, Grades 3–8",
+          "location": "Aurora, IL",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve 55 multilingual learners speaking 11 languages through push-in co-teaching and pull-out newcomer groups\n- Raised annual reclassification on WIDA ACCESS from 9% to 17% with targeted academic language instruction\n- Coach 12 content teachers on SIOP strategies and language objectives\n- Lead a family welcome center intake for 80 newcomer families a year with interpreters\n- Translate report cards and lead parent workshops with district interpreters in Spanish and Arabic"
+        },
+        {
+          "company": "Fox Valley Elementary",
+          "role": "ESL Teacher, K–2",
+          "location": "Elgin, IL",
+          "startDate": "2019-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught 40 emergent bilingual students in pull-out and co-taught settings\n- Built a bilingual picture-book lending library of 400 titles in 6 languages\n- Co-taught with 4 classroom teachers using parallel and station teaching models"
+        },
+        {
+          "company": "Prairie Literacy Coalition",
+          "role": "Volunteer ESL Instructor",
+          "location": "Bloomington, IL",
+          "startDate": "2016-09",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Taught adult ESL classes to 15 refugee learners twice a week\n- Helped families enroll children in school"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northern Illinois University",
+          "degree": "Master of Science in Education, Teaching English to Speakers of Other Languages",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Illinois State University",
+          "degree": "Bachelor of Science in Elementary Education",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: SIOP, co-teaching, newcomer support, academic language development, translanguaging",
+        "Assessment: WIDA ACCESS 2.0, WIDA Screener, language proficiency monitoring",
+        "Technology: Imagine Learning, Google Classroom, TalkingPoints",
+        "Licenses: Illinois Professional Educator License (Elementary 1–6), ESL Endorsement, Bilingual Endorsement (Spanish)"
+      ]
+    },
+    "Reading Specialist": {
+      "summary": "Certified reading specialist with 12 years in elementary education, including 5 leading K–5 literacy intervention for a 700-student school. Moved 68% of tier 3 students to grade-level benchmark within a year. Brings Orton-Gillingham intervention, dyslexia screening and teacher coaching rooted in the Science of Reading.",
+      "experience": [
+        {
+          "company": "Oak Meadow Elementary School",
+          "role": "Reading Specialist",
+          "location": "Columbus, OH",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver tier 2 and tier 3 reading intervention to 60 students a year in grades K–5\n- Moved 68% of tier 3 students to grade-level benchmark on Acadience within one year\n- Lead universal dyslexia screening for 700 students under Ohio's dyslexia law and coordinate follow-up assessments\n- Coach 14 classroom teachers on explicit phonics and decodable text routines\n- Lead the school's MTSS reading team and track intervention groups in a shared data dashboard"
+        },
+        {
+          "company": "Brookside Elementary School",
+          "role": "1st Grade Teacher",
+          "location": "Worthington, OH",
+          "startDate": "2014-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught 1st grade for 7 years and served as literacy team lead\n- Grew the class average on the Ohio K–3 diagnostic by 1.2 grade levels a year\n- Led guided reading groups and running records for 25 students a year"
+        },
+        {
+          "company": "Oxford Community Schools",
+          "role": "Reading Tutor",
+          "location": "Oxford, OH",
+          "startDate": "2012-09",
+          "endDate": "2014-05",
+          "isCurrent": false,
+          "description": "- Tutored 8 1st and 2nd graders in phonics twice a week\n- Tracked progress with DIBELS fluency probes"
+        }
+      ],
+      "education": [
+        {
+          "school": "The Ohio State University",
+          "degree": "Master of Education, Reading and Literacy",
+          "startDate": "2016-06",
+          "endDate": "2018-08"
+        },
+        {
+          "school": "Miami University",
+          "degree": "Bachelor of Science in Education, Early Childhood Education",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Intervention: Orton-Gillingham, Wilson Fundations, Heggerty, decodable texts",
+        "Assessment: Acadience Reading, CORE Phonics Survey, dyslexia screening, diagnostic reading assessments",
+        "Coaching: modeling, data meetings, MTSS team leadership",
+        "Licenses: Ohio Professional Teaching License (Early Childhood PK–3), Reading Endorsement K–12",
+        "Certifications: Orton-Gillingham Associate Level (OGA)"
+      ]
+    },
+    "Adjunct Professor": {
+      "summary": "Adjunct professor of business with 6 years teaching undergraduate marketing at two universities alongside 8 years as a brand strategist. Teaches 4 sections a year with average evaluations of 4.7 out of 5. Brings current industry case studies, client-based student projects and flexible online and in-person delivery.",
+      "experience": [
+        {
+          "company": "Lakefront University",
+          "role": "Adjunct Professor, Department of Marketing",
+          "location": "Chicago, IL",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach Principles of Marketing and Consumer Behavior to 160 undergraduates a year in person and online\n- Built client-based projects with 8 local nonprofits, with 3 student campaigns adopted by the organizations\n- Earned an average 4.7/5 on student evaluations across 22 sections\n- Redesigned the online Principles section in D2L, raising completion from 82% to 93%\n- Hold weekly office hours and advise students on internships and marketing careers"
+        },
+        {
+          "company": "Chicago Metropolitan University",
+          "role": "Adjunct Instructor, School of Business",
+          "location": "Chicago, IL",
+          "startDate": "2020-01",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Taught Digital Marketing to 3 sections of 35 students\n- Graded projects and exams for 105 students per term"
+        },
+        {
+          "company": "Northlake Brand Studio",
+          "role": "Senior Brand Strategist",
+          "location": "Chicago, IL",
+          "startDate": "2016-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Led positioning and research projects for consumer brands with $5M–$80M in revenue\n- Built brand strategies that grew 4 client brands' unaided awareness by 10+ points"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northwestern University, Kellogg School of Management",
+          "degree": "Master of Business Administration, Marketing",
+          "startDate": "2014-09",
+          "endDate": "2016-06"
+        },
+        {
+          "school": "Indiana University Bloomington",
+          "degree": "Bachelor of Science in Business, Marketing",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Teaching: course design, case method, client projects, online and hybrid instruction",
+        "Marketing: brand strategy, consumer research, digital marketing, analytics",
+        "Platforms: D2L Brightspace, Canvas, Zoom, Qualtrics",
+        "Professional: industry partnerships, guest speaker programming"
+      ]
+    },
+    "Registrar": {
+      "summary": "University registrar with 14 years in academic records and enrollment services, now leading a 16-person office at a 12,000-student public university. Led a Banner to Workday Student migration with zero lost records. Brings FERPA expertise, degree-audit automation and policy leadership with faculty governance.",
+      "experience": [
+        {
+          "company": "Cascadia State University",
+          "role": "University Registrar",
+          "location": "Bellingham, WA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 16-person office handling registration, records, transcripts, graduation and course scheduling for 12,000 students\n- Co-led the migration from Banner to Workday Student, converting 410,000 academic histories with zero lost records\n- Automated degree audits and graduation clearance, cutting diploma processing time from 10 weeks to 3\n- Train 400 faculty and staff on FERPA each year and manage data requests from IPEDS and the state\n- Lead the curriculum committee's catalog review and course inventory process each year"
+        },
+        {
+          "company": "Commencement Bay University",
+          "role": "Associate Registrar",
+          "location": "Tacoma, WA",
+          "startDate": "2016-07",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Managed registration and catalog operations, launching an online course catalog in Coursedog\n- Reduced transcript turnaround from 5 days to same day through electronic transcripts via Parchment\n- Built enrollment reports for academic departments each term"
+        },
+        {
+          "company": "Commencement Bay University",
+          "role": "Records Specialist",
+          "location": "Tacoma, WA",
+          "startDate": "2012-08",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Processed transfer credit evaluations and enrollment verifications for 2,000 students a term"
+        }
+      ],
+      "education": [
+        {
+          "school": "Western Washington University",
+          "degree": "Master of Education, Higher Education Leadership",
+          "startDate": "2014-09",
+          "endDate": "2016-06"
+        },
+        {
+          "school": "University of Washington Tacoma",
+          "degree": "Bachelor of Arts in Business Administration",
+          "startDate": "2008-09",
+          "endDate": "2012-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Records: academic records, registration, degree audit, graduation, transfer credit, transcripts",
+        "Systems: Workday Student, Ellucian Banner, Coursedog, Parchment, Argos",
+        "Compliance: FERPA, IPEDS reporting, NCAA eligibility certification, veterans certification",
+        "Leadership: staff management, policy development, change management",
+        "Memberships: AACRAO"
+      ]
+    },
+    "School Superintendent": {
+      "summary": "School superintendent with 24 years in public education, leading a 14,500-student district with 1,900 staff and a $210M budget. Raised the four-year graduation rate from 81% to 91% and passed a $145M bond with 63% voter approval. Brings strategic planning, board relations and fiscal stewardship.",
+      "experience": [
+        {
+          "company": "Cedar Valley Community School District",
+          "role": "Superintendent",
+          "location": "Cedar Rapids, IA",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 14,500-student district with 22 schools, 1,900 staff and a $210M annual budget, reporting to a 7-member board\n- Raised the four-year graduation rate from 81% to 91% through 9th-grade academies and career pathways\n- Led a community campaign that passed a $145M facilities bond with 63% approval\n- Closed a $6M structural deficit in 2 years without school closures while raising teacher pay 9%\n- Partner with city and county leaders on a pre-K expansion adding 400 seats"
+        },
+        {
+          "company": "Prairie Hills School District",
+          "role": "Assistant Superintendent for Teaching and Learning",
+          "location": "Ames, IA",
+          "startDate": "2015-07",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Oversaw curriculum, assessment and professional learning for 9,000 students\n- Implemented MTSS district-wide, cutting the reading proficiency gap for low-income students by 11 points\n- Led strategic plan development with 60 community stakeholders"
+        },
+        {
+          "company": "Prairie Hills School District",
+          "role": "High School Principal and Teacher",
+          "location": "Ames, IA",
+          "startDate": "2002-08",
+          "endDate": "2015-06",
+          "isCurrent": false,
+          "description": "- Served as science teacher, assistant principal and principal of a 1,300-student high school"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Iowa",
+          "degree": "Doctor of Education (EdD), Educational Leadership",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "Iowa State University",
+          "degree": "Master of Education, Educational Administration",
+          "startDate": "2005-06",
+          "endDate": "2008-05"
+        },
+        {
+          "school": "University of Northern Iowa",
+          "degree": "Bachelor of Arts in Science Education",
+          "startDate": "1998-08",
+          "endDate": "2002-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: strategic planning, board governance, community engagement, labor relations",
+        "Finance: budget development, bond referendums, state school finance, capital planning",
+        "Instruction: MTSS, career and technical education, assessment strategy, equity initiatives",
+        "Licenses: Iowa Superintendent/AEA Administrator License, Iowa Evaluator License"
+      ]
+    }
+  }
+}

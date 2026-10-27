@@ -72,7 +72,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-x-7 gap-y-1.5 text-[13.5px] text-zinc-300">
                         {contacts.map((entry) => (
-                            <ContactItem key={entry.key} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent-light)" />
+                            <ContactItem key={entry.id} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent-light)" />
                         ))}
                     </div>
                 )}

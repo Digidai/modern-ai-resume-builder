@@ -21,6 +21,7 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'location',
   'website',
   'linkedin',
+  'links',
   'summary',
   'experience',
   'education',
@@ -59,6 +60,8 @@ const isValidResumeData = (data: unknown): data is Partial<ResumeData> => {
 const mergeResumeData = (data: Partial<ResumeData>): ResumeData => ({
   ...INITIAL_RESUME_DATA,
   ...data,
+  // Saved resumes from before links existed have none; don't show the sample's links in them.
+  links: Array.isArray(data.links) ? data.links : [],
   design: sanitizeDesign(data.design),
 });
 
@@ -80,6 +83,7 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
     case 'linkedin':
     case 'summary':
       return typeof value === 'string';
+    case 'links':
     case 'experience':
     case 'education':
     case 'skills':

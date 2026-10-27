@@ -28,7 +28,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <ul className="mt-3.5 flex flex-wrap gap-x-6 gap-y-1 text-[13px] text-stone-600 leading-snug">
                         {contacts.map((entry) => (
-                            <li key={entry.key} className="min-w-0 max-w-full">
+                            <li key={entry.id} className="min-w-0 max-w-full">
                                 <ContactLink entry={entry} className="wrap-anywhere" />
                             </li>
                         ))}

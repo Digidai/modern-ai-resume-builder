@@ -1,0 +1,1226 @@
+{
+  "family": "Government & Public Service",
+  "guide": {
+    "focus": "the programs, policies and public services you delivered, the budgets and rules you worked within, and the measurable outcomes for residents",
+    "skills": [
+      "Policy analysis",
+      "Program evaluation",
+      "Budget development",
+      "Regulatory compliance",
+      "Stakeholder and community engagement",
+      "Grant administration",
+      "Data analysis (Excel, Tableau, ArcGIS)",
+      "Briefing and plain-language writing",
+      "Public procurement (FAR or state code)",
+      "Interagency coordination"
+    ],
+    "sections": [
+      "Summary",
+      "Experience",
+      "Education",
+      "Skills",
+      "Certifications"
+    ],
+    "metrics": [
+      "residents served",
+      "budget managed",
+      "processing time",
+      "compliance rate",
+      "cost savings",
+      "response time"
+    ],
+    "bullets": [
+      "Cut average permit review time from 42 to 19 days by redesigning intake and adding online plan submission",
+      "Wrote the fiscal analysis for a $38M affordable housing bond approved by 61% of voters",
+      "Coordinated 14 agencies through a FEMA-funded hazard mitigation plan update adopted on schedule"
+    ],
+    "tips": [
+      "For federal roles on USAJOBS, list hours per week, GS grade and exact dates for each role, and mirror the specialized-experience wording in the announcement.",
+      "Name the laws, programs and funding streams you worked with (for example CDBG, FEMA BRIC, the FAR or the state open meetings act).",
+      "Quantify public impact in residents served, dollars managed or days saved rather than describing duties."
+    ],
+    "templates": [
+      "classic",
+      "meridian",
+      "ivy"
+    ]
+  },
+  "titles": {
+    "Policy Intern": {
+      "summary": "Master of Public Policy candidate with internship experience in state and city government, focused on housing and labor policy. Drafted a rent-burden brief cited in a 2026 city council hearing. Brings quantitative analysis in Stata and R, clear memo writing and comfort working on deadline for elected officials.",
+      "experience": [
+        {
+          "company": "Illinois Department of Labor",
+          "role": "Graduate Policy Fellow (part-time)",
+          "location": "Chicago, IL",
+          "startDate": "2025-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cleaned and analyzed 5 years of wage-claim data to identify industries with the highest repeat violations\n- Built a Tableau dashboard that the enforcement unit now uses in weekly case prioritization\n- Drafted a 6-page memo comparing state wage-theft penalties across 10 states for the division director"
+        },
+        {
+          "company": "City of Lakeshore Park, Office of the Mayor",
+          "role": "Policy Intern, Housing and Economic Development",
+          "location": "Lakeshore Park, IL",
+          "startDate": "2026-06",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Analyzed American Community Survey data on rent burden across 32 neighborhoods and drafted a brief cited at a council hearing\n- Compiled a 12-city scan of right-to-counsel eviction programs, including costs and outcomes\n- Wrote 8 two-page briefing memos for senior advisors ahead of stakeholder meetings"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Chicago, Harris School of Public Policy",
+          "degree": "Master of Public Policy (expected June 2027)",
+          "startDate": "2025-09",
+          "endDate": "2027-06"
+        },
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "B.A. Economics and Political Science",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Eviction Filing Trends in Cook County",
+          "link": "",
+          "description": "Capstone analysis of 90,000 court filings linking eviction spikes to rent changes; presented to a housing advocacy coalition"
+        }
+      ],
+      "skills": [
+        "Analysis: Stata, R, Excel, Tableau, regression and difference-in-differences",
+        "Data sources: ACS, BLS QCEW, HUD CHAS, court records",
+        "Writing: policy memos, briefing books, testimony summaries",
+        "Coursework: Public Finance, Program Evaluation, Urban Economics",
+        "Tools: Python (pandas), ArcGIS Online, Qualtrics, Microsoft Office"
+      ]
+    },
+    "Policy Analyst": {
+      "summary": "Policy analyst with five years in state government analyzing health and human services legislation. Produced 60+ bill analyses and the cost model behind a Medicaid postpartum coverage extension funded in the 2025 budget. Brings fiscal modeling, nonpartisan writing and the ability to turn complex data into decisions for legislators.",
+      "experience": [
+        {
+          "company": "Colorado Legislative Research Office",
+          "role": "Policy Analyst, Health and Human Services",
+          "location": "Denver, CO",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Write nonpartisan analyses for 60+ health and human services bills across three legislative sessions\n- Built the cost model for a proposed 12-month Medicaid postpartum coverage extension, projected at $9.4M a year and adopted in the 2025 budget\n- Brief committee members and staff on deadline, often turning requests around within 24 hours\n- Developed an Excel caseload projection template now used by 4 analysts\n- Staff 2 interim legislative committees, preparing agendas, background papers and post-hearing summaries"
+        },
+        {
+          "company": "Front Range Fiscal Policy Center",
+          "role": "Research Associate",
+          "location": "Denver, CO",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Analyzed SNAP and TANF participation data for 64 counties to support 3 published reports\n- Wrote 20 blog posts and fact sheets translating budget proposals for community partners\n- Presented findings at 12 community forums and coalition meetings across the state"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Denver, Josef Korbel School",
+          "degree": "M.A. Public Policy",
+          "startDate": "2019-09",
+          "endDate": "2021-06"
+        },
+        {
+          "school": "Colorado State University",
+          "degree": "B.A. Political Science",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Policy areas: Medicaid, CHIP, SNAP, TANF, behavioral health financing",
+        "Analysis: fiscal notes, caseload forecasting, Excel modeling, Stata, Tableau",
+        "Writing: bill analyses, issue briefs, committee memos",
+        "Process: legislative calendar, rulemaking, stakeholder interviews",
+        "Data sources: Medicaid MMIS extracts, ACS, CMS waiver documents, state budget books"
+      ]
+    },
+    "Senior Policy Analyst": {
+      "summary": "Senior policy analyst with ten years in federal and think-tank environmental policy, specializing in clean energy incentives and grid regulation. Led the analysis informing a DOE grant program that awarded $1.2B to states. Brings rigorous economic analysis, rulemaking experience and the judgment to brief senior officials on contested issues.",
+      "experience": [
+        {
+          "company": "U.S. Department of Energy, Office of Policy",
+          "role": "Senior Policy Analyst (GS-14)",
+          "location": "Washington, DC",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led the eligibility and allocation analysis for a $1.2B state grid resilience formula program\n- Drafted 3 sections of a notice of funding opportunity and reviewed 400+ public comments in a multi-office team\n- Brief Deputy Assistant Secretaries monthly on transmission permitting and interconnection queue data\n- Mentor 2 analysts and manage a $600k contract with a national laboratory for modeling support\n- Coordinated interagency comments with EPA and FERC staff on 2 proposed rules"
+        },
+        {
+          "company": "Potomac Energy Policy Institute",
+          "role": "Policy Analyst",
+          "location": "Washington, DC",
+          "startDate": "2018-08",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Published 9 reports on state renewable portfolio standards, cited in 2 FERC proceedings\n- Testified before 3 state legislative committees on community solar program design\n- Built an open dataset of 50 state interconnection rules used by 3 utility commissions"
+        },
+        {
+          "company": "Maryland Public Service Commission",
+          "role": "Regulatory Economist",
+          "location": "Baltimore, MD",
+          "startDate": "2016-06",
+          "endDate": "2018-07",
+          "isCurrent": false,
+          "description": "- Reviewed utility rate case filings and wrote testimony on cost allocation for 4 proceedings\n- Built a cost allocation model in Excel used in 2 later rate cases"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgetown University, McCourt School of Public Policy",
+          "degree": "Master of Public Policy",
+          "startDate": "2014-09",
+          "endDate": "2016-05"
+        },
+        {
+          "school": "University of Virginia",
+          "degree": "B.A. Economics",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Policy: energy regulation, federal grant design, transmission and interconnection, IRA incentives",
+        "Analysis: benefit-cost analysis, Python, Stata, Excel, regulatory impact analysis",
+        "Process: APA rulemaking, NOFO development, interagency clearance",
+        "Communication: senior briefings, congressional testimony support, technical reports",
+        "Clearance: Public Trust (Tier 4)"
+      ]
+    },
+    "Policy Advisor": {
+      "summary": "Policy advisor with eight years in city and state executive offices advising elected leaders on public safety and criminal justice. Designed a co-responder program now covering all 9 police districts with 22% fewer repeat crisis calls. Brings coalition building, policy design and trusted, discreet counsel under political pressure.",
+      "experience": [
+        {
+          "company": "Office of the Mayor, City of Harborview",
+          "role": "Senior Policy Advisor, Public Safety",
+          "location": "Harborview, PA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Advise the Mayor and Chief of Staff on public safety policy, preparing 150+ decision memos and briefings a year\n- Designed and launched a behavioral health co-responder program across 9 districts, reducing repeat crisis calls by 22%\n- Negotiated program terms with police, the behavioral health department and 3 unions\n- Secured $7.5M in state and federal funding, including a DOJ COPS grant\n- Built a quarterly public safety dashboard with the police department and the city's data office"
+        },
+        {
+          "company": "Pennsylvania Governor's Policy Office",
+          "role": "Policy Specialist, Criminal Justice",
+          "location": "Harrisburg, PA",
+          "startDate": "2018-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Staffed the reentry council and drafted an executive order expanding ID access for 18,000 returning citizens a year\n- Tracked 70+ bills a session and prepared position recommendations for the Governor\n- Coordinated 6 listening sessions with 400 residents and justice-involved families"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Pennsylvania, Fels Institute of Government",
+          "degree": "Master of Public Administration",
+          "startDate": "2016-09",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "Temple University",
+          "degree": "B.A. Criminal Justice",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Policy: public safety, reentry, behavioral health crisis response, violence prevention",
+        "Advising: decision memos, talking points, executive orders, legislative strategy",
+        "Engagement: union and community negotiations, coalition management",
+        "Funding: DOJ, BJA and state grant applications",
+        "Data: Excel, Tableau, crime and calls-for-service analysis, program evaluation design"
+      ]
+    },
+    "Legislative Assistant": {
+      "summary": "Legislative assistant with three years in a U.S. House office covering agriculture, environment and veterans' issues. Drafted two bills introduced in the 118th and 119th Congresses, one added to the farm bill markup. Brings fast research, constituent-focused writing and strong relationships with committee staff.",
+      "experience": [
+        {
+          "company": "Office of a U.S. Representative (Midwest district)",
+          "role": "Legislative Assistant",
+          "location": "Washington, DC",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cover agriculture, environment and veterans' affairs, preparing the Member for 2 committee hearings a month\n- Drafted 2 bills with Legislative Counsel, including a conservation easement provision included in the farm bill markup\n- Write 40+ constituent response letters a week and cut the correspondence backlog from 900 to under 100\n- Staff meetings with 15–20 advocacy groups and agencies a month and summarize asks for the Legislative Director\n- Prepared appropriations request packages for 14 district projects totaling $22M"
+        },
+        {
+          "company": "Office of a U.S. Representative (Midwest district)",
+          "role": "Staff Assistant",
+          "location": "Washington, DC",
+          "startDate": "2023-06",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Managed front-office operations, tours and 200+ weekly constituent calls\n- Logged constituent views in IQ, enabling weekly issue-trend reports\n- Drafted 30 constituent letters a week from approved templates"
+        },
+        {
+          "company": "Iowa General Assembly",
+          "role": "Legislative Intern",
+          "location": "Des Moines, IA",
+          "startDate": "2022-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Tracked 60 bills through committee and wrote daily status summaries for caucus staff\n- Researched constituent questions on property tax and farm programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Iowa",
+          "degree": "B.A. Political Science, minor in Environmental Policy",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Legislative: bill drafting with Legislative Counsel, appropriations requests, Congressional Record research",
+        "Issue areas: agriculture, conservation programs, VA benefits",
+        "Tools: Congress.gov, CRS reports, IQ constituent management, Quorum",
+        "Writing: memos, floor statements, constituent correspondence",
+        "Communication: hearing memos, one-pagers, social media drafts for the communications director"
+      ]
+    },
+    "Legislative Director": {
+      "summary": "Legislative director with 12 years on Capitol Hill, leading a Senate office's legislative agenda across health, tax and technology. Shepherded 6 bills into law, including a rural broadband provision funded at $500M. Brings legislative strategy, negotiation across party lines and management of a 6-person policy team.",
+      "experience": [
+        {
+          "company": "Office of a U.S. Senator (Mountain West state)",
+          "role": "Legislative Director",
+          "location": "Washington, DC",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 6-person legislative team and set the Senator's agenda across 3 committee assignments\n- Moved 6 bills into law, including a rural broadband provision funded at $500M in appropriations\n- Negotiated bipartisan cosponsorship with 12 offices on a telehealth extension package\n- Manage $40M+ in annual Congressionally Directed Spending requests for state projects\n- Hire and coach legislative staff, promoting 3 assistants to counsel or legislative assistant roles"
+        },
+        {
+          "company": "Senate Committee on Commerce, Science, and Transportation",
+          "role": "Professional Staff Member",
+          "location": "Washington, DC",
+          "startDate": "2017-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Organized 14 hearings on spectrum policy and drafted portions of 2 enacted reauthorizations\n- Coordinated technical assistance with the FCC and NTIA on bill text\n- Briefed the Chair before 30 member meetings with industry, tribal and consumer groups"
+        },
+        {
+          "company": "Office of a U.S. Representative (Southwest district)",
+          "role": "Legislative Assistant",
+          "location": "Washington, DC",
+          "startDate": "2014-08",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Covered health and tribal affairs and drafted 4 introduced bills\n- Prepared the Member for 2 committee markups and 40 stakeholder meetings"
+        }
+      ],
+      "education": [
+        {
+          "school": "The George Washington University",
+          "degree": "M.A. Legislative Affairs",
+          "startDate": "2015-09",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "University of New Mexico",
+          "degree": "B.A. Political Science",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Legislative: agenda setting, floor and markup strategy, appropriations, conference negotiations",
+        "Policy: telecom, rural health, tax extenders, tribal programs",
+        "Leadership: staff management, hiring, coordination with state office",
+        "Relationships: committee staff, leadership offices, federal agencies, stakeholder coalitions",
+        "Writing: bill text review, Dear Colleague letters, floor statements, conference reports"
+      ]
+    },
+    "City Planner": {
+      "summary": "City planner with five years in long-range and current planning for a growing mid-size city. Managed the zoning code update that legalized duplexes citywide and has enabled 340 new units since adoption. Brings land-use analysis, community engagement, staff reports and AICP certification.",
+      "experience": [
+        {
+          "company": "City of Cedar Bluff Planning and Development Services",
+          "role": "Associate Planner",
+          "location": "Cedar Bluff, ID",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Managed outreach and drafting for a zoning code rewrite that legalized duplexes citywide, enabling 340 new units since 2024\n- Review 80+ land-use applications a year and present staff reports to the Planning and Zoning Commission\n- Ran 25 neighborhood workshops and an online survey with 4,200 responses\n- Built ArcGIS dashboards tracking housing permits against comprehensive plan targets\n- Drafted 3 code amendments on parking minimums and tree preservation adopted by City Council"
+        },
+        {
+          "company": "Snake River Regional Planning Council",
+          "role": "Planning Technician",
+          "location": "Meridian, ID",
+          "startDate": "2021-01",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Maintained parcel and land-use GIS layers for 6 member jurisdictions\n- Prepared demographic profiles for 3 corridor studies\n- Answered 40 zoning questions a week at the public counter and by phone"
+        }
+      ],
+      "education": [
+        {
+          "school": "Portland State University",
+          "degree": "Master of Urban and Regional Planning",
+          "startDate": "2019-09",
+          "endDate": "2021-06"
+        },
+        {
+          "school": "Boise State University",
+          "degree": "B.A. Geography",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Station-Area Plan Studio",
+          "link": "",
+          "description": "Graduate studio plan for a light rail station area with a 6-person team; recommended zoning changes for 1,800 homes and presented to city staff"
+        }
+      ],
+      "skills": [
+        "Planning: zoning administration, comprehensive plans, site plan review, subdivision regulations",
+        "Analysis: ArcGIS Pro, ArcGIS Online, Census data, housing capacity analysis",
+        "Engagement: public workshops, commission presentations, Spanish-language outreach",
+        "Certifications: AICP",
+        "Codes and law: state land use act, zoning ordinance, ADA, fair housing"
+      ]
+    },
+    "Transportation Planner": {
+      "summary": "Transportation planner with six years at a metropolitan planning organization and a consulting firm, specializing in active transportation and safety. Led the Vision Zero action plan that secured $18M in federal Safe Streets for All funding. Brings travel demand and crash data analysis, grant writing and inclusive public engagement.",
+      "experience": [
+        {
+          "company": "Heartland Metropolitan Planning Council",
+          "role": "Senior Transportation Planner",
+          "location": "Kansas City, MO",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a regional Vision Zero action plan for 9 counties, helping members win $18M in Safe Streets for All grants\n- Analyzed 5 years of crash data to identify a high-injury network covering 6% of roads and 58% of fatalities\n- Manage $2.4M in planning consultant contracts and the bicycle and pedestrian advisory committee\n- Score and program $30M a year in TAP and CMAQ funds through the TIP process\n- Present plan updates to the board of 30 elected officials and 4 technical committees"
+        },
+        {
+          "company": "Crossway Mobility Partners",
+          "role": "Transportation Planner",
+          "location": "Kansas City, MO",
+          "startDate": "2020-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Built corridor models in Synchro and TransCAD for 8 complete-streets studies\n- Ran pop-up engagement events reaching 1,500 residents along a bus rapid transit corridor\n- Wrote 6 grant applications for local clients, 4 of them funded"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kansas",
+          "degree": "Master of Urban Planning",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Safe Routes to School Audit",
+          "link": "",
+          "description": "Graduate project auditing walking routes at 8 elementary schools; findings funded $600k in crosswalk and sidewalk improvements"
+        }
+      ],
+      "skills": [
+        "Planning: Vision Zero, complete streets, transit corridors, MTP and TIP programming",
+        "Analysis: TransCAD, Synchro, ArcGIS Pro, Python, crash data (FARS, state DOT)",
+        "Funding: SS4A, RAISE, CMAQ, TAP, FTA grants",
+        "Certifications: AICP, Road Safety Professional (RSP1)",
+        "Engagement: Spanish-language outreach, virtual open houses, Social Pinpoint"
+      ]
+    },
+    "Planning Director": {
+      "summary": "Planning director with 16 years in municipal planning, leading a 28-person department in a fast-growing suburb of 180,000. Guided adoption of a new comprehensive plan and form-based code that doubled multifamily permits near transit. Brings department leadership, council relations and a track record of streamlining development review.",
+      "experience": [
+        {
+          "company": "City of Sonoran Vista, Planning Division",
+          "role": "Planning Director",
+          "location": "Sonoran Vista, AZ",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 28-person department with a $4.6M budget covering current planning, long-range planning and historic preservation\n- Guided adoption of a comprehensive plan and form-based code that doubled multifamily permits within half a mile of transit\n- Cut median development review time from 11 to 6 weeks by adding concurrent review and Accela online submittals\n- Present 60+ items a year to City Council and the Planning and Zoning Commission\n- Coach 5 division managers and launched a planner career ladder that cut turnover from 22% to 9%"
+        },
+        {
+          "company": "City of Saguaro Springs, Planning Division",
+          "role": "Planning Manager",
+          "location": "Saguaro Springs, AZ",
+          "startDate": "2014-07",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Supervised 9 planners reviewing 400+ cases a year, including 3 master-planned communities\n- Managed a $1.1M light rail station-area plan funded by FTA\n- Wrote the city's first accessory dwelling unit ordinance"
+        },
+        {
+          "company": "Valley Regional Association of Governments",
+          "role": "Regional Planner",
+          "location": "Phoenix, AZ",
+          "startDate": "2010-06",
+          "endDate": "2014-06",
+          "isCurrent": false,
+          "description": "- Prepared socioeconomic projections used in the regional transportation plan for 27 jurisdictions\n- Managed a regional land use database used by 27 jurisdictions"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "Master of Urban and Environmental Planning",
+          "startDate": "2008-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: department management, budget planning, staff development, council relations",
+        "Planning: comprehensive plans, form-based codes, transit-oriented development, historic preservation",
+        "Operations: Accela, process redesign, performance measures",
+        "Certifications: AICP, ICMA Credentialed Manager candidate",
+        "Community engagement: public hearings, neighborhood meetings, developer roundtables"
+      ]
+    },
+    "Budget Analyst": {
+      "summary": "Budget analyst with five years in county government developing operating and capital budgets. Manages a $310M portfolio covering public safety and courts, and built the forecast model that flagged a $6M overtime overrun early. Brings governmental accounting, forecasting and clear budget documents for elected officials.",
+      "experience": [
+        {
+          "company": "Prairie Lake County Budget and Finance",
+          "role": "Budget Analyst II",
+          "location": "Prairie Lake, MN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Develop and monitor $310M in operating budgets for the Sheriff's Office, courts and public defender\n- Built a monthly overtime forecast that flagged a $6M overrun in Q1, allowing corrective staffing plans\n- Wrote 5 sections of the county's GFOA award-winning budget book\n- Reviewed 40 capital project requests totaling $95M and scored them against the 5-year CIP criteria\n- Train 20 department finance staff a year on budget submissions and position control"
+        },
+        {
+          "company": "City of Riverbend, Office of Financial Services",
+          "role": "Budget Technician",
+          "location": "Riverbend, MN",
+          "startDate": "2021-01",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Reconciled 1,200 budget lines in Infor each month and prepared variance reports for 8 departments\n- Tracked $22M in ARPA allocations to meet Treasury reporting deadlines\n- Prepared 12 monthly budget-to-actual reports for the finance director"
+        },
+        {
+          "company": "Minnesota House Fiscal Analysis Department",
+          "role": "Graduate Fiscal Intern",
+          "location": "St. Paul, MN",
+          "startDate": "2020-06",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Updated fiscal note data for 25 bills during a special session\n- Built a revenue tracking spreadsheet for the education finance committee"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota, Humphrey School of Public Affairs",
+          "degree": "Master of Public Policy",
+          "startDate": "2019-09",
+          "endDate": "2021-05"
+        },
+        {
+          "school": "University of Wisconsin–Eau Claire",
+          "degree": "B.A. Economics",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Budgeting: operating and capital budgets, CIP, position control, variance analysis",
+        "Accounting: GASB standards, fund accounting, ARPA and grant reporting",
+        "Tools: Excel (Power Query), Workday Adaptive Planning, Infor, Tableau",
+        "Communication: budget books, board presentations, department training",
+        "Certifications: Certified Government Financial Manager (CGFM) candidate"
+      ]
+    },
+    "Management Analyst": {
+      "summary": "Management analyst with six years improving operations in city government, focused on performance measurement and process redesign. Led a 311 redesign that cut pothole response time from 9 to 3 days. Brings Lean Six Sigma methods, data analysis and practical change management with frontline staff.",
+      "experience": [
+        {
+          "company": "City of Mission Hills, Office of Innovation",
+          "role": "Senior Management Analyst",
+          "location": "Mission Hills, TX",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned 311 work-order routing with Public Works, cutting average pothole repair time from 9 to 3 days\n- Lead 4 Lean process improvement projects a year, saving 11,000 staff hours annually\n- Built a Power BI performance dashboard with 45 KPIs reviewed monthly by the City Manager\n- Conducted an organizational study of the permitting division that led to 6 reallocated positions\n- Facilitate quarterly performance reviews with 12 department directors and track action items"
+        },
+        {
+          "company": "Alamo Valley County Office of the County Manager",
+          "role": "Management Analyst",
+          "location": "Mission Hills, TX",
+          "startDate": "2020-01",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Analyzed jail staffing and booking data, supporting a schedule change that cut overtime by 18%\n- Wrote 15 commissioners court briefing reports on operational issues\n- Surveyed 600 county employees and summarized findings for the County Manager"
+        },
+        {
+          "company": "City of Mission Hills, City Manager's Office",
+          "role": "Local Government Management Fellow",
+          "location": "Mission Hills, TX",
+          "startDate": "2019-06",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Rotated through budget, public works and HR, completing 3 operational studies\n- Analyzed fleet utilization data that supported retiring 18 underused vehicles"
+        }
+      ],
+      "education": [
+        {
+          "school": "The University of Texas at San Antonio",
+          "degree": "Master of Public Administration",
+          "startDate": "2017-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: Lean Six Sigma, process mapping, organizational studies, performance management",
+        "Data: Power BI, Excel, SQL basics, survey design",
+        "Domains: 311 operations, permitting, public works, corrections staffing",
+        "Certifications: Lean Six Sigma Green Belt, Certified Public Manager (CPM)",
+        "Facilitation: kaizen events, stakeholder workshops, executive presentations"
+      ]
+    },
+    "Program Analyst": {
+      "summary": "Federal program analyst with seven years evaluating and monitoring grant programs at HHS. Oversees performance data for a $240M grant portfolio across 52 grantees and led the evaluation that reshaped funding criteria. Brings GPRA and Evidence Act reporting, program evaluation and clear findings for senior leadership.",
+      "experience": [
+        {
+          "company": "U.S. Department of Health and Human Services, HRSA",
+          "role": "Program Analyst (GS-13)",
+          "location": "Rockville, MD",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Monitor performance for a $240M maternal health grant portfolio covering 52 state and tribal grantees\n- Led an outcome evaluation that revised NOFO scoring criteria, increasing funding to high-need rural areas by 30%\n- Prepare GPRA performance measures and Congressional Justification narratives each fiscal year\n- Built a Tableau dashboard that cut quarterly grantee report review from 3 weeks to 1\n- Conducted 10 grantee site visits a year and resolved 6 corrective action plans"
+        },
+        {
+          "company": "U.S. Government Accountability Office",
+          "role": "Analyst",
+          "location": "Washington, DC",
+          "startDate": "2019-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Contributed to 3 audit reports on federal health programs, including interviews with 20 agency officials\n- Analyzed claims and survey data in SAS to support report findings and recommendations\n- Drafted 2 sections of a GAO report on Medicaid managed care oversight"
+        },
+        {
+          "company": "Urban Policy Research Center",
+          "role": "Graduate Research Intern",
+          "location": "Washington, DC",
+          "startDate": "2018-06",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Cleaned survey data for a national study of community health center financing\n- Drafted literature reviews for 2 published briefs"
+        }
+      ],
+      "education": [
+        {
+          "school": "American University, School of Public Affairs",
+          "degree": "Master of Public Administration",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Program management: grant monitoring, site visits, corrective action plans, 2 CFR 200",
+        "Evaluation: logic models, mixed methods, Evidence Act learning agendas",
+        "Data: SAS, Tableau, Excel, EHBs and GrantSolutions",
+        "Reporting: GPRA measures, Congressional Justifications, briefing memos",
+        "Clearance: Public Trust, Federal Acquisition Certification for CORs (FAC-COR Level II)"
+      ]
+    },
+    "Contract Specialist": {
+      "summary": "Federal contract specialist with six years awarding and administering contracts under the FAR for defense and civilian agencies. Has awarded 150+ actions worth $420M with zero sustained protests. Brings full acquisition-lifecycle experience, FAC-C Professional certification and a collaborative approach with program offices.",
+      "experience": [
+        {
+          "company": "U.S. Army Contracting Command",
+          "role": "Contract Specialist (GS-1102-12)",
+          "location": "Huntsville, AL",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Award and administer 40+ contract actions a year, totaling $280M in IDIQ task orders and firm-fixed-price contracts\n- Led source selection for a $95M engineering services contract using best-value tradeoff, with no sustained GAO protest\n- Cut average procurement lead time by 25% by standardizing acquisition plan and evaluation templates\n- Mentor 3 interns in the 1102 development program on PIEE and contract file documentation\n- Close out 25 completed contracts a year, deobligating $1.8M in unused funds"
+        },
+        {
+          "company": "General Services Administration",
+          "role": "Contract Specialist (GS-1102-9/11)",
+          "location": "Fort Worth, TX",
+          "startDate": "2020-02",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Processed 110 Multiple Award Schedule modifications and new offers worth $140M\n- Conducted price analysis and negotiations, saving $3.2M against proposed pricing\n- Reviewed 40 contractor responsibility determinations in SAM.gov"
+        },
+        {
+          "company": "U.S. Army, Redstone Arsenal",
+          "role": "Procurement Technician (GS-1106-5)",
+          "location": "Huntsville, AL",
+          "startDate": "2019-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Processed 150 simplified acquisitions under $250k using the government purchase card program\n- Prepared contract files and FPDS reports for 4 contract specialists"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Alabama in Huntsville",
+          "degree": "B.S. Business Administration, Supply Chain Management",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Acquisition: FAR and DFARS, source selection, IDIQ, GSA schedules, contract administration",
+        "Analysis: price and cost analysis, negotiation memorandums, responsibility determinations",
+        "Systems: PIEE, SAM.gov, FPDS, Procurement Desktop",
+        "Certifications: FAC-C Professional, Secret clearance",
+        "Communication: industry days, debriefings, program office coordination"
+      ]
+    },
+    "Public Affairs Specialist": {
+      "summary": "Public affairs specialist with seven years leading communications for state and federal agencies. Managed emergency communications during a 2024 wildfire season, reaching 2.1M residents with evacuation updates. Brings media relations, crisis communications, plain-language writing and social media strategy for public audiences.",
+      "experience": [
+        {
+          "company": "Sierra Foothills Fire Protection District",
+          "role": "Public Information Officer II",
+          "location": "Auburn, CA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Served as lead PIO on 6 major incidents, issuing evacuation updates that reached 2.1M residents in 2024\n- Field 1,500+ media inquiries a year and prepare chiefs for 80+ interviews and press briefings\n- Grew agency social media followers by 60% and kept response time on public questions under 2 hours during incidents\n- Wrote the joint information center playbook adopted by 4 partner agencies\n- Train 12 field staff a year as backup PIOs, expanding incident coverage to 24 hours"
+        },
+        {
+          "company": "U.S. Forest Service, Pacific Southwest Region",
+          "role": "Public Affairs Specialist (GS-1035-9)",
+          "location": "Vallejo, CA",
+          "startDate": "2019-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Produced 120 news releases and 30 videos on forest restoration and prescribed fire\n- Organized 14 public meetings on a forest plan revision under NEPA\n- Managed the forest's social media, growing followers by 35% in two years"
+        },
+        {
+          "company": "Santa Clara Valley Ledger",
+          "role": "Staff Reporter",
+          "location": "San Jose, CA",
+          "startDate": "2018-06",
+          "endDate": "2019-04",
+          "isCurrent": false,
+          "description": "- Covered local government and public safety, filing 4–5 stories a week\n- Broke a story on 911 dispatch delays that prompted a county audit"
+        }
+      ],
+      "education": [
+        {
+          "school": "San José State University",
+          "degree": "B.S. Journalism, Public Relations concentration",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Communications: media relations, crisis communications, news releases, speechwriting",
+        "Emergency: NIMS/ICS, joint information centers, Wireless Emergency Alerts",
+        "Digital: Sprout Social, Adobe Premiere, Canva, GovDelivery",
+        "Certifications: FEMA ICS-300, Advanced Public Information Officer (E0388)",
+        "Writing: AP style, plain-language guidelines, Spanish translation coordination"
+      ]
+    },
+    "Intelligence Analyst": {
+      "summary": "All-source intelligence analyst with ten years across the U.S. Air Force and a federal law enforcement agency. Produced analysis that supported 14 transnational trafficking cases resulting in 60+ arrests. Brings structured analytic techniques, link analysis, concise writing for decision-makers and an active TS/SCI clearance.",
+      "experience": [
+        {
+          "company": "U.S. Department of Homeland Security, Homeland Security Investigations",
+          "role": "Intelligence Research Specialist (GS-0132-13)",
+          "location": "El Paso, TX",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produce all-source assessments on cross-border trafficking networks for 4 investigative groups\n- Mapped financial and communications links in i2 Analyst's Notebook, supporting 14 cases and 60+ arrests\n- Write 50+ finished intelligence products a year, including briefings for the Special Agent in Charge\n- Trained 25 agents and analysts on structured analytic techniques and source evaluation\n- Coordinate with FBI, DEA and CBP counterparts through a regional fusion center"
+        },
+        {
+          "company": "U.S. Air Force",
+          "role": "Intelligence Analyst (1N0), Staff Sergeant",
+          "location": "Langley AFB, VA",
+          "startDate": "2016-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Delivered daily threat briefings to wing leadership supporting 2 overseas deployments\n- Led a 6-person analysis cell producing targeting packages under tight timelines\n- Maintained 100% accuracy in classified document handling inspections"
+        }
+      ],
+      "education": [
+        {
+          "school": "American Military University",
+          "degree": "B.A. Intelligence Studies",
+          "startDate": "2016-09",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "U.S. Air Force, Goodfellow AFB",
+          "degree": "Intelligence Fundamentals and Analyst Course",
+          "startDate": "2016-07",
+          "endDate": "2016-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analysis: all-source analysis, structured analytic techniques, link and network analysis, ICD 203 standards",
+        "Tools: i2 Analyst's Notebook, Palantir Gotham, ArcGIS, OSINT tradecraft",
+        "Writing: finished intelligence products, executive briefings, threat assessments",
+        "Clearance: active TS/SCI with CI polygraph",
+        "Domains: transnational criminal organizations, illicit finance, border security"
+      ]
+    },
+    "Emergency Management Specialist": {
+      "summary": "Emergency management specialist with six years in county emergency management, covering planning, exercises and disaster recovery. Coordinated FEMA public assistance for a 2023 flood that recovered $14M for local agencies. Brings NIMS/ICS operations, grant management and strong working relationships with first responders and community partners.",
+      "experience": [
+        {
+          "company": "Bayshore County Office of Emergency Management",
+          "role": "Emergency Management Specialist II",
+          "location": "Bayshore, TX",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinated FEMA public assistance after a 2023 flood, documenting 120 projects and recovering $14M for county agencies\n- Lead the EOC planning section during activations, producing incident action plans for 300+ responders\n- Design and run 8 HSEEP-compliant exercises a year with hospitals, schools and utilities\n- Manage $2.3M in EMPG and UASI grants with clean single-audit results\n- Update the county hazard mitigation plan with 22 participating jurisdictions, approved by FEMA in 2025"
+        },
+        {
+          "company": "Gulf Coast Disaster Relief Alliance",
+          "role": "Disaster Program Specialist",
+          "location": "Houston, TX",
+          "startDate": "2020-03",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Recruited and trained 180 shelter volunteers and managed 3 shelter operations\n- Responded to 200+ home fires, connecting families to emergency assistance within 24 hours\n- Mapped 40 shelter sites and supply routes in ArcGIS for regional planning"
+        },
+        {
+          "company": "Gulf States Recovery Corps (AmeriCorps)",
+          "role": "Disaster Recovery Member",
+          "location": "Beaumont, TX",
+          "startDate": "2019-06",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Mucked and gutted 30 flood-damaged homes and managed volunteer check-in\n- Completed damage intake interviews for 120 households"
+        }
+      ],
+      "education": [
+        {
+          "school": "Sam Houston State University",
+          "degree": "B.S. Homeland Security Studies",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: EOC operations, NIMS/ICS, incident action planning, WebEOC",
+        "Planning and recovery: hazard mitigation plans, COOP, FEMA public assistance, HSEEP exercises",
+        "Grants: EMPG, UASI, HMGP, 2 CFR 200 compliance",
+        "Certifications: Certified Emergency Manager (CEM), ICS-300/400, FEMA PDS",
+        "Tools: ArcGIS, Everbridge, FEMA Grants Portal, WebEOC"
+      ]
+    },
+    "Economic Development Specialist": {
+      "summary": "Economic development specialist with five years in city and regional economic development, focused on business attraction and small-business programs. Closed 9 business attraction deals bringing 1,100 jobs and $220M in capital investment. Brings incentive analysis, site selection support and trusted relationships with employers and workforce partners.",
+      "experience": [
+        {
+          "company": "City of Piedmont Falls Office of Economic Development",
+          "role": "Economic Development Specialist",
+          "location": "Greenville, SC",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Managed 9 business attraction projects to close, bringing 1,100 jobs and $220M in capital investment\n- Built fiscal impact models for incentive packages, keeping every deal under a 6-year payback\n- Launched a small-business grant program that awarded $1.5M to 140 businesses, 60% minority- or women-owned\n- Respond to 30+ site selector RFIs a year with property, workforce and utility data\n- Coordinate with the regional workforce board on 4 customized training programs for new employers"
+        },
+        {
+          "company": "Blue Ridge Economic Partnership",
+          "role": "Research Analyst",
+          "location": "Greenville, SC",
+          "startDate": "2021-01",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Maintained a 10-county property database and labor-market profiles in JobsEQ\n- Prepared 25 prospect proposals for advanced manufacturing and logistics projects\n- Hosted 15 site selector tours and prepared follow-up proposals"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "M.A. City and Regional Planning",
+          "startDate": "2019-08",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "Furman University",
+          "degree": "B.A. Economics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Downtown Retail Market Analysis",
+          "link": "",
+          "description": "Graduate capstone estimating retail leakage and storefront demand for a downtown district; recommendations adopted in the city's 2021 retail strategy"
+        }
+      ],
+      "skills": [
+        "Economic development: business attraction and retention, incentives, site selection, TIF",
+        "Analysis: fiscal impact modeling, IMPLAN, JobsEQ, CoStar",
+        "Programs: small-business grants, CDBG economic development, workforce partnerships",
+        "Certifications: Economic Development Finance Professional (EDFP)",
+        "Relationships: site selectors, utilities, chambers of commerce, state commerce agency"
+      ]
+    },
+    "Code Enforcement Officer": {
+      "summary": "Code enforcement officer with five years enforcing property maintenance, zoning and housing codes in a city of 250,000. Resolves 900+ cases a year with an 88% voluntary compliance rate. Brings fair and consistent enforcement, solid case documentation and calm de-escalation with residents and property owners.",
+      "experience": [
+        {
+          "company": "City of Ashford Neighborhood Code Compliance",
+          "role": "Code Enforcement Officer II",
+          "location": "Ashford, IN",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Inspect and manage 900+ property maintenance, zoning and rental housing cases a year in a 3-district area\n- Achieve an 88% voluntary compliance rate by pairing notices with referrals to home repair assistance\n- Prepare evidence packets and testify at 40+ administrative hearings with a 95% upheld rate\n- Joined the rental registration pilot, inspecting 600 units in its first year\n- Coordinate with fire, health and police on 30 multi-agency nuisance properties a year"
+        },
+        {
+          "company": "Ashford County Department of Planning Services",
+          "role": "Zoning Inspector",
+          "location": "Ashford, IN",
+          "startDate": "2021-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Conducted 450 site inspections for permit compliance and complaint follow-up\n- Logged cases in Accela with photos and timelines, cutting supervisor review time by 30%\n- Issued 120 notices for permit violations with a 90% compliance rate"
+        },
+        {
+          "company": "Purdue University Fort Wayne Police Department",
+          "role": "Community Service Officer (part-time)",
+          "location": "Fort Wayne, IN",
+          "startDate": "2018-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Patrolled campus parking and buildings and wrote 400+ incident and parking reports\n- Assisted with event safety for 30 campus events a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "Purdue University Fort Wayne",
+          "degree": "B.S. Criminal Justice",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Codes: International Property Maintenance Code, zoning ordinances, rental housing standards",
+        "Case management: inspections, notices of violation, administrative hearings, Accela",
+        "People: de-escalation, Spanish conversational, community referrals",
+        "Certifications: AACE Certified Code Enforcement Officer, ICC Property Maintenance and Housing Inspector",
+        "Safety: field safety protocols, OSHA 10, defensive driving"
+      ]
+    },
+    "Police Officer": {
+      "summary": "Patrol police officer with six years in a city department of 400 sworn officers, recognized for community policing and crisis intervention. Handles 1,400+ calls for service a year with zero sustained complaints. Brings CIT certification, field training officer experience and thorough, court-ready report writing.",
+      "experience": [
+        {
+          "company": "Prairie Hills Police Department",
+          "role": "Police Officer, Patrol Division and Field Training Officer",
+          "location": "Prairie Hills, OK",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Respond to 1,400+ calls for service a year in a high-volume patrol beat with zero sustained complaints\n- Train 6 recruit officers as a field training officer, all completing the program on schedule\n- Resolve mental health calls as a CIT officer, diverting 70+ people a year to crisis services instead of jail\n- Write reports in Mark43 used in 50+ prosecutions, with testimony in district court and municipal court\n- Lead 6 neighborhood association meetings a year, addressing traffic and property crime concerns"
+        },
+        {
+          "company": "Prairie Hills County Sheriff's Office",
+          "role": "Detention Officer",
+          "location": "Prairie Hills, OK",
+          "startDate": "2018-06",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Supervised a 60-person housing unit and conducted intake searches and classification interviews\n- Maintained accurate logs and incident reports supporting jail standards inspections\n- Completed 120 hours of in-service training on de-escalation and inmate rights"
+        }
+      ],
+      "education": [
+        {
+          "school": "Prairie Hills Regional Police Academy",
+          "degree": "Basic Police Academy, CLEET certification",
+          "startDate": "2020-01",
+          "endDate": "2020-07"
+        },
+        {
+          "school": "Northeastern State University",
+          "degree": "B.S. Criminal Justice",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Patrol: calls for service, traffic enforcement, crime scene preservation, report writing",
+        "Community: problem-oriented policing, neighborhood meetings, youth outreach",
+        "Systems: Mark43 RMS, CAD, NCIC, body-worn camera evidence management",
+        "Certifications: CLEET peace officer, Crisis Intervention Team (CIT), Field Training Officer, CPR/First Aid",
+        "Training: de-escalation, firearms qualification, defensive tactics, ICAT"
+      ]
+    },
+    "Firefighter": {
+      "summary": "Firefighter/paramedic with seven years in a busy urban department running 2,000+ incidents a year. Serves as acting engineer and leads the station's EMS quality reviews. Brings fire suppression, advanced life support, technical rescue training and a steady presence on high-stress scenes.",
+      "experience": [
+        {
+          "company": "Catawba Valley Fire Department",
+          "role": "Firefighter/Paramedic, Engine 11",
+          "location": "Catawba Valley, NC",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Respond to 2,000+ fire, EMS and rescue incidents a year at one of the department's 5 busiest stations\n- Provide ALS care including cardiac arrest management, contributing to a 34% ROSC rate on station calls\n- Serve as acting engineer, operating pumps and inspecting apparatus each shift\n- Lead monthly EMS chart reviews in ESO, improving protocol compliance from 86% to 97%\n- Teach CPR and Stop the Bleed classes to 300 residents a year through community outreach"
+        },
+        {
+          "company": "Catawba Valley EMS",
+          "role": "EMT-Basic",
+          "location": "Catawba Valley, NC",
+          "startDate": "2019-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Ran 12-hour shifts averaging 9 calls, with accurate patient care reports on every transport\n- Completed paramedic coursework while working full time\n- Completed 6 months of hospital and field paramedic clinical rotations"
+        },
+        {
+          "company": "Mill Creek Volunteer Fire Department",
+          "role": "Volunteer Firefighter",
+          "location": "Matthews, NC",
+          "startDate": "2017-06",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Responded to 150 fire and EMS calls a year as a volunteer\n- Completed Firefighter I training and maintained station equipment"
+        }
+      ],
+      "education": [
+        {
+          "school": "Central Piedmont Community College",
+          "degree": "A.A.S. Emergency Medical Science (Paramedic)",
+          "startDate": "2019-01",
+          "endDate": "2020-12"
+        },
+        {
+          "school": "Catawba Valley Fire Recruit Academy",
+          "degree": "Firefighter I/II and Hazmat Operations",
+          "startDate": "2021-01",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Fire: suppression, ventilation, search and rescue, pump operations, hydrant testing",
+        "EMS: advanced airway, 12-lead ECG, medication administration, ESO ePCR",
+        "Special operations: vehicle extrication, confined space, swift water awareness",
+        "Certifications: NC Firefighter I/II, NC Paramedic, NREMT-P, ACLS, PALS, Hazmat Technician",
+        "Station duties: apparatus checks, equipment maintenance, pre-fire planning"
+      ]
+    },
+    "Probation Officer": {
+      "summary": "Adult probation officer with six years supervising felony and misdemeanor caseloads in county and state systems. Manages 75 clients using evidence-based practices and lowered technical violation revocations by 30%. Brings motivational interviewing, risk assessment and close coordination with courts and treatment providers.",
+      "experience": [
+        {
+          "company": "Ocotillo County Adult Probation Department",
+          "role": "Probation Officer, Standard Supervision",
+          "location": "Ocotillo, AZ",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 75 felony probationers using risk-needs-responsivity principles and the OST risk assessment\n- Reduced technical violation revocations on the caseload by 30% using graduated sanctions and incentives\n- Write 15+ presentence and violation reports a month for Superior Court judges\n- Connect clients to substance use and employment services, with 62% employed at 6 months\n- Testify at 25 violation hearings a year and coordinate with defense counsel and prosecutors"
+        },
+        {
+          "company": "Arizona Department of Juvenile Corrections",
+          "role": "Youth Parole Officer",
+          "location": "Tucson, AZ",
+          "startDate": "2020-02",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Managed a caseload of 30 youth on parole, conducting home and school visits twice a month\n- Facilitated cognitive behavioral groups for 40 youth a year\n- Coordinated reentry plans with families and schools for 30 youth a year"
+        },
+        {
+          "company": "Sonoran Youth Services",
+          "role": "Case Aide",
+          "location": "Tempe, AZ",
+          "startDate": "2019-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Supported 3 case managers serving 60 youth in diversion programs\n- Scheduled court dates and transported youth to appointments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.S. Criminology and Criminal Justice",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Supervision: risk-needs assessment, case planning, field contacts, drug testing",
+        "Methods: motivational interviewing, EPICS, cognitive behavioral interventions",
+        "Court: presentence investigations, violation reports, testimony",
+        "Certifications: AZ Adult Probation Officer certification, CPR/First Aid, Spanish (conversational)",
+        "Systems: APETS case management, AZTEC, NCIC, drug testing platforms"
+      ]
+    },
+    "City Clerk": {
+      "summary": "City clerk with ten years in municipal clerk offices, overseeing records, elections and council proceedings for a city of 95,000. Moved council agendas and public records requests online, cutting average records response time from 12 to 4 days. Brings open meetings and public records law expertise, election administration and MMC certification.",
+      "experience": [
+        {
+          "company": "City of Poudre Valley",
+          "role": "City Clerk",
+          "location": "Poudre Valley, CO",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 7-person office managing council meetings, municipal elections, records and boards and commissions\n- Implemented Granicus agenda management and a public records portal, cutting average response time from 12 to 4 days\n- Administered 2 municipal elections with 68,000 ballots and no recount or certification issues\n- Rolled out a records retention program that destroyed 1,400 boxes of eligible records, freeing $40k in storage costs\n- Trained 15 boards and commissions on open meetings law and records retention"
+        },
+        {
+          "company": "City of Elk Ridge",
+          "role": "Deputy City Clerk",
+          "location": "Elk Ridge, CO",
+          "startDate": "2016-07",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Prepared agendas and minutes for 70+ council and commission meetings a year\n- Processed 900 CORA requests a year in line with Colorado Open Records Act deadlines\n- Codified 40 ordinances a year and kept the municipal code current online"
+        },
+        {
+          "company": "Front Range Water District",
+          "role": "Records Technician",
+          "location": "Greeley, CO",
+          "startDate": "2014-06",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Scanned and indexed 30,000 board and engineering records into Laserfiche\n- Prepared board meeting packets and took minutes for 2 committees"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado State University",
+          "degree": "B.A. Political Science",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Governance: council proceedings, open meetings law, boards and commissions, ordinance codification",
+        "Records: public records requests, retention schedules, Laserfiche",
+        "Elections: municipal election administration, petitions, campaign finance filings",
+        "Certifications: Master Municipal Clerk (MMC), notary public",
+        "Technology: Granicus, Laserfiche, NextRequest, Municode"
+      ]
+    },
+    "Assistant City Manager": {
+      "summary": "Assistant city manager with 13 years in local government, overseeing public works, utilities and development services for a city of 140,000. Led a $210M water infrastructure program on budget and secured $48M in federal and state grants. Brings operations leadership, capital planning and steady relationships with council and labor groups.",
+      "experience": [
+        {
+          "company": "City of Cedar Hollow",
+          "role": "Assistant City Manager",
+          "location": "Cedar Hollow, TX",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Oversee 5 departments with 420 employees and a $160M combined budget, including utilities and development services\n- Lead a $210M water and wastewater capital program delivered on budget through year four of six\n- Secured $48M in federal and state grants, including TWDB and EPA funding\n- Negotiated a 3-year agreement with the firefighters' association within budget targets\n- Lead the city's strategic plan update with 3,000 resident survey responses"
+        },
+        {
+          "company": "City of Cedar Hollow",
+          "role": "Budget and Strategic Planning Director",
+          "location": "Cedar Hollow, TX",
+          "startDate": "2017-05",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Built the city's first 5-year financial forecast and maintained a AAA bond rating\n- Introduced performance budgeting across 18 departments\n- Prepared 4 bond issuances totaling $180M with financial advisors"
+        },
+        {
+          "company": "City of Austin Financial Services",
+          "role": "Senior Financial Analyst",
+          "location": "Austin, TX",
+          "startDate": "2013-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Managed budgets for parks and libraries totaling $120M\n- Built a 5-year revenue forecast for 2 enterprise funds"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University, Bush School of Government",
+          "degree": "Master of Public Service and Administration",
+          "startDate": "2011-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: department oversight, council relations, labor negotiations, organizational change",
+        "Finance: capital improvement programs, bond issuance, multi-year forecasting, GFOA practices",
+        "Infrastructure: water and wastewater, transportation, development review",
+        "Credentials: ICMA Credentialed Manager",
+        "Communication: council work sessions, community town halls, media interviews"
+      ]
+    },
+    "City Manager": {
+      "summary": "City manager with 20 years in local government, leading a full-service city of 210,000 with 1,600 employees. Delivered six straight balanced budgets while raising reserves from 12% to 20% and launching a voter-approved $350M bond program. Brings executive leadership, council partnership and a record of measurable service improvements.",
+      "experience": [
+        {
+          "company": "City of Camelback",
+          "role": "City Manager",
+          "location": "Camelback, AZ",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 1,600 employees across 14 departments with a $780M annual budget reporting to a 7-member council\n- Delivered 6 balanced budgets and raised general fund reserves from 12% to 20%\n- Led the $350M bond program approved by 64% of voters for streets, parks and public safety facilities\n- Launched a resident dashboard with 30 service targets; 22 now met, up from 11 in 2020\n- Rebuilt labor relations with 4 bargaining units, reaching multi-year agreements without impasse"
+        },
+        {
+          "company": "City of Pinnacle Peak",
+          "role": "Assistant City Manager",
+          "location": "Pinnacle Peak, AZ",
+          "startDate": "2013-04",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Oversaw public safety, community services and IT with 900 employees\n- Led a regional dispatch consolidation that cut costs by $2.5M a year\n- Launched a performance management program for 8 departments"
+        },
+        {
+          "company": "City of Agua Fria",
+          "role": "Deputy Budget Director",
+          "location": "Agua Fria, AZ",
+          "startDate": "2006-07",
+          "endDate": "2013-03",
+          "isCurrent": false,
+          "description": "- Led recession-era budget restructuring that closed a $35M structural gap\n- Built a 5-year financial plan used through two budget cycles"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "Master of Public Administration",
+          "startDate": "2004-08",
+          "endDate": "2006-05"
+        },
+        {
+          "school": "Northern Arizona University",
+          "degree": "B.S. Political Science",
+          "startDate": "2000-08",
+          "endDate": "2004-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive leadership: council-manager governance, strategic planning, organizational culture",
+        "Finance: budgets, reserves policy, bond programs, credit ratings",
+        "Operations: public safety, utilities, performance management",
+        "Credentials: ICMA Credentialed Manager, Arizona City/County Management Association board",
+        "Community: resident engagement, regional partnerships, economic development"
+      ]
+    }
+  }
+}

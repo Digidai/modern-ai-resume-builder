@@ -47,10 +47,10 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## Job Titles and Role Examples
 
-- `src/data/jobTitles.json` contains 640 titles grouped by category.
+- `src/data/roles/<family>.json` is the source of truth for job titles: one example resume per title, plus a `guide` for new families. `npm run roles:sync` merges them into `src/data/jobTitles.json` (930 titles, 19 families) and `src/data/roleGuides.json`.
+- `scripts/seo-postbuild.mjs` pre-renders each example into its job page and writes `/examples/<slug>.json` (agents) and `/role-examples/<slug>.json` (the page preview). In dev, `src/data/roleExamples.ts` reads the source files instead.
 - `scripts/jobtitles-validate.mjs` checks duplicates and slug collisions.
 - `scripts/jobtitles-import.mjs` supports bulk import.
-- `src/data/roleExamples.ts` provides sample content for common roles.
 - `src/data/personas.ts` assigns deterministic persona names for previews.
 
 ## AI Integration
@@ -74,3 +74,12 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 - Build output is `dist`.
 - Cloudflare Pages or Workers are supported via `wrangler.jsonc`.
 - Any static host can serve the build output.
+
+## Agent Mode
+
+- `worker/agent.ts` serves a stateless MCP server over Streamable HTTP at `/mcp` and the same tools as REST under `/api/agent/` (spec at `/openapi.json`).
+- `render_preview` and `render_pdf` print the `/render` page (`src/views/RenderView.tsx`) with Cloudflare Browser Rendering, so agents get exactly the editor's output.
+- `get_example_resume` reads `/examples/<slug>.json` through the `ASSETS` binding.
+- Editor handoff links carry the resume in the URL fragment (`/editor/#resume=<payload>`); the encoding lives in `src/shared/resumeLink.ts`.
+- Prompts shown on template, job and `/agents/` pages come from `src/shared/agentPrompt.mjs`, which also lists the MCP tools for the build script.
+- The agent skill lives in `skills/moderncv-resume/SKILL.md` and is copied to `dist/skills/`.

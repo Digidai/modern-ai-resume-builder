@@ -64,7 +64,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {links.length > 0 && (
                     <div className="mt-1.5 flex flex-wrap items-center justify-center gap-x-5 gap-y-1 text-[12.5px] text-[#5D5D5D]">
                         {links.map((entry) => (
-                            <ContactItem key={entry.key} entry={entry} iconClassName="w-3 h-3 text-(--accent)" />
+                            <ContactItem key={entry.id} entry={entry} iconClassName="w-3 h-3 text-(--accent)" />
                         ))}
                     </div>
                 )}

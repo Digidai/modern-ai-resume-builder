@@ -35,8 +35,8 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <ul className="grid grid-cols-3 gap-x-6 gap-y-2 text-[13px] font-medium">
                         {contacts.map((entry) => (
-                            <li key={entry.key} className="min-w-0 border-t-2 border-slate-900 pt-1.5 leading-snug">
-                                <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600">{CONTACT_LABELS[entry.key]}</span>
+                            <li key={entry.id} className="min-w-0 border-t-2 border-slate-900 pt-1.5 leading-snug">
+                                <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600">{entry.label}</span>
                                 <ContactLink entry={entry} className="wrap-anywhere" />
                             </li>
                         ))}

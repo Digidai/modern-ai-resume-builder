@@ -32,7 +32,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {contacts.map((entry) => {
                             const Icon = entry.icon;
                             return (
-                                <li key={entry.key} className="flex items-start justify-end gap-2 min-w-0 max-w-full text-right">
+                                <li key={entry.id} className="flex items-start justify-end gap-2 min-w-0 max-w-full text-right">
                                     <ContactLink entry={entry} className="min-w-0 wrap-anywhere leading-snug" />
                                     <Icon className="w-3.5 h-3.5 mt-[2px] shrink-0 text-(--accent-light)" />
                                 </li>

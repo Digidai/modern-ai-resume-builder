@@ -1,0 +1,1883 @@
+{
+  "family": "Construction & Real Estate",
+  "guide": null,
+  "titles": {
+    "Construction Manager": {
+      "summary": "Construction manager with 14 years delivering commercial and healthcare projects up to $120M. Leads project teams from preconstruction through closeout and finished the last 6 projects on or ahead of schedule. Brings owner and design-team coordination, cost control and a strong safety record on occupied sites.",
+      "experience": [
+        {
+          "company": "Granite Peak Builders",
+          "role": "Construction Manager",
+          "location": "Denver, CO",
+          "startDate": "2020-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead delivery of healthcare and commercial projects from $25M to $120M with teams of up to 12 staff\n- Finished a $120M hospital tower expansion 5 weeks early while keeping 2 adjacent floors fully occupied\n- Held final costs within 1.5% of GMP across 6 projects through monthly cost-to-complete reviews in Procore\n- Maintained a 0.6 TRIR across 900,000 field hours with daily pre-task planning and ICRA controls\n- Present monthly cost, schedule and risk reports to owner executives and hospital facilities leadership"
+        },
+        {
+          "company": "Front Range Construction Group",
+          "role": "Senior Project Manager",
+          "location": "Colorado Springs, CO",
+          "startDate": "2015-01",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Managed office, lab and higher education projects from $10M to $45M\n- Cut change order cycle time from 21 days to 8 with a standard pricing log\n- Mentored 3 assistant project managers, 2 of whom were promoted to project manager"
+        },
+        {
+          "company": "Summit Valley Contractors",
+          "role": "Project Engineer",
+          "location": "Boulder, CO",
+          "startDate": "2012-06",
+          "endDate": "2014-12",
+          "isCurrent": false,
+          "description": "- Ran RFIs, submittals and meeting minutes for a $60M university research building\n- Tracked 1,400 submittals with no schedule-critical delays\n- Coordinated 60 subcontractor pay applications a month"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado State University",
+          "degree": "B.S. in Construction Management",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Mountain View Medical Center Tower",
+          "link": "",
+          "description": "$120M, 8-story patient tower expansion delivered under CM at-risk with 2 floors occupied throughout; LEED Silver"
+        }
+      ],
+      "skills": [
+        "Project Delivery: CM at-risk, design-build, GMP management, scheduling, closeout",
+        "Cost Control: Budgets, change orders, cost-to-complete forecasting, buyout",
+        "Systems: Procore, Primavera P6, Bluebeam Revu, Autodesk Construction Cloud",
+        "Safety: OSHA 30, ICRA, site logistics planning",
+        "Certifications: CCM (Certified Construction Manager), LEED AP BD+C"
+      ]
+    },
+    "Site Supervisor": {
+      "summary": "Site supervisor with 8 years running residential and light commercial jobsites, coordinating up to 15 subcontractors at a time. Delivered 110 townhomes on schedule in 2025 with zero lost-time injuries. Brings hands-on field leadership, daily scheduling, quality walk-throughs and solid OSHA compliance.",
+      "experience": [
+        {
+          "company": "Brookline Homes",
+          "role": "Site Supervisor",
+          "location": "Raleigh, NC",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run daily site operations for townhome communities of 60 to 140 units, coordinating up to 15 trade partners\n- Delivered 110 townhomes on schedule in 2025 with zero lost-time injuries\n- Cut punch-list items per home from 38 to 14 with phase inspections before drywall and before paint\n- Schedule inspections with the city, passing 96% of framing and MEP inspections on the first visit\n- Hold weekly trade partner meetings to review the 3-week lookahead, material deliveries and safety focus items"
+        },
+        {
+          "company": "Triangle Commercial Builders",
+          "role": "Assistant Superintendent",
+          "location": "Durham, NC",
+          "startDate": "2018-02",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Supported field operations on 3 retail and office buildings from $4M to $12M\n- Ran daily toolbox talks and site safety audits for 40 workers\n- Tracked daily manpower and wrote daily logs in Procore"
+        },
+        {
+          "company": "Oak City Remodeling",
+          "role": "Carpenter Lead",
+          "location": "Raleigh, NC",
+          "startDate": "2016-04",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Led a 4-person framing and trim crew on 30 home renovations\n- Trained 3 apprentices in layout and finish carpentry\n- Installed trim and cabinets in 15 kitchen remodels"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wake Technical Community College",
+          "degree": "A.A.S. in Construction Management Technology",
+          "startDate": "2014-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Operations: Daily scheduling, trade coordination, inspections, punch lists",
+        "Safety: OSHA 30, toolbox talks, fall protection, site audits",
+        "Systems: Procore, BuilderTrend, Bluebeam Revu",
+        "Trades Knowledge: Framing, MEP rough-in, finishes, residential codes (IRC)",
+        "Leadership: Trade partner coordination, homeowner walkthroughs, new supervisor mentoring"
+      ]
+    },
+    "Construction Superintendent": {
+      "summary": "Construction superintendent with 15 years running ground-up multifamily and mixed-use projects up to $95M. Leads field teams and 30+ subcontractors and delivered a 320-unit podium project 6 weeks early. Brings three-week lookahead discipline, quality control and a strong safety culture on dense urban sites.",
+      "experience": [
+        {
+          "company": "Cascadia Building Company",
+          "role": "Construction Superintendent",
+          "location": "Seattle, WA",
+          "startDate": "2019-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run field operations for multifamily and mixed-use projects from $40M to $95M with 2 assistant superintendents\n- Delivered a 320-unit, 7-story podium building 6 weeks early by sequencing framing floors with pull planning\n- Coordinate 30+ subcontractors through daily huddles and 3-week lookaheads tied to the P6 master schedule\n- Kept TRIR at 0.8 across 650,000 hours on sites bordering 2 active streets and light rail\n- Mentor 2 assistant superintendents and 3 field engineers on lookahead planning and inspections"
+        },
+        {
+          "company": "Puget Construction Partners",
+          "role": "Superintendent",
+          "location": "Tacoma, WA",
+          "startDate": "2014-03",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Ran 4 wood-frame apartment projects of 120 to 210 units\n- Cut drywall rework 50% with a pre-cover inspection checklist\n- Coordinated envelope mockups and water testing that passed on the first attempt"
+        },
+        {
+          "company": "Evergreen Concrete & Framing",
+          "role": "Foreman",
+          "location": "Everett, WA",
+          "startDate": "2010-05",
+          "endDate": "2014-02",
+          "isCurrent": false,
+          "description": "- Led framing crews of up to 18 carpenters\n- Built the crew's first panelized wall program, saving 3 weeks per building\n- Ran daily safety huddles and pre-task plans for framing crews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bates Technical College",
+          "degree": "Certificate in Carpentry",
+          "startDate": "2008-09",
+          "endDate": "2010-03"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Ballard Junction Apartments",
+          "link": "",
+          "description": "$95M, 320-unit, 5-over-2 podium with ground-floor retail, delivered 6 weeks early with zero lost-time incidents"
+        }
+      ],
+      "skills": [
+        "Field Leadership: Subcontractor coordination, pull planning, 3-week lookaheads, quality control",
+        "Construction: Podium and wood-frame, concrete, envelope, MEP coordination",
+        "Systems: Procore, Primavera P6, Bluebeam Revu",
+        "Safety: OSHA 30, site-specific safety plans, crane and logistics planning",
+        "Certifications: Washington Flagger Card, First Aid/CPR"
+      ]
+    },
+    "Site Superintendent": {
+      "summary": "Site superintendent with 10 years leading field work on industrial and distribution center projects up to 1.1M sq ft. Delivered 4 tilt-up warehouses in 2024–2025, each turned over on or before the contract date. Brings concrete and steel sequencing, subcontractor management and tight jobsite safety controls.",
+      "experience": [
+        {
+          "company": "Inland Empire Industrial Builders",
+          "role": "Site Superintendent",
+          "location": "Ontario, CA",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run field operations for tilt-up distribution centers from 400,000 to 1.1M sq ft and $35M to $90M\n- Turned over 4 warehouses in 2024–2025, each on or before the contract completion date\n- Sequenced 220 tilt panels per building with crane and rigging partners, raising panels in 9 working days\n- Lead daily safety walks for crews of up to 180 workers, with zero OSHA citations since 2021\n- Run weekly owner and design-team walks, tracking punch items to closeout in Procore"
+        },
+        {
+          "company": "Riverside Tilt-Up Contractors",
+          "role": "Assistant Superintendent",
+          "location": "Riverside, CA",
+          "startDate": "2016-07",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Managed slab pours of up to 60,000 sq ft per day with laser screed crews\n- Kept floor flatness above FF50 on 5 consecutive projects\n- Led site utility and grading coordination with civil subcontractors on 6 projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State Polytechnic University, Pomona",
+          "degree": "B.S. in Construction Engineering Technology",
+          "startDate": "2012-09",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Operations: Tilt-up construction, slab-on-grade, structural steel, site work",
+        "Coordination: Crane planning, subcontractor scheduling, inspections, owner walkthroughs",
+        "Systems: Procore, Microsoft Project, Bluebeam Revu",
+        "Safety: OSHA 30, rigging and crane safety, Cal/OSHA compliance",
+        "Leadership: Assistant superintendent mentoring, foreman meetings, owner communication"
+      ]
+    },
+    "Construction Scheduler": {
+      "summary": "Construction scheduler with 7 years building and updating CPM schedules for transportation, healthcare and data center projects worth up to $600M. Maintains schedules of 6,000+ activities and supports delay claims with clear time-impact analysis. Brings Primavera P6 mastery and practical field knowledge. AACE PSP certified with a civil engineering degree from Georgia Tech.",
+      "experience": [
+        {
+          "company": "Meridian Infrastructure Group",
+          "role": "Construction Scheduler",
+          "location": "Atlanta, GA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build and update resource-loaded CPM schedules in Primavera P6 for data center and healthcare projects up to $600M\n- Maintain schedules of 6,000+ activities with monthly updates accepted by owners without revision 90% of the time\n- Prepared time-impact analyses that secured 47 days of compensable extension on a $280M hospital project\n- Run weekly lookahead reviews with 4 superintendents, cutting near-critical slippage 35%\n- Train project managers to read P6 layouts and float reports, standardizing schedule reviews across 12 jobs"
+        },
+        {
+          "company": "Peachtree Civil Contractors",
+          "role": "Project Controls Analyst",
+          "location": "Marietta, GA",
+          "startDate": "2019-05",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Updated baseline schedules for 3 GDOT highway interchange projects\n- Built earned value reports that flagged a 12% productivity gap 2 months before it hit cost\n- Wrote monthly schedule narratives for owner and DOT reviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Scheduling: CPM scheduling, resource loading, baseline development, lookaheads",
+        "Analysis: Time-impact analysis, delay claims, earned value, critical path review",
+        "Systems: Primavera P6, Microsoft Project, Procore, Power BI",
+        "Communication: Schedule narratives, owner presentations, superintendent coordination",
+        "Certifications: AACE Planning & Scheduling Professional (PSP)"
+      ]
+    },
+    "Project Engineer": {
+      "summary": "Project engineer with 4 years at a general contractor on higher education and laboratory projects from $30M to $85M. Manages RFIs, submittals and change documentation and cut submittal turnaround 30%. Brings strong document control, field coordination and the groundwork to move into project management. Holds OSHA 30 and LEED Green Associate credentials and is preparing for an assistant project manager role.",
+      "experience": [
+        {
+          "company": "Hartwell & Pierce Construction",
+          "role": "Project Engineer",
+          "location": "Boston, MA",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage RFIs, submittals and meeting minutes for an $85M university laboratory building\n- Cut average submittal turnaround from 14 to 10 days by pre-checking packages against specs before review\n- Track 220 potential change orders and prepare pricing backup for owner review in Procore\n- Coordinate MEP 3D clash detection with 6 trades in Navisworks, resolving 400+ clashes before install\n- Walk the site daily with the superintendent to verify installed work against drawings and log issues"
+        },
+        {
+          "company": "Commonwealth Builders",
+          "role": "Assistant Project Engineer",
+          "location": "Worcester, MA",
+          "startDate": "2022-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Logged submittals and daily reports for a $30M residence hall\n- Built a closeout tracker for 1,100 O&M and warranty documents\n- Ran weekly progress photo documentation for the owner's report"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wentworth Institute of Technology",
+          "degree": "B.S. in Construction Management",
+          "startDate": "2018-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Project Administration: RFIs, submittals, change orders, meeting minutes, closeout",
+        "Coordination: MEP clash detection, trade coordination, field verification",
+        "Systems: Procore, Navisworks, Bluebeam Revu, Revit (viewing)",
+        "Field Skills: Blueprint reading, layout checks, quality inspections, daily logs",
+        "Certifications: OSHA 30, LEED Green Associate"
+      ]
+    },
+    "Construction Project Manager": {
+      "summary": "Construction project manager with 9 years at general contractors delivering K-12, municipal and office projects from $8M to $55M. Brought 7 projects in under budget, averaging 2.4% savings returned to owners. Brings buyout, subcontract management, owner communication and a firm grip on schedule and cost risk.",
+      "experience": [
+        {
+          "company": "Lakeside Construction Services",
+          "role": "Construction Project Manager",
+          "location": "Minneapolis, MN",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead delivery of K-12 and municipal projects from $8M to $55M, managing a PE, superintendent and 25+ subcontracts\n- Brought 7 projects in under budget, returning an average of 2.4% of contract value to owners\n- Bought out $38M in subcontracts for a new high school, finishing 3% under the buyout budget\n- Delivered a $42M school addition in 14 months between occupied semesters with no school-day disruptions\n- Run monthly owner meetings and board updates with schedule, budget and risk dashboards"
+        },
+        {
+          "company": "North Star Builders",
+          "role": "Assistant Project Manager",
+          "location": "St. Paul, MN",
+          "startDate": "2017-03",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Managed subcontracts, pay applications and change orders on 3 office projects\n- Reduced owner pay app rejections to zero by standardizing lien waiver tracking\n- Coached 2 project engineers on submittal review and cost tracking"
+        },
+        {
+          "company": "Twin Ports Contracting",
+          "role": "Project Engineer",
+          "location": "Duluth, MN",
+          "startDate": "2016-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Handled RFIs and submittals for a $20M clinic\n- Prepared 3-week lookaheads with the superintendent\n- Drafted owner meeting minutes and change order logs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Minnesota State University, Mankato",
+          "degree": "B.S. in Construction Management",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Eastbrook High School Addition",
+          "link": "",
+          "description": "$42M, 110,000 sq ft classroom and athletics addition built over 14 months on an occupied campus"
+        }
+      ],
+      "skills": [
+        "Project Management: Buyout, subcontract management, pay applications, change orders",
+        "Planning: Scheduling, risk registers, phasing for occupied buildings",
+        "Systems: Procore, Sage 300 CRE, Primavera P6, Bluebeam Revu",
+        "Certifications: PMP, OSHA 30"
+      ]
+    },
+    "Civil Engineer": {
+      "summary": "Licensed civil engineer with 8 years in land development and municipal infrastructure design. Leads site grading, stormwater and utility design for residential and commercial projects up to 400 acres. Brings Civil 3D expertise, permitting knowledge and clear coordination with agencies, developers and contractors.",
+      "experience": [
+        {
+          "company": "Bluestem Engineering Partners",
+          "role": "Project Civil Engineer",
+          "location": "Austin, TX",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead site civil design for subdivisions and commercial sites from 10 to 400 acres, managing 3 designers\n- Designed grading, drainage and utilities for a 1,100-lot master-planned community, permitted in 7 months\n- Cut detention pond footprint 30% using Atlas 14 modeling in HydroCAD, returning 22 lots to the developer\n- Coordinate approvals with TxDOT, TCEQ and 4 municipalities, with no permit denials since 2021\n- Review shop drawings and answer contractor RFIs during construction, keeping turnaround under 5 business days"
+        },
+        {
+          "company": "Capital Area Civil Design",
+          "role": "Civil Engineer (EIT)",
+          "location": "Round Rock, TX",
+          "startDate": "2018-06",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Produced Civil 3D plan sets for water, wastewater and roadway projects\n- Prepared stormwater pollution prevention plans for 25 construction sites\n- Performed site visits and erosion control inspections on 12 projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Hillside Ranch Master Plan",
+          "link": "",
+          "description": "1,100-lot community with 6 miles of roadway, 2 lift stations and regional detention; designed and permitted in 7 months"
+        }
+      ],
+      "skills": [
+        "Design: Site grading, stormwater, water and wastewater utilities, roadway design",
+        "Software: AutoCAD Civil 3D, HydroCAD, HEC-RAS, WaterCAD",
+        "Permitting: TCEQ, TxDOT, SWPPP, municipal site plan approval",
+        "Project Management: Budgets, schedules, client meetings, designer mentoring",
+        "Licenses: Professional Engineer (PE), Texas"
+      ]
+    },
+    "Structural Engineer": {
+      "summary": "Licensed structural engineer with 10 years designing steel, concrete and mass timber buildings up to 18 stories. Leads structural design for $50M to $200M projects and delivered a cross-laminated timber office that saved 14% in structural cost. Brings seismic design expertise and close architect collaboration.",
+      "experience": [
+        {
+          "company": "Keller Matsuda Structural",
+          "role": "Senior Structural Engineer",
+          "location": "Portland, OR",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead structural design for office, lab and multifamily buildings from $50M to $200M, mentoring 4 engineers\n- Designed a 12-story mass timber office that cut structural cost 14% versus the post-tensioned concrete option\n- Performed ASCE 41 seismic evaluations and retrofit designs for 9 unreinforced masonry buildings\n- Coordinate Revit structural models with architects and MEP teams, cutting field RFIs to the structure 40%\n- Visit sites monthly during construction to review connection details and rebar placement before pours"
+        },
+        {
+          "company": "Columbia Structural Associates",
+          "role": "Structural Engineer",
+          "location": "Seattle, WA",
+          "startDate": "2016-01",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Designed steel moment frames and concrete shear walls for 15 mid-rise buildings\n- Wrote design calculations and RAM Structural System models for permit submittal\n- Reviewed 200 steel shop drawings a year for code compliance"
+        },
+        {
+          "company": "Ridgeway Engineering",
+          "role": "Engineer in Training",
+          "location": "Spokane, WA",
+          "startDate": "2014-06",
+          "endDate": "2015-12",
+          "isCurrent": false,
+          "description": "- Designed foundations and wood-frame lateral systems for 40 residential and retail projects\n- Completed 60 construction site observations\n- Prepared 25 retaining wall designs"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "M.S. in Structural Engineering",
+          "startDate": "2012-09",
+          "endDate": "2014-06"
+        },
+        {
+          "school": "Oregon State University",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2008-09",
+          "endDate": "2012-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Pearl District Timber Office",
+          "link": "",
+          "description": "12-story CLT and glulam office with buckling-restrained braced frames; 14% structural cost savings and 2,100 tonnes of embodied carbon avoided"
+        }
+      ],
+      "skills": [
+        "Design: Steel, reinforced concrete, mass timber, seismic design, retrofits",
+        "Codes: IBC, ASCE 7, ASCE 41, ACI 318, AISC 360, NDS",
+        "Software: ETABS, RAM Structural System, SAP2000, Revit",
+        "Licenses: Structural Engineer (SE), Oregon and Washington; PE, Oregon"
+      ]
+    },
+    "MEP Engineer": {
+      "summary": "MEP engineer with 7 years designing mechanical and plumbing systems for healthcare, lab and commercial buildings. Leads HVAC design for projects up to 350,000 sq ft and cut modeled energy use 28% on a recent hospital. Brings energy modeling, code compliance and tight Revit coordination with architects and contractors.",
+      "experience": [
+        {
+          "company": "Larkin Boyd Engineers",
+          "role": "Mechanical (MEP) Engineer",
+          "location": "Chicago, IL",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead mechanical and plumbing design for healthcare and lab projects up to 350,000 sq ft\n- Designed a heat recovery chiller plant for a 220-bed hospital that cut modeled energy use 28% versus ASHRAE 90.1\n- Model loads in Trane TRACE 3D Plus and size systems to ASHRAE 170 for operating suites and isolation rooms\n- Coordinate Revit MEP models with 5 disciplines, keeping drawing issues to under 2% of RFIs during construction\n- Perform construction site visits and review 300 MEP submittals a year for code and design compliance"
+        },
+        {
+          "company": "Prairie Mechanical Design",
+          "role": "Junior Mechanical Engineer",
+          "location": "Naperville, IL",
+          "startDate": "2019-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Produced HVAC and plumbing drawings for office and retail tenant fit-outs\n- Completed 30 field surveys of existing systems for renovation projects\n- Drafted energy code compliance forms for 20 projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "B.S. in Mechanical Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Lakeshore Regional Hospital Expansion",
+          "link": "",
+          "description": "220-bed tower with heat recovery chillers and dedicated outdoor air systems; projected to save $410K a year in energy"
+        }
+      ],
+      "skills": [
+        "Mechanical Design: HVAC systems, chilled water plants, plumbing, medical gas",
+        "Codes: ASHRAE 62.1, 90.1 and 170, IMC, IPC, NFPA 99",
+        "Software: Revit MEP, Trane TRACE 3D Plus, AutoCAD, Navisworks",
+        "Construction Administration: Submittal review, RFIs, site observation reports, commissioning support",
+        "Licenses: Professional Engineer (PE), Illinois; LEED AP BD+C"
+      ]
+    },
+    "Architect": {
+      "summary": "Licensed architect with 11 years designing civic, education and multifamily buildings. Leads design teams of 5 on projects up to $90M and brought a net-zero library from concept to opening. Brings design leadership, construction documents, code analysis and steady client and contractor communication.",
+      "experience": [
+        {
+          "company": "Whitfield Rowe Architects",
+          "role": "Project Architect",
+          "location": "Philadelphia, PA",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead teams of 5 architects and designers on civic and education projects from $15M to $90M\n- Took a 45,000 sq ft net-zero energy public library from schematic design to opening, certified LEED Platinum\n- Produce Revit construction document sets and lead code analysis under the IBC and ADA standards\n- Run construction administration for 3 projects, answering 600+ RFIs and submittals within 7 days on average\n- Mentor 3 junior designers through the ARE exams, with 2 now licensed"
+        },
+        {
+          "company": "Schuylkill Design Studio",
+          "role": "Architectural Designer",
+          "location": "Philadelphia, PA",
+          "startDate": "2016-06",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Designed multifamily buildings of 80 to 240 units through design development\n- Built parametric facade studies in Rhino and Grasshopper that cut panel types 35%\n- Ran community workshops for 2 affordable housing projects"
+        },
+        {
+          "company": "Brandywine Architecture",
+          "role": "Junior Designer",
+          "location": "Wilmington, DE",
+          "startDate": "2015-06",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Drafted details and wall sections for school renovations\n- Prepared presentation renderings for 6 client meetings\n- Built physical study models for client presentations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cornell University",
+          "degree": "Bachelor of Architecture (B.Arch.)",
+          "startDate": "2010-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Fairmount Branch Library",
+          "link": "",
+          "description": "45,000 sq ft net-zero energy library with mass timber reading room and 300 kW rooftop solar; LEED Platinum"
+        }
+      ],
+      "skills": [
+        "Architecture: Design leadership, construction documents, code analysis, construction administration",
+        "Software: Revit, Rhino, Grasshopper, Enscape, AutoCAD, Adobe Creative Cloud",
+        "Sustainability: Net-zero design, LEED, daylighting, embodied carbon",
+        "Licenses: Registered Architect (Pennsylvania), NCARB Certificate, LEED AP BD+C"
+      ]
+    },
+    "Interior Designer": {
+      "summary": "Interior designer with 7 years in commercial workplace and hospitality interiors. Leads projects from programming to installation, including a 120,000 sq ft headquarters delivered 4% under its FF&E budget. Brings space planning, finish and furniture specification, Revit documentation and confident client presentations.",
+      "experience": [
+        {
+          "company": "Lindqvist Interiors Studio",
+          "role": "Interior Designer",
+          "location": "Dallas, TX",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead workplace and hospitality interiors projects from 10,000 to 120,000 sq ft for corporate and hotel clients\n- Delivered a 120,000 sq ft headquarters 4% under its $6.8M FF&E budget through dealer bidding and value engineering\n- Produce Revit documentation, finish schedules and furniture plans for permit and pricing\n- Ran workplace surveys of 900 employees that shaped a 25% shift from private offices to shared spaces\n- Present design concepts and finish palettes to client leadership, winning approval on the first round for 4 of 5 projects"
+        },
+        {
+          "company": "Uptown Design Collective",
+          "role": "Junior Interior Designer",
+          "location": "Dallas, TX",
+          "startDate": "2019-06",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Built material boards and finish specs for 15 restaurant and retail fit-outs\n- Managed sample library of 3,000 finishes and kept specs current with vendors\n- Coordinated furniture deliveries and punch walks for 6 installations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Christian University",
+          "degree": "B.F.A. in Interior Design",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Trinity Financial Headquarters",
+          "link": "",
+          "description": "120,000 sq ft, 5-floor workplace with hybrid work neighborhoods, a client center and WELL-aligned finishes"
+        }
+      ],
+      "skills": [
+        "Design: Space planning, programming, finish and furniture specification, lighting concepts",
+        "Software: Revit, AutoCAD, SketchUp, Enscape, Adobe InDesign",
+        "Project Delivery: FF&E budgets, dealer bidding, installation oversight",
+        "Client Presentations: Concept decks, material boards, 3D renderings, budget reviews",
+        "Credentials: NCIDQ Certified, Texas Registered Interior Designer, LEED Green Associate"
+      ]
+    },
+    "Real Estate Agent": {
+      "summary": "Licensed real estate agent with 6 years in residential sales across suburban Phoenix. Closed 38 transactions and $19.5M in volume in 2025, with 60% of business from referrals and repeat clients. Brings pricing analysis, strong listing presentations and steady guidance for first-time buyers and sellers.",
+      "experience": [
+        {
+          "company": "Saguaro Realty Group",
+          "role": "Real Estate Agent",
+          "location": "Chandler, AZ",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed 38 transactions and $19.5M in sales volume in 2025, ranking in the brokerage's top 10 of 85 agents\n- Price listings with CMAs that average 99.1% of list price and 18 days on market versus a 41-day area median\n- Generate 60% of business from referrals and repeat clients through a quarterly market update email to 1,400 contacts\n- Guided 22 first-time buyers through down payment assistance programs in 2024–2025\n- Market listings with professional photos, 3D tours and targeted social ads, averaging 22 showings in the first week"
+        },
+        {
+          "company": "Valley Home Partners",
+          "role": "Buyer's Agent",
+          "location": "Mesa, AZ",
+          "startDate": "2020-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Represented 26 buyers in a competitive market, winning 70% of offers submitted\n- Ran 3 open houses a month for the team's listings\n- Wrote and negotiated 60 purchase offers with help from the listing team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.S. in Marketing",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: Listing presentations, buyer consultations, negotiation, open houses",
+        "Market Analysis: CMAs, pricing strategy, neighborhood trends",
+        "Systems: ARMLS Flexmls, Follow Up Boss, DocuSign, Canva",
+        "Marketing: Listing photography direction, social ads, email newsletters, open house events",
+        "Licenses: Arizona Real Estate Salesperson License, Accredited Buyer's Representative (ABR)"
+      ]
+    },
+    "Real Estate Broker": {
+      "summary": "Managing real estate broker with 15 years in residential and small commercial brokerage. Leads a 42-agent office that closed $185M in volume in 2025 while personally closing $24M. Brings agent recruiting and coaching, compliance oversight and complex negotiation across luxury, investment and 1031 transactions. Holds CRS and GRI designations and a California broker license.",
+      "experience": [
+        {
+          "company": "Bayline Realty & Associates",
+          "role": "Managing Broker",
+          "location": "San Diego, CA",
+          "startDate": "2019-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 42-agent office that closed $185M in volume across 190 transactions in 2025\n- Grew the agent roster from 24 to 42 in 5 years, with 80% annual agent retention\n- Review every transaction file for DRE compliance, holding a record of zero license complaints\n- Personally closed $24M in 2025, including 6 investment property sales structured as 1031 exchanges\n- Run weekly sales meetings and a 12-week training course for newly licensed agents"
+        },
+        {
+          "company": "Coastline Properties",
+          "role": "Real Estate Agent",
+          "location": "La Jolla, CA",
+          "startDate": "2011-04",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Closed an average of $16M a year in luxury and coastal residential sales\n- Built a listing marketing package with professional video that cut days on market 25%\n- Mentored 5 new agents through their first 10 transactions"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Diego State University",
+          "degree": "B.S. in Finance, Real Estate emphasis",
+          "startDate": "2006-08",
+          "endDate": "2010-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Brokerage Leadership: Agent recruiting, training, transaction oversight, office P&L",
+        "Transactions: Luxury residential, investment property, 1031 exchanges, small commercial",
+        "Compliance: California DRE regulations, trust account oversight, disclosure review",
+        "Marketing: Office brand, listing presentations, agent recruiting campaigns",
+        "Licenses: California Real Estate Broker License, CRS, GRI"
+      ]
+    },
+    "Leasing Agent": {
+      "summary": "Leasing agent with 3 years at Class A apartment communities, leasing about 15 units a month. Holds a 42% tour-to-lease conversion rate and helped push occupancy from 91% to 96%. Brings warm, organized tours, fair housing knowledge and accurate lease paperwork in Yardi and Entrata. NAA CALP certified and fluent in Yardi Voyager and Entrata.",
+      "experience": [
+        {
+          "company": "Elmstead Residential",
+          "role": "Leasing Agent",
+          "location": "Charlotte, NC",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lease about 15 units a month at a 340-unit Class A community, averaging 42% tour-to-lease conversion\n- Helped raise occupancy from 91% to 96% in 9 months during a lease-up of a sister property\n- Screen applicants and prepare leases in Yardi Voyager with zero audit findings in 2025\n- Respond to online leads within 15 minutes on average, adding 20% more booked tours\n- Lead move-in walkthroughs and renewal conversations, helping lift renewal rate from 52% to 57%"
+        },
+        {
+          "company": "Southpark Apartment Homes",
+          "role": "Leasing Assistant",
+          "location": "Charlotte, NC",
+          "startDate": "2023-02",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Handled walk-ins, packages and resident requests at a 220-unit community\n- Planned 6 resident events that lifted renewal rate 5 points\n- Updated move-in packets and welcome emails for new residents"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Charlotte",
+          "degree": "B.A. in Communication Studies",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leasing: Tours, lead follow-up, applicant screening, lease preparation, renewals",
+        "Compliance: Fair Housing Act, application criteria, lease audits",
+        "Systems: Yardi Voyager, Entrata, Knock CRM",
+        "Customer Service: Resident communication, move-in walkthroughs, service request intake",
+        "Certifications: NAA Certified Apartment Leasing Professional (CALP)"
+      ]
+    },
+    "Real Estate Analyst": {
+      "summary": "Real estate analyst with 4 years underwriting multifamily and industrial acquisitions for a private equity real estate firm. Built models for $1.3B of deals reviewed and $310M closed. Brings Argus and Excel modeling, market research and clear investment memos for the investment committee.",
+      "experience": [
+        {
+          "company": "Halcyon Ridge Capital",
+          "role": "Real Estate Analyst",
+          "location": "New York, NY",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Underwrite multifamily and industrial acquisitions, modeling $1.3B of deals and $310M closed since 2023\n- Build 10-year cash flow and waterfall models in Excel and Argus Enterprise with sensitivity tables on cap rates and rent growth\n- Write investment committee memos with rent comps, CoStar supply data and downside cases\n- Track monthly performance of 14 portfolio assets, flagging 2 underperformers that led to revised business plans\n- Support due diligence on property condition reports, leases and operating statements for 6 acquisitions"
+        },
+        {
+          "company": "Brightwater Commercial Advisors",
+          "role": "Analyst, Capital Markets",
+          "location": "Boston, MA",
+          "startDate": "2022-06",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Prepared offering memoranda and valuations for 20 multifamily listings\n- Built a broker opinion of value template used by 6 brokers\n- Pulled rent and sales comps from CoStar for 30 broker opinions of value"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston College",
+          "degree": "B.S. in Finance, Carroll School of Management",
+          "startDate": "2018-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Underwriting: DCF, IRR and equity multiple, waterfall models, debt sizing",
+        "Software: Excel (advanced), Argus Enterprise, CoStar, Yardi Matrix",
+        "Research: Rent comps, sales comps, supply pipeline, submarket analysis",
+        "Due Diligence: Lease abstracts, operating statement review, property condition reports",
+        "Certifications: ARGUS Enterprise Certified, CFA Level I passed"
+      ]
+    },
+    "Real Estate Appraiser": {
+      "summary": "Certified residential appraiser with 9 years valuing single-family, condo and small multifamily properties for lenders and estates. Completes about 450 appraisals a year with a revision request rate under 3%. Brings USPAP-compliant reporting, sound comparable selection and on-time delivery in fast-moving markets. Handles complex assignments, including small multifamily, rural acreage and estate valuations. Also trains appraiser trainees through their licensing hours.",
+      "experience": [
+        {
+          "company": "Keystone Valuation Services",
+          "role": "Certified Residential Appraiser",
+          "location": "Pittsburgh, PA",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Complete about 450 appraisals a year for 12 lenders, AMCs and estate attorneys\n- Keep the revision request rate under 3% by documenting comparable adjustments with paired-sales analysis\n- Deliver reports in an average of 4.5 days against a 7-day client standard\n- Train and supervise 2 appraiser trainees through their experience hours\n- Complete complex assignments including 2- to 4-unit properties, rural acreage and estate date-of-death valuations"
+        },
+        {
+          "company": "Allegheny Appraisal Group",
+          "role": "Licensed Appraiser Trainee",
+          "location": "Monroeville, PA",
+          "startDate": "2017-02",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Inspected and measured 900+ homes under ANSI Z765 standards\n- Drafted UAD-compliant URAR reports for supervisory review\n- Shadowed 300 inspections before taking on solo assignments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Duquesne University",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Valuation: Sales comparison approach, cost approach, paired-sales analysis, market conditions",
+        "Reporting: URAR (Form 1004), Form 1073, desktop and hybrid appraisals, UAD",
+        "Standards: USPAP, Fannie Mae Selling Guide, ANSI Z765",
+        "Software: TOTAL by a la mode, MLS, county records",
+        "Licenses: Certified Residential Real Estate Appraiser, Pennsylvania"
+      ]
+    },
+    "Mortgage Loan Officer": {
+      "summary": "NMLS-licensed mortgage loan officer with 7 years originating conventional, FHA and VA loans. Funded $42M across 120 loans in 2025 with a 92% pull-through rate. Brings clear borrower education, strong realtor partnerships and clean files that move quickly through underwriting. Licensed in Ohio, Indiana and Kentucky and known for 24-day average closings. Also hosts monthly first-time buyer workshops with partner agents.",
+      "experience": [
+        {
+          "company": "Heritage Peak Mortgage",
+          "role": "Mortgage Loan Officer",
+          "location": "Columbus, OH",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Funded $42M across 120 conventional, FHA and VA loans in 2025 with a 92% application-to-close pull-through\n- Built referral partnerships with 35 real estate agents, generating 70% of loan volume\n- Close loans in 24 days on average by collecting complete documents upfront in Encompass\n- Hold a 4.9 out of 5 borrower rating across 300+ post-close reviews\n- Host monthly first-time buyer workshops with partner agents, generating about 15 new applications each"
+        },
+        {
+          "company": "Buckeye Community Bank",
+          "role": "Mortgage Loan Processor",
+          "location": "Westerville, OH",
+          "startDate": "2019-05",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Processed 25 loan files a month from application to clear-to-close\n- Cut conditions per file 30% with a pre-submission checklist\n- Ordered appraisals and title and tracked conditions in Encompass"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "B.B.A. in Finance",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Lending: Conventional, FHA, VA and USDA loans, pre-approvals, rate locks",
+        "Compliance: TRID, RESPA, ECOA, HMDA, ability-to-repay rules",
+        "Systems: Encompass, Optimal Blue, Salesforce, Desktop Underwriter",
+        "Sales: Realtor partnerships, borrower consultations, pipeline management, Salesforce",
+        "Licenses: NMLS Mortgage Loan Originator (Ohio, Indiana, Kentucky)"
+      ]
+    },
+    "Title Examiner": {
+      "summary": "Title examiner with 6 years examining residential and commercial titles for a regional title insurer. Examines about 70 files a month with an error rate under 0.5%. Brings deep chain-of-title research, lien and judgment searches and clear commitments that keep closings on schedule. Licensed Florida title agent working across 8 counties.",
+      "experience": [
+        {
+          "company": "Cornerstone Land Title",
+          "role": "Title Examiner",
+          "location": "Tampa, FL",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Examine about 70 residential and commercial title files a month across 8 Florida counties\n- Keep the post-closing error rate under 0.5% by checking chains of title against 30+ years of recorded documents\n- Identify liens, judgments, easements and probate gaps and draft Schedule B requirements for commitments\n- Clear 90% of title defects before the closing date by working directly with attorneys and lenders\n- Train 2 junior examiners on probate, foreclosure and HOA lien issues common in Florida titles"
+        },
+        {
+          "company": "Gulf Coast Abstract Company",
+          "role": "Title Searcher",
+          "location": "Clearwater, FL",
+          "startDate": "2020-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ran 100+ title searches a month using county records and plant data\n- Built a county quick-reference guide for recording quirks used by 6 searchers\n- Pulled tax records and recorded documents for 8 counties"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "B.A. in Political Science",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Title Examination: Chain of title, lien and judgment searches, easements, probate review",
+        "Documents: Title commitments, Schedule B requirements, legal descriptions",
+        "Systems: SoftPro, RamQuest, county recording portals",
+        "Legal Knowledge: Florida real property law, probate, foreclosure, HOA liens",
+        "Licenses: Florida Title Insurance Agent (2-20 License)"
+      ]
+    },
+    "Property Manager": {
+      "summary": "Property manager with 8 years managing multifamily communities of up to 420 units. Raised occupancy to 97% and net operating income 11% at a 2-community portfolio while cutting delinquency in half. Brings budgeting, resident relations, vendor management and Yardi expertise. Holds the CAM credential and a Tennessee real estate license.",
+      "experience": [
+        {
+          "company": "Riverbirch Property Management",
+          "role": "Property Manager",
+          "location": "Nashville, TN",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 2 multifamily communities totaling 620 units with $11M in annual revenue and a team of 12\n- Raised occupancy from 92% to 97% and NOI 11% through renewal pricing and faster unit turns\n- Cut delinquency from 4.8% to 2.1% of rent with early outreach and payment plans in Yardi\n- Bid and managed $1.6M in capital projects, including roof and amenity renovations on budget\n- Hire and lead 12 leasing, maintenance and office staff, building cross-training that keeps coverage on weekends"
+        },
+        {
+          "company": "Music City Apartments",
+          "role": "Assistant Property Manager",
+          "location": "Franklin, TN",
+          "startDate": "2018-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Handled rent collection, renewals and resident issues for a 300-unit community\n- Shortened average unit turn from 11 days to 6 with vendor scheduling\n- Coordinated 400 move-ins and move-outs a year with the maintenance team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Middle Tennessee State University",
+          "degree": "B.B.A. in Real Estate",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Property Management: Budgets, NOI, leasing oversight, renewals, collections",
+        "Operations: Unit turns, vendor contracts, capital projects, resident relations",
+        "Systems: Yardi Voyager, RentCafe, AppFolio",
+        "Leadership: Team hiring, training, scheduling, vendor oversight",
+        "Licenses: Tennessee Real Estate License, Certified Apartment Manager (CAM)"
+      ]
+    },
+    "Real Estate Development Manager": {
+      "summary": "Real estate development manager with 11 years leading multifamily and mixed-use projects from site acquisition to stabilization. Delivered 1,400 units and $520M in total development cost. Brings entitlements, financing, design management and construction oversight, with a record of beating pro forma returns.",
+      "experience": [
+        {
+          "company": "Marlowe Urban Development",
+          "role": "Development Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 multifamily and mixed-use projects at a time, totaling 1,400 units and $520M in development cost\n- Secured rezoning and variances for a 380-unit tower in 9 months through 14 community meetings\n- Closed $310M in construction loans and LIHTC equity across 3 deals\n- Delivered a 260-unit project 4% under budget, stabilizing at a 6.4% yield-on-cost versus 5.9% pro forma\n- Manage architects, general contractors and consultants through design and construction, reviewing monthly draw packages"
+        },
+        {
+          "company": "Peachtree Residential Partners",
+          "role": "Associate, Development",
+          "location": "Atlanta, GA",
+          "startDate": "2016-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Built development pro formas and managed due diligence for 12 site acquisitions\n- Coordinated architects and civil engineers through permitting on 2 garden-style projects\n- Prepared investment committee memos for 6 projects"
+        },
+        {
+          "company": "Southeastern Commercial Realty",
+          "role": "Financial Analyst",
+          "location": "Charlotte, NC",
+          "startDate": "2014-07",
+          "endDate": "2016-05",
+          "isCurrent": false,
+          "description": "- Modeled office and retail acquisitions in Argus\n- Prepared quarterly investor reports for a $400M fund\n- Built quarterly investor reports for 2 funds"
+        }
+      ],
+      "education": [
+        {
+          "school": "Emory University, Goizueta Business School",
+          "degree": "MBA, Real Estate",
+          "startDate": "2014-08",
+          "endDate": "2016-05"
+        },
+        {
+          "school": "University of Georgia",
+          "degree": "B.B.A. in Real Estate",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Westside Yards",
+          "link": "",
+          "description": "380-unit mixed-use tower with 25,000 sq ft of retail and 20% workforce housing; entitled in 9 months"
+        }
+      ],
+      "skills": [
+        "Development: Site acquisition, entitlements, design management, construction oversight",
+        "Finance: Pro formas, construction loans, LIHTC, joint venture equity, yield-on-cost",
+        "Software: Excel, Argus Developer, Procore, CoStar",
+        "Stakeholders: Community engagement, municipal approvals, investor reporting"
+      ]
+    },
+    "Facilities Manager": {
+      "summary": "Facilities manager with 10 years running corporate campuses and life science buildings up to 900,000 sq ft. Manages a $9M operating budget and cut energy use 19% while raising work order completion to 96% on time. Brings vendor management, capital planning and calm handling of critical building systems.",
+      "experience": [
+        {
+          "company": "Aurora Biosciences",
+          "role": "Facilities Manager",
+          "location": "San Diego, CA",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run facilities for a 4-building, 900,000 sq ft R&D campus with a $9M operating budget and 18 staff and vendors\n- Cut energy use 19% through LED retrofits, chiller optimization and BAS scheduling in Siemens Desigo\n- Raised on-time work order completion from 81% to 96% after moving maintenance into ServiceNow\n- Delivered $5.5M in capital projects, including a lab HVAC upgrade completed without research downtime\n- Lead emergency response for building systems, maintaining a 24/7 on-call rotation with response under 30 minutes"
+        },
+        {
+          "company": "Pacific Shores Corporate Center",
+          "role": "Facilities Supervisor",
+          "location": "Carlsbad, CA",
+          "startDate": "2016-04",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Supervised janitorial, security and maintenance vendors for a 350,000 sq ft office campus\n- Rebid 6 service contracts, saving $420K a year\n- Planned 3 office moves of 200 employees each over weekends"
+        },
+        {
+          "company": "Mission Valley Medical Offices",
+          "role": "Facilities Coordinator",
+          "location": "San Diego, CA",
+          "startDate": "2014-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Coordinated work orders and tenant requests for 5 medical office buildings\n- Tracked fire and life safety inspections with zero lapses\n- Built a preventive maintenance calendar for 5 buildings"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Diego State University",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Facilities: Building operations, preventive maintenance, space planning, vendor management",
+        "Building Systems: HVAC, BAS, lab exhaust, emergency power, fire and life safety",
+        "Systems: ServiceNow, Siemens Desigo CC, Energy Star Portfolio Manager",
+        "Certifications: IFMA Certified Facility Manager (CFM), OSHA 30"
+      ]
+    },
+    "Building Inspector": {
+      "summary": "ICC-certified building inspector with 9 years inspecting residential and commercial construction for a fast-growing county. Performs about 14 inspections a day and helped cut re-inspection rates 25% through contractor outreach. Brings deep IBC and IRC knowledge, clear correction notices and fair, consistent calls. Holds ICC residential combination and commercial building certifications.",
+      "experience": [
+        {
+          "company": "Chisholm County Building Department",
+          "role": "Building Inspector II",
+          "location": "Georgetown, TX",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform about 14 foundation, framing, energy and final inspections a day on residential and commercial projects\n- Cut re-inspection rates 25% by running quarterly code-update sessions for 150 local builders\n- Review plans for code compliance under the 2021 IBC and IRC, approving 600+ residential permits a year\n- Mentor 3 new inspectors through ICC certification exams, all passing on the first attempt\n- Write clear correction notices with code references and photos, cutting contractor appeals 40% since 2022"
+        },
+        {
+          "company": "Brushy Creek City Inspections",
+          "role": "Combination Inspector Trainee",
+          "location": "Round Rock, TX",
+          "startDate": "2017-03",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Conducted building, plumbing and mechanical inspections on single-family homes\n- Logged inspection results in Accela with photo documentation for every correction\n- Joined senior inspectors on 500 commercial inspections to prepare for B2 certification"
+        }
+      ],
+      "education": [
+        {
+          "school": "Austin Community College",
+          "degree": "A.A.S. in Building Construction Technology",
+          "startDate": "2014-08",
+          "endDate": "2016-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inspection: Foundation, framing, energy, accessibility and final inspections",
+        "Codes: IBC, IRC, IECC, IPC, IMC, ADA standards",
+        "Systems: Accela, Bluebeam Revu, iPad field inspection apps",
+        "Communication: Correction notices, contractor education, homeowner guidance",
+        "Certifications: ICC Residential Combination Inspector, ICC Commercial Building Inspector (B2)"
+      ]
+    },
+    "Building Engineer": {
+      "summary": "Building engineer with 8 years operating and maintaining Class A office towers. Keeps HVAC, plumbing and life safety systems running for 1.1M sq ft with 99.9% uptime of critical equipment. Brings chiller and boiler operation, BAS troubleshooting and quick, courteous response to tenant requests.",
+      "experience": [
+        {
+          "company": "Lakeview Tower Management",
+          "role": "Building Engineer",
+          "location": "Chicago, IL",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate and maintain HVAC, plumbing, electrical and life safety systems for a 52-story, 1.1M sq ft office tower\n- Keep chillers, cooling towers and boilers at 99.9% uptime through daily rounds and preventive maintenance\n- Tuned BAS sequences in Johnson Controls Metasys, cutting summer peak demand 8%\n- Close 95% of tenant comfort requests within 2 hours, logged in Angus AnyWhere\n- Lead monthly fire alarm, fire pump and generator tests with contractors and document results for the fire marshal"
+        },
+        {
+          "company": "Riverside Plaza Partners",
+          "role": "Assistant Building Engineer",
+          "location": "Chicago, IL",
+          "startDate": "2018-04",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Performed PM on air handlers, pumps and fire pumps in a 600,000 sq ft office building\n- Assisted with monthly fire alarm and generator testing\n- Replaced bearings and belts on 25 air handlers during scheduled shutdowns"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chicago Technical College",
+          "degree": "Diploma in HVAC/R Technology",
+          "startDate": "2016-09",
+          "endDate": "2018-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Building Systems: Chillers, boilers, cooling towers, air handlers, pumps, fire pumps",
+        "Controls: Johnson Controls Metasys, BAS troubleshooting, setpoint tuning",
+        "Maintenance: Preventive maintenance, tenant service, life safety testing",
+        "Safety: Lockout/tagout, confined space awareness, arc flash awareness (NFPA 70E)",
+        "Licenses: City of Chicago Stationary Engineer License, EPA 608 Universal"
+      ]
+    },
+    "Safety Manager": {
+      "summary": "Construction safety manager with 11 years leading safety programs for commercial and heavy civil general contractors. Oversees safety for 12 active projects and cut the company EMR from 0.94 to 0.71. Brings OSHA 1926 expertise, site audits, incident investigation and training that field crews take seriously.",
+      "experience": [
+        {
+          "company": "Ironbridge Construction Company",
+          "role": "Safety Manager",
+          "location": "Houston, TX",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead safety for 12 active commercial and civil projects with up to 900 workers and 3 site safety coordinators\n- Cut the company EMR from 0.94 to 0.71 and TRIR from 2.4 to 0.9 over 4 years\n- Launched a near-miss reporting app that raised reports from 15 to 140 a month and drove 60 corrective actions\n- Teach OSHA 30, fall protection and excavation competent person courses to 250 workers a year\n- Investigate every recordable and serious near miss with a root cause report shared across all jobs within 72 hours"
+        },
+        {
+          "company": "Gulf Coast Civil Builders",
+          "role": "Site Safety Coordinator",
+          "location": "Beaumont, TX",
+          "startDate": "2016-02",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Ran daily safety audits on refinery and highway projects\n- Wrote site-specific safety plans for 9 projects, including confined space and trenching\n- Coordinated drug testing and orientation for 300 new hires a year"
+        },
+        {
+          "company": "Lone Star Steel Erectors",
+          "role": "Safety Technician",
+          "location": "Pasadena, TX",
+          "startDate": "2014-06",
+          "endDate": "2016-01",
+          "isCurrent": false,
+          "description": "- Inspected rigging, harnesses and aerial lifts for 80 ironworkers\n- Tracked certifications and toolbox talk records\n- Ran weekly toolbox talks for erection crews"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Houston–Clear Lake",
+          "degree": "B.S. in Occupational Safety and Health",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Safety Programs: OSHA 1926, site-specific safety plans, JHAs, incident investigation",
+        "High-Risk Work: Fall protection, excavation and trenching, crane and rigging, confined space",
+        "Systems: SafetyCulture (iAuditor), Procore Safety, Excel",
+        "Certifications: CHST, OSHA 500 Authorized Trainer, First Aid/CPR Instructor"
+      ]
+    },
+    "HVAC Technician": {
+      "summary": "EPA-certified HVAC technician with 6 years installing and servicing residential and light commercial heating and cooling systems. Completes 4 to 6 service calls a day with a 95% first-visit fix rate. Brings refrigerant handling, diagnostics on heat pumps and RTUs, and clear explanations that customers trust. NATE certified and EPA 608 Universal, with a top record in maintenance agreement sales.",
+      "experience": [
+        {
+          "company": "Comfort Point Heating & Air",
+          "role": "HVAC Service Technician",
+          "location": "Atlanta, GA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Diagnose and repair furnaces, heat pumps and rooftop units on 4 to 6 service calls a day\n- Hold a 95% first-visit fix rate by stocking the truck from a seasonal parts checklist\n- Sold 180 maintenance agreements in 2025, the most of 14 technicians\n- Commission high-efficiency heat pump installs to manufacturer specs and Georgia energy code\n- Perform 300 seasonal maintenance tune-ups a year, documenting readings and photos in ServiceTitan"
+        },
+        {
+          "company": "Peach State Mechanical",
+          "role": "HVAC Installer",
+          "location": "Marietta, GA",
+          "startDate": "2020-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Installed 200+ split systems and ductwork in new homes\n- Completed duct leakage tests that passed 98% on the first attempt\n- Brazed refrigerant lines and set condensers on new home installs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chattahoochee Technical College",
+          "degree": "Diploma in Air Conditioning Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HVAC Service: Diagnostics, refrigerant recovery and charging, heat pumps, gas furnaces, RTUs",
+        "Installation: Split systems, ductwork, thermostats, commissioning",
+        "Tools: Manifold gauges, combustion analyzers, ServiceTitan",
+        "Customer Service: Clear repair explanations, maintenance agreement sales, 5-star reviews",
+        "Licenses: EPA 608 Universal, NATE Certified (Air Conditioning and Heat Pump Service)"
+      ]
+    },
+    "Electrician": {
+      "summary": "Oregon-licensed journeyman electrician with 8 years in commercial and multifamily construction. Leads 3-person crews installing power, lighting and low-voltage systems and passes 97% of inspections on the first visit. Brings NEC fluency, blueprint reading and safe work under NFPA 70E. Trains apprentices on site and coordinates panel layouts with other trades.",
+      "experience": [
+        {
+          "company": "Brightline Electrical Contractors",
+          "role": "Journeyman Electrician",
+          "location": "Portland, OR",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-person crew installing branch circuits, panels and lighting in multifamily and office projects\n- Pass 97% of rough and final inspections on the first visit under the Oregon Electrical Specialty Code (2023 NEC)\n- Installed service gear and 400A distribution for a 240-unit apartment building ahead of the energization date\n- Train 4 apprentices on conduit bending, terminations and lockout/tagout under NFPA 70E\n- Read and mark up construction drawings, coordinating panel locations with plumbing and HVAC trades"
+        },
+        {
+          "company": "Valley Power & Light Services",
+          "role": "Apprentice Electrician",
+          "location": "Salem, OR",
+          "startDate": "2017-06",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Completed 8,000 on-the-job hours in commercial tenant improvements and retail fit-outs\n- Pulled wire and bent EMT for 60+ projects\n- Installed fire alarm devices and data cabling on 15 tenant improvement projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "Oregon State-Registered Electrical Apprenticeship (Inside Wireman)",
+          "degree": "4-Year Electrical Apprenticeship, 8,000 OJT hours",
+          "startDate": "2017-06",
+          "endDate": "2021-01"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Electrical Work: Branch circuits, panels, service gear, lighting controls, low voltage",
+        "Codes: NEC 2023, Oregon Electrical Specialty Code, NFPA 70E",
+        "Tools: Conduit benders, meters and testers, blueprint reading, Procore",
+        "Safety: Lockout/tagout, arc flash PPE, ladder and lift safety",
+        "Licenses: Oregon General Journeyman Electrician, OSHA 30"
+      ]
+    },
+    "Plumber": {
+      "summary": "Licensed journeyman plumber with 7 years in new residential construction and residential service. Handles 5 to 7 service calls a day with a 4.9-star customer rating. Brings water heater, drain and gas line expertise, clean work in occupied homes and a solid grasp of the plumbing code.",
+      "experience": [
+        {
+          "company": "Clearflow Plumbing Services",
+          "role": "Journeyman Plumber",
+          "location": "San Antonio, TX",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle 5 to 7 service calls a day on drains, water heaters, leaks and gas lines in occupied homes\n- Hold a 4.9 out of 5 customer rating across 600+ reviews\n- Replace about 150 tank and tankless water heaters a year to code and manufacturer specs\n- Lead re-pipes from polybutylene to PEX, completing most homes in 1 day\n- Explain repair options and pricing to homeowners before work, keeping callbacks under 2% of jobs"
+        },
+        {
+          "company": "Hill Country New Home Plumbing",
+          "role": "Plumber Apprentice",
+          "location": "New Braunfels, TX",
+          "startDate": "2019-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Roughed in DWV and water lines for 3 to 4 new homes a week\n- Passed 96% of rough-in inspections on the first visit\n- Set tubs, toilets and fixtures at trim-out on 150 homes a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "St. Philip’s College",
+          "degree": "Certificate in Plumbing Technology",
+          "startDate": "2018-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Plumbing: DWV and water supply, water heaters, re-pipes, fixtures, gas piping",
+        "Codes: International Plumbing Code and Uniform Plumbing Code as adopted in Texas, fuel gas code",
+        "Tools: Drain cameras, PEX and copper tools, press fittings, ServiceTitan",
+        "Customer Service: Upfront pricing, clean work areas, clear repair explanations",
+        "Licenses: Texas Journeyman Plumber (TSBPE), OSHA 10"
+      ]
+    },
+    "Carpenter": {
+      "summary": "Journeyman carpenter with 9 years in commercial framing, concrete formwork and finish carpentry. Leads layout for 4-person crews and has worked on hotels, schools and mid-rise residential. Brings accurate layout with total stations, form work that passes first inspection and safe work at height. Comfortable leading layout with a robotic total station on 6-story buildings.",
+      "experience": [
+        {
+          "company": "Northgate Builders",
+          "role": "Journeyman Carpenter",
+          "location": "Portland, OR",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead layout and framing for a 4-person crew on mid-rise residential and hotel projects\n- Set out walls and embeds with a robotic total station, cutting layout time 40% on a 6-story hotel\n- Built gang forms for 14 elevated concrete decks with zero failed pre-pour inspections\n- Install doors, frames and millwork to finish tolerances in 180 hotel guest rooms\n- Read architectural and structural drawings to set out stair openings, shafts and blocking for other trades"
+        },
+        {
+          "company": "Columbia River Concrete Forming",
+          "role": "Carpenter",
+          "location": "Vancouver, WA",
+          "startDate": "2017-03",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Built wall and column forms for schools and parking structures\n- Completed scaffold and fall protection training and served as crew safety contact\n- Stripped and reset forms for 3 parking structures"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific Northwest Carpenters Institute",
+          "degree": "Carpentry Apprenticeship (4-year)",
+          "startDate": "2013-09",
+          "endDate": "2017-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Carpentry: Wood and metal stud framing, concrete formwork, doors and hardware, millwork",
+        "Layout: Robotic total station, blueprint reading, transit and laser levels",
+        "Safety: Fall protection, scaffold use, OSHA 30",
+        "Teamwork: Crew leadership, apprentice mentoring, trade coordination",
+        "Certifications: Journeyman Carpenter, Powder-Actuated Tool Certified"
+      ]
+    },
+    "Foreman": {
+      "summary": "Construction foreman with 12 years in commercial concrete, leading crews of up to 22 finishers, carpenters and laborers. Placed 38,000 cubic yards on time across 9 projects in 2024–2025. Brings daily crew planning, quality control on slabs and structures and the respect of crews who want a safe, productive day.",
+      "experience": [
+        {
+          "company": "Keystone Concrete Contractors",
+          "role": "Concrete Foreman",
+          "location": "Columbus, OH",
+          "startDate": "2019-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead crews of up to 22 finishers, carpenters and laborers on warehouses, schools and parking structures\n- Placed 38,000 cubic yards across 9 projects in 2024–2025 with every pour on schedule\n- Hit floor flatness of FF45/FL30 or better on 1.2M sq ft of warehouse slabs\n- Hold crew safety huddles daily, with zero recordable injuries since 2022\n- Plan daily crew assignments, concrete orders and pump schedules with the superintendent"
+        },
+        {
+          "company": "Buckeye Structural Concrete",
+          "role": "Lead Concrete Finisher",
+          "location": "Dayton, OH",
+          "startDate": "2014-03",
+          "endDate": "2019-04",
+          "isCurrent": false,
+          "description": "- Finished slabs and elevated decks with laser screeds and ride-on trowels\n- Trained 10 new finishers on edging, jointing and curing\n- Ran curing and saw-cut schedules for 300,000 sq ft of slabs"
+        },
+        {
+          "company": "Miami Valley Site Work",
+          "role": "Laborer",
+          "location": "Springfield, OH",
+          "startDate": "2013-04",
+          "endDate": "2014-02",
+          "isCurrent": false,
+          "description": "- Set forms, placed rebar and cleaned up sites for 2 crews\n- Earned a promotion to finisher within 11 months\n- Moved rebar and forms with a skid steer"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio Laborers' Training Center",
+          "degree": "Construction Craft Laborer Apprenticeship",
+          "startDate": "2013-04",
+          "endDate": "2015-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Leadership: Crew planning, daily reports, productivity tracking, subcontractor coordination",
+        "Concrete: Slab-on-grade, elevated decks, laser screed, flatness control, curing",
+        "Safety: OSHA 30, silica exposure control, daily huddles",
+        "Equipment: Laser screeds, ride-on trowels, concrete pumps, skid steers",
+        "Certifications: ACI Concrete Flatwork Finisher, ACI Field Testing Technician Grade I"
+      ]
+    },
+    "Quantity Surveyor": {
+      "summary": "Quantity surveyor with 8 years on commercial and infrastructure projects in the UK and US, now managing cost for a general contractor's $300M project portfolio. Recovered $4.2M in variations and kept final accounts within 1% of forecast. Brings measurement, cost reporting and contract administration skills. MRICS chartered, with experience under NRM2, NEC4, AIA and ConsensusDocs contracts.",
+      "experience": [
+        {
+          "company": "Halden Meyer Construction",
+          "role": "Senior Quantity Surveyor",
+          "location": "Houston, TX",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage cost for 5 commercial and data center projects totaling $300M under AIA and ConsensusDocs contracts\n- Recovered $4.2M in owner-directed variations with priced backup and schedule impact narratives\n- Keep final accounts within 1% of the monthly cost-to-complete forecast across 4 closed projects\n- Measure quantities from Revit models and 2D drawings in CostX for buyout and change pricing\n- Prepare monthly cost reports for project directors with earned value and forecast final cost"
+        },
+        {
+          "company": "Brockwell & Lane",
+          "role": "Quantity Surveyor",
+          "location": "Remote",
+          "startDate": "2018-03",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Prepared bills of quantities under NRM2 for rail and highway projects worth up to $150M\n- Valued monthly subcontractor applications for 25 trade packages under NEC4 contracts\n- Reviewed 30 subcontract agreements for scope and payment terms"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Florida",
+          "degree": "B.S. in Construction Management",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Cost Management: Measurement, bills of quantities, cost-to-complete, final accounts",
+        "Contracts: AIA, ConsensusDocs, NEC4, change orders and variations",
+        "Software: CostX, Bluebeam Revu, Revit, Excel",
+        "Reporting: Monthly cost reports, earned value, cash flow forecasting",
+        "Certifications: MRICS (Chartered Quantity Surveyor), CCP (AACE)"
+      ]
+    },
+    "Surveyor": {
+      "summary": "Surveyor with 6 years running field crews for construction staking, topographic and as-built surveys. Leads a 2-person crew and stakes about 25 commercial and infrastructure sites a year with no rework from layout errors. Brings GNSS and robotic total station expertise and Civil 3D data processing. FAA Part 107 certified for drone photogrammetry and earthwork volume checks.",
+      "experience": [
+        {
+          "company": "Cardinal Point Surveying",
+          "role": "Survey Party Chief",
+          "location": "Indianapolis, IN",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 2-person field crew on construction staking, topographic and as-built surveys for about 25 sites a year\n- Staked building corners, grid lines and utilities for 8 warehouses with zero layout-error rework\n- Collect topo data with Trimble R12i GNSS and S7 robotic total stations, processing surfaces in Civil 3D\n- Flew drone photogrammetry for 15 earthwork volume checks, cutting field time 60% versus ground shots\n- Set and check survey control networks on each site and log closure results for the project surveyor"
+        },
+        {
+          "company": "Hoosier Land Services",
+          "role": "Survey Technician",
+          "location": "Carmel, IN",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Ran instruments and collected data on residential lot and road surveys\n- Drafted plats and exhibits in AutoCAD for 70 projects\n- Ran digital level loops for 20 benchmark checks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vincennes University",
+          "degree": "A.S. in Surveying Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Surveying: Construction staking, topographic surveys, as-builts, control networks",
+        "Equipment: Trimble GNSS, robotic total stations, digital levels, DJI drones",
+        "Software: AutoCAD Civil 3D, Trimble Business Center, Pix4D",
+        "Safety: Traffic control awareness, OSHA 10, site safety orientation",
+        "Certifications: NSPS Certified Survey Technician (Level II), FAA Part 107"
+      ]
+    },
+    "Land Surveyor": {
+      "summary": "Licensed professional land surveyor with 13 years in boundary, ALTA/NSPS and subdivision surveys. Signs about 300 surveys a year and manages 4 field crews. Brings deep boundary law knowledge, title commitment review and careful research that holds up in closings, permitting and the occasional courtroom.",
+      "experience": [
+        {
+          "company": "Meridian Line Surveying",
+          "role": "Professional Land Surveyor",
+          "location": "Nashville, TN",
+          "startDate": "2019-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sign and seal about 300 boundary, ALTA/NSPS and subdivision surveys a year as surveyor in charge\n- Manage 4 field crews and 3 CAD technicians, keeping average turnaround at 12 business days\n- Review title commitments and Schedule B exceptions for 120 commercial ALTA surveys a year\n- Served as expert witness in 3 boundary disputes, with the court adopting the surveyed line each time\n- Review CAD deliverables and field notes from each crew before signing, with no plat rejections at county review since 2021"
+        },
+        {
+          "company": "Cumberland Survey Group",
+          "role": "Survey Project Manager",
+          "location": "Murfreesboro, TN",
+          "startDate": "2013-06",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Managed survey work for 40 residential subdivisions, including final plats and easement exhibits\n- Earned PLS license in 2017 and took over responsible charge for 2 crews\n- Prepared 60 easement exhibits and legal descriptions a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "East Tennessee State University",
+          "degree": "B.S. in Surveying and Mapping Science",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Surveying: Boundary retracement, ALTA/NSPS surveys, subdivision plats, easements",
+        "Research: Deed and plat research, title commitment review, boundary law",
+        "Software: AutoCAD Civil 3D, Trimble Business Center, Carlson Survey",
+        "Leadership: Crew management, CAD team review, project scheduling",
+        "Licenses: Professional Land Surveyor (PLS), Tennessee and Kentucky"
+      ]
+    },
+    "Estimator": {
+      "summary": "Estimator with 7 years pricing commercial interior and tenant improvement work for a general contractor. Produces about 90 estimates a year worth $160M in bid volume and holds a 27% hit rate. Brings quantity takeoff, subcontractor bid leveling and clear scope narratives that reduce surprises after award. Keeps post-award buyout within 2% of estimate on most projects.",
+      "experience": [
+        {
+          "company": "Summit Interiors Construction",
+          "role": "Estimator",
+          "location": "Dallas, TX",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare about 90 estimates a year for office, medical and retail interiors worth $160M in bid volume\n- Win 27% of bids, up from 19%, by leveling subcontractor quotes and writing clear scope inclusions\n- Perform takeoffs in On-Screen Takeoff and Bluebeam, holding post-award buyout within 2% of estimate\n- Built a cost database of 3 years of historical unit prices used for conceptual budgets\n- Present bid summaries and scope gaps to project managers at each handoff meeting"
+        },
+        {
+          "company": "Metroplex Tenant Builders",
+          "role": "Assistant Estimator",
+          "location": "Plano, TX",
+          "startDate": "2019-06",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Solicited bids from 40+ subcontractors per project through BuildingConnected\n- Prepared takeoffs for drywall, ceilings and flooring on 60 bids\n- Built quick budget estimates for 20 owner pursuit meetings"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Texas",
+          "degree": "B.S. in Construction Engineering Technology",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Estimating: Quantity takeoff, bid leveling, conceptual budgets, scope narratives",
+        "Software: On-Screen Takeoff, Bluebeam Revu, BuildingConnected, Excel",
+        "Construction: Interior systems, MEP scope review, tenant improvements",
+        "Communication: Bid summaries, scope narratives, subcontractor outreach",
+        "Certifications: ASPE Certified Professional Estimator (CPE) candidate"
+      ]
+    },
+    "Construction Estimator": {
+      "summary": "Senior construction estimator with 12 years pricing heavy civil and site work, including roads, utilities and earthwork for public owners. Prepares bids up to $75M and won $210M in work over the last 3 years. Brings HCSS HeavyBid expertise, crew-based pricing and risk review that protects margin on hard-bid work.",
+      "experience": [
+        {
+          "company": "Redstone Civil Constructors",
+          "role": "Senior Construction Estimator",
+          "location": "Salt Lake City, UT",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Price hard-bid highway, utility and earthwork projects up to $75M for UDOT and municipal owners\n- Won $210M in work over 3 years with a 22% hit rate and average 9% gross margin at closeout\n- Build crew-based estimates in HCSS HeavyBid with equipment rates tied to actual fleet costs\n- Lead go/no-go and risk reviews, declining 3 bids that later saw major overruns for the low bidder\n- Mentor 2 junior estimators on takeoff, crew productivity and bid-day procedures"
+        },
+        {
+          "company": "Wasatch Excavation & Utilities",
+          "role": "Estimator",
+          "location": "Provo, UT",
+          "startDate": "2016-03",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Estimated water, sewer and storm drain projects from $1M to $15M\n- Ran earthwork quantity models in Trimble Business Center\n- Visited 30 project sites before bid to check access, soils and haul routes"
+        },
+        {
+          "company": "Great Basin Paving",
+          "role": "Project Engineer",
+          "location": "Ogden, UT",
+          "startDate": "2014-06",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Tracked quantities and pay estimates for asphalt paving jobs\n- Built daily production reports for 4 paving crews\n- Prepared monthly cost reports on paving production"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Utah",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Estimating: Heavy civil, earthwork, utilities, paving, crew-based pricing",
+        "Software: HCSS HeavyBid, Trimble Business Center, Bluebeam Revu, Excel",
+        "Risk: Bid/no-bid analysis, contingency, quantity verification",
+        "Leadership: Junior estimator mentoring, bid-day coordination",
+        "Certifications: AACE Certified Cost Professional (CCP)"
+      ]
+    },
+    "Assistant Project Manager": {
+      "summary": "Assistant project manager with 5 years at a commercial general contractor, supporting $20M to $70M office and healthcare projects. Manages 18 subcontracts, pay applications and change orders on a $64M clinic. Brings tight cost tracking, owner-ready documentation and field coordination that prepares for full project management.",
+      "experience": [
+        {
+          "company": "Lindell Brothers Construction",
+          "role": "Assistant Project Manager",
+          "location": "Kansas City, MO",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 18 subcontracts worth $31M on a $64M outpatient clinic, including buyout, pay applications and lien waivers\n- Track 140 change events in Procore and price owner change orders, recovering $1.9M in approved changes\n- Update the monthly cost report with the PM, keeping forecast accuracy within 1% of actuals\n- Lead weekly subcontractor coordination meetings and owner-architect-contractor meeting minutes\n- Review subcontractor schedules and update the 3-week lookahead with the superintendent each week"
+        },
+        {
+          "company": "Midland Commercial Builders",
+          "role": "Project Engineer",
+          "location": "Overland Park, KS",
+          "startDate": "2021-06",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Ran RFIs and 900 submittals for a $22M office building\n- Built the closeout tracker that delivered all O&M manuals within 30 days of substantial completion\n- Walked the site weekly to update percent-complete for pay applications"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kansas",
+          "degree": "B.S. in Architectural Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Northland Outpatient Clinic",
+          "link": "",
+          "description": "$64M, 120,000 sq ft clinic with imaging suites and ambulatory surgery; tracking to finish 3 weeks early"
+        }
+      ],
+      "skills": [
+        "Project Controls: Subcontract management, pay applications, change orders, cost reports",
+        "Coordination: OAC meetings, RFIs, submittals, closeout",
+        "Systems: Procore, Sage 300 CRE, Bluebeam Revu, Primavera P6 (viewing)",
+        "Leadership: Project engineer mentoring, subcontractor relationships",
+        "Certifications: OSHA 30, LEED Green Associate"
+      ]
+    },
+    "Field Engineer": {
+      "summary": "Field engineer with 3 years on heavy civil and bridge projects, handling layout, quantity tracking and quality documentation in the field. Supported a $140M interchange project and cut quantity disputes with the owner to zero. Brings survey layout, daily reporting and practical problem solving alongside superintendents and crews.",
+      "experience": [
+        {
+          "company": "Riverton Heavy Civil",
+          "role": "Field Engineer",
+          "location": "Jacksonville, FL",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support superintendents on a $140M FDOT interchange with 4 bridges and 3 miles of new roadway\n- Track daily installed quantities for 120 pay items, with zero quantity disputes at monthly FDOT estimates\n- Run layout for drilled shafts and bridge bents with a Trimble robotic total station to ±1/4 inch\n- Document QC inspections for concrete pours and rebar placement in HCSS HeavyJob and project logs\n- Prepare as-built redlines and weekly progress photos for the project's monthly owner report"
+        },
+        {
+          "company": "First Coast Bridge Constructors",
+          "role": "Field Engineering Intern",
+          "location": "St. Augustine, FL",
+          "startDate": "2023-05",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Assisted with pile driving logs and concrete cylinder sampling on a bridge replacement\n- Updated as-built redlines for 40 drawing sheets\n- Logged daily weather and crew counts for the superintendent"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Florida",
+          "degree": "B.S. in Civil Engineering",
+          "startDate": "2019-08",
+          "endDate": "2023-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Engineering: Layout, quantity tracking, daily reports, as-builts, QC documentation",
+        "Equipment: Trimble robotic total station, GNSS rover, digital levels",
+        "Software: HCSS HeavyJob, AutoCAD Civil 3D, Bluebeam Revu, Excel",
+        "Communication: Daily reports, RFI drafts, crew coordination",
+        "Certifications: FDOT Concrete Field Inspector Level 1, OSHA 30, Engineer in Training (EIT)"
+      ]
+    },
+    "Construction Management Intern": {
+      "summary": "Construction management junior at Virginia Tech with a summer internship at a commercial general contractor and hands-on residential framing experience. Logged 400 submittals and created a site logistics plan used on a $48M project. Brings Procore and Bluebeam skills, estimating coursework and a strong safety mindset.",
+      "experience": [
+        {
+          "company": "Old Dominion Builders",
+          "role": "Construction Management Intern",
+          "location": "Richmond, VA",
+          "startDate": "2026-05",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Supported the project team on a $48M mixed-use building, logging and routing 400 submittals in Procore\n- Drew a phased site logistics plan in Bluebeam that the superintendent used for crane and delivery planning\n- Joined daily safety walks and wrote 30 observation reports, 6 of which led to corrective actions"
+        },
+        {
+          "company": "Blue Ridge Student Home Build Crew",
+          "role": "Volunteer Crew Lead",
+          "location": "Blacksburg, VA",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead groups of 8 student volunteers framing and sheathing affordable single-family homes\n- Helped complete 3 homes in 2 years while keeping a zero-injury record on build days\n- Coordinate tool checkout and material staging for Saturday builds with the site supervisor"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Tech",
+          "degree": "B.S. in Building Construction (expected May 2028), GPA 3.5",
+          "startDate": "2024-08",
+          "endDate": "2028-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "ASC Region 2 Student Competition",
+          "link": "",
+          "description": "Commercial division team that produced a GMP estimate, CPM schedule and safety plan for a $30M office building in 18 hours; placed 3rd"
+        }
+      ],
+      "skills": [
+        "Construction Tools: Procore, Bluebeam Revu, Primavera P6 (coursework), On-Screen Takeoff",
+        "Coursework: Estimating, construction scheduling, materials and methods, construction law",
+        "Field Skills: Wood framing, site safety observation, blueprint reading",
+        "Leadership: Student chapter of the Associated General Contractors (AGC), events committee",
+        "Certifications: OSHA 30, First Aid/CPR"
+      ]
+    },
+    "Assistant Property Manager": {
+      "summary": "Assistant property manager with 4 years in multifamily operations at 250- to 400-unit communities. Runs collections, renewals and resident relations and cut delinquency from 5.1% to 2.4%. Brings Yardi and RealPage accounting, lease compliance and the operating knowledge to step into a property manager role.",
+      "experience": [
+        {
+          "company": "Crestmoor Living",
+          "role": "Assistant Property Manager",
+          "location": "Tampa, FL",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support the property manager at a 380-unit community with $7.2M in annual rent and a team of 8\n- Cut delinquency from 5.1% to 2.4% with weekly aging reviews, payment plans and timely notices under Florida law\n- Raised renewal rate from 51% to 58% by sending offers 90 days out and handling resident concerns quickly\n- Post rent, process move-outs and prepare deposit dispositions in Yardi with zero month-end audit findings\n- Process about 200 vendor invoices a month and code them to the property budget"
+        },
+        {
+          "company": "Bayshore Apartments",
+          "role": "Leasing Consultant",
+          "location": "St. Petersburg, FL",
+          "startDate": "2022-01",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Leased 12 units a month at a 260-unit community with a 38% closing ratio\n- Managed online reputation responses, raising the review rating from 3.8 to 4.4\n- Answered 40 resident calls and emails a day about leasing and maintenance"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Tampa",
+          "degree": "B.S. in Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Property Operations: Rent collection, renewals, move-ins and move-outs, resident relations",
+        "Accounting: Rent posting, delinquency reports, deposit dispositions, invoice processing",
+        "Systems: Yardi Voyager, RealPage OneSite, Entrata",
+        "Leadership: Front office supervision, leasing team support, resident events",
+        "Licenses: Florida Community Association Manager (CAM), NAA Certified Apartment Manager (in progress)"
+      ]
+    },
+    "Escrow Officer": {
+      "summary": "Escrow officer with 9 years closing residential and commercial transactions in California. Manages about 25 open escrows at a time and closed 310 files worth $290M in 2025. Brings careful document review, clear communication with agents, lenders and buyers, and strict control of trust funds and wire fraud risk.",
+      "experience": [
+        {
+          "company": "Golden Coast Escrow",
+          "role": "Escrow Officer",
+          "location": "San Jose, CA",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage about 25 open residential and commercial escrows at a time with 1 escrow assistant\n- Closed 310 files worth $290M in 2025, including 1031 exchanges and short sales\n- Prepare escrow instructions, settlement statements and payoff demands in SoftPro, meeting TRID timing on every file\n- Stopped 2 attempted wire fraud diversions in 2024 by enforcing call-back verification on all payoff changes\n- Review title commitments, payoffs and lender instructions on every file before signing"
+        },
+        {
+          "company": "Silicon Valley Title & Escrow",
+          "role": "Escrow Assistant",
+          "location": "Santa Clara, CA",
+          "startDate": "2017-03",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Opened orders, ordered payoffs and coordinated signings for 2 escrow officers\n- Cut missing-document delays 30% with a pre-closing checklist sent to agents\n- Prepared 40 closing packages a month for signing appointments"
+        }
+      ],
+      "education": [
+        {
+          "school": "San José State University",
+          "degree": "B.S. in Business Administration, Finance",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Escrow: Escrow instructions, settlement statements, payoffs, disbursements, 1031 exchanges",
+        "Compliance: TRID, RESPA, California Escrow Law, trust account reconciliation, wire fraud controls",
+        "Systems: SoftPro, Qualia, DocuSign",
+        "Communication: Agent and lender updates, buyer and seller guidance, closing coordination",
+        "Certifications: Certified Senior Escrow Officer (CSEO), California Escrow Association"
+      ]
+    },
+    "Real Estate Transaction Coordinator": {
+      "summary": "Real estate transaction coordinator with 4 years managing contract-to-close for residential agents and teams. Coordinates about 220 closings a year with a 99% on-time close rate. Brings contract and deadline tracking, compliance-ready files and steady communication with lenders, title and clients. Licensed North Carolina broker fluent in Dotloop and SkySlope.",
+      "experience": [
+        {
+          "company": "Willow & Main Realty Team",
+          "role": "Transaction Coordinator",
+          "location": "Raleigh, NC",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage contract-to-close for about 220 buyer and seller transactions a year across 9 agents\n- Hold a 99% on-time closing rate by tracking due diligence, appraisal and financing deadlines in Dotloop\n- Keep every file broker-compliant at review, with zero missing disclosures in 2025\n- Send weekly status updates to clients, lenders and attorneys, cutting agent status calls by about half\n- Build closing checklists and timelines for each new contract within 24 hours of acceptance"
+        },
+        {
+          "company": "Capital City Closing Services",
+          "role": "Closing Assistant",
+          "location": "Cary, NC",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Prepared closing packages and scheduled signings for a real estate law firm handling 60 closings a month\n- Ordered title searches, HOA documents and payoffs\n- Coordinated 60 signings a month with notaries and attorneys"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "B.A. in Communication",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Transaction Management: Contract-to-close, deadline tracking, disclosures, file compliance",
+        "Coordination: Lenders, closing attorneys, inspectors, appraisers, HOAs",
+        "Systems: Dotloop, SkySlope, Follow Up Boss, DocuSign",
+        "Organization: Deadline calendars, document tracking, checklist management",
+        "Licenses: North Carolina Real Estate Broker License"
+      ]
+    },
+    "Preconstruction Manager": {
+      "summary": "Preconstruction manager with 12 years at commercial general contractors, leading estimating, value engineering and constructability reviews for projects from $20M to $250M. Converted $640M of pursuits into negotiated work over 4 years. Brings target-value design, early trade partner engagement and budgets that hold through design development.",
+      "experience": [
+        {
+          "company": "Bancroft & Hale Builders",
+          "role": "Preconstruction Manager",
+          "location": "Nashville, TN",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 6-person preconstruction team covering estimating, scheduling and VDC for healthcare, higher education and office pursuits\n- Converted $640M of preconstruction-phase projects into negotiated GMP contracts over 4 years, a 78% conversion rate\n- Held final GMPs within 2% of schematic design budgets on 9 projects using target-value design with owners and architects\n- Identified $7.4M in value engineering on a $180M academic building without cutting program space\n- Run constructability and phasing reviews in Revit and Navisworks at each design milestone"
+        },
+        {
+          "company": "Cumberland Valley Construction",
+          "role": "Senior Estimator",
+          "location": "Knoxville, TN",
+          "startDate": "2016-04",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Built conceptual and detailed estimates for 70 projects from $10M to $120M using Sage Estimating and historical cost data\n- Created a cost database of 400 completed projects that cut conceptual estimate time from 2 weeks to 4 days\n- Led trade partner outreach that raised average bids per package from 3 to 6"
+        },
+        {
+          "company": "Smoky Mountain Builders",
+          "role": "Estimator",
+          "location": "Chattanooga, TN",
+          "startDate": "2014-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Performed quantity takeoffs for concrete, steel and interiors on K-12 and retail bids\n- Leveled subcontractor bids for 25 hard-bid projects\n- Visited 40 project sites before bid to verify existing conditions"
+        }
+      ],
+      "education": [
+        {
+          "school": "Auburn University",
+          "degree": "B.S. in Building Science",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Riverside College of Engineering Building",
+          "link": "",
+          "description": "$180M, 240,000 sq ft teaching and research building; preconstruction led to a GMP within 1.5% of the schematic budget"
+        }
+      ],
+      "skills": [
+        "Preconstruction: Conceptual estimating, target-value design, value engineering, constructability reviews",
+        "Software: Sage Estimating, DESTINI Estimator, Revit, Navisworks, Bluebeam Revu",
+        "Business Development: Pursuit strategy, owner interviews, fee proposals, trade partner engagement",
+        "Leadership: Team management, estimator development, design-team coordination",
+        "Certifications: ASPE Certified Professional Estimator (CPE), LEED AP BD+C"
+      ]
+    },
+    "Real Estate Asset Manager": {
+      "summary": "Real estate asset manager with 10 years in institutional office and industrial portfolios. Oversees 14 assets and 4.2M sq ft valued at $1.1B and grew portfolio NOI 13% in 3 years. Brings business plan execution, leasing strategy, capital planning and clear quarterly reporting to investors.",
+      "experience": [
+        {
+          "company": "Larchmont Realty Investors",
+          "role": "Asset Manager",
+          "location": "Chicago, IL",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 14 industrial and office assets totaling 4.2M sq ft and $1.1B in value for 2 institutional funds\n- Grew same-store NOI 13% over 3 years by marking expiring industrial leases to market rents 28% higher\n- Directed $36M in capital projects, including dock and roof upgrades that won 3 renewals worth 900,000 sq ft\n- Led hold-sell analysis and the $185M sale of 3 office buildings at a 7% premium to appraised value\n- Oversee 3 third-party property managers, reviewing budgets, leasing pipelines and capital requests each month"
+        },
+        {
+          "company": "Prairie Shore Capital",
+          "role": "Associate, Asset Management",
+          "location": "Chicago, IL",
+          "startDate": "2016-07",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Reviewed annual budgets and leasing proposals for a $600M office portfolio\n- Built Argus models for quarterly valuations and lender reporting\n- Tracked lease expirations and renewal probabilities for 40 tenants"
+        },
+        {
+          "company": "Midway Commercial Brokerage",
+          "role": "Research Analyst",
+          "location": "Chicago, IL",
+          "startDate": "2014-06",
+          "endDate": "2016-06",
+          "isCurrent": false,
+          "description": "- Produced quarterly industrial and office market reports\n- Maintained lease comp database of 3,000 transactions\n- Wrote 12 market updates a year for brokerage clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Chicago Booth School of Business",
+          "degree": "MBA (Evening), Finance and Real Estate",
+          "startDate": "2017-09",
+          "endDate": "2020-06"
+        },
+        {
+          "school": "University of Illinois Urbana-Champaign",
+          "degree": "B.S. in Finance",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Asset Management: Business plans, hold-sell analysis, budgets, capital planning",
+        "Leasing: Lease strategy, renewals, tenant credit review, market rent analysis",
+        "Software: Argus Enterprise, Yardi, CoStar, Excel",
+        "Reporting: Investor and lender reporting, quarterly valuations, NCREIF metrics"
+      ]
+    }
+  }
+}

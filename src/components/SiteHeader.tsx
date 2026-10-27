@@ -15,7 +15,7 @@ export const Logo: React.FC = () => (
 );
 
 const navLinkClass = ({ isActive }: { isActive: boolean }) =>
-  `rounded-lg px-3 py-2 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
+  `shrink-0 whitespace-nowrap rounded-lg px-2.5 py-2 sm:px-3 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 ${
     isActive
       ? 'text-slate-900 dark:text-white'
       : 'text-slate-600 hover:text-slate-900 dark:text-slate-400 dark:hover:text-white'
@@ -32,6 +32,9 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
         </NavLink>
         <NavLink to="/templates/" className={navLinkClass}>
           Templates
+        </NavLink>
+        <NavLink to="/agents/" className={navLinkClass}>
+          AI agents
         </NavLink>
         <Link to="/#faq" className={navLinkClass({ isActive: false })}>
           FAQ
@@ -54,6 +57,9 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
       <NavLink to="/templates/" className={navLinkClass}>
         Templates
       </NavLink>
+      <NavLink to="/agents/" className={navLinkClass}>
+        AI agents
+      </NavLink>
       <Link to="/#faq" className={navLinkClass({ isActive: false })}>
         FAQ
       </Link>
@@ -74,6 +80,9 @@ export const SiteFooter: React.FC = () => (
         </Link>
         <Link to="/editor" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
           Editor
+        </Link>
+        <Link to="/agents/" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white">
+          AI agents
         </Link>
         <a href="https://github.com/Digidai/modern-ai-resume-builder" className="rounded px-2 py-2 hover:text-slate-900 dark:hover:text-white" rel="noopener noreferrer" target="_blank">
           GitHub

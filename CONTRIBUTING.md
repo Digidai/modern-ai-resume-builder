@@ -23,8 +23,8 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 ## Updating Job Titles
 
-1. Edit `src/data/jobTitles.json`.
-2. Validate: `npm run jobtitles:validate`.
+1. Add the title and a realistic example resume to its family file in `src/data/roles/` (a new family also needs a `guide`).
+2. Run `npm run roles:sync`, then `npm run jobtitles:validate`.
 3. Build: `npm run build` (SEO pages + share images depend on job titles).
 
 ## SEO + Social Sharing

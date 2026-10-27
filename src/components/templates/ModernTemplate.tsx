@@ -27,7 +27,7 @@ export const ModernTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-3.5 flex flex-wrap gap-x-5 gap-y-1.5 text-[13px] text-slate-600">
                         {contacts.map((entry) => (
-                            <ContactItem key={entry.key} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
+                            <ContactItem key={entry.id} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
                         ))}
                     </div>
                 )}

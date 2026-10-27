@@ -1,5 +1,5 @@
 import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
-import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN } from '../types';
+import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type ResumeLink } from '../types';
 import {
   SparklesIcon,
   PlusIcon,
@@ -15,12 +15,88 @@ import { Button } from './Button';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
-import { Input, Textarea } from './Input';
+import { Input, Textarea, fieldClass } from './Input';
 import { LazyResumePreview } from './LazyResumePreview';
 import { DesignControls } from './DesignControls';
 import { useAiActions } from '../hooks/useAiActions';
 import { createId } from '../utils/resumeData';
-import { formatDateRange } from './templates/shared';
+import { formatDateRange, describeLink } from './templates/shared';
+
+const MAX_LINKS = 8;
+
+/**
+ * Extra profiles (GitHub, portfolio, X, Google Scholar…). The label is optional: templates detect
+ * well-known sites from the URL, and the placeholder shows what will be used.
+ */
+const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (links: ResumeLink[]) => void }) => {
+  const update = (id: string, patch: Partial<ResumeLink>) => onChange(links.map((l) => (l.id === id ? { ...l, ...patch } : l)));
+  return (
+    <div className="flex flex-col gap-2 sm:col-span-2">
+      <div className="flex min-h-6 items-center justify-between gap-2">
+        <span className="text-sm font-medium text-slate-700 dark:text-slate-300" id="links-heading">
+          Other links
+        </span>
+        {links.length < MAX_LINKS && (
+          <button
+            type="button"
+            onClick={() => onChange([...links, { id: createId(), label: '', url: '' }])}
+            className="inline-flex h-7 items-center gap-1 rounded-full px-2.5 text-xs font-medium text-indigo-600 hover:bg-indigo-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:text-indigo-400 dark:hover:bg-indigo-950/50"
+          >
+            <PlusIcon className="h-3.5 w-3.5" /> Add link
+          </button>
+        )}
+      </div>
+      {links.length === 0 ? (
+        <p className="text-xs text-slate-500 dark:text-slate-400">GitHub, portfolio, X, Dribbble, Behance, Google Scholar or any page you want recruiters to see.</p>
+      ) : (
+        <ul className="flex flex-col gap-2" aria-labelledby="links-heading">
+          {links.map((link, index) => {
+            const detected = describeLink({ label: '', url: link.url }).label;
+            const error = getUrlError(link.url);
+            const name = link.label.trim() || (link.url.trim() ? detected : `Link ${index + 1}`);
+            return (
+              <li key={link.id} className="flex flex-col gap-1">
+                <div className="flex items-start gap-2">
+                  <input
+                    value={link.label}
+                    onChange={(e) => update(link.id, { label: e.target.value })}
+                    placeholder={link.url.trim() ? detected : 'Label'}
+                    aria-label={`${name} label (optional)`}
+                    className={`${fieldClass()} w-32 shrink-0 sm:w-36`}
+                  />
+                  <input
+                    type="url"
+                    value={link.url}
+                    onChange={(e) => update(link.id, { url: e.target.value })}
+                    placeholder="github.com/yourname"
+                    aria-label={`${name} URL`}
+                    aria-invalid={error ? true : undefined}
+                    aria-describedby={error ? `link-error-${link.id}` : undefined}
+                    autoFocus={!link.url && index === links.length - 1 && !link.label}
+                    className={`${fieldClass(error)} min-w-0 flex-1`}
+                  />
+                  <button
+                    type="button"
+                    onClick={() => onChange(links.filter((l) => l.id !== link.id))}
+                    aria-label={`Remove ${name}`}
+                    className="mt-1 rounded-md p-1.5 text-slate-400 hover:bg-slate-100 hover:text-red-600 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-indigo-500 dark:hover:bg-slate-800"
+                  >
+                    <TrashIcon className="h-4 w-4" />
+                  </button>
+                </div>
+                {error && (
+                  <p id={`link-error-${link.id}`} className="text-xs text-red-600 dark:text-red-400">
+                    {error}
+                  </p>
+                )}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
+  );
+};
 
 interface ResumeEditorProps {
   data: ResumeData;
@@ -465,6 +541,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                   placeholder="linkedin.com/in/yourname"
                   className="sm:col-span-2"
                 />
+                <LinksEditor links={data.links ?? []} onChange={(links) => setField('links', links)} />
               </div>
             </Section>
 

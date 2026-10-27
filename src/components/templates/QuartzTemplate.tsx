@@ -97,7 +97,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     <SectionTitle>Contact</SectionTitle>
                                     <ul className="flex flex-col gap-1.5 text-[12.5px] text-slate-800">
                                         {contacts.map((entry) => (
-                                            <li key={entry.key} className="min-w-0">
+                                            <li key={entry.id} className="min-w-0">
                                                 <ContactItem entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
                                             </li>
                                         ))}

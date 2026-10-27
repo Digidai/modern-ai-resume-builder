@@ -17,7 +17,7 @@ const bodyList = 'list-disc pl-4 space-y-[1.5px] marker:text-[#6A6A6A]';
 export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
     const contacts = getContactEntries(data);
     const headerContacts = contacts.filter((entry) => entry.key === 'email' || entry.key === 'phone' || entry.key === 'location');
-    const links = contacts.filter((entry) => entry.key === 'website' || entry.key === 'linkedin');
+    const links = contacts.filter((entry) => entry.key === 'website' || entry.key === 'linkedin' || entry.key === 'link');
     const skillGroups = groupSkills(data.skills);
 
     const name = data.fullName.trim();
@@ -45,7 +45,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {headerContacts.length > 0 && (
                         <div className="mt-2 flex flex-wrap items-center justify-center gap-x-7 gap-y-0.5 font-raleway text-[14px] font-medium text-[#5F5F5F]">
                             {headerContacts.map((entry) => (
-                                <ContactLink key={entry.key} entry={entry} className="min-w-0 wrap-anywhere" />
+                                <ContactLink key={entry.id} entry={entry} className="min-w-0 wrap-anywhere" />
                             ))}
                         </div>
                     )}
@@ -161,8 +161,8 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     <SectionTitle>Links</SectionTitle>
                                     <dl className="flex flex-col gap-2">
                                         {links.map((entry) => (
-                                            <div key={entry.key}>
-                                                <dt className="text-[14px] font-bold uppercase tracking-[0.02em] text-[#333333]">{entry.key === 'website' ? 'Website' : 'LinkedIn'}</dt>
+                                            <div key={entry.id}>
+                                                <dt className="text-[14px] font-bold uppercase tracking-[0.02em] text-[#333333]">{entry.label}</dt>
                                                 <dd className="font-raleway text-[13px] font-medium text-[#555555]">
                                                     <ContactLink entry={entry} className="wrap-anywhere" />
                                                 </dd>

@@ -1,6 +1,26 @@
 import React from 'react';
 import { ResumeData } from '../../types';
-import { MailIcon, PhoneIcon, MapPinIcon, GlobeIcon, LinkedinIcon } from '../Icons';
+import {
+    MailIcon,
+    PhoneIcon,
+    MapPinIcon,
+    GlobeIcon,
+    LinkedinIcon,
+    LinkIcon,
+    GithubIcon,
+    GitlabIcon,
+    XBrandIcon,
+    DribbbleIcon,
+    BehanceIcon,
+    InstagramIcon,
+    YoutubeIcon,
+    FacebookIcon,
+    FigmaIcon,
+    BookIcon,
+    PenIcon,
+    CodeIcon,
+    AtSignIcon,
+} from '../Icons';
 
 export interface TemplateProps {
     data: ResumeData;
@@ -33,21 +53,76 @@ export const displayUrl = (value: string): string =>
 export const toHref = (value: string): string =>
     /^https?:\/\//i.test(value.trim()) ? value.trim() : `https://${value.trim()}`;
 
+type IconComponent = React.ComponentType<{ className?: string }>;
+
+/** Known profile sites: label and icon are detected from the link's host when the user leaves the label empty. */
+const NETWORKS: ReadonlyArray<{ label: string; icon: IconComponent; host: RegExp }> = [
+    { label: 'GitHub', icon: GithubIcon, host: /(^|\.)github\.(com|io)$/ },
+    { label: 'GitLab', icon: GitlabIcon, host: /(^|\.)gitlab\.com$/ },
+    { label: 'LinkedIn', icon: LinkedinIcon, host: /(^|\.)linkedin\.com$/ },
+    { label: 'X', icon: XBrandIcon, host: /(^|\.)(x|twitter)\.com$/ },
+    { label: 'Bluesky', icon: AtSignIcon, host: /(^|\.)bsky\.app$/ },
+    { label: 'Threads', icon: AtSignIcon, host: /(^|\.)threads\.(net|com)$/ },
+    { label: 'Dribbble', icon: DribbbleIcon, host: /(^|\.)dribbble\.com$/ },
+    { label: 'Behance', icon: BehanceIcon, host: /(^|\.)behance\.net$/ },
+    { label: 'Figma', icon: FigmaIcon, host: /(^|\.)figma\.com$/ },
+    { label: 'Instagram', icon: InstagramIcon, host: /(^|\.)instagram\.com$/ },
+    { label: 'YouTube', icon: YoutubeIcon, host: /(^|\.)(youtube\.com|youtu\.be)$/ },
+    { label: 'TikTok', icon: AtSignIcon, host: /(^|\.)tiktok\.com$/ },
+    { label: 'Facebook', icon: FacebookIcon, host: /(^|\.)facebook\.com$/ },
+    { label: 'Medium', icon: PenIcon, host: /(^|\.)medium\.com$/ },
+    { label: 'Substack', icon: PenIcon, host: /(^|\.)substack\.com$/ },
+    { label: 'Stack Overflow', icon: CodeIcon, host: /(^|\.)stackoverflow\.com$/ },
+    { label: 'LeetCode', icon: CodeIcon, host: /(^|\.)leetcode\.(com|cn)$/ },
+    { label: 'Kaggle', icon: CodeIcon, host: /(^|\.)kaggle\.com$/ },
+    { label: 'Hugging Face', icon: CodeIcon, host: /(^|\.)huggingface\.co$/ },
+    { label: 'CodePen', icon: CodeIcon, host: /(^|\.)codepen\.io$/ },
+    { label: 'Google Scholar', icon: BookIcon, host: /^scholar\.google\./ },
+    { label: 'ORCID', icon: BookIcon, host: /(^|\.)orcid\.org$/ },
+    { label: 'ResearchGate', icon: BookIcon, host: /(^|\.)researchgate\.net$/ },
+];
+
+const hostOf = (url: string): string => {
+    try {
+        return new URL(toHref(url)).hostname.toLowerCase().replace(/^www\./, '');
+    } catch {
+        return '';
+    }
+};
+
+/** Label and icon for a profile link: the user's label if given, else the detected site, else "Link". */
+export const describeLink = (link: { label: string; url: string }): { label: string; icon: IconComponent } => {
+    const host = hostOf(link.url);
+    const network = NETWORKS.find((n) => n.host.test(host));
+    return { label: link.label.trim() || network?.label || 'Link', icon: network?.icon ?? LinkIcon };
+};
+
 export interface ContactEntry {
-    key: 'email' | 'phone' | 'location' | 'website' | 'linkedin';
-    icon: React.ComponentType<{ className?: string }>;
+    /** Unique per entry; use it as the React key (there can be several `link` entries). */
+    id: string;
+    key: 'email' | 'phone' | 'location' | 'website' | 'linkedin' | 'link';
+    /** Human label: "Email", "Phone", "Website", "LinkedIn", or the link's label ("GitHub", "Portfolio"…). */
+    label: string;
+    icon: IconComponent;
     value: string;
     href?: string;
 }
 
-/** Non-empty contact fields in display order, with links where it makes sense. */
+/** Non-empty contact fields and profile links in display order, with links where it makes sense. */
 export const getContactEntries = (data: ResumeData): ContactEntry[] => {
     const entries: ContactEntry[] = [];
-    if (data.email.trim()) entries.push({ key: 'email', icon: MailIcon, value: data.email.trim(), href: `mailto:${data.email.trim()}` });
-    if (data.phone.trim()) entries.push({ key: 'phone', icon: PhoneIcon, value: data.phone.trim(), href: `tel:${data.phone.replace(/[^\d+]/g, '')}` });
-    if (data.location.trim()) entries.push({ key: 'location', icon: MapPinIcon, value: data.location.trim() });
-    if (data.website.trim()) entries.push({ key: 'website', icon: GlobeIcon, value: displayUrl(data.website), href: toHref(data.website) });
-    if (data.linkedin.trim()) entries.push({ key: 'linkedin', icon: LinkedinIcon, value: displayUrl(data.linkedin), href: toHref(data.linkedin) });
+    const email = data.email.trim();
+    const phone = data.phone.trim();
+    if (email) entries.push({ id: 'email', key: 'email', label: 'Email', icon: MailIcon, value: email, href: `mailto:${email}` });
+    if (phone) entries.push({ id: 'phone', key: 'phone', label: 'Phone', icon: PhoneIcon, value: phone, href: `tel:${phone.replace(/[^\d+]/g, '')}` });
+    if (data.location.trim()) entries.push({ id: 'location', key: 'location', label: 'Location', icon: MapPinIcon, value: data.location.trim() });
+    if (data.website.trim()) entries.push({ id: 'website', key: 'website', label: 'Website', icon: GlobeIcon, value: displayUrl(data.website), href: toHref(data.website) });
+    if (data.linkedin.trim()) entries.push({ id: 'linkedin', key: 'linkedin', label: 'LinkedIn', icon: LinkedinIcon, value: displayUrl(data.linkedin), href: toHref(data.linkedin) });
+    (data.links ?? []).forEach((link, index) => {
+        if (!link.url.trim()) return;
+        const { label, icon } = describeLink(link);
+        entries.push({ id: `link-${link.id || index}`, key: 'link', label, icon, value: displayUrl(link.url), href: toHref(link.url) });
+    });
     return entries;
 };
 

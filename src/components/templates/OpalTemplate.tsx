@@ -31,7 +31,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <ul className="mt-4 flex justify-center flex-wrap gap-2 text-[12.5px] font-medium text-slate-700">
                         {contacts.map((entry) => (
-                            <li key={entry.key} className="max-w-full min-w-0 bg-(--accent)/5 border border-(--accent)/15 px-3 py-0.5 rounded-full">
+                            <li key={entry.id} className="max-w-full min-w-0 bg-(--accent)/5 border border-(--accent)/15 px-3 py-0.5 rounded-full">
                                 <ContactItem entry={entry} iconClassName="w-3 h-3 text-(--accent)" />
                             </li>
                         ))}

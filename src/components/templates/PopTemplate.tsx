@@ -48,7 +48,7 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-3.5 flex flex-wrap gap-2 text-[13px] text-slate-700">
                         {contacts.map((entry) => (
-                            <span key={entry.key} className="inline-flex max-w-full rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-slate-900/5">
+                            <span key={entry.id} className="inline-flex max-w-full rounded-full bg-white px-3 py-1 shadow-sm ring-1 ring-slate-900/5">
                                 <ContactItem entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
                             </span>
                         ))}

@@ -42,7 +42,7 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {contacts.length > 0 && (
                             <ul className="text-right text-[12.5px] font-medium leading-snug space-y-0.5 max-w-[80mm]">
                                 {contacts.map((entry) => (
-                                    <li key={entry.key} className="wrap-anywhere">
+                                    <li key={entry.id} className="wrap-anywhere">
                                         <ContactLink entry={entry} />
                                     </li>
                                 ))}

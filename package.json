@@ -10,6 +10,7 @@
     "build:deploy": "npm run build && npx wrangler deploy",
     "seo:postbuild": "node scripts/seo-postbuild.mjs",
     "jobtitles:validate": "node scripts/jobtitles-validate.mjs",
+    "roles:sync": "node scripts/roles-sync.mjs",
     "jobtitles:import": "node scripts/jobtitles-import.mjs",
     "sitemap:submit": "node scripts/submit-sitemap.mjs",
     "deploy": "npx wrangler deploy",

@@ -72,7 +72,7 @@ export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-[13px] text-slate-700">
                         {contacts.map((entry) => (
-                            <ContactItem key={entry.key} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
+                            <ContactItem key={entry.id} entry={entry} iconClassName="h-3.5 w-3.5 text-(--accent)" />
                         ))}
                     </div>
                 )}

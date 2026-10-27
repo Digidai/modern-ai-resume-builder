@@ -2,9 +2,33 @@
   "categories": {
     "Engineering": {
       "focus": "the systems you built, the scale they run at, and the measurable effect on speed, reliability or cost",
-      "skills": ["Programming languages", "System design", "Cloud platforms (AWS, GCP, Azure)", "CI/CD", "Testing and code review", "Databases and SQL", "Observability", "Security fundamentals", "APIs and integrations", "Technical documentation"],
-      "sections": ["Summary", "Experience", "Projects", "Skills", "Education"],
-      "metrics": ["latency", "uptime", "deploy frequency", "infrastructure cost", "test coverage", "users served"],
+      "skills": [
+        "Programming languages",
+        "System design",
+        "Cloud platforms (AWS, GCP, Azure)",
+        "CI/CD",
+        "Testing and code review",
+        "Databases and SQL",
+        "Observability",
+        "Security fundamentals",
+        "APIs and integrations",
+        "Technical documentation"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Projects",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "latency",
+        "uptime",
+        "deploy frequency",
+        "infrastructure cost",
+        "test coverage",
+        "users served"
+      ],
       "bullets": [
         "Rebuilt the checkout service in Go, cutting p95 latency from 900 ms to 180 ms for 2M monthly users",
         "Introduced contract tests and staged rollouts, reducing production incidents by 45% in two quarters",
@@ -15,13 +39,41 @@
         "Link to a repository, demo or write-up for at least one project you can talk about in depth.",
         "Name the stack inside each bullet; keyword matching happens at the bullet level, not only in the skills list."
       ],
-      "templates": ["classic", "tech", "modern"]
+      "templates": [
+        "classic",
+        "tech",
+        "modern"
+      ]
     },
     "Design & Product": {
       "focus": "the problems you framed, the decisions you drove, and the user or business outcomes they produced",
-      "skills": ["User research", "Product strategy", "Prototyping", "Figma", "Design systems", "Usability testing", "Roadmapping", "Experimentation (A/B testing)", "Stakeholder management", "Accessibility"],
-      "sections": ["Summary", "Experience", "Projects", "Skills", "Education"],
-      "metrics": ["activation", "conversion", "retention", "task success rate", "NPS", "time to value"],
+      "skills": [
+        "User research",
+        "Product strategy",
+        "Prototyping",
+        "Figma",
+        "Design systems",
+        "Usability testing",
+        "Roadmapping",
+        "Experimentation (A/B testing)",
+        "Stakeholder management",
+        "Accessibility"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Projects",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "activation",
+        "conversion",
+        "retention",
+        "task success rate",
+        "NPS",
+        "time to value"
+      ],
       "bullets": [
         "Redesigned onboarding from 9 steps to 4, lifting week-one activation from 31% to 44%",
         "Built a 120-component design system adopted by 5 squads, halving UI build time for new features",
@@ -32,13 +84,41 @@
         "Describe your role in shared outcomes precisely (\"led\", \"co-owned\", \"contributed\").",
         "Keep visuals for the portfolio: a clean, readable resume signals design judgement better than decoration."
       ],
-      "templates": ["modern", "timeline", "vanguard"]
+      "templates": [
+        "modern",
+        "timeline",
+        "vanguard"
+      ]
     },
     "Data & Analytics": {
       "focus": "the questions you answered, the models or pipelines you shipped, and the decisions your analysis changed",
-      "skills": ["SQL", "Python or R", "Statistics", "Machine learning", "Data modeling", "dbt and ELT pipelines", "BI tools (Looker, Tableau, Power BI)", "Experiment design", "Data visualization", "Stakeholder communication"],
-      "sections": ["Summary", "Experience", "Projects", "Skills", "Education"],
-      "metrics": ["forecast accuracy", "revenue impact", "query time", "model lift", "hours saved", "data freshness"],
+      "skills": [
+        "SQL",
+        "Python or R",
+        "Statistics",
+        "Machine learning",
+        "Data modeling",
+        "dbt and ELT pipelines",
+        "BI tools (Looker, Tableau, Power BI)",
+        "Experiment design",
+        "Data visualization",
+        "Stakeholder communication"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Projects",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "forecast accuracy",
+        "revenue impact",
+        "query time",
+        "model lift",
+        "hours saved",
+        "data freshness"
+      ],
       "bullets": [
         "Built a churn model (gradient boosting, AUC 0.86) that targeted retention offers and saved $900k a year",
         "Rebuilt the revenue dashboard on dbt and Looker, cutting refresh time from 6 hours to 20 minutes",
@@ -49,13 +129,41 @@
         "List tools under grouped skills (\"Analytics: SQL, dbt, Looker\") so ATS keyword matches are exact.",
         "Link a notebook, Kaggle profile or public analysis if you have one."
       ],
-      "templates": ["classic", "modern", "compact"]
+      "templates": [
+        "classic",
+        "modern",
+        "compact"
+      ]
     },
     "Marketing & Growth": {
       "focus": "the channels you owned, the budget you managed, and the pipeline or revenue you generated",
-      "skills": ["Campaign strategy", "SEO and content", "Paid acquisition", "Lifecycle and email marketing", "Marketing analytics", "Conversion rate optimization", "Brand positioning", "Marketing automation (HubSpot, Marketo)", "Copywriting", "Budget management"],
-      "sections": ["Summary", "Experience", "Skills", "Projects", "Education"],
-      "metrics": ["pipeline", "CAC", "ROAS", "conversion rate", "organic traffic", "MQL to SQL rate"],
+      "skills": [
+        "Campaign strategy",
+        "SEO and content",
+        "Paid acquisition",
+        "Lifecycle and email marketing",
+        "Marketing analytics",
+        "Conversion rate optimization",
+        "Brand positioning",
+        "Marketing automation (HubSpot, Marketo)",
+        "Copywriting",
+        "Budget management"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Projects",
+        "Education"
+      ],
+      "metrics": [
+        "pipeline",
+        "CAC",
+        "ROAS",
+        "conversion rate",
+        "organic traffic",
+        "MQL to SQL rate"
+      ],
       "bullets": [
         "Grew organic sign-ups 3.2x in 12 months by rebuilding 400 pages around search intent",
         "Managed a $1.5M paid budget across Google and LinkedIn, lowering CAC by 28% while doubling pipeline",
@@ -66,13 +174,40 @@
         "Show the size of what you managed: budget, audience, team or number of markets.",
         "Mention the tools you ran yourself; many marketing job posts filter on them."
       ],
-      "templates": ["modern", "vanguard", "timeline"]
+      "templates": [
+        "modern",
+        "vanguard",
+        "timeline"
+      ]
     },
     "Sales & Support": {
       "focus": "quota attainment, deal size, and the customer outcomes you delivered",
-      "skills": ["Prospecting", "Discovery and qualification", "Negotiation", "Pipeline management", "CRM (Salesforce, HubSpot)", "Account management", "Customer onboarding", "Renewals and expansion", "Product demos", "Customer empathy"],
-      "sections": ["Summary", "Experience", "Skills", "Education"],
-      "metrics": ["quota attainment", "ARR closed", "win rate", "net revenue retention", "CSAT", "first response time"],
+      "skills": [
+        "Prospecting",
+        "Discovery and qualification",
+        "Negotiation",
+        "Pipeline management",
+        "CRM (Salesforce, HubSpot)",
+        "Account management",
+        "Customer onboarding",
+        "Renewals and expansion",
+        "Product demos",
+        "Customer empathy"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "quota attainment",
+        "ARR closed",
+        "win rate",
+        "net revenue retention",
+        "CSAT",
+        "first response time"
+      ],
       "bullets": [
         "Closed $2.4M in new ARR in FY24, reaching 132% of quota and ranking #2 of 18 reps",
         "Built an outbound sequence for mid-market accounts that booked 60 qualified meetings a quarter",
@@ -83,13 +218,40 @@
         "State deal size and sales cycle so readers understand the segment you sell into.",
         "For support roles, show volume handled alongside quality metrics such as CSAT."
       ],
-      "templates": ["modern", "classic", "banking"]
+      "templates": [
+        "modern",
+        "classic",
+        "banking"
+      ]
     },
     "HR & Operations": {
       "focus": "the people programs and processes you ran, and how they improved hiring, retention or efficiency",
-      "skills": ["Talent acquisition", "Employee relations", "HRIS (Workday, BambooHR)", "Compensation and benefits", "Performance management", "Onboarding", "Employment law compliance", "Process improvement", "People analytics", "Change management"],
-      "sections": ["Summary", "Experience", "Skills", "Education"],
-      "metrics": ["time to hire", "offer acceptance rate", "retention", "engagement score", "cost per hire", "processing time"],
+      "skills": [
+        "Talent acquisition",
+        "Employee relations",
+        "HRIS (Workday, BambooHR)",
+        "Compensation and benefits",
+        "Performance management",
+        "Onboarding",
+        "Employment law compliance",
+        "Process improvement",
+        "People analytics",
+        "Change management"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "time to hire",
+        "offer acceptance rate",
+        "retention",
+        "engagement score",
+        "cost per hire",
+        "processing time"
+      ],
       "bullets": [
         "Rebuilt the engineering hiring loop, cutting time to hire from 52 to 31 days across 80 hires",
         "Launched a structured onboarding program that raised 90-day retention from 82% to 95%",
@@ -100,13 +262,41 @@
         "Name certifications such as SHRM-CP or CIPD near the top if the role asks for them.",
         "Describe sensitive work by outcome and scope, never by individual cases."
       ],
-      "templates": ["classic", "modern", "executive"]
+      "templates": [
+        "classic",
+        "modern",
+        "executive"
+      ]
     },
     "Finance & Legal": {
       "focus": "accuracy, risk reduction and the financial or legal outcomes you were accountable for",
-      "skills": ["Financial modeling", "FP&A", "GAAP or IFRS", "Audit and controls", "Excel and SQL", "ERP systems (NetSuite, SAP)", "Contract drafting and review", "Regulatory compliance", "Risk assessment", "Stakeholder reporting"],
-      "sections": ["Summary", "Experience", "Education", "Skills", "Certifications"],
-      "metrics": ["close time", "forecast variance", "savings", "audit findings", "contract cycle time", "deal value"],
+      "skills": [
+        "Financial modeling",
+        "FP&A",
+        "GAAP or IFRS",
+        "Audit and controls",
+        "Excel and SQL",
+        "ERP systems (NetSuite, SAP)",
+        "Contract drafting and review",
+        "Regulatory compliance",
+        "Risk assessment",
+        "Stakeholder reporting"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Education",
+        "Skills",
+        "Certifications"
+      ],
+      "metrics": [
+        "close time",
+        "forecast variance",
+        "savings",
+        "audit findings",
+        "contract cycle time",
+        "deal value"
+      ],
       "bullets": [
         "Shortened the monthly close from 10 to 5 business days by automating reconciliations in NetSuite",
         "Built the three-statement model used in a $40M Series C, keeping forecast variance under 3%",
@@ -117,13 +307,40 @@
         "Use a conservative, single-column layout; finance and legal readers value precision over style.",
         "Quantify the scale you handled: revenue, assets, deal value or number of matters."
       ],
-      "templates": ["banking", "ivy", "classic"]
+      "templates": [
+        "banking",
+        "ivy",
+        "classic"
+      ]
     },
     "Business & Strategy": {
       "focus": "the strategic questions you owned, the recommendations you made, and the results once they were implemented",
-      "skills": ["Strategic planning", "Market analysis", "Financial modeling", "Business case development", "Stakeholder alignment", "Program management", "Competitive intelligence", "OKRs and KPIs", "Executive communication", "Partnership development"],
-      "sections": ["Summary", "Experience", "Education", "Skills"],
-      "metrics": ["revenue growth", "margin", "market share", "cost savings", "time to launch", "partnerships signed"],
+      "skills": [
+        "Strategic planning",
+        "Market analysis",
+        "Financial modeling",
+        "Business case development",
+        "Stakeholder alignment",
+        "Program management",
+        "Competitive intelligence",
+        "OKRs and KPIs",
+        "Executive communication",
+        "Partnership development"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Education",
+        "Skills"
+      ],
+      "metrics": [
+        "revenue growth",
+        "margin",
+        "market share",
+        "cost savings",
+        "time to launch",
+        "partnerships signed"
+      ],
       "bullets": [
         "Led the market-entry case for Germany and France, launching in 7 months and reaching $5M revenue in year one",
         "Built the company OKR process across 9 departments, aligning 120 goals to three annual priorities",
@@ -134,13 +351,41 @@
         "Name the audience you influenced (CEO, board, regional leads) to show seniority.",
         "Keep consulting engagements anonymous where needed, but keep the industry and the scale."
       ],
-      "templates": ["executive", "classic", "ivy"]
+      "templates": [
+        "executive",
+        "classic",
+        "ivy"
+      ]
     },
     "Operations & Supply Chain": {
       "focus": "throughput, cost and reliability across the operations or supply chain you ran",
-      "skills": ["Supply chain planning", "Inventory management", "Logistics and distribution", "Lean and Six Sigma", "Vendor management", "ERP and WMS systems", "Demand forecasting", "Process improvement", "Safety and compliance", "Data analysis"],
-      "sections": ["Summary", "Experience", "Skills", "Certifications", "Education"],
-      "metrics": ["on-time delivery", "inventory turns", "cost per unit", "forecast accuracy", "throughput", "safety incidents"],
+      "skills": [
+        "Supply chain planning",
+        "Inventory management",
+        "Logistics and distribution",
+        "Lean and Six Sigma",
+        "Vendor management",
+        "ERP and WMS systems",
+        "Demand forecasting",
+        "Process improvement",
+        "Safety and compliance",
+        "Data analysis"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Certifications",
+        "Education"
+      ],
+      "metrics": [
+        "on-time delivery",
+        "inventory turns",
+        "cost per unit",
+        "forecast accuracy",
+        "throughput",
+        "safety incidents"
+      ],
       "bullets": [
         "Raised on-time delivery from 88% to 97% across 3 warehouses by redesigning pick routes",
         "Reduced inventory carrying cost by $1.8M while keeping a 98% fill rate through SKU rationalization",
@@ -151,13 +396,41 @@
         "List certifications such as APICS CSCP, PMP or Six Sigma belts.",
         "Name the systems you used (SAP, Oracle, Manhattan); they are common keyword filters."
       ],
-      "templates": ["classic", "compact", "modern"]
+      "templates": [
+        "classic",
+        "compact",
+        "modern"
+      ]
     },
     "Healthcare": {
       "focus": "patient outcomes, safety and the clinical or operational standards you upheld",
-      "skills": ["Patient care", "Clinical documentation", "EHR systems (Epic, Cerner)", "Infection control", "Care coordination", "Patient education", "Regulatory compliance (HIPAA)", "Triage", "Interdisciplinary collaboration", "Quality improvement"],
-      "sections": ["Summary", "Licenses and certifications", "Experience", "Education", "Skills"],
-      "metrics": ["patients per shift", "readmission rate", "patient satisfaction", "documentation accuracy", "wait time", "compliance audit scores"],
+      "skills": [
+        "Patient care",
+        "Clinical documentation",
+        "EHR systems (Epic, Cerner)",
+        "Infection control",
+        "Care coordination",
+        "Patient education",
+        "Regulatory compliance (HIPAA)",
+        "Triage",
+        "Interdisciplinary collaboration",
+        "Quality improvement"
+      ],
+      "sections": [
+        "Summary",
+        "Licenses and certifications",
+        "Experience",
+        "Education",
+        "Skills"
+      ],
+      "metrics": [
+        "patients per shift",
+        "readmission rate",
+        "patient satisfaction",
+        "documentation accuracy",
+        "wait time",
+        "compliance audit scores"
+      ],
       "bullets": [
         "Cared for 5 to 6 patients per shift on a 32-bed cardiac unit with a 98% documentation audit score",
         "Led a falls-prevention initiative that reduced unit falls by 40% over 12 months",
@@ -168,13 +441,41 @@
         "Name the setting and specialty for each role: unit type, patient population and bed count.",
         "Use a clean single-column layout; hospital applicant systems parse them most reliably."
       ],
-      "templates": ["classic", "academic", "modern"]
+      "templates": [
+        "vital",
+        "classic",
+        "modern"
+      ]
     },
     "Education": {
       "focus": "learner outcomes, the curriculum you built, and how you supported students and colleagues",
-      "skills": ["Curriculum design", "Classroom management", "Differentiated instruction", "Assessment and data use", "Learning management systems", "Student engagement", "Parent communication", "Special education support", "Educational technology", "Mentoring"],
-      "sections": ["Summary", "Certifications", "Experience", "Education", "Skills"],
-      "metrics": ["test score growth", "pass rates", "attendance", "class size", "course completion", "programs launched"],
+      "skills": [
+        "Curriculum design",
+        "Classroom management",
+        "Differentiated instruction",
+        "Assessment and data use",
+        "Learning management systems",
+        "Student engagement",
+        "Parent communication",
+        "Special education support",
+        "Educational technology",
+        "Mentoring"
+      ],
+      "sections": [
+        "Summary",
+        "Certifications",
+        "Experience",
+        "Education",
+        "Skills"
+      ],
+      "metrics": [
+        "test score growth",
+        "pass rates",
+        "attendance",
+        "class size",
+        "course completion",
+        "programs launched"
+      ],
       "bullets": [
         "Raised the share of students meeting grade-level reading standards from 54% to 71% in one year",
         "Designed a project-based science curriculum adopted by all 6 sections of grade 8",
@@ -185,13 +486,41 @@
         "State grade levels, subjects and class sizes for each position.",
         "Academic and research roles can use a longer CV; school roles usually prefer one or two pages."
       ],
-      "templates": ["academic", "classic", "ivy"]
+      "templates": [
+        "academic",
+        "classic",
+        "ivy"
+      ]
     },
     "Creative & Media": {
       "focus": "the work you made, the audiences it reached, and the briefs you delivered on",
-      "skills": ["Storytelling", "Content strategy", "Adobe Creative Cloud", "Video production", "Copywriting and editing", "Brand guidelines", "Social media", "Art direction", "Project management", "Audience analytics"],
-      "sections": ["Summary", "Experience", "Projects", "Skills", "Education"],
-      "metrics": ["views", "engagement rate", "audience growth", "projects delivered", "awards", "on-time delivery"],
+      "skills": [
+        "Storytelling",
+        "Content strategy",
+        "Adobe Creative Cloud",
+        "Video production",
+        "Copywriting and editing",
+        "Brand guidelines",
+        "Social media",
+        "Art direction",
+        "Project management",
+        "Audience analytics"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Projects",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "views",
+        "engagement rate",
+        "audience growth",
+        "projects delivered",
+        "awards",
+        "on-time delivery"
+      ],
       "bullets": [
         "Produced a 12-episode video series that reached 4.8M views and grew the channel by 120k subscribers",
         "Art-directed the rebrand across 60 assets, delivered two weeks ahead of the product launch",
@@ -202,13 +531,40 @@
         "Name clients, publications or brands when you are allowed to.",
         "A more expressive template is fine for creative roles, but keep the text easy to scan."
       ],
-      "templates": ["vanguard", "elegant", "timeline"]
+      "templates": [
+        "vanguard",
+        "elegant",
+        "timeline"
+      ]
     },
     "Retail & Hospitality": {
       "focus": "the customer experience you delivered, the sales you drove, and the teams you ran",
-      "skills": ["Customer service", "Sales and upselling", "Inventory and merchandising", "Point-of-sale systems", "Team leadership", "Scheduling", "Cash handling", "Food safety", "Conflict resolution", "Visual merchandising"],
-      "sections": ["Summary", "Experience", "Skills", "Education"],
-      "metrics": ["sales growth", "average transaction value", "guest satisfaction", "staff retention", "shrink", "covers per shift"],
+      "skills": [
+        "Customer service",
+        "Sales and upselling",
+        "Inventory and merchandising",
+        "Point-of-sale systems",
+        "Team leadership",
+        "Scheduling",
+        "Cash handling",
+        "Food safety",
+        "Conflict resolution",
+        "Visual merchandising"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "sales growth",
+        "average transaction value",
+        "guest satisfaction",
+        "staff retention",
+        "shrink",
+        "covers per shift"
+      ],
       "bullets": [
         "Grew store sales 18% year over year by coaching a team of 12 on add-on selling",
         "Raised the hotel guest satisfaction score from 8.1 to 9.0 by redesigning the check-in process",
@@ -219,13 +575,41 @@
         "List certifications such as ServSafe or responsible-service training.",
         "Keep it to one page and lead with the most recent, most senior role."
       ],
-      "templates": ["modern", "compact", "classic"]
+      "templates": [
+        "modern",
+        "compact",
+        "classic"
+      ]
     },
     "Construction & Real Estate": {
       "focus": "the projects you delivered, their value, and how you kept them on time, on budget and safe",
-      "skills": ["Project management", "Cost estimating", "Scheduling (Primavera, MS Project)", "Site supervision", "Safety compliance (OSHA)", "Contract management", "Blueprint reading", "Subcontractor coordination", "Property management", "Market analysis"],
-      "sections": ["Summary", "Experience", "Certifications", "Skills", "Education"],
-      "metrics": ["project value", "budget variance", "schedule variance", "safety record", "occupancy", "transaction volume"],
+      "skills": [
+        "Project management",
+        "Cost estimating",
+        "Scheduling (Primavera, MS Project)",
+        "Site supervision",
+        "Safety compliance (OSHA)",
+        "Contract management",
+        "Blueprint reading",
+        "Subcontractor coordination",
+        "Property management",
+        "Market analysis"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Certifications",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "project value",
+        "budget variance",
+        "schedule variance",
+        "safety record",
+        "occupancy",
+        "transaction volume"
+      ],
       "bullets": [
         "Delivered a $28M mixed-use build two weeks early and 3% under budget with zero lost-time incidents",
         "Managed 22 subcontractors across 4 concurrent sites using Procore and weekly look-ahead schedules",
@@ -236,14 +620,264 @@
         "List licences and certifications such as PMP, OSHA 30 or a real estate licence.",
         "A projects section works well for construction roles; keep it in reverse chronological order."
       ],
-      "templates": ["classic", "modern", "banking"]
+      "templates": [
+        "classic",
+        "modern",
+        "banking"
+      ]
+    },
+    "Government & Public Service": {
+      "focus": "the programs, policies and public services you delivered, the budgets and rules you worked within, and the measurable outcomes for residents",
+      "skills": [
+        "Policy analysis",
+        "Program evaluation",
+        "Budget development",
+        "Regulatory compliance",
+        "Stakeholder and community engagement",
+        "Grant administration",
+        "Data analysis (Excel, Tableau, ArcGIS)",
+        "Briefing and plain-language writing",
+        "Public procurement (FAR or state code)",
+        "Interagency coordination"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Education",
+        "Skills",
+        "Certifications"
+      ],
+      "metrics": [
+        "residents served",
+        "budget managed",
+        "processing time",
+        "compliance rate",
+        "cost savings",
+        "response time"
+      ],
+      "bullets": [
+        "Cut average permit review time from 42 to 19 days by redesigning intake and adding online plan submission",
+        "Wrote the fiscal analysis for a $38M affordable housing bond approved by 61% of voters",
+        "Coordinated 14 agencies through a FEMA-funded hazard mitigation plan update adopted on schedule"
+      ],
+      "tips": [
+        "For federal roles on USAJOBS, list hours per week, GS grade and exact dates for each role, and mirror the specialized-experience wording in the announcement.",
+        "Name the laws, programs and funding streams you worked with (for example CDBG, FEMA BRIC, the FAR or the state open meetings act).",
+        "Quantify public impact in residents served, dollars managed or days saved rather than describing duties."
+      ],
+      "templates": [
+        "classic",
+        "meridian",
+        "ivy"
+      ]
+    },
+    "Nonprofit & Social Services": {
+      "focus": "the people and communities you served, the programs and funding you built, and the outcomes you can document for clients, funders and boards",
+      "skills": [
+        "Case management",
+        "Trauma-informed care",
+        "Program design and evaluation",
+        "Grant writing and reporting",
+        "Fundraising and donor stewardship",
+        "Volunteer management",
+        "Budget management",
+        "Community partnerships",
+        "Nonprofit CRM and case systems (Salesforce, Raiser's Edge, Apricot)",
+        "Bilingual and culturally responsive communication"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Skills",
+        "Education",
+        "Certifications"
+      ],
+      "metrics": [
+        "clients served",
+        "caseload size",
+        "program outcomes",
+        "dollars raised",
+        "donor retention",
+        "volunteer hours"
+      ],
+      "bullets": [
+        "Managed a caseload of 28 families and moved 82% into stable housing within 90 days",
+        "Wrote 14 foundation and government proposals that raised $1.3M at a 64% win rate",
+        "Recruited and trained 220 volunteers who logged 9,500 hours, the equivalent of 4.5 full-time staff"
+      ],
+      "tips": [
+        "Put licenses and credentials (LMSW, LCSW, CADC, CFRE) with the issuing state near the top, because many roles screen for them first.",
+        "Quantify outcomes funders care about, such as housing placements, retention rates, dollars raised or cost per client, not just activities.",
+        "Name the populations, funding streams and systems you know, for example HUD CoC, HMIS, Medicaid billing or Raiser's Edge."
+      ],
+      "templates": [
+        "classic",
+        "modern",
+        "ivy"
+      ]
+    },
+    "Science & Research": {
+      "focus": "the questions you investigated, the methods and instruments you mastered, and the data, publications or products your work produced",
+      "skills": [
+        "Experimental design",
+        "Laboratory techniques and instrumentation",
+        "Statistical analysis (R, Python, GraphPad Prism)",
+        "Data integrity (ALCOA+)",
+        "GLP and GMP compliance",
+        "Method development and validation",
+        "Scientific writing and publishing",
+        "Grant writing",
+        "Literature review",
+        "Cross-functional collaboration"
+      ],
+      "sections": [
+        "Summary",
+        "Experience",
+        "Education",
+        "Projects",
+        "Skills",
+        "Certifications"
+      ],
+      "metrics": [
+        "assay throughput",
+        "method precision (CV%)",
+        "turnaround time",
+        "publications and citations",
+        "grant funding secured",
+        "cost per sample"
+      ],
+      "bullets": [
+        "Developed an LC-MS/MS method for 14 metabolites with under 6% CV, replacing two legacy assays and cutting run time by 40%",
+        "Co-authored 5 peer-reviewed papers, including a first-author study in Journal of Biological Chemistry cited 60+ times",
+        "Wrote the preliminary-data section of an NIH R01 renewal that secured $2.4M over five years"
+      ],
+      "tips": [
+        "Name the techniques, instruments and software you used hands-on (qPCR, HPLC, flow cytometry, ImageJ) because hiring managers screen for exact methods.",
+        "List publications, posters and patents in a short selected list and link to ORCID or Google Scholar rather than pasting a full CV.",
+        "For industry roles, translate research into outcomes such as programs advanced, methods transferred or batches released, not only papers."
+      ],
+      "templates": [
+        "academic",
+        "classic",
+        "ivy"
+      ]
+    },
+    "Skilled Trades & Manufacturing": {
+      "focus": "the licences you hold, the equipment and systems you work on, and how your work improved safety, uptime, quality or output",
+      "skills": [
+        "Blueprint and schematic reading",
+        "Licences and trade certifications",
+        "Safety compliance (OSHA, NFPA 70E, LOTO)",
+        "Troubleshooting and diagnostics",
+        "Preventive maintenance",
+        "PLCs and controls",
+        "Precision measurement and GD&T",
+        "Welding and fabrication",
+        "CMMS (Maximo, Fiix, UpKeep)",
+        "Lean manufacturing and 5S"
+      ],
+      "sections": [
+        "Summary",
+        "Certifications",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "equipment uptime",
+        "scrap rate",
+        "OEE",
+        "first-pass yield",
+        "safety record",
+        "work orders completed"
+      ],
+      "bullets": [
+        "Rebuilt the PM schedule for 14 injection molders in Fiix, cutting unplanned downtime from 9% to 4% in six months",
+        "Passed 3G and 4G AWS D1.1 bend tests and held a weld reject rate under 1% on structural steel",
+        "Wired 120 kVA of new service and panels to NEC 2023 with zero failed inspections across 30 commercial jobs"
+      ],
+      "tips": [
+        "Put licences and certifications near the top with the issuing body, state and number of hours or expiry date where relevant.",
+        "Name the machines, controls and processes you know (Haas, Fanuc, Allen-Bradley, GTAW) because hiring managers and ATS filters search for them.",
+        "Quantify safety and quality as well as output: incident-free hours, scrap, rework and inspection pass rates all count."
+      ],
+      "templates": [
+        "classic",
+        "compact",
+        "modern"
+      ]
+    },
+    "Transportation & Logistics": {
+      "focus": "the licences and ratings you hold, the vehicles, aircraft or routes you run, and your record on safety, on-time performance and compliance",
+      "skills": [
+        "CDL, FAA or FRA licences and endorsements",
+        "DOT and FMCSA compliance",
+        "Hours of service and ELD use",
+        "Route planning",
+        "Pre-trip and pre-flight inspections",
+        "Hazardous materials handling",
+        "Dispatch and load planning",
+        "Fleet and aircraft maintenance",
+        "Customer service",
+        "Safety management systems (SMS)"
+      ],
+      "sections": [
+        "Summary",
+        "Certifications",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "accident-free miles",
+        "on-time performance",
+        "miles or flight hours",
+        "fuel efficiency (MPG)",
+        "CSA and inspection results",
+        "loads or stops per day"
+      ],
+      "bullets": [
+        "Drove 1.1M accident-free miles in 9 years on a CDL-A with Hazmat and Tanker endorsements, holding 99% on-time delivery",
+        "Cut empty miles from 18% to 11% by rebuilding lane plans and backhaul matches for a 60-truck fleet",
+        "Logged 6,200 flight hours as an A320 first officer with zero FAA violations and a 98% on-time departure rate"
+      ],
+      "tips": [
+        "List each licence with its class, endorsements, ratings and issuing body (for example \"CDL Class A, Hazmat and Tanker endorsements\" or \"FAA ATP, A320 type rating\").",
+        "Lead with safety numbers such as accident-free miles, clean inspections or violation-free years, because employers screen on them first.",
+        "Name the equipment, aircraft, routes and systems you know (Samsara ELDs, McLeod, Sabre, Boeing 737) so recruiters can match you quickly."
+      ],
+      "templates": [
+        "classic",
+        "compact",
+        "professional"
+      ]
     }
   },
   "fallback": {
     "focus": "the results you delivered and the scope you were responsible for",
-    "skills": ["Communication", "Problem solving", "Project management", "Collaboration", "Data-informed decisions", "Process improvement", "Customer focus", "Time management"],
-    "sections": ["Summary", "Experience", "Skills", "Education"],
-    "metrics": ["revenue", "cost savings", "time saved", "customer satisfaction", "quality"],
+    "skills": [
+      "Communication",
+      "Problem solving",
+      "Project management",
+      "Collaboration",
+      "Data-informed decisions",
+      "Process improvement",
+      "Customer focus",
+      "Time management"
+    ],
+    "sections": [
+      "Summary",
+      "Experience",
+      "Skills",
+      "Education"
+    ],
+    "metrics": [
+      "revenue",
+      "cost savings",
+      "time saved",
+      "customer satisfaction",
+      "quality"
+    ],
     "bullets": [
       "Streamlined a weekly reporting process, saving the team 6 hours a week",
       "Led a cross-functional project with 4 teams that launched on schedule",
@@ -254,7 +888,11 @@
       "Tailor the summary and skills to the keywords in each job posting.",
       "Use a single-column template when you apply through online application systems."
     ],
-    "templates": ["classic", "modern", "timeline"]
+    "templates": [
+      "classic",
+      "modern",
+      "timeline"
+    ]
   },
   "levels": {
     "early": {

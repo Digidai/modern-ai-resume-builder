@@ -2,11 +2,14 @@ import React from 'react';
 import { Link } from 'react-router';
 import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
+import jobTitles from '../data/jobTitles.json';
+
+const JOB_TITLE_COUNT = (jobTitles as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0);
 
 const links = [
   { to: '/editor/', label: 'Open the editor', body: 'Pick up where you left off — your resume is saved in this browser.' },
   { to: '/templates/', label: 'Browse templates', body: 'Compare every design with your own content.' },
-  { to: '/directory/', label: 'Resume examples by job', body: 'Guides and templates for 640 job titles.' },
+  { to: '/directory/', label: 'Resume examples by job', body: `Example resumes and guides for ${JOB_TITLE_COUNT} job titles.` },
 ];
 
 const NotFoundView: React.FC = () => {

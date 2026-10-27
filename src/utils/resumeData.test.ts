@@ -30,6 +30,8 @@ describe('sanitizeResumeData', () => {
       title: 'Data Engineer',
       website: 'https://ada.dev',
       linkedin: 'https://linkedin.com/in/ada',
+      // Profiles other than LinkedIn become extra links.
+      links: [{ label: 'GitHub', url: 'https://github.com/ada' }],
       location: 'London, GB',
       skills: ['Languages: Python, SQL', 'Leadership'],
       education: [{ school: 'UCL', degree: 'BSc in Mathematics', startDate: '2014-09', endDate: '2017-06' }],
@@ -39,6 +41,18 @@ describe('sanitizeResumeData', () => {
       { company: 'Acme', role: 'Lead', startDate: '2021-03', endDate: '', isCurrent: true, description: 'Owned the platform.\n- Cut costs 30%' },
       { company: 'Initech', startDate: '2018', endDate: '2021-02', isCurrent: false },
     ]);
+  });
+
+  it('keeps profile links with a URL and drops empty ones', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      links: [{ label: ' Portfolio ', url: 'pat.dev' }, { label: 'Empty', url: '  ' }, 'junk', { url: 'x.com/pat' }],
+    });
+    expect(result?.links).toMatchObject([
+      { label: 'Portfolio', url: 'pat.dev' },
+      { label: '', url: 'x.com/pat' },
+    ]);
+    expect(sanitizeResumeData({ fullName: 'Old backup' })?.links).toEqual([]);
   });
 
   it('rejects JSON that is not a resume', () => {

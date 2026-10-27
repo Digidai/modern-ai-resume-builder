@@ -36,7 +36,7 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <div className="mt-3 flex flex-wrap justify-center gap-x-5 gap-y-1 text-[14px] text-slate-600">
                         {contacts.map((entry) => (
-                            <ContactLink key={entry.key} entry={entry} className="min-w-0 wrap-anywhere" />
+                            <ContactLink key={entry.id} entry={entry} className="min-w-0 wrap-anywhere" />
                         ))}
                     </div>
                 )}

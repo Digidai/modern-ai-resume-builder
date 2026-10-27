@@ -6,7 +6,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 // title-case headings with no rules, and two-line entries with dates on the right.
 // Accent (default near-black) drives the name and the header rule.
 
-const CONTACT_ORDER = ['location', 'email', 'phone', 'linkedin', 'website'] as const;
+const CONTACT_ORDER = ['location', 'email', 'phone', 'linkedin', 'website', 'link'] as const;
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section className="mt-[14px] first:mt-0">
@@ -38,7 +38,7 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {contacts.length > 0 && (
                         <p className="mt-[4px] text-[14.67px] leading-[1.45] text-balance">
                             {contacts.map((entry, index) => (
-                                <React.Fragment key={entry.key}>
+                                <React.Fragment key={entry.id}>
                                     {index > 0 && ' '}
                                     <span className="inline-block max-w-full">
                                         <ContactLink entry={entry} className="wrap-anywhere" />

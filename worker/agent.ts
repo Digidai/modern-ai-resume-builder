@@ -12,6 +12,7 @@ import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 import roleGuides from '../src/data/roleGuides.json';
 import jobTitles from '../src/data/jobTitles.json';
 import type { ResumeData } from '../src/types';
+import { slugifyJobTitle } from '../src/utils/slug';
 
 export interface AgentEnv {
   ASSETS: { fetch: (request: Request) => Promise<Response> };
@@ -77,6 +78,22 @@ const guessCategory = (title: string): string | undefined => {
     if (lower.includes(known) && known.length > (best?.length ?? 0)) best = { name, length: known.length };
   }
   return best?.name;
+};
+
+const getExampleResume = async (env: AgentEnv, origin: string, jobTitle: string) => {
+  const title = jobTitle.trim().slice(0, 120);
+  if (!title) throw new AgentError(400, 'INVALID_REQUEST', 'job_title is required.');
+  // Exact title first, then the longest known title contained in the request ("Senior Data Analyst II").
+  const lower = title.toLowerCase();
+  const candidates = [title, ...[...categoryByTitle.keys()].filter((known) => lower.includes(known)).sort((a, b) => b.length - a.length)];
+  for (const candidate of candidates) {
+    const response = await env.ASSETS.fetch(new Request(`${origin}/examples/${slugifyJobTitle(candidate)}.json`));
+    if (response.ok && (response.headers.get('content-type') ?? '').includes('json')) {
+      const data = (await response.json()) as Json;
+      return { ...data, matchedTitle: data.jobTitle, exact: candidate === title };
+    }
+  }
+  throw new AgentError(404, 'NOT_FOUND', `No example for "${title}". Use get_writing_guide instead, or try a more common title.`);
 };
 
 const getWritingGuide = (jobTitle: string) => {
@@ -235,7 +252,7 @@ const RESUME_INPUT = {
   resume: {
     type: 'object',
     description:
-      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, summary, experience[], education[], projects[], skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
+      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, links[{label,url}] for GitHub/portfolio/X/Scholar etc., summary, experience[], education[], projects[], skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
   },
   template: { type: 'string', description: 'Template id from list_templates. Default "modern".' },
   accent: { type: 'string', description: 'Accent colour as #RRGGBB. Omit for the template default.' },
@@ -267,7 +284,7 @@ const TOOLS: Tool[] = [
     name: 'list_templates',
     title: 'List resume templates',
     description:
-      'Lists the 34 resume templates with id, description, who each suits, ATS status and a preview image URL. ATS-friendly templates are single-column and parse reliably in applicant tracking systems; recommend them for online applications.',
+      `Lists the ${TEMPLATES.length} resume templates with id, description, who each suits, ATS status and a preview image URL. ATS-friendly templates are single-column and parse reliably in applicant tracking systems; recommend them for online applications.`,
     inputSchema: { type: 'object', properties: { ats_only: { type: 'boolean', description: 'Only ATS-friendly templates.' } } },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { origin }) => [text(listTemplates(origin, args.ats_only === true))],
@@ -284,6 +301,19 @@ const TOOLS: Tool[] = [
     },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args) => [text(getWritingGuide(String(args.job_title ?? '')))],
+  },
+  {
+    name: 'get_example_resume',
+    title: 'Get an example resume for a job title',
+    description:
+      'Returns a complete, realistic example resume written for a job title (summary, experience with quantified bullets, education, projects, grouped skills), in the same shape the render tools accept. Use it as a model for structure, tone and level of detail. Never copy its employers, dates or numbers into a real person\'s resume.',
+    inputSchema: {
+      type: 'object',
+      properties: { job_title: { type: 'string', description: 'Job title, e.g. "Registered Nurse" or "Senior Data Analyst".' } },
+      required: ['job_title'],
+    },
+    annotations: { readOnlyHint: true, openWorldHint: false },
+    run: async (args, { env, origin }) => [text(await getExampleResume(env, origin, String(args.job_title ?? '')))],
   },
   {
     name: 'get_resume_schema',
@@ -342,8 +372,8 @@ const TOOLS: Tool[] = [
   },
 ];
 
-const SERVER_INSTRUCTIONS = `ModernCV builds resumes with 34 professional templates and exports vector PDFs. Free, no account.
-Workflow: 1) get_writing_guide for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.`;
+const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
+Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport
@@ -451,6 +481,9 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
   }
   if (route === 'guide' && request.method === 'GET') {
     return json(getWritingGuide(url.searchParams.get('job_title') ?? ''));
+  }
+  if (route === 'example' && request.method === 'GET') {
+    return json(await getExampleResume(ctx.env, ctx.origin, url.searchParams.get('job_title') ?? ''));
   }
   if (route === 'link' || route === 'pdf' || route === 'preview') {
     if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');

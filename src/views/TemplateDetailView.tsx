@@ -13,6 +13,8 @@ import jobTitlesData from '../data/jobTitles.json';
 import { slugifyJobTitle } from '../utils/slug';
 import { AtsBadge } from './TemplatesView';
 import NotFoundView from './NotFoundView';
+import { AgentPromptCard } from '../components/AgentPromptCard';
+import { buildAgentPrompt } from '../shared/agentPrompt.mjs';
 
 const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
 const CATEGORIES = jobTitlesData as { name: string; titles: string[] }[];
@@ -140,6 +142,8 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
               </div>
             ))}
           </dl>
+
+          <AgentPromptCard className="mt-8" subject="a resume in this template" prompt={buildAgentPrompt({ siteUrl, template })} />
 
           {roles.length > 0 && (
             <section className="mt-8">

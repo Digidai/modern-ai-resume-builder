@@ -1,0 +1,2046 @@
+{
+  "family": "Operations & Supply Chain",
+  "guide": null,
+  "titles": {
+    "Supply Chain Manager": {
+      "summary": "Supply chain manager with 9 years in consumer packaged goods, running end-to-end planning, sourcing and distribution for a $310M product portfolio. Cut landed cost 7% while lifting fill rate to 98.4%. Brings S&OP discipline, supplier negotiation and a habit of turning ERP data into weekly decisions.",
+      "experience": [
+        {
+          "company": "Harvest Lane Foods",
+          "role": "Supply Chain Manager",
+          "location": "Columbus, OH",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a team of 6 planners and buyers covering 420 SKUs, 38 co-manufacturers and 3 regional distribution centers\n- Redesigned the monthly S&OP cycle in SAP IBP, raising forecast accuracy from 71% to 84% and freeing $6.2M in working capital\n- Renegotiated packaging contracts with 12 suppliers, saving $2.4M a year without changing material specs\n- Built a dual-sourcing plan for 9 single-source ingredients, keeping fill rate above 97% through the 2023 corn syrup shortage\n- Introduced a supplier risk dashboard tracking 38 co-manufacturers on capacity, quality and financial health, reviewed monthly with the VP of Operations"
+        },
+        {
+          "company": "Brightwell Home Products",
+          "role": "Senior Supply Chain Analyst",
+          "location": "Cincinnati, OH",
+          "startDate": "2017-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Modeled network scenarios in Llamasoft that consolidated two warehouses into one, saving $1.1M in annual freight and rent\n- Automated weekly inventory health reports in Power BI, replacing 10 hours of manual Excel work per week\n- Built a landed-cost model for 420 SKUs that shaped two pricing decisions worth $1.8M in margin"
+        },
+        {
+          "company": "Tri-County Distribution",
+          "role": "Supply Chain Analyst",
+          "location": "Dayton, OH",
+          "startDate": "2015-07",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Set safety-stock targets for 1,800 SKUs using service-level math, cutting stockouts 22% in the first year\n- Tracked carrier on-time performance and drove scorecard reviews that lifted OTD from 88% to 94%\n- Trained 3 new analysts on SAP inventory transactions and replenishment reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "The Ohio State University",
+          "degree": "B.S. in Logistics Management",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Planning: S&OP, demand and supply planning, safety stock, network design",
+        "Systems: SAP S/4HANA, SAP IBP, Llamasoft, Power BI, Excel (Power Query)",
+        "Sourcing: Supplier negotiation, contract management, dual sourcing, cost modeling",
+        "Leadership: Team coaching, executive reporting, cross-functional S&OP facilitation",
+        "Certifications: APICS CSCP, Lean Six Sigma Green Belt"
+      ]
+    },
+    "Supply Chain Analyst": {
+      "summary": "Supply chain analyst with 4 years in electronics distribution, focused on inventory optimization and freight analytics. Built a SKU segmentation model that cut excess stock by $1.8M. Brings strong SQL, Python and Excel modeling skills plus a working knowledge of how planners actually use the numbers.",
+      "experience": [
+        {
+          "company": "Circuitry Parts Supply",
+          "role": "Supply Chain Analyst",
+          "location": "Phoenix, AZ",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built an ABC-XYZ segmentation of 14,000 SKUs in Python, resetting reorder points and cutting excess inventory $1.8M in 9 months\n- Developed a freight cost dashboard in Tableau that exposed $340K in accessorial charges, recovered through carrier audits\n- Forecast weekly demand for 600 fast movers using exponential smoothing, reducing MAPE from 38% to 26%\n- Partner with 4 buyers to run what-if lead-time scenarios before quarterly purchase commitments\n- Documented SQL data models and refresh schedules so 4 planners can self-serve inventory reports without analyst help"
+        },
+        {
+          "company": "Saguaro Industrial Supply",
+          "role": "Inventory Analyst",
+          "location": "Tempe, AZ",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Reconciled cycle counts against Oracle NetSuite records, raising inventory record accuracy from 92% to 98.5%\n- Wrote SQL queries that flagged 1,100 obsolete SKUs for liquidation, recovering $210K\n- Built a vendor fill-rate report in Excel that became the basis for quarterly supplier reviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arizona State University",
+          "degree": "B.S. in Supply Chain Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Lead-Time Variability Model",
+          "link": "github.com/mtorres/leadtime-sim",
+          "description": "Monte Carlo simulation of supplier lead times used to size safety stock for 600 SKUs; adopted by the planning team for quarterly reviews"
+        }
+      ],
+      "skills": [
+        "Analytics: SQL, Python (pandas, statsmodels), Excel, forecasting, Monte Carlo simulation",
+        "Systems: Oracle NetSuite, Tableau, Power BI, Blue Yonder",
+        "Supply Chain: Inventory optimization, ABC-XYZ analysis, freight audit, KPI reporting",
+        "Communication: Executive summaries, planner training, data documentation",
+        "Certifications: APICS CPIM Part 1"
+      ]
+    },
+    "Supply Chain Coordinator": {
+      "summary": "Supply chain coordinator with 3 years supporting purchasing and inbound logistics for a medical device manufacturer. Keeps 250+ open purchase orders on track and lifted supplier on-time delivery to 95%. Organized, quick with ERP transactions and comfortable chasing suppliers, carriers and internal teams for answers.",
+      "experience": [
+        {
+          "company": "Corvita Medical Devices",
+          "role": "Supply Chain Coordinator",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 250+ open purchase orders across 60 suppliers in Microsoft Dynamics 365, confirming dates and expediting late parts\n- Introduced a weekly late-PO report that lifted supplier on-time delivery from 86% to 95% in 12 months\n- Coordinate inbound freight with 5 LTL carriers and resolved 40+ damage claims worth $65K\n- Maintain ISO 13485 traceability records for incoming lots, passing two FDA audits with zero supply chain findings\n- Track 30 critical components weekly and escalate shortages to planning 3 weeks before line impact"
+        },
+        {
+          "company": "North Loop Packaging",
+          "role": "Purchasing Assistant",
+          "location": "St. Paul, MN",
+          "startDate": "2021-08",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Entered and confirmed 1,200 purchase orders a year with 99.6% data accuracy\n- Organized supplier certificates of compliance into a shared library, cutting audit prep from 3 days to 4 hours\n- Reconciled 80 PO price and quantity mismatches a month with accounts payable, clearing invoice holds within 5 days"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "B.S. in Business Administration, Supply Chain concentration",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: Purchase order management, expediting, inbound logistics, freight claims",
+        "Systems: Microsoft Dynamics 365, Excel (pivot tables, XLOOKUP), SharePoint",
+        "Compliance: ISO 13485 records, lot traceability, supplier certifications",
+        "Communication: Supplier follow-up, cross-team coordination, status reporting",
+        "Planning Support: Shortage tracking, PO change management, receiving discrepancies"
+      ]
+    },
+    "Supply Chain Director": {
+      "summary": "Supply chain director with 15 years across automotive and industrial manufacturing, leading planning, procurement and logistics for a $900M business. Delivered $18M in cost savings over three years while raising OTIF to 96%. Builds lean planning organizations, resilient supplier networks and clear executive reporting.",
+      "experience": [
+        {
+          "company": "Ironridge Components",
+          "role": "Supply Chain Director",
+          "location": "Detroit, MI",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 48-person organization spanning planning, procurement, logistics and customer service across 4 plants\n- Delivered $18M in cumulative savings through should-cost negotiations, freight bid events and inventory reduction\n- Raised OTIF to Tier 1 automotive customers from 89% to 96% by launching an integrated business planning process\n- Cut inventory days on hand from 62 to 44, releasing $27M in cash during the 2022 semiconductor shortage\n- Built a supplier risk program scoring 300 suppliers quarterly, adding second sources for 45 high-risk parts"
+        },
+        {
+          "company": "Lakeshore Drivetrain Systems",
+          "role": "Senior Manager, Supply Chain",
+          "location": "Grand Rapids, MI",
+          "startDate": "2015-03",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Managed $220M in annual direct spend and a team of 14 buyers and planners\n- Implemented SAP APO supply planning across 2 plants, reducing expedited freight 41%\n- Launched supplier development with 8 key casting suppliers, lifting their on-time delivery from 79% to 93%"
+        },
+        {
+          "company": "Great Plains Axle Co.",
+          "role": "Materials Manager",
+          "location": "Toledo, OH",
+          "startDate": "2011-06",
+          "endDate": "2015-02",
+          "isCurrent": false,
+          "description": "- Ran MRP, receiving and production control for a 600-employee plant\n- Introduced kanban for 300 high-volume parts, cutting line stoppages for material by 70%\n- Cut obsolete inventory write-offs 55% with a monthly excess and obsolete review"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Michigan",
+          "degree": "MBA, Operations",
+          "startDate": "2009-09",
+          "endDate": "2011-05"
+        },
+        {
+          "school": "Michigan State University",
+          "degree": "B.S. in Supply Chain Management",
+          "startDate": "2003-09",
+          "endDate": "2007-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Organization design, budgeting, executive reporting, talent development",
+        "Planning: Integrated business planning, S&OP, MRP, inventory strategy",
+        "Procurement: Should-cost modeling, strategic sourcing, supplier risk management",
+        "Systems: SAP S/4HANA, SAP APO, Kinaxis RapidResponse, Power BI",
+        "Certifications: APICS CSCP, CPSM"
+      ]
+    },
+    "Logistics Manager": {
+      "summary": "Logistics manager with 8 years running outbound distribution for e-commerce and wholesale channels. Oversees 40,000 shipments a month and cut cost per order 14% through carrier mix and packaging changes. Brings TMS and WMS expertise, carrier contract negotiation and a steady hand during peak season.",
+      "experience": [
+        {
+          "company": "Copperleaf Outdoor Goods",
+          "role": "Logistics Manager",
+          "location": "Salt Lake City, UT",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own outbound logistics for 40,000 parcel and LTL shipments a month with a $9.5M annual freight budget\n- Rebid parcel and LTL contracts across 7 carriers, lowering cost per order from $8.90 to $7.65\n- Introduced right-size cartonization in Manhattan WMS, reducing dimensional weight charges 23%\n- Planned peak-season capacity with 3 carriers, holding on-time delivery at 97% through a 3x November volume spike\n- Manage a team of 4 logistics coordinators and 2 freight auditors, holding claims ratio below 0.4% of shipments"
+        },
+        {
+          "company": "Wasatch Wholesale Supply",
+          "role": "Logistics Supervisor",
+          "location": "Ogden, UT",
+          "startDate": "2018-02",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Supervised 18 shipping and receiving associates across two shifts\n- Rolled out MercuryGate TMS load planning, raising truckload utilization from 78% to 91%\n- Cut LTL claims 45% by standardizing pallet wrap and labeling across both shifts"
+        },
+        {
+          "company": "Basin Freight Partners",
+          "role": "Logistics Coordinator",
+          "location": "Boise, ID",
+          "startDate": "2016-06",
+          "endDate": "2018-01",
+          "isCurrent": false,
+          "description": "- Scheduled 120 inbound and outbound loads a week for 15 shipper accounts\n- Audited carrier invoices and recovered $95K in billing errors in 18 months\n- Built a weekly carrier scorecard for on-time pickup, tender acceptance and damage"
+        }
+      ],
+      "education": [
+        {
+          "school": "Utah State University",
+          "degree": "B.S. in Operations Management",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Logistics: Parcel, LTL and truckload management, carrier contracts, peak planning",
+        "Systems: Manhattan WMS, MercuryGate TMS, ShipStation, Excel, Power BI",
+        "Cost Control: Freight audit, cartonization, accessorial reduction, budget management",
+        "Leadership: Shift supervision, KPI scorecards, vendor reviews",
+        "Certifications: APICS CLTD, OSHA 10"
+      ]
+    },
+    "Logistics Coordinator": {
+      "summary": "Logistics coordinator with 3 years scheduling domestic freight for a building products distributor. Books about 90 loads a week across 20 carriers and keeps on-time pickup above 96%. Brings fast TMS work, clear carrier communication and careful paperwork that keeps billing disputes rare.",
+      "experience": [
+        {
+          "company": "Granite State Building Supply",
+          "role": "Logistics Coordinator",
+          "location": "Manchester, NH",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Schedule about 90 truckload and LTL shipments a week with 20 contracted carriers in Oracle Transportation Management\n- Maintain on-time pickup above 96% by confirming appointments 48 hours out and rebooking at-risk loads early\n- Prepare bills of lading and delivery receipts for 4 branches, cutting billing disputes 35%\n- Track spot-rate quotes against contract rates, saving $48K by shifting 60 loads to better-priced lanes\n- Track all loads in real time through carrier portals and alert branch managers to delays before customers call"
+        },
+        {
+          "company": "Merrimack Valley Distributors",
+          "role": "Shipping Clerk",
+          "location": "Lowell, MA",
+          "startDate": "2021-07",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Processed 300 outbound orders a day, staging pallets and printing labels with 99.7% accuracy\n- Created a carrier contact sheet and cut-off schedule adopted by the whole shipping team\n- Tracked daily shipping KPIs on a whiteboard and Excel log that the supervisor used in morning huddles"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of New Hampshire",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Freight: Load scheduling, LTL and truckload booking, appointment setting, BOL preparation",
+        "Systems: Oracle Transportation Management, DAT load board, Excel, Outlook",
+        "Operations: Carrier communication, claims documentation, rate comparison",
+        "Communication: Customer delivery updates, branch coordination, carrier follow-up",
+        "Certifications: OSHA 10"
+      ]
+    },
+    "Transportation Manager": {
+      "summary": "Transportation manager with 10 years in grocery and beverage distribution, managing a $28M freight budget and a mixed private and dedicated fleet. Reduced cost per case delivered 11% through route optimization and backhaul programs. Brings DOT compliance knowledge, carrier strategy and data-driven routing.",
+      "experience": [
+        {
+          "company": "Riverbend Beverage Distributors",
+          "role": "Transportation Manager",
+          "location": "Nashville, TN",
+          "startDate": "2020-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage $28M in annual transportation spend across 85 private-fleet routes and 4 dedicated carriers\n- Optimized daily routes in Descartes, cutting miles driven 9% and cost per case delivered 11%\n- Launched a backhaul program with 6 suppliers that generated $1.3M in annual freight credits\n- Maintain FMCSA and DOT compliance for 110 drivers, achieving a Satisfactory safety rating at the 2024 audit\n- Lead 6 dispatchers and 3 transportation supervisors across 2 distribution centers with daily performance huddles"
+        },
+        {
+          "company": "Cumberland Fresh Market",
+          "role": "Transportation Supervisor",
+          "location": "Knoxville, TN",
+          "startDate": "2016-04",
+          "endDate": "2020-09",
+          "isCurrent": false,
+          "description": "- Directed dispatch for 40 refrigerated routes serving 120 stores with 98% on-time delivery\n- Reduced reefer fuel use 12% by introducing idle-time monitoring through Samsara telematics\n- Introduced an electronic logging device rollout for 40 trucks ahead of the ELD mandate with zero hours-of-service violations"
+        },
+        {
+          "company": "Volunteer Logistics Group",
+          "role": "Transportation Analyst",
+          "location": "Memphis, TN",
+          "startDate": "2014-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Analyzed lane rates for 500 shipper lanes and supported quarterly carrier bid events\n- Built a cost-per-mile model that identified $400K in mode-shift savings\n- Prepared monthly freight accruals for finance with variance explanations by lane"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Tennessee, Knoxville",
+          "degree": "B.S. in Supply Chain Management",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Transportation: Route optimization, private fleet, dedicated carriers, backhaul programs",
+        "Compliance: FMCSA, DOT hours of service, CSA scores, driver qualification files",
+        "Systems: Descartes Route Planner, Samsara, Oracle TMS, Excel",
+        "Leadership: Dispatcher supervision, driver relations, budget management",
+        "Certifications: CTL (Certified in Transportation and Logistics)"
+      ]
+    },
+    "Fleet Manager": {
+      "summary": "Fleet manager with 9 years overseeing utility and service vehicle fleets of up to 340 units. Lowered total cost of ownership per vehicle 13% through lifecycle replacement planning and preventive maintenance. Brings telematics, vendor management and safety program experience to keep vehicles available and drivers safe.",
+      "experience": [
+        {
+          "company": "Sunbelt Water Utilities",
+          "role": "Fleet Manager",
+          "location": "Tampa, FL",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 340 light, medium and heavy-duty vehicles with a $7.8M operating and $4.5M capital budget\n- Built a lifecycle replacement model that cut total cost of ownership per vehicle 13% over 3 years\n- Raised fleet availability from 91% to 97% by moving 80% of maintenance to scheduled PM in Fleetio\n- Reduced preventable accidents 30% through Geotab driver scorecards and quarterly defensive driving training\n- Transitioned 45 light-duty units to hybrid and electric models, cutting fuel cost $210K a year"
+        },
+        {
+          "company": "Gulf Coast Pest Services",
+          "role": "Assistant Fleet Manager",
+          "location": "Sarasota, FL",
+          "startDate": "2017-03",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Coordinated maintenance and registrations for 160 service trucks across 9 branches\n- Negotiated a national fuel card program that saved $180K a year\n- Built a vehicle utilization report that removed 18 underused trucks from the fleet, saving $160K in lease and insurance"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of South Florida",
+          "degree": "B.S. in Business Management",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Fleet: Lifecycle planning, preventive maintenance, acquisition and remarketing, fuel programs",
+        "Systems: Fleetio, Geotab, WEX fuel cards, Excel",
+        "Safety: Driver scorecards, DOT compliance, accident review, defensive driving programs",
+        "Finance: Capital and operating budgets, lease versus buy analysis, cost per mile tracking",
+        "Certifications: Certified Automotive Fleet Manager (CAFM)"
+      ]
+    },
+    "Import/Export Coordinator": {
+      "summary": "Import/export coordinator with 5 years handling ocean and air shipments for a furniture and home goods importer. Processes about 600 containers a year and keeps customs holds under 1%. Brings working knowledge of HTS classification, Incoterms and ISF filing plus calm follow-through with forwarders and brokers.",
+      "experience": [
+        {
+          "company": "Pacific Rim Home Imports",
+          "role": "Import/Export Coordinator",
+          "location": "Long Beach, CA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coordinate about 600 inbound ocean containers a year from 25 suppliers in Vietnam, China and Malaysia\n- File ISF 10+2 data on time for 100% of shipments and keep customs exam holds under 1%\n- Recovered $120K in detention and demurrage by pre-booking drayage and tracking last free day in CargoWise\n- Review HTS codes for 300 new SKUs a year with the customs broker, avoiding classification penalties\n- Track 60 in-transit containers weekly against warehouse receiving capacity, staggering deliveries to avoid dock congestion"
+        },
+        {
+          "company": "Harborline Freight Forwarding",
+          "role": "Export Documentation Specialist",
+          "location": "Carson, CA",
+          "startDate": "2021-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Prepared commercial invoices, packing lists and certificates of origin for 40 export shipments a month\n- Filed EEI in AESDirect with zero rejections across 480 filings\n- Coordinated 25 airfreight exports a month for samples and spare parts, all cleared without customs holds"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Long Beach",
+          "degree": "B.S. in International Business",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Trade Compliance: HTS classification, ISF 10+2, EEI filing, Incoterms 2020, certificates of origin",
+        "Systems: CargoWise, AESDirect, ACE portal, Excel",
+        "Logistics: Ocean and air freight, drayage, detention and demurrage control",
+        "Communication: Forwarder and broker coordination, supplier follow-up, shipment status reports",
+        "Languages: English, Vietnamese (conversational)"
+      ]
+    },
+    "Customs Broker": {
+      "summary": "Licensed customs broker with 8 years clearing entries for apparel, electronics and industrial importers. Supervises about 9,000 entries a year with a 99.7% accuracy rate. Brings deep tariff classification, Section 301 and duty drawback expertise, plus clear guidance that keeps clients compliant and audit-ready.",
+      "experience": [
+        {
+          "company": "Lone Star Customs Brokerage",
+          "role": "Licensed Customs Broker",
+          "location": "Houston, TX",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise about 9,000 consumption entries a year for 45 importers with 99.7% post-summary accuracy\n- Recovered $2.1M in duty for 6 clients through Section 301 exclusion and drawback filings\n- Classify complex goods under the HTSUS and issue binding ruling requests to CBP when needed\n- Train 5 entry writers on ACE, ABI and FDA Prior Notice, cutting entry rejections 40%\n- Advise clients on country-of-origin and USMCA qualification, preparing certifications for 18 importers"
+        },
+        {
+          "company": "Bayport Trade Services",
+          "role": "Entry Writer",
+          "location": "Pasadena, TX",
+          "startDate": "2018-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Prepared 3,500 entries a year, including PGA filings for FDA, USDA and EPA\n- Built a classification reference library of 1,200 recurring items used by the full entry team\n- Handled CBP Form 28 and 29 responses for 40 clients, closing each within the deadline"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Houston",
+          "degree": "B.B.A. in Supply Chain Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customs: HTSUS classification, valuation, Section 301, AD/CVD, duty drawback, binding rulings",
+        "Systems: ACE, ABI, CargoWise, Descartes Customs Info",
+        "Compliance: 19 CFR, FDA and USDA PGA requirements, CTPAT, recordkeeping",
+        "Client Service: Compliance advisories, audit support, importer training",
+        "Licenses: U.S. Customs Broker License (CBP), Certified Customs Specialist (CCS)"
+      ]
+    },
+    "Procurement Specialist": {
+      "summary": "Procurement specialist with 5 years buying indirect goods and services for a regional hospital system. Manages $35M in annual spend across facilities, IT and professional services, saving 9% through competitive bids. Brings RFP management, contract review in Coupa and clear supplier communication.",
+      "experience": [
+        {
+          "company": "Valley Pines Health System",
+          "role": "Procurement Specialist",
+          "location": "Sacramento, CA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage $35M in indirect spend across facilities, IT, marketing and professional services for 4 hospitals\n- Ran 22 RFPs in Coupa, delivering $3.1M in savings, about 9% of addressable spend\n- Consolidated janitorial supplies from 7 vendors to 2, saving $410K a year and simplifying ordering for 60 departments\n- Cut purchase requisition cycle time from 9 days to 4 by building approval rules and catalog punch-outs\n- Onboard about 120 new suppliers a year, verifying W-9, insurance and OIG exclusion checks before activation"
+        },
+        {
+          "company": "Capitol Regional Transit",
+          "role": "Purchasing Analyst",
+          "location": "Sacramento, CA",
+          "startDate": "2020-08",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Processed 1,500 purchase orders a year in line with public procurement rules and FTA guidelines\n- Prepared bid tabulations for 30 formal solicitations with no bid protests sustained\n- Built a contract expiration report that flagged 45 agreements for rebid 6 months ahead"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Davis",
+          "degree": "B.A. in Managerial Economics",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Procurement: RFP and RFQ management, bid evaluation, contract review, spend analysis",
+        "Systems: Coupa, Workday, Excel, Tableau",
+        "Supplier Management: Vendor onboarding, performance reviews, catalog management",
+        "Compliance: Healthcare supplier vetting, OIG exclusion checks, conflict of interest reviews",
+        "Certifications: CPSM (in progress), Certified Professional Public Buyer (CPPB)"
+      ]
+    },
+    "Buyer": {
+      "summary": "Buyer with 6 years purchasing machined and fabricated components for an industrial equipment manufacturer. Manages $24M in annual spend with 45 suppliers and holds supplier on-time delivery at 94%. Brings MRP-driven ordering, price negotiation and a practical feel for shop-floor priorities. Holds APICS CPIM and knows Epicor MRP well enough to fix bad lead times at the source.",
+      "experience": [
+        {
+          "company": "Prairieland Equipment Co.",
+          "role": "Buyer",
+          "location": "Wichita, KS",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Purchase $24M a year of castings, machined parts and sheet metal from 45 suppliers using Epicor MRP signals\n- Negotiated annual price agreements on 180 part numbers, holding cost increases to 1.8% against 6% inflation\n- Lifted supplier on-time delivery from 85% to 94% with monthly scorecards and blanket PO releases\n- Qualified 3 new Mexican suppliers for weldments, cutting lead times from 10 weeks to 6\n- Work with engineering on 60 engineering change notices a year, managing cut-in dates to avoid scrapping obsolete parts"
+        },
+        {
+          "company": "Flint Hills Hydraulics",
+          "role": "Associate Buyer",
+          "location": "Topeka, KS",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Placed 2,000 purchase orders a year for hoses, fittings and MRO supplies\n- Reduced emergency buys 35% by setting min-max levels for 400 shop supply items\n- Processed expedites and returns for 25 vendors with clear RMA documentation"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kansas State University",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Purchasing: MRP-driven ordering, blanket POs, price negotiation, supplier qualification",
+        "Systems: Epicor Kinetic, Excel, Power BI",
+        "Supplier Management: Scorecards, corrective action requests, cost reduction",
+        "Collaboration: Engineering change coordination, production planning, accounts payable support",
+        "Certifications: APICS CPIM"
+      ]
+    },
+    "Sourcing Specialist": {
+      "summary": "Sourcing specialist with 4 years finding and qualifying suppliers for a private-label apparel brand. Onboarded 14 factories across Vietnam, Bangladesh and Guatemala and cut average FOB cost 6%. Brings costing, factory audit coordination and sample tracking skills that keep seasons on calendar.",
+      "experience": [
+        {
+          "company": "Juniper & Ash Apparel",
+          "role": "Sourcing Specialist",
+          "location": "New York, NY",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Source knit and woven tops for 3 private-label lines totaling $42M in annual FOB value\n- Qualified 14 new factories after social compliance audits under the Higg FSLM framework\n- Negotiated cost sheets on 260 styles a season, lowering average FOB cost 6% while holding quality AQL 2.5\n- Moved 30% of volume to Central America, cutting transit time from 35 days to 9 for replenishment styles\n- Track fabric and trim costs against cotton and polyester market prices to flag factory quotes more than 5% above benchmark"
+        },
+        {
+          "company": "Hudson Row Brands",
+          "role": "Sourcing Assistant",
+          "location": "Jersey City, NJ",
+          "startDate": "2021-07",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Tracked 1,400 lab dips, fit samples and pre-production samples in Centric PLM\n- Built a vendor capacity tracker that flagged 2 overbooked mills before peak season\n- Prepared weekly sample status reports for 4 product developers and 2 merchants"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fashion Institute of Technology",
+          "degree": "B.S. in Production Management: Fashion and Related Industries",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sourcing: Factory qualification, cost negotiation, FOB costing, capacity planning",
+        "Compliance: Higg FSLM, social audits, AQL inspections, UFLPA documentation",
+        "Systems: Centric PLM, Excel, Smartsheet",
+        "Product Knowledge: Knit and woven fabrics, trims, garment construction, fit sessions",
+        "Languages: English, Spanish (fluent)"
+      ]
+    },
+    "Strategic Sourcing Manager": {
+      "summary": "Strategic sourcing manager with 11 years in indirect and IT categories at technology and financial services firms. Leads category strategies covering $140M in spend and delivered $12M in validated savings over 3 years. Brings should-cost analysis, executive stakeholder management and complex SaaS negotiation.",
+      "experience": [
+        {
+          "company": "Meridian Payments Group",
+          "role": "Strategic Sourcing Manager",
+          "location": "Charlotte, NC",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own category strategy for IT software, cloud and telecom, covering $140M in annual spend\n- Delivered $12M in validated savings across 3 years through competitive events and multi-year renewals\n- Negotiated a 5-year cloud commitment with tiered discounts, saving $3.4M versus on-demand pricing\n- Introduced a SaaS renewal calendar in Ariba, ending 100% of auto-renewals without review\n- Mentor 2 sourcing analysts on RFP design, negotiation planning and savings validation with finance"
+        },
+        {
+          "company": "Carolina Mutual Insurance",
+          "role": "Senior Sourcing Analyst",
+          "location": "Raleigh, NC",
+          "startDate": "2017-01",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Ran 35 sourcing events for marketing, facilities and contingent labor categories\n- Consolidated 12 staffing agencies into a managed service program, cutting markup 4 points\n- Introduced a sourcing intake form that cut time from request to RFP release from 6 weeks to 3"
+        },
+        {
+          "company": "Piedmont Consulting Partners",
+          "role": "Procurement Consultant",
+          "location": "Atlanta, GA",
+          "startDate": "2015-06",
+          "endDate": "2016-12",
+          "isCurrent": false,
+          "description": "- Built spend cubes for 4 mid-market clients, identifying $9M in addressable savings\n- Supported RFP design and supplier negotiations for print and logistics categories\n- Wrote negotiation playbooks for 3 recurring categories"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wake Forest University",
+          "degree": "MBA",
+          "startDate": "2013-08",
+          "endDate": "2015-05"
+        },
+        {
+          "school": "Appalachian State University",
+          "degree": "B.S. in Finance",
+          "startDate": "2007-08",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Category Management: Category strategy, should-cost modeling, spend analysis, supplier risk",
+        "Negotiation: SaaS and cloud contracts, multi-year renewals, total cost of ownership",
+        "Systems: SAP Ariba, Coupa, Power BI, Excel",
+        "Stakeholder Management: Executive alignment, IT and legal partnership, business case writing",
+        "Certifications: CPSM, CIPS Level 4"
+      ]
+    },
+    "Vendor Manager": {
+      "summary": "Vendor manager with 7 years overseeing outsourced service providers for a national property insurer. Manages 40 vendors and $60M in annual spend across claims, contact center and IT services. Improved vendor SLA attainment from 82% to 95% using quarterly business reviews and clear performance contracts.",
+      "experience": [
+        {
+          "company": "Keystone Shield Insurance",
+          "role": "Vendor Manager",
+          "location": "Philadelphia, PA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 40 service vendors and $60M in annual spend across claims adjusting, contact center and IT support\n- Rewrote SLAs with service credits for 12 critical vendors, lifting SLA attainment from 82% to 95%\n- Lead quarterly business reviews with scorecards in ServiceNow VRM, retiring 5 underperforming vendors\n- Completed third-party risk assessments for 100% of critical vendors under NYDFS Part 500 requirements\n- Built an offboarding checklist that recovers data, equipment and access within 10 days of contract end"
+        },
+        {
+          "company": "Liberty Bell Financial",
+          "role": "Vendor Relationship Analyst",
+          "location": "Wilmington, DE",
+          "startDate": "2019-05",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Tracked contract renewals and invoices for 150 vendors, recovering $260K in duplicate billing\n- Coordinated SOC 2 report reviews for 30 technology suppliers\n- Maintained a vendor inventory in Coupa covering contract owners, renewal dates and risk tiers for 150 vendors"
+        }
+      ],
+      "education": [
+        {
+          "school": "Temple University",
+          "degree": "B.B.A. in Risk Management and Insurance",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Vendor Management: SLA design, QBRs, scorecards, vendor consolidation, offboarding",
+        "Risk: Third-party risk assessments, SOC 2 review, NYDFS Part 500, contract compliance",
+        "Systems: ServiceNow VRM, Coupa, Excel, Power BI",
+        "Contracts: Statements of work, service credits, renewal negotiations, termination planning",
+        "Certifications: Certified Third-Party Risk Professional (CTPRP)"
+      ]
+    },
+    "Purchasing Manager": {
+      "summary": "Purchasing manager with 10 years in food manufacturing, leading a team of 5 buyers and $85M in raw material and packaging spend. Held material cost inflation 3 points below market through forward contracts and supplier development. Brings commodity buying, team coaching and tight cooperation with production planning.",
+      "experience": [
+        {
+          "company": "Golden Prairie Bakeries",
+          "role": "Purchasing Manager",
+          "location": "Omaha, NE",
+          "startDate": "2020-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 5 buyers purchasing $85M a year of flour, oils, sweeteners and packaging for 3 bakeries\n- Used forward contracts and hedging with treasury to keep ingredient inflation 3 points below the market index\n- Developed 2 regional flour mills as secondary sources, reducing supply risk and freight cost $650K a year\n- Cut raw material inventory 18% by aligning purchase schedules with weekly production plans in SAP\n- Run quarterly business reviews with the top 10 suppliers covering cost, quality and delivery scorecards"
+        },
+        {
+          "company": "Heartland Snack Company",
+          "role": "Senior Buyer",
+          "location": "Lincoln, NE",
+          "startDate": "2016-03",
+          "endDate": "2020-05",
+          "isCurrent": false,
+          "description": "- Bought $30M a year of packaging films and corrugate from 15 suppliers\n- Standardized 40 carton sizes down to 22, saving $280K in tooling and inventory\n- Moved 15 packaging SKUs to consignment inventory, freeing $900K in working capital"
+        },
+        {
+          "company": "Platte River Foods",
+          "role": "Buyer",
+          "location": "Kearney, NE",
+          "startDate": "2014-06",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Purchased spices and dairy ingredients against MRP requirements for a 2-line plant\n- Maintained SQF supplier approval files with zero audit nonconformances\n- Kept supplier lead times current in the MRP system, cutting rush orders 25%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nebraska–Lincoln",
+          "degree": "B.S. in Agribusiness",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Purchasing: Commodity buying, forward contracts, supplier development, cost negotiation",
+        "Leadership: Buyer coaching, KPI management, budget planning",
+        "Systems: SAP S/4HANA, Excel, Power BI",
+        "Compliance: SQF, FSMA supplier verification, allergen controls",
+        "Certifications: CPSM"
+      ]
+    },
+    "Purchasing Agent": {
+      "summary": "Purchasing agent with 4 years buying MRO, electrical and safety supplies for a municipal public works department. Processes about 1,800 purchase orders a year and saved $190K through cooperative contracts. Brings sound knowledge of public procurement rules, quote gathering and vendor follow-up.",
+      "experience": [
+        {
+          "company": "Larimer Valley Public Works",
+          "role": "Purchasing Agent",
+          "location": "Fort Collins, CO",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process about 1,800 purchase orders a year for MRO, electrical, safety and fleet parts\n- Saved $190K a year by moving recurring buys onto Sourcewell and state cooperative contracts\n- Gather 3-quote competition on all purchases over $10K, keeping the department fully compliant at annual audit\n- Set up 25 punch-out catalogs in Tyler Munis, cutting average PO cycle time from 6 days to 2\n- Reconcile invoices with receiving and PO data each week, clearing 95% of mismatches within 3 business days"
+        },
+        {
+          "company": "Front Range Electrical Supply",
+          "role": "Inside Sales and Purchasing Associate",
+          "location": "Loveland, CO",
+          "startDate": "2020-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Replenished stock for 3,000 electrical SKUs and handled 40 contractor orders a day\n- Reduced backorders 20% by tracking vendor lead times in a shared spreadsheet\n- Answered contractor product questions and suggested substitutes when items were backordered"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado State University",
+          "degree": "B.S. in Business Administration",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Purchasing: Quote collection, PO processing, cooperative contracts, catalog management",
+        "Public Procurement: Competitive bidding thresholds, audit documentation, vendor registration",
+        "Systems: Tyler Munis, Excel, Outlook",
+        "Vendor Relations: Quote follow-up, delivery tracking, vendor performance notes",
+        "Certifications: NIGP Certified Procurement Professional (NIGP-CPP) candidate"
+      ]
+    },
+    "Inventory Manager": {
+      "summary": "Inventory manager with 8 years controlling stock for multi-site auto parts and industrial distributors. Oversees $46M in inventory across 5 branches and raised inventory accuracy to 99.2%. Brings cycle counting programs, slow-mover reduction and WMS expertise that protect both service levels and cash.",
+      "experience": [
+        {
+          "company": "Redline Auto Parts Distribution",
+          "role": "Inventory Manager",
+          "location": "Indianapolis, IN",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Control $46M in inventory across 1 central warehouse and 4 branches with a team of 9 inventory clerks\n- Launched ABC cycle counting in Infor WMS, raising location accuracy from 95.1% to 99.2%\n- Cut slow-moving and obsolete stock by $3.6M through return-to-vendor deals and targeted promotions\n- Reduced annual shrink from 1.4% to 0.6% of sales with exception reports and bin audits\n- Set min-max levels for 6,000 branch SKUs, cutting emergency transfers between branches 30%"
+        },
+        {
+          "company": "Hoosier Industrial Supply",
+          "role": "Inventory Control Supervisor",
+          "location": "Fort Wayne, IN",
+          "startDate": "2017-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Supervised receiving and inventory control for 22,000 SKUs\n- Ended annual wall-to-wall physical counts after achieving 98% sustained cycle count accuracy\n- Trained 8 counters on RF count procedures and variance research steps"
+        },
+        {
+          "company": "Crossroads Tire & Wheel",
+          "role": "Inventory Analyst",
+          "location": "Muncie, IN",
+          "startDate": "2015-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Balanced tire stock across 12 stores through weekly transfer recommendations\n- Built seasonal stocking plans that lifted winter tire in-stock to 96%\n- Prepared month-end inventory valuation reports for the controller"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ball State University",
+          "degree": "B.S. in Business Administration, Operations Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inventory Control: Cycle counting, ABC analysis, shrink reduction, obsolescence management",
+        "Systems: Infor WMS, Epicor Prophet 21, Excel, Power BI",
+        "Leadership: Team supervision, SOP writing, audit readiness",
+        "Finance: Inventory valuation, month-end close support, reserve analysis",
+        "Certifications: APICS CPIM"
+      ]
+    },
+    "Inventory Planner": {
+      "summary": "Inventory planner with 5 years planning replenishment for omnichannel home goods and beauty retailers. Manages purchase plans for 2,400 SKUs and improved in-stock from 91% to 97% while trimming weeks of supply. Brings forecasting, open-to-buy discipline and close work with merchants and vendors. Comfortable owning a category's buy plan end to end, from forecast to purchase order.",
+      "experience": [
+        {
+          "company": "Lumen & Linen Home",
+          "role": "Inventory Planner",
+          "location": "Chicago, IL",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan replenishment for 2,400 bedding and bath SKUs across e-commerce and 85 stores, worth $70M in annual sales\n- Lifted in-stock from 91% to 97% while cutting weeks of supply from 14 to 11\n- Rebuilt the weekly forecast in Anaplan with promotional lift factors, reducing forecast error 18%\n- Manage open-to-buy with 3 merchants, keeping receipts within 2% of the seasonal plan\n- Run weekly vendor calls with 25 top suppliers to confirm ship dates and expedite fast-selling items"
+        },
+        {
+          "company": "Rosewater Beauty Supply",
+          "role": "Allocation Analyst",
+          "location": "Evanston, IL",
+          "startDate": "2021-06",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Allocated new launches to 140 stores using sell-through and store-cluster data\n- Cut markdowns on seasonal gift sets 12% by holding back 20% of inventory for chase allocations\n- Built an allocation scorecard comparing planned versus actual sell-through by store cluster"
+        }
+      ],
+      "education": [
+        {
+          "school": "Loyola University Chicago",
+          "degree": "B.B.A. in Supply Chain Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Planning: Replenishment, forecasting, open-to-buy, allocation, weeks of supply",
+        "Systems: Anaplan, Oracle Retail, Excel (advanced), Looker",
+        "Analytics: Sell-through analysis, promotional lift, store clustering",
+        "Collaboration: Merchant partnership, vendor lead-time management",
+        "Vendor Management: Purchase order confirmation, lead-time tracking, expedites"
+      ]
+    },
+    "Demand Planner": {
+      "summary": "Demand planner with 6 years forecasting for consumer electronics and small appliances. Owns the statistical forecast for $520M in annual revenue and raised forecast accuracy from 68% to 81%. Brings statistical modeling, consensus forecasting and a clear way of explaining forecast risk to sales and finance.",
+      "experience": [
+        {
+          "company": "Brightpath Appliances",
+          "role": "Demand Planner",
+          "location": "Louisville, KY",
+          "startDate": "2021-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own the 18-month forecast for 650 SKUs and $520M in annual revenue across retail and Amazon channels\n- Raised SKU-level forecast accuracy from 68% to 81% by tuning models in Kinaxis and cleansing promotional history\n- Lead the monthly consensus forecast meeting with sales, marketing and finance, documenting every override\n- Built a new-product forecasting method from analog SKUs, cutting launch overstock $2.2M\n- Report forecast accuracy and bias by channel each month to the VP of Sales and supply planning"
+        },
+        {
+          "company": "Bluegrass Consumer Brands",
+          "role": "Associate Demand Planner",
+          "location": "Lexington, KY",
+          "startDate": "2019-07",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Forecast 300 personal care SKUs for 4 national retail accounts using POS data\n- Tracked forecast bias by account, reducing chronic over-forecasting at one key retailer by 15 points\n- Supported 6 national retailer promotions a year with lift forecasts and post-event reviews"
+        },
+        {
+          "company": "Derby City Distributing",
+          "role": "Supply Chain Intern",
+          "location": "Louisville, KY",
+          "startDate": "2018-05",
+          "endDate": "2018-08",
+          "isCurrent": false,
+          "description": "- Built a weekly sales history dashboard in Excel for 2 planners\n- Cleaned 3 years of order data to support a forecasting system upgrade\n- Pulled weekly POS data from 3 retailer portals into one tracking file"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kentucky",
+          "degree": "B.S. in Business Analytics",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Forecasting: Statistical forecasting, consensus planning, new product forecasting, bias tracking",
+        "Systems: Kinaxis RapidResponse, SAP, Excel, Power BI, Python (basic)",
+        "Data: POS analysis, promotional lift modeling, forecast accuracy metrics (MAPE, WMAPE)",
+        "Collaboration: Sales and marketing alignment, S&OP inputs, executive forecast reviews",
+        "Certifications: IBF Certified Professional Forecaster (CPF)"
+      ]
+    },
+    "Supply Chain Planner": {
+      "summary": "Supply chain planner with 5 years in pharmaceutical manufacturing, translating demand into production and material plans for 2 sites. Reduced schedule changes inside the frozen window 45% while protecting 99% customer service. Brings MRP and finite scheduling expertise plus a strong understanding of GMP constraints. Holds APICS CPIM and works daily with quality, production and procurement.",
+      "experience": [
+        {
+          "company": "Clearwater Pharma Manufacturing",
+          "role": "Supply Chain Planner",
+          "location": "Raleigh, NC",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan production and materials for 120 oral solid dose SKUs across 2 GMP sites in SAP APO\n- Cut schedule changes inside the 4-week frozen window 45% by locking campaigns with quality and production\n- Protect 99% customer service while reducing finished goods inventory from 5.2 to 4.1 months\n- Coordinate batch release timing with QA, shortening average release lead time by 6 days\n- Monitor API and excipient availability weekly, flagging 6 supply risks to procurement before they hit the schedule"
+        },
+        {
+          "company": "Tarheel Nutraceuticals",
+          "role": "Production Scheduler",
+          "location": "Durham, NC",
+          "startDate": "2021-05",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Scheduled 3 encapsulation lines and 2 packaging lines on a weekly finite plan\n- Raised schedule attainment from 84% to 93% by sequencing products to reduce changeover cleans\n- Coordinated packaging material deliveries with 8 suppliers to support weekly schedules"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "B.S. in Industrial and Systems Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Planning: MRP, master production scheduling, campaign planning, capacity planning",
+        "Systems: SAP APO, SAP ECC, Excel, Spotfire",
+        "Regulated Manufacturing: GMP, batch release, change control coordination",
+        "Collaboration: Quality assurance, production, procurement, customer service",
+        "Certifications: APICS CPIM"
+      ]
+    },
+    "Operations Supervisor": {
+      "summary": "Operations supervisor with 6 years leading shift teams in fulfillment and returns processing. Supervises 45 associates per shift and raised units per hour 19% through layout changes and coaching. Brings safety leadership, labor planning and calm problem solving during high-volume peaks. Known for training new hires quickly and keeping night-shift turnover low.",
+      "experience": [
+        {
+          "company": "Parcelpoint Fulfillment",
+          "role": "Operations Supervisor",
+          "location": "Reno, NV",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 45 associates and 3 leads on the night shift, processing 28,000 units across pick, pack and returns\n- Raised units per hour 19% by re-slotting fast movers and coaching the bottom 15% of performers weekly\n- Cut recordable injuries from 6 to 1 a year with daily safety huddles and ergonomic workstation changes\n- Build daily labor plans against forecast, holding overtime under 6% of hours through peak\n- Lead daily start-up meetings covering safety, volume and staffing for 3 functional areas"
+        },
+        {
+          "company": "Sierra Returns Center",
+          "role": "Team Lead",
+          "location": "Sparks, NV",
+          "startDate": "2020-03",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Led 15 associates grading and restocking 4,000 returned items a day\n- Trained 60 new hires on WMS scanning and grading standards during 2 peak seasons\n- Built a returns grading cheat sheet that cut grading errors 25%"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nevada, Reno",
+          "degree": "B.S. in Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: Shift leadership, labor planning, productivity tracking, returns processing",
+        "Safety: OSHA 10, incident investigation, ergonomics, safety huddles",
+        "Systems: Manhattan WMS, Kronos, Excel",
+        "Continuous Improvement: 5S, standard work, Gemba walks",
+        "Communication: Shift handoffs, performance feedback, daily KPI reporting"
+      ]
+    },
+    "Warehouse Manager": {
+      "summary": "Warehouse manager with 11 years running distribution centers for retail and 3PL clients. Leads a 220,000 sq ft building with 110 employees and lifted order accuracy to 99.8%. Brings WMS implementation, labor management and a strong safety record across three clients and multiple peak seasons.",
+      "experience": [
+        {
+          "company": "Midstate 3PL Services",
+          "role": "Warehouse Manager",
+          "location": "Allentown, PA",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 220,000 sq ft multi-client warehouse with 110 employees, 4 supervisors and a $9M operating budget\n- Led the Blue Yonder WMS go-live with zero missed client cutoffs, then raised order accuracy to 99.8%\n- Cut cost per unit shipped 15% through labor standards and engineered pick paths\n- Achieved 900 days without a lost-time injury and passed 3 client audits with no major findings\n- Manage relationships with 3 retail and e-commerce clients, presenting monthly KPI reviews on accuracy, dock-to-stock and cost"
+        },
+        {
+          "company": "Lehigh Valley Distribution",
+          "role": "Operations Manager",
+          "location": "Bethlehem, PA",
+          "startDate": "2016-02",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Managed inbound and outbound operations shipping 2,500 pallets a week to 300 retail stores\n- Reduced dock-to-stock time from 48 hours to 18 by cross-training receiving and put-away teams\n- Launched cross-docking for 2 high-volume vendors, cutting storage cost 18%"
+        },
+        {
+          "company": "Keystone Grocery Supply",
+          "role": "Warehouse Supervisor",
+          "location": "Harrisburg, PA",
+          "startDate": "2013-06",
+          "endDate": "2016-01",
+          "isCurrent": false,
+          "description": "- Supervised 30 selectors in a refrigerated grocery warehouse\n- Raised cases per hour 12% through voice-pick coaching\n- Cut selector injuries 40% with stretch-and-flex routines and lift training"
+        }
+      ],
+      "education": [
+        {
+          "school": "Penn State University",
+          "degree": "B.S. in Supply Chain and Information Systems",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Warehouse Operations: Receiving, put-away, pick-pack-ship, slotting, labor standards",
+        "Systems: Blue Yonder WMS, Manhattan WMS, Kronos, Power BI",
+        "Safety: OSHA 30, powered industrial truck programs, incident reduction",
+        "Leadership: Budget ownership, supervisor development, client relationship management"
+      ]
+    },
+    "Warehouse Supervisor": {
+      "summary": "Warehouse supervisor with 5 years leading receiving and shipping teams in building materials and beverage distribution. Supervises 25 associates and cut mis-shipments 60% in the first year. Brings forklift program oversight, practical WMS knowledge and coaching that keeps crews productive and safe. Certified forklift trainer with a practical focus on load accuracy and yard flow.",
+      "experience": [
+        {
+          "company": "Summit Lumber & Supply",
+          "role": "Warehouse Supervisor",
+          "location": "Denver, CO",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 25 associates across receiving, yard and shipping for a 3-acre building materials yard\n- Cut mis-shipments 60% by adding load-check sign-offs and scanner verification before trucks leave\n- Run the powered industrial truck program, certifying 30 operators under OSHA 1910.178\n- Reorganized yard locations for lumber and drywall, reducing average load time from 55 to 35 minutes\n- Lead morning huddles covering safety, daily loads and staffing for a crew working 6 days a week"
+        },
+        {
+          "company": "Rocky Mountain Beverage Co.",
+          "role": "Warehouse Lead",
+          "location": "Aurora, CO",
+          "startDate": "2021-04",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Led a 10-person night crew building 500 mixed pallets for route deliveries\n- Improved pallet build accuracy from 97% to 99.4% through pick-label changes and coaching\n- Reorganized the pick path for 300 SKUs, cutting walking distance per route 20%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Community College of Denver",
+          "degree": "A.A.S. in Business Management",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Warehouse: Receiving, shipping, yard management, load verification, inventory counts",
+        "Safety: OSHA 1910.178 forklift training, OSHA 10, daily equipment checks",
+        "Systems: Epicor BisTrack, RF scanners, Excel",
+        "Leadership: Crew scheduling, coaching, onboarding new hires",
+        "Communication: Driver coordination, customer pickup service, daily reporting"
+      ]
+    },
+    "Quality Manager": {
+      "summary": "Quality manager with 12 years in aerospace and precision machining, leading AS9100 quality systems for a 300-person plant. Cut customer escapes 72% and cost of poor quality by $1.9M. Brings audit leadership, root cause problem solving and the ability to build a quality culture on the shop floor.",
+      "experience": [
+        {
+          "company": "Skyward Precision Components",
+          "role": "Quality Manager",
+          "location": "Wichita, KS",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 14-person quality team covering inspection, supplier quality and the AS9100D management system\n- Cut customer escapes 72% in 3 years by enforcing 8D investigations and first article inspection per AS9102\n- Reduced cost of poor quality by $1.9M a year through scrap tracking and SPC on 20 critical features\n- Hosted 9 customer and registrar audits with zero major findings\n- Manage supplier quality for 60 suppliers, including source inspections and corrective action requests"
+        },
+        {
+          "company": "Aerotech Machining Group",
+          "role": "Quality Engineer",
+          "location": "Tulsa, OK",
+          "startDate": "2016-04",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Wrote PFMEAs and control plans for 40 new part numbers\n- Led supplier corrective actions that raised incoming acceptance from 94% to 99%\n- Trained 80 machinists on in-process inspection and SPC chart reading"
+        },
+        {
+          "company": "Sooner Metal Works",
+          "role": "Quality Inspector",
+          "location": "Oklahoma City, OK",
+          "startDate": "2014-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Inspected machined parts with CMM and hand gauges against GD&T drawings\n- Programmed 25 CMM routines that cut inspection time per lot 30%\n- Cut inspection backlog from 5 days to 1 with prioritized queues"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wichita State University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Quality Systems: AS9100D, ISO 9001, internal audits, document control, CAPA",
+        "Problem Solving: 8D, root cause analysis, PFMEA, control plans, SPC",
+        "Inspection: First article inspection (AS9102), CMM, GD&T",
+        "Certifications: ASQ Certified Manager of Quality (CMQ/OE), ASQ CQE"
+      ]
+    },
+    "Quality Assurance Manager": {
+      "summary": "Quality assurance manager with 10 years in food and beverage manufacturing, running SQF and FSMA programs for a 2-line co-packing plant. Led the site from SQF conditional to an Excellent rating and cut consumer complaints 48%. Brings HACCP leadership, audit readiness and practical training for production crews.",
+      "experience": [
+        {
+          "company": "Clearspring Beverage Co-Pack",
+          "role": "Quality Assurance Manager",
+          "location": "Fresno, CA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage QA, lab and sanitation verification with a team of 9 for a plant producing 18M cases a year\n- Raised the SQF audit score from 79 to 96 within 2 audit cycles by rebuilding the document control system\n- Cut consumer complaints per million units 48% through foreign material controls and inline X-ray checks\n- Rewrote the HACCP and FSMA food safety plan, passing an unannounced FDA inspection with no 483 observations\n- Manage QA budget of $1.1M, including lab equipment, testing contracts and third-party audits"
+        },
+        {
+          "company": "Central Valley Juice Company",
+          "role": "QA Supervisor",
+          "location": "Modesto, CA",
+          "startDate": "2017-05",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Supervised 6 QA technicians across 3 shifts testing Brix, pH and micro samples\n- Introduced environmental monitoring zoning that reduced Listeria-positive swabs to zero for 2 years\n- Trained 120 production staff on GMPs and allergen controls every quarter"
+        },
+        {
+          "company": "Sunland Dairy",
+          "role": "Quality Technician",
+          "location": "Tulare, CA",
+          "startDate": "2016-06",
+          "endDate": "2017-04",
+          "isCurrent": false,
+          "description": "- Ran raw milk and finished product testing to PMO standards\n- Logged CCP checks in a new digital system, ending missed record entries\n- Validated sanitation chemical concentrations daily"
+        }
+      ],
+      "education": [
+        {
+          "school": "California State University, Fresno",
+          "degree": "B.S. in Food Science and Nutrition",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Food Safety: HACCP, FSMA Preventive Controls, SQF Edition 9, environmental monitoring",
+        "Quality Systems: Document control, CAPA, supplier approval, internal audits",
+        "Lab: Micro testing, Brix and pH, shelf-life studies",
+        "Certifications: PCQI, SQF Practitioner, HACCP Certified, ASQ CQA"
+      ]
+    },
+    "Quality Control Inspector": {
+      "summary": "Quality control inspector with 4 years inspecting machined and fabricated parts for medical and industrial customers. Performs first article, in-process and final inspections and holds a 99.5% audit accuracy rate. Brings CMM programming, GD&T reading skill and careful documentation that stands up to customer audits.",
+      "experience": [
+        {
+          "company": "Precision Ridge Manufacturing",
+          "role": "Quality Control Inspector",
+          "location": "Rochester, NY",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Inspect about 120 lots a month of machined titanium and stainless parts for orthopedic device customers\n- Program and run Zeiss CMM routines, cutting inspection time on complex parts from 90 to 35 minutes\n- Perform first article inspections to AS9102 and ISO 13485 requirements with 99.5% accuracy on audit re-checks\n- Flagged a worn fixture trend through SPC charts, preventing an estimated $60K scrap event\n- Write nonconformance reports for out-of-tolerance parts and support MRB decisions with measurement data"
+        },
+        {
+          "company": "Genesee Fabrication",
+          "role": "Quality Technician",
+          "location": "Batavia, NY",
+          "startDate": "2021-08",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Checked welds and sheet metal parts using calipers, height gauges and visual weld criteria per AWS D1.1\n- Maintained calibration records for 300 gauges with no overdue instruments\n- Inspected 40 incoming lots a month and flagged supplier defects within 24 hours"
+        }
+      ],
+      "education": [
+        {
+          "school": "Monroe Community College",
+          "degree": "A.A.S. in Precision Machining",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inspection: First article, in-process and final inspection, visual weld inspection",
+        "Measurement: Zeiss CMM (Calypso), calipers, micrometers, height gauges, optical comparator",
+        "Quality: GD&T (ASME Y14.5), SPC, nonconformance reports, calibration records",
+        "Documentation: Inspection reports, first article packages, NCRs, traceability records",
+        "Certifications: ASQ Certified Quality Inspector (CQI)"
+      ]
+    },
+    "Production Planner": {
+      "summary": "Production planner with 5 years scheduling discrete manufacturing for HVAC and industrial equipment. Builds weekly schedules for 6 assembly lines and raised schedule attainment from 81% to 94%. Brings MRP expertise, capacity planning and the shop-floor relationships needed to keep orders shipping on time. Holds APICS CPIM and runs the daily shortage meeting that keeps lines building.",
+      "experience": [
+        {
+          "company": "Northwind Air Systems",
+          "role": "Production Planner",
+          "location": "Milwaukee, WI",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build weekly schedules for 6 assembly lines producing 1,200 rooftop and split units a month\n- Raised schedule attainment from 81% to 94% by checking material and labor availability before release\n- Cut past-due orders from 140 to 25 using a daily shortage meeting with purchasing and production\n- Model capacity in Plex for quarterly demand, identifying the need for a second shift 10 weeks ahead\n- Publish a daily build sequence to production leads and track hourly attainment on line boards"
+        },
+        {
+          "company": "Badger Conveyor Systems",
+          "role": "Material Planner",
+          "location": "Waukesha, WI",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Planned materials for 800 purchased and manufactured parts using MRP\n- Corrected 1,500 bill-of-material errors with engineering, reducing line shortages 30%\n- Built a weekly material shortage report that purchasing used to prioritize expedites"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Milwaukee",
+          "degree": "B.B.A. in Supply Chain and Operations Management",
+          "startDate": "2016-09",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Planning: Master scheduling, MRP, capacity planning, shortage management",
+        "Systems: Plex ERP, Excel (advanced), Power BI",
+        "Manufacturing: Bill of materials, routings, work order release, line balancing basics",
+        "Collaboration: Production leads, purchasing, engineering, customer service",
+        "Certifications: APICS CPIM"
+      ]
+    },
+    "Manufacturing Engineer": {
+      "summary": "Manufacturing engineer with 6 years in automotive electronics assembly, launching SMT and final assembly lines. Led 3 new product launches and raised first-pass yield from 91% to 98.6%. Brings PFMEA, fixture design and lean line layout skills, plus close work with design engineers on manufacturability.",
+      "experience": [
+        {
+          "company": "Voltline Automotive Electronics",
+          "role": "Manufacturing Engineer",
+          "location": "Auburn Hills, MI",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Launched 3 SMT and final assembly lines for battery management modules, each meeting PPAP on schedule\n- Raised first-pass yield from 91% to 98.6% by redesigning solder paste stencils and reflow profiles\n- Designed 12 assembly fixtures in SolidWorks, cutting cycle time 22% on the highest-volume module\n- Lead DFM reviews with design engineering, eliminating 9 hard-to-build features before release\n- Support daily production with root cause analysis of top 5 defects and line stops"
+        },
+        {
+          "company": "Huron Controls",
+          "role": "Associate Manufacturing Engineer",
+          "location": "Port Huron, MI",
+          "startDate": "2020-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Wrote work instructions and PFMEAs for 25 wire harness assemblies\n- Rebalanced a 10-station line, raising output 15% with the same headcount\n- Built an error-proofing sensor check that ended reversed-connector escapes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kettering University",
+          "degree": "B.S. in Mechanical Engineering",
+          "startDate": "2016-07",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Reflow Profile Optimization",
+          "link": "",
+          "description": "Design of experiments on 4 reflow variables that cut voiding in power components from 18% to 4%, documented as a plant best practice"
+        }
+      ],
+      "skills": [
+        "Manufacturing: SMT, final assembly, line balancing, fixture design, DFM",
+        "Quality: PFMEA, control plans, PPAP, APQP, IATF 16949",
+        "Tools: SolidWorks, Minitab, AutoCAD, Siemens Opcenter MES",
+        "Methods: Lean manufacturing, design of experiments, time studies",
+        "Certifications: Lean Six Sigma Green Belt, IPC-A-610 Certified IPC Specialist"
+      ]
+    },
+    "Process Engineer": {
+      "summary": "Process engineer with 7 years in specialty chemicals, optimizing batch and continuous processes for yield, safety and cost. Increased reactor yield 6 points and cut steam use 14% across 2 units. Brings process modeling, PSM and HAZOP experience and steady support for operations around the clock.",
+      "experience": [
+        {
+          "company": "Gulfstream Specialty Chemicals",
+          "role": "Process Engineer",
+          "location": "Baton Rouge, LA",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own process performance for 2 batch reactor units producing 40M lb a year of surfactants\n- Raised reactor yield from 88% to 94% by adjusting temperature ramps and catalyst addition, worth $2.3M a year\n- Cut steam consumption 14% through heat integration changes modeled in Aspen Plus\n- Lead HAZOP and management of change reviews for 15 projects under OSHA PSM 1910.119\n- Provide on-call support for 2 units, resolving about 6 process upsets a month with operations"
+        },
+        {
+          "company": "Bayou Polymers",
+          "role": "Associate Process Engineer",
+          "location": "Lake Charles, LA",
+          "startDate": "2019-06",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Monitored extrusion line data in OSIsoft PI and resolved 30+ off-spec events with operations\n- Wrote 20 updated operating procedures that passed PSM compliance audit\n- Ran 4 plant trials on resin grades that cut die buildup 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Louisiana State University",
+          "degree": "B.S. in Chemical Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Steam Heat Integration Study",
+          "link": "",
+          "description": "Pinch analysis across 2 units that identified 3 heat-exchange retrofits; first retrofit paid back in 11 months"
+        }
+      ],
+      "skills": [
+        "Process: Batch and continuous optimization, mass and energy balances, heat integration",
+        "Safety: OSHA PSM, HAZOP, management of change, PHA revalidation",
+        "Tools: Aspen Plus, OSIsoft PI, Minitab, Excel VBA",
+        "Collaboration: Operations, maintenance, quality, EHS",
+        "Licenses: Engineer in Training (EIT), Louisiana"
+      ]
+    },
+    "Production Manager": {
+      "summary": "Production manager with 11 years in plastics injection molding, leading 3 shifts and 85 employees. Raised OEE from 63% to 79% and cut scrap 40% across 28 presses. Brings lean execution, labor planning and supervisor coaching that keeps output steady for consumer and medical customers.",
+      "experience": [
+        {
+          "company": "Polyform Molding Solutions",
+          "role": "Production Manager",
+          "location": "Greenville, SC",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 85 operators, technicians and 3 shift supervisors running 28 injection molding presses\n- Raised OEE from 63% to 79% by introducing SMED changeovers and hourly production boards\n- Cut scrap 40%, saving $780K a year, through scientific molding standards and press-side quality checks\n- Lowered overtime from 14% to 6% of labor hours with a cross-training matrix covering 40 roles\n- Own a $9M labor and supplies budget and report weekly cost-per-part results to the plant manager"
+        },
+        {
+          "company": "Upstate Plastics Group",
+          "role": "Production Supervisor",
+          "location": "Spartanburg, SC",
+          "startDate": "2016-03",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Supervised 30 associates on night shift across molding and secondary assembly\n- Achieved 2 years without a recordable injury on shift\n- Ran daily start-up meetings and tracked scrap by press on shift boards"
+        },
+        {
+          "company": "Carolina Thermoform",
+          "role": "Process Technician",
+          "location": "Anderson, SC",
+          "startDate": "2014-05",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Set up and troubleshot thermoforming lines for food packaging\n- Documented process windows that cut startup scrap 25%\n- Trained 8 new technicians on thermoformer setup and lockout procedures"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: OEE, SMED, scheduling, labor planning, shift management",
+        "Lean: 5S, tiered daily huddles, standard work, kaizen events",
+        "Molding: Scientific molding, mold changeovers, secondary operations",
+        "Certifications: Lean Six Sigma Green Belt, OSHA 30"
+      ]
+    },
+    "Manufacturing Manager": {
+      "summary": "Manufacturing manager with 13 years in medical device assembly and packaging, leading clean-room operations with 140 employees. Delivered 30% output growth without adding floor space and kept the site audit-ready under FDA 21 CFR 820. Brings lean transformation, budget ownership and strong partnership with quality.",
+      "experience": [
+        {
+          "company": "Arcadia Surgical Products",
+          "role": "Manufacturing Manager",
+          "location": "Irvine, CA",
+          "startDate": "2020-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 140 employees across ISO Class 7 clean-room assembly, sterilization prep and packaging with a $14M budget\n- Grew output 30% in existing floor space by converting batch cells into 6 one-piece-flow lines\n- Reduced nonconformance reports 45% working with quality on mistake-proofing and operator certification\n- Supported 4 FDA and notified body audits with zero manufacturing-related observations\n- Partner with quality and R&D on 3 product transfers a year from development to full production"
+        },
+        {
+          "company": "Pacifica Catheter Technologies",
+          "role": "Production Manager",
+          "location": "Santa Ana, CA",
+          "startDate": "2015-06",
+          "endDate": "2019-12",
+          "isCurrent": false,
+          "description": "- Managed 60 assemblers and 4 leads producing catheter components\n- Cut lead time from 21 days to 9 by moving to a kanban pull system\n- Developed 4 leads into supervisors through a structured coaching program"
+        },
+        {
+          "company": "Orange Coast Medical",
+          "role": "Manufacturing Engineer",
+          "location": "Costa Mesa, CA",
+          "startDate": "2013-06",
+          "endDate": "2015-05",
+          "isCurrent": false,
+          "description": "- Validated 8 packaging processes through IQ, OQ and PQ protocols\n- Designed bonding fixtures that lifted yield from 92% to 97%\n- Wrote 20 work instructions with photo-based steps"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of California, Irvine",
+          "degree": "B.S. in Mechanical Engineering",
+          "startDate": "2009-09",
+          "endDate": "2013-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Manufacturing: Clean-room operations, one-piece flow, capacity planning, budget management",
+        "Compliance: FDA 21 CFR 820, ISO 13485, process validation (IQ/OQ/PQ)",
+        "Lean: Kanban, value stream mapping, mistake-proofing",
+        "Systems: Oracle EBS, MasterControl, Power BI",
+        "Leadership: Supervisor development, budget planning, cross-functional product launches"
+      ]
+    },
+    "Plant Manager": {
+      "summary": "Plant manager with 17 years in building products and metals manufacturing, leading a 420-employee plant with $260M in annual output. Improved EBITDA margin 5 points over 4 years while cutting the injury rate in half. Brings P&L ownership, union partnership and disciplined operating systems.",
+      "experience": [
+        {
+          "company": "Riverstone Building Products",
+          "role": "Plant Manager",
+          "location": "Birmingham, AL",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 420-employee unionized plant producing $260M a year of roofing and siding products\n- Improved plant EBITDA margin from 14% to 19% through scrap reduction, energy savings and a $22M line upgrade\n- Cut the total recordable incident rate from 3.1 to 1.4 by launching a behavior-based safety program\n- Negotiated a 4-year labor agreement with the USW local without a work stoppage\n- Lead a staff of 9 department managers across production, maintenance, quality, EHS, HR and finance"
+        },
+        {
+          "company": "Southern Steel Fabricators",
+          "role": "Operations Manager",
+          "location": "Huntsville, AL",
+          "startDate": "2014-09",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Ran production, maintenance and shipping for a 2-shift structural steel plant\n- Raised on-time delivery from 82% to 95% while growing revenue 40%\n- Built daily tiered meetings linking shop-floor issues to weekly management reviews"
+        },
+        {
+          "company": "Magnolia Wire & Cable",
+          "role": "Production Manager",
+          "location": "Jackson, MS",
+          "startDate": "2009-06",
+          "endDate": "2014-08",
+          "isCurrent": false,
+          "description": "- Managed 3 shifts and 120 employees across drawing and insulation lines\n- Cut copper scrap 28%, saving $1.5M a year\n- Rolled out shift-start production meetings across 3 shifts"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Alabama",
+          "degree": "MBA",
+          "startDate": "2012-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "Auburn University",
+          "degree": "B.S. in Industrial and Systems Engineering",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: P&L ownership, capital planning, labor relations, leadership development",
+        "Operations: Lean operating systems, OEE, energy management, maintenance strategy",
+        "Safety: Behavior-based safety, OSHA 30, ISO 45001",
+        "Finance: Budgeting, capital project ROI, cost accounting"
+      ]
+    },
+    "Maintenance Manager": {
+      "summary": "Maintenance manager with 12 years in food processing and packaging plants, leading 28 technicians across 3 shifts. Raised planned maintenance to 82% of labor hours and cut unplanned downtime 46%. Brings CMMS implementation, reliability practices and capital project management that keep lines running.",
+      "experience": [
+        {
+          "company": "Prairie Gold Meat Processing",
+          "role": "Maintenance Manager",
+          "location": "Sioux Falls, SD",
+          "startDate": "2020-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 28 mechanics, electricians and planners with a $6.5M maintenance budget for a 24/7 processing plant\n- Cut unplanned downtime 46% by implementing Fiix CMMS and raising planned work to 82% of labor hours\n- Launched vibration and infrared condition monitoring on 120 critical assets, avoiding 9 major failures in 2025\n- Managed $4M in capital projects, including an ammonia refrigeration upgrade delivered on budget\n- Built a maintenance apprenticeship with a local technical college, hiring 6 technicians through the program"
+        },
+        {
+          "company": "Dakota Packaging Corporation",
+          "role": "Maintenance Supervisor",
+          "location": "Fargo, ND",
+          "startDate": "2016-02",
+          "endDate": "2020-10",
+          "isCurrent": false,
+          "description": "- Supervised 12 technicians maintaining corrugators and converting lines\n- Built a critical spares list that cut average repair wait time from 2 days to 4 hours\n- Cut maintenance overtime 20% with a planned work backlog of 2 weeks"
+        },
+        {
+          "company": "Red River Foods",
+          "role": "Reliability Technician",
+          "location": "Grand Forks, ND",
+          "startDate": "2014-05",
+          "endDate": "2016-01",
+          "isCurrent": false,
+          "description": "- Performed lubrication routes and vibration readings on 80 assets\n- Wrote 50 PM procedures adopted plant-wide\n- Trained 10 operators on basic lubrication checks"
+        }
+      ],
+      "education": [
+        {
+          "school": "South Dakota State University",
+          "degree": "B.S. in Mechanical Engineering Technology",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Maintenance: Preventive and predictive maintenance, planning and scheduling, spares strategy",
+        "Reliability: Vibration analysis, infrared thermography, RCA, MTBF and MTTR tracking",
+        "Systems: Fiix CMMS, SAP PM, Excel",
+        "Leadership: Technician hiring, apprenticeship programs, budget and capital planning",
+        "Certifications: Certified Maintenance & Reliability Professional (CMRP), OSHA 30"
+      ]
+    },
+    "EHS Manager": {
+      "summary": "EHS manager with 10 years leading environmental, health and safety programs in metal finishing and chemical distribution. Cut the recordable rate 63% and kept 3 sites free of environmental violations. Brings OSHA and EPA compliance expertise, ISO 45001 implementation and the credibility to coach supervisors on the floor.",
+      "experience": [
+        {
+          "company": "Allegheny Coatings & Finishing",
+          "role": "EHS Manager",
+          "location": "Pittsburgh, PA",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead EHS for 3 plating and coating sites with 380 employees and a team of 3 safety specialists\n- Cut the total recordable incident rate from 4.3 to 1.6 through JSAs, near-miss reporting and supervisor training\n- Maintained Title V air and NPDES wastewater permits with zero notices of violation in 5 years\n- Led ISO 45001 certification across all 3 sites in 14 months\n- Manage a $1.4M EHS budget covering PPE, industrial hygiene sampling, permits and training"
+        },
+        {
+          "company": "Three Rivers Chemical Distribution",
+          "role": "EHS Specialist",
+          "location": "Canonsburg, PA",
+          "startDate": "2017-04",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Managed hazardous waste, Tier II and TRI reporting for 2 warehouses\n- Rolled out a lockout/tagout program covering 140 machines\n- Trained 200 employees on hazard communication under the GHS standard"
+        },
+        {
+          "company": "Monongahela Steel Products",
+          "role": "Safety Coordinator",
+          "location": "Morgantown, WV",
+          "startDate": "2015-06",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Ran monthly safety audits and new-hire safety orientation for 200 employees\n- Organized industrial hygiene sampling that led to new local exhaust ventilation\n- Ran forklift and crane inspection programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Indiana University of Pennsylvania",
+          "degree": "B.S. in Safety, Health and Environmental Applied Sciences",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Safety: OSHA 1910, JSAs, lockout/tagout, incident investigation, industrial hygiene",
+        "Environmental: Title V permits, NPDES, RCRA hazardous waste, Tier II, TRI",
+        "Management Systems: ISO 45001, ISO 14001, EHS auditing",
+        "Certifications: CSP (Certified Safety Professional), OSHA 500"
+      ]
+    },
+    "Lean Six Sigma Black Belt": {
+      "summary": "Lean Six Sigma Black Belt with 9 years leading improvement projects in electronics manufacturing and distribution. Completed 24 DMAIC projects with $8.6M in validated savings and trained 70 Green Belts. Brings strong statistical analysis, change management and the ability to make improvements stick after the project ends.",
+      "experience": [
+        {
+          "company": "Silverline Electronics",
+          "role": "Lean Six Sigma Black Belt",
+          "location": "Austin, TX",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 to 6 DMAIC projects a year across PCB assembly, test and repair operations\n- Delivered $4.9M in finance-validated savings, including a solder defect project that cut rework 58%\n- Trained and coached 70 Green Belts, with 85% completing certification projects\n- Built a project pipeline and governance process in Power BI reviewed monthly with the VP of Operations\n- Ran 12 kaizen events in test and repair, cutting average repair turnaround from 6 days to 3"
+        },
+        {
+          "company": "Lone Pine Distribution",
+          "role": "Continuous Improvement Engineer",
+          "location": "San Antonio, TX",
+          "startDate": "2017-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Led 10 kaizen events in picking and packing, raising productivity 21%\n- Used regression analysis to cut mis-picks 35% across 2 distribution centers\n- Trained 40 associates on 5S and standard work"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University",
+          "degree": "B.S. in Industrial Distribution",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Solder Defect Reduction (DMAIC)",
+          "link": "",
+          "description": "Designed experiments on stencil, paste and reflow variables that cut solder defects from 2,400 to 1,000 DPMO and saved $1.2M a year"
+        }
+      ],
+      "skills": [
+        "Methods: DMAIC, DMADV, kaizen, value stream mapping, hypothesis testing, DOE",
+        "Tools: Minitab, JMP, Power BI, Visio",
+        "Change Management: Stakeholder alignment, control plans, Green Belt coaching",
+        "Leadership: Project selection, executive reporting, Green Belt certification reviews",
+        "Certifications: ASQ Certified Six Sigma Black Belt (CSSBB), Lean Bronze Certification"
+      ]
+    },
+    "Operations Director": {
+      "summary": "Operations director with 16 years running multi-site distribution and light manufacturing for consumer and industrial brands. Leads 5 facilities, 650 employees and a $75M operating budget. Cut cost per unit 17% while expanding capacity 35%, with a track record of building strong site leaders.",
+      "experience": [
+        {
+          "company": "Evergreen Consumer Brands",
+          "role": "Operations Director",
+          "location": "Seattle, WA",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 5 distribution and kitting facilities with 650 employees and a $75M operating budget\n- Cut cost per unit 17% over 4 years through automation, labor standards and network consolidation\n- Opened a 400,000 sq ft fulfillment center on schedule and $1.2M under its $38M capital budget\n- Built a site leadership bench, promoting 7 managers internally and cutting leader turnover from 30% to 12%\n- Lead safety performance across all 5 sites, cutting the recordable rate from 3.4 to 1.5"
+        },
+        {
+          "company": "Cascade Industrial Products",
+          "role": "Senior Operations Manager",
+          "location": "Tacoma, WA",
+          "startDate": "2014-08",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Managed manufacturing and shipping for 2 plants with 280 employees\n- Raised on-time in-full from 86% to 96% through S&OP and daily management\n- Introduced a shared KPI scorecard for safety, quality, delivery and cost across both plants"
+        },
+        {
+          "company": "Puget Sound Logistics",
+          "role": "Operations Manager",
+          "location": "Kent, WA",
+          "startDate": "2010-06",
+          "endDate": "2014-07",
+          "isCurrent": false,
+          "description": "- Ran a 250,000 sq ft retail distribution center\n- Cut labor cost per carton 14% through slotting and shift redesign\n- Rolled out a new WMS with zero missed customer shipments"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington",
+          "degree": "MBA, Operations and Supply Chain",
+          "startDate": "2012-09",
+          "endDate": "2014-06"
+        },
+        {
+          "school": "Washington State University",
+          "degree": "B.A. in Business Administration",
+          "startDate": "2005-08",
+          "endDate": "2009-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Multi-site management, P&L and budget ownership, leadership development",
+        "Operations: Network strategy, automation, labor standards, capacity planning",
+        "Planning: S&OP, capital planning, KPI frameworks",
+        "Systems: SAP, Manhattan WMS, Tableau",
+        "Safety: Multi-site safety leadership, OSHA 30, ISO 45001 programs"
+      ]
+    },
+    "Continuous Improvement Manager": {
+      "summary": "Continuous improvement manager with 11 years deploying lean operating systems in packaging and paper manufacturing. Leads CI for 4 plants and delivered $6.8M in annual run-rate savings. Brings kaizen leadership, daily management systems and coaching that build problem-solving skills in plant teams.",
+      "experience": [
+        {
+          "company": "Northfield Paper & Packaging",
+          "role": "Continuous Improvement Manager",
+          "location": "Green Bay, WI",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead lean deployment for 4 corrugated plants with a team of 4 CI engineers\n- Delivered $6.8M in annual run-rate savings from 60 kaizen events and 12 Black Belt projects\n- Introduced tiered daily management boards in all plants, cutting response time to line issues from 2 hours to 20 minutes\n- Raised corrugator uptime 8 points through SMED and autonomous maintenance programs\n- Built a CI training curriculum that certified 45 Yellow Belts and 12 Green Belts across the 4 plants"
+        },
+        {
+          "company": "Fox Valley Converting",
+          "role": "Lean Manager",
+          "location": "Appleton, WI",
+          "startDate": "2016-05",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Ran value stream mapping for 3 product families and led the resulting improvement roadmap\n- Cut finished goods lead time from 12 days to 5\n- Trained 30 supervisors on standard work and leader routines"
+        },
+        {
+          "company": "Lakeland Tissue Mills",
+          "role": "Process Improvement Engineer",
+          "location": "Neenah, WI",
+          "startDate": "2014-06",
+          "endDate": "2016-04",
+          "isCurrent": false,
+          "description": "- Led 5S and visual management on 4 converting lines\n- Reduced changeover time 40% on the highest-volume line\n- Ran 15 kaizen events on converting lines"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin–Madison",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2010-09",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Lean: Kaizen, value stream mapping, SMED, TPM, 5S, tiered daily management",
+        "Six Sigma: DMAIC, root cause analysis, SPC, Minitab",
+        "Leadership: CI program strategy, coaching, savings validation with finance",
+        "Certifications: Lean Six Sigma Black Belt, Shingo Institute Discover Excellence"
+      ]
+    },
+    "Procurement Manager": {
+      "summary": "Procurement manager with 10 years in higher education and public sector purchasing, leading a 7-person team and $120M in annual spend. Built a category management program that saved $9.4M over 3 years. Brings competitive solicitation expertise, P2P system rollouts and policy work that balances compliance with speed.",
+      "experience": [
+        {
+          "company": "Commonwealth State University System",
+          "role": "Procurement Manager",
+          "location": "Richmond, VA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 7 buyers and contract specialists managing $120M in annual spend across 3 campuses\n- Launched category management for IT, lab supplies and construction services, saving $9.4M over 3 years\n- Led the Jaggaer procure-to-pay rollout to 2,400 users, raising on-contract spend from 58% to 81%\n- Rewrote procurement policy to the Virginia Public Procurement Act, cutting small purchase approval time in half\n- Built a supplier diversity program that raised spend with small and minority-owned businesses from 9% to 16%"
+        },
+        {
+          "company": "James River Regional Health",
+          "role": "Senior Contract Specialist",
+          "location": "Norfolk, VA",
+          "startDate": "2017-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Negotiated 45 service and equipment contracts worth $38M\n- Joined a group purchasing organization tier that cut med-surg supply cost 7%\n- Cut contract cycle time 30% by building template language with legal"
+        },
+        {
+          "company": "Tidewater County Government",
+          "role": "Buyer",
+          "location": "Chesapeake, VA",
+          "startDate": "2015-06",
+          "endDate": "2017-02",
+          "isCurrent": false,
+          "description": "- Issued 40 formal IFBs and RFPs a year for public works and parks\n- Maintained a clean audit record across 2 external procurement reviews\n- Trained 50 department staff on purchasing card rules"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Commonwealth University",
+          "degree": "B.S. in Business, Supply Chain Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Procurement: Category management, IFB and RFP design, contract negotiation, spend analysis",
+        "Systems: Jaggaer, Banner Finance, Excel, Tableau",
+        "Compliance: Virginia Public Procurement Act, Uniform Guidance (2 CFR 200), audit readiness",
+        "Leadership: Team management, policy writing, stakeholder training",
+        "Certifications: CPPO, CPSM"
+      ]
+    },
+    "Materials Manager": {
+      "summary": "Materials manager with 9 years leading production control, purchasing and receiving in heavy equipment manufacturing. Oversees $38M in raw and WIP inventory and cut line shortages 65%. Brings MRP discipline, kanban design and the cross-team follow-through that keeps assembly lines supplied.",
+      "experience": [
+        {
+          "company": "Ironwood Agricultural Equipment",
+          "role": "Materials Manager",
+          "location": "Peoria, IL",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 16 planners, buyers and material handlers supporting 4 tractor attachment assembly lines\n- Cut line-down shortages 65% by introducing two-bin kanban for 900 parts and daily shortage triage\n- Reduced raw and WIP inventory from $46M to $38M while raising on-time builds to 95%\n- Improved MRP data accuracy, correcting lead times and lot sizes on 6,000 part records in Oracle\n- Manage receiving and stores operations, raising dock-to-stock speed from 3 days to 1"
+        },
+        {
+          "company": "Prairie State Hydraulics",
+          "role": "Production Control Supervisor",
+          "location": "Bloomington, IL",
+          "startDate": "2017-04",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Supervised scheduling and material staging for 3 machining cells\n- Shortened work order cycle time from 15 days to 9 through priority dispatching\n- Led a cycle count program that lifted inventory accuracy to 98%"
+        },
+        {
+          "company": "Illinois River Fabricating",
+          "role": "Material Planner",
+          "location": "Pekin, IL",
+          "startDate": "2015-06",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Planned steel plate and tube purchases for weldment production\n- Cut steel remnant scrap 18% by grouping nesting jobs\n- Trained 6 material handlers on line-side delivery routes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bradley University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Materials: MRP, kanban, production control, receiving, line-side replenishment",
+        "Systems: Oracle Cloud SCM, Excel, Power BI",
+        "Lean: Two-bin systems, plan for every part (PFEP), value stream mapping",
+        "Certifications: APICS CPIM, Lean Six Sigma Green Belt"
+      ]
+    },
+    "Production Supervisor": {
+      "summary": "Production supervisor with 5 years leading shift crews in snack food and bakery manufacturing. Supervises 32 operators on 4 lines and lifted line efficiency from 74% to 86%. Brings GMP and food safety discipline, hands-on troubleshooting and coaching that reduces turnover on a demanding night shift. Holds HACCP certification and runs daily line reviews with maintenance and quality.",
+      "experience": [
+        {
+          "company": "Crisp Valley Snacks",
+          "role": "Production Supervisor",
+          "location": "Lancaster, PA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 32 operators and 2 leads on night shift across 4 fryer and packaging lines\n- Raised line efficiency from 74% to 86% by standardizing startups and tracking downtime by cause each hour\n- Cut first-year operator turnover from 55% to 30% with a structured 6-week training plan\n- Hold GMP, allergen changeover and SQF records to standard, with zero shift-related findings at 2 audits\n- Track OEE and waste by line each shift, presenting results at the morning production meeting"
+        },
+        {
+          "company": "Dutch Country Bakery",
+          "role": "Line Lead",
+          "location": "York, PA",
+          "startDate": "2020-05",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Led 10 operators on a bread line producing 9,000 loaves an hour\n- Reduced giveaway weight 1.5% through scale calibration checks every 2 hours\n- Trained 15 operators on startup and changeover procedures"
+        }
+      ],
+      "education": [
+        {
+          "school": "Harrisburg Area Community College",
+          "degree": "A.A.S. in Management",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: Shift leadership, line efficiency, downtime tracking, changeovers",
+        "Food Safety: GMP, SQF, allergen control, sanitation verification",
+        "People: Training plans, coaching, attendance management, shift handoffs",
+        "Continuous Improvement: Downtime tracking, 5S, standard work, root cause analysis",
+        "Certifications: HACCP Certified, OSHA 10"
+      ]
+    },
+    "Quality Engineer": {
+      "summary": "Quality engineer with 5 years in automotive stamping and assembly, owning customer quality for 2 Tier 1 programs. Cut customer PPM from 145 to 22 and closed every 8D on time. Brings APQP and PPAP expertise, measurement system analysis and a structured, data-led approach to root cause. ASQ CQE who has submitted 60+ PPAPs, all approved on first submission.",
+      "experience": [
+        {
+          "company": "Metalform Stamping Group",
+          "role": "Quality Engineer",
+          "location": "Spartanburg, SC",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own quality for 2 Tier 1 automotive programs covering 85 stamped and welded part numbers\n- Cut customer PPM from 145 to 22 in 18 months through error-proofing and layered process audits\n- Submit PPAP Level 3 packages for 20 new parts a year, all approved on first submission\n- Run gauge R&R studies on 40 inspection gauges, replacing 6 that failed the 10% threshold\n- Lead 8D investigations for customer complaints, closing all within the customer's 30-day requirement"
+        },
+        {
+          "company": "Palmetto Assembly Systems",
+          "role": "Quality Technician",
+          "location": "Greer, SC",
+          "startDate": "2021-01",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Performed incoming and final inspections and logged results in Plex QMS\n- Led a containment team that sorted 40,000 parts in 3 days with no further escapes\n- Ran first-piece and layered audits on 3 stamping presses each shift"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "B.S. in Mechanical Engineering",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Quality Planning: APQP, PPAP, PFMEA, control plans, IATF 16949",
+        "Problem Solving: 8D, 5 Whys, Ishikawa, layered process audits",
+        "Measurement: Gauge R&R, MSA, SPC, CMM basics",
+        "Tools: Minitab, Plex QMS, Excel",
+        "Certifications: ASQ Certified Quality Engineer (CQE)"
+      ]
+    },
+    "Supply Chain Intern": {
+      "summary": "Supply chain management senior at Purdue with two internships in planning and procurement for manufacturing companies. Built an Excel safety-stock tool now used by a 4-person planning team. Brings SQL and Excel modeling, APICS coursework and clear communication with buyers, suppliers and plant staff.",
+      "experience": [
+        {
+          "company": "Tippecanoe Machinery",
+          "role": "Supply Chain Planning Intern",
+          "location": "Lafayette, IN",
+          "startDate": "2026-05",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Built an Excel safety-stock calculator for 450 purchased parts, adopted by a 4-person planning team\n- Analyzed 2 years of supplier delivery data, flagging 8 suppliers with lead times 30% above ERP settings\n- Presented a slow-mover report to the materials manager that led to $85K in return-to-vendor credits"
+        },
+        {
+          "company": "Wabash Valley Foods",
+          "role": "Procurement Intern",
+          "location": "Terre Haute, IN",
+          "startDate": "2025-05",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Compiled bid comparisons for 6 packaging RFQs\n- Cleaned 1,200 vendor master records in SAP, removing 140 duplicates\n- Joined 3 supplier calls on packaging lead times and logged follow-up actions"
+        }
+      ],
+      "education": [
+        {
+          "school": "Purdue University",
+          "degree": "B.S. in Supply Chain and Operations Management (expected May 2027), GPA 3.6",
+          "startDate": "2023-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Distribution Network Case Competition",
+          "link": "",
+          "description": "Team of 4 that modeled warehouse locations for a regional retailer using linear programming in Excel Solver; placed 2nd of 18 teams"
+        },
+        {
+          "name": "Campus Dining Inventory Study",
+          "link": "",
+          "description": "Class project measuring produce waste at 2 dining halls and proposing par levels that cut projected waste 15%"
+        }
+      ],
+      "skills": [
+        "Analytics: Excel (pivot tables, Solver, XLOOKUP), SQL, Tableau",
+        "Coursework: Inventory management, operations planning, procurement, logistics",
+        "Systems: SAP (student and internship use), Microsoft 365",
+        "Leadership: Purdue Supply Chain Club treasurer, peer tutor for operations management",
+        "Certifications: APICS CPIM Part 1 (in progress), Lean Six Sigma Yellow Belt"
+      ]
+    },
+    "Category Manager": {
+      "summary": "Category manager with 8 years in procurement for a national restaurant group, owning food and packaging categories worth $210M. Delivered 4.5% annual cost reduction while improving supplier fill rates to 98%. Brings commodity strategy, market analysis and contract negotiation backed by clear cost models.",
+      "experience": [
+        {
+          "company": "Copper Kettle Restaurant Group",
+          "role": "Category Manager, Proteins and Packaging",
+          "location": "Dallas, TX",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own proteins and packaging categories worth $210M a year for 640 restaurants\n- Delivered 4.5% average annual cost reduction through formula pricing tied to USDA market indexes\n- Shifted 40% of packaging spend to fiber-based alternatives, meeting state PFAS bans 6 months early\n- Raised distributor fill rates from 94% to 98% by adding 2 secondary chicken suppliers\n- Lead quarterly business reviews with 8 strategic suppliers covering cost, fill rate, food safety and innovation"
+        },
+        {
+          "company": "Trinity Foodservice Supply",
+          "role": "Senior Procurement Analyst",
+          "location": "Fort Worth, TX",
+          "startDate": "2018-04",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Built commodity cost models for beef, pork and cheese used in quarterly price negotiations\n- Supported a supplier consolidation that saved $3.2M a year\n- Tracked weekly commodity markets and briefed the category team on price risks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Christian University",
+          "degree": "B.B.A. in Supply and Value Chain Management",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Category Management: Category strategy, commodity analysis, formula pricing, supplier segmentation",
+        "Negotiation: Annual contracts, index-based pricing, risk sharing",
+        "Analytics: Cost modeling, Excel, Power BI, USDA market reports",
+        "Compliance: Food safety supplier approval, PFAS packaging regulations",
+        "Food Safety: Supplier approval, GFSI audit review, specification management"
+      ]
+    },
+    "VP of Supply Chain": {
+      "summary": "Supply chain executive with 20 years across consumer health and specialty food brands, leading global planning, sourcing, manufacturing and logistics. Owns a $1.1B cost base and 900-person organization. Delivered $45M in productivity over 3 years and rebuilt supply resilience after major disruptions.",
+      "experience": [
+        {
+          "company": "Wellspring Consumer Health",
+          "role": "VP of Supply Chain",
+          "location": "Parsippany, NJ",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 900-person supply chain organization across 3 plants, 40 contract manufacturers and 4 DCs, with a $1.1B cost base\n- Delivered $45M in productivity over 3 years through network redesign, procurement and automation\n- Raised case fill rate to top retailers from 91% to 98.5% after launching integrated business planning\n- Cut inventory $60M while adding dual sources for 85% of critical APIs and packaging\n- Report quarterly to the board on supply risk, service and cost, and sit on the 8-person executive leadership team"
+        },
+        {
+          "company": "Garden State Specialty Foods",
+          "role": "Senior Director, Supply Chain Planning and Logistics",
+          "location": "Princeton, NJ",
+          "startDate": "2014-05",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Led planning, customer logistics and distribution for a $1.4B business\n- Consolidated 6 warehouses into 3, saving $14M a year in distribution cost\n- Led an SAP S/4HANA rollout across planning, logistics and customer service"
+        },
+        {
+          "company": "Brookfield Nutrition Company",
+          "role": "Director, Procurement",
+          "location": "Stamford, CT",
+          "startDate": "2008-08",
+          "endDate": "2014-04",
+          "isCurrent": false,
+          "description": "- Managed $400M in ingredient and packaging spend with a team of 12\n- Built a commodity hedging program that reduced cost volatility 40%\n- Developed supplier sustainability scorecards for 50 suppliers"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rutgers University",
+          "degree": "MBA, Supply Chain Management",
+          "startDate": "2006-09",
+          "endDate": "2008-05"
+        },
+        {
+          "school": "Lehigh University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2000-08",
+          "endDate": "2004-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Executive team member, board reporting, organization design, $1B+ cost ownership",
+        "Strategy: Network design, integrated business planning, make-versus-buy, supply resilience",
+        "Operations: Manufacturing, contract manufacturing, distribution, procurement",
+        "Systems: SAP S/4HANA, o9 Solutions, Tableau",
+        "Sustainability: Scope 3 emissions reduction, packaging recyclability, supplier ESG programs"
+      ]
+    },
+    "Inventory Control Specialist": {
+      "summary": "Inventory control specialist with 4 years in electronics and e-commerce warehouses, running cycle counts and inventory adjustments for 18,000 SKUs. Raised location accuracy from 96.8% to 99.6%. Brings careful investigation of variances, strong WMS and Excel skills and clear reporting to operations and finance. Comfortable working with finance on month-end reconciliation and write-off reviews.",
+      "experience": [
+        {
+          "company": "Brightbox Commerce Fulfillment",
+          "role": "Inventory Control Specialist",
+          "location": "Las Vegas, NV",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run daily cycle counts across 18,000 SKUs and 42,000 bin locations in Körber WMS\n- Raised location accuracy from 96.8% to 99.6% by tracing root causes of the top 50 variance SKUs\n- Researched and resolved 300 inventory discrepancies a month, reducing write-offs 38%\n- Reconcile month-end inventory with the finance team, closing within 2 business days\n- Train new associates on scanning discipline and location labeling to prevent future variances"
+        },
+        {
+          "company": "Desert Sun Electronics",
+          "role": "Inventory Clerk",
+          "location": "Henderson, NV",
+          "startDate": "2021-09",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Received and put away 150 inbound shipments a week with RF scanners\n- Labeled and re-slotted 2,500 locations during a warehouse reorganization\n- Supported 2 annual physical inventories with zero recounts required"
+        }
+      ],
+      "education": [
+        {
+          "school": "College of Southern Nevada",
+          "degree": "A.A.S. in Logistics and Supply Chain Management",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inventory Control: Cycle counting, variance research, adjustments, month-end reconciliation",
+        "Systems: Körber WMS, NetSuite, RF scanners, Excel (pivot tables, VLOOKUP)",
+        "Warehouse: Receiving, put-away, slotting, labeling",
+        "Analysis: Variance trends, root cause tracking, accuracy reporting",
+        "Certifications: Forklift certified, OSHA 10"
+      ]
+    }
+  }
+}

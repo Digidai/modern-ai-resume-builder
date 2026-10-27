@@ -73,7 +73,7 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {contacts.length > 0 && (
                     <ul className="flex flex-wrap justify-center gap-x-5 gap-y-1 mt-3 text-[13px] italic text-slate-600">
                         {contacts.map((entry) => (
-                            <li key={entry.key} className="min-w-0 max-w-full">
+                            <li key={entry.id} className="min-w-0 max-w-full">
                                 <ContactLink entry={entry} className="wrap-anywhere" />
                             </li>
                         ))}

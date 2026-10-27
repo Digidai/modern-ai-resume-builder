@@ -3,6 +3,8 @@ import path from 'node:path';
 import sharp from 'sharp';
 import { slugifyJobTitle } from './slugify.mjs';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
+import { buildJobPageTitle, describeExample, exampleToResume, formatRange, toBullets } from '../src/shared/roleExample.mjs';
+import { MCP_TOOLS } from '../src/shared/agentPrompt.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
 const SITE_NAME = 'ModernCV';
@@ -78,9 +80,39 @@ const shortenJobTitleForSeo = (title) => {
   return truncateText(title, maxTitleLength);
 };
 
-const buildSeoTitle = (jobTitle) => {
-  const shortTitle = shortenJobTitleForSeo(jobTitle);
-  return `Resume Templates for ${shortTitle} | ModernCV`;
+const buildSeoTitle = (jobTitle) => buildJobPageTitle(jobTitle);
+
+/** Example resumes by title, from src/data/roles/*.json. */
+const loadRoleExamples = async () => {
+  const dir = path.join(projectRoot, 'src', 'data', 'roles');
+  const files = (await fs.readdir(dir).catch(() => [])).filter((f) => f.endsWith('.json')).sort();
+  const map = new Map();
+  for (const file of files) {
+    const data = JSON.parse(await fs.readFile(path.join(dir, file), 'utf8'));
+    for (const [title, example] of Object.entries(data.titles ?? {})) map.set(title, example);
+  }
+  return map;
+};
+
+const renderExampleHtml = (title, example) => {
+  const experience = example.experience
+    .map(
+      (e) =>
+        `<h4>${escapeHtml(e.role)}, ${escapeHtml(e.company)}${e.location ? ` (${escapeHtml(e.location)})` : ''}</h4><p>${escapeHtml(formatRange(e))}</p>${htmlList(toBullets(e.description))}`
+    )
+    .join('');
+  const projects = (example.projects ?? [])
+    .map((p) => `<h4>${escapeHtml(p.name)}${p.link ? ` (${escapeHtml(p.link)})` : ''}</h4><p>${escapeHtml(p.description)}</p>`)
+    .join('');
+  const education = example.education.map((ed) => `<li>${escapeHtml(ed.degree)}, ${escapeHtml(ed.school)} (${escapeHtml(formatRange(ed))})</li>`).join('');
+  return `<section id="example"><h2>${escapeHtml(title)} resume example</h2>
+    <article>
+      <h3>Summary</h3><p>${escapeHtml(example.summary)}</p>
+      <h3>Experience</h3>${experience}
+      ${projects ? `<h3>Projects</h3>${projects}` : ''}
+      ${education ? `<h3>Education</h3><ul>${education}</ul>` : ''}
+      ${example.skills.length ? `<h3>Skills</h3>${htmlList(example.skills)}` : ''}
+    </article></section>`;
 };
 
 const BASE_KEYWORDS = [
@@ -107,6 +139,11 @@ const CATEGORY_KEYWORDS = {
   'Creative & Media': ['creative resume', 'copywriter resume', 'media resume'],
   'Retail & Hospitality': ['retail resume', 'hospitality resume', 'customer service cv'],
   'Construction & Real Estate': ['construction resume', 'real estate resume', 'project engineer resume'],
+  'Science & Research': ['scientist resume', 'research resume', 'lab resume template'],
+  'Government & Public Service': ['government resume', 'federal resume', 'public sector resume'],
+  'Nonprofit & Social Services': ['nonprofit resume', 'social worker resume', 'social services resume'],
+  'Skilled Trades & Manufacturing': ['trades resume', 'manufacturing resume', 'technician resume'],
+  'Transportation & Logistics': ['logistics resume', 'driver resume', 'transportation resume'],
 };
 
 const ROLE_KEYWORD_RULES = [
@@ -480,7 +517,7 @@ const buildDirectorySchema = (siteUrl, items, imageUrl, lastmodIso) => {
   };
 };
 
-const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmodIso, faqs = []) => {
+const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmodIso, faqs = [], occupation = null) => {
   const organization = buildOrganizationSchema(siteUrl);
   const website = buildWebSiteSchema(siteUrl);
   const hasTemplates = Array.isArray(templates) && templates.length > 0;
@@ -493,8 +530,9 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmo
       {
         '@type': 'WebPage',
         '@id': `${pageUrl}#webpage`,
-        name: `${title} resume templates and writing guide`,
-        description: `Resume templates, example bullet points, skills and FAQs for ${title} roles.`,
+        name: `${title} resume example, templates and writing guide`,
+        description: `A ${title} resume example, templates, example bullet points, skills and FAQs.`,
+        about: { '@id': `${pageUrl}#occupation` },
         url: pageUrl,
         inLanguage: 'en',
         dateModified: lastmodIso,
@@ -522,6 +560,17 @@ const buildJobPageSchema = (siteUrl, title, pageUrl, templates, imageUrl, lastmo
             }
           : {}),
       },
+      ...(occupation
+        ? [
+            {
+              '@type': 'Occupation',
+              '@id': `${pageUrl}#occupation`,
+              name: title,
+              ...(occupation.category ? { occupationalCategory: occupation.category } : {}),
+              skills: occupation.skills.join(', '),
+            },
+          ]
+        : []),
       ...(faqs.length
         ? [
             {
@@ -585,6 +634,7 @@ const buildSitemapXml = ({ siteUrl, lastmod, jobItems, templates, homeOgPath, di
     { path: '/', priority: '1.0', changefreq: 'weekly', imagePath: homeOgPath },
     { path: '/directory', priority: '0.9', changefreq: 'weekly', imagePath: directoryOgPath },
     { path: '/templates', priority: '0.9', changefreq: 'weekly', imagePath: '/og/templates/classic.jpg' },
+    { path: '/agents', priority: '0.7', changefreq: 'monthly', imagePath: '/og/templates/classic.jpg' },
     ...templates.map((t) => ({
       path: `/templates/${t.id}`,
       priority: '0.8',
@@ -880,7 +930,7 @@ const renderDirectoryRoot = (categories, toPath) => {
 
 const htmlList = (items, tag = 'ul') => `<${tag}>${items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</${tag}>`;
 
-const renderJobRoot = (title, guide, relatedTitles, toPath) => {
+const renderJobRoot = (title, guide, relatedTitles, toPath, example) => {
   const recommended = guide.recommended
     .map((t) => `<li><a href="${escapeAttr(toPath(`/templates/${t.id}/`))}">${escapeHtml(t.name)}</a>${t.atsFriendly ? ' (ATS-friendly)' : ''}: ${escapeHtml(t.description)}</li>`)
     .join('');
@@ -892,9 +942,10 @@ const renderJobRoot = (title, guide, relatedTitles, toPath) => {
   return `
   <main class="max-w-4xl mx-auto p-6">
     <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <a href="${escapeAttr(toPath('/directory/'))}">Resume examples</a> / <span aria-current="page">${escapeHtml(title)}</span></nav>
-    <h1>${escapeHtml(title)} resume templates</h1>
-    <p>See your resume as a ${escapeHtml(title)} in every design. Pick one, edit the content, and download a PDF.</p>
+    <h1>${escapeHtml(title)} resume example &amp; templates</h1>
+    <p>${example ? `A realistic ${escapeHtml(title)} resume shown in every design. Start from the example or use the design with your own resume.` : `See your resume as a ${escapeHtml(title)} in every design. Pick one, edit the content, and download a PDF.`}</p>
     <p><a href="${escapeAttr(toPath('/editor/'))}">Open the resume editor</a></p>
+    ${example ? renderExampleHtml(title, example) : ''}
     <h2>How to write a ${escapeHtml(title)} resume</h2>
     <p>${escapeHtml(guide.intro)} ${escapeHtml(guide.advice)}</p>
     <h3>Sections, in order</h3>${htmlList(guide.sections, 'ol')}
@@ -936,6 +987,21 @@ const renderTemplateRoot = (t, roles, toPath) => `
       <dt>Export</dt><dd>Vector PDF with selectable text, or print from the browser. A4 page size.</dd>
     </dl>
     ${roles.length ? `<h2>Popular with</h2><ul>${roles.map((r) => `<li><a href="${escapeAttr(toPath(`/resume_tmpl/${slugifyJobTitle(r)}/`))}">${escapeHtml(r)}</a></li>`).join('')}</ul>` : ''}
+  </main>`;
+
+const renderAgentsRoot = (siteUrl, tools, templateCount, toPath) => `
+  <main class="max-w-3xl mx-auto p-6 md:p-10">
+    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <span aria-current="page">AI agents</span></nav>
+    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Use ModernCV from AI agents</h1>
+    <p class="mt-4">Connect Claude, ChatGPT, Cursor or any MCP client to ModernCV. Agents can read writing guides and example resumes, render any of the ${templateCount} templates to a PNG preview or a vector PDF, and hand the user an editor link. Free, no account, no API key.</p>
+    <h2>MCP server</h2>
+    <p>Remote MCP over Streamable HTTP: <code>${escapeHtml(siteUrl)}/mcp</code></p>
+    <ul>${tools.map(([name, desc]) => `<li><code>${escapeHtml(name)}</code>: ${escapeHtml(desc)}</li>`).join('')}</ul>
+    <h2>Agent skill</h2>
+    <p><a href="${escapeAttr(`${siteUrl}/skills/moderncv-resume/SKILL.md`)}">SKILL.md</a>: a step-by-step workflow for drafting, checking and exporting a resume.</p>
+    <h2>HTTP API</h2>
+    <p>The same capabilities as REST endpoints under <code>/api/agent/</code>. <a href="${escapeAttr(`${siteUrl}/openapi.json`)}">OpenAPI 3.1 spec</a>.</p>
+    <p><a href="${escapeAttr(toPath('/templates/'))}">Browse templates</a> · <a href="${escapeAttr(`${siteUrl}/llms.txt`)}">llms.txt</a></p>
   </main>`;
 
 const renderEditorRoot = (toPath) => `
@@ -984,6 +1050,13 @@ const buildResumeSchema = (siteUrl, templates) => {
       location: { type: 'string' },
       website: { type: 'string' },
       linkedin: { type: 'string' },
+      links: {
+        type: 'array',
+        maxItems: 8,
+        description: 'Extra profiles shown with the contact details (GitHub, portfolio, X, Dribbble, Google Scholar…). Leave label empty to detect it from the URL.',
+        items: { type: 'object', required: ['url'], properties: { label: { type: 'string' }, url: { type: 'string' } } },
+        examples: [[{ label: '', url: 'github.com/alexsterling' }, { label: 'Portfolio', url: 'alexsterling.design/work' }]],
+      },
       summary: { type: 'string', description: 'Two or three sentences.' },
       experience: {
         type: 'array',
@@ -1045,7 +1118,7 @@ const buildOpenApi = (siteUrl, templates) => {
       title: 'ModernCV Agent API',
       version: '1.0.0',
       description:
-        'Draft-to-PDF resume API for AI agents: writing guides, 34 templates, PNG previews, vector PDFs and editor handoff links. No auth; rendering is limited to 6 requests per minute per IP. Resumes are not stored. The same tools are available over MCP at ' +
+        `Draft-to-PDF resume API for AI agents: writing guides, example resumes, ${templates.length} templates, PNG previews, vector PDFs and editor handoff links. No auth; rendering is limited to 6 requests per minute per IP. Resumes are not stored. The same tools are available over MCP at ` +
         `${siteUrl}/mcp.`,
     },
     servers: [{ url: siteUrl }],
@@ -1141,7 +1214,8 @@ Key facts:
 
 ## For agents
 
-- MCP server (Streamable HTTP, no auth): \`${siteUrl}/mcp\`. Tools: list_templates, get_writing_guide, get_resume_schema, render_preview, render_pdf, create_editor_link.
+- [Agent setup guide](${siteUrl}/agents/): MCP client config, skill install, copy-paste prompts.
+- MCP server (Streamable HTTP, no auth): \`${siteUrl}/mcp\`. Tools: ${MCP_TOOLS.map(([n]) => n).join(', ')}.
 - [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, link, preview, pdf).
 - [Agent skill](${siteUrl}/skills/moderncv-resume/SKILL.md): step-by-step workflow for drafting, checking and exporting a resume.
 - Editor handoff link: ${siteUrl}/editor/#resume=<payload> opens the editor with a resume loaded. The payload is base64url-encoded resume JSON (or URL-encoded JSON); POST /api/agent/link builds a compact one. It stays in the URL fragment and never reaches the server.
@@ -1292,6 +1366,7 @@ const main = async () => {
   const seenTitles = new Set();
   const duplicateTitles = new Set();
   const slugToTitles = new Map();
+  const roleExamples = await loadRoleExamples();
   const titleToCategory = new Map();
   const categoryToTitles = new Map();
 
@@ -1534,7 +1609,8 @@ const main = async () => {
   for (const item of jobItems) {
     const pageTitle = buildSeoTitle(item.title);
     const categoryName = titleToCategory.get(item.title);
-    const description = buildJobDescription({ jobTitle: item.title, categoryName });
+    const example = roleExamples.get(item.title);
+    const description = example ? describeExample(item.title, example, templates.length) : buildJobDescription({ jobTitle: item.title, categoryName });
     const keywords = buildJobKeywords({ jobTitle: item.title, categoryName });
     const pageUrl = buildUrl(siteUrl, item.path);
     const jobOgPath = `/og/resume_tmpl/${item.slug}.png`;
@@ -1549,11 +1625,39 @@ const main = async () => {
       description,
       keywords,
       robots: ROBOTS_INDEX,
-      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, guide.recommended, jobOgImageUrl, lastmodIso, guide.faqs),
-      rootHtml: renderJobRoot(item.title, guide, relatedTitles, toPath),
+      ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, guide.recommended, jobOgImageUrl, lastmodIso, guide.faqs, { category: categoryName, skills: guide.skills }),
+      rootHtml: renderJobRoot(item.title, guide, relatedTitles, toPath, example),
       ogImage: jobOgPath,
       imageAlt: `Resume templates for ${item.title}`,
     });
+  }
+
+  // Static example resumes for agents and integrations: /examples/<slug>.json (also used by the MCP server).
+  for (const item of jobItems) {
+    const example = roleExamples.get(item.title);
+    if (!example) continue;
+    const { fullName: _n, email: _e, phone: _p, linkedin: _l, website: _w, links: _k, location, ...resume } = exampleToResume({
+      title: item.title,
+      fullName: 'Sample Person',
+      example,
+      makeId: () => undefined,
+    });
+    // Raw example for the job page preview (one small file per title instead of a whole family chunk).
+    await writeFileEnsuringDir(path.join(distDir, 'role-examples', `${item.slug}.json`), JSON.stringify(example));
+    const strip = (items) => items.map(({ id: _id, ...rest }) => rest);
+    await writeFileEnsuringDir(
+      path.join(distDir, 'examples', `${item.slug}.json`),
+      `${JSON.stringify(
+        {
+          jobTitle: item.title,
+          family: titleToCategory.get(item.title) ?? null,
+          page: buildUrl(siteUrl, item.path),
+          resume: { ...resume, location, experience: strip(resume.experience), education: strip(resume.education), projects: strip(resume.projects) },
+        },
+        null,
+        2
+      )}\n`
+    );
   }
 
   const atsCount = templates.filter((t) => t.atsFriendly).length;
@@ -1666,6 +1770,55 @@ const main = async () => {
       imageAlt: `${t.name} resume template preview`,
     });
   }
+
+  const agentsUrl = `${siteUrl}/agents/`;
+  const agentsDescription = `Connect Claude, ChatGPT, Cursor or any AI agent to ModernCV: a free remote MCP server, an agent skill and an HTTP API to draft resumes, render ${templates.length} templates to PDF and hand off an editor link.`;
+  await writePage({
+    routePath: '/agents',
+    title: 'Use ModernCV from AI Agents (MCP Server, Skill, API) | ModernCV',
+    description: agentsDescription,
+    keywords: joinKeywords(['resume mcp server', 'ai agent resume builder', 'claude resume skill', 'resume pdf api', 'chatgpt resume builder', ...BASE_KEYWORDS]),
+    robots: ROBOTS_INDEX,
+    ldJson: {
+      '@context': 'https://schema.org',
+      '@graph': [
+        buildOrganizationSchema(siteUrl),
+        buildWebSiteSchema(siteUrl),
+        {
+          '@type': 'TechArticle',
+          '@id': `${agentsUrl}#article`,
+          headline: 'Use ModernCV from AI agents',
+          description: agentsDescription,
+          url: agentsUrl,
+          inLanguage: 'en',
+          dateModified: lastmodIso,
+          isPartOf: { '@id': `${siteUrl}/#website` },
+          about: ['Model Context Protocol', 'Resume', 'AI agents'],
+        },
+        {
+          '@type': 'WebAPI',
+          '@id': `${siteUrl}/#agent-api`,
+          name: 'ModernCV Agent API',
+          description: 'Writing guides, example resumes, PNG previews, vector PDFs and editor links for AI agents.',
+          documentation: `${siteUrl}/openapi.json`,
+          url: `${siteUrl}/mcp`,
+          provider: { '@id': `${siteUrl}/#organization` },
+          isAccessibleForFree: true,
+        },
+        {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${siteUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'AI agents', item: agentsUrl },
+          ],
+        },
+      ],
+    },
+    rootHtml: renderAgentsRoot(siteUrl, MCP_TOOLS, templates.length, toPath),
+    ogImage: '/og/templates/classic.jpg',
+    ogImageType: 'image/jpeg',
+    imageAlt: 'ModernCV for AI agents',
+  });
 
   await writeAgentFiles({ siteUrl, templates, categories, jobItems, lastmod });
 
