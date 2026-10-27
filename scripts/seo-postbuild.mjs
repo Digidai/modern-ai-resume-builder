@@ -827,7 +827,7 @@ const buildEditorOgSvg = () => {
   return buildOgSvgShell(content);
 };
 
-const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
+const renderHomeRoot = ({ featuredTitles, templates, titleCount, toPath }) => {
   const roleLinks = featuredTitles
     .map((title) => {
       const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
@@ -842,8 +842,8 @@ const renderHomeRoot = ({ featuredTitles, templates, toPath }) => {
   return `
   <main class="max-w-6xl mx-auto p-6 md:p-10">
     <header class="mb-10">
-      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">ModernCV AI Resume Builder</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Write your resume once and set it in any of ${templates.length} templates. No account, A4 PDF with selectable text.</p>
+      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">Start from a real resume for your job.</h1>
+      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Pick from ${titleCount} job titles to get a complete example and writing guide, or write your own. Switch between ${templates.length} templates and download a PDF that applicant tracking systems can read. No account needed.</p>
       <div class="mt-6 flex flex-wrap gap-4">
         <a class="inline-flex h-10 items-center justify-center rounded-lg bg-ink px-5 text-paper font-medium hover:bg-ink-hover transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
         <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse job titles</a>
@@ -1561,7 +1561,7 @@ const main = async () => {
     keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),
-    rootHtml: renderHomeRoot({ featuredTitles, templates, toPath }),
+    rootHtml: renderHomeRoot({ featuredTitles, templates, titleCount: allTitles.length, toPath }),
     ogImage: homeOgPath,
     imageAlt: 'ModernCV resume builder preview',
   });

@@ -125,25 +125,25 @@ const HomeView: React.FC = () => {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
-          <div>
+        <section className="mx-auto grid max-w-6xl items-start gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-16 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
+          <div className="lg:pt-14">
             <p className="inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-3 py-1 text-[13px] font-medium text-muted shadow-card">
               <span className="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true" />
-              Free · No account · A4 vector PDF
+              Free · No sign-up · ATS-friendly PDF
             </p>
-            <h1 className="mt-6 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink sm:text-5xl sm:leading-[54px] lg:text-[60px] lg:leading-[64px]">
-              Write your resume once. Set it in any of {TEMPLATES.length} templates.
+            <h1 className="mt-6 font-display text-[38px] font-semibold leading-[42px] tracking-display text-ink sm:text-[46px] sm:leading-[52px] lg:text-[52px] lg:leading-[58px]">
+              Start from a real resume for your job.
             </h1>
             <p className="mt-6 max-w-xl text-[17px] leading-[28px] text-muted">
-              Type your experience on the left and see it typeset on an A4 page on the right. Download a PDF with selectable text when it reads
-              well. Nothing to sign up for; your draft is saved in this browser.
+              Pick from {EXAMPLE_COUNT} job titles to get a complete example and writing guide, or write your own. Switch between {TEMPLATES.length}{' '}
+              templates any time and download a PDF that applicant tracking systems can read. No account needed.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Link to="/editor" className={primaryLinkClass}>
                 {hasOwnResume ? 'Continue editing' : 'Create my resume'}
               </Link>
               <Link to="/directory" className={secondaryLinkClass}>
-                Browse examples by job
+                Find my job title
               </Link>
             </div>
           </div>
@@ -183,7 +183,7 @@ const HomeView: React.FC = () => {
               <span className="kicker">
                 {hasOwnResume ? 'Your resume' : 'Sample resume'} · {heroTemplate?.name}
               </span>
-              <span className="kicker">A4 · 210 × 297 mm</span>
+              <span className="kicker">Click to edit</span>
             </figcaption>
           </figure>
         </section>
