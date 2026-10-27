@@ -22,6 +22,9 @@ import { SectionErrorBoundary } from '../components/ErrorBoundary';
 import { buildEditorSeoKeywords } from '../utils/seo';
 import { getTemplateById } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
+import { useToast } from '../components/Toast';
+import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
+import { sanitizeResumeData } from '../utils/resumeData';
 
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
   const content =
@@ -111,6 +114,7 @@ const EditorView: React.FC = () => {
     handleExportJson,
     importJson,
     startOver,
+    loadResume,
     isExportingPdf,
     saveError,
     saveStatus,
@@ -128,6 +132,34 @@ const EditorView: React.FC = () => {
     next.delete('template');
     setSearchParams(next, { replace: true });
   }, [searchParams, setSearchParams, setResumeData]);
+
+  // Agent handoff: /editor/#resume=<payload> opens the editor with that resume (see src/shared/resumeLink.ts).
+  // The fragment never reaches the server; it is removed once read so a reload doesn't load it again.
+  // `hashchange` covers a second link opened while the editor is already showing.
+  const { showError } = useToast();
+  const currentTemplateRef = useRef(resumeData.templateId);
+  currentTemplateRef.current = resumeData.templateId;
+  useEffect(() => {
+    const loadFromHash = () => {
+      const payload = readResumeHash(window.location.hash);
+      if (!payload) return;
+      window.history.replaceState(window.history.state, '', window.location.pathname + window.location.search);
+      void decodeResumePayload(payload).then((raw) => {
+        const parsed = sanitizeResumeData(raw);
+        if (!parsed) {
+          showError("This link doesn't contain a valid resume.");
+          return;
+        }
+        // Keep the user's current template unless the link names a valid one.
+        const named = raw && typeof raw === 'object' && typeof (raw as { templateId?: unknown }).templateId === 'string';
+        if (!named || !getTemplateById(parsed.templateId)) parsed.templateId = currentTemplateRef.current;
+        loadResume(parsed, `Loaded ${parsed.fullName ? `${parsed.fullName}'s resume` : 'the resume'} from the link.`);
+      });
+    };
+    loadFromHash();
+    window.addEventListener('hashchange', loadFromHash);
+    return () => window.removeEventListener('hashchange', loadFromHash);
+  }, [loadResume, showError]);
 
   const siteUrl = getSiteUrl();
   const websiteId = `${siteUrl}/#website`;

@@ -18,6 +18,8 @@ interface ResumeContextValue {
   importJson: (file: File) => Promise<boolean>;
   /** Replaces the resume with a blank or sample one; the previous version can be restored from the toast. */
   startOver: (kind: 'blank' | 'sample') => void;
+  /** Replaces the resume (e.g. from an agent's `#resume=` link); the previous version can be restored from the toast. */
+  loadResume: (data: ResumeData, message: string) => void;
 }
 
 const ResumeContext = createContext<ResumeContextValue | null>(null);
@@ -113,8 +115,9 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       handleExportJson,
       importJson,
       startOver,
+      loadResume: replaceWithUndo,
     }),
-    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson, importJson, startOver]
+    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson, importJson, startOver, replaceWithUndo]
   );
 
   return <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>;

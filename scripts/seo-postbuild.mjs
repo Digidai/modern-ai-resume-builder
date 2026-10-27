@@ -630,8 +630,9 @@ const buildRobotsTxt = ({ siteUrl }) =>
     'Allow: /',
     'Disallow: /api/',
     'Disallow: /dev/',
+    'Disallow: /render/',
     '',
-    ...AI_CRAWLERS.flatMap((bot) => [`User-agent: ${bot}`, 'Allow: /', 'Disallow: /api/', '']),
+    ...AI_CRAWLERS.flatMap((bot) => [`User-agent: ${bot}`, 'Allow: /', 'Disallow: /api/', 'Disallow: /render/', '']),
     `Sitemap: ${siteUrl}/sitemap.xml`,
     '',
   ].join('\n');
@@ -1011,6 +1012,109 @@ const buildResumeSchema = (siteUrl, templates) => {
   };
 };
 
+const FONT_IDS = ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif'];
+
+/** OpenAPI 3.1 description of the agent HTTP API served by the Worker (worker/agent.ts). */
+const buildOpenApi = (siteUrl, templates) => {
+  const renderBody = {
+    required: true,
+    content: {
+      'application/json': {
+        schema: {
+          type: 'object',
+          required: ['resume'],
+          properties: {
+            resume: { $ref: `${siteUrl}/resume.schema.json`, description: 'ModernCV resume object, or a JSON Resume document.' },
+            template: { type: 'string', enum: templates.map((t) => t.id), default: 'modern' },
+            accent: { type: 'string', pattern: '^#[0-9A-Fa-f]{6}$', description: 'Accent colour; omit for the template default.' },
+            font: { type: 'string', enum: FONT_IDS, default: 'template' },
+            scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1, description: 'Text size; lower it to fit one page.' },
+          },
+        },
+      },
+    },
+  };
+  const error = { description: 'Error', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } };
+  const renderHeaders = {
+    'x-resume-pages': { description: 'Height in A4 pages.', schema: { type: 'integer' } },
+    'x-resume-warnings': { description: 'URL-encoded JSON array of content warnings.', schema: { type: 'string' } },
+  };
+  return {
+    openapi: '3.1.0',
+    info: {
+      title: 'ModernCV Agent API',
+      version: '1.0.0',
+      description:
+        'Draft-to-PDF resume API for AI agents: writing guides, 34 templates, PNG previews, vector PDFs and editor handoff links. No auth; rendering is limited to 6 requests per minute per IP. Resumes are not stored. The same tools are available over MCP at ' +
+        `${siteUrl}/mcp.`,
+    },
+    servers: [{ url: siteUrl }],
+    paths: {
+      '/api/agent/templates': {
+        get: {
+          operationId: 'listTemplates',
+          summary: 'List resume templates',
+          parameters: [{ name: 'ats_only', in: 'query', schema: { type: 'boolean' } }],
+          responses: { 200: { description: 'Templates', content: { 'application/json': { schema: { type: 'object' } } } } },
+        },
+      },
+      '/api/agent/guide': {
+        get: {
+          operationId: 'getWritingGuide',
+          summary: 'Resume writing guide for a job title',
+          parameters: [{ name: 'job_title', in: 'query', required: true, schema: { type: 'string' }, example: 'Data Analyst' }],
+          responses: { 200: { description: 'Guide', content: { 'application/json': { schema: { type: 'object' } } } }, 400: error },
+        },
+      },
+      '/api/agent/link': {
+        post: {
+          operationId: 'createEditorLink',
+          summary: 'Editor URL with the resume preloaded (carried in the URL fragment, not stored)',
+          requestBody: renderBody,
+          responses: {
+            200: {
+              description: 'Link',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: { url: { type: 'string' }, template: { type: 'string' }, warnings: { type: 'array', items: { type: 'string' } } },
+                  },
+                },
+              },
+            },
+            400: error,
+          },
+        },
+      },
+      '/api/agent/preview': {
+        post: {
+          operationId: 'renderPreview',
+          summary: 'Render page 1 as PNG',
+          requestBody: renderBody,
+          responses: { 200: { description: 'PNG', headers: renderHeaders, content: { 'image/png': {} } }, 400: error, 429: error },
+        },
+      },
+      '/api/agent/pdf': {
+        post: {
+          operationId: 'renderPdf',
+          summary: 'Render an A4 vector PDF',
+          requestBody: renderBody,
+          responses: { 200: { description: 'PDF', headers: renderHeaders, content: { 'application/pdf': {} } }, 400: error, 429: error },
+        },
+      },
+    },
+    components: {
+      schemas: {
+        Error: {
+          type: 'object',
+          properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' } } } },
+        },
+      },
+    },
+  };
+};
+
 const writeAgentFiles = async ({ siteUrl, templates, categories, jobItems, lastmod }) => {
   const ats = templates.filter((t) => t.atsFriendly);
   const templateLine = (t) =>
@@ -1025,6 +1129,7 @@ Key facts:
 - Download PDF produces a vector PDF with selectable text and embedded fonts.
 - Import accepts a ModernCV JSON backup or a JSON Resume (jsonresume.org) document.
 - Open the editor with a template preselected: ${siteUrl}/editor/?template=<id> (ids are listed in ${siteUrl}/templates.json).
+- Agents can build and export resumes directly: remote MCP server at ${siteUrl}/mcp, HTTP API at ${siteUrl}/api/agent/ (spec: ${siteUrl}/openapi.json), and an installable skill at ${siteUrl}/skills/moderncv-resume/SKILL.md.
 `;
 
   const llms = `${intro}
@@ -1036,6 +1141,10 @@ Key facts:
 
 ## For agents
 
+- MCP server (Streamable HTTP, no auth): \`${siteUrl}/mcp\`. Tools: list_templates, get_writing_guide, get_resume_schema, render_preview, render_pdf, create_editor_link.
+- [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, link, preview, pdf).
+- [Agent skill](${siteUrl}/skills/moderncv-resume/SKILL.md): step-by-step workflow for drafting, checking and exporting a resume.
+- Editor handoff link: ${siteUrl}/editor/#resume=<payload> opens the editor with a resume loaded. The payload is base64url-encoded resume JSON (or URL-encoded JSON); POST /api/agent/link builds a compact one. It stays in the URL fragment and never reaches the server.
 - [Template catalog (JSON)](${siteUrl}/templates.json): ids, names, descriptions, ATS status, preview images and editor links.
 - [Resume import schema (JSON Schema)](${siteUrl}/resume.schema.json): Produce a file in this shape, then the user imports it from the editor menu.
 - [Full reference](${siteUrl}/llms-full.txt): All templates, writing guides per job family, and FAQs in one file.
@@ -1077,6 +1186,21 @@ Last updated: ${lastmod}
 ## Templates
 
 ${templates.map(templateLine).join('\n')}
+
+## Agent API
+
+Remote MCP server: ${siteUrl}/mcp (Streamable HTTP, stateless, no auth). Add it to Claude Code with \`claude mcp add --transport http moderncv ${siteUrl}/mcp\`.
+
+| Tool / endpoint | Purpose |
+|---|---|
+| list_templates · GET /api/agent/templates | Templates with id, description, best-for, ATS status, preview |
+| get_writing_guide · GET /api/agent/guide?job_title= | Section order, skills, metrics, example bullets, recommended templates |
+| get_resume_schema · ${siteUrl}/resume.schema.json | JSON Schema of the resume object |
+| render_preview · POST /api/agent/preview | Page 1 as PNG plus page count (header x-resume-pages) |
+| render_pdf · POST /api/agent/pdf | A4 vector PDF |
+| create_editor_link · POST /api/agent/link | Editor URL with the resume preloaded (in the URL fragment) |
+
+POST bodies are \`{ "resume": {...}, "template": "classic", "accent": "#1F6E73", "font": "inter", "scale": 0.95 }\`; only \`resume\` is required. Rendering is limited to 6 per minute per IP. Resumes are rendered and discarded, never stored. Never invent facts for a user's resume.
 
 ## Import format
 
@@ -1124,6 +1248,8 @@ ${HOME_FAQ_ITEMS.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')}`;
     updated: lastmod,
     editorUrl: `${siteUrl}/editor/`,
     importSchema: `${siteUrl}/resume.schema.json`,
+    mcpServer: `${siteUrl}/mcp`,
+    api: `${siteUrl}/openapi.json`,
     templates: templates.map((t) => ({
       id: t.id,
       name: t.name,
@@ -1136,6 +1262,11 @@ ${HOME_FAQ_ITEMS.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')}`;
     })),
   };
 
+  await writeFileEnsuringDir(path.join(distDir, 'openapi.json'), `${JSON.stringify(buildOpenApi(siteUrl, templates), null, 2)}\n`);
+  await writeFileEnsuringDir(
+    path.join(distDir, 'skills', 'moderncv-resume', 'SKILL.md'),
+    await fs.readFile(path.join(projectRoot, 'skills', 'moderncv-resume', 'SKILL.md'), 'utf8')
+  );
   await writeFileEnsuringDir(path.join(distDir, 'llms.txt'), llms);
   await writeFileEnsuringDir(path.join(distDir, 'llms-full.txt'), full);
   await writeFileEnsuringDir(path.join(distDir, 'templates.json'), `${JSON.stringify(catalog, null, 2)}\n`);
@@ -1386,6 +1517,18 @@ const main = async () => {
     rootHtml: renderEditorRoot(toPath),
     ogImage: editorOgPath,
     imageAlt: 'ModernCV resume editor preview',
+  });
+
+  // Bare paper the agent renderer prints (src/views/RenderView.tsx); never indexed.
+  await writePage({
+    routePath: '/render',
+    title: 'Resume | ModernCV',
+    description: 'Printable resume rendered by ModernCV.',
+    keywords: '',
+    robots: ROBOTS_NOINDEX,
+    ldJson: [],
+    rootHtml: '',
+    ogImage: editorOgPath,
   });
 
   for (const item of jobItems) {

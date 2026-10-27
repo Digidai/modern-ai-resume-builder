@@ -68,7 +68,7 @@ const TEMPLATES = TEMPLATE_IDS.reduce<Record<TemplateId, React.LazyExoticCompone
 );
 
 const TemplateFallback: React.FC = () => (
-  <div className="w-full min-h-[120px] rounded-md bg-slate-100 dark:bg-slate-900 animate-pulse" />
+  <div className="w-full min-h-[120px] rounded-md bg-slate-100 dark:bg-slate-900 animate-pulse" data-template-loading="true" />
 );
 
 export const preloadResumeTemplate = async (templateId: string): Promise<void> => {

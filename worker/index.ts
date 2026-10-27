@@ -3,6 +3,7 @@ import {
   type AiErrorCode,
   type AiRequest,
 } from '../src/shared/aiContract';
+import { handleAgentRequest } from './agent';
 
 interface Env {
   ASSETS: {
@@ -31,6 +32,8 @@ interface Env {
   AI_SESSION_RATE_LIMIT_PER_MINUTE?: string;
   AI_SESSION_TTL_SECONDS?: string;
   AI_CLIENT_TOKEN_TTL_SECONDS?: string;
+  /** Origin the agent renderer's headless browser loads `/render/` from (defaults to the request origin). */
+  RENDER_ORIGIN?: string;
 }
 
 type JsonObject = Record<string, unknown>;
@@ -1292,6 +1295,17 @@ export class RateLimiter {
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
+
+    // Agent mode: remote MCP server and HTTP API, open to any origin (no cookies or credentials).
+    const agentResponse = await handleAgentRequest(request, env, {
+      clientIp: getClientIp(request),
+      rateLimit: async (key, limit) => (await consumeRateLimit(env, key, limit)).allowed,
+    });
+    if (agentResponse) {
+      const secured = await withSecurityHeaders(request, env, agentResponse);
+      secured.headers.set('cross-origin-resource-policy', 'cross-origin');
+      return secured;
+    }
 
     if ((url.pathname === SESSION_PATH || url.pathname === API_PATH || url.pathname === PDF_PATH) && request.method === 'OPTIONS') {
       const preflight = isAllowedOriginRequest(request, env)
