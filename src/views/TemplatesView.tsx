@@ -14,7 +14,7 @@ const FILTERS = [
 type FilterId = (typeof FILTERS)[number]['id'];
 
 export const AtsBadge: React.FC<{ className?: string }> = ({ className = '' }) => (
-  <span className={`kicker text-muted ${className}`}>
+  <span className={`tag ${className}`}>
     ATS
   </span>
 );
@@ -96,15 +96,15 @@ const TemplatesView: React.FC = () => {
           applicant tracking systems (ATS) read them reliably. Every template supports your own accent colour, font and text size.
         </p>
 
-        <div className="mt-8 flex flex-wrap gap-x-7 gap-y-2 border-b border-rule" role="group" aria-label="Filter templates">
+        <div className="mt-8 inline-flex flex-wrap gap-1 rounded-lg border border-rule bg-tint p-1" role="group" aria-label="Filter templates">
           {FILTERS.map((f) => (
             <button
               key={f.id}
               type="button"
               aria-pressed={filter === f.id}
               onClick={() => setFilter(f.id)}
-              className={`focus-ring -mb-px border-b-2 pb-2.5 text-sm transition-colors ${
-                filter === f.id ? 'border-accent font-medium text-ink' : 'border-transparent text-muted hover:text-ink'
+              className={`focus-ring h-8 rounded-md px-3 text-sm font-medium transition-colors ${
+                filter === f.id ? 'bg-surface text-ink shadow-card ring-1 ring-rule' : 'text-muted hover:text-ink'
               }`}
             >
               {f.label}
@@ -112,17 +112,17 @@ const TemplatesView: React.FC = () => {
           ))}
         </div>
 
-        <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
+        <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
           {visible.map((t) => (
             <li key={t.id} className="group relative flex flex-col">
               {/* Stretched link instead of wrapping the preview: previews contain their own <a> elements. */}
-              <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
+              <div className="rounded-xl border border-rule bg-tint p-3 transition-[box-shadow,border-color] duration-200 group-hover:border-muted/30 group-hover:shadow-raised group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent sm:p-4"><div className="overflow-hidden rounded-[2px] bg-white shadow-card">
                 <LazyResumePreview data={resumeData} templateId={t.id} />
-              </div>
-              <div className="mt-3 flex items-baseline justify-between gap-2">
+              </div></div>
+              <div className="mt-3 flex items-center justify-between gap-2">
                 <Link
                   to={`/templates/${t.id}/`}
-                  className="font-display text-base font-semibold text-ink after:absolute after:inset-0 group-hover:text-accent focus-visible:outline-none"
+                  className="font-display text-[15px] font-semibold text-ink after:absolute after:inset-0 focus-visible:outline-none"
                 >
                   {t.name}
                 </Link>

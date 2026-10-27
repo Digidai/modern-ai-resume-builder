@@ -183,16 +183,16 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
           <h2 id="similar-heading" className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">
             Similar templates
           </h2>
-          <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2">
+          <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">
             All {TEMPLATES.length} templates
           </Link>
         </div>
         <ul className="mt-8 grid grid-cols-2 gap-6 sm:grid-cols-4">
           {similar.map((t) => (
             <li key={t.id} className="group relative">
-              <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
+              <div className="rounded-xl border border-rule bg-tint p-3 transition-[box-shadow,border-color] duration-200 group-hover:border-muted/30 group-hover:shadow-raised group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent sm:p-4"><div className="overflow-hidden rounded-[2px] bg-white shadow-card">
                 <LazyResumePreview data={resumeData} templateId={t.id} />
-              </div>
+              </div></div>
               <Link
                 to={`/templates/${t.id}/`}
                 className="mt-3 block font-display text-base font-semibold text-ink after:absolute after:inset-0 group-hover:text-accent focus-visible:outline-none"

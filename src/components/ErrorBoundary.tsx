@@ -69,7 +69,7 @@ export class ErrorBoundary extends Component<Props, State> {
                 <summary className="text-xs text-muted cursor-pointer hover:text-ink">
                   Error details
                 </summary>
-                <pre className="mt-2 p-2 bg-tint rounded-[2px] text-xs overflow-auto max-h-32 text-danger">
+                <pre className="mt-2 p-2 bg-tint rounded-lg text-xs overflow-auto max-h-32 text-danger">
                   {this.state.error.message}
                 </pre>
               </details>
@@ -77,13 +77,13 @@ export class ErrorBoundary extends Component<Props, State> {
             <div className="flex gap-3 justify-center">
               <button
                 onClick={this.handleReset}
-                className="focus-ring h-10 px-4 text-sm font-medium text-paper bg-ink rounded-[2px] hover:bg-ink-hover transition-colors"
+                className="focus-ring h-10 px-4 text-sm font-medium text-paper bg-ink rounded-lg shadow-button hover:bg-ink-hover transition-colors"
               >
                 Try Again
               </button>
               <button
                 onClick={() => window.location.reload()}
-                className="focus-ring h-10 px-4 text-sm font-medium text-ink border border-ink rounded-[2px] hover:bg-ink/5 transition-colors"
+                className="focus-ring h-10 px-4 text-sm font-medium text-ink border border-rule bg-surface shadow-card rounded-lg hover:bg-tint transition-colors"
               >
                 Refresh Page
               </button>
@@ -112,7 +112,7 @@ export const SectionErrorBoundary: React.FC<SectionErrorBoundaryProps> = ({
   return (
     <ErrorBoundary
       fallback={
-        <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-[2px]">
+        <div className="p-4 bg-amber-50 dark:bg-amber-900/20 border border-amber-200 dark:border-amber-800 rounded-lg">
           <p className="text-sm text-amber-800 dark:text-amber-200">
             {sectionName} failed to load. Please refresh the page.
           </p>

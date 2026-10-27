@@ -9,14 +9,14 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const variants = {
-  primary: 'bg-ink text-paper hover:bg-ink-hover',
-  secondary: 'border border-ink bg-transparent text-ink hover:bg-ink/5',
-  ghost: 'text-accent underline decoration-1 underline-offset-4 hover:decoration-2',
+  primary: 'bg-ink text-paper shadow-button hover:bg-ink-hover',
+  secondary: 'border border-rule bg-surface text-ink shadow-card hover:border-muted/40 hover:bg-tint',
+  ghost: 'text-accent hover:bg-accent/8',
   danger: 'bg-danger text-paper hover:opacity-90',
   'danger-ghost': 'text-muted hover:bg-danger/10 hover:text-danger',
   success: 'border border-success/40 text-success hover:bg-success/10',
   icon: 'text-muted hover:bg-ink/5 hover:text-ink',
-  dark: 'bg-ink text-paper hover:bg-ink-hover',
+  dark: 'bg-ink text-paper shadow-button hover:bg-ink-hover',
 };
 
 const sizes = {
@@ -40,7 +40,7 @@ export const Button: React.FC<ButtonProps> = ({
 }) => {
   // Icon buttons are square unless a size is given explicitly.
   const resolvedSize = variant === 'icon' && size === 'md' ? 'icon' : size;
-  const rounded = 'rounded-[2px]';
+  const rounded = 'rounded-lg';
 
   return (
     <button

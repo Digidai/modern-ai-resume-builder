@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { ScaledResumePreview } from '../components/ScaledResumePreview';
@@ -12,6 +12,7 @@ import { INITIAL_RESUME_DATA, type ResumeData } from '../types';
 import { TEMPLATES } from '../constants/templates';
 import jobTitlesData from '../data/jobTitles.json';
 
+const HERO_TEMPLATE_IDS = ['modern', 'classic', 'timeline', 'sidebar'];
 const SHOWCASE_TEMPLATE_IDS = ['classic', 'modern', 'vanguard', 'timeline', 'banking', 'sidebar', 'creative', 'duo'];
 
 const ATS_COUNT = TEMPLATES.filter((t) => t.atsFriendly).length;
@@ -34,9 +35,9 @@ const isSampleResume = (data: ResumeData) =>
   JSON.stringify({ ...data, templateId: '' }) === JSON.stringify({ ...INITIAL_RESUME_DATA, templateId: '' });
 
 const primaryLinkClass =
-  'focus-ring inline-flex h-11 items-center justify-center rounded-[2px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors hover:bg-ink-hover';
+  'focus-ring inline-flex h-11 items-center justify-center rounded-lg bg-ink px-5 text-[15px] font-medium text-paper shadow-button transition-colors hover:bg-ink-hover';
 const secondaryLinkClass =
-  'focus-ring inline-flex h-11 items-center justify-center rounded-[2px] border border-ink px-5 text-[15px] font-medium text-ink transition-colors hover:bg-ink/5';
+  'focus-ring inline-flex h-11 items-center justify-center rounded-lg border border-rule bg-surface shadow-card px-5 text-[15px] font-medium text-ink transition-colors hover:bg-tint';
 
 const HomeView: React.FC = () => {
   const navigate = useNavigate();
@@ -113,7 +114,10 @@ const HomeView: React.FC = () => {
     navigate('/editor');
   };
 
-  const heroTemplate = TEMPLATES.find((t) => t.id === resumeData.templateId) ?? TEMPLATES.find((t) => t.id === 'modern');
+  const [heroTemplateId, setHeroTemplateId] = useState(() =>
+    hasOwnResume && TEMPLATES.some((t) => t.id === resumeData.templateId) ? resumeData.templateId : 'modern',
+  );
+  const heroTemplate = TEMPLATES.find((t) => t.id === heroTemplateId);
 
   return (
     <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
@@ -121,10 +125,13 @@ const HomeView: React.FC = () => {
 
       <main className="flex-1">
         {/* Hero */}
-        <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-16 lg:grid-cols-[1.1fr_1fr] lg:gap-20 lg:pb-24">
+        <section className="mx-auto grid max-w-6xl items-center gap-12 px-4 pb-16 pt-12 sm:px-6 md:pt-20 lg:grid-cols-[1.05fr_1fr] lg:gap-16 lg:pb-24">
           <div>
-            <p className="kicker text-muted">Free · No account · A4 vector PDF</p>
-            <h1 className="mt-5 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink sm:text-5xl sm:leading-[54px] lg:text-[56px] lg:leading-[60px]">
+            <p className="inline-flex items-center gap-2 rounded-full border border-rule bg-surface px-3 py-1 text-[13px] font-medium text-muted shadow-card">
+              <span className="h-1.5 w-1.5 rounded-full bg-success" aria-hidden="true" />
+              Free · No account · A4 vector PDF
+            </p>
+            <h1 className="mt-6 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink sm:text-5xl sm:leading-[54px] lg:text-[60px] lg:leading-[64px]">
               Write your resume once. Set it in any of {TEMPLATES.length} templates.
             </h1>
             <p className="mt-6 max-w-xl text-[17px] leading-[28px] text-muted">
@@ -141,11 +148,30 @@ const HomeView: React.FC = () => {
             </div>
           </div>
 
-          <figure className="mx-auto w-full max-w-md lg:max-w-[460px]">
+          <figure className="mx-auto w-full max-w-md rounded-2xl border border-rule bg-tint p-4 sm:p-6 lg:max-w-[500px]">
+            <div className="mb-4 flex flex-wrap items-center gap-1.5" role="group" aria-label="Preview template">
+              {HERO_TEMPLATE_IDS.map((id) => {
+                const t = TEMPLATES.find((x) => x.id === id);
+                const active = id === heroTemplateId;
+                return (
+                  <button
+                    key={id}
+                    type="button"
+                    aria-pressed={active}
+                    onClick={() => setHeroTemplateId(id)}
+                    className={`focus-ring h-7 rounded-md px-2.5 text-[13px] font-medium transition-colors ${
+                      active ? 'bg-surface text-ink shadow-card ring-1 ring-rule' : 'text-muted hover:text-ink'
+                    }`}
+                  >
+                    {t?.name}
+                  </button>
+                );
+              })}
+            </div>
             {/* The overlay link is a sibling, not a wrapper: the resume itself contains links. */}
-            <div className="group relative bg-white shadow-sheet has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-accent">
+            <div className="group relative overflow-hidden rounded-[3px] bg-white shadow-sheet has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-accent">
               <SectionErrorBoundary sectionName="Resume Preview">
-                <ScaledResumePreview data={resumeData} />
+                <ScaledResumePreview data={resumeData} templateId={heroTemplateId} />
               </SectionErrorBoundary>
               <Link
                 to="/editor"
@@ -155,19 +181,19 @@ const HomeView: React.FC = () => {
             </div>
             <figcaption className="mt-4 flex items-baseline justify-between gap-4 text-muted">
               <span className="kicker">
-                {hasOwnResume ? 'Your resume' : 'Sample'} · {heroTemplate?.name}
+                {hasOwnResume ? 'Your resume' : 'Sample resume'} · {heroTemplate?.name}
               </span>
-              <span className="kicker">210 × 297 mm</span>
+              <span className="kicker">A4 · 210 × 297 mm</span>
             </figcaption>
           </figure>
         </section>
 
         {/* Facts */}
-        <section className="border-y border-rule" aria-label="What you get">
-          <dl className="mx-auto grid max-w-6xl gap-px bg-rule sm:grid-cols-2 lg:grid-cols-4">
+        <section className="mx-auto max-w-6xl px-4 sm:px-6" aria-label="What you get">
+          <dl className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {FACTS.map((fact) => (
-              <div key={fact.title} className="bg-paper px-4 py-6 sm:px-6 lg:py-8">
-                <dt className="font-display text-xl font-semibold tracking-display text-ink">{fact.title}</dt>
+              <div key={fact.title} className="rounded-xl border border-rule bg-surface p-5 shadow-card">
+                <dt className="font-display text-lg font-semibold tracking-display text-ink">{fact.title}</dt>
                 <dd className="mt-1.5 text-sm leading-6 text-muted">{fact.body}</dd>
               </div>
             ))}
@@ -183,23 +209,25 @@ const HomeView: React.FC = () => {
                 {hasOwnResume ? 'These previews use your own resume.' : 'Each design below shows the same sample content.'} Choose one to open it in the editor.
               </p>
             </div>
-            <Link to="/templates/" className="focus-ring shrink-0 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2">
+            <Link to="/templates/" className={`${secondaryLinkClass} h-10! text-sm! shrink-0`}>
               All {TEMPLATES.length} templates
             </Link>
           </div>
-          <ul className="mt-10 grid grid-cols-2 gap-x-6 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
+          <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-8 sm:grid-cols-3 lg:grid-cols-4">
             {SHOWCASE_TEMPLATE_IDS.map((id) => {
               const template = TEMPLATES.find((t) => t.id === id);
               if (!template) return null;
               return (
                 // The button overlays the card instead of wrapping it: previews contain their own links.
                 <li key={id} className="group relative">
-                  <div className="border border-rule bg-white transition-colors group-hover:border-ink group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent">
-                    <LazyResumePreview data={resumeData} templateId={id} />
+                  <div className="rounded-xl border border-rule bg-tint p-3 transition-[box-shadow,border-color] duration-200 group-hover:border-muted/30 group-hover:shadow-raised group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent sm:p-4">
+                    <div className="overflow-hidden rounded-[2px] bg-white shadow-card">
+                      <LazyResumePreview data={resumeData} templateId={id} />
+                    </div>
                   </div>
-                  <p className="mt-3 flex items-baseline justify-between gap-2">
-                    <span className="font-display text-base font-semibold text-ink">{template.name}</span>
-                    {template.atsFriendly && <span className="kicker text-muted">ATS</span>}
+                  <p className="mt-3 flex items-center justify-between gap-2">
+                    <span className="font-display text-[15px] font-semibold text-ink">{template.name}</span>
+                    {template.atsFriendly && <span className="tag">ATS</span>}
                   </p>
                   <p className="mt-0.5 text-sm leading-5 text-muted">{template.description}</p>
                   <button
@@ -217,11 +245,13 @@ const HomeView: React.FC = () => {
         {/* How it works */}
         <section className="mx-auto max-w-6xl px-4 sm:px-6">
           <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">How it works</h2>
-          <ol className="mt-8 grid border-y border-rule md:grid-cols-3">
+          <ol className="mt-8 grid gap-4 md:grid-cols-3">
             {STEPS.map((step, index) => (
-              <li key={step.title} className={`py-6 md:px-6 ${index === 0 ? 'md:pl-0' : 'border-t border-rule md:border-l md:border-t-0'}`}>
-                <span className="kicker text-accent">{String(index + 1).padStart(2, '0')}</span>
-                <h3 className="mt-2 font-display text-xl font-semibold tracking-display text-ink">{step.title}</h3>
+              <li key={step.title} className="rounded-xl border border-rule bg-surface p-6 shadow-card">
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-tint text-[13px] font-semibold text-ink ring-1 ring-rule">
+                  {index + 1}
+                </span>
+                <h3 className="mt-4 font-display text-lg font-semibold tracking-display text-ink">{step.title}</h3>
                 <p className="mt-1.5 text-[15px] leading-6 text-muted">{step.body}</p>
               </li>
             ))}
@@ -230,26 +260,30 @@ const HomeView: React.FC = () => {
 
         {/* FAQ */}
         <section id="faq" className="mx-auto grid max-w-6xl scroll-mt-32 gap-8 px-4 py-16 sm:px-6 md:scroll-mt-20 lg:grid-cols-[1fr_2fr] lg:gap-16 lg:py-24">
-          <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">Questions</h2>
-          <div className="border-t border-rule">
+          <div>
+            <h2 className="font-display text-[32px] font-semibold leading-[38px] tracking-display text-ink">Questions</h2>
+            <p className="mt-3 text-base leading-[26px] text-muted">Everything about privacy, PDFs and templates.</p>
+          </div>
+          <div className="divide-y divide-rule overflow-hidden rounded-xl border border-rule bg-surface shadow-card">
             {HOME_FAQ_ITEMS.map((item) => (
-              <details key={item.question} className="group border-b border-rule [&_summary::-webkit-details-marker]:hidden">
-                <summary className="focus-ring flex cursor-pointer list-none items-center justify-between gap-4 py-5 text-[17px] font-medium text-ink">
+              <details key={item.question} className="group [&_summary::-webkit-details-marker]:hidden">
+                <summary className="flex cursor-pointer list-none items-center justify-between gap-4 px-5 py-4 text-base font-medium text-ink transition-colors hover:bg-tint focus-visible:bg-tint focus-visible:outline-none sm:px-6">
                   {item.question}
                   <ChevronDownIcon className="h-4 w-4 shrink-0 text-muted transition-transform group-open:rotate-180" />
                 </summary>
-                <p className="-mt-1 pb-6 text-base leading-[26px] text-muted">{item.answer}</p>
+                <p className="px-5 pb-5 text-[15px] leading-[25px] text-muted sm:px-6">{item.answer}</p>
               </details>
             ))}
           </div>
         </section>
 
         {/* Final CTA */}
-        <section className="border-t border-rule bg-surface">
-          <div className="mx-auto flex max-w-6xl flex-col items-start justify-between gap-6 px-4 py-12 sm:px-6 md:flex-row md:items-center">
-            <p className="max-w-2xl font-display text-2xl font-semibold leading-8 tracking-display text-ink">
-              It's free, there is no account, and you can download the PDF as often as you like.
-            </p>
+        <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6 lg:pb-24">
+          <div className="flex flex-col items-start justify-between gap-6 rounded-2xl border border-rule bg-surface p-8 shadow-card md:flex-row md:items-center md:p-10">
+            <div>
+              <p className="font-display text-2xl font-semibold leading-8 tracking-display text-ink">Ready when you are.</p>
+              <p className="mt-1.5 text-base text-muted">Free, no account, and you can download the PDF as often as you like.</p>
+            </div>
             <Link to="/editor" className={`${primaryLinkClass} shrink-0`}>
               {hasOwnResume ? 'Continue editing' : 'Start my resume'}
             </Link>

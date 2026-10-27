@@ -38,32 +38,40 @@
   --font-jetbrains: var(--rf-jetbrains);
 }
 
-/* Site design tokens ("editorial print": paper, ink, one brick accent). Values switch with the
-   `dark` class on <html>; resume templates never use these. */
+/* Site design tokens ("refined neutral": cool near-white, white surfaces, soft shadows, one slate-blue
+   accent). Values switch with the `dark` class on <html>; resume templates never use these. */
 :root {
-  --site-paper: #F7F5F0;
+  --site-paper: #FAFAF9;
   --site-surface: #FFFFFF;
-  --site-tint: #EFECE5;
-  --site-ink: #1C1A17;
-  --site-muted: #5E5A52;
-  --site-rule: #DDD8CC;
-  --site-accent: #A3361F;
-  --site-success: #3F6B3A;
-  --site-danger: #A12622;
-  --site-ink-hover: #000000;
+  --site-tint: #F4F4F5;
+  --site-ink: #18181B;
+  --site-muted: #52525B;
+  --site-rule: #E4E4E7;
+  --site-accent: #2F5A8A;
+  --site-success: #2F6B47;
+  --site-danger: #B42318;
+  --site-ink-hover: #27272A;
+  --site-shadow-card: 0 1px 2px rgba(24, 24, 27, 0.04), 0 1px 3px rgba(24, 24, 27, 0.06);
+  --site-shadow-raised: 0 1px 2px rgba(24, 24, 27, 0.05), 0 8px 24px -6px rgba(24, 24, 27, 0.12);
+  --site-shadow-sheet: 0 1px 2px rgba(24, 24, 27, 0.06), 0 2px 6px rgba(24, 24, 27, 0.04), 0 24px 48px -12px rgba(24, 24, 27, 0.18);
+  --site-shadow-button: 0 1px 2px rgba(24, 24, 27, 0.16), inset 0 1px 0 rgba(255, 255, 255, 0.12);
 }
 
 html.dark {
-  --site-paper: #14120F;
-  --site-surface: #1D1B17;
-  --site-tint: #1D1B17;
-  --site-ink: #EDE9E1;
-  --site-muted: #A39E93;
-  --site-rule: #34302A;
-  --site-accent: #E07A5F;
-  --site-success: #8DB585;
-  --site-danger: #F08A80;
-  --site-ink-hover: #FFFFFF;
+  --site-paper: #0F0F11;
+  --site-surface: #18181B;
+  --site-tint: #1F1F23;
+  --site-ink: #FAFAFA;
+  --site-muted: #A1A1AA;
+  --site-rule: #2A2A2F;
+  --site-accent: #8DB4E2;
+  --site-success: #7CC49A;
+  --site-danger: #F97066;
+  --site-ink-hover: #E4E4E7;
+  --site-shadow-card: 0 1px 2px rgba(0, 0, 0, 0.4);
+  --site-shadow-raised: 0 1px 2px rgba(0, 0, 0, 0.4), 0 8px 24px -6px rgba(0, 0, 0, 0.5);
+  --site-shadow-sheet: 0 1px 2px rgba(0, 0, 0, 0.5), 0 24px 48px -12px rgba(0, 0, 0, 0.6);
+  --site-shadow-button: 0 1px 2px rgba(0, 0, 0, 0.4);
 }
 
 @theme inline {
@@ -79,18 +87,35 @@ html.dark {
   --color-danger: var(--site-danger);
   --font-display: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
   --font-label: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", Menlo, monospace;
-  --tracking-display: -0.025em;
-  --shadow-sheet: 0 1px 2px rgba(0, 0, 0, 0.06), 0 12px 32px rgba(0, 0, 0, 0.08);
+  --tracking-display: -0.022em;
+  --shadow-sheet: var(--site-shadow-sheet);
+  --shadow-card: var(--site-shadow-card);
+  --shadow-raised: var(--site-shadow-raised);
+  --shadow-button: var(--site-shadow-button);
 }
 
-/* Kicker for small labels and counts: 11px sans, uppercase, 0.06em tracking. */
+/* Small label for eyebrows, counts and captions: 13px medium, sentence case. */
 @utility kicker {
   font-family: var(--font-display);
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 18px;
+  letter-spacing: 0;
+}
+
+/* Small neutral badge, e.g. the ATS marker on template cards. */
+@utility tag {
+  display: inline-flex;
+  align-items: center;
+  border-radius: 6px;
+  padding: 1px 6px;
   font-size: 11px;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 16px;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
+  letter-spacing: 0.01em;
+  color: var(--site-muted);
+  background-color: var(--site-tint);
+  box-shadow: inset 0 0 0 1px var(--site-rule);
 }
 
 /* Default focus ring for site controls. */

@@ -76,7 +76,7 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
       {open && (
         <div
           role="menu"
-          className="animate-enter absolute right-0 top-full z-40 mt-2 w-64 overflow-hidden rounded-[2px] border border-rule bg-surface p-1 shadow-sheet"
+          className="animate-enter absolute right-0 top-full z-40 mt-2 w-64 overflow-hidden rounded-lg border border-rule bg-surface p-1 shadow-sheet"
         >
           {items.map((group, groupIndex) => (
             <div key={groupIndex} className={groupIndex > 0 ? 'mt-1 border-t border-rule pt-1' : ''}>
@@ -89,7 +89,7 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
                     setOpen(false);
                     item.onSelect();
                   }}
-                  className="flex w-full items-start gap-3 rounded-[2px] px-3 py-2 text-left hover:bg-ink/5 focus-visible:bg-ink/5 focus-visible:outline-none"
+                  className="flex w-full items-start gap-3 rounded-lg px-3 py-2 text-left hover:bg-tint focus-visible:bg-tint focus-visible:outline-none"
                 >
                   <span className="mt-0.5 text-muted">{item.icon}</span>
                   <span>
@@ -229,7 +229,7 @@ const EditorView: React.FC = () => {
       type="button"
       onClick={() => setMobileView(view)}
       aria-pressed={mobileView === view}
-      className={`rounded-[2px] border px-3 py-1 text-sm font-medium transition-colors focus-ring ${
+      className={`rounded-lg border px-3 py-1 text-sm font-medium transition-colors focus-ring ${
         mobileView === view
           ? 'border-rule bg-surface text-ink'
           : 'border-transparent text-muted'
@@ -244,7 +244,7 @@ const EditorView: React.FC = () => {
       <header className="z-30 flex h-14 shrink-0 items-center gap-2 border-b border-rule bg-paper px-2 sm:px-4 print:hidden">
         <Link
           to="/"
-          className="flex items-center gap-2 rounded-[2px] px-2 py-1.5 text-sm font-semibold text-ink hover:bg-ink/5 focus-ring"
+          className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-semibold text-ink hover:bg-tint focus-ring"
           aria-label="Back to home"
         >
           <ArrowLeftIcon className="h-4 w-4 text-muted" />
@@ -254,7 +254,7 @@ const EditorView: React.FC = () => {
         <SaveIndicator status={saveStatus} />
 
         <div className="flex flex-1 justify-center md:hidden">
-          <div className="flex rounded-[2px] bg-paper p-0.5" role="group" aria-label="View">
+          <div className="flex rounded-lg bg-paper p-0.5" role="group" aria-label="View">
             {segment('edit', 'Edit')}
             {segment('preview', 'Preview')}
           </div>
@@ -294,7 +294,7 @@ const EditorView: React.FC = () => {
           }`}
         >
           {saveError && (
-            <div role="alert" className="m-4 mb-0 flex gap-2 rounded-[2px] border border-danger/40 bg-danger/5 px-3 py-2 text-sm text-danger">
+            <div role="alert" className="m-4 mb-0 flex gap-2 rounded-lg border border-danger/40 bg-danger/5 px-3 py-2 text-sm text-danger">
               <AlertIcon className="mt-0.5 h-4 w-4 shrink-0" />
               <span>
                 Changes can't be saved in this browser ({saveError}). Use <strong>More → Save backup</strong> to keep a copy.

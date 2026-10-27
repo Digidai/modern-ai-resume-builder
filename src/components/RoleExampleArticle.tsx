@@ -53,7 +53,7 @@ export const RoleExampleArticle = ({ title, fullName, example, onStart }: RoleEx
           </div>
         </div>
 
-        <article className="mt-8 max-w-4xl rounded-[4px] border border-rule bg-surface p-6 text-[15px] leading-relaxed text-ink sm:p-10">
+        <article className="mt-8 max-w-4xl rounded-xl border border-rule bg-surface p-6 text-[15px] leading-relaxed text-ink sm:p-10">
           <header>
             <p className="font-display text-2xl font-semibold tracking-display text-ink">{fullName}</p>
             <p className="font-medium text-muted">{title}</p>

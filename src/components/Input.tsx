@@ -1,8 +1,8 @@
 import React, { useId, useLayoutEffect, useRef } from 'react';
 
 export const fieldClass = (error?: string) =>
-  `w-full rounded-[2px] border px-3 py-2 text-sm text-ink placeholder:text-muted transition-colors
-   focus:outline-none focus:ring-1 focus:ring-accent focus:border-accent
+  `w-full rounded-lg border px-3 py-2 text-sm text-ink shadow-card placeholder:text-muted/70 transition-[color,border-color,box-shadow]
+   focus:outline-none focus:ring-4 focus:ring-accent/15 focus:border-accent
    disabled:cursor-not-allowed disabled:bg-paper disabled:text-muted
    ${
      error

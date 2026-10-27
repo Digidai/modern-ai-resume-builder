@@ -38,7 +38,7 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
           <button
             type="button"
             onClick={() => onChange([...links, { id: createId(), label: '', url: '' }])}
-            className="focus-ring inline-flex h-7 items-center gap-1 rounded-[2px] text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2"
+            className="focus-ring inline-flex h-7 items-center gap-1 rounded-lg text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent"
           >
             Add link
           </button>
@@ -80,7 +80,7 @@ const LinksEditor = ({ links, onChange }: { links: ResumeLink[]; onChange: (link
                     type="button"
                     onClick={() => onChange(links.filter((l) => l.id !== link.id))}
                     aria-label={`Remove ${name}`}
-                    className="mt-1 shrink-0 rounded-[2px] p-1.5 text-muted hover:bg-ink/5 hover:text-danger focus-ring"
+                    className="mt-1 shrink-0 rounded-lg p-1.5 text-muted hover:bg-tint hover:text-danger focus-ring"
                   >
                     <TrashIcon className="h-4 w-4" />
                   </button>
@@ -141,7 +141,7 @@ const Section = ({
 );
 
 const EmptyState = ({ children, onAdd, addLabel }: { children: ReactNode; onAdd: () => void; addLabel: string }) => (
-  <div className="flex flex-col items-center gap-3 rounded-[2px] border-2 border-dashed border-rule px-4 py-8 text-center text-sm text-muted">
+  <div className="flex flex-col items-center gap-3 rounded-lg border-2 border-dashed border-rule px-4 py-8 text-center text-sm text-muted">
     <p>{children}</p>
     <Button variant="secondary" size="sm" onClick={onAdd} leftIcon={<PlusIcon className="h-4 w-4" />}>
       {addLabel}
@@ -175,13 +175,13 @@ const ItemCard = ({
 }: ItemCardProps) => {
   const label = title.trim() || placeholderTitle;
   return (
-    <div className="rounded-[2px] border border-rule bg-surface transition-colors">
+    <div className="rounded-lg border border-rule bg-surface transition-colors">
       <div className="flex items-center gap-1 py-1.5 pl-1.5 pr-2">
         <button
           type="button"
           onClick={onToggle}
           aria-expanded={isOpen}
-          className="flex min-w-0 flex-1 items-center gap-2 rounded-[2px] px-2 py-1.5 text-left hover:bg-ink/5 focus-ring"
+          className="flex min-w-0 flex-1 items-center gap-2 rounded-lg px-2 py-1.5 text-left hover:bg-tint focus-ring"
         >
           <ChevronDownIcon
             className={`h-4 w-4 shrink-0 text-muted transition-transform ${isOpen ? '' : '-rotate-90'}`}
@@ -244,7 +244,7 @@ const AiButton = ({
     disabled={disabled || loading}
     aria-label={label}
     title={label}
-    className="focus-ring inline-flex h-7 items-center gap-1 rounded-[2px] px-1.5 text-sm font-medium text-accent underline underline-offset-4 transition-colors hover:decoration-2 disabled:pointer-events-none disabled:opacity-40"
+    className="focus-ring inline-flex h-7 items-center gap-1 rounded-lg px-1.5 text-sm font-medium text-accent underline underline-offset-4 transition-colors hover:decoration-2 disabled:pointer-events-none disabled:opacity-40"
   >
     {loading && <LoaderIcon className="h-3.5 w-3.5 animate-spin" />}
     {children}
@@ -288,17 +288,17 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
 
   return (
     <div className="space-y-2">
-      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-[2px] border border-rule bg-surface p-1.5 transition-colors focus-within:border-accent focus-within:ring-1 focus-within:ring-accent">
+      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-lg border border-rule bg-surface p-1.5 transition-colors focus-within:border-accent focus-within:ring-1 focus-within:ring-accent">
         {skills.map((skill, index) => (
           <span
             key={`${skill}-${index}`}
-            className="inline-flex items-center gap-1 rounded-[2px] bg-tint py-1 pl-2.5 pr-1 text-sm text-ink"
+            className="inline-flex items-center gap-1 rounded-lg bg-tint py-1 pl-2.5 pr-1 text-sm text-ink"
           >
             {skill}
             <button
               type="button"
               onClick={() => onChange(skills.filter((_, i) => i !== index))}
-              className="rounded p-0.5 text-muted hover:bg-ink/5 hover:text-ink focus-ring"
+              className="rounded p-0.5 text-muted hover:bg-tint hover:text-ink focus-ring"
               aria-label={`Remove ${skill}`}
             >
               <XIcon className="h-3.5 w-3.5" />
@@ -801,15 +801,15 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 return (
                   <div key={t.id} className="group relative text-left">
                     <div
-                      className={`relative bg-white outline-offset-2 transition-colors group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-accent ${
-                        selected ? 'outline-2 outline-accent' : 'border border-rule group-hover:border-ink'
+                      className={`relative overflow-hidden rounded-md bg-white outline-offset-2 transition-shadow group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-accent ${
+                        selected ? 'outline-2 outline-accent' : 'shadow-card ring-1 ring-rule group-hover:shadow-raised'
                       }`}
                     >
                       <LazyResumePreview data={data} templateId={t.id} />
                     </div>
                     <span className="mt-2 flex items-baseline justify-between gap-2">
                       <span className={`text-sm ${selected ? 'font-semibold text-ink' : 'font-medium text-ink'}`}>{t.name}</span>
-                      {t.atsFriendly && <span className="kicker text-muted">ATS</span>}
+                      {t.atsFriendly && <span className="tag">ATS</span>}
                     </span>
                     <span className="mt-0.5 block text-xs leading-snug text-muted">{t.description}</span>
                     {/* Overlay control: previews contain links, which must not nest inside a button. */}

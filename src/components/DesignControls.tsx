@@ -102,7 +102,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
   const swatch = 'relative h-8 w-8 rounded-full ring-1 ring-ink/25 ring-offset-2 ring-offset-surface transition focus-ring';
 
   return (
-    <div className="space-y-6 rounded-[2px] border border-rule bg-surface p-4">
+    <div className="space-y-6 rounded-lg border border-rule bg-surface p-4">
       <fieldset>
         <legend className="text-sm font-medium text-ink">Accent colour</legend>
         <div className="mt-3 grid w-fit grid-cols-6 gap-3" role="radiogroup" aria-label="Accent colour">
@@ -169,7 +169,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
               if (HEX.test(v)) onChange({ accent: v.toUpperCase() });
               else if (v === '') onChange({ accent: '' });
             }}
-            className="w-32 rounded-[2px] border border-rule aria-invalid:border-amber-600 bg-surface px-2.5 py-1.5 font-label text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+            className="w-32 rounded-lg border border-rule aria-invalid:border-amber-600 bg-surface px-2.5 py-1.5 font-label text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
           />
           {hexInvalid && (
             <span id="accent-hex-status" className="text-xs text-amber-800 dark:text-amber-300">
@@ -195,7 +195,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
           id="design-font"
           value={design.font}
           onChange={(e) => onChange({ font: e.target.value })}
-          className="mt-2 block w-full rounded-[2px] border border-rule bg-surface px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
+          className="mt-2 block w-full rounded-lg border border-rule bg-surface px-3 py-2 text-sm text-ink focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent"
         >
           {FONT_PRESETS.map((f) => (
             <option key={f.id} value={f.id}>
@@ -232,7 +232,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
                 type="button"
                 disabled={fitting || design.scale <= SCALE_MIN}
                 onClick={startFit}
-                className="focus-ring h-8 rounded-[2px] bg-ink px-3 text-xs font-medium text-paper hover:bg-ink-hover disabled:opacity-50"
+                className="focus-ring h-8 rounded-lg bg-ink px-3 text-xs font-medium text-paper shadow-button hover:bg-ink-hover disabled:opacity-50"
               >
                 {fitting ? 'Fitting…' : design.scale <= SCALE_MIN ? 'At minimum size' : 'Fit to one page'}
               </button>
@@ -241,7 +241,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
               <button
                 type="button"
                 onClick={() => onChange(DEFAULT_DESIGN)}
-                className="focus-ring h-8 rounded-[2px] border border-ink px-3 text-xs font-medium text-ink hover:bg-ink/5"
+                className="focus-ring h-8 rounded-lg border border-rule bg-surface shadow-card px-3 text-xs font-medium text-ink hover:bg-tint"
               >
                 Reset style
               </button>

@@ -77,7 +77,7 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
           <div
             key={toast.id}
             role={toast.type === 'error' ? 'alert' : 'status'}
-            className="pointer-events-auto w-full sm:w-auto sm:max-w-sm flex items-center gap-3 pl-4 pr-2 py-2.5 rounded-[2px] shadow-sheet bg-ink text-paper animate-enter"
+            className="pointer-events-auto w-full sm:w-auto sm:max-w-sm flex items-center gap-3 pl-4 pr-2 py-2.5 rounded-lg shadow-sheet bg-ink text-paper animate-enter"
           >
             <svg className={`w-5 h-5 shrink-0 ${iconColor[toast.type]}`} fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={ICON_PATHS[toast.type]} />
@@ -89,14 +89,14 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
                   toast.action?.onClick();
                   removeToast(toast.id);
                 }}
-                className="focus-ring shrink-0 rounded-[2px] px-2.5 py-1 text-sm font-semibold text-paper underline underline-offset-4 hover:bg-paper/10"
+                className="focus-ring shrink-0 rounded-lg px-2.5 py-1 text-sm font-semibold text-paper underline underline-offset-4 hover:bg-paper/10"
               >
                 {toast.action.label}
               </button>
             )}
             <button
               onClick={() => removeToast(toast.id)}
-              className="focus-ring shrink-0 rounded-[2px] p-1.5 text-paper/70 hover:text-paper hover:bg-paper/10"
+              className="focus-ring shrink-0 rounded-lg p-1.5 text-paper/70 hover:text-paper hover:bg-paper/10"
               aria-label="Dismiss notification"
             >
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">

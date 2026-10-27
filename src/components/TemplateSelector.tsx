@@ -264,7 +264,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
         document.getElementById(`template-${next.id}`)?.focus();
     };
 
-    const textLink = 'focus-ring font-medium text-accent underline underline-offset-4 hover:decoration-2';
+    const textLink = 'focus-ring font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent';
 
     return (
         <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
@@ -321,15 +321,15 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                             return (
                                 <div key={t.id} className="group relative text-left">
                                     <div
-                                        className={`relative bg-white outline-offset-2 transition-colors group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-accent ${
-                                            selected ? 'outline-2 outline-accent' : 'border border-rule group-hover:border-ink'
+                                        className={`relative overflow-hidden rounded-md bg-white outline-offset-2 transition-shadow group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-accent ${
+                                            selected ? 'outline-2 outline-accent' : 'shadow-card ring-1 ring-rule group-hover:shadow-raised'
                                         }`}
                                     >
                                         <LazyResumePreview data={thumbnailData?.[t.id] ?? previewData} templateId={t.id} />
                                     </div>
                                     <span className={`mt-1.5 flex items-baseline justify-between gap-1 text-xs ${selected ? 'font-semibold text-ink' : 'text-muted'}`} title={t.description}>
                                         <span className="truncate">{t.name}</span>
-                                        {t.atsFriendly && <span className="shrink-0 text-[10px] uppercase tracking-[0.08em] text-muted">ATS</span>}
+                                        {t.atsFriendly && <span className="tag shrink-0">ATS</span>}
                                     </span>
                                     {/* Overlay control: previews contain links, which must not nest inside a button. */}
                                     <button

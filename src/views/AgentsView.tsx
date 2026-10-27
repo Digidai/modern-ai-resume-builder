@@ -9,8 +9,8 @@ import { TEMPLATES } from '../constants/templates';
 const CodeBlock: React.FC<{ code: string; label: string; title?: string }> = ({ code, label, title }) => {
   const [copied, setCopied] = useState(false);
   return (
-    <div className="border border-rule bg-tint">
-      <div className="flex items-center justify-between gap-3 border-b border-rule px-4 py-1.5">
+    <div className="overflow-hidden rounded-xl border border-rule bg-surface shadow-card">
+      <div className="flex items-center justify-between gap-3 border-b border-rule bg-tint px-4 py-2">
         <span className="kicker truncate text-muted">{title ?? label}</span>
         <button
           type="button"
@@ -24,7 +24,7 @@ const CodeBlock: React.FC<{ code: string; label: string; title?: string }> = ({ 
             }
           }}
           aria-label={`Copy ${label}`}
-          className="focus-ring shrink-0 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2"
+          className="focus-ring h-7 shrink-0 rounded-md border border-rule bg-surface px-2.5 text-xs font-medium text-ink shadow-card transition-colors hover:bg-tint"
         >
           {copied ? 'Copied' : 'Copy'}
         </button>
@@ -40,8 +40,8 @@ const H2: React.FC<{ id: string; children: React.ReactNode }> = ({ id, children 
   </h2>
 );
 
-const link = 'focus-ring font-medium text-accent underline underline-offset-4 hover:decoration-2';
-const code = 'rounded-[2px] bg-tint px-1.5 py-0.5 font-label text-[0.85em] text-ink';
+const link = 'focus-ring font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent';
+const code = 'rounded-lg bg-tint px-1.5 py-0.5 font-label text-[0.85em] text-ink';
 
 const AgentsView: React.FC = () => {
   const siteUrl = getSiteUrl();
@@ -140,23 +140,25 @@ const AgentsView: React.FC = () => {
               <CodeBlock key={s.client} code={s.code} label={`${s.client} setup`} title={s.client} />
             ))}
           </div>
-          <table className="w-full border-y border-ink text-left text-sm">
+          <div className="overflow-hidden rounded-xl border border-rule bg-surface shadow-card">
+          <table className="w-full text-left text-sm">
             <caption className="sr-only">MCP tools</caption>
             <thead>
-              <tr className="border-b border-rule">
-                <th scope="col" className="kicker py-2 pr-4 font-normal text-muted">Tool</th>
-                <th scope="col" className="kicker py-2 font-normal text-muted">What it does</th>
+              <tr className="border-b border-rule bg-tint">
+                <th scope="col" className="kicker px-4 py-2.5 text-muted">Tool</th>
+                <th scope="col" className="kicker px-4 py-2.5 text-muted">What it does</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-rule">
               {MCP_TOOLS.map(([name, text]) => (
                 <tr key={name}>
-                  <td className="py-2.5 pr-4 align-top font-label text-[13px] text-ink sm:whitespace-nowrap">{name}</td>
-                  <td className="py-2.5 leading-6 text-muted">{text}</td>
+                  <td className="px-4 py-3 align-top font-label text-[13px] text-ink sm:whitespace-nowrap">{name}</td>
+                  <td className="px-4 py-3 leading-6 text-muted">{text}</td>
                 </tr>
               ))}
             </tbody>
           </table>
+          </div>
         </section>
 
         <section className="mt-16 space-y-4" aria-labelledby="skill">
@@ -203,7 +205,7 @@ const AgentsView: React.FC = () => {
           </ul>
         </section>
 
-        <section className="mt-16 border-t border-ink pt-4 text-[15px] leading-6 text-muted">
+        <section className="mt-16 border-t border-rule pt-6 text-[15px] leading-6 text-muted">
           <h2 className="font-display text-xl font-semibold tracking-display text-ink">Privacy</h2>
           <p className="mt-2 max-w-3xl">
             Resumes sent for rendering are processed in memory and discarded; nothing is stored or logged. Editor links keep the resume in the URL fragment. In the editor, data lives only in the

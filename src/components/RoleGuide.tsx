@@ -11,7 +11,7 @@ interface RoleGuideProps {
 }
 
 const Card = ({ title, children }: { title: string; children: ReactNode }) => (
-  <section className="border-t border-ink pt-3">
+  <section className="rounded-xl border border-rule bg-surface p-6 shadow-card">
     <h3 className="font-display text-lg font-semibold tracking-display text-ink">{title}</h3>
     <div className="mt-3 text-[15px] leading-6 text-muted">{children}</div>
   </section>
@@ -26,7 +26,7 @@ export const RoleGuide = ({ title, guide, onPickTemplate }: RoleGuideProps) => (
         {guide.intro} {guide.advice}
       </p>
 
-      <div className="mt-10 grid gap-x-10 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
         <Card title="Sections, in order">
           <ol className="list-decimal space-y-1 pl-5 marker:text-muted">
             {guide.sections.map((s) => (
@@ -84,7 +84,7 @@ export const RoleGuide = ({ title, guide, onPickTemplate }: RoleGuideProps) => (
                 >
                   <span className="flex items-baseline justify-between gap-2 font-medium text-ink group-hover:text-accent group-hover:underline group-hover:underline-offset-4">
                     {t.name}
-                    {t.atsFriendly && <span className="kicker text-muted no-underline">ATS</span>}
+                    {t.atsFriendly && <span className="tag no-underline">ATS</span>}
                   </span>
                   <span className="block text-sm text-muted">{t.description}</span>
                 </button>

@@ -30,7 +30,7 @@ const NotFoundView: React.FC = () => {
           {links.map((l) => (
             <li key={l.to}>
               <Link to={l.to} className="focus-ring group flex flex-col gap-0.5 py-4 sm:flex-row sm:items-baseline sm:gap-6">
-                <span className="font-medium text-accent underline underline-offset-4 group-hover:decoration-2 sm:w-56 sm:shrink-0">{l.label}</span>
+                <span className="font-medium text-accent underline underline-offset-4 group-hover:decoration-accent sm:w-56 sm:shrink-0">{l.label}</span>
                 <span className="text-sm text-muted">{l.body}</span>
               </Link>
             </li>

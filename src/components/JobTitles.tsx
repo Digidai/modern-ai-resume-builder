@@ -29,17 +29,17 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, isSearching, isEx
     const hasMore = !isSearching && category.titles.length > visibleTitles.length;
 
     return (
-        <section className="mb-10 break-inside-avoid border-t border-ink pt-3">
-            <h2 className="flex items-baseline justify-between gap-3 font-display text-xl font-semibold tracking-display text-ink">
+        <section className="mb-5 break-inside-avoid rounded-xl border border-rule bg-surface p-5 shadow-card">
+            <h2 className="flex items-center justify-between gap-3 font-display text-[17px] font-semibold tracking-display text-ink">
                 {category.name}
-                <span className="kicker shrink-0 font-normal text-muted">{category.titles.length}</span>
+                <span className="tag shrink-0">{category.titles.length}</span>
             </h2>
-            <ul className="mt-2">
+            <ul className="-mx-2 mt-3">
                 {visibleTitles.map((title) => (
-                    <li key={title} className="border-b border-rule last:border-b-0">
+                    <li key={title}>
                         <Link
                             to={`/resume_tmpl/${slugifyJobTitle(title)}`}
-                            className="focus-ring block py-1.5 text-[15px] leading-6 text-ink transition-colors hover:text-accent hover:underline hover:underline-offset-4"
+                            className="focus-ring block rounded-md px-2 py-1.5 text-[15px] leading-6 text-ink transition-colors hover:bg-tint"
                         >
                             {title}
                         </Link>
@@ -49,7 +49,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, isSearching, isEx
             {!isSearching && category.titles.length > 10 && (
                 <button
                     type="button"
-                    className="focus-ring mt-2 text-sm font-medium text-accent underline underline-offset-4 hover:decoration-2"
+                    className="focus-ring mt-2 rounded-md text-sm font-medium text-accent hover:underline underline-offset-4"
                     onClick={() => onToggleCategory(category.name)}
                     aria-expanded={!hasMore}
                 >
@@ -242,12 +242,12 @@ const JobTitles: React.FC = () => {
                     </div>
                     <div>
                         <div className="relative">
-                            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center">
+                            <div className="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-4">
                                 <SearchIcon className="h-5 w-5 text-muted" />
                             </div>
                             <input
                                 type="search"
-                                className="block h-12 w-full rounded-none border-0 border-b-2 border-ink bg-transparent pl-8 pr-10 text-lg text-ink placeholder:text-muted focus:border-accent focus:outline-none [&::-webkit-search-cancel-button]:hidden"
+                                className="block h-12 w-full rounded-xl border border-rule bg-surface pl-11 pr-10 text-base text-ink shadow-card placeholder:text-muted/70 transition-[border-color,box-shadow] focus:border-accent focus:outline-none focus:ring-4 focus:ring-accent/15 [&::-webkit-search-cancel-button]:hidden"
                                 placeholder="Search roles, e.g. Product Manager"
                                 value={search}
                                 aria-label="Search job titles"
@@ -277,7 +277,7 @@ const JobTitles: React.FC = () => {
                 </div>
 
                 {filteredCategories.length > 0 ? (
-                    <div className="gap-10 sm:columns-2 lg:columns-3">
+                    <div className="gap-5 sm:columns-2 lg:columns-3">
                         {filteredCategories.map((category) => (
                             <CategoryCard
                                 key={category.name}
