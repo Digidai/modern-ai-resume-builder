@@ -118,6 +118,9 @@ const HomeView: React.FC = () => {
     hasOwnResume && TEMPLATES.some((t) => t.id === resumeData.templateId) ? resumeData.templateId : 'modern',
   );
   const heroTemplate = TEMPLATES.find((t) => t.id === heroTemplateId);
+  // The hero shows only the first page, so say when the resume runs longer.
+  const [heroPages, setHeroPages] = useState(1);
+  const heroPageCount = Math.max(1, Math.ceil(heroPages - 0.01));
 
   return (
     <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
@@ -171,8 +174,11 @@ const HomeView: React.FC = () => {
             {/* The overlay link is a sibling, not a wrapper: the resume itself contains links. */}
             <div className="group relative overflow-hidden rounded-[3px] bg-white shadow-sheet has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-accent">
               <SectionErrorBoundary sectionName="Resume Preview">
-                <ScaledResumePreview data={resumeData} templateId={heroTemplateId} />
+                <ScaledResumePreview data={resumeData} templateId={heroTemplateId} onPages={setHeroPages} />
               </SectionErrorBoundary>
+              {heroPageCount > 1 && (
+                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-white to-transparent" aria-hidden="true" />
+              )}
               <Link
                 to="/editor"
                 className="absolute inset-0 focus-visible:outline-none"
@@ -183,7 +189,11 @@ const HomeView: React.FC = () => {
               <span className="kicker">
                 {hasOwnResume ? 'Your resume' : 'Sample resume'} · {heroTemplate?.name}
               </span>
-              <span className="kicker">Click to edit</span>
+              {heroPageCount > 1 ? (
+                <span className="kicker font-medium text-danger">{heroPageCount} pages · Fit it in the editor</span>
+              ) : (
+                <span className="kicker">Click to edit</span>
+              )}
             </figcaption>
           </figure>
         </section>

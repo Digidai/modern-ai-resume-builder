@@ -20,6 +20,8 @@ interface ScaledResumePreviewProps {
   /** Upper bound for the scale factor in page mode (1 = true size). */
   maxScale?: number;
   className?: string;
+  /** Called with the document height in A4 pages (e.g. 1.3) whenever it changes. */
+  onPages?: (pages: number) => void;
 }
 
 /**
@@ -33,12 +35,15 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
   exportable = false,
   maxScale = 1,
   className = '',
+  onPages,
 }) => {
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0);
   const [outerWidth, setOuterWidth] = useState(0);
   const [contentHeight, setContentHeight] = useState(A4_HEIGHT_PX);
+  const onPagesRef = useRef(onPages);
+  onPagesRef.current = onPages;
 
   useLayoutEffect(() => {
     const outer = outerRef.current;
@@ -50,6 +55,7 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
       setOuterWidth(width);
       if (width > 0) setScale(Math.min(mode === 'page' ? maxScale : Infinity, width / A4_WIDTH_PX));
       setContentHeight(inner.offsetHeight || A4_HEIGHT_PX);
+      if (inner.offsetHeight) onPagesRef.current?.(inner.offsetHeight / A4_HEIGHT_PX);
     };
     update();
 
