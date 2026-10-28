@@ -2,18 +2,17 @@ import React, { useEffect, useState } from 'react';
 import ResumePreview from '../components/ResumePreview';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
-import { PRINT_CONFIG } from '../constants/print';
+import { printedPages } from '../constants/print';
+import { isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
-
-const PAGE_HEIGHT_PX = (PRINT_CONFIG.PAGE_HEIGHT_MM / 25.4) * 96;
 
 /**
  * Bare A4 paper for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
  * Cloudflare Browser Rendering and prints it. Nothing is saved; `data-render-state` on <html> tells
  * the printer when the template and fonts are ready (`ready`) or the payload was invalid (`error`),
- * and `data-render-pages` reports the height in A4 pages.
+ * and `data-render-pages` is the printed page count (measured in screen layout, whose widths match print).
  */
 const RenderView: React.FC = () => {
   const [data, setData] = useState<ResumeData | null>(null);
@@ -56,7 +55,8 @@ const RenderView: React.FC = () => {
       }
       void document.fonts.ready.then(() =>
         requestAnimationFrame(() => {
-          root.dataset.renderPages = (paper.offsetHeight / PAGE_HEIGHT_PX).toFixed(2);
+          const fullBleed = isFullBleedTemplate(data.templateId);
+          root.dataset.renderPages = String(printedPages(paper.offsetHeight, fullBleed));
           root.dataset.renderState = 'ready';
         })
       );
@@ -66,8 +66,9 @@ const RenderView: React.FC = () => {
   }, [data, root]);
 
   if (!data) return null;
+  // In print the page box sets the width; a fixed 210mm would overflow the 180mm content area and shrink.
   return (
-    <main className="mx-auto w-[210mm] bg-white">
+    <main className="mx-auto w-[210mm] bg-white print:w-full">
       <ResumePreview data={data} id="resume-render" showPageBreaks={false} />
     </main>
   );

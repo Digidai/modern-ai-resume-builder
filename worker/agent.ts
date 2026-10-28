@@ -233,8 +233,6 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       browser = await puppeteer.launch(env.BROWSER!);
       const page = await browser.newPage();
       await page.setBypassCSP(true);
-      // Measure and capture in print layout, which is what the PDF uses (screen layout is taller).
-      await page.emulateMediaType('print');
       await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1 });
       await page.goto(renderUrl, { waitUntil: 'networkidle0' });
       await page.waitForSelector('html[data-render-state]', { timeout: 20000 });
@@ -243,7 +241,9 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
         document.documentElement.dataset.renderPages,
       ]);
       if (state !== 'ready') throw new AgentError(400, 'INVALID_RESUME', 'The resume could not be rendered.');
-      const pages = Math.max(1, Math.ceil(Number(pagesText || 1) - 0.01));
+      // Pages and the PNG come from screen layout (the paper with its margins, at print width); the PDF prints it.
+      const pages = Math.max(1, Number(pagesText) || 1);
+      if (format === 'pdf') await page.emulateMediaType('print');
       const bytes =
         format === 'pdf'
           ? await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true })

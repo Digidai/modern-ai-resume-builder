@@ -325,7 +325,7 @@ const EditorView: React.FC = () => {
             )}
           </div>
           <p className="mt-4 text-center text-xs text-muted print:hidden">
-            Dashed lines mark A4 page breaks. They aren't printed.
+            Dashed lines show where each printed A4 page ends. They aren't printed.
           </p>
         </main>
       </div>

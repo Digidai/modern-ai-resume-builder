@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { useLayoutEffect, useRef, useState } from 'react';
 import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
-import { PRINT_CONFIG } from '../constants/print';
+import { MM_TO_PX, PRINT_CONFIG, pageBreaksMm } from '../constants/print';
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
 
@@ -14,18 +14,6 @@ interface ResumePreviewProps {
   showPageBreaks?: boolean;
 }
 
-const PAGE_BREAK_GUIDE_STYLE: React.CSSProperties = {
-  backgroundImage: 'linear-gradient(to right, #94a3b8 50%, transparent 50%)',
-  backgroundSize: '12px 1px',
-  backgroundPosition: `0 ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`,
-  backgroundRepeat: 'repeat-x',
-  maskImage: `linear-gradient(to bottom, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm)`,
-  maskSize: `100% ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`,
-  WebkitMaskImage: `linear-gradient(to bottom, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM - 0.2}mm, black ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm, transparent ${PRINT_CONFIG.PAGE_HEIGHT_MM + 0.2}mm)`,
-  WebkitMaskSize: `100% ${PRINT_CONFIG.PAGE_HEIGHT_MM}mm`,
-  opacity: 0.4,
-};
-
 /**
  * The A4 "paper". Templates render inside a flex column that fills at least one page;
  * a template's root should be `flex-1` (never a fixed 297mm height) so backgrounds reach the
@@ -34,38 +22,59 @@ const PAGE_BREAK_GUIDE_STYLE: React.CSSProperties = {
 const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-preview-container', showPageBreaks = true }) => {
   const isFullBleed = isFullBleedTemplate(data.templateId);
   const scale = data.design?.scale || 1;
+  const paperRef = useRef<HTMLDivElement>(null);
+  const [heightPx, setHeightPx] = useState(0);
 
-  // Standard templates get page margins from @page when printed; full-bleed templates own theirs.
-  const printStyles = `
-    @page { size: A4; margin: ${isFullBleed ? PRINT_CONFIG.MARGIN_FULL_BLEED_MM : PRINT_CONFIG.MARGIN_STANDARD_MM}mm; }
-    @media print {
-      .resume-preview-container { padding: 0 !important; min-height: ${isFullBleed ? 'calc(297mm - 1px)' : '0'} !important; }
-    }
-  `;
+  useLayoutEffect(() => {
+    const paper = paperRef.current;
+    if (!paper) return;
+    const measure = () => setHeightPx(paper.offsetHeight);
+    measure();
+    const observer = new ResizeObserver(measure);
+    observer.observe(paper);
+    return () => observer.disconnect();
+  }, []);
+
+  const screenHeightMm = heightPx / MM_TO_PX;
+  const breaks = heightPx ? pageBreaksMm(screenHeightMm, isFullBleed) : [];
+  const { MARGIN_STANDARD_MM: std, MARGIN_CONTINUATION_MM: cont } = PRINT_CONFIG;
+
+  // Standard templates get 15mm @page margins on every page. Full-bleed templates own page 1's margins;
+  // once they run past one page, page 1 gets a bottom margin and later pages a top and bottom margin, so no
+  // text is printed against the paper edge.
+  const printStyles = !isFullBleed
+    ? `@page { size: A4; margin: ${std}mm; }
+       @media print { .resume-preview-container { padding: 0 !important; min-height: 0 !important; } }`
+    : breaks.length
+      ? `@page { size: A4; margin: ${cont}mm 0; } @page :first { margin: 0 0 ${cont}mm; }
+         @media print { .resume-preview-container { min-height: 0 !important; } }`
+      : `@page { size: A4; margin: 0; }
+         @media print { .resume-preview-container { min-height: calc(297mm - 1px) !important; } }`;
 
   return (
     <div
+      ref={paperRef}
       className={`resume-paper resume-preview-container relative box-border flex min-h-[297mm] w-full flex-col overflow-hidden bg-white text-slate-900 print:overflow-visible ${
         isFullBleed ? '' : 'p-[15mm]'
       }`}
       id={id || undefined}
       data-template-id={data.templateId}
+      data-pages={breaks.length + 1}
       style={data.design ? designStyle(data.design) : undefined}
     >
       <style nonce={getCspNonce()}>{printStyles}</style>
 
-      {showPageBreaks && (
-        <div className="pointer-events-none absolute inset-0 z-50 print:hidden" data-export-ignore="true" style={PAGE_BREAK_GUIDE_STYLE} />
-      )}
       {showPageBreaks &&
-        PRINT_CONFIG.PAGE_BREAK_POSITIONS.map((position, index) => (
+        breaks.map((mm, index) => (
           <div
-            key={position}
-            style={{ top: position }}
-            className="pointer-events-none absolute right-0 z-50 w-full print:hidden"
+            key={mm}
+            style={{ top: `${mm}mm` }}
+            className="pointer-events-none absolute inset-x-0 z-50 border-t border-dashed border-slate-400/70 print:hidden"
             data-export-ignore="true"
           >
-            <div className="absolute right-2 top-1 rounded bg-white/80 px-1 font-sans text-[10px] text-slate-400">Page {index + 2}</div>
+            <div className="absolute right-2 top-1 rounded bg-white/90 px-1.5 font-sans text-[10px] font-medium text-slate-500">
+              Page {index + 2}
+            </div>
           </div>
         ))}
 

@@ -3,11 +3,18 @@ import type { ResumeDesign } from '../types';
 import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
 import { CheckIcon } from './Icons';
+import { printedPages } from '../constants/print';
+import { isFullBleedTemplate } from '../constants/templates';
 
-const PAGE_HEIGHT_PX = (297 / 25.4) * 96;
+/** Printed pages of the exported preview. */
+const measurePages = (el: HTMLElement) => {
+  const fullBleed = isFullBleedTemplate(el.dataset.templateId ?? '');
+  return printedPages(el.offsetHeight, fullBleed);
+};
+
 const HEX = /^#[0-9a-f]{6}$/i;
 
-/** Height of the exported preview in A4 pages, or null while it is not laid out (e.g. hidden on mobile). */
+/** Printed page count of the exported preview, or null while it is not laid out (e.g. hidden on mobile). */
 const usePreviewPages = () => {
   const [pages, setPages] = useState<number | null>(null);
   useEffect(() => {
@@ -19,7 +26,7 @@ const usePreviewPages = () => {
         frame = requestAnimationFrame(attach);
         return;
       }
-      const measure = () => setPages(el.offsetHeight ? el.offsetHeight / PAGE_HEIGHT_PX : null);
+      const measure = () => setPages(el.offsetHeight ? measurePages(el) : null);
       observer = new ResizeObserver(measure);
       observer.observe(el);
       measure();
@@ -34,6 +41,7 @@ const usePreviewPages = () => {
 };
 
 const round = (n: number) => Math.round(n * 100) / 100;
+const FIT_STEP = 0.01;
 
 interface DesignControlsProps {
   design: ResumeDesign;
@@ -41,35 +49,33 @@ interface DesignControlsProps {
 }
 
 export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
-  const pages = usePreviewPages();
-  const pageCount = pages === null ? null : Math.max(1, Math.ceil(pages - 0.01));
+  const pageCount = usePreviewPages();
   const [fitting, setFitting] = useState(false);
   const [fitNote, setFitNote] = useState('');
   const [hexDraft, setHexDraft] = useState(design.accent);
 
   useEffect(() => setHexDraft(design.accent), [design.accent]);
 
-  // Fit to one page: step the scale down, letting each step lay out before measuring again. If it still
-  // doesn't fit at the minimum, restore the original size rather than leave the text shrunk for nothing.
+  // Fit to one page: shrink 1% at a time, letting each step lay out before measuring again, so the text
+  // stays as large as possible. If it still doesn't fit at the minimum, restore the original size.
   const startFit = async () => {
     const paper = document.getElementById('resume-preview-container');
     if (!paper) return;
-    const measure = () => paper.offsetHeight / PAGE_HEIGHT_PX;
     const nextLayout = () => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
     const startScale = design.scale;
     let scale = startScale;
     setFitNote('');
     setFitting(true);
-    while (measure() > 1.005 && scale > SCALE_MIN + 1e-6) {
-      scale = round(Math.max(SCALE_MIN, scale - SCALE_STEP));
+    while (measurePages(paper) > 1 && scale > SCALE_MIN + 1e-6) {
+      scale = round(Math.max(SCALE_MIN, scale - FIT_STEP));
       onChange({ scale });
       await nextLayout();
     }
-    const finalPages = measure();
-    if (finalPages > 1.005) {
+    const finalPages = measurePages(paper);
+    if (finalPages > 1) {
       onChange({ scale: startScale });
       setFitNote(
-        `Still ${Math.ceil(finalPages - 0.01)} pages at the smallest size, so the size was left unchanged. Shorten a few bullets or try the Compact template.`
+        `Still ${finalPages} pages at the smallest size, so the size was left unchanged. Shorten a few bullets or try the Compact template.`
       );
     }
     setFitting(false);
