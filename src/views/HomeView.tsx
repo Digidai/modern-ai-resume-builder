@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { ScaledResumePreview } from '../components/ScaledResumePreview';
@@ -12,6 +12,7 @@ import { INITIAL_RESUME_DATA, type ResumeData } from '../types';
 import { TEMPLATES } from '../constants/templates';
 import jobTitlesData from '../data/jobTitles.json';
 
+const HERO_MIN_SCALE = 0.7;
 const HERO_TEMPLATE_IDS = ['modern', 'classic', 'timeline', 'sidebar'];
 const SHOWCASE_TEMPLATE_IDS = ['classic', 'modern', 'vanguard', 'timeline', 'banking', 'sidebar', 'creative', 'duo'];
 
@@ -118,9 +119,20 @@ const HomeView: React.FC = () => {
     hasOwnResume && TEMPLATES.some((t) => t.id === resumeData.templateId) ? resumeData.templateId : 'modern',
   );
   const heroTemplate = TEMPLATES.find((t) => t.id === heroTemplateId);
-  // The hero shows only the first page, so say when the resume runs longer.
-  const [heroPages, setHeroPages] = useState(1);
-  const heroPageCount = Math.max(1, Math.ceil(heroPages - 0.01));
+  // The hero is the first demo visitors see, so it always shows exactly one page: a long resume is shrunk
+  // for display only (saved data is untouched), and if it still won't fit, the built-in sample is shown.
+  const [heroFit, setHeroFit] = useState<{ scale: number; sample: boolean }>({ scale: 1, sample: false });
+  useEffect(() => setHeroFit({ scale: resumeData.design?.scale || 1, sample: false }), [resumeData, heroTemplateId]);
+  const onHeroPages = (pages: number) => {
+    if (pages <= 1.005 || heroFit.sample) return;
+    setHeroFit((f) =>
+      f.scale > HERO_MIN_SCALE + 1e-6 ? { ...f, scale: Math.max(HERO_MIN_SCALE, Math.round((f.scale - 0.03) * 100) / 100) } : { ...f, sample: true },
+    );
+  };
+  const heroData: ResumeData = heroFit.sample
+    ? INITIAL_RESUME_DATA
+    : { ...resumeData, design: { ...resumeData.design, scale: heroFit.scale } };
+  const heroLabel = hasOwnResume && !heroFit.sample ? 'Your resume' : 'Sample resume';
 
   return (
     <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
@@ -174,11 +186,8 @@ const HomeView: React.FC = () => {
             {/* The overlay link is a sibling, not a wrapper: the resume itself contains links. */}
             <div className="group relative overflow-hidden rounded-[3px] bg-white shadow-sheet has-[a:focus-visible]:outline-2 has-[a:focus-visible]:outline-offset-4 has-[a:focus-visible]:outline-accent">
               <SectionErrorBoundary sectionName="Resume Preview">
-                <ScaledResumePreview data={resumeData} templateId={heroTemplateId} onPages={setHeroPages} />
+                <ScaledResumePreview data={heroData} templateId={heroTemplateId} onPages={onHeroPages} />
               </SectionErrorBoundary>
-              {heroPageCount > 1 && (
-                <div className="pointer-events-none absolute inset-x-0 bottom-0 h-16 bg-linear-to-t from-white to-transparent" aria-hidden="true" />
-              )}
               <Link
                 to="/editor"
                 className="absolute inset-0 focus-visible:outline-none"
@@ -187,13 +196,9 @@ const HomeView: React.FC = () => {
             </div>
             <figcaption className="mt-4 flex items-baseline justify-between gap-4 text-muted">
               <span className="kicker">
-                {hasOwnResume ? 'Your resume' : 'Sample resume'} · {heroTemplate?.name}
+                {heroLabel} · {heroTemplate?.name}
               </span>
-              {heroPageCount > 1 ? (
-                <span className="kicker font-medium text-danger">{heroPageCount} pages · Fit it in the editor</span>
-              ) : (
-                <span className="kicker">Click to edit</span>
-              )}
+              <span className="kicker">Click to edit</span>
             </figcaption>
           </figure>
         </section>
