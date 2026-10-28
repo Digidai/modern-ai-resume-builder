@@ -21,14 +21,14 @@ const EXAMPLE_COUNT = (jobTitlesData as { titles: string[] }[]).reduce((n, c) =>
 const FACTS = [
   { title: `${TEMPLATES.length} templates`, body: `${ATS_COUNT} single-column and ATS-friendly, the rest two-column or expressive.` },
   { title: `${EXAMPLE_COUNT} resume examples`, body: 'One complete example and writing guide per job title.' },
-  { title: 'A4 vector PDF', body: 'Selectable text and embedded fonts, matching the preview.' },
+  { title: 'ATS-friendly PDF', body: 'Real, selectable text and embedded fonts, matching the preview.' },
   { title: 'Stays in your browser', body: 'No account. Your draft is saved locally until you delete it.' },
 ];
 
 const STEPS = [
   { title: 'Fill in your details', body: 'Start from the sample or a blank page. Changes save as you type.' },
   { title: 'Pick a template', body: 'Every design previews your own content, so you can compare them side by side.' },
-  { title: 'Download the PDF', body: 'Export an A4 PDF, plus a JSON backup if you want to edit it later.' },
+  { title: 'Download the PDF', body: 'Export a PDF, plus a JSON backup if you want to edit it later.' },
 ];
 
 const isSampleResume = (data: ResumeData) =>
@@ -53,7 +53,7 @@ const HomeView: React.FC = () => {
   useSeo({
     title: `ModernCV – Free Resume Builder with ${TEMPLATES.length} Templates, No Sign-up`,
     description:
-      `Free resume builder with ${TEMPLATES.length} templates and ${EXAMPLE_COUNT} example resumes by job title. No account, optional AI writing help, and an A4 PDF with selectable text.`,
+      `Free resume builder with ${TEMPLATES.length} templates and ${EXAMPLE_COUNT} example resumes by job title. No account, optional AI writing help, and a PDF with selectable text.`,
     keywords: buildHomeSeoKeywords(),
     canonical: '/',
     robots: SEO_ROBOTS_INDEX,

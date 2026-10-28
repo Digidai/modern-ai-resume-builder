@@ -235,7 +235,7 @@ const buildJobDescription = ({ jobTitle, categoryName }) => {
 
   return (
     categoryTemplates[categoryName] ??
-    `Browse ModernCV resume templates for ${jobTitle}. Pick a layout, start from a realistic example and download an A4 PDF.`
+    `Browse ModernCV resume templates for ${jobTitle}. Pick a layout, start from a realistic example and download a PDF.`
   );
 };
 
@@ -1557,7 +1557,7 @@ const main = async () => {
     routePath: '/',
     title: `ModernCV – Free Resume Builder with ${templates.length} Templates, No Sign-up`,
     description:
-      `Free resume builder with ${templates.length} templates and ${allTitles.length} example resumes by job title. No account, optional AI writing help, and an A4 PDF with selectable text.`,
+      `Free resume builder with ${templates.length} templates and ${allTitles.length} example resumes by job title. No account, optional AI writing help, and a PDF with selectable text.`,
     keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),

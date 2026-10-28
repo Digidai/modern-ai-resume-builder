@@ -97,7 +97,7 @@ export const buildJobSeoDescription = (jobTitle: string, categoryName?: string) 
 
   return (
     templates[normalizedCategory ?? ''] ??
-    `Browse ModernCV resume templates for ${jobTitle}. Pick a layout, start from a realistic example and download an A4 PDF.`
+    `Browse ModernCV resume templates for ${jobTitle}. Pick a layout, start from a realistic example and download a PDF.`
   );
 };
 
