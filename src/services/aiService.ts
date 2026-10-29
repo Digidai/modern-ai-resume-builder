@@ -319,6 +319,9 @@ export const generateSummary = async (
   });
 };
 
+/** Sends a prepared LaTeX resume to the AI parser; resolves to its JSON reply (one attempt, it is slow). */
+export const parseLatexResume = async (source: string): Promise<string> => callAiProxy({ action: 'parse_latex', source });
+
 export const __resetAiSessionCacheForTests = (): void => {
   clearSessionCache();
 };

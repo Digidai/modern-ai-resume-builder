@@ -2,6 +2,7 @@ import puppeteer from '@cloudflare/puppeteer';
 import {
   type AiErrorCode,
   type AiRequest,
+  MAX_LATEX_SOURCE_CHARS,
 } from '../src/shared/aiContract';
 import { handleAgentRequest } from './agent';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
@@ -92,9 +93,14 @@ const PDF_TIMEOUT_MS = 45000;
 const SESSION_PATH = '/api/ai/session';
 const RATE_LIMIT_DO_PATH = 'https://rate-limiter/consume';
 const MAX_BODY_BYTES = 64 * 1024;
+/** /api/ai bodies: a LaTeX source of MAX_LATEX_SOURCE_CHARS characters, CJK included (3 bytes each). */
+const MAX_AI_BODY_BYTES = 160 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = '@cf/zai-org/glm-5.3-flash';
 const MAX_OUTPUT_TOKENS = 600;
+/** A whole resume as JSON, plus reasoning; LaTeX parsing gets a longer budget and deadline. */
+const PARSE_OUTPUT_TOKENS = 8000;
+const PARSE_TIMEOUT_MS = 150000;
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE = 240;
@@ -703,7 +709,29 @@ const SYSTEM_PROMPT = [
   'Return only the final text: no preamble, no quotes, no markdown, no bullet symbols.',
 ].join(' ');
 
+const PARSE_LATEX_PROMPT = [
+  'You convert a LaTeX resume or academic CV (moderncv, Awesome-CV, AltaCV, Jake\'s Resume, res, custom macros) into JSON.',
+  'Return only one JSON object, no markdown fences or commentary, with these keys (omit empty ones):',
+  'fullName, title (headline or target role), email, phone, location, website, linkedin (URL),',
+  'links: [{label, url}] for GitHub, Google Scholar, ORCID, portfolio and other profiles,',
+  'summary (plain text; research interests for academic CVs),',
+  'experience: [{company, role, location, startDate, endDate, isCurrent, description}],',
+  'education: [{school, degree, startDate, endDate}] (put thesis titles, GPA and honours in degree, e.g. "PhD in Physics; thesis: ..."),',
+  'projects: [{name, link, description}],',
+  'publications: [{authors, title, venue, year, link}] (authors as written; link is a DOI or URL),',
+  'awards: [{title, issuer, year, detail}] for grants, fellowships, scholarships and prizes (detail: amount or role),',
+  'talks: [{title, event, location, year}] for invited talks, seminars, conference presentations and posters,',
+  'teaching: [{course, role, institution, year}] for courses taught and TA roles,',
+  'skills: ["Category: item, item", ...] (keep categories when the CV groups skills; put languages and certifications here too).',
+  'Rules: dates are "YYYY-MM" (or "YYYY" when only the year is given); a current role has endDate "" and isCurrent true.',
+  'description is a single string with one bullet per line, each starting with "- ", taken from \\item lines; keep the wording.',
+  'Activities, leadership, service, committees and volunteering go in experience (organisation as company); put a LinkedIn URL in linkedin, not links.',
+  'Turn LaTeX into plain Unicode text: expand accents and escapes (\\& to &, -- to an en dash), drop formatting commands, icons and spacing.',
+  'Keep the CV\'s language and every fact; never invent, summarise away or reorder entries. Ignore the preamble except for name and contact macros.',
+].join('\n');
+
 const buildUserPrompt = (payload: AiRequest): string => {
+  if (payload.action === 'parse_latex') return `LaTeX source:\n\n${payload.source}`;
   if (payload.action === 'improve') {
     return [
       `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
@@ -744,6 +772,23 @@ const parseAiText = (data: unknown): string => {
   return typeof message?.content === 'string' ? cleanModelText(message.content) : '';
 };
 
+/** The JSON object in a model reply, without think blocks or code fences; '' when there is none. */
+const parseAiJson = (data: unknown): string => {
+  if (!data || typeof data !== 'object') return '';
+  const value = data as JsonObject;
+  const message = ((Array.isArray(value.choices) ? value.choices[0] : undefined) as JsonObject | undefined)?.message as JsonObject | undefined;
+  const raw = typeof value.response === 'string' ? value.response : typeof message?.content === 'string' ? message.content : '';
+  const text = raw.replace(/<think>[\s\S]*?<\/think>/gi, '');
+  const start = text.indexOf('{');
+  const end = text.lastIndexOf('}');
+  if (start < 0 || end <= start) return '';
+  try {
+    return JSON.stringify(JSON.parse(text.slice(start, end + 1)));
+  } catch {
+    return '';
+  }
+};
+
 const validateRequest = (body: unknown): AiRequest | null => {
   if (!body || typeof body !== 'object') return null;
   const value = body as Record<string, unknown>;
@@ -757,6 +802,12 @@ const validateRequest = (body: unknown): AiRequest | null => {
       text,
       context: normalizeText(value.context) || 'resume',
     };
+  }
+
+  if (value.action === 'parse_latex') {
+    const source = normalizeText(value.source);
+    if (!source || source.length > MAX_LATEX_SOURCE_CHARS) return null;
+    return { action: 'parse_latex', source };
   }
 
   if (value.action === 'summary') {
@@ -797,23 +848,25 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
 
   const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
   const reasoningEffort = normalizeText(env.AI_REASONING_EFFORT);
+  const parsing = payload.action === 'parse_latex';
   const input: Record<string, unknown> = {
     messages: [
-      { role: 'system', content: SYSTEM_PROMPT },
+      { role: 'system', content: parsing ? PARSE_LATEX_PROMPT : SYSTEM_PROMPT },
       { role: 'user', content: buildUserPrompt(payload) },
     ],
-    max_tokens: MAX_OUTPUT_TOKENS,
+    max_tokens: parsing ? PARSE_OUTPUT_TOKENS : MAX_OUTPUT_TOKENS,
     ...(reasoningEffort ? { reasoning_effort: reasoningEffort } : {}),
   };
 
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
   const timeout = new Promise<never>((_, reject) => {
-    timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), REQUEST_TIMEOUT_MS);
+    timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), parsing ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
   });
 
   try {
     const result = await Promise.race([env.AI.run(model, input), timeout]);
-    const text = parseAiText(result);
+    // JSON replies keep their quotes and "- " lines; only think blocks are removed.
+    const text = parsing ? parseAiJson(result) : parseAiText(result);
     if (!text) throw new Error('EMPTY_RESPONSE');
     // Keep the user's bullet format: templates render "- " lines as lists.
     const inputWasBullets = payload.action === 'improve' && /^\s*[-*•]\s+/m.test(payload.text);
@@ -1173,7 +1226,7 @@ const handleAiRequest = async (request: Request, env: Env): Promise<Response> =>
 
   let body: unknown;
   try {
-    body = await parseJsonBody(request);
+    body = await parseJsonBody(request, MAX_AI_BODY_BYTES);
   } catch (error) {
     if (error instanceof Error && error.message === 'REQUEST_TOO_LARGE') {
       return appendRateLimitHeaders(

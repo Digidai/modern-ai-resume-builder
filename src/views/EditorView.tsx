@@ -29,6 +29,7 @@ import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import { downloadLatex, openInOverleaf } from '../utils/latex';
+import { LatexImportDialog } from '../components/LatexImportDialog';
 
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
   const content =
@@ -185,6 +186,7 @@ const EditorView: React.FC = () => {
     saveStatus,
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
+  const [latexImportOpen, setLatexImportOpen] = useState(false);
   const [previewView, setPreviewView] = useState<PreviewView>(readPreviewView);
   const changePreviewView = useCallback((view: PreviewView) => {
     setPreviewView(view);
@@ -295,6 +297,12 @@ const EditorView: React.FC = () => {
         icon: <UploadIcon className="h-4 w-4" />,
         onSelect: () => fileInputRef.current?.click(),
       },
+      {
+        label: 'Import LaTeX (.tex)',
+        description: 'Convert a LaTeX resume or CV from Overleaf; preview it first.',
+        icon: <CodeIcon className="h-4 w-4" />,
+        onSelect: () => setLatexImportOpen(true),
+      },
     ],
     [
       {
@@ -357,6 +365,15 @@ const EditorView: React.FC = () => {
           <ThemeToggle />
         </div>
         <ActionsMenu items={menuItems} />
+        <LatexImportDialog
+          open={latexImportOpen}
+          current={resumeData}
+          onClose={() => setLatexImportOpen(false)}
+          onImport={(data) => {
+            setLatexImportOpen(false);
+            loadResume(data, 'Imported your LaTeX resume.');
+          }}
+        />
         <Button
           onClick={handleDownloadPdf}
           isLoading={isExportingPdf}

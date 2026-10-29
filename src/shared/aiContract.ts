@@ -1,4 +1,4 @@
-export const AI_ACTIONS = ['improve', 'summary'] as const;
+export const AI_ACTIONS = ['improve', 'summary', 'parse_latex'] as const;
 export type AiAction = (typeof AI_ACTIONS)[number];
 
 export const AI_ERROR_CODES = [
@@ -39,7 +39,16 @@ export interface AiSummaryRequest {
   skills: string[];
 }
 
-export type AiRequest = AiImproveRequest | AiSummaryRequest;
+/** Converts a LaTeX resume or CV to ModernCV JSON; the reply's `text` is that JSON. */
+export interface AiParseLatexRequest {
+  action: 'parse_latex';
+  source: string;
+}
+
+/** Longest .tex source (after comments are stripped) the parser accepts. */
+export const MAX_LATEX_SOURCE_CHARS = 40_000;
+
+export type AiRequest = AiImproveRequest | AiSummaryRequest | AiParseLatexRequest;
 
 export interface AiApiResponse {
   text?: string;
