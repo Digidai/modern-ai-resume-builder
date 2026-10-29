@@ -236,27 +236,31 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1 });
       await page.goto(renderUrl, { waitUntil: 'networkidle0' });
       await page.waitForSelector('html[data-render-state]', { timeout: 20000 });
-      const [state, pagesText] = await page.evaluate(() => [
+      const [state, pagesText, fitScaleText] = await page.evaluate(() => [
         document.documentElement.dataset.renderState,
         document.documentElement.dataset.renderPages,
+        document.documentElement.dataset.renderFitScale,
       ]);
       if (state !== 'ready') throw new AgentError(400, 'INVALID_RESUME', 'The resume could not be rendered.');
-      // Pages and the PNG come from screen layout (the paper with its margins, at print width); the PDF prints it.
+      // RenderView paginates like print; the PNG is page 1 in screen layout; only the PDF switches to print media.
       const pages = Math.max(1, Number(pagesText) || 1);
       if (format === 'pdf') await page.emulateMediaType('print');
       const bytes =
         format === 'pdf'
           ? await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true })
           : await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: 794, height: 1123 } });
-      return { bytes: new Uint8Array(bytes), pages };
+      return { bytes: new Uint8Array(bytes), pages, fitScale: fitScaleText ? Number(fitScaleText) : null };
     })();
     const timeout = new Promise<never>((_, reject) => {
       timeoutId = setTimeout(() => reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.')), RENDER_TIMEOUT_MS);
     });
-    const { bytes, pages } = await Promise.race([job, timeout]);
+    const { bytes, pages, fitScale } = await Promise.race([job, timeout]);
     if (pages > 1) {
-      const scaleTip = resume.design.scale > 0.9 ? 'set scale to 0.9, ' : '';
-      warnings.push(`The resume runs to ${pages} pages. For one page, shorten bullets, ${scaleTip}or use the "compact" template.`);
+      warnings.push(
+        fitScale
+          ? `The resume runs to ${pages} pages. It fits on one page at "scale": ${fitScale}, or shorten a few bullets.`
+          : `The resume runs to ${pages} pages and doesn't fit on one even at the smallest scale (0.85). Shorten bullets, drop older roles, or use the "compact" template.`
+      );
     }
     return { bytes, pages, template: resume.templateId, warnings };
   } catch (error) {

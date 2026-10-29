@@ -2,7 +2,10 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
-import { MM_TO_PX, PRINT_CONFIG, pageBreaksMm } from '../constants/print';
+import { PAGE_HEIGHT_PX, PRINT_CONFIG } from '../constants/print';
+import { measurePrintLayout, type PrintLayout } from '../utils/printLayout';
+
+const ONE_PAGE: PrintLayout = { pages: 1, breaksMm: [] };
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
 
@@ -23,20 +26,26 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
   const isFullBleed = isFullBleedTemplate(data.templateId);
   const scale = data.design?.scale || 1;
   const paperRef = useRef<HTMLDivElement>(null);
-  const [heightPx, setHeightPx] = useState(0);
+  const [layout, setLayout] = useState<PrintLayout>(ONE_PAGE);
+  // Thumbnails are never printed or paginated, so only the editor, export and render papers measure.
+  const paginated = showPageBreaks || !!id;
 
   useLayoutEffect(() => {
     const paper = paperRef.current;
-    if (!paper) return;
-    const measure = () => setHeightPx(paper.offsetHeight);
+    if (!paper || !paginated) return;
+    const measure = () => {
+      // Up to one A4 tall (the paper's min-height) always prints on one page; only longer papers need
+      // the full print simulation.
+      const next = paper.offsetHeight <= PAGE_HEIGHT_PX + 1 ? ONE_PAGE : measurePrintLayout(paper, isFullBleed);
+      setLayout((prev) => (prev.pages === next.pages && prev.breaksMm.join() === next.breaksMm.join() ? prev : next));
+    };
     measure();
     const observer = new ResizeObserver(measure);
     observer.observe(paper);
     return () => observer.disconnect();
-  }, []);
+  }, [data, isFullBleed, paginated]);
 
-  const screenHeightMm = heightPx / MM_TO_PX;
-  const breaks = heightPx ? pageBreaksMm(screenHeightMm, isFullBleed) : [];
+  const breaks = layout.breaksMm;
   const { MARGIN_STANDARD_MM: std, MARGIN_CONTINUATION_MM: cont } = PRINT_CONFIG;
 
   // Standard templates get 15mm @page margins on every page. Full-bleed templates own page 1's margins;
@@ -45,7 +54,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
   const printStyles = !isFullBleed
     ? `@page { size: A4; margin: ${std}mm; }
        @media print { .resume-preview-container { padding: 0 !important; min-height: 0 !important; } }`
-    : breaks.length
+    : layout.pages > 1
       ? `@page { size: A4; margin: ${cont}mm 0; } @page :first { margin: 0 0 ${cont}mm; }
          @media print { .resume-preview-container { min-height: 0 !important; } }`
       : `@page { size: A4; margin: 0; }
@@ -59,7 +68,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
       }`}
       id={id || undefined}
       data-template-id={data.templateId}
-      data-pages={breaks.length + 1}
+      data-pages={layout.pages}
       style={data.design ? designStyle(data.design) : undefined}
     >
       <style nonce={getCspNonce()}>{printStyles}</style>
@@ -79,7 +88,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
         ))}
 
       {/* `zoom` (not transform) so the scaled layout reflows, paginates, and prints correctly. */}
-      <div className="flex flex-1 flex-col" style={scale !== 1 ? { zoom: scale } : undefined}>
+      <div className="flex flex-1 flex-col" data-resume-zoom style={scale !== 1 ? { zoom: scale } : undefined}>
         <ResumeTemplateRenderer data={data} templateId={data.templateId} />
       </div>
     </div>

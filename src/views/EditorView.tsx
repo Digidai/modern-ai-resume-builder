@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { useSeo, SEO_ROBOTS_NOINDEX, getSiteUrl } from '../hooks/useSeo';
 import ResumeEditor from '../components/ResumeEditor';
@@ -22,6 +22,8 @@ import { SectionErrorBoundary } from '../components/ErrorBoundary';
 import { buildEditorSeoKeywords } from '../utils/seo';
 import { getTemplateById } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
+import { useOnePageFit } from '../hooks/useOnePageFit';
+import { DEFAULT_DESIGN, type ResumeDesign } from '../types';
 import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
@@ -106,6 +108,32 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
   );
 };
 
+/** Under the preview: how many pages the PDF will have, with a one-click fit when it runs over. */
+const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<ResumeDesign>) => void }> = ({ design, onChange }) => {
+  const { pageCount, fit, note, atMinimum } = useOnePageFit(design, onChange);
+  if (pageCount === null) return null;
+  return (
+    <div className="mt-4 flex flex-col items-center gap-2 text-center text-xs text-muted print:hidden" aria-live="polite">
+      {pageCount === 1 ? (
+        <p>Fits on one page.</p>
+      ) : (
+        <>
+          <p>
+            <span className="font-medium text-ink">{pageCount} pages.</span> Dashed lines show where each new page starts; they
+            aren't printed.
+          </p>
+          {!atMinimum && (
+            <Button variant="secondary" size="sm" onClick={fit}>
+              Fit to one page
+            </Button>
+          )}
+        </>
+      )}
+      {note && <p className="max-w-md leading-relaxed text-amber-800 dark:text-amber-300">{note}</p>}
+    </div>
+  );
+};
+
 const EditorView: React.FC = () => {
   const {
     resumeData,
@@ -120,6 +148,10 @@ const EditorView: React.FC = () => {
     saveStatus,
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
+  const updateDesign = useCallback(
+    (patch: Partial<ResumeDesign>) => setResumeData((prev) => ({ ...prev, design: { ...(prev.design ?? DEFAULT_DESIGN), ...patch } })),
+    [setResumeData]
+  );
   const isBlankResume =
     !resumeData.fullName.trim() &&
     !resumeData.summary.trim() &&
@@ -324,9 +356,7 @@ const EditorView: React.FC = () => {
               </p>
             )}
           </div>
-          <p className="mt-4 text-center text-xs text-muted print:hidden">
-            Dashed lines show where each printed A4 page ends. They aren't printed.
-          </p>
+          <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} />
         </main>
       </div>
     </div>

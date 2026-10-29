@@ -142,7 +142,7 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <p className={bodyText}>
                             {skillGroups[0].items.map((skill, index) => (
                                 <React.Fragment key={index}>
-                                    {index > 0 && <span aria-hidden className="mx-[7px] text-(--accent)">▪</span>}
+                                    {index > 0 && <span aria-hidden className="mx-[7px] inline-block size-[0.34em] bg-(--accent) align-middle" />}
                                     <span className="inline-block max-w-full">{skill}</span>
                                 </React.Fragment>
                             ))}

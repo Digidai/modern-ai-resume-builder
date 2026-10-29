@@ -15,7 +15,7 @@ If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `
 2. **Read the guide and an example.** `GET /api/agent/guide?job_title=<title>` returns section order, length, skills to feature, metrics to quantify, example bullets and recommended templates. `GET /api/agent/example?job_title=<title>` returns a complete example resume for that role (use it for structure and tone only; never copy its employers, dates or numbers).
 3. **Draft the resume JSON** (shape below). Write 3–5 bullets per recent role, each starting with an action verb and ending with a result. Mirror keywords from the job posting if the user shared one.
 4. **Choose a template.** Prefer an ATS-friendly one (`classic`, `modern`, `ivy`, `banking` (Ledger), `meridian`, `keystone`, `vital`, `vanguard`, `timeline`, `executive`, `compact`, …) for online applications. `GET /api/agent/templates?ats_only=true` lists them.
-5. **Check the fit.** `POST /api/agent/preview` returns page 1 as PNG; the `x-resume-pages` header gives the page count. If it is over one page and the user wants one, shorten bullets, set `"scale": 0.9`, or switch to `compact`.
+5. **Check the fit.** `POST /api/agent/preview` returns page 1 as PNG; the `x-resume-pages` header gives the page count. If it is over one page and the user wants one, the warnings (`x-resume-warnings`) give the largest `scale` that fits one page; use it, or shorten bullets, or switch to `compact`.
 6. **Deliver.** `POST /api/agent/pdf` for the PDF file, and always `POST /api/agent/link` for a link that opens the editor with the resume loaded so the user can tweak it. Give the user both.
 
 ## HTTP API

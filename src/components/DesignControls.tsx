@@ -3,45 +3,11 @@ import type { ResumeDesign } from '../types';
 import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
 import { CheckIcon } from './Icons';
-import { printedPages } from '../constants/print';
-import { isFullBleedTemplate } from '../constants/templates';
-
-/** Printed pages of the exported preview. */
-const measurePages = (el: HTMLElement) => {
-  const fullBleed = isFullBleedTemplate(el.dataset.templateId ?? '');
-  return printedPages(el.offsetHeight, fullBleed);
-};
+import { useOnePageFit } from '../hooks/useOnePageFit';
 
 const HEX = /^#[0-9a-f]{6}$/i;
 
-/** Printed page count of the exported preview, or null while it is not laid out (e.g. hidden on mobile). */
-const usePreviewPages = () => {
-  const [pages, setPages] = useState<number | null>(null);
-  useEffect(() => {
-    let observer: ResizeObserver | undefined;
-    let frame = 0;
-    const attach = () => {
-      const el = document.getElementById('resume-preview-container');
-      if (!el) {
-        frame = requestAnimationFrame(attach);
-        return;
-      }
-      const measure = () => setPages(el.offsetHeight ? measurePages(el) : null);
-      observer = new ResizeObserver(measure);
-      observer.observe(el);
-      measure();
-    };
-    attach();
-    return () => {
-      cancelAnimationFrame(frame);
-      observer?.disconnect();
-    };
-  }, []);
-  return pages;
-};
-
 const round = (n: number) => Math.round(n * 100) / 100;
-const FIT_STEP = 0.01;
 
 interface DesignControlsProps {
   design: ResumeDesign;
@@ -49,41 +15,10 @@ interface DesignControlsProps {
 }
 
 export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
-  const pageCount = usePreviewPages();
-  const [fitting, setFitting] = useState(false);
-  const [fitNote, setFitNote] = useState('');
+  const { pageCount, fit, note: fitNote, atMinimum } = useOnePageFit(design, onChange);
   const [hexDraft, setHexDraft] = useState(design.accent);
 
   useEffect(() => setHexDraft(design.accent), [design.accent]);
-
-  // Fit to one page: shrink 1% at a time, letting each step lay out before measuring again, so the text
-  // stays as large as possible. If it still doesn't fit at the minimum, restore the original size.
-  const startFit = async () => {
-    const paper = document.getElementById('resume-preview-container');
-    if (!paper) return;
-    const nextLayout = () => new Promise<void>((resolve) => requestAnimationFrame(() => requestAnimationFrame(() => resolve())));
-    const startScale = design.scale;
-    let scale = startScale;
-    setFitNote('');
-    setFitting(true);
-    while (measurePages(paper) > 1 && scale > SCALE_MIN + 1e-6) {
-      scale = round(Math.max(SCALE_MIN, scale - FIT_STEP));
-      onChange({ scale });
-      await nextLayout();
-    }
-    const finalPages = measurePages(paper);
-    if (finalPages > 1) {
-      onChange({ scale: startScale });
-      setFitNote(
-        `Still ${finalPages} pages at the smallest size, so the size was left unchanged. Shorten a few bullets or try the Compact template.`
-      );
-    }
-    setFitting(false);
-  };
-
-  useEffect(() => {
-    if (pageCount === 1) setFitNote('');
-  }, [pageCount]);
 
   // Roving focus for the accent radiogroup: one tab stop, arrow keys move and select.
   const accentValues = ['', ...ACCENT_PRESETS.map((p) => p.value)];
@@ -236,11 +171,11 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             {pageCount !== null && pageCount > 1 && (
               <button
                 type="button"
-                disabled={fitting || design.scale <= SCALE_MIN}
-                onClick={startFit}
+                disabled={atMinimum}
+                onClick={fit}
                 className="focus-ring h-8 rounded-lg bg-ink px-3 text-xs font-medium text-paper shadow-button hover:bg-ink-hover disabled:opacity-50"
               >
-                {fitting ? 'Fitting…' : design.scale <= SCALE_MIN ? 'At minimum size' : 'Fit to one page'}
+                {atMinimum ? 'At minimum size' : 'Fit to one page'}
               </button>
             )}
             {!isDefault && (

@@ -6,23 +6,23 @@
    The user's font preset overrides every non-mono family on the paper (see ResumePreview). */
 :root {
   /* Base stacks; `--font-*` below point here so a preset can swap them without cycles. */
-  --rf-inter: "Inter Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --rf-source-sans: "Source Sans 3 Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-roboto: "Roboto Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-inter: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
+  --rf-source-sans: "Source Sans 3", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-roboto: "Roboto", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
   --rf-lato: "Lato", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-raleway: "Raleway Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-montserrat: "Montserrat Variable", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-source-serif: "Source Serif 4 Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-garamond: "EB Garamond Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-playfair: "Playfair Display Variable", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-raleway: "Raleway", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-montserrat: "Montserrat", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
+  --rf-source-serif: "Source Serif 4", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-garamond: "EB Garamond", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-playfair: "Playfair Display", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-tinos: "Tinos", "Times New Roman", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-charis: "Charis SIL", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-plex-serif: "IBM Plex Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-jetbrains: "JetBrains Mono Variable", ui-monospace, "PingFang SC", "Noto Sans CJK SC", monospace;
+  --rf-jetbrains: "JetBrains Mono", ui-monospace, "PingFang SC", "Noto Sans CJK SC", monospace;
 }
 
 @theme static {
-  --font-sans: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-sans: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
   --font-inter: var(--rf-inter);
   --font-source-sans: var(--rf-source-sans);
   --font-roboto: var(--rf-roboto);
@@ -85,8 +85,8 @@ html.dark {
   --color-accent: var(--site-accent);
   --color-success: var(--site-success);
   --color-danger: var(--site-danger);
-  --font-display: "Inter Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
-  --font-label: "JetBrains Mono Variable", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --font-display: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", "PingFang SC", "Microsoft YaHei", "Noto Sans SC", sans-serif;
+  --font-label: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
   --tracking-display: -0.022em;
   --shadow-sheet: var(--site-shadow-sheet);
   --shadow-card: var(--site-shadow-card);

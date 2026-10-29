@@ -1,11 +1,14 @@
 import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
+import { PRINT_CONFIG } from '../constants/print';
+import { isFullBleedTemplate } from '../constants/templates';
+import { measurePrintLayout } from './printLayout';
 
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
-const PAGE_SPLIT_EPSILON_PT = 1;
+const MM_TO_PT = 72 / 25.4;
 
 interface ExportResumeToPdfOptions {
   rawFileName: string;
@@ -76,37 +79,25 @@ export const exportResumeToPdf = async ({
     console.warn('Server PDF rendering unavailable, exporting in the browser instead.', error);
   }
 
-  // Browser fallback: an image-based PDF that reproduces the preview exactly.
-  // Preserve the on-screen layout (padding/backgrounds) for higher fidelity.
-  const marginPt = 0;
-  const contentWidth = A4_WIDTH_PT;
-  const contentHeight = A4_HEIGHT_PT;
+  // Browser fallback: an image-based PDF. Pages are cut where printing would break them (never through a
+  // line) and continuation pages get the same top margin as the vector PDF.
+  const fullBleed = isFullBleedTemplate(data.templateId);
+  const { pages, breaksMm } = measurePrintLayout(element, fullBleed);
 
   const clone = element.cloneNode(true) as HTMLElement;
   // offsetWidth is the layout width; the on-screen preview may be visually scaled with a transform.
-  const baseWidth = element.offsetWidth || element.scrollWidth;
-  const fallbackWidth = element.scrollWidth || 794;
-  const safeWidth = Math.max(1, Math.round(baseWidth || fallbackWidth));
+  const safeWidth = Math.max(1, Math.round(element.offsetWidth || element.scrollWidth || 794));
+  clone.removeAttribute('id');
   clone.style.boxShadow = 'none';
   clone.style.margin = '0';
   clone.style.height = 'auto';
   clone.style.width = `${safeWidth}px`;
-
-  const wrapper = document.createElement('div');
-  wrapper.style.position = 'fixed';
-  wrapper.style.left = '-100000px';
-  wrapper.style.top = '0';
-  wrapper.style.opacity = '0';
-  wrapper.style.zIndex = '-1';
-  wrapper.style.pointerEvents = 'none';
-  wrapper.style.width = `${safeWidth}px`;
-  wrapper.appendChild(clone);
-  document.body.appendChild(wrapper);
-
   clone.querySelectorAll('[data-export-ignore="true"]').forEach((node) => node.remove());
 
-  const width = clone.scrollWidth || safeWidth;
-  const height = clone.scrollHeight;
+  const wrapper = document.createElement('div');
+  Object.assign(wrapper.style, { position: 'fixed', left: '-100000px', top: '0', opacity: '0', zIndex: '-1', pointerEvents: 'none', width: `${safeWidth}px` });
+  wrapper.appendChild(clone);
+  document.body.appendChild(wrapper);
 
   let dataUrl = '';
   try {
@@ -115,43 +106,42 @@ export const exportResumeToPdf = async ({
       cacheBust: true,
       pixelRatio: EXPORT_PIXEL_RATIO,
       backgroundColor: '#ffffff',
-      width,
-      height,
-      filter: (node) => {
-        if (!(node instanceof HTMLElement)) return true;
-        return node.dataset.exportIgnore !== 'true';
-      },
+      width: clone.scrollWidth || safeWidth,
+      height: clone.scrollHeight,
     });
-    if (!dataUrl) {
-      throw new Error('Failed to generate image from resume');
-    }
+    if (!dataUrl) throw new Error('Failed to generate image from resume');
   } catch (error) {
-    wrapper.remove();
     throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
+  } finally {
+    wrapper.remove();
   }
-  wrapper.remove();
 
   try {
     const image = await loadImage(dataUrl);
+    const pxPerMm = image.width / PRINT_CONFIG.PAGE_WIDTH_MM;
+    const imageHeightMm = image.height / pxPerMm;
+    const topMarginMm = fullBleed ? PRINT_CONFIG.MARGIN_CONTINUATION_MM : PRINT_CONFIG.MARGIN_STANDARD_MM;
     const pdfDoc = await PDFDocument.create();
-    const pngImage = await pdfDoc.embedPng(dataUrl);
 
-    const pageWidth = A4_WIDTH_PT;
-    const pageHeight = A4_HEIGHT_PT;
-    const scale = contentWidth / image.width;
-    const scaledHeight = image.height * scale;
-    // Avoid spurious extra pages from sub-point rounding when height ~= A4.
-    const pageCount = Math.max(1, Math.ceil((scaledHeight - PAGE_SPLIT_EPSILON_PT) / contentHeight));
+    let fromMm = 0;
+    for (let index = 0; index < pages; index += 1) {
+      // Page 1 is the top of the paper as-is (it carries its own margin); later pages continue from
+      // their break, placed below the top margin.
+      const capacityMm = PRINT_CONFIG.PAGE_HEIGHT_MM - (index === 0 ? 0 : topMarginMm);
+      const toMm = Math.min(breaksMm[index] ?? Infinity, imageHeightMm, fromMm + capacityMm);
+      const canvas = document.createElement('canvas');
+      canvas.width = image.width;
+      canvas.height = Math.max(1, Math.round((toMm - fromMm) * pxPerMm));
+      const context = canvas.getContext('2d');
+      if (!context) throw new Error('Canvas is not available');
+      context.drawImage(image, 0, Math.round(fromMm * pxPerMm), canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
 
-    for (let pageIndex = 0; pageIndex < pageCount; pageIndex += 1) {
-      const page = pdfDoc.addPage([pageWidth, pageHeight]);
-      const y = marginPt + contentHeight - scaledHeight + contentHeight * pageIndex;
-      page.drawImage(pngImage, {
-        x: marginPt,
-        y,
-        width: contentWidth,
-        height: scaledHeight,
-      });
+      const slice = await pdfDoc.embedPng(canvas.toDataURL('image/png'));
+      const page = pdfDoc.addPage([A4_WIDTH_PT, A4_HEIGHT_PT]);
+      const heightPt = (canvas.height / pxPerMm) * MM_TO_PT;
+      const topPt = (index === 0 ? 0 : topMarginMm) * MM_TO_PT;
+      page.drawImage(slice, { x: 0, y: A4_HEIGHT_PT - topPt - heightPt, width: A4_WIDTH_PT, height: heightPt });
+      fromMm = toMm;
     }
 
     const pdfBytes = await pdfDoc.save();

@@ -2,7 +2,8 @@ import React, { useEffect, useState } from 'react';
 import ResumePreview from '../components/ResumePreview';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
-import { printedPages } from '../constants/print';
+import { largestOnePageScale, measurePrintLayout } from '../utils/printLayout';
+import { SCALE_MIN } from '../constants/design';
 import { isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
@@ -12,7 +13,8 @@ import type { ResumeData } from '../types';
  * Bare A4 paper for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
  * Cloudflare Browser Rendering and prints it. Nothing is saved; `data-render-state` on <html> tells
  * the printer when the template and fonts are ready (`ready`) or the payload was invalid (`error`),
- * and `data-render-pages` is the printed page count (measured in screen layout, whose widths match print).
+ * `data-render-pages` is the printed page count (paginated the way print does), and
+ * `data-render-fit-scale` the largest scale that fits one page when it runs longer.
  */
 const RenderView: React.FC = () => {
   const [data, setData] = useState<ResumeData | null>(null);
@@ -56,7 +58,10 @@ const RenderView: React.FC = () => {
       void document.fonts.ready.then(() =>
         requestAnimationFrame(() => {
           const fullBleed = isFullBleedTemplate(data.templateId);
-          root.dataset.renderPages = String(printedPages(paper.offsetHeight, fullBleed));
+          const pages = measurePrintLayout(paper, fullBleed).pages;
+          root.dataset.renderPages = String(pages);
+          // For a longer resume, the largest text size that would fit one page (empty when none does).
+          if (pages > 1) root.dataset.renderFitScale = String(largestOnePageScale(paper, fullBleed, data.design.scale, SCALE_MIN) ?? '');
           root.dataset.renderState = 'ready';
         })
       );
