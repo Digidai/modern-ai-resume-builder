@@ -1,5 +1,5 @@
 import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
-import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk } from '../types';
+import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk, type Teaching } from '../types';
 import {
   PlusIcon,
   TrashIcon,
@@ -27,6 +27,7 @@ const PUBLICATION_TEMPLATE_NAMES = TEMPLATES.filter((t) => t.publications).map((
 const newPublication = (): Publication => ({ id: createId(), authors: '', title: '', venue: '', year: '', link: '' });
 const newAward = (): Award => ({ id: createId(), title: '', issuer: '', year: '', detail: '' });
 const newTalk = (): Talk => ({ id: createId(), title: '', event: '', location: '', year: '' });
+const newTeaching = (): Teaching => ({ id: createId(), course: '', role: '', institution: '', year: '' });
 
 /**
  * Extra profiles (GitHub, portfolio, X, Google Scholar…). The label is optional: templates detect
@@ -118,7 +119,7 @@ const EDITOR_TABS = [
 ] as const;
 type ResumeEditorTab = (typeof EDITOR_TABS)[number]['id'];
 
-type ListKey = 'experience' | 'education' | 'projects' | 'publications' | 'awards' | 'talks';
+type ListKey = 'experience' | 'education' | 'projects' | 'publications' | 'awards' | 'talks' | 'teaching';
 type ListItem<K extends ListKey> = NonNullable<ResumeData[K]>[number];
 
 /* ---------- small building blocks ---------- */
@@ -365,6 +366,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
   const publications = data.publications ?? [];
   const awards = data.awards ?? [];
   const talks = data.talks ?? [];
+  const teaching = data.teaching ?? [];
 
   const setField = useCallback(
     <K extends keyof ResumeData>(field: K, value: ResumeData[K]) => onChange((prev) => ({ ...prev, [field]: value })),
@@ -944,6 +946,47 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                         />
                         <Input label="Location" value={talk.location} onChange={(v) => updateItem('talks', talk.id, { location: v })} placeholder="Vancouver, Canada" hint="Optional" />
                         <Input label="Year" value={talk.year} onChange={(v) => updateItem('talks', talk.id, { year: v })} placeholder="2025" />
+                      </div>
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+
+            <Section
+              title="Teaching"
+              description={`Courses taught, TA roles and guest lectures. Shown by ${PUBLICATION_TEMPLATE_NAMES}.`}
+              action={
+                teaching.length > 0 && (
+                  <Button variant="secondary" size="sm" leftIcon={<PlusIcon className="h-4 w-4" />} onClick={() => addItem('teaching', newTeaching(), 'end')}>
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {teaching.length === 0 ? (
+                <EmptyState addLabel="Add a course" onAdd={() => addItem('teaching', newTeaching(), 'end')}>
+                  Optional. Most recent first.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {teaching.map((entry, index) => (
+                    <ItemCard
+                      key={entry.id}
+                      title={entry.course}
+                      subtitle={[entry.role, entry.year].filter(Boolean).join(' · ')}
+                      placeholderTitle="New course"
+                      isOpen={openIds.has(`teaching:${entry.id}`)}
+                      onToggle={() => toggleOpen(`teaching:${entry.id}`)}
+                      onRemove={() => removeItem('teaching', entry.id, entry.course || 'course')}
+                      onMoveUp={index > 0 ? () => moveItem('teaching', index, -1) : undefined}
+                      onMoveDown={index < teaching.length - 1 ? () => moveItem('teaching', index, 1) : undefined}
+                    >
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_8rem]">
+                        <Input label="Course" value={entry.course} onChange={(v) => updateItem('teaching', entry.id, { course: v })} placeholder="CS 229: Machine Learning" className="sm:col-span-2" />
+                        <Input label="Role" value={entry.role} onChange={(v) => updateItem('teaching', entry.id, { role: v })} placeholder="Teaching Assistant" />
+                        <Input label="Year" value={entry.year} onChange={(v) => updateItem('teaching', entry.id, { year: v })} placeholder="Fall 2024" />
+                        <Input label="Institution" value={entry.institution} onChange={(v) => updateItem('teaching', entry.id, { institution: v })} placeholder="Stanford University" hint="Optional" className="sm:col-span-2" />
                       </div>
                     </ItemCard>
                   ))}

@@ -1,10 +1,10 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
 
 // "Scholar": an academic CV for PhD students, postdocs and researchers. Source Serif, small-caps
 // section headings over a hairline, and a left gutter that carries the years of each entry and the
 // numbers of the publication list. Publications come right after education, numbered, with the
-// owner's name in bold, followed by grants and awards and talks. Academic CVs run to several pages; entries never split across a page break.
+// owner's name in bold, followed by grants and awards, talks and teaching. Academic CVs run to several pages; entries never split across a page break.
 
 const GUTTER = 'grid grid-cols-[22mm_minmax(0,1fr)] gap-x-[5mm]';
 const bodyText = 'text-[14px] leading-[1.5] text-neutral-800 wrap-break-word';
@@ -45,6 +45,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
     const publications = data.publications ?? [];
     const awards = data.awards ?? [];
     const talks = data.talks ?? [];
+    const teaching = data.teaching ?? [];
     const name = data.fullName.trim();
     const title = data.title.trim();
     const summary = data.summary.trim();
@@ -119,6 +120,18 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <Row key={talk.id} gutter={talk.year}>
                             <p className={bodyText}>
                                 <TalkLine talk={talk} showYear={false} />
+                            </p>
+                        </Row>
+                    ))}
+                </Section>
+            )}
+
+            {teaching.length > 0 && (
+                <Section title="Teaching">
+                    {teaching.map((entry) => (
+                        <Row key={entry.id} gutter={entry.year}>
+                            <p className={bodyText}>
+                                <TeachingLine entry={entry} showYear={false} titleClassName="font-semibold text-neutral-950" />
                             </p>
                         </Row>
                     ))}

@@ -1,4 +1,4 @@
-import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Award, type Publication, type Talk } from '../types';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Award, type Publication, type Talk, type Teaching } from '../types';
 
 /** Resume data sets used by the dev-only template gallery (`/dev/templates`). */
 export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
@@ -152,4 +152,10 @@ export const SAMPLE_AWARDS: Award[] = [
 export const SAMPLE_TALKS: Talk[] = [
   { id: 't1', title: 'Measuring onboarding friction', event: 'CHI 2025, paper presentation', location: 'Yokohama, Japan', year: '2025' },
   { id: 't2', title: 'Design tokens as a shared language', event: 'Design Systems Seminar, Carnegie Mellon University', location: 'Pittsburgh, PA', year: '2024' },
+];
+
+/** Sample teaching, shown with `&pubs=1`. */
+export const SAMPLE_TEACHING: Teaching[] = [
+  { id: 'c1', course: 'HCI 440: Interaction Design Studio', role: 'Instructor', institution: 'Carnegie Mellon University', year: 'Fall 2024' },
+  { id: 'c2', course: 'HCI 205: Research Methods', role: 'Teaching Assistant', institution: 'Carnegie Mellon University', year: '2022–2023' },
 ];

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 // "Plain": the most basic resume there is. Black text in one sans-serif face, one column, left
 // aligned, no colour, icons or boxes. Section headings are small capitals over a single hairline;
@@ -32,6 +32,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
     const publications = data.publications ?? [];
     const awards = data.awards ?? [];
     const talks = data.talks ?? [];
+    const teaching = data.teaching ?? [];
     const name = data.fullName.trim();
     const title = data.title.trim();
     const summary = data.summary.trim();
@@ -146,6 +147,18 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {talks.map((talk) => (
                             <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
                                 <TalkLine talk={talk} />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            )}
+
+            {teaching.length > 0 && (
+                <Section title="Teaching">
+                    <ul className="flex flex-col gap-[5px]">
+                        {teaching.map((entry) => (
+                            <li key={entry.id} className={`${bodyText} break-inside-avoid`}>
+                                <TeachingLine entry={entry} />
                             </li>
                         ))}
                     </ul>

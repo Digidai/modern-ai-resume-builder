@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 /** Small-caps heading on a full-width hairline, the way a LaTeX CV sets \section. */
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -99,6 +99,19 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {(data.talks ?? []).map((talk) => (
                             <li key={talk.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
                                 <TalkLine talk={talk} />
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+
+            {(data.teaching ?? []).length > 0 && (
+                <section>
+                    <SectionHeading>Teaching</SectionHeading>
+                    <ul className="pl-[4mm] flex flex-col gap-1.5">
+                        {(data.teaching ?? []).map((entry) => (
+                            <li key={entry.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
+                                <TeachingLine entry={entry} />
                             </li>
                         ))}
                     </ul>

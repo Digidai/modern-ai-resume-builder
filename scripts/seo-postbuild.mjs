@@ -1089,6 +1089,20 @@ const buildResumeSchema = (siteUrl, templates) => {
           },
         },
       },
+      teaching: {
+        type: 'array',
+        description: 'Courses taught, TA roles and guest lectures. Shown by the same templates as publications.',
+        items: {
+          type: 'object',
+          required: ['course'],
+          properties: {
+            course: { type: 'string', description: 'Course code and name, e.g. "CS 229: Machine Learning".' },
+            role: { type: 'string', description: '"Instructor", "Teaching Assistant" or "Guest lecturer".' },
+            institution: { type: 'string' },
+            year: { type: 'string', description: '"2024" or "Fall 2023, Spring 2024".' },
+          },
+        },
+      },
       projects: {
         type: 'array',
         items: {

@@ -1,6 +1,6 @@
 import { validateUrl } from '../../utils/validation';
 import React from 'react';
-import { ResumeData, type Award, type Publication, type Talk } from '../../types';
+import { ResumeData, type Award, type Publication, type Talk, type Teaching } from '../../types';
 import {
     MailIcon,
     PhoneIcon,
@@ -363,6 +363,20 @@ export const TalkLine: React.FC<{ talk: Talk; showYear?: boolean }> = ({ talk, s
             {event && rest && ', '}
             {rest}
             {(event || rest) && !/[.?!]$/.test(rest || event) && '.'}
+        </>
+    );
+};
+
+/** One teaching entry: **Course**, Role, Institution, year. Pass `showYear={false}` when the year sits in a gutter. */
+export const TeachingLine: React.FC<{ entry: Teaching; showYear?: boolean; titleClassName?: string }> = ({ entry, showYear = true, titleClassName = 'font-semibold' }) => {
+    const course = entry.course.trim();
+    const rest = [entry.role, entry.institution, showYear ? entry.year : ''].map((part) => part.trim()).filter(Boolean).join(', ');
+    return (
+        <>
+            {course && <span className={titleClassName}>{course}</span>}
+            {course && rest && ', '}
+            {rest}
+            {(course || rest) && !/[.?!]$/.test(rest || course) && '.'}
         </>
     );
 };

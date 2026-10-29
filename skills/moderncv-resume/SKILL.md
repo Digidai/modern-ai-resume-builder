@@ -75,7 +75,7 @@ A JSON Resume document (https://jsonresume.org/schema) also works. The native sh
 - Skills may be grouped as `"Category: item, item"`; templates render the groups.
 - `photo` (optional) is a base64 JPEG/PNG/WebP data URL, 3:4, under 200 KB. Only photo templates (`list_templates` → `photo: true`) show it; leave it out for ATS portals and US or UK applications.
 - `publications` (optional) is a list of `{ authors, title, venue, year, link }` for academic and research CVs. Templates with `publications: true` in `list_templates` (Scholar, Academic, Plain, Text, Graduate) show it, numbered or as a reference list, with the owner's name in bold.
-- `awards` (optional) is a list of `{ title, issuer, year, detail }` for grants, fellowships and prizes (`detail` holds an amount or role such as "$450,000, co-PI"), and `talks` (optional) is a list of `{ title, event, location, year }` for invited talks and conference presentations. The same templates as publications show them.
+- `awards` (optional) is a list of `{ title, issuer, year, detail }` for grants, fellowships and prizes (`detail` holds an amount or role such as "$450,000, co-PI"), and `talks` (optional) is a list of `{ title, event, location, year }` for invited talks and conference presentations. `teaching` (optional) is a list of `{ course, role, institution, year }` for courses taught and TA roles. The same templates as publications show them.
 - `links` holds extra profiles (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, ORCID…). Leave `label` empty for well-known sites; templates detect the site and show its icon. Up to 8.
 
 ## Privacy

@@ -58,6 +58,18 @@ export interface Talk {
   year: string;
 }
 
+/** A course taught or a teaching assistant role. */
+export interface Teaching {
+  id: string;
+  /** Course code and name, e.g. "CS 229: Machine Learning". */
+  course: string;
+  /** "Instructor", "Teaching Assistant", "Guest lecturer". */
+  role: string;
+  institution: string;
+  /** "2024" or "Fall 2023, Spring 2024". */
+  year: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -102,6 +114,8 @@ export interface ResumeData {
   awards?: Award[];
   /** Talks and presentations; shown by the same templates as publications. */
   talks?: Talk[];
+  /** Courses taught and TA roles; shown by the same templates as publications. */
+  teaching?: Teaching[];
 }
 
 export const INITIAL_RESUME_DATA: ResumeData = {

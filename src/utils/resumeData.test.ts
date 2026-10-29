@@ -74,7 +74,7 @@ describe('sanitizeResumeData', () => {
     expect(sanitizeResumeData({ fullName: 'Pat' })?.publications).toBeUndefined();
   });
 
-  it('imports grants, awards and talks, including JSON Resume awards, and drops empty entries', () => {
+  it('imports grants, awards, talks and teaching, including JSON Resume awards, and drops empty entries', () => {
     const result = sanitizeResumeData({
       basics: { name: 'Pat' },
       awards: [{ title: 'Graduate Fellowship', awarder: 'NSF', date: '2023-09-01', summary: '$138,000' }, {}],
@@ -84,11 +84,14 @@ describe('sanitizeResumeData', () => {
       fullName: 'Pat',
       awards: [{ title: ' Best Paper ', issuer: 'CHI', year: '2025' }, { title: ' ', issuer: '' }],
       talks: [{ title: 'Sparse attention', event: 'NeurIPS', year: '2025' }, { location: 'Paris' }],
+      teaching: [{ course: ' CS 229 ', role: 'Teaching Assistant', year: '2024' }, { institution: 'Stanford' }],
     });
     expect(own?.awards).toMatchObject([{ title: 'Best Paper', issuer: 'CHI', year: '2025', detail: '' }]);
     expect(own?.talks).toMatchObject([{ title: 'Sparse attention', event: 'NeurIPS', location: '', year: '2025' }]);
     expect(sanitizeResumeData({ fullName: 'Pat' })?.awards).toBeUndefined();
+    expect(own?.teaching).toMatchObject([{ course: 'CS 229', role: 'Teaching Assistant', institution: '', year: '2024' }]);
     expect(sanitizeResumeData({ fullName: 'Pat' })?.talks).toBeUndefined();
+    expect(sanitizeResumeData({ fullName: 'Pat' })?.teaching).toBeUndefined();
   });
 
   it('rejects JSON that is not a resume', () => {

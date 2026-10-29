@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { AwardLine, Authors, TalkLine, groupSkills } from './shared';
+import { AwardLine, Authors, TalkLine, TeachingLine, groupSkills } from './shared';
 
 describe('groupSkills', () => {
   it('splits a category on top-level separators but keeps commas inside parentheses', () => {
@@ -25,7 +25,7 @@ describe('Authors', () => {
   });
 });
 
-describe('TalkLine and AwardLine', () => {
+describe('TalkLine, AwardLine and TeachingLine', () => {
   const text = (el: Parameters<typeof renderToStaticMarkup>[0]) => renderToStaticMarkup(el).replace(/<[^>]+>/g, '').replace(/&quot;/g, '"');
 
   it('punctuates talks once, whichever fields are filled', () => {
@@ -38,5 +38,8 @@ describe('TalkLine and AwardLine', () => {
     const award = { id: '1', title: 'Fellowship', issuer: 'NSF', year: '2023', detail: '' };
     expect(text(createElement(AwardLine, { award }))).toBe('Fellowship, NSF, 2023.');
     expect(text(createElement(AwardLine, { award, showYear: false }))).toBe('Fellowship, NSF.');
+    const entry = { id: '1', course: 'CS 229', role: 'Teaching Assistant', institution: '', year: '2024' };
+    expect(text(createElement(TeachingLine, { entry }))).toBe('CS 229, Teaching Assistant, 2024.');
+    expect(text(createElement(TeachingLine, { entry, showYear: false }))).toBe('CS 229, Teaching Assistant.');
   });
 });

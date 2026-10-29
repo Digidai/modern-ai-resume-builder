@@ -1,5 +1,5 @@
 import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
-import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type ResumeDesign, type ResumeLink } from '../types';
+import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
 
@@ -193,6 +193,15 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
       year: str(item.year).trim(),
     }))
     .filter((item) => item.title || item.event);
+  const teaching: Teaching[] = list(raw.teaching)
+    .map((item) => ({
+      id: str(item.id) || createId(),
+      course: str(item.course).trim(),
+      role: str(item.role).trim(),
+      institution: str(item.institution).trim(),
+      year: str(item.year).trim(),
+    }))
+    .filter((item) => item.course || item.role);
   const links: ResumeLink[] = list(raw.links)
     .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
     .filter((item) => item.url)
@@ -221,5 +230,6 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     ...(publications.length ? { publications } : {}),
     ...(awards.length ? { awards } : {}),
     ...(talks.length ? { talks } : {}),
+    ...(teaching.length ? { teaching } : {}),
   };
 };

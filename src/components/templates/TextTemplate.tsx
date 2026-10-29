@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 // "Text": a resume that is only text. No rules, capitals, colour or icons: the hierarchy comes from
 // weight, size and white space alone, like a well-set plain document. One sans-serif face, one column.
@@ -21,6 +21,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
     const publications = data.publications ?? [];
     const awards = data.awards ?? [];
     const talks = data.talks ?? [];
+    const teaching = data.teaching ?? [];
     const name = data.fullName.trim();
     const title = data.title.trim();
     const summary = data.summary.trim();
@@ -137,6 +138,18 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {talks.map((talk) => (
                             <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
                                 <TalkLine talk={talk} />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            )}
+
+            {teaching.length > 0 && (
+                <Section title="Teaching">
+                    <ul className="flex flex-col gap-[6px]">
+                        {teaching.map((entry) => (
+                            <li key={entry.id} className={`${bodyText} break-inside-avoid`}>
+                                <TeachingLine entry={entry} />
                             </li>
                         ))}
                     </ul>
