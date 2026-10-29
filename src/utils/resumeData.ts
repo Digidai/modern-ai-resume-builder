@@ -1,5 +1,5 @@
 import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
-import { DEFAULT_DESIGN, type Education, type Experience, type Project, type ResumeData, type ResumeDesign, type ResumeLink } from '../types';
+import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Publication, type ResumeData, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
 
@@ -103,6 +103,13 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
       startDate: isoMonth(e.startDate),
       endDate: isoMonth(e.endDate),
     })),
+    publications: list(raw.publications).map((p) => ({
+      title: str(p.name),
+      venue: str(p.publisher),
+      year: str(p.releaseDate).trim().slice(0, 4),
+      link: str(p.url),
+      authors: str(p.authors),
+    })),
     projects: list(raw.projects).map((p) => ({
       name: str(p.name),
       link: str(p.url),
@@ -152,6 +159,16 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     link: str(item.link),
     description: str(item.description),
   }));
+  const publications: Publication[] = list(raw.publications)
+    .map((item) => ({
+      id: str(item.id) || createId(),
+      authors: str(item.authors).trim(),
+      title: str(item.title).trim(),
+      venue: str(item.venue).trim(),
+      year: str(item.year).trim(),
+      link: str(item.link).trim(),
+    }))
+    .filter((item) => item.title || item.authors);
   const links: ResumeLink[] = list(raw.links)
     .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
     .filter((item) => item.url)
@@ -177,5 +194,6 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     education,
     skills,
     projects,
+    ...(publications.length ? { publications } : {}),
   };
 };

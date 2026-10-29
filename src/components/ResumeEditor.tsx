@@ -1,5 +1,5 @@
 import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
-import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type ResumeLink } from '../types';
+import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Publication, type ResumeLink } from '../types';
 import {
   PlusIcon,
   TrashIcon,
@@ -22,6 +22,9 @@ import { createId } from '../utils/resumeData';
 import { formatDateRange, describeLink } from './templates/shared';
 
 const MAX_LINKS = 8;
+
+const PUBLICATION_TEMPLATE_NAMES = TEMPLATES.filter((t) => t.publications).map((t) => t.name).join(', ');
+const newPublication = (): Publication => ({ id: createId(), authors: '', title: '', venue: '', year: '', link: '' });
 
 /**
  * Extra profiles (GitHub, portfolio, X, Google Scholar…). The label is optional: templates detect
@@ -113,8 +116,8 @@ const EDITOR_TABS = [
 ] as const;
 type ResumeEditorTab = (typeof EDITOR_TABS)[number]['id'];
 
-type ListKey = 'experience' | 'education' | 'projects';
-type ListItem<K extends ListKey> = ResumeData[K][number];
+type ListKey = 'experience' | 'education' | 'projects' | 'publications';
+type ListItem<K extends ListKey> = NonNullable<ResumeData[K]>[number];
 
 /* ---------- small building blocks ---------- */
 
@@ -357,6 +360,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
   }, []);
 
   // All updates are functional so late async results (AI) never overwrite newer edits.
+  const publications = data.publications ?? [];
+
   const setField = useCallback(
     <K extends keyof ResumeData>(field: K, value: ResumeData[K]) => onChange((prev) => ({ ...prev, [field]: value })),
     [onChange]
@@ -372,7 +377,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     <K extends ListKey>(key: K, id: string, patch: Partial<ListItem<K>>) =>
       onChange((prev) => ({
         ...prev,
-        [key]: (prev[key] as ListItem<K>[]).map((item) => (item.id === id ? { ...item, ...patch } : item)),
+        [key]: ((prev[key] ?? []) as ListItem<K>[]).map((item) => (item.id === id ? { ...item, ...patch } : item)),
       })),
     [onChange]
   );
@@ -380,7 +385,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
   const addItem = useCallback(
     <K extends ListKey>(key: K, item: ListItem<K>, position: 'start' | 'end') => {
       onChange((prev) => {
-        const list = prev[key] as ListItem<K>[];
+        const list = (prev[key] ?? []) as ListItem<K>[];
         return { ...prev, [key]: position === 'start' ? [item, ...list] : [...list, item] };
       });
       setOpenIds((prev) => new Set(prev).add(`${key}:${item.id}`));
@@ -392,7 +397,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     <K extends ListKey>(key: K, id: string, label: string) => {
       let removed: { item: ListItem<K>; index: number } | null = null;
       onChange((prev) => {
-        const list = prev[key] as ListItem<K>[];
+        const list = (prev[key] ?? []) as ListItem<K>[];
         const index = list.findIndex((item) => item.id === id);
         if (index === -1) return prev;
         removed = { item: list[index], index };
@@ -404,7 +409,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
           onClick: () =>
             onChange((prev) => {
               if (!removed) return prev;
-              const list = [...(prev[key] as ListItem<K>[])];
+              const list = [...((prev[key] ?? []) as ListItem<K>[])];
               list.splice(Math.min(removed.index, list.length), 0, removed.item);
               return { ...prev, [key]: list };
             }),
@@ -417,7 +422,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
   const moveItem = useCallback(
     (key: ListKey, index: number, delta: -1 | 1) =>
       onChange((prev) => {
-        const list = [...prev[key]] as ListItem<ListKey>[];
+        const list = [...(prev[key] ?? [])] as ListItem<ListKey>[];
         const target = index + delta;
         if (target < 0 || target >= list.length) return prev;
         [list[index], list[target]] = [list[target], list[index]];
@@ -783,6 +788,64 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                           updateItem('projects', proj.id, { description: v })
                         )}
                       />
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+
+            <Section
+              title="Publications"
+              description={`Papers, articles and posters, for academic and research CVs. Shown by ${PUBLICATION_TEMPLATE_NAMES}.`}
+              action={
+                publications.length > 0 && (
+                  <Button variant="secondary" size="sm" leftIcon={<PlusIcon className="h-4 w-4" />} onClick={() => addItem('publications', newPublication(), 'end')}>
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {publications.length === 0 ? (
+                <EmptyState addLabel="Add a publication" onAdd={() => addItem('publications', newPublication(), 'end')}>
+                  Optional. Your name is set in bold in the author list.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {publications.map((pub, index) => (
+                    <ItemCard
+                      key={pub.id}
+                      title={pub.title}
+                      subtitle={[pub.venue, pub.year].filter(Boolean).join(' · ')}
+                      placeholderTitle="New publication"
+                      isOpen={openIds.has(`publications:${pub.id}`)}
+                      onToggle={() => toggleOpen(`publications:${pub.id}`)}
+                      onRemove={() => removeItem('publications', pub.id, pub.title || 'publication')}
+                      onMoveUp={index > 0 ? () => moveItem('publications', index, -1) : undefined}
+                      onMoveDown={index < publications.length - 1 ? () => moveItem('publications', index, 1) : undefined}
+                    >
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_8rem]">
+                        <Input label="Title" value={pub.title} onChange={(v) => updateItem('publications', pub.id, { title: v })} placeholder="Sparse attention for long documents" className="sm:col-span-2" />
+                        <Input
+                          label="Authors"
+                          value={pub.authors}
+                          onChange={(v) => updateItem('publications', pub.id, { authors: v })}
+                          placeholder="Lee, P., Chen, J., Okafor, A."
+                          hint="In publication order; your name is bolded automatically."
+                          className="sm:col-span-2"
+                        />
+                        <Input label="Journal, conference or publisher" value={pub.venue} onChange={(v) => updateItem('publications', pub.id, { venue: v })} placeholder="NeurIPS" />
+                        <Input label="Year" value={pub.year} onChange={(v) => updateItem('publications', pub.id, { year: v })} placeholder="2025" />
+                        <Input
+                          label="DOI or link"
+                          type="url"
+                          value={pub.link}
+                          onChange={(v) => updateItem('publications', pub.id, { link: v })}
+                          error={getUrlError(pub.link)}
+                          placeholder="doi.org/10.1000/xyz123"
+                          hint="Optional"
+                          className="sm:col-span-2"
+                        />
+                      </div>
                     </ItemCard>
                   ))}
                 </div>

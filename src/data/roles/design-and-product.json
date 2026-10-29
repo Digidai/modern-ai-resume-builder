@@ -98,6 +98,7 @@
       "fit": {
         "modern": 0.99,
         "silk": 0.94,
+        "scholar": 0.99,
         "minimalist": 0.93,
         "tokyo": 0.96,
         "swiss": 0.89,
@@ -288,6 +289,7 @@
       ],
       "fit": {
         "silk": 0.98,
+        "scholar": 0.99,
         "minimalist": 0.96,
         "tokyo": 0.98,
         "swiss": 0.89,
@@ -676,6 +678,7 @@
       ],
       "fit": {
         "silk": 0.96,
+        "scholar": 0.98,
         "minimalist": 0.94,
         "tokyo": 0.97,
         "swiss": 0.89,
@@ -1584,6 +1587,7 @@
       ],
       "fit": {
         "modern": 0.99,
+        "scholar": 0.99,
         "minimalist": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
@@ -2879,6 +2883,7 @@
         "executive": 0.94,
         "silk": 0.93,
         "opal": 0.95,
+        "scholar": 0.98,
         "minimalist": 0.9,
         "tokyo": 0.96,
         "creative": 0.98,

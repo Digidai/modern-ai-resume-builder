@@ -1,4 +1,4 @@
-import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData } from '../types';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Publication } from '../types';
 
 /** Resume data sets used by the dev-only template gallery (`/dev/templates`). */
 export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
@@ -134,3 +134,10 @@ export type FixtureName = keyof typeof FIXTURES;
 export const SAMPLE_PHOTO = `data:image/svg+xml,${encodeURIComponent(
   '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 400"><defs><linearGradient id="b" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#e7e9ee"/><stop offset="1" stop-color="#c9ced8"/></linearGradient></defs><rect width="300" height="400" fill="url(#b)"/><path d="M28 400c6-78 52-116 122-116s116 38 122 116z" fill="#2d3a52"/><path d="M128 270h44v34l-22 22-22-22z" fill="#e9c8ae"/><path d="M118 288l32 52 32-52 18 8-50 104-50-104z" fill="#f4f5f7"/><ellipse cx="150" cy="190" rx="56" ry="68" fill="#efcfb5"/><path d="M92 182c-4-58 30-86 60-86s64 22 58 86c-6-30-24-46-58-48-34 2-52 18-60 48z" fill="#3b2f2a"/></svg>',
 )}`;
+
+/** Sample publications for previewing publication templates (`&pubs=1`); the owner is Alex Sterling. */
+export const SAMPLE_PUBLICATIONS: Publication[] = [
+  { id: 'p1', authors: 'Sterling, A., Chen, J., Okafor, N.', title: 'Measuring onboarding friction in B2B software', venue: 'Proceedings of CHI', year: '2025', link: 'doi.org/10.1145/3706598.3713001' },
+  { id: 'p2', authors: 'Okafor, N., A. Sterling', title: 'Design tokens as a shared language between design and engineering', venue: 'Interactions', year: '2023', link: '' },
+  { id: 'p3', authors: 'Alex Sterling', title: 'Small multiples for product dashboards', venue: 'Preprint', year: '2022', link: 'arxiv.org/abs/2204.01234' },
+];

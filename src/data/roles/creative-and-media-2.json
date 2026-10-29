@@ -360,6 +360,7 @@
       "fit": {
         "silk": 0.94,
         "opal": 0.95,
+        "scholar": 0.98,
         "minimalist": 0.94,
         "tokyo": 0.96,
         "prism": 0.98,
@@ -480,6 +481,7 @@
         "executive": 0.99,
         "silk": 0.94,
         "opal": 0.92,
+        "scholar": 0.96,
         "minimalist": 0.92,
         "tokyo": 0.93,
         "prism": 0.97,

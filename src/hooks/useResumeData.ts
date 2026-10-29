@@ -28,6 +28,7 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'education',
   'skills',
   'projects',
+  'publications',
 ];
 
 // Earlier versions kept personal fields in sessionStorage, which lost the resume when
@@ -90,6 +91,7 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
     case 'education':
     case 'skills':
     case 'projects':
+    case 'publications':
       return Array.isArray(value);
     case 'design':
       return typeof value === 'object' && value !== null && !Array.isArray(value);
@@ -182,7 +184,8 @@ const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>):
   try {
     for (const field of fields) {
       const key = getFieldStorageKey(field);
-      localStorage.setItem(key, JSON.stringify(data[field] ?? ''));
+      if (data[field] === undefined) localStorage.removeItem(key);
+      else localStorage.setItem(key, JSON.stringify(data[field]));
       sessionStorage.removeItem(key);
     }
 

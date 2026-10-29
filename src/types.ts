@@ -23,6 +23,19 @@ export interface ResumeLink {
   url: string;
 }
 
+/** A paper, article, book or poster. `authors` is free text; the resume owner's name is set in bold. */
+export interface Publication {
+  id: string;
+  authors: string;
+  title: string;
+  /** Journal, conference, publisher or "Preprint". */
+  venue: string;
+  /** "2025", "2025-06" or "In press". */
+  year: string;
+  /** DOI or URL, optional. */
+  link: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -61,6 +74,8 @@ export interface ResumeData {
   education: Education[];
   skills: string[];
   projects: Project[];
+  /** Optional; shown by templates with `publications: true` in the catalog. */
+  publications?: Publication[];
 }
 
 export const INITIAL_RESUME_DATA: ResumeData = {

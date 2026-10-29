@@ -1046,6 +1046,21 @@ const buildResumeSchema = (siteUrl, templates) => {
         }),
       },
       education: { type: 'array', items: dated({ school: { type: 'string' }, degree: { type: 'string' } }) },
+      publications: {
+        type: 'array',
+        description: 'Papers, articles and posters for academic and research CVs. Shown by templates with publications: true in list_templates (Scholar, Academic, Plain, Text, Graduate). The owner\'s name is bolded in authors automatically.',
+        items: {
+          type: 'object',
+          required: ['title'],
+          properties: {
+            authors: { type: 'string', description: 'Author list in publication order, e.g. "Lee, P., Chen, J."' },
+            title: { type: 'string' },
+            venue: { type: 'string', description: 'Journal, conference, publisher or "Preprint".' },
+            year: { type: 'string', description: '"2025" or "In press".' },
+            link: { type: 'string', description: 'DOI or URL.' },
+          },
+        },
+      },
       projects: {
         type: 'array',
         items: {

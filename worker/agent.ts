@@ -62,6 +62,7 @@ const listTemplates = (origin: string, atsOnly = false) =>
     bestFor: t.bestFor,
     atsFriendly: t.atsFriendly,
     photo: Boolean(t.photo),
+    publications: Boolean(t.publications),
     preview: `${origin}/og/templates/${t.id}-page.jpg`,
     page: `${origin}/templates/${t.id}/`,
   }));
@@ -193,6 +194,7 @@ const prepareResume = (input: Json): PreparedResume => {
   const rawPhoto = typeof raw.photo === 'string' ? raw.photo : typeof (raw.basics as Json | undefined)?.image === 'string' ? String((raw.basics as Json).image) : '';
   if (rawPhoto && !resume.photo) warnings.push('Ignored photo: it must be a base64 JPEG, PNG or WebP data URL under 200 KB (remote image URLs are not loaded).');
   if (resume.photo && !getTemplateById(resume.templateId)?.photo) warnings.push(`Template "${resume.templateId}" doesn't show photos; photo templates: ${TEMPLATES.filter((t) => t.photo).map((t) => t.id).join(', ')}.`);
+  if (resume.publications?.length && !getTemplateById(resume.templateId)?.publications) warnings.push(`Template "${resume.templateId}" doesn't show publications; publication templates: ${TEMPLATES.filter((t) => t.publications).map((t) => t.id).join(', ')}.`);
   if (!resume.fullName.trim()) warnings.push('fullName is empty.');
   if (!resume.email && !resume.phone) warnings.push('No email or phone; recruiters need a way to reach the candidate.');
   if (!resume.experience.length && !resume.education.length) warnings.push('No experience or education entries.');
@@ -209,6 +211,7 @@ const toLinkPayload = (resume: ResumeData) => ({
   experience: resume.experience.map(({ id: _id, ...rest }) => rest),
   education: resume.education.map(({ id: _id, ...rest }) => rest),
   projects: resume.projects.map(({ id: _id, ...rest }) => rest),
+  ...(resume.publications ? { publications: resume.publications.map(({ id: _id, ...rest }) => rest) } : {}),
 });
 
 const createEditorLink = async (origin: string, input: Json) => {
@@ -308,7 +311,7 @@ const RESUME_INPUT = {
   resume: {
     type: 'object',
     description:
-      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, links[{label,url}] for GitHub/portfolio/X/Scholar etc., optional photo (base64 JPEG/PNG data URL, shown only by photo templates), summary, experience[], education[], projects[], skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
+      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, links[{label,url}] for GitHub/portfolio/X/Scholar etc., optional photo (base64 JPEG/PNG data URL, shown only by photo templates), summary, experience[], education[], projects[], publications[{authors,title,venue,year,link}] for academic CVs, skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
   },
   template: { type: 'string', description: 'Template id from list_templates. Default "modern".' },
   accent: { type: 'string', description: 'Accent colour as #RRGGBB. Omit for the template default.' },

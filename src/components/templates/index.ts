@@ -36,3 +36,8 @@ export * from './EuropaTemplate';
 export * from './TokyoTemplate';
 export * from './JadeTemplate';
 export * from './PortraitTemplate';
+export * from './PlainTemplate';
+export * from './TextTemplate';
+export * from './GraduateTemplate';
+export * from './WallStreetTemplate';
+export * from './ScholarTemplate';

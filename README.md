@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is a free, local-first AI resume builder with 44 templates (including photo CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
+**ModernCV is a free, local-first AI resume builder with 49 templates (including photo and academic CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -55,7 +55,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 44 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy, AltaCV) and 16 ATS-friendly single-column layouts.
+- 49 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy, AltaCV) and 21 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - A template gallery (`/templates/`) with an ATS filter and a detail page per template.
 - 1,204 job titles in 21 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
@@ -90,7 +90,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 44 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital.
+ModernCV ships with 49 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar. Scholar, Academic, Plain, Text and Graduate show a Publications section.
 
 Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 
@@ -123,7 +123,7 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 - `/directory` route with searchable categories (1,204 titles in 21 families).
 - `/resume_tmpl/<slug>/` pages: a complete example resume written for that title (`src/data/roles/*.json`), shown in every template and pre-rendered as readable text, with "Copy text", "Start from example" and "Use with my resume", plus a writing guide and five FAQs generated from `src/data/roleGuides.json`.
 - `/templates/` gallery and `/templates/<id>/` detail pages with "best for" roles, similar templates and an editor deep link.
-- SEO postbuild script pre-renders every page (home, directory, templates, agents, 1,204 job pages) with unique titles and descriptions drawn from each example, JSON-LD (WebApplication, Occupation, FAQPage, BreadcrumbList, CreativeWork, ItemList, TechArticle, WebAPI) and a 1,252-URL sitemap.
+- SEO postbuild script pre-renders every page (home, directory, templates, agents, 1,204 job pages) with unique titles and descriptions drawn from each example, JSON-LD (WebApplication, Occupation, FAQPage, BreadcrumbList, CreativeWork, ItemList, TechArticle, WebAPI) and a 1,257-URL sitemap.
 - Unknown URLs return a real `404` with `x-robots-tag: noindex` instead of redirecting to home.
 
 ### Privacy and Data

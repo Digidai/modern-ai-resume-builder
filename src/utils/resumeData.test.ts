@@ -65,6 +65,15 @@ describe('sanitizeResumeData', () => {
     expect(sanitizeResumeData({ fullName: 'Pat', photo: `data:image/png;base64,${'A'.repeat(200_000)}` })?.photo).toBeUndefined();
   });
 
+  it('imports publications, including JSON Resume ones, and drops empty entries', () => {
+    const result = sanitizeResumeData({
+      basics: { name: 'Pat Lee' },
+      publications: [{ name: 'Sparse attention', publisher: 'NeurIPS', releaseDate: '2025-12-01', url: 'doi.org/10.1/x' }, {}],
+    });
+    expect(result?.publications).toMatchObject([{ title: 'Sparse attention', venue: 'NeurIPS', year: '2025', link: 'doi.org/10.1/x', authors: '' }]);
+    expect(sanitizeResumeData({ fullName: 'Pat' })?.publications).toBeUndefined();
+  });
+
   it('rejects JSON that is not a resume', () => {
     expect(sanitizeResumeData({ foo: 1 })).toBeNull();
     expect(sanitizeResumeData([1, 2])).toBeNull();

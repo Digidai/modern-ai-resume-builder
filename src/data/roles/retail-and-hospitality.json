@@ -637,6 +637,7 @@
         "executive": 0.96,
         "silk": 0.93,
         "opal": 0.99,
+        "scholar": 0.97,
         "minimalist": 0.91,
         "tokyo": 0.96,
         "swiss": 0.89,
@@ -1258,6 +1259,7 @@
       ],
       "fit": {
         "silk": 0.97,
+        "scholar": 0.99,
         "minimalist": 0.94,
         "tokyo": 0.97,
         "swiss": 0.9,

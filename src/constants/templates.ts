@@ -16,6 +16,8 @@ export interface TemplateConfig {
   isFullBleed: boolean;
   /** Shows the resume photo (initials when there is none). */
   photo?: boolean;
+  /** Shows the Publications section (`data.publications`). */
+  publications?: boolean;
 }
 
 /** Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs. */
@@ -28,7 +30,7 @@ const TEMPLATE_CATALOG = [
   { id: 'timeline', name: 'Timeline', description: "Clean accent layout with a dated career timeline", bestFor: 'Career progressions and frequent promotions', atsFriendly: true, isFullBleed: true },
   { id: 'executive', name: 'Executive', description: "Centered executive layout with serif headings", bestFor: 'Directors, VPs and senior leadership', atsFriendly: true, isFullBleed: false },
   { id: 'compact', name: 'Compact', description: "Dense single column that fits long histories", bestFor: 'Long careers that need to fit on one page', atsFriendly: true, isFullBleed: false },
-  { id: 'academic', name: 'Academic', description: "Scholarly CV with small-caps headings and rules", bestFor: 'Researchers, teachers and academic CVs', atsFriendly: true, isFullBleed: false },
+  { id: 'academic', name: 'Academic', description: "Scholarly CV with small-caps headings and rules", bestFor: 'Researchers, teachers and academic CVs', atsFriendly: true, isFullBleed: false, publications: true },
   { id: 'tech', name: 'Tech', description: "Developer style: mono headings and tags, sans body", bestFor: 'Software engineers and developers', atsFriendly: true, isFullBleed: false },
   { id: 'silk', name: 'Silk', description: "Elegant Garamond serif with centered hairline headings", bestFor: 'Editorial, communications and humanities roles', atsFriendly: true, isFullBleed: true },
   { id: 'lateral', name: 'Lateral', description: "Calm side-label grid with one quiet accent rule", bestFor: 'Consultants and analysts who like a structured grid', atsFriendly: true, isFullBleed: true },
@@ -36,6 +38,11 @@ const TEMPLATE_CATALOG = [
   { id: 'meridian', name: 'Meridian', description: "Modern serif with a hairline date rail on the right", bestFor: 'Law, policy, consulting and finance professionals', atsFriendly: true, isFullBleed: true },
   { id: 'keystone', name: 'Keystone', description: "Corporate layout with tinted heading bands", bestFor: 'Operations, management and corporate roles', atsFriendly: true, isFullBleed: true },
   { id: 'vital', name: 'Vital', description: "Clean clinical layout with a credentials block", bestFor: 'Nurses, clinicians and other licensed professionals', atsFriendly: true, isFullBleed: true },
+  { id: 'plain', name: 'Plain', description: "The most basic resume: black text, one column, one hairline per section", bestFor: 'Anyone who wants a plain, no-design resume that every ATS reads', atsFriendly: true, isFullBleed: true, publications: true },
+  { id: 'text', name: 'Text', description: "Text only: no rules, colour or icons, just weight and white space", bestFor: 'Minimalists and conservative industries', atsFriendly: true, isFullBleed: true, publications: true },
+  { id: 'graduate', name: 'Graduate', description: "Education and skills first, then internships and projects", bestFor: 'Students, new graduates and interns', atsFriendly: true, isFullBleed: true, publications: true },
+  { id: 'wallstreet', name: 'Wall Street', description: "Investment-banking format: Times, education first, bold firms", bestFor: 'Investment banking, private equity, consulting and finance', atsFriendly: true, isFullBleed: true },
+  { id: 'scholar', name: 'Scholar', description: "Academic CV with numbered publications and a year gutter", bestFor: 'PhD students, postdocs, researchers and faculty', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", bestFor: 'Senior professionals with a quiet, serif style', atsFriendly: false, isFullBleed: false },
   { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", bestFor: 'Designers and engineers who want a two-column summary', atsFriendly: false, isFullBleed: true },
   { id: 'altitude', name: 'Altitude', description: "AltaCV-style two columns with outlined skill tags", bestFor: 'Engineers and researchers who want a lively two-column page', atsFriendly: false, isFullBleed: true },

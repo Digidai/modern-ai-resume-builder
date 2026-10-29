@@ -1,6 +1,6 @@
 import { validateUrl } from '../../utils/validation';
 import React from 'react';
-import { ResumeData } from '../../types';
+import { ResumeData, type Publication } from '../../types';
 import {
     MailIcon,
     PhoneIcon,
@@ -244,5 +244,91 @@ export const Portrait: React.FC<{ data: ResumeData; className: string; fallbackC
         <div aria-hidden="true" className={`flex shrink-0 items-center justify-center ${className} ${fallbackClassName}`}>
             {initials}
         </div>
+    );
+};
+
+const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+
+/**
+ * Spellings of the owner's name as it appears in author lists: "Pat Lee", "P. Lee", "Lee, P.",
+ * "Lee P", "P Lee". Matching is case-insensitive; returns null when there is no surname.
+ */
+const ownerNamePattern = (fullName: string): RegExp | null => {
+    const words = fullName.trim().split(/\s+/).filter(Boolean);
+    if (words.length < 2) return words.length ? new RegExp(`(\\b${escapeRegExp(words[0])}\\b)`, 'gi') : null;
+    const first = words[0];
+    const last = escapeRegExp(words[words.length - 1]);
+    const initial = escapeRegExp(Array.from(first)[0] ?? '');
+    const forms = [
+        escapeRegExp(words.join(' ')),
+        `${escapeRegExp(first)}\\s+${last}`,
+        `${initial}\\.?(?:\\s*[A-Z]\\.?)*\\s+${last}`,
+        `${last},?\\s+${initial}\\.?(?:\\s*[A-Z]\\.?)*`,
+    ];
+    return new RegExp(`(${forms.join('|')})`, 'gi');
+};
+
+/** Author list with the resume owner's name in bold. */
+export const Authors: React.FC<{ authors: string; owner: string }> = ({ authors, owner }) => {
+    const pattern = ownerNamePattern(owner);
+    if (!pattern) return <>{authors}</>;
+    const parts = authors.split(pattern);
+    return (
+        <>
+            {parts.map((part, index) =>
+                index % 2 === 1 ? (
+                    <strong key={index} className="font-bold">
+                        {part}
+                    </strong>
+                ) : (
+                    <React.Fragment key={index}>{part}</React.Fragment>
+                )
+            )}
+        </>
+    );
+};
+
+/** Adds a full stop unless the text already ends in punctuation. */
+const sentence = (text: string) => (/[.?!]$/.test(text) ? text : `${text}.`);
+
+/**
+ * One reference in a conventional citation style:
+ * Lee, P., Chen, J. (2025). Title of the paper. *Venue*. doi.org/…
+ * Colours and sizes come from the parent; `linkClassName` styles the DOI/URL.
+ */
+export const Citation: React.FC<{ pub: Publication; owner: string; linkClassName?: string; titleClassName?: string }> = ({
+    pub,
+    owner,
+    linkClassName = 'wrap-anywhere hover:underline underline-offset-2',
+    titleClassName = '',
+}) => {
+    const authors = pub.authors.trim().replace(/[,;\s]+$/, '');
+    const title = pub.title.trim();
+    const venue = pub.venue.trim();
+    const year = pub.year.trim();
+    const link = pub.link.trim();
+    return (
+        <>
+            {authors && <Authors authors={authors} owner={owner} />}
+            {authors && year && ` (${year})`}
+            {authors && (year || !authors.endsWith('.') ? '. ' : ' ')}
+            {title && <span className={titleClassName}>{sentence(title)}</span>}
+            {venue && (
+                <>
+                    {' '}
+                    <em>{venue}</em>
+                    {!authors && year ? `, ${year}` : ''}.
+                </>
+            )}
+            {!authors && !venue && year && ` ${year}.`}
+            {link && validateUrl(link) && (
+                <>
+                    {' '}
+                    <a href={toHref(link)} target="_blank" rel="noopener noreferrer" className={linkClassName}>
+                        {displayUrl(link)}
+                    </a>
+                </>
+            )}
+        </>
     );
 };
