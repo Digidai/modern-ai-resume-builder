@@ -110,7 +110,7 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
 
 /** Under the preview: how many pages the PDF will have, with a one-click fit when it runs over. */
 const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<ResumeDesign>) => void }> = ({ design, onChange }) => {
-  const { pageCount, fit, note, atMinimum } = useOnePageFit(design, onChange);
+  const { pageCount, lastPageSparse, fitLabel, fit, note, atMinimum } = useOnePageFit(design, onChange);
   if (pageCount === null) return null;
   return (
     <div className="mt-4 flex flex-col items-center gap-2 text-center text-xs text-muted print:hidden" aria-live="polite">
@@ -119,12 +119,13 @@ const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<Res
       ) : (
         <>
           <p>
-            <span className="font-medium text-ink">{pageCount} pages.</span> Dashed lines show where each new page starts; they
+            <span className="font-medium text-ink">{pageCount} pages.</span>
+            {lastPageSparse && <> Page {pageCount} has only a few lines.</>} Dashed lines show where each new page starts; they
             aren't printed.
           </p>
           {!atMinimum && (
             <Button variant="secondary" size="sm" onClick={fit}>
-              Fit to one page
+              {fitLabel}
             </Button>
           )}
         </>

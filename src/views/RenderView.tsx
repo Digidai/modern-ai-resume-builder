@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ResumePreview from '../components/ResumePreview';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
-import { largestOnePageScale, measurePrintLayout } from '../utils/printLayout';
+import { largestScaleForPages, measurePrintLayout } from '../utils/printLayout';
 import { SCALE_MIN } from '../constants/design';
 import { isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
@@ -61,7 +61,7 @@ const RenderView: React.FC = () => {
           const pages = measurePrintLayout(paper, fullBleed).pages;
           root.dataset.renderPages = String(pages);
           // For a longer resume, the largest text size that would fit one page (empty when none does).
-          if (pages > 1) root.dataset.renderFitScale = String(largestOnePageScale(paper, fullBleed, data.design.scale, SCALE_MIN) ?? '');
+          if (pages > 1) root.dataset.renderFitScale = String(largestScaleForPages(paper, fullBleed, data.design.scale, SCALE_MIN) ?? '');
           root.dataset.renderState = 'ready';
         })
       );

@@ -28,7 +28,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     return (
         <div className="flex-1 flex flex-col bg-white font-sans text-[14px] leading-normal text-slate-800 p-[8mm] [--accent:var(--rs-accent,#0F172A)] [--dot:color-mix(in_oklab,var(--accent)_28%,transparent)]">
-            <div className="flex-1 flex flex-col border-2 border-(--accent)">
+            <div className="page-frame flex-1 flex flex-col border-2 border-(--accent)">
                 <header className="border-b-2 border-(--accent) grid grid-cols-[minmax(0,1fr)_auto] gap-8 px-6 py-6">
                     <div className="min-w-0">
                         <div role="heading" aria-level={1} className="font-jetbrains text-[26px] leading-tight font-bold uppercase tracking-[0.1em] text-slate-900 wrap-break-word">{data.fullName}</div>
@@ -51,7 +51,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                 </header>
 
                 <div className="flex flex-1">
-                    <main className="flex-1 min-w-0 flex flex-col">
+                    <main className="page-frame py-[5mm] [&>:first-child]:-mt-[5mm] [&>:last-child]:-mb-[5mm] flex-1 min-w-0 flex flex-col">
                         {data.summary && (
                             <section className={sectionClass}>
                                 <Heading>Summary</Heading>
@@ -106,7 +106,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                     </main>
 
                     {hasSidebar && (
-                        <aside className="w-[33%] shrink-0 border-l-2 border-(--accent) flex flex-col">
+                        <aside className="page-frame py-[5mm] [&>:first-child]:-mt-[5mm] [&>:last-child]:-mb-[5mm] w-[33%] shrink-0 border-l-2 border-(--accent) flex flex-col">
                             {skillGroups.length > 0 && (
                                 <section className={sectionClass}>
                                     <Heading>Skills</Heading>

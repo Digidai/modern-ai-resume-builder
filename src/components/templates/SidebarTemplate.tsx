@@ -33,7 +33,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     return (
         <div className="flex flex-1 flex-row font-roboto [--accent:var(--rs-accent,#2F5A8A)] [--accent-light:color-mix(in_oklab,var(--accent)_45%,white)] [--side:color-mix(in_oklab,var(--accent)_22%,#0f172a)]">
-            <aside className="flex w-[70mm] shrink-0 flex-col gap-8 bg-(--side) pt-[15mm] pr-[8mm] pb-[12mm] pl-[12mm] text-slate-300 print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
+            <aside className="page-frame flex w-[70mm] shrink-0 flex-col gap-8 bg-(--side) pt-[15mm] pr-[8mm] pb-[12mm] pl-[12mm] text-slate-300 print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                 {(data.fullName.trim() || data.title.trim()) && (
                     <div>
                         {data.fullName.trim() && (
@@ -101,7 +101,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
             </aside>
 
-            <main className="flex min-w-0 flex-1 flex-col gap-7 bg-white pt-[15mm] pr-[13mm] pb-[12mm] pl-[10mm] text-slate-800">
+            <main className="page-frame flex min-w-0 flex-1 flex-col gap-7 bg-white pt-[15mm] pr-[13mm] pb-[12mm] pl-[10mm] text-slate-800">
                 {data.summary.trim() && (
                     <section>
                         <MainHeading>Profile</MainHeading>

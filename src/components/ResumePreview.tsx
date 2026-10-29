@@ -4,10 +4,17 @@ import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
 import { PAGE_HEIGHT_PX, PRINT_CONFIG } from '../constants/print';
 import { measurePrintLayout, type PrintLayout } from '../utils/printLayout';
-
-const ONE_PAGE: PrintLayout = { pages: 1, breaksMm: [] };
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
+
+/**
+ * Whether this browser repeats a block's padding and background on each page (Chromium, Firefox). The
+ * last-page fill height is only meaningful where it does; Safari measures without it, so it prints
+ * without the stretch (the server also re-prints without it if the PDF ever comes out longer).
+ */
+const SUPPORTS_CLONE = typeof CSS !== 'undefined' && CSS.supports('box-decoration-break', 'clone');
+
+const ONE_PAGE: PrintLayout = { pages: 1, breaksMm: [], fillHeightPx: PAGE_HEIGHT_PX - 1, lastPageFill: 1 };
 
 interface ResumePreviewProps {
   data: ResumeData;
@@ -37,7 +44,11 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
       // Up to one A4 tall (the paper's min-height) always prints on one page; only longer papers need
       // the full print simulation.
       const next = paper.offsetHeight <= PAGE_HEIGHT_PX + 1 ? ONE_PAGE : measurePrintLayout(paper, isFullBleed);
-      setLayout((prev) => (prev.pages === next.pages && prev.breaksMm.join() === next.breaksMm.join() ? prev : next));
+      setLayout((prev) =>
+        prev.pages === next.pages && prev.breaksMm.join() === next.breaksMm.join() && prev.fillHeightPx === next.fillHeightPx && prev.lastPageFill === next.lastPageFill
+          ? prev
+          : next
+      );
     };
     measure();
     const observer = new ResizeObserver(measure);
@@ -46,19 +57,17 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
   }, [data, isFullBleed, paginated]);
 
   const breaks = layout.breaksMm;
-  const { MARGIN_STANDARD_MM: std, MARGIN_CONTINUATION_MM: cont } = PRINT_CONFIG;
+  const std = PRINT_CONFIG.MARGIN_STANDARD_MM;
 
-  // Standard templates get 15mm @page margins on every page. Full-bleed templates own page 1's margins;
-  // once they run past one page, page 1 gets a bottom margin and later pages a top and bottom margin, so no
-  // text is printed against the paper edge.
+  // Standard templates get 15mm @page margins on every page. Full-bleed templates print edge to edge: their
+  // root (and any `.page-frame`) repeats its padding and background on every page, and the paper fills whole
+  // pages so the background also reaches the bottom of the last one.
+  const fillRule = !SUPPORTS_CLONE && layout.pages > 1 ? 'min-height: 0' : `min-height: ${layout.fillHeightPx}px`;
   const printStyles = !isFullBleed
     ? `@page { size: A4; margin: ${std}mm; }
        @media print { .resume-preview-container { padding: 0 !important; min-height: 0 !important; } }`
-    : layout.pages > 1
-      ? `@page { size: A4; margin: ${cont}mm 0; } @page :first { margin: 0 0 ${cont}mm; }
-         @media print { .resume-preview-container { min-height: 0 !important; } }`
-      : `@page { size: A4; margin: 0; }
-         @media print { .resume-preview-container { min-height: calc(297mm - 1px) !important; } }`;
+    : `@page { size: A4; margin: 0; }
+       @media print { .resume-preview-container { ${fillRule} !important; } }`;
 
   return (
     <div
@@ -68,7 +77,9 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
       }`}
       id={id || undefined}
       data-template-id={data.templateId}
+      data-full-bleed={isFullBleed || undefined}
       data-pages={layout.pages}
+      data-last-page-fill={layout.lastPageFill.toFixed(2)}
       style={data.design ? designStyle(data.design) : undefined}
     >
       <style nonce={getCspNonce()}>{printStyles}</style>

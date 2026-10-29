@@ -41,7 +41,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             <div className="flex flex-1">
-                <aside className="flex w-[34%] shrink-0 flex-col gap-7 bg-(--accent)/6 pt-[9mm] pr-[7mm] pb-[12mm] pl-[12mm] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
+                <aside className="flex w-[34%] shrink-0 flex-col gap-7 bg-(--accent)/6 page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[7mm] pb-[12mm] pl-[12mm] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                     {contacts.length > 0 && (
                         <section>
                             <SidebarHeading>Contact</SidebarHeading>
@@ -101,7 +101,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                     )}
                 </aside>
 
-                <main className="flex min-w-0 flex-1 flex-col gap-7 pt-[9mm] pr-[13mm] pb-[12mm] pl-[8mm]">
+                <main className="page-frame flex min-w-0 flex-1 flex-col gap-7 pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[13mm] pb-[12mm] pl-[8mm]">
                     {data.summary.trim() && (
                         <section>
                             <MainHeading>Profile</MainHeading>

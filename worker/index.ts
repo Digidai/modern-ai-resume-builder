@@ -846,6 +846,12 @@ const buildPdfDocument = (html: string, css: string): string =>
   `<style>${css.replace(/<\/style/gi, '<\\/style')}</style></head>` +
   `<body style="margin:0">${html.replace(/<script[\s\S]*?<\/script>/gi, '')}</body></html>`;
 
+/** Page count of a Chromium-generated PDF (its single page tree's /Count). */
+const pdfPageCount = (pdf: Uint8Array): number => {
+  const text = new TextDecoder('latin1').decode(pdf);
+  return Math.max(0, ...Array.from(text.matchAll(/\/Count (\d+)/g), (match) => Number(match[1])));
+};
+
 const handlePdfRequest = async (request: Request, env: Env): Promise<Response> => {
   if (request.method !== 'POST') {
     return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
@@ -877,7 +883,17 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
       const page = await browser.newPage();
       await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
-      return page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
+      const print = () => page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
+      const pdf = await print();
+      // Full-bleed papers are stretched to fill their last page using a height measured in the user's
+      // browser. If that ever adds a page here (different engine or fonts), print again without the stretch.
+      const expected = Number(/^<div[^>]*\bdata-pages="(\d+)"/.exec(html)?.[1] ?? 0);
+      if (expected && /^<div[^>]*\bdata-full-bleed/.test(html) && pdfPageCount(pdf) > expected) {
+        // More specific than the paper's own (later, in-body) print rule, which is also !important.
+        await page.addStyleTag({ content: 'html body .resume-preview-container { min-height: 0 !important; }' });
+        return print();
+      }
+      return pdf;
     })();
     const timeout = new Promise<never>((_, reject) => {
       timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), PDF_TIMEOUT_MS);

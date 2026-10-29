@@ -1,9 +1,8 @@
 import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
-import { PRINT_CONFIG } from '../constants/print';
 import { isFullBleedTemplate } from '../constants/templates';
-import { measurePrintLayout } from './printLayout';
+import { pageBoxMm, withPrintedPages } from './printLayout';
 
 const A4_WIDTH_PT = 595.28;
 const A4_HEIGHT_PT = 841.89;
@@ -79,75 +78,56 @@ export const exportResumeToPdf = async ({
     console.warn('Server PDF rendering unavailable, exporting in the browser instead.', error);
   }
 
-  // Browser fallback: an image-based PDF. Pages are cut where printing would break them (never through a
-  // line) and continuation pages get the same top margin as the vector PDF.
+  // Browser fallback: an image-based PDF of the same pagination print uses (page-sized columns of the
+  // paper, with repeating page frames), so pages break, keep margins and fill backgrounds like the vector PDF.
   const fullBleed = isFullBleedTemplate(data.templateId);
-  const { pages, breaksMm } = measurePrintLayout(element, fullBleed);
-
-  const clone = element.cloneNode(true) as HTMLElement;
-  // offsetWidth is the layout width; the on-screen preview may be visually scaled with a transform.
-  const safeWidth = Math.max(1, Math.round(element.offsetWidth || element.scrollWidth || 794));
-  clone.removeAttribute('id');
-  clone.style.boxShadow = 'none';
-  clone.style.margin = '0';
-  clone.style.height = 'auto';
-  clone.style.width = `${safeWidth}px`;
-  clone.querySelectorAll('[data-export-ignore="true"]').forEach((node) => node.remove());
-
-  const wrapper = document.createElement('div');
-  Object.assign(wrapper.style, { position: 'fixed', left: '-100000px', top: '0', opacity: '0', zIndex: '-1', pointerEvents: 'none', width: `${safeWidth}px` });
-  wrapper.appendChild(clone);
-  document.body.appendChild(wrapper);
-
-  let dataUrl = '';
+  const box = pageBoxMm(fullBleed);
   try {
-    await nextFrame();
-    dataUrl = await toPng(clone, {
-      cacheBust: true,
-      pixelRatio: EXPORT_PIXEL_RATIO,
-      backgroundColor: '#ffffff',
-      width: clone.scrollWidth || safeWidth,
-      height: clone.scrollHeight,
+    const { image, pages, pagePx, stridePx } = await withPrintedPages(element, fullBleed, async (host, layout) => {
+      await nextFrame();
+      const width = layout.pages * layout.columnWidthPx + (layout.pages - 1) * layout.gapPx;
+      const dataUrl = await toPng(host, {
+        cacheBust: true,
+        pixelRatio: EXPORT_PIXEL_RATIO,
+        backgroundColor: '#ffffff',
+        width,
+        height: layout.columnHeightPx,
+        // `width` above sizes the canvas to include the overflowing columns; the host keeps its measured width.
+        style: { position: 'static', left: '0', top: '0', opacity: '1', width: `${layout.columnWidthPx}px` },
+      });
+      if (!dataUrl) throw new Error('Failed to generate image from resume');
+      const image = await loadImage(dataUrl);
+      // html-to-image shrinks very wide canvases (about 10+ pages), so use the scale it actually produced.
+      const ratio = image.width / width;
+      return {
+        image,
+        pages: layout.pages,
+        pagePx: { width: layout.columnWidthPx * ratio, height: layout.columnHeightPx * ratio },
+        stridePx: (layout.columnWidthPx + layout.gapPx) * ratio,
+      };
     });
-    if (!dataUrl) throw new Error('Failed to generate image from resume');
-  } catch (error) {
-    throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
-  } finally {
-    wrapper.remove();
-  }
 
-  try {
-    const image = await loadImage(dataUrl);
-    const pxPerMm = image.width / PRINT_CONFIG.PAGE_WIDTH_MM;
-    const imageHeightMm = image.height / pxPerMm;
-    const topMarginMm = fullBleed ? PRINT_CONFIG.MARGIN_CONTINUATION_MM : PRINT_CONFIG.MARGIN_STANDARD_MM;
     const pdfDoc = await PDFDocument.create();
-
-    let fromMm = 0;
     for (let index = 0; index < pages; index += 1) {
-      // Page 1 is the top of the paper as-is (it carries its own margin); later pages continue from
-      // their break, placed below the top margin.
-      const capacityMm = PRINT_CONFIG.PAGE_HEIGHT_MM - (index === 0 ? 0 : topMarginMm);
-      const toMm = Math.min(breaksMm[index] ?? Infinity, imageHeightMm, fromMm + capacityMm);
       const canvas = document.createElement('canvas');
-      canvas.width = image.width;
-      canvas.height = Math.max(1, Math.round((toMm - fromMm) * pxPerMm));
+      canvas.width = Math.round(pagePx.width);
+      canvas.height = Math.round(pagePx.height);
       const context = canvas.getContext('2d');
       if (!context) throw new Error('Canvas is not available');
-      context.drawImage(image, 0, Math.round(fromMm * pxPerMm), canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-
+      context.drawImage(image, Math.round(index * stridePx), 0, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
       const slice = await pdfDoc.embedPng(canvas.toDataURL('image/png'));
       const page = pdfDoc.addPage([A4_WIDTH_PT, A4_HEIGHT_PT]);
-      const heightPt = (canvas.height / pxPerMm) * MM_TO_PT;
-      const topPt = (index === 0 ? 0 : topMarginMm) * MM_TO_PT;
-      page.drawImage(slice, { x: 0, y: A4_HEIGHT_PT - topPt - heightPt, width: A4_WIDTH_PT, height: heightPt });
-      fromMm = toMm;
+      page.drawImage(slice, {
+        x: box.inset * MM_TO_PT,
+        y: A4_HEIGHT_PT - (box.inset + box.height) * MM_TO_PT,
+        width: box.width * MM_TO_PT,
+        height: box.height * MM_TO_PT,
+      });
     }
 
     const pdfBytes = await pdfDoc.save();
-    const blob = new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' });
-    downloadBlob(blob, `${safeName}.pdf`);
+    downloadBlob(new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }), `${safeName}.pdf`);
   } catch (error) {
-    throw new Error(`Failed to create PDF: ${error instanceof Error ? error.message : 'Unknown error'}`);
+    throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
 };

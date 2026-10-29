@@ -3,8 +3,6 @@ export const PRINT_CONFIG = {
   PAGE_HEIGHT_MM: 297,
   MARGIN_STANDARD_MM: 15,
   MARGIN_FULL_BLEED_MM: 0,
-  /** Full-bleed templates own page 1's margins; when they run longer, later pages get this top and bottom margin. */
-  MARGIN_CONTINUATION_MM: 12,
 } as const;
 
 export const A4_DIMENSIONS = {

@@ -155,6 +155,15 @@ html.dark {
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Full-bleed templates own their margins on every printed page: the template root and any `.page-frame`
+     repeat their padding, borders and background on each page they span. On screen this only matters to
+     the off-screen copy that printLayout.ts paginates in columns to predict the printed pages. */
+  .resume-paper[data-full-bleed] [data-resume-zoom] > *,
+  .resume-paper .page-frame {
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
   body {
     @apply bg-paper text-ink antialiased;
   }

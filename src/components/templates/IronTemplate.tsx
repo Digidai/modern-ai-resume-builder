@@ -42,7 +42,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
             </header>
 
-            <div className="flex-1 px-[14mm] pt-[9mm] pb-[12mm] flex flex-col gap-7">
+            <div className="page-frame flex-1 px-[14mm] pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[12mm] flex flex-col gap-7">
                 {data.summary.trim() && (
                     <section>
                         <Label>Profile</Label>

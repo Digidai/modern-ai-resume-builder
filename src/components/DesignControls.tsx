@@ -15,7 +15,7 @@ interface DesignControlsProps {
 }
 
 export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
-  const { pageCount, fit, note: fitNote, atMinimum } = useOnePageFit(design, onChange);
+  const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum } = useOnePageFit(design, onChange);
   const [hexDraft, setHexDraft] = useState(design.accent);
 
   useEffect(() => setHexDraft(design.accent), [design.accent]);
@@ -165,7 +165,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
         />
         <div className="mt-3 flex flex-wrap items-center justify-between gap-2">
           <span className="text-xs text-muted" aria-live="polite">
-            {pageCount === null ? '' : pageCount === 1 ? 'Fits on 1 page' : `${pageCount} pages`}
+            {pageCount === null ? '' : pageCount === 1 ? 'Fits on 1 page' : `${pageCount} pages${lastPageSparse ? ' · last page has only a few lines' : ''}`}
           </span>
           <div className="flex gap-2">
             {pageCount !== null && pageCount > 1 && (
@@ -175,7 +175,7 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
                 onClick={fit}
                 className="focus-ring h-8 rounded-lg bg-ink px-3 text-xs font-medium text-paper shadow-button hover:bg-ink-hover disabled:opacity-50"
               >
-                {atMinimum ? 'At minimum size' : 'Fit to one page'}
+                {atMinimum ? 'At minimum size' : fitLabel}
               </button>
             )}
             {!isDefault && (

@@ -51,7 +51,7 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
                 </header>
             )}
 
-            <div className={`flex flex-col gap-[6mm] px-[15mm] pb-[13mm] ${hasHeader ? 'pt-[4mm]' : 'pt-[13mm]'}`}>
+            <div className={`page-frame flex flex-col gap-[6mm] px-[15mm] pt-[13mm] pb-[13mm] ${hasHeader ? '[&>:first-child]:-mt-[9mm]' : ''}`}>
                 {summary && (
                     <section>
                         <SectionTitle>Profile</SectionTitle>

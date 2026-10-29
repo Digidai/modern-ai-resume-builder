@@ -2,13 +2,20 @@ import { useCallback, useEffect, useState } from 'react';
 import type { ResumeDesign } from '../types';
 import { SCALE_MIN } from '../constants/design';
 import { isFullBleedTemplate } from '../constants/templates';
-import { largestOnePageScale, measurePrintLayout } from '../utils/printLayout';
+import { largestScaleForPages, measurePrintLayout } from '../utils/printLayout';
 
 const PREVIEW_ID = 'resume-preview-container';
+/** Below this share of a page, the last page reads as "only a few lines" (about ten lines of body text). */
+const SPARSE_LAST_PAGE = 0.2;
 
-/** Printed page count of the exported preview, or null while it has no layout (e.g. hidden on mobile). */
+interface PreviewPages {
+  pages: number;
+  lastPageFill: number;
+}
+
+/** Printed pages of the exported preview (kept current by ResumePreview), or null while it has no layout (e.g. hidden on mobile). */
 export const usePreviewPages = () => {
-  const [pages, setPages] = useState<number | null>(null);
+  const [state, setState] = useState<PreviewPages | null>(null);
   useEffect(() => {
     let resize: ResizeObserver | undefined;
     let mutation: MutationObserver | undefined;
@@ -19,12 +26,14 @@ export const usePreviewPages = () => {
         frame = requestAnimationFrame(attach);
         return;
       }
-      // ResumePreview keeps `data-pages` current.
-      const measure = () => setPages(el.offsetHeight ? Number(el.dataset.pages) || 1 : null);
+      const measure = () => {
+        const next = el.offsetHeight ? { pages: Number(el.dataset.pages) || 1, lastPageFill: Number(el.dataset.lastPageFill ?? 1) } : null;
+        setState((prev) => (prev?.pages === next?.pages && prev?.lastPageFill === next?.lastPageFill ? prev : next));
+      };
       resize = new ResizeObserver(measure);
       resize.observe(el);
       mutation = new MutationObserver(measure);
-      mutation.observe(el, { attributes: true, attributeFilter: ['data-pages'] });
+      mutation.observe(el, { attributes: true, attributeFilter: ['data-pages', 'data-last-page-fill'] });
       measure();
     };
     attach();
@@ -34,27 +43,29 @@ export const usePreviewPages = () => {
       mutation?.disconnect();
     };
   }, []);
-  return pages;
+  return state;
 };
 
+const pagesLabel = (pages: number) => (pages === 1 ? 'one page' : `${pages} pages`);
+
 /**
- * Page count plus "Fit to one page": picks the largest text size (down to the minimum) that prints on
- * one page, measured off-screen, then applies it in one step. If nothing fits, the size is left alone
- * and `note` says why.
+ * Page count plus "Fit to N−1 pages" (one page for a two-page resume): picks the largest text size, down
+ * to the minimum, that drops the last page, measured off-screen, and applies it in one step. If nothing
+ * fits, the size is left alone and `note` says why.
  */
 export const useOnePageFit = (design: ResumeDesign, onChange: (patch: Partial<ResumeDesign>) => void) => {
-  const pageCount = usePreviewPages();
+  const preview = usePreviewPages();
+  const pageCount = preview?.pages ?? null;
+  const target = pageCount && pageCount > 1 ? pageCount - 1 : 1;
   const [note, setNote] = useState('');
 
-  useEffect(() => {
-    if (pageCount === 1) setNote('');
-  }, [pageCount]);
+  useEffect(() => setNote(''), [pageCount]);
 
   const fit = useCallback(() => {
     const paper = document.getElementById(PREVIEW_ID);
     if (!paper) return;
     const fullBleed = isFullBleedTemplate(paper.dataset.templateId ?? '');
-    const scale = largestOnePageScale(paper, fullBleed, design.scale, SCALE_MIN);
+    const scale = largestScaleForPages(paper, fullBleed, design.scale, SCALE_MIN, target);
     if (scale !== null) {
       setNote('');
       onChange({ scale });
@@ -62,9 +73,17 @@ export const useOnePageFit = (design: ResumeDesign, onChange: (patch: Partial<Re
     }
     const pages = measurePrintLayout(paper, fullBleed, SCALE_MIN).pages;
     setNote(
-      `Still ${pages} pages at the smallest text size (${Math.round(SCALE_MIN * 100)}%), so nothing was changed. Shorten a few bullets or try the Compact template.`
+      `Still ${pagesLabel(pages)} at the smallest text size (${Math.round(SCALE_MIN * 100)}%), so nothing was changed. Shorten a few bullets or try the Compact template.`
     );
-  }, [design.scale, onChange]);
+  }, [design.scale, onChange, target]);
 
-  return { pageCount, fit, note, atMinimum: design.scale <= SCALE_MIN + 1e-6 };
+  return {
+    pageCount,
+    /** The last page holds only a few lines, so dropping it is usually a small change. */
+    lastPageSparse: !!preview && preview.pages > 1 && preview.lastPageFill < SPARSE_LAST_PAGE,
+    fitLabel: `Fit to ${pagesLabel(target)}`,
+    fit,
+    note,
+    atMinimum: design.scale <= SCALE_MIN + 1e-6,
+  };
 };

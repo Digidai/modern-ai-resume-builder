@@ -77,7 +77,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     return (
         <div className="flex flex-1 flex-col bg-white p-[10mm] font-inter text-[14px] leading-[1.5] text-slate-900 wrap-break-word [--accent:var(--rs-accent,#0F172A)]">
-            <div className="flex flex-1 flex-col border-2 border-(--accent)">
+            <div className="page-frame flex flex-1 flex-col border-2 border-(--accent)">
                 <header className="border-b-2 border-(--accent) px-[8mm] pt-[7mm] pb-[6mm]">
                     {data.fullName && (
                         <div role="heading" aria-level={1} className="text-[38px] font-bold uppercase leading-[1.05] tracking-tight text-slate-900">{data.fullName}</div>
@@ -91,7 +91,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {hasSide ? (
                     <div className="grid flex-1 grid-cols-[minmax(0,1fr)_minmax(0,2fr)]">
-                        <aside className="flex min-w-0 flex-col gap-6 border-r-2 border-(--accent) bg-(--accent)/5 px-[6mm] py-[6mm]">
+                        <aside className="page-frame flex min-w-0 flex-col gap-6 border-r-2 border-(--accent) bg-(--accent)/5 px-[6mm] py-[6mm]">
                             {contacts.length > 0 && (
                                 <section>
                                     <SectionTitle>Contact</SectionTitle>
@@ -144,10 +144,10 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 </section>
                             )}
                         </aside>
-                        <div className="min-w-0 px-[7mm] py-[6mm]">{main}</div>
+                        <div className="page-frame min-w-0 px-[7mm] py-[6mm]">{main}</div>
                     </div>
                 ) : (
-                    <div className="flex-1 px-[8mm] py-[6mm]">{main}</div>
+                    <div className="page-frame flex-1 px-[8mm] py-[6mm]">{main}</div>
                 )}
             </div>
         </div>
