@@ -1,4 +1,4 @@
-import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
+import { useCallback, useEffect, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
 import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk, type Teaching } from '../types';
 import {
   PlusIcon,
@@ -245,19 +245,31 @@ const AiButton = ({
   disabled?: boolean;
   children: ReactNode;
   label: string;
-}) => (
-  <button
-    type="button"
-    onClick={onClick}
-    disabled={disabled || loading}
-    aria-label={label}
-    title={label}
-    className="focus-ring inline-flex h-7 items-center gap-1 rounded-md px-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10 disabled:pointer-events-none disabled:opacity-40"
-  >
-    {loading && <LoaderIcon className="h-3.5 w-3.5 animate-spin" />}
-    {children}
-  </button>
-);
+}) => {
+  // Seconds since the request started: the model can think for several seconds before its first word.
+  const [elapsed, setElapsed] = useState(0);
+  useEffect(() => {
+    if (!loading) return;
+    const started = Date.now();
+    setElapsed(0);
+    const timer = window.setInterval(() => setElapsed(Math.floor((Date.now() - started) / 1000)), 1000);
+    return () => window.clearInterval(timer);
+  }, [loading]);
+  return (
+    <button
+      type="button"
+      onClick={onClick}
+      disabled={disabled || loading}
+      aria-label={label}
+      title={label}
+      className={`focus-ring inline-flex h-7 items-center gap-1 rounded-md px-2 text-sm font-medium text-accent transition-colors hover:bg-accent/10 disabled:pointer-events-none ${loading ? 'bg-accent/10' : 'disabled:opacity-40'}`}
+    >
+      {loading && <LoaderIcon className="h-3.5 w-3.5 animate-spin" />}
+      {children}
+      {loading && elapsed > 0 && <span className="tabular-nums text-xs font-normal text-muted">{elapsed}s</span>}
+    </button>
+  );
+};
 
 /**
  * Tag input: Enter or comma adds a skill, Backspace on an empty field removes the last one.
@@ -467,12 +479,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
   const polishButton = (fieldId: string, text: string, context: string, apply: (value: string) => void) => (
     <AiButton
-      onClick={() => improveField({ fieldId, text, context, onUpdate: applyAi(text, apply) })}
+      onClick={() => improveField({ fieldId, text, context, onUpdate: applyAi(text, apply), onPartial: apply })}
       loading={isLoadingField(fieldId)}
       disabled={!text.trim()}
       label={`Improve ${context.toLowerCase()} with AI`}
     >
-      Improve
+      {isLoadingField(fieldId) ? 'Improving…' : 'Improve'}
     </AiButton>
   );
 
@@ -579,15 +591,17 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                       onClick={() =>
                         generateField({
                           fieldId: 'summary',
-                          generator: () => generateSummaryField(data.title, data.skills || []),
+                          generator: (onPartial) => generateSummaryField(data.title, data.skills || [], onPartial),
                           onUpdate: applyAi(data.summary, (v) => setField('summary', v)),
+                          original: data.summary,
+                          onPartial: (v) => setField('summary', v),
                         })
                       }
                       loading={isLoadingField('summary')}
                       disabled={!data.title.trim()}
                       label="Write a summary with AI"
                     >
-                      Write
+                      {isLoadingField('summary') ? 'Writing…' : 'Write'}
                     </AiButton>
                     {polishButton('summary-polish', data.summary, 'Professional Summary', (v) => setField('summary', v))}
                   </div>

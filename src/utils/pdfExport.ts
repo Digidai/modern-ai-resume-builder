@@ -10,10 +10,19 @@ const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
 const MM_TO_PT = 72 / 25.4;
 
+/** Where an export is: rendering on the server, or (when that fails) capturing and building pages in the browser. */
+export type PdfExportProgress =
+  | { stage: 'preparing' }
+  | { stage: 'server' }
+  | { stage: 'browser' }
+  | { stage: 'building'; page: number; pages: number }
+  | { stage: 'saving' };
+
 interface ExportResumeToPdfOptions {
   rawFileName: string;
   data: ResumeData;
   previewElementId?: string;
+  onProgress?: (progress: PdfExportProgress) => void;
 }
 
 const loadImage = (src: string) =>
@@ -161,6 +170,7 @@ export const exportResumeToPdf = async ({
   rawFileName,
   data,
   previewElementId = 'resume-preview-container',
+  onProgress,
 }: ExportResumeToPdfOptions) => {
   if (document.fonts?.ready) {
     await document.fonts.ready;
@@ -174,7 +184,10 @@ export const exportResumeToPdf = async ({
   // Best path: the server prints the exact preview to a vector PDF (selectable text, all templates).
   try {
     const { renderPdfOnServer } = await import('./serverPdf');
-    downloadBlob(await renderPdfOnServer(element), `${safeName}.pdf`);
+    onProgress?.({ stage: 'server' });
+    const pdf = await renderPdfOnServer(element);
+    onProgress?.({ stage: 'saving' });
+    downloadBlob(pdf, `${safeName}.pdf`);
     return;
   } catch (error) {
     console.warn('Server PDF rendering unavailable, exporting in the browser instead.', error);
@@ -184,6 +197,7 @@ export const exportResumeToPdf = async ({
   // and fill backgrounds like the vector PDF.
   const fullBleed = isFullBleedTemplate(data.templateId);
   const box = pageBoxMm(fullBleed);
+  onProgress?.({ stage: 'browser' });
   try {
     // Our own font CSS: html-to-image's font discovery throws in Firefox (it reads `@font-face` rules'
     // `style.fontFamily`, which Firefox doesn't expose).
@@ -191,7 +205,10 @@ export const exportResumeToPdf = async ({
     const pageImages = fullBleed && !SUPPORTS_CLONE ? await capturePagesBySlicing(element, fontEmbedCSS) : await capturePagesAsColumns(element, fullBleed, fontEmbedCSS);
 
     const pdfDoc = await PDFDocument.create();
-    for (const canvas of pageImages) {
+    for (const [index, canvas] of pageImages.entries()) {
+      onProgress?.({ stage: 'building', page: index + 1, pages: pageImages.length });
+      // Let the progress repaint between pages; encoding each one blocks the main thread.
+      await nextFrame();
       const slice = await pdfDoc.embedPng(canvas.toDataURL('image/png'));
       const page = pdfDoc.addPage([A4_WIDTH_PT, A4_HEIGHT_PT]);
       page.drawImage(slice, {
@@ -202,6 +219,7 @@ export const exportResumeToPdf = async ({
       });
     }
 
+    onProgress?.({ stage: 'saving' });
     const pdfBytes = await pdfDoc.save();
     downloadBlob(new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }), `${safeName}.pdf`);
   } catch (error) {

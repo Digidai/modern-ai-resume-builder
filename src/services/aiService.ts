@@ -1,8 +1,9 @@
 import {
   type AiErrorCode,
   type AiErrorEnvelope,
-  type AiParseLatexEvent,
   type AiRequest,
+  type AiStreamEvent,
+  finishAiText,
   isAiApiResponse,
   isAiErrorCode,
   isAiSessionResponse,
@@ -232,16 +233,15 @@ const postAiRequest = async (
   }
 };
 
-const callAiProxy = async (payload: AiRequest): Promise<string> => {
-  let sessionToken = await fetchSessionToken();
-  let response = await postAiRequest(payload, sessionToken);
+/** Posts an AI request, refreshing the session once when it has expired; throws on any error status. */
+const sendAiRequest = async (payload: AiRequest): Promise<Response> => {
+  let response = await postAiRequest(payload, await fetchSessionToken());
 
   if (response.status === 401) {
     const authError = await parseError(response);
     if (authError.code === 'SESSION_EXPIRED' || authError.code === 'INVALID_SESSION_TOKEN' || authError.code === 'AUTH_REQUIRED') {
       clearSessionCache();
-      sessionToken = await fetchSessionToken(true);
-      response = await postAiRequest(payload, sessionToken);
+      response = await postAiRequest(payload, await fetchSessionToken(true));
     } else {
       throw authError;
     }
@@ -250,19 +250,7 @@ const callAiProxy = async (payload: AiRequest): Promise<string> => {
   if (!response.ok) {
     throw await parseError(response);
   }
-
-  const rawData = (await response.json().catch(() => ({}))) as unknown;
-  if (!isAiApiResponse(rawData)) {
-    throw new AiError('AI response schema is invalid.', 'INVALID_RESPONSE', false);
-  }
-
-  const data = rawData;
-  const text = typeof data.text === 'string' ? data.text.trim() : '';
-  if (!text) {
-    throw new AiError('AI returned an empty response.', 'INVALID_RESPONSE', false);
-  }
-
-  return text;
+  return response;
 };
 
 /**
@@ -292,46 +280,38 @@ export const postWithAiSession = async (path: string, body: string): Promise<Res
   return response;
 };
 
-export const improveText = async (
-  text: string,
-  context: string = 'resume'
-): Promise<string> => {
+/** Called with the reply so far, cleaned the way the finished text will be, while the model writes it. */
+export type AiPartialHandler = (text: string) => void;
+
+/** Streams a text request; each attempt starts the partial text over, so a retry doesn't repeat it. */
+const streamText = (payload: AiRequest, onPartial?: AiPartialHandler) =>
+  executeWithRetry(() => {
+    let raw = '';
+    return streamAiRequest({ ...payload, stream: true }, (event) => {
+      if (event.type !== 'delta' || !onPartial) return;
+      raw += event.text;
+      onPartial(finishAiText(raw, payload.action === 'improve' ? payload.text : undefined));
+    });
+  });
+
+export const improveText = async (text: string, context: string = 'resume', onPartial?: AiPartialHandler): Promise<string> => {
   if (!text.trim()) return '';
-
-  return executeWithRetry(async () => {
-    return callAiProxy({
-      action: 'improve',
-      text,
-      context,
-    });
-  });
+  return streamText({ action: 'improve', text, context }, onPartial);
 };
 
-export const generateSummary = async (
-  role: string,
-  skills: string[]
-): Promise<string> => {
-  return executeWithRetry(async () => {
-    return callAiProxy({
-      action: 'summary',
-      role: role?.trim() || 'Professional',
-      skills,
-    });
-  });
-};
+export const generateSummary = async (role: string, skills: string[], onPartial?: AiPartialHandler): Promise<string> =>
+  streamText({ action: 'summary', role: role?.trim() || 'Professional', skills }, onPartial);
 
 /**
  * Sends a prepared LaTeX resume to the AI parser and resolves to its JSON reply (one attempt, it is
  * slow). `onEvent` receives the streamed progress events as the model works.
  */
-export const parseLatexResume = async (source: string, onEvent?: (event: AiParseLatexEvent) => void): Promise<string> => {
-  const payload: AiRequest = { action: 'parse_latex', source, stream: true };
-  let response = await postAiRequest(payload, await fetchSessionToken());
-  if (response.status === 401) {
-    clearSessionCache();
-    response = await postAiRequest(payload, await fetchSessionToken(true));
-  }
-  if (!response.ok) throw await parseError(response);
+export const parseLatexResume = (source: string, onEvent?: (event: AiStreamEvent) => void): Promise<string> =>
+  streamAiRequest({ action: 'parse_latex', source, stream: true }, onEvent);
+
+/** Posts a `stream: true` request and resolves to the `done` text; `onEvent` sees every event before it. */
+const streamAiRequest = async (payload: AiRequest, onEvent?: (event: AiStreamEvent) => void): Promise<string> => {
+  const response = await sendAiRequest(payload);
   // A server without streaming answers with the usual { text }.
   if (!(response.headers.get('content-type') || '').includes('ndjson') || !response.body) {
     const data = (await response.json().catch(() => ({}))) as unknown;
@@ -345,9 +325,9 @@ export const parseLatexResume = async (source: string, onEvent?: (event: AiParse
   let buffer = '';
   const handle = (line: string): string | null => {
     if (!line.trim()) return null;
-    let event: AiParseLatexEvent;
+    let event: AiStreamEvent;
     try {
-      event = JSON.parse(line) as AiParseLatexEvent;
+      event = JSON.parse(line) as AiStreamEvent;
     } catch {
       return null;
     }

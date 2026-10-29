@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
-import { improveText, generateSummary, AiError } from '../services/aiService';
+import { improveText, generateSummary, AiError, type AiPartialHandler } from '../services/aiService';
 
 interface UseAiActionsOptions {
   onError: (message: string) => void;
@@ -10,13 +10,39 @@ interface ImproveFieldInput {
   text: string;
   context: string;
   onUpdate: (value: string) => void;
+  /** Shows the reply in the field while it streams; called with `text` again if the request fails. */
+  onPartial?: (value: string) => void;
 }
 
 interface GenerateFieldInput {
   fieldId: string;
-  generator: () => Promise<string>;
+  generator: (onPartial: AiPartialHandler) => Promise<string>;
   onUpdate: (value: string) => void;
+  /** The field's text before generating, put back if the request fails after a partial reply showed. */
+  original?: string;
+  onPartial?: (value: string) => void;
 }
+
+/**
+ * Passes streamed text to `show` a few times a second (each update re-renders the preview), and
+ * `restore` puts the original back after a failed request that showed something.
+ */
+const partialWriter = (show: ((value: string) => void) | undefined, original: string) => {
+  let shown = false;
+  let last = 0;
+  return {
+    write: (value: string) => {
+      const now = Date.now();
+      if (!show || !value || now - last < 80) return;
+      last = now;
+      shown = true;
+      show(value);
+    },
+    restore: () => {
+      if (shown) show?.(original);
+    },
+  };
+};
 
 type AiStatusState = 'idle' | 'loading' | 'success' | 'error';
 
@@ -97,7 +123,8 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   }, []);
 
   const improveField = useCallback(
-    ({ fieldId, text, context, onUpdate }: ImproveFieldInput) => {
+    ({ fieldId, text, context, onUpdate, onPartial }: ImproveFieldInput) => {
+      const partial = partialWriter(onPartial, text);
       void (async () => {
         startLoading(fieldId);
         setAiStatus({
@@ -107,7 +134,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
           updatedAt: Date.now(),
         });
         try {
-          const improved = await improveText(text, context);
+          const improved = await improveText(text, context, partial.write);
           onUpdate(improved);
           setAiStatus({
             state: 'success',
@@ -116,6 +143,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
             updatedAt: Date.now(),
           });
         } catch (error) {
+          partial.restore();
           const details = getAiErrorMessage(error);
           setAiStatus({
             state: 'error',
@@ -133,7 +161,8 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   );
 
   const generateField = useCallback(
-    ({ fieldId, generator, onUpdate }: GenerateFieldInput) => {
+    ({ fieldId, generator, onUpdate, onPartial, original = '' }: GenerateFieldInput) => {
+      const partial = partialWriter(onPartial, original);
       void (async () => {
         startLoading(fieldId);
         setAiStatus({
@@ -143,7 +172,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
           updatedAt: Date.now(),
         });
         try {
-          const result = await generator();
+          const result = await generator(partial.write);
           onUpdate(result);
           setAiStatus({
             state: 'success',
@@ -152,6 +181,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
             updatedAt: Date.now(),
           });
         } catch (error) {
+          partial.restore();
           const details = getAiErrorMessage(error);
           setAiStatus({
             state: 'error',
@@ -169,9 +199,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   );
 
   const generateSummaryField = useCallback(
-    async (role: string, skills: string[]) => {
-      return generateSummary(role, skills);
-    },
+    async (role: string, skills: string[], onPartial?: AiPartialHandler) => generateSummary(role, skills, onPartial),
     []
   );
 

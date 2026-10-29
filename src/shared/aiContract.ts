@@ -27,31 +27,34 @@ export const AI_ERROR_CODES = [
 
 export type AiErrorCode = (typeof AI_ERROR_CODES)[number];
 
-export interface AiImproveRequest {
+interface AiStreamOption {
+  /** Reply as an NDJSON stream of `AiStreamEvent`s instead of `{ text }`. */
+  stream?: boolean;
+}
+
+export interface AiImproveRequest extends AiStreamOption {
   action: 'improve';
   text: string;
   context?: string;
 }
 
-export interface AiSummaryRequest {
+export interface AiSummaryRequest extends AiStreamOption {
   action: 'summary';
   role: string;
   skills: string[];
 }
 
 /** Converts a LaTeX resume or CV to ModernCV JSON; the reply's `text` is that JSON. */
-export interface AiParseLatexRequest {
+export interface AiParseLatexRequest extends AiStreamOption {
   action: 'parse_latex';
   source: string;
-  /** Reply as an NDJSON stream of `AiParseLatexEvent`s instead of `{ text }`. */
-  stream?: boolean;
 }
 
 /**
- * One line of a streamed parse: `thinking` while the model reasons, `delta` for each piece of JSON it
- * writes, then `done` with the whole JSON object, or `error`.
+ * One line of a streamed reply: `thinking` while the model reads or reasons, `delta` for each piece
+ * of text it writes, then `done` with the finished text (as `{ text }` would carry it), or `error`.
  */
-export type AiParseLatexEvent =
+export type AiStreamEvent =
   | { type: 'thinking' }
   | { type: 'delta'; text: string }
   | { type: 'done'; text: string }
@@ -61,6 +64,28 @@ export type AiParseLatexEvent =
 export const MAX_LATEX_SOURCE_CHARS = 40_000;
 
 export type AiRequest = AiImproveRequest | AiSummaryRequest | AiParseLatexRequest;
+
+/**
+ * Model text as the editor shows it: think blocks and the quotes or bullets models add despite
+ * instructions are removed, and when `input` used "- " bullets each line becomes one again (templates
+ * render them as lists). Also works on a partial reply while it streams.
+ */
+export const finishAiText = (raw: string, input?: string): string => {
+  const text = raw
+    .replace(/<think>[\s\S]*?<\/think>/gi, '')
+    .replace(/<think>[\s\S]*$/i, '')
+    .trim()
+    .replace(/^["“”']+|["“”']+$/g, '')
+    .replace(/^\s*(?:[-*•]\s+)/gm, '')
+    .trim();
+  if (!input || !/^\s*[-*•]\s+/m.test(input)) return text;
+  return text
+    .split('\n')
+    .map((line) => line.trim())
+    .filter(Boolean)
+    .map((line) => `- ${line}`)
+    .join('\n');
+};
 
 export interface AiApiResponse {
   text?: string;

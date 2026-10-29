@@ -89,4 +89,29 @@ describe('aiService', () => {
       })
     );
   });
+
+  it('streams an improvement, passing cleaned partial text and resolving to the finished text', async () => {
+    const events = [
+      { type: 'thinking' },
+      { type: 'delta', text: '"Led a team' },
+      { type: 'delta', text: ' of 4\nCut costs' },
+      { type: 'delta', text: ' 30%"' },
+      { type: 'done', text: '- Led a team of 4\n- Cut costs 30%' },
+    ];
+    fetchMock
+      .mockResolvedValueOnce(jsonResponse({ token: 'session-token', expiresAt: Date.now() + 60_000 }))
+      .mockResolvedValueOnce(
+        new Response(events.map((event) => JSON.stringify(event)).join('\n') + '\n', {
+          headers: { 'content-type': 'application/x-ndjson' },
+        })
+      );
+    const partials: string[] = [];
+
+    const result = await improveText('- led team\n- cut costs', 'experience', (text) => partials.push(text));
+
+    expect(result).toBe('- Led a team of 4\n- Cut costs 30%');
+    // Quotes the model wraps around its reply are dropped, and each line keeps the input's "- " bullet.
+    expect(partials).toEqual(['- Led a team', '- Led a team of 4\n- Cut costs', '- Led a team of 4\n- Cut costs 30%']);
+    expect(JSON.parse(String(fetchMock.mock.calls[1][1]?.body))).toMatchObject({ action: 'improve', stream: true });
+  });
 });

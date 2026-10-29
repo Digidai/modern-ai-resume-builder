@@ -5,6 +5,7 @@ import { useResumeData, type ResumeSaveStatus } from '../hooks/useResumeData';
 import { useToast } from '../components/Toast';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 import { BLANK_RESUME_DATA, sanitizeResumeData } from '../utils/resumeData';
+import type { PdfExportProgress } from '../utils/pdfExport';
 
 interface ResumeContextValue {
   resumeData: ResumeData;
@@ -12,6 +13,8 @@ interface ResumeContextValue {
   saveError: string | null;
   saveStatus: ResumeSaveStatus;
   isExportingPdf: boolean;
+  /** The running PDF export's stage, or null. */
+  pdfProgress: PdfExportProgress | null;
   handleDownloadPdf: () => Promise<void>;
   handleExportJson: () => void;
   /** Loads a JSON backup; returns false (and shows an error) if the file isn't a resume. */
@@ -29,13 +32,14 @@ const toFileBase = (name: string) =>
 
 export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const { resumeData, setResumeData, replaceData, saveError, saveStatus } = useResumeData();
-  const [isExportingPdf, setIsExportingPdf] = useState(false);
+  const [pdfProgress, setPdfProgress] = useState<PdfExportProgress | null>(null);
+  const isExportingPdf = pdfProgress !== null;
   const { showError, showSuccess, showToast } = useToast();
 
   const handleDownloadPdf = useCallback(async () => {
     if (isExportingPdf) return;
 
-    setIsExportingPdf(true);
+    setPdfProgress({ stage: 'preparing' });
     try {
       // PDF libraries (pdf-lib, html-to-image) are large; load them on demand.
       const [{ exportResumeToPdf }] = await Promise.all([
@@ -46,13 +50,14 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
         rawFileName: resumeData.fullName.trim() || 'resume',
         data: resumeData,
         previewElementId: 'resume-preview-container',
+        onProgress: setPdfProgress,
       });
       showSuccess('PDF downloaded.');
     } catch (error) {
       console.error(error);
       showError(error instanceof Error && error.message ? error.message : 'Failed to export PDF. Please try again.');
     } finally {
-      setIsExportingPdf(false);
+      setPdfProgress(null);
     }
   }, [isExportingPdf, resumeData, showError, showSuccess]);
 
@@ -111,13 +116,14 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       saveError,
       saveStatus,
       isExportingPdf,
+      pdfProgress,
       handleDownloadPdf,
       handleExportJson,
       importJson,
       startOver,
       loadResume: replaceWithUndo,
     }),
-    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, handleDownloadPdf, handleExportJson, importJson, startOver, replaceWithUndo]
+    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, pdfProgress, handleDownloadPdf, handleExportJson, importJson, startOver, replaceWithUndo]
   );
 
   return <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>;

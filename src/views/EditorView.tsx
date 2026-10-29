@@ -30,6 +30,39 @@ import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import { downloadLatex, openInOverleaf } from '../utils/latex';
 import { LatexImportDialog } from '../components/LatexImportDialog';
+import { TaskProgress } from '../components/TaskProgress';
+import type { PdfExportProgress } from '../utils/pdfExport';
+
+const PDF_STEPS = ['Prepare', 'Render', 'Save'] as const;
+
+/** Card under Download PDF while an export runs: what it is doing now and for how long. */
+const PdfProgress: React.FC<{ progress: PdfExportProgress }> = ({ progress }) => {
+  const { stage } = progress;
+  const status =
+    stage === 'preparing'
+      ? 'Loading fonts and the template…'
+      : stage === 'server'
+        ? 'Rendering a vector PDF…'
+        : stage === 'browser'
+          ? 'Rendering in your browser…'
+          : stage === 'building'
+            ? `Building page ${progress.page} of ${progress.pages}…`
+            : 'Saving the file…';
+  const browser = stage === 'browser' || stage === 'building';
+  return (
+    <div className="absolute right-0 top-full z-50 mt-2 w-80 max-w-[calc(100vw-2rem)] rounded-lg bg-surface shadow-raised">
+      <TaskProgress
+        data-testid="pdf-progress"
+        steps={PDF_STEPS}
+        step={stage === 'preparing' ? 0 : stage === 'saving' ? 2 : 1}
+        status={status}
+        label="PDF export progress"
+        percent={stage === 'building' ? Math.round((progress.page / progress.pages) * 100) : stage === 'saving' ? 100 : null}
+        note={browser ? "The server is unavailable, so this copy is an image PDF: its text can't be selected." : 'Usually takes a few seconds.'}
+      />
+    </div>
+  );
+};
 
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
   const content =
@@ -182,6 +215,7 @@ const EditorView: React.FC = () => {
     startOver,
     loadResume,
     isExportingPdf,
+    pdfProgress,
     saveError,
     saveStatus,
   } = useResume();
@@ -374,15 +408,18 @@ const EditorView: React.FC = () => {
             loadResume(data, 'Imported your LaTeX resume.');
           }}
         />
-        <Button
-          onClick={handleDownloadPdf}
-          isLoading={isExportingPdf}
-          leftIcon={<DownloadIcon className="h-4 w-4" />}
-          className="max-sm:h-9 max-sm:w-9 max-sm:px-0"
-          aria-label="Download PDF"
-        >
-          <span className="max-sm:sr-only">{isExportingPdf ? 'Exporting…' : 'Download PDF'}</span>
-        </Button>
+        <div className="relative">
+          <Button
+            onClick={handleDownloadPdf}
+            isLoading={isExportingPdf}
+            leftIcon={<DownloadIcon className="h-4 w-4" />}
+            className="max-sm:h-9 max-sm:w-9 max-sm:px-0"
+            aria-label="Download PDF"
+          >
+            <span className="max-sm:sr-only">{isExportingPdf ? 'Exporting…' : 'Download PDF'}</span>
+          </Button>
+          {pdfProgress && <PdfProgress progress={pdfProgress} />}
+        </div>
         <input
           ref={fileInputRef}
           type="file"

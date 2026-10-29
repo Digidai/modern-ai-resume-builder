@@ -1,9 +1,10 @@
 import puppeteer from '@cloudflare/puppeteer';
 import {
   type AiErrorCode,
-  type AiParseLatexEvent,
   type AiRequest,
+  type AiStreamEvent,
   MAX_LATEX_SOURCE_CHARS,
+  finishAiText,
 } from '../src/shared/aiContract';
 import { handleAgentRequest } from './agent';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
@@ -753,34 +754,18 @@ const buildUserPrompt = (payload: AiRequest): string => {
     .join('\n');
 };
 
-/** Strips wrappers models sometimes add despite instructions (quotes, bullets, think blocks). */
-const cleanModelText = (text: string): string =>
-  text
-    .replace(/<think>[\s\S]*?<\/think>/gi, '')
-    .trim()
-    .replace(/^["“”']+|["“”']+$/g, '')
-    .replace(/^\s*(?:[-*•]\s+)/gm, '')
-    .trim();
-
-/** Workers AI returns OpenAI-style `choices` for newer models and `{ response }` for older ones. */
-const parseAiText = (data: unknown): string => {
+/** The reply text of a Workers AI result: OpenAI-style `choices` for newer models, `{ response }` for older ones. */
+const modelContent = (data: unknown): string => {
   if (!data || typeof data !== 'object') return '';
   const value = data as JsonObject;
-  if (typeof value.response === 'string') return cleanModelText(value.response);
-
-  const choices = Array.isArray(value.choices) ? value.choices : [];
-  const message = (choices[0] as JsonObject | undefined)?.message as JsonObject | undefined;
-  return typeof message?.content === 'string' ? cleanModelText(message.content) : '';
-};
-
-/** The JSON object in a model reply, without think blocks or code fences; '' when there is none. */
-const parseAiJson = (data: unknown): string => {
-  if (!data || typeof data !== 'object') return '';
-  const value = data as JsonObject;
+  if (typeof value.response === 'string') return value.response;
   const message = ((Array.isArray(value.choices) ? value.choices[0] : undefined) as JsonObject | undefined)?.message as JsonObject | undefined;
-  const raw = typeof value.response === 'string' ? value.response : typeof message?.content === 'string' ? message.content : '';
-  return extractJsonObject(raw);
+  return typeof message?.content === 'string' ? message.content : '';
 };
+
+/** What `{ text }` carries for a raw model reply: the JSON object for a parse, cleaned text otherwise. */
+const finishReply = (payload: AiRequest, raw: string): string =>
+  payload.action === 'parse_latex' ? extractJsonObject(raw) : finishAiText(raw, payload.action === 'improve' ? payload.text : undefined);
 
 /** The outermost JSON object in model text, re-serialised; '' when there is none. */
 const extractJsonObject = (raw: string): string => {
@@ -807,6 +792,7 @@ const validateRequest = (body: unknown): AiRequest | null => {
       action: 'improve',
       text,
       context: normalizeText(value.context) || 'resume',
+      stream: value.stream === true,
     };
   }
 
@@ -825,6 +811,7 @@ const validateRequest = (body: unknown): AiRequest | null => {
       action: 'summary',
       role: normalizeText(value.role) || 'Professional',
       skills,
+      stream: value.stream === true,
     };
   }
 
@@ -886,14 +873,9 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
 
   try {
     const result = await Promise.race([env.AI.run(model, input), timeout]);
-    // JSON replies keep their quotes and "- " lines; only think blocks are removed.
-    const text = parsing ? parseAiJson(result) : parseAiText(result);
+    const text = finishReply(payload, modelContent(result));
     if (!text) throw new Error('EMPTY_RESPONSE');
-    // Keep the user's bullet format: templates render "- " lines as lists.
-    const inputWasBullets = payload.action === 'improve' && /^\s*[-*•]\s+/m.test(payload.text);
-    return inputWasBullets
-      ? text.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => `- ${line}`).join('\n')
-      : text;
+    return text;
   } catch (error) {
     throw upstreamError(error, model);
   } finally {
@@ -911,10 +893,10 @@ const streamDelta = (chunk: JsonObject): { text: string; reasoning: boolean } =>
 };
 
 /**
- * parse_latex with `stream: true`: starts the model (errors before the first byte are thrown as usual),
- * then relays its SSE output as NDJSON `AiParseLatexEvent`s so the client can show progress.
+ * A request with `stream: true`: starts the model (errors before the first byte are thrown as usual),
+ * then relays its SSE output as NDJSON `AiStreamEvent`s so the client can show progress.
  */
-const streamParseLatex = async (env: Env, payload: AiRequest): Promise<Response> => {
+const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
   if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
   const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
   let upstream: unknown;
@@ -927,10 +909,10 @@ const streamParseLatex = async (env: Env, payload: AiRequest): Promise<Response>
   const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();
   const writer = writable.getWriter();
   const encoder = new TextEncoder();
-  const send = (event: AiParseLatexEvent) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`));
+  const send = (event: AiStreamEvent) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`));
 
   const relay = async () => {
-    const deadline = Date.now() + PARSE_TIMEOUT_MS;
+    const deadline = Date.now() + (payload.action === 'parse_latex' ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
     let content = '';
     let lastThinking = 0;
     try {
@@ -979,10 +961,11 @@ const streamParseLatex = async (env: Env, payload: AiRequest): Promise<Response>
           }
         }
       } else {
-        content = parseAiText(upstream);
+        content = modelContent(upstream);
       }
-      const json = extractJsonObject(content);
-      await send(json ? { type: 'done', text: json } : { type: 'error', code: 'EMPTY_RESPONSE', error: "The AI didn't return a resume. Please try again." });
+      const text = finishReply(payload, content);
+      const empty = payload.action === 'parse_latex' ? "The AI didn't return a resume. Please try again." : 'AI returned an empty response. Please try again.';
+      await send(text ? { type: 'done', text } : { type: 'error', code: 'EMPTY_RESPONSE', error: empty });
     } catch (error) {
       console.error('[ai] parse stream failed', { model, message: error instanceof Error ? error.message : String(error) });
       await send({ type: 'error', code: 'UPSTREAM_UNAVAILABLE', error: 'AI service is temporarily unavailable. Please try again.' }).catch(() => undefined);
@@ -1359,7 +1342,7 @@ const handleAiRequest = async (request: Request, env: Env): Promise<Response> =>
   }
 
   try {
-    if (payload.action === 'parse_latex' && payload.stream) return appendRateLimitHeaders(await streamParseLatex(env, payload), globalRateLimit);
+    if (payload.stream) return appendRateLimitHeaders(await streamAi(env, payload), globalRateLimit);
     const text = await callAi(env, payload);
     return appendRateLimitHeaders(jsonResponse({ text }), globalRateLimit);
   } catch (error) {
