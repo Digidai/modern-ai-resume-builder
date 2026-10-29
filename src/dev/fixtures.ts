@@ -1,4 +1,4 @@
-import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Publication } from '../types';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Award, type Publication, type Talk } from '../types';
 
 /** Resume data sets used by the dev-only template gallery (`/dev/templates`). */
 export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
@@ -140,4 +140,16 @@ export const SAMPLE_PUBLICATIONS: Publication[] = [
   { id: 'p1', authors: 'Sterling, A., Chen, J., Okafor, N.', title: 'Measuring onboarding friction in B2B software', venue: 'Proceedings of CHI', year: '2025', link: 'doi.org/10.1145/3706598.3713001' },
   { id: 'p2', authors: 'Okafor, N., A. Sterling', title: 'Design tokens as a shared language between design and engineering', venue: 'Interactions', year: '2023', link: '' },
   { id: 'p3', authors: 'Alex Sterling', title: 'Small multiples for product dashboards', venue: 'Preprint', year: '2022', link: 'arxiv.org/abs/2204.01234' },
+];
+
+/** Sample grants and awards, shown with `&pubs=1`. */
+export const SAMPLE_AWARDS: Award[] = [
+  { id: 'a1', title: 'Research Grant in Human-Computer Interaction', issuer: 'National Science Foundation', year: '2024–2027', detail: '$450,000, co-PI' },
+  { id: 'a2', title: 'Best Paper Honorable Mention', issuer: 'ACM CHI', year: '2025', detail: 'Top 5% of submissions' },
+];
+
+/** Sample talks, shown with `&pubs=1`. */
+export const SAMPLE_TALKS: Talk[] = [
+  { id: 't1', title: 'Measuring onboarding friction', event: 'CHI 2025, paper presentation', location: 'Yokohama, Japan', year: '2025' },
+  { id: 't2', title: 'Design tokens as a shared language', event: 'Design Systems Seminar, Carnegie Mellon University', location: 'Pittsburgh, PA', year: '2024' },
 ];

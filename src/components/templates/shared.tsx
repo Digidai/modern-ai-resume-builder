@@ -1,6 +1,6 @@
 import { validateUrl } from '../../utils/validation';
 import React from 'react';
-import { ResumeData, type Publication } from '../../types';
+import { ResumeData, type Award, type Publication, type Talk } from '../../types';
 import {
     MailIcon,
     PhoneIcon,
@@ -329,6 +329,40 @@ export const Citation: React.FC<{ pub: Publication; owner: string; linkClassName
                     </a>
                 </>
             )}
+        </>
+    );
+};
+
+/**
+ * One grant or award: **Title**, Issuer, detail, year. Ends with a full stop, like citations and talks. Pass `showYear={false}` when the template
+ * prints the year in a gutter. Colours and sizes come from the parent.
+ */
+export const AwardLine: React.FC<{ award: Award; showYear?: boolean; titleClassName?: string }> = ({ award, showYear = true, titleClassName = 'font-semibold' }) => {
+    const title = award.title.trim();
+    const rest = [award.issuer, award.detail, showYear ? award.year : ''].map((part) => part.trim()).filter(Boolean).join(', ');
+    return (
+        <>
+            {title && <span className={titleClassName}>{title}</span>}
+            {title && rest && ', '}
+            {rest}
+            {(title || rest) && !/[.?!]$/.test(rest || title) && '.'}
+        </>
+    );
+};
+
+/** One talk: “Title.” *Event*, Location, year. Pass `showYear={false}` when the year sits in a gutter. */
+export const TalkLine: React.FC<{ talk: Talk; showYear?: boolean }> = ({ talk, showYear = true }) => {
+    const title = talk.title.trim().replace(/[.]$/, '');
+    const event = talk.event.trim();
+    const rest = [talk.location, showYear ? talk.year : ''].map((part) => part.trim()).filter(Boolean).join(', ');
+    return (
+        <>
+            {title && `\u201c${/[?!]$/.test(title) ? title : `${title}.`}\u201d`}
+            {title && (event || rest) && ' '}
+            {event && <em>{event}</em>}
+            {event && rest && ', '}
+            {rest}
+            {(event || rest) && !/[.?!]$/.test(rest || event) && '.'}
         </>
     );
 };

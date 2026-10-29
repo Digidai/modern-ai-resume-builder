@@ -1,5 +1,5 @@
 import { useCallback, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
-import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Publication, type ResumeLink } from '../types';
+import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk } from '../types';
 import {
   PlusIcon,
   TrashIcon,
@@ -25,6 +25,8 @@ const MAX_LINKS = 8;
 
 const PUBLICATION_TEMPLATE_NAMES = TEMPLATES.filter((t) => t.publications).map((t) => t.name).join(', ');
 const newPublication = (): Publication => ({ id: createId(), authors: '', title: '', venue: '', year: '', link: '' });
+const newAward = (): Award => ({ id: createId(), title: '', issuer: '', year: '', detail: '' });
+const newTalk = (): Talk => ({ id: createId(), title: '', event: '', location: '', year: '' });
 
 /**
  * Extra profiles (GitHub, portfolio, X, Google Scholar…). The label is optional: templates detect
@@ -116,7 +118,7 @@ const EDITOR_TABS = [
 ] as const;
 type ResumeEditorTab = (typeof EDITOR_TABS)[number]['id'];
 
-type ListKey = 'experience' | 'education' | 'projects' | 'publications';
+type ListKey = 'experience' | 'education' | 'projects' | 'publications' | 'awards' | 'talks';
 type ListItem<K extends ListKey> = NonNullable<ResumeData[K]>[number];
 
 /* ---------- small building blocks ---------- */
@@ -361,6 +363,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
   // All updates are functional so late async results (AI) never overwrite newer edits.
   const publications = data.publications ?? [];
+  const awards = data.awards ?? [];
+  const talks = data.talks ?? [];
 
   const setField = useCallback(
     <K extends keyof ResumeData>(field: K, value: ResumeData[K]) => onChange((prev) => ({ ...prev, [field]: value })),
@@ -845,6 +849,101 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                           hint="Optional"
                           className="sm:col-span-2"
                         />
+                      </div>
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+
+            <Section
+              title="Grants and awards"
+              description={`Grants, fellowships, scholarships and prizes. Shown by ${PUBLICATION_TEMPLATE_NAMES}.`}
+              action={
+                awards.length > 0 && (
+                  <Button variant="secondary" size="sm" leftIcon={<PlusIcon className="h-4 w-4" />} onClick={() => addItem('awards', newAward(), 'end')}>
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {awards.length === 0 ? (
+                <EmptyState addLabel="Add a grant or award" onAdd={() => addItem('awards', newAward(), 'end')}>
+                  Optional. Most recent first.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {awards.map((award, index) => (
+                    <ItemCard
+                      key={award.id}
+                      title={award.title}
+                      subtitle={[award.issuer, award.year].filter(Boolean).join(' · ')}
+                      placeholderTitle="New grant or award"
+                      isOpen={openIds.has(`awards:${award.id}`)}
+                      onToggle={() => toggleOpen(`awards:${award.id}`)}
+                      onRemove={() => removeItem('awards', award.id, award.title || 'award')}
+                      onMoveUp={index > 0 ? () => moveItem('awards', index, -1) : undefined}
+                      onMoveDown={index < awards.length - 1 ? () => moveItem('awards', index, 1) : undefined}
+                    >
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_8rem]">
+                        <Input label="Title" value={award.title} onChange={(v) => updateItem('awards', award.id, { title: v })} placeholder="Graduate Research Fellowship" className="sm:col-span-2" />
+                        <Input label="Funder or awarding body" value={award.issuer} onChange={(v) => updateItem('awards', award.id, { issuer: v })} placeholder="National Science Foundation" />
+                        <Input label="Year" value={award.year} onChange={(v) => updateItem('awards', award.id, { year: v })} placeholder="2023–2026" />
+                        <Input
+                          label="Amount or note"
+                          value={award.detail}
+                          onChange={(v) => updateItem('awards', award.id, { detail: v })}
+                          placeholder="$138,000, 3 years"
+                          hint="Optional: amount, your role (PI, co-PI) or selectivity."
+                          className="sm:col-span-2"
+                        />
+                      </div>
+                    </ItemCard>
+                  ))}
+                </div>
+              )}
+            </Section>
+
+            <Section
+              title="Talks"
+              description={`Invited talks, conference presentations, seminars and posters. Shown by ${PUBLICATION_TEMPLATE_NAMES}.`}
+              action={
+                talks.length > 0 && (
+                  <Button variant="secondary" size="sm" leftIcon={<PlusIcon className="h-4 w-4" />} onClick={() => addItem('talks', newTalk(), 'end')}>
+                    Add
+                  </Button>
+                )
+              }
+            >
+              {talks.length === 0 ? (
+                <EmptyState addLabel="Add a talk" onAdd={() => addItem('talks', newTalk(), 'end')}>
+                  Optional. Most recent first.
+                </EmptyState>
+              ) : (
+                <div className="space-y-3">
+                  {talks.map((talk, index) => (
+                    <ItemCard
+                      key={talk.id}
+                      title={talk.title}
+                      subtitle={[talk.event, talk.year].filter(Boolean).join(' · ')}
+                      placeholderTitle="New talk"
+                      isOpen={openIds.has(`talks:${talk.id}`)}
+                      onToggle={() => toggleOpen(`talks:${talk.id}`)}
+                      onRemove={() => removeItem('talks', talk.id, talk.title || 'talk')}
+                      onMoveUp={index > 0 ? () => moveItem('talks', index, -1) : undefined}
+                      onMoveDown={index < talks.length - 1 ? () => moveItem('talks', index, 1) : undefined}
+                    >
+                      <div className="grid grid-cols-1 gap-4 sm:grid-cols-[minmax(0,1fr)_8rem]">
+                        <Input label="Title" value={talk.title} onChange={(v) => updateItem('talks', talk.id, { title: v })} placeholder="Sparse attention at scale" className="sm:col-span-2" />
+                        <Input
+                          label="Event or host"
+                          value={talk.event}
+                          onChange={(v) => updateItem('talks', talk.id, { event: v })}
+                          placeholder="NeurIPS, invited talk"
+                          className="sm:col-span-2"
+                        />
+                        <Input label="Location" value={talk.location} onChange={(v) => updateItem('talks', talk.id, { location: v })} placeholder="Vancouver, Canada" hint="Optional" />
+                        <Input label="Year" value={talk.year} onChange={(v) => updateItem('talks', talk.id, { year: v })} placeholder="2025" />
                       </div>
                     </ItemCard>
                   ))}

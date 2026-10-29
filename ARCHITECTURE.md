@@ -44,7 +44,7 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 - To add a template:
   1. Create a component in `src/components/templates/` whose root is `flex-1` and reads `var(--rs-accent, <default>)`.
   2. Export it in `ResumeTemplates.tsx` and register it in `ResumeTemplateRenderer.tsx`.
-  3. Add it to `TEMPLATE_CATALOG` (`photo: true` if it shows `data.photo` via `Portrait`, `publications: true` if it renders `data.publications` via `Citation`); check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures.
+  3. Add it to `TEMPLATE_CATALOG` (`photo: true` if it shows `data.photo` via `Portrait`, `publications: true` if it renders `data.publications`, `data.awards` and `data.talks` via `Citation`, `AwardLine` and `TalkLine`); check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures.
 
 ## Job Titles and Role Examples
 

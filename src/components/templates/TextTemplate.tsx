@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, Citation, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 // "Text": a resume that is only text. No rules, capitals, colour or icons: the hierarchy comes from
 // weight, size and white space alone, like a well-set plain document. One sans-serif face, one column.
@@ -19,6 +19,8 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const publications = data.publications ?? [];
+    const awards = data.awards ?? [];
+    const talks = data.talks ?? [];
     const name = data.fullName.trim();
     const title = data.title.trim();
     const summary = data.summary.trim();
@@ -111,6 +113,30 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {publications.map((pub) => (
                             <li key={pub.id} className={`${bodyText} break-inside-avoid`}>
                                 <Citation pub={pub} owner={data.fullName} />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            )}
+
+            {awards.length > 0 && (
+                <Section title="Grants and awards">
+                    <ul className="flex flex-col gap-[6px]">
+                        {awards.map((award) => (
+                            <li key={award.id} className={`${bodyText} break-inside-avoid`}>
+                                <AwardLine award={award} />
+                            </li>
+                        ))}
+                    </ul>
+                </Section>
+            )}
+
+            {talks.length > 0 && (
+                <Section title="Talks">
+                    <ul className="flex flex-col gap-[6px]">
+                        {talks.map((talk) => (
+                            <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
+                                <TalkLine talk={talk} />
                             </li>
                         ))}
                     </ul>

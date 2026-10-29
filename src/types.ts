@@ -36,6 +36,28 @@ export interface Publication {
   link: string;
 }
 
+/** A grant, fellowship, scholarship, prize or honour. */
+export interface Award {
+  id: string;
+  title: string;
+  /** Funder or awarding body, e.g. "National Science Foundation". */
+  issuer: string;
+  /** "2025" or "2023–2026". */
+  year: string;
+  /** Optional amount, role or note, e.g. "$450,000, co-PI" or "Top 1% of submissions". */
+  detail: string;
+}
+
+/** An invited talk, conference presentation, seminar or poster. */
+export interface Talk {
+  id: string;
+  title: string;
+  /** Conference, seminar series or host, e.g. "NeurIPS 2025, invited talk". */
+  event: string;
+  location: string;
+  year: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -76,6 +98,10 @@ export interface ResumeData {
   projects: Project[];
   /** Optional; shown by templates with `publications: true` in the catalog. */
   publications?: Publication[];
+  /** Grants and awards; shown by the same templates as publications. */
+  awards?: Award[];
+  /** Talks and presentations; shown by the same templates as publications. */
+  talks?: Talk[];
 }
 
 export const INITIAL_RESUME_DATA: ResumeData = {

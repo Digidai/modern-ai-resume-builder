@@ -1061,6 +1061,34 @@ const buildResumeSchema = (siteUrl, templates) => {
           },
         },
       },
+      awards: {
+        type: 'array',
+        description: 'Grants, fellowships, scholarships and prizes. Shown by the same templates as publications.',
+        items: {
+          type: 'object',
+          required: ['title'],
+          properties: {
+            title: { type: 'string', description: 'e.g. "Graduate Research Fellowship".' },
+            issuer: { type: 'string', description: 'Funder or awarding body.' },
+            year: { type: 'string', description: '"2025" or "2023–2026".' },
+            detail: { type: 'string', description: 'Optional amount, role or note, e.g. "$450,000, co-PI".' },
+          },
+        },
+      },
+      talks: {
+        type: 'array',
+        description: 'Invited talks, conference presentations, seminars and posters. Shown by the same templates as publications.',
+        items: {
+          type: 'object',
+          required: ['title'],
+          properties: {
+            title: { type: 'string' },
+            event: { type: 'string', description: 'Conference, seminar series or host, e.g. "NeurIPS, invited talk".' },
+            location: { type: 'string' },
+            year: { type: 'string' },
+          },
+        },
+      },
       projects: {
         type: 'array',
         items: {

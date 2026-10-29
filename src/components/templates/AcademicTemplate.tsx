@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, Citation, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 /** Small-caps heading on a full-width hairline, the way a LaTeX CV sets \section. */
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -76,6 +76,32 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </li>
                         ))}
                     </ol>
+                </section>
+            )}
+
+            {(data.awards ?? []).length > 0 && (
+                <section>
+                    <SectionHeading>Grants and Awards</SectionHeading>
+                    <ul className="pl-[4mm] flex flex-col gap-1.5">
+                        {(data.awards ?? []).map((award) => (
+                            <li key={award.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
+                                <AwardLine award={award} />
+                            </li>
+                        ))}
+                    </ul>
+                </section>
+            )}
+
+            {(data.talks ?? []).length > 0 && (
+                <section>
+                    <SectionHeading>Talks</SectionHeading>
+                    <ul className="pl-[4mm] flex flex-col gap-1.5">
+                        {(data.talks ?? []).map((talk) => (
+                            <li key={talk.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
+                                <TalkLine talk={talk} />
+                            </li>
+                        ))}
+                    </ul>
                 </section>
             )}
 

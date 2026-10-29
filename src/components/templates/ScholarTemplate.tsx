@@ -1,10 +1,10 @@
 import React from 'react';
-import { TemplateProps, Citation, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
 
 // "Scholar": an academic CV for PhD students, postdocs and researchers. Source Serif, small-caps
 // section headings over a hairline, and a left gutter that carries the years of each entry and the
 // numbers of the publication list. Publications come right after education, numbered, with the
-// owner's name in bold. Academic CVs run to several pages; entries never split across a page break.
+// owner's name in bold, followed by grants and awards and talks. Academic CVs run to several pages; entries never split across a page break.
 
 const GUTTER = 'grid grid-cols-[22mm_minmax(0,1fr)] gap-x-[5mm]';
 const bodyText = 'text-[14px] leading-[1.5] text-neutral-800 wrap-break-word';
@@ -43,6 +43,8 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const publications = data.publications ?? [];
+    const awards = data.awards ?? [];
+    const talks = data.talks ?? [];
     const name = data.fullName.trim();
     const title = data.title.trim();
     const summary = data.summary.trim();
@@ -93,6 +95,30 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <Row key={pub.id} gutter={`[${index + 1}]`}>
                             <p className={bodyText}>
                                 <Citation pub={pub} owner={data.fullName} linkClassName="text-(--accent) wrap-anywhere hover:underline underline-offset-2" />
+                            </p>
+                        </Row>
+                    ))}
+                </Section>
+            )}
+
+            {awards.length > 0 && (
+                <Section title="Grants and awards">
+                    {awards.map((award) => (
+                        <Row key={award.id} gutter={award.year}>
+                            <p className={bodyText}>
+                                <AwardLine award={award} showYear={false} titleClassName="font-semibold text-neutral-950" />
+                            </p>
+                        </Row>
+                    ))}
+                </Section>
+            )}
+
+            {talks.length > 0 && (
+                <Section title="Talks">
+                    {talks.map((talk) => (
+                        <Row key={talk.id} gutter={talk.year}>
+                            <p className={bodyText}>
+                                <TalkLine talk={talk} showYear={false} />
                             </p>
                         </Row>
                     ))}

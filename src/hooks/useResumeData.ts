@@ -29,6 +29,8 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'skills',
   'projects',
   'publications',
+  'awards',
+  'talks',
 ];
 
 // Earlier versions kept personal fields in sessionStorage, which lost the resume when
@@ -92,6 +94,8 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
     case 'skills':
     case 'projects':
     case 'publications':
+    case 'awards':
+    case 'talks':
       return Array.isArray(value);
     case 'design':
       return typeof value === 'object' && value !== null && !Array.isArray(value);

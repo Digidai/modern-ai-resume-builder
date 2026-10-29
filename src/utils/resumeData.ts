@@ -1,5 +1,5 @@
 import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
-import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Publication, type ResumeData, type ResumeDesign, type ResumeLink } from '../types';
+import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
 
@@ -110,6 +110,12 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
       link: str(p.url),
       authors: str(p.authors),
     })),
+    awards: list(raw.awards).map((a) => ({
+      title: str(a.title),
+      issuer: str(a.awarder),
+      year: str(a.date).trim().slice(0, 4),
+      detail: str(a.summary),
+    })),
     projects: list(raw.projects).map((p) => ({
       name: str(p.name),
       link: str(p.url),
@@ -169,6 +175,24 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
       link: str(item.link).trim(),
     }))
     .filter((item) => item.title || item.authors);
+  const awards: Award[] = list(raw.awards)
+    .map((item) => ({
+      id: str(item.id) || createId(),
+      title: str(item.title).trim(),
+      issuer: str(item.issuer).trim(),
+      year: str(item.year).trim(),
+      detail: str(item.detail).trim(),
+    }))
+    .filter((item) => item.title || item.issuer);
+  const talks: Talk[] = list(raw.talks)
+    .map((item) => ({
+      id: str(item.id) || createId(),
+      title: str(item.title).trim(),
+      event: str(item.event).trim(),
+      location: str(item.location).trim(),
+      year: str(item.year).trim(),
+    }))
+    .filter((item) => item.title || item.event);
   const links: ResumeLink[] = list(raw.links)
     .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
     .filter((item) => item.url)
@@ -195,5 +219,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     skills,
     projects,
     ...(publications.length ? { publications } : {}),
+    ...(awards.length ? { awards } : {}),
+    ...(talks.length ? { talks } : {}),
   };
 };
