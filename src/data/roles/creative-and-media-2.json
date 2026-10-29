@@ -1,0 +1,498 @@
+{
+  "family": "Creative & Media",
+  "guide": null,
+  "titles": {
+    "Musician": {
+      "summary": "Working guitarist and multi-instrumentalist with 10 years of session, touring and church music work. Plays 120+ paid dates a year and has recording credits on 40 released tracks across soul, country and gospel. Reads charts and the Nashville Number System, tracks remotely from a Pro Tools home studio and teaches private lessons.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Session and Touring Guitarist",
+          "location": "Memphis, TN",
+          "startDate": "2019-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Play 120+ paid dates a year with 4 regional artists, including 2 national opening tours\n- Track guitar, bass and keys on 40 released tracks for local studios and remote clients\n- Deliver remote parts from a Pro Tools home studio within 48 hours, with 2 revision rounds included\n- Learn 20-song sets from charts or by ear in under a week for fill-in gigs"
+        },
+        {
+          "company": "Rivergate Worship Center",
+          "role": "Part-time Music Director",
+          "location": "Germantown, TN",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 9-piece worship band and choir for 2 Sunday services and holiday programs\n- Write charts and plan set lists in Planning Center each week"
+        },
+        {
+          "company": "Harmony Lane Music School",
+          "role": "Guitar Instructor",
+          "location": "Memphis, TN",
+          "startDate": "2016-09",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Taught 35 weekly guitar and bass students ages 8 to 60 and ran 2 student recitals a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mid-South Conservatory of Music",
+          "degree": "B.M. in Commercial Music Performance",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruments: Electric and acoustic guitar, bass, keys, lap steel",
+        "Musicianship: Nashville Number System, chart reading, improvisation, music direction",
+        "Recording: Pro Tools, Neve-style preamps, amp mic placement, remote session delivery",
+        "Teaching: Private lessons, ensemble coaching, recitals"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.99
+      }
+    },
+    "Translator": {
+      "summary": "ATA-certified Spanish into English translator with 8 years translating legal, medical and corporate documents. Delivers about 40,000 words a month with a 99.6% QA pass rate and built termbases that cut client review time 25%. Works in Trados Studio and memoQ and handles certified translations for courts and immigration.",
+      "experience": [
+        {
+          "company": "Lexica Language Services",
+          "role": "Senior Translator, Spanish to English",
+          "location": "San Antonio, TX",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Translate about 40,000 words a month of contracts, clinical trial documents and HR policies\n- Hold a 99.6% pass rate on third-party LQA reviews across 3 enterprise accounts\n- Built and maintain client termbases in Trados Studio, cutting client review cycles 25%\n- Review and edit work from 6 freelance translators and give written feedback on each project"
+        },
+        {
+          "company": "Freelance (independent practice)",
+          "role": "Freelance Translator",
+          "location": "San Antonio, TX",
+          "startDate": "2018-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Produced certified translations of birth certificates, court records and diplomas for USCIS filings\n- Translated patient education materials for 2 regional health systems"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gulf Coast University",
+          "degree": "M.A. in Translation and Interpreting",
+          "startDate": "2015-08",
+          "endDate": "2017-12"
+        },
+        {
+          "school": "Alamo Heights University",
+          "degree": "B.A. in Spanish",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Languages: Spanish into English, Latin American and European Spanish",
+        "Specialties: Legal contracts, clinical and medical documents, HR and corporate content",
+        "Tools: Trados Studio, memoQ, Xbench, termbase management",
+        "Certifications: ATA Certified Translator Spanish into English"
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "swiss": 0.95,
+        "berlin": 0.88,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.99,
+        "pop": 0.96
+      }
+    },
+    "Interpreter": {
+      "summary": "Certified healthcare interpreter for Mandarin and Cantonese with 6 years of on-site, phone and video remote interpreting. Handles about 25 patient encounters a shift and helped a clinic cut interpreter wait times from 20 to 6 minutes. Holds CCHI CHI-Mandarin certification and follows the NCIHC code of ethics.",
+      "experience": [
+        {
+          "company": "Bridgeway Language Access",
+          "role": "Medical Interpreter, Mandarin and Cantonese",
+          "location": "New York, NY",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Interpret about 25 encounters a shift by video remote and phone for ER, oncology and pediatric clinics\n- Hold a 98% accuracy score on monthly call quality audits\n- Sight-translate consent forms and discharge instructions, flagging 30+ unclear terms to clinical staff in 2025\n- Mentor 4 new interpreters on consecutive note-taking and medical terminology"
+        },
+        {
+          "company": "Kissena Community Health Center",
+          "role": "Staff Interpreter",
+          "location": "Flushing, NY",
+          "startDate": "2020-02",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Provided on-site interpreting for primary care, OB and behavioral health visits\n- Cut average interpreter wait times from 20 to 6 minutes by setting up a scheduled block system"
+        }
+      ],
+      "education": [
+        {
+          "school": "Queensboro State College",
+          "degree": "B.A. in Linguistics",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Languages: Mandarin, Cantonese, English",
+        "Interpreting: Consecutive, simultaneous, sight translation, video remote and phone",
+        "Healthcare: Medical terminology, HIPAA, NCIHC standards of practice",
+        "Certifications: CCHI CHI-Mandarin, 40-hour medical interpreter training"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "pop": 0.94
+      }
+    },
+    "YouTuber": {
+      "summary": "YouTuber running a DIY home repair channel with 380K subscribers and 42M lifetime views. Grew annual channel revenue to $210K from AdSense, sponsorships and affiliate links, with average view duration above 55%. Plans, films and edits every video and manages 12 brand partners a year.",
+      "experience": [
+        {
+          "company": "Weeknight Workshop (YouTube channel)",
+          "role": "Creator and Host",
+          "location": "Indianapolis, IN",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan, film, host and edit 2 videos a week on home repair, growing to 380K subscribers and 42M views\n- Built yearly revenue to $210K across AdSense, 12 sponsors, Amazon affiliate links and a printable plans store\n- Raised average view duration from 41% to 57% by tightening intros and testing thumbnails with YouTube Test & Compare\n- Manage a freelance editor and a part-time researcher and run the channel calendar in Notion"
+        },
+        {
+          "company": "Brightline Media Lab",
+          "role": "Video Editor",
+          "location": "Carmel, IN",
+          "startDate": "2017-08",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Edited product videos and social cuts for 15 manufacturing and retail clients\n- Built motion graphic templates that halved turnaround on recurring series"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hoosier State University",
+          "degree": "B.A. in Telecommunications",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Content: Scripting, on-camera hosting, thumbnails, titles, series planning",
+        "Production: Sony FX3, DJI drones, wireless lavs, Premiere Pro, After Effects",
+        "Growth: YouTube Studio analytics, retention editing, Test & Compare",
+        "Business: Sponsorship deals, affiliate programs, media kits, Notion"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "pop": 0.92
+      }
+    },
+    "Voice Actor": {
+      "summary": "SAG-AFTRA voice actor with 7 years in commercials, animation, video games and audiobooks. Has booked 150+ paid jobs, including 2 national radio campaigns and 18 narrated audiobooks. Records broadcast-quality audio from a treated home studio with Source-Connect and turns around most commercial scripts the same day.",
+      "experience": [
+        {
+          "company": "Bluewire Voice Studio",
+          "role": "Voice Actor",
+          "location": "Burbank, CA",
+          "startDate": "2019-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Booked 150+ paid jobs in commercials, explainers, animation and games, including 2 national radio campaigns\n- Voice 6 recurring characters across 3 indie video games and an animated web series\n- Record from a treated home booth with a Neumann TLM 103 and join directed sessions by Source-Connect\n- Deliver edited, mastered files for most commercial scripts the same day"
+        },
+        {
+          "company": "Clearwave Audio Studios",
+          "role": "Audiobook Narrator",
+          "location": "Glendale, CA",
+          "startDate": "2018-01",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Narrated 18 fiction and nonfiction audiobooks to ACX technical standards\n- Produced character voice guides with authors before each recording"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific Arts Conservatory",
+          "degree": "B.F.A. in Acting",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Commercial and character demo reels",
+          "link": "averymontesvo.com/demos",
+          "description": "Sixty-second commercial demo and 90-second animation and games demo"
+        }
+      ],
+      "skills": [
+        "Performance: Commercial reads, character voices, narration, accents and dialects",
+        "Studio: Neumann TLM 103, Source-Connect, Adobe Audition, iZotope RX",
+        "Formats: Commercials, animation, video games, e-learning, audiobooks",
+        "Union and Marketplaces: SAG-AFTRA, Voice123, ACX"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.95,
+        "tokyo": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.97
+      }
+    },
+    "Actor": {
+      "summary": "Stage and screen actor with 8 years of professional credits in regional theater, indie film and commercials. Performed 300+ shows across 14 productions and booked 2 regional TV spots in 2025. Equity Membership Candidate with a teaching artist side career and strong cold-reading and improv skills.",
+      "experience": [
+        {
+          "company": "Pike Street Repertory Theatre",
+          "role": "Company Actor",
+          "location": "Seattle, WA",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Performed 300+ shows across 14 productions, including leads in a Shakespeare comedy and a new play premiere\n- Workshop 3 new scripts a year with playwrights in staged readings\n- Booked 2 regional TV commercials and a supporting role in an indie feature through agency auditions in 2025\n- Self-tape 6 to 10 auditions a month with a home lighting and audio setup"
+        },
+        {
+          "company": "Rainier Children's Theatre",
+          "role": "Teaching Artist",
+          "location": "Tacoma, WA",
+          "startDate": "2018-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach after-school and summer acting classes to 60 students a term\n- Direct 2 youth showcases a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cascadia School of the Arts",
+          "degree": "B.F.A. in Acting",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Performance: Classical text, contemporary drama, comedy, on-camera acting",
+        "Training: Meisner technique, improv, stage combat, dialects",
+        "Auditions: Self-taping, cold reading, sides preparation",
+        "Union and Extras: Equity Membership Candidate, stage combat certification, valid passport"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "pop": 0.92
+      }
+    },
+    "Makeup Artist": {
+      "summary": "Licensed makeup artist with 6 years in bridal, editorial and commercial film work. Booked 45 weddings in 2025 with a 5.0 rating across 120 reviews and keyed makeup on 9 commercials and music videos. Known for long-wear skin prep, airbrush work and kits that meet strict hygiene standards on set.",
+      "experience": [
+        {
+          "company": "Golden Hour Beauty Co.",
+          "role": "Freelance Makeup Artist",
+          "location": "Los Angeles, CA",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Booked 45 weddings in 2025 with bridal parties of up to 8, holding a 5.0 rating across 120 reviews\n- Keyed makeup on 9 commercials and music videos, handling continuity photos and touch-ups on 14-hour shoot days\n- Use airbrush and HD techniques that hold up under 4K cameras and studio lighting\n- Keep a sanitized kit with single-use applicators and alcohol-cleaned palettes for every client"
+        },
+        {
+          "company": "Glamour Row Beauty",
+          "role": "Makeup Artist",
+          "location": "Santa Monica, CA",
+          "startDate": "2019-05",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Performed 15 to 20 makeup applications a week at a prestige beauty counter\n- Hit 115% of monthly retail goals by teaching clients their routine step by step"
+        }
+      ],
+      "education": [
+        {
+          "school": "Westside Academy of Makeup Artistry",
+          "degree": "Certificate in Film and Beauty Makeup",
+          "startDate": "2018-08",
+          "endDate": "2019-04"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Bridal and editorial portfolio",
+          "link": "noraleemakeup.com",
+          "description": "Before-and-after bridal work, editorial spreads and on-set stills from commercial shoots"
+        }
+      ],
+      "skills": [
+        "Makeup: Bridal, editorial, HD and airbrush, special occasion",
+        "Film and TV: Continuity, touch-ups, working with lighting and 4K cameras",
+        "Hygiene: Kit sanitation, single-use applicators, skin prep and allergy checks",
+        "License and Tools: California esthetician license, Temptu airbrush, Instagram portfolio"
+      ],
+      "fit": {
+        "silk": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.94,
+        "tokyo": 0.96,
+        "prism": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
+      }
+    },
+    "Fashion Designer": {
+      "summary": "Womenswear fashion designer with 7 years designing ready-to-wear for contemporary labels. Leads 4 collections a year of about 60 styles each, and a reworked knit program grew sell-through from 58% to 71%. Creates tech packs in Illustrator and fits samples in CLO 3D, cutting sample rounds from 3 to 2.",
+      "experience": [
+        {
+          "company": "Halloway Studio",
+          "role": "Fashion Designer, Womenswear",
+          "location": "New York, NY",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design 4 seasonal collections a year of about 60 styles each, from mood boards to final line review\n- Grew knitwear sell-through from 58% to 71% by rebuilding the program around 3 core silhouettes\n- Build tech packs in Illustrator and run fittings with the technical designer and overseas factories\n- Cut average sample rounds from 3 to 2 by fitting first protos digitally in CLO 3D"
+        },
+        {
+          "company": "Mercer Lane Apparel",
+          "role": "Assistant Designer",
+          "location": "New York, NY",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Drew flats and spec sheets for dresses and wovens and tracked samples in the PLM\n- Sourced fabrics and trims at Premiere Vision and from 20 domestic mills"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hudson Institute of Design",
+          "degree": "B.F.A. in Fashion Design",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Senior thesis collection: Tidewater",
+          "link": "claramoreau.design/tidewater",
+          "description": "Eight-look collection in deadstock linen shown at the school's spring runway show"
+        }
+      ],
+      "skills": [
+        "Design: Trend research, mood boards, line planning, fabric and trim sourcing",
+        "Technical: Tech packs, flats, fittings, pattern corrections, grading basics",
+        "Software: Adobe Illustrator, Photoshop, CLO 3D, Centric PLM",
+        "Craft: Draping, sewing, knitwear development"
+      ],
+      "fit": {
+        "silk": 0.96,
+        "opal": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.98
+      }
+    },
+    "Tattoo Artist": {
+      "summary": "Licensed tattoo artist with 7 years in custom shops, specializing in fine-line botanical and black and gray realism. Books 3 to 4 months out and completed 600+ custom pieces with a 4.9-star average on 250 reviews. Holds an Oregon tattoo license and current bloodborne pathogens certification.",
+      "experience": [
+        {
+          "company": "Black Fern Tattoo",
+          "role": "Tattoo Artist",
+          "location": "Portland, OR",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design and tattoo custom fine-line and black and gray pieces, booking 3 to 4 months out\n- Completed 600+ custom tattoos with a 4.9-star average across 250 Google and Instagram reviews\n- Draw every design in Procreate and run consults, deposits and scheduling through Square Appointments\n- Follow Oregon Health Licensing Office rules for single-use needles, barrier film and autoclave spore testing"
+        },
+        {
+          "company": "Iron Oak Tattoo",
+          "role": "Apprentice, then Tattoo Artist",
+          "location": "Salem, OR",
+          "startDate": "2019-02",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Completed a 2-year apprenticeship covering line work, shading, machine setup and sterilization\n- Tattooed 200+ walk-in and flash pieces after licensing"
+        }
+      ],
+      "education": [
+        {
+          "school": "Willamette Valley College of Art",
+          "degree": "B.F.A. in Illustration",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Tattoo portfolio",
+          "link": "instagram.com/inkbymarenk",
+          "description": "Healed fine-line botanical and black and gray realism pieces with process sketches"
+        }
+      ],
+      "skills": [
+        "Tattooing: Fine line, black and gray realism, botanical, cover-ups",
+        "Design: Custom drawing, Procreate, stencil prep, placement",
+        "Safety: Bloodborne pathogens certification, autoclave and spore testing, cross-contamination control",
+        "License and Tools: Oregon tattoo license, rotary pen machines, Square Appointments"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.92,
+        "minimalist": 0.92,
+        "tokyo": 0.93,
+        "prism": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.98
+      }
+    }
+  }
+}

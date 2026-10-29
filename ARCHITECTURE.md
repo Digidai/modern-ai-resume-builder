@@ -47,11 +47,11 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## Job Titles and Role Examples
 
-- `src/data/roles/<family>.json` is the source of truth for job titles: one example resume per title, plus a `guide` for new families. `npm run roles:sync` merges them into `src/data/jobTitles.json` (930 titles, 19 families) and `src/data/roleGuides.json`.
+- `src/data/roles/<family>.json` is the source of truth for job titles: one example resume per title, plus a `guide` for new families. `npm run roles:sync` merges them into `src/data/jobTitles.json` (1,204 titles, 21 families) and `src/data/roleGuides.json`.
 - `scripts/seo-postbuild.mjs` pre-renders each example into its job page and writes `/examples/<slug>.json` (agents) and `/role-examples/<slug>.json` (the page preview). In dev, `src/data/roleExamples.ts` reads the source files instead.
 - `scripts/jobtitles-validate.mjs` checks duplicates and slug collisions.
 - `scripts/jobtitles-import.mjs` supports bulk import.
-- `src/data/personas.ts` assigns deterministic persona names for previews.
+- `src/data/personas.ts` assigns each job title a unique persona name from a hash of its slug, so adding titles doesn't rename existing pages (or change their measured fit).
 
 ## AI Integration
 

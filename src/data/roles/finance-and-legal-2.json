@@ -1,0 +1,639 @@
+{
+  "family": "Finance & Legal",
+  "guide": null,
+  "titles": {
+    "Lawyer": {
+      "summary": "Licensed Missouri attorney with 7 years in general practice and legal aid, covering family law, estate planning and civil litigation. Tried 4 bench trials and argued 30 contested hearings in 2025 while carrying 55 active matters. Explains options plainly to clients and moves cases forward on schedule.",
+      "experience": [
+        {
+          "company": "Haverhill & Price Law",
+          "role": "Attorney",
+          "location": "Springfield, MO",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Represent clients in family law, estate planning and civil litigation matters, carrying about 55 active files\n- Tried 4 bench trials and argued 30 contested hearings in Missouri circuit courts in 2025\n- Draft about 60 wills, trusts and powers of attorney a year and took 2 probate estates through final settlement\n- Track deadlines, conflicts and billing in Clio, recording 1,750 billable hours in 2025"
+        },
+        {
+          "company": "Ozark Legal Aid Society",
+          "role": "Staff Attorney",
+          "location": "Joplin, MO",
+          "startDate": "2019-09",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Represented about 120 tenants in eviction cases, avoiding a judgment in 64% of them\n- Ran monthly legal clinics on protective orders and debt collection defense"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gateway University School of Law",
+          "degree": "J.D.",
+          "startDate": "2016-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Show-Me State University",
+          "degree": "B.A. in Political Science",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Practice Areas: family law, estate planning, probate, civil litigation, landlord-tenant",
+        "Litigation: pleadings, discovery, depositions, motions, bench trials",
+        "Tools: Clio, Westlaw, Missouri Case.net, Microsoft Word"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.99,
+        "ginto": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.97
+      }
+    },
+    "Corporate Attorney": {
+      "summary": "Corporate attorney with 8 years of M&A, private equity and financing work at Midwest law firms. Runs day-to-day execution on middle-market deals from $40M to $350M and closed 9 transactions in 2025. Drafts clean purchase agreements and keeps diligence teams on a tight timeline.",
+      "experience": [
+        {
+          "company": "Whitlock Barrow LLP",
+          "role": "Senior Associate, Corporate",
+          "location": "Chicago, IL",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead day-to-day execution on middle-market M&A deals from $40M to $350M, closing 9 transactions in 2025 for private equity and strategic buyers\n- Draft and negotiate purchase agreements, disclosure schedules and ancillary documents, coordinating with R&W insurance underwriters\n- Supervise diligence teams of 3 to 5 junior associates and produce diligence memos from Datasite data rooms"
+        },
+        {
+          "company": "Marquette Lowell LLP",
+          "role": "Associate, Corporate",
+          "location": "Milwaukee, WI",
+          "startDate": "2018-09",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Drafted credit agreements and security documents for 20 secured financings\n- Prepared Form 8-K and 10-Q sections for 2 public company clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lakefront University School of Law",
+          "degree": "J.D.",
+          "startDate": "2015-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Practice: mergers and acquisitions, private equity, venture financings, corporate governance, commercial contracts",
+        "Transactions: purchase agreements, disclosure schedules, due diligence, closing checklists, R&W insurance",
+        "Tools: Datasite, iManage, Litera, Westlaw, Practical Law"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "pop": 0.94
+      }
+    },
+    "Investment Banking Analyst": {
+      "summary": "First-year investment banking analyst in an industrials M&A group, after two banking internships. Helped close the $310M sale of a specialty packaging manufacturer and builds models for 6 live sell-side and buy-side mandates. Fast and careful in Excel and PowerPoint.",
+      "experience": [
+        {
+          "company": "Calder Ridge Partners",
+          "role": "Investment Banking Analyst, Industrials",
+          "location": "New York, NY",
+          "startDate": "2025-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build operating models, DCF, LBO and accretion/dilution analyses for 6 live M&A mandates in industrial services\n- Helped close the $310M sale of a specialty packaging manufacturer, managing about 40 buyer data room requests a week\n- Draft CIM sections, management presentations and buyer lists covering 120 strategic and financial sponsors\n- Prepare trading comps and precedent transactions using FactSet, Capital IQ and PitchBook"
+        },
+        {
+          "company": "Calder Ridge Partners",
+          "role": "Summer Analyst, Healthcare",
+          "location": "New York, NY",
+          "startDate": "2024-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Built comps and pitch book pages for 3 client pitches and received a full-time offer"
+        },
+        {
+          "company": "Fairmount Lane Capital",
+          "role": "Investment Banking Intern",
+          "location": "Philadelphia, PA",
+          "startDate": "2023-06",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Screened 200 lower middle-market targets for 2 buy-side searches"
+        }
+      ],
+      "education": [
+        {
+          "school": "Old Harbor University",
+          "degree": "B.S. in Finance",
+          "startDate": "2021-09",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Modeling: three-statement models, DCF, LBO, accretion/dilution, trading comps, precedent transactions",
+        "Tools: Excel, PowerPoint, FactSet, Capital IQ, PitchBook, Bloomberg",
+        "Transactions: sell-side M&A, CIMs, data rooms, buyer outreach",
+        "Licenses: FINRA SIE, Series 79, Series 63"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.87
+      }
+    },
+    "Private Equity Associate": {
+      "summary": "Private equity associate with 4 years across investment banking and lower middle-market buyouts. Built the models and investment committee memos for 2 platform acquisitions at $145M and $88M enterprise value plus 3 add-ons. Runs diligence workstreams with outside advisors and tracks portfolio KPIs monthly.",
+      "experience": [
+        {
+          "company": "Arbor Lane Equity Partners",
+          "role": "Private Equity Associate",
+          "location": "Boston, MA",
+          "startDate": "2024-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Screen about 150 opportunities a year in business and healthcare services with $5M to $25M of EBITDA\n- Built LBO models and IC memos for 2 closed platform deals at $145M and $88M enterprise value and 3 add-ons\n- Run financial and commercial diligence with QoE providers, counsel and consultants through signing\n- Track monthly KPIs and covenant compliance for 4 portfolio companies and built a pricing model that lifted gross margin 2 points at one"
+        },
+        {
+          "company": "Tremont Hale Securities",
+          "role": "Investment Banking Analyst",
+          "location": "New York, NY",
+          "startDate": "2022-07",
+          "endDate": "2024-06",
+          "isCurrent": false,
+          "description": "- Executed 4 sell-side processes for sponsor-backed services companies\n- Built three-statement and LBO models used in buyer negotiations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Charleswood University",
+          "degree": "B.A. in Economics",
+          "startDate": "2018-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Investing: LBO modeling, deal sourcing, diligence, IC memos, value creation plans",
+        "Finance: quality of earnings review, debt financing, covenant analysis, returns analysis",
+        "Tools: Excel, PitchBook, Capital IQ, DealCloud, PowerPoint",
+        "Sectors: business services, healthcare services, industrial distribution"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.87
+      }
+    },
+    "Actuary": {
+      "summary": "Fellow of the Society of Actuaries with 9 years in life insurance and reinsurance. Owns quarterly LDTI and VM-20 reserves for a $4.2B life block and rebuilt experience studies in Python, cutting run time from 3 days to 4 hours. Priced a term product that reached $18M in first-year premium.",
+      "experience": [
+        {
+          "company": "Gristmill Life & Annuity",
+          "role": "Actuary",
+          "location": "Des Moines, IA",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own quarterly reserve calculations under US GAAP LDTI and statutory VM-20 for a $4.2B term and universal life block\n- Rebuilt mortality and lapse experience studies in Python and SQL, cutting run time from 3 days to 4 hours\n- Lead annual asset adequacy cash flow testing and present results to the appointed actuary and CFO\n- Priced a new term life product in AXIS that reached $18M in first-year premium, 12% above plan"
+        },
+        {
+          "company": "Prairie Ridge Reinsurance",
+          "role": "Actuarial Analyst",
+          "location": "Omaha, NE",
+          "startDate": "2017-07",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Built reinsurance pricing models for 30 treaty quotes a year while passing SOA exams\n- Automated quarterly experience reporting in R, saving 2 days per cycle"
+        }
+      ],
+      "education": [
+        {
+          "school": "Iowa Plains University",
+          "degree": "B.S. in Actuarial Science",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Credentials: Fellow of the Society of Actuaries (FSA), Member of the American Academy of Actuaries (MAAA)",
+        "Actuarial: reserving, LDTI, VM-20, cash flow testing, experience studies, product pricing",
+        "Tools: AXIS, Prophet, Python, SQL, R, Excel VBA",
+        "Communication: actuarial memoranda, committee presentations, regulator responses"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.88
+      }
+    },
+    "Bank Manager": {
+      "summary": "Bank branch manager with 11 years in community banking, from personal banker to running a $210M deposit branch. Grew branch deposits 14% and loan originations 22% in 2025, ranking 3rd of 26 branches. Keeps the branch audit-ready and coaches bankers to steady referral habits.",
+      "experience": [
+        {
+          "company": "Silver Maple Community Bank",
+          "role": "Branch Manager",
+          "location": "Spokane, WA",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 9 bankers and tellers at a $210M deposit branch, ranked 3rd of 26 branches on the 2025 scorecard\n- Grew branch deposits 14% and consumer and small business loan originations 22% in 2025\n- Keep the branch compliant with BSA/AML, Reg CC, Reg E and dual control, earning satisfactory ratings in 3 straight audits\n- Coach staff through weekly huddles in Salesforce, raising referrals per banker from 6 to 10 a month"
+        },
+        {
+          "company": "Inland Northwest Federal Credit Union",
+          "role": "Assistant Branch Manager",
+          "location": "Coeur d'Alene, ID",
+          "startDate": "2017-06",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Supervised 6 tellers and managed vault and cash ordering\n- Approved consumer loans up to $50k within lending authority"
+        },
+        {
+          "company": "Inland Northwest Federal Credit Union",
+          "role": "Personal Banker",
+          "location": "Coeur d'Alene, ID",
+          "startDate": "2015-05",
+          "endDate": "2017-05",
+          "isCurrent": false,
+          "description": "- Opened about 40 accounts a month and led the branch in auto loan applications in 2016"
+        }
+      ],
+      "education": [
+        {
+          "school": "Palouse State University",
+          "degree": "B.A. in Business Administration",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: hiring, coaching, sales management, performance reviews",
+        "Banking: consumer and small business lending, deposits, treasury management referrals, cash management",
+        "Compliance: BSA/AML, OFAC, Reg CC, Reg E, CRA, fair lending",
+        "Systems: Jack Henry SilverLake, Salesforce, Verafin, nCino"
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.93,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "Mortgage Loan Processor": {
+      "summary": "Mortgage loan processor with 6 years in residential lending, handling conventional, FHA and VA files. Processes 22 to 26 loans a month with a 21-day average from disclosure to clear to close, 6 days faster than the team average. Tracks TRID timelines closely and had zero tolerance cures in 2025.",
+      "experience": [
+        {
+          "company": "Westfork Home Lending",
+          "role": "Mortgage Loan Processor",
+          "location": "Boise, ID",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process 22–26 conventional, FHA and VA purchase and refinance loans a month in Encompass from application to clear to close\n- Hold a 21-day average from initial disclosure to clear to close, 6 days faster than the team average\n- Order and review appraisals, title commitments, VOEs and flood certificates and clear underwriting conditions\n- Track TRID disclosure timelines and changed circumstances, with zero tolerance cures in 2025"
+        },
+        {
+          "company": "Gem County Credit Union",
+          "role": "Loan Officer Assistant",
+          "location": "Nampa, ID",
+          "startDate": "2020-02",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Collected documents and ran DU and LPA findings for about 15 mortgage files a month\n- Sent status updates to borrowers and agents twice a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Snake River College",
+          "degree": "A.A.S. in Business",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Processing: conventional, FHA and VA loans, condition clearing, appraisal and title review",
+        "Compliance: TRID, RESPA, HMDA, ECOA, fair lending",
+        "Systems: Encompass, Desktop Underwriter, Loan Product Advisor, The Work Number"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "ginto": 0.96,
+        "bronx": 0.93,
+        "pop": 0.96
+      }
+    },
+    "Junior Accountant": {
+      "summary": "Junior accountant with a year of corporate accounting experience after a public accounting internship. Prepares journal entries and 25 monthly reconciliations in NetSuite and delivered 120 audit requests on schedule for the company's first annual audit. Pursuing CPA licensure with FAR passed.",
+      "experience": [
+        {
+          "company": "Ambermill Foods",
+          "role": "Junior Accountant",
+          "location": "Grand Rapids, MI",
+          "startDate": "2025-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare about 40 journal entries a month for accruals, prepaid amortization and payroll in NetSuite\n- Reconcile 25 balance sheet accounts monthly, including 6 bank and credit card accounts\n- Process about 300 vendor invoices a month and supported 1099 filing for 85 vendors\n- Pulled support for 120 PBC requests during the first annual audit, all delivered on schedule"
+        },
+        {
+          "company": "Riverfold CPA Partners",
+          "role": "Tax and Accounting Intern",
+          "location": "Grand Rapids, MI",
+          "startDate": "2024-01",
+          "endDate": "2024-04",
+          "isCurrent": false,
+          "description": "- Prepared 40 individual tax returns in UltraTax for review by senior staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grand Lakes State University",
+          "degree": "BBA in Accounting",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Accounting: journal entries, account reconciliations, accounts payable, accruals, month-end close",
+        "Standards: US GAAP, internal controls",
+        "Systems: NetSuite, QuickBooks Online, Bill.com, Excel",
+        "Certifications: CPA candidate, FAR passed"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.99,
+        "ginto": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.95
+      }
+    },
+    "Accounting Clerk": {
+      "summary": "Accounting clerk with 5 years in accounts payable, receivable and billing for a building supply distributor and a dental group. Matches about 600 vendor invoices a month and keeps unapplied cash under $5k across 1,200 trade accounts. Fast, accurate data entry and tidy reconciliations.",
+      "experience": [
+        {
+          "company": "Sandhill Building Supply",
+          "role": "Accounting Clerk",
+          "location": "Tulsa, OK",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Enter and three-way match about 600 vendor invoices a month against POs and receivers in Sage 100\n- Apply customer payments and post daily deposits for 1,200 trade accounts, keeping unapplied cash under $5k\n- Run weekly check and ACH payment batches and prepare 1099s each January\n- Reconcile 3 bank accounts and the petty cash fund monthly"
+        },
+        {
+          "company": "Cimarron Dental Group",
+          "role": "Billing Clerk",
+          "location": "Broken Arrow, OK",
+          "startDate": "2021-07",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Posted insurance and patient payments for 4 offices in Dentrix\n- Followed up on unpaid claims older than 60 days, cutting that balance by 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arkansas River Community College",
+          "degree": "A.A.S. in Accounting",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Accounting: accounts payable, accounts receivable, cash application, bank reconciliations, three-way match",
+        "Systems: Sage 100, QuickBooks, Dentrix, Bill.com, Excel",
+        "Data Entry: 10-key at 11,000 KPH with high accuracy"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.99,
+        "ginto": 0.97,
+        "quartz": 0.99,
+        "bronx": 0.92
+      }
+    },
+    "Collections Specialist": {
+      "summary": "Collections specialist with 6 years in medical and auto loan collections. Collected $1.1M on a $2.6M patient and insurance portfolio in 2025, 112% of goal, and cut accounts over 120 days from 31% to 22%. Firm and respectful on calls and careful with FDCPA and HIPAA rules.",
+      "experience": [
+        {
+          "company": "Brazos Health Revenue Services",
+          "role": "Collections Specialist",
+          "location": "Waco, TX",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Work a portfolio of about 900 patient and insurance accounts worth $2.6M, collecting $1.1M in 2025, 112% of goal\n- Set up payment plans and screen patients for financial assistance under FDCPA, Reg F and HIPAA rules\n- Cut accounts over 120 days from 31% to 22% by reprioritizing worklists in Epic Resolute\n- Resolve about 60 disputes and insurance denials a month with billing and coding teams"
+        },
+        {
+          "company": "Heartland Auto Finance",
+          "role": "Collections Representative",
+          "location": "Temple, TX",
+          "startDate": "2020-08",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Made about 150 calls a day on 30 to 60 day delinquent auto loans\n- Kept my roll rate to 60+ days below team average for 18 straight months"
+        }
+      ],
+      "education": [
+        {
+          "school": "McLennan Heights College",
+          "degree": "A.A. in Business",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Collections: skip tracing, payment plans, dispute resolution, negotiation, aging management",
+        "Compliance: FDCPA, Reg F, FCRA, HIPAA, TCPA",
+        "Systems: Epic Resolute, FACS, LiveVox, Excel"
+      ],
+      "fit": {
+        "ginto": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.93
+      }
+    },
+    "Court Clerk": {
+      "summary": "Court clerk with 6 years in county district and superior courts, now clerking civil and criminal hearings. Records minutes and exhibits for 8 to 10 hearings a day in Odyssey and processes about 150 filings daily within same-day standards. Trained 7 new clerks on docketing.",
+      "experience": [
+        {
+          "company": "Tamarack County Superior Court",
+          "role": "Court Clerk II",
+          "location": "Bellingham, WA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clerk 8 to 10 civil and criminal hearings a day, recording minutes, exhibits, orders and judgments in Odyssey\n- Process about 150 filings a day, including e-filed pleadings, fee waivers and protection orders, within same-day standards\n- Swear in witnesses and jurors and keep exhibits under chain of custody rules\n- Trained 7 new clerks on docketing, which cut entry errors flagged in monthly audits by a third"
+        },
+        {
+          "company": "Tamarack County District Court",
+          "role": "Court Clerk I",
+          "location": "Bellingham, WA",
+          "startDate": "2020-06",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Processed traffic, small claims and civil infraction filings and collected fines and fees\n- Answered about 80 public calls and counter questions a day without giving legal advice"
+        }
+      ],
+      "education": [
+        {
+          "school": "Evergreen Coast College",
+          "degree": "A.A. in Paralegal Studies",
+          "startDate": "2018-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Courtroom: minute entries, exhibits, juror and witness oaths, orders and judgments",
+        "Records: docketing, e-filing review, fee waivers, public records requests, sealed records",
+        "Systems: Odyssey case management, court e-filing portal, Microsoft Office",
+        "Customer Service: public counter, phone inquiries, self-represented litigants"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.92,
+        "bronx": 0.93,
+        "mono": 0.97,
+        "pop": 0.94
+      }
+    },
+    "Litigation Paralegal": {
+      "summary": "Litigation paralegal with 7 years supporting commercial, product liability and personal injury cases. Runs document productions of up to 400,000 pages in Relativity and prepared trial materials for 3 jury trials in 2024 and 2025. Keeps deadlines, exhibits and privilege logs in order so attorneys can focus on the case.",
+      "experience": [
+        {
+          "company": "Galloway Ainsley LLP",
+          "role": "Litigation Paralegal",
+          "location": "Philadelphia, PA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 3 partners and 5 associates on commercial and product liability cases, managing 25 active matters\n- Run document productions of up to 400,000 pages in Relativity, including Bates numbering and privilege logs\n- Prepared trial binders, exhibit lists and witness kits for 3 jury trials in 2024 and 2025\n- Calendar deadlines under the Federal Rules of Civil Procedure and Pennsylvania rules and e-file in CM/ECF and PACFile"
+        },
+        {
+          "company": "Delmont & Fisk Injury Law",
+          "role": "Paralegal",
+          "location": "Cherry Hill, NJ",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Requested medical records and drafted demand letters for about 70 personal injury files\n- Summarized 40 depositions for trial preparation"
+        }
+      ],
+      "education": [
+        {
+          "school": "Brandywine Valley College",
+          "degree": "Paralegal Certificate, ABA-approved",
+          "startDate": "2018-09",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Liberty Bell University",
+          "degree": "B.A. in English",
+          "startDate": "2014-09",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Litigation: discovery, document review, privilege logs, deposition summaries, trial preparation",
+        "E-Discovery and Filing: Relativity, CM/ECF, PACFile, iManage",
+        "Research: Westlaw, Lexis, public records searches",
+        "Certifications: NALA Certified Paralegal (CP)"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "minimalist": 0.97,
+        "swiss": 0.95,
+        "berlin": 0.88,
+        "iron": 0.96,
+        "ginto": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.92
+      }
+    },
+    "Notary Public": {
+      "summary": "Commissioned South Carolina notary public and certified loan signing agent running a mobile notary business since 2021. Has completed more than 1,400 loan signings with fewer than 1% of packages returned for corrections. Works with 18 title companies, lenders and law firms who book repeat appointments.",
+      "experience": [
+        {
+          "company": "Coastal Seal Mobile Notary",
+          "role": "Owner, Notary Public and Loan Signing Agent",
+          "location": "Charleston, SC",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Complete 45–60 loan signings and general notarizations a month for title companies, lenders and law firms\n- Returned more than 1,400 loan packages since 2021 with fewer than 1% needing corrections\n- Verify signer identity, record every act in a bound notary journal and follow South Carolina notary law\n- Built repeat business with 18 title and escrow clients through Snapdocs and SigningOrder"
+        },
+        {
+          "company": "Palmetto Harbor Title",
+          "role": "Closing Assistant",
+          "location": "Mount Pleasant, SC",
+          "startDate": "2018-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Prepared closing packages and deeds for about 35 closings a month\n- Earned a notary commission in 2019 and notarized in-office closings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ashley River Community College",
+          "degree": "A.A.S. in Office Administration",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Commission: South Carolina Notary Public, NNA Certified Notary Signing Agent, background screened, E&O insured",
+        "Documents: purchase and refinance packages, HELOCs, deeds, affidavits, powers of attorney",
+        "Tools: Snapdocs, SigningOrder, notary journal, Adobe Acrobat, dual-tray printing"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.97,
+        "ginto": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "pop": 0.93
+      }
+    }
+  }
+}

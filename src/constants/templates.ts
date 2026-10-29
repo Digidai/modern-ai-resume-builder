@@ -14,6 +14,8 @@ export interface TemplateConfig {
   atsFriendly: boolean;
   /** Whether the template handles its own full-bleed layout */
   isFullBleed: boolean;
+  /** Shows the resume photo (initials when there is none). */
+  photo?: boolean;
 }
 
 /** Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs. */
@@ -37,7 +39,11 @@ const TEMPLATE_CATALOG = [
   { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", bestFor: 'Senior professionals with a quiet, serif style', atsFriendly: false, isFullBleed: false },
   { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", bestFor: 'Designers and engineers who want a two-column summary', atsFriendly: false, isFullBleed: true },
   { id: 'altitude', name: 'Altitude', description: "AltaCV-style two columns with outlined skill tags", bestFor: 'Engineers and researchers who want a lively two-column page', atsFriendly: false, isFullBleed: true },
-  { id: 'halo', name: 'Halo', description: "Soft gradient header, initials avatar, card sidebar", bestFor: 'Customer-facing, education and people roles', atsFriendly: false, isFullBleed: true },
+  { id: 'halo', name: 'Halo', description: "Soft gradient header, round photo or initials, card sidebar", bestFor: 'Customer-facing, education and people roles', atsFriendly: false, isFullBleed: true, photo: true },
+  { id: 'europa', name: 'Europa', description: "Europass-style CV: photo, label column and blue rules", bestFor: 'Applications in the EU, Germany, Switzerland and the Nordics', atsFriendly: false, isFullBleed: true, photo: true },
+  { id: 'tokyo', name: 'Tokyo', description: "Rirekisho-inspired ruled form with a 3×4 photo box", bestFor: 'Japanese companies and formal applications that expect a photo', atsFriendly: false, isFullBleed: true, photo: true },
+  { id: 'jade', name: 'Jade', description: "Photo header with accent title bars, common in China", bestFor: 'Applications in mainland China, Hong Kong, Taiwan and Singapore', atsFriendly: false, isFullBleed: true, photo: true },
+  { id: 'portrait', name: 'Portrait', description: "Round photo atop a soft tinted sidebar", bestFor: 'Hospitality, sales and customer-facing roles that use a photo', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'prism', name: 'Prism', description: "Angled accent header with skewed date tags", bestFor: 'Sales, marketing and startup roles that want energy', atsFriendly: false, isFullBleed: true },
   { id: 'sidebar', name: 'Sidebar', description: "Dark accent sidebar beside a timeline main column", bestFor: 'Tech and product roles with many skills', atsFriendly: false, isFullBleed: true },
   { id: 'creative', name: 'Creative', description: "Bold accent header band with a tinted sidebar", bestFor: 'Marketing, design and media roles', atsFriendly: false, isFullBleed: true },

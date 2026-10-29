@@ -13,6 +13,13 @@ const profileUrl = (network: string, username: string): string => {
   const host = PROFILE_HOSTS[network.toLowerCase().replace(/[^a-z]/g, '')];
   return username && host ? `${host}${username.replace(/^@/, '')}` : '';
 };
+/** Largest accepted photo data URL (the editor produces roughly 30–90 KB). */
+export const MAX_PHOTO_LENGTH = 200_000;
+/** Keeps only an inline raster image, so a resume never loads anything from the network. */
+export const sanitizePhoto = (value: unknown): string => {
+  const photo = str(value).trim();
+  return photo.length <= MAX_PHOTO_LENGTH && /^data:image\/(jpeg|png|webp);base64,[a-z0-9+/]+=*$/i.test(photo) ? photo : '';
+};
 const list = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object') : [];
 
@@ -71,6 +78,7 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
   return {
     fullName: str(basics.name),
     title: str(basics.label),
+    photo: str(basics.image),
     email: str(basics.email),
     phone: str(basics.phone),
     website: str(basics.url) || str(basics.website),
@@ -163,6 +171,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     website: str(raw.website),
     linkedin: str(raw.linkedin),
     links,
+    ...(sanitizePhoto(raw.photo) ? { photo: sanitizePhoto(raw.photo) } : {}),
     summary: str(raw.summary),
     experience,
     education,

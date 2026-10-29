@@ -100,8 +100,8 @@
       "fit": {
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.92,
-        "ginto": 0.91,
+        "iron": 0.9,
+        "ginto": 0.89,
         "quartz": 0.94,
         "bronx": 0.89,
         "mono": 0.96,
@@ -159,10 +159,10 @@
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.85,
+        "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.91,
-        "bronx": 0.86,
+        "quartz": 0.93,
+        "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.95
@@ -213,7 +213,7 @@
         "quartz": 0.91,
         "bronx": 0.86,
         "mono": 0.96,
-        "pop": 0.94
+        "pop": 0.97
       }
     },
     "Cashier": {
@@ -305,12 +305,12 @@
         "Certifications: ServSafe Manager"
       ],
       "fit": {
-        "creative": 0.99,
+        "creative": 0.97,
         "swiss": 0.99,
         "berlin": 0.88,
-        "iron": 0.86,
-        "ginto": 0.87,
-        "quartz": 0.9,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.9,
@@ -364,7 +364,7 @@
         "quartz": 0.94,
         "bronx": 0.87,
         "mono": 0.98,
-        "pop": 0.95
+        "pop": 0.92
       }
     },
     "Customer Service Associate": {
@@ -411,8 +411,8 @@
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.85,
-        "quartz": 0.91,
-        "bronx": 0.88,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9,
         "cast": 0.98
@@ -468,12 +468,12 @@
         "minimalist": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.87,
+        "iron": 0.89,
         "ginto": 0.85,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.88
       }
     },
     "Restaurant Supervisor": {
@@ -518,8 +518,8 @@
         "berlin": 0.88,
         "iron": 0.89,
         "ginto": 0.89,
-        "quartz": 0.92,
-        "bronx": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.89,
         "mono": 0.98,
         "pop": 0.92
       }
@@ -638,13 +638,15 @@
         "silk": 0.93,
         "opal": 0.99,
         "minimalist": 0.91,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
         "path": 0.99,
-        "bronx": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.95
@@ -800,7 +802,7 @@
         "minimalist": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.97,
         "bronx": 0.93,
@@ -848,6 +850,7 @@
       ],
       "fit": {
         "minimalist": 0.96,
+        "tokyo": 0.99,
         "swiss": 0.96,
         "berlin": 0.89,
         "iron": 0.91,
@@ -855,7 +858,7 @@
         "quartz": 0.91,
         "bronx": 0.86,
         "mono": 0.95,
-        "pop": 0.93
+        "pop": 0.91
       }
     },
     "Barista": {
@@ -901,7 +904,7 @@
         "iron": 0.88,
         "ginto": 0.91,
         "quartz": 0.94,
-        "bronx": 0.85,
+        "bronx": 0.9,
         "pop": 0.92,
         "cast": 0.99
       }
@@ -946,10 +949,10 @@
       "fit": {
         "swiss": 0.96,
         "berlin": 0.88,
-        "iron": 0.9,
-        "ginto": 0.91,
-        "quartz": 0.94,
-        "bronx": 0.86,
+        "iron": 0.91,
+        "ginto": 0.93,
+        "quartz": 0.97,
+        "bronx": 0.92,
         "pop": 0.94,
         "cast": 0.99
       }
@@ -992,7 +995,7 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "bronx": 0.89
+        "bronx": 0.95
       }
     },
     "Front Desk Manager": {
@@ -1042,16 +1045,16 @@
         "Leadership: Hiring, onboarding, scheduling, performance reviews"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.97,
         "opal": 0.98,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.97,
-        "quartz": 0.91,
+        "quartz": 0.93,
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
@@ -1147,10 +1150,10 @@
       "fit": {
         "swiss": 0.94,
         "berlin": 0.86,
-        "iron": 0.89,
-        "ginto": 0.86,
-        "quartz": 0.95,
-        "bronx": 0.85,
+        "iron": 0.9,
+        "ginto": 0.88,
+        "quartz": 0.98,
+        "bronx": 0.89,
         "mono": 0.96,
         "pop": 0.92
       }
@@ -1203,6 +1206,7 @@
       ],
       "fit": {
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1255,6 +1259,7 @@
       "fit": {
         "silk": 0.97,
         "minimalist": 0.94,
+        "tokyo": 0.97,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.87,
@@ -1306,10 +1311,10 @@
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.86,
-        "iron": 0.89,
-        "ginto": 0.85,
-        "quartz": 0.93,
-        "bronx": 0.85,
+        "iron": 0.91,
+        "ginto": 0.86,
+        "quartz": 0.95,
+        "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.89
       }
@@ -1358,10 +1363,10 @@
         "berlin": 0.87,
         "iron": 0.88,
         "ginto": 0.86,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "quartz": 0.9,
+        "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.91,
+        "pop": 0.88,
         "cast": 0.99
       }
     },
@@ -1405,9 +1410,9 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.9,
-        "iron": 0.89,
-        "ginto": 0.89,
-        "quartz": 0.88,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.86,
         "bronx": 0.85,
         "pop": 0.92
       }
@@ -1449,8 +1454,8 @@
         "Systems: Eventbrite, Givebutter, Social Tables, Asana"
       ],
       "fit": {
-        "quartz": 0.97,
-        "bronx": 0.85
+        "quartz": 0.98,
+        "bronx": 0.9
       }
     },
     "Banquet Manager": {
@@ -1502,6 +1507,7 @@
       "fit": {
         "modern": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1554,7 +1560,7 @@
         "berlin": 0.94,
         "iron": 0.92,
         "ginto": 0.9,
-        "quartz": 0.91,
+        "quartz": 0.88,
         "bronx": 0.9,
         "pop": 0.94
       }
@@ -1599,6 +1605,7 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.87,
         "iron": 0.92,
@@ -1649,8 +1656,8 @@
       "fit": {
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.92,
-        "ginto": 0.91,
+        "iron": 0.9,
+        "ginto": 0.89,
         "quartz": 0.95,
         "bronx": 0.93,
         "mono": 0.96,
@@ -1708,12 +1715,13 @@
         "executive": 0.97,
         "silk": 0.97,
         "minimalist": 0.94,
+        "prism": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.93,
-        "bronx": 0.92,
+        "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.95
@@ -1760,7 +1768,6 @@
       "fit": {
         "modern": 0.96,
         "minimalist": 0.94,
-        "creative": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1818,14 +1825,14 @@
         "Systems: Oracle Retail, UKG, Tableau, Zipline"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.95,
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.96,
-        "bronx": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.86,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
@@ -1874,7 +1881,7 @@
         "minimalist": 0.98,
         "swiss": 0.95,
         "berlin": 0.87,
-        "iron": 0.85,
+        "iron": 0.86,
         "ginto": 0.85,
         "quartz": 0.89,
         "bronx": 0.85,
@@ -1931,7 +1938,7 @@
         "quartz": 0.88,
         "bronx": 0.86,
         "mono": 0.95,
-        "pop": 0.92
+        "pop": 0.89
       }
     },
     "Hotel Sales Manager": {
@@ -1978,7 +1985,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.89

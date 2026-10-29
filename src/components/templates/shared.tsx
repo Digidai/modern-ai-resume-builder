@@ -219,3 +219,30 @@ export const groupSkills = (skills: string[]): SkillGroup[] => {
     }
     return plain.length ? [...groups, { category: '', items: plain }] : groups;
 };
+
+/** "Alex Sterling" → "AS"; one word gives one letter. */
+export const initialsOf = (name: string): string => {
+    const words = name.split(/\s+/).filter(Boolean);
+    if (words.length === 0) return '';
+    const first = Array.from(words[0])[0] ?? '';
+    const last = words.length > 1 ? Array.from(words[words.length - 1])[0] ?? '' : '';
+    return (first + last).toUpperCase();
+};
+
+/**
+ * The resume's photo, cropped to fill the box `className` sizes; without a photo it shows the
+ * initials on `fallbackClassName` so the layout keeps its shape. Renders nothing when there is
+ * neither a photo nor a name.
+ */
+export const Portrait: React.FC<{ data: ResumeData; className: string; fallbackClassName: string }> = ({ data, className, fallbackClassName }) => {
+    const initials = initialsOf(data.fullName);
+    if (data.photo) {
+        return <img src={data.photo} alt={data.fullName.trim() ? `Photo of ${data.fullName.trim()}` : 'Photo'} className={`block shrink-0 object-cover ${className}`} />;
+    }
+    if (!initials) return null;
+    return (
+        <div aria-hidden="true" className={`flex shrink-0 items-center justify-center ${className} ${fallbackClassName}`}>
+            {initials}
+        </div>
+    );
+};

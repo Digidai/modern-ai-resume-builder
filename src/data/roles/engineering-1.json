@@ -89,11 +89,13 @@
         "Testing: JUnit, Playwright, Mockito"
       ],
       "fit": {
+        "modern": 0.98,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.96,
         "berlin": 0.89,
-        "iron": 0.91,
-        "ginto": 0.93,
+        "iron": 0.89,
+        "ginto": 0.91,
         "quartz": 0.94,
         "bronx": 0.9,
         "mono": 0.97,
@@ -203,15 +205,14 @@
         "Cloud: AWS, Kubernetes, Terraform, Datadog"
       ],
       "fit": {
-        "modern": 0.98,
         "minimalist": 0.91,
+        "tokyo": 0.99,
         "swiss": 0.92,
         "berlin": 0.86,
-        "iron": 0.89,
-        "ginto": 0.89,
+        "iron": 0.91,
+        "ginto": 0.9,
         "symmetry": 0.99,
-        "quartz": 0.97,
-        "bronx": 0.9,
+        "bronx": 0.96,
         "mono": 0.92,
         "pop": 0.91
       }
@@ -309,6 +310,7 @@
         "silk": 0.98,
         "opal": 0.96,
         "minimalist": 0.91,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -374,13 +376,14 @@
         "silk": 0.98,
         "opal": 0.96,
         "minimalist": 0.89,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.86,
         "symmetry": 0.98,
         "quartz": 0.95,
-        "bronx": 0.9,
+        "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96
@@ -499,17 +502,18 @@
         "Platforms: AWS, Kubernetes, Kafka, Aurora, Snowflake"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.97,
         "silk": 0.96,
         "opal": 0.96,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.94,
+        "iron": 0.92,
+        "ginto": 0.96,
         "symmetry": 0.98,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
         "mono": 0.89,
         "pop": 0.92,
         "cast": 0.98
@@ -567,15 +571,16 @@
         "silk": 0.94,
         "meridian": 0.98,
         "minimalist": 0.91,
+        "tokyo": 0.94,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.94,
         "quartz": 0.9,
-        "bronx": 0.85,
+        "bronx": 0.88,
         "mono": 0.9,
-        "pop": 0.85,
+        "pop": 0.87,
         "cast": 0.99
       }
     },
@@ -625,7 +630,7 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "mono": 0.98,
-        "pop": 0.95
+        "pop": 0.98
       }
     },
     "Senior Frontend Developer": {
@@ -675,15 +680,15 @@
         "Leadership: Code review standards, mentoring, frontend architecture, WCAG 2.1 AA"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "silk": 0.98,
         "minimalist": 0.95,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.86,
+        "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.94,
-        "bronx": 0.92,
+        "bronx": 0.86,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -741,6 +746,8 @@
         "silk": 0.96,
         "opal": 0.94,
         "minimalist": 0.88,
+        "europa": 0.99,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -800,19 +807,20 @@
         "Performance: Profiling with pprof, load testing with k6, capacity planning"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.93,
         "executive": 0.98,
         "silk": 0.96,
         "opal": 0.96,
         "minimalist": 0.89,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.96,
         "path": 0.97,
-        "quartz": 0.91,
-        "bronx": 0.88,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95
@@ -868,6 +876,7 @@
         "modern": 0.95,
         "executive": 0.97,
         "minimalist": 0.91,
+        "tokyo": 0.95,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.9,
@@ -934,8 +943,8 @@
         "iron": 0.94,
         "ginto": 0.91,
         "symmetry": 0.96,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.9
       }
@@ -990,6 +999,7 @@
         "modern": 0.97,
         "silk": 0.96,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.89,
@@ -1048,16 +1058,16 @@
         "Leadership: Technical planning, code review, mentoring, testing strategy"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.99,
         "silk": 0.96,
         "minimalist": 0.94,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.86,
+        "iron": 0.88,
+        "ginto": 0.88,
         "symmetry": 0.98,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.88,
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.97
@@ -1160,10 +1170,10 @@
         "minimalist": 0.96,
         "swiss": 0.93,
         "berlin": 0.86,
-        "iron": 0.9,
-        "ginto": 0.87,
-        "quartz": 0.94,
-        "bronx": 0.92,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.86
       }
@@ -1337,12 +1347,12 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.96,
-        "swiss": 0.94,
-        "berlin": 0.87,
+        "swiss": 0.92,
+        "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.91,
         "quartz": 0.91,
-        "bronx": 0.86,
+        "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.9
       }
@@ -1394,16 +1404,16 @@
         "Platforms: Vercel, Cloudflare, PostgreSQL with Prisma"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "minimalist": 0.94,
         "swiss": 0.94,
-        "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.86,
-        "quartz": 0.96,
-        "bronx": 0.89,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.98,
+        "bronx": 0.95,
         "mono": 0.93,
-        "pop": 0.88,
+        "pop": 0.9,
         "cast": 0.99
       }
     },
@@ -1454,12 +1464,12 @@
         "Practices: Reactive Forms, lazy-loaded modules, Section 508, Nx workspaces"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.89,
+        "iron": 0.88,
+        "ginto": 0.87,
         "quartz": 0.94,
         "bronx": 0.88,
         "mono": 0.97,
@@ -1515,6 +1525,7 @@
       "fit": {
         "silk": 0.96,
         "minimalist": 0.92,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.88,
@@ -1524,7 +1535,7 @@
         "quartz": 0.95,
         "bronx": 0.92,
         "mono": 0.93,
-        "pop": 0.87,
+        "pop": 0.89,
         "cast": 0.99
       }
     },
@@ -1637,6 +1648,7 @@
         "silk": 0.98,
         "opal": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1756,16 +1768,17 @@
         "Testing and tools: Jest, Supertest, Postman, Docker"
       ],
       "fit": {
+        "modern": 0.98,
         "executive": 0.99,
         "silk": 0.94,
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.94,
-        "ginto": 0.89,
+        "iron": 0.92,
+        "ginto": 0.87,
         "symmetry": 0.98,
-        "quartz": 0.91,
-        "bronx": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.86
       }
@@ -1817,11 +1830,11 @@
         "Certifications: Microsoft Certified: Azure Developer Associate (AZ-204)"
       ],
       "fit": {
-        "modern": 0.98,
         "executive": 0.98,
         "silk": 0.96,
         "opal": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1887,8 +1900,9 @@
         "tech": 0.99,
         "silk": 0.95,
         "lateral": 0.99,
-        "opal": 0.96,
+        "opal": 0.99,
         "minimalist": 0.88,
+        "tokyo": 0.93,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1952,13 +1966,14 @@
         "modern": 0.97,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.86,
         "symmetry": 0.98,
         "quartz": 0.91,
-        "bronx": 0.88,
+        "bronx": 0.93,
         "mono": 0.93,
         "pop": 0.88
       }
@@ -2010,16 +2025,16 @@
         "Quality: pytest, mypy, Ruff, pre-commit"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.99,
         "silk": 0.98,
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.86,
+        "iron": 0.92,
+        "ginto": 0.88,
         "symmetry": 0.96,
-        "quartz": 0.93,
-        "bronx": 0.86,
+        "quartz": 0.96,
+        "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.91
       }
@@ -2199,15 +2214,16 @@
         "executive": 0.99,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.86,
         "symmetry": 0.98,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.93,
-        "pop": 0.85,
+        "pop": 0.87,
         "cast": 0.97
       }
     },
@@ -2261,13 +2277,14 @@
         "modern": 0.97,
         "executive": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.86,
         "iron": 0.88,
         "ginto": 0.89,
         "symmetry": 0.98,
-        "quartz": 0.91,
-        "bronx": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.97
@@ -2329,7 +2346,7 @@
         "iron": 0.9,
         "ginto": 0.87,
         "symmetry": 0.96,
-        "quartz": 0.93,
+        "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.86
@@ -2391,7 +2408,7 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "mono": 0.93,
-        "pop": 0.89
+        "pop": 0.86
       }
     },
     "Ruby on Rails Developer": {
@@ -2444,18 +2461,18 @@
         "modern": 0.95,
         "executive": 0.96,
         "silk": 0.95,
-        "opal": 0.98,
         "minimalist": 0.94,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.86,
         "symmetry": 0.96,
         "path": 0.95,
-        "quartz": 0.95,
-        "bronx": 0.88,
+        "quartz": 0.98,
+        "bronx": 0.93,
         "mono": 0.93,
-        "pop": 0.85,
+        "pop": 0.88,
         "cast": 0.94
       }
     },
@@ -2506,21 +2523,22 @@
         "Quality: PHPUnit, PHPStan, Rector, GitLab CI"
       ],
       "fit": {
-        "modern": 0.91,
+        "modern": 0.93,
         "executive": 0.93,
         "academic": 0.98,
         "tech": 0.99,
         "silk": 0.97,
         "opal": 0.97,
         "minimalist": 0.89,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.85,
-        "ginto": 0.86,
+        "iron": 0.86,
+        "ginto": 0.88,
         "symmetry": 0.96,
         "path": 0.97,
-        "quartz": 0.95,
-        "bronx": 0.86,
+        "quartz": 0.98,
+        "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.99
@@ -2625,9 +2643,9 @@
         "minimalist": 0.98,
         "swiss": 0.96,
         "berlin": 0.9,
-        "iron": 0.93,
-        "ginto": 0.94,
-        "quartz": 0.89,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.95
@@ -2675,9 +2693,9 @@
         "berlin": 0.89,
         "iron": 0.94,
         "ginto": 0.94,
-        "quartz": 0.92,
+        "quartz": 0.91,
         "bronx": 0.89,
-        "pop": 0.97
+        "pop": 0.94
       }
     },
     "Salesforce Developer": {
@@ -2785,14 +2803,16 @@
         "Tools: Jira, Confluence, DocuSign for Salesforce, Outreach"
       ],
       "fit": {
+        "modern": 0.99,
         "silk": 0.97,
         "minimalist": 0.93,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.91,
+        "iron": 0.9,
         "ginto": 0.85,
         "symmetry": 0.99,
-        "bronx": 0.94,
+        "quartz": 0.97,
+        "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.9
       }
@@ -2837,10 +2857,10 @@
       "fit": {
         "swiss": 0.96,
         "berlin": 0.87,
-        "iron": 0.89,
-        "ginto": 0.89,
-        "quartz": 0.89,
-        "bronx": 0.86,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
       }
@@ -2892,11 +2912,12 @@
         "Performance: Perf, VTune, Valgrind, SIMD intrinsics, lock-free queues"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.94,
         "executive": 0.98,
         "silk": 0.98,
         "opal": 0.98,
         "minimalist": 0.88,
+        "tokyo": 0.94,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -2957,12 +2978,13 @@
         "Tools: Visual Studio, Rider, SQL Server, Azure DevOps"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.94,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.89,
+        "ginto": 0.88,
         "symmetry": 0.98,
         "quartz": 0.98,
         "bronx": 0.92,
@@ -3026,7 +3048,7 @@
         "quartz": 0.91,
         "bronx": 0.91,
         "mono": 0.95,
-        "pop": 0.89
+        "pop": 0.92
       }
     },
     "Swift Developer": {
@@ -3079,8 +3101,8 @@
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.91,
-        "ginto": 0.91,
+        "iron": 0.93,
+        "ginto": 0.93,
         "quartz": 0.94,
         "bronx": 0.95,
         "mono": 0.95,
@@ -3139,13 +3161,14 @@
         "executive": 0.98,
         "silk": 0.94,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.96,
-        "quartz": 0.9,
-        "bronx": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
@@ -3198,13 +3221,14 @@
         "Security: MPC wallets, key management, reorg-safe indexing"
       ],
       "fit": {
+        "modern": 0.98,
         "silk": 0.98,
         "minimalist": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.89,
-        "quartz": 0.92,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.9,
         "bronx": 0.92,
         "mono": 0.96,
         "pop": 0.86,
@@ -3265,7 +3289,7 @@
         "berlin": 0.85,
         "iron": 0.9,
         "ginto": 0.91,
-        "quartz": 0.96,
+        "quartz": 0.93,
         "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.88
@@ -3308,8 +3332,8 @@
         "Mobile platform: Firebase, push notifications, deep links, BLE"
       ],
       "fit": {
-        "quartz": 0.96,
-        "bronx": 0.88
+        "quartz": 0.99,
+        "bronx": 0.94
       }
     },
     "Mobile Engineer": {
@@ -3364,14 +3388,15 @@
         "silk": 0.94,
         "opal": 0.96,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "path": 0.93,
-        "quartz": 0.93,
-        "bronx": 0.88,
+        "path": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.92
@@ -3487,13 +3512,14 @@
         "silk": 0.97,
         "opal": 0.98,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.96,
         "path": 0.95,
-        "quartz": 0.98,
+        "quartz": 0.95,
         "bronx": 0.93,
         "mono": 0.91,
         "pop": 0.85,
@@ -3605,13 +3631,14 @@
         "Build: Gradle, modularization, Bazel, GitHub Actions"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "silk": 0.97,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.89,
+        "ginto": 0.87,
         "quartz": 0.91,
         "bronx": 0.88,
         "mono": 0.95,
@@ -3673,7 +3700,7 @@
         "quartz": 0.98,
         "bronx": 0.93,
         "mono": 0.96,
-        "pop": 0.9
+        "pop": 0.93
       }
     },
     "React Native Developer": {
@@ -3726,10 +3753,10 @@
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.92,
-        "ginto": 0.89,
-        "quartz": 0.97,
-        "bronx": 0.93,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.94,
+        "bronx": 0.88,
         "mono": 0.96,
         "pop": 0.93
       }
@@ -3781,15 +3808,15 @@
         "Release: Fastlane, CodePush, Sentry, Bitrise"
       ],
       "fit": {
-        "modern": 0.94,
+        "modern": 0.95,
         "executive": 0.97,
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.87,
-        "quartz": 0.96,
-        "bronx": 0.86,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "quartz": 0.98,
+        "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
@@ -3842,15 +3869,15 @@
         "Performance: Frame timing, draw-call batching, foveated rendering"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.96,
         "silk": 0.98,
         "minimalist": 0.93,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.89,
-        "quartz": 0.94,
-        "bronx": 0.89,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.92,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
@@ -3910,8 +3937,8 @@
         "iron": 0.88,
         "ginto": 0.91,
         "symmetry": 0.98,
-        "quartz": 0.91,
-        "bronx": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9,
         "cast": 0.99
@@ -4008,11 +4035,13 @@
         "modern": 0.95,
         "opal": 0.96,
         "minimalist": 0.89,
+        "tokyo": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.96,
+        "path": 0.97,
         "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.9,
@@ -4068,10 +4097,10 @@
       "fit": {
         "swiss": 0.97,
         "berlin": 0.9,
-        "iron": 0.93,
-        "ginto": 0.97,
-        "quartz": 0.96,
-        "bronx": 0.87,
+        "iron": 0.95,
+        "ginto": 0.99,
+        "quartz": 0.99,
+        "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.96
       }
@@ -4127,6 +4156,7 @@
         "silk": 0.95,
         "opal": 0.98,
         "minimalist": 0.92,
+        "tokyo": 0.99,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -4189,13 +4219,14 @@
         "modern": 0.99,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.85
       }
@@ -4244,7 +4275,8 @@
         "ginto": 0.96,
         "quartz": 0.93,
         "bronx": 0.88,
-        "mono": 0.98
+        "mono": 0.98,
+        "pop": 0.98
       }
     },
     "Junior Frontend Developer": {
@@ -4347,6 +4379,7 @@
         "silk": 0.92,
         "opal": 0.96,
         "minimalist": 0.94,
+        "tokyo": 0.96,
         "swiss": 0.86,
         "berlin": 0.85,
         "iron": 0.86,
@@ -4405,6 +4438,7 @@
         "modern": 0.98,
         "opal": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.85,
@@ -4462,16 +4496,17 @@
         "Domain: PCI DSS, ISO 8583, NCPDP, JVM performance tuning"
       ],
       "fit": {
-        "modern": 0.94,
+        "modern": 0.97,
         "executive": 0.98,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.87,
+        "iron": 0.88,
+        "ginto": 0.89,
         "path": 0.99,
-        "quartz": 0.93,
-        "bronx": 0.85,
+        "quartz": 0.95,
+        "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.99
@@ -4524,16 +4559,16 @@
         "Leadership: Hiring, mentoring, roadmap planning, career ladders"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.96,
         "minimalist": 0.94,
+        "tokyo": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.85,
-        "ginto": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
         "symmetry": 0.98,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
@@ -4592,7 +4627,7 @@
         "iron": 0.87,
         "ginto": 0.87,
         "quartz": 0.96,
-        "bronx": 0.93,
+        "bronx": 0.88,
         "mono": 0.96,
         "pop": 0.89,
         "cast": 0.97
@@ -4654,7 +4689,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "path": 0.99,
+        "path": 0.97,
         "quartz": 0.93,
         "bronx": 0.88,
         "mono": 0.94,
@@ -4715,11 +4750,11 @@
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.91,
-        "bronx": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.99
@@ -4762,8 +4797,7 @@
         "Performance: Tracy, PIX, Razor, memory allocators, SIMD"
       ],
       "fit": {
-        "quartz": 0.97,
-        "bronx": 0.89
+        "bronx": 0.94
       }
     },
     "Unreal Engine Developer": {
@@ -4810,7 +4844,7 @@
         "ginto": 0.94,
         "quartz": 0.91,
         "bronx": 0.88,
-        "pop": 0.95
+        "pop": 0.98
       }
     },
     "Graphics Engineer": {
@@ -4859,8 +4893,8 @@
         "minimalist": 0.99,
         "swiss": 0.98,
         "berlin": 0.92,
-        "quartz": 0.9,
-        "bronx": 0.85
+        "quartz": 0.92,
+        "bronx": 0.89
       }
     },
     "Embedded Software Engineer": {
@@ -4955,8 +4989,8 @@
         "minimalist": 0.99,
         "swiss": 0.98,
         "berlin": 0.93,
-        "quartz": 0.95,
-        "bronx": 0.89
+        "quartz": 0.98,
+        "bronx": 0.94
       }
     },
     "Senior Machine Learning Engineer": {
@@ -5017,7 +5051,8 @@
         "berlin": 0.85,
         "iron": 0.92,
         "ginto": 0.93,
-        "quartz": 0.9,
+        "path": 0.98,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.94
@@ -5068,7 +5103,7 @@
       "fit": {
         "berlin": 0.94,
         "quartz": 0.9,
-        "bronx": 0.85
+        "bronx": 0.88
       }
     }
   }

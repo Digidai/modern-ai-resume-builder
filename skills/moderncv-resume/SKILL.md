@@ -1,11 +1,11 @@
 ---
 name: moderncv-resume
-description: Write, design and export a professional resume with ModernCV (40 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
+description: Write, design and export a professional resume with ModernCV (44 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
 ---
 
 # ModernCV resume skill
 
-ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 PDF in one of 40 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
+ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 PDF in one of 44 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
 If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `render_preview`, `render_pdf`, `create_editor_link`). Otherwise use the HTTP API below with `curl`.
 
@@ -73,6 +73,7 @@ A JSON Resume document (https://jsonresume.org/schema) also works. The native sh
 - Dates are `YYYY-MM`. For a current role set `"isCurrent": true` and `"endDate": ""`.
 - `description` holds one bullet per line, each starting with `- `.
 - Skills may be grouped as `"Category: item, item"`; templates render the groups.
+- `photo` (optional) is a base64 JPEG/PNG/WebP data URL, 3:4, under 200 KB. Only photo templates (`list_templates` → `photo: true`) show it; leave it out for ATS portals and US or UK applications.
 - `links` holds extra profiles (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, ORCID…). Leave `label` empty for well-known sites; templates detect the site and show its icon. Up to 8.
 
 ## Privacy

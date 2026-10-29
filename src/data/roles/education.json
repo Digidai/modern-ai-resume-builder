@@ -63,8 +63,8 @@
         "berlin": 0.85,
         "iron": 0.9,
         "ginto": 0.91,
-        "quartz": 0.92,
-        "bronx": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.9
       }
@@ -107,14 +107,16 @@
         "Certifications: Kentucky Emergency Substitute Certificate, CPR and First Aid"
       ],
       "fit": {
+        "modern": 0.99,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.86,
+        "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.97,
-        "bronx": 0.93,
+        "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.99
@@ -168,12 +170,12 @@
       "fit": {
         "modern": 0.95,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "swiss": 0.92,
         "berlin": 0.88,
         "iron": 0.9,
         "ginto": 0.87,
         "symmetry": 0.97,
-        "bronx": 0.94,
         "mono": 0.95,
         "pop": 0.86
       }
@@ -228,6 +230,7 @@
         "modern": 0.98,
         "silk": 0.95,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "prism": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
@@ -302,7 +305,7 @@
         "ginto": 0.89,
         "symmetry": 0.95,
         "quartz": 0.89,
-        "bronx": 0.9,
+        "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.93
       }
@@ -362,6 +365,7 @@
         "silk": 0.96,
         "opal": 0.99,
         "minimalist": 0.92,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.94,
@@ -489,18 +493,19 @@
       "fit": {
         "modern": 0.95,
         "silk": 0.94,
-        "opal": 0.98,
+        "opal": 0.95,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.9,
         "ginto": 0.91,
         "symmetry": 0.98,
         "path": 0.98,
-        "quartz": 0.87,
+        "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.94
+        "pop": 0.91
       }
     },
     "Learning Experience Designer": {
@@ -555,14 +560,14 @@
         "Platforms: Canvas, LearnWorlds, xAPI"
       ],
       "fit": {
-        "modern": 0.94,
+        "modern": 0.97,
         "minimalist": 0.94,
-        "swiss": 0.91,
-        "berlin": 0.85,
-        "iron": 0.92,
-        "ginto": 0.93,
-        "quartz": 0.88,
-        "bronx": 0.85,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.9,
+        "bronx": 0.88,
         "mono": 0.94,
         "pop": 0.92
       }
@@ -624,6 +629,7 @@
         "silk": 0.97,
         "opal": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "creative": 0.99,
         "swiss": 0.9,
         "berlin": 0.85,
@@ -816,9 +822,10 @@
         "opal": 0.97,
         "minimalist": 0.95,
         "swiss": 0.93,
-        "berlin": 0.89,
+        "berlin": 0.85,
         "iron": 0.89,
         "ginto": 0.94,
+        "path": 0.98,
         "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.92,
@@ -878,6 +885,7 @@
         "silk": 0.95,
         "opal": 0.97,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -945,6 +953,7 @@
         "modern": 0.98,
         "executive": 0.98,
         "silk": 0.98,
+        "opal": 0.99,
         "minimalist": 0.97,
         "swiss": 0.93,
         "berlin": 0.85,
@@ -953,7 +962,7 @@
         "quartz": 0.92,
         "bronx": 0.88,
         "mono": 0.94,
-        "pop": 0.94
+        "pop": 0.91
       }
     },
     "School Principal": {
@@ -1010,14 +1019,15 @@
       "fit": {
         "modern": 0.96,
         "minimalist": 0.93,
+        "creative": 0.97,
         "swiss": 0.93,
         "berlin": 0.87,
         "iron": 0.89,
         "ginto": 0.88,
         "symmetry": 0.96,
-        "path": 0.98,
-        "quartz": 0.89,
-        "bronx": 0.91,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.91,
         "cast": 0.97
@@ -1144,10 +1154,10 @@
         "minimalist": 0.94,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.97,
-        "ginto": 0.93,
+        "iron": 0.95,
+        "ginto": 0.91,
         "quartz": 0.89,
-        "bronx": 0.88,
+        "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.95
       }
@@ -1272,7 +1282,7 @@
         "iron": 0.91,
         "ginto": 0.91,
         "quartz": 0.96,
-        "bronx": 0.87,
+        "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.93
       }
@@ -1333,7 +1343,7 @@
         "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.94,
-        "bronx": 0.92,
+        "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
@@ -1401,7 +1411,7 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.92,
+        "pop": 0.89,
         "cast": 0.99
       }
     },
@@ -1465,8 +1475,8 @@
         "berlin": 0.85,
         "iron": 0.94,
         "ginto": 0.93,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.9
       }
@@ -1571,6 +1581,7 @@
         "executive": 0.98,
         "silk": 0.97,
         "minimalist": 0.96,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1643,7 +1654,6 @@
         "iron": 0.86,
         "ginto": 0.89,
         "symmetry": 0.96,
-        "path": 0.98,
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.92,
@@ -1893,10 +1903,10 @@
         "berlin": 0.87,
         "iron": 0.86,
         "ginto": 0.9,
-        "quartz": 0.88,
+        "quartz": 0.89,
         "bronx": 0.87,
         "mono": 0.96,
-        "pop": 0.85
+        "pop": 0.88
       }
     },
     "Education Program Manager": {
@@ -1957,6 +1967,7 @@
         "silk": 0.99,
         "opal": 0.99,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "sidebar": 0.99,
         "swiss": 0.9,
         "berlin": 0.85,
@@ -2028,10 +2039,10 @@
         "iron": 0.91,
         "ginto": 0.92,
         "symmetry": 0.98,
-        "quartz": 0.88,
+        "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.95
+        "pop": 0.93
       }
     },
     "Education Technology Specialist": {
@@ -2086,14 +2097,16 @@
         "Compliance: FERPA, COPPA, student data privacy agreements, accessibility"
       ],
       "fit": {
+        "modern": 0.98,
         "minimalist": 0.94,
+        "sidebar": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.89,
+        "iron": 0.89,
+        "ginto": 0.87,
         "symmetry": 0.98,
         "path": 0.98,
-        "quartz": 0.87,
+        "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.87,
@@ -2154,7 +2167,7 @@
         "iron": 0.86,
         "ginto": 0.87,
         "quartz": 0.89,
-        "bronx": 0.85,
+        "bronx": 0.87,
         "mono": 0.96,
         "pop": 0.85
       }
@@ -2208,9 +2221,9 @@
         "minimalist": 0.98,
         "swiss": 0.95,
         "berlin": 0.89,
-        "iron": 0.9,
-        "ginto": 0.89,
-        "bronx": 0.98,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "bronx": 0.92,
         "mono": 0.97,
         "pop": 0.87
       }
@@ -2321,7 +2334,7 @@
         "quartz": 0.94,
         "bronx": 0.91,
         "mono": 0.92,
-        "pop": 0.85,
+        "pop": 0.86,
         "cast": 0.97
       }
     },
@@ -2373,9 +2386,9 @@
       ],
       "fit": {
         "modern": 0.94,
-        "executive": 0.96,
+        "executive": 0.98,
         "tech": 0.99,
-        "silk": 0.93,
+        "silk": 0.95,
         "opal": 0.99,
         "minimalist": 0.98,
         "swiss": 0.91,
@@ -2383,8 +2396,8 @@
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
@@ -2442,15 +2455,14 @@
         "Technology: Desmos, TI-84, Canvas, Delta Math"
       ],
       "fit": {
-        "modern": 0.98,
         "opal": 0.99,
         "minimalist": 0.97,
         "swiss": 0.94,
         "berlin": 0.88,
-        "iron": 0.92,
-        "ginto": 0.93,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "iron": 0.94,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.91
       }
@@ -2510,13 +2522,14 @@
         "modern": 0.96,
         "opal": 0.97,
         "minimalist": 0.92,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.91,
         "ginto": 0.89,
         "symmetry": 0.98,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.9,
         "pop": 0.91
       }
@@ -2709,16 +2722,17 @@
         "Platforms: D2L Brightspace, Canvas, Zoom, Qualtrics"
       ],
       "fit": {
+        "modern": 0.99,
         "silk": 0.99,
         "minimalist": 0.97,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.96,
-        "ginto": 0.94,
-        "quartz": 0.87,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.94
+        "pop": 0.91
       }
     },
     "Registrar": {
@@ -2770,10 +2784,10 @@
         "minimalist": 0.95,
         "swiss": 0.94,
         "berlin": 0.86,
-        "iron": 0.86,
-        "ginto": 0.88,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "quartz": 0.94,
+        "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.86
       }
@@ -2828,7 +2842,8 @@
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.85,
-        "bronx": 0.96,
+        "quartz": 0.98,
+        "bronx": 0.9,
         "mono": 0.97,
         "pop": 0.92
       }

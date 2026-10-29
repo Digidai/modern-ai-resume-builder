@@ -1,0 +1,606 @@
+{
+  "family": "Education",
+  "guide": null,
+  "titles": {
+    "Childcare Worker": {
+      "summary": "Childcare worker with 4 years caring for infants and toddlers in licensed centers. Kept a perfect record on two state licensing inspections while caring for a group of 8 toddlers. Brings a CDA credential, calm daily routines and clear communication with parents.",
+      "experience": [
+        {
+          "company": "Little Sprouts Learning Center",
+          "role": "Childcare Worker, Toddler Room",
+          "location": "Columbus, OH",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for a group of 8 toddlers aged 12 to 24 months with one co-teacher, following Ohio Step Up To Quality ratios\n- Plan daily sensory, music and outdoor activities aligned with the Ohio Early Learning and Development Standards\n- Log meals, naps, diapering and milestones in Brightwheel, sending families photo updates each day\n- Passed 2 state licensing inspections with zero citations for the toddler room"
+        },
+        {
+          "company": "Northside Community Recreation Center",
+          "role": "Summer Day Camp Counselor",
+          "location": "Columbus, OH",
+          "startDate": "2020-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Supervised groups of 12 campers aged 5 to 7 during crafts, swimming and field trips\n- Handled check-in and check-out for 60 children a day using authorized pickup lists"
+        }
+      ],
+      "education": [
+        {
+          "school": "Scioto Valley Community College",
+          "degree": "Child Development Associate (CDA) Credential, Infant/Toddler",
+          "startDate": "2021-09",
+          "endDate": "2022-06"
+        },
+        {
+          "school": "Whetstone Heights High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Care: infant and toddler routines, positive guidance, potty training, safe sleep practices",
+        "Learning: sensory play, circle time, early literacy, developmental milestone tracking",
+        "Tools: Brightwheel, Procare, parent communication logs"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.99,
+        "quartz": 0.89,
+        "bronx": 0.91,
+        "mono": 0.97,
+        "pop": 0.96
+      }
+    },
+    "Daycare Teacher": {
+      "summary": "Daycare lead teacher with 6 years in preschool and toddler classrooms, including 3 years leading a room of 16 three-year-olds. Raised the room's Teaching Strategies GOLD scores so 85% of children met widely held expectations in language by spring. Brings an associate degree in early childhood education, play-based curriculum planning and strong family partnerships.",
+      "experience": [
+        {
+          "company": "Desert Willow Child Development Center",
+          "role": "Lead Teacher, Three-Year-Old Room",
+          "location": "Tucson, AZ",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a classroom of 16 children with one assistant teacher, planning weekly themes with The Creative Curriculum\n- Assess each child three times a year in Teaching Strategies GOLD, with 85% meeting language expectations in spring 2026\n- Hold 32 parent-teacher conferences a year and send weekly newsletters in English and Spanish\n- Mentored 2 new assistant teachers through their first 90 days"
+        },
+        {
+          "company": "Sunbeam Early Learning",
+          "role": "Assistant Teacher, Toddler Room",
+          "location": "Tucson, AZ",
+          "startDate": "2020-08",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Supported a lead teacher with 10 toddlers, running meals, naps and outdoor play\n- Created a picture schedule that cut average transition time from 10 to 4 minutes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Saguaro Valley Community College",
+          "degree": "Associate of Applied Science in Early Childhood Education",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Curriculum: The Creative Curriculum, play-based learning, early literacy and math, social-emotional learning",
+        "Assessment: Teaching Strategies GOLD, ASQ-3 screening, anecdotal observation",
+        "Classroom: positive behavior guidance, visual schedules, family conferences",
+        "Certifications: Arizona Department of Health Services childcare training, Pediatric CPR and First Aid, bilingual English/Spanish"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "creative": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.97,
+        "pop": 0.85
+      }
+    },
+    "Science Teacher": {
+      "summary": "State-licensed middle school science teacher with 6 years teaching 7th and 8th grade physical and life science. Raised the share of 8th graders meeting the state science standard from 38% to 52% in two years. Brings NGSS-aligned lab design, phenomenon-based units and an active after-school robotics club.",
+      "experience": [
+        {
+          "company": "Willamette Bluff Middle School",
+          "role": "8th Grade Science Teacher",
+          "location": "Portland, OR",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 5 sections of 8th grade physical science to 150 students using OpenSciEd phenomenon-based units\n- Raised students meeting the Oregon science standard from 38% to 52% through weekly lab notebooks and claim-evidence-reasoning writing\n- Redesigned 12 labs around low-cost materials, keeping consumables within a $900 annual budget\n- Coach a VEX IQ robotics club of 24 students that reached the state championship in 2025"
+        },
+        {
+          "company": "Fernhill Middle School",
+          "role": "7th Grade Life Science Teacher",
+          "location": "Beaverton, OR",
+          "startDate": "2020-08",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Taught life science to 140 students, running hybrid labs during 2020 and 2021\n- Built a schoolyard watershed study with a local soil and water district"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific Crest University",
+          "degree": "Master of Arts in Teaching, Secondary Science",
+          "startDate": "2019-06",
+          "endDate": "2020-06"
+        },
+        {
+          "school": "Cascade State University",
+          "degree": "Bachelor of Science in Biology",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: NGSS, OpenSciEd, inquiry labs, claim-evidence-reasoning, differentiated instruction",
+        "Assessment: performance tasks, Oregon science assessment, standards-based grading",
+        "Technology: Google Classroom, Vernier probes, PhET simulations, VEX IQ",
+        "Licensure: Oregon Preliminary Teaching License, Integrated Science and Biology"
+      ],
+      "fit": {
+        "minimalist": 0.99,
+        "sidebar": 0.98,
+        "creative": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.9
+      }
+    },
+    "Music Teacher": {
+      "summary": "Certified music teacher and high school band director with 9 years leading concert, marching and jazz ensembles. Grew band enrollment from 48 to 112 students and earned Superior ratings at district festival five years running. Brings strong rehearsal technique, program budgeting and community partnerships.",
+      "experience": [
+        {
+          "company": "Platte Ridge High School",
+          "role": "Director of Bands",
+          "location": "Omaha, NE",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Direct concert band, marching band and jazz ensemble for 112 students in grades 9 to 12\n- Grew enrollment from 48 to 112 by launching a feeder partnership with 2 middle schools\n- Earned Superior ratings at the NSAA District Music Contest each year from 2021 to 2025\n- Manage a $38,000 program budget and a booster club that raised $22,000 for new instruments"
+        },
+        {
+          "company": "Elkhorn Valley Middle School",
+          "role": "General Music and Band Teacher",
+          "location": "Elkhorn, NE",
+          "startDate": "2017-08",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Taught 6th to 8th grade band and general music to 260 students a year\n- Started a 20-student percussion ensemble that performed at the district spring showcase"
+        }
+      ],
+      "education": [
+        {
+          "school": "Prairie Bluff University",
+          "degree": "Bachelor of Music Education",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Ensembles: concert band, marching band, jazz band, percussion ensemble",
+        "Teaching: rehearsal pedagogy, sight-reading, National Core Arts Standards, adjudication prep",
+        "Tools: Finale, MuseScore, SmartMusic, Charms Office Assistant",
+        "Certification: Nebraska Professional Teaching Certificate, Vocal and Instrumental Music K–12"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.95
+      }
+    },
+    "Art Teacher": {
+      "summary": "Licensed K–5 art teacher with 7 years building visual arts programs in public elementary schools. Organized a districtwide student art show that drew 900 visitors and placed 40 works in local businesses. Brings choice-based studio practice, ceramics and integration of art with literacy and science.",
+      "experience": [
+        {
+          "company": "James River Elementary School",
+          "role": "Art Teacher, Grades K–5",
+          "location": "Richmond, VA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach weekly art classes to 520 students across 24 sections using a choice-based TAB studio model\n- Launched a ceramics unit with a donated kiln, firing about 1,200 student pieces a year\n- Co-organize an annual districtwide art show with 900 visitors and 40 works displayed in local businesses\n- Publish student portfolios on Artsonia, reaching 300 family accounts"
+        },
+        {
+          "company": "Brookfield Park Elementary School",
+          "role": "Art Teacher, Grades K–5",
+          "location": "Henrico, VA",
+          "startDate": "2019-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught art to 430 students, moving lessons to art-on-a-cart and video demos during 2020\n- Partnered with 3rd grade teachers on a habitat collage unit tied to science standards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Old Dominion Arts Institute",
+          "degree": "Bachelor of Fine Arts in Art Education",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Media: drawing, painting, printmaking, ceramics, fiber arts",
+        "Instruction: Teaching for Artistic Behavior, Virginia Visual Arts SOL, arts integration",
+        "Tools: Artsonia, Seesaw, Canva, kiln operation",
+        "Licensure: Virginia Postgraduate Professional License, Visual Arts PreK–12"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.94
+      }
+    },
+    "Physical Education Teacher": {
+      "summary": "Certified physical education teacher with 8 years in middle school PE and health, plus head coaching for track and field. Increased the share of students in the FitnessGram Healthy Fitness Zone for aerobic capacity from 54% to 67%. Brings inclusive skill-based lessons, adapted PE and safe program management.",
+      "experience": [
+        {
+          "company": "Chattahoochee Ridge Middle School",
+          "role": "Physical Education and Health Teacher",
+          "location": "Marietta, GA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach PE and health to 340 students in grades 6 to 8 across 6 daily sections\n- Raised FitnessGram aerobic capacity Healthy Fitness Zone results from 54% to 67% with a heart-rate monitor program\n- Adapted units for 18 students with IEPs in partnership with the adapted PE specialist\n- Head coach of track and field, growing the team from 35 to 70 athletes"
+        },
+        {
+          "company": "Pine Mountain Middle School",
+          "role": "Physical Education Teacher",
+          "location": "Kennesaw, GA",
+          "startDate": "2018-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught PE to 300 students a year with a focus on lifetime fitness units\n- Assistant coach for girls basketball, which won the county title in 2020"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Southern Highlands University",
+          "degree": "Bachelor of Science in Health and Physical Education",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: SHAPE America standards, skill progressions, adapted PE, health education",
+        "Assessment: FitnessGram, heart-rate monitoring, skills rubrics",
+        "Coaching: track and field, basketball, athlete conditioning",
+        "Certifications: Georgia Professional Certificate Health and Physical Education P–12, CPR/AED, Concussion Protocol"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.91,
+        "ginto": 0.93,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
+    },
+    "Online Tutor": {
+      "summary": "Online math and SAT tutor with 5 years and more than 3,000 virtual sessions for students in grades 8 to 12. Students in my SAT program improved by an average of 140 points over 8 weeks. Brings clear explanation on a digital whiteboard, progress tracking and dependable communication with parents.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Online Math and SAT Tutor",
+          "location": "Remote",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Tutor 22 regular students a week in Algebra 1 through AP Calculus AB over Zoom with a shared Bitpaper whiteboard\n- Raised SAT scores by an average of 140 points across 46 students in an 8-week program\n- Send parents a short progress report after every 4 sessions, keeping a 90% client retention rate\n- Manage scheduling and billing in TutorBird"
+        },
+        {
+          "company": "BrightPath Learning Online",
+          "role": "Contract Online Tutor",
+          "location": "Remote",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Delivered 1,400 on-demand math sessions with a 4.9 out of 5 average student rating\n- Wrote 30 practice sets for the platform's Algebra 2 library"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lakeview State University",
+          "degree": "Bachelor of Science in Mathematics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Subjects: Algebra 1 and 2, Geometry, Precalculus, AP Calculus AB, SAT and ACT Math",
+        "Online teaching: Zoom, Bitpaper, Desmos, Google Classroom",
+        "Business: TutorBird, Stripe invoicing, parent progress reports"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "bronx": 0.92
+      }
+    },
+    "Teaching English Abroad": {
+      "summary": "TEFL-certified English teacher with 4 years teaching in South Korea and Mexico, applying for international school and ESL roles. Raised average speaking test scores of 180 middle school students by 18% in one school year. Brings communicative lesson design, classroom management across language barriers and conversational Korean and Spanish.",
+      "experience": [
+        {
+          "company": "Haneul Language Academy",
+          "role": "English Teacher",
+          "location": "Daegu, South Korea",
+          "startDate": "2024-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 6 classes of 12 to 15 students aged 10 to 15 using a communicative, task-based approach\n- Raised average speaking test scores of 180 students by 18% in the 2025 school year\n- Wrote a 40-lesson debate curriculum now used by 5 teachers at the academy\n- Report monthly progress to parents with Korean co-teachers"
+        },
+        {
+          "company": "Colegio Bilingüe Los Pinos",
+          "role": "ESL Teacher, Grades 3 to 5",
+          "location": "Guadalajara, Mexico",
+          "startDate": "2022-08",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Taught English to 90 elementary students, preparing 28 for Cambridge A2 Flyers with a 93% pass rate\n- Ran a weekly English reading club for 20 students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Global TESOL Institute",
+          "degree": "120-Hour TEFL Certificate with Young Learners Specialization",
+          "startDate": "2022-03",
+          "endDate": "2022-06"
+        },
+        {
+          "school": "Harbor Point University",
+          "degree": "Bachelor of Arts in Communication",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Teaching: communicative language teaching, task-based learning, phonics, debate",
+        "Assessment: Cambridge Young Learners exams, CEFR levels, speaking rubrics",
+        "Languages: English native, Spanish intermediate, Korean conversational",
+        "Tools: Google Slides, Kahoot, ClassDojo"
+      ],
+      "fit": {
+        "sidebar": 0.95,
+        "creative": 0.94,
+        "swiss": 0.95,
+        "berlin": 0.88,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.96
+      }
+    },
+    "Paraprofessional": {
+      "summary": "Special education paraprofessional with 5 years supporting students with autism and intellectual disabilities in self-contained and inclusion settings. Helped a caseload of 6 students meet 80% of their IEP behavior goals last year. Brings CPI crisis prevention training, data collection and steady partnership with teachers and therapists.",
+      "experience": [
+        {
+          "company": "Lake Park Elementary School",
+          "role": "Special Education Paraprofessional",
+          "location": "Milwaukee, WI",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 6 students with autism in a K–2 self-contained classroom and during inclusion in general education\n- Collect daily ABC and trial data for IEP goals, helping students meet 80% of behavior goals in 2025–26\n- Run small-group reading using the teacher's Orton-Gillingham lesson plans\n- Assist with feeding, toileting and transitions with dignity and privacy"
+        },
+        {
+          "company": "Menomonee Valley Middle School",
+          "role": "Instructional Paraprofessional",
+          "location": "Milwaukee, WI",
+          "startDate": "2021-01",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Supported 3 inclusion classrooms with 8 students on IEPs in math and science\n- Covered lunch and recess supervision for 200 students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Milwaukee Lakefront Technical College",
+          "degree": "Associate of Applied Science in Instructional Assistant",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Student support: IEP goal data, visual supports, PECS, small-group reading, behavior plans",
+        "Safety: CPI Nonviolent Crisis Intervention, CPR and First Aid",
+        "Tools: Google Classroom, Boardmaker, Seesaw",
+        "Credentials: Wisconsin Special Education Program Aide License, ParaPro Assessment passed"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.93,
+        "ginto": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "pop": 0.93
+      }
+    },
+    "History Teacher": {
+      "summary": "Certified social studies teacher with 9 years teaching U.S. History and AP United States History. Raised the AP U.S. History pass rate from 46% to 71% while opening the course to all interested students. Brings primary-source inquiry, document-based writing instruction and a nationally recognized National History Day program.",
+      "experience": [
+        {
+          "company": "Farmington River High School",
+          "role": "Social Studies Teacher",
+          "location": "Hartford, CT",
+          "startDate": "2019-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach AP United States History and 10th grade U.S. History to 150 students a year\n- Raised the APUSH pass rate from 46% to 71% while enrollment doubled to 60 students under an open-access policy\n- Built a DBQ writing sequence adopted by the 7-person social studies department\n- Advise the National History Day club, sending 9 projects to nationals since 2021"
+        },
+        {
+          "company": "Wethersfield Commons Middle School",
+          "role": "8th Grade Social Studies Teacher",
+          "location": "Wethersfield, CT",
+          "startDate": "2017-08",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Taught U.S. History to 125 students with a civics project on local government\n- Organized a Constitution Day mock convention for the full grade"
+        }
+      ],
+      "education": [
+        {
+          "school": "Connecticut Valley University",
+          "degree": "Master of Arts in Teaching, Social Studies",
+          "startDate": "2016-06",
+          "endDate": "2017-05"
+        },
+        {
+          "school": "New England Hillside College",
+          "degree": "Bachelor of Arts in History",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: primary-source inquiry, DBQ and LEQ writing, Socratic seminar, C3 Framework",
+        "Assessment: AP Classroom, common formative assessments, writing rubrics",
+        "Technology: Canvas, Google Earth, Library of Congress primary sources, Pear Deck",
+        "Certification: Connecticut Professional Educator Certificate, History and Social Studies 7–12"
+      ],
+      "fit": {
+        "silk": 0.95,
+        "sidebar": 0.94,
+        "creative": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.88
+      }
+    },
+    "Chemistry Teacher": {
+      "summary": "Certified high school chemistry teacher with 7 years teaching general, honors and AP Chemistry. Grew AP Chemistry enrollment from 14 to 41 students with a 68% pass rate in 2026. Brings rigorous lab safety management, modeling instruction and two years of prior experience as a quality control lab analyst.",
+      "experience": [
+        {
+          "company": "Treasure Valley High School",
+          "role": "Chemistry Teacher and Science Department Chair",
+          "location": "Boise, ID",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach honors and AP Chemistry to 145 students using AACT and modeling instruction resources\n- Grew AP Chemistry from 14 to 41 students, with 68% scoring 3 or higher in 2026\n- Manage the chemical inventory, SDS binder and annual fume hood checks with zero lab incidents in 5 years\n- Chair a 9-teacher department, leading the shift to standards-based grading"
+        },
+        {
+          "company": "Snake River Middle-High School",
+          "role": "Physical Science and Chemistry Teacher",
+          "location": "Nampa, ID",
+          "startDate": "2019-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Taught chemistry and physical science to 130 students in grades 8 to 11\n- Secured a $6,500 state STEM grant for digital balances and pH probes"
+        },
+        {
+          "company": "Sawtooth Nutrition Labs",
+          "role": "Quality Control Lab Analyst",
+          "location": "Meridian, ID",
+          "startDate": "2017-06",
+          "endDate": "2019-06",
+          "isCurrent": false,
+          "description": "- Ran HPLC and titration assays on 40 raw material lots a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gem State University",
+          "degree": "Bachelor of Science in Chemistry, Secondary Education Minor",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Instruction: modeling instruction, POGIL, inquiry labs, AP Chemistry curriculum",
+        "Lab: chemical hygiene plan, inventory and SDS management, Vernier probeware, titration",
+        "Technology: Canvas, AP Classroom, PhET simulations",
+        "Certification: Idaho Standard Secondary Certificate, Chemistry and Physical Science 6–12"
+      ],
+      "fit": {
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.97,
+        "pop": 0.88
+      }
+    },
+    "Coding Bootcamp Instructor": {
+      "summary": "Coding bootcamp lead instructor with 4 years teaching full-stack JavaScript after 5 years as a software engineer. Taught 9 cohorts totaling 210 students, with 78% hired into tech roles within 180 days of graduation. Brings React and Node.js depth, live-coding lectures and a mentoring style built for career changers.",
+      "experience": [
+        {
+          "company": "Forge Code Academy",
+          "role": "Lead Instructor, Full-Stack Web Development",
+          "location": "Denver, CO",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 14-week cohorts of 24 students in JavaScript, React, Node.js, Express and PostgreSQL\n- Graduated 210 students across 9 cohorts, with 78% hired within 180 days\n- Rewrote the backend unit around TypeScript and testing with Jest, raising capstone pass rates from 81% to 92%\n- Lead 4 teaching assistants and run weekly code review sessions"
+        },
+        {
+          "company": "Peakline Software",
+          "role": "Software Engineer",
+          "location": "Boulder, CO",
+          "startDate": "2017-07",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Built React and Node.js features for a scheduling app used by 1,800 clinics\n- Mentored 5 junior engineers and led onboarding for new hires"
+        }
+      ],
+      "education": [
+        {
+          "school": "Front Range Technical University",
+          "degree": "Bachelor of Science in Computer Science",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Languages: JavaScript, TypeScript, SQL, HTML, CSS",
+        "Frameworks: React, Node.js, Express, PostgreSQL, Jest",
+        "Teaching: live coding, curriculum design, pair programming, code review",
+        "Tools: Git, GitHub Classroom, VS Code, Zoom"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.96
+      }
+    }
+  }
+}

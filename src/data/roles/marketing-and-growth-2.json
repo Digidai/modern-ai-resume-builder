@@ -1,0 +1,268 @@
+{
+  "family": "Marketing & Growth",
+  "guide": null,
+  "titles": {
+    "Public Relations Specialist": {
+      "summary": "Public relations specialist with 5 years in agency and healthcare communications, pitching consumer health, B2B tech and regional business clients. Landed 140+ earned media placements in 2025, including 18 in top-tier trade and national outlets. Writes clean press releases, preps spokespeople and tracks coverage in Cision and Muck Rack.",
+      "experience": [
+        {
+          "company": "Oakline Communications",
+          "role": "Public Relations Specialist",
+          "location": "Raleigh, NC",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run day-to-day media relations for 5 clients in consumer health, B2B software and regional banking\n- Landed 140+ earned placements in 2025, including 18 in national and top-tier trade outlets\n- Write press releases, byline drafts and media kits, and prep executives for 30+ interviews a year\n- Build monthly coverage reports in Muck Rack and Cision, tying share of voice to client goals"
+        },
+        {
+          "company": "Triangle Health Partners",
+          "role": "Communications Coordinator",
+          "location": "Durham, NC",
+          "startDate": "2021-01",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Wrote news releases and internal updates for a 6-hospital health system\n- Coordinated local TV coverage of a new cancer center opening, earning 12 broadcast segments\n- Managed the media inquiry inbox and on-call rotation for after-hours requests"
+        }
+      ],
+      "education": [
+        {
+          "school": "Piedmont State University",
+          "degree": "B.A. in Journalism and Mass Communication",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Media Relations: Pitching, press releases, media lists, interview prep",
+        "Writing: Bylines, media kits, talking points, AP style",
+        "Measurement: Share of voice, coverage reports, message pull-through",
+        "Tools: Cision, Muck Rack, Meltwater, Google Workspace"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.94
+      }
+    },
+    "Amazon Marketplace Manager": {
+      "summary": "Amazon marketplace manager with 7 years growing consumer brands on Seller Central and Vendor Central. Grew a $9M outdoor gear brand to $14.5M on Amazon in 2 years while lowering TACoS from 14% to 10%. Hands-on with Sponsored Products, A+ content, Brand Registry and inventory planning for FBA.",
+      "experience": [
+        {
+          "company": "Ridgecrest Outdoor Gear",
+          "role": "Amazon Marketplace Manager",
+          "location": "Boise, ID",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own the Amazon channel for 220 ASINs, growing revenue from $9M to $14.5M in 2 years\n- Cut TACoS from 14% to 10% by restructuring Sponsored Products and Sponsored Brands campaigns by match type\n- Lifted conversion rate 3.2 points on top 30 listings with new A+ content, main images and Brand Store pages\n- Plan FBA inventory with operations, holding in-stock rate at 97% through Prime Day and Q4"
+        },
+        {
+          "company": "Summit Commerce Partners",
+          "role": "Marketplace Account Manager",
+          "location": "Salt Lake City, UT",
+          "startDate": "2019-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Managed Amazon accounts for 9 home and pet brands with $40M in combined annual sales\n- Launched 60 new products using Vine reviews and launch-phase ad budgets\n- Resolved listing suppressions, hijackers and IP complaints through Brand Registry"
+        }
+      ],
+      "education": [
+        {
+          "school": "Intermountain State University",
+          "degree": "B.S. in Marketing",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Amazon Ads: Sponsored Products, Sponsored Brands, Sponsored Display, DSP basics",
+        "Listings: SEO keyword research, A+ content, Brand Store, Vine",
+        "Operations: FBA inventory planning, Brand Registry, account health",
+        "Tools: Seller Central, Vendor Central, Helium 10, Pacvu, Excel"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.92
+      }
+    },
+    "TikTok Content Creator": {
+      "summary": "TikTok content creator with 4 years making short-form video for a skincare brand and a personal channel of 210K followers. Built the brand's TikTok from 8K to 340K followers and drove $1.2M in TikTok Shop sales in 2025. Scripts, shoots and edits fast in CapCut and reads analytics to decide what to post next.",
+      "experience": [
+        {
+          "company": "Kindred Skincare",
+          "role": "TikTok Content Creator",
+          "location": "Brooklyn, NY",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Script, film and edit 5 to 7 TikToks a week for a DTC skincare brand, growing the account from 8K to 340K followers\n- Drove $1.2M in TikTok Shop sales in 2025 through product demos and 2 weekly LIVE shopping sessions\n- Brief and manage 25 affiliate creators a quarter through TikTok Creator Marketplace\n- Track watch time, saves and shop clicks in TikTok Analytics and cut formats that miss a 25% completion rate"
+        },
+        {
+          "company": "Dewdrop Diaries (personal channel)",
+          "role": "Skincare Creator",
+          "location": "New York, NY",
+          "startDate": "2022-01",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Grew a personal skincare channel to 210K followers with 3 videos passing 2M views\n- Signed 14 paid brand partnerships and delivered all on deadline"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hudson Valley State University",
+          "degree": "B.A. in Media Studies",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "30-Day Barrier Repair series",
+          "link": "tiktok.com/@kindredskin",
+          "description": "Thirty-part routine series that reached 9M views and became the brand's top-selling bundle"
+        }
+      ],
+      "skills": [
+        "Content: Hooks, scripting, on-camera hosting, trend adaptation",
+        "Production: CapCut, iPhone filming, ring lights, lavalier mics",
+        "Commerce: TikTok Shop, LIVE selling, affiliate creator management",
+        "Analytics: TikTok Analytics, completion rate, saves, shop click-through"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.96,
+        "opal": 0.96,
+        "minimalist": 0.94,
+        "tokyo": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
+      }
+    },
+    "UGC Creator": {
+      "summary": "Full-time UGC creator with 3 years producing ad-ready videos for beauty, home and wellness brands. Delivered 400+ videos for 60 brands, and a top-performing hook test cut one client's cost per purchase 31% on Meta. Shoots raw, native-feeling content on deadline and supplies hooks, B-roll and usage-rights options.",
+      "experience": [
+        {
+          "company": "Saltmarsh Creative LLC",
+          "role": "UGC Creator",
+          "location": "Charleston, SC",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Produce 12 to 18 UGC videos a month for beauty, home and wellness brands, with 400+ delivered to 60 clients\n- Film 3 hook variations per script so brands can A/B test, cutting one client's Meta cost per purchase 31%\n- Write scripts from creative briefs and deliver raw files, B-roll and captioned edits within 5 business days\n- Hold a 4.9 rating across 85 jobs on Billo and keep 40% of clients on monthly retainers"
+        },
+        {
+          "company": "Lowcountry Home Goods",
+          "role": "Social Media Assistant",
+          "location": "Mount Pleasant, SC",
+          "startDate": "2021-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Shot product photos and Reels for a 3-store home decor shop\n- Grew Instagram followers from 3K to 19K in 18 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Palmetto Coast College",
+          "degree": "B.A. in Communication",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "UGC portfolio",
+          "link": "mayaugc.com/portfolio",
+          "description": "Twenty sample ads with hooks, unboxings and testimonials sorted by industry"
+        }
+      ],
+      "skills": [
+        "Content: Hooks, testimonials, unboxings, product demos, voiceovers",
+        "Production: iPhone filming, natural lighting, CapCut, captions",
+        "Business: Rate cards, usage rights, whitelisting, creative briefs",
+        "Platforms: Billo, Meta and TikTok ad formats"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.94,
+        "tokyo": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.85
+      }
+    },
+    "Brand Ambassador": {
+      "summary": "Brand ambassador with 3 years running in-store demos, sampling and event activations for beverage and snack brands. Handed out 30,000+ samples in 2025 and lifted average demo-day unit sales 22% at partner stores. Outgoing, reliable with setup and teardown and quick with recap reports.",
+      "experience": [
+        {
+          "company": "Spark Field Marketing",
+          "role": "Brand Ambassador",
+          "location": "Miami, FL",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run 10 to 14 sampling demos a month in grocery and liquor stores for 4 beverage and snack brands\n- Handed out 30,000+ samples in 2025 and lifted average demo-day unit sales 22% over baseline\n- Staff festival and stadium activations, collecting 2,800 email sign-ups for a sparkling water launch\n- Submit photo recaps and sales counts in the agency recap app within 24 hours of every event"
+        },
+        {
+          "company": "Coral Gables Outfitters",
+          "role": "Sales Associate",
+          "location": "Coral Gables, FL",
+          "startDate": "2022-06",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Sold apparel and accessories, often top 3 in weekly sales on a team of 15\n- Signed up 300+ customers for the loyalty program"
+        }
+      ],
+      "education": [
+        {
+          "school": "Biscayne Bay College",
+          "degree": "A.A. in Business Administration",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Activations: Sampling, product demos, event setup and teardown",
+        "Engagement: Product storytelling, lead capture, bilingual English and Spanish",
+        "Reporting: Event recaps, sales counts, photo documentation",
+        "Certifications: TIPS alcohol service, Florida food handler"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.96,
+        "bronx": 0.93,
+        "pop": 0.96
+      }
+    }
+  }
+}

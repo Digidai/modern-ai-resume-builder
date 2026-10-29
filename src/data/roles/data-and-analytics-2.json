@@ -1,0 +1,391 @@
+{
+  "family": "Data & Analytics",
+  "guide": null,
+  "titles": {
+    "Quantitative Researcher": {
+      "summary": "Quantitative researcher with 5 years developing systematic equity and futures signals at a mid-size hedge fund. Built a short-horizon order-flow signal that added 1.4 points of annual return at a 1.1 Sharpe after costs. Combines a statistics PhD with production-grade Python research code and careful backtest hygiene.",
+      "experience": [
+        {
+          "company": "Halyard Point Capital",
+          "role": "Quantitative Researcher",
+          "location": "New York, NY",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Researched a short-horizon order-flow signal for U.S. equities that added 1.4 points of annual return at a 1.1 Sharpe net of costs\n- Built a walk-forward backtest framework in Python with purged cross-validation, cutting look-ahead and overfitting issues found in review\n- Modeled transaction costs from 3 years of fill data, lowering estimated slippage error by 30%\n- Present signal research to the investment committee and hand off production code to the trading engineering team"
+        },
+        {
+          "company": "Halyard Point Capital",
+          "role": "Quantitative Research Intern",
+          "location": "New York, NY",
+          "startDate": "2021-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Tested 40 carry and momentum variants on commodity futures and documented results for the portfolio managers"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Chicago",
+          "degree": "Ph.D. Statistics",
+          "startDate": "2017-09",
+          "endDate": "2022-06"
+        },
+        {
+          "school": "Rice University",
+          "degree": "B.A. Mathematics",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: time series analysis, regularized regression, Bayesian inference, portfolio optimization, market microstructure",
+        "Languages: Python, SQL, C++, R",
+        "Tools: pandas, NumPy, scikit-learn, kdb+/q, Linux"
+      ],
+      "fit": {
+        "minimalist": 0.97,
+        "berlin": 0.94,
+        "ginto": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.99,
+        "pop": 0.94
+      }
+    },
+    "Research Analyst": {
+      "summary": "Research analyst with 4 years supporting equity research on industrial and transportation companies. Built and maintain earnings models for 14 covered stocks and wrote the first draft of 30+ published notes. Known for fast, accurate data work and clear channel-check write-ups.",
+      "experience": [
+        {
+          "company": "Whitcomb Lane Securities",
+          "role": "Equity Research Associate",
+          "location": "Boston, MA",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Maintain 3-statement earnings models in Excel for 14 industrial and trucking stocks, updating within 4 hours of each earnings release\n- Drafted 30+ published notes and 2 initiation reports with the senior analyst\n- Run monthly freight channel checks with 25 shippers and brokers and summarize trends for clients\n- Built a Python scraper of public load-board data that became a recurring chart in the sector monthly"
+        },
+        {
+          "company": "Barrow Street Market Research",
+          "role": "Research Analyst",
+          "location": "Providence, RI",
+          "startDate": "2022-06",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Compiled market sizing and competitor data for 12 consulting projects in manufacturing and logistics\n- Designed and analyzed 4 B2B surveys of 300–500 respondents in Qualtrics"
+        }
+      ],
+      "education": [
+        {
+          "school": "Boston College",
+          "degree": "B.A. Economics",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Research: financial modeling, earnings analysis, channel checks, industry research, report writing",
+        "Tools: Excel, FactSet, Bloomberg, Capital IQ, Python",
+        "Licenses: SIE, Series 86 and 87, CFA Level II candidate"
+      ],
+      "fit": {
+        "iron": 0.97,
+        "pop": 0.98
+      }
+    },
+    "Sports Analyst": {
+      "summary": "Sports analyst with 3 years in a minor league and college athletics analytics department. Built a pitch-sequencing report that coaches used in every series, and staff pitchers lowered walk rate by 1.2 points. Turns tracking data into short, practical reports that players and coaches actually read.",
+      "experience": [
+        {
+          "company": "Riverhawks Baseball Club",
+          "role": "Baseball Operations Analyst",
+          "location": "Greenville, SC",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build pre-series scouting and pitch-sequencing reports from TrackMan and Hawk-Eye data for 140 games a season\n- Created a command and zone report that coaches reviewed weekly while staff walk rate fell from 10.1% to 8.9%\n- Maintain a PostgreSQL database of pitch and player data and automate daily refreshes with Python\n- Present findings to coaches and players in 10-minute meetings with 1–2 clear takeaways"
+        },
+        {
+          "company": "Coastal Carolina Athletics",
+          "role": "Student Sports Analytics Assistant",
+          "location": "Conway, SC",
+          "startDate": "2022-08",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Tagged game film in Hudl and charted shot locations for men's and women's basketball\n- Built Tableau dashboards on lineup efficiency used by the coaching staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "Coastal Carolina University",
+          "degree": "B.S. Sport Management, Analytics minor",
+          "startDate": "2019-08",
+          "endDate": "2023-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analytics: player evaluation, scouting reports, regression, data visualization",
+        "Data: TrackMan, Hawk-Eye, Synergy, Hudl, Statcast",
+        "Tools: Python, R, SQL, PostgreSQL, Tableau"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "quartz": 0.97,
+        "bronx": 0.96
+      }
+    },
+    "Credit Risk Analyst": {
+      "summary": "Credit risk analyst with 5 years in consumer lending at a regional bank and a fintech lender. Rebuilt a personal loan scorecard that cut 12-month charge-offs by 0.8 points while holding approval rates. Comfortable with model documentation and validation under SR 11-7 and with CECL reserve work.",
+      "experience": [
+        {
+          "company": "Fairhaven Bancorp",
+          "role": "Senior Credit Risk Analyst",
+          "location": "Charlotte, NC",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebuilt the personal loan application scorecard with logistic regression and bureau attributes, cutting 12-month charge-offs by 0.8 points at the same approval rate\n- Run monthly portfolio monitoring on a $2.1B consumer book, tracking roll rates, vintages and PSI drift in SAS and SQL\n- Prepare CECL loss forecasts for 4 loan segments and support quarterly reserve reviews with finance\n- Documented 3 models to SR 11-7 standards with no material findings from model validation"
+        },
+        {
+          "company": "Loanbridge Financial",
+          "role": "Credit Risk Analyst",
+          "location": "Raleigh, NC",
+          "startDate": "2021-07",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Analyzed credit policy changes with A/B tests on 50,000 applications a month\n- Built Tableau dashboards for delinquency and fraud trends used by the CRO"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of North Carolina at Chapel Hill",
+          "degree": "B.S. Statistics and Analytics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Risk: scorecard development, portfolio monitoring, vintage analysis, CECL, stress testing",
+        "Tools: SAS, SQL, Python, Tableau, Excel",
+        "Regulation: SR 11-7, FCRA, ECOA and Reg B"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "ginto": 0.98,
+        "bronx": 0.9,
+        "pop": 0.99
+      }
+    },
+    "Supply Chain Data Analyst": {
+      "summary": "Supply chain data analyst with 4 years in retail distribution and inventory planning. Built a SKU-level safety stock model that cut stockouts 22% while lowering inventory by $3.5M. Works closely with planners and DC managers to put analysis into daily decisions.",
+      "experience": [
+        {
+          "company": "Hollowell Home & Garden",
+          "role": "Supply Chain Data Analyst",
+          "location": "Atlanta, GA",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a SKU-level safety stock model in Python across 18,000 items and 4 DCs, cutting stockouts 22% and inventory by $3.5M\n- Created Power BI dashboards for fill rate, on-time delivery and carrier cost used in weekly S&OP meetings\n- Automated vendor scorecards from SAP and WMS data with SQL, saving planners 10 hours a week\n- Analyzed lane-level freight spend to support a carrier bid that saved 7% on LTL costs"
+        },
+        {
+          "company": "Peachline Distribution",
+          "role": "Inventory Analyst",
+          "location": "Marietta, GA",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Ran cycle count variance analysis that raised inventory record accuracy from 95% to 98.6%\n- Maintained replenishment parameters for 6,000 SKUs in Excel and the WMS"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Southern University",
+          "degree": "B.B.A. Logistics and Supply Chain Management",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Supply Chain: inventory planning, safety stock, demand forecasting, S&OP, freight analysis",
+        "Tools: SQL, Python, Power BI, Excel, SAP S/4HANA, Manhattan WMS",
+        "Certifications: APICS CPIM"
+      ],
+      "fit": {
+        "berlin": 0.96
+      }
+    },
+    "HR Data Analyst": {
+      "summary": "HR data analyst with 4 years building workforce reporting for a 6,000-employee health system. Built an attrition risk dashboard that helped managers cut first-year nurse turnover from 27% to 19%. Handles sensitive employee data carefully and explains findings plainly to HR business partners.",
+      "experience": [
+        {
+          "company": "Saint Ansel Health",
+          "role": "HR Data Analyst",
+          "location": "St. Louis, MO",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Power BI attrition dashboard from Workday data that helped managers cut first-year nurse turnover from 27% to 19%\n- Deliver monthly headcount, hiring and time-to-fill reports to 40 leaders with row-level security\n- Ran the annual pay equity analysis with regression in R and supported adjustments for 220 employees\n- Cleaned and reconciled job architecture data ahead of a compensation system migration"
+        },
+        {
+          "company": "Gateway Staffing Group",
+          "role": "HR Reporting Analyst",
+          "location": "Clayton, MO",
+          "startDate": "2021-08",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Automated weekly placement and turnover reports with SQL and Excel, saving 6 hours a week\n- Prepared EEO-1 and affirmative action data for annual filings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Saint Louis University",
+          "degree": "B.S. Business Analytics",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "People Analytics: attrition analysis, headcount reporting, pay equity, survey analysis",
+        "Tools: Workday Reporting, Power BI, SQL, R, Excel",
+        "Compliance: EEO-1, OFCCP reporting, data privacy"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "ginto": 0.97
+      }
+    },
+    "Clinical Data Analyst": {
+      "summary": "Clinical data analyst with 5 years in hospital quality and population health reporting. Built a sepsis bundle compliance report that helped raise SEP-1 compliance from 58% to 74% in one year. Knows Epic Clarity data well and works closely with nurses and physicians to define measures correctly.",
+      "experience": [
+        {
+          "company": "Mountain View Regional Health",
+          "role": "Clinical Data Analyst",
+          "location": "Salt Lake City, UT",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a daily SEP-1 compliance report from Epic Clarity that helped raise sepsis bundle compliance from 58% to 74% in 12 months\n- Write SQL and Tableau dashboards for readmissions, CLABSI and length-of-stay measures across 4 hospitals\n- Validate CMS core measure abstractions and submit data to NHSN on schedule each quarter\n- Partner with clinical leaders to define measure logic and document it in a shared data dictionary"
+        },
+        {
+          "company": "Bonneville Health Plan",
+          "role": "Healthcare Data Analyst",
+          "location": "Provo, UT",
+          "startDate": "2021-06",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Analyzed claims data for HEDIS gap reports used by care managers for 80,000 members\n- Automated monthly provider reports with SQL Server and SSRS"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Utah",
+          "degree": "M.S. Health Informatics",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical Data: Epic Clarity and Caboodle, CMS core measures, HEDIS, NHSN reporting, ICD-10",
+        "Tools: SQL, Tableau, Python, SSRS, Excel",
+        "Compliance: HIPAA, data validation, measure specification"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.99,
+        "ginto": 0.97,
+        "bronx": 0.98,
+        "pop": 0.98
+      }
+    },
+    "Data Annotator": {
+      "summary": "Data annotator with 2 years labeling image, video and text data for autonomous driving and retail AI projects. Keep a 98.7% QA accuracy score while labeling 600–800 bounding boxes per shift. Follows complex guidelines closely and flags edge cases that improve them.",
+      "experience": [
+        {
+          "company": "Labelcrest Data Services",
+          "role": "Data Annotator",
+          "location": "Remote",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Label 600–800 bounding boxes, polygons and LiDAR cuboids per shift for driving datasets in CVAT and Labelbox\n- Hold a 98.7% QA accuracy score over 18 months, above the 97% team requirement\n- Flagged 45 ambiguous edge cases that led to 6 guideline updates for pedestrians and road signs\n- Review peer work as a second-pass QA reviewer 2 days a week"
+        },
+        {
+          "company": "Harbor Point Retail",
+          "role": "Inventory Associate",
+          "location": "Tacoma, WA",
+          "startDate": "2023-06",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Scanned and counted inventory for a 40,000-item store with 99% count accuracy\n- Processed 3 truck deliveries a week and updated product records"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tacoma Community College",
+          "degree": "A.A. General Studies",
+          "startDate": "2021-09",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Annotation: bounding boxes, polygon segmentation, LiDAR cuboids, text classification, QA review",
+        "Tools: CVAT, Labelbox, Label Studio, Google Sheets",
+        "Work Habits: guideline adherence, edge-case documentation, steady throughput"
+      ],
+      "fit": {
+        "berlin": 0.98
+      }
+    },
+    "AI Trainer": {
+      "summary": "AI trainer with 2 years writing and rating responses to improve large language models, focused on coding and math. Completed 3,000+ RLHF comparison and rewrite tasks with a 96% reviewer approval rate. Brings a computer science background, strict attention to factual accuracy and clear written rationales.",
+      "experience": [
+        {
+          "company": "Promptwell Labs",
+          "role": "AI Trainer, Coding and Math",
+          "location": "Remote",
+          "startDate": "2025-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Write, rank and rewrite model responses for Python, SQL and algebra prompts, completing 3,000+ RLHF tasks with 96% reviewer approval\n- Run and test model-generated code before rating it, catching errors other raters missed in calibration audits\n- Write adversarial prompts to probe reasoning failures, contributing 400 items to an internal evaluation set\n- Mentor 8 new trainers on rubric use during their first 2 weeks"
+        },
+        {
+          "company": "Cedar Hill Tutoring",
+          "role": "Math and Programming Tutor",
+          "location": "Lawrence, KS",
+          "startDate": "2022-09",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Tutored 20 high school and college students a week in calculus and intro Python\n- Wrote practice problem sets with step-by-step solutions"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kansas",
+          "degree": "B.S. Computer Science",
+          "startDate": "2020-08",
+          "endDate": "2024-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "AI Training: RLHF ranking, response writing, rubric scoring, red teaming, evaluation design",
+        "Technical: Python, SQL, JavaScript, calculus, statistics",
+        "Writing: technical explanations, fact-checking, style guide adherence"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.95,
+        "bronx": 0.98
+      }
+    }
+  }
+}

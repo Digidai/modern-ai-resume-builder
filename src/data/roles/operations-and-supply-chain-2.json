@@ -1,0 +1,368 @@
+{
+  "family": "Operations & Supply Chain",
+  "guide": null,
+  "titles": {
+    "Warehouse Associate": {
+      "summary": "Warehouse associate with 4 years in receiving, picking and loading at third-party logistics and retail distribution centers. Picks at 112% of the rate standard with 99.7% accuracy and is certified on sit-down and reach forklifts. Shows up for every shift and works safely, with zero recordable incidents.",
+      "experience": [
+        {
+          "company": "Crossdock Freight Logistics",
+          "role": "Warehouse Associate",
+          "location": "Indianapolis, IN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Receive, put away, pick and load freight for 3 retail clients in a 400,000 sq ft facility using Manhattan WMS and RF scanners\n- Pick at 112% of the rate standard with 99.7% order accuracy over the last 12 months\n- Operate sit-down and reach forklifts to unload about 12 trailers a shift and stage outbound loads by route\n- Hold zero recordable incidents and serve on the site safety committee"
+        },
+        {
+          "company": "Hoosier Home Center",
+          "role": "Stock Associate",
+          "location": "Greenwood, IN",
+          "startDate": "2022-03",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Unloaded freight trucks and stocked 3 departments overnight\n- Ran cycle counts on the handheld scanner and flagged mismatches to the inventory lead"
+        }
+      ],
+      "education": [
+        {
+          "school": "Franklin Township High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Warehouse: receiving, put-away, picking, packing, loading, cycle counts",
+        "Equipment: sit-down forklift, reach truck, pallet jack, RF scanners",
+        "Systems: Manhattan WMS, Microsoft Excel basics",
+        "Safety: OSHA 10, forklift certified, lockout/tagout awareness"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "pop": 0.96
+      }
+    },
+    "Picker Packer": {
+      "summary": "Picker packer with 2 years in e-commerce fulfillment for apparel and home goods. Packs about 160 orders an hour with a 99.8% accuracy rate, top 5 of 40 on my shift. Learns new packing standards fast and keeps the station clean and safe.",
+      "experience": [
+        {
+          "company": "Brightbox Fulfillment",
+          "role": "Picker Packer",
+          "location": "Reno, NV",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Pick single and multi-item orders with an RF scanner and pack about 160 orders an hour for 4 e-commerce brands\n- Hold a 99.8% accuracy rate, top 5 of 40 associates on the day shift\n- Follow brand-specific packing standards for gift notes, inserts and fragile items\n- Cross-trained on returns processing and helped clear a 6,000-unit holiday returns backlog"
+        },
+        {
+          "company": "Truckee Meadows Grocery",
+          "role": "Grocery Clerk (part-time)",
+          "location": "Sparks, NV",
+          "startDate": "2023-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Stocked shelves, rotated dated product and filled online pickup orders"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washoe Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Fulfillment: picking, packing, order verification, returns processing, labeling",
+        "Tools: RF scanners, ShipStation, label printers, pallet jack",
+        "Work Habits: rate and accuracy goals, 5S, safe lifting up to 50 lbs"
+      ],
+      "fit": {
+        "bronx": 0.97
+      }
+    },
+    "Stocker": {
+      "summary": "Overnight stocker with 3 years at a grocery chain and a home improvement store. Works about 900 cases a shift and helped lift on-shelf availability in center store from 94% to 97%. Dependable on nights and weekends and careful with date rotation.",
+      "experience": [
+        {
+          "company": "Fairway Fields Market",
+          "role": "Overnight Stocker",
+          "location": "Louisville, KY",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Unload the nightly truck and work about 900 cases a shift across 6 center-store aisles\n- Rotate product first in, first out and pull out-of-date items, cutting dated-product write-offs on my aisles by 15%\n- Set price changes and planogram resets with a handheld scanner, helping raise on-shelf availability from 94% to 97%\n- Face and zone every aisle before the 6 a.m. opening"
+        },
+        {
+          "company": "Bluegrass Hardware & Supply",
+          "role": "Freight Team Associate",
+          "location": "Jeffersontown, KY",
+          "startDate": "2023-05",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Unloaded freight and stocked lumber, paint and garden departments with a pallet jack"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio Falls High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stocking: truck unloading, FIFO rotation, facing, planogram resets, price changes",
+        "Equipment: pallet jack, box cutter safety, handheld scanners",
+        "Availability: overnight, weekends and holidays"
+      ]
+    },
+    "Inventory Specialist": {
+      "summary": "Inventory specialist with 6 years in distribution inventory control. Runs the cycle count program for 18,000 SKUs and raised inventory record accuracy from 96.1% to 99.2% in 2025. Finds the root cause of variances instead of just adjusting them.",
+      "experience": [
+        {
+          "company": "Ridgeport Industrial Supply",
+          "role": "Inventory Specialist",
+          "location": "Charlotte, NC",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the daily ABC cycle count program for 18,000 SKUs in a 250,000 sq ft MRO distribution center in SAP EWM\n- Raised inventory record accuracy from 96.1% to 99.2% in 2025 by tracing variances to receiving and pick errors\n- Cut annual physical inventory adjustments from $180k to $46k and supported the external audit count\n- Build weekly aging, slow-mover and negative on-hand reports in Excel and Power BI for purchasing"
+        },
+        {
+          "company": "Catawba Auto Parts Distribution",
+          "role": "Inventory Control Clerk",
+          "location": "Gastonia, NC",
+          "startDate": "2020-05",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Counted and researched about 150 locations a day and posted adjustments with supervisor approval\n- Processed vendor returns and damaged goods write-offs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Piedmont Crossroads Community College",
+          "degree": "A.A.S. in Supply Chain Management",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inventory Control: cycle counting, ABC analysis, variance research, physical inventory, slotting support",
+        "Systems: SAP EWM, Microsoft Excel (pivot tables and XLOOKUP), Power BI, RF scanners",
+        "Certifications: APICS CPIM Part 1, forklift certified"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.91,
+        "ginto": 0.94,
+        "pop": 0.93
+      }
+    },
+    "Shipping and Receiving Clerk": {
+      "summary": "Shipping and receiving clerk with 5 years at manufacturing plants. Handles about 30 inbound and outbound shipments a day and cut receiving discrepancies by 40% by checking every delivery against the PO before signing. Keeps bills of lading, freight claims and carrier pickups organized.",
+      "experience": [
+        {
+          "company": "Ironvale Fabrication",
+          "role": "Shipping and Receiving Clerk",
+          "location": "Rockford, IL",
+          "startDate": "2022-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process about 30 inbound and outbound LTL, FTL and parcel shipments a day for a metal parts manufacturer\n- Receive materials against POs in Epicor, cutting receiving discrepancies by 40% with a check-before-signing routine\n- Prepare bills of lading, packing lists and labels and book carrier pickups through the TMS portal\n- File freight claims for damaged shipments, recovering $22k in 2025"
+        },
+        {
+          "company": "Rock River Plastics",
+          "role": "Material Handler",
+          "location": "Belvidere, IL",
+          "startDate": "2021-03",
+          "endDate": "2022-09",
+          "isCurrent": false,
+          "description": "- Delivered raw materials to 12 molding presses and staged finished goods for shipping\n- Operated forklifts and tracked lot numbers on every pallet"
+        }
+      ],
+      "education": [
+        {
+          "school": "Winnebago Valley Community College",
+          "degree": "Certificate in Logistics and Supply Chain",
+          "startDate": "2020-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Shipping: bills of lading, LTL and parcel shipping, carrier scheduling, freight claims",
+        "Receiving: PO matching, inspection, lot tracking, discrepancy reporting",
+        "Systems: Epicor ERP, UPS WorldShip, FedEx Ship Manager, Excel",
+        "Equipment: forklift certified, pallet jack, scales"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "pop": 0.98
+      }
+    },
+    "Distribution Center Manager": {
+      "summary": "Distribution center manager with 14 years in warehouse operations, now running a 600,000 sq ft grocery DC. Leads 310 associates and 9 supervisors and cut cost per case 8% in 2025 while holding 99.6% order accuracy. Builds a safety-first culture and develops supervisors from within.",
+      "experience": [
+        {
+          "company": "Heartland Pantry Distribution",
+          "role": "Distribution Center Manager",
+          "location": "Kansas City, KS",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 600,000 sq ft ambient and cold grocery DC shipping 85,000 cases a day to 140 stores, with 310 associates and a $24M operating budget\n- Cut cost per case 8% in 2025 by adding labor standards in Blue Yonder WMS and re-slotting the top 2,000 SKUs\n- Hold 99.6% order accuracy and 98.5% on-time store delivery\n- Lowered the OSHA recordable rate from 4.1 to 2.3 with daily safety huddles and a powered equipment training program"
+        },
+        {
+          "company": "Midcontinent Retail Logistics",
+          "role": "Operations Manager",
+          "location": "Olathe, KS",
+          "startDate": "2016-04",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Managed outbound operations on 2 shifts with 120 associates\n- Led a voice picking rollout that raised picks per hour 15%"
+        },
+        {
+          "company": "Midcontinent Retail Logistics",
+          "role": "Shift Supervisor",
+          "location": "Olathe, KS",
+          "startDate": "2012-06",
+          "endDate": "2016-03",
+          "isCurrent": false,
+          "description": "- Supervised 35 associates in receiving and replenishment"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kaw River State University",
+          "degree": "B.S. in Supply Chain Management",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: DC management, labor planning, slotting, cold chain, transportation coordination",
+        "Leadership: supervisor development, union and non-union workforces, performance management",
+        "Systems: Blue Yonder WMS, SAP, voice picking, Power BI",
+        "Safety and Continuous Improvement: OSHA compliance, Lean Six Sigma Green Belt, 5S"
+      ],
+      "fit": {
+        "modern": 0.93,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "Fulfillment Associate": {
+      "summary": "Fulfillment associate with 2 years in e-commerce warehouses, working pick, pack, ship and returns. Hit 105% or more of the shift rate goal in 11 of the last 12 months and was trained as a process assistant. Reliable during peak season and quick to learn new stations.",
+      "experience": [
+        {
+          "company": "Parcelpoint Commerce Services",
+          "role": "Fulfillment Associate",
+          "location": "Columbus, OH",
+          "startDate": "2024-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Pick, pack and ship orders for 6 online brands using RF scanners and a sortation line, processing about 1,200 units a shift\n- Hit 105% or more of the shift rate goal in 11 of the last 12 months with a 99.6% accuracy rate\n- Trained as a process assistant and onboard about 4 new associates a month on packing and quality checks\n- Worked 55-hour weeks through 2025 peak season with zero missed shifts"
+        },
+        {
+          "company": "Scioto Burger Co.",
+          "role": "Crew Member",
+          "location": "Grove City, OH",
+          "startDate": "2023-04",
+          "endDate": "2024-09",
+          "isCurrent": false,
+          "description": "- Worked register and drive-thru during rush hours and kept order times under 3 minutes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grove City Central High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Fulfillment: picking, packing, shipping, returns, quality checks, sortation",
+        "Tools: RF scanners, label printers, pallet jack, Microsoft Teams",
+        "Strengths: rate and accuracy goals, peak-season overtime, training new hires"
+      ],
+      "fit": {
+        "bronx": 0.98
+      }
+    },
+    "Import/Export Specialist": {
+      "summary": "Import/export specialist with 7 years at a freight forwarder and an industrial equipment manufacturer. Manages about 500 import and export shipments a year across Asia, Europe and Mexico and recovered $340k in duties in 2025 through USMCA claims and duty drawback. Licensed Customs Broker who keeps classification and export records audit-ready.",
+      "experience": [
+        {
+          "company": "Ashby Pump & Compressor",
+          "role": "Import/Export Specialist",
+          "location": "Houston, TX",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage about 500 import and export shipments a year with forwarders and brokers across Asia, Europe and Mexico\n- Classify parts under the HTSUS and Schedule B and maintain ECCN determinations under the EAR\n- Recovered $340k in duties in 2025 through USMCA preference claims and a duty drawback program\n- File EEI in AESDirect, screen restricted parties in Descartes and keep records ready for CBP audits"
+        },
+        {
+          "company": "Gulfstream Freight Forwarding",
+          "role": "Ocean Import Coordinator",
+          "location": "Houston, TX",
+          "startDate": "2019-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Coordinated about 80 ocean containers a month from booking to delivery, filing ISF on time for every shipment\n- Reviewed commercial invoices and packing lists before entry filing"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bayou City University",
+          "degree": "BBA in International Business",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Trade Compliance: HTSUS classification, EAR and ECCN, restricted party screening, USMCA, duty drawback",
+        "Logistics: Incoterms 2020, ocean and air freight, ISF, customs entries, letters of credit",
+        "Systems: SAP GTS, AESDirect, Descartes, CargoWise, Excel",
+        "Credentials: Licensed Customs Broker, Certified Export Specialist (CES)"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
+      }
+    }
+  }
+}

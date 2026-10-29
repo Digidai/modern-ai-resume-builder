@@ -131,12 +131,13 @@
       ],
       "fit": {
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.88,
-        "quartz": 0.92,
-        "bronx": 0.89,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.9,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.99
@@ -190,13 +191,14 @@
       "fit": {
         "silk": 0.97,
         "minimalist": 0.95,
+        "tokyo": 0.99,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.88,
+        "iron": 0.9,
         "ginto": 0.85,
         "symmetry": 0.99,
-        "quartz": 0.96,
-        "bronx": 0.88,
+        "quartz": 0.99,
+        "bronx": 0.94,
         "mono": 0.9,
         "pop": 0.88
       }
@@ -255,7 +257,7 @@
         "iron": 0.87,
         "ginto": 0.87,
         "quartz": 0.98,
-        "bronx": 0.87,
+        "bronx": 0.93,
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.98
@@ -313,16 +315,18 @@
         "Software: Waters Empower 3, ChemStation, JMP, MasterControl"
       ],
       "fit": {
+        "modern": 0.99,
         "silk": 0.96,
+        "opal": 0.97,
         "minimalist": 0.92,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.94,
-        "ginto": 0.97,
-        "quartz": 0.89,
-        "bronx": 0.86,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.96
+        "pop": 0.93
       }
     },
     "Research Scientist": {
@@ -371,10 +375,10 @@
         "minimalist": 0.97,
         "swiss": 0.96,
         "berlin": 0.87,
-        "iron": 0.95,
-        "ginto": 0.97,
+        "iron": 0.97,
+        "ginto": 0.99,
         "quartz": 0.91,
-        "bronx": 0.85,
+        "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.99
       }
@@ -431,7 +435,7 @@
         "Process: atomic layer deposition, sol-gel synthesis, design of experiments"
       ],
       "fit": {
-        "modern": 0.92,
+        "modern": 0.94,
         "executive": 0.95,
         "academic": 0.99,
         "tech": 0.98,
@@ -439,13 +443,14 @@
         "lateral": 0.99,
         "opal": 0.96,
         "minimalist": 0.89,
+        "tokyo": 0.94,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.88,
+        "iron": 0.87,
+        "ginto": 0.9,
         "symmetry": 0.94,
         "path": 0.98,
-        "quartz": 0.92,
+        "quartz": 0.93,
         "bronx": 0.9,
         "mono": 0.86,
         "pop": 0.85,
@@ -504,13 +509,12 @@
         "Development: CMC strategy, IND authoring, tech transfer to CDMOs"
       ],
       "fit": {
-        "modern": 0.99,
         "minimalist": 0.92,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.91,
-        "quartz": 0.94,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "quartz": 0.97,
         "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.93,
@@ -561,10 +565,11 @@
       ],
       "fit": {
         "minimalist": 0.97,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.87,
-        "iron": 0.97,
-        "ginto": 0.91,
+        "iron": 0.99,
+        "ginto": 0.93,
         "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.94
@@ -619,10 +624,9 @@
         "minimalist": 0.98,
         "swiss": 0.94,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.89,
-        "quartz": 0.97,
-        "bronx": 0.87,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "bronx": 0.93,
         "mono": 0.92,
         "pop": 0.87
       }
@@ -679,13 +683,13 @@
         "Leadership: R&D portfolio strategy, stage-gate governance, budgeting, hiring"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "opal": 0.97,
         "minimalist": 0.92,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.89,
+        "iron": 0.9,
+        "ginto": 0.9,
         "symmetry": 0.98,
         "quartz": 0.97,
         "bronx": 0.9,
@@ -742,8 +746,8 @@
       "fit": {
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.93,
-        "ginto": 0.92,
+        "iron": 0.91,
+        "ginto": 0.9,
         "mono": 0.95,
         "pop": 0.93
       }
@@ -795,7 +799,6 @@
         "Certifications: USFWS bat survey qualification, wilderness first aid, UTV safety"
       ],
       "fit": {
-        "opal": 0.99,
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
@@ -967,13 +970,14 @@
         "modern": 0.97,
         "silk": 0.96,
         "minimalist": 0.95,
+        "tokyo": 0.94,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.88,
-        "bronx": 0.87,
+        "quartz": 0.86,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -1028,6 +1032,7 @@
         "silk": 0.94,
         "lateral": 0.99,
         "minimalist": 0.89,
+        "tokyo": 0.94,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1080,10 +1085,10 @@
       ],
       "fit": {
         "berlin": 0.93,
-        "iron": 0.92,
-        "ginto": 0.91,
-        "quartz": 0.95,
-        "bronx": 0.88,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.98,
+        "bronx": 0.93,
         "pop": 0.94
       }
     },
@@ -1143,8 +1148,8 @@
         "modern": 0.96,
         "executive": 0.96,
         "silk": 0.95,
-        "opal": 0.97,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.87,
@@ -1154,7 +1159,7 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.89,
-        "pop": 0.86,
+        "pop": 0.88,
         "cast": 0.95
       }
     },
@@ -1209,10 +1214,10 @@
         "minimalist": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.89,
-        "ginto": 0.87,
-        "quartz": 0.95,
-        "bronx": 0.85,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.98,
+        "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.88
       }
@@ -1262,9 +1267,7 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.89,
-        "ginto": 0.99,
-        "quartz": 0.97,
-        "bronx": 0.86,
+        "bronx": 0.91,
         "mono": 0.97
       }
     },
@@ -1312,9 +1315,9 @@
       ],
       "fit": {
         "berlin": 0.94,
-        "iron": 0.97,
-        "quartz": 0.92,
-        "bronx": 0.87,
+        "iron": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.93,
         "mono": 0.99
       }
     },
@@ -1436,7 +1439,8 @@
         "ginto": 0.98,
         "quartz": 0.91,
         "bronx": 0.86,
-        "mono": 0.97
+        "mono": 0.97,
+        "pop": 0.99
       }
     }
   }

@@ -1,0 +1,879 @@
+{
+  "family": "Students & Career Changes",
+  "guide": {
+    "focus": "the skills you can prove from school, part-time work, volunteering, projects or an earlier career, and how they carry over to the role you want next",
+    "skills": [
+      "Communication",
+      "Customer service",
+      "Teamwork",
+      "Time management",
+      "Microsoft Office and Google Workspace",
+      "Problem solving",
+      "Reliability and punctuality",
+      "Learning new tools quickly",
+      "Organization",
+      "Role-specific certifications"
+    ],
+    "sections": [
+      "Summary",
+      "Education",
+      "Experience",
+      "Projects",
+      "Skills"
+    ],
+    "metrics": [
+      "GPA or honors",
+      "customers served",
+      "hours volunteered",
+      "money raised or saved",
+      "project users or results",
+      "certifications earned"
+    ],
+    "bullets": [
+      "Served about 120 customers a shift at a busy campus cafe and trained 4 new baristas on the POS system",
+      "Built a sales dashboard in Excel and Power BI as a certificate capstone, cutting a weekly report from 3 hours to 20 minutes",
+      "Kept the books for a 400-family school PTA during a career break, closing each year with a balanced audit"
+    ],
+    "tips": [
+      "Lead with the strongest evidence you have: put Education first if you are still in school, and a recent certificate or project first if you are changing careers.",
+      "List a career gap as one honest line with dates, then add volunteer, freelance or caregiving work and the courses you took during or after it.",
+      "Rewrite past duties in the language of the job you want, for example \"handled cash and inventory\" becomes \"reconciled $8,000 in daily sales and ran weekly inventory counts\"."
+    ],
+    "templates": [
+      "classic",
+      "ivy",
+      "modern"
+    ]
+  },
+  "titles": {
+    "High School Student": {
+      "summary": "High school senior with a 3.8 GPA, a year of part-time cashier work and 150 hours of volunteer tutoring. Trusted to close the register alone after three months and recognized as employee of the month in spring 2026. Looking for a part-time retail or office job with after-school and weekend hours.",
+      "experience": [
+        {
+          "company": "Tower District Frozen Yogurt",
+          "role": "Cashier (Part-Time)",
+          "location": "Fresno, CA",
+          "startDate": "2025-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve about 80 customers a shift and handle cash and card payments on a Square POS\n- Close the store 2 nights a week, counting the drawer and completing the cleaning checklist\n- Named employee of the month in April 2026"
+        },
+        {
+          "company": "Fresno Valley Public Library, Fig Garden Branch",
+          "role": "Volunteer Homework Tutor",
+          "location": "Fresno, CA",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Help elementary students with reading and math 3 hours a week, totaling more than 150 hours\n- Translate for Hmong-speaking parents during sign-up"
+        }
+      ],
+      "education": [
+        {
+          "school": "Sierra Vista High School",
+          "degree": "High School Diploma (expected), GPA 3.8, Key Club Treasurer, Varsity Cross Country",
+          "startDate": "2023-08",
+          "endDate": "2027-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customer service: cash handling, Square POS, opening and closing, food safety",
+        "Computer: Google Docs, Google Sheets, Canva",
+        "Languages: English and Hmong",
+        "Activities: Key Club Treasurer managing a $2,400 budget, varsity cross country"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "quartz": 0.97,
+        "bronx": 0.94
+      }
+    },
+    "College Student": {
+      "summary": "Marketing major at Palouse Pines University with a 3.6 GPA and a part-time role running social media for the campus recreation center. Grew the center's Instagram from 1,800 to 4,500 followers in one school year. Seeking a summer marketing or communications internship.",
+      "experience": [
+        {
+          "company": "Palouse Pines University Campus Recreation",
+          "role": "Social Media Assistant (Part-Time)",
+          "location": "Spokane, WA",
+          "startDate": "2025-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Plan and post 5 pieces of content a week on Instagram and TikTok for a center used by 9,000 students\n- Grew Instagram followers from 1,800 to 4,500 in one school year\n- Track reach and engagement in Meta Business Suite and report monthly to the marketing coordinator"
+        },
+        {
+          "company": "Riverfront Coffee House",
+          "role": "Barista",
+          "location": "Spokane, WA",
+          "startDate": "2024-06",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Served about 150 customers a shift and trained 3 new baristas"
+        }
+      ],
+      "education": [
+        {
+          "school": "Palouse Pines University",
+          "degree": "Bachelor of Arts in Marketing (in progress), GPA 3.6, Dean's List",
+          "startDate": "2024-08",
+          "endDate": "2028-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "American Marketing Association Case Competition",
+          "link": "",
+          "description": "Led a 4-person team that built a launch plan for a local bike shop's rental service and placed 2nd of 18 teams."
+        }
+      ],
+      "skills": [
+        "Marketing: social media content, campaign planning, copywriting, basic SEO",
+        "Tools: Canva, Meta Business Suite, CapCut, Google Analytics 4",
+        "Office: Excel, Google Workspace, PowerPoint"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "pop": 0.88
+      }
+    },
+    "Recent College Graduate": {
+      "summary": "May 2026 economics graduate with a 3.7 GPA, a financial analysis internship and research experience in Excel and Stata. Built a vendor spend model during a finance internship that found $85,000 in duplicate payments. Seeking an entry-level financial or business analyst role.",
+      "experience": [
+        {
+          "company": "Lakemont Health Partners",
+          "role": "Finance Intern",
+          "location": "Milwaukee, WI",
+          "startDate": "2025-06",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Built an Excel model of vendor spend across 1,400 invoices that found $85,000 in duplicate payments\n- Prepared weekly variance reports for 6 clinic managers\n- Presented findings to the CFO at the end of the internship"
+        },
+        {
+          "company": "Badger Ridge University, Department of Economics",
+          "role": "Undergraduate Research Assistant",
+          "location": "Madison, WI",
+          "startDate": "2024-09",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Cleaned and merged county labor market data for a faculty study on minimum wage effects\n- Ran regressions in Stata and produced 12 charts for a working paper"
+        }
+      ],
+      "education": [
+        {
+          "school": "Badger Ridge University",
+          "degree": "Bachelor of Arts in Economics, Minor in Data Science, GPA 3.7",
+          "startDate": "2022-09",
+          "endDate": "2026-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Senior Capstone: Housing Affordability in Mid-Size Cities",
+          "link": "",
+          "description": "Analyzed rent and wage data for 40 metro areas in R and presented the results at the department's honors symposium."
+        }
+      ],
+      "skills": [
+        "Analysis: financial modeling, variance analysis, regression, data cleaning",
+        "Tools: Excel with pivot tables and XLOOKUP, Stata, R, Tableau, SQL basics",
+        "Communication: written reports, presentations, PowerPoint"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.92,
+        "ginto": 0.87,
+        "quartz": 0.99,
+        "bronx": 0.98,
+        "pop": 0.9
+      }
+    },
+    "Entry Level": {
+      "summary": "Entry-level office professional with an associate degree in business, 10 months as an administrative assistant and 2 years in retail. Cut appointment no-shows at a busy dental office from 14% to 8% by setting up text reminders. Brings Microsoft Office Specialist certification, accurate data entry and a friendly phone manner.",
+      "experience": [
+        {
+          "company": "Bright Smile Family Dental",
+          "role": "Administrative Assistant",
+          "location": "Lexington, KY",
+          "startDate": "2026-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Answer about 70 calls a day, schedule patients and check in 40 visits daily in Dentrix\n- Cut no-show rate from 14% to 8% by setting up automated text reminders\n- Scan and file insurance forms and keep patient records up to date\n- Order office supplies within a $600 monthly budget"
+        },
+        {
+          "company": "Hamburg Pavilion Home Goods",
+          "role": "Sales Associate",
+          "location": "Lexington, KY",
+          "startDate": "2023-08",
+          "endDate": "2025-12",
+          "isCurrent": false,
+          "description": "- Helped customers, ran the register and processed returns\n- Led weekly inventory counts for the kitchen department with 99% accuracy"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bluegrass Commonwealth Community College",
+          "degree": "Associate of Applied Science in Business Administration",
+          "startDate": "2023-08",
+          "endDate": "2025-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Office: scheduling, data entry at 60 words per minute, phone and email support, filing",
+        "Software: Microsoft 365, Excel, Outlook, Dentrix, Google Workspace",
+        "Certification: Microsoft Office Specialist Excel Associate"
+      ],
+      "fit": {
+        "bronx": 0.95
+      }
+    },
+    "Internship": {
+      "summary": "Mechanical engineering junior with a 3.5 GPA seeking a summer 2027 engineering internship. Designed the suspension uprights for our Formula SAE car, cutting part weight by 18% while passing every FEA load case. Brings SolidWorks, hands-on machine shop experience and a semester of lab research.",
+      "experience": [
+        {
+          "company": "Tri-Rivers Institute of Technology, Advanced Materials Lab",
+          "role": "Undergraduate Research Assistant",
+          "location": "Pittsburgh, PA",
+          "startDate": "2026-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare and test 3D-printed polymer samples on an Instron tensile tester, about 60 tests a month\n- Process test data in MATLAB and maintain the lab's sample tracking sheet\n- Co-presented a poster at the spring undergraduate research fair"
+        },
+        {
+          "company": "Ohio River Precision Machining",
+          "role": "Summer Shop Assistant",
+          "location": "Beaver, PA",
+          "startDate": "2025-06",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Deburred and inspected about 400 parts a week with calipers and micrometers\n- Learned to run a manual mill and lathe under a journeyman machinist"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tri-Rivers Institute of Technology",
+          "degree": "Bachelor of Science in Mechanical Engineering (in progress), GPA 3.5",
+          "startDate": "2024-08",
+          "endDate": "2028-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Formula SAE Suspension Team",
+          "link": "",
+          "description": "Designed front suspension uprights in SolidWorks and validated them with FEA, cutting part weight by 18% for the 2026 competition car."
+        }
+      ],
+      "skills": [
+        "Engineering: CAD, FEA, GD&T basics, tensile testing, design for manufacturing",
+        "Software: SolidWorks, ANSYS, MATLAB, Excel",
+        "Shop: manual mill and lathe, 3D printing, precision measurement"
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.91,
+        "iron": 0.93,
+        "ginto": 0.92,
+        "bronx": 0.95,
+        "pop": 0.9
+      }
+    },
+    "Career Change": {
+      "summary": "Restaurant general manager with 9 years in hospitality, moving into a data analyst role after earning the Google Data Analytics Certificate. Built a labor and sales dashboard that cut labor cost from 31% to 27% of sales at a $3.2M restaurant. Brings SQL, Excel and Tableau skills plus years of turning numbers into decisions with a team.",
+      "experience": [
+        {
+          "company": "Copper Kettle Kitchen and Bar",
+          "role": "General Manager",
+          "location": "Nashville, TN",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 160-seat restaurant with $3.2M in annual sales and a staff of 45\n- Built a weekly labor and sales dashboard from Toast POS exports in Excel and Tableau, cutting labor cost from 31% to 27% of sales\n- Analyzed 18 months of menu data to cut 12 low-margin items, raising food margin by 3 points\n- Forecast weekly staffing from reservation and weather data, reducing overtime by 40%"
+        },
+        {
+          "company": "Riverside Grill Group",
+          "role": "Assistant Manager",
+          "location": "Nashville, TN",
+          "startDate": "2017-05",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Managed inventory of about $25,000 a month and cut food waste by 15% with weekly variance reports\n- Hired and trained 30 front-of-house staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "Self-paced online program",
+          "degree": "Google Data Analytics Professional Certificate",
+          "startDate": "2025-09",
+          "endDate": "2026-03"
+        },
+        {
+          "school": "Middle Tennessee Valley University",
+          "degree": "Bachelor of Science in Hospitality Management",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Nashville Restaurant Inspection Analysis",
+          "link": "",
+          "description": "Cleaned 5 years of public inspection records in SQL and built a Tableau dashboard showing violation trends by neighborhood and cuisine."
+        }
+      ],
+      "skills": [
+        "Data: SQL with BigQuery, Excel with pivot tables and Power Query, Tableau, R basics",
+        "Analysis: forecasting, variance analysis, KPI dashboards, data cleaning",
+        "Business: P&L management, team leadership, vendor negotiation"
+      ],
+      "fit": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.95,
+        "opal": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.94
+      }
+    },
+    "Stay-at-Home Parent Returning to Work": {
+      "summary": "Accounts payable specialist with 6 years of experience returning to work after a planned career break to raise two children. Kept the books for a 400-family PTA during the break and finished QuickBooks Online certification in 2026. Seeking a full-time bookkeeping or accounts payable role.",
+      "experience": [
+        {
+          "company": "Career break: full-time parent",
+          "role": "Volunteer PTA Treasurer and freelance bookkeeper",
+          "location": "Plano, TX",
+          "startDate": "2019-04",
+          "endDate": "2026-06",
+          "isCurrent": false,
+          "description": "- Managed a $62,000 annual PTA budget in QuickBooks Online with a clean audit each year\n- Did part-time bookkeeping for 2 local small businesses, about 8 hours a week"
+        },
+        {
+          "company": "Lone Prairie Building Supply",
+          "role": "Accounts Payable Specialist",
+          "location": "Dallas, TX",
+          "startDate": "2015-02",
+          "endDate": "2019-03",
+          "isCurrent": false,
+          "description": "- Processed about 900 vendor invoices a month with three-way matching in NetSuite\n- Cut late payment fees by 70% by setting up a weekly payment run\n- Reconciled 120 vendor statements a quarter and supported the annual audit"
+        },
+        {
+          "company": "Trinity Valley Staffing",
+          "role": "Accounting Clerk",
+          "location": "Dallas, TX",
+          "startDate": "2013-06",
+          "endDate": "2015-01",
+          "isCurrent": false,
+          "description": "- Entered payroll and expense data for 250 temporary workers each week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Self-paced online program",
+          "degree": "QuickBooks Online Certified User",
+          "startDate": "2026-03",
+          "endDate": "2026-05"
+        },
+        {
+          "school": "North Texas Plains University",
+          "degree": "Bachelor of Business Administration in Accounting",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Accounting: accounts payable, three-way match, vendor reconciliation, month-end support",
+        "Software: QuickBooks Online, NetSuite, Excel, Bill.com",
+        "Certification: QuickBooks Online Certified User 2026"
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "ginto": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "pop": 0.97
+      }
+    },
+    "Career Gap": {
+      "summary": "Marketing coordinator with 5 years of digital campaign experience, returning after an 18-month break to care for a parent. Stayed current with freelance social media work for two small businesses and earned Google Ads and HubSpot certifications in 2026. Grew email revenue by 35% in one year in the most recent role.",
+      "experience": [
+        {
+          "company": "Career break: family caregiving",
+          "role": "Freelance social media manager",
+          "location": "Raleigh, NC",
+          "startDate": "2025-02",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Cared full-time for a parent through cancer treatment and recovery\n- Managed Instagram and Facebook for a bakery and a fitness studio part-time, growing combined followers by 2,300"
+        },
+        {
+          "company": "Oak City Outfitters",
+          "role": "Marketing Coordinator",
+          "location": "Raleigh, NC",
+          "startDate": "2021-05",
+          "endDate": "2025-01",
+          "isCurrent": false,
+          "description": "- Ran email and paid social campaigns for a 6-store outdoor retailer with a $15,000 monthly ad budget\n- Grew email revenue by 35% in 2023 through segmentation and automated flows in Klaviyo\n- Coordinated 4 seasonal product launches with buyers and store managers"
+        },
+        {
+          "company": "Triangle Media Group",
+          "role": "Marketing Assistant",
+          "location": "Durham, NC",
+          "startDate": "2019-08",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Scheduled social posts and built monthly performance reports for 10 clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Online professional certifications",
+          "degree": "Google Ads Search Certification and HubSpot Inbound Marketing Certification",
+          "startDate": "2026-04",
+          "endDate": "2026-07"
+        },
+        {
+          "school": "Carolina Piedmont University",
+          "degree": "Bachelor of Arts in Communication",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Marketing: email marketing, paid social, Google Ads, content calendars, product launches",
+        "Tools: Klaviyo, HubSpot, Meta Ads Manager, Canva, Google Analytics 4",
+        "Certifications: Google Ads Search 2026, HubSpot Inbound Marketing 2026"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "minimalist": 0.95,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.93,
+        "ginto": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.89,
+        "cast": 0.99
+      }
+    },
+    "Older Worker": {
+      "summary": "Office and operations manager with more than 15 years running day-to-day operations for professional services firms. Moved a 40-person firm from paper files and a local server to Microsoft 365 and SharePoint, cutting IT costs by $18,000 a year. Brings vendor management, bookkeeping and a calm, organized approach that staff rely on.",
+      "experience": [
+        {
+          "company": "Hollister and Grant Engineering",
+          "role": "Office Manager",
+          "location": "Albany, NY",
+          "startDate": "2016-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run office operations for a 40-person civil engineering firm, including facilities, vendors and onboarding\n- Led the move from a local server to Microsoft 365, SharePoint and Teams, saving $18,000 a year in IT costs\n- Manage accounts payable and payroll inputs in QuickBooks Online and ADP Workforce Now\n- Track projects and office requests in Asana, closing 95% within a week"
+        },
+        {
+          "company": "Capital District Law Associates",
+          "role": "Office Administrator",
+          "location": "Albany, NY",
+          "startDate": "2011-01",
+          "endDate": "2016-02",
+          "isCurrent": false,
+          "description": "- Managed scheduling, billing support and supplies for 12 attorneys and 8 staff\n- Renegotiated copier and phone contracts, saving $9,000 a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hudson Mohawk Community College",
+          "degree": "Associate of Applied Science in Business Administration",
+          "startDate": "",
+          "endDate": ""
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: office management, vendor contracts, facilities, onboarding, budgeting",
+        "Software: Microsoft 365, SharePoint, Teams, Zoom, Asana, QuickBooks Online, ADP Workforce Now",
+        "Finance: accounts payable, payroll inputs, expense tracking"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.97,
+        "ginto": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "pop": 0.98
+      }
+    },
+    "First Job": {
+      "summary": "High school sophomore looking for a first part-time job as a crew member or store associate. Volunteer at a local animal shelter for 80 hours and run a small lawn care business serving 9 neighbors. Reliable, available weekends and summers, and quick to learn new tasks.",
+      "experience": [
+        {
+          "company": "Second Chance Animal Shelter",
+          "role": "Volunteer Kennel Assistant",
+          "location": "Boise, ID",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean kennels, feed and walk dogs every Saturday, logging more than 80 hours\n- Greet visitors at adoption events and answer basic questions"
+        },
+        {
+          "company": "Self-employed",
+          "role": "Lawn Care and Yard Work",
+          "location": "Boise, ID",
+          "startDate": "2024-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Mow, rake and shovel snow for 9 neighborhood households\n- Schedule jobs by text and keep track of payments in a simple spreadsheet"
+        }
+      ],
+      "education": [
+        {
+          "school": "Foothills High School",
+          "degree": "High School Diploma (expected), GPA 3.4, JV Soccer, Spanish Club",
+          "startDate": "2025-08",
+          "endDate": "2029-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Work habits: punctual, follows instructions, teamwork, works well outdoors",
+        "Computer: Google Docs, Google Sheets",
+        "Languages: English and basic Spanish"
+      ]
+    },
+    "Part-Time Job": {
+      "summary": "Community college student seeking a part-time retail, cafe or front desk job with evening and weekend availability. Balance a full course load with 20 hours a week of work and earned a customer service award at my current grocery job. Brings cash handling, opening and closing experience and a steady schedule.",
+      "experience": [
+        {
+          "company": "Harvest Fresh Market",
+          "role": "Cashier and Stocker (Part-Time, 20 hrs/week)",
+          "location": "Tulsa, OK",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Check out about 100 customers a shift and handle $3,000 to $5,000 in daily sales with balanced drawers\n- Restock produce and dairy overnight before the store opens on weekends\n- Earned the store's Customer Service Star award in Q2 2026"
+        },
+        {
+          "company": "Brookside Bagel Company",
+          "role": "Counter Server (Part-Time)",
+          "location": "Tulsa, OK",
+          "startDate": "2023-06",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Took orders, made coffee drinks and opened the store at 6 a.m. on weekends\n- Kept the counter clean to pass 3 health inspections with high scores"
+        }
+      ],
+      "education": [
+        {
+          "school": "Green Country Community College",
+          "degree": "Associate of Science in Health Sciences (in progress), GPA 3.5",
+          "startDate": "2025-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customer service: cash handling, NCR POS, stocking, food prep, opening and closing",
+        "Availability: weekday evenings after 4 p.m. and all day weekends",
+        "Certifications: Oklahoma Food Handler Card, CPR and First Aid"
+      ],
+      "fit": {
+        "bronx": 0.94
+      }
+    },
+    "Summer Job": {
+      "summary": "High school junior and certified lifeguard looking for a summer 2027 lifeguard, camp or recreation job. Worked a full summer as a camp counselor for 12 campers with zero safety incidents. Available full-time from June to mid-August.",
+      "experience": [
+        {
+          "company": "Lake Hiawassee Day Camp",
+          "role": "Junior Camp Counselor",
+          "location": "Chattanooga, TN",
+          "startDate": "2026-06",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Supervised a group of 12 campers aged 7 to 9 for 8 weeks with zero safety incidents\n- Led daily crafts, swim time and games, and helped run the end-of-summer talent show"
+        },
+        {
+          "company": "Signal Mountain Swim Club",
+          "role": "Swim Lesson Assistant",
+          "location": "Signal Mountain, TN",
+          "startDate": "2025-06",
+          "endDate": "2025-07",
+          "isCurrent": false,
+          "description": "- Helped instructors teach beginner lessons to 30 children aged 4 to 8"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ridgeview High School",
+          "degree": "High School Diploma (expected), GPA 3.6, Varsity Swim Team",
+          "startDate": "2024-08",
+          "endDate": "2028-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: Lifeguard with CPR/AED and First Aid, Water Safety Instructor in progress",
+        "Skills: child supervision, activity planning, swimming instruction, teamwork",
+        "Availability: full-time June 1 to August 15"
+      ]
+    },
+    "Nanny": {
+      "summary": "Professional nanny with 7 years caring for infants through school-age children for 3 families. Supported one family through newborn twins, establishing a sleep routine that had both babies sleeping 7 hours by 4 months. Brings CPR and First Aid certification, newborn care training and a clean driving record.",
+      "experience": [
+        {
+          "company": "Private family, 2 children",
+          "role": "Full-Time Nanny",
+          "location": "Brookline, MA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for twins from 6 weeks old, now age 4, 45 hours a week\n- Set up feeding and sleep schedules with the parents, with both babies sleeping 7-hour stretches by 4 months\n- Plan daily outings, early literacy activities and preschool drop-off and pickup\n- Keep a shared daily log of meals, naps and milestones in a family app"
+        },
+        {
+          "company": "Private family, 3 children",
+          "role": "Nanny",
+          "location": "Newton, MA",
+          "startDate": "2019-09",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Cared for 3 children aged 2 to 9, including school pickups and homework help\n- Drove children to 6 weekly activities with a clean driving record"
+        }
+      ],
+      "education": [
+        {
+          "school": "Charles River Community College",
+          "degree": "Certificate in Early Childhood Education",
+          "startDate": "2018-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Childcare: newborn care, sleep training, potty training, meal prep, homework help",
+        "Household: family scheduling, light housekeeping, children's laundry, safe driving",
+        "Certifications: Infant and Child CPR and First Aid, Newborn Care Specialist training, Massachusetts EEC background check"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.91,
+        "pop": 0.98
+      }
+    },
+    "Babysitter": {
+      "summary": "College student and experienced babysitter who has cared for children from 8 families over 4 years. Keep 5 regular families on weekly schedules and hold a 5-star rating across 40 reviews on Care.com. Certified in CPR and First Aid and comfortable with infants through age 12.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Babysitter",
+          "location": "Ann Arbor, MI",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Babysit for 5 regular families on weeknights and weekends, about 12 hours a week\n- Have cared for children from 8 families aged 6 months to 12 years, including bedtime routines and meals\n- Hold a 5-star rating across 40 parent reviews on Care.com\n- Follow each family's rules for screen time, allergies and medication"
+        },
+        {
+          "company": "Huron Valley Parks and Recreation",
+          "role": "After-School Program Aide (Part-Time)",
+          "location": "Ann Arbor, MI",
+          "startDate": "2025-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 20 elementary students during homework time and outdoor play"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washtenaw Lakes University",
+          "degree": "Bachelor of Science in Elementary Education (in progress)",
+          "startDate": "2024-08",
+          "endDate": "2028-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Childcare: infant care, bedtime routines, meal prep, homework help, creative play",
+        "Safety: Pediatric CPR and First Aid, allergy awareness, safe sleep",
+        "Certifications: American Red Cross Babysitting and Child Care, valid driver's license"
+      ],
+      "fit": {
+        "bronx": 0.98
+      }
+    },
+    "Freelancer": {
+      "summary": "Freelance B2B copywriter with 7 years writing website, email and case study content for software and health tech companies. Have delivered 600+ projects for 45 clients, with 4 retainer clients making up 70% of revenue. A rewritten pricing page for one SaaS client raised trial sign-ups by 22%.",
+      "experience": [
+        {
+          "company": "Self-employed",
+          "role": "Freelance B2B Copywriter",
+          "location": "Remote",
+          "startDate": "2019-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Write website pages, email sequences, case studies and white papers for 45 clients, mostly SaaS and health tech\n- Rewrote a SaaS pricing page that raised trial sign-ups by 22% in an A/B test\n- Built 4 long-term retainers that make up 70% of annual revenue\n- Hold Top Rated Plus status on Upwork with a 100% job success score over 120 contracts"
+        },
+        {
+          "company": "Lantern Health Software",
+          "role": "Content Marketing Specialist",
+          "location": "Columbus, OH",
+          "startDate": "2016-06",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Wrote blog posts, ebooks and product emails for a patient engagement platform\n- Grew organic blog traffic from 8,000 to 30,000 monthly visits"
+        }
+      ],
+      "education": [
+        {
+          "school": "Buckeye Hills University",
+          "degree": "Bachelor of Arts in English",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Writing: website copy, email sequences, case studies, white papers, SEO content",
+        "Tools: Google Docs, WordPress, Webflow, HubSpot, Surfer SEO, Notion",
+        "Business: client management, scoping and pricing, invoicing in FreshBooks"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.97,
+        "bronx": 0.98
+      }
+    },
+    "Gig Worker": {
+      "summary": "Independent delivery and rideshare driver with 4 years and more than 9,000 completed trips, seeking a full-time route driver or delivery role. Maintain a 4.96 customer rating and a 98% on-time delivery rate. Brings a clean driving record, route planning and dependable customer service.",
+      "experience": [
+        {
+          "company": "Self-employed independent contractor",
+          "role": "Delivery and Rideshare Driver",
+          "location": "Phoenix, AZ",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Complete about 50 food, grocery and passenger trips a week across DoorDash, Instacart and Uber\n- Finished more than 9,000 trips with a 4.96 average rating and 98% on-time delivery\n- Plan routes and peak hours with app data to keep weekly earnings steady\n- Track mileage, expenses and quarterly taxes in Stride and QuickBooks Self-Employed"
+        },
+        {
+          "company": "Self-employed independent contractor",
+          "role": "Handyman Tasker",
+          "location": "Phoenix, AZ",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Completed 210 furniture assembly and mounting jobs on TaskRabbit with a 4.9 rating"
+        },
+        {
+          "company": "Desert Sun Auto Parts",
+          "role": "Counter Sales Associate",
+          "location": "Mesa, AZ",
+          "startDate": "2019-05",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Looked up parts and served about 60 customers a day\n- Handled local deliveries to 15 repair shops in a company van"
+        }
+      ],
+      "education": [
+        {
+          "school": "Papago Ridge High School",
+          "degree": "High School Diploma",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Driving: route planning, safe driving, clean MVR, vehicle upkeep",
+        "Customer service: on-time delivery, contactless delivery, problem resolution",
+        "Tools: DoorDash, Instacart, Uber, TaskRabbit, Google Maps, Stride"
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "mono": 0.97,
+        "pop": 0.93
+      }
+    },
+    "Computer Science Graduate": {
+      "summary": "May 2026 computer science graduate with a 3.6 GPA and a software engineering internship building backend services. Shipped a caching layer during an internship that cut API response time from 420 ms to 90 ms. Seeking an entry-level software engineer role working in Python, TypeScript or Go.",
+      "experience": [
+        {
+          "company": "Ledgerline Payments",
+          "role": "Software Engineering Intern",
+          "location": "Austin, TX",
+          "startDate": "2025-05",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Built a Redis caching layer for the merchant lookup API, cutting p95 response time from 420 ms to 90 ms\n- Wrote 60 unit and integration tests in pytest and fixed 9 bugs from the backlog\n- Presented the project to 40 engineers at the intern demo day"
+        },
+        {
+          "company": "Pedernales State University, Computer Science Department",
+          "role": "Teaching Assistant, Data Structures",
+          "location": "San Marcos, TX",
+          "startDate": "2024-08",
+          "endDate": "2026-05",
+          "isCurrent": false,
+          "description": "- Led 2 weekly lab sections of 30 students and held office hours\n- Wrote autograder tests for 6 programming assignments in Java"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pedernales State University",
+          "degree": "Bachelor of Science in Computer Science, GPA 3.6",
+          "startDate": "2022-08",
+          "endDate": "2026-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "CourseSwap",
+          "link": "",
+          "description": "Built a class section swap board with React, TypeScript, Node.js and PostgreSQL used by about 700 students in its first semester."
+        },
+        {
+          "name": "Distributed Key-Value Store",
+          "link": "",
+          "description": "Implemented a Raft-based key-value store in Go for a distributed systems course, passing all fault-injection tests."
+        }
+      ],
+      "skills": [
+        "Languages: Python, TypeScript, Java, Go, SQL",
+        "Frameworks: React, Node.js, FastAPI, pytest",
+        "Tools: Git, Docker, PostgreSQL, Redis, AWS basics, Linux"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "swiss": 0.98,
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.92
+      }
+    }
+  }
+}

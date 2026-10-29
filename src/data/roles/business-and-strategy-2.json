@@ -1,0 +1,261 @@
+{
+  "family": "Business & Strategy",
+  "guide": null,
+  "titles": {
+    "Corporate Development Associate": {
+      "summary": "Corporate development associate with 5 years across technology M&A banking and in-house deal work at a public SaaS company. Built the valuation models and board memos for 3 acquisitions totaling $210M, including a $95M payments startup. Tracks integration closely and reported $6M in realized cost synergies in year one.",
+      "experience": [
+        {
+          "company": "Kestrelline Software",
+          "role": "Corporate Development Associate",
+          "location": "Seattle, WA",
+          "startDate": "2023-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Screen about 120 acquisition and minority investment targets a year and keep the pipeline current in Affinity\n- Built valuation models and board memos for 3 closed acquisitions totaling $210M, including a $95M payments startup\n- Coordinate diligence across finance, legal, security and product, running 400-item request lists in Datasite\n- Track integration milestones and synergy targets, reporting $6M in realized cost synergies in year one"
+        },
+        {
+          "company": "Pugetview Advisors",
+          "role": "Investment Banking Analyst, Technology",
+          "location": "Seattle, WA",
+          "startDate": "2021-07",
+          "endDate": "2023-07",
+          "isCurrent": false,
+          "description": "- Executed 5 sell-side and capital raise processes for software companies\n- Built DCF, LBO and comparable company analyses for pitches and live deals"
+        }
+      ],
+      "education": [
+        {
+          "school": "Olympic Crest University",
+          "degree": "B.A. in Economics",
+          "startDate": "2017-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Corporate Development: target screening, valuation, deal structuring, diligence management, integration planning",
+        "Modeling: DCF, accretion/dilution, synergy models, scenario analysis",
+        "Tools: Excel, PowerPoint, PitchBook, Capital IQ, Affinity, Datasite",
+        "Sectors: B2B SaaS, payments, data infrastructure"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.89
+      }
+    },
+    "Entrepreneur": {
+      "summary": "Entrepreneur who has started and run two consumer businesses, including a bootstrapped home textiles brand now at $2.4M in annual revenue. Sold an earlier laundry pickup venture to a regional dry cleaner in 2020. Comfortable owning product, sourcing, marketing and the P&L at the same time.",
+      "experience": [
+        {
+          "company": "Tidewell Goods",
+          "role": "Founder and CEO",
+          "location": "Savannah, GA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a bootstrapped kitchen and home textiles brand to $2.4M in 2025 revenue with an 18% operating margin\n- Manage 3 manufacturing partners and cut unit costs 11% by renegotiating order minimums and freight terms\n- Grew wholesale to 140 boutique accounts through Faire and trade shows alongside a Shopify store and a 65,000-subscriber Klaviyo list\n- Hired and lead a team of 6 across operations, customer service and marketing"
+        },
+        {
+          "company": "Sidecar Laundry Pickup",
+          "role": "Co-founder",
+          "location": "Atlanta, GA",
+          "startDate": "2018-05",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Launched an app-based laundry pickup service that reached 900 subscribers\n- Negotiated the sale of the business to a regional dry cleaning chain in 2020"
+        },
+        {
+          "company": "Magnolia Row Brands",
+          "role": "Brand Manager",
+          "location": "Atlanta, GA",
+          "startDate": "2015-07",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Managed a $12M personal care product line and 2 retail launches"
+        }
+      ],
+      "education": [
+        {
+          "school": "Coastal Georgia University",
+          "degree": "BBA in Marketing",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Business Building: product development, sourcing, pricing, hiring, exit negotiation",
+        "Growth: Shopify, Klaviyo, Meta Ads, Faire wholesale, trade shows",
+        "Finance: P&L ownership, cash flow forecasting, inventory planning, QuickBooks Online"
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "quartz": 0.99,
+        "bronx": 0.96,
+        "mono": 0.98,
+        "pop": 0.9
+      }
+    },
+    "Small Business Owner": {
+      "summary": "Small business owner who has run a bakery café in Burlington for 9 years after 5 years as a restaurant pastry chef. Grew revenue from $420k in the first full year to $1.3M in 2025 with 14 employees and 22 wholesale accounts. Handles hiring, food costs, payroll and the books with an outside CPA.",
+      "experience": [
+        {
+          "company": "Hollowbrook Bakery & Café",
+          "role": "Owner",
+          "location": "Burlington, VT",
+          "startDate": "2017-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 40-seat bakery café with 14 employees and $1.3M in 2025 revenue, up from $420k in the first full year\n- Added wholesale accounts with 22 cafés and grocers, now 30% of revenue\n- Hold food cost near 29% with weekly recipe costing in Toast and seasonal menu changes\n- Manage payroll in Gusto, sales tax filings and bookkeeping in QuickBooks Online with an outside CPA, and passed every health inspection"
+        },
+        {
+          "company": "Champlain Inn",
+          "role": "Pastry Chef",
+          "location": "Shelburne, VT",
+          "startDate": "2012-05",
+          "endDate": "2017-08",
+          "isCurrent": false,
+          "description": "- Ran the pastry program for a 120-seat restaurant and weddings of up to 200 guests\n- Trained and scheduled a team of 3 pastry cooks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Green Mountain Culinary Institute",
+          "degree": "A.O.S. in Baking and Pastry Arts",
+          "startDate": "2010-09",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Management: hiring, scheduling, training, vendor negotiation, budgeting",
+        "Finance: QuickBooks Online, Gusto payroll, sales tax, cash flow planning",
+        "Operations: Toast POS, food costing, inventory, ServSafe Manager certified",
+        "Marketing: Instagram, Google Business Profile, local partnerships"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.89,
+        "bronx": 0.9,
+        "pop": 0.97
+      }
+    },
+    "Franchise Owner": {
+      "summary": "Multi-unit franchise owner operating 3 boutique fitness studios after 6 years in grocery store management. The studios brought in $2.9M combined in 2025, and the 2 newest units each broke even within 9 months. Raised member retention from 68% to 79% with better onboarding and coach scorecards.",
+      "experience": [
+        {
+          "company": "Juniper Fit Studios (franchisee, 3 units)",
+          "role": "Franchise Owner and Operator",
+          "location": "Plano, TX",
+          "startDate": "2019-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own and operate 3 boutique fitness studios with 31 staff and $2.9M in combined 2025 revenue\n- Opened units 2 and 3 in 2022 and 2024 with SBA 7(a) financing, each reaching breakeven within 9 months\n- Raised member retention from 68% to 79% with onboarding calls and coach scorecards tracked in ClubReady\n- Rank in the top 10% of 210 franchise locations on brand audits and member NPS"
+        },
+        {
+          "company": "Lonestar Regional Grocers",
+          "role": "Store Manager",
+          "location": "Richardson, TX",
+          "startDate": "2013-04",
+          "endDate": "2018-12",
+          "isCurrent": false,
+          "description": "- Ran a $28M store with 120 employees, beating the shrink target 4 years in a row\n- Promoted from assistant manager in 2015"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Texas Prairie University",
+          "degree": "BBA in Management",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Multi-Unit Operations: P&L management, site selection, build-outs, staffing, brand standards",
+        "Finance: SBA lending, budgeting, unit economics, QuickBooks Online, ADP payroll",
+        "Systems: ClubReady, HubSpot, Google Ads",
+        "Leadership: hiring managers, coaching, local marketing, member experience"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.94,
+        "ginto": 0.91,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "pop": 0.94
+      }
+    },
+    "Startup Founder": {
+      "summary": "Startup founder building scheduling software for home health agencies, after running caregiver operations at a home health provider. Grew the company to $1.8M ARR and 64 agency customers, raised a $4.5M seed round and keeps net revenue retention at 118%. Still leads the largest sales conversations personally.",
+      "experience": [
+        {
+          "company": "Rostrly",
+          "role": "Co-founder and CEO",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Founded a B2B SaaS company for home health scheduling and EVV compliance, growing to $1.8M ARR and 64 agency customers\n- Raised a $4.5M seed round from 2 institutional funds and 12 angels\n- Built the team to 14 across engineering, sales and support after 80 discovery interviews with agency owners\n- Lead founder-led sales on enterprise accounts, closing the 3 largest customers and keeping net revenue retention at 118%"
+        },
+        {
+          "company": "Mill City Home Health",
+          "role": "Director of Operations",
+          "location": "Minneapolis, MN",
+          "startDate": "2018-05",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ran scheduling and staffing for 400 caregivers serving 1,100 clients\n- Cut missed visits 35% by moving scheduling off spreadsheets"
+        },
+        {
+          "company": "Twin Lakes Health Analytics",
+          "role": "Business Analyst",
+          "location": "St. Paul, MN",
+          "startDate": "2015-07",
+          "endDate": "2018-04",
+          "isCurrent": false,
+          "description": "- Built claims and utilization reports for 12 provider clients in SQL and Tableau"
+        }
+      ],
+      "education": [
+        {
+          "school": "Upper Midwest University",
+          "degree": "B.S. in Industrial and Systems Engineering",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Company Building: fundraising, hiring, product strategy, board management",
+        "Go-to-Market: founder-led sales, pricing, customer discovery, HubSpot",
+        "Finance: SaaS metrics, financial modeling, burn management",
+        "Domain: home health operations, HIPAA, EVV requirements"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.85
+      }
+    }
+  }
+}

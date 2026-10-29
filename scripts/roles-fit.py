@@ -9,10 +9,12 @@ def get(pg, **q):
     pg.goto(B+urllib.parse.urlencode(q)); pg.wait_for_selector("html[data-fit]", state="attached", timeout=60000)
     return json.loads(pg.evaluate("document.documentElement.dataset.fit"))
 def solve(pg, title):
-    level=None
-    for _ in range(14):
-        r=get(pg, title=title, auto=1, **({"level":level} if level is not None else {}))
-        level=r["level"]; h=r["heights"]
+    # Try the full example first: per-template scales alone (down to 0.85) often fit it, and trimming
+    # deletes content. Only when that fails, trim (auto picks a starting level) and retry.
+    level=0
+    for attempt in range(15):
+        r=get(pg, title=title, level=level) if attempt==0 else get(pg, title=title, auto=1, level=level)
+        level=r.get("level",level); h=r["heights"]
         scales={k: max(0.85, math.floor(min(1,PAGE/v)*100)/100) for k,v in h.items() if v>PAGE+1.5}
         for _ in range(4):
             if not scales: return {"level":level,"fit":{}}
@@ -21,7 +23,7 @@ def solve(pg, title):
             if not bad: return {"level":level,"fit":scales}
             if any(scales[k]<=0.85 for k in bad): break
             for k in bad: scales[k]=round(max(0.85, scales[k]-0.02),2)
-        level+=1
+        if attempt: level+=1
     return {"level":level,"fit":scales,"unresolved":True}
 def work(titles):
     out={}

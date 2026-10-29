@@ -84,9 +84,8 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "iron": 0.98,
-        "quartz": 0.96,
-        "bronx": 0.86
+        "quartz": 0.99,
+        "bronx": 0.91
       }
     },
     "Policy Analyst": {
@@ -243,10 +242,10 @@
       "fit": {
         "swiss": 0.95,
         "berlin": 0.89,
-        "iron": 0.93,
-        "ginto": 0.96,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "iron": 0.95,
+        "ginto": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.88,
         "mono": 0.94,
         "pop": 0.97
       }
@@ -297,16 +296,15 @@
         "Tools: Congress.gov, CRS reports, IQ constituent management, Quorum"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.97,
         "executive": 0.97,
         "minimalist": 0.96,
         "swiss": 0.95,
         "berlin": 0.87,
-        "iron": 0.85,
-        "ginto": 0.86,
+        "iron": 0.86,
+        "ginto": 0.87,
         "symmetry": 0.99,
-        "quartz": 0.99,
-        "bronx": 0.91,
+        "bronx": 0.97,
         "mono": 0.95,
         "pop": 0.87
       }
@@ -363,18 +361,18 @@
         "Leadership: staff management, hiring, coordination with state office"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.94,
         "opal": 0.99,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.93,
-        "ginto": 0.87,
+        "iron": 0.95,
+        "ginto": 0.89,
         "symmetry": 0.98,
-        "path": 0.94,
-        "quartz": 0.91,
-        "bronx": 0.86,
+        "path": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.93,
         "cast": 0.98
@@ -424,12 +422,15 @@
         "Certifications: AICP"
       ],
       "fit": {
+        "modern": 0.98,
+        "sidebar": 0.97,
+        "creative": 0.96,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.92,
-        "ginto": 0.89,
-        "quartz": 0.89,
-        "bronx": 0.9,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9
       }
@@ -476,8 +477,8 @@
         "berlin": 0.87,
         "iron": 0.91,
         "ginto": 0.88,
-        "quartz": 0.9,
-        "bronx": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.91
       }
@@ -536,7 +537,7 @@
         "berlin": 0.86,
         "iron": 0.86,
         "ginto": 0.85,
-        "bronx": 0.89,
+        "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -720,12 +721,13 @@
         "modern": 0.95,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.97,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.91,
+        "quartz": 0.89,
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.85,
@@ -778,13 +780,13 @@
         "Systems: PIEE, SAM.gov, FPDS, Procurement Desktop"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "silk": 0.97,
         "minimalist": 0.95,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.89,
+        "iron": 0.88,
+        "ginto": 0.87,
         "quartz": 0.99,
         "bronx": 0.94,
         "mono": 0.92,
@@ -842,13 +844,14 @@
         "executive": 0.98,
         "silk": 0.97,
         "minimalist": 0.92,
+        "tokyo": 0.96,
         "prism": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "path": 0.92,
-        "quartz": 0.92,
+        "quartz": 0.94,
         "bronx": 0.89,
         "noir": 0.98,
         "mono": 0.88,
@@ -901,6 +904,7 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.99,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
         "iron": 0.97,
@@ -963,7 +967,7 @@
         "berlin": 0.86,
         "iron": 0.92,
         "ginto": 0.9,
-        "bronx": 0.87,
+        "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.9
       }
@@ -1012,14 +1016,14 @@
         "Certifications: Economic Development Finance Professional (EDFP)"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.99,
         "minimalist": 0.97,
+        "tokyo": 0.99,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.9,
-        "quartz": 0.85,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.91,
@@ -1074,10 +1078,12 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.92,
         "berlin": 0.85,
         "iron": 0.91,
         "ginto": 0.89,
+        "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.9
       }
@@ -1130,8 +1136,8 @@
         "berlin": 0.85,
         "iron": 0.92,
         "ginto": 0.91,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.88,
         "mono": 0.94,
         "pop": 0.99
       }
@@ -1364,7 +1370,7 @@
         "Credentials: ICMA Credentialed Manager"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.95,
         "silk": 0.94,
         "minimalist": 0.98,
         "swiss": 0.91,
@@ -1438,6 +1444,7 @@
         "lateral": 0.98,
         "opal": 0.96,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,

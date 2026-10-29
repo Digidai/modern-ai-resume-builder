@@ -1,18 +1,10 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, initialsOf, Portrait, toHref } from './shared';
 
 // "Halo": a soft, friendly layout. A full-bleed header washed with an accent gradient holds an
-// initials avatar (no photo needed), an IBM Plex Serif name and an icon contact row. Below, a
+// round photo (initials when there is none), an IBM Plex Serif name and an icon contact row. Below, a
 // rounded tinted card on the left carries skills and education, beside the main column. The main
 // column comes first in the DOM and the card is placed left with grid placement.
-
-const initialsOf = (name: string): string => {
-    const words = name.split(/\s+/).filter(Boolean);
-    if (words.length === 0) return '';
-    const first = Array.from(words[0])[0] ?? '';
-    const last = words.length > 1 ? Array.from(words[words.length - 1])[0] ?? '' : '';
-    return (first + last).toUpperCase();
-};
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-[8px] flex items-center gap-[8px] break-after-avoid font-plex-serif text-[18px] font-semibold leading-tight text-slate-900">
@@ -42,12 +34,11 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
             {hasHeader && (
                 <header className="flex items-center gap-[6mm] bg-linear-to-br from-(--accent)/20 via-(--accent)/8 to-(--accent)/2 px-[15mm] pt-[12mm] pb-[8mm] break-inside-avoid">
                     {initials && (
-                        <div
-                            aria-hidden
-                            className="flex h-[25mm] w-[25mm] shrink-0 items-center justify-center rounded-full bg-(--accent) font-plex-serif text-[34px] font-semibold tracking-[0.02em] text-white ring-[5px] ring-white/80"
-                        >
-                            {initials}
-                        </div>
+                        <Portrait
+                            data={data}
+                            className="h-[25mm] w-[25mm] rounded-full ring-[5px] ring-white/80"
+                            fallbackClassName="bg-(--accent) font-plex-serif text-[34px] font-semibold tracking-[0.02em] text-white"
+                        />
                     )}
                     <div className="min-w-0 flex-1">
                         {name && <div role="heading" aria-level={1} className="font-plex-serif text-[34px] font-semibold leading-[1.1] text-slate-900 wrap-break-word">{name}</div>}

@@ -1,0 +1,275 @@
+{
+  "family": "HR & Operations",
+  "guide": null,
+  "titles": {
+    "Benefits Administrator": {
+      "summary": "Benefits administrator with 6 years running health and welfare and retirement plans for healthcare employers. Administers benefits for 3,400 employees in Workday and recovered $96k in carrier overbilling in 2025 through monthly invoice reconciliation. Answers employee questions clearly and keeps COBRA, ACA and leave processes on schedule.",
+      "experience": [
+        {
+          "company": "Canyon Ridge Regional Medical Center",
+          "role": "Benefits Administrator",
+          "location": "Albuquerque, NM",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Administer medical, dental, vision, life, disability and 403(b) plans for 3,400 employees in Workday\n- Ran 2025 open enrollment with 97% of elections completed on time, leading 12 employee information sessions\n- Reconcile $2.8M in monthly carrier invoices, recovering $96k in 2025 premiums billed for terminated members\n- Coordinate COBRA and FMLA leave with the TPA and prepare ACA 1095-C data and Form 5500 support for auditors"
+        },
+        {
+          "company": "Sandia Peak Payroll Services",
+          "role": "HR and Benefits Coordinator",
+          "location": "Albuquerque, NM",
+          "startDate": "2020-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Processed enrollments and fixed carrier EDI file errors for 25 client companies\n- Answered about 40 employee benefits questions a week by phone and email"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rio Abajo State University",
+          "degree": "BBA in Human Resource Management",
+          "startDate": "2016-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Benefits: health and welfare plans, 403(b), open enrollment, leave of absence, carrier EDI feeds",
+        "Compliance: ERISA, ACA reporting, COBRA, HIPAA, FMLA, Section 125",
+        "Systems: Workday HCM, ADP Workforce Now, Benefitfocus, Excel",
+        "Certifications: SHRM-CP"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.92,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
+    },
+    "Office Coordinator": {
+      "summary": "Office coordinator with 5 years keeping offices and front desks running smoothly. Runs daily operations and a $180k facilities budget for a 70-person marketing agency and saved $14k a year by switching supply vendors. Handles onboarding logistics, events and vendor issues without needing reminders.",
+      "experience": [
+        {
+          "company": "Hollis & Vane Marketing",
+          "role": "Office Coordinator",
+          "location": "Nashville, TN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run day-to-day operations for a 70-person office, including vendors, supplies, mail and a $180k annual facilities budget\n- Coordinate onboarding logistics for 25 new hires a year, getting badges, desks and laptops ready with IT before day one\n- Planned 2 company offsites and monthly team events, finishing 2025 6% under budget\n- Switched office supply and snack vendors, saving $14k a year"
+        },
+        {
+          "company": "Music Row Dental Partners",
+          "role": "Front Desk Coordinator",
+          "location": "Nashville, TN",
+          "startDate": "2021-02",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Scheduled about 60 patients a day in Dentrix and verified insurance before each visit\n- Ordered office and clinical supplies for 2 locations"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cumberland Ridge University",
+          "degree": "B.A. in Communication",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: vendor management, budgeting, event planning, facilities requests, onboarding logistics",
+        "Tools: Google Workspace, Microsoft 365, Slack, Envoy, Expensify, Asana",
+        "Administration: calendar management, purchase orders, invoice processing, travel booking"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.97,
+        "ginto": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.92
+      }
+    },
+    "File Clerk": {
+      "summary": "File clerk with 2 years of records work in a medical practice and a public library. Files and retrieves 300 or more patient records a day and indexes scanned documents into OnBase with 99.8% accuracy. Careful with confidential records and retention rules.",
+      "experience": [
+        {
+          "company": "Hartfield Orthopedic Group",
+          "role": "File Clerk",
+          "location": "Omaha, NE",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- File, retrieve and refile 300 or more patient charts and documents a day in a 40,000-record paper archive\n- Scan and index about 1,500 pages a week into OnBase with 99.8% indexing accuracy\n- Prepare boxes for offsite storage and certified destruction following the retention schedule and HIPAA rules"
+        },
+        {
+          "company": "Westgate Public Library",
+          "role": "Library Page (part-time)",
+          "location": "Omaha, NE",
+          "startDate": "2022-06",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Shelved about 800 items a shift in call number order and ran weekly shelf-reading checks"
+        }
+      ],
+      "education": [
+        {
+          "school": "Platte Valley Community College",
+          "degree": "Certificate in Office Administration",
+          "startDate": "2023-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Records: alphabetic and numeric filing, retention schedules, document scanning, indexing",
+        "Tools: OnBase, Microsoft Office, Adobe Acrobat, high-volume scanners",
+        "Compliance: HIPAA privacy, chain of custody",
+        "Data Entry: 50 WPM typing, 10-key"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.94
+      }
+    },
+    "Front Desk Receptionist": {
+      "summary": "Front desk receptionist with 5 years in hotel guest services and outpatient clinic check-in. Checks in about 90 patients a day and helped cut no-shows from 12% to 7% by rolling out text reminders. Friendly on the phone and accurate with insurance and copays.",
+      "experience": [
+        {
+          "company": "Carraway Physical Therapy",
+          "role": "Front Desk Receptionist",
+          "location": "San Diego, CA",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Check in about 90 patients a day, verify insurance eligibility and collect copays in WebPT, balancing the drawer daily\n- Answer a 6-line phone system and schedule visits for 8 therapists\n- Cut no-shows from 12% to 7% by setting up automated text reminders and same-day confirmation calls\n- Process referral faxes and new patient paperwork within 1 business day"
+        },
+        {
+          "company": "Torrey Cove Inn",
+          "role": "Guest Services Agent",
+          "location": "La Jolla, CA",
+          "startDate": "2021-05",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Checked in up to 120 guests a day in Opera PMS and handled room moves and billing questions\n- Earned 14 guest review mentions by name in 2022"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mesa Grande Community College",
+          "degree": "A.A. in Liberal Studies",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Front Desk: patient check-in, multi-line phones, scheduling, copay collection, visitor management",
+        "Systems: WebPT, Opera PMS, RingCentral, Microsoft Office",
+        "Compliance: HIPAA, insurance eligibility checks",
+        "Languages: English, conversational Spanish"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.96,
+        "quartz": 0.97,
+        "bronx": 0.97,
+        "pop": 0.98
+      }
+    },
+    "Workforce Planner": {
+      "summary": "Workforce planner with 7 years in contact center forecasting and scheduling. Builds staffing plans for 650 agents across 4 sites and cut overtime spend 18%, about $420k, in 2025 by redesigning shift patterns. Turns forecasts into hiring plans that finance and operations both trust.",
+      "experience": [
+        {
+          "company": "Sablewood Insurance Services",
+          "role": "Workforce Planner",
+          "location": "Jacksonville, FL",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build weekly and annual staffing forecasts for 650 agents across 4 sites in NICE IEX, keeping interval forecast accuracy within 5%\n- Built a capacity model in Excel and Power BI that guided open enrollment hiring, meeting the 80/30 service level in 11 of 12 peak weeks\n- Cut overtime spend 18% ($420k) in 2025 by redesigning shift patterns and adding split shifts\n- Partner with finance and HR on headcount plans, attrition and shrinkage assumptions and a $38M labor budget"
+        },
+        {
+          "company": "St. Johns Telecom Services",
+          "role": "Real-Time Analyst",
+          "location": "Jacksonville, FL",
+          "startDate": "2020-01",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Monitored queues for 300 agents and adjusted breaks, training and overtime to protect service level\n- Built intraday adherence reports in SQL that replaced 3 manual spreadsheets"
+        }
+      ],
+      "education": [
+        {
+          "school": "First Coast State University",
+          "degree": "B.S. in Industrial Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Workforce Management: forecasting, capacity planning, scheduling, intraday management, Erlang C",
+        "Tools: NICE IEX, Verint, Excel, Power BI, SQL",
+        "Planning: headcount plans, attrition modeling, shrinkage, labor budgets"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.97,
+        "bronx": 0.98,
+        "pop": 0.97
+      }
+    },
+    "Executive Secretary": {
+      "summary": "Executive secretary with 10 years supporting senior leaders in insurance and legal settings. Supports the CEO and 2 executive vice presidents and delivers board materials for 18 board and committee meetings a year, always 7 days ahead. Handles confidential correspondence with discretion and drafts routine replies independently.",
+      "experience": [
+        {
+          "company": "Ashgrove Mutual Life",
+          "role": "Executive Secretary to the CEO",
+          "location": "Hartford, CT",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage calendars, travel and correspondence for the CEO and 2 executive vice presidents\n- Prepare board books and minutes for 6 board and 12 committee meetings a year in Diligent Boards, delivering materials 7 days ahead\n- Screen about 60 calls and 200 emails a day and draft replies to routine requests\n- Book domestic and international travel and reconcile expenses in SAP Concur within 5 days of each trip"
+        },
+        {
+          "company": "Farmington Valley Law Group",
+          "role": "Legal Secretary",
+          "location": "Farmington, CT",
+          "startDate": "2016-03",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Prepared correspondence, pleadings and court filings for 3 partners\n- Maintained docket calendars with no missed deadlines over 4 years"
+        }
+      ],
+      "education": [
+        {
+          "school": "Connecticut River College",
+          "degree": "A.S. in Office Administration",
+          "startDate": "2014-09",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Executive Support: calendar management, board materials, minutes, travel, confidential correspondence",
+        "Tools: Microsoft 365, Diligent Boards, SAP Concur, Zoom, Adobe Acrobat",
+        "Office Skills: 80 WPM typing, proofreading, minute-taking",
+        "Certifications: Certified Administrative Professional (CAP)"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.94
+      }
+    }
+  }
+}

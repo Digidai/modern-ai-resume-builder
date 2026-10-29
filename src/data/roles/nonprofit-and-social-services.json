@@ -98,15 +98,16 @@
         "Documentation: Credible EHR, SOAP notes, HIPAA and 42 CFR Part 2"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.94,
         "executive": 0.96,
         "silk": 0.94,
         "opal": 0.97,
         "minimalist": 0.9,
+        "tokyo": 0.95,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.86,
+        "iron": 0.86,
+        "ginto": 0.85,
         "symmetry": 0.93,
         "path": 0.95,
         "quartz": 0.95,
@@ -163,10 +164,10 @@
         "minimalist": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.89,
-        "ginto": 0.9,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.87,
         "mono": 0.94,
         "pop": 0.94
       }
@@ -217,15 +218,13 @@
         "Compliance: Medi-Cal documentation (CalAIM), HIPAA, mandated reporting"
       ],
       "fit": {
-        "modern": 0.97,
         "opal": 0.98,
         "minimalist": 0.97,
         "swiss": 0.97,
         "berlin": 0.88,
-        "iron": 0.86,
-        "ginto": 0.88,
-        "quartz": 0.98,
-        "bronx": 0.87,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.88
       }
@@ -333,7 +332,7 @@
       "fit": {
         "swiss": 0.92,
         "berlin": 0.86,
-        "iron": 0.91,
+        "iron": 0.9,
         "ginto": 0.92,
         "mono": 0.98,
         "pop": 0.9
@@ -388,10 +387,9 @@
         "silk": 0.99,
         "swiss": 0.92,
         "berlin": 0.86,
-        "iron": 0.9,
-        "ginto": 0.87,
-        "quartz": 0.99,
-        "bronx": 0.87,
+        "iron": 0.91,
+        "ginto": 0.89,
+        "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.9
       }
@@ -445,9 +443,8 @@
         "minimalist": 0.96,
         "swiss": 0.93,
         "berlin": 0.89,
-        "iron": 0.89,
-        "ginto": 0.88,
-        "bronx": 0.93,
+        "iron": 0.91,
+        "ginto": 0.9,
         "mono": 0.97,
         "pop": 0.89
       }
@@ -615,13 +612,13 @@
         "Certifications: Mental Health First Aid, naloxone administration"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "minimalist": 0.96,
         "swiss": 0.96,
         "berlin": 0.89,
         "iron": 0.85,
-        "ginto": 0.85,
-        "bronx": 0.89,
+        "ginto": 0.86,
+        "bronx": 0.95,
         "mono": 0.97,
         "pop": 0.85,
         "cast": 0.99
@@ -680,8 +677,8 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.92,
-        "bronx": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
@@ -790,16 +787,16 @@
         "Languages: English, Spanish (professional)"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "silk": 0.99,
         "minimalist": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.86,
+        "ginto": 0.85,
         "path": 0.99,
-        "quartz": 0.95,
-        "bronx": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.94
@@ -919,6 +916,7 @@
         "modern": 0.95,
         "silk": 0.96,
         "minimalist": 0.96,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
         "iron": 0.85,
@@ -981,7 +979,8 @@
         "berlin": 0.85,
         "iron": 0.93,
         "ginto": 0.87,
-        "bronx": 0.91,
+        "quartz": 0.97,
+        "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.89
       }
@@ -1035,13 +1034,13 @@
         "modern": 0.97,
         "silk": 0.95,
         "minimalist": 0.96,
+        "tokyo": 0.99,
         "swiss": 0.87,
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.85,
         "symmetry": 0.99,
-        "quartz": 0.97,
-        "bronx": 0.86,
+        "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.9
       }
@@ -1221,7 +1220,7 @@
         "berlin": 0.87,
         "iron": 0.86,
         "ginto": 0.86,
-        "bronx": 0.94,
+        "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -1275,9 +1274,9 @@
         "minimalist": 0.96,
         "swiss": 0.93,
         "berlin": 0.87,
-        "iron": 0.87,
-        "ginto": 0.87,
-        "bronx": 0.9,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "bronx": 0.96,
         "mono": 0.95,
         "pop": 0.86
       }

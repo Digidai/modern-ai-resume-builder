@@ -165,13 +165,16 @@ const hashString = (value: string): number => {
 const categories = jobTitlesData as JobTitleCategory[];
 const allTitles = categories.flatMap((category) => category.titles);
 
-const slugPairs = allTitles
-  .map((title) => ({ title, slug: slugifyJobTitle(title) }))
-  .sort((a, b) => a.slug.localeCompare(b.slug, 'en'));
-
+// Each title gets the name its slug hashes to (the next free one on a collision), so adding titles
+// later doesn't rename the people on existing job pages, and every title still gets a unique name.
+const NAME_SLOTS = FIRST_NAMES.length * LAST_NAMES.length;
 const FULL_NAME_BY_SLUG = new Map<string, string>();
-for (let i = 0; i < slugPairs.length; i += 1) {
-  FULL_NAME_BY_SLUG.set(slugPairs[i].slug, nameFromIndex(i));
+const takenSlots = new Set<number>();
+for (const slug of allTitles.map(slugifyJobTitle).sort((a, b) => a.localeCompare(b, 'en'))) {
+  let slot = hashString(slug) % NAME_SLOTS;
+  while (takenSlots.has(slot)) slot = (slot + 1) % NAME_SLOTS;
+  takenSlots.add(slot);
+  FULL_NAME_BY_SLUG.set(slug, nameFromIndex(slot));
 }
 
 export const getPersonaFullNameForJobTitle = (jobTitle: string): string => {

@@ -1022,6 +1022,12 @@ const buildResumeSchema = (siteUrl, templates) => {
       location: { type: 'string' },
       website: { type: 'string' },
       linkedin: { type: 'string' },
+      photo: {
+        type: 'string',
+        maxLength: 200000,
+        pattern: '^data:image/(jpeg|png|webp);base64,',
+        description: 'Optional headshot as a base64 JPEG, PNG or WebP data URL (3:4 portrait, about 420 × 560 px). Only photo templates show it; leave it out for ATS portals and US or UK applications.',
+      },
       links: {
         type: 'array',
         maxItems: 8,

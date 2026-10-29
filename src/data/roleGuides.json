@@ -851,6 +851,96 @@
         "compact",
         "professional"
       ]
+    },
+    "Security & Facilities": {
+      "focus": "the sites you protected or kept running, the licenses you hold and the measurable effect on incidents, cleanliness, response times or work order backlog",
+      "skills": [
+        "State guard card or security license",
+        "Patrols and access control",
+        "Incident report writing",
+        "CCTV and alarm monitoring",
+        "De-escalation",
+        "Emergency response and CPR/AED",
+        "Floor care equipment",
+        "Chemical safety and SDS",
+        "Work order systems",
+        "OSHA safety practices"
+      ],
+      "sections": [
+        "Summary",
+        "Licenses and certifications",
+        "Experience",
+        "Skills",
+        "Education"
+      ],
+      "metrics": [
+        "incidents reduced",
+        "response time",
+        "square footage covered",
+        "inspection scores",
+        "work orders closed",
+        "shrink or loss recovered"
+      ],
+      "bullets": [
+        "Patrol a 22-story office tower and log 40+ checkpoints a shift in TrackTik with zero missed tours in 2025",
+        "Cut after-hours alarm calls 30% by tightening door checks and retraining tenants on badge access",
+        "Clean and maintain 45,000 sq ft of office space a night, scoring 96% or higher on monthly quality audits"
+      ],
+      "tips": [
+        "List your license or guard card type, state and expiration date near the top; many sites cannot post you without it.",
+        "Name the site type and size (hospital, warehouse, 400-unit apartment complex) so employers can picture your post.",
+        "Mention shifts you can work, such as overnights and weekends, because coverage is often the deciding factor."
+      ],
+      "templates": [
+        "classic",
+        "compact",
+        "modern"
+      ]
+    },
+    "Students & Career Changes": {
+      "focus": "the skills you can prove from school, part-time work, volunteering, projects or an earlier career, and how they carry over to the role you want next",
+      "skills": [
+        "Communication",
+        "Customer service",
+        "Teamwork",
+        "Time management",
+        "Microsoft Office and Google Workspace",
+        "Problem solving",
+        "Reliability and punctuality",
+        "Learning new tools quickly",
+        "Organization",
+        "Role-specific certifications"
+      ],
+      "sections": [
+        "Summary",
+        "Education",
+        "Experience",
+        "Projects",
+        "Skills"
+      ],
+      "metrics": [
+        "GPA or honors",
+        "customers served",
+        "hours volunteered",
+        "money raised or saved",
+        "project users or results",
+        "certifications earned"
+      ],
+      "bullets": [
+        "Served about 120 customers a shift at a busy campus cafe and trained 4 new baristas on the POS system",
+        "Built a sales dashboard in Excel and Power BI as a certificate capstone, cutting a weekly report from 3 hours to 20 minutes",
+        "Kept the books for a 400-family school PTA during a career break, closing each year with a balanced audit"
+      ],
+      "tips": [
+        "Lead with the strongest evidence you have: put Education first if you are still in school, and a recent certificate or project first if you are changing careers.",
+        "List a career gap as one honest line with dates, then add volunteer, freelance or caregiving work and the courses you took during or after it.",
+        "Rewrite past duties in the language of the job you want, for example \"handled cash and inventory\" becomes \"reconciled $8,000 in daily sales and ran weekly inventory counts\"."
+      ],
+      "templates": [
+        "classic",
+        "ivy",
+        "modern"
+      ]
     }
   },
   "fallback": {

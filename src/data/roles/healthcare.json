@@ -48,18 +48,20 @@
         "Licenses: RN (Illinois), BLS, ACLS"
       ],
       "fit": {
-        "modern": 0.92,
+        "modern": 0.9,
         "executive": 0.92,
         "academic": 0.97,
         "tech": 0.98,
         "silk": 0.99,
         "opal": 0.95,
         "minimalist": 0.93,
+        "tokyo": 0.97,
         "swiss": 0.92,
         "berlin": 0.86,
         "iron": 0.85,
-        "ginto": 0.9,
+        "ginto": 0.89,
         "symmetry": 0.95,
+        "quartz": 0.98,
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.85,
@@ -119,13 +121,13 @@
         "silk": 0.97,
         "opal": 0.96,
         "minimalist": 0.91,
+        "tokyo": 0.95,
         "swiss": 0.92,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.87,
+        "ginto": 0.88,
         "symmetry": 0.95,
         "path": 0.98,
-        "bronx": 0.93,
         "noir": 0.99,
         "mono": 0.92,
         "pop": 0.86,
@@ -184,17 +186,18 @@
         "Communication: dementia care, family updates, shift handoff"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.95,
         "executive": 0.95,
         "opal": 0.97,
         "minimalist": 0.92,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.92,
-        "ginto": 0.91,
+        "iron": 0.9,
+        "ginto": 0.89,
         "path": 0.99,
-        "quartz": 0.93,
-        "bronx": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.88,
         "cast": 0.94
@@ -252,21 +255,21 @@
         "Licenses: APRN-CNP (New Mexico), RN, DEA registration"
       ],
       "fit": {
-        "modern": 0.9,
+        "modern": 0.92,
         "executive": 0.95,
         "academic": 0.99,
         "tech": 0.96,
         "silk": 0.98,
-        "opal": 0.92,
+        "opal": 0.94,
         "minimalist": 0.9,
+        "tokyo": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.9,
+        "ginto": 0.92,
         "symmetry": 0.94,
-        "path": 0.98,
-        "quartz": 0.86,
-        "bronx": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99
@@ -330,6 +333,7 @@
         "silk": 0.98,
         "opal": 0.94,
         "minimalist": 0.9,
+        "tokyo": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.89,
@@ -395,18 +399,19 @@
         "Systems: Epic, Kronos, API Healthcare, Press Ganey"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.98,
         "executive": 0.98,
         "silk": 0.98,
         "opal": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.87,
+        "iron": 0.93,
+        "ginto": 0.89,
         "symmetry": 0.97,
-        "quartz": 0.88,
-        "bronx": 0.86,
+        "quartz": 0.9,
+        "bronx": 0.91,
         "mono": 0.91,
         "pop": 0.87,
         "cast": 0.99
@@ -528,8 +533,8 @@
         "berlin": 0.85,
         "iron": 0.93,
         "ginto": 0.94,
-        "quartz": 0.95,
-        "bronx": 0.89,
+        "quartz": 0.98,
+        "bronx": 0.94,
         "mono": 0.94,
         "pop": 0.9,
         "cast": 0.99
@@ -581,15 +586,15 @@
         "Systems: Epic, Washington IIS, Surescripts"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.98,
         "opal": 0.96,
         "minimalist": 0.93,
         "swiss": 0.92,
         "berlin": 0.88,
-        "iron": 0.86,
-        "ginto": 0.88,
+        "iron": 0.87,
+        "ginto": 0.9,
         "symmetry": 0.99,
-        "bronx": 0.9,
+        "bronx": 0.96,
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.98
@@ -642,16 +647,17 @@
         "Languages: English, Spanish (fluent)"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.97,
         "opal": 0.98,
         "minimalist": 0.91,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "ginto": 0.85,
+        "ginto": 0.86,
         "symmetry": 0.98,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -705,11 +711,11 @@
         "modern": 0.99,
         "silk": 0.99,
         "minimalist": 0.95,
-        "swiss": 0.92,
-        "berlin": 0.85,
+        "swiss": 0.95,
+        "berlin": 0.89,
         "iron": 0.9,
         "ginto": 0.87,
-        "bronx": 0.92,
+        "bronx": 0.98,
         "mono": 0.97,
         "pop": 0.86
       }
@@ -765,13 +771,13 @@
         "silk": 0.97,
         "opal": 0.96,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.97,
-        "quartz": 0.98,
-        "bronx": 0.92,
+        "bronx": 0.98,
         "mono": 0.92,
         "pop": 0.85
       }
@@ -833,16 +839,16 @@
         "tech": 0.99,
         "silk": 0.94,
         "opal": 0.96,
-        "meridian": 0.98,
         "minimalist": 0.92,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.89,
         "ginto": 0.92,
         "symmetry": 0.92,
-        "path": 0.96,
-        "quartz": 0.9,
-        "bronx": 0.86,
+        "path": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.91
       }
@@ -899,21 +905,22 @@
         "Systems: Epic Rehab, Cerner"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.98,
         "executive": 0.98,
         "silk": 0.92,
         "opal": 0.98,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.9,
+        "iron": 0.93,
+        "ginto": 0.92,
         "symmetry": 0.96,
-        "path": 0.94,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "path": 0.96,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.9,
-        "pop": 0.89,
+        "pop": 0.91,
         "cast": 0.97
       }
     },
@@ -966,10 +973,9 @@
         "minimalist": 0.93,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.88,
-        "quartz": 0.97,
-        "bronx": 0.87,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "bronx": 0.93,
         "mono": 0.92,
         "pop": 0.88
       }
@@ -984,7 +990,7 @@
           "startDate": "2024-07",
           "endDate": "",
           "isCurrent": true,
-          "description": "- Perform 14–16 OB, pelvic, abdominal and breast ultrasounds daily on GE Voluson and Logiq systems\n- Built standardized preliminary worksheets in the PACS, reducing radiologist report turnaround from 4.1 to 2.9 hours\n- Complete first-trimester nuchal translucency measurements meeting Fetal Medicine Foundation quality criteria\n- Maintain a 98% image-quality score on monthly radiologist peer review\n- Perform renal and thyroid exams for the affiliated endocrinology clinic two days a week"
+          "description": "- Perform 14–16 OB, pelvic, abdominal and breast ultrasounds daily on GE Voluson and Logiq systems\n- Built standardized preliminary worksheets in the PACS, reducing radiologist report turnaround from 4.1 to 2.9 hours\n- Complete first-trimester nuchal translucency measurements meeting Fetal Medicine Foundation quality criteria\n- Maintain a 98% image-quality score on monthly radiologist peer review"
         },
         {
           "company": "Hill Country Medical Center",
@@ -993,7 +999,7 @@
           "startDate": "2023-01",
           "endDate": "2024-05",
           "isCurrent": false,
-          "description": "- Completed 1,200 clinical hours scanning abdomen, OB/GYN, vascular and small-parts exams under registered sonographers\n- Logged 900+ supervised exams, exceeding program competency requirements\n- Prepared a case study on placental abnormalities presented to program faculty and classmates"
+          "description": "- Completed 1,200 clinical hours scanning abdomen, OB/GYN, vascular and small-parts exams under registered sonographers\n- Logged 900+ supervised exams, exceeding program competency requirements"
         }
       ],
       "education": [
@@ -1006,22 +1012,14 @@
       ],
       "projects": [],
       "skills": [
-        "Exams: OB/GYN, abdomen, pelvic, breast, thyroid, renal",
+        "Exams: OB/GYN, abdomen, pelvic, breast, thyroid",
         "Equipment: GE Voluson E10, GE Logiq E10, Philips EPIQ",
-        "Systems: Epic Radiant, ViewPoint, PACS",
-        "Certifications: RDMS (ARDMS) – Abdomen and OB/GYN, SPI, BLS"
+        "Systems: Epic Radiant, ViewPoint, PACS"
       ],
       "fit": {
-        "minimalist": 0.93,
-        "swiss": 0.91,
-        "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.89,
-        "symmetry": 0.99,
-        "quartz": 0.88,
-        "bronx": 0.85,
-        "mono": 0.96,
-        "pop": 0.9
+        "berlin": 0.94,
+        "quartz": 0.99,
+        "bronx": 0.89
       }
     },
     "Sonographer": {
@@ -1074,14 +1072,15 @@
         "modern": 0.97,
         "executive": 0.97,
         "silk": 0.96,
+        "opal": 0.98,
         "minimalist": 0.94,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.87,
         "symmetry": 0.98,
-        "quartz": 0.87,
-        "bronx": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
@@ -1134,15 +1133,14 @@
         "Certifications: MLT (ASCP), BLS"
       ],
       "fit": {
-        "modern": 0.98,
         "minimalist": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
         "symmetry": 0.99,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.86
       }
@@ -1197,10 +1195,10 @@
         "minimalist": 0.97,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.86,
-        "quartz": 0.93,
-        "bronx": 0.89,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.95,
+        "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.85
       }
@@ -1257,14 +1255,13 @@
         "Systems: Sunquest, Thermo Scientific TSQ, Hologic Panther"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.94,
         "opal": 0.97,
         "minimalist": 0.9,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.87,
+        "iron": 0.93,
+        "ginto": 0.89,
         "symmetry": 0.96,
         "quartz": 0.9,
         "bronx": 0.9,
@@ -1327,7 +1324,7 @@
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.85
@@ -1382,12 +1379,13 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.86,
         "symmetry": 0.96,
-        "quartz": 0.94,
+        "quartz": 0.93,
         "bronx": 0.9,
         "mono": 0.92,
         "pop": 0.88,
@@ -1451,13 +1449,15 @@
         "silk": 0.96,
         "opal": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.91,
         "ginto": 0.87,
         "symmetry": 0.96,
-        "quartz": 0.92,
-        "bronx": 0.93,
+        "path": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.89,
         "cast": 0.98
@@ -1511,10 +1511,9 @@
       "fit": {
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.89,
-        "quartz": 0.97,
-        "bronx": 0.9,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "bronx": 0.96,
         "mono": 0.97,
         "pop": 0.92
       }
@@ -1578,14 +1577,15 @@
         "silk": 0.94,
         "opal": 0.94,
         "minimalist": 0.92,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.9,
         "symmetry": 0.94,
-        "path": 0.98,
-        "quartz": 0.92,
-        "bronx": 0.88,
+        "path": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.98
@@ -1693,15 +1693,15 @@
         "Certifications: CMAA (NHA), HIPAA training"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "silk": 0.98,
         "minimalist": 0.94,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.87,
-        "quartz": 0.96,
-        "bronx": 0.86,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "quartz": 0.98,
+        "bronx": 0.92,
         "mono": 0.92,
         "pop": 0.87
       }
@@ -1765,7 +1765,7 @@
         "quartz": 0.97,
         "bronx": 0.93,
         "mono": 0.93,
-        "pop": 0.89
+        "pop": 0.87
       }
     },
     "Social Worker": {
@@ -1826,13 +1826,14 @@
         "silk": 0.98,
         "opal": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.95,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.89,
+        "iron": 0.86,
+        "ginto": 0.87,
         "symmetry": 0.92,
-        "quartz": 0.94,
-        "bronx": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.88
       }
@@ -1892,6 +1893,7 @@
         "modern": 0.99,
         "opal": 0.99,
         "minimalist": 0.9,
+        "tokyo": 0.96,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.9,
@@ -1949,15 +1951,15 @@
         "Systems: ESO ePCR, LUCAS device, Stryker Power-PRO"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "silk": 0.97,
         "minimalist": 0.95,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.88,
+        "iron": 0.89,
+        "ginto": 0.86,
         "symmetry": 0.99,
-        "bronx": 0.98,
+        "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.86
       }
@@ -2009,16 +2011,15 @@
         "Certifications: NRP (NREMT), Arizona Paramedic, ACLS, PALS, PHTLS"
       ],
       "fit": {
-        "modern": 0.98,
         "executive": 0.99,
         "silk": 0.98,
         "minimalist": 0.94,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.86,
+        "iron": 0.87,
         "ginto": 0.85,
         "symmetry": 0.96,
-        "quartz": 0.88,
+        "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
@@ -2078,7 +2079,7 @@
         "iron": 0.87,
         "ginto": 0.86,
         "quartz": 0.93,
-        "bronx": 0.9,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.87
       }
@@ -2130,7 +2131,6 @@
         "Licenses: RDH (Oregon), Local Anesthesia Endorsement, NBDHE"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.96,
         "opal": 0.97,
         "minimalist": 0.93,
@@ -2139,8 +2139,8 @@
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.96,
-        "quartz": 0.88,
-        "bronx": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.87
       }
@@ -2270,13 +2270,14 @@
         "silk": 0.94,
         "opal": 0.97,
         "minimalist": 0.92,
+        "tokyo": 0.98,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.9,
         "symmetry": 0.94,
         "quartz": 0.9,
-        "bronx": 0.91,
+        "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.9,
         "cast": 0.98
@@ -2329,19 +2330,20 @@
         "Certifications: CPC (AAPC), CRC (AAPC)"
       ],
       "fit": {
-        "modern": 0.94,
+        "modern": 0.96,
         "executive": 0.96,
         "silk": 0.95,
         "minimalist": 0.93,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.94,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.91,
-        "pop": 0.85
+        "pop": 0.87
       }
     },
     "Medical Biller": {
@@ -2391,15 +2393,14 @@
         "Certifications: CPB (AAPC)"
       ],
       "fit": {
-        "modern": 0.97,
         "silk": 0.98,
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.89,
         "ginto": 0.85,
-        "quartz": 0.94,
-        "bronx": 0.86,
+        "quartz": 0.96,
+        "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.99
@@ -2452,18 +2453,19 @@
         "Certifications: RHIT (AHIMA)"
       ],
       "fit": {
-        "modern": 0.92,
+        "modern": 0.94,
         "executive": 0.97,
         "silk": 0.97,
         "minimalist": 0.92,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.85,
-        "ginto": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
         "symmetry": 0.95,
-        "path": 0.95,
-        "quartz": 0.95,
-        "bronx": 0.88,
+        "path": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.94,
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
@@ -2522,10 +2524,10 @@
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.87,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "mono": 0.92,
-        "pop": 0.89,
+        "pop": 0.92,
         "cast": 0.99
       }
     },
@@ -2586,10 +2588,10 @@
         "minimalist": 0.94,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.91,
-        "quartz": 0.91,
-        "bronx": 0.87,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.93
       }
@@ -2696,7 +2698,7 @@
         "quartz": 0.94,
         "bronx": 0.95,
         "mono": 0.95,
-        "pop": 0.91
+        "pop": 0.94
       }
     },
     "Emergency Room Nurse": {
@@ -2749,9 +2751,9 @@
         "minimalist": 0.96,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.86,
-        "quartz": 0.88,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.86,
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.87
@@ -2807,13 +2809,14 @@
         "modern": 0.98,
         "executive": 0.99,
         "silk": 0.98,
-        "minimalist": 0.96,
+        "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.92,
-        "bronx": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.87,
         "cast": 0.97
@@ -2928,14 +2931,14 @@
         "Licenses: RN (Tennessee, compact), BLS, ACLS"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "minimalist": 0.94,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.85,
-        "ginto": 0.85,
-        "quartz": 0.88,
-        "bronx": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.85
       }
@@ -2992,15 +2995,16 @@
         "Systems: PointClickCare, SmartLinx, Abaqis"
       ],
       "fit": {
+        "modern": 0.99,
         "silk": 0.98,
         "opal": 0.99,
         "minimalist": 0.92,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.96,
-        "ginto": 0.89,
-        "quartz": 0.9,
-        "bronx": 0.88,
+        "iron": 0.94,
+        "ginto": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.96
       }
@@ -3052,16 +3056,18 @@
         "Licenses: Respiratory Care Practitioner (Florida)"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "executive": 0.99,
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
         "symmetry": 0.93,
-        "quartz": 0.94,
+        "path": 0.99,
+        "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.86
@@ -3106,16 +3112,15 @@
         "Certifications: BLS, Kinesio Taping Practitioner (CKTP)"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.98,
-        "sidebar": 0.96,
-        "creative": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.98,
         "swiss": 0.94,
         "berlin": 0.85,
-        "iron": 0.85,
-        "ginto": 0.85,
-        "quartz": 0.86,
-        "bronx": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.89
       }
@@ -3179,6 +3184,7 @@
         "silk": 0.93,
         "opal": 0.98,
         "minimalist": 0.9,
+        "tokyo": 0.95,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.89,
@@ -3306,9 +3312,8 @@
         "silk": 0.99,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.95,
-        "bronx": 0.93,
+        "iron": 0.93,
+        "ginto": 0.97,
         "mono": 0.95,
         "pop": 0.93
       }
@@ -3417,9 +3422,9 @@
         "silk": 0.99,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.95,
-        "ginto": 0.93,
-        "bronx": 0.9,
+        "iron": 0.97,
+        "ginto": 0.95,
+        "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.93
       }

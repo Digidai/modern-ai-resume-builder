@@ -1,0 +1,699 @@
+{
+  "family": "Sales & Support",
+  "guide": null,
+  "titles": {
+    "Call Center Agent": {
+      "summary": "Call center agent with 5 years handling inbound billing, service and pharmacy calls in California's Central Valley. Holds a 92% first-call resolution rate across about 70 calls a day while keeping average handle time under 6 minutes. Stays calm with upset callers and writes account notes the next agent can act on.",
+      "experience": [
+        {
+          "company": "Tri-Valley Broadband",
+          "role": "Call Center Agent",
+          "location": "Fresno, CA",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Answer 65–75 inbound calls a day on billing, outages and plan changes in Genesys Cloud, keeping average handle time at 5:40\n- Hold a 92% first-call resolution rate and a 4.6/5 post-call survey score, top 10% of a 120-agent floor\n- Process payments, payment arrangements and service orders in Salesforce Service Cloud with a 99% audit accuracy score\n- Mentor 6 new hires a year during nesting week on call flow and PCI-compliant payment handling"
+        },
+        {
+          "company": "Central Valley Pharmacy Services",
+          "role": "Customer Service Representative",
+          "location": "Visalia, CA",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Handled 50 calls a day on prescription refills and insurance questions, verifying caller identity under HIPAA rules\n- Escalated prior authorization issues to pharmacists with complete notes, cutting repeat callbacks by 15%"
+        },
+        {
+          "company": "Fresh Harvest Grocery",
+          "role": "Cashier (part-time)",
+          "location": "Fresno, CA",
+          "startDate": "2019-08",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Handled 300 transactions per shift with a balanced cash drawer on every audit"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Joaquin Plains Community College",
+          "degree": "A.A. in Business",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Customer Service: de-escalation, first-call resolution, payment arrangements, account verification",
+        "Systems: Genesys Cloud, Salesforce Service Cloud, Zendesk, Microsoft Teams",
+        "Compliance: PCI DSS payment handling, HIPAA basics, call recording disclosures",
+        "Typing: 55 WPM with accurate call notes"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.96,
+        "opal": 0.94,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.99,
+        "bronx": 0.92,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.97
+      }
+    },
+    "Insurance Agent": {
+      "summary": "Licensed property and casualty and life insurance agent with 6 years at independent agencies in Georgia. Manages a 1,150-policy book with $2.3M in written premium and lifted retention from 86% to 91% through annual coverage reviews. Quotes across 9 carriers and explains coverage gaps in plain language.",
+      "experience": [
+        {
+          "company": "Oconee Family Insurance Agency",
+          "role": "Licensed Insurance Agent",
+          "location": "Athens, GA",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a book of 1,150 personal and small commercial policies with $2.3M in written premium across 9 carriers in Applied Epic\n- Wrote $410k in new premium in 2025, 118% of goal, mostly home and auto bundles with umbrella add-ons\n- Raised retention from 86% to 91% by running annual coverage reviews for every household with 3 or more policies\n- Quote and bind business owner policies, workers' compensation and term life through EZLynx and carrier portals"
+        },
+        {
+          "company": "Piedmont Mutual Insurance Services",
+          "role": "Customer Service Representative",
+          "location": "Gainesville, GA",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Processed endorsements, certificates of insurance and billing changes for 1,800 policies\n- Earned a Georgia Property and Casualty license within 3 months and began quoting personal auto"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northeast Georgia State College",
+          "degree": "BBA in Marketing",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Georgia Property and Casualty, Georgia Life Accident and Sickness",
+        "Lines: personal auto, homeowners, umbrella, BOP, workers' compensation, term life",
+        "Systems: Applied Epic, EZLynx, carrier rating portals, Microsoft Excel",
+        "Sales: needs analysis, cross-selling, renewal reviews, referral programs"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.89
+      }
+    },
+    "Pharmaceutical Sales Representative": {
+      "summary": "Pharmaceutical sales representative with 7 years in medical and pharmaceutical sales, the last 4 in cardiometabolic brands. Grew territory share for the lead SGLT2 brand from 11.2% to 14.8% in 2025, ranking 6th of 74 reps nationally. Builds trust with primary care and endocrinology offices through clinical, on-label conversations.",
+      "experience": [
+        {
+          "company": "Larkspur Therapeutics",
+          "role": "Pharmaceutical Sales Representative, Cardiometabolic",
+          "location": "Charlotte, NC",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Promote 2 branded cardiometabolic products to 180 primary care and endocrinology targets across a 9-county territory\n- Grew territory market share for the lead SGLT2 brand from 11.2% to 14.8% in 2025, ranking 6th of 74 reps nationally\n- Plan call cycles in Veeva CRM using IQVIA prescriber data and support formulary pull-through at 3 regional health systems\n- Run 40 speaker and lunch programs a year within PhRMA Code guidelines and Sunshine Act spend reporting"
+        },
+        {
+          "company": "Brightfield Diagnostics",
+          "role": "Territory Sales Associate",
+          "location": "Greensboro, NC",
+          "startDate": "2019-07",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Sold point-of-care testing supplies to 120 physician offices, finishing 2021 at 109% of quota\n- Opened 22 new accounts by targeting urgent care clinics in the Triad region"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wake Hollow University",
+          "degree": "B.S. in Biology",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Therapeutic Areas: type 2 diabetes, heart failure, chronic kidney disease, lipid management",
+        "Selling: clinical selling, call planning, speaker programs, formulary pull-through",
+        "Systems: Veeva CRM, IQVIA prescriber data, Salesforce, Microsoft Excel",
+        "Compliance: PhRMA Code, Sunshine Act reporting, on-label promotion, sample accountability"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "Solutions Engineer": {
+      "summary": "Solutions engineer with 8 years in presales and integration work for B2B data and API software. Supported $6.8M in closed ARR in FY2025 and holds a 72% technical win rate across 18 proofs of concept a year. Turns a prospect's architecture into a working demo built on their own data sources.",
+      "experience": [
+        {
+          "company": "Quillstack Data",
+          "role": "Senior Solutions Engineer",
+          "location": "Austin, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Partner with 5 account executives on mid-market and enterprise deals for a data integration platform, supporting $6.8M in closed ARR in FY2025\n- Run discovery and tailored demos and lead 18 proofs of concept a year with a 72% technical win rate\n- Build reference pipelines in Python, SQL and Terraform connecting Snowflake, Salesforce and PostgreSQL for prospects\n- Answer 40 security questionnaires a year on SOC 2, SSO/SAML and data residency with the security team"
+        },
+        {
+          "company": "Harrowgate Software",
+          "role": "Solutions Engineer",
+          "location": "Austin, TX",
+          "startDate": "2020-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Delivered 150 demos a year for an API management product to platform and security teams\n- Wrote a demo environment reset script that cut setup time from 2 hours to 15 minutes"
+        },
+        {
+          "company": "Ravelin Systems Integration",
+          "role": "Integration Consultant",
+          "location": "Dallas, TX",
+          "startDate": "2018-07",
+          "endDate": "2020-02",
+          "isCurrent": false,
+          "description": "- Built REST and SFTP integrations for 14 healthcare clients using MuleSoft"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Plains University",
+          "degree": "B.S. in Computer Science",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Presales: discovery, technical demos, proofs of concept, RFP responses, solution design",
+        "Technical: Python, SQL, REST APIs, Terraform, Docker",
+        "Platforms: Snowflake, AWS, Salesforce, PostgreSQL, Okta",
+        "Security: SOC 2 controls, SSO/SAML, encryption basics"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.99
+      }
+    },
+    "Customer Support Specialist": {
+      "summary": "Customer support specialist with 4 years in SaaS and e-commerce support, now owning billing and integration tickets for a scheduling platform. Keeps a 95% CSAT across about 50 tickets a day and wrote help articles that cut repeat how-to tickets by 18%. Reproduces bugs carefully and hands engineering tickets they can act on.",
+      "experience": [
+        {
+          "company": "Tallyhaus Scheduling",
+          "role": "Customer Support Specialist",
+          "location": "Portland, OR",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Resolve 45–55 tickets a day across email, chat and phone in Zendesk with a 95% CSAT\n- Own billing and integration issues for Stripe and Google Calendar sync, filing Jira bugs with clear repro steps\n- Wrote 30 help center articles that cut repeat how-to tickets by 18% in 6 months\n- Keep first response under 2 hours for 98% of tickets"
+        },
+        {
+          "company": "Willamette Outdoor Co.",
+          "role": "Customer Service Associate",
+          "location": "Salem, OR",
+          "startDate": "2022-05",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Handled order, return and warranty requests for 60 customers a day by phone and email in Gorgias\n- Processed refunds and exchanges in Shopify with complete records for every chargeback dispute"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cascade Ridge State University",
+          "degree": "B.A. in Communication",
+          "startDate": "2018-09",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Support: ticket triage, troubleshooting, escalation, knowledge base writing, macros",
+        "Tools: Zendesk, Jira, Stripe, Shopify, Gorgias, Loom",
+        "Metrics: CSAT, first-response time, resolution time, ticket deflection"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.91,
+        "pop": 0.98
+      }
+    },
+    "Car Salesperson": {
+      "summary": "Automotive sales consultant with 6 years selling cars and powersports vehicles in the Phoenix area. Sold 172 units in 2025 and placed in the top 3 of 22 salespeople in 7 months of the year. Responds to leads fast, works deals cleanly with the F&I office and earns repeat and referral buyers.",
+      "experience": [
+        {
+          "company": "Copper Canyon Motors",
+          "role": "Sales Consultant",
+          "location": "Mesa, AZ",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sold 172 new and used vehicles in 2025, averaging 14 units a month and ranking top 3 of 22 in 7 months\n- Work internet and phone leads in VinSolutions, responding within 10 minutes and setting 45 showroom appointments a month\n- Present trade-in values, financing and service contracts with the F&I team, lifting back-end products per unit by 12%\n- Hold a 94% sales satisfaction score on manufacturer surveys"
+        },
+        {
+          "company": "Desert Sun Powersports",
+          "role": "Sales Associate",
+          "location": "Tempe, AZ",
+          "startDate": "2020-04",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Sold an average of 8 ATVs and motorcycles a month plus gear and accessories\n- Ran walkarounds and test rides and followed up with every unsold customer within 48 hours"
+        },
+        {
+          "company": "Valley Wireless Store",
+          "role": "Retail Sales Associate",
+          "location": "Chandler, AZ",
+          "startDate": "2018-06",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Sold phones and service plans, hitting the accessory attach goal in 10 of 12 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Salt River Valley Community College",
+          "degree": "Coursework in Business Administration",
+          "startDate": "2017-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Sales: needs assessment, test drives, negotiation, trade-in walkarounds, follow-up",
+        "Systems: VinSolutions, DealerSocket, CDK Drive, Kelley Blue Book, vAuto",
+        "Product: new and certified pre-owned inventory, EV basics, service contracts",
+        "License: Arizona driver license with clean record"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
+      }
+    },
+    "Telemarketer": {
+      "summary": "Telemarketer with 2 years of outbound calling for home warranty and alarm monitoring campaigns. Converted 6.8% of live contacts to booked appointments in Q2 2026, second of 28 agents. Follows scripts and calling rules closely while keeping conversations natural.",
+      "experience": [
+        {
+          "company": "Pinecrest Outreach Group",
+          "role": "Telemarketer",
+          "location": "Tampa, FL",
+          "startDate": "2024-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Make 120–150 outbound dials a day in Five9, setting an average of 9 appointments a week\n- Converted 6.8% of live contacts to booked appointments in Q2 2026, second of 28 agents\n- Follow approved scripts, Do Not Call scrubbing and TCPA consent rules, passing every quality audit in 2025"
+        },
+        {
+          "company": "Gulfview Cinema",
+          "role": "Concessions Lead (part-time)",
+          "location": "Clearwater, FL",
+          "startDate": "2022-05",
+          "endDate": "2024-05",
+          "isCurrent": false,
+          "description": "- Suggested combo upgrades that raised average ticket by 8% on my shifts\n- Trained 5 new hires on register and food safety basics"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tampa Bay Gateway College",
+          "degree": "A.A. in General Studies",
+          "startDate": "2022-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Outbound Calling: cold calling, objection handling, appointment setting, script adherence",
+        "Systems: Five9, Salesforce, HubSpot, Google Sheets",
+        "Compliance: TCPA, Do Not Call list, call recording disclosures",
+        "Languages: English, conversational Spanish"
+      ],
+      "fit": {
+        "quartz": 0.98,
+        "bronx": 0.95
+      }
+    },
+    "Bilingual Customer Service Representative": {
+      "summary": "Bilingual English and Spanish customer service representative with 5 years supporting health plan and credit union members in El Paso. Handles 55 calls a day, 60% in Spanish, with a 90% quality score and 4.7 out of 5 member satisfaction. Also translates member letters and phone prompts for compliance review.",
+      "experience": [
+        {
+          "company": "Rio Grande Health Plans",
+          "role": "Bilingual Member Services Representative",
+          "location": "El Paso, TX",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle 55 inbound calls a day from Medicaid and Marketplace members in English and Spanish on eligibility, claims and provider searches\n- Maintain a 90% quality score and 4.7/5 member satisfaction with 60% of calls in Spanish\n- Translated member letters and IVR prompts for 3 outreach campaigns, approved by the compliance team\n- Document every call in Salesforce Health Cloud and follow HIPAA identity verification steps"
+        },
+        {
+          "company": "Border City Federal Credit Union",
+          "role": "Member Service Representative",
+          "location": "El Paso, TX",
+          "startDate": "2021-08",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Opened accounts and handled debit card disputes for Spanish-speaking members under Reg E timelines\n- Wrote a Spanish dispute checklist that cut repeat callbacks by 20%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Franklin Mountains State University",
+          "degree": "B.A. in Spanish",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Languages: English and Spanish with native fluency, written translation",
+        "Customer Service: call handling, de-escalation, eligibility and claims questions, account maintenance",
+        "Systems: Salesforce Health Cloud, Avaya, Facets, Microsoft 365",
+        "Compliance: HIPAA, Medicaid member rights, Reg E dispute basics"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "pop": 0.9
+      }
+    },
+    "Retail Banking Associate": {
+      "summary": "Retail banking associate with 4 years in branch banking, from teller to account opening and client referrals. Reached 121% of the 2025 referral goal with 14 qualified mortgage and investment referrals a month. Keeps account opening clean, with zero CIP exceptions in 2 internal audits.",
+      "experience": [
+        {
+          "company": "Harbor Mill Savings Bank",
+          "role": "Retail Banking Associate",
+          "location": "Providence, RI",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Open 25–30 checking, savings and CD accounts a month, meeting CIP and KYC requirements with zero exceptions in 2 internal audits\n- Refer 14 qualified clients a month to mortgage and wealth partners, 121% of the 2025 referral goal\n- Process teller transactions and cash orders up to $40k with a balanced drawer on 99.6% of days\n- File currency transaction reports and escalate unusual activity under BSA/AML procedures"
+        },
+        {
+          "company": "Narragansett Credit Union",
+          "role": "Teller",
+          "location": "Warwick, RI",
+          "startDate": "2022-01",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Processed about 120 deposits, withdrawals and loan payments a day\n- Cross-trained on notary services and debit card dispute intake"
+        }
+      ],
+      "education": [
+        {
+          "school": "Blackstone Valley College",
+          "degree": "B.S. in Finance",
+          "startDate": "2017-09",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Banking: account opening, teller operations, CDs, debit card disputes, online banking enrollment",
+        "Compliance: BSA/AML, CIP and KYC, Reg CC, Reg E, CTR filing",
+        "Systems: Fiserv DNA, Salesforce Financial Services Cloud, Verafin",
+        "Licenses: FINRA SIE"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "pop": 0.95
+      }
+    },
+    "Real Estate Sales Agent": {
+      "summary": "Licensed Texas real estate sales agent with 5 years in residential sales after 3 years in title and escrow. Closed 31 transactions worth $10.4M in 2025, with listings selling at 98.6% of list price. Most business now comes from past clients and referrals.",
+      "experience": [
+        {
+          "company": "Bluebonnet Hearth Realty",
+          "role": "Real Estate Sales Agent",
+          "location": "San Antonio, TX",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Closed 31 transactions in 2025 totaling $10.4M in sales volume, 60% on the buyer side\n- Sold listings at an average of 98.6% of list price with a 19-day median days on market\n- Generate 70% of business from past clients and referrals tracked in Follow Up Boss\n- Price homes with CMAs from MLS data and manage buyer representation agreements, TREC contracts and option periods through closing in dotloop"
+        },
+        {
+          "company": "Mission Trail Title Company",
+          "role": "Escrow Assistant",
+          "location": "San Antonio, TX",
+          "startDate": "2018-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Prepared settlement statements and closing packages for about 40 closings a month\n- Coordinated payoffs, title curative items and funding with lenders and agents"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hill Country State University",
+          "degree": "BBA in Marketing",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licensing: Texas Real Estate Sales Agent license, Accredited Buyer's Representative designation",
+        "Sales: listing presentations, CMAs, negotiation, open houses, buyer consultations",
+        "Tools: MLS, Follow Up Boss, dotloop, Canva, Zillow Premier Agent",
+        "Transactions: TREC promulgated contracts, option periods, inspection and appraisal negotiations"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.86,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.91
+      }
+    },
+    "Solar Sales Representative": {
+      "summary": "Residential solar sales representative with 3 years selling rooftop solar and battery systems in southern Nevada. Sold 88 systems totaling 712 kW in 2025, 115% of quota, with a 9% cancellation rate against a 17% team average. Explains bills, financing and interconnection timelines clearly so deals hold through install.",
+      "experience": [
+        {
+          "company": "Mojave Bright Solar",
+          "role": "Residential Solar Sales Representative",
+          "location": "Las Vegas, NV",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Sold 88 residential systems totaling 712 kW in 2025, 115% of quota\n- Run in-home and virtual consultations with Aurora Solar designs, utility bill analysis and cash, loan and lease comparisons\n- Keep cancellations at 9% versus a 17% team average by setting clear expectations on permitting and utility interconnection\n- Self-generate 40% of appointments through referrals and community events"
+        },
+        {
+          "company": "Red Rock Fitness Club",
+          "role": "Membership Sales Advisor",
+          "location": "Henderson, NV",
+          "startDate": "2020-09",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Sold about 35 memberships a month, leading the club in personal training add-ons for 2022\n- Ran tours and follow-up calls for walk-in and web leads"
+        }
+      ],
+      "education": [
+        {
+          "school": "Desert Valley Community College",
+          "degree": "A.A.S. in Business Management",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Solar: system sizing, net metering, utility bill analysis, battery storage, interconnection",
+        "Sales: in-home consultations, objection handling, referral generation, financing comparisons",
+        "Tools: Aurora Solar, Enerflo, Salesforce, lender financing portals",
+        "Certifications: NABCEP PV Associate"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "pop": 0.92
+      }
+    },
+    "Door-to-Door Sales Representative": {
+      "summary": "Door-to-door sales representative with 3 seasons in pest control and home security field sales. Sold 211 monitored security accounts in 2025, 4th of 60 reps in the region. Plans routes carefully and walks every customer through the contract, keeping cancellations at 4%.",
+      "experience": [
+        {
+          "company": "Summitline Home Security",
+          "role": "Door-to-Door Sales Representative",
+          "location": "Raleigh, NC",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Knock 120–150 doors a day and close an average of 18 monitored security accounts a month\n- Sold 211 accounts in 2025, ranking 4th of 60 reps in the region\n- Log every door and callback in SalesRabbit and use its heat maps to plan routes\n- Keep cancellations at 4% within the 3-day cooling-off period by reviewing each contract line by line"
+        },
+        {
+          "company": "Prairie Guard Pest Control",
+          "role": "Summer Sales Representative",
+          "location": "Frisco, TX",
+          "startDate": "2024-05",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Sold 164 recurring pest control plans over 14 weeks in suburban Dallas neighborhoods"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mountain West State University",
+          "degree": "B.S. in Business",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Sales: door approach, objection handling, same-day closing, territory planning",
+        "Tools: SalesRabbit, Spotio, Salesforce mobile, Google Maps",
+        "Compliance: FTC Cooling-Off Rule, local solicitation permits, contract walkthroughs"
+      ]
+    },
+    "Customer Service Manager": {
+      "summary": "Customer service manager with 11 years in contact centers, leading 46 agents for a home appliance retailer. Raised CSAT from 81% to 89% and cut average speed of answer from 3:10 to 1:05 in 18 months. Runs a tight QA and coaching program and manages a $3.1M labor budget.",
+      "experience": [
+        {
+          "company": "Bellwether Home Appliances",
+          "role": "Customer Service Manager",
+          "location": "Columbus, OH",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead 4 supervisors and 46 agents handling 38,000 phone, chat and email contacts a month for orders, delivery and warranty service\n- Raised CSAT from 81% to 89% and cut average speed of answer from 3:10 to 1:05 in 18 months\n- Rebuilt the QA scorecard and coaching cadence in NICE CXone, lifting quality scores by 9 points\n- Manage a $3.1M annual labor budget and plan seasonal hiring with workforce management"
+        },
+        {
+          "company": "Riverbend Office Supply",
+          "role": "Customer Service Supervisor",
+          "location": "Dayton, OH",
+          "startDate": "2017-04",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Supervised 14 agents supporting B2B order and invoice questions\n- Cut backorder complaints 22% by building a daily stock alert process with logistics"
+        },
+        {
+          "company": "Riverbend Office Supply",
+          "role": "Customer Service Representative",
+          "location": "Dayton, OH",
+          "startDate": "2015-08",
+          "endDate": "2017-03",
+          "isCurrent": false,
+          "description": "- Handled 70 calls a day and was promoted after 20 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio Heartland University",
+          "degree": "B.A. in Business Administration",
+          "startDate": "2011-09",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: hiring, coaching, performance reviews, QA programs, escalation management",
+        "Operations: staffing plans, labor budgets, SLAs, process improvement",
+        "Systems: NICE CXone, Salesforce Service Cloud, Zendesk, Tableau, Excel",
+        "Metrics: CSAT, NPS, ASA, AHT, first-contact resolution"
+      ],
+      "fit": {
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.87,
+        "cast": 0.99
+      }
+    },
+    "Chat Support Agent": {
+      "summary": "Chat support agent with 2 years handling live chat for a meal kit subscription company. Resolves about 90 conversations a shift across 3–4 concurrent chats with a 94% CSAT and a 35-second median first response. Writes clear, friendly replies and spots patterns worth escalating.",
+      "experience": [
+        {
+          "company": "Parcelnest Meal Kits",
+          "role": "Chat Support Agent",
+          "location": "Kansas City, MO",
+          "startDate": "2024-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle 3–4 concurrent chats in Intercom, resolving about 90 conversations per shift\n- Hold a 94% CSAT with a 35-second median first response\n- Process refunds, delivery credits and subscription changes within approved limits in Shopify and Recharge\n- Flagged repeated late deliveries to logistics, which led to a carrier change in 2 regions"
+        },
+        {
+          "company": "Plaza Corner Bookstore Café",
+          "role": "Barista and Shift Lead (part-time)",
+          "location": "Kansas City, MO",
+          "startDate": "2022-06",
+          "endDate": "2024-07",
+          "isCurrent": false,
+          "description": "- Ran the register and closing duties and trained 4 new baristas"
+        }
+      ],
+      "education": [
+        {
+          "school": "Missouri River Community College",
+          "degree": "A.A. in General Studies",
+          "startDate": "2022-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Chat Support: concurrent chats, written tone, macros, troubleshooting, refunds",
+        "Tools: Intercom, Zendesk, Shopify, Recharge, Slack",
+        "Typing: 70 WPM"
+      ]
+    }
+  }
+}

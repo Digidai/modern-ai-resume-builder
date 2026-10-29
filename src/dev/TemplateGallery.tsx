@@ -2,13 +2,13 @@ import React from 'react';
 import { useSearchParams } from 'react-router';
 import ResumePreview from '../components/ResumePreview';
 import { TEMPLATE_IDS } from '../constants/templates';
-import { FIXTURES, type FixtureName } from './fixtures';
+import { FIXTURES, SAMPLE_PHOTO, type FixtureName } from './fixtures';
 
 /**
  * Dev-only template gallery (not bundled in production).
  * /dev/templates?f=long            → every template, scaled down
  * /dev/templates?t=modern&f=sparse → one template at true A4 size, for screenshots
- * Optional design overrides: &accent=%23A0442A  &font=garamond  &scale=0.9
+ * Optional design overrides: &accent=%23A0442A  &font=garamond  &scale=0.9  &photo=1 (sample photo)
  */
 const TemplateGallery: React.FC = () => {
   const [params] = useSearchParams();
@@ -18,6 +18,7 @@ const TemplateGallery: React.FC = () => {
   const accent = params.get('accent');
   const fixture = {
     ...baseFixture,
+    ...(params.get('photo') === '1' ? { photo: SAMPLE_PHOTO } : {}),
     design: {
       accent: accent && /^#[0-9a-f]{6}$/i.test(accent) ? accent : '',
       font: params.get('font') || 'template',

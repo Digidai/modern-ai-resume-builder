@@ -54,6 +54,8 @@ export interface ResumeData {
   linkedin: string;
   /** Additional profiles and links shown with the contact details. */
   links: ResumeLink[];
+  /** Optional headshot as a JPEG/PNG/WebP data URL; only photo templates show it. */
+  photo?: string;
   summary: string;
   experience: Experience[];
   education: Education[];

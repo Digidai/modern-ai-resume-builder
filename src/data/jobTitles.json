@@ -175,7 +175,35 @@
       "Mechanical Engineer",
       "Hardware Engineer",
       "Controls Engineer",
-      "Mechanical Engineering Intern"
+      "Mechanical Engineering Intern",
+      "Generative AI Engineer",
+      "Robotics Engineer",
+      "FPGA Engineer",
+      "Cybersecurity Analyst",
+      "SAP Consultant",
+      "ServiceNow Developer",
+      "Mainframe Developer",
+      "Technical Support Specialist",
+      "Chemical Engineer",
+      "Biomedical Engineer",
+      "Aerospace Engineer",
+      "Environmental Engineer",
+      "Industrial Engineer",
+      "Petroleum Engineer",
+      "Test Engineer",
+      "Automation Engineer",
+      "Data Center Technician",
+      "Telecommunications Technician",
+      "Electronics Technician",
+      "Mechatronics Engineer",
+      "Mining Engineer",
+      "Nuclear Engineer",
+      "Materials Engineer",
+      "Agricultural Engineer",
+      "Marine Engineer",
+      "Drupal Developer",
+      "Low-Code Developer",
+      "RPA Developer"
     ]
   },
   {
@@ -242,7 +270,14 @@
       "Senior Graphic Designer",
       "Junior Graphic Designer",
       "Product Management Intern",
-      "Lead Product Manager"
+      "Lead Product Manager",
+      "Packaging Designer",
+      "Game Designer",
+      "Conversational Designer",
+      "Accessibility Specialist",
+      "Furniture Designer",
+      "Product Owner Intern",
+      "Design Intern"
     ]
   },
   {
@@ -299,7 +334,16 @@
       "Senior Business Analyst",
       "Healthcare Data Analyst",
       "Power BI Developer",
-      "Tableau Developer"
+      "Tableau Developer",
+      "Quantitative Researcher",
+      "Research Analyst",
+      "Sports Analyst",
+      "Credit Risk Analyst",
+      "Supply Chain Data Analyst",
+      "HR Data Analyst",
+      "Clinical Data Analyst",
+      "Data Annotator",
+      "AI Trainer"
     ]
   },
   {
@@ -363,7 +407,12 @@
       "E-commerce Marketing Manager",
       "Marketing Director",
       "VP of Marketing",
-      "Head of Growth"
+      "Head of Growth",
+      "Public Relations Specialist",
+      "Amazon Marketplace Manager",
+      "TikTok Content Creator",
+      "UGC Creator",
+      "Brand Ambassador"
     ]
   },
   {
@@ -419,7 +468,21 @@
       "Customer Onboarding Specialist",
       "Call Center Representative",
       "Call Center Supervisor",
-      "Medical Device Sales Representative"
+      "Medical Device Sales Representative",
+      "Call Center Agent",
+      "Insurance Agent",
+      "Pharmaceutical Sales Representative",
+      "Solutions Engineer",
+      "Customer Support Specialist",
+      "Car Salesperson",
+      "Telemarketer",
+      "Bilingual Customer Service Representative",
+      "Retail Banking Associate",
+      "Real Estate Sales Agent",
+      "Solar Sales Representative",
+      "Door-to-Door Sales Representative",
+      "Customer Service Manager",
+      "Chat Support Agent"
     ]
   },
   {
@@ -476,7 +539,13 @@
       "Office Administrator",
       "Administrative Coordinator",
       "Virtual Assistant",
-      "Data Entry Clerk"
+      "Data Entry Clerk",
+      "Benefits Administrator",
+      "Office Coordinator",
+      "File Clerk",
+      "Front Desk Receptionist",
+      "Workforce Planner",
+      "Executive Secretary"
     ]
   },
   {
@@ -532,7 +601,20 @@
       "Financial Advisor",
       "Associate Attorney",
       "Legal Secretary",
-      "General Counsel"
+      "General Counsel",
+      "Lawyer",
+      "Corporate Attorney",
+      "Investment Banking Analyst",
+      "Private Equity Associate",
+      "Actuary",
+      "Bank Manager",
+      "Mortgage Loan Processor",
+      "Junior Accountant",
+      "Accounting Clerk",
+      "Collections Specialist",
+      "Court Clerk",
+      "Litigation Paralegal",
+      "Notary Public"
     ]
   },
   {
@@ -581,7 +663,12 @@
       "Associate Consultant",
       "Engagement Manager",
       "Strategy & Operations Manager",
-      "VP of Strategy"
+      "VP of Strategy",
+      "Corporate Development Associate",
+      "Entrepreneur",
+      "Small Business Owner",
+      "Franchise Owner",
+      "Startup Founder"
     ]
   },
   {
@@ -632,7 +719,15 @@
       "Supply Chain Intern",
       "Category Manager",
       "VP of Supply Chain",
-      "Inventory Control Specialist"
+      "Inventory Control Specialist",
+      "Warehouse Associate",
+      "Picker Packer",
+      "Stocker",
+      "Inventory Specialist",
+      "Shipping and Receiving Clerk",
+      "Distribution Center Manager",
+      "Fulfillment Associate",
+      "Import/Export Specialist"
     ]
   },
   {
@@ -693,7 +788,48 @@
       "Phlebotomist",
       "Clinical Pharmacist",
       "Medical Office Manager",
-      "Dental Office Manager"
+      "Dental Office Manager",
+      "Caregiver",
+      "Home Health Aide",
+      "Personal Care Aide",
+      "Veterinarian",
+      "Veterinary Technician",
+      "Veterinary Assistant",
+      "Surgeon",
+      "Physician",
+      "Medical Scribe",
+      "Sterile Processing Technician",
+      "Patient Access Representative",
+      "Dietitian",
+      "Optometrist",
+      "Audiologist",
+      "Massage Therapist",
+      "Pediatric Nurse",
+      "Psychiatric Nurse",
+      "Oncology Nurse",
+      "Nurse Educator",
+      "Hospice Nurse",
+      "Occupational Therapy Assistant",
+      "Behavior Technician (RBT)",
+      "Optician",
+      "Anesthesiologist",
+      "Medical Interpreter",
+      "Medical Secretary",
+      "Unit Secretary",
+      "Patient Care Technician",
+      "EKG Technician",
+      "Dialysis Technician",
+      "MRI Technologist",
+      "CT Technologist",
+      "Nuclear Medicine Technologist",
+      "Pharmacy Assistant",
+      "Doula",
+      "Midwife",
+      "Lactation Consultant",
+      "Psychiatrist",
+      "Occupational Health Nurse",
+      "School Nurse",
+      "Home Care Nurse"
     ]
   },
   {
@@ -743,7 +879,19 @@
       "Reading Specialist",
       "Adjunct Professor",
       "Registrar",
-      "School Superintendent"
+      "School Superintendent",
+      "Childcare Worker",
+      "Daycare Teacher",
+      "Science Teacher",
+      "Music Teacher",
+      "Art Teacher",
+      "Physical Education Teacher",
+      "Online Tutor",
+      "Teaching English Abroad",
+      "Paraprofessional",
+      "History Teacher",
+      "Chemistry Teacher",
+      "Coding Bootcamp Instructor"
     ]
   },
   {
@@ -784,7 +932,16 @@
       "Senior Video Editor",
       "Reporter",
       "Photo Editor",
-      "Production Assistant"
+      "Production Assistant",
+      "Musician",
+      "Translator",
+      "Interpreter",
+      "YouTuber",
+      "Voice Actor",
+      "Actor",
+      "Makeup Artist",
+      "Fashion Designer",
+      "Tattoo Artist"
     ]
   },
   {
@@ -827,7 +984,29 @@
       "District Manager",
       "Stock Associate",
       "Assistant Restaurant Manager",
-      "Hotel Sales Manager"
+      "Hotel Sales Manager",
+      "Host",
+      "Dishwasher",
+      "Food Service Worker",
+      "Hair Stylist",
+      "Cosmetologist",
+      "Esthetician",
+      "Nail Technician",
+      "Personal Trainer",
+      "Fitness Instructor",
+      "Yoga Instructor",
+      "Banquet Server",
+      "Fast Food Worker",
+      "Crew Member",
+      "Grocery Clerk",
+      "Deli Clerk",
+      "Butcher",
+      "Baker",
+      "Prep Cook",
+      "Busser",
+      "Room Attendant",
+      "Spa Manager",
+      "Golf Course Attendant"
     ]
   },
   {
@@ -875,7 +1054,27 @@
       "Escrow Officer",
       "Real Estate Transaction Coordinator",
       "Preconstruction Manager",
-      "Real Estate Asset Manager"
+      "Real Estate Asset Manager",
+      "Construction Laborer",
+      "Landscaper",
+      "Groundskeeper",
+      "Painter",
+      "Roofer",
+      "Drywall Installer",
+      "Mason",
+      "Heavy Equipment Operator",
+      "Site Engineer",
+      "Leasing Consultant",
+      "Home Inspector",
+      "Tile Setter",
+      "Flooring Installer",
+      "Glazier",
+      "Insulation Installer",
+      "Scaffolder",
+      "Construction Inspector",
+      "Building Surveyor",
+      "Real Estate Investor",
+      "Mortgage Broker"
     ]
   },
   {
@@ -904,7 +1103,15 @@
       "Probation Officer",
       "City Clerk",
       "Assistant City Manager",
-      "City Manager"
+      "City Manager",
+      "Federal Employee",
+      "Correctional Officer",
+      "911 Dispatcher",
+      "Military to Civilian",
+      "Veteran",
+      "Park Ranger",
+      "Customs and Border Protection Officer",
+      "Legislative Aide"
     ]
   },
   {
@@ -932,7 +1139,13 @@
       "Development Director",
       "Program Director",
       "Social Services Director",
-      "Executive Director"
+      "Executive Director",
+      "Case Worker",
+      "Youth Worker",
+      "Fundraising Manager",
+      "Family Support Worker",
+      "Housing Specialist",
+      "Advocacy Manager"
     ]
   },
   {
@@ -961,7 +1174,15 @@
       "Physicist",
       "Geologist",
       "Formulation Scientist",
-      "Bioinformatics Scientist"
+      "Bioinformatics Scientist",
+      "Lab Technician",
+      "Bioinformatician",
+      "Clinical Research Associate",
+      "Food Scientist",
+      "Ecologist",
+      "Marine Biologist",
+      "Neuroscientist",
+      "Pharmacologist"
     ]
   },
   {
@@ -991,7 +1212,16 @@
       "Maintenance Supervisor",
       "Instrumentation Technician",
       "Refrigeration Technician",
-      "Production Associate"
+      "Production Associate",
+      "Assembler",
+      "Production Worker",
+      "Quality Inspector",
+      "Solar Installer",
+      "Wind Turbine Technician",
+      "Elevator Mechanic",
+      "Auto Body Technician",
+      "Locksmith",
+      "Appliance Repair Technician"
     ]
   },
   {
@@ -1021,7 +1251,61 @@
       "Gate Agent",
       "Airport Operations Manager",
       "Locomotive Engineer",
-      "Train Conductor"
+      "Train Conductor",
+      "Forklift Operator",
+      "Mover",
+      "CDL Truck Driver",
+      "School Bus Driver",
+      "Rideshare Driver",
+      "Dispatcher",
+      "Ship Captain",
+      "Railroad Conductor",
+      "Train Engineer",
+      "Delivery Associate",
+      "Last-Mile Delivery Driver",
+      "Tow Truck Driver",
+      "Ambulance Driver",
+      "Port Operations Manager",
+      "Baggage Handler"
+    ]
+  },
+  {
+    "name": "Security & Facilities",
+    "titles": [
+      "Security Guard",
+      "Security Officer",
+      "Loss Prevention Officer",
+      "Security Supervisor",
+      "Janitor",
+      "Custodian",
+      "Building Maintenance Worker",
+      "Cleaner",
+      "Pest Control Technician",
+      "Armed Security Guard",
+      "Event Security",
+      "Night Auditor"
+    ]
+  },
+  {
+    "name": "Students & Career Changes",
+    "titles": [
+      "High School Student",
+      "College Student",
+      "Recent College Graduate",
+      "Entry Level",
+      "Internship",
+      "Career Change",
+      "Stay-at-Home Parent Returning to Work",
+      "Career Gap",
+      "Older Worker",
+      "First Job",
+      "Part-Time Job",
+      "Summer Job",
+      "Nanny",
+      "Babysitter",
+      "Freelancer",
+      "Gig Worker",
+      "Computer Science Graduate"
     ]
   }
 ]

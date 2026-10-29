@@ -1,0 +1,420 @@
+{
+  "family": "Skilled Trades & Manufacturing",
+  "guide": null,
+  "titles": {
+    "Assembler": {
+      "summary": "Assembler with 4 years building electromechanical subassemblies and control panels in an ISO 9001 plant. Works from drawings and work instructions at 105% of standard rate with a first-pass yield above 99%.",
+      "experience": [
+        {
+          "company": "Pellston Controls Manufacturing",
+          "role": "Electromechanical Assembler",
+          "location": "Grand Rapids, MI",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assemble motor control panels and wire harnesses from schematics and work instructions, averaging 105% of standard rate\n- Crimp, strip and terminate wire to IPC/WHMA-A-620 and torque fasteners to spec, holding first-pass yield at 99.2%\n- Run in-process continuity and hipot tests and log results in the MES before panels move to final inspection\n- Suggested a kitting change at the station that cut part search time and saved about 20 minutes per shift"
+        },
+        {
+          "company": "Wyoming Avenue Plastics",
+          "role": "Production Assembler",
+          "location": "Wyoming, MI",
+          "startDate": "2022-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Assembled and packed molded components on a paced line at 400 units per shift\n- Followed 5S and lockout/tagout rules with no safety incidents"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kent Valley Technical Center",
+          "degree": "Certificate, Industrial Electronics",
+          "startDate": "2021-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Assembly: wire harnesses, control panels, subassemblies, torque specs",
+        "Standards: IPC/WHMA-A-620, ISO 9001 work instructions, 5S",
+        "Tools: crimpers, torque drivers, hipot testers, multimeters, MES scanning",
+        "Safety: lockout/tagout, ESD handling, forklift certified"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.9,
+        "ginto": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.95,
+        "pop": 0.9
+      }
+    },
+    "Production Worker": {
+      "summary": "Production worker with 3 years on high-speed food packaging lines, running fillers, case packers and palletizers. Helped the line reach 92% OEE and has kept a perfect attendance and safety record for two years.",
+      "experience": [
+        {
+          "company": "Harvest Gold Snack Foods",
+          "role": "Production Line Operator",
+          "location": "Lancaster, PA",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a vertical form-fill-seal bagger and case packer at 120 bags per minute on 12-hour rotating shifts\n- Perform changeovers in under 25 minutes and check weights, seals and date codes every 30 minutes\n- Follow GMP, allergen and sanitation procedures, passing every SQF audit on the line\n- Helped raise line OEE from 86% to 92% by flagging jams early and tracking downtime causes"
+        },
+        {
+          "company": "Conestoga Packaging Services",
+          "role": "Packer",
+          "location": "Ephrata, PA",
+          "startDate": "2023-04",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Packed and labeled retail displays at 300+ units per hour\n- Built and wrapped pallets to customer spec with a pallet jack"
+        }
+      ],
+      "education": [
+        {
+          "school": "Penn Manor Ridge High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Production: VFFS baggers, case packers, palletizers, changeovers, quality checks",
+        "Food safety: GMP, SQF, allergen control, sanitation",
+        "Safety: lockout/tagout, forklift and pallet jack certified, PPE",
+        "Other: downtime logging, weight checks, 12-hour shift availability"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.95,
+        "pop": 0.93
+      }
+    },
+    "Quality Inspector": {
+      "summary": "Quality inspector with 6 years in precision machining and aerospace parts, measuring to tolerances of +/- 0.0005 in. ASQ Certified Quality Inspector, and helped cut customer escapes by 60% in one year through tighter first-article inspection.",
+      "experience": [
+        {
+          "company": "Tellurian Precision Components",
+          "role": "Quality Inspector II",
+          "location": "Wichita, KS",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform first-article and in-process inspection of machined aerospace parts to AS9102 using a Zeiss CMM, height gauges and micrometers\n- Read blueprints and GD&T callouts to verify tolerances down to +/- 0.0005 in.\n- Write nonconformance reports and support MRB, helping reduce customer escapes 60% in one year\n- Calibrate and track 400+ gauges in the calibration system with zero overdue items at the last AS9100 audit"
+        },
+        {
+          "company": "Prairie Axle Works",
+          "role": "Quality Technician",
+          "location": "Hesston, KS",
+          "startDate": "2020-05",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Inspected welded and machined agricultural components against drawings and sampling plans\n- Collected SPC data and charted key dimensions for 3 production cells"
+        }
+      ],
+      "education": [
+        {
+          "school": "Butler Plains Community College",
+          "degree": "A.A.S. Quality Assurance Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Inspection: CMM, height gauges, micrometers, bore gauges, optical comparators",
+        "Quality systems: AS9100, AS9102 FAI, NCRs, MRB, SPC",
+        "Certifications: ASQ Certified Quality Inspector, GD&T Fundamentals",
+        "Software: Calypso, PC-DMIS, Net-Inspect, Microsoft Excel"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.94
+      }
+    },
+    "Solar Installer": {
+      "summary": "NABCEP PV Associate solar installer with 4 years installing residential rooftop and ground-mount systems. Installed 260+ systems totaling 2.1 MW, and leads a crew that completes a typical 8 kW roof install in one day.",
+      "experience": [
+        {
+          "company": "Brightmesa Solar",
+          "role": "Lead Solar Installer",
+          "location": "Albuquerque, NM",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-person crew installing racking, modules, microinverters and battery storage, finishing most 8 kW roof jobs in one day\n- Flash roof attachments on comp shingle, tile and standing seam roofs with no leak callbacks across 180 installs\n- Run conduit, wire combiner boxes and set disconnects to NEC 690 under a licensed electrician\n- Set up roof anchors and harnesses per OSHA fall protection rules and pass 97% of AHJ inspections on first visit"
+        },
+        {
+          "company": "Rio Grande Renewables",
+          "role": "Solar Installer",
+          "location": "Santa Fe, NM",
+          "startDate": "2022-04",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Installed ground-mount racking and modules on rural homes and farms\n- Commissioned systems and walked homeowners through monitoring apps"
+        }
+      ],
+      "education": [
+        {
+          "school": "Central Mesa Community College",
+          "degree": "Certificate, Photovoltaic Installation",
+          "startDate": "2021-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Installation: rail and rail-less racking, microinverters, string inverters, battery storage",
+        "Electrical: NEC 690 and 705, conduit bending, wire management, grounding",
+        "Certifications: NABCEP PV Associate, OSHA 10, Enphase installer training",
+        "Safety: roof fall protection, ladder safety, lockout/tagout"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.95,
+        "pop": 0.94
+      }
+    },
+    "Wind Turbine Technician": {
+      "summary": "Wind turbine technician with 5 years maintaining 2 to 3 MW turbines on a 140-turbine wind farm. GWO certified, with a role in raising site availability from 95.1% to 97.4% through faster troubleshooting and preventive maintenance.",
+      "experience": [
+        {
+          "company": "High Prairie Wind Services",
+          "role": "Wind Technician II",
+          "location": "Sweetwater, TX",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform scheduled maintenance on 2.3 and 2.8 MW turbines, including torque and tension checks, gearbox oil changes and pitch system service\n- Troubleshoot converter, yaw and pitch faults using SCADA data and wiring diagrams, helping raise site availability from 95.1% to 97.4%\n- Climb 80 m towers and work in the hub and nacelle under LOTO and NFPA 70E arc flash rules\n- Train 4 new technicians on climb safety and tower rescue drills"
+        },
+        {
+          "company": "Caprock Turbine Solutions",
+          "role": "Wind Technician I",
+          "location": "Snyder, TX",
+          "startDate": "2021-05",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Assisted with blade inspections, bolt tensioning and main bearing greasing on 60 turbines\n- Logged work orders and parts usage in the CMMS"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Plains State Technical College",
+          "degree": "A.A.S. Wind Energy Technology",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: GWO Basic Safety Training, GWO Basic Technical Training, NFPA 70E, CPR/First Aid",
+        "Maintenance: gearbox, pitch and yaw systems, hydraulics, bolt torque and tensioning",
+        "Troubleshooting: SCADA, PLC fault codes, electrical schematics, multimeters",
+        "Safety: climb and rescue, LOTO, confined space"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "pop": 0.93
+      }
+    },
+    "Elevator Mechanic": {
+      "summary": "Licensed elevator mechanic with 10 years installing, modernizing and servicing traction and hydraulic elevators. Maintains a 65-unit service route with 99.3% uptime and has completed 18 controller modernizations.",
+      "experience": [
+        {
+          "company": "Ascendant Vertical Transportation",
+          "role": "Elevator Mechanic",
+          "location": "Philadelphia, PA",
+          "startDate": "2020-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Service a 65-unit route of traction and hydraulic elevators and escalators in offices, hospitals and residential towers, keeping uptime at 99.3%\n- Lead modernizations replacing relay logic with microprocessor controllers and door operators on 18 units\n- Perform Category 1 and Category 5 tests and prepare units for state inspection to ASME A17.1\n- Respond to entrapment and shutdown calls, averaging under 45 minutes to site"
+        },
+        {
+          "company": "Delaware River Elevator Company",
+          "role": "Elevator Mechanic Apprentice",
+          "location": "Camden, NJ",
+          "startDate": "2016-06",
+          "endDate": "2020-03",
+          "isCurrent": false,
+          "description": "- Installed rails, machines, cabs and hoistway doors on new construction under a licensed mechanic\n- Assisted with hydraulic jack replacements and wiring of fixtures"
+        }
+      ],
+      "education": [
+        {
+          "school": "National Elevator Industry Educational Program",
+          "degree": "Elevator Mechanic Apprenticeship (completed)",
+          "startDate": "2016-06",
+          "endDate": "2020-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Equipment: traction and hydraulic elevators, escalators, wheelchair lifts",
+        "Work: installation, modernization, troubleshooting, safety testing",
+        "Codes and licenses: ASME A17.1, QEI-ready, Pennsylvania Elevator Mechanic License",
+        "Tools: controller diagnostics, multimeters, rigging and hoisting, OSHA 30"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.9,
+        "ginto": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "pop": 0.96
+      }
+    },
+    "Auto Body Technician": {
+      "summary": "I-CAR Platinum auto body technician with 8 years of collision repair on steel and aluminum vehicles. Produces 45 to 55 flagged hours per week with a comeback rate under 1% at a DRP shop.",
+      "experience": [
+        {
+          "company": "Ridgecrest Collision Center",
+          "role": "Auto Body Technician",
+          "location": "Boise, ID",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Repair and replace panels, bumpers and structural parts on 5 to 8 vehicles per week, flagging 45 to 55 hours\n- Pull frames and unibodies on a Car-O-Liner bench and measure with an electronic system to OEM specs\n- Perform MIG and squeeze-type resistance spot welds on steel and aluminum per OEM repair procedures\n- Keep comebacks under 1% and cycle time 1.2 days below the DRP average"
+        },
+        {
+          "company": "Treasure Valley Auto Body",
+          "role": "Body Technician Apprentice",
+          "location": "Nampa, ID",
+          "startDate": "2018-06",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Disassembled vehicles, repaired dents and prepped panels for paint\n- Wrote repair blueprints with estimators using CCC ONE"
+        }
+      ],
+      "education": [
+        {
+          "school": "Snake River Technical College",
+          "degree": "Certificate, Collision Repair Technology",
+          "startDate": "2017-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Repair: panel replacement, dent repair, frame and unibody straightening, plastic repair",
+        "Welding: MIG steel and aluminum, STRSW, I-CAR welding qualified",
+        "Certifications: I-CAR Platinum, ASE B2 and B3",
+        "Tools: Car-O-Liner frame bench, electronic measuring, CCC ONE, OEM repair procedures"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.91,
+        "ginto": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.97,
+        "pop": 0.92
+      }
+    },
+    "Locksmith": {
+      "summary": "Licensed locksmith with 7 years servicing residential, commercial and automotive locks and access control. Handles 8 to 12 calls a day and rekeyed and master-keyed a 300-door school campus over one summer.",
+      "experience": [
+        {
+          "company": "Keystone Lock and Safe",
+          "role": "Commercial Locksmith",
+          "location": "Las Vegas, NV",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install and repair mortise and cylindrical locks, exit devices, door closers and electric strikes on commercial doors\n- Designed and pinned a master key system for a 300-door school campus, completing rekeying over one summer break\n- Install and program card access readers and keypad locks tied to building access control software\n- Run 8 to 12 service calls per day, including lockouts, with a 4.8 of 5 customer rating"
+        },
+        {
+          "company": "Silver State Locksmiths",
+          "role": "Locksmith Technician",
+          "location": "Henderson, NV",
+          "startDate": "2019-04",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Rekeyed residential locks, opened vehicles and cut and programmed transponder keys\n- Serviced and changed combinations on safes for retail clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clark Basin High School",
+          "degree": "High School Diploma",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hardware: mortise and cylindrical locks, exit devices, door closers, electric strikes",
+        "Keying: master key systems, pinning, key code machines, transponder programming",
+        "Access control: card readers, keypads, electrified hardware",
+        "Credentials: Nevada locksmith license, ALOA Certified Registered Locksmith"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.91,
+        "pop": 0.91
+      }
+    },
+    "Appliance Repair Technician": {
+      "summary": "Appliance repair technician with 6 years diagnosing and repairing refrigerators, washers, dryers, dishwashers and ranges in customers' homes. EPA 608 certified, with a 91% first-visit fix rate across 5 to 7 calls per day.",
+      "experience": [
+        {
+          "company": "Homewell Appliance Service",
+          "role": "Appliance Service Technician",
+          "location": "Kansas City, MO",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Diagnose and repair 5 to 7 in-home calls per day across major brands, holding a 91% first-visit fix rate\n- Recover refrigerant, braze sealed systems and replace compressors on refrigerators under EPA 608 rules\n- Troubleshoot control boards, sensors and gas valves using wiring schematics, meters and manometers\n- Order parts and close tickets in ServiceTitan, maintaining a 4.9 of 5 customer rating"
+        },
+        {
+          "company": "Blue Valley Appliance Outlet",
+          "role": "Appliance Installer and Repair Helper",
+          "location": "Overland Park, KS",
+          "startDate": "2020-05",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Installed washers, dryers, ranges and dishwashers, including gas line and dryer vent connections\n- Assisted senior technicians on warranty repairs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Missouri Riverside Technical College",
+          "degree": "Certificate, Appliance Service Technology",
+          "startDate": "2019-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Appliances: refrigerators, washers, dryers, dishwashers, gas and electric ranges",
+        "Certifications: EPA 608 Universal, NASTeC Certified Appliance Technician",
+        "Diagnostics: wiring schematics, multimeters, manometers, sealed system brazing",
+        "Software: ServiceTitan, manufacturer service portals"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.94,
+        "bronx": 0.94,
+        "pop": 0.94
+      }
+    }
+  }
+}

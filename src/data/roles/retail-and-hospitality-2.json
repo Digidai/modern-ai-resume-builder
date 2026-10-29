@@ -1,0 +1,1028 @@
+{
+  "family": "Retail & Hospitality",
+  "guide": null,
+  "titles": {
+    "Host": {
+      "summary": "Restaurant host with 2 years at the front door of busy casual and steakhouse dining rooms. Seats 300+ guests on Saturday nights and cut average quoted-wait misses by keeping the OpenTable floor map current. Brings a calm voice on the phone, fair section rotation and a good memory for regulars.",
+      "experience": [
+        {
+          "company": "Bluebonnet Grill House",
+          "role": "Host",
+          "location": "Austin, TX",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Greet and seat 300+ guests on Friday and Saturday nights in a 180-seat dining room and patio\n- Manage reservations and the waitlist in OpenTable, keeping quoted waits within 5 minutes on 90% of parties\n- Rotate sections evenly across 9 servers so no table waits more than 2 minutes for a greeting\n- Answer phones, take to-go orders and handle large-party bookings of up to 40 guests"
+        },
+        {
+          "company": "Lantern Street Diner",
+          "role": "Busser and Host",
+          "location": "Round Rock, TX",
+          "startDate": "2024-06",
+          "endDate": "2025-02",
+          "isCurrent": false,
+          "description": "- Cleared and reset tables in under 3 minutes during weekend brunch rushes\n- Covered the host stand on weekday mornings and rolled 200 silverware sets a shift"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hill Country High School",
+          "degree": "High School Diploma",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Front of House: Greeting, seating, waitlist management, section rotation",
+        "Systems: OpenTable, Toast POS, phone and to-go orders",
+        "Service: Large-party bookings, guest complaints, regular-guest recognition",
+        "Availability: Nights, weekends, holidays"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.96,
+        "bronx": 0.91,
+        "pop": 0.98
+      }
+    },
+    "Dishwasher": {
+      "summary": "Dishwasher with 3 years in high-volume seafood and bakery kitchens, keeping the dish pit moving through 400-cover nights. Has not missed a health inspection item on the dish station in 2 years. Brings speed, safe chemical handling and a habit of helping prep when the pit is caught up.",
+      "experience": [
+        {
+          "company": "Harborlight Oyster Co.",
+          "role": "Dishwasher",
+          "location": "Portland, ME",
+          "startDate": "2024-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a Hobart conveyor dish machine for 350 to 400 covers on summer weekend nights\n- Check wash and rinse temperatures and sanitizer strength each shift, logging results for the kitchen manager\n- Keep the line stocked with clean sheet pans, hotel pans and plates so cooks never wait on smallware\n- Help shuck oysters and portion sides during slow periods, covering about 6 prep hours a week"
+        },
+        {
+          "company": "Casco Bagel Works",
+          "role": "Dishwasher and Porter",
+          "location": "South Portland, ME",
+          "startDate": "2023-05",
+          "endDate": "2024-03",
+          "isCurrent": false,
+          "description": "- Washed mixer bowls, proof boxes and bagel boards for a bakery producing 1,500 bagels a day\n- Took out trash and recycling, mopped floors and broke down 40+ boxes from deliveries daily"
+        }
+      ],
+      "education": [
+        {
+          "school": "Back Cove High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-09",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dish Station: Hobart dish machine, pot and pan washing, glassware handling",
+        "Sanitation: Temperature and sanitizer logs, chemical safety, floor and drain cleaning",
+        "Kitchen Support: Basic prep, oyster shucking, receiving and stocking",
+        "Certifications: Maine Food Handler"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "bronx": 0.94,
+        "mono": 0.98,
+        "pop": 0.93
+      }
+    },
+    "Food Service Worker": {
+      "summary": "Food service worker with 4 years in hospital and senior living dining, serving patients and residents on texture-modified and allergy diets. Delivers 120 patient trays a shift with a 99% diet-order accuracy rate on audits. ServSafe Food Handler certified and comfortable on the tray line, in the café and in the dish room.",
+      "experience": [
+        {
+          "company": "Meadowline Dining Services at Scioto Valley Medical Center",
+          "role": "Food Service Worker",
+          "location": "Columbus, OH",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assemble and deliver about 120 patient trays a shift on the tray line, matching each to diet orders in CBORD\n- Hold a 99% accuracy rate on monthly tray audits for allergies, consistency and diabetic diets\n- Take patient meal orders bedside and by phone for 3 medical-surgical units\n- Record hot and cold holding temperatures every 2 hours and restock the visitor café"
+        },
+        {
+          "company": "Brookhaven Senior Living",
+          "role": "Dietary Aide",
+          "location": "Westerville, OH",
+          "startDate": "2021-08",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Served plated meals to 85 residents in the main dining room and memory care unit\n- Prepared pureed and mechanical soft meals following IDDSI guidelines\n- Ran the dish machine and cleaned the kitchen to state survey standards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Olentangy Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Patient Dining: Tray line, diet orders, IDDSI textures, allergy checks",
+        "Food Safety: ServSafe Food Handler, temperature logs, sanitation, HACCP basics",
+        "Systems: CBORD, café POS",
+        "Service: Bedside ordering, resident dining, phone orders"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.98,
+        "pop": 0.94
+      }
+    },
+    "Hair Stylist": {
+      "summary": "Licensed hair stylist with 6 years behind the chair, specializing in lived-in color and precision cuts. Built a book of 210 regular clients with a 78% rebooking rate. Holds a Colorado cosmetology license and trains newer stylists on balayage and toning.",
+      "experience": [
+        {
+          "company": "Copper & Comb Salon",
+          "role": "Senior Hair Stylist",
+          "location": "Denver, CO",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve 30 to 35 clients a week for cuts, balayage, foils and color corrections\n- Grew a book of 210 regular clients with a 78% rebooking rate tracked in Vagaro\n- Raised retail sales to 18% of service revenue by recommending take-home care for each color client\n- Train 3 junior stylists on balayage, toning and consultation scripts"
+        },
+        {
+          "company": "Mile High Cuts",
+          "role": "Hair Stylist",
+          "location": "Aurora, CO",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Completed 20+ cuts and blowouts a day in a high-volume walk-in salon\n- Moved from walk-in to booked appointments for 60% of clients within 1 year\n- Shampooed, swept and restocked color for senior stylists during the first 6 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Front Range Beauty Academy",
+          "degree": "Cosmetology Diploma, 1,500 hours",
+          "startDate": "2019-01",
+          "endDate": "2020-02"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Color: Balayage, foils, toning, gray coverage, color correction",
+        "Cutting: Precision cuts, layered cuts, men's cuts, blowouts and styling",
+        "Client Care: Consultations, rebooking, retail recommendations",
+        "License and Tools: Colorado cosmetology license, Vagaro booking, Redken and Wella color lines"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.93,
+        "ginto": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "pop": 0.93
+      }
+    },
+    "Cosmetologist": {
+      "summary": "Licensed cosmetologist with 5 years providing hair, skin and nail services in a full-service salon and spa. Brings in about $7,500 a month in service revenue across color, waxing and bridal styling. Holds a Georgia master cosmetologist license and keeps a spotless record on state board inspections.",
+      "experience": [
+        {
+          "company": "Peachtree Atelier Salon & Spa",
+          "role": "Cosmetologist",
+          "location": "Atlanta, GA",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Provide cuts, color, keratin treatments, brow and lip waxing and gel manicures for 25+ clients a week\n- Generate about $7,500 a month in service revenue, top 3 among 12 service providers\n- Style hair and makeup for 22 bridal parties in 2025, booking 40% of bridesmaids as regular clients\n- Keep stations and tools disinfected to Georgia State Board standards with zero inspection findings"
+        },
+        {
+          "company": "Velvet Lane Salon",
+          "role": "Cosmetologist",
+          "location": "Decatur, GA",
+          "startDate": "2021-07",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Performed cuts, single-process color and waxing for a mostly walk-in clientele\n- Grew booked appointments from 8 to 20 a week through Instagram before-and-after posts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Southern Crest Beauty Institute",
+          "degree": "Cosmetology Diploma, 1,500 hours",
+          "startDate": "2020-03",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hair: Cuts, color, keratin smoothing, updos and bridal styling",
+        "Skin and Nails: Waxing, brow shaping, gel manicures, makeup application",
+        "Sanitation: State board standards, EPA-registered disinfectants, tool sterilization",
+        "License and Systems: Georgia master cosmetologist license, Boulevard booking, Square POS"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.93
+      }
+    },
+    "Esthetician": {
+      "summary": "Licensed esthetician with 4 years performing facials, chemical peels and waxing in day spa and medical-adjacent skin studio settings. Holds a 72% client retention rate and sold 65 facial series packages in 2025. Holds a California esthetician license and is trained in dermaplaning and microcurrent.",
+      "experience": [
+        {
+          "company": "Tidewater Skin Studio",
+          "role": "Lead Esthetician",
+          "location": "San Diego, CA",
+          "startDate": "2023-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform 25 to 30 treatments a week, including custom facials, chemical peels, dermaplaning and microcurrent\n- Keep a 72% client retention rate by building 3-month treatment plans after each skin analysis\n- Sold 65 facial series packages in 2025, adding about $28,000 in prepaid revenue\n- Train 2 newer estheticians on peel protocols, contraindication screening and SOAP-style treatment notes"
+        },
+        {
+          "company": "Coastline Day Spa",
+          "role": "Esthetician",
+          "location": "Carlsbad, CA",
+          "startDate": "2022-03",
+          "endDate": "2023-04",
+          "isCurrent": false,
+          "description": "- Performed facials, body waxing and lash tints for resort and local guests\n- Raised retail skincare sales 25% by sending each guest home with a written routine\n- Set up and broke down treatment rooms and laundered linens between appointments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific Esthetics Academy",
+          "degree": "Esthetics Program, 600 hours",
+          "startDate": "2021-06",
+          "endDate": "2022-01"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Treatments: Custom facials, chemical peels, dermaplaning, microcurrent, waxing",
+        "Skin Analysis: Fitzpatrick typing, contraindication screening, home-care plans",
+        "Sanitation: Barbicide and hospital-grade disinfection, single-use implements",
+        "License and Systems: California esthetician license, Mangomint booking, treatment notes"
+      ],
+      "fit": {
+        "swiss": 0.91,
+        "berlin": 0.89,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.97,
+        "pop": 0.9
+      }
+    },
+    "Nail Technician": {
+      "summary": "Licensed nail technician with 3 years doing gel, acrylic and dip services in busy nail bars. Completes 8 to 10 clients a day and earned a 4.9-star average across 300+ online reviews. Known for clean cuticle work, hand-painted nail art and strict sanitation.",
+      "experience": [
+        {
+          "company": "Gloss & Grace Nail Bar",
+          "role": "Nail Technician",
+          "location": "Houston, TX",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Complete 8 to 10 clients a day for gel manicures, acrylic full sets, dip powder and spa pedicures\n- Hold a 4.9-star average across 300+ Google and Booksy reviews\n- Create hand-painted and chrome nail art, adding about $15 per set on 40% of appointments\n- Clean and disinfect implements and pedicure tubs between every client and log tub cleaning daily"
+        },
+        {
+          "company": "Lotus Nail Lounge",
+          "role": "Junior Nail Technician",
+          "location": "Pasadena, TX",
+          "startDate": "2023-03",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Performed basic manicures, pedicures and polish changes for walk-in guests\n- Learned acrylic and e-file techniques and moved to full sets within 6 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bayou City Beauty College",
+          "degree": "Manicurist Program, 600 hours",
+          "startDate": "2022-07",
+          "endDate": "2023-01"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Nail Services: Gel manicures, acrylic full sets and fills, dip powder, spa pedicures",
+        "Nail Art: Hand painting, chrome and ombre, e-file shaping",
+        "Sanitation: Implement disinfection, pedicure tub logs, single-use files and buffers",
+        "License and Systems: Texas manicurist license, Booksy, Square POS"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.98,
+        "pop": 0.97
+      }
+    },
+    "Personal Trainer": {
+      "summary": "NASM-certified personal trainer with 5 years coaching strength, weight loss and return-to-activity clients. Runs about 28 sessions a week with an 85% client renewal rate. Builds progressive programs in Trainerize and tracks every client against measurable goals.",
+      "experience": [
+        {
+          "company": "North Loop Strength Club",
+          "role": "Personal Trainer",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Coach 30 active clients across about 28 one-on-one and small-group sessions a week\n- Keep an 85% renewal rate on 12-week training packages\n- Write progressive strength and conditioning programs in Trainerize with movement screens every 6 weeks\n- Helped 14 clients finish their first 5K or powerlifting meet in 2025"
+        },
+        {
+          "company": "Lakeside Fitness Center",
+          "role": "Fitness Floor Trainer",
+          "location": "St. Paul, MN",
+          "startDate": "2021-05",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Ran 120 complimentary member orientations, converting 22% into paid training packages\n- Kept the gym floor safe and cleaned equipment, spotting members on heavy lifts\n- Covered the front desk on weekends, handling check-ins and membership questions in ABC Fitness"
+        }
+      ],
+      "education": [
+        {
+          "school": "Twin Rivers State University",
+          "degree": "B.S. in Exercise Science",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Training: Strength and conditioning, weight loss programs, mobility, small-group training",
+        "Assessment: Movement screens, body composition, goal tracking",
+        "Certifications: NASM-CPT, CPR/AED, Precision Nutrition Level 1",
+        "Tools: Trainerize, Mindbody, InBody scanner"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "pop": 0.92
+      }
+    },
+    "Fitness Instructor": {
+      "summary": "Group fitness instructor with 4 years teaching indoor cycling, barre and HIIT. Leads 12 classes a week with an average of 92% capacity and a waitlist on Saturday mornings. Holds AFAA group fitness and Schwinn indoor cycling certifications.",
+      "experience": [
+        {
+          "company": "Saguaro Cycle & Barre",
+          "role": "Lead Fitness Instructor",
+          "location": "Phoenix, AZ",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 12 cycling, barre and HIIT classes a week at an average of 92% capacity\n- Built 45-minute rhythm rides and playlists that lifted class rebooking from 61% to 74%\n- Onboard and audition new instructors, training 5 hires on cueing, music licensing and studio safety\n- Lead a 6-week beginner challenge each January, converting 38 guests into monthly members"
+        },
+        {
+          "company": "Desert Ridge Community Recreation Center",
+          "role": "Group Fitness Instructor",
+          "location": "Glendale, AZ",
+          "startDate": "2022-01",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Taught 6 weekly classes, including low-impact aerobics and strength for older adults\n- Grew average Tuesday evening attendance from 9 to 24 participants\n- Subbed 40+ classes across 5 formats on short notice"
+        }
+      ],
+      "education": [
+        {
+          "school": "Valle Verde Community College",
+          "degree": "A.A.S. in Exercise Science",
+          "startDate": "2019-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Formats: Indoor cycling, barre, HIIT, low-impact and senior fitness",
+        "Instruction: Cueing, modifications, class programming, music selection",
+        "Certifications: AFAA Group Fitness, Schwinn Indoor Cycling, CPR/AED",
+        "Systems: Mindbody, ClassPass, Spotify playlists"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.93,
+        "pop": 0.97
+      }
+    },
+    "Yoga Instructor": {
+      "summary": "Yoga Alliance RYT-500 instructor with 6 years teaching vinyasa, yin and prenatal yoga to studio, corporate and private clients. Teaches 14 classes a week and helped grow studio memberships 30% by launching a beginner series. Known for clear alignment cues and safe modifications for every level.",
+      "experience": [
+        {
+          "company": "Blue Ridge Yoga Collective",
+          "role": "Senior Yoga Instructor",
+          "location": "Asheville, NC",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach 14 vinyasa, yin and prenatal classes a week with average attendance of 18 students\n- Launched a 4-week beginner series that helped grow monthly memberships 30% in 18 months\n- Co-lead a 200-hour teacher training, mentoring 16 trainees on sequencing and hands-on assists\n- Run 2 corporate wellness classes a week for a local hospital system's staff"
+        },
+        {
+          "company": "Laurel Wellness Studio",
+          "role": "Yoga Instructor",
+          "location": "Hendersonville, NC",
+          "startDate": "2020-08",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Taught 8 weekly hatha and gentle yoga classes and private sessions\n- Built a Sunday restorative class from 6 to 20 regular students\n- Ran 3 weekend workshops on inversions and breathwork, each selling out at 25 spots"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mountain Light Yoga School",
+          "degree": "500-Hour Yoga Teacher Training",
+          "startDate": "2019-01",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Styles: Vinyasa, yin, hatha, prenatal, restorative",
+        "Teaching: Alignment cues, sequencing, modifications, hands-on assists",
+        "Certifications: Yoga Alliance RYT-500, RPYT prenatal, CPR/AED",
+        "Business: Workshops, teacher training, corporate classes, Mindbody"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "pop": 0.96
+      }
+    },
+    "Banquet Server": {
+      "summary": "Banquet server with 4 years working weddings, conferences and galas of up to 900 guests at hotel and event venues. Picked as a lead server for VIP and head-table service at 30+ events. TIPS certified and fluent in plated, buffet and French service.",
+      "experience": [
+        {
+          "company": "Cumberland Grand Hotel & Conference Center",
+          "role": "Banquet Server",
+          "location": "Nashville, TN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Serve plated and buffet meals at 4 to 6 events a week for groups of 50 to 900 guests\n- Lead head-table and VIP service at 30+ events, timing courses with the banquet captain's cues\n- Set rounds of 10 with linens, flatware and glassware to the banquet event order in under 4 minutes per table\n- Pour wine and run hosted bars as a TIPS-certified server with zero alcohol incidents"
+        },
+        {
+          "company": "Belle Meade Event Hall",
+          "role": "Event Server",
+          "location": "Franklin, TN",
+          "startDate": "2022-03",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Worked 70+ weddings and private parties, passing hors d'oeuvres and serving family-style dinners\n- Broke down rooms and polished glassware after events, often until 1 a.m."
+        }
+      ],
+      "education": [
+        {
+          "school": "Harpeth Ridge High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Service Styles: Plated, buffet, French, family-style, passed hors d'oeuvres",
+        "Event Setup: Banquet event orders, table settings, linens, room flips",
+        "Beverage: Wine service, hosted bars, TIPS certification",
+        "Availability: Nights, weekends, double shifts"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.95,
+        "pop": 0.98
+      }
+    },
+    "Fast Food Worker": {
+      "summary": "Fast food worker with 2 years at a busy drive-thru burger restaurant, working register, grill and fry stations. Helped keep average drive-thru times under 3.5 minutes during lunch rush. Dependable, quick to learn new stations and holds an Oklahoma food handler card.",
+      "experience": [
+        {
+          "company": "Prairie Burger Co.",
+          "role": "Crew Team Member",
+          "location": "Tulsa, OK",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Take orders at the front counter and drive-thru headset, handling about 180 orders a shift\n- Keep drive-thru times under 3.5 minutes at lunch by bagging and checking orders at the window\n- Work grill and fry stations, following timers and holding times for food safety\n- Clean the lobby, restrooms and fryers at close and restock sauces and cups for the morning crew"
+        },
+        {
+          "company": "Riverwalk Snack Shack",
+          "role": "Concession Worker",
+          "location": "Jenks, OK",
+          "startDate": "2024-05",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Served snacks and drinks to crowds of 500+ at summer weekend events\n- Counted the cash drawer at close with no shortages"
+        }
+      ],
+      "education": [
+        {
+          "school": "Arkansas River High School",
+          "degree": "High School Diploma",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stations: Register, drive-thru headset, grill, fryer, assembly",
+        "Food Safety: Oklahoma food handler card, holding times, cleaning checklists",
+        "Service: Order accuracy, cash handling, friendly greetings",
+        "Availability: Evenings, weekends, closing shifts"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.93
+      }
+    },
+    "Crew Member": {
+      "summary": "Crew member with 3 years at fast casual restaurants, working the make line, prep and register. Trained 8 new hires on the line and helped the store cut food waste 12% by following prep charts. California food handler card holder who covers any station on short notice.",
+      "experience": [
+        {
+          "company": "Valley Taco Kitchen",
+          "role": "Crew Member and Crew Trainer",
+          "location": "Fresno, CA",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build 250+ burritos, bowls and tacos a shift on the make line during lunch and dinner peaks\n- Prep proteins, salsas and produce by the daily prep chart, helping cut food waste 12% in 6 months\n- Trained 8 new crew members on the line, the Toast POS and opening checklists\n- Handle online order pickup shelves, checking each bag against the ticket before handoff"
+        },
+        {
+          "company": "Sierra Slice Pizza Co.",
+          "role": "Crew Member",
+          "location": "Clovis, CA",
+          "startDate": "2023-04",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Stretched dough, topped pizzas and ran the conveyor oven on Friday rushes of 150+ pies\n- Answered phones and took delivery orders on the POS"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Joaquin Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stations: Make line, prep, register, online order pickup, dish",
+        "Food Safety: California food handler card, FIFO, temperature checks",
+        "Systems: Toast POS, delivery tablets",
+        "Teamwork: Crew training, covering stations, opening and closing"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.97
+      }
+    },
+    "Grocery Clerk": {
+      "summary": "Grocery clerk with 3 years stocking, facing and running registers in neighborhood supermarkets. Works a 600-case truck overnight with the crew and keeps out-of-stocks below 2% in assigned aisles. Reliable on early mornings and holidays, and certified on the store's electric pallet jack.",
+      "experience": [
+        {
+          "company": "Three Rivers Fresh Market",
+          "role": "Grocery Clerk",
+          "location": "Pittsburgh, PA",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Unload and work a 600-case grocery truck 3 nights a week with a crew of 5\n- Keep out-of-stocks below 2% in 4 center-store aisles through daily scans on a Zebra handheld\n- Rotate dairy and frozen products by date, pulling about 40 short-dated items a week for markdown\n- Cover a register during rushes and help customers find items and check prices"
+        },
+        {
+          "company": "Allegheny Corner Store",
+          "role": "Store Clerk",
+          "location": "Millvale, PA",
+          "startDate": "2023-03",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Ran the register, sold lottery and checked ID for tobacco and beer sales\n- Stocked coolers and shelves from weekly vendor deliveries"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Hills Regional High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Stocking: Truck unloading, facing, date rotation, markdowns",
+        "Equipment: Electric pallet jack, Zebra handheld scanner, box cutter safety",
+        "Front End: Register, price checks, age-restricted sales",
+        "Availability: Overnights, early mornings, holidays"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.98,
+        "ginto": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "pop": 0.99
+      }
+    },
+    "Deli Clerk": {
+      "summary": "Deli clerk with 3 years slicing meats and cheeses, building sandwiches and running the hot case at a busy family grocery. Serves about 150 deli customers a shift while keeping slicers and cases inspection ready. ServSafe Food Handler certified and trained on Hobart and Bizerba slicers.",
+      "experience": [
+        {
+          "company": "Nutmeg Family Grocers",
+          "role": "Deli Clerk",
+          "location": "Hartford, CT",
+          "startDate": "2024-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Slice meats and cheeses to order on Hobart and Bizerba slicers for about 150 customers a shift\n- Build 60+ made-to-order subs and wraps during the weekday lunch rush\n- Set the hot case and grab-and-go cooler each morning, labeling and logging temperatures every 4 hours\n- Break down and sanitize slicers every 4 hours and at close, passing every health department inspection"
+        },
+        {
+          "company": "Wethersfield Sub Shop",
+          "role": "Counter Worker",
+          "location": "Wethersfield, CT",
+          "startDate": "2023-06",
+          "endDate": "2024-02",
+          "isCurrent": false,
+          "description": "- Made sandwiches and salads to order and ran the register\n- Prepped vegetables and portioned meats for the next day"
+        }
+      ],
+      "education": [
+        {
+          "school": "Charter Oak High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-09",
+          "endDate": "2023-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Deli: Slicing to order, sandwich building, hot case, party platters",
+        "Equipment: Hobart and Bizerba slicers, scales and label printers",
+        "Food Safety: ServSafe Food Handler, temperature logs, slicer sanitation, allergen labeling",
+        "Service: Sampling, special orders, phone orders"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.98,
+        "bronx": 0.97,
+        "pop": 0.93
+      }
+    },
+    "Butcher": {
+      "summary": "Butcher with 8 years breaking down beef, pork and lamb in grocery and independent meat markets. Cuts about 1,200 lb of primals a week and lifted case yield 6% through tighter trim specs. Brings knife and band saw skill, custom cutting for customers and strict food safety habits.",
+      "experience": [
+        {
+          "company": "Platte Valley Meat Market",
+          "role": "Head Butcher",
+          "location": "Omaha, NE",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Break down about 1,200 lb of beef, pork and lamb primals a week into retail and custom cuts\n- Raised usable yield 6% by rewriting trim specs and grinding trim into house sausages\n- Process whole hogs and wild game for 80+ local customers each fall\n- Train 2 apprentices on band saw safety, boning and tying roasts, and keep HACCP logs for the grinder"
+        },
+        {
+          "company": "Loess Hills Grocery",
+          "role": "Meat Cutter",
+          "location": "Council Bluffs, IA",
+          "startDate": "2018-03",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Cut, wrapped and labeled case-ready meats for a high-volume grocery meat department\n- Kept the full-service case stocked and rotated for 6 hours of daily service"
+        }
+      ],
+      "education": [
+        {
+          "school": "Omaha Area Technical College",
+          "degree": "Certificate in Meat Processing",
+          "startDate": "2017-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Cutting: Primal breakdown, boning, steak cutting, grinding, sausage making",
+        "Equipment: Band saw, Biro grinder, vacuum sealer, scale and label system",
+        "Food Safety: HACCP logs, ServSafe Manager, cold chain, sanitation",
+        "Service: Custom orders, wild game processing, cooking advice"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.95
+      }
+    },
+    "Baker": {
+      "summary": "Baker with 5 years producing artisan breads and viennoiserie in wholesale and retail bakeries. Mixes and bakes 900+ loaves a night and cut dough waste 15% by scaling recipes to daily orders. Works comfortably with deck and rack ovens, sourdough cultures and early-morning schedules.",
+      "experience": [
+        {
+          "company": "Lake Champlain Bread Co.",
+          "role": "Baker",
+          "location": "Burlington, VT",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Mix, shape and bake 900+ loaves a night for 3 cafés and 25 wholesale accounts\n- Maintain the sourdough levain and adjust hydration and proof times to seasonal temperature swings\n- Cut dough waste 15% by building a recipe scaling sheet tied to daily wholesale orders\n- Run 2 deck ovens and a rack oven on a 2 a.m. start, finishing loading for 6 a.m. delivery"
+        },
+        {
+          "company": "Maple Hollow Bakery",
+          "role": "Bakery Assistant",
+          "location": "Winooski, VT",
+          "startDate": "2021-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Laminated croissant and danish dough and baked muffins and scones for the retail case\n- Decorated 15 to 20 cakes a week for counter and special orders"
+        }
+      ],
+      "education": [
+        {
+          "school": "Green Mountain Culinary Institute",
+          "degree": "Certificate in Baking and Pastry",
+          "startDate": "2020-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Bread: Sourdough, levain management, shaping, scoring, enriched doughs",
+        "Pastry: Lamination, croissants, quick breads, cake decorating",
+        "Equipment: Deck and rack ovens, spiral mixer, sheeter, proofer",
+        "Food Safety: ServSafe Food Handler, allergen labeling, sanitation"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "quartz": 0.9,
+        "bronx": 0.9,
+        "pop": 0.97
+      }
+    },
+    "Prep Cook": {
+      "summary": "Prep cook with 2 years in a scratch Creole bistro, prepping stocks, sauces and portioned proteins for a 120-seat dining room. Completes the full daily prep list before 3 p.m. service with labeled, rotated product. ServSafe Food Handler certified, with fast knife work and a clean station.",
+      "experience": [
+        {
+          "company": "Magazine Street Bistro",
+          "role": "Prep Cook",
+          "location": "New Orleans, LA",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Work through a 40-item daily prep list, including roux, stocks, remoulade and cut vegetables\n- Portion and label proteins by weight, helping the kitchen hold food cost near 29%\n- Rotate the walk-in using FIFO and date labels, with zero expired product found on inspections\n- Receive produce and seafood deliveries and check temperatures and counts against invoices"
+        },
+        {
+          "company": "Bayou Crawfish Kitchen",
+          "role": "Dishwasher and Prep",
+          "location": "Metairie, LA",
+          "startDate": "2024-03",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Washed dishes and cleaned the boil area during 300-pound crawfish nights\n- Peeled shrimp and cut corn and potatoes for the boil"
+        }
+      ],
+      "education": [
+        {
+          "school": "Crescent City Community College",
+          "degree": "Coursework in Culinary Arts",
+          "startDate": "2024-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Prep: Knife cuts, stocks and sauces, portioning, marinades",
+        "Kitchen Practice: FIFO, date labeling, receiving, walk-in organization",
+        "Food Safety: ServSafe Food Handler, temperature checks, allergen separation",
+        "Equipment: Robot Coupe, tilt skillet, slicer, vacuum sealer"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.97,
+        "ginto": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.92,
+        "pop": 0.99
+      }
+    },
+    "Busser": {
+      "summary": "Busser with 2 years in a fine dining chophouse and a busy family pizza parlor. Resets tables in under 3 minutes on 250-cover nights and keeps water, bread and side plates moving for 8 servers. Reliable, fast-moving and learning the menu to step up to a server position.",
+      "experience": [
+        {
+          "company": "Back Bay Chophouse",
+          "role": "Busser",
+          "location": "Boston, MA",
+          "startDate": "2025-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clear and reset tables to fine dining standard in under 3 minutes on 250-cover weekend nights\n- Refill water, serve bread and crumb tables for 8 servers across a 150-seat dining room\n- Polish glassware and silverware and restock server stations before and during service\n- Help run food from the pass on busy nights, learning the menu and table numbers"
+        },
+        {
+          "company": "Fenway Pizza Parlor",
+          "role": "Busser and Dishwasher",
+          "location": "Brookline, MA",
+          "startDate": "2024-04",
+          "endDate": "2025-01",
+          "isCurrent": false,
+          "description": "- Cleared tables and swept the dining room for a 70-seat family restaurant\n- Washed dishes during weekday dinner shifts"
+        }
+      ],
+      "education": [
+        {
+          "school": "Charles River High School",
+          "degree": "High School Diploma",
+          "startDate": "2020-09",
+          "endDate": "2024-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dining Room: Table resets, water and bread service, crumbing, food running",
+        "Support: Glassware polishing, side station restocking, linen changes",
+        "Teamwork: Server support, closing duties, shift handoffs",
+        "Availability: Nights, weekends, holidays"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "ginto": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.97
+      }
+    },
+    "Room Attendant": {
+      "summary": "Room attendant with 3 years cleaning guest rooms at a large resort casino and a roadside inn. Cleans 15 rooms a shift on a 2,400-room property while passing 97% of inspections. Brings efficient routines, safe chemical use and fast room status updates that help the front desk check guests in early.",
+      "experience": [
+        {
+          "company": "Silver Mesa Resort & Casino",
+          "role": "Room Attendant",
+          "location": "Las Vegas, NV",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean 15 checkouts and stayovers a shift on a 2,400-room resort tower\n- Pass 97% of supervisor inspections and earned 2 guest-comment awards in 2025\n- Update room status in real time through the property's phone app so front desk can release rooms quickly\n- Report broken fixtures and lost-and-found items through HotSOS the same shift"
+        },
+        {
+          "company": "Desert Palms Inn",
+          "role": "Housekeeping Attendant",
+          "location": "Henderson, NV",
+          "startDate": "2023-04",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Cleaned 18 standard rooms a shift and washed and folded laundry for an 80-room inn\n- Covered the laundry room on weekends"
+        }
+      ],
+      "education": [
+        {
+          "school": "Spring Mountain High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Housekeeping: Checkouts, stayovers, bed making, bathroom cleaning, amenity restock",
+        "Safety: SDS chemical handling, safe lifting, bloodborne pathogens awareness",
+        "Systems: HotSOS, room status app",
+        "Languages: English, Spanish"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.99,
+        "quartz": 0.99,
+        "bronx": 0.93
+      }
+    },
+    "Spa Manager": {
+      "summary": "Spa manager with 10 years in resort and day spa operations, now running a 14-room resort spa with 38 therapists and staff. Grew spa revenue 22% to $3.1M in 2025 while holding therapist payroll at 42% of service revenue. Licensed esthetician with hands-on experience in Book4Time, retail buying and guest recovery.",
+      "experience": [
+        {
+          "company": "Juniper Canyon Resort Spa",
+          "role": "Spa Manager",
+          "location": "Sedona, AZ",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run a 14-treatment-room resort spa with 38 therapists, estheticians and front desk staff\n- Grew annual revenue 22% to $3.1M by adding couples packages and midweek locals pricing\n- Hold therapist payroll at 42% of service revenue through Book4Time scheduling and demand forecasting\n- Raised retail to 14% of total revenue by resetting the boutique and setting monthly retail goals per provider"
+        },
+        {
+          "company": "Ocotillo Day Spa",
+          "role": "Assistant Spa Manager",
+          "location": "Tucson, AZ",
+          "startDate": "2018-04",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Managed front desk, scheduling and inventory for a 9-room day spa\n- Hired and onboarded 15 massage therapists and estheticians\n- Cut no-shows 35% with deposit and confirmation policies"
+        },
+        {
+          "company": "Sonoran Glow Skin Clinic",
+          "role": "Esthetician",
+          "location": "Tucson, AZ",
+          "startDate": "2016-06",
+          "endDate": "2018-03",
+          "isCurrent": false,
+          "description": "- Performed facials, peels and waxing for 25+ clients a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mesa Verde State University",
+          "degree": "B.S. in Hospitality Management",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Spa Operations: P&L, payroll control, treatment menu design, retail buying",
+        "Leadership: Hiring, provider scheduling, coaching, guest recovery",
+        "Systems: Book4Time, Opera PMS, Excel",
+        "License: Arizona esthetician license"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.93,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "bronx": 0.95,
+        "mono": 0.95,
+        "pop": 0.88
+      }
+    },
+    "Golf Course Attendant": {
+      "summary": "Golf course attendant with 2 seasons at a busy resort course, staging carts, handling bag drop and keeping the range stocked. Helps turn 220+ rounds on peak days with carts ready at every tee time. Friendly with guests, careful with equipment and trained on GPS cart fleets.",
+      "experience": [
+        {
+          "company": "Sea Oats Golf Links",
+          "role": "Outside Services Attendant",
+          "location": "Myrtle Beach, SC",
+          "startDate": "2025-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Greet golfers at bag drop and load bags onto carts for 220+ rounds on peak spring days\n- Stage, wash and charge a 90-cart Club Car fleet with GPS units, reporting faults to the cart mechanic\n- Pick the driving range with a picker cart and refill ball dispensers every 2 hours\n- Clean clubs after rounds and point guests to the pro shop, restaurant and next tee"
+        },
+        {
+          "company": "Grand Strand Driving Range",
+          "role": "Range Attendant",
+          "location": "North Myrtle Beach, SC",
+          "startDate": "2024-05",
+          "endDate": "2024-09",
+          "isCurrent": false,
+          "description": "- Ran the ball machine, picked the range and sold buckets at the counter\n- Kept the hitting mats, bays and restrooms clean"
+        }
+      ],
+      "education": [
+        {
+          "school": "Waccamaw Bay High School",
+          "degree": "High School Diploma",
+          "startDate": "2020-08",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Outside Services: Bag drop, cart staging, club cleaning, range picking",
+        "Equipment: Club Car GPS carts, range picker, ball washer and dispenser",
+        "Guest Service: Course directions, tee time check-in support, pace-of-play reminders",
+        "Availability: Early mornings, weekends, tournament days"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "pop": 0.95
+      }
+    }
+  }
+}

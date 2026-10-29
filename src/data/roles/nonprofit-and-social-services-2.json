@@ -1,0 +1,287 @@
+{
+  "family": "Nonprofit & Social Services",
+  "guide": null,
+  "titles": {
+    "Case Worker": {
+      "summary": "Case worker with 5 years helping low-income adults and families stabilize housing, income and health care. Carry a caseload of 35 households and connected 92% of clients to at least one new benefit within 60 days last year. Brings a BSW, trauma-informed assessment and close working relationships with county benefit offices.",
+      "experience": [
+        {
+          "company": "Riverbend Family Services",
+          "role": "Case Worker, Adult Services",
+          "location": "Louisville, KY",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a caseload of 35 households, completing intake assessments and individualized service plans\n- Connected 92% of 2025 clients to at least one new benefit within 60 days, including SNAP, Medicaid and LIHEAP\n- Document contacts and outcomes in Apricot within 48 hours, passing every quarterly file audit\n- Co-facilitate a monthly financial coaching group for 15 participants"
+        },
+        {
+          "company": "Ohio Valley Community Action",
+          "role": "Intake Specialist",
+          "location": "New Albany, IN",
+          "startDate": "2020-08",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Screened about 70 walk-in and phone clients a week for emergency rent and utility aid\n- Built a shared referral list of 120 local providers used by the whole intake team"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kentucky Bluegrass University",
+          "degree": "Bachelor of Social Work",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Case management: intake assessment, service planning, benefits enrollment, crisis intervention",
+        "Approaches: trauma-informed care, motivational interviewing, strengths-based practice",
+        "Tools: Apricot, HMIS, Microsoft 365",
+        "Certifications: Mental Health First Aid, Kentucky Certified Kinship Navigator training"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.99,
+        "bronx": 0.93,
+        "mono": 0.97,
+        "pop": 0.93
+      }
+    },
+    "Youth Worker": {
+      "summary": "Youth worker with 6 years running drop-in, mentoring and after-school programs for teens in under-resourced neighborhoods. Grew daily attendance at our teen center from 25 to 60 young people and kept 88% of seniors on track to graduate. Brings Youth Mental Health First Aid, restorative practices and trust built through consistency.",
+      "experience": [
+        {
+          "company": "Harbor Lights Youth Center",
+          "role": "Senior Youth Worker",
+          "location": "Baltimore, MD",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the evening drop-in program for teens aged 13 to 19, growing daily attendance from 25 to 60\n- Mentor a caseload of 15 young people, with 88% of seniors on track to graduate in 2026\n- Lead restorative circles that cut program suspensions by half in one year\n- Partner with 3 high schools and a workforce program to place 22 teens in paid summer jobs"
+        },
+        {
+          "company": "Patapsco Neighborhood Athletic League",
+          "role": "Youth Development Specialist",
+          "location": "Baltimore, MD",
+          "startDate": "2020-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Coached basketball and led homework help for 40 middle schoolers a day\n- Planned 6 college visits and a summer leadership camp for 30 youth"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chesapeake Metropolitan University",
+          "degree": "Bachelor of Arts in Sociology",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Youth development: mentoring, group facilitation, restorative practices, conflict de-escalation",
+        "Programs: drop-in centers, after-school, summer employment, college access",
+        "Tools: Salesforce Nonprofit Cloud, Google Workspace, Canva",
+        "Certifications: Youth Mental Health First Aid, CPR and First Aid, mandated reporter training"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
+    },
+    "Fundraising Manager": {
+      "summary": "Fundraising manager with 8 years in individual giving, events and grants for community health and arts nonprofits. Grew annual contributed revenue from $1.4M to $2.1M in three years while lifting donor retention to 61%. Brings CFRE credential, data-driven donor segmentation and a strong record managing a portfolio of mid-level donors.",
+      "experience": [
+        {
+          "company": "Lakeside Community Health Foundation",
+          "role": "Fundraising Manager",
+          "location": "Cleveland, OH",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-person team responsible for individual giving, events and corporate sponsorships\n- Grew contributed revenue from $1.4M to $2.1M in three years, including a 40% rise in monthly donors\n- Raised donor retention from 48% to 61% by segmenting appeals in Raiser's Edge NXT and adding a thank-you call program\n- Manage a portfolio of 120 donors giving $1,000 to $25,000 a year"
+        },
+        {
+          "company": "Cuyahoga Arts Collective",
+          "role": "Development Coordinator",
+          "location": "Cleveland, OH",
+          "startDate": "2018-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Produced an annual gala that grew from $180,000 to $310,000 net\n- Wrote 25 foundation proposals a year with a 64% success rate"
+        }
+      ],
+      "education": [
+        {
+          "school": "Erie Shore University",
+          "degree": "Bachelor of Arts in Communication",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Fundraising: annual fund, mid-level giving, events, corporate sponsorship, grant writing",
+        "Donor data: Raiser's Edge NXT, Classy, segmentation, retention analysis",
+        "Communications: appeals, impact reports, donor stewardship",
+        "Credential: Certified Fund Raising Executive (CFRE)"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "pop": 0.94
+      }
+    },
+    "Family Support Worker": {
+      "summary": "Family support worker with 5 years delivering home visits to parents of children from birth to age 5. Helped 94% of enrolled families complete well-child visits on schedule and reach their own goals in housing or employment. Brings Parents as Teachers certification, developmental screening and bilingual English and Spanish skills.",
+      "experience": [
+        {
+          "company": "Rio Grande Family Partnership",
+          "role": "Family Support Worker, Home Visiting",
+          "location": "Albuquerque, NM",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Conduct 2 to 4 home visits a month for a caseload of 22 families using the Parents as Teachers model\n- Complete ASQ-3 and ASQ:SE-2 screenings, referring 17 children to early intervention in 2025\n- Kept 94% of families on schedule for well-child visits and immunizations\n- Run monthly group connections for 30 parents, in English and Spanish"
+        },
+        {
+          "company": "Sandia Head Start",
+          "role": "Family Advocate",
+          "location": "Albuquerque, NM",
+          "startDate": "2020-08",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Built family partnership agreements with 60 Head Start families\n- Connected families to food, housing and WIC resources"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mesa del Sol University",
+          "degree": "Bachelor of Science in Family Studies",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Home visiting: Parents as Teachers, goal setting, parenting education, family assessment",
+        "Screening: ASQ-3, ASQ:SE-2, Edinburgh Postnatal Depression Scale",
+        "Languages: English and Spanish fluent",
+        "Certifications: Parents as Teachers Foundational and Model Implementation, Infant Mental Health Endorsement Level 1"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.99,
+        "bronx": 0.91,
+        "pop": 0.97
+      }
+    },
+    "Housing Specialist": {
+      "summary": "Housing specialist with 6 years administering Housing Choice Vouchers and helping households find and keep stable rentals. Manage 420 voucher households with a 99% on-time recertification rate. Brings HUD regulations, rent calculation accuracy and good working relationships with more than 200 local landlords.",
+      "experience": [
+        {
+          "company": "Sacramento Valley Housing Authority",
+          "role": "Housing Specialist II, Housing Choice Voucher Program",
+          "location": "Sacramento, CA",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a caseload of 420 HCV households, completing annual and interim recertifications with a 99% on-time rate\n- Calculate tenant rent and HAP payments under 24 CFR 982, with a 2% error rate in 2025 quality control reviews\n- Recruited 45 new landlords through outreach events and a lease-up bonus program\n- Process portability moves and rent increase requests within 30 days"
+        },
+        {
+          "company": "Capitol Homeward Coalition",
+          "role": "Housing Navigator",
+          "location": "Sacramento, CA",
+          "startDate": "2020-03",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Placed 110 households experiencing homelessness into rental housing through rapid rehousing\n- Negotiated move-in and security deposit agreements with landlords"
+        }
+      ],
+      "education": [
+        {
+          "school": "Delta River State University",
+          "degree": "Bachelor of Arts in Human Services",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Housing programs: Housing Choice Voucher, rapid rehousing, portability, HUD-VASH",
+        "Compliance: 24 CFR 982, rent calculation, income verification, EIV",
+        "Systems: Yardi Voyager, HMIS, Microsoft 365",
+        "Certifications: HCV Specialist certification, Rent Calculation certification, Fair Housing training"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "pop": 0.92
+      }
+    },
+    "Advocacy Manager": {
+      "summary": "Advocacy manager with 8 years running state policy campaigns for children's health and economic security. Led the coalition campaign that passed a $45M state child care subsidy expansion in 2025. Brings legislative strategy, coalition building and grassroots mobilization of more than 6,000 supporters.",
+      "experience": [
+        {
+          "company": "Keystone Kids Action Network",
+          "role": "Advocacy Manager",
+          "location": "Harrisburg, PA",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead state advocacy strategy for a 40-member coalition of providers, parents and faith groups\n- Ran the campaign that secured a $45M child care subsidy expansion in the 2025 state budget\n- Grew the action list from 2,100 to 6,300 supporters, generating 9,000 legislator contacts in one session\n- Prepare 12 parent and provider witnesses a year for committee hearings"
+        },
+        {
+          "company": "Susquehanna Policy Project",
+          "role": "Policy and Outreach Associate",
+          "location": "Harrisburg, PA",
+          "startDate": "2018-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Wrote 18 fact sheets and testimony on the state earned income tax credit and SNAP access\n- Organized an annual advocacy day with 350 participants"
+        }
+      ],
+      "education": [
+        {
+          "school": "Allegheny Plateau University",
+          "degree": "Master of Public Policy",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        },
+        {
+          "school": "Lehigh Gap College",
+          "degree": "Bachelor of Arts in Political Science",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Advocacy: legislative strategy, coalition building, grassroots organizing, lobbying",
+        "Communications: testimony, fact sheets, op-eds, media relations",
+        "Tools: EveryAction, Quorum, Mailchimp, Google Workspace"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.9
+      }
+    }
+  }
+}

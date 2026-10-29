@@ -16,6 +16,7 @@ import { useToast } from './Toast';
 import { Input, Textarea, fieldClass } from './Input';
 import { LazyResumePreview } from './LazyResumePreview';
 import { DesignControls } from './DesignControls';
+import { PhotoField } from './PhotoField';
 import { useAiActions } from '../hooks/useAiActions';
 import { createId } from '../utils/resumeData';
 import { formatDateRange, describeLink } from './templates/shared';
@@ -543,6 +544,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                   className="sm:col-span-2"
                 />
                 <LinksEditor links={data.links ?? []} onChange={(links) => setField('links', links)} />
+                <PhotoField photo={data.photo ?? ''} templateId={data.templateId} onChange={(photo) => setField('photo', photo)} />
               </div>
             </Section>
 

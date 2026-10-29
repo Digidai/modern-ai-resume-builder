@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is a free, local-first AI resume builder with 40 templates, a vector PDF export, 930 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
+**ModernCV is a free, local-first AI resume builder with 44 templates (including photo CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -55,10 +55,10 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 40 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy, AltaCV) and 16 ATS-friendly single-column layouts.
+- 44 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, Deedy, AltaCV) and 16 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - A template gallery (`/templates/`) with an ATS filter and a detail page per template.
-- 930 job titles in 19 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
+- 1,204 job titles in 21 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
 - Social and custom links: up to 8 extra links (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, …) with auto-detected icons in every template.
 - Built for AI agents: a remote MCP server (`/mcp`), an installable agent skill, an HTTP API with an OpenAPI spec, copy-paste prompts on every template and job page, plus `llms.txt`, `llms-full.txt`, a template catalog and a resume JSON Schema. See [`/agents/`](https://genedai.cv/agents/).
 - Imports [JSON Resume](https://jsonresume.org/) files as well as ModernCV backups.
@@ -74,7 +74,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - **40 套专业模板** - 吸收 Jake's、Harvard、Awesome-CV、moderncv、Deedy、AltaCV 等经典设计，其中 16 套为 ATS 友好单栏
 - **样式控制** - 强调色（含对比度检查）、10 种自托管字体、字号与一键压缩到一页
 - **模板画廊** - `/templates/` 支持 ATS 筛选，每套模板都有独立详情页
-- **930 个职位页面（19 个职业大类）** - 每个职位都有按岗位和级别撰写的真实示例简历、预渲染写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ，可一键“从示例开始”编辑
+- **1,204 个职位页面（21 个职业大类）** - 每个职位都有按岗位和级别撰写的真实示例简历、预渲染写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ，可一键“从示例开始”编辑
 - **社交与自定义链接** - 最多 8 个额外链接（GitHub、作品集、X、Dribbble、Behance、Google Scholar 等），自动识别图标，所有模板都会展示
 - **AI Agent 可直接使用** - 远程 MCP 服务（`/mcp`）、可安装的 Agent Skill、带 OpenAPI 的 HTTP API，每个模板和职位页都有可复制的 Prompt；另有 `llms.txt`、`llms-full.txt`、模板目录 JSON、简历 JSON Schema。详见 [`/agents/`](https://genedai.cv/agents/)
 - **JSON Resume 导入** - 可直接导入 JSON Resume 标准格式或本站备份文件
@@ -90,7 +90,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 40 templates. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital.
+ModernCV ships with 44 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital.
 
 Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 
@@ -120,10 +120,10 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 - The model is set by the `AI_MODEL` Worker var (default `@cf/zai-org/glm-5.3-flash`). No API key is needed; billing goes to the Cloudflare account.
 
 ### Job Title Directory and SEO
-- `/directory` route with searchable categories (930 titles in 19 families).
+- `/directory` route with searchable categories (1,204 titles in 21 families).
 - `/resume_tmpl/<slug>/` pages: a complete example resume written for that title (`src/data/roles/*.json`), shown in every template and pre-rendered as readable text, with "Copy text", "Start from example" and "Use with my resume", plus a writing guide and five FAQs generated from `src/data/roleGuides.json`.
 - `/templates/` gallery and `/templates/<id>/` detail pages with "best for" roles, similar templates and an editor deep link.
-- SEO postbuild script pre-renders every page (home, directory, templates, agents, 930 job pages) with unique titles and descriptions drawn from each example, JSON-LD (WebApplication, Occupation, FAQPage, BreadcrumbList, CreativeWork, ItemList, TechArticle, WebAPI) and a 974-URL sitemap.
+- SEO postbuild script pre-renders every page (home, directory, templates, agents, 1,204 job pages) with unique titles and descriptions drawn from each example, JSON-LD (WebApplication, Occupation, FAQPage, BreadcrumbList, CreativeWork, ItemList, TechArticle, WebAPI) and a 1,252-URL sitemap.
 - Unknown URLs return a real `404` with `x-robots-tag: noindex` instead of redirecting to home.
 
 ### Privacy and Data

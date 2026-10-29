@@ -1,0 +1,951 @@
+{
+  "family": "Construction & Real Estate",
+  "guide": null,
+  "titles": {
+    "Construction Laborer": {
+      "summary": "Construction laborer with 4 years on commercial and multifamily jobsites doing demo, concrete pours, material handling and site cleanup. Holds OSHA 30 and a flagger card, and has worked 3,800+ hours with no recordable injuries.",
+      "experience": [
+        {
+          "company": "Tallgrass Building Group",
+          "role": "Construction Laborer",
+          "location": "Wichita, KS",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Set and strip wall and footing forms, place rebar chairs and run vibrators on pours up to 120 cubic yards\n- Operate jumping jack compactors, plate tampers and concrete saws to grade and spec for 4-story wood-frame buildings\n- Stage drywall, lumber and fixtures with a skid steer and telehandler spotter, keeping trades supplied ahead of schedule\n- Maintain housekeeping and guardrails per OSHA 1926 Subpart M, helping the site go 410 days without a lost-time incident"
+        },
+        {
+          "company": "Arkhaven Demolition",
+          "role": "General Laborer",
+          "location": "Hutchinson, KS",
+          "startDate": "2022-04",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Removed interior finishes, ceilings and non-load-bearing walls on 9 tenant renovation projects\n- Sorted debris for metal and cardboard recycling, diverting about 30% of tonnage from the landfill"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hutchinson Heights High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: OSHA 30 Construction, ATSSA Flagger, First Aid/CPR",
+        "Equipment: jumping jacks, plate compactors, concrete saws, power buggies, skid steer",
+        "Site work: formwork, rebar tying, concrete finishing, trench shoring support, demolition",
+        "Other: valid driver's license, reliable transportation, lifting 75 lbs"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.91,
+        "pop": 0.88
+      }
+    },
+    "Landscaper": {
+      "summary": "Landscaper with 5 years installing and maintaining residential and HOA properties, from sod and irrigation to paver patios and retaining walls. Led a 3-person install crew that completed 60+ hardscape jobs last season with zero callbacks for settling.",
+      "experience": [
+        {
+          "company": "Fernbrook Outdoor Living",
+          "role": "Landscape Crew Lead",
+          "location": "Raleigh, NC",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 3-person crew installing paver patios, segmental retaining walls up to 4 ft and planting beds from design plans\n- Excavate and compact base with a mini excavator and plate compactor to ICPI guidelines, completing 60+ jobs in 2025 with no settling callbacks\n- Install and repair drip and spray irrigation zones, cutting average client water use by about 20% after audits\n- Track materials and hours on job tickets, keeping installs within 5% of estimated labor"
+        },
+        {
+          "company": "Neuse River Lawn Care",
+          "role": "Landscape Technician",
+          "location": "Garner, NC",
+          "startDate": "2021-04",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Mowed, edged, pruned and mulched 35 residential accounts per week on a zero-turn and walk-behind route\n- Applied pre-emergent and fertilizer under the supervision of a licensed applicator"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wake Tech Community College",
+          "degree": "Certificate, Landscape Construction",
+          "startDate": "2022-01",
+          "endDate": "2022-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hardscape: paver patios, segmental retaining walls, base prep, polymeric sand",
+        "Equipment: mini excavator, skid steer, plate compactor, zero-turn mowers, sod cutter",
+        "Irrigation: drip and spray zones, Rain Bird and Hunter controllers, valve repair",
+        "Certifications: ICPI Concrete Paver Installer, NC Pesticide Applicator (in progress)"
+      ],
+      "fit": {
+        "swiss": 0.95,
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.88
+      }
+    },
+    "Groundskeeper": {
+      "summary": "Groundskeeper with 6 years maintaining a 140-acre college campus and athletic fields. Keeps turf, trees and walkways safe and presentable year-round, and cut field closures from wet conditions by about 25% after regrading drainage on two practice fields.",
+      "experience": [
+        {
+          "company": "Larchwood College Facilities",
+          "role": "Groundskeeper II",
+          "location": "Ithaca, NY",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Mow, aerate, overseed and line 4 natural-grass athletic fields to NCAA game-day standards\n- Regraded and installed French drains on 2 practice fields, reducing rain-out closures by about 25%\n- Run snow removal on 6 miles of walkways with a tractor and plow, applying deicer to keep slip-and-fall claims at zero for 3 winters\n- Perform daily inspections and basic maintenance on mowers, blowers and utility vehicles, logging repairs in the work order system"
+        },
+        {
+          "company": "Cayuga Memorial Park",
+          "role": "Grounds Maintenance Worker",
+          "location": "Auburn, NY",
+          "startDate": "2020-04",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Maintained 60 acres of lawns, beds and trees, including trimming, leaf cleanup and stump grinding\n- Operated a backhoe for interments under supervision with a clean safety record"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tompkins Cortland Community College",
+          "degree": "Certificate, Horticulture",
+          "startDate": "2019-01",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Turf care: mowing, aeration, overseeding, field lining, irrigation checks",
+        "Equipment: reel and rotary mowers, compact tractors, snow plows, chainsaws, backhoe",
+        "Certifications: NYS DEC Commercial Pesticide Technician, OSHA 10",
+        "Maintenance: small engine repair, preventive maintenance logs, work orders"
+      ],
+      "fit": {
+        "creative": 0.99,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
+      }
+    },
+    "Painter": {
+      "summary": "Commercial and residential painter with 7 years of brush, roll and airless spray work on interiors, exteriors and new construction. Holds EPA RRP Lead-Safe certification and completed a 48-unit apartment repaint two weeks ahead of schedule.",
+      "experience": [
+        {
+          "company": "Coppervale Painting Company",
+          "role": "Journeyman Painter",
+          "location": "Columbus, OH",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Spray and back-roll walls and ceilings with Graco airless rigs on multifamily and office projects up to 80,000 sq ft\n- Led a 4-person crew on a 48-unit apartment repaint, finishing 2 weeks early with a punch list under 1% of rooms\n- Prep surfaces with patching, caulking, sanding and primers, and follow EPA RRP lead-safe practices on pre-1978 buildings\n- Apply epoxy floor coatings and dry-fall to warehouse ceilings from scissor lifts"
+        },
+        {
+          "company": "Hilliard Home Painters",
+          "role": "Painter",
+          "location": "Hilliard, OH",
+          "startDate": "2019-04",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Painted 120+ residential interiors and exteriors, including cabinet refinishing and stain work\n- Set up ladders and plank systems safely and protected furniture and floors, earning repeat referrals"
+        }
+      ],
+      "education": [
+        {
+          "school": "Painters District Council Apprenticeship Program",
+          "degree": "Painter and Decorator Apprenticeship (completed)",
+          "startDate": "2017-08",
+          "endDate": "2019-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Application: airless spray, brush and roll, back-rolling, cabinet finishing, epoxy coatings",
+        "Prep: drywall patching, caulking, sanding, primers and stain blockers",
+        "Certifications: EPA RRP Lead-Safe Renovator, OSHA 10, aerial lift operator",
+        "Equipment: Graco airless sprayers, scissor lifts, extension planks, color matching"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.86,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.93
+      }
+    },
+    "Roofer": {
+      "summary": "Roofer with 6 years on residential steep-slope and commercial low-slope systems, including asphalt shingle, TPO and modified bitumen. Runs tear-offs and installs with full fall protection and has completed 300+ roofs with no leak warranty claims.",
+      "experience": [
+        {
+          "company": "Stonecrest Roofing Systems",
+          "role": "Roofing Foreman",
+          "location": "Oklahoma City, OK",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 5-person crew on tear-offs and re-roofs, installing architectural shingles, ice and water shield and ridge vent on 2 to 3 homes per week\n- Install 60-mil TPO with hot-air welders on commercial roofs up to 40,000 sq ft, passing manufacturer warranty inspections first time\n- Set up personal fall arrest anchors, guardrails and warning lines per OSHA 1926.501, with no falls or recordables in 4 years\n- Document hail damage and supplements with photos for insurance adjusters, helping close storm jobs about 10% faster"
+        },
+        {
+          "company": "Red Earth Exteriors",
+          "role": "Roofer",
+          "location": "Norman, OK",
+          "startDate": "2020-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Tore off and installed shingle roofs, flashing, drip edge and gutters on residential storm repair jobs\n- Repaired flashing and pipe boots on 150+ leak calls"
+        }
+      ],
+      "education": [
+        {
+          "school": "Moore Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Systems: asphalt shingle, TPO, EPDM, modified bitumen, metal panel repair",
+        "Safety: OSHA 30 Construction, fall protection competent person, ladder safety",
+        "Certifications: GAF Certified installer training, Carlisle TPO installer",
+        "Tools: hot-air welders, pneumatic nailers, roof brackets, Xactimate photo documentation"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.92,
+        "mono": 0.98,
+        "pop": 0.88
+      }
+    },
+    "Drywall Installer": {
+      "summary": "Drywall installer with 5 years hanging and finishing board on commercial tenant improvements and new homes. Hangs an average of 45 sheets per shift and finishes to Level 4 and Level 5, with a punch-out rate under 2% on recent jobs.",
+      "experience": [
+        {
+          "company": "Saltgrass Interior Systems",
+          "role": "Drywall Hanger and Finisher",
+          "location": "Phoenix, AZ",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Frame metal studs and hang 5/8 in. Type X board on rated walls and ceilings for office and medical build-outs\n- Hang an average of 45 sheets per shift using screw guns, lifts and stilts while keeping seams off openings\n- Tape, bed and finish to Level 4 and Level 5 with automatic taping tools and boxes, keeping punch-out under 2%\n- Install fire caulk and UL-listed assemblies at penetrations, passing 100% of fire-rated wall inspections on 6 projects"
+        },
+        {
+          "company": "Desert Ridge Homes",
+          "role": "Drywall Helper",
+          "location": "Mesa, AZ",
+          "startDate": "2021-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Stocked board, cut openings and hung ceilings on production homes averaging 2,200 sq ft\n- Patched and textured walls with knockdown and orange peel finishes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chandler Vista High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hanging: gypsum and Type X board, metal stud framing, ceilings, soffits",
+        "Finishing: Level 4 and Level 5, automatic taping tools, knockdown and orange peel texture",
+        "Safety: OSHA 10, scaffold and baker platform use, silica dust controls",
+        "Tools: screw guns, drywall lifts, stilts, laser levels, RotoZip"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.93,
+        "pop": 0.88
+      }
+    },
+    "Mason": {
+      "summary": "Journeyman mason with 9 years laying brick, block and stone on schools, retail and custom homes. Lays 450 to 500 brick per day to plumb and line, and served as lead mason on a 3-story school addition delivered without a single masonry rework order.",
+      "experience": [
+        {
+          "company": "Whitlow Masonry Contractors",
+          "role": "Journeyman Mason",
+          "location": "Louisville, KY",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lay 450 to 500 face brick per day on veneer walls, holding head joints and coursing to spec\n- Served as lead mason on a 3-story school addition, laying 8 in. and 12 in. CMU with grouted cells and bond beams with zero rework orders\n- Install flashing, weeps, ties and control joints per TMS 402/602 and pass third-party special inspections\n- Erect and inspect frame scaffold daily and mentor 2 apprentices on lead building and mortar mixing"
+        },
+        {
+          "company": "Bluegrass Stone and Brick",
+          "role": "Mason Apprentice",
+          "location": "Lexington, KY",
+          "startDate": "2017-06",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Tended masons, mixed mortar and grout, and built stone veneer and fireplaces on custom homes\n- Progressed from tending to laying block on foundations within 18 months"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bricklayers and Allied Craftworkers Training Center",
+          "degree": "Bricklayer Apprenticeship (completed)",
+          "startDate": "2017-06",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Masonry: face brick, CMU, natural and cultured stone, arches, reinforced grouted walls",
+        "Standards: TMS 402/602, flashing and weep details, cold-weather masonry practices",
+        "Safety: OSHA 30 Construction, scaffold competent person, silica exposure controls",
+        "Tools: masonry saws, mortar mixers, laser levels, story poles, rough terrain forklift"
+      ],
+      "fit": {
+        "silk": 0.98,
+        "sidebar": 0.98,
+        "creative": 0.99,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "mono": 0.97,
+        "pop": 0.86
+      }
+    },
+    "Heavy Equipment Operator": {
+      "summary": "Heavy equipment operator with 8 years running excavators, dozers, loaders and motor graders on highway and utility projects. NCCER certified with a CDL Class A for lowboy hauls, and has moved over 400,000 cubic yards of earth without a property damage incident.",
+      "experience": [
+        {
+          "company": "Bitterroot Earthworks",
+          "role": "Heavy Equipment Operator",
+          "location": "Billings, MT",
+          "startDate": "2021-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate Cat 336 excavators, D6 dozers and 140 motor graders on highway widening and subdivision site work\n- Cut and fill to grade with Trimble GPS machine control, holding finish grade within 0.1 ft across 400,000+ cubic yards\n- Dig utility trenches up to 14 ft deep with trench boxes per OSHA Subpart P, coordinating 811 locates with pipe crews\n- Haul equipment on a lowboy under CDL Class A and complete daily walkarounds, with no property damage incidents in 5 years"
+        },
+        {
+          "company": "Yellowstone Valley Paving",
+          "role": "Equipment Operator",
+          "location": "Laurel, MT",
+          "startDate": "2018-05",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Ran wheel loaders, rollers and skid steers on asphalt paving and gravel road jobs\n- Loaded haul trucks at the aggregate pit, averaging 70 loads per shift"
+        }
+      ],
+      "education": [
+        {
+          "school": "Big Sky Operating Engineers Training Center",
+          "degree": "Heavy Equipment Operator Program, NCCER Level 2",
+          "startDate": "2017-09",
+          "endDate": "2018-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Equipment: excavators, dozers, motor graders, wheel loaders, rollers, skid steers",
+        "Licenses: CDL Class A, NCCER Heavy Equipment Operations Level 2, OSHA 30",
+        "Grade control: Trimble GPS machine control, laser and stake reading, slope staking",
+        "Safety: trench protection, 811 locates, daily equipment inspections, spotter signals"
+      ],
+      "fit": {
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.97,
+        "pop": 0.87
+      }
+    },
+    "Site Engineer": {
+      "summary": "Site engineer with 5 years on commercial and healthcare projects, managing layout, RFIs, submittals and quality control for a general contractor. Holds an EIT and cut layout errors on a $62M medical office building to zero by adding a weekly total station check.",
+      "experience": [
+        {
+          "company": "Halverson Kyle Builders",
+          "role": "Site Engineer",
+          "location": "Nashville, TN",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run field layout with a Leica total station for grid lines, anchor bolts and embeds on a $62M 5-story medical office building\n- Added a weekly control check that eliminated layout errors after two early pier misses\n- Manage 300+ RFIs and 180 submittals in Procore, keeping average RFI turnaround under 6 days\n- Lead daily quality walks and pre-pour checklists with subs, tracking deficiencies to closeout"
+        },
+        {
+          "company": "Cumberland Ridge Constructors",
+          "role": "Field Engineer",
+          "location": "Murfreesboro, TN",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Supported a $28M distribution center, tracking concrete pours, testing reports and daily logs\n- Reviewed shop drawings against structural plans and flagged 14 conflicts before fabrication"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tennessee Highland University",
+          "degree": "B.S. Civil Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field engineering: layout, total station, as-builts, pre-pour checklists, quality control",
+        "Project controls: RFIs, submittals, daily reports, 3-week look-ahead schedules",
+        "Software: Procore, Bluebeam Revu, AutoCAD, Primavera P6",
+        "Credentials: EIT (Tennessee), OSHA 30 Construction"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.93,
+        "iron": 0.96,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.92,
+        "mono": 0.98
+      }
+    },
+    "Leasing Consultant": {
+      "summary": "Leasing consultant with 3 years at Class A apartment communities, handling tours, applications and renewals. Closed 38% of tours to signed leases last year and helped lift a 290-unit property from 91% to 96% occupancy in six months.",
+      "experience": [
+        {
+          "company": "Brambleton Residential",
+          "role": "Leasing Consultant",
+          "location": "Charlotte, NC",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Give 40+ in-person and virtual tours per month at a 290-unit community, closing 38% to signed leases\n- Helped raise occupancy from 91% to 96% in six months through same-day follow-up and lease-up specials\n- Screen applicants in Yardi against income and background criteria, following Fair Housing guidelines\n- Process renewals and move-ins, improving the renewal rate from 52% to 58% over one year"
+        },
+        {
+          "company": "Ivy Terrace Apartments",
+          "role": "Leasing Assistant",
+          "location": "Matthews, NC",
+          "startDate": "2023-05",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Answered leads from ILS listings and scheduled tours, responding to inquiries within 1 hour\n- Prepared model units and move-in packets and logged maintenance requests"
+        }
+      ],
+      "education": [
+        {
+          "school": "Queens Hill University",
+          "degree": "B.A. Communication",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leasing: tours, lead follow-up, applicant screening, renewals, move-in and move-out",
+        "Software: Yardi Voyager, RentCafe, Knock CRM, Microsoft Excel",
+        "Compliance: Fair Housing Act training, lease documentation",
+        "Credentials: NAA Certified Apartment Leasing Professional (CALP)"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.94,
+        "pop": 0.93
+      }
+    },
+    "Home Inspector": {
+      "summary": "Licensed home inspector with 6 years and 1,900+ residential inspections, plus a background as a residential carpenter. Delivers same-day reports with photos with zero errors and omissions claims to date.",
+      "experience": [
+        {
+          "company": "Clearsight Home Inspections",
+          "role": "Home Inspector",
+          "location": "Tampa, FL",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform 6 to 8 inspections per week on single-family homes and condos to InterNACHI Standards of Practice\n- Inspect roofs, structure, electrical panels, HVAC, plumbing and attics using thermal imaging and moisture meters\n- Complete Florida wind mitigation and 4-point insurance inspections, saving clients an average of $600 per year on premiums\n- Deliver photo reports in Spectora within 24 hours, maintaining a 4.9 of 5 rating across 400+ reviews"
+        },
+        {
+          "company": "Bayshore Custom Carpentry",
+          "role": "Residential Carpenter",
+          "location": "Clearwater, FL",
+          "startDate": "2016-03",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Framed additions, replaced rotted sheathing and installed windows and doors on remodels\n- Repaired water and termite damage found during real estate transactions"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gulfcoast Inspection Training Institute",
+          "degree": "Florida Home Inspector Pre-Licensing Course (120 hours)",
+          "startDate": "2020-05",
+          "endDate": "2020-08"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: Florida Licensed Home Inspector, Certified Wind Mitigation Inspector",
+        "Inspections: structure, roofing, electrical, plumbing, HVAC, 4-point, wind mitigation",
+        "Tools: FLIR thermal camera, moisture meters, GFCI testers, drone roof imaging",
+        "Software: Spectora report writing, InterNACHI Standards of Practice"
+      ],
+      "fit": {
+        "creative": 0.97,
+        "berlin": 0.92,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.9
+      }
+    },
+    "Tile Setter": {
+      "summary": "Tile setter with 7 years installing ceramic, porcelain and natural stone in custom bathrooms, kitchens and commercial lobbies. Certified Tile Installer through CTEF, with large-format installs held to lippage under 1/32 in.",
+      "experience": [
+        {
+          "company": "Mosaic Point Tile Works",
+          "role": "Lead Tile Setter",
+          "location": "San Antonio, TX",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install porcelain, marble and glass mosaic in 60+ custom showers and kitchens per year\n- Set 24x48 in. large-format tile with leveling systems, holding lippage under 1/32 in. per ANSI A108\n- Build waterproof shower pans with Schluter Kerdi and curbless linear drains, with no leak callbacks in 5 years\n- Float mortar beds and layout floors for 3 hotel lobbies totaling 9,000 sq ft"
+        },
+        {
+          "company": "Alamo Heights Floors",
+          "role": "Tile Helper",
+          "location": "San Antonio, TX",
+          "startDate": "2019-02",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Mixed thinset and grout, cut tile on wet saws and installed cement backer board\n- Removed old tile and prepped subfloors for 100+ remodel jobs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ceramic Tile Education Foundation",
+          "degree": "Certified Tile Installer (CTI)",
+          "startDate": "2022-03",
+          "endDate": "2022-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Installation: porcelain, natural stone, glass mosaic, large-format tile, mortar beds",
+        "Waterproofing: Schluter Kerdi, RedGard, linear drains, curbless showers",
+        "Standards: ANSI A108/A118, TCNA Handbook, lippage tolerances",
+        "Tools: wet saws, leveling systems, grinders, laser layout"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.93,
+        "pop": 0.95
+      }
+    },
+    "Flooring Installer": {
+      "summary": "Flooring installer with 6 years installing hardwood, LVP, carpet and sheet vinyl in homes, offices and senior living facilities. Installs up to 1,000 sq ft of LVP per day and has kept warranty callbacks below 1% of jobs.",
+      "experience": [
+        {
+          "company": "Harborgate Floor Covering",
+          "role": "Flooring Installer",
+          "location": "Baltimore, MD",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install LVP, engineered hardwood and carpet in residential and light commercial jobs, averaging 1,000 sq ft of LVP per day\n- Test slab moisture with calcium chloride and RH probes and apply moisture barriers before installs\n- Heat-weld sheet vinyl in 40+ senior living resident rooms and corridors to infection-control specs\n- Keep warranty callbacks under 1% by grinding, patching and leveling subfloors to manufacturer flatness"
+        },
+        {
+          "company": "Chesterfield Carpet Outlet",
+          "role": "Carpet Installer",
+          "location": "Towson, MD",
+          "startDate": "2020-03",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Stretched and seamed carpet with power stretchers and seaming irons in 300+ homes\n- Installed stair runners, transitions and pad"
+        }
+      ],
+      "education": [
+        {
+          "school": "Patapsco Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2015-08",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Materials: LVP, engineered and solid hardwood, carpet, sheet vinyl, VCT",
+        "Prep: moisture testing, self-leveler, grinding, underlayment, transitions",
+        "Certifications: CFI Certified Residential Installer, OSHA 10",
+        "Tools: power stretchers, heat-weld guns, floor nailers, undercut saws"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.88,
+        "bronx": 0.9,
+        "pop": 0.96
+      }
+    },
+    "Glazier": {
+      "summary": "Journeyman glazier with 10 years installing storefront, curtain wall and interior glass on commercial buildings. Led installation of 22,000 sq ft of unitized curtain wall on a 9-story office tower that passed AAMA water testing on the first attempt.",
+      "experience": [
+        {
+          "company": "Clearspan Glass and Metal",
+          "role": "Journeyman Glazier",
+          "location": "Portland, OR",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install unitized and stick-built curtain wall, storefront and entrances on office, school and retail projects\n- Led a 4-person crew setting 22,000 sq ft of curtain wall on a 9-story tower, passing AAMA 501.2 field water tests first time\n- Rig and set IGUs up to 600 lbs with vacuum lifters and mini cranes from swing stage and boom lifts\n- Apply structural silicone and perimeter sealant to manufacturer specs and hold 100% tie-off at the slab edge"
+        },
+        {
+          "company": "Willamette Auto and Residential Glass",
+          "role": "Glazier Apprentice",
+          "location": "Salem, OR",
+          "startDate": "2016-09",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Cut, glazed and installed residential windows, shower doors and mirrors\n- Replaced storefront glass on 24-hour emergency board-up calls"
+        }
+      ],
+      "education": [
+        {
+          "school": "Glaziers Joint Apprenticeship Training Program",
+          "degree": "Glazier Apprenticeship (completed)",
+          "startDate": "2016-09",
+          "endDate": "2020-07"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Systems: unitized and stick-built curtain wall, storefront, entrances, interior glass partitions",
+        "Rigging: vacuum lifters, mini cranes, swing stage, boom lifts, qualified rigger",
+        "Sealants: structural silicone glazing, perimeter sealant, AAMA 501.2 water testing",
+        "Safety: OSHA 30 Construction, fall protection, MEWP operator"
+      ],
+      "fit": {
+        "creative": 0.99,
+        "berlin": 0.92,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.88
+      }
+    },
+    "Insulation Installer": {
+      "summary": "Insulation installer with 4 years installing fiberglass batts, blown-in cellulose and spray foam in new homes and retrofits. BPI Building Analyst certified, with homes routinely passing blower door tests at under 3 ACH50.",
+      "experience": [
+        {
+          "company": "Thermacrest Insulation",
+          "role": "Insulation Installer",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install R-21 batts in walls and blow R-49 cellulose into attics on 5 to 7 new homes per week\n- Spray open- and closed-cell foam in rim joists and crawlspaces with a Graco reactor, wearing a supplied-air respirator\n- Air-seal top plates and penetrations ahead of blower door tests, with homes averaging 2.4 ACH50\n- Pass 98% of city energy code insulation inspections on first visit"
+        },
+        {
+          "company": "North Loop Weatherization",
+          "role": "Weatherization Crew Member",
+          "location": "St. Paul, MN",
+          "startDate": "2022-05",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Dense-packed walls and air-sealed attics in 80+ income-qualified homes\n- Installed baffles and ventilation per weatherization program standards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Roseville Lakes High School",
+          "degree": "High School Diploma",
+          "startDate": "2017-08",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Insulation: fiberglass batts, blown cellulose, dense-pack, open- and closed-cell spray foam",
+        "Air sealing: top plates, rim joists, penetrations, blower door prep",
+        "Certifications: BPI Building Analyst, OSHA 10, respirator fit-tested",
+        "Equipment: Graco reactors, insulation blowing machines, IR camera"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.93,
+        "pop": 0.95
+      }
+    },
+    "Scaffolder": {
+      "summary": "Scaffolder with 6 years erecting and dismantling tube-and-clamp and system scaffold at refineries and power plants. Competent person certified, with 160,000+ work-hours on crews without a dropped object or recordable injury.",
+      "experience": [
+        {
+          "company": "Gulfpoint Industrial Access",
+          "role": "Lead Scaffold Builder",
+          "location": "Port Arthur, TX",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead a 6-person crew erecting tube-and-clamp and Safway Systems scaffold up to 120 ft during refinery turnarounds\n- Inspect and tag scaffolds daily as competent person per OSHA 1926.451, with zero failed client audits\n- Build cantilevers, hanging scaffold and access towers around heaters and columns from engineered drawings\n- Supported crews totaling 160,000 work-hours with no dropped objects or recordables during two major turnarounds"
+        },
+        {
+          "company": "Sabine Access Services",
+          "role": "Scaffold Builder",
+          "location": "Beaumont, TX",
+          "startDate": "2020-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Erected and dismantled system scaffold in petrochemical units under permit-to-work rules\n- Moved material with tag lines and hand signals in coordination with crane crews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lamar Bay Technical College",
+          "degree": "NCCER Scaffolding Level 1 and 2",
+          "startDate": "2019-08",
+          "endDate": "2020-02"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Scaffolding: tube-and-clamp, Safway Systems, frame, cantilever and hanging scaffold",
+        "Certifications: Scaffold Competent Person, NCCER Scaffolding, OSHA 30, TWIC, Basic Plus",
+        "Safety: fall protection, dropped object prevention, permit-to-work, H2S awareness",
+        "Other: engineered drawing reading, rigging and tag lines, scaffold tagging"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.86,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.88
+      }
+    },
+    "Construction Inspector": {
+      "summary": "Construction inspector with 9 years inspecting roads, bridges and utilities for public agencies, starting as a concrete testing technician. ICC and ACI certified, and documented $1.4M in contractor deficiencies corrected before acceptance on a county road program.",
+      "experience": [
+        {
+          "company": "Mesquite County Public Works",
+          "role": "Senior Construction Inspector",
+          "location": "El Paso, TX",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Inspect roadway, drainage and water line projects up to $25M for compliance with plans, specs and TxDOT standards\n- Document daily quantities and field reports used for monthly pay estimates, with no disputed quantities at closeout\n- Flagged deficiencies valued at $1.4M on a county road program, all corrected before acceptance\n- Witness compaction, concrete and asphalt testing and enforce SWPPP and traffic control requirements"
+        },
+        {
+          "company": "Rio Bravo Testing Laboratories",
+          "role": "Materials Testing Technician",
+          "location": "Las Cruces, NM",
+          "startDate": "2017-06",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Performed slump, air and cylinder tests on concrete and nuclear density tests on soils and asphalt\n- Wrote test reports for 300+ commercial and public projects"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chihuahuan Desert State University",
+          "degree": "A.A.S. Construction Technology",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: ICC Commercial Building Inspector, ACI Concrete Field Testing Technician Grade I, NICET Level III",
+        "Inspection: roadway, drainage, utilities, concrete, asphalt, compaction",
+        "Compliance: TxDOT specifications, SWPPP, traffic control, daily reports and pay quantities",
+        "Software: Bluebeam Revu, SiteManager, Microsoft Excel"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.88
+      }
+    },
+    "Building Surveyor": {
+      "summary": "Building surveyor with 6 years producing property condition assessments and measured surveys of commercial buildings for lenders and owners. Completed 250+ ASTM E2018 assessments, and a survey of a 1960s office portfolio found $3.2M in deferred maintenance that shaped the buyer's price.",
+      "experience": [
+        {
+          "company": "Keelson Building Consultants",
+          "role": "Building Surveyor",
+          "location": "Denver, CO",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Conduct property condition assessments to ASTM E2018 on offices, multifamily and retail up to 500,000 sq ft\n- Survey roofs, facades, MEP systems and ADA access, and prepare 10-year capital reserve tables\n- Identified $3.2M in deferred maintenance on a 4-building office portfolio, used in the buyer's price renegotiation\n- Produce measured floor plans from laser and 3D scan data to BOMA standards"
+        },
+        {
+          "company": "Front Range Facility Assessments",
+          "role": "Assistant Surveyor",
+          "location": "Aurora, CO",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Assisted on 120 condition surveys and drafted reports with photo logs and cost estimates\n- Measured existing buildings and updated as-built drawings in AutoCAD"
+        }
+      ],
+      "education": [
+        {
+          "school": "Colorado Plains University",
+          "degree": "B.S. Construction Management",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Assessments: ASTM E2018 PCAs, facade surveys, capital reserve studies, ADA reviews",
+        "Measurement: BOMA floor area, Leica laser scanning, as-built drawings",
+        "Software: AutoCAD, Revit, RSMeans cost data, Bluebeam Revu",
+        "Credentials: ICC Property Maintenance and Housing Inspector, OSHA 10"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "pop": 0.93
+      }
+    },
+    "Real Estate Investor": {
+      "summary": "Real estate investor with 7 years acquiring, renovating and operating small multifamily and single-family rentals. Built a portfolio of 34 units through value-add renovations and BRRRR refinances, with an average cash-on-cash return of 11%.",
+      "experience": [
+        {
+          "company": "Ashbury Lane Holdings LLC",
+          "role": "Principal and Owner",
+          "location": "Indianapolis, IN",
+          "startDate": "2019-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Acquired 34 units across 9 properties with private and bank financing, underwriting each deal on cap rate, DSCR and rehab budget\n- Managed renovations averaging $38,000 per unit with licensed contractors, raising average rents 27% after turnover\n- Refinanced 5 properties after rehab, recovering 85% of invested capital to fund the next acquisitions\n- Oversee a third-party property manager, keeping occupancy at 96% and delinquency under 2%"
+        },
+        {
+          "company": "Monument Circle Commercial Lending",
+          "role": "Credit Analyst",
+          "location": "Indianapolis, IN",
+          "startDate": "2016-06",
+          "endDate": "2019-02",
+          "isCurrent": false,
+          "description": "- Underwrote $90M of commercial real estate loans, building cash flow models and rent roll analyses\n- Prepared credit memos for loan committee on multifamily and retail properties"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hoosier Plains University",
+          "degree": "B.S. Finance",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Investing: acquisitions, underwriting, value-add renovation, BRRRR, 1031 exchanges",
+        "Finance: DSCR loans, cap rate and cash-on-cash analysis, pro formas, private capital",
+        "Operations: contractor management, property management oversight, rent roll review",
+        "Tools: Microsoft Excel, CoStar, Stessa, county records research"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.86
+      }
+    },
+    "Mortgage Broker": {
+      "summary": "NMLS-licensed mortgage broker with 7 years arranging conventional, FHA, VA and jumbo loans through 20+ wholesale lenders. Closed $84M in volume across 210 loans last year with an average 26-day close.",
+      "experience": [
+        {
+          "company": "Sandhill Home Lending",
+          "role": "Mortgage Broker",
+          "location": "Sacramento, CA",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Originate purchase and refinance loans for first-time and move-up buyers, closing $84M across 210 loans in 2025\n- Shop rates and programs across 20+ wholesale lenders, saving clients an average of 0.3% on rate versus retail quotes\n- Structure income and asset documentation for self-employed borrowers, including bank statement and DSCR loans\n- Generate 60% of volume from real estate agent and past-client referrals, with an average 26-day close"
+        },
+        {
+          "company": "Capital Delta Mortgage",
+          "role": "Loan Officer Assistant",
+          "location": "Roseville, CA",
+          "startDate": "2019-04",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Collected borrower documents, ordered appraisals and title, and tracked conditions in Encompass\n- Supported 2 loan officers through a 2020 refinance wave of 35+ files per month"
+        }
+      ],
+      "education": [
+        {
+          "school": "Sacramento Valley State University",
+          "degree": "B.S. Business Administration",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licensing: NMLS Mortgage Loan Originator, California DRE Broker",
+        "Loan programs: conventional, FHA, VA, jumbo, bank statement, DSCR",
+        "Compliance: TRID, RESPA, ECOA, ability-to-repay",
+        "Software: Encompass, Arive, Optimal Blue pricing, Salesforce"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.91,
+        "ginto": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.92,
+        "pop": 0.93
+      }
+    }
+  }
+}

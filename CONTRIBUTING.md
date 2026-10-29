@@ -25,7 +25,7 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 1. Add the title and a realistic example resume to its family file in `src/data/roles/` (a new family also needs a `guide`).
 2. Run `npm run roles:sync`, then `npm run jobtitles:validate`.
-3. Check it fits one page in every template: with `npm run dev -- --port 3000` running, `python3 scripts/roles-fit.py titles.json fit.json` (Python Playwright; `titles.json` is a JSON array of titles), then `npm run roles:fit:apply -- fit.json`. This trims the least important lines if needed and records the per-template scale (`fit`) the job page uses.
+3. Check it fits one page in every template: with `npm run dev -- --port 3000` running, `python3 scripts/roles-fit.py titles.json fit.json` (Python Playwright; `titles.json` is a JSON array of titles), then `npm run roles:fit:apply -- fit.json`. It tries per-template scales (down to 85%) first, trims the least important lines only if that isn't enough, and records the per-template scale (`fit`) the job page uses. Titles you didn't measure are left unchanged (and listed as "not measured"). After adding a template, measure all titles.
 4. Build: `npm run build` (SEO pages + share images depend on job titles).
 
 ## SEO + Social Sharing

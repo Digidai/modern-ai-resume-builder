@@ -48,18 +48,19 @@
         "Sourcing: Supplier negotiation, contract management, dual sourcing, cost modeling"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.93,
         "executive": 0.98,
         "academic": 0.99,
         "opal": 0.93,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "swiss": 0.92,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.99,
-        "quartz": 0.98,
-        "bronx": 0.96,
+        "quartz": 0.95,
+        "bronx": 0.9,
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.98
@@ -152,10 +153,11 @@
         "Communication: Supplier follow-up, cross-team coordination, status reporting"
       ],
       "fit": {
+        "modern": 0.98,
         "minimalist": 0.96,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
+        "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.94,
         "bronx": 0.9,
@@ -220,13 +222,14 @@
         "silk": 0.96,
         "opal": 0.95,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.89,
         "symmetry": 0.98,
         "path": 0.98,
-        "quartz": 0.94,
+        "quartz": 0.91,
         "bronx": 0.9,
         "mono": 0.88,
         "pop": 0.87,
@@ -282,10 +285,9 @@
         "minimalist": 0.97,
         "swiss": 0.94,
         "berlin": 0.86,
-        "iron": 0.88,
-        "ginto": 0.86,
-        "quartz": 0.97,
-        "bronx": 0.9,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.9
       }
@@ -328,13 +330,12 @@
         "Communication: Customer delivery updates, branch coordination, carrier follow-up"
       ],
       "fit": {
-        "creative": 0.99,
         "swiss": 0.95,
         "berlin": 0.89,
         "iron": 0.9,
         "ginto": 0.85,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.9
       }
@@ -389,10 +390,10 @@
         "minimalist": 0.93,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.86,
+        "iron": 0.91,
+        "ginto": 0.88,
         "symmetry": 0.99,
-        "bronx": 0.89,
+        "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.92
       }
@@ -435,15 +436,16 @@
         "Finance: Capital and operating budgets, lease versus buy analysis, cost per mile tracking"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "silk": 0.97,
         "minimalist": 0.98,
+        "creative": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.88,
-        "bronx": 0.87,
+        "quartz": 0.86,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -486,12 +488,13 @@
         "Communication: Forwarder and broker coordination, supplier follow-up, shipment status reports"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.88,
-        "ginto": 0.87,
+        "iron": 0.86,
+        "ginto": 0.85,
         "quartz": 0.89,
         "bronx": 0.86,
         "mono": 0.95,
@@ -538,6 +541,7 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.98,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.88,
@@ -587,16 +591,17 @@
         "Compliance: Healthcare supplier vetting, OIG exclusion checks, conflict of interest reviews"
       ],
       "fit": {
-        "modern": 0.97,
+        "modern": 0.99,
         "silk": 0.94,
         "opal": 0.99,
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.85,
+        "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.85
       }
@@ -642,6 +647,7 @@
         "silk": 0.95,
         "opal": 0.99,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.85,
@@ -695,8 +701,8 @@
         "berlin": 0.85,
         "iron": 0.91,
         "ginto": 0.9,
-        "quartz": 0.91,
-        "bronx": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.95
       }
@@ -753,13 +759,12 @@
         "Systems: SAP Ariba, Coupa, Power BI, Excel"
       ],
       "fit": {
-        "modern": 0.97,
         "silk": 0.98,
         "minimalist": 0.94,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.94,
-        "ginto": 0.91,
+        "iron": 0.96,
+        "ginto": 0.93,
         "quartz": 0.97,
         "bronx": 0.93,
         "mono": 0.91,
@@ -864,12 +869,13 @@
         "Compliance: SQF, FSMA supplier verification, allergen controls"
       ],
       "fit": {
+        "modern": 0.98,
         "silk": 0.98,
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
         "quartz": 0.96,
         "bronx": 0.86,
         "mono": 0.95,
@@ -916,10 +922,10 @@
       "fit": {
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.88,
-        "quartz": 0.93,
-        "bronx": 0.86,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.95,
+        "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.92
       }
@@ -971,13 +977,14 @@
         "Finance: Inventory valuation, month-end close support, reserve analysis"
       ],
       "fit": {
+        "modern": 0.98,
         "minimalist": 0.95,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.99,
-        "quartz": 0.93,
+        "quartz": 0.92,
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.85
@@ -1023,11 +1030,12 @@
       "fit": {
         "silk": 0.94,
         "minimalist": 0.92,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.93,
+        "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.88,
@@ -1080,13 +1088,13 @@
         "Data: POS analysis, promotional lift modeling, forecast accuracy metrics (MAPE, WMAPE)"
       ],
       "fit": {
-        "modern": 0.94,
+        "modern": 0.97,
         "minimalist": 0.95,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.85,
-        "bronx": 0.92,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "bronx": 0.98,
         "mono": 0.93,
         "pop": 0.87
       }
@@ -1131,6 +1139,7 @@
       "fit": {
         "silk": 0.92,
         "minimalist": 0.91,
+        "tokyo": 0.94,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.87,
@@ -1139,7 +1148,7 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.9,
-        "pop": 0.88,
+        "pop": 0.9,
         "cast": 0.99
       }
     },
@@ -1181,17 +1190,17 @@
         "Continuous Improvement: 5S, standard work, Gemba walks"
       ],
       "fit": {
-        "modern": 0.99,
         "silk": 0.99,
         "minimalist": 0.98,
+        "tokyo": 0.97,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.89,
+        "iron": 0.91,
         "ginto": 0.87,
-        "quartz": 0.93,
-        "bronx": 0.85,
+        "quartz": 0.96,
+        "bronx": 0.9,
         "mono": 0.95,
-        "pop": 0.91
+        "pop": 0.94
       }
     },
     "Warehouse Manager": {
@@ -1290,6 +1299,7 @@
       "fit": {
         "silk": 0.95,
         "minimalist": 0.94,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.91,
@@ -1349,8 +1359,8 @@
       "fit": {
         "modern": 0.98,
         "executive": 0.97,
-        "opal": 0.98,
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1359,7 +1369,7 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.96
       }
     },
     "Quality Assurance Manager": {
@@ -1413,13 +1423,14 @@
         "silk": 0.96,
         "opal": 0.96,
         "minimalist": 0.91,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
@@ -1463,14 +1474,15 @@
         "Documentation: Inspection reports, first article packages, NCRs, traceability records"
       ],
       "fit": {
+        "modern": 0.98,
         "silk": 0.98,
         "minimalist": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.86,
         "ginto": 0.85,
         "quartz": 0.89,
-        "bronx": 0.87,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
       }
@@ -1559,10 +1571,10 @@
       ],
       "fit": {
         "berlin": 0.92,
-        "iron": 0.87,
-        "ginto": 0.88,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.88,
         "pop": 0.92
       }
     },
@@ -1606,8 +1618,8 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.9,
-        "iron": 0.94,
-        "ginto": 0.86,
+        "iron": 0.97,
+        "ginto": 0.88,
         "quartz": 0.91,
         "bronx": 0.9,
         "pop": 0.89
@@ -1663,12 +1675,13 @@
         "modern": 0.98,
         "opal": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.94,
+        "quartz": 0.96,
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.88,
@@ -1726,6 +1739,7 @@
         "executive": 0.97,
         "silk": 0.95,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1796,11 +1810,11 @@
         "minimalist": 0.95,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.92,
-        "ginto": 0.9,
-        "path": 0.96,
-        "quartz": 0.94,
-        "bronx": 0.87,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "path": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.93,
         "mono": 0.94,
         "pop": 0.91,
         "cast": 0.98
@@ -1855,9 +1869,9 @@
         "minimalist": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.89,
-        "ginto": 0.9,
-        "bronx": 0.92,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "bronx": 0.98,
         "mono": 0.95,
         "pop": 0.88
       }
@@ -1960,7 +1974,7 @@
         "Leadership: Project selection, executive reporting, Green Belt certification reviews"
       ],
       "fit": {
-        "swiss": 0.96,
+        "swiss": 0.98,
         "berlin": 0.9,
         "iron": 0.91,
         "ginto": 0.91,
@@ -2027,9 +2041,9 @@
         "minimalist": 0.94,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.91,
-        "quartz": 0.92,
+        "iron": 0.91,
+        "ginto": 0.93,
+        "quartz": 0.95,
         "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.91
@@ -2086,6 +2100,7 @@
         "executive": 0.98,
         "silk": 0.95,
         "minimalist": 0.91,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -2144,16 +2159,15 @@
         "Compliance: Virginia Public Procurement Act, Uniform Guidance (2 CFR 200), audit readiness"
       ],
       "fit": {
-        "modern": 0.99,
         "silk": 0.99,
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.88,
-        "ginto": 0.87,
+        "iron": 0.9,
+        "ginto": 0.89,
         "bronx": 0.95,
         "mono": 0.95,
-        "pop": 0.86
+        "pop": 0.89
       }
     },
     "Materials Manager": {
@@ -2206,10 +2220,10 @@
         "minimalist": 0.94,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.89,
         "ginto": 0.85,
-        "quartz": 0.96,
-        "bronx": 0.89,
+        "quartz": 0.98,
+        "bronx": 0.95,
         "mono": 0.93,
         "pop": 0.88,
         "cast": 0.97
@@ -2305,12 +2319,13 @@
       ],
       "fit": {
         "minimalist": 0.98,
+        "tokyo": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.91,
-        "ginto": 0.89,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.87,
         "mono": 0.96,
         "pop": 0.94
       }
@@ -2401,14 +2416,15 @@
       ],
       "fit": {
         "silk": 0.97,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.86,
-        "quartz": 0.94,
-        "bronx": 0.9,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.92
+        "pop": 0.89
       }
     },
     "VP of Supply Chain": {
@@ -2463,17 +2479,17 @@
         "Operations: Manufacturing, contract manufacturing, distribution, procurement"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.94,
         "silk": 0.96,
         "opal": 0.97,
         "minimalist": 0.95,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.88,
+        "iron": 0.87,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.92,
-        "bronx": 0.91,
+        "quartz": 0.89,
+        "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.97

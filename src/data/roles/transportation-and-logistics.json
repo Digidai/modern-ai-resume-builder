@@ -84,12 +84,13 @@
         "Skills: defensive driving (Smith System), load securement, trip planning"
       ],
       "fit": {
+        "creative": 0.98,
         "swiss": 0.98,
         "berlin": 0.9,
-        "iron": 0.86,
-        "ginto": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
         "quartz": 0.85,
-        "bronx": 0.87,
+        "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.86
       }
@@ -134,10 +135,10 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.91,
-        "iron": 0.92,
-        "ginto": 0.87,
-        "quartz": 0.95,
-        "bronx": 0.89,
+        "iron": 0.94,
+        "ginto": 0.88,
+        "quartz": 0.97,
+        "bronx": 0.95,
         "mono": 0.98,
         "pop": 0.93
       }
@@ -229,8 +230,10 @@
       "fit": {
         "swiss": 0.99,
         "berlin": 0.91,
-        "iron": 0.95,
+        "iron": 0.93,
         "ginto": 0.85,
+        "quartz": 0.98,
+        "bronx": 0.93,
         "mono": 0.98,
         "pop": 0.94
       }
@@ -290,7 +293,6 @@
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.97,
-        "quartz": 0.98,
         "mono": 0.93,
         "pop": 0.85
       }
@@ -337,7 +339,7 @@
         "iron": 0.87,
         "ginto": 0.86,
         "quartz": 0.85,
-        "bronx": 0.85,
+        "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.88
       }
@@ -392,9 +394,9 @@
         "minimalist": 0.96,
         "swiss": 0.95,
         "berlin": 0.87,
-        "iron": 0.85,
+        "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.89,
+        "quartz": 0.91,
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.89,
@@ -442,10 +444,10 @@
         "minimalist": 0.98,
         "swiss": 0.96,
         "berlin": 0.89,
-        "iron": 0.91,
-        "ginto": 0.86,
-        "quartz": 0.88,
-        "bronx": 0.85,
+        "iron": 0.92,
+        "ginto": 0.87,
+        "quartz": 0.9,
+        "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.92
       }
@@ -488,7 +490,8 @@
         "Programs: driver onboarding, MVR monitoring, accident registers, audit preparation"
       ],
       "fit": {
-        "creative": 0.96,
+        "sidebar": 0.97,
+        "creative": 0.93,
         "professional": 0.99,
         "swiss": 0.93,
         "berlin": 0.87,
@@ -554,8 +557,8 @@
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.87,
-        "bronx": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
@@ -599,13 +602,12 @@
         "Shop: Fleetio and TMT work orders, PM programs, welding and fabrication"
       ],
       "fit": {
-        "creative": 0.98,
         "swiss": 0.98,
         "berlin": 0.88,
-        "iron": 0.87,
-        "ginto": 0.86,
-        "quartz": 0.85,
-        "bronx": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.86,
+        "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.89
       }
@@ -654,7 +656,7 @@
         "iron": 0.89,
         "ginto": 0.85,
         "quartz": 0.88,
-        "bronx": 0.89,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
       }
@@ -860,9 +862,9 @@
         "swiss": 0.96,
         "berlin": 0.87,
         "iron": 0.85,
-        "ginto": 0.87,
-        "quartz": 0.95,
-        "bronx": 0.9,
+        "ginto": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
       }
@@ -909,7 +911,7 @@
         "iron": 0.89,
         "ginto": 0.94,
         "quartz": 0.94,
-        "bronx": 0.91,
+        "bronx": 0.86,
         "pop": 0.93
       }
     },
@@ -953,6 +955,7 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "sidebar": 0.95,
         "creative": 0.97,
         "professional": 0.98,
@@ -963,7 +966,7 @@
         "symmetry": 0.98,
         "quartz": 0.85,
         "bronx": 0.85,
-        "moda": 0.98,
+        "moda": 0.95,
         "mono": 0.95,
         "pop": 0.85
       }
@@ -1013,6 +1016,7 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.97,
+        "tokyo": 0.99,
         "swiss": 0.98,
         "berlin": 0.85,
         "iron": 0.94,
@@ -1079,7 +1083,7 @@
         "quartz": 0.87,
         "bronx": 0.86,
         "mono": 0.95,
-        "pop": 0.95
+        "pop": 0.93
       }
     },
     "Ramp Agent": {
@@ -1123,7 +1127,7 @@
         "iron": 0.95,
         "ginto": 0.94,
         "quartz": 0.97,
-        "bronx": 0.89,
+        "bronx": 0.94,
         "pop": 0.94
       }
     },
@@ -1164,11 +1168,9 @@
         "Compliance: TSA and CBP document checks, ADA passenger assistance, SIDA badge"
       ],
       "fit": {
-        "berlin": 0.87,
+        "berlin": 0.91,
         "iron": 0.93,
         "ginto": 0.9,
-        "quartz": 0.98,
-        "bronx": 0.92,
         "pop": 0.97
       }
     },
@@ -1218,7 +1220,7 @@
         "Safety: airport SMS, emergency planning, runway incursion prevention"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.94,
         "executive": 0.97,
         "silk": 0.97,
         "opal": 0.95,
@@ -1278,8 +1280,8 @@
         "berlin": 0.88,
         "iron": 0.88,
         "ginto": 0.86,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.86
       }
@@ -1325,10 +1327,10 @@
         "creative": 0.98,
         "swiss": 0.98,
         "berlin": 0.87,
-        "iron": 0.88,
-        "ginto": 0.88,
-        "quartz": 0.88,
-        "bronx": 0.89,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.86,
+        "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9
       }

@@ -1,0 +1,723 @@
+{
+  "family": "Transportation & Logistics",
+  "guide": null,
+  "titles": {
+    "Forklift Operator": {
+      "summary": "Certified forklift operator with 5 years in high-volume distribution centers running sit-down, reach and order picker trucks. Moves 25 to 30 pallets per hour with 99.8% putaway accuracy and no equipment damage incidents in 3 years.",
+      "experience": [
+        {
+          "company": "Crossdock Grocery Distribution",
+          "role": "Forklift Operator",
+          "location": "Memphis, TN",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Unload trailers and put away 25 to 30 pallets per hour to racking up to 32 ft with a Raymond reach truck\n- Hold 99.8% putaway accuracy using RF scanners in Manhattan WMS during cycle count audits\n- Complete daily OSHA 1910.178 pre-shift inspections and battery changes, with no damage incidents in 3 years\n- Replenish pick faces ahead of waves so selectors average under 5 minutes of wait time per shift"
+        },
+        {
+          "company": "Delta Basin Building Supply",
+          "role": "Warehouse Associate",
+          "location": "Southaven, MS",
+          "startDate": "2021-04",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Loaded flatbeds with lumber and sheet goods using a sit-down forklift and side loader\n- Pulled and staged contractor orders with 99% accuracy"
+        }
+      ],
+      "education": [
+        {
+          "school": "Whitehaven Park High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Equipment: sit-down counterbalance, reach truck, order picker, electric pallet jack, side loader",
+        "Certifications: OSHA-compliant forklift operator certification, OSHA 10 General Industry",
+        "Warehouse: putaway, replenishment, trailer loading, cycle counts",
+        "Systems: Manhattan WMS, RF scanners, battery changing"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.95,
+        "pop": 0.92
+      }
+    },
+    "Mover": {
+      "summary": "Mover with 3 years on residential and office relocations, handling packing, padding, loading and long carries. Part of a crew that completed 400+ moves with a damage claim rate under 1%.",
+      "experience": [
+        {
+          "company": "Two Rivers Moving and Storage",
+          "role": "Mover and Crew Lead",
+          "location": "Pittsburgh, PA",
+          "startDate": "2024-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Pack, pad, wrap and load household goods and office furniture into 26-ft trucks for 2 to 3 moves per day\n- Lead a 3-person crew on local moves, keeping damage claims under 1% across 400+ jobs\n- Disassemble and reassemble beds, desks and modular furniture and protect floors and door frames\n- Use dollies, hand trucks and straps and follow safe lifting practices, with no lost-time injuries"
+        },
+        {
+          "company": "Steel Valley Office Movers",
+          "role": "Moving Helper",
+          "location": "McKeesport, PA",
+          "startDate": "2023-05",
+          "endDate": "2024-02",
+          "isCurrent": false,
+          "description": "- Moved office crates, cubicle panels and IT equipment on weekend commercial relocations\n- Labeled and inventoried items to match floor plans at destination"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mon Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Moving: packing, padding and shrink wrap, truck loading, furniture disassembly",
+        "Equipment: 4-wheel dollies, appliance hand trucks, straps, liftgates",
+        "Licenses: Class C driver's license with clean MVR",
+        "Customer service: inventory sheets, careful handling, on-time arrivals"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.98,
+        "ginto": 0.92
+      }
+    },
+    "CDL Truck Driver": {
+      "summary": "CDL Class A truck driver with 9 years and 1.1 million accident-free miles in OTR and regional dry van and reefer freight. Holds Hazmat and Tanker endorsements and keeps a 98% on-time delivery rate with clean DOT roadside inspections.",
+      "experience": [
+        {
+          "company": "Ozark Line Carriers",
+          "role": "Regional CDL-A Driver",
+          "location": "Springfield, MO",
+          "startDate": "2021-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Haul refrigerated grocery freight across a 6-state region, averaging 2,400 miles per week with a 98% on-time rate\n- Log hours with an ELD under DOT hours-of-service rules, with zero HOS violations in 5 years\n- Complete pre-trip and post-trip inspections and reefer temperature checks, passing 14 roadside inspections without out-of-service orders\n- Back into tight urban docks and manage drop-and-hook appointments, cutting detention time about 15% by calling ahead"
+        },
+        {
+          "company": "Gateway Plains Freight",
+          "role": "OTR Driver",
+          "location": "Joplin, MO",
+          "startDate": "2017-04",
+          "endDate": "2021-01",
+          "isCurrent": false,
+          "description": "- Drove 48-state dry van routes, logging 120,000+ miles per year accident-free\n- Secured loads, scaled out and handled bills of lading and delivery paperwork"
+        }
+      ],
+      "education": [
+        {
+          "school": "Crossroads CDL Training Academy",
+          "degree": "CDL Class A Entry-Level Driver Training",
+          "startDate": "2017-01",
+          "endDate": "2017-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class A, Hazmat and Tanker endorsements, TWIC, DOT medical card",
+        "Equipment: dry van, reefer, 53-ft trailers, Thermo King units, sliding tandems",
+        "Compliance: DOT hours-of-service, ELD logs, pre-trip inspections, load securement",
+        "Tools: Samsara ELD, Trucker Path, Qualcomm messaging"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "pop": 0.92
+      }
+    },
+    "School Bus Driver": {
+      "summary": "School bus driver with 6 years transporting K-12 and special-needs students, holding a CDL Class B with Passenger and School Bus endorsements. Drives a 70-passenger route with zero preventable accidents and a 99% on-time arrival rate.",
+      "experience": [
+        {
+          "company": "Fox River Unified School District",
+          "role": "School Bus Driver",
+          "location": "Appleton, WI",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Drive a 70-passenger route of 62 students twice daily, arriving on time 99% of school days\n- Perform pre-trip inspections and student loading checks, with zero preventable accidents in 5 years\n- Secure wheelchairs and child safety restraints on a lift-equipped bus for special education routes\n- Manage student behavior with seating charts and clear rules, reducing office referrals on the route by half"
+        },
+        {
+          "company": "Lakeshore Charter Coaches",
+          "role": "Activity Trip Driver",
+          "location": "Green Bay, WI",
+          "startDate": "2020-09",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Drove athletic teams and field trips up to 200 miles in all weather conditions\n- Completed post-trip sweeps and fuel and mileage logs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northeast Wisconsin Driver Training Center",
+          "degree": "CDL Class B with P and S Endorsements",
+          "startDate": "2020-06",
+          "endDate": "2020-08"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class B, Passenger and School Bus endorsements, DOT medical card",
+        "Safety: pre-trip inspections, emergency evacuation drills, railroad crossing procedures",
+        "Special needs: wheelchair lifts, securement systems, child safety restraints",
+        "Other: First Aid/CPR, student behavior management, route logs"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.92,
+        "pop": 0.89
+      }
+    },
+    "Rideshare Driver": {
+      "summary": "Rideshare driver with 4 years and 9,000+ completed trips across two major platforms. Keeps a 4.96 of 5 rider rating and a clean driving record while planning shifts around airport and event demand.",
+      "experience": [
+        {
+          "company": "Self-employed (rideshare platforms)",
+          "role": "Independent Rideshare Driver",
+          "location": "Atlanta, GA",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Complete 9,000+ trips with a 4.96 of 5 rider rating and a 97% acceptance rate during peak hours\n- Plan shifts around airport queues, concerts and games, raising average hourly earnings about 20% over two years\n- Keep the vehicle inspected, cleaned and insured to platform standards, with zero accidents or moving violations\n- Track mileage, fuel and maintenance for taxes and keep records for quarterly estimated payments"
+        },
+        {
+          "company": "Peachline Shuttle Service",
+          "role": "Hotel Shuttle Driver",
+          "location": "College Park, GA",
+          "startDate": "2021-03",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Drove a 14-passenger van between hotels and the airport on fixed schedules\n- Loaded luggage and assisted guests with mobility needs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Decatur Heights High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Driving: clean MVR, defensive driving, city and highway navigation",
+        "Customer service: rider safety, accessibility assistance, conflict de-escalation",
+        "Tools: rideshare driver apps, Waze and Google Maps, mileage tracking apps",
+        "Business: self-employment bookkeeping, vehicle maintenance scheduling"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.98,
+        "bronx": 0.99,
+        "pop": 0.96
+      }
+    },
+    "Dispatcher": {
+      "summary": "Truck dispatcher with 6 years planning loads for a 45-truck regional fleet. Keeps trucks moving at 92% loaded miles and raised average revenue per mile 11% by building backhauls on load boards and with direct shippers.",
+      "experience": [
+        {
+          "company": "Bluebonnet Freight Lines",
+          "role": "Fleet Dispatcher",
+          "location": "Dallas, TX",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Dispatch 45 tractors on regional dry van and flatbed lanes, keeping loaded miles at 92%\n- Book backhauls through DAT and direct shipper contacts, raising average revenue per mile 11%\n- Plan loads around DOT hours-of-service and ELD clocks, with zero HOS violations attributed to dispatch\n- Handle breakdowns, reroutes and late appointments with drivers and customers, holding on-time delivery at 96%"
+        },
+        {
+          "company": "Trinity Crossing Logistics",
+          "role": "Dispatch Coordinator",
+          "location": "Fort Worth, TX",
+          "startDate": "2020-02",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Assigned local deliveries for 20 box trucks and tracked proof of delivery\n- Entered loads and rate confirmations in McLeod and handled driver check calls"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Texas Plains College",
+          "degree": "A.A.S. Logistics and Supply Chain Management",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dispatch: load planning, backhauls, driver communication, breakdown recovery",
+        "Compliance: DOT hours-of-service, ELD monitoring, FMCSA rules",
+        "Software: McLeod, DAT load board, Samsara, Microsoft Excel",
+        "Customer service: appointment scheduling, rate confirmations, shipper updates"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.97,
+        "pop": 0.93
+      }
+    },
+    "Ship Captain": {
+      "summary": "USCG-licensed Master with 15 years at sea and 6 years in command of offshore supply vessels in the Gulf of Mexico. Led 2,100+ days of vessel operations with no lost-time incidents and a clean record across 4 Coast Guard inspections.",
+      "experience": [
+        {
+          "company": "Bayou Teche Marine Services",
+          "role": "Captain, Offshore Supply Vessel",
+          "location": "Houma, LA",
+          "startDate": "2020-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Command a 250-ft DP2 offshore supply vessel with a crew of 14, delivering cargo, fuel and drilling fluids to deepwater platforms\n- Maintain SMS, ISM and STCW compliance, passing 4 USCG and 3 class inspections without major deficiencies\n- Hold position alongside rigs on dynamic positioning in seas up to 10 ft, with no contact incidents in 6 years\n- Lead weekly fire, abandon ship and man overboard drills, recording 2,100+ days with no lost-time injuries"
+        },
+        {
+          "company": "Terrebonne Workboats",
+          "role": "Chief Mate",
+          "location": "Port Fourchon, LA",
+          "startDate": "2014-03",
+          "endDate": "2020-04",
+          "isCurrent": false,
+          "description": "- Stood bridge watches, planned cargo loading and stability calculations and supervised deck crew\n- Ran DP operations as DPO and trained 5 junior officers"
+        },
+        {
+          "company": "Atchafalaya Towing Company",
+          "role": "Deckhand and Mate",
+          "location": "Morgan City, LA",
+          "startDate": "2011-06",
+          "endDate": "2014-02",
+          "isCurrent": false,
+          "description": "- Handled lines, rigging and maintenance on harbor and coastal tugs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Gulf Maritime Academy",
+          "degree": "B.S. Marine Transportation",
+          "startDate": "2007-08",
+          "endDate": "2011-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: USCG Master 1600 GRT Oceans, STCW, TWIC, DP Unlimited Certificate",
+        "Operations: dynamic positioning, cargo and stability planning, ship handling, bridge resource management",
+        "Compliance: ISM, SOLAS, MARPOL, USCG inspections, safety management systems",
+        "Navigation: ECDIS, ARPA radar, GMDSS radio"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "opal": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.85
+      }
+    },
+    "Railroad Conductor": {
+      "summary": "FRA-certified railroad conductor with 7 years on Class I freight trains, working road, yard and local switching assignments. Has handled 1,500+ trips without a reportable injury or derailment and holds a clean operating rules record.",
+      "experience": [
+        {
+          "company": "Great Northern Plains Railway",
+          "role": "Freight Conductor",
+          "location": "Fargo, ND",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Direct crews on manifest, grain and unit trains up to 10,000 ft, completing 1,500+ trips without a reportable injury\n- Verify train consists, hazmat documents and air brake tests under FRA rules and 49 CFR Part 242\n- Perform switching moves, set outs and pick ups using radio protocols and GCOR, with zero rule violations\n- Inspect cars for defects and coordinate with dispatchers on track warrants to keep trains on schedule"
+        },
+        {
+          "company": "Red River Valley Short Line",
+          "role": "Brakeman and Switchman",
+          "location": "Moorhead, MN",
+          "startDate": "2019-03",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Lined switches, coupled cars and set hand brakes in yard and industry service\n- Spotted cars at grain elevators and fertilizer plants"
+        }
+      ],
+      "education": [
+        {
+          "school": "Prairie Rail Training Institute",
+          "degree": "Conductor Training Program",
+          "startDate": "2018-09",
+          "endDate": "2019-02"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FRA Conductor Certification under 49 CFR Part 242, Hazmat training",
+        "Operations: GCOR, track warrants, switching, air brake tests, train makeup",
+        "Safety: car inspection, blue flag protection, radio communication rules",
+        "Other: all-weather and on-call availability, hand signals"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.91,
+        "ginto": 0.94,
+        "quartz": 0.94,
+        "bronx": 0.95,
+        "pop": 0.93
+      }
+    },
+    "Train Engineer": {
+      "summary": "FRA-certified locomotive engineer with 11 years in freight service, including 6 years running heavy-haul coal and intermodal trains. Uses Trip Optimizer and PTC to cut fuel use about 8% on assigned trains while keeping a clean operating record.",
+      "experience": [
+        {
+          "company": "Appalachian Summit Railroad",
+          "role": "Locomotive Engineer",
+          "location": "Roanoke, VA",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate heavy-haul coal and intermodal trains up to 18,000 tons over mountain grades using dynamic braking and distributed power\n- Run trains with Trip Optimizer and PTC, reducing fuel use about 8% versus manual runs on assigned territory\n- Hold engineer certification under 49 CFR Part 240 with zero decertifying events in 6 years\n- Complete locomotive inspections and job briefings and mentor 3 engineer trainees"
+        },
+        {
+          "company": "Appalachian Summit Railroad",
+          "role": "Conductor",
+          "location": "Bluefield, WV",
+          "startDate": "2015-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Worked road and yard service, managing train documents, switching and air brake tests\n- Promoted to engineer training after 4 years with a clean safety record"
+        }
+      ],
+      "education": [
+        {
+          "school": "New River Community College",
+          "degree": "Certificate, Railroad Operations",
+          "startDate": "2014-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: FRA Locomotive Engineer under 49 CFR Part 240, FRA Conductor under Part 242",
+        "Train handling: dynamic braking, distributed power, heavy grades, Trip Optimizer",
+        "Systems: Positive Train Control, event recorders, locomotive inspections",
+        "Rules: NORAC and GCOR, hazmat handling, radio procedures"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.96,
+        "bronx": 0.95,
+        "mono": 0.98,
+        "pop": 0.94
+      }
+    },
+    "Delivery Associate": {
+      "summary": "Delivery associate with 2 years delivering parcels by cargo van on suburban and apartment routes. Completes 180 to 220 stops per shift with a 99.7% successful delivery rate and no vehicle incidents.",
+      "experience": [
+        {
+          "company": "Swiftleaf Delivery Services",
+          "role": "Delivery Associate",
+          "location": "Orlando, FL",
+          "startDate": "2025-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Load and deliver 180 to 220 packages per shift in a Ram ProMaster van using a handheld scanner and routing app\n- Hold a 99.7% successful delivery rate and photo proof-of-delivery compliance above 99%\n- Follow defensive driving and backing rules monitored by in-cab cameras, with no vehicle incidents\n- Organize the van by stop order at load-out, finishing routes on time on 95% of shifts"
+        },
+        {
+          "company": "Lake Nona Market",
+          "role": "Stock and Delivery Clerk",
+          "location": "Orlando, FL",
+          "startDate": "2024-02",
+          "endDate": "2024-12",
+          "isCurrent": false,
+          "description": "- Stocked shelves and delivered grocery orders to nearby homes and offices\n- Checked orders for accuracy before dispatch"
+        }
+      ],
+      "education": [
+        {
+          "school": "Conway Lakes High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Delivery: route following, package sorting, photo proof of delivery, apartment access",
+        "Driving: cargo vans, clean MVR, defensive driving, safe backing",
+        "Tools: handheld scanners, routing apps, in-cab safety cameras",
+        "Physical: lifting up to 50 lbs, 10-hour shifts in heat and rain"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.94,
+        "ginto": 0.97,
+        "quartz": 0.97,
+        "bronx": 0.94,
+        "pop": 0.95
+      }
+    },
+    "Last-Mile Delivery Driver": {
+      "summary": "Last-mile delivery driver with 4 years on dense urban and suburban routes, the last three as a route trainer. Averages 200+ stops per day with 99.8% delivery accuracy and helped cut station damage claims 30% through better loading.",
+      "experience": [
+        {
+          "company": "Urbanpath Last Mile",
+          "role": "Delivery Driver and Route Trainer",
+          "location": "Chicago, IL",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver 200+ stops per day on high-rise and city routes with 99.8% delivery accuracy\n- Ride along with and train 25 new drivers on scanning, parking and building access, with 80% passing their first solo route\n- Introduced shelf-by-stop loading that cut damaged-package claims at the station about 30%\n- Complete DVIRs and report van defects, keeping the route vehicle out-of-service days to near zero"
+        },
+        {
+          "company": "Lakeshore Courier Express",
+          "role": "Courier Driver",
+          "location": "Evanston, IL",
+          "startDate": "2022-05",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Delivered same-day medical and legal documents across the north suburbs\n- Collected signatures and chain-of-custody forms on 100% of lab specimen runs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Niles Grove High School",
+          "degree": "High School Diploma",
+          "startDate": "2017-08",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Delivery: high-density routing, high-rise access, signature and photo POD",
+        "Vehicles: step vans, cargo vans, DVIR inspections, safe city driving",
+        "Training: new driver ride-alongs, scanner and app coaching",
+        "Licenses: Class D driver's license with clean MVR, DOT medical card"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.94,
+        "pop": 0.97
+      }
+    },
+    "Tow Truck Driver": {
+      "summary": "Tow truck operator with 6 years running flatbed and wheel-lift trucks for police rotation, motor club and accident recovery calls. WreckMaster certified, completing 1,800+ tows with no customer vehicle damage claims.",
+      "experience": [
+        {
+          "company": "Ironhorse Towing and Recovery",
+          "role": "Tow Truck Operator",
+          "location": "Columbus, GA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Operate a 21-ft rollback and a medium-duty wrecker for police rotation, accident and roadside calls, averaging 8 to 12 calls per shift\n- Recover vehicles from ditches and embankments with winching and snatch blocks per WreckMaster methods, with no damage claims across 1,800+ tows\n- Set traffic incident management cones and lighting on interstates following TIM safety procedures\n- Complete impound paperwork and photos accurately, with zero disputed releases in the last year"
+        },
+        {
+          "company": "Chattahoochee Roadside Assist",
+          "role": "Roadside Service Technician",
+          "location": "Phenix City, AL",
+          "startDate": "2020-03",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Handled jump starts, tire changes, lockouts and fuel deliveries for motor club members\n- Kept average on-scene arrival under 35 minutes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Muscogee Ridge High School",
+          "degree": "High School Diploma",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Licenses: CDL Class B, DOT medical card, clean MVR",
+        "Certifications: WreckMaster 4/5, TIM Responder Training, TRAA Light Duty",
+        "Equipment: rollbacks, wheel-lift wreckers, winches, snatch blocks, dollies",
+        "Other: impound documentation, roadside service, 24/7 on-call rotation"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.96,
+        "bronx": 0.91,
+        "pop": 0.93
+      }
+    },
+    "Ambulance Driver": {
+      "summary": "EMT and ambulance operator with 4 years driving advanced and basic life support units for a county EMS service. EVOC certified, with 3,200+ responses and zero at-fault collisions while holding a 9-minute average urban response time.",
+      "experience": [
+        {
+          "company": "Saguache Valley EMS",
+          "role": "EMT / Ambulance Operator",
+          "location": "Pueblo, CO",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Drive ALS and BLS ambulances on 911 and interfacility calls, completing 3,200+ responses with zero at-fault collisions\n- Hold a 9-minute average urban response time using due regard and EVOC lights-and-siren practices\n- Assist paramedics with patient assessment, splinting, airway support and stretcher loading\n- Run daily rig checks for oxygen, suction, AED and drug box seals, passing every state ambulance inspection"
+        },
+        {
+          "company": "Arkansas River Medical Transport",
+          "role": "Wheelchair Van and Transport Driver",
+          "location": "Canon City, CO",
+          "startDate": "2022-02",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Transported dialysis and outpatient clients with wheelchair securement and safe transfers\n- Kept trip logs and arrived on time for 98% of scheduled appointments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pueblo Foothills Community College",
+          "degree": "EMT-Basic Certificate",
+          "startDate": "2022-01",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Certifications: NREMT EMT, Colorado EMT, EVOC, BLS/CPR, NIMS 100 and 700",
+        "Driving: emergency vehicle operation, due regard, night and winter driving",
+        "Patient care: BLS assessment, splinting, oxygen therapy, stretcher and stair chair",
+        "Documentation: ePCR charting, rig inventory checks"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "pop": 0.94
+      }
+    },
+    "Port Operations Manager": {
+      "summary": "Port operations manager with 14 years in container and breakbulk terminal operations. Oversees a 1.2 million TEU terminal and cut average vessel turn time from 41 to 33 hours while improving the terminal's injury rate by 35%.",
+      "experience": [
+        {
+          "company": "Tidewater Bay Container Terminal",
+          "role": "Port Operations Manager",
+          "location": "Savannah, GA",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Direct vessel, yard and gate operations for a 1.2 million TEU terminal with 9 STS cranes and 400+ ILA labor per shift\n- Cut average vessel turn time from 41 to 33 hours by reworking berth windows and crane splits with carriers\n- Lead a safety program with daily toolbox talks and near-miss reporting that lowered the recordable rate 35%\n- Manage a $48M operating budget and coordinate with CBP, USCG and harbor pilots on security and inspections"
+        },
+        {
+          "company": "Gulf Bridge Stevedoring",
+          "role": "Terminal Superintendent",
+          "location": "Mobile, AL",
+          "startDate": "2016-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Supervised breakbulk steel, forest products and project cargo discharge for 150+ vessel calls a year\n- Raised gang productivity 12% by standardizing stowage plans and gear checks"
+        },
+        {
+          "company": "Gulf Bridge Stevedoring",
+          "role": "Vessel Planner",
+          "location": "Mobile, AL",
+          "startDate": "2012-06",
+          "endDate": "2015-12",
+          "isCurrent": false,
+          "description": "- Built stowage and discharge plans and tracked cargo against manifests"
+        }
+      ],
+      "education": [
+        {
+          "school": "Coastal Southern University",
+          "degree": "B.S. Logistics and Maritime Transportation",
+          "startDate": "2008-08",
+          "endDate": "2012-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: vessel planning, berth scheduling, yard and gate management, labor deployment",
+        "Systems: Navis N4, TOS reporting, Power BI",
+        "Compliance: MTSA, TWIC, CBP, OSHA 1917 and 1918 marine terminal standards",
+        "Leadership: union labor relations, budgeting, carrier relationships"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "opal": 0.97,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.94,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "Baggage Handler": {
+      "summary": "Ramp agent and baggage handler with 3 years at a busy regional hub, loading and unloading narrow-body and regional jets. Holds a 99.9% bag scan accuracy and helped the crew reach 94% on-time departures for its gates.",
+      "experience": [
+        {
+          "company": "Alta Ramp Services",
+          "role": "Ramp Agent / Baggage Handler",
+          "location": "Salt Lake City, UT",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Load and unload bags, cargo and mail on 8 to 12 narrow-body and regional jet turns per shift\n- Scan and reconcile bags with 99.9% accuracy, helping the crew post 94% on-time departures\n- Drive tugs and belt loaders and marshal aircraft with wands following FAA and airline ramp safety rules\n- Perform FOD walks and wear required PPE in all weather, with no ramp incidents"
+        },
+        {
+          "company": "Wasatch Cargo Handling",
+          "role": "Cargo Warehouse Agent",
+          "location": "West Valley City, UT",
+          "startDate": "2023-01",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Built air cargo ULDs and pallets and weighed shipments for outbound flights\n- Operated a forklift in the cargo warehouse"
+        }
+      ],
+      "education": [
+        {
+          "school": "Granger Hills High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Ramp: bag loading, belt loaders, tugs and carts, aircraft marshalling, pushback wing walking",
+        "Safety: FOD prevention, hearing and hi-vis PPE, lightning and de-icing procedures",
+        "Credentials: SIDA badge, airport driving permit, forklift certified",
+        "Tools: bag scanners, load sheets, ULD build-up"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.97,
+        "pop": 0.95
+      }
+    }
+  }
+}

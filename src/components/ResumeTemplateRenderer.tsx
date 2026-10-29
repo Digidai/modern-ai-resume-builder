@@ -56,6 +56,10 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   vital: () => import('./templates/VitalTemplate').then((module) => ({ default: module.VitalTemplate })),
   altitude: () => import('./templates/AltitudeTemplate').then((module) => ({ default: module.AltitudeTemplate })),
   halo: () => import('./templates/HaloTemplate').then((module) => ({ default: module.HaloTemplate })),
+  europa: () => import('./templates/EuropaTemplate').then((module) => ({ default: module.EuropaTemplate })),
+  tokyo: () => import('./templates/TokyoTemplate').then((module) => ({ default: module.TokyoTemplate })),
+  jade: () => import('./templates/JadeTemplate').then((module) => ({ default: module.JadeTemplate })),
+  portrait: () => import('./templates/PortraitTemplate').then((module) => ({ default: module.PortraitTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

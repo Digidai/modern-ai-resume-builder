@@ -32,3 +32,7 @@ export * from './VitalTemplate';
 export * from './AltitudeTemplate';
 export * from './HaloTemplate';
 export * from './PrismTemplate';
+export * from './EuropaTemplate';
+export * from './TokyoTemplate';
+export * from './JadeTemplate';
+export * from './PortraitTemplate';

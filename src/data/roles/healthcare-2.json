@@ -1,0 +1,2030 @@
+{
+  "family": "Healthcare",
+  "guide": null,
+  "titles": {
+    "Caregiver": {
+      "summary": "Caregiver with 4 years of in-home and assisted living experience supporting older adults with dementia, Parkinson's and limited mobility. Kept a long-term client with moderate Alzheimer's safely at home for 2 years with zero falls through a steady daily routine and simple home changes. Families count on my patience, clear daily notes and reliable attendance.",
+      "experience": [
+        {
+          "company": "Hearthside Companion Care",
+          "role": "Caregiver",
+          "location": "Fort Collins, CO",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Provide bathing, toileting, dressing and gait-belt transfers for 4 regular clients on 8 to 12 hour shifts\n- Prepare low-sodium and diabetic meals, give medication reminders and log intake and changes in the agency app\n- Kept a client with moderate Alzheimer's at home for 2 years with zero falls by holding a set routine, adding night lights and clearing walkways\n- Report skin changes, new confusion or poor appetite to the care coordinator the same day, which caught 2 early UTIs"
+        },
+        {
+          "company": "Aspen Glen Assisted Living",
+          "role": "Resident Assistant",
+          "location": "Loveland, CO",
+          "startDate": "2021-08",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Helped 14 residents a shift with dressing, grooming, meals and walking to activities\n- Completed hourly safety checks and documented care in PointClickCare"
+        }
+      ],
+      "education": [
+        {
+          "school": "Front Range Community College",
+          "degree": "Personal Care Provider Training Certificate",
+          "startDate": "2021-06",
+          "endDate": "2021-07"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Personal care: bathing, toileting, transfers, Hoyer lift, fall prevention",
+        "Home support: meal prep, diabetic and low-sodium diets, medication reminders, light housekeeping",
+        "Dementia care: redirection, routine building, sundowning support",
+        "Certifications: CPR and First Aid (American Red Cross), valid driver's license"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.88
+      }
+    },
+    "Home Health Aide": {
+      "summary": "Certified home health aide with 3 years at a Medicare-certified agency, visiting 6 to 8 patients a day after hospital discharge. Raised the on-time visit rate on my route from 91% to 98% by planning visits around therapy appointments. Comfortable with post-surgical patients, oxygen users and families learning to give care at home.",
+      "experience": [
+        {
+          "company": "Tri-Lakes Home Health Services",
+          "role": "Home Health Aide",
+          "location": "Grand Rapids, MI",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Visit 6 to 8 patients a day for bathing, dressing, catheter care and safe transfers following the RN's aide care plan\n- Check and record vital signs, weight and oxygen saturation and call the case manager when readings fall outside set limits\n- Clock visits and chart tasks in HHAeXchange with EVV, keeping documentation complete on 99% of visits\n- Raised my route's on-time visit rate from 91% to 98% by grouping visits by area and working around PT and OT appointments"
+        },
+        {
+          "company": "Maplewood Senior Residences",
+          "role": "Resident Care Aide",
+          "location": "Wyoming, MI",
+          "startDate": "2022-01",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Assisted 12 residents a shift with ADLs, meals and toileting and reported changes to the nurse on duty"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grand Rapids Community College",
+          "degree": "Home Health Aide Certificate (75 hours)",
+          "startDate": "2021-10",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Patient care: ADLs, catheter and ostomy care, Hoyer lift, range-of-motion exercises",
+        "Monitoring: vital signs, pulse oximetry, daily weights, skin checks",
+        "Documentation: HHAeXchange, EVV, aide care plans, HIPAA",
+        "Certifications: Michigan home health aide, BLS (American Heart Association)"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.91,
+        "ginto": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "pop": 0.91
+      }
+    },
+    "Personal Care Aide": {
+      "summary": "Personal care aide with 2 years supporting adults with physical and developmental disabilities through a Medicaid waiver program. Helped one client go from 3 ER visits a quarter to none over 6 months by setting up a steady meal and fluid routine with the family. Dependable, calm under pressure and careful about privacy.",
+      "experience": [
+        {
+          "company": "Open Door Personal Care",
+          "role": "Personal Care Aide",
+          "location": "Albuquerque, NM",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support 3 clients with bathing, dressing, grooming, meal prep and errands under each client's Medicaid waiver service plan\n- Cut one client's ER visits from 3 a quarter to none over 6 months by building a meal, fluid and bowel routine with the family\n- Record shifts and tasks in the Sandata EVV app and report missed medications or new bruising to my supervisor the same day"
+        },
+        {
+          "company": "Rio Vista Group Homes",
+          "role": "Direct Support Professional",
+          "location": "Albuquerque, NM",
+          "startDate": "2024-01",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Assisted 4 adults with developmental disabilities with daily routines, community outings and medication reminders"
+        }
+      ],
+      "education": [
+        {
+          "school": "Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Personal care: ADLs, transfers, incontinence care, grooming",
+        "Daily living: meal prep, errands, light housekeeping, community outings",
+        "Documentation: Sandata EVV, shift notes, incident reports, HIPAA",
+        "Certifications: CPR and First Aid, New Mexico personal care services training"
+      ],
+      "fit": {
+        "iron": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.9,
+        "pop": 0.94
+      }
+    },
+    "Veterinarian": {
+      "summary": "Licensed veterinarian with 8 years in small animal general practice and urgent care, now seeing about 25 appointments a day at a 4-doctor hospital. Grew dental procedures 35% in two years by adding full-mouth radiographs to every dental and teaching techs to grade disease at wellness visits. Brings solid soft tissue surgery, clear client communication and Fear Free handling.",
+      "experience": [
+        {
+          "company": "Cedar Knoll Animal Hospital",
+          "role": "Associate Veterinarian",
+          "location": "Overland Park, KS",
+          "startDate": "2020-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- See about 25 wellness, sick and urgent appointments a day and perform 6 to 10 surgeries a week, including spays, neuters, mass removals and cystotomies\n- Grew dental procedures 35% in 2 years by making dental radiographs standard on every COHAT and training techs to grade dental disease\n- Manage diabetic, renal and endocrine cases with in-house IDEXX labs and write SOAP records in ezyVet\n- Mentor 2 new graduate veterinarians and lead monthly case rounds"
+        },
+        {
+          "company": "Johnson County Pet Urgent Care",
+          "role": "Associate Veterinarian",
+          "location": "Lenexa, KS",
+          "startDate": "2018-06",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Triaged and treated urgent cases including GDV stabilization, toxin ingestion and lacerations\n- Placed chest drains and feeding tubes and coordinated referrals to specialty hospitals"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kansas State University College of Veterinary Medicine",
+          "degree": "Doctor of Veterinary Medicine (DVM)",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: soft tissue surgery, dentistry and extractions, internal medicine, urgent care",
+        "Diagnostics: digital radiography, ultrasound, IDEXX in-house labs, cytology",
+        "Systems: ezyVet, controlled drug logs, telehealth follow-ups",
+        "Licensure: Kansas veterinary license, USDA Category II accreditation, DEA registration, Fear Free Certified"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.88
+      }
+    },
+    "Veterinary Technician": {
+      "summary": "Licensed veterinary technician with 5 years in a busy small animal practice and a 24-hour emergency hospital. Lead anesthesia for about 12 surgical and dental procedures a week and lowered hypotension events 30% by rewriting our monitoring checklist. Skilled in dental radiographs, IV catheters and calm, low-stress handling.",
+      "experience": [
+        {
+          "company": "Willow Brook Veterinary Clinic",
+          "role": "Lead Veterinary Technician",
+          "location": "Chattanooga, TN",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Induce, intubate and monitor anesthesia for about 12 surgical and dental procedures a week using capnography, Doppler blood pressure and ECG\n- Rewrote the anesthesia monitoring checklist and warming protocol, lowering hypotension events 30% over 12 months\n- Take full-mouth dental radiographs, run in-house CBCs and chemistries and prepare cytology slides\n- Train 3 veterinary assistants on restraint, controlled drug logs and Cornerstone charge entry"
+        },
+        {
+          "company": "Lookout Mountain Animal Emergency",
+          "role": "Veterinary Technician",
+          "location": "Chattanooga, TN",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Placed IV catheters, ran fluid and CRI pumps and triaged walk-ins in a 24-hour ER seeing about 60 patients a day\n- Assisted with CPR using RECOVER guidelines and kept crash carts stocked"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chattanooga State Community College",
+          "degree": "A.A.S. Veterinary Technology",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: anesthesia monitoring, IV catheters, dental radiography, venipuncture, surgical prep",
+        "Lab: CBC and chemistry, urinalysis, cytology, fecal testing",
+        "Systems: IDEXX Cornerstone, controlled substance logs",
+        "Credentials: LVMT (Tennessee), VTNE, Fear Free Certified, RECOVER BLS and ALS"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.87
+      }
+    },
+    "Veterinary Assistant": {
+      "summary": "Veterinary assistant with 2 years at a small animal clinic seeing about 40 patients a day. Cut morning check-in waits from about 15 to 8 minutes by setting up a pre-visit history call the clinic still uses. Steady with nervous cats and large dogs, kennel care and keeping exam rooms turned over on time.",
+      "experience": [
+        {
+          "company": "Sagebrush Animal Clinic",
+          "role": "Veterinary Assistant",
+          "location": "Billings, MT",
+          "startDate": "2024-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Restrain dogs and cats for exams, vaccines and blood draws using low-stress and Fear Free techniques\n- Set up a pre-visit history call that cut morning check-in waits from about 15 to 8 minutes\n- Clean and turn over 5 exam rooms, wrap and sterilize surgical packs and care for up to 20 boarders\n- Fill prescriptions under veterinarian direction and enter charges in AVImark"
+        },
+        {
+          "company": "Rimrock Pet Lodge",
+          "role": "Kennel Attendant",
+          "location": "Billings, MT",
+          "startDate": "2023-05",
+          "endDate": "2024-07",
+          "isCurrent": false,
+          "description": "- Fed, walked and medicated up to 30 boarders a day and reported changes in appetite or behavior"
+        }
+      ],
+      "education": [
+        {
+          "school": "City College at Montana State University Billings",
+          "degree": "Certificate, Veterinary Assistant",
+          "startDate": "2024-01",
+          "endDate": "2024-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Animal handling: restraint, Fear Free techniques, kennel care, medication administration",
+        "Clinic support: exam room turnover, surgical pack sterilization, lab sample prep",
+        "Front desk: AVImark, check-in, client callbacks",
+        "Certifications: Fear Free Certified, Pet CPR and First Aid"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.97,
+        "ginto": 0.93,
+        "bronx": 0.95,
+        "pop": 0.96
+      }
+    },
+    "Surgeon": {
+      "summary": "Board-certified general surgeon with 10 years in practice, now at a community teaching hospital performing about 450 cases a year with a focus on minimally invasive and robotic surgery. Launched the hospital's robotic hernia program, cutting length of stay for complex ventral hernias from 3.4 to 1.6 days. Teaches residents and chairs the surgical quality committee.",
+      "experience": [
+        {
+          "company": "Oak Prairie Regional Medical Center",
+          "role": "Attending General Surgeon",
+          "location": "Des Moines, IA",
+          "startDate": "2019-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform about 450 cases a year, including laparoscopic cholecystectomy, colectomy, hernia repair and emergency laparotomy, and take 1 in 5 acute care surgery call\n- Launched the robotic hernia program on the da Vinci Xi, cutting length of stay for complex ventral hernias from 3.4 to 1.6 days\n- Chair the surgical quality committee, using ACS NSQIP data and an ERAS bundle to lower colorectal surgical site infections from 11% to 6%\n- Teach and evaluate 8 general surgery residents a year in the OR and at M&M conference"
+        },
+        {
+          "company": "Lakeland Surgical Associates",
+          "role": "General Surgeon",
+          "location": "Omaha, NE",
+          "startDate": "2016-08",
+          "endDate": "2019-07",
+          "isCurrent": false,
+          "description": "- Built a practice of about 300 cases a year in breast, endocrine and foregut surgery\n- Served on the trauma panel at a Level II trauma center"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Iowa Carver College of Medicine",
+          "degree": "Doctor of Medicine (MD)",
+          "startDate": "2007-08",
+          "endDate": "2011-05"
+        },
+        {
+          "school": "University of Nebraska Medical Center",
+          "degree": "Residency, General Surgery",
+          "startDate": "2011-07",
+          "endDate": "2016-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Surgical: laparoscopic and robotic surgery, hernia repair, colorectal surgery, acute care surgery",
+        "Quality: ACS NSQIP, ERAS protocols, M&M review",
+        "Systems: Epic OpTime, da Vinci Xi",
+        "Credentials: American Board of Surgery certified, FACS, Iowa medical license, ATLS"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.93,
+        "minimalist": 0.99,
+        "tokyo": 0.98,
+        "creative": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.92
+      }
+    },
+    "Physician": {
+      "summary": "Board-certified internal medicine physician with 9 years in outpatient primary care, managing a panel of about 2,100 adults. Led a team-based diabetes program that raised the share of patients with A1c under 8% from 61% to 74% in two years. Values clear follow-up, shared decisions and close work with nurses and care managers.",
+      "experience": [
+        {
+          "company": "Cobblestone Primary Care",
+          "role": "Primary Care Physician",
+          "location": "Albany, NY",
+          "startDate": "2020-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- See 20 to 22 patients a day for chronic disease care, preventive visits and same-day sick visits, documenting in Epic\n- Led a team-based diabetes program with RN care managers and a clinical pharmacist, raising patients with A1c under 8% from 61% to 74% in 2 years\n- Close HEDIS and MIPS quality gaps through panel outreach, lifting colorectal cancer screening from 66% to 78%\n- Precept internal medicine residents one half day a week"
+        },
+        {
+          "company": "Mohawk Valley Medical Group",
+          "role": "Internal Medicine Physician",
+          "location": "Utica, NY",
+          "startDate": "2017-08",
+          "endDate": "2020-08",
+          "isCurrent": false,
+          "description": "- Managed a panel of 1,800 adults and covered hospital follow-up and telehealth visits\n- Started a Medicare annual wellness visit workflow that added about 600 visits a year"
+        }
+      ],
+      "education": [
+        {
+          "school": "SUNY Upstate Medical University",
+          "degree": "Doctor of Medicine (MD)",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "Albany Medical Center",
+          "degree": "Residency, Internal Medicine",
+          "startDate": "2014-07",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: chronic disease management, preventive care, diabetes, hypertension, COPD",
+        "Quality: HEDIS, MIPS, value-based care, care management",
+        "Systems: Epic, Epic Healthy Planet, telehealth",
+        "Credentials: ABIM board certified, New York medical license, DEA registration"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.99,
+        "minimalist": 0.99,
+        "creative": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.9
+      }
+    },
+    "Medical Scribe": {
+      "summary": "Medical scribe with 18 months in a 40-bed emergency department, documenting about 25 encounters a shift in Epic. Built a set of SmartPhrases for common ED complaints that cut provider chart-closing time by about 20 minutes a shift. Pre-med graduate with strong medical terminology, applying to medical school this cycle.",
+      "experience": [
+        {
+          "company": "Scribewell Clinical Documentation",
+          "role": "Medical Scribe, Emergency Department",
+          "location": "Tucson, AZ",
+          "startDate": "2025-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Document HPI, review of systems, exam findings, orders and results in Epic for 2 to 3 emergency physicians, about 25 encounters a shift\n- Built shared Epic SmartPhrases for chest pain, abdominal pain and falls, cutting chart-closing time by about 20 minutes a shift\n- Track pending labs, imaging and consults and prompt providers on reassessments and dispositions\n- Hold 98% chart accuracy on monthly QA audits while following HIPAA"
+        },
+        {
+          "company": "Tucson Free Clinic Collective",
+          "role": "Clinic Volunteer",
+          "location": "Tucson, AZ",
+          "startDate": "2023-09",
+          "endDate": "2025-03",
+          "isCurrent": false,
+          "description": "- Took intake vitals and helped Spanish-speaking patients complete forms at a weekly free clinic"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Arizona",
+          "degree": "B.S. Physiology and Medical Sciences",
+          "startDate": "2021-08",
+          "endDate": "2025-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Documentation: Epic ASAP, SmartPhrases, HPI and ROS, discharge instructions",
+        "Knowledge: medical terminology, ICD-10 basics, ED workflows",
+        "Other: HIPAA, 75 WPM typing, conversational Spanish",
+        "Certifications: Certified Medical Scribe Specialist (CMSS)"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "bronx": 0.94,
+        "pop": 0.97
+      }
+    },
+    "Sterile Processing Technician": {
+      "summary": "Certified sterile processing technician with 6 years of experience, now in a Level I trauma center department serving 28 operating rooms. Reduced incomplete or incorrect trays reaching the OR by 42% by rebuilding count sheets in CensiTrac. Skilled in steam, low-temperature and flexible endoscope reprocessing.",
+      "experience": [
+        {
+          "company": "Bluff City University Hospital",
+          "role": "Sterile Processing Technician II",
+          "location": "Memphis, TN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Decontaminate, inspect, assemble and sterilize instrument trays for 28 ORs following AAMI ST79 and manufacturer IFUs\n- Rebuilt 160 orthopedic and spine count sheets in CensiTrac with photos, cutting incomplete or incorrect trays reaching the OR by 42%\n- Run and document steam and V-PRO cycles, biological indicators and Bowie-Dick tests, with zero findings on the last Joint Commission survey\n- Train new technicians on case cart picking and loaner tray intake"
+        },
+        {
+          "company": "Mid-South Surgery Center",
+          "role": "Sterile Processing Technician",
+          "location": "Germantown, TN",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Reprocessed flexible endoscopes following AAMI ST91 and kept high-level disinfection logs\n- Cut immediate-use steam sterilization 50% by adding backup sets of high-use trays"
+        }
+      ],
+      "education": [
+        {
+          "school": "Southwest Tennessee Community College",
+          "degree": "Certificate, Sterile Processing Technology",
+          "startDate": "2019-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Reprocessing: decontamination, instrument inspection, tray assembly, endoscope HLD",
+        "Sterilization: steam, Steris V-PRO, EtO, biological indicators, load records",
+        "Systems and standards: CensiTrac, AAMI ST79 and ST91, Joint Commission, OSHA bloodborne pathogens",
+        "Certifications: CRCST (HSPA), CIS (HSPA)"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.92
+      }
+    },
+    "Patient Access Representative": {
+      "summary": "Patient access representative with 4 years in hospital and clinic registration, handling about 60 registrations a shift. Cut registration-related claim denials on my team by 27% by adding real-time eligibility checks before every outpatient visit. Calm with upset patients and fluent in Spanish.",
+      "experience": [
+        {
+          "company": "Panhandle Plains Medical Center",
+          "role": "Patient Access Representative II",
+          "location": "Amarillo, TX",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Register about 60 ED and outpatient patients a shift in Epic Prelude, scanning IDs and insurance cards and collecting consents\n- Verify eligibility and benefits through Availity and payer portals and give patients cost estimates before scheduled services\n- Added real-time eligibility checks before every outpatient visit, cutting registration-related denials on my team by 27%\n- Collect copays and deposits and screen uninsured patients for Medicaid and financial assistance"
+        },
+        {
+          "company": "High Plains Family Clinic",
+          "role": "Front Desk Coordinator",
+          "location": "Amarillo, TX",
+          "startDate": "2022-03",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Scheduled about 80 visits a day in eClinicalWorks and handled referrals and insurance updates"
+        }
+      ],
+      "education": [
+        {
+          "school": "Amarillo College",
+          "degree": "Certificate, Medical Office Administration",
+          "startDate": "2021-01",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Registration: Epic Prelude and Cadence, insurance verification, Availity, MSP questionnaires",
+        "Revenue cycle: copay collection, cost estimates, denial prevention, financial assistance screening",
+        "Other: HIPAA, EMTALA, bilingual English and Spanish",
+        "Certifications: CHAA (NAHAM)"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.94,
+        "quartz": 0.98,
+        "bronx": 0.94,
+        "pop": 0.94
+      }
+    },
+    "Dietitian": {
+      "summary": "Registered dietitian nutritionist with 6 years in acute care and skilled nursing, now covering ICU and oncology units. Led a malnutrition program that raised documented malnutrition diagnoses 48% and captured $310K in added reimbursement in its first year. Skilled in enteral and parenteral nutrition and practical patient teaching.",
+      "experience": [
+        {
+          "company": "Merrimack Regional Hospital",
+          "role": "Clinical Dietitian II",
+          "location": "Manchester, NH",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Assess and follow about 18 patients a day in ICU and oncology units, writing ADIME notes and nutrition orders in Epic\n- Calculate and adjust enteral and parenteral nutrition with the nutrition support team, cutting time to goal tube feeding from 72 to 48 hours\n- Led the malnutrition program using ASPEN and Academy criteria, raising documented malnutrition diagnoses 48% and capturing $310K in first-year reimbursement\n- Precept 4 dietetic interns a year"
+        },
+        {
+          "company": "Granite Hills Rehabilitation Center",
+          "role": "Clinical Dietitian",
+          "location": "Concord, NH",
+          "startDate": "2020-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Completed MDS nutrition assessments and weight reviews for 120 long-term care and rehab residents\n- Cut significant unplanned weight loss from 9% to 5% of residents with a fortified foods program"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of New Hampshire",
+          "degree": "M.S. Nutrition and Dietetics with Dietetic Internship",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "University of Vermont",
+          "degree": "B.S. Dietetics, Nutrition and Food Sciences",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: medical nutrition therapy, nutrition-focused physical exam, enteral and parenteral nutrition, malnutrition diagnosis",
+        "Documentation: ADIME, Nutrition Care Process, Epic, MDS",
+        "Teaching: diabetes and renal diet education, intern precepting",
+        "Credentials: RDN (CDR), LD (New Hampshire), CNSC"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "tokyo": 0.96,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.87
+      }
+    },
+    "Optometrist": {
+      "summary": "Licensed optometrist with 7 years in private practice, seeing about 22 patients a day for comprehensive eye exams, contact lenses and medical eye care. Built dry eye and myopia control clinics that now bring in $260K a year. Comfortable managing glaucoma suspects, diabetic eye exams and urgent red eyes.",
+      "experience": [
+        {
+          "company": "Larch Street Eye Associates",
+          "role": "Associate Optometrist",
+          "location": "Eugene, OR",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform comprehensive and medical eye exams for about 22 patients a day using Zeiss Cirrus OCT, Optos widefield imaging and Humphrey visual fields\n- Built dry eye and myopia control clinics with meibography, IPL and ortho-k, growing them to $260K in annual revenue\n- Co-manage glaucoma, diabetic retinopathy and cataract patients with 3 local ophthalmology groups\n- Document exams and E/M coding in Compulink and bill medical and vision plans"
+        },
+        {
+          "company": "Cascade Vision Center",
+          "role": "Optometrist",
+          "location": "Salem, OR",
+          "startDate": "2019-07",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Fit about 30 specialty contact lens patients a year, including scleral lenses for keratoconus\n- Treated urgent visits for corneal abrasions, foreign bodies and infections"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pacific University College of Optometry",
+          "degree": "Doctor of Optometry (OD)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "University of Oregon",
+          "degree": "B.S. Biology",
+          "startDate": "2011-09",
+          "endDate": "2015-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: comprehensive eye exams, glaucoma management, dry eye, myopia control, specialty contact lenses",
+        "Equipment: Zeiss Cirrus OCT, Optos, Humphrey visual fields, IPL",
+        "Systems: Compulink, E/M coding, VSP and EyeMed billing",
+        "Licensure: Oregon optometry license with therapeutic prescribing, NBEO"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.95,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.99,
+        "pop": 0.89
+      }
+    },
+    "Audiologist": {
+      "summary": "Licensed audiologist with 8 years in ENT and pediatric hospital settings, fitting about 30 hearing aids a month. Cut first-year hearing aid returns from 14% to 6% by making real-ear verification and a two-week follow-up standard. Experienced in diagnostic testing, vestibular evaluation and newborn hearing follow-up.",
+      "experience": [
+        {
+          "company": "Bluestone ENT & Allergy",
+          "role": "Audiologist",
+          "location": "Huntsville, AL",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform audiograms, tympanometry, OAEs and ABRs for about 14 patients a day in a 6-physician ENT practice\n- Fit about 30 hearing aids a month and verify every fitting with real-ear measurement in Noah and Audioscan Verifit\n- Cut first-year hearing aid returns from 14% to 6% by making a two-week follow-up and counseling visit standard\n- Run VNG and VEMP testing for dizziness patients and write reports for ENT review"
+        },
+        {
+          "company": "Riverchase Children's Hospital",
+          "role": "Pediatric Audiologist",
+          "location": "Nashville, TN",
+          "startDate": "2018-07",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Completed newborn hearing rescreens and sedated ABRs for infants referred from 9 birth hospitals\n- Fit pediatric hearing aids and coordinated care with early intervention programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vanderbilt University School of Medicine",
+          "degree": "Doctor of Audiology (AuD)",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Diagnostics: audiometry, tympanometry, OAE, ABR, VNG and VEMP",
+        "Amplification: hearing aid fitting, real-ear verification, cochlear implant referrals, tinnitus counseling",
+        "Systems: Noah, Audioscan Verifit, Otometrics, Epic",
+        "Credentials: CCC-A (ASHA), Alabama audiology license"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "pop": 0.89
+      }
+    },
+    "Massage Therapist": {
+      "summary": "Licensed massage therapist with 6 years in clinical and spa settings, giving about 25 sessions a week. Hold a 72% rebooking rate and a 3-week waitlist built mostly on chiropractor and physical therapist referrals. Skilled in deep tissue, myofascial release and prenatal massage.",
+      "experience": [
+        {
+          "company": "Ridgeway Sports Massage & Recovery",
+          "role": "Licensed Massage Therapist",
+          "location": "Asheville, NC",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Give about 25 sessions a week of deep tissue, myofascial release, sports and prenatal massage based on each client's intake and goals\n- Keep a 72% rebooking rate and a 3-week waitlist, mostly from chiropractor and PT referrals\n- Write SOAP notes in Jane App and bill auto injury and workers' compensation claims\n- Adjust pressure and positioning for clients with pregnancy, arthritis and post-surgical restrictions"
+        },
+        {
+          "company": "Mountain Laurel Day Spa",
+          "role": "Massage Therapist",
+          "location": "Asheville, NC",
+          "startDate": "2020-06",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Gave about 30 Swedish, hot stone and couples sessions a week\n- Helped raise retail add-on sales 18% by recommending home-care products after sessions"
+        }
+      ],
+      "education": [
+        {
+          "school": "Piedmont Institute of Massage Therapy",
+          "degree": "Diploma, Therapeutic Massage (650 hours)",
+          "startDate": "2019-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Techniques: deep tissue, myofascial release, trigger point, sports, prenatal, Swedish",
+        "Clinical: client intake, SOAP notes, contraindication screening, body mechanics",
+        "Business: Jane App, rebooking, auto injury and workers' comp billing",
+        "Licensure: North Carolina LMBT, MBLEx, CPR"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.96,
+        "ginto": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.95
+      }
+    },
+    "Pediatric Nurse": {
+      "summary": "Certified pediatric nurse with 6 years of nursing, including 4 on a 30-bed general pediatrics unit caring for infants through teens. Led a peripheral IV safety project that cut serious infiltrations 45% in a year. Known for calm family teaching and steady work during respiratory season surges.",
+      "experience": [
+        {
+          "company": "Westport Children's Hospital",
+          "role": "Registered Nurse, General Pediatrics",
+          "location": "Kansas City, MO",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for 4 to 5 patients a shift with bronchiolitis, asthma, DKA, post-op needs and complex chronic conditions, using PEWS to catch early decline\n- Led a unit project on hourly PIV checks with a visual tool, cutting serious infiltrations 45% in 12 months\n- Teach families G-tube feeding, inhaler use and home medication schedules with teach-back before discharge\n- Work as charge nurse 1 to 2 shifts a week and precept new graduate nurses"
+        },
+        {
+          "company": "Northland Medical Center",
+          "role": "Registered Nurse, Medical-Surgical",
+          "location": "Kansas City, KS",
+          "startDate": "2020-07",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Cared for 5 to 6 adult medical-surgical patients a shift and charted in Epic"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kansas School of Nursing",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: pediatric assessment, PEWS, IV therapy, G-tube care, family-centered care",
+        "Systems: Epic, Alaris pumps, Pyxis",
+        "Leadership: charge nurse, precepting, unit practice council",
+        "Credentials: RN (Missouri compact license), CPN, PALS, BLS"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.94,
+        "ginto": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "pop": 0.96
+      }
+    },
+    "Psychiatric Nurse": {
+      "summary": "Board-certified psychiatric nurse with 7 years on adult inpatient and crisis units. Helped cut restraint and seclusion events on a 24-bed acute unit by 52% through trauma-informed de-escalation training and daily safety huddles. Skilled in risk assessment, psychotropic medication management and group facilitation.",
+      "experience": [
+        {
+          "company": "Elmhurst Pines Behavioral Hospital",
+          "role": "Registered Nurse, Adult Acute Psychiatry",
+          "location": "Hartford, CT",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for 6 to 8 patients a shift with psychosis, bipolar disorder, depression and co-occurring substance use on a 24-bed locked unit\n- Complete C-SSRS suicide screens, Broset violence checks and AIMS exams and give scheduled, PRN and long-acting injectable medications\n- Co-led trauma-informed de-escalation training and daily safety huddles, cutting restraint and seclusion events 52% in 18 months\n- Run daily psychoeducation groups on medications and coping skills"
+        },
+        {
+          "company": "Connecticut River Crisis Stabilization Unit",
+          "role": "Registered Nurse",
+          "location": "Middletown, CT",
+          "startDate": "2019-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Assessed walk-in and police-referred patients and coordinated admissions with psychiatrists and social workers\n- Monitored alcohol and opioid withdrawal using CIWA and COWS protocols"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Connecticut",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: psychiatric assessment, suicide risk screening, de-escalation, withdrawal management, LAI administration",
+        "Tools: C-SSRS, Broset, AIMS, CIWA and COWS",
+        "Systems: Oracle Health, Pyxis",
+        "Credentials: RN (Connecticut), PMH-BC (ANCC), CPI Nonviolent Crisis Intervention, BLS"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.91,
+        "ginto": 0.87,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.89
+      }
+    },
+    "Oncology Nurse": {
+      "summary": "Oncology certified nurse with 8 years in inpatient oncology and outpatient infusion, giving about 10 chemotherapy and immunotherapy infusions a day. Led a nurse-run symptom call line that cut avoidable ED visits among patients on active treatment by 22%. Skilled in central line care, oral chemo teaching and early recognition of neutropenic fever and infusion reactions.",
+      "experience": [
+        {
+          "company": "Atchafalaya Cancer Center",
+          "role": "Infusion Nurse",
+          "location": "Baton Rouge, LA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Give about 10 chemotherapy, immunotherapy and targeted therapy infusions a day following ONS standards and independent double checks in Epic Beacon\n- Access and maintain ports and PICCs, manage infusion reactions and draw labs to confirm treatment parameters\n- Led a nurse-run symptom call line with triage protocols, cutting avoidable ED visits among patients on active treatment by 22%\n- Teach patients and families about oral chemotherapy, side effects and neutropenic precautions"
+        },
+        {
+          "company": "Bayou Teche Medical Center",
+          "role": "Registered Nurse, Inpatient Oncology",
+          "location": "Lafayette, LA",
+          "startDate": "2018-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Cared for 4 to 5 patients a shift receiving chemotherapy, transplant preparation and end-of-life care\n- Started sepsis bundles for neutropenic fever, giving antibiotics within 60 minutes for 95% of patients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Louisiana State University Health Sciences Center",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: chemotherapy and immunotherapy administration, central line care, symptom triage, oncologic emergencies",
+        "Systems: Epic Beacon, Alaris pumps, Pyxis",
+        "Teaching: oral chemo education, survivorship care, family support",
+        "Credentials: RN (Louisiana), OCN, ONS/ONCC Chemotherapy Immunotherapy Certificate, BLS"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "creative": 0.99,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.85
+      }
+    },
+    "Nurse Educator": {
+      "summary": "Nurse educator with 12 years of nursing practice and 6 years teaching in an associate degree nursing program, holding CNE certification. Redesigned the medical-surgical course with simulation and NCLEX-style testing, helping raise first-time NCLEX-RN pass rates from 82% to 93%. Still works per diem in the ICU to keep clinical skills current.",
+      "experience": [
+        {
+          "company": "Ozark Plateau Community College",
+          "role": "Nursing Faculty",
+          "location": "Springfield, MO",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Teach medical-surgical and critical care courses to about 60 ADN students a semester, covering lecture, skills lab and clinical groups at 2 hospitals\n- Redesigned the medical-surgical course with high-fidelity simulation, ATI practice tests and NCLEX-style exams, helping raise first-time NCLEX-RN pass rates from 82% to 93%\n- Write and debrief 10 simulation scenarios a year on Laerdal SimMan following INACSL standards\n- Serve on the curriculum committee that led the program through ACEN reaccreditation"
+        },
+        {
+          "company": "Greene County Medical Center",
+          "role": "Registered Nurse, Medical ICU (staff, now per diem)",
+          "location": "Springfield, MO",
+          "startDate": "2014-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for 1 to 2 critically ill patients a shift on ventilators, CRRT and vasoactive drips\n- Served 3 years as unit educator, running annual skills validation for 70 nurses"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Missouri",
+          "degree": "Master of Science in Nursing (MSN), Nursing Education",
+          "startDate": "2016-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Missouri State University",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Teaching: curriculum design, simulation debriefing, NCLEX test writing, clinical instruction",
+        "Tools: ATI, Canvas, ExamSoft, Laerdal SimMan",
+        "Clinical: critical care, medical-surgical nursing",
+        "Credentials: RN (Missouri), CNE (NLN), CCRN, BLS and ACLS"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.97,
+        "minimalist": 0.99,
+        "tokyo": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.96
+      }
+    },
+    "Hospice Nurse": {
+      "summary": "Hospice RN case manager with 7 years in home hospice and inpatient palliative care, carrying a caseload of 12 to 14 patients. Helped lift the agency's Hospice CAHPS willingness-to-recommend score from 81% to 90% by adding a 48-hour post-admission call and simpler symptom plans for families. Skilled in pain and symptom control and calm conversations about dying.",
+      "experience": [
+        {
+          "company": "Evening Star Hospice",
+          "role": "RN Case Manager",
+          "location": "Toledo, OH",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage 12 to 14 home and nursing facility patients, completing comprehensive assessments and HOPE data in Homecare Homebase\n- Adjust pain, breathlessness, agitation and bowel regimens with the hospice physician and teach families to use comfort kits\n- Present patients at weekly IDG meetings and update plans of care with social workers, chaplains and aides\n- Added a 48-hour post-admission call and one-page symptom plans, helping lift the CAHPS willingness-to-recommend score from 81% to 90%"
+        },
+        {
+          "company": "Northwest Ohio Medical Center",
+          "role": "Registered Nurse, Palliative Care Unit",
+          "location": "Toledo, OH",
+          "startDate": "2019-05",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Cared for 4 to 5 patients a shift at end of life and supported families through withdrawal of life support\n- Managed PCA pumps and continuous infusions for symptom control"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bowling Green State University",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: pain and symptom management, end-of-life care, comfort kits, death pronouncement",
+        "Hospice: Medicare hospice benefit, IDG, HOPE, plan of care",
+        "Systems: Homecare Homebase, Epic",
+        "Credentials: RN (Ohio), CHPN, BLS"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.86,
+        "pop": 0.92
+      }
+    },
+    "Occupational Therapy Assistant": {
+      "summary": "Certified occupational therapy assistant with 5 years in skilled nursing and outpatient rehab, treating about 12 patients a day. Helped the rehab team raise short-stay discharges home from 64% to 75% through daily ADL retraining and home safety planning. Skilled in neuro and orthopedic treatment and adaptive equipment training.",
+      "experience": [
+        {
+          "company": "Pine Hollow Rehabilitation Center",
+          "role": "Certified Occupational Therapy Assistant",
+          "location": "Rochester, MN",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Treat about 12 short-stay and long-term residents a day under OT plans of care for stroke, hip fracture and joint replacement\n- Run daily ADL retraining, therapeutic exercise and adaptive equipment training, helping raise discharges home from 64% to 75%\n- Document daily notes and Section GG scores in NetHealth while staying above 85% productivity\n- Train nursing aides on safe transfers and splint wearing schedules"
+        },
+        {
+          "company": "Zumbro Valley Outpatient Therapy",
+          "role": "Certified Occupational Therapy Assistant",
+          "location": "Rochester, MN",
+          "startDate": "2021-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Treated hand and upper extremity patients with therapeutic exercise and custom splints\n- Led a weekly fall-prevention class for about 10 older adults"
+        }
+      ],
+      "education": [
+        {
+          "school": "Anoka Technical College",
+          "degree": "A.A.S. Occupational Therapy Assistant",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Treatment: ADL retraining, therapeutic exercise, neuro rehab, fine motor, cognitive strategies",
+        "Equipment: adaptive equipment, splinting, wheelchair positioning",
+        "Documentation: NetHealth, Section GG, Medicare Part A and B",
+        "Credentials: COTA/L (Minnesota), NBCOT, BLS"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "pop": 0.94
+      }
+    },
+    "Behavior Technician (RBT)": {
+      "summary": "Registered behavior technician with 2 years delivering ABA therapy to children ages 3 to 9 with autism in clinic and home settings. Helped a nonvocal 4-year-old move from 5 to 40 independent PECS requests a session over 6 months. Collects clean session data and follows behavior plans closely under BCBA supervision.",
+      "experience": [
+        {
+          "company": "Sunflower Autism Center",
+          "role": "Registered Behavior Technician",
+          "location": "Fort Worth, TX",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Deliver about 30 hours a week of 1:1 ABA sessions to 4 clients using DTT, NET and functional communication training\n- Run skill acquisition and behavior reduction programs as written by the BCBA and record trial-by-trial data in CentralReach\n- Supported a nonvocal 4-year-old in moving from 5 to 40 independent PECS requests a session over 6 months\n- Coach parents on prompting and reinforcement during home sessions"
+        },
+        {
+          "company": "Panther Creek Elementary School",
+          "role": "Special Education Paraprofessional",
+          "location": "Fort Worth, TX",
+          "startDate": "2023-08",
+          "endDate": "2024-08",
+          "isCurrent": false,
+          "description": "- Supported 6 students in a special education classroom with IEP goals and visual schedules"
+        }
+      ],
+      "education": [
+        {
+          "school": "Tarleton State University",
+          "degree": "B.S. Psychology",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "ABA: DTT, NET, PECS, functional communication training, prompt fading",
+        "Data: CentralReach, ABC data, frequency and duration recording",
+        "Behavior support: behavior intervention plans, de-escalation, parent coaching",
+        "Credentials: RBT (BACB), CPR and First Aid"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.92,
+        "ginto": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.92,
+        "pop": 0.94
+      }
+    },
+    "Optician": {
+      "summary": "Licensed, ABO-certified optician with 6 years in independent optical shops, dispensing about 25 pairs of glasses a day. Raised premium lens and second-pair sales 31% by simplifying how lens options are explained at the frame bar. Skilled in progressive fitting, in-house edging and frame adjustments.",
+      "experience": [
+        {
+          "company": "Spectacle Row Opticians",
+          "role": "Licensed Optician",
+          "location": "Providence, RI",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Fit and dispense about 25 pairs of glasses a day, taking PD, segment height and wrap measurements for progressive and computer lenses\n- Raised premium lens and second-pair sales 31% with a simple good, better, best lens chart at the frame bar\n- Edge and mount single vision lenses on a Santinelli edger, cutting turnaround for those jobs from 7 days to 1\n- Process VSP and EyeMed claims in OfficeMate and resolve non-adapts with the optometrist"
+        },
+        {
+          "company": "Narragansett Eye Care",
+          "role": "Apprentice Optician",
+          "location": "Warwick, RI",
+          "startDate": "2020-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Completed Rhode Island optician apprenticeship hours while adjusting frames, verifying lenses with a lensometer and ordering from 4 labs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Community College of Rhode Island",
+          "degree": "Certificate, Ophthalmic Dispensing",
+          "startDate": "2019-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dispensing: progressive fitting, frame selection, PD and seg height, lensometry, adjustments",
+        "Lab: Santinelli edging, lens mounting, tinting",
+        "Systems: OfficeMate, VSP and EyeMed claims",
+        "Credentials: Rhode Island optician license, ABO certified, NCLE certified"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "pop": 0.93
+      }
+    },
+    "Anesthesiologist": {
+      "summary": "Board-certified anesthesiologist with 9 years in a 14-OR community hospital and ambulatory surgery center, directing up to 4 CRNAs at a time. Built a regional anesthesia and ERAS pathway for joint replacement that cut inpatient opioid use 40% and moved 60% of knee replacements to same-day discharge. Covers general, regional, obstetric and pediatric cases.",
+      "experience": [
+        {
+          "company": "Sound Anesthesia Partners",
+          "role": "Partner Anesthesiologist",
+          "location": "Tacoma, WA",
+          "startDate": "2021-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Provide and direct anesthesia for about 1,400 cases a year across 14 ORs, supervising up to 4 CRNAs in the anesthesia care team model\n- Built an ultrasound-guided nerve block and ERAS pathway for joint replacement, cutting inpatient opioid use 40% and moving 60% of knee replacements to same-day discharge\n- Cover labor epidurals and cesarean anesthesia on call and serve as a lead for difficult airway cases\n- Track PONV, reintubation and block complication data in Epic Anesthesia and present at quarterly QI review"
+        },
+        {
+          "company": "Sound Anesthesia Partners",
+          "role": "Staff Anesthesiologist",
+          "location": "Tacoma, WA",
+          "startDate": "2017-08",
+          "endDate": "2021-06",
+          "isCurrent": false,
+          "description": "- Staffed a 6-room ambulatory surgery center and cut first-case delays 30% with a pre-op phone screen"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Washington School of Medicine",
+          "degree": "Doctor of Medicine (MD)",
+          "startDate": "2009-08",
+          "endDate": "2013-06"
+        },
+        {
+          "school": "Oregon Health & Science University",
+          "degree": "Residency, Anesthesiology",
+          "startDate": "2013-07",
+          "endDate": "2017-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: general and regional anesthesia, ultrasound-guided nerve blocks, obstetric anesthesia, difficult airway",
+        "Quality: ERAS, PONV prevention, ASA standards, QI review",
+        "Systems: Epic Anesthesia, ultrasound",
+        "Credentials: ABA board certified, Washington medical license, DEA registration, ACLS and PALS"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "tokyo": 0.98,
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.99,
+        "mono": 0.94,
+        "pop": 0.89
+      }
+    },
+    "Medical Interpreter": {
+      "summary": "Certified Spanish medical interpreter with 5 years in hospital and contract interpreting, now handling about 30 encounters a day in person and by video. Cut average interpreter wait time in the ED from 19 to 7 minutes by building a video remote backup schedule with the charge nurses. Experienced in consent discussions, discharge teaching and difficult conversations in oncology and palliative care.",
+      "experience": [
+        {
+          "company": "Valle Verde Medical Center",
+          "role": "Staff Medical Interpreter",
+          "location": "El Paso, TX",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Interpret about 30 in-person and video encounters a day in Spanish across the ED, labor and delivery, oncology and outpatient clinics\n- Interpret informed consent, family meetings and discharge teaching following NCIHC standards and HIPAA\n- Built a video remote interpreting backup schedule with ED charge nurses, cutting average wait from 19 to 7 minutes\n- Sight translate forms and raise cultural or health literacy concerns with the care team"
+        },
+        {
+          "company": "Border Region Interpreting Services",
+          "role": "Contract Medical Interpreter",
+          "location": "El Paso, TX",
+          "startDate": "2021-03",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Interpreted by phone and on site for 12 clinics and home health visits"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Texas at El Paso",
+          "degree": "B.A. Translation and Interpreting Studies",
+          "startDate": "2016-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Interpreting: consecutive, simultaneous, sight translation, VRI and OPI",
+        "Medical: terminology, informed consent, oncology, OB and palliative care conversations",
+        "Standards: NCIHC Standards of Practice, HIPAA, Title VI language access",
+        "Credentials: CHI-Spanish (CCHI), Bridging the Gap 40-hour training"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.91,
+        "ginto": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.99,
+        "pop": 0.9
+      }
+    },
+    "Medical Secretary": {
+      "summary": "Medical secretary with 6 years supporting cardiology and orthopedic practices, now managing calendars and correspondence for 5 physicians. Cut prior authorization turnaround from 6 to 3 business days with a payer-specific checklist and a daily follow-up queue. Organized, discreet and quick with dictation.",
+      "experience": [
+        {
+          "company": "Kanawha Valley Cardiology",
+          "role": "Medical Secretary",
+          "location": "Charleston, WV",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage calendars, procedure scheduling and correspondence for 5 cardiologists in athenaOne\n- Submit prior authorizations for echocardiograms, nuclear stress tests and cardiac caths through CoverMyMeds and payer portals, cutting turnaround from 6 to 3 business days\n- Process about 40 referrals and records requests a day following HIPAA release rules\n- Transcribe and send dictated letters to referring physicians within 24 hours"
+        },
+        {
+          "company": "Elk River Orthopedics",
+          "role": "Front Office Assistant",
+          "location": "Charleston, WV",
+          "startDate": "2020-05",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Scheduled about 90 visits a day and collected copays\n- Scanned and indexed paper records, clearing a 3-month backlog"
+        }
+      ],
+      "education": [
+        {
+          "school": "BridgeValley Community and Technical College",
+          "degree": "A.A.S. Medical Office Administration",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Administration: physician calendars, referrals, prior authorizations, correspondence, records requests",
+        "Systems: athenaOne, CoverMyMeds, Microsoft 365",
+        "Knowledge: medical terminology, ICD-10 and CPT basics, HIPAA",
+        "Other: 70 WPM typing, dictation transcription"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "pop": 0.96
+      }
+    },
+    "Unit Secretary": {
+      "summary": "Unit secretary with 4 years on a 36-bed telemetry unit, handling about 15 admissions, discharges and transfers a shift. Helped move average discharge time from 3:40 p.m. to 2:20 p.m. by building a morning discharge huddle sheet with the charge nurse. Keeps the desk organized during rapid responses, bed huddles and visitor rushes.",
+      "experience": [
+        {
+          "company": "Wabash Valley Medical Center",
+          "role": "Unit Secretary, Telemetry",
+          "location": "Terre Haute, IN",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Process admissions, discharges and transfers in Epic for about 15 patient moves a shift on a 36-bed telemetry unit\n- Enter and track consult, transport and dietary orders and page providers for the nursing team\n- Built a morning discharge huddle sheet with the charge nurse, helping move average discharge time from 3:40 p.m. to 2:20 p.m.\n- Answer phones and call lights, track telemetry box inventory and keep the census board current"
+        },
+        {
+          "company": "Covered Bridge Senior Living",
+          "role": "Receptionist",
+          "location": "Terre Haute, IN",
+          "startDate": "2021-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Greeted visitors, routed calls and kept resident records organized for a 90-unit community"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ivy Tech Community College",
+          "degree": "Certificate, Health Unit Coordinator",
+          "startDate": "2021-08",
+          "endDate": "2021-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Unit operations: ADT, order entry, bed board, census, paging",
+        "Systems: Epic, Vocera, TeleTracking",
+        "Knowledge: medical terminology, HIPAA, rapid response and code procedures",
+        "Certifications: CHUC (NAHUC), BLS"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "iron": 0.97,
+        "ginto": 0.99,
+        "quartz": 0.95,
+        "bronx": 0.89
+      }
+    },
+    "Patient Care Technician": {
+      "summary": "Certified patient care technician with 3 years of hands-on care, now on a 32-bed medical-surgical unit caring for 8 to 10 patients a shift. Kept a strict 2-hour turn and skin check schedule that helped the unit go 9 months without a stage 2 or higher pressure injury. Skilled in phlebotomy, 12-lead EKGs and reporting vital sign changes early.",
+      "experience": [
+        {
+          "company": "Shenandoah Valley Medical Center",
+          "role": "Patient Care Technician",
+          "location": "Harrisonburg, VA",
+          "startDate": "2023-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for 8 to 10 medical-surgical patients a shift with bathing, toileting, feeding, walking and safe transfers using Hoyer and sit-to-stand lifts\n- Take vitals, blood glucose checks and intake and output and report changes to the RN using SBAR\n- Draw about 20 morning labs and run 12-lead EKGs for chest pain and pre-op orders\n- Kept a 2-hour turn and skin check schedule, helping the unit go 9 months without a stage 2 or higher pressure injury"
+        },
+        {
+          "company": "Massanutten Health and Rehab",
+          "role": "Certified Nursing Assistant",
+          "location": "Harrisonburg, VA",
+          "startDate": "2022-08",
+          "endDate": "2023-08",
+          "isCurrent": false,
+          "description": "- Assisted 12 residents a shift with ADLs, meals and mobility and charted in PointClickCare"
+        }
+      ],
+      "education": [
+        {
+          "school": "Blue Ridge Community College",
+          "degree": "Certificate, Patient Care Technician",
+          "startDate": "2022-01",
+          "endDate": "2022-07"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Patient care: ADLs, transfers, turning and skin checks, fall prevention, specimen collection",
+        "Technical: phlebotomy, 12-lead EKG, glucose monitoring, vital signs",
+        "Systems: Epic, PointClickCare",
+        "Certifications: CPCT/A (NHA), Virginia CNA, BLS"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "pop": 0.98
+      }
+    },
+    "EKG Technician": {
+      "summary": "Certified EKG technician with 4 years in hospital cardiology and a cardiology practice, running about 45 resting EKGs a shift. Cut artifact-related repeat EKGs from 9% to 3% by retraining staff on lead placement and skin prep. Comfortable with Holter monitors, stress testing and reporting critical rhythms right away.",
+      "experience": [
+        {
+          "company": "Longleaf Regional Medical Center",
+          "role": "EKG Technician",
+          "location": "Fayetteville, NC",
+          "startDate": "2022-11",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform about 45 12-lead EKGs a shift for ED, inpatient and pre-op patients and send tracings to GE MUSE\n- Hook up Holter and 30-day event monitors and teach patients how to log symptoms\n- Prep and monitor patients during treadmill and Lexiscan stress tests with the cardiologist and nurse\n- Retrained 14 techs and nurses on lead placement and skin prep, cutting artifact-related repeats from 9% to 3%"
+        },
+        {
+          "company": "Cross Creek Cardiology",
+          "role": "Medical Assistant",
+          "location": "Fayetteville, NC",
+          "startDate": "2021-06",
+          "endDate": "2022-10",
+          "isCurrent": false,
+          "description": "- Roomed about 25 patients a day, took vitals and ran office EKGs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fayetteville Technical Community College",
+          "degree": "Certificate, EKG and Phlebotomy",
+          "startDate": "2021-01",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Cardiac testing: 12-lead EKG, Holter and event monitors, treadmill and pharmacologic stress tests",
+        "Rhythm recognition: STEMI, atrial fibrillation, heart blocks, ventricular tachycardia",
+        "Systems: GE MUSE, Epic",
+        "Certifications: CET (NHA), BLS"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.97,
+        "ginto": 0.98,
+        "bronx": 0.95,
+        "pop": 0.99
+      }
+    },
+    "Dialysis Technician": {
+      "summary": "Certified hemodialysis technician with 5 years in outpatient dialysis, now caring for about 12 patients a day in a 24-station clinic. Helped raise the share of patients meeting Kt/V adequacy targets from 88% to 95% by tightening needle placement and blood flow checks. Experienced with water treatment testing and machine disinfection.",
+      "experience": [
+        {
+          "company": "Llano Estacado Kidney Center",
+          "role": "Hemodialysis Patient Care Technician",
+          "location": "Lubbock, TX",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Cannulate fistulas and grafts and start, monitor and end treatments for about 12 patients a day on Fresenius 2008T machines\n- Check blood pressure, fluid removal and access every 30 minutes and report cramping, low blood pressure or clotting to the charge nurse\n- Tightened needle placement and blood flow checks with the RN team, helping raise patients meeting Kt/V targets from 88% to 95%\n- Test chlorine and chloramine levels before each shift and log water treatment and machine disinfection per AAMI standards"
+        },
+        {
+          "company": "Caprock Dialysis Partners",
+          "role": "Dialysis Technician",
+          "location": "Midland, TX",
+          "startDate": "2021-05",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Completed a 10-week training program and ran treatments for about 8 patients a day"
+        }
+      ],
+      "education": [
+        {
+          "school": "Midland College",
+          "degree": "Associate of Science, General Studies",
+          "startDate": "2018-08",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dialysis: cannulation, treatment monitoring, access assessment, Kt/V and fluid removal",
+        "Equipment: Fresenius 2008T, water treatment testing, machine disinfection",
+        "Safety: CMS ESRD Conditions for Coverage, infection control, AAMI standards",
+        "Certifications: CCHT (NNCC), BLS"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.95,
+        "quartz": 0.99,
+        "bronx": 0.92,
+        "mono": 0.99,
+        "pop": 0.9
+      }
+    },
+    "MRI Technologist": {
+      "summary": "ARRT-certified MRI technologist with 7 years in MRI and 9 in imaging, scanning about 20 patients a shift on 1.5T and 3T systems. Cut average brain and spine exam times by 8 minutes by rebuilding protocols with deep learning reconstruction, adding 4 appointment slots a day. Serves as the department's MR safety officer.",
+      "experience": [
+        {
+          "company": "Gulf Breeze Diagnostic Imaging",
+          "role": "Lead MRI Technologist",
+          "location": "Pensacola, FL",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Scan about 20 patients a shift on Siemens 1.5T and 3T systems, including neuro, MSK, body, cardiac and breast MRI\n- Rebuilt brain and spine protocols with deep learning reconstruction, cutting average exam time 8 minutes and adding 4 slots a day\n- Act as MR safety officer, screening implants against MR Conditional labeling and training staff on Zone III and IV access\n- Start IVs and give gadolinium contrast following ACR guidance and eGFR screening"
+        },
+        {
+          "company": "Perdido Bay Hospital",
+          "role": "MRI Technologist",
+          "location": "Pensacola, FL",
+          "startDate": "2019-06",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Scanned inpatient, ED and stroke alert patients on GE 1.5T scanners\n- Helped the department keep ACR MRI accreditation"
+        },
+        {
+          "company": "Perdido Bay Hospital",
+          "role": "Radiologic Technologist",
+          "location": "Pensacola, FL",
+          "startDate": "2017-06",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Performed about 50 x-rays a day and cross-trained into MRI"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pensacola State College",
+          "degree": "A.S. Radiography",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Imaging: neuro, MSK, body, cardiac and breast MRI, contrast injection, IV starts",
+        "Safety: MR safety officer, implant screening, ACR MR safety guidance",
+        "Systems: Siemens MAGNETOM, GE SIGNA, PACS, Epic Radiant",
+        "Credentials: ARRT (R)(MR), MRSO (ABMRS), BLS"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "CT Technologist": {
+      "summary": "ARRT-certified CT technologist with 6 years in imaging, now at a Level II trauma center performing about 35 scans a shift. Cut stroke alert door-to-scan time from 18 to 9 minutes by setting up a direct-to-scanner pathway with the ED. Strong in CT angiography, contrast safety and dose reduction.",
+      "experience": [
+        {
+          "company": "Big Sky Regional Medical Center",
+          "role": "CT Technologist",
+          "location": "Bozeman, MT",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform about 35 scans a shift, including trauma panels, CTA head and neck, PE studies and CT-guided biopsies on Siemens SOMATOM scanners\n- Worked with ED nurses to set up a direct-to-scanner stroke pathway, cutting door-to-scan time from 18 to 9 minutes\n- Screen for contrast allergies and kidney function, power-inject contrast and manage reactions under ACR guidance\n- Keep CTDIvol and DLP within facility dose reference levels and help maintain ACR CT accreditation"
+        },
+        {
+          "company": "Gallatin Valley Imaging",
+          "role": "Radiologic Technologist",
+          "location": "Bozeman, MT",
+          "startDate": "2020-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Performed about 50 x-rays a day and cross-trained into CT"
+        }
+      ],
+      "education": [
+        {
+          "school": "Great Falls College Montana State University",
+          "degree": "A.A.S. Radiologic Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Imaging: trauma CT, CTA, CT-guided procedures, 3D reconstructions",
+        "Safety: contrast screening and reactions, ALARA, dose monitoring",
+        "Systems: Siemens SOMATOM, Bayer MEDRAD injectors, PACS, Epic Radiant",
+        "Credentials: ARRT (R)(CT), Montana radiologic technologist license, BLS"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "pop": 0.88
+      }
+    },
+    "Nuclear Medicine Technologist": {
+      "summary": "Certified nuclear medicine technologist with 8 years in cardiology and hospital nuclear medicine, performing about 14 studies a day including PET/CT. Helped launch PSMA PET/CT and Lu-177 therapy services, growing to 40 PSMA scans a month in the first year. Strong in radiation safety, NRC compliance and patient care during long exams.",
+      "experience": [
+        {
+          "company": "Susquehanna Valley Medical Center",
+          "role": "Lead Nuclear Medicine Technologist",
+          "location": "Lancaster, PA",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Perform about 14 studies a day, including myocardial perfusion, bone, HIDA, renal and FDG and PSMA PET/CT, on SPECT/CT and PET/CT systems\n- Helped launch PSMA PET/CT and Lu-177 radioligand therapy, growing to 40 PSMA scans a month in the first year\n- Receive, calibrate and dispense radiopharmaceuticals, run dose calibrator QC and keep records for NRC and state inspections\n- Train 3 technologists on PET/CT and assist the radiation safety officer with wipe tests and area surveys"
+        },
+        {
+          "company": "Conestoga Cardiology Associates",
+          "role": "Nuclear Medicine Technologist",
+          "location": "York, PA",
+          "startDate": "2018-07",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Ran about 12 nuclear stress tests a day with Lexiscan and treadmill protocols\n- Kept the lab free of findings across 2 state radiation inspections"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pennsylvania College of Health Sciences",
+          "degree": "B.S. Nuclear Medicine Technology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Imaging: SPECT/CT, PET/CT, myocardial perfusion, oncology and theranostics",
+        "Radiopharmacy: dose calibration, unit dose handling, Tc-99m generator elution, Lu-177 therapy support",
+        "Safety: NRC 10 CFR Part 35, ALARA, wipe tests, area surveys",
+        "Credentials: CNMT and PET (NMTCB), BLS"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "pop": 0.89
+      }
+    },
+    "Pharmacy Assistant": {
+      "summary": "Pharmacy assistant with 1 year in a busy community pharmacy filling about 350 prescriptions a day. Set up a weekly will-call bin audit that helped cut returned-to-stock prescriptions 20%. Friendly at the counter and careful with patient privacy.",
+      "experience": [
+        {
+          "company": "Hometown Rx",
+          "role": "Pharmacy Assistant",
+          "location": "Kokomo, IN",
+          "startDate": "2025-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the register and drive-thru, ring up prescriptions and confirm patient name and date of birth at pickup\n- Answer phones, take refill requests and route insurance and clinical questions to technicians and pharmacists\n- Set up a weekly will-call bin audit that helped cut returned-to-stock prescriptions 20%\n- Restock shelves, pull expired products and keep the counting area clean"
+        },
+        {
+          "company": "Howard County Market",
+          "role": "Cashier",
+          "location": "Kokomo, IN",
+          "startDate": "2023-06",
+          "endDate": "2025-08",
+          "isCurrent": false,
+          "description": "- Handled about 200 transactions a shift and balanced the cash drawer"
+        }
+      ],
+      "education": [
+        {
+          "school": "Kokomo High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Pharmacy support: will-call management, refill requests, inventory, expiration checks",
+        "Customer service: register, drive-thru, phone calls",
+        "Systems: PioneerRx, POS",
+        "Compliance: HIPAA, pseudoephedrine logs, PTCB exam prep in progress"
+      ]
+    },
+    "Doula": {
+      "summary": "DONA-certified birth and postpartum doula with 5 years of practice, supporting about 30 families a year in hospitals and a birth center. Built a Medicaid doula partnership with a community clinic that served 85 low-income families in its first two years. Offers steady labor support, clear birth planning and early feeding help.",
+      "experience": [
+        {
+          "company": "Gentle Harbor Birth Support (self-employed)",
+          "role": "Birth and Postpartum Doula",
+          "location": "Portland, OR",
+          "startDate": "2021-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Support about 30 families a year through prenatal visits, labor and birth and 2 to 3 postpartum visits\n- Provide comfort measures, position changes and partner coaching during labor at 4 hospitals and a freestanding birth center\n- Partnered with a community health clinic to bill Oregon Health Plan for doula care, serving 85 low-income families in 2 years\n- Teach newborn care, feeding basics and postpartum warning signs and refer to IBCLCs and perinatal mental health providers"
+        },
+        {
+          "company": "Columbia River Volunteer Doula Program",
+          "role": "Volunteer Doula",
+          "location": "Portland, OR",
+          "startDate": "2020-09",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Gave free labor support to 18 birthing people, many without family present"
+        }
+      ],
+      "education": [
+        {
+          "school": "Portland State University",
+          "degree": "B.A. Community Health",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Birth support: comfort measures, positioning, birth planning, partner coaching",
+        "Postpartum: newborn care, feeding support, recovery check-ins, referrals",
+        "Business: client intake, Oregon Health Plan billing, contracts",
+        "Credentials: DONA Birth Doula (CD), Oregon Traditional Health Worker registry, CPR"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "pop": 0.9
+      }
+    },
+    "Midwife": {
+      "summary": "Certified nurse-midwife with 7 years of full-scope practice and 6 prior years as a labor and delivery nurse, attending about 120 births a year. Helped the practice lower its primary cesarean rate from 24% to 17% through intermittent auscultation, labor support and careful induction timing. Provides prenatal, gynecologic and postpartum care in English and Spanish.",
+      "experience": [
+        {
+          "company": "Desert Willow Midwifery & Women's Health",
+          "role": "Certified Nurse-Midwife",
+          "location": "Las Cruces, NM",
+          "startDate": "2019-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage labor and attend about 120 births a year in the hospital, including VBACs and births with epidurals\n- Helped lower the practice's primary cesarean rate from 24% to 17% with intermittent auscultation, upright positions and careful induction timing\n- See about 20 patients a day for prenatal, postpartum, contraception and well-person visits, including IUD and implant placement\n- Consult with and transfer care to OB/GYN physicians under written collaboration plans"
+        },
+        {
+          "company": "Mesilla Valley Medical Center",
+          "role": "Registered Nurse, Labor and Delivery",
+          "location": "Las Cruces, NM",
+          "startDate": "2013-06",
+          "endDate": "2019-08",
+          "isCurrent": false,
+          "description": "- Cared for laboring patients, interpreted fetal monitoring and assisted with cesarean births"
+        }
+      ],
+      "education": [
+        {
+          "school": "Frontier Nursing University",
+          "degree": "Master of Science in Nursing (MSN), Nurse-Midwifery",
+          "startDate": "2017-01",
+          "endDate": "2019-08"
+        },
+        {
+          "school": "New Mexico State University",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2009-08",
+          "endDate": "2013-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: labor management, intermittent auscultation, perineal repair, newborn assessment",
+        "Women's health: prenatal and postpartum care, contraception, IUD and implant placement, well-person exams",
+        "Systems: Epic, fetal monitoring interpretation",
+        "Credentials: CNM (AMCB), New Mexico APRN license, NRP, BLS"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.97,
+        "minimalist": 0.97,
+        "sidebar": 0.96,
+        "creative": 0.93,
+        "professional": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.96,
+        "mono": 0.96,
+        "pop": 0.88
+      }
+    },
+    "Lactation Consultant": {
+      "summary": "IBCLC and registered nurse with 9 years in maternal-child care, including 5 as a hospital lactation consultant seeing about 15 mother-baby pairs a day. Helped raise exclusive breast milk feeding at discharge from 52% to 66% and led staff training for Baby-Friendly redesignation. Skilled in pumping plans and feeding support for NICU and late preterm infants.",
+      "experience": [
+        {
+          "company": "Winnebago Regional Medical Center",
+          "role": "Lactation Consultant",
+          "location": "Oshkosh, WI",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- See about 15 mother-baby and NICU pairs a day for latch, milk supply, pumping and late preterm feeding plans\n- Helped raise exclusive breast milk feeding at discharge from 52% to 66% and led staff training for Baby-Friendly redesignation\n- Run a weekly outpatient lactation clinic with weighted feeds and follow-up calls\n- Teach the prenatal breastfeeding class and train about 40 nurses a year on the Ten Steps"
+        },
+        {
+          "company": "Winnebago Regional Medical Center",
+          "role": "Registered Nurse, Mother-Baby",
+          "location": "Oshkosh, WI",
+          "startDate": "2017-06",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Cared for 4 mother-baby couplets a shift and gave first-line feeding support"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Wisconsin Oshkosh",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Lactation: latch assessment, weighted feeds, pumping plans, oral anatomy screening, NICU feeding",
+        "Programs: Baby-Friendly USA, Ten Steps, staff education",
+        "Systems: Epic, hospital-grade breast pumps",
+        "Credentials: IBCLC, RN (Wisconsin), NRP, BLS"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "pop": 0.96
+      }
+    },
+    "Psychiatrist": {
+      "summary": "Board-certified adult psychiatrist with 8 years in community mental health and hospital consult-liaison work. Built a collaborative care program with 6 primary care clinics in which 58% of enrolled patients reached depression response within 6 months. Treats mood, psychotic and substance use disorders, including clozapine and buprenorphine care.",
+      "experience": [
+        {
+          "company": "Elkhorn Creek Behavioral Health",
+          "role": "Staff Psychiatrist",
+          "location": "Lexington, KY",
+          "startDate": "2021-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- See about 16 patients a day for evaluations and medication management of depression, bipolar disorder, schizophrenia and PTSD\n- Built a collaborative care program with 6 primary care clinics, with 58% of enrolled patients reaching depression response on the PHQ-9 within 6 months\n- Run a clozapine clinic for 45 patients and prescribe buprenorphine for opioid use disorder\n- Supervise 3 psychiatric nurse practitioners and teach residents at weekly case conference"
+        },
+        {
+          "company": "Kentucky River Medical Center",
+          "role": "Consult-Liaison Psychiatrist",
+          "location": "Lexington, KY",
+          "startDate": "2018-08",
+          "endDate": "2020-12",
+          "isCurrent": false,
+          "description": "- Answered about 10 inpatient consults a day for delirium, capacity, suicide risk and agitation\n- Helped cut average ED psychiatric boarding time from 22 to 14 hours with a rapid evaluation protocol"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Louisville School of Medicine",
+          "degree": "Doctor of Medicine (MD)",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        },
+        {
+          "school": "University of Cincinnati College of Medicine",
+          "degree": "Residency, Psychiatry",
+          "startDate": "2014-07",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Clinical: psychiatric evaluation, psychopharmacology, clozapine management, buprenorphine treatment",
+        "Programs: collaborative care, consult-liaison psychiatry, measurement-based care",
+        "Systems: Epic, telepsychiatry",
+        "Credentials: ABPN board certified, Kentucky medical license, DEA registration"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "silk": 0.95,
+        "minimalist": 0.93,
+        "tokyo": 0.96,
+        "creative": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "symmetry": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.98
+      }
+    },
+    "Occupational Health Nurse": {
+      "summary": "Certified occupational health nurse with 9 years of nursing, including 5 running the onsite clinic at a 1,400-employee manufacturing plant. Cut the plant's OSHA recordable injury rate from 4.1 to 2.3 through early first aid care, ergonomic reviews and return-to-work planning. Manages DOT testing, medical surveillance and workers' compensation cases.",
+      "experience": [
+        {
+          "company": "Tri-State Appliance Works",
+          "role": "Occupational Health Nurse",
+          "location": "Evansville, IN",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the onsite clinic for 1,400 employees across 3 shifts, treating injuries with first aid and referring to occupational medicine when needed\n- Cut the OSHA recordable injury rate from 4.1 to 2.3 by pairing early first aid care with ergonomic reviews and modified-duty plans\n- Manage hearing conservation, respirator clearance and DOT drug and alcohol testing and keep the OSHA 300 log\n- Coordinate about 60 workers' compensation and FMLA cases a year with the TPA, safety and HR"
+        },
+        {
+          "company": "Southwind Regional Hospital",
+          "role": "Registered Nurse, Emergency Department",
+          "location": "Evansville, IN",
+          "startDate": "2017-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Cared for 4 to 5 ED patients a shift, including trauma and workplace injuries"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Southern Indiana",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Occupational health: injury triage, case management, return to work, medical surveillance",
+        "Compliance: OSHA recordkeeping, hearing conservation, respirator clearance, DOT testing",
+        "Systems: Cority, Microsoft Excel",
+        "Credentials: RN (Indiana), COHN (ABOHN), CAOHC hearing conservationist, DOT breath alcohol technician"
+      ],
+      "fit": {
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "pop": 0.92
+      }
+    },
+    "School Nurse": {
+      "summary": "Nationally certified school nurse with 10 years of nursing, including 6 serving a K-8 school of 750 students. Raised on-time immunization compliance from 84% to 97% in two years through parent outreach and on-site clinics with the county health department. Manages diabetes, seizure and severe allergy care plans and trains staff on emergency medications.",
+      "experience": [
+        {
+          "company": "Meadowbrook School District",
+          "role": "School Nurse",
+          "location": "Colorado Springs, CO",
+          "startDate": "2020-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Care for 750 K-8 students, handling about 40 health office visits a day and deciding who returns to class, goes home or needs EMS\n- Write individualized health plans and 504 plan input for students with type 1 diabetes, seizures, asthma and severe allergies\n- Raised on-time immunization compliance from 84% to 97% in 2 years with parent outreach and on-site clinics run with the county health department\n- Train about 60 staff a year on epinephrine auto-injectors, glucagon and seizure rescue medication and run vision and hearing screenings"
+        },
+        {
+          "company": "Fountain Creek Medical Center",
+          "role": "Registered Nurse, Pediatrics",
+          "location": "Colorado Springs, CO",
+          "startDate": "2016-06",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Cared for 4 to 5 pediatric patients a shift and taught families asthma and diabetes care"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Colorado Springs",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2012-08",
+          "endDate": "2016-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "School health: IHPs, 504 plans, medication administration, health screenings, immunization compliance",
+        "Clinical: diabetes management, seizure action plans, anaphylaxis response, triage",
+        "Systems: Infinite Campus, Colorado Immunization Information System",
+        "Credentials: RN (Colorado), NCSN, Colorado special services license (school nurse), BLS"
+      ],
+      "fit": {
+        "creative": 0.99,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.99,
+        "pop": 0.85
+      }
+    },
+    "Home Care Nurse": {
+      "summary": "Home health RN case manager with 7 years of nursing, including 4 in Medicare-certified home health managing about 25 patients. Helped cut the branch's 30-day rehospitalization rate from 17% to 11% through next-day start-of-care visits and heart failure teaching. Strong in OASIS, wound care and teaching families to manage care at home.",
+      "experience": [
+        {
+          "company": "Konza Home Health",
+          "role": "RN Case Manager",
+          "location": "Manhattan, KS",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage about 25 home health patients, completing start-of-care, recertification and discharge OASIS-E assessments in WellSky\n- Treat complex wounds with negative pressure therapy, manage PICC lines and IV antibiotics and teach families each step\n- Helped cut the branch's 30-day rehospitalization rate from 17% to 11% by seeing new patients within 24 hours and using a heart failure zone tool\n- Coordinate with physicians, therapists and aides and keep plans of care current under Medicare Conditions of Participation"
+        },
+        {
+          "company": "Big Blue River Hospital",
+          "role": "Registered Nurse, Medical-Surgical",
+          "location": "Manhattan, KS",
+          "startDate": "2019-06",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Cared for 5 to 6 patients a shift and planned discharges with case management"
+        }
+      ],
+      "education": [
+        {
+          "school": "Washburn University",
+          "degree": "Bachelor of Science in Nursing (BSN)",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Home health: OASIS-E, plan of care, Medicare CoPs, care coordination",
+        "Clinical: wound care and wound vacs, PICC and IV therapy, heart failure and COPD teaching",
+        "Systems: WellSky Home Health, Epic",
+        "Credentials: RN (Kansas compact license), WCC, BLS"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.91,
+        "ginto": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.93
+      }
+    }
+  }
+}

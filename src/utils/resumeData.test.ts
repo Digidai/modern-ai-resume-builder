@@ -55,6 +55,16 @@ describe('sanitizeResumeData', () => {
     expect(sanitizeResumeData({ fullName: 'Old backup' })?.links).toEqual([]);
   });
 
+  it('keeps only inline raster photos, including a JSON Resume basics.image', () => {
+    const jpeg = 'data:image/jpeg;base64,/9j/4AAQSkZJRg==';
+    expect(sanitizeResumeData({ fullName: 'Pat', photo: jpeg })?.photo).toBe(jpeg);
+    expect(sanitizeResumeData({ basics: { name: 'Pat', image: jpeg } })?.photo).toBe(jpeg);
+    // Remote URLs would load from the network when the PDF renders; SVG can carry scripts.
+    expect(sanitizeResumeData({ fullName: 'Pat', photo: 'https://example.com/me.jpg' })?.photo).toBeUndefined();
+    expect(sanitizeResumeData({ fullName: 'Pat', photo: 'data:image/svg+xml;base64,PHN2Zz4=' })?.photo).toBeUndefined();
+    expect(sanitizeResumeData({ fullName: 'Pat', photo: `data:image/png;base64,${'A'.repeat(200_000)}` })?.photo).toBeUndefined();
+  });
+
   it('rejects JSON that is not a resume', () => {
     expect(sanitizeResumeData({ foo: 1 })).toBeNull();
     expect(sanitizeResumeData([1, 2])).toBeNull();

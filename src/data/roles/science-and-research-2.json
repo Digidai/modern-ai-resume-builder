@@ -1,0 +1,422 @@
+{
+  "family": "Science & Research",
+  "guide": null,
+  "titles": {
+    "Lab Technician": {
+      "summary": "Environmental lab technician with 4 years preparing and analyzing water, soil and wastewater samples under EPA methods. Process about 180 samples a week with a 99.4% QC acceptance rate across two NELAP audits. Brings ICP-OES and wet chemistry experience, careful chain-of-custody records and LIMS data entry.",
+      "experience": [
+        {
+          "company": "Gateway Environmental Laboratories",
+          "role": "Laboratory Technician II, Inorganics",
+          "location": "St. Louis, MO",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Prepare and analyze about 180 water, soil and wastewater samples a week for metals and nutrients\n- Run ICP-OES under EPA 200.7 and colorimetric methods, keeping a 99.4% QC acceptance rate\n- Log samples and results in LabVantage LIMS with complete chain-of-custody, with zero findings in 2 NELAP audits\n- Cut sample digestion backlog from 4 days to 1 by reorganizing the hot block schedule"
+        },
+        {
+          "company": "Missouri Valley Water District",
+          "role": "Laboratory Assistant",
+          "location": "Chesterfield, MO",
+          "startDate": "2021-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Collected and tested daily drinking water samples for pH, turbidity, chlorine and coliform\n- Prepared reagents and maintained calibration logs for 12 instruments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mississippi Bluffs University",
+          "degree": "Bachelor of Science in Environmental Chemistry",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: EPA 200.7, EPA 350.1, acid digestion, titration, total suspended solids",
+        "Instruments: ICP-OES, discrete analyzer, pH and conductivity meters, analytical balances",
+        "Quality: NELAP and ISO 17025, QC charting, chain of custody, SOP updates",
+        "Tools: LabVantage LIMS, Excel"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.96
+      }
+    },
+    "Bioinformatician": {
+      "summary": "Bioinformatician with 6 years building sequencing pipelines and analyses for cancer genomics research. Rebuilt the core's RNA-seq workflow in Nextflow, cutting turnaround from 10 days to 2 for about 1,500 samples a year. Brings Python and R, cloud computing and close collaboration with bench scientists and clinicians.",
+      "experience": [
+        {
+          "company": "Gulf Coast Cancer Research Institute",
+          "role": "Bioinformatician II, Genomics Core",
+          "location": "Houston, TX",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Maintain RNA-seq, whole-exome and single-cell pipelines for 40 research labs\n- Rebuilt the RNA-seq workflow in Nextflow with containers, cutting turnaround from 10 days to 2 for about 1,500 samples a year\n- Run differential expression and pathway analyses with DESeq2 and fgsea for 12 grant-funded projects\n- Co-authored 7 peer-reviewed papers, including 2 as lead analyst"
+        },
+        {
+          "company": "Bayou State University, Department of Genetics",
+          "role": "Research Programmer",
+          "location": "Baton Rouge, LA",
+          "startDate": "2020-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Wrote Snakemake pipelines for variant calling with GATK on an HPC cluster\n- Taught a 6-week R workshop to 45 graduate students"
+        }
+      ],
+      "education": [
+        {
+          "school": "Bayou State University",
+          "degree": "Master of Science in Bioinformatics",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "Coastal Plains College",
+          "degree": "Bachelor of Science in Biology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Programming: Python, R, Bash, SQL",
+        "Pipelines: Nextflow, Snakemake, Docker, Singularity, Git",
+        "Genomics: RNA-seq, WES, scRNA-seq, GATK, DESeq2"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85
+      }
+    },
+    "Clinical Research Associate": {
+      "summary": "Clinical research associate with 5 years monitoring Phase II and III oncology and cardiovascular trials at 30+ sites. Keep monitoring visit reports at 98% on time and helped sites close 600 queries ahead of a database lock. Brings ICH-GCP expertise, risk-based monitoring and ACRP certification.",
+      "experience": [
+        {
+          "company": "Meridian Clinical Research Partners",
+          "role": "Clinical Research Associate II",
+          "location": "Charlotte, NC",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Monitor 9 sites across 2 Phase III oncology trials, conducting qualification, interim and close-out visits\n- Submit 98% of monitoring visit reports within 5 business days\n- Drove resolution of 600 open queries in 6 weeks ahead of database lock for a 1,200-patient trial\n- Perform risk-based SDV in Medidata Rave and track issues in Veeva Vault CTMS"
+        },
+        {
+          "company": "Piedmont Heart Institute",
+          "role": "Clinical Research Coordinator",
+          "location": "Greensboro, NC",
+          "startDate": "2021-01",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Coordinated 6 cardiovascular device and drug studies, enrolling 85 patients\n- Prepared IRB submissions and passed a sponsor audit with no major findings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Carolina Pines University",
+          "degree": "Bachelor of Science in Biomedical Sciences",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Monitoring: ICH-GCP E6, risk-based monitoring, SDV, protocol deviations, TMF review",
+        "Therapeutic areas: oncology, cardiovascular, medical devices",
+        "Systems: Medidata Rave, Veeva Vault CTMS and eTMF, Microsoft 365",
+        "Certification: ACRP Certified Clinical Research Associate (CCRA)"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.97,
+        "ginto": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "pop": 0.92
+      }
+    },
+    "Food Scientist": {
+      "summary": "Food scientist with 7 years developing snacks and bakery products from bench to commercial scale. Led development of a high-protein cracker line that reached $14M in first-year sales. Brings formulation, shelf life testing, sensory evaluation and smooth plant scale-up.",
+      "experience": [
+        {
+          "company": "Northfield Snack Company",
+          "role": "Senior Food Scientist, Product Development",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead formulation for crackers and baked snacks from concept to launch, managing 6 projects at a time\n- Developed a high-protein cracker line that reached $14M in first-year retail sales\n- Ran 5 plant trials to scale the line, holding target texture within 5% on a TA.XTplus analyzer\n- Cut ingredient cost by 7% on 3 legacy products through reformulation"
+        },
+        {
+          "company": "Hawkeye Hearth Bakeries",
+          "role": "Food Scientist",
+          "location": "Des Moines, IA",
+          "startDate": "2019-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ran accelerated shelf life studies for 20 bread and bun SKUs\n- Organized trained sensory panels of 12 tasters for monthly product reviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Upper Midwest University",
+          "degree": "Master of Science in Food Science",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Cedar Valley State University",
+          "degree": "Bachelor of Science in Food Science and Technology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product development: formulation, plant scale-up, ingredient functionality, cost optimization",
+        "Testing: shelf life, water activity, texture analysis, sensory evaluation",
+        "Food safety: HACCP, FSMA, PCQI, allergen control",
+        "Tools: Genesis R&D, Excel, JMP"
+      ],
+      "fit": {
+        "professional": 0.99,
+        "berlin": 0.92,
+        "ginto": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.99,
+        "pop": 0.97
+      }
+    },
+    "Ecologist": {
+      "summary": "Ecologist with 7 years in field surveys and environmental permitting for energy, transportation and restoration projects. Delineated more than 2,400 acres of wetlands and wrote biological assessments that supported 18 Section 7 consultations. Brings ArcGIS Pro, R for ecological data and solid knowledge of federal permitting.",
+      "experience": [
+        {
+          "company": "Big Sky Ecological Consulting",
+          "role": "Senior Ecologist",
+          "location": "Bozeman, MT",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead field crews of 3 to 5 for wetland delineations, vegetation and wildlife surveys across Montana and Wyoming\n- Delineated more than 2,400 acres of wetlands under the 1987 Corps Manual and regional supplements\n- Wrote biological assessments supporting 18 ESA Section 7 consultations for transmission and highway projects\n- Analyze survey data in R and produce maps in ArcGIS Pro and Field Maps"
+        },
+        {
+          "company": "Yellowstone Plateau Restoration Trust",
+          "role": "Field Ecologist",
+          "location": "Livingston, MT",
+          "startDate": "2019-05",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Monitored 40 riparian restoration plots for plant survival and bird use\n- Coordinated 150 volunteers a year on planting and invasive weed removal"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northern Rockies University",
+          "degree": "Master of Science in Ecology",
+          "startDate": "2017-08",
+          "endDate": "2019-05"
+        },
+        {
+          "school": "Willow Creek College",
+          "degree": "Bachelor of Science in Environmental Biology",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field: wetland delineation, vegetation surveys, avian point counts, habitat assessment",
+        "Regulatory: Clean Water Act Section 404, ESA Section 7, NEPA",
+        "Analysis: R, ArcGIS Pro, ArcGIS Field Maps, Trimble GPS",
+        "Certifications: SWS Wetland Professional in Training, Wilderness First Aid"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "minimalist": 0.99,
+        "creative": 0.98,
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.92
+      }
+    },
+    "Marine Biologist": {
+      "summary": "Marine biologist with 6 years running fisheries and reef monitoring surveys for a state research institute. Led 120 dive surveys a year and helped produce the stock assessment data behind a 2025 change to grouper size limits. Brings AAUS scientific diving, vessel operations and R-based population analysis.",
+      "experience": [
+        {
+          "company": "Gulfstream Marine Research Institute",
+          "role": "Marine Biologist II",
+          "location": "St. Petersburg, FL",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead reef fish visual surveys at 60 sites, completing about 120 scientific dives a year\n- Manage the fishery-independent survey database used in 2 regional stock assessments\n- Analyzed length data in R that informed a 2025 change to gag grouper size limits\n- Supervise 3 technicians and 2 interns on vessel and dive operations"
+        },
+        {
+          "company": "Coral Key Field Station",
+          "role": "Research Technician",
+          "location": "Marathon, FL",
+          "startDate": "2020-05",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Monitored coral bleaching and disease at 25 permanent transects\n- Maintained an ocean nursery that outplanted 4,000 coral fragments"
+        }
+      ],
+      "education": [
+        {
+          "school": "Sunshine Coast University",
+          "degree": "Master of Science in Marine Science",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        },
+        {
+          "school": "Atlantic Shores College",
+          "degree": "Bachelor of Science in Marine Biology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field: underwater visual census, transect surveys, fish tagging, coral restoration",
+        "Analysis: R, ArcGIS Pro, population and length-frequency analysis",
+        "Operations: vessel operation up to 30 ft, sample collection and permitting",
+        "Certifications: AAUS Scientific Diver 100 ft, Rescue Diver, DAN Oxygen Provider, USCG boater safety"
+      ],
+      "fit": {
+        "sidebar": 0.93,
+        "creative": 0.93,
+        "swiss": 0.97,
+        "berlin": 0.89,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.97,
+        "pop": 0.93
+      }
+    },
+    "Neuroscientist": {
+      "summary": "Neuroscientist with a PhD and 5 years of postdoctoral and industry research on cortical circuits and neurodegeneration. Built a two-photon imaging assay that screened 40 candidate compounds for a tau program and advanced 3 to in vivo studies. Brings in vivo imaging, electrophysiology and Python analysis of large neural datasets.",
+      "experience": [
+        {
+          "company": "Cortexa Therapeutics",
+          "role": "Scientist II, In Vivo Neuroscience",
+          "location": "San Diego, CA",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead in vivo two-photon calcium imaging studies in mouse models of tauopathy\n- Built an imaging assay that screened 40 candidate compounds and advanced 3 to efficacy studies\n- Wrote a Python pipeline with Suite2p that cut analysis time per animal from 3 days to 4 hours\n- Present results to program teams and co-wrote 2 IND-enabling study reports"
+        },
+        {
+          "company": "Pacific Bay Institute for Brain Research",
+          "role": "Postdoctoral Fellow",
+          "location": "La Jolla, CA",
+          "startDate": "2020-09",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Studied visual cortex plasticity with Neuropixels recordings and optogenetics\n- Published 4 papers, including a first-author paper in a leading neuroscience journal"
+        }
+      ],
+      "education": [
+        {
+          "school": "Great Lakes Research University",
+          "degree": "PhD in Neuroscience",
+          "startDate": "2015-08",
+          "endDate": "2020-08"
+        },
+        {
+          "school": "Hudson Valley College",
+          "degree": "Bachelor of Science in Psychology and Biology",
+          "startDate": "2011-08",
+          "endDate": "2015-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: two-photon imaging, Neuropixels and patch-clamp electrophysiology, optogenetics, stereotaxic surgery",
+        "Analysis: Python, MATLAB, Suite2p, Kilosort, statistics",
+        "Disease areas: tauopathy, Alzheimer's disease, cortical plasticity"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.87
+      }
+    },
+    "Pharmacologist": {
+      "summary": "Pharmacologist with a PhD and 6 years in preclinical drug discovery for inflammation and immunology programs. Designed PK/PD studies that set the first-in-human dose for a clinical-stage JAK inhibitor. Brings in vitro and in vivo pharmacology, PK modeling in Phoenix WinNonlin and clear cross-functional communication.",
+      "experience": [
+        {
+          "company": "Triangle Biosciences",
+          "role": "Senior Scientist, Pharmacology",
+          "location": "Durham, NC",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead pharmacology for 2 immunology programs, managing a team of 3 research associates\n- Designed PK/PD studies that set the first-in-human dose for a JAK inhibitor now in Phase 1\n- Run rodent arthritis and colitis models and cell-based potency assays to rank 150 compounds a year\n- Oversee CRO studies worth $1.2M a year and write pharmacology sections for IND filings"
+        },
+        {
+          "company": "Blue Ridge Pharmaceuticals",
+          "role": "Scientist, In Vitro Pharmacology",
+          "location": "Raleigh, NC",
+          "startDate": "2020-01",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Developed 4 cytokine release and receptor binding assays for lead optimization\n- Cut assay cycle time by 30% by moving to 384-well format"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chesapeake Medical University",
+          "degree": "PhD in Pharmacology",
+          "startDate": "2014-08",
+          "endDate": "2019-12"
+        },
+        {
+          "school": "Shenandoah Valley College",
+          "degree": "Bachelor of Science in Chemistry",
+          "startDate": "2010-08",
+          "endDate": "2014-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Pharmacology: PK/PD, dose prediction, in vivo efficacy models, receptor pharmacology",
+        "Assays: ELISA, MSD, flow cytometry, cell-based potency, 384-well screening",
+        "Software: Phoenix WinNonlin, GraphPad Prism, Spotfire",
+        "Regulatory: IND-enabling studies, GLP awareness, CRO management"
+      ],
+      "fit": {
+        "silk": 0.97,
+        "minimalist": 0.97,
+        "sidebar": 0.96,
+        "creative": 0.95,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.92,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.93
+      }
+    }
+  }
+}

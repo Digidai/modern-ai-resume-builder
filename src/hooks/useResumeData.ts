@@ -22,6 +22,7 @@ const RESUME_FIELDS: Array<keyof ResumeData> = [
   'website',
   'linkedin',
   'links',
+  'photo',
   'summary',
   'experience',
   'education',
@@ -81,6 +82,7 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
     case 'location':
     case 'website':
     case 'linkedin':
+    case 'photo':
     case 'summary':
       return typeof value === 'string';
     case 'links':
@@ -180,7 +182,7 @@ const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>):
   try {
     for (const field of fields) {
       const key = getFieldStorageKey(field);
-      localStorage.setItem(key, JSON.stringify(data[field]));
+      localStorage.setItem(key, JSON.stringify(data[field] ?? ''));
       sessionStorage.removeItem(key);
     }
 

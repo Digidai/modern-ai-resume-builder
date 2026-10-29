@@ -1,0 +1,432 @@
+{
+  "family": "Government & Public Service",
+  "guide": null,
+  "titles": {
+    "Federal Employee": {
+      "summary": "Federal program specialist (GS-12) with 9 years in USDA and SSA operations, grants and customer service. Cut the average processing time for rural housing loan packages from 41 to 26 days across a 14-county area. Brings federal regulations, budget execution and clear writing for public and congressional audiences.",
+      "experience": [
+        {
+          "company": "U.S. Department of Agriculture, Rural Development",
+          "role": "Loan Specialist (GS-1165-12)",
+          "location": "Kansas City, MO",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage a portfolio of 320 Single Family Housing direct and guaranteed loans worth $48M across 14 counties\n- Cut average loan package processing time from 41 to 26 days by standardizing checklists and lender training\n- Draft responses to 25 congressional inquiries a year within the 10-day deadline\n- Trained 6 new GS-9 and GS-11 specialists on 7 CFR 3550 requirements"
+        },
+        {
+          "company": "Social Security Administration",
+          "role": "Claims Specialist (GS-0105-9/11)",
+          "location": "Topeka, KS",
+          "startDate": "2017-06",
+          "endDate": "2021-05",
+          "isCurrent": false,
+          "description": "- Adjudicated about 60 retirement, survivor and SSI claims a month with a 97% accuracy rate in quality reviews\n- Served as office lead for the 2020 shift to telephone and online interviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "Heartland State University",
+          "degree": "Bachelor of Science in Public Administration",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Federal programs: USDA Single Family Housing, 7 CFR 3550, SSA claims, Privacy Act",
+        "Operations: loan servicing, case management, process improvement, quality review",
+        "Systems: Microsoft 365, Power BI, agency case management systems",
+        "Status: Career tenure, Public Trust clearance"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "pop": 0.95
+      }
+    },
+    "Correctional Officer": {
+      "summary": "State correctional officer with 7 years in medium and maximum security housing units, academy-trained and certified in crisis intervention. Helped cut assaults on staff in my unit by 35% over two years through structured rounds and early de-escalation. Brings firm, fair inmate supervision, accurate reporting and calm response to emergencies.",
+      "experience": [
+        {
+          "company": "Pinal Ridge State Correctional Facility",
+          "role": "Correctional Officer II",
+          "location": "Florence, AZ",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise a 120-bed maximum security housing unit, conducting counts, cell searches and 30-minute security rounds\n- Contributed to a 35% drop in staff assaults on the unit from 2023 to 2025 through early de-escalation and CIT referrals\n- Write incident and disciplinary reports, with violations upheld in 58 of 60 hearings since 2022\n- Serve on the facility emergency response team and train new officers in post orders"
+        },
+        {
+          "company": "Pinal Ridge State Correctional Facility",
+          "role": "Correctional Officer I",
+          "location": "Florence, AZ",
+          "startDate": "2019-08",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Staffed medium security yard, visitation and transport posts\n- Screened about 300 visitors a week for contraband with metal detectors and pat searches"
+        }
+      ],
+      "education": [
+        {
+          "school": "State Correctional Officer Training Academy",
+          "degree": "Correctional Officer Basic Training, 7 weeks",
+          "startDate": "2019-06",
+          "endDate": "2019-08"
+        },
+        {
+          "school": "Gila Valley Community College",
+          "degree": "Associate of Applied Science in Criminal Justice",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security: inmate supervision, counts, cell and area searches, contraband detection, restraints",
+        "Crisis: Crisis Intervention Team, de-escalation, use-of-force policy, emergency response",
+        "Reporting: incident reports, disciplinary write-ups, offender management system"
+      ],
+      "fit": {
+        "silk": 0.99,
+        "minimalist": 0.99,
+        "creative": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.96
+      }
+    },
+    "911 Dispatcher": {
+      "summary": "911 dispatcher with 6 years answering emergency calls and dispatching police, fire and EMS for a county of 650,000 residents. Answer 98% of 911 calls within 15 seconds against a 90% NENA standard. Brings Emergency Medical Dispatch certification, multi-channel radio work and steady judgment under pressure.",
+      "experience": [
+        {
+          "company": "Lakeshore County Emergency Communications Center",
+          "role": "Public Safety Telecommunicator II",
+          "location": "Grand Rapids, MI",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Answer about 90 emergency and non-emergency calls a shift and dispatch for 8 police and fire agencies\n- Answer 98% of 911 calls within 15 seconds, above the NENA standard of 90%\n- Give pre-arrival instructions with ProQA Paramount, including CPR coaching on 40+ cardiac arrest calls\n- Serve as a Communications Training Officer for 5 new hires"
+        },
+        {
+          "company": "Lakeshore County Emergency Communications Center",
+          "role": "Call Taker",
+          "location": "Grand Rapids, MI",
+          "startDate": "2020-08",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Handled incoming 911 and text-to-911 calls, entering incidents in CAD for dispatch\n- Ran LEIN and NCIC queries for officers in the field"
+        },
+        {
+          "company": "Great Lakes Home Health",
+          "role": "Patient Scheduling Coordinator",
+          "location": "Grand Rapids, MI",
+          "startDate": "2018-05",
+          "endDate": "2020-07",
+          "isCurrent": false,
+          "description": "- Scheduled visits for 400 home health patients across 25 field nurses"
+        }
+      ],
+      "education": [
+        {
+          "school": "West Michigan Community College",
+          "degree": "Associate of Arts in General Studies",
+          "startDate": "2016-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Dispatch: call triage, police, fire and EMS radio dispatch, text-to-911, multi-agency coordination",
+        "Systems: CAD, ProQA Paramount, LEIN, NCIC, Motorola MCC 7500 consoles",
+        "Certifications: APCO Public Safety Telecommunicator, IAED Emergency Medical Dispatcher, CPR",
+        "Typing: 55 words per minute"
+      ],
+      "fit": {
+        "modern": 0.96,
+        "silk": 0.98,
+        "creative": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.85
+      }
+    },
+    "Military to Civilian": {
+      "summary": "U.S. Army logistics noncommissioned officer with 12 years of supply chain and team leadership, transitioning to a civilian operations or logistics manager role. Led a 22-person supply team accountable for $34M in equipment with zero losses across three inspections. Brings Lean Six Sigma Green Belt, SAP-based inventory control and a recent SkillBridge internship in distribution operations.",
+      "experience": [
+        {
+          "company": "Clearwater Distribution Co. (DoD SkillBridge Program)",
+          "role": "Operations Management Intern",
+          "location": "Killeen, TX",
+          "startDate": "2026-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Shadow the shift operations manager at a 400,000 sq ft regional distribution center with 160 associates\n- Mapped the returns process and proposed a layout change projected to save 6 labor hours a day\n- Track daily pick rate, on-time shipping and safety KPIs in Power BI"
+        },
+        {
+          "company": "U.S. Army, 1st Sustainment Battalion",
+          "role": "Supply Operations Manager (Sergeant First Class)",
+          "location": "Fort Cavazos, TX",
+          "startDate": "2020-07",
+          "endDate": "2026-06",
+          "isCurrent": false,
+          "description": "- Led a team of 22 supply specialists managing $34M in vehicles, communications gear and parts\n- Passed 3 command supply inspections with zero lost or unaccounted items\n- Cut average parts wait time from 19 to 11 days by reorganizing reorder points in GCSS-Army, an SAP-based system\n- Planned logistics for a 9-month overseas deployment of 600 personnel"
+        },
+        {
+          "company": "U.S. Army",
+          "role": "Supply Specialist to Staff Sergeant",
+          "location": "Fort Carson, CO",
+          "startDate": "2014-06",
+          "endDate": "2020-06",
+          "isCurrent": false,
+          "description": "- Ran a warehouse of 2,400 line items and trained 8 junior soldiers in inventory control"
+        }
+      ],
+      "education": [
+        {
+          "school": "Lone Star Online University",
+          "degree": "Bachelor of Science in Supply Chain Management",
+          "startDate": "2019-01",
+          "endDate": "2024-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Operations: inventory control, warehouse management, logistics planning, KPI reporting",
+        "Leadership: team supervision, training, performance reviews, safety programs",
+        "Tools: SAP, Power BI, Excel, Microsoft 365",
+        "Certifications: Lean Six Sigma Green Belt, Secret clearance"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.94
+      }
+    },
+    "Veteran": {
+      "summary": "Marine Corps veteran with 8 years of service and 4 years in civilian security operations for local government. Cut after-hours alarm false dispatches at county buildings by 60% through a sensor audit and staff training. Brings team leadership, physical security planning and calm incident command built in the Marine Corps.",
+      "experience": [
+        {
+          "company": "Brazos Bend County Facilities Department",
+          "role": "Security Operations Supervisor",
+          "location": "Bryan, TX",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 14 security officers across 9 county buildings, including the courthouse and records center\n- Reduced false alarm dispatches by 60% in one year after auditing 210 sensors and retraining staff\n- Manage the Genetec access control system for 1,100 badge holders\n- Wrote the county's active threat response plan and led drills for 600 employees"
+        },
+        {
+          "company": "U.S. Marine Corps",
+          "role": "Military Police Sergeant",
+          "location": "Camp Lejeune, NC",
+          "startDate": "2014-07",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Led a 12-Marine patrol section responsible for base law enforcement and gate security\n- Coordinated security for 3 large base events with 15,000 attendees each\n- Trained 40 Marines a year in use of force, first aid and report writing"
+        }
+      ],
+      "education": [
+        {
+          "school": "Brazos Valley College",
+          "degree": "Associate of Applied Science in Homeland Security",
+          "startDate": "2020-01",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security: physical security assessments, access control, alarm systems, emergency planning",
+        "Leadership: shift supervision, training, scheduling, after-action reviews",
+        "Systems: Genetec Security Center, Microsoft 365, incident reporting software",
+        "Credentials: Texas DPS Level III Security Officer, FEMA ICS-100/200/700, honorable discharge"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "mono": 0.97,
+        "pop": 0.89
+      }
+    },
+    "Park Ranger": {
+      "summary": "Park ranger with 7 years in state and national parks, including 4 seasons in visitor protection and interpretation. Designed a junior ranger program that reached 6,500 children in 2025 and raised visitor survey scores to 4.8 out of 5. Brings Wilderness First Responder certification, search and rescue experience and public speaking to large groups.",
+      "experience": [
+        {
+          "company": "Copper Hollow State Park",
+          "role": "Park Ranger II",
+          "location": "Gatlinburg, TN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Patrol 8,200 acres and 34 miles of trail, enforcing park rules and educating about 400,000 annual visitors\n- Launched a junior ranger program that reached 6,500 children in 2025\n- Responded to 45 search, rescue and medical calls, coordinating with county EMS and fire\n- Lead prescribed burn prep and invasive plant removal crews of 10 volunteers"
+        },
+        {
+          "company": "National Park Service, Blue Ridge district",
+          "role": "Seasonal Park Ranger, Interpretation (GS-0025-05)",
+          "location": "Asheville, NC",
+          "startDate": "2019-05",
+          "endDate": "2021-10",
+          "isCurrent": false,
+          "description": "- Delivered 150 guided walks and campfire programs a season to groups of up to 80\n- Staffed the visitor center desk, issuing backcountry permits and trail advice"
+        }
+      ],
+      "education": [
+        {
+          "school": "Smoky Ridge University",
+          "degree": "Bachelor of Science in Natural Resource Management",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Visitor services: interpretation, public speaking, environmental education, permits",
+        "Resource protection: patrol, trail maintenance, invasive species control, wildlife monitoring",
+        "Emergency: search and rescue, Wilderness First Responder, wildland fire Red Card FFT2",
+        "Certifications: NAI Certified Interpretive Guide, Tennessee State Park Ranger commission"
+      ],
+      "fit": {
+        "swiss": 0.95,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "pop": 0.91
+      }
+    },
+    "Customs and Border Protection Officer": {
+      "summary": "CBP officer (GS-1895-12) with 8 years at southwest land ports of entry, trained at the CBP Field Operations Academy at FLETC. Made 31 narcotics seizures in 2025 totaling more than 900 pounds through targeted secondary inspections. Brings fluent Spanish, immigration and customs law and fair, professional treatment of travelers.",
+      "experience": [
+        {
+          "company": "U.S. Customs and Border Protection, Port of Nogales",
+          "role": "CBP Officer (GS-1895-12)",
+          "location": "Nogales, AZ",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Inspect about 250 travelers and vehicles a shift at primary and secondary lanes, applying INA and customs regulations\n- Made 31 narcotics seizures in 2025 totaling more than 900 pounds using targeting data and Z-portal imaging\n- Process admissibility cases and expedited removals in TECS and SIGMA with full documentation\n- Field training officer for 7 new officers after the academy"
+        },
+        {
+          "company": "U.S. Customs and Border Protection, Port of Calexico",
+          "role": "CBP Officer (GS-1895-9/11)",
+          "location": "Calexico, CA",
+          "startDate": "2018-07",
+          "endDate": "2021-03",
+          "isCurrent": false,
+          "description": "- Conducted pedestrian and passenger vehicle inspections at a crossing of 20,000 people a day\n- Interpreted for Spanish-speaking travelers during secondary interviews"
+        }
+      ],
+      "education": [
+        {
+          "school": "CBP Field Operations Academy, FLETC",
+          "degree": "CBP Officer Basic Training",
+          "startDate": "2018-02",
+          "endDate": "2018-07"
+        },
+        {
+          "school": "Imperial Desert University",
+          "degree": "Bachelor of Arts in Criminal Justice",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Law: Immigration and Nationality Act, customs and agriculture regulations, search and seizure",
+        "Inspection: primary and secondary inspection, interviewing, document fraud detection, NII imaging",
+        "Systems: TECS, SIGMA, ATS targeting",
+        "Other: Spanish fluent, firearms qualified, Top Secret background investigation"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "minimalist": 0.97,
+        "tokyo": 0.97,
+        "sidebar": 0.91,
+        "creative": 0.91,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.92
+      }
+    },
+    "Legislative Aide": {
+      "summary": "Legislative aide with 4 years in a state house office handling constituent services, bill tracking and committee preparation. Resolved more than 1,100 constituent cases with state agencies and drafted the committee memo for a broadband grant bill signed into law in 2025. Brings fast research, clear writing and calm handling of busy session weeks.",
+      "experience": [
+        {
+          "company": "Minnesota House of Representatives, District 42B Office",
+          "role": "Legislative Aide",
+          "location": "Saint Paul, MN",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage constituent services for a district of 44,000 residents, resolving more than 1,100 cases with state agencies\n- Track 150 bills a session and prepare briefing binders for 2 committee assignments\n- Drafted the committee memo and talking points for a rural broadband grant bill signed into law in 2025\n- Write newsletters, op-ed drafts and social posts for the member"
+        },
+        {
+          "company": "North Star Votes Coalition",
+          "role": "Field Organizer",
+          "location": "Duluth, MN",
+          "startDate": "2021-06",
+          "endDate": "2022-11",
+          "isCurrent": false,
+          "description": "- Recruited and trained 85 volunteers who knocked 30,000 doors in a 2022 ballot campaign\n- Ran weekly phone banks and data entry in VAN"
+        }
+      ],
+      "education": [
+        {
+          "school": "Mississippi Headwaters College",
+          "degree": "Bachelor of Arts in Political Science",
+          "startDate": "2017-09",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Legislative: bill tracking, committee briefings, amendment research, constituent casework",
+        "Writing: memos, talking points, newsletters, press releases",
+        "Tools: IQ constituent CRM, VAN, Microsoft 365, Canva"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.99,
+        "bronx": 0.93,
+        "pop": 0.98
+      }
+    }
+  }
+}

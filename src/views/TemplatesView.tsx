@@ -10,6 +10,7 @@ const FILTERS = [
   { id: 'all', label: 'All' },
   { id: 'ats', label: 'ATS-friendly' },
   { id: 'creative', label: 'Two-column & creative' },
+  { id: 'photo', label: 'With photo' },
 ] as const;
 type FilterId = (typeof FILTERS)[number]['id'];
 
@@ -28,7 +29,9 @@ const TemplatesView: React.FC = () => {
   const description = `${TEMPLATES.length} free resume templates, ${atsCount} of them ATS-friendly. Inspired by Jake's Resume, Harvard, Awesome-CV and moderncv. Preview with your own content and download a PDF.`;
 
   const visible = useMemo(
-    () => TEMPLATES.filter((t) => (filter === 'all' ? true : filter === 'ats' ? t.atsFriendly : !t.atsFriendly)),
+    () => TEMPLATES.filter((t) =>
+        filter === 'all' ? true : filter === 'ats' ? t.atsFriendly : filter === 'photo' ? Boolean(t.photo) : !t.atsFriendly
+      ),
     [filter]
   );
 
@@ -93,7 +96,7 @@ const TemplatesView: React.FC = () => {
         <h1 className="mt-6 font-display text-[40px] font-semibold leading-[44px] tracking-display text-ink lg:text-[56px] lg:leading-[60px]">Resume templates</h1>
         <p className="mt-4 max-w-3xl text-base leading-[26px] text-muted">
           {TEMPLATES.length} free designs, each previewed with the resume in your editor. {atsCount} are single-column with standard headings, so
-          applicant tracking systems (ATS) read them reliably. Every template supports your own accent colour, font and text size.
+          applicant tracking systems (ATS) read them reliably, and {TEMPLATES.filter((t) => t.photo).length} show an optional photo for CVs in Europe and Asia. Every template supports your own accent colour, font and text size.
         </p>
 
         <div className="mt-8 inline-flex flex-wrap gap-1 rounded-lg border border-rule bg-tint p-1" role="group" aria-label="Filter templates">

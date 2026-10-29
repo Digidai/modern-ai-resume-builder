@@ -50,6 +50,7 @@
       ],
       "fit": {
         "minimalist": 0.94,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.86,
@@ -99,10 +100,10 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "iron": 0.93,
-        "ginto": 0.94,
-        "quartz": 0.95,
-        "bronx": 0.86,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.98,
+        "bronx": 0.91,
         "pop": 0.97
       }
     },
@@ -145,6 +146,7 @@
       ],
       "fit": {
         "minimalist": 0.96,
+        "tokyo": 0.99,
         "swiss": 0.94,
         "berlin": 0.85,
         "iron": 0.87,
@@ -196,8 +198,8 @@
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.85,
-        "iron": 0.93,
-        "ginto": 0.87,
+        "iron": 0.91,
+        "ginto": 0.85,
         "quartz": 0.95,
         "bronx": 0.92,
         "mono": 0.96,
@@ -254,14 +256,15 @@
         "modern": 0.95,
         "silk": 0.96,
         "minimalist": 0.94,
+        "tokyo": 0.96,
         "swiss": 0.88,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.98,
         "path": 0.99,
-        "quartz": 0.98,
-        "bronx": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.97
@@ -456,7 +459,7 @@
         "berlin": 0.87,
         "iron": 0.92,
         "ginto": 0.9,
-        "quartz": 0.97,
+        "quartz": 0.95,
         "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.92
@@ -509,6 +512,7 @@
         "modern": 0.99,
         "silk": 0.96,
         "minimalist": 0.99,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.92,
@@ -572,15 +576,15 @@
         "Systems: OneSource Income Tax and Provision, CCH IntelliConnect, Oracle, Alteryx"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "silk": 0.98,
         "minimalist": 0.95,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.91,
-        "ginto": 0.92,
-        "quartz": 0.91,
-        "bronx": 0.87,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.91,
         "cast": 0.97
@@ -638,13 +642,14 @@
         "Controls & Systems: SOX readiness, NetSuite implementation, FloQast, Adaptive Planning"
       ],
       "fit": {
+        "modern": 0.98,
         "silk": 0.94,
         "opal": 0.99,
         "minimalist": 0.97,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.93,
-        "ginto": 0.88,
+        "iron": 0.91,
+        "ginto": 0.87,
         "quartz": 0.93,
         "bronx": 0.85,
         "mono": 0.92,
@@ -813,18 +818,19 @@
         "Certifications: CRCM, CAMS"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "executive": 0.99,
         "minimalist": 0.92,
+        "tokyo": 0.97,
         "swiss": 0.91,
         "berlin": 0.85,
-        "iron": 0.89,
+        "iron": 0.88,
         "ginto": 0.85,
         "symmetry": 0.96,
-        "quartz": 0.96,
-        "bronx": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.89
+        "pop": 0.87
       }
     },
     "Compliance Analyst": {
@@ -865,17 +871,17 @@
         "Certifications: CAMS, FINRA SIE"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "silk": 0.97,
         "minimalist": 0.98,
         "swiss": 0.93,
         "berlin": 0.86,
-        "iron": 0.88,
-        "ginto": 0.9,
-        "quartz": 0.9,
-        "bronx": 0.87,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.9
+        "pop": 0.88
       }
     },
     "Risk Manager": {
@@ -920,6 +926,7 @@
         "executive": 0.97,
         "silk": 0.98,
         "minimalist": 0.91,
+        "tokyo": 0.95,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
@@ -989,6 +996,7 @@
         "silk": 0.97,
         "opal": 0.97,
         "minimalist": 0.91,
+        "tokyo": 0.96,
         "swiss": 0.87,
         "berlin": 0.85,
         "iron": 0.87,
@@ -1041,12 +1049,13 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.96,
+        "tokyo": 0.99,
         "swiss": 0.94,
         "berlin": 0.87,
         "iron": 0.86,
         "ginto": 0.86,
-        "quartz": 0.95,
-        "bronx": 0.9,
+        "quartz": 0.93,
+        "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.87
       }
@@ -1092,10 +1101,10 @@
         "minimalist": 0.96,
         "swiss": 0.98,
         "berlin": 0.9,
-        "iron": 0.9,
-        "ginto": 0.86,
-        "quartz": 0.94,
-        "bronx": 0.89,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
       }
@@ -1212,14 +1221,15 @@
         "Capital: debt refinancing, lender relationships, PE sponsor reporting"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.94,
         "silk": 0.94,
         "opal": 0.95,
         "minimalist": 0.92,
+        "tokyo": 0.99,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.9,
-        "ginto": 0.87,
+        "iron": 0.88,
+        "ginto": 0.85,
         "quartz": 0.94,
         "bronx": 0.89,
         "mono": 0.92,
@@ -1276,6 +1286,7 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.93,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.89,
@@ -1344,6 +1355,7 @@
         "lateral": 0.99,
         "opal": 0.95,
         "minimalist": 0.9,
+        "tokyo": 0.95,
         "swiss": 0.87,
         "berlin": 0.85,
         "iron": 0.9,
@@ -1402,10 +1414,9 @@
       "fit": {
         "swiss": 0.94,
         "berlin": 0.89,
-        "iron": 0.98,
-        "ginto": 0.93,
-        "quartz": 0.94,
-        "bronx": 0.85,
+        "ginto": 0.94,
+        "quartz": 0.97,
+        "bronx": 0.89,
         "mono": 0.97
       }
     },
@@ -1447,7 +1458,7 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "bronx": 0.87
+        "bronx": 0.93
       }
     },
     "Contracts Manager": {
@@ -1552,7 +1563,7 @@
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.9,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.87,
@@ -1605,14 +1616,12 @@
         "Process: vendor selection, change management, workflow automation"
       ],
       "fit": {
-        "modern": 0.99,
         "minimalist": 0.94,
         "swiss": 0.92,
         "berlin": 0.86,
-        "iron": 0.86,
-        "ginto": 0.86,
-        "quartz": 0.99,
-        "bronx": 0.87,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "bronx": 0.93,
         "mono": 0.93,
         "pop": 0.9
       }
@@ -1657,8 +1666,8 @@
         "berlin": 0.95,
         "iron": 0.97,
         "ginto": 0.96,
-        "quartz": 0.96,
-        "bronx": 0.86,
+        "quartz": 0.99,
+        "bronx": 0.91,
         "pop": 0.96
       }
     },
@@ -1718,6 +1727,7 @@
         "silk": 0.94,
         "opal": 0.95,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.86,
@@ -1769,10 +1779,8 @@
       ],
       "fit": {
         "berlin": 0.98,
-        "iron": 0.95,
-        "ginto": 0.98,
-        "quartz": 0.97,
-        "bronx": 0.86,
+        "iron": 0.98,
+        "bronx": 0.91,
         "pop": 0.97
       }
     },
@@ -1828,16 +1836,17 @@
         "Entity Management: subsidiary governance, dissolutions, foreign registrations"
       ],
       "fit": {
-        "modern": 0.92,
+        "modern": 0.94,
         "executive": 0.97,
         "tech": 0.99,
         "silk": 0.96,
         "opal": 0.99,
         "minimalist": 0.93,
+        "tokyo": 0.97,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.86,
-        "ginto": 0.9,
+        "iron": 0.88,
+        "ginto": 0.92,
         "symmetry": 0.96,
         "quartz": 0.9,
         "bronx": 0.85,
@@ -1883,15 +1892,16 @@
         "Typing: 80 WPM"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.97,
         "silk": 0.97,
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.87,
-        "ginto": 0.86,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.94,
+        "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.85
       }
@@ -1935,12 +1945,13 @@
       ],
       "fit": {
         "minimalist": 0.96,
+        "tokyo": 0.97,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.87,
-        "ginto": 0.86,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "iron": 0.88,
+        "ginto": 0.88,
+        "quartz": 0.92,
+        "bronx": 0.89,
         "mono": 0.96,
         "pop": 0.86
       }
@@ -1997,15 +2008,16 @@
         "Technical: semiconductors, wireless communications, circuit design"
       ],
       "fit": {
-        "modern": 0.96,
+        "modern": 0.98,
         "silk": 0.94,
         "opal": 0.95,
         "minimalist": 0.92,
+        "tokyo": 0.98,
         "sidebar": 0.98,
         "swiss": 0.88,
         "berlin": 0.85,
-        "iron": 0.89,
-        "ginto": 0.86,
+        "iron": 0.91,
+        "ginto": 0.87,
         "symmetry": 0.95,
         "path": 0.95,
         "quartz": 0.88,
@@ -2062,8 +2074,8 @@
         "minimalist": 0.97,
         "swiss": 0.96,
         "berlin": 0.88,
-        "iron": 0.97,
-        "ginto": 0.94,
+        "iron": 0.95,
+        "ginto": 0.93,
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.95,
@@ -2160,6 +2172,8 @@
       ],
       "fit": {
         "berlin": 0.94,
+        "iron": 0.99,
+        "ginto": 0.97,
         "quartz": 0.91,
         "bronx": 0.86,
         "pop": 0.98
@@ -2207,8 +2221,8 @@
         "minimalist": 0.98,
         "swiss": 0.94,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.87,
+        "iron": 0.9,
+        "ginto": 0.88,
         "quartz": 0.89,
         "bronx": 0.86,
         "mono": 0.93,
@@ -2267,15 +2281,16 @@
         "Systems: NetSuite, FloQast, Ramp, Shopify, Excel"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "executive": 0.98,
         "silk": 0.98,
         "lateral": 0.99,
         "minimalist": 0.9,
+        "tokyo": 0.95,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.93,
-        "ginto": 0.88,
+        "iron": 0.91,
+        "ginto": 0.86,
         "symmetry": 0.94,
         "path": 0.98,
         "quartz": 0.94,
@@ -2332,8 +2347,9 @@
         "modern": 0.95,
         "executive": 0.97,
         "silk": 0.96,
-        "opal": 0.98,
+        "opal": 0.95,
         "minimalist": 0.91,
+        "tokyo": 0.94,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.88,
@@ -2342,7 +2358,7 @@
         "quartz": 0.9,
         "bronx": 0.86,
         "mono": 0.92,
-        "pop": 0.9,
+        "pop": 0.88,
         "cast": 0.99
       }
     },
@@ -2385,8 +2401,7 @@
       "fit": {
         "berlin": 0.97,
         "iron": 0.96,
-        "quartz": 0.98,
-        "bronx": 0.89
+        "bronx": 0.94
       }
     },
     "Bank Teller": {
@@ -2429,6 +2444,7 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.87,
@@ -2481,6 +2497,7 @@
         "modern": 0.97,
         "silk": 0.99,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
         "iron": 0.85,
@@ -2529,14 +2546,14 @@
         "Designations: CPCU, AU (Associate in Commercial Underwriting)"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "minimalist": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.86,
-        "ginto": 0.86,
-        "quartz": 0.91,
-        "bronx": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.86
       }
@@ -2579,13 +2596,14 @@
         "Licenses: Texas All-Lines Adjuster, HAAG Certified Inspector (Residential)"
       ],
       "fit": {
-        "modern": 0.99,
+        "modern": 0.97,
         "silk": 0.95,
         "minimalist": 0.96,
+        "tokyo": 0.97,
         "creative": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.87,
+        "iron": 0.85,
         "ginto": 0.85,
         "quartz": 0.89,
         "bronx": 0.85,
@@ -2632,12 +2650,13 @@
         "Credentials: CFP, Series 65"
       ],
       "fit": {
-        "modern": 0.95,
+        "modern": 0.97,
         "silk": 0.99,
         "minimalist": 0.98,
+        "tokyo": 0.99,
         "swiss": 0.93,
         "berlin": 0.85,
-        "iron": 0.85,
+        "iron": 0.86,
         "ginto": 0.85,
         "quartz": 0.92,
         "bronx": 0.87,
@@ -2700,7 +2719,7 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.98
+        "pop": 0.95
       }
     },
     "Legal Secretary": {
@@ -2741,13 +2760,12 @@
         "Certifications: Notary Public (Virginia), NALS Accredited Legal Professional (ALP)"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.96,
         "sidebar": 0.99,
         "creative": 0.96,
         "swiss": 0.9,
         "berlin": 0.85,
-        "iron": 0.88,
+        "iron": 0.9,
         "ginto": 0.85,
         "quartz": 0.87,
         "bronx": 0.85,

@@ -42,10 +42,10 @@
       "fit": {
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.91,
-        "ginto": 0.88,
-        "quartz": 0.87,
-        "bronx": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.87,
         "pop": 0.89
       }
     },
@@ -99,6 +99,7 @@
         "modern": 0.99,
         "silk": 0.94,
         "minimalist": 0.93,
+        "tokyo": 0.96,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -159,7 +160,7 @@
         "Tools: Figma, Dovetail, Jira, Amplitude"
       ],
       "fit": {
-        "modern": 0.98,
+        "modern": 0.96,
         "silk": 0.96,
         "minimalist": 0.94,
         "swiss": 0.89,
@@ -226,17 +227,17 @@
       ],
       "fit": {
         "silk": 0.96,
-        "opal": 0.99,
         "minimalist": 0.9,
+        "tokyo": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.93,
         "ginto": 0.9,
         "symmetry": 0.98,
-        "quartz": 0.93,
-        "bronx": 0.88,
+        "quartz": 0.95,
+        "bronx": 0.94,
         "mono": 0.89,
-        "pop": 0.91
+        "pop": 0.94
       }
     },
     "Product Design Lead": {
@@ -288,12 +289,13 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.96,
+        "tokyo": 0.98,
         "swiss": 0.89,
         "berlin": 0.85,
-        "iron": 0.87,
-        "ginto": 0.85,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.97
@@ -433,7 +435,7 @@
           "startDate": "2020-01",
           "endDate": "2022-04",
           "isCurrent": false,
-          "description": "- Ran 50+ usability sessions with teachers and students on an assessment platform\n- Analyzed survey data in R, identifying grading workflow issues behind 25% of support tickets\n- Built a research repository in Dovetail used by 30 colleagues"
+          "description": "- Ran 50+ usability sessions with teachers and students on an assessment platform\n- Analyzed survey data in R, identifying grading workflow issues behind 25% of support tickets"
         }
       ],
       "education": [
@@ -454,19 +456,14 @@
       "skills": [
         "Methods: interviews, usability testing, diary studies, surveys, concept testing",
         "Analysis: thematic analysis, R, Qualtrics, basic SQL",
-        "Tools: Dovetail, UserTesting, Maze, Figma",
-        "Communication: research readouts, insight workshops, research repositories"
+        "Tools: Dovetail, UserTesting, Maze, Figma"
       ],
       "fit": {
-        "minimalist": 0.99,
-        "swiss": 0.92,
-        "berlin": 0.86,
-        "iron": 0.93,
-        "ginto": 0.89,
-        "quartz": 0.85,
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "quartz": 0.9,
         "bronx": 0.85,
-        "mono": 0.97,
-        "pop": 0.9
+        "pop": 0.98
       }
     },
     "User Researcher": {
@@ -571,17 +568,15 @@
         "Tools: User Interviews, Rally, Dovetail, Tremendous, Airtable"
       ],
       "fit": {
-        "modern": 0.98,
         "executive": 0.99,
         "opal": 0.99,
         "minimalist": 0.96,
-        "creative": 0.99,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.86,
-        "bronx": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
@@ -682,6 +677,7 @@
       "fit": {
         "silk": 0.96,
         "minimalist": 0.94,
+        "tokyo": 0.97,
         "swiss": 0.89,
         "berlin": 0.85,
         "iron": 0.85,
@@ -742,10 +738,10 @@
         "minimalist": 0.97,
         "swiss": 0.87,
         "berlin": 0.85,
-        "iron": 0.88,
-        "ginto": 0.87,
-        "quartz": 0.94,
-        "bronx": 0.92,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.86,
         "mono": 0.97,
         "pop": 0.89
       }
@@ -796,8 +792,8 @@
         "minimalist": 0.99,
         "swiss": 0.98,
         "berlin": 0.94,
-        "quartz": 0.93,
-        "bronx": 0.87
+        "quartz": 0.95,
+        "bronx": 0.93
       }
     },
     "Service Designer": {
@@ -848,8 +844,8 @@
         "creative": 0.97,
         "swiss": 0.93,
         "berlin": 0.86,
-        "iron": 0.94,
-        "ginto": 0.95,
+        "iron": 0.92,
+        "ginto": 0.93,
         "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.95,
@@ -1016,7 +1012,7 @@
       "fit": {
         "berlin": 0.96,
         "quartz": 0.97,
-        "bronx": 0.87
+        "bronx": 0.93
       }
     },
     "UX Engineer": {
@@ -1063,7 +1059,7 @@
         "ginto": 0.92,
         "quartz": 0.93,
         "bronx": 0.91,
-        "pop": 0.98
+        "pop": 0.95
       }
     },
     "Design Systems Designer": {
@@ -1108,8 +1104,8 @@
         "berlin": 0.88,
         "iron": 0.9,
         "ginto": 0.86,
-        "quartz": 0.91,
-        "bronx": 0.9,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
       }
@@ -1256,10 +1252,10 @@
       ],
       "fit": {
         "berlin": 0.94,
-        "iron": 0.94,
-        "ginto": 0.91,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "iron": 0.96,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.88,
         "pop": 0.96
       }
     },
@@ -1313,8 +1309,8 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.9,
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.97
@@ -1418,7 +1414,7 @@
         "quartz": 0.94,
         "bronx": 0.93,
         "mono": 0.98,
-        "pop": 0.9
+        "pop": 0.88
       }
     },
     "Design Manager": {
@@ -1468,15 +1464,14 @@
         "Tools: Figma, Lattice, Jira, Productboard"
       ],
       "fit": {
-        "modern": 0.98,
         "silk": 0.99,
         "minimalist": 0.96,
         "swiss": 0.94,
         "berlin": 0.87,
-        "iron": 0.85,
-        "ginto": 0.87,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.94,
+        "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.86
       }
@@ -1535,7 +1530,7 @@
         "iron": 0.87,
         "ginto": 0.86,
         "quartz": 0.94,
-        "bronx": 0.86,
+        "bronx": 0.92,
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
@@ -1598,7 +1593,7 @@
         "quartz": 0.94,
         "bronx": 0.9,
         "mono": 0.91,
-        "pop": 0.85,
+        "pop": 0.87,
         "cast": 0.95
       }
     },
@@ -1655,8 +1650,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.86,
-        "quartz": 0.98,
-        "bronx": 0.89,
+        "bronx": 0.95,
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
@@ -1760,10 +1754,10 @@
       ],
       "fit": {
         "berlin": 0.92,
-        "iron": 0.94,
-        "ginto": 0.94,
-        "quartz": 0.93,
-        "bronx": 0.85,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.9,
         "pop": 0.94
       }
     },
@@ -1874,12 +1868,13 @@
       ],
       "fit": {
         "minimalist": 0.98,
+        "tokyo": 0.98,
         "swiss": 0.94,
         "berlin": 0.87,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.87
       }
@@ -1941,8 +1936,8 @@
         "berlin": 0.92,
         "iron": 0.93,
         "ginto": 0.98,
-        "quartz": 0.92,
-        "bronx": 0.86,
+        "quartz": 0.94,
+        "bronx": 0.91,
         "mono": 0.95,
         "pop": 0.93
       }
@@ -2000,9 +1995,8 @@
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.9,
-        "path": 0.99,
-        "quartz": 0.89,
-        "bronx": 0.85,
+        "quartz": 0.91,
+        "bronx": 0.89,
         "mono": 0.98,
         "pop": 0.88,
         "cast": 0.99
@@ -2061,10 +2055,10 @@
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.86,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.9,
         "mono": 0.98,
-        "pop": 0.85,
+        "pop": 0.88,
         "cast": 0.99
       }
     },
@@ -2252,15 +2246,17 @@
         "lateral": 0.98,
         "opal": 0.97,
         "minimalist": 0.9,
-        "creative": 0.97,
+        "tokyo": 0.96,
+        "sidebar": 0.97,
+        "creative": 0.94,
         "swiss": 0.87,
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.97,
         "path": 0.96,
-        "quartz": 0.89,
-        "bronx": 0.86,
+        "quartz": 0.88,
+        "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93
@@ -2306,10 +2302,10 @@
       "fit": {
         "swiss": 0.96,
         "berlin": 0.86,
-        "iron": 0.88,
-        "ginto": 0.91,
-        "quartz": 0.88,
-        "bronx": 0.85,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.9,
+        "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.93
       }
@@ -2400,8 +2396,8 @@
         "berlin": 0.92,
         "iron": 0.94,
         "ginto": 0.91,
-        "quartz": 0.91,
-        "bronx": 0.87,
+        "quartz": 0.89,
+        "bronx": 0.85,
         "pop": 0.96
       }
     },
@@ -2443,12 +2439,13 @@
         "Governance: PII handling, responsible AI reviews, SOC 2"
       ],
       "fit": {
+        "creative": 0.99,
         "swiss": 0.94,
         "berlin": 0.87,
         "iron": 0.92,
         "ginto": 0.86,
-        "quartz": 0.87,
-        "bronx": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.92
       }
@@ -2505,7 +2502,7 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "mono": 0.97,
-        "pop": 0.88
+        "pop": 0.85
       }
     },
     "Product Owner": {
@@ -2549,8 +2546,8 @@
         "berlin": 0.95,
         "iron": 0.94,
         "ginto": 0.93,
-        "quartz": 0.92,
-        "bronx": 0.85,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "pop": 0.93
       }
     },
@@ -2608,10 +2605,10 @@
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.95,
+        "quartz": 0.98,
         "bronx": 0.88,
         "mono": 0.93,
-        "pop": 0.88,
+        "pop": 0.86,
         "cast": 0.99
       }
     },
@@ -2654,9 +2651,10 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "iron": 0.99,
-        "quartz": 0.94,
-        "bronx": 0.9,
+        "iron": 0.97,
+        "ginto": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.85,
         "pop": 0.97
       }
     },
@@ -2707,15 +2705,16 @@
         "Tools: Adobe Creative Cloud, Figma, Frame.io"
       ],
       "fit": {
+        "modern": 0.98,
         "minimalist": 0.98,
         "swiss": 0.92,
         "berlin": 0.85,
-        "iron": 0.88,
+        "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.94,
-        "bronx": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.88,
         "mono": 0.96,
-        "pop": 0.9,
+        "pop": 0.87,
         "cast": 0.97
       }
     },
@@ -2758,9 +2757,9 @@
       ],
       "fit": {
         "berlin": 0.97,
-        "iron": 0.94,
-        "ginto": 0.94,
-        "quartz": 0.89,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "quartz": 0.88,
         "bronx": 0.88,
         "pop": 0.92
       }
@@ -2817,7 +2816,7 @@
         "berlin": 0.87,
         "iron": 0.87,
         "ginto": 0.88,
-        "quartz": 0.92,
+        "quartz": 0.91,
         "bronx": 0.86,
         "mono": 0.98,
         "pop": 0.86
@@ -2881,6 +2880,7 @@
         "silk": 0.93,
         "opal": 0.95,
         "minimalist": 0.9,
+        "tokyo": 0.96,
         "creative": 0.98,
         "swiss": 0.85,
         "berlin": 0.85,
@@ -2934,10 +2934,10 @@
       ],
       "fit": {
         "berlin": 0.96,
-        "iron": 0.94,
-        "ginto": 0.95,
-        "quartz": 0.91,
-        "bronx": 0.85,
+        "iron": 0.96,
+        "ginto": 0.97,
+        "quartz": 0.93,
+        "bronx": 0.9,
         "pop": 0.97
       }
     },
@@ -3040,8 +3040,8 @@
         "berlin": 0.87,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.95,
-        "bronx": 0.9,
+        "quartz": 0.93,
+        "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.85
       }
@@ -3149,11 +3149,11 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.92,
-        "iron": 0.94,
-        "ginto": 0.95,
-        "quartz": 0.87,
-        "bronx": 0.85,
-        "pop": 0.96
+        "iron": 0.96,
+        "ginto": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "pop": 0.99
       }
     },
     "Industrial Designer": {
@@ -3362,9 +3362,8 @@
       "fit": {
         "swiss": 0.98,
         "berlin": 0.93,
-        "iron": 0.99,
-        "quartz": 0.9,
-        "bronx": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.9,
         "mono": 0.99
       }
     },
@@ -3421,7 +3420,7 @@
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.85,
-        "quartz": 0.92,
+        "quartz": 0.94,
         "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.87,

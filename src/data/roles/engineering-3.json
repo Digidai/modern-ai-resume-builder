@@ -1,0 +1,1264 @@
+{
+  "family": "Engineering",
+  "guide": null,
+  "titles": {
+    "Generative AI Engineer": {
+      "summary": "Generative AI engineer with 5 years in machine learning and 2 years shipping LLM features to production. Built a retrieval-augmented support assistant that now resolves 31% of customer chats without a human handoff. Focuses on evaluation harnesses, cost control and guardrails so model features stay reliable after launch.",
+      "experience": [
+        {
+          "company": "Brightkeel Software",
+          "role": "Generative AI Engineer",
+          "location": "Austin, TX",
+          "startDate": "2024-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a RAG support assistant with LangChain, pgvector and a hosted LLM API that resolves 31% of 18,000 monthly chats without escalation\n- Designed an offline evaluation suite of 1,200 labeled questions with LLM-as-judge and exact-match checks, gating every prompt and model change in CI\n- Cut inference cost per conversation by 46% by routing simple intents to a smaller model and caching embeddings in Redis\n- Added PII redaction and prompt-injection filters that passed the company's SOC 2 Type II review with no findings"
+        },
+        {
+          "company": "Quarrystone Analytics",
+          "role": "Machine Learning Engineer",
+          "location": "Denver, CO",
+          "startDate": "2021-07",
+          "endDate": "2024-03",
+          "isCurrent": false,
+          "description": "- Trained and deployed document classification models in PyTorch on SageMaker, processing 2M insurance forms a month at 94% accuracy\n- Fine-tuned a BERT-based extractor for invoice fields, replacing a rules engine and reducing manual review by 22 hours a week"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "M.S. Computer Science",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "LLM: RAG, prompt engineering, LoRA fine-tuning, function calling, evaluation design",
+        "Frameworks: PyTorch, Hugging Face Transformers, LangChain, LlamaIndex, vLLM",
+        "Data: PostgreSQL with pgvector, Pinecone, Redis, Spark, Airflow"
+      ],
+      "fit": {
+        "modern": 0.99,
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
+      }
+    },
+    "Robotics Engineer": {
+      "summary": "Robotics engineer with 6 years building perception and motion planning software for mobile manipulators in warehouses. Led a grasp planning rewrite that raised pick success from 88% to 96% across 140 deployed robots. Comfortable moving between ROS 2 code, simulation and hands-on debugging on the shop floor.",
+      "experience": [
+        {
+          "company": "Kinetrix Automation",
+          "role": "Robotics Engineer",
+          "location": "Pittsburgh, PA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rewrote the grasp planning stack in C++ with point cloud segmentation in PCL, raising pick success from 88% to 96% on 140 fielded robots\n- Built a Gazebo and Isaac Sim regression suite of 400 scenarios that runs on every merge and caught 23 planning regressions in its first year\n- Tuned MoveIt 2 trajectories for a 6-axis arm, cutting average cycle time per pick from 9.1 to 7.4 seconds\n- Supported 5 customer site launches, training technicians on calibration and fault recovery"
+        },
+        {
+          "company": "Fieldmark Agrobotics",
+          "role": "Associate Robotics Engineer",
+          "location": "Columbus, OH",
+          "startDate": "2020-06",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Developed ROS 2 nodes for GPS and IMU sensor fusion with an extended Kalman filter, holding row-following error under 4 cm\n- Wrote Python tools to replay field rosbags, cutting bug reproduction time from days to hours"
+        }
+      ],
+      "education": [
+        {
+          "school": "Case Western Reserve University",
+          "degree": "M.S. Mechanical Engineering, Robotics",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Robotics: ROS 2, MoveIt 2, SLAM, sensor fusion, inverse kinematics, motion planning",
+        "Perception: OpenCV, PCL, Intel RealSense, camera-LiDAR calibration",
+        "Languages: C++, Python, MATLAB",
+        "Tools: Gazebo, NVIDIA Isaac Sim, Docker, Git, Linux"
+      ],
+      "fit": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.91
+      }
+    },
+    "FPGA Engineer": {
+      "summary": "FPGA engineer with 7 years designing high-speed digital logic for radar and communications hardware. Closed timing on a 16-channel beamforming design at 491 MHz on a Xilinx UltraScale+ device, enabling a product launch two months early. Strong in SystemVerilog, UVM verification and bring-up in the lab.",
+      "experience": [
+        {
+          "company": "Ridgeback Signal Systems",
+          "role": "Senior FPGA Engineer",
+          "location": "Huntsville, AL",
+          "startDate": "2022-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Architected a 16-channel digital beamformer in SystemVerilog on a Zynq UltraScale+ RFSoC, closing timing at 491 MHz with 18% LUT headroom\n- Built a UVM testbench with constrained-random stimulus and functional coverage, reaching 97% coverage before tape-out of the board\n- Led lab bring-up with ChipScope ILAs and oscilloscopes, resolving JESD204B link issues in 3 weeks\n- Mentor 2 junior engineers through code reviews and CDC analysis"
+        },
+        {
+          "company": "Bayfront Communications Hardware",
+          "role": "FPGA Design Engineer",
+          "location": "San Diego, CA",
+          "startDate": "2019-06",
+          "endDate": "2022-08",
+          "isCurrent": false,
+          "description": "- Implemented DDC, FIR filters and FFT cores in VHDL for a software-defined radio, cutting resource use 21% versus vendor IP\n- Wrote Python and cocotb regression tests run nightly in Jenkins"
+        }
+      ],
+      "education": [
+        {
+          "school": "Georgia Institute of Technology",
+          "degree": "B.S. Electrical Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "HDL: SystemVerilog, VHDL, Verilog",
+        "Verification: UVM, cocotb, QuestaSim, formal property checking",
+        "Tools: Vivado, Quartus Prime, ChipScope, Git, Jenkins",
+        "Domain: DSP, timing closure, clock domain crossing, JESD204B, PCIe, DDR4"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.91,
+        "ginto": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "pop": 0.91
+      }
+    },
+    "Cybersecurity Analyst": {
+      "summary": "Cybersecurity analyst with 4 years in a 24/7 security operations center protecting a 9,000-endpoint hospital network. Tuned SIEM detections to cut false-positive alerts by 40% while raising true-positive escalations. Holds Security+ and CySA+ and brings clear incident write-ups for both engineers and leadership.",
+      "experience": [
+        {
+          "company": "Mercy Valley Health System",
+          "role": "Cybersecurity Analyst",
+          "location": "Omaha, NE",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Triage 60–80 alerts per shift in Splunk Enterprise Security and CrowdStrike Falcon, escalating confirmed incidents within a 30-minute SLA\n- Rewrote 35 correlation searches mapped to MITRE ATT&CK, reducing false positives by 40% over two quarters\n- Led containment on a credential-phishing campaign affecting 47 mailboxes, resetting accounts and blocking indicators in under 2 hours\n- Run monthly Tenable vulnerability scans and track remediation of critical findings for HIPAA security risk assessments"
+        },
+        {
+          "company": "Prairie Line Managed Services",
+          "role": "SOC Analyst I",
+          "location": "Lincoln, NE",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Monitored client networks for 30 small businesses using Microsoft Sentinel and documented incidents in ServiceNow\n- Analyzed suspicious emails and attachments in a sandbox, submitting 200+ phishing indicators to block lists"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nebraska Omaha",
+          "degree": "B.S. Cybersecurity",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security Operations: incident response, threat hunting, log analysis, phishing analysis, vulnerability management",
+        "Tools: Splunk ES, CrowdStrike Falcon, Microsoft Sentinel, Tenable.io, Wireshark",
+        "Frameworks: MITRE ATT&CK, NIST CSF, HIPAA Security Rule",
+        "Certifications: CompTIA Security+, CompTIA CySA+"
+      ],
+      "fit": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "minimalist": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.86
+      }
+    },
+    "SAP Consultant": {
+      "summary": "SAP consultant with 8 years implementing finance and procurement modules for mid-market manufacturers. Led the FI/CO workstream of an S/4HANA migration for a 2,400-person company that went live on schedule with month-end close shortened from 8 to 5 days. Bridges business process owners and ABAP developers with clear functional specs.",
+      "experience": [
+        {
+          "company": "Ashbury Enterprise Partners",
+          "role": "Senior SAP FI/CO Consultant",
+          "location": "Charlotte, NC",
+          "startDate": "2021-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led the FI/CO workstream for a brownfield S/4HANA 2022 conversion, configuring the Universal Journal, new asset accounting and profit center accounting\n- Shortened month-end close from 8 to 5 working days by automating accruals and intercompany reconciliation\n- Wrote 40 functional specs for reports, interfaces and enhancements and managed testing with an offshore ABAP team\n- Ran 3 rounds of integration testing and trained 120 finance users before go-live"
+        },
+        {
+          "company": "Coldbrook Industrial Products",
+          "role": "SAP Business Analyst, Finance",
+          "location": "Greenville, SC",
+          "startDate": "2018-01",
+          "endDate": "2021-02",
+          "isCurrent": false,
+          "description": "- Supported ECC 6.0 FI, CO and MM integration for 4 plants, resolving 30–40 tickets a month\n- Configured automatic payment program changes that moved 85% of vendor payments to ACH"
+        }
+      ],
+      "education": [
+        {
+          "school": "Clemson University",
+          "degree": "B.S. Accounting",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "SAP Modules: S/4HANA Finance, FI, CO, Asset Accounting, MM integration",
+        "Delivery: SAP Activate, fit-to-standard workshops, functional specs, cutover planning",
+        "Tools: SAP Solution Manager, Fiori, Jira, Excel",
+        "Certifications: SAP Certified Application Associate S/4HANA Financial Accounting"
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.95,
+        "pop": 0.94
+      }
+    },
+    "ServiceNow Developer": {
+      "summary": "ServiceNow developer with 5 years building ITSM and HR Service Delivery solutions on the Now Platform. Built a catalog and Flow Designer onboarding process that cut new-hire setup time from 6 days to 2. Keeps instances upgrade-safe with scoped apps, ATF tests and clean update set practices.",
+      "experience": [
+        {
+          "company": "Keystone Mutual Holdings",
+          "role": "ServiceNow Developer",
+          "location": "Harrisburg, PA",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built an employee onboarding catalog with Flow Designer and IntegrationHub spokes for Workday and Active Directory, cutting setup time from 6 days to 2\n- Developed scoped apps with Business Rules, Script Includes and UI Policies for 3 departments with no impact on 2 family upgrades\n- Created 180 Automated Test Framework tests that now run before every release\n- Tuned slow list views and GlideRecord queries, reducing average form load time by 35%"
+        },
+        {
+          "company": "Brightriver IT Solutions",
+          "role": "Junior ServiceNow Developer",
+          "location": "Pittsburgh, PA",
+          "startDate": "2021-01",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Configured incident, problem and change workflows for 6 client instances\n- Built REST integrations to pull asset data from Jamf into the CMDB"
+        }
+      ],
+      "education": [
+        {
+          "school": "Penn State University",
+          "degree": "B.S. Information Sciences and Technology",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "ServiceNow: ITSM, HRSD, CMDB, Service Portal, Flow Designer, IntegrationHub, ATF",
+        "Development: JavaScript, Glide API, REST and SOAP integrations, AngularJS",
+        "Practices: ITIL 4, Agile, update sets, instance upgrades",
+        "Certifications: Certified System Administrator, Certified Application Developer"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.92
+      }
+    },
+    "Mainframe Developer": {
+      "summary": "Mainframe developer with 9 years maintaining COBOL batch and CICS online systems for a regional bank processing 3M transactions a day. Rewrote the nightly interest accrual job stream, cutting batch window time by 70 minutes. Combines deep z/OS knowledge with work on API enablement for newer digital channels.",
+      "experience": [
+        {
+          "company": "Heartland Trust Bancorp",
+          "role": "Senior Mainframe Developer",
+          "location": "Des Moines, IA",
+          "startDate": "2020-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Maintain 1,400 COBOL programs and JCL job streams for deposit and loan systems processing 3M transactions a day\n- Restructured the nightly interest accrual stream with DB2 index changes and parallel steps, shortening the batch window by 70 minutes\n- Exposed 12 CICS transactions as REST APIs through z/OS Connect for the mobile banking team\n- Resolve production abends on a weekly on-call rotation, keeping batch completion above 99.8%"
+        },
+        {
+          "company": "Midstate Insurance Services",
+          "role": "Mainframe Programmer Analyst",
+          "location": "Cedar Rapids, IA",
+          "startDate": "2017-06",
+          "endDate": "2020-01",
+          "isCurrent": false,
+          "description": "- Modified COBOL and VSAM-based policy rating programs for annual rate filings in 9 states\n- Converted 200 job schedules from manual scripts to CA-7"
+        }
+      ],
+      "education": [
+        {
+          "school": "Iowa State University",
+          "degree": "B.S. Management Information Systems",
+          "startDate": "2013-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Languages: COBOL, JCL, REXX, SQL",
+        "Platform: z/OS, CICS, DB2, VSAM, IMS",
+        "Tools: ISPF, Endevor, CA-7, File-AID, IBM Debug Tool",
+        "Modernization: z/OS Connect, REST APIs, Git for z/OS"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.97,
+        "ginto": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.99
+      }
+    },
+    "Technical Support Specialist": {
+      "summary": "Technical support specialist with 3 years on a phone, chat and email help desk for a SaaS scheduling product used by 5,000 clinics. Hold a 96% customer satisfaction score while closing 45 tickets a day. Writes clear knowledge base articles and reproduces bugs precisely for the engineering team.",
+      "experience": [
+        {
+          "company": "Slotwise Scheduling",
+          "role": "Technical Support Specialist",
+          "location": "Tampa, FL",
+          "startDate": "2024-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Resolve about 45 tickets a day across phone, chat and email in Zendesk while holding a 96% CSAT score\n- Troubleshoot login, calendar sync and browser issues using HAR files, console logs and admin tools\n- Wrote 38 knowledge base articles that deflected an estimated 600 tickets a quarter\n- Escalate reproducible bugs to engineering in Jira with steps, screenshots and affected account lists"
+        },
+        {
+          "company": "Gulfview Computer Repair",
+          "role": "Help Desk Technician",
+          "location": "Clearwater, FL",
+          "startDate": "2022-05",
+          "endDate": "2024-01",
+          "isCurrent": false,
+          "description": "- Diagnosed and repaired 15–20 laptops and desktops a week for walk-in customers\n- Set up Microsoft 365, printers and Wi-Fi for 25 small-business clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "St. Petersburg College",
+          "degree": "A.S. Computer Information Technology",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Support: ticket triage, remote troubleshooting, escalation, knowledge base writing",
+        "Tools: Zendesk, Jira, Slack, TeamViewer, Chrome DevTools",
+        "Systems: Windows 11, macOS, Microsoft 365, Active Directory",
+        "Certifications: CompTIA A+, ITIL 4 Foundation"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "pop": 0.95
+      }
+    },
+    "Chemical Engineer": {
+      "summary": "Chemical engineer with 6 years in specialty chemical production, supporting reactor and distillation units. Optimized a solvent recovery column that saves $410K a year in raw materials. Experienced with Aspen Plus modeling, PSM documentation and running safe plant trials alongside operators.",
+      "experience": [
+        {
+          "company": "Bayline Specialty Chemicals",
+          "role": "Process Engineer II",
+          "location": "Baton Rouge, LA",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Own process performance for 3 batch reactors and a solvent recovery train producing 18,000 tons a year of coatings intermediates\n- Modeled the recovery column in Aspen Plus and changed reflux and feed tray location, raising solvent recovery from 91% to 97% and saving $410K a year\n- Led 4 HAZOPs and updated P&IDs and operating procedures under OSHA PSM\n- Cut batch cycle time 12% by revising heat-up profiles with DCS trend data from DeltaV"
+        },
+        {
+          "company": "Gulf Bend Polymers",
+          "role": "Associate Process Engineer",
+          "location": "Lake Charles, LA",
+          "startDate": "2020-06",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Ran mass balances and line sizing for a debottlenecking project that added 8% capacity\n- Investigated off-spec batches with root cause analysis, reducing rework by 30%"
+        }
+      ],
+      "education": [
+        {
+          "school": "Louisiana State University",
+          "degree": "B.S. Chemical Engineering",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Process: mass and energy balances, distillation, reactor design, heat exchanger rating",
+        "Software: Aspen Plus, Aspen HYSYS, DeltaV, OSIsoft PI, AutoCAD Plant 3D",
+        "Safety: OSHA PSM, HAZOP, LOPA, MOC",
+        "Licenses: EIT (Louisiana)"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.87,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.94,
+        "bronx": 0.93,
+        "pop": 0.99
+      }
+    },
+    "Biomedical Engineer": {
+      "summary": "Biomedical engineer with 5 years in medical device development, focused on design verification for Class II infusion and monitoring products. Led verification testing for a pump that received FDA 510(k) clearance with no additional information requests. Works within ISO 13485 design controls and ISO 14971 risk management.",
+      "experience": [
+        {
+          "company": "Clearvein Medical",
+          "role": "Biomedical Engineer II",
+          "location": "Minneapolis, MN",
+          "startDate": "2023-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led design verification for a Class II ambulatory infusion pump, writing 60 test protocols that supported a 510(k) cleared without AI requests\n- Maintained the design history file and traceability matrix in Greenlight Guru under 21 CFR 820 and ISO 13485\n- Updated the ISO 14971 risk file and FMEA after 9 design changes\n- Built a LabVIEW flow-accuracy fixture that cut test time per unit from 4 hours to 90 minutes"
+        },
+        {
+          "company": "Northshore Diagnostics",
+          "role": "Associate R&D Engineer",
+          "location": "St. Paul, MN",
+          "startDate": "2021-06",
+          "endDate": "2023-02",
+          "isCurrent": false,
+          "description": "- Prototyped housings in SolidWorks and ran IEC 60601-1 pre-compliance tests with an outside lab\n- Analyzed bench data in MATLAB and Minitab for a pulse oximetry sensor"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Minnesota",
+          "degree": "B.S. Biomedical Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Regulatory: FDA 510(k), 21 CFR 820, ISO 13485, ISO 14971, IEC 60601-1",
+        "Engineering: design verification, test method validation, FMEA, root cause analysis",
+        "Tools: SolidWorks, MATLAB, LabVIEW, Minitab, Greenlight Guru"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.99,
+        "bronx": 0.88,
+        "pop": 0.98
+      }
+    },
+    "Aerospace Engineer": {
+      "summary": "Aerospace engineer with 7 years in structural analysis for commercial and business jet airframes. Led stress analysis on a composite wing fairing redesign that saved 14 lb per shipset. Experienced with NASTRAN finite element models, FAA certification reports and supporting first-article builds.",
+      "experience": [
+        {
+          "company": "Skyward Aerostructures",
+          "role": "Senior Stress Engineer",
+          "location": "Wichita, KS",
+          "startDate": "2021-10",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led static and fatigue analysis for a composite wing-to-body fairing redesign in NASTRAN and HyperMesh, saving 14 lb per shipset\n- Wrote 22 certification stress reports reviewed by FAA DERs under 14 CFR Part 25\n- Dispositioned 300+ nonconformance reports with margin checks, keeping the line on schedule\n- Coached 3 junior engineers on bolted joint and composite failure analysis"
+        },
+        {
+          "company": "Plainsview Aviation Components",
+          "role": "Structures Engineer",
+          "location": "Hutchinson, KS",
+          "startDate": "2019-06",
+          "endDate": "2021-09",
+          "isCurrent": false,
+          "description": "- Built detailed FEMs for machined aluminum brackets and ran hand calcs to verify margins\n- Supported first-article inspection and drawing changes in CATIA V5"
+        }
+      ],
+      "education": [
+        {
+          "school": "Wichita State University",
+          "degree": "B.S. Aerospace Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Analysis: static stress, fatigue and damage tolerance, composites, bolted joints",
+        "Software: MSC NASTRAN, Patran, HyperMesh, CATIA V5, Python",
+        "Certification: 14 CFR Part 25, FAA DER coordination, AS9100",
+        "Clearance: eligible for U.S. security clearance"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "pop": 0.96
+      }
+    },
+    "Environmental Engineer": {
+      "summary": "Environmental engineer with 6 years in stormwater, permitting and site remediation for municipal and industrial clients. Designed green infrastructure for a 120-acre business park that cut peak runoff 35% and earned county approval on first submittal. Licensed PE who writes clear permit applications and manages field sampling programs.",
+      "experience": [
+        {
+          "company": "Cedar Basin Environmental",
+          "role": "Environmental Engineer",
+          "location": "Raleigh, NC",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed bioretention and detention systems in HydroCAD for a 120-acre business park, cutting peak runoff 35% with first-submittal approval\n- Prepared NPDES stormwater permits and SWPPPs for 14 industrial facilities\n- Managed groundwater sampling for 3 Phase II remediation sites and reported results to NC DEQ\n- Track budgets and schedules for $1.2M in annual project fees"
+        },
+        {
+          "company": "Piedmont Water Consultants",
+          "role": "Staff Engineer",
+          "location": "Durham, NC",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Completed Phase I environmental site assessments under ASTM E1527 for 40 properties\n- Drafted erosion control plans in Civil 3D"
+        }
+      ],
+      "education": [
+        {
+          "school": "North Carolina State University",
+          "degree": "B.S. Environmental Engineering",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical: stormwater design, NPDES permitting, site remediation, Phase I and II ESAs",
+        "Software: HydroCAD, AutoCAD Civil 3D, ArcGIS Pro, EPA SWMM",
+        "Licenses: PE (North Carolina), OSHA 40-hour HAZWOPER"
+      ]
+    },
+    "Industrial Engineer": {
+      "summary": "Industrial engineer with 5 years improving throughput and labor efficiency in distribution and light manufacturing. Rebalanced a pack-out line that raised units per labor hour 18% without new equipment. Uses time studies, simulation and Lean tools to make changes that hold after the project ends.",
+      "experience": [
+        {
+          "company": "Cornerline Home Products",
+          "role": "Industrial Engineer",
+          "location": "Louisville, KY",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Rebalanced a 12-station pack-out line using time studies and takt analysis, raising units per labor hour 18%\n- Built a FlexSim model of the receiving dock that justified a $380K layout change with a 14-month payback\n- Set engineered labor standards for 60 tasks that now drive weekly staffing in the WMS\n- Led 6 kaizen events with operators, cutting changeover time on a filling line from 50 to 28 minutes"
+        },
+        {
+          "company": "Bluegrass Assembly Works",
+          "role": "Associate Industrial Engineer",
+          "location": "Lexington, KY",
+          "startDate": "2021-06",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Redesigned 3 workcells in AutoCAD to cut operator walking distance by 40%\n- Tracked OEE in Power BI for 9 presses"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Kentucky",
+          "degree": "B.S. Industrial Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Methods: time studies, line balancing, value stream mapping, 5S, SMED, OEE",
+        "Tools: FlexSim, AutoCAD, Minitab, Power BI, Excel",
+        "Certifications: Lean Six Sigma Green Belt"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "bronx": 0.95
+      }
+    },
+    "Petroleum Engineer": {
+      "summary": "Petroleum engineer with 8 years in Permian Basin completions and production. Redesigned frac stage spacing on a 24-well program that raised 180-day oil recovery 11% at flat cost per well. Brings strong reservoir and economics analysis plus field time on location.",
+      "experience": [
+        {
+          "company": "Mesquite Ridge Energy",
+          "role": "Senior Completions Engineer",
+          "location": "Midland, TX",
+          "startDate": "2021-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed completions for 24 horizontal Wolfcamp wells a year, adjusting stage spacing and proppant loading to lift 180-day recovery 11%\n- Built type curves and economics in Aries to rank 60 drilling locations for the annual capital plan\n- Supervised frac operations on location, keeping 3 consecutive programs free of recordable incidents\n- Cut completion cost per lateral foot 9% by switching to local sand and simul-frac scheduling"
+        },
+        {
+          "company": "Caprock Production Company",
+          "role": "Production Engineer",
+          "location": "Odessa, TX",
+          "startDate": "2018-07",
+          "endDate": "2021-04",
+          "isCurrent": false,
+          "description": "- Managed artificial lift for 140 wells, converting 22 to gas lift and cutting failure frequency 25%\n- Ran decline curve analysis and workover economics in Excel and OFM"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas Tech University",
+          "degree": "B.S. Petroleum Engineering",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Engineering: hydraulic fracturing design, artificial lift, decline curve analysis, well economics",
+        "Software: Aries, Petra, Spotfire, OFM, Kinetix",
+        "Safety: SafeLand, H2S Clear, well control awareness"
+      ],
+      "fit": {
+        "berlin": 0.99
+      }
+    },
+    "Test Engineer": {
+      "summary": "Test engineer with 6 years building automated test systems for consumer electronics and power products. Designed an end-of-line tester that cut test time per unit from 3 minutes to 70 seconds across 2 contract factories. Strong in Python and LabVIEW test code, fixture design and failure analysis.",
+      "experience": [
+        {
+          "company": "Voltara Power Systems",
+          "role": "Test Engineer",
+          "location": "Raleigh, NC",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed an end-of-line tester for battery inverters in Python and TestStand, cutting cycle time from 180 to 70 seconds per unit\n- Wrote DVT plans covering thermal, HALT and EMC pre-scan testing for 3 product launches\n- Deployed test stations to 2 contract manufacturers and trained 12 technicians on operation and calibration\n- Built a SQL and Grafana yield dashboard that surfaced a connector defect and lifted first-pass yield from 93% to 98%"
+        },
+        {
+          "company": "Lumenhall Audio",
+          "role": "Associate Test Engineer",
+          "location": "Durham, NC",
+          "startDate": "2020-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Developed LabVIEW sequences with Audio Precision analyzers for speaker production tests\n- Performed failure analysis on 150 field returns and reported root causes to design teams"
+        }
+      ],
+      "education": [
+        {
+          "school": "Virginia Tech",
+          "degree": "B.S. Electrical Engineering",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Test: DVT and PVT planning, HALT, end-of-line testing, Gage R&R, failure analysis",
+        "Software: Python, LabVIEW, TestStand, SQL, Grafana",
+        "Equipment: oscilloscopes, DAQ systems, electronic loads, thermal chambers"
+      ],
+      "fit": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "quartz": 0.96,
+        "bronx": 0.96,
+        "pop": 0.97
+      }
+    },
+    "Automation Engineer": {
+      "summary": "Automation engineer with 7 years programming PLC and HMI systems for packaging and food processing lines. Led controls for a new case-packing line that reached rated speed 3 weeks ahead of plan. Works hands-on during commissioning and writes code that maintenance teams can troubleshoot.",
+      "experience": [
+        {
+          "company": "Greenhaven Foods",
+          "role": "Controls and Automation Engineer",
+          "location": "Grand Rapids, MI",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led controls for a $4.5M case-packing line with Allen-Bradley ControlLogix, FactoryTalk View and Fanuc robots, reaching rated speed 3 weeks early\n- Standardized PLC code templates across 6 lines, cutting average fault diagnosis time from 25 to 10 minutes\n- Integrated line data into Ignition SCADA for OEE tracking used in daily production meetings\n- Completed risk assessments and safety circuit designs to ANSI B11 and ISO 13849"
+        },
+        {
+          "company": "Lakeshore Integration Services",
+          "role": "Controls Engineer",
+          "location": "Holland, MI",
+          "startDate": "2019-05",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Programmed Siemens S7-1500 PLCs and VFDs for 11 conveyor and palletizing systems\n- Commissioned systems at customer sites in 5 states"
+        }
+      ],
+      "education": [
+        {
+          "school": "Grand Valley State University",
+          "degree": "B.S.E. Electrical Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-04"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Controls: Allen-Bradley ControlLogix, Siemens TIA Portal, ladder logic, structured text",
+        "HMI and SCADA: FactoryTalk View, Ignition, WinCC",
+        "Hardware: VFDs, servo drives, Fanuc robots, EtherNet/IP, safety PLCs",
+        "Standards: NFPA 79, ISO 13849, ANSI B11"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "pop": 0.96
+      }
+    },
+    "Data Center Technician": {
+      "summary": "Data center technician with 3 years on rotating 12-hour shifts in a 20 MW colocation facility. Completed 1,100+ remote hands tickets with a 99% first-time fix rate and zero safety incidents. Careful with cabling standards, change windows and documentation.",
+      "experience": [
+        {
+          "company": "Ironpeak Colocation",
+          "role": "Data Center Technician II",
+          "location": "Ashburn, VA",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Handle 25–30 remote hands tickets per shift, including server racking, drive swaps and fiber patching, with a 99% first-time fix rate\n- Install and label structured cabling to TIA-942 standards, running 400+ fiber and copper cross-connects a quarter\n- Perform daily walkthroughs of UPS, CRAC and PDU readings and escalate alarms to facilities within 5 minutes\n- Follow lockout/tagout and change management procedures with zero safety incidents in 2 years"
+        },
+        {
+          "company": "Patriot Tech Services",
+          "role": "IT Field Technician",
+          "location": "Fairfax, VA",
+          "startDate": "2022-09",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Imaged, deployed and repaired desktops and network gear at 30 client offices\n- Terminated Cat6 cable runs and tested them with a Fluke DSX analyzer"
+        }
+      ],
+      "education": [
+        {
+          "school": "Northern Virginia Community College",
+          "degree": "A.A.S. Network Engineering Technology",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Hardware: server racking, hard drive and DIMM replacement, fiber and copper cabling, optics",
+        "Tools: Fluke DSX, OTDR, ServiceNow, DCIM, label printers",
+        "Certifications: CompTIA A+, CompTIA Network+, OSHA 10"
+      ],
+      "fit": {
+        "berlin": 0.99,
+        "iron": 0.97,
+        "quartz": 0.98,
+        "bronx": 0.92,
+        "pop": 0.98
+      }
+    },
+    "Telecommunications Technician": {
+      "summary": "Telecommunications technician with 5 years installing and repairing fiber, copper and wireless service for a regional carrier. Completes 5–7 field jobs a day with a 2% repeat-trouble rate, well under the team target. Works safely on poles, in vaults and inside customer premises.",
+      "experience": [
+        {
+          "company": "Tri-Valley Communications",
+          "role": "Telecommunications Technician II",
+          "location": "Fresno, CA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Install and repair FTTH and business fiber service, completing 5–7 jobs a day with a 2% repeat-trouble rate\n- Splice fiber with fusion splicers and certify links with OTDR and power meters, documenting results in the job app\n- Troubleshoot ONTs, routers and VoIP lines with customers on site, keeping satisfaction scores at 4.8 of 5\n- Climb poles and work in vaults following OSHA and company safety rules with no recordable incidents"
+        },
+        {
+          "company": "Central Valley Cable Contractors",
+          "role": "Cable Installer",
+          "location": "Visalia, CA",
+          "startDate": "2021-03",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Ran coax and Cat6 drops and installed modems for 4–6 residential customers a day\n- Pulled and labeled cable in new apartment buildings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Fresno City College",
+          "degree": "Certificate, Telecommunications Technology",
+          "startDate": "2020-01",
+          "endDate": "2020-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Field Work: fiber splicing, OTDR testing, aerial and underground plant, ONT and router setup",
+        "Equipment: Fujikura fusion splicers, EXFO OTDR, bucket trucks, ladders",
+        "Certifications: FOA CFOT, OSHA 10, CPR and First Aid, Class C driver license"
+      ],
+      "fit": {
+        "berlin": 0.99,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "bronx": 0.98,
+        "pop": 0.97
+      }
+    },
+    "Electronics Technician": {
+      "summary": "Electronics technician with 6 years testing, troubleshooting and reworking circuit boards in an AS9100 manufacturing plant. Repairs 30–40 boards a week to component level and holds a 1.2% repeat-failure rate. IPC-certified for soldering and rework with strong habits around ESD control and documentation.",
+      "experience": [
+        {
+          "company": "Rimrock Defense Electronics",
+          "role": "Electronics Technician II",
+          "location": "Tucson, AZ",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Troubleshoot and repair 30–40 failed PCBAs a week to component level using schematics, oscilloscopes and logic analyzers\n- Perform BGA and fine-pitch rework to IPC-7711/7721 with a 1.2% repeat-failure rate\n- Run functional and ATE tests and log results and failure codes in the MES\n- Proposed a fixture change that cut a recurring connector failure by 60%"
+        },
+        {
+          "company": "Saguaro Circuit Assembly",
+          "role": "Electronics Assembler and Test Technician",
+          "location": "Chandler, AZ",
+          "startDate": "2020-05",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Hand-soldered through-hole and SMT parts to IPC-A-610 Class 3\n- Built and tested wire harnesses to drawings for 12 customer programs"
+        }
+      ],
+      "education": [
+        {
+          "school": "Pima Community College",
+          "degree": "A.A.S. Electronics Technology",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical: component-level troubleshooting, SMT and BGA rework, functional testing, harness building",
+        "Equipment: oscilloscopes, DMMs, logic analyzers, rework stations, X-ray inspection",
+        "Certifications: IPC J-STD-001, IPC-A-610, IPC-7711/7721"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "bronx": 0.98,
+        "pop": 0.98
+      }
+    },
+    "Mechatronics Engineer": {
+      "summary": "Mechatronics engineer with 4 years designing electromechanical subsystems for lab automation instruments. Developed a stepper-driven pipetting gantry that improved positioning repeatability to ±25 µm and shipped in 600 units. Works across mechanical CAD, embedded firmware and motion control.",
+      "experience": [
+        {
+          "company": "Cellwright Instruments",
+          "role": "Mechatronics Engineer",
+          "location": "San Diego, CA",
+          "startDate": "2023-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a 3-axis pipetting gantry with closed-loop steppers, reaching ±25 µm repeatability in a product that has shipped 600 units\n- Wrote STM32 motor control firmware in C with homing, stall detection and CAN communication\n- Ran tolerance stack-ups and DFMEA for 4 subsystems and released drawings in Onshape\n- Cut gantry BOM cost 17% by consolidating machined parts into sheet metal"
+        },
+        {
+          "company": "Coastline Motion Labs",
+          "role": "Associate Mechatronics Engineer",
+          "location": "Irvine, CA",
+          "startDate": "2022-06",
+          "endDate": "2023-06",
+          "isCurrent": false,
+          "description": "- Built test rigs with Arduino and LabVIEW for motor life testing\n- Tuned PID loops for a linear stage using MATLAB and Simulink models"
+        }
+      ],
+      "education": [
+        {
+          "school": "Cal Poly San Luis Obispo",
+          "degree": "B.S. Mechanical Engineering, Mechatronics concentration",
+          "startDate": "2018-09",
+          "endDate": "2022-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Mechanical: Onshape, SolidWorks, GD&T, tolerance analysis, DFM",
+        "Embedded: C, STM32, CAN, UART, stepper and BLDC motor control",
+        "Analysis: MATLAB, Simulink, PID tuning, DFMEA",
+        "Prototyping: 3D printing, CNC basics, LabVIEW test rigs"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "iron": 0.99,
+        "ginto": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "pop": 0.96
+      }
+    },
+    "Mining Engineer": {
+      "summary": "Mining engineer with 6 years in open-pit copper and gold operations, covering short-range planning and drill-and-blast. Redesigned blast patterns that improved fragmentation and raised mill throughput 6%. MSHA-trained and comfortable splitting time between the office and the pit.",
+      "experience": [
+        {
+          "company": "Copper Basin Mining Company",
+          "role": "Mine Planning Engineer",
+          "location": "Globe, AZ",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Build weekly and monthly mine plans in Deswik for a 90,000 ton-per-day open pit, hitting ore tonnage targets in 11 of 12 months\n- Redesigned blast patterns and powder factors with fragmentation analysis, raising mill throughput 6%\n- Coordinate haul road and dump designs with operations and survey to cut average haul cycle by 1.5 minutes\n- Lead monthly reconciliation of plan versus actual tonnage and grade for site leadership"
+        },
+        {
+          "company": "Silver Sage Gold",
+          "role": "Junior Mining Engineer",
+          "location": "Elko, NV",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Designed drill-and-blast patterns for 12 shots a week and supervised loading in the pit\n- Updated pit designs and pushbacks in Vulcan"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nevada, Reno",
+          "degree": "B.S. Mining Engineering",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Mining: short-range planning, drill and blast design, haulage optimization, reconciliation",
+        "Software: Deswik, Maptek Vulcan, AutoCAD, Excel",
+        "Safety: MSHA Part 48 surface training, blasting certification"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "ginto": 0.96
+      }
+    },
+    "Nuclear Engineer": {
+      "summary": "Nuclear engineer with 7 years in reactor engineering at a two-unit pressurized water reactor plant. Led core monitoring for 3 refueling outages and startups with no thermal limit violations. Holds a Senior Reactor Operator certification and knows NRC regulations and plant procedures well.",
+      "experience": [
+        {
+          "company": "Cumberland River Generating Station",
+          "role": "Senior Reactor Engineer",
+          "location": "Chattanooga, TN",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead core performance monitoring for a 1,150 MWe PWR, running flux maps and verifying thermal limits under technical specifications\n- Directed reactor physics testing during 3 refueling outage startups with no limit violations\n- Revised 14 surveillance procedures and 10 CFR 50.59 screenings after a fuel design change\n- Trained 20 licensed operators each cycle on core design changes"
+        },
+        {
+          "company": "Cumberland River Generating Station",
+          "role": "Reactor Engineer",
+          "location": "Chattanooga, TN",
+          "startDate": "2019-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Completed the SRO certification program and supported control room operations during startups\n- Analyzed incore detector data and trended axial flux difference for weekly reports"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Tennessee, Knoxville",
+          "degree": "B.S. Nuclear Engineering",
+          "startDate": "2015-08",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Nuclear: reactor physics, core monitoring, thermal-hydraulics, fuel management",
+        "Regulatory: NRC 10 CFR 50, 10 CFR 50.59, technical specifications, corrective action program",
+        "Software: Studsvik CMS, RELAP5, MATLAB, Python",
+        "Licenses: Senior Reactor Operator certification"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.96,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.93,
+        "pop": 0.96
+      }
+    },
+    "Materials Engineer": {
+      "summary": "Materials engineer with 5 years in metallurgy and failure analysis for automotive castings and forgings. Changed a heat treatment cycle that cut fatigue cracking returns by 70%. Combines lab work in SEM and metallography with practical root cause reports for suppliers and customers.",
+      "experience": [
+        {
+          "company": "Ironwood Drivetrain Components",
+          "role": "Materials Engineer",
+          "location": "Toledo, OH",
+          "startDate": "2022-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Lead failure analysis on 60+ field and plant failures a year using SEM/EDS, metallography and hardness testing\n- Changed the quench and temper cycle for a forged axle shaft, cutting fatigue cracking warranty returns by 70%\n- Approved material specs and PPAP submissions from 18 steel and aluminum suppliers\n- Wrote 8D reports for customer quality concerns, closing each within 30 days"
+        },
+        {
+          "company": "Maumee Castings",
+          "role": "Metallurgical Engineer",
+          "location": "Defiance, OH",
+          "startDate": "2021-06",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Monitored ductile iron chemistry and nodularity, reducing scrap from 5.8% to 3.9%\n- Ran tensile and impact testing in the plant lab"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio State University",
+          "degree": "B.S. Materials Science and Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Materials: steel and aluminum metallurgy, heat treatment, ductile iron, corrosion",
+        "Lab: SEM/EDS, optical metallography, hardness and tensile testing, fractography",
+        "Quality: 8D, PPAP, IATF 16949, Minitab"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "bronx": 0.96
+      }
+    },
+    "Agricultural Engineer": {
+      "summary": "Agricultural engineer with 5 years designing irrigation and grain handling systems for row-crop operations in the Midwest. Designed variable-rate irrigation plans that cut water use 18% across 9,000 acres without yield loss. Works directly with growers, dealers and fabricators from layout to startup.",
+      "experience": [
+        {
+          "company": "Prairie Field Systems",
+          "role": "Agricultural Engineer",
+          "location": "Kearney, NE",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design center-pivot and variable-rate irrigation layouts for 40 growers, cutting water use 18% across 9,000 acres with no yield loss\n- Specify pumps, pipe and controls and size systems with soil moisture and well data\n- Lay out grain bins, dryers and conveyors in AutoCAD for 6 farm sites a year\n- Train dealer technicians on pivot telemetry and remote control apps"
+        },
+        {
+          "company": "Platte Valley Equipment",
+          "role": "Associate Design Engineer",
+          "location": "Grand Island, NE",
+          "startDate": "2021-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Modeled planter frame parts in SolidWorks and ran FEA on 5 redesigned brackets\n- Supported field testing of a seed metering prototype"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Nebraska–Lincoln",
+          "degree": "B.S. Agricultural Engineering",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Engineering: irrigation design, pump sizing, grain handling, machinery design",
+        "Software: AutoCAD, SolidWorks, ArcGIS, Excel",
+        "Agronomy: variable-rate application, soil moisture sensing, precision ag data",
+        "Licenses: EIT (Nebraska)"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.99,
+        "bronx": 0.95,
+        "pop": 0.98
+      }
+    },
+    "Marine Engineer": {
+      "summary": "Marine engineer with 8 years at sea and ashore, including 4 years as a licensed engineer on tug and supply vessels. Led a main engine overhaul program that cut unplanned off-hire days by 40% across a 12-vessel fleet. Holds a USCG Chief Engineer license and knows ABS and SOLAS requirements well.",
+      "experience": [
+        {
+          "company": "Delta Harbor Marine Services",
+          "role": "Port Engineer",
+          "location": "Houma, LA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Manage maintenance, drydocks and budgets for 12 offshore supply vessels with $6M in annual spend\n- Introduced a condition-based overhaul plan for Caterpillar 3516 main engines, cutting unplanned off-hire days by 40%\n- Coordinate ABS surveys and USCG inspections, closing all findings before due dates\n- Write repair specifications and oversee 3 shipyard periods a year"
+        },
+        {
+          "company": "Bayou State Towing",
+          "role": "Assistant Engineer, promoted to Chief Engineer",
+          "location": "New Orleans, LA",
+          "startDate": "2018-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Ran engine rooms on 2 harbor tugs on 14-day rotations, keeping vessels available 98% of scheduled time\n- Maintained propulsion, generators and hydraulics and logged work in the planned maintenance system"
+        }
+      ],
+      "education": [
+        {
+          "school": "Texas A&M University at Galveston",
+          "degree": "B.S. Marine Engineering Technology",
+          "startDate": "2014-08",
+          "endDate": "2018-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Technical: diesel propulsion, generators, hydraulics, drydock planning, vibration analysis",
+        "Regulatory: USCG Subchapter M, ABS rules, SOLAS, MARPOL",
+        "Licenses: USCG Chief Engineer, TWIC, STCW Basic Safety Training"
+      ],
+      "fit": {
+        "berlin": 0.95,
+        "iron": 0.96,
+        "bronx": 0.96,
+        "pop": 0.95
+      }
+    },
+    "Drupal Developer": {
+      "summary": "Drupal developer with 6 years building and maintaining sites for universities and public agencies. Led a Drupal 7 to Drupal 10 migration of 9,000 pages with no SEO traffic loss. Writes custom modules, accessible Twig themes and automated deployments.",
+      "experience": [
+        {
+          "company": "Openfold Web Studio",
+          "role": "Senior Drupal Developer",
+          "location": "Portland, OR",
+          "startDate": "2022-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led a Drupal 7 to Drupal 10 migration of 9,000 pages with the Migrate API, keeping organic traffic flat through launch\n- Built custom modules and Layout Builder components for 14 university and county sites\n- Raised Lighthouse accessibility scores to 95+ by fixing Twig templates against WCAG 2.1 AA\n- Set up Composer-based CI deploys with GitHub Actions and Pantheon multidev environments"
+        },
+        {
+          "company": "Willamette Digital Services",
+          "role": "Drupal Developer",
+          "location": "Salem, OR",
+          "startDate": "2020-03",
+          "endDate": "2021-12",
+          "isCurrent": false,
+          "description": "- Maintained 20 Drupal 8 sites and applied security updates within 48 hours of release\n- Built Views and content types for a state grants portal"
+        }
+      ],
+      "education": [
+        {
+          "school": "Oregon State University",
+          "degree": "B.S. Computer Science",
+          "startDate": "2016-09",
+          "endDate": "2020-03"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Drupal: Drupal 10, custom modules, Migrate API, Layout Builder, Views, Drush",
+        "Web: PHP, Symfony, Twig, JavaScript, SCSS, MySQL",
+        "DevOps: Composer, Git, GitHub Actions, Pantheon, Acquia",
+        "Accessibility: WCAG 2.1 AA, axe, Section 508"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.97
+      }
+    },
+    "Low-Code Developer": {
+      "summary": "Low-code developer with 4 years building business apps and automations on Microsoft Power Platform. Built a field inspection app that replaced paper forms for 250 inspectors and cut report turnaround from 5 days to same day. Pairs quick delivery with sound data models, governance and documentation.",
+      "experience": [
+        {
+          "company": "Summitline Property Services",
+          "role": "Power Platform Developer",
+          "location": "Salt Lake City, UT",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built a Power Apps field inspection app with offline mode and photo capture for 250 inspectors, cutting report turnaround from 5 days to same day\n- Automated 22 approval and notification workflows in Power Automate, saving about 60 staff hours a week\n- Designed Dataverse tables and security roles and set up DLP policies with IT\n- Built Power BI reports on inspection data used in weekly regional reviews"
+        },
+        {
+          "company": "Wasatch Regional Credit Union",
+          "role": "Business Systems Analyst",
+          "location": "Ogden, UT",
+          "startDate": "2022-06",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Replaced 8 shared spreadsheets with SharePoint lists and Power Apps forms for loan operations\n- Gathered requirements and wrote user guides for 3 internal tools"
+        }
+      ],
+      "education": [
+        {
+          "school": "Utah State University",
+          "degree": "B.S. Management Information Systems",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Power Platform: Power Apps, Power Automate, Dataverse, Power BI, Power Fx",
+        "Integration: SharePoint, Microsoft 365, REST connectors, SQL Server",
+        "Practices: requirements gathering, ALM with solutions, DLP governance",
+        "Certifications: Microsoft PL-400"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "pop": 0.96
+      }
+    },
+    "RPA Developer": {
+      "summary": "RPA developer with 5 years automating finance and claims back-office processes. Built 30 production bots in UiPath that now save about 42,000 hours a year with a 98% run success rate. Writes stable selectors, solid exception handling and clear runbooks for support teams.",
+      "experience": [
+        {
+          "company": "Pinehurst Mutual Insurance",
+          "role": "RPA Developer",
+          "location": "Hartford, CT",
+          "startDate": "2022-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Built and maintain 30 UiPath bots for claims intake and premium reconciliation, saving about 42,000 hours a year\n- Raised bot run success from 91% to 98% with the REFramework, retry logic and Orchestrator queue monitoring\n- Added Document Understanding to read 9,000 claim forms a month at 93% straight-through processing\n- Assess new automation requests with process owners and score them for ROI"
+        },
+        {
+          "company": "Shoreline Accounting Services",
+          "role": "Automation Analyst",
+          "location": "New Haven, CT",
+          "startDate": "2021-01",
+          "endDate": "2022-01",
+          "isCurrent": false,
+          "description": "- Automated invoice matching with Power Automate Desktop and Excel macros, cutting processing time by 50%\n- Documented 15 processes with process definition documents"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Connecticut",
+          "degree": "B.S. Business Information Systems",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "RPA: UiPath Studio, Orchestrator, REFramework, Document Understanding, Power Automate Desktop",
+        "Development: VB.NET, C#, SQL, Python, REST APIs",
+        "Process: PDD and SDD writing, process assessment, exception handling",
+        "Certifications: UiPath Certified Professional Automation Developer"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "pop": 0.87
+      }
+    }
+  }
+}

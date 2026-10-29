@@ -1,0 +1,318 @@
+{
+  "family": "Design & Product",
+  "guide": null,
+  "titles": {
+    "Packaging Designer": {
+      "summary": "Packaging designer with 6 years creating retail packaging for food, beverage and personal care brands. Led a line redesign for a snack brand that lifted shelf sales 14% in its first two quarters. Handles concept through press check, including dielines, print specs and sustainable material choices.",
+      "experience": [
+        {
+          "company": "Fernbrook Brand Studio",
+          "role": "Senior Packaging Designer",
+          "location": "Minneapolis, MN",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led the redesign of a 22-SKU snack line, from concept boards to final art, lifting shelf sales 14% in two quarters\n- Build dielines and mechanicals in Adobe Illustrator and ArtiosCAD and prepare files to printer specs for flexo and offset\n- Moved 3 product lines to recyclable mono-material films with the supplier, removing 40 tons of mixed plastic a year\n- Attend press checks to approve color against Pantone and G7 targets"
+        },
+        {
+          "company": "North Loop Creative",
+          "role": "Packaging Designer",
+          "location": "St. Paul, MN",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Designed cartons, labels and shippers for 15 personal care and beverage clients\n- Created 3D mockups in Adobe Dimension for client presentations and retailer pitches"
+        }
+      ],
+      "education": [
+        {
+          "school": "Minneapolis College of Art and Design",
+          "degree": "BFA Graphic Design",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Packaging: structural design, dielines, labeling regulations, sustainable materials",
+        "Production: flexo and offset printing, color management, press checks, Pantone",
+        "Tools: Adobe Illustrator, Photoshop, InDesign, ArtiosCAD, Adobe Dimension"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.95,
+        "bronx": 0.98,
+        "pop": 0.92
+      }
+    },
+    "Game Designer": {
+      "summary": "Game designer with 5 years on mobile and PC titles, focused on systems, economy and level design. Redesigned the progression economy of a live mobile RPG, raising day-30 retention from 6% to 8.5%. Prototypes quickly in Unity and uses playtest and telemetry data to tune balance.",
+      "experience": [
+        {
+          "company": "Brightforge Games",
+          "role": "Game Designer",
+          "location": "Austin, TX",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the progression and currency economy of a live mobile RPG with 400K monthly players, raising day-30 retention from 6% to 8.5%\n- Write design docs and balance spreadsheets for 3 seasonal events per quarter\n- Prototype new mechanics in Unity with C# and visual scripting before handing off to engineering\n- Run weekly playtests and review telemetry in Looker to tune difficulty curves"
+        },
+        {
+          "company": "Lanternfall Studio",
+          "role": "Junior Level Designer",
+          "location": "Dallas, TX",
+          "startDate": "2021-06",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Built and scripted 9 levels in Unreal Engine 5 for a PC action-adventure game\n- Iterated layouts from 40+ playtest sessions to fix pacing and navigation issues"
+        }
+      ],
+      "education": [
+        {
+          "school": "Southern Methodist University",
+          "degree": "B.S. Creative Computation, Game Design concentration",
+          "startDate": "2017-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: systems design, game economy, level design, combat balance, narrative scripting",
+        "Engines: Unity, Unreal Engine 5, Blueprints",
+        "Tools: C#, Excel and Google Sheets modeling, Jira, Confluence, Looker"
+      ],
+      "fit": {
+        "berlin": 0.93,
+        "quartz": 0.96,
+        "bronx": 0.94
+      }
+    },
+    "Conversational Designer": {
+      "summary": "Conversational designer with 5 years designing chatbots and voice assistants for banking and telecom customer service. Redesigned a bill-pay assistant that raised containment from 52% to 68% while improving CSAT. Writes clear dialog flows, LLM prompts and fallback strategies grounded in transcript analysis.",
+      "experience": [
+        {
+          "company": "Clearwire Mutual Bank",
+          "role": "Conversational Designer",
+          "location": "Columbus, OH",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Redesigned the bill-pay and card services assistant, raising containment from 52% to 68% and CSAT from 3.9 to 4.3\n- Write dialog flows, intents and LLM system prompts in Google Dialogflow CX with guardrails for regulated disclosures\n- Review 500 transcripts a month to find failure patterns and prioritize fixes with product and engineering\n- Built a conversation style guide and voice persona adopted across chat and IVR"
+        },
+        {
+          "company": "Signalpoint Wireless",
+          "role": "Conversation Designer, IVR",
+          "location": "Cincinnati, OH",
+          "startDate": "2021-03",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Rewrote IVR prompts and menus for 12 call flows, cutting misroutes 18%\n- Designed test scripts and ran usability tests with Voiceflow prototypes"
+        }
+      ],
+      "education": [
+        {
+          "school": "Ohio University",
+          "degree": "B.A. Linguistics",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: dialog flows, intent design, prompt writing, error recovery, voice and tone",
+        "Tools: Dialogflow CX, Voiceflow, Amazon Lex, Figma, Miro",
+        "Research: transcript analysis, usability testing, containment and CSAT metrics"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.97,
+        "bronx": 0.96,
+        "pop": 0.97
+      }
+    },
+    "Accessibility Specialist": {
+      "summary": "Accessibility specialist with 6 years auditing and remediating web and mobile products for WCAG compliance. Led a remediation program that took a public-facing benefits portal from 340 open issues to WCAG 2.1 AA conformance in 9 months. Tests hands-on with screen readers and trains designers and developers to build accessibly from the start.",
+      "experience": [
+        {
+          "company": "Civicbridge Digital",
+          "role": "Accessibility Specialist",
+          "location": "Sacramento, CA",
+          "startDate": "2022-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Led remediation of a state benefits portal, closing 340 issues and reaching WCAG 2.1 AA conformance in 9 months\n- Audit web and mobile apps with JAWS, NVDA, VoiceOver and TalkBack plus axe and manual keyboard testing\n- Write VPATs and Section 508 conformance reports for 8 products\n- Trained 90 designers and developers through a 4-part workshop series on accessible patterns"
+        },
+        {
+          "company": "Bayside Learning Platforms",
+          "role": "Front-End Developer, Accessibility",
+          "location": "Oakland, CA",
+          "startDate": "2020-02",
+          "endDate": "2022-05",
+          "isCurrent": false,
+          "description": "- Fixed ARIA, focus order and color contrast issues across a React component library\n- Added automated axe checks to CI, catching 200+ issues before release"
+        }
+      ],
+      "education": [
+        {
+          "school": "San Francisco State University",
+          "degree": "B.S. Computer Science",
+          "startDate": "2015-08",
+          "endDate": "2019-12"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Standards: WCAG 2.1 and 2.2, Section 508, ADA Title II, ARIA Authoring Practices",
+        "Testing: JAWS, NVDA, VoiceOver, TalkBack, axe DevTools, keyboard testing",
+        "Development: HTML, CSS, JavaScript, React",
+        "Certifications: IAAP CPACC, IAAP WAS"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.87,
+        "pop": 0.96
+      }
+    },
+    "Furniture Designer": {
+      "summary": "Furniture designer with 7 years designing residential and contract seating and casegoods for production. Designed a lounge chair collection that became the company's second best-selling line within a year. Works from sketch to shop drawings and partners closely with factories on costing and prototypes.",
+      "experience": [
+        {
+          "company": "Oakhaven Furniture Co.",
+          "role": "Senior Furniture Designer",
+          "location": "High Point, NC",
+          "startDate": "2021-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Designed a 9-piece lounge seating collection that became the company's second best-selling line within 12 months\n- Produce 3D models in Rhino and SolidWorks and shop drawings for domestic and overseas factories\n- Cut target cost 12% on a dining collection by revising joinery and panel yields with the plant engineer\n- Review 40+ prototypes a year for comfort, durability and BIFMA test requirements"
+        },
+        {
+          "company": "Hartwell Studio Furniture",
+          "role": "Furniture Designer",
+          "location": "Grand Rapids, MI",
+          "startDate": "2019-06",
+          "endDate": "2021-08",
+          "isCurrent": false,
+          "description": "- Designed contract casegoods and tables for office and hospitality projects\n- Built full-scale mockups in the wood shop with CNC and hand tools"
+        }
+      ],
+      "education": [
+        {
+          "school": "Rhode Island School of Design",
+          "degree": "BFA Furniture Design",
+          "startDate": "2015-09",
+          "endDate": "2019-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Design: seating, casegoods, materials and finishes, ergonomics, production design",
+        "Tools: Rhinoceros 3D, SolidWorks, AutoCAD, KeyShot, Adobe Creative Suite",
+        "Making: woodworking, CNC routing, upholstery basics, prototyping",
+        "Standards: BIFMA, CAL TB 117-2013"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "pop": 0.9
+      }
+    },
+    "Product Owner Intern": {
+      "summary": "Information systems student with a summer product owner internship on an agile team building a patient scheduling app. Wrote and refined 60 user stories and helped the team ship a waitlist feature that filled 300 cancelled slots in its first month. Organized, curious about users and comfortable in Jira.",
+      "experience": [
+        {
+          "company": "Carepoint Scheduling",
+          "role": "Product Owner Intern",
+          "location": "Nashville, TN",
+          "startDate": "2026-05",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Wrote and refined 60 user stories with acceptance criteria in Jira for a 7-person Scrum team\n- Helped scope and launch a waitlist feature that filled 300 cancelled appointment slots in its first month\n- Interviewed 8 clinic front-desk staff and summarized pain points for the product owner\n- Ran backlog grooming prep and kept the sprint board current during 6 sprints"
+        },
+        {
+          "company": "Vanderbilt Student Government",
+          "role": "Technology Committee Member",
+          "location": "Nashville, TN",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Gathered student feedback through surveys of 450 respondents to prioritize campus app improvements\n- Coordinated requests between student groups and the university IT office"
+        }
+      ],
+      "education": [
+        {
+          "school": "Vanderbilt University",
+          "degree": "B.S. Computer Science and Economics (expected)",
+          "startDate": "2023-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Product: user stories, acceptance criteria, backlog prioritization, user interviews",
+        "Agile: Scrum ceremonies, sprint planning, Kanban",
+        "Tools: Jira, Confluence, Figma, Excel, SQL basics"
+      ],
+      "fit": {
+        "berlin": 0.97,
+        "bronx": 0.98
+      }
+    },
+    "Design Intern": {
+      "summary": "Graphic design student with a summer design internship at a branding agency and 2 years of campus design work. Designed social and email assets for a nonprofit campaign that raised $48K, beating its goal by 20%. Strong in layout, typography and quick iteration on feedback.",
+      "experience": [
+        {
+          "company": "Brightmark Branding",
+          "role": "Design Intern",
+          "location": "Denver, CO",
+          "startDate": "2026-06",
+          "endDate": "2026-08",
+          "isCurrent": false,
+          "description": "- Designed social, email and landing page assets for a nonprofit fundraising campaign that raised $48K, 20% over goal\n- Built brand guideline pages and mockups in Figma and InDesign for 3 client pitches\n- Prepared print-ready files for brochures and signage and checked proofs with the print vendor"
+        },
+        {
+          "company": "CU Boulder Student Union",
+          "role": "Student Designer",
+          "location": "Boulder, CO",
+          "startDate": "2024-09",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Design posters, digital signage and Instagram graphics for 10–12 events a month\n- Created a template kit that cut turnaround on event graphics from 3 days to 1"
+        }
+      ],
+      "education": [
+        {
+          "school": "University of Colorado Boulder",
+          "degree": "BFA Graphic Design (expected)",
+          "startDate": "2023-08",
+          "endDate": "2027-05"
+        }
+      ],
+      "projects": [
+        {
+          "name": "Trailhead brand identity",
+          "link": "",
+          "description": "Created a logo, type system and signage for a fictional state park system as a studio capstone, selected for the department exhibition."
+        }
+      ],
+      "skills": [
+        "Design: layout, typography, branding, social graphics, print production",
+        "Tools: Adobe InDesign, Illustrator, Photoshop, Figma, Canva",
+        "Motion: After Effects basics"
+      ],
+      "fit": {
+        "swiss": 0.93,
+        "berlin": 0.89,
+        "iron": 0.93,
+        "ginto": 0.95,
+        "pop": 0.92
+      }
+    }
+  }
+}

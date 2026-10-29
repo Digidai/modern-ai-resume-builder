@@ -1,0 +1,626 @@
+{
+  "family": "Security & Facilities",
+  "guide": {
+    "focus": "the sites you protected or kept running, the licenses you hold and the measurable effect on incidents, cleanliness, response times or work order backlog",
+    "skills": [
+      "State guard card or security license",
+      "Patrols and access control",
+      "Incident report writing",
+      "CCTV and alarm monitoring",
+      "De-escalation",
+      "Emergency response and CPR/AED",
+      "Floor care equipment",
+      "Chemical safety and SDS",
+      "Work order systems",
+      "OSHA safety practices"
+    ],
+    "sections": [
+      "Summary",
+      "Licenses and certifications",
+      "Experience",
+      "Skills",
+      "Education"
+    ],
+    "metrics": [
+      "incidents reduced",
+      "response time",
+      "square footage covered",
+      "inspection scores",
+      "work orders closed",
+      "shrink or loss recovered"
+    ],
+    "bullets": [
+      "Patrol a 22-story office tower and log 40+ checkpoints a shift in TrackTik with zero missed tours in 2025",
+      "Cut after-hours alarm calls 30% by tightening door checks and retraining tenants on badge access",
+      "Clean and maintain 45,000 sq ft of office space a night, scoring 96% or higher on monthly quality audits"
+    ],
+    "tips": [
+      "List your license or guard card type, state and expiration date near the top; many sites cannot post you without it.",
+      "Name the site type and size (hospital, warehouse, 400-unit apartment complex) so employers can picture your post.",
+      "Mention shifts you can work, such as overnights and weekends, because coverage is often the deciding factor."
+    ],
+    "templates": [
+      "classic",
+      "compact",
+      "modern"
+    ]
+  },
+  "titles": {
+    "Security Guard": {
+      "summary": "Licensed unarmed security guard with 3 years protecting office and retail properties in Dallas. Patrols a 22-story tower and logs 40+ checkpoints a shift with zero missed tours in 2025. Holds a Texas DPS Level II license, CPR/AED certification and a calm approach to visitors and tenants.",
+      "experience": [
+        {
+          "company": "Lone Star Shield Security",
+          "role": "Security Guard",
+          "location": "Dallas, TX",
+          "startDate": "2024-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Staff the lobby desk and patrol a 22-story office tower on the overnight shift\n- Scan 40+ checkpoints a shift in TrackTik with zero missed tours in 2025\n- Issue visitor badges and check IDs for about 150 after-hours contractors and tenants a week\n- Write clear daily activity and incident reports, including 2 trespass cases handed to Dallas police"
+        },
+        {
+          "company": "Elm Ridge Shopping Center",
+          "role": "Security Patrol Officer",
+          "location": "Garland, TX",
+          "startDate": "2023-02",
+          "endDate": "2023-12",
+          "isCurrent": false,
+          "description": "- Patrolled parking lots and storefronts on foot and in a marked cart\n- Responded to lockouts, lost children and shoplifting calls from store staff"
+        }
+      ],
+      "education": [
+        {
+          "school": "Trinity Heights High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security: Patrols, access control, visitor management, incident reports",
+        "Licenses: Texas DPS Level II non-commissioned, CPR/AED",
+        "Systems: TrackTik, CCTV monitoring, two-way radio, badge access systems",
+        "Availability: Overnights, weekends, holidays"
+      ],
+      "fit": {
+        "berlin": 0.98,
+        "ginto": 0.97,
+        "quartz": 0.97,
+        "bronx": 0.93
+      }
+    },
+    "Security Officer": {
+      "summary": "Security officer with 6 years in hospital and distribution center security, holding a California BSIS guard card and baton permit. Responds to 15 to 20 calls a shift in a 450-bed hospital and helped cut workplace violence incidents 18% through early de-escalation. Trained in CPI Nonviolent Crisis Intervention and fire life safety.",
+      "experience": [
+        {
+          "company": "Capitol Sentinel Protective Services",
+          "role": "Security Officer",
+          "location": "Sacramento, CA",
+          "startDate": "2022-05",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Respond to 15 to 20 calls a shift at a 450-bed hospital, including emergency department disturbances and patient watches\n- Helped cut reported workplace violence incidents 18% in 2025 by stepping in early with CPI de-escalation\n- Monitor 120 cameras and door alarms in Genetec and write incident reports in Silvertrac\n- Escort staff to parking at night and assist with Code Gray and fire alarm responses"
+        },
+        {
+          "company": "Delta Gate Security",
+          "role": "Security Officer",
+          "location": "Stockton, CA",
+          "startDate": "2020-03",
+          "endDate": "2022-04",
+          "isCurrent": false,
+          "description": "- Ran the truck gate at a 600,000 sq ft distribution center, checking 200+ trailers a day\n- Conducted vehicle and trailer seal checks and logged every entry and exit"
+        }
+      ],
+      "education": [
+        {
+          "school": "American River Valley College",
+          "degree": "Coursework in Administration of Justice",
+          "startDate": "2018-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security: Emergency response, patient watches, patrols, gate and access control",
+        "Licenses: California BSIS guard card, baton permit, CPR/AED",
+        "Training: CPI Nonviolent Crisis Intervention, fire life safety",
+        "Systems: Genetec, Silvertrac, Lenel badge access, radio dispatch"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.94
+      }
+    },
+    "Loss Prevention Officer": {
+      "summary": "Loss prevention officer with 5 years in big-box home and department store LP. Made 140+ shoplifting apprehensions with zero use-of-force complaints and helped bring store shrink from 2.1% to 1.4%. Holds a Florida Class D security license and Wicklander-Zulawski interview training.",
+      "experience": [
+        {
+          "company": "Sunbelt Home & Garden",
+          "role": "Loss Prevention Officer",
+          "location": "Orlando, FL",
+          "startDate": "2022-07",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Watch the sales floor and 64 CCTV cameras for theft, making 140+ apprehensions with zero use-of-force complaints\n- Helped bring store shrink from 2.1% to 1.4% in 2 inventory cycles by focusing on tool and appliance aisles\n- Build cases on 3 internal theft and refund fraud schemes using POS exception reports, recovering $38,000\n- Audit EAS towers, spider wraps and locked cases weekly and train associates on theft deterrence"
+        },
+        {
+          "company": "Citrus Way Department Store",
+          "role": "Loss Prevention Associate",
+          "location": "Kissimmee, FL",
+          "startDate": "2021-03",
+          "endDate": "2022-06",
+          "isCurrent": false,
+          "description": "- Conducted floor walks and plainclothes surveillance in apparel and fragrance\n- Wrote detailed case reports and testified in 2 court hearings"
+        }
+      ],
+      "education": [
+        {
+          "school": "Central Florida State College",
+          "degree": "A.S. in Criminal Justice",
+          "startDate": "2019-08",
+          "endDate": "2021-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Loss Prevention: Apprehensions, plainclothes surveillance, case building, shrink audits",
+        "Investigations: Wicklander-Zulawski interviews, POS exception reports, refund fraud",
+        "Systems: CCTV, EAS, Agilence, incident case management",
+        "License: Florida Class D security license"
+      ],
+      "fit": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.93,
+        "ginto": 0.93,
+        "quartz": 0.97,
+        "bronx": 0.94,
+        "pop": 0.94
+      }
+    },
+    "Security Supervisor": {
+      "summary": "Security supervisor with 9 years in contract security, now leading 22 officers across 3 shifts at a mixed-use office and retail campus. Cut average alarm response time from 6 to 3 minutes and kept post coverage at 99.5% through 2025. Holds an Illinois PERC card and Certified Protection Officer credential.",
+      "experience": [
+        {
+          "company": "Lakefront Guardian Security",
+          "role": "Security Supervisor",
+          "location": "Chicago, IL",
+          "startDate": "2022-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Supervise 22 officers across 3 shifts at a 1.2M sq ft office and retail campus\n- Cut average alarm response time from 6 to 3 minutes by redrawing patrol zones and adding radio check-ins\n- Kept post coverage at 99.5% in 2025 by building schedules in TrackTik and keeping a trained call-off list\n- Run monthly drills with the property manager and write post orders for 14 posts"
+        },
+        {
+          "company": "Prairie Point Security Group",
+          "role": "Lead Security Officer",
+          "location": "Oak Brook, IL",
+          "startDate": "2019-06",
+          "endDate": "2022-02",
+          "isCurrent": false,
+          "description": "- Led a 6-officer overnight team at a corporate headquarters\n- Trained 20 new officers on access control, report writing and emergency procedures"
+        },
+        {
+          "company": "Midway Commons Mall",
+          "role": "Security Officer",
+          "location": "Chicago, IL",
+          "startDate": "2017-04",
+          "endDate": "2019-05",
+          "isCurrent": false,
+          "description": "- Patrolled a 90-store mall and responded to medical and theft calls"
+        }
+      ],
+      "education": [
+        {
+          "school": "Calumet Community College",
+          "degree": "A.A.S. in Criminal Justice",
+          "startDate": "2015-08",
+          "endDate": "2017-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Leadership: Shift scheduling, officer training, post orders, performance reviews",
+        "Operations: Alarm response, emergency drills, client reporting",
+        "Certifications: Illinois PERC card, Certified Protection Officer, CPR/AED",
+        "Systems: TrackTik, Genetec, Lenel OnGuard"
+      ],
+      "fit": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.98,
+        "bronx": 0.93,
+        "mono": 0.97,
+        "pop": 0.88
+      }
+    },
+    "Janitor": {
+      "summary": "Janitor with 4 years cleaning office buildings on night shift, covering about 45,000 sq ft a night. Scores 96% or higher on monthly quality audits and keeps restrooms and break rooms stocked without tenant complaints. Trained on autoscrubbers, burnishers and safe chemical use.",
+      "experience": [
+        {
+          "company": "Great Lakes Building Services",
+          "role": "Janitor",
+          "location": "Detroit, MI",
+          "startDate": "2023-02",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean about 45,000 sq ft of office space a night, including 12 restrooms, break rooms and lobbies\n- Score 96% or higher on monthly client quality audits for 20 straight months\n- Run an autoscrubber and propane burnisher on 8,000 sq ft of hard floors each week\n- Mix and label chemicals with a dilution station and follow SDS sheets for every product"
+        },
+        {
+          "company": "Woodward Avenue Diner",
+          "role": "Porter and Dishwasher",
+          "location": "Ferndale, MI",
+          "startDate": "2021-09",
+          "endDate": "2023-01",
+          "isCurrent": false,
+          "description": "- Washed dishes, mopped kitchen floors and cleaned grease traps weekly\n- Took out trash and cleaned the parking lot each morning"
+        }
+      ],
+      "education": [
+        {
+          "school": "Eastside Detroit High School",
+          "degree": "High School Diploma",
+          "startDate": "2017-09",
+          "endDate": "2021-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Cleaning: Restrooms, offices, trash and recycling, dusting, vacuuming",
+        "Floor Care: Autoscrubber, burnisher, stripping and waxing, carpet extraction",
+        "Safety: SDS sheets, chemical dilution, wet floor signage, lockout of equipment",
+        "Availability: Nights, weekends"
+      ],
+      "fit": {
+        "berlin": 0.91,
+        "iron": 0.98,
+        "ginto": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "pop": 0.99
+      }
+    },
+    "Custodian": {
+      "summary": "School custodian with 5 years keeping a 520-student elementary school and event venues clean and safe. Strips and refinishes 38,000 sq ft of floors each summer and passed every district health and safety walkthrough since 2022. Handles minor repairs, setups and emergency cleanups during the school day.",
+      "experience": [
+        {
+          "company": "Inland Valley School District, Pine Ridge Elementary",
+          "role": "Custodian",
+          "location": "Spokane, WA",
+          "startDate": "2021-08",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean 22 classrooms, the cafeteria, gym and restrooms for a 520-student school on the day shift\n- Strip, seal and wax 38,000 sq ft of VCT floors each summer using a swing machine and autoscrubber\n- Set up the gym and cafeteria for 40+ assemblies, concerts and parent nights a year\n- Handle bodily fluid cleanups with bloodborne pathogens protocols and submit repair requests in SchoolDude"
+        },
+        {
+          "company": "Riverfront Events Arena",
+          "role": "Event Custodian",
+          "location": "Spokane, WA",
+          "startDate": "2020-02",
+          "endDate": "2021-07",
+          "isCurrent": false,
+          "description": "- Cleaned concourses, restrooms and seating bowls during and after events of up to 10,000 guests\n- Restocked paper goods and emptied trash on a 90-minute rotation during events"
+        }
+      ],
+      "education": [
+        {
+          "school": "Spokane Falls Technical High School",
+          "degree": "High School Diploma",
+          "startDate": "2015-09",
+          "endDate": "2019-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Custodial: Classroom and restroom cleaning, event setup, trash and recycling",
+        "Floor Care: Stripping and waxing, swing machine, autoscrubber, carpet extraction",
+        "Safety: Bloodborne pathogens, SDS sheets, ladder safety",
+        "Systems: SchoolDude work orders"
+      ],
+      "fit": {
+        "swiss": 0.96,
+        "berlin": 0.91,
+        "iron": 0.92,
+        "ginto": 0.94,
+        "bronx": 0.95,
+        "pop": 0.96
+      }
+    },
+    "Building Maintenance Worker": {
+      "summary": "Building maintenance worker with 6 years handling plumbing, electrical, drywall and HVAC tasks for apartment communities. Closes about 60 work orders a month with a 24-hour average turnaround and turns vacant units in 4 days. Holds EPA 608 Universal and OSHA 10 certifications.",
+      "experience": [
+        {
+          "company": "Chesapeake Residential Group",
+          "role": "Maintenance Technician",
+          "location": "Baltimore, MD",
+          "startDate": "2022-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Close about 60 work orders a month in Yardi at a 340-unit community, averaging 24 hours from request to finish\n- Turn vacant units in 4 days with paint, drywall patching, fixture swaps and appliance checks\n- Service PTAC units and split systems, change filters and recharge refrigerant under EPA 608\n- Share the after-hours on-call rotation 1 week a month for leaks, lockouts and no-heat calls"
+        },
+        {
+          "company": "Fells Landing Self Storage",
+          "role": "Maintenance Helper",
+          "location": "Dundalk, MD",
+          "startDate": "2020-06",
+          "endDate": "2022-03",
+          "isCurrent": false,
+          "description": "- Repaired roll-up doors, replaced locks and fixed lighting across 900 storage units\n- Kept grounds clean, cleared snow and painted curbs and bollards"
+        }
+      ],
+      "education": [
+        {
+          "school": "Patapsco Vocational High School",
+          "degree": "High School Diploma, Building Trades Program",
+          "startDate": "2016-09",
+          "endDate": "2020-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Repairs: Plumbing fixtures, basic electrical, drywall, painting, appliances",
+        "HVAC: Filter changes, PTAC service, refrigerant recovery",
+        "Certifications: EPA 608 Universal, OSHA 10",
+        "Systems: Yardi Voyager work orders, make-ready checklists"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "bronx": 0.95
+      }
+    },
+    "Cleaner": {
+      "summary": "Commercial and residential cleaner with 3 years cleaning offices, medical suites and homes. Cleans 6 to 8 locations a night with a crew of 3 and has had zero client callbacks for missed tasks in 2025. Careful with keys and alarm codes and trained in safe chemical use.",
+      "experience": [
+        {
+          "company": "Wasatch Clean Co.",
+          "role": "Commercial Cleaner",
+          "location": "Salt Lake City, UT",
+          "startDate": "2024-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Clean 6 to 8 offices and medical suites a night with a crew of 3, following each site's checklist\n- Disinfect exam rooms and waiting areas with hospital-grade products and color-coded microfiber\n- Hold keys and alarm codes for 14 client sites with no security issues\n- Had zero client callbacks for missed tasks in 2025"
+        },
+        {
+          "company": "Bonneville Home Cleaning",
+          "role": "House Cleaner",
+          "location": "Murray, UT",
+          "startDate": "2023-03",
+          "endDate": "2024-03",
+          "isCurrent": false,
+          "description": "- Cleaned 3 to 4 homes a day, including kitchens, bathrooms and move-out deep cleans\n- Earned repeat requests from 12 regular clients"
+        }
+      ],
+      "education": [
+        {
+          "school": "Jordan Valley High School",
+          "degree": "High School Diploma",
+          "startDate": "2018-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Cleaning: Offices, medical suites, kitchens, bathrooms, deep cleans",
+        "Methods: Color-coded microfiber, disinfecting dwell times, HEPA vacuums",
+        "Safety: SDS sheets, chemical labeling, alarm and key control",
+        "Availability: Nights, weekends"
+      ],
+      "fit": {
+        "iron": 0.98,
+        "ginto": 0.93,
+        "quartz": 0.96,
+        "bronx": 0.92
+      }
+    },
+    "Pest Control Technician": {
+      "summary": "Licensed pest control technician with 4 years servicing homes, restaurants and HOA properties. Runs a route of 14 to 18 stops a day and keeps a 94% customer retention rate. Holds a Florida pest control ID card and performs WDO termite inspections for real estate sales.",
+      "experience": [
+        {
+          "company": "Gulf Breeze Pest Solutions",
+          "role": "Pest Control Technician",
+          "location": "Tampa, FL",
+          "startDate": "2023-01",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Service 14 to 18 residential and commercial stops a day for ants, roaches, rodents and mosquitoes\n- Keep a 94% retention rate on a route of 420 quarterly accounts\n- Complete about 25 WDO termite inspections a month for home sales and install Sentricon bait stations\n- Log treatments, product amounts and photos in PestPac to meet Florida labeling and recordkeeping rules"
+        },
+        {
+          "company": "Bay Area Lawn & Shrub",
+          "role": "Lawn Care Technician",
+          "location": "Brandon, FL",
+          "startDate": "2021-04",
+          "endDate": "2022-12",
+          "isCurrent": false,
+          "description": "- Applied fertilizer and weed control to 30 lawns a day with a ride-on spreader and backpack sprayer\n- Upsold 60 customers to perimeter pest service"
+        }
+      ],
+      "education": [
+        {
+          "school": "Hillsborough Bay High School",
+          "degree": "High School Diploma",
+          "startDate": "2016-08",
+          "endDate": "2020-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Pest Control: General household pests, rodent exclusion, mosquito treatments, termite baiting",
+        "Inspections: WDO reports, commercial kitchen inspections, monitoring logs",
+        "Equipment: B&G sprayer, backpack mister, bait stations, moisture meter",
+        "License and Systems: Florida pest control ID card, PestPac, clean driving record"
+      ],
+      "fit": {
+        "berlin": 0.96,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
+      }
+    },
+    "Armed Security Guard": {
+      "summary": "Armed security guard with 7 years of security experience, including 4 years as a U.S. Army military police officer. Protects a bank operations center and its cash vault with zero incidents across 3 years. Holds a Virginia DCJS armed security officer registration with firearms endorsement and qualifies at 96% or higher every year.",
+      "experience": [
+        {
+          "company": "Old Dominion Protective Group",
+          "role": "Armed Security Officer",
+          "location": "Richmond, VA",
+          "startDate": "2023-06",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Stand armed post at a bank operations center, controlling access to the cash vault and loading dock\n- Escort armored car transfers and cash deliveries with zero incidents across 3 years\n- Qualify on the 9 mm handgun at 96% or higher on annual DCJS range qualifications\n- Monitor alarms and CCTV and write incident reports for the client's corporate security team"
+        },
+        {
+          "company": "James River Security",
+          "role": "Security Officer",
+          "location": "Henrico, VA",
+          "startDate": "2022-08",
+          "endDate": "2023-05",
+          "isCurrent": false,
+          "description": "- Ran access control at a data center, checking badges and escorting vendors\n- Completed hourly patrols and logged all findings"
+        },
+        {
+          "company": "U.S. Army",
+          "role": "Military Police Officer",
+          "location": "Petersburg, VA",
+          "startDate": "2018-07",
+          "endDate": "2022-07",
+          "isCurrent": false,
+          "description": "- Conducted law enforcement patrols, gate security and traffic control on an Army installation\n- Earned the Army Commendation Medal for emergency response during a base lockdown"
+        }
+      ],
+      "education": [
+        {
+          "school": "Chesterfield Hills High School",
+          "degree": "High School Diploma",
+          "startDate": "2014-09",
+          "endDate": "2018-06"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Security: Armed post, vault access control, escort duty, patrols",
+        "Licenses: Virginia DCJS armed security officer registration, firearms endorsement, CPR/AED",
+        "Training: Use of force, handcuffing, OC spray, active threat response",
+        "Systems: CCTV, alarm panels, incident reporting, radio"
+      ],
+      "fit": {
+        "modern": 0.97,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "minimalist": 0.93,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.96
+      }
+    },
+    "Event Security": {
+      "summary": "Event security staffer with 3 years working concerts, stadium games and festivals of up to 40,000 guests. Screens about 1,200 guests an hour at entry gates with magnetometers and bag checks. Holds a Kansas City private security license and Certified Crowd Manager training, and stays calm in packed crowds.",
+      "experience": [
+        {
+          "company": "Crown Event Staffing",
+          "role": "Event Security Staff",
+          "location": "Kansas City, MO",
+          "startDate": "2024-03",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Work 8 to 12 events a month, including stadium games, arena concerts and summer festivals\n- Screen about 1,200 guests an hour at entry gates with walk-through magnetometers and clear-bag checks\n- Hold pit barricade posts at concerts, pulling crowd-surfers safely and calling medical over the radio\n- Promoted to team lead for 6-person gate crews at 20+ events in 2025"
+        },
+        {
+          "company": "Northland Amphitheater",
+          "role": "Usher and Ticket Scanner",
+          "location": "North Kansas City, MO",
+          "startDate": "2023-05",
+          "endDate": "2023-10",
+          "isCurrent": false,
+          "description": "- Scanned tickets and guided guests to seats for 30 summer concerts\n- Reported spills, fights and medical issues to the security supervisor"
+        }
+      ],
+      "education": [
+        {
+          "school": "Blue Valley Park High School",
+          "degree": "High School Diploma",
+          "startDate": "2019-08",
+          "endDate": "2023-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Event Security: Gate screening, magnetometers, bag checks, barricade and pit work",
+        "Crowd Safety: Certified Crowd Manager training, ejections, medical calls, evacuation routes",
+        "Licenses: Kansas City private security license, CPR/AED",
+        "Availability: Nights, weekends, festival double shifts"
+      ],
+      "fit": {
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.91,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "pop": 0.92
+      }
+    },
+    "Night Auditor": {
+      "summary": "Night auditor with 4 years running the overnight shift at independent hotels, closing the day in Opera Cloud and balancing 12 revenue outlets. Cut audit variances to under $25 a night and handles front desk check-ins, security walks and guest calls alone. Trusted with cash deposits, key control and the building fire panel.",
+      "experience": [
+        {
+          "company": "Forsyth Square Inn",
+          "role": "Night Auditor",
+          "location": "Savannah, GA",
+          "startDate": "2023-04",
+          "endDate": "",
+          "isCurrent": true,
+          "description": "- Run the 11 p.m. to 7 a.m. shift alone for a 140-room hotel, covering check-ins, calls and guest requests\n- Close the day in Opera Cloud and balance room, restaurant and bar revenue across 12 outlets\n- Cut nightly audit variances from about $150 to under $25 by reconciling POS and credit card batches each hour\n- Walk the property twice a night, check the fire panel and log incidents and noise complaints"
+        },
+        {
+          "company": "Tybee Shores Motel",
+          "role": "Front Desk Agent",
+          "location": "Tybee Island, GA",
+          "startDate": "2022-05",
+          "endDate": "2023-03",
+          "isCurrent": false,
+          "description": "- Checked in 60+ guests a day in peak season and handled reservations in RoomKey PMS\n- Counted and dropped the cash drawer at shift change"
+        }
+      ],
+      "education": [
+        {
+          "school": "Coastal Empire Technical College",
+          "degree": "Certificate in Accounting",
+          "startDate": "2020-08",
+          "endDate": "2022-05"
+        }
+      ],
+      "projects": [],
+      "skills": [
+        "Night Audit: Day close, revenue reconciliation, credit card batches, cash deposits",
+        "Front Desk: Check-ins, reservations, guest calls, key control",
+        "Safety: Property walks, fire panel checks, incident logs",
+        "Systems: Opera Cloud, RoomKey PMS, Micros POS, Excel"
+      ],
+      "fit": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "pop": 0.94
+      }
+    }
+  }
+}
