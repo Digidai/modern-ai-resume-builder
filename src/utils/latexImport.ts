@@ -59,3 +59,46 @@ export const resumeFromParsedLatex = (json: string, current: Pick<ResumeData, 't
   const hasContent = data.fullName || data.experience.length || data.education.length || (data.publications ?? []).length;
   return hasContent ? data : null;
 };
+
+const PROGRESS_SECTIONS = ['experience', 'education', 'projects', 'publications', 'awards', 'talks', 'teaching', 'skills'] as const;
+export type LatexProgressSection = (typeof PROGRESS_SECTIONS)[number];
+
+/**
+ * Reads the parser's partial JSON as it streams in: which list it is writing now and how many entries
+ * each list has so far. Tolerates a reply cut off anywhere, including mid-string.
+ */
+export const latexParseProgress = (partial: string): { section: LatexProgressSection | null; counts: Partial<Record<LatexProgressSection, number>> } => {
+  const counts: Partial<Record<LatexProgressSection, number>> = {};
+  let section: LatexProgressSection | null = null;
+  let depth = 0;
+  let inString = false;
+  let stringStart = 0;
+  let lastString = '';
+  let key = '';
+  for (let i = 0; i < partial.length; i += 1) {
+    const char = partial[i];
+    if (inString) {
+      if (char === '\\') i += 1;
+      else if (char === '"') {
+        inString = false;
+        lastString = partial.slice(stringStart, i);
+        // A string inside a top-level list of strings (skills) is one entry.
+        if (depth === 2 && section === 'skills' && key === 'skills') counts.skills = (counts.skills ?? 0) + 1;
+      }
+      continue;
+    }
+    if (char === '"') {
+      inString = true;
+      stringStart = i + 1;
+    } else if (char === ':' && depth === 1) key = lastString;
+    else if (char === '{' || char === '[') {
+      depth += 1;
+      if (char === '[' && depth === 2) section = (PROGRESS_SECTIONS as readonly string[]).includes(key) ? (key as LatexProgressSection) : null;
+      if (char === '{' && depth === 3 && section && key === section) counts[section] = (counts[section] ?? 0) + 1;
+    } else if (char === '}' || char === ']') {
+      depth -= 1;
+      if (depth === 1) section = null;
+    }
+  }
+  return { section, counts };
+};

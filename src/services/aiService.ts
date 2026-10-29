@@ -1,6 +1,7 @@
 import {
   type AiErrorCode,
   type AiErrorEnvelope,
+  type AiParseLatexEvent,
   type AiRequest,
   isAiApiResponse,
   isAiErrorCode,
@@ -319,8 +320,61 @@ export const generateSummary = async (
   });
 };
 
-/** Sends a prepared LaTeX resume to the AI parser; resolves to its JSON reply (one attempt, it is slow). */
-export const parseLatexResume = async (source: string): Promise<string> => callAiProxy({ action: 'parse_latex', source });
+/**
+ * Sends a prepared LaTeX resume to the AI parser and resolves to its JSON reply (one attempt, it is
+ * slow). `onEvent` receives the streamed progress events as the model works.
+ */
+export const parseLatexResume = async (source: string, onEvent?: (event: AiParseLatexEvent) => void): Promise<string> => {
+  const payload: AiRequest = { action: 'parse_latex', source, stream: true };
+  let response = await postAiRequest(payload, await fetchSessionToken());
+  if (response.status === 401) {
+    clearSessionCache();
+    response = await postAiRequest(payload, await fetchSessionToken(true));
+  }
+  if (!response.ok) throw await parseError(response);
+  // A server without streaming answers with the usual { text }.
+  if (!(response.headers.get('content-type') || '').includes('ndjson') || !response.body) {
+    const data = (await response.json().catch(() => ({}))) as unknown;
+    const text = isAiApiResponse(data) && typeof data.text === 'string' ? data.text.trim() : '';
+    if (!text) throw new AiError('AI returned an empty response.', 'INVALID_RESPONSE', false);
+    return text;
+  }
+
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  let buffer = '';
+  const handle = (line: string): string | null => {
+    if (!line.trim()) return null;
+    let event: AiParseLatexEvent;
+    try {
+      event = JSON.parse(line) as AiParseLatexEvent;
+    } catch {
+      return null;
+    }
+    if (event.type === 'error') throw new AiError(event.error, isAiErrorCode(event.code) ? event.code : 'UNKNOWN_ERROR', false);
+    onEvent?.(event);
+    return event.type === 'done' ? event.text : null;
+  };
+  try {
+    for (;;) {
+      const { value, done } = await reader.read();
+      buffer += decoder.decode(value, { stream: !done });
+      let newline: number;
+      while ((newline = buffer.indexOf('\n')) >= 0) {
+        const result = handle(buffer.slice(0, newline));
+        buffer = buffer.slice(newline + 1);
+        if (result) return result;
+      }
+      if (done) break;
+    }
+  } catch (error) {
+    if (error instanceof AiError) throw error;
+    throw new AiError('The connection to the AI was interrupted. Please try again.', 'NETWORK_ERROR', true);
+  }
+  const result = handle(buffer);
+  if (result) return result;
+  throw new AiError('The AI stopped before finishing. Please try again.', 'EMPTY_RESPONSE', true);
+};
 
 export const __resetAiSessionCacheForTests = (): void => {
   clearSessionCache();

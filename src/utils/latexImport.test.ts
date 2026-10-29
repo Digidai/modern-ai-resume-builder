@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_DESIGN } from '../types';
-import { latexSourceProblem, prepareLatexSource, resumeFromParsedLatex } from './latexImport';
+import { latexParseProgress, latexSourceProblem, prepareLatexSource, resumeFromParsedLatex } from './latexImport';
 
 describe('prepareLatexSource', () => {
   it('drops comments and setup lines but keeps escaped percent signs and macro definitions', () => {
@@ -55,5 +55,15 @@ describe('resumeFromParsedLatex', () => {
     expect(resumeFromParsedLatex('not json', current)).toBeNull();
     expect(resumeFromParsedLatex('[]', current)).toBeNull();
     expect(resumeFromParsedLatex('{"summary":""}', current)).toBeNull();
+  });
+});
+
+describe('latexParseProgress', () => {
+  it('counts entries per list and names the list being written, ignoring braces and keys inside strings', () => {
+    const partial =
+      '{"fullName":"A \\"{experience}\\" B","summary":"[skills] {x}","experience":[{"company":"X","description":"- {a} [b]"},{"company":"Y"}],' +
+      '"skills":["Python, R","SQL"],"publications":[{"title":"On {graphs}"},{"title":"Unfinished \\"quo';
+    expect(latexParseProgress(partial)).toEqual({ section: 'publications', counts: { experience: 2, skills: 2, publications: 2 } });
+    expect(latexParseProgress('{"fullName":"Pat","education":[]').section).toBeNull();
   });
 });

@@ -3,7 +3,7 @@ import type { ResumeData } from '../types';
 import { MAX_LATEX_SOURCE_CHARS } from '../shared/aiContract';
 import { getTemplateById } from '../constants/templates';
 import { AiError, parseLatexResume } from '../services/aiService';
-import { latexSourceProblem, prepareLatexSource, resumeFromParsedLatex } from '../utils/latexImport';
+import { latexParseProgress, latexSourceProblem, prepareLatexSource, resumeFromParsedLatex, type LatexProgressSection } from '../utils/latexImport';
 import { Button } from './Button';
 import { Textarea } from './Input';
 import { ScaledResumePreview } from './ScaledResumePreview';
@@ -32,6 +32,75 @@ const describe = (data: ResumeData) =>
     .filter(Boolean)
     .join(' · ');
 
+const SECTION_NAMES: Record<LatexProgressSection, [string, string, string?]> = {
+  experience: ['experience', 'job'],
+  education: ['education', 'degree'],
+  projects: ['projects', 'project'],
+  publications: ['publications', 'publication'],
+  awards: ['grants and awards', 'grant or award', 'grants and awards'],
+  talks: ['talks', 'talk'],
+  teaching: ['teaching', 'course'],
+  skills: ['skills', 'skill line'],
+};
+
+interface Progress {
+  stage: 'sending' | 'reading' | 'writing';
+  /** Characters of JSON written so far. */
+  written: number;
+  section: LatexProgressSection | null;
+  counts: Partial<Record<LatexProgressSection, number>>;
+}
+
+const STEPS = ['Send', 'Read', 'Write'] as const;
+
+/** Stage, found entries and elapsed time while the AI converts the CV. */
+const ConversionProgress: React.FC<{ progress: Progress; elapsed: number; expected: number }> = ({ progress, elapsed, expected }) => {
+  const step = progress.stage === 'sending' ? 0 : progress.stage === 'reading' ? 1 : 2;
+  const found = (Object.keys(SECTION_NAMES) as LatexProgressSection[])
+    .map((section) => count(progress.counts[section] ?? 0, SECTION_NAMES[section][1], SECTION_NAMES[section][2]))
+    .filter(Boolean)
+    .join(' · ');
+  const status =
+    progress.stage === 'sending'
+      ? 'Sending your CV…'
+      : progress.stage === 'reading'
+        ? 'AI is reading the LaTeX…'
+        : progress.section
+          ? `Writing ${SECTION_NAMES[progress.section][0]}…`
+          : 'Writing your resume…';
+  // Hold at 95% until the reply is complete.
+  const percent = step < 2 ? null : Math.min(95, Math.max(4, Math.round((progress.written / expected) * 100)));
+  return (
+    <div className="space-y-2 rounded-lg border border-rule bg-tint px-4 py-3 text-sm" data-testid="latex-import-progress">
+      <ol className="flex items-center gap-2 text-xs text-muted" aria-hidden="true">
+        {STEPS.map((label, index) => (
+          <li key={label} className={`flex items-center gap-1.5 ${index <= step ? 'text-ink' : ''} ${index === step ? 'font-semibold' : ''}`}>
+            <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[10px] font-semibold ${index < step ? 'bg-ink text-surface' : index === step ? 'border-2 border-ink bg-ink/10' : 'border border-rule'}`}>
+              {index < step ? '✓' : index + 1}
+            </span>
+            {label}
+            {index < STEPS.length - 1 && <span className="mx-1 h-px w-6 bg-rule" />}
+          </li>
+        ))}
+      </ol>
+      <div className="flex items-baseline justify-between gap-3">
+        <p aria-live="polite" className="font-medium">
+          {status}
+        </p>
+        <span className="shrink-0 tabular-nums text-xs text-muted">
+          {Math.floor(elapsed / 60)}:{String(elapsed % 60).padStart(2, '0')}
+        </span>
+      </div>
+      <div className="h-1.5 overflow-hidden rounded-full bg-rule/60" role="progressbar" aria-label="Conversion progress" aria-valuemin={0} aria-valuemax={100} aria-valuenow={percent ?? undefined}>
+        <div className={`h-full rounded-full bg-ink transition-[width] duration-300 ${percent === null ? 'w-1/4 animate-pulse' : ''}`} style={percent === null ? undefined : { width: `${percent}%` }} />
+      </div>
+      <p className="text-xs text-muted">
+        {found ? `Found so far: ${found}` : progress.stage === 'reading' ? 'Long CVs can take a minute or two; the AI reads the whole file before writing.' : '\u00a0'}
+      </p>
+    </div>
+  );
+};
+
 /**
  * Import LaTeX: the .tex goes to the AI parser, and the result is shown as pages before it replaces
  * the resume (the editor's undo toast can bring the old one back).
@@ -48,6 +117,17 @@ export const LatexImportDialog: React.FC<{
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [result, setResult] = useState<ResumeData | null>(null);
+  const [progress, setProgress] = useState<Progress | null>(null);
+  const [elapsed, setElapsed] = useState(0);
+  const [expected, setExpected] = useState(1);
+
+  useEffect(() => {
+    if (!loading) return;
+    const started = Date.now();
+    setElapsed(0);
+    const timer = window.setInterval(() => setElapsed(Math.floor((Date.now() - started) / 1000)), 1000);
+    return () => window.clearInterval(timer);
+  }, [loading]);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -71,8 +151,25 @@ export const LatexImportDialog: React.FC<{
     setLoading(true);
     setError('');
     setResult(null);
+    // The JSON reply comes out at roughly 60% of the trimmed LaTeX.
+    setExpected(prepared.length * 0.6);
+    setProgress({ stage: 'sending', written: 0, section: null, counts: {} });
+    let written = '';
+    let lastUpdate = 0;
+    // The upload takes a moment; after that the model is reading the prompt, even before it says so.
+    const reading = window.setTimeout(() => setProgress((previous) => (previous?.stage === 'sending' ? { ...previous, stage: 'reading' } : previous)), 1500);
     try {
-      const parsed = resumeFromParsedLatex(await parseLatexResume(prepared), current);
+      const reply = await parseLatexResume(prepared, (event) => {
+        if (event.type === 'thinking') setProgress((previous) => (previous?.stage === 'sending' ? { ...previous, stage: 'reading' } : previous));
+        if (event.type !== 'delta') return;
+        written += event.text;
+        // Re-reading the partial JSON on every token is wasteful; a few times a second is enough.
+        const now = Date.now();
+        if (now - lastUpdate < 250) return;
+        lastUpdate = now;
+        setProgress({ stage: 'writing', written: written.length, ...latexParseProgress(written) });
+      });
+      const parsed = resumeFromParsedLatex(reply, current);
       if (!parsed) {
         setError("Couldn't find resume content in that LaTeX. Check it is the main .tex file and try again.");
         return;
@@ -83,7 +180,9 @@ export const LatexImportDialog: React.FC<{
     } catch (err) {
       setError(err instanceof AiError ? err.message : 'Conversion failed. Please try again.');
     } finally {
+      window.clearTimeout(reading);
       setLoading(false);
+      setProgress(null);
     }
   };
 
@@ -131,7 +230,7 @@ export const LatexImportDialog: React.FC<{
             />
             <div className="flex flex-wrap items-center gap-2">
               <Button onClick={() => void convert()} isLoading={loading} disabled={!source.trim()}>
-                {loading ? 'Reading your CV…' : 'Convert'}
+                {loading ? 'Converting…' : 'Convert'}
               </Button>
               <Button variant="ghost" onClick={() => fileRef.current?.click()} disabled={loading}>
                 Choose .tex file
@@ -154,8 +253,8 @@ export const LatexImportDialog: React.FC<{
                   setError('');
                 }}
               />
-              {loading && <span className="text-sm text-muted">This can take up to two minutes for a long CV.</span>}
             </div>
+            {loading && progress && <ConversionProgress progress={progress} elapsed={elapsed} expected={expected} />}
             {error && (
               <p role="alert" className="text-sm text-danger">
                 {error}

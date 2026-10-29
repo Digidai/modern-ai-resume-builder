@@ -43,7 +43,19 @@ export interface AiSummaryRequest {
 export interface AiParseLatexRequest {
   action: 'parse_latex';
   source: string;
+  /** Reply as an NDJSON stream of `AiParseLatexEvent`s instead of `{ text }`. */
+  stream?: boolean;
 }
+
+/**
+ * One line of a streamed parse: `thinking` while the model reasons, `delta` for each piece of JSON it
+ * writes, then `done` with the whole JSON object, or `error`.
+ */
+export type AiParseLatexEvent =
+  | { type: 'thinking' }
+  | { type: 'delta'; text: string }
+  | { type: 'done'; text: string }
+  | { type: 'error'; code: AiErrorCode; error: string };
 
 /** Longest .tex source (after comments are stripped) the parser accepts. */
 export const MAX_LATEX_SOURCE_CHARS = 40_000;

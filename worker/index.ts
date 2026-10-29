@@ -1,6 +1,7 @@
 import puppeteer from '@cloudflare/puppeteer';
 import {
   type AiErrorCode,
+  type AiParseLatexEvent,
   type AiRequest,
   MAX_LATEX_SOURCE_CHARS,
 } from '../src/shared/aiContract';
@@ -778,6 +779,11 @@ const parseAiJson = (data: unknown): string => {
   const value = data as JsonObject;
   const message = ((Array.isArray(value.choices) ? value.choices[0] : undefined) as JsonObject | undefined)?.message as JsonObject | undefined;
   const raw = typeof value.response === 'string' ? value.response : typeof message?.content === 'string' ? message.content : '';
+  return extractJsonObject(raw);
+};
+
+/** The outermost JSON object in model text, re-serialised; '' when there is none. */
+const extractJsonObject = (raw: string): string => {
   const text = raw.replace(/<think>[\s\S]*?<\/think>/gi, '');
   const start = text.indexOf('{');
   const end = text.lastIndexOf('}');
@@ -807,7 +813,7 @@ const validateRequest = (body: unknown): AiRequest | null => {
   if (value.action === 'parse_latex') {
     const source = normalizeText(value.source);
     if (!source || source.length > MAX_LATEX_SOURCE_CHARS) return null;
-    return { action: 'parse_latex', source };
+    return { action: 'parse_latex', source, stream: value.stream === true };
   }
 
   if (value.action === 'summary') {
@@ -843,13 +849,10 @@ const parseJsonBody = async (request: Request, maxBytes = MAX_BODY_BYTES): Promi
   }
 };
 
-const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
-  if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
-
-  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> => {
   const reasoningEffort = normalizeText(env.AI_REASONING_EFFORT);
   const parsing = payload.action === 'parse_latex';
-  const input: Record<string, unknown> = {
+  return {
     messages: [
       { role: 'system', content: parsing ? PARSE_LATEX_PROMPT : SYSTEM_PROMPT },
       { role: 'user', content: buildUserPrompt(payload) },
@@ -857,6 +860,24 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
     max_tokens: parsing ? PARSE_OUTPUT_TOKENS : MAX_OUTPUT_TOKENS,
     ...(reasoningEffort ? { reasoning_effort: reasoningEffort } : {}),
   };
+};
+
+/** Maps a Workers AI failure to the error codes handleAiRequest reports. */
+const upstreamError = (error: unknown, model: string): Error => {
+  const message = error instanceof Error ? error.message : String(error);
+  if (message === 'UPSTREAM_TIMEOUT' || message === 'EMPTY_RESPONSE') return error as Error;
+  console.error('[ai] Workers AI call failed', { model, message });
+  // Workers AI reports capacity/rate limits as errors mentioning 429 or "capacity".
+  if (/\b429\b|rate limit|capacity/i.test(message)) return new Error('UPSTREAM_RATE_LIMIT:AI is busy right now. Please try again in a moment.');
+  return new Error('UPSTREAM_UNAVAILABLE:AI service is temporarily unavailable. Please try again.');
+};
+
+const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
+  if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
+
+  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+  const parsing = payload.action === 'parse_latex';
+  const input = buildAiInput(env, payload);
 
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
   const timeout = new Promise<never>((_, reject) => {
@@ -874,17 +895,106 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
       ? text.split('\n').map((line) => line.trim()).filter(Boolean).map((line) => `- ${line}`).join('\n')
       : text;
   } catch (error) {
-    const message = error instanceof Error ? error.message : String(error);
-    if (message === 'UPSTREAM_TIMEOUT' || message === 'EMPTY_RESPONSE') throw error;
-    console.error('[ai] Workers AI call failed', { model, message });
-    // Workers AI reports capacity/rate limits as errors mentioning 429 or "capacity".
-    if (/\b429\b|rate limit|capacity/i.test(message)) {
-      throw new Error('UPSTREAM_RATE_LIMIT:AI is busy right now. Please try again in a moment.');
-    }
-    throw new Error('UPSTREAM_UNAVAILABLE:AI service is temporarily unavailable. Please try again.');
+    throw upstreamError(error, model);
   } finally {
     clearTimeout(timeoutId);
   }
+};
+
+/** Pieces of one Workers AI stream chunk: OpenAI-style `choices[0].delta`, or the older `{ response }`. */
+const streamDelta = (chunk: JsonObject): { text: string; reasoning: boolean } => {
+  if (typeof chunk.response === 'string') return { text: chunk.response, reasoning: false };
+  const delta = ((Array.isArray(chunk.choices) ? chunk.choices[0] : undefined) as JsonObject | undefined)?.delta as JsonObject | undefined;
+  const text = typeof delta?.content === 'string' ? delta.content : '';
+  const reasoning = typeof delta?.reasoning_content === 'string' || typeof delta?.reasoning === 'string';
+  return { text, reasoning };
+};
+
+/**
+ * parse_latex with `stream: true`: starts the model (errors before the first byte are thrown as usual),
+ * then relays its SSE output as NDJSON `AiParseLatexEvent`s so the client can show progress.
+ */
+const streamParseLatex = async (env: Env, payload: AiRequest): Promise<Response> => {
+  if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
+  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+  let upstream: unknown;
+  try {
+    upstream = await env.AI.run(model, { ...buildAiInput(env, payload), stream: true });
+  } catch (error) {
+    throw upstreamError(error, model);
+  }
+
+  const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();
+  const writer = writable.getWriter();
+  const encoder = new TextEncoder();
+  const send = (event: AiParseLatexEvent) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`));
+
+  const relay = async () => {
+    const deadline = Date.now() + PARSE_TIMEOUT_MS;
+    let content = '';
+    let lastThinking = 0;
+    try {
+      if (upstream instanceof ReadableStream) {
+        const reader = (upstream as ReadableStream<Uint8Array>).getReader();
+        const decoder = new TextDecoder();
+        let buffer = '';
+        for (;;) {
+          const remaining = deadline - Date.now();
+          let timer: ReturnType<typeof setTimeout> | undefined;
+          const next = await Promise.race([
+            reader.read(),
+            new Promise<null>((resolve) => {
+              timer = setTimeout(() => resolve(null), Math.max(0, remaining));
+            }),
+          ]);
+          clearTimeout(timer);
+          if (!next) {
+            await reader.cancel();
+            await send({ type: 'error', code: 'UPSTREAM_TIMEOUT', error: 'The AI took too long. Try again, or import a shorter CV.' });
+            return;
+          }
+          if (next.done) break;
+          buffer += decoder.decode(next.value, { stream: true });
+          let newline: number;
+          while ((newline = buffer.indexOf('\n')) >= 0) {
+            const line = buffer.slice(0, newline).trim();
+            buffer = buffer.slice(newline + 1);
+            if (!line.startsWith('data:')) continue;
+            const data = line.slice(5).trim();
+            if (!data || data === '[DONE]') continue;
+            let chunk: JsonObject;
+            try {
+              chunk = JSON.parse(data) as JsonObject;
+            } catch {
+              continue;
+            }
+            const { text, reasoning } = streamDelta(chunk);
+            if (text) {
+              content += text;
+              await send({ type: 'delta', text });
+            } else if (reasoning && Date.now() - lastThinking > 1000) {
+              lastThinking = Date.now();
+              await send({ type: 'thinking' });
+            }
+          }
+        }
+      } else {
+        content = parseAiText(upstream);
+      }
+      const json = extractJsonObject(content);
+      await send(json ? { type: 'done', text: json } : { type: 'error', code: 'EMPTY_RESPONSE', error: "The AI didn't return a resume. Please try again." });
+    } catch (error) {
+      console.error('[ai] parse stream failed', { model, message: error instanceof Error ? error.message : String(error) });
+      await send({ type: 'error', code: 'UPSTREAM_UNAVAILABLE', error: 'AI service is temporarily unavailable. Please try again.' }).catch(() => undefined);
+    } finally {
+      await writer.close().catch(() => undefined);
+    }
+  };
+  // The model has accepted the CV; tell the client it is reading before the first token arrives.
+  void send({ type: 'thinking' });
+  void relay();
+
+  return new Response(readable, { headers: { 'content-type': 'application/x-ndjson; charset=utf-8', 'cache-control': 'no-store' } });
 };
 
 /**
@@ -1249,6 +1359,7 @@ const handleAiRequest = async (request: Request, env: Env): Promise<Response> =>
   }
 
   try {
+    if (payload.action === 'parse_latex' && payload.stream) return appendRateLimitHeaders(await streamParseLatex(env, payload), globalRateLimit);
     const text = await callAi(env, payload);
     return appendRateLimitHeaders(jsonResponse({ text }), globalRateLimit);
   } catch (error) {
