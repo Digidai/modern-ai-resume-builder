@@ -3,16 +3,9 @@ import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
 import { PAGE_HEIGHT_PX, PRINT_CONFIG } from '../constants/print';
-import { measurePrintLayout, type PrintLayout } from '../utils/printLayout';
+import { measurePrintLayout, SUPPORTS_CLONE, type PrintLayout } from '../utils/printLayout';
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
-
-/**
- * Whether this browser repeats a block's padding and background on each page (Chromium, Firefox). The
- * last-page fill height is only meaningful where it does; Safari measures without it, so its own print
- * skips the stretch. Server PDFs ignore this rule and measure the stretch in the engine that prints.
- */
-const SUPPORTS_CLONE = typeof CSS !== 'undefined' && CSS.supports('box-decoration-break', 'clone');
 
 const ONE_PAGE: PrintLayout = { pages: 1, breaksMm: [], fillHeightPx: PAGE_HEIGHT_PX - 1, lastPageFill: 1 };
 
@@ -61,7 +54,8 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
 
   // Standard templates get 15mm @page margins on every page. Full-bleed templates print edge to edge: their
   // root (and any `.page-frame`) repeats its padding and background on every page, and the paper fills whole
-  // pages so the background also reaches the bottom of the last one.
+  // pages so the background also reaches the bottom of the last one. Safari doesn't repeat frames, so its own
+  // print skips the stretch (server PDFs measure the stretch in the engine that prints).
   const fillRule = !SUPPORTS_CLONE && layout.pages > 1 ? 'min-height: 0' : `min-height: ${layout.fillHeightPx}px`;
   const printStyles = !isFullBleed
     ? `@page { size: A4; margin: ${std}mm; }

@@ -42,16 +42,11 @@ const inlineFontFace = async (rule: CSSFontFaceRule, baseUrl: string): Promise<s
   return rule.cssText.replace(/src:[^;]+;/, `src: url("${dataUrl}") format("woff2");`);
 };
 
-/**
- * Snapshot of the rendered paper: its markup plus every same-origin CSS rule, with the
- * fonts it uses inlined as data: URLs (the render sandbox has no network access).
- */
-export const buildPdfSnapshot = async (element: HTMLElement): Promise<{ html: string; css: string }> => {
+/** `@font-face` rules for the fonts the element uses, with their files inlined as data: URLs. */
+export const buildFontEmbedCss = async (element: HTMLElement): Promise<string> => {
   await document.fonts.ready;
   const usedFamilies = collectUsedFamilies(element);
-  const cssParts: string[] = [];
-  const fontJobs: Promise<string | null>[] = [];
-
+  const jobs: Promise<string | null>[] = [];
   for (const sheet of Array.from(document.styleSheets)) {
     let rules: CSSRuleList;
     try {
@@ -59,22 +54,35 @@ export const buildPdfSnapshot = async (element: HTMLElement): Promise<{ html: st
     } catch {
       continue; // cross-origin sheet
     }
-    const baseUrl = sheet.href || window.location.href;
     for (const rule of Array.from(rules)) {
-      if (rule instanceof CSSFontFaceRule) {
-        const family = stripQuotes(rule.style.getPropertyValue('font-family'));
-        if (usedFamilies.has(family) && isFaceLoaded(rule)) fontJobs.push(inlineFontFace(rule, baseUrl));
-      } else {
-        cssParts.push(rule.cssText);
-      }
+      if (!(rule instanceof CSSFontFaceRule)) continue;
+      const family = stripQuotes(rule.style.getPropertyValue('font-family'));
+      if (usedFamilies.has(family) && isFaceLoaded(rule)) jobs.push(inlineFontFace(rule, sheet.href || window.location.href));
     }
   }
+  return (await Promise.all(jobs)).filter((face): face is string => !!face).join('\n');
+};
 
-  const fonts = (await Promise.all(fontJobs)).filter((face): face is string => !!face);
+/**
+ * Snapshot of the rendered paper: its markup plus every same-origin CSS rule, with the
+ * fonts it uses inlined as data: URLs (the render sandbox has no network access).
+ */
+export const buildPdfSnapshot = async (element: HTMLElement): Promise<{ html: string; css: string }> => {
+  const fonts = buildFontEmbedCss(element);
+  const cssParts: string[] = [];
+  for (const sheet of Array.from(document.styleSheets)) {
+    let rules: CSSRuleList;
+    try {
+      rules = sheet.cssRules;
+    } catch {
+      continue; // cross-origin sheet
+    }
+    for (const rule of Array.from(rules)) if (!(rule instanceof CSSFontFaceRule)) cssParts.push(rule.cssText);
+  }
   const clone = element.cloneNode(true) as HTMLElement;
   clone.querySelectorAll('[data-export-ignore="true"]').forEach((node) => node.remove());
   clone.removeAttribute('id');
-  return { html: clone.outerHTML, css: [...fonts, ...cssParts].join('\n') };
+  return { html: clone.outerHTML, css: [await fonts, ...cssParts].join('\n') };
 };
 
 /** Renders the paper to a vector PDF on the server (Cloudflare Browser Rendering). */
