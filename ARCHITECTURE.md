@@ -37,13 +37,14 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## Template System
 
+- Pages are lazy-loaded chunks registered in `src/routes.tsx` (add new routes there and in `App.tsx`). `index.tsx` loads the current page's chunk before mounting, so the pre-rendered HTML stays on screen until React replaces it.
 - Template components live in `src/components/ResumeTemplates.tsx` and `src/components/templates/`.
 - Template metadata (name, description, ATS flag, full-bleed) lives in `src/constants/templates.ts`.
 - Design settings (`ResumeData.design`: accent, font, scale) are applied by `ResumePreview` as CSS variables (`--rs-accent`, `--font-*`) plus `zoom`; see `src/constants/design.ts`.
 - To add a template:
   1. Create a component in `src/components/templates/` whose root is `flex-1` and reads `var(--rs-accent, <default>)`.
   2. Export it in `ResumeTemplates.tsx` and register it in `ResumeTemplateRenderer.tsx`.
-  3. Add it to `TEMPLATE_CATALOG`; check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures.
+  3. Add it to `TEMPLATE_CATALOG` (`photo: true` if it shows `data.photo` via `Portrait`); check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures.
 
 ## Job Titles and Role Examples
 

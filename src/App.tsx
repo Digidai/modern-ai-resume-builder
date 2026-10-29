@@ -2,14 +2,7 @@ import { Routes, Route, useLocation, useNavigate, useNavigationType } from 'reac
 import { ResumeProvider, useResume } from './contexts/ResumeContext';
 import { ErrorBoundary } from './components/ErrorBoundary';
 import { ToastProvider } from './components/Toast';
-import { HomeView, EditorView } from './views';
-import JobTitles from './components/JobTitles';
-import TemplateSelector from './components/TemplateSelector';
-import TemplatesView from './views/TemplatesView';
-import TemplateDetailView from './views/TemplateDetailView';
-import NotFoundView from './views/NotFoundView';
-import RenderView from './views/RenderView';
-import AgentsView from './views/AgentsView';
+import { HomeView, EditorView, JobTitles, TemplateSelector, TemplatesView, TemplateDetailView, NotFoundView, RenderView, AgentsView } from './routes';
 import { lazy, Suspense, useEffect } from 'react';
 
 // Dev-only template gallery; `import.meta.env.DEV` is false in production builds, so it is tree-shaken.
@@ -57,6 +50,7 @@ function AppRoutes() {
   return (
     <>
     <ScrollManager />
+    <Suspense fallback={null}>
     <Routes>
       <Route path="/" element={<HomeView />} />
       <Route path="/directory" element={<JobTitles />} />
@@ -67,13 +61,14 @@ function AppRoutes() {
       <Route path="/agents" element={<AgentsView />} />
       <Route path="/render" element={<RenderView />} />
       {DevTemplateGallery && (
-        <Route path="/dev/templates" element={<Suspense fallback={null}><DevTemplateGallery /></Suspense>} />
+        <Route path="/dev/templates" element={<DevTemplateGallery />} />
       )}
       {DevFitCheck && (
-        <Route path="/dev/fit" element={<Suspense fallback={null}><DevFitCheck /></Suspense>} />
+        <Route path="/dev/fit" element={<DevFitCheck />} />
       )}
       <Route path="*" element={<NotFoundView />} />
     </Routes>
+    </Suspense>
     </>
   );
 }

@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Faster first load: each page is its own chunk, so the main script is 216 KB (68 KB gzipped) instead of 503 KB. The pre-rendered page stays visible until its chunk is ready.
 - Photo CVs: an optional photo in the editor (cropped to 3:4 and compressed in the browser, never uploaded) and four photo templates: Europa (Europass style), Tokyo (rirekisho-style ruled form), Jade (Chinese-style ID photo header) and Portrait (round photo sidebar). Halo shows the photo instead of initials. The resume schema, MCP and API accept `photo` (and JSON Resume `basics.image` data URLs); `list_templates` marks photo templates. 44 templates in total.
 - Job pages: 274 new titles and 2 new families (Security & Facilities, Students & Career Changes), 1,204 titles in 21 families, each with an example resume that fits one A4 page in every template.
 - Site redesign in a refined neutral style: near-white background with white cards, soft layered shadows, rounded corners, Inter headings and body text, one slate-blue accent, a new logo mark and icons. Gradients, sparkle badges, pills and purple are gone from the site; the job page picker shows 8 templates with "Show all", and the agent prompt is a collapsible "Use with an AI agent" panel.
