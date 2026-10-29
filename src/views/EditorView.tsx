@@ -110,8 +110,42 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
   );
 };
 
+type PreviewView = 'pages' | 'continuous';
+const PREVIEW_VIEW_KEY = 'moderncv:previewView';
+const readPreviewView = (): PreviewView => {
+  try {
+    return localStorage.getItem(PREVIEW_VIEW_KEY) === 'continuous' ? 'continuous' : 'pages';
+  } catch {
+    return 'pages';
+  }
+};
+
+/** Pages (as printed, the default) or one continuous sheet. */
+const PreviewViewToggle: React.FC<{ view: PreviewView; onChange: (view: PreviewView) => void }> = ({ view, onChange }) => (
+  <div className="mx-auto mb-3 flex w-full max-w-[210mm] justify-end print:hidden max-md:hidden">
+    <div role="group" aria-label="Preview layout" className="inline-flex rounded-lg border border-rule bg-surface p-0.5 text-xs shadow-card">
+      {(
+        [
+          ['pages', 'Pages'],
+          ['continuous', 'Continuous'],
+        ] as const
+      ).map(([value, label]) => (
+        <button
+          key={value}
+          type="button"
+          aria-pressed={view === value}
+          onClick={() => onChange(value)}
+          className={`rounded-md px-2.5 py-1 font-medium transition-colors focus-ring ${view === value ? 'bg-ink text-paper' : 'text-muted hover:text-ink'}`}
+        >
+          {label}
+        </button>
+      ))}
+    </div>
+  </div>
+);
+
 /** Under the preview: how many pages the PDF will have, with a one-click fit when it runs over. */
-const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<ResumeDesign>) => void }> = ({ design, onChange }) => {
+const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<ResumeDesign>) => void; view: PreviewView }> = ({ design, onChange, view }) => {
   const { pageCount, lastPageSparse, fitLabel, fit, note, atMinimum } = useOnePageFit(design, onChange);
   if (pageCount === null) return null;
   return (
@@ -122,8 +156,8 @@ const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<Res
         <>
           <p>
             <span className="font-medium text-ink">{pageCount} pages.</span>
-            {lastPageSparse && <> Page {pageCount} has only a few lines.</>} Dashed lines show where each new page starts; they
-            aren't printed.
+            {lastPageSparse && <> Page {pageCount} has only a few lines.</>}
+            {view === 'continuous' && <> Dashed lines show where each new page starts; they aren't printed.</>}
           </p>
           {!atMinimum && (
             <Button variant="secondary" size="sm" onClick={fit}>
@@ -151,6 +185,15 @@ const EditorView: React.FC = () => {
     saveStatus,
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
+  const [previewView, setPreviewView] = useState<PreviewView>(readPreviewView);
+  const changePreviewView = useCallback((view: PreviewView) => {
+    setPreviewView(view);
+    try {
+      localStorage.setItem(PREVIEW_VIEW_KEY, view);
+    } catch {
+      // Storage may be unavailable (private mode); the choice then lasts for this visit.
+    }
+  }, []);
   const updateDesign = useCallback(
     (patch: Partial<ResumeDesign>) => setResumeData((prev) => ({ ...prev, design: { ...(prev.design ?? DEFAULT_DESIGN), ...patch } })),
     [setResumeData]
@@ -362,9 +405,10 @@ const EditorView: React.FC = () => {
           }`}
           aria-label="Resume preview"
         >
-          <div className="relative mx-auto w-full max-w-[210mm] bg-white shadow-sheet print:max-w-none print:shadow-none">
+          <PreviewViewToggle view={previewView} onChange={changePreviewView} />
+          <div className={`relative mx-auto w-full max-w-[210mm] print:max-w-none print:shadow-none ${previewView === 'pages' ? '' : 'bg-white shadow-sheet'}`}>
             <SectionErrorBoundary sectionName="Resume Preview">
-              <ScaledResumePreview data={resumeData} mode="page" exportable />
+              <ScaledResumePreview data={resumeData} mode="page" exportable view={previewView} />
             </SectionErrorBoundary>
             {isBlankResume && (
               // Sits over the empty page, outside the exported element, so it never reaches the PDF.
@@ -373,7 +417,7 @@ const EditorView: React.FC = () => {
               </p>
             )}
           </div>
-          <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} />
+          <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} view={previewView} />
         </main>
       </div>
     </div>

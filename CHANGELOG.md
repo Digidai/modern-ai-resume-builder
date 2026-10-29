@@ -7,6 +7,7 @@ All notable changes to this project will be documented in this file.
 - Five ATS-friendly templates: Plain (the most basic black-and-white resume), Text (text only, no rules or colour), Graduate (education and skills first), Wall Street (investment-banking format) and Scholar (academic CV). 49 templates in total.
 - Publications: a new editor section (title, authors, venue, year, DOI) for academic and research CVs, shown by Scholar, Academic, Plain, Text and Graduate, with your name bolded in the author list. Accepted by the schema, MCP and API, and imported from JSON Resume.
 - Grants and awards (title, funder, year, amount or role) and Talks (title, event, location, year): two more academic CV sections, shown by the same templates as Publications. Scholar puts their years in its gutter. Accepted by the schema, MCP and API; JSON Resume `awards` are imported.
+- The editor preview now shows separate A4 pages exactly as the PDF prints them (where entries move to the next page, repeated margins and backgrounds). A Continuous toggle keeps the single long sheet with dashed page lines; the choice is remembered.
 - Import publications from BibTeX (paste or upload a .bib from Google Scholar, DBLP, Zotero) or from a public ORCID record, with a review list that skips works already on the resume. New `/api/orcid` endpoint.
 - Open in Overleaf and Download LaTeX (.tex): the resume as a standalone LaTeX document (pdfLaTeX, or XeLaTeX with xeCJK for Chinese/Japanese/Korean text).
 - Latin Modern (the default LaTeX typeface) as a font option.

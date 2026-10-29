@@ -1,6 +1,11 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
 import { ResumeData } from '../types';
 import ResumePreview from './ResumePreview';
+import { isFullBleedTemplate } from '../constants/templates';
+import { buildPageSheets } from '../utils/printLayout';
+
+/** Space between sheets in the page view, in unscaled px. */
+const SHEET_GAP_PX = 28;
 
 /** A4 width at 96 dpi; the paper is always laid out at this width and then scaled. */
 const A4_WIDTH_PX = (210 / 25.4) * 96;
@@ -22,7 +27,53 @@ interface ScaledResumePreviewProps {
   className?: string;
   /** Called with the document height in A4 pages (e.g. 1.3) whenever it changes. */
   onPages?: (pages: number) => void;
+  /**
+   * Page mode only. `pages`: separate A4 sheets laid out exactly as printed (breaks, margins and
+   * repeated backgrounds). `continuous`: one long sheet with dashed lines where pages start.
+   */
+  view?: 'pages' | 'continuous';
 }
+
+/**
+ * The page view: rebuilds the printed sheets from the (invisible, still laid out) paper whenever it
+ * changes. The paper stays the exported, measured and accessible element; the sheets are copies.
+ */
+const PageSheets: React.FC<{ paperHost: React.RefObject<HTMLDivElement | null>; fullBleed: boolean }> = ({ paperHost, fullBleed }) => {
+  const sheetsRef = useRef<HTMLDivElement>(null);
+  useLayoutEffect(() => {
+    const paper = paperHost.current?.querySelector<HTMLElement>('.resume-paper');
+    const sheets = sheetsRef.current;
+    if (!paper || !sheets) return;
+    const rebuild = () => sheets.replaceChildren(...buildPageSheets(paper, fullBleed));
+    rebuild();
+    let frame = 0;
+    const schedule = () => {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(rebuild);
+    };
+    const mutation = new MutationObserver(schedule);
+    mutation.observe(paper, { subtree: true, childList: true, characterData: true, attributes: true });
+    const resize = new ResizeObserver(schedule);
+    resize.observe(paper);
+    document.fonts?.addEventListener('loadingdone', schedule);
+    return () => {
+      cancelAnimationFrame(frame);
+      mutation.disconnect();
+      resize.disconnect();
+      document.fonts?.removeEventListener('loadingdone', schedule);
+    };
+  }, [paperHost, fullBleed]);
+  return (
+    <div
+      ref={sheetsRef}
+      className="flex flex-col [&>.resume-page-sheet]:shadow-sheet print:hidden"
+      style={{ gap: SHEET_GAP_PX }}
+      aria-hidden="true"
+      inert
+      data-testid="page-sheets"
+    />
+  );
+};
 
 /**
  * Renders the resume at true A4 width and scales it to fit its container, so the layout is
@@ -36,7 +87,9 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
   maxScale = 1,
   className = '',
   onPages,
+  view = 'continuous',
 }) => {
+  const paperHostRef = useRef<HTMLDivElement>(null);
   const outerRef = useRef<HTMLDivElement>(null);
   const innerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0);
@@ -67,6 +120,7 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
 
   const resolvedData = templateId ? { ...data, templateId } : data;
   const isThumbnail = mode === 'thumbnail';
+  const paged = !isThumbnail && view === 'pages';
   const height = isThumbnail ? A4_HEIGHT_PX * scale : contentHeight * scale;
 
   return (
@@ -88,11 +142,11 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
           visibility: scale ? 'visible' : 'hidden',
         }}
       >
-        <ResumePreview
-          data={resolvedData}
-          id={exportable ? 'resume-preview-container' : ''}
-          showPageBreaks={!isThumbnail}
-        />
+        {/* In the page view the paper stays laid out (for export, measuring and screen readers) but invisible. */}
+        <div ref={paperHostRef} className={paged ? 'pointer-events-none absolute inset-x-0 top-0 opacity-0 print:static print:opacity-100' : undefined}>
+          <ResumePreview data={resolvedData} id={exportable ? 'resume-preview-container' : ''} showPageBreaks={!isThumbnail && !paged} />
+        </div>
+        {paged && <PageSheets paperHost={paperHostRef} fullBleed={isFullBleedTemplate(resolvedData.templateId)} />}
       </div>
     </div>
   );

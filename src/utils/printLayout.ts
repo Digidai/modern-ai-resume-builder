@@ -396,3 +396,57 @@ export const largestScaleForPages = (paper: HTMLElement, fullBleed: boolean, cur
   }
   return low / 100;
 };
+
+/**
+ * Safari reports one client rect for a block split across columns, so the fill can't be measured from
+ * fragments there: find the tallest copy that still lays out on `pages` columns instead.
+ */
+const tallestWithPages = (paged: PaginatedCopy, pages: number) => {
+  // Flattened flexboxes no longer stretch children, so grow the template root (which paints the
+  // backgrounds) rather than the paper. Lengths there are in its zoomed units; only the page count matters.
+  const target = paged.copy.querySelector<HTMLElement>('[data-resume-zoom] > *') ?? paged.copy;
+  let low = 0;
+  let high = 2 * pages * paged.columnHeightPx;
+  while (high - low > 1) {
+    const mid = Math.floor((low + high) / 2);
+    target.style.minHeight = `${mid}px`;
+    if (countPages(paged) === pages) low = mid;
+    else high = mid;
+  }
+  target.style.minHeight = `${Math.max(0, low - 1)}px`;
+};
+
+/**
+ * The paper as separate printed pages for the on-screen page view: one A4 sheet per page, each showing
+ * its page-sized column of a paginated copy inside the page's margins (15mm, or none for full-bleed
+ * templates), so the preview breaks, repeats frames and fills the last page exactly as the PDF does.
+ */
+export const buildPageSheets = (paper: HTMLElement, fullBleed: boolean): HTMLElement[] => {
+  const paged = createPaginatedCopy(paper, fullBleed, undefined, true);
+  try {
+    const { host, copy, columnWidthPx, columnHeightPx } = paged;
+    const naturalPx = copy.offsetHeight;
+    applyColumns(paged);
+    const pages = naturalPx <= columnHeightPx + 2 ? 1 : countPages(paged);
+    if (fullBleed && pages > 1 && !SUPPORTS_CLONE) tallestWithPages(paged, pages);
+    else if (fullBleed) copy.style.minHeight = `${pages === 1 ? columnHeightPx - 1 : heightToFillLastPage(paged, naturalPx, pages)}px`;
+    host.remove();
+    Object.assign(host.style, { position: 'absolute', left: '0', top: '0', opacity: '', visibility: '' });
+    host.removeAttribute('aria-hidden');
+    const inset = pageBoxMm(fullBleed).inset * MM_TO_PX;
+    return Array.from({ length: pages }, (_, index) => {
+      const sheet = document.createElement('div');
+      sheet.className = 'resume-page-sheet';
+      Object.assign(sheet.style, { position: 'relative', width: `${PAGE_WIDTH_MM * MM_TO_PX}px`, height: `${PAGE_HEIGHT_MM * MM_TO_PX}px`, overflow: 'hidden', background: '#ffffff' });
+      const frame = document.createElement('div');
+      Object.assign(frame.style, { position: 'absolute', left: `${inset}px`, top: `${inset}px`, width: `${columnWidthPx}px`, height: `${columnHeightPx}px`, overflow: 'hidden' });
+      const column = host.cloneNode(true) as HTMLElement;
+      column.style.left = `${-index * (columnWidthPx + GAP_PX)}px`;
+      frame.appendChild(column);
+      sheet.appendChild(frame);
+      return sheet;
+    });
+  } finally {
+    paged.host.remove();
+  }
+};
