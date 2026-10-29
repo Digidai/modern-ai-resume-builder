@@ -846,6 +846,82 @@ const buildPdfDocument = (html: string, css: string): string =>
   `<style>${css.replace(/<\/style/gi, '<\\/style')}</style></head>` +
   `<body style="margin:0">${html.replace(/<script[\s\S]*?<\/script>/gi, '')}</body></html>`;
 
+/**
+ * Runs in the PDF page, in the engine that prints, and returns the page count. Same method as
+ * src/utils/printLayout.ts: an off-screen copy of the paper laid out in page-sized columns (Chromium
+ * fragments columns like printed pages; full-bleed roots and `.page-frame`s repeat their padding on every page).
+ * - The editor measured `expected` pages in the user's browser. Safari and Firefox lay text out slightly
+ *   differently, so if it comes out longer here, the text is made up to 5% smaller to keep the promised count.
+ * - Full-bleed papers get a min-height that ends exactly at the bottom of the last page, so their
+ *   background reaches the edge.
+ * A string, so the bundler can't inject helpers that don't exist in the page.
+ */
+const PRINT_FIT_SCRIPT = `(expected) => {
+  const paper = document.querySelector('.resume-preview-container');
+  if (!paper) return 0;
+  const fullBleed = paper.hasAttribute('data-full-bleed');
+  const MM = 96 / 25.4, W = (fullBleed ? 210 : 180) * MM, H = (fullBleed ? 297 : 267) * MM, GAP = 40;
+  if (fullBleed) paper.style.setProperty('min-height', '0px', 'important');
+  const host = document.createElement('div');
+  host.style.cssText = 'position:absolute;left:-100000px;top:0;visibility:hidden;background:#fff;width:' + W + 'px';
+  const copy = paper.cloneNode(true);
+  copy.querySelectorAll('style').forEach((node) => node.remove());
+  copy.style.removeProperty('min-height');
+  copy.style.cssText += ';min-height:0;padding:0;overflow:visible;width:100%;box-sizing:border-box';
+  host.appendChild(copy);
+  document.body.appendChild(host);
+  const count = () => Math.max(1, Math.round((host.scrollWidth + GAP) / (W + GAP)));
+  const measure = () => {
+    host.style.height = host.style.columnWidth = host.style.columnGap = host.style.columnFill = '';
+    const natural = copy.offsetHeight;
+    if (natural <= H + 2) return { pages: 1, natural };
+    host.style.height = H + 'px';
+    host.style.columnWidth = W + 'px';
+    host.style.columnGap = GAP + 'px';
+    host.style.columnFill = 'auto';
+    return { pages: count(), natural };
+  };
+  try {
+    let layout = measure();
+    const zoomBox = copy.querySelector('[data-resume-zoom]');
+    const base = zoomBox ? parseFloat(zoomBox.style.zoom) || 1 : 1;
+    if (zoomBox && expected > 0 && layout.pages > expected) {
+      for (let step = 1; step <= 5 && layout.pages > expected; step += 1) {
+        zoomBox.style.zoom = String(Math.round(base * 100 - step) / 100);
+        layout = measure();
+      }
+      if (layout.pages <= expected) paper.querySelector('[data-resume-zoom]').style.zoom = zoomBox.style.zoom;
+      else {
+        zoomBox.style.zoom = base === 1 ? '' : String(base);
+        layout = measure();
+      }
+    }
+    if (!fullBleed) return layout.pages;
+    if (layout.pages === 1) {
+      paper.style.setProperty('min-height', (H - 1) + 'px', 'important');
+      return 1;
+    }
+    const frames = [copy, ...copy.querySelectorAll('[data-resume-zoom] > *, .page-frame')];
+    const lastBottom = () => {
+      const top = host.getBoundingClientRect().top;
+      return Math.max(...frames.map((el) => { const r = el.getClientRects(); return r.length ? r[r.length - 1].bottom - top : 0; }));
+    };
+    let good = 0, extra = 0;
+    for (let attempt = 0; attempt < 5; attempt += 1) {
+      const gap = H - 1 - lastBottom();
+      if (gap < 1) break;
+      extra += gap;
+      copy.style.minHeight = (layout.natural + extra) + 'px';
+      if (count() !== layout.pages) break;
+      good = extra;
+    }
+    paper.style.setProperty('min-height', (layout.natural + good) + 'px', 'important');
+    return layout.pages;
+  } finally {
+    host.remove();
+  }
+}`;
+
 /** Page count of a Chromium-generated PDF (its single page tree's /Count). */
 const pdfPageCount = (pdf: Uint8Array): number => {
   const text = new TextDecoder('latin1').decode(pdf);
@@ -884,16 +960,13 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
       await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
       const print = () => page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
-      const pdf = await print();
-      // Full-bleed papers are stretched to fill their last page using a height measured in the user's
-      // browser. If that ever adds a page here (different engine or fonts), print again without the stretch.
       const expected = Number(/^<div[^>]*\bdata-pages="(\d+)"/.exec(html)?.[1] ?? 0);
-      if (expected && /^<div[^>]*\bdata-full-bleed/.test(html) && pdfPageCount(pdf) > expected) {
-        // More specific than the paper's own (later, in-body) print rule, which is also !important.
-        await page.addStyleTag({ content: 'html body .resume-preview-container { min-height: 0 !important; }' });
-        return print();
-      }
-      return pdf;
+      const pages = Number(await page.evaluate(`(${PRINT_FIT_SCRIPT})(${expected})`));
+      const pdf = await print();
+      if (pdfPageCount(pdf) <= pages) return pdf;
+      // Never let the last-page stretch add a page.
+      await page.evaluate("document.querySelector('.resume-preview-container')?.style.setProperty('min-height', '0px', 'important')");
+      return print();
     })();
     const timeout = new Promise<never>((_, reject) => {
       timeoutId = setTimeout(() => reject(new Error('UPSTREAM_TIMEOUT')), PDF_TIMEOUT_MS);

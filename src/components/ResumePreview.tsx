@@ -9,8 +9,8 @@ import { getCspNonce } from '../utils/csp';
 
 /**
  * Whether this browser repeats a block's padding and background on each page (Chromium, Firefox). The
- * last-page fill height is only meaningful where it does; Safari measures without it, so it prints
- * without the stretch (the server also re-prints without it if the PDF ever comes out longer).
+ * last-page fill height is only meaningful where it does; Safari measures without it, so its own print
+ * skips the stretch. Server PDFs ignore this rule and measure the stretch in the engine that prints.
  */
 const SUPPORTS_CLONE = typeof CSS !== 'undefined' && CSS.supports('box-decoration-break', 'clone');
 
