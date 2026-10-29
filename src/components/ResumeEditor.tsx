@@ -13,6 +13,7 @@ import { Button } from './Button';
 import { TEMPLATES } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
+import { PublicationImport } from './PublicationImport';
 import { Input, Textarea, fieldClass } from './Input';
 import { LazyResumePreview } from './LazyResumePreview';
 import { DesignControls } from './DesignControls';
@@ -811,6 +812,13 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                 )
               }
             >
+              <PublicationImport
+                existing={publications}
+                onImport={(added) => {
+                  onChange((prev) => ({ ...prev, publications: [...(prev.publications ?? []), ...added] }));
+                  showToast(`Added ${added.length} ${added.length === 1 ? 'publication' : 'publications'}.`, 'success');
+                }}
+              />
               {publications.length === 0 ? (
                 <EmptyState addLabel="Add a publication" onAdd={() => addItem('publications', newPublication(), 'end')}>
                   Optional. Your name is set in bold in the author list.

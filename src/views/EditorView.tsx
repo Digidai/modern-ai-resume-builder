@@ -14,6 +14,7 @@ import {
   CloudCheckIcon,
   AlertIcon,
   LoaderIcon,
+  CodeIcon,
 } from '../components/Icons';
 import { Button } from '../components/Button';
 import ThemeToggle from '../components/ThemeToggle';
@@ -27,6 +28,7 @@ import { DEFAULT_DESIGN, type ResumeDesign } from '../types';
 import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
+import { downloadLatex, openInOverleaf } from '../utils/latex';
 
 const SaveIndicator: React.FC<{ status: ResumeSaveStatus }> = ({ status }) => {
   const content =
@@ -249,6 +251,20 @@ const EditorView: React.FC = () => {
         description: 'Open a .json file saved from ModernCV.',
         icon: <UploadIcon className="h-4 w-4" />,
         onSelect: () => fileInputRef.current?.click(),
+      },
+    ],
+    [
+      {
+        label: 'Open in Overleaf',
+        description: 'Continue in LaTeX: a new Overleaf project with this resume.',
+        icon: <CodeIcon className="h-4 w-4" />,
+        onSelect: () => openInOverleaf(resumeData),
+      },
+      {
+        label: 'Download LaTeX (.tex)',
+        description: 'A standalone .tex file for pdfLaTeX or XeLaTeX.',
+        icon: <FileIcon className="h-4 w-4" />,
+        onSelect: () => downloadLatex(resumeData),
       },
     ],
     [

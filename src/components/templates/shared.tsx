@@ -152,7 +152,7 @@ export const ContactItem: React.FC<{ entry: ContactEntry; iconClassName?: string
     );
 };
 
-const BULLET_PATTERN = /^\s*(?:[-*•·▪–]|\d+[.)])\s+/;
+export const BULLET_PATTERN = /^\s*(?:[-*•·▪–]|\d+[.)])\s+/;
 
 /**
  * Renders free text from the editor: lines starting with "-", "•", "*" or "1." become a
@@ -253,7 +253,7 @@ const escapeRegExp = (value: string) => value.replace(/[.*+?^${}()|[\]\\]/g, '\\
  * Spellings of the owner's name as it appears in author lists: "Pat Lee", "P. Lee", "Lee, P.",
  * "Lee P", "P Lee". Matching is case-insensitive; returns null when there is no surname.
  */
-const ownerNamePattern = (fullName: string): RegExp | null => {
+export const ownerNamePattern = (fullName: string): RegExp | null => {
     const words = fullName.trim().split(/\s+/).filter(Boolean);
     if (words.length < 2) return words.length ? new RegExp(`(\\b${escapeRegExp(words[0])}\\b)`, 'gi') : null;
     const first = words[0];

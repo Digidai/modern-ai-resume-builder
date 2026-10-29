@@ -90,7 +90,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 49 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar. Scholar, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs.
+ModernCV ships with 49 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar. Scholar, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs. Publications can be imported from BibTeX or ORCID, and any resume can be opened in Overleaf or downloaded as LaTeX.
 
 Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 

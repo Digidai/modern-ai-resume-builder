@@ -18,6 +18,7 @@
   --rf-tinos: "Tinos", "Times New Roman", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-charis: "Charis SIL", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-plex-serif: "IBM Plex Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
+  --rf-latin-modern: "Latin Modern Roman", "CMU Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
   --rf-jetbrains: "JetBrains Mono", ui-monospace, "PingFang SC", "Noto Sans CJK SC", monospace;
 }
 
@@ -35,6 +36,7 @@
   --font-tinos: var(--rf-tinos);
   --font-charis: var(--rf-charis);
   --font-plex-serif: var(--rf-plex-serif);
+  --font-latin-modern: var(--rf-latin-modern);
   --font-jetbrains: var(--rf-jetbrains);
 }
 

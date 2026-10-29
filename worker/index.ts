@@ -4,6 +4,7 @@ import {
   type AiRequest,
 } from '../src/shared/aiContract';
 import { handleAgentRequest } from './agent';
+import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
 interface Env {
   ASSETS: {
@@ -84,6 +85,8 @@ interface DurableObjectStateLike {
 
 const API_PATH = '/api/ai';
 const PDF_PATH = '/api/pdf';
+const ORCID_PATH = '/api/orcid';
+const ORCID_RATE_LIMIT = 20;
 const MAX_PDF_BODY_BYTES = 6 * 1024 * 1024;
 const PDF_TIMEOUT_MS = 45000;
 const SESSION_PATH = '/api/ai/session';
@@ -1282,7 +1285,7 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
         "connect-src 'self' data:",
         "object-src 'none'",
         "base-uri 'self'",
-        "form-action 'self'",
+        "form-action 'self' https://www.overleaf.com",
         "frame-ancestors 'none'",
       ].join('; ')
     );
@@ -1381,6 +1384,23 @@ export class RateLimiter {
   }
 }
 
+/** GET /api/orcid?id=0000-0002-1825-0097 → { orcid, publications } from the public ORCID record. */
+const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise<Response> => {
+  if (request.method !== 'GET') return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Use GET.');
+  const orcid = normalizeOrcid(url.searchParams.get('id') ?? '');
+  if (!orcid) return errorResponse(400, 'INVALID_REQUEST', 'Enter an ORCID iD such as 0000-0002-1825-0097.');
+  const limit = await consumeRateLimit(env, `orcid:ip:${getClientIp(request)}`, ORCID_RATE_LIMIT);
+  if (!limit.allowed) return appendRateLimitHeaders(errorResponse(429, 'RATE_LIMITED', 'Rate limit reached. Please wait a minute and try again.'), limit);
+  try {
+    const publications = await fetchOrcidPublications(orcid);
+    return jsonResponse({ orcid, publications: publications.map(({ id: _id, ...rest }) => rest) });
+  } catch (error) {
+    if (error instanceof OrcidError) return errorResponse(error.status, error.code, error.message);
+    console.error('[orcid] failed', error);
+    return errorResponse(502, 'UPSTREAM_UNAVAILABLE', 'Could not reach ORCID. Try again later.');
+  }
+};
+
 export default {
   async fetch(request: Request, env: Env): Promise<Response> {
     const url = new URL(request.url);
@@ -1416,6 +1436,11 @@ export default {
 
     if (url.pathname === PDF_PATH) {
       response = await handlePdfRequest(request, env);
+      return finalizeResponse(request, env, response);
+    }
+
+    if (url.pathname === ORCID_PATH) {
+      response = await handleOrcidRequest(request, env, url);
       return finalizeResponse(request, env, response);
     }
 

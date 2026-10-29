@@ -31,7 +31,7 @@ Base URL: `https://genedai.cv`. JSON in, JSON/PDF/PNG out. CORS is open. Renderi
 | `POST /api/agent/preview` | same | `image/png` of page 1; headers `x-resume-pages`, `x-resume-warnings` |
 | `POST /api/agent/pdf` | same | `application/pdf` (A4, selectable text) |
 
-`template` is an id from the templates list (default `modern`). `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif`. `scale` is 0.85–1.15.
+`template` is an id from the templates list (default `modern`). `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif, latin-modern`. `scale` is 0.85–1.15.
 
 ```bash
 curl -s https://genedai.cv/api/agent/pdf \

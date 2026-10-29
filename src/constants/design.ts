@@ -31,6 +31,7 @@ const OVERRIDABLE_FAMILIES = [
   'tinos',
   'charis',
   'plex-serif',
+  'latin-modern',
 ] as const;
 
 export const FONT_PRESETS = [
@@ -44,6 +45,7 @@ export const FONT_PRESETS = [
   { id: 'garamond', name: 'EB Garamond', kind: 'Serif', family: 'garamond' },
   { id: 'tinos', name: 'Tinos (Times)', kind: 'Serif', family: 'tinos' },
   { id: 'plex-serif', name: 'IBM Plex Serif', kind: 'Serif', family: 'plex-serif' },
+  { id: 'latin-modern', name: 'Latin Modern (LaTeX)', kind: 'Serif', family: 'latin-modern' },
 ] as const;
 
 export const SCALE_MIN = 0.85;

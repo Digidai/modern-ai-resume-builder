@@ -7,6 +7,10 @@ All notable changes to this project will be documented in this file.
 - Five ATS-friendly templates: Plain (the most basic black-and-white resume), Text (text only, no rules or colour), Graduate (education and skills first), Wall Street (investment-banking format) and Scholar (academic CV). 49 templates in total.
 - Publications: a new editor section (title, authors, venue, year, DOI) for academic and research CVs, shown by Scholar, Academic, Plain, Text and Graduate, with your name bolded in the author list. Accepted by the schema, MCP and API, and imported from JSON Resume.
 - Grants and awards (title, funder, year, amount or role) and Talks (title, event, location, year): two more academic CV sections, shown by the same templates as Publications. Scholar puts their years in its gutter. Accepted by the schema, MCP and API; JSON Resume `awards` are imported.
+- Import publications from BibTeX (paste or upload a .bib from Google Scholar, DBLP, Zotero) or from a public ORCID record, with a review list that skips works already on the resume. New `/api/orcid` endpoint.
+- Open in Overleaf and Download LaTeX (.tex): the resume as a standalone LaTeX document (pdfLaTeX, or XeLaTeX with xeCJK for Chinese/Japanese/Korean text).
+- Latin Modern (the default LaTeX typeface) as a font option.
+- Tabs opened before a deploy reload once instead of failing to load a page.
 - Teaching (course, role, institution, year) for courses taught and TA roles, shown by the same templates.
 - Faster first load: each page is its own chunk, so the main script is 216 KB (68 KB gzipped) instead of 503 KB. The pre-rendered page stays visible until its chunk is ready.
 - Photo CVs: an optional photo in the editor (cropped to 3:4 and compressed in the browser, never uploaded) and four photo templates: Europa (Europass style), Tokyo (rirekisho-style ruled form), Jade (Chinese-style ID photo header) and Portrait (round photo sidebar). Halo shows the photo instead of initials. The resume schema, MCP and API accept `photo` (and JSON Resume `basics.image` data URLs); `list_templates` marks photo templates. 44 templates in total.

@@ -1011,7 +1011,7 @@ const buildResumeSchema = (siteUrl, templates) => {
         type: 'object',
         properties: {
           accent: { type: 'string', pattern: '^(#[0-9A-Fa-f]{6})?$', description: 'Accent colour; empty for the template default.' },
-          font: { type: 'string', enum: ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif'] },
+          font: { type: 'string', enum: ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif', 'latin-modern'] },
           scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1 },
         },
       },
@@ -1120,7 +1120,7 @@ const buildResumeSchema = (siteUrl, templates) => {
   };
 };
 
-const FONT_IDS = ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif'];
+const FONT_IDS = ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif', 'latin-modern'];
 
 /** OpenAPI 3.1 description of the agent HTTP API served by the Worker (worker/agent.ts). */
 const buildOpenApi = (siteUrl, templates) => {
