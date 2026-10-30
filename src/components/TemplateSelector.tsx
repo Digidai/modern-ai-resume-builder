@@ -20,6 +20,7 @@ import { AgentPromptCard } from './AgentPromptCard';
 import { buildAgentPrompt } from '../shared/agentPrompt.mjs';
 import { loadRoleExample, type RoleExample } from '../data/roleExamples';
 import { buildJobPageTitle, describeExample, exampleToResume } from '../shared/roleExample.mjs';
+import { trimExample } from '../shared/trimExample.mjs';
 import { getPersonaFullNameForJobTitle } from '../data/personas';
 import { BLANK_RESUME_DATA, createId } from '../utils/resumeData';
 
@@ -90,10 +91,20 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
         };
     }, [resolvedJobTitle, categoryName]);
     const personaName = useMemo(() => getPersonaFullNameForJobTitle(resolvedJobTitle), [resolvedJobTitle]);
-    const exampleResume = useMemo(
-        () => (example ? exampleToResume({ title: resolvedJobTitle, fullName: personaName, example, makeId: createId }) : null),
-        [example, resolvedJobTitle, personaName]
-    );
+    const letter = resumeData.design.paper === 'letter';
+    // The example as each template shows it. On US Letter a few expressive templates need a shorter
+    // version to stay on one page (`example.trimLetter`, a trim level per template); the rest show it whole.
+    const exampleFor = useMemo(() => {
+        if (!example) return null;
+        const byLevel = new Map<number, ReturnType<typeof exampleToResume>>();
+        return (templateId: string) => {
+            const level = letter ? example.trimLetter?.[templateId] ?? 0 : 0;
+            if (!byLevel.has(level))
+                byLevel.set(level, exampleToResume({ title: resolvedJobTitle, fullName: personaName, example: level ? trimExample(example, level) : example, makeId: createId }));
+            return byLevel.get(level)!;
+        };
+    }, [example, resolvedJobTitle, personaName, letter]);
+    const exampleResume = exampleFor?.(selectedTemplateId) ?? null;
     const seoDescription = example
         ? describeExample(resolvedJobTitle, example, TEMPLATES.length)
         : buildJobSeoDescription(resolvedJobTitle, categoryName);
@@ -193,11 +204,11 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     });
 
     // Previews show the role's example (with the user's style settings); without one, the user's own resume.
-    // The example always fits on one A4 page: `example.fit` gives the text size each template needs (default 1),
-    // capped by the user's own size setting.
+    // The example always fits on one page: `example.fit` (A4) and `example.fitLetter` (US Letter) give the text
+    // size each template needs (default 1), capped by the user's own size setting.
     const exampleScale = useCallback(
-        (templateId: string) => Math.min(resumeData.design.scale || 1, example?.fit?.[templateId] ?? 1),
-        [resumeData.design.scale, example]
+        (templateId: string) => Math.min(resumeData.design.scale || 1, (letter ? example?.fitLetter : example?.fit)?.[templateId] ?? 1),
+        [resumeData.design.scale, example, letter]
     );
     const previewData: ResumeData = useMemo(() => {
         if (exampleResume)
@@ -217,9 +228,9 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     const thumbnailData = useMemo(() => {
         if (!exampleResume) return null;
         return Object.fromEntries(
-            TEMPLATES.map((t) => [t.id, { ...previewData, design: { ...previewData.design, scale: exampleScale(t.id) }, templateId: t.id }])
+            TEMPLATES.map((t) => [t.id, { ...previewData, ...exampleFor?.(t.id), design: { ...previewData.design, scale: exampleScale(t.id) }, templateId: t.id }])
         ) as Record<string, ResumeData>;
-    }, [exampleResume, previewData, exampleScale]);
+    }, [exampleResume, exampleFor, previewData, exampleScale]);
 
     const relatedTitles = useMemo(() => {
         if (!categoryName) return [];

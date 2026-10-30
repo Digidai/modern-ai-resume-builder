@@ -3,13 +3,11 @@ import { ResumeData } from '../types';
 import ResumePreview from './ResumePreview';
 import { isFullBleedTemplate } from '../constants/templates';
 import { buildPageSheets } from '../utils/printLayout';
+import { MM_TO_PX, paperSize } from '../constants/print';
 
 /** Space between sheets in the page view, in unscaled px. */
 const SHEET_GAP_PX = 28;
 
-/** A4 width at 96 dpi; the paper is always laid out at this width and then scaled. */
-const A4_WIDTH_PX = (210 / 25.4) * 96;
-const A4_HEIGHT_PX = (297 / 25.4) * 96;
 
 interface ScaledResumePreviewProps {
   data: ResumeData;
@@ -17,7 +15,7 @@ interface ScaledResumePreviewProps {
   templateId?: string;
   /**
    * `page`: full document at natural height (main preview; exported to PDF when `exportable`).
-   * `thumbnail`: first page only, clipped to the A4 aspect ratio, not interactive.
+   * `thumbnail`: first page only, clipped to the page's aspect ratio, not interactive.
    */
   mode?: 'page' | 'thumbnail';
   /** Marks this preview as the one PDF export captures (DOM id `resume-preview-container`). */
@@ -25,10 +23,10 @@ interface ScaledResumePreviewProps {
   /** Upper bound for the scale factor in page mode (1 = true size). */
   maxScale?: number;
   className?: string;
-  /** Called with the document height in A4 pages (e.g. 1.3) whenever it changes. */
+  /** Called with the document height in pages (e.g. 1.3) whenever it changes. */
   onPages?: (pages: number) => void;
   /**
-   * Page mode only. `pages`: separate A4 sheets laid out exactly as printed (breaks, margins and
+   * Page mode only. `pages`: separate sheets laid out exactly as printed (breaks, margins and
    * repeated backgrounds). `continuous`: one long sheet with dashed lines where pages start.
    */
   view?: 'pages' | 'continuous';
@@ -76,7 +74,7 @@ const PageSheets: React.FC<{ paperHost: React.RefObject<HTMLDivElement | null>; 
 };
 
 /**
- * Renders the resume at true A4 width and scales it to fit its container, so the layout is
+ * Renders the resume at the true width of its paper (A4 or US Letter) and scales it to fit its container, so the layout is
  * identical on phones, in thumbnails, and in the exported PDF.
  */
 export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
@@ -94,7 +92,11 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
   const innerRef = useRef<HTMLDivElement>(null);
   const [scale, setScale] = useState(0);
   const [outerWidth, setOuterWidth] = useState(0);
-  const [contentHeight, setContentHeight] = useState(A4_HEIGHT_PX);
+  // The paper is always laid out at its real width at 96 dpi and then scaled.
+  const page = paperSize(data.design?.paper);
+  const PAGE_WIDTH_PX = page.widthMm * MM_TO_PX;
+  const PAGE_HEIGHT_PX = page.heightMm * MM_TO_PX;
+  const [contentHeight, setContentHeight] = useState(PAGE_HEIGHT_PX);
   const onPagesRef = useRef(onPages);
   onPagesRef.current = onPages;
 
@@ -106,9 +108,9 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
     const update = () => {
       const width = outer.clientWidth;
       setOuterWidth(width);
-      if (width > 0) setScale(Math.min(mode === 'page' ? maxScale : Infinity, width / A4_WIDTH_PX));
-      setContentHeight(inner.offsetHeight || A4_HEIGHT_PX);
-      if (inner.offsetHeight) onPagesRef.current?.(inner.offsetHeight / A4_HEIGHT_PX);
+      if (width > 0) setScale(Math.min(mode === 'page' ? maxScale : Infinity, width / PAGE_WIDTH_PX));
+      setContentHeight(inner.offsetHeight || PAGE_HEIGHT_PX);
+      if (inner.offsetHeight) onPagesRef.current?.(inner.offsetHeight / PAGE_HEIGHT_PX);
     };
     update();
 
@@ -116,18 +118,18 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
     observer.observe(outer);
     observer.observe(inner);
     return () => observer.disconnect();
-  }, [mode, maxScale]);
+  }, [mode, maxScale, PAGE_WIDTH_PX, PAGE_HEIGHT_PX]);
 
   const resolvedData = templateId ? { ...data, templateId } : data;
   const isThumbnail = mode === 'thumbnail';
   const paged = !isThumbnail && view === 'pages';
-  const height = isThumbnail ? A4_HEIGHT_PX * scale : contentHeight * scale;
+  const height = isThumbnail ? PAGE_HEIGHT_PX * scale : contentHeight * scale;
 
   return (
     <div
       ref={outerRef}
       className={`relative w-full ${isThumbnail ? 'overflow-hidden select-none pointer-events-none' : ''} ${className}`}
-      style={{ height: scale ? height : undefined, aspectRatio: scale ? undefined : '210 / 297' }}
+      style={{ height: scale ? height : undefined, aspectRatio: scale ? undefined : `${page.widthMm} / ${page.heightMm}` }}
       aria-hidden={isThumbnail || undefined}
       inert={isThumbnail || undefined}
     >
@@ -135,10 +137,10 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
         ref={innerRef}
         className="absolute top-0 origin-top-left"
         style={{
-          width: A4_WIDTH_PX,
+          width: PAGE_WIDTH_PX,
           transform: `scale(${scale || 0.0001})`,
           // Centered when capped by maxScale and narrower than the container.
-          left: Math.max(0, (outerWidth - A4_WIDTH_PX * scale) / 2),
+          left: Math.max(0, (outerWidth - PAGE_WIDTH_PX * scale) / 2),
           visibility: scale ? 'visible' : 'hidden',
         }}
       >

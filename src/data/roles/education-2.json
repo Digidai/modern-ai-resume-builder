@@ -52,6 +52,18 @@
         "bronx": 0.91,
         "mono": 0.97,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "silk": 0.95,
+        "minimalist": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.94
       }
     },
     "Daycare Teacher": {
@@ -101,6 +113,24 @@
         "quartz": 0.92,
         "bronx": 0.86,
         "mono": 0.97,
+        "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.95,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.95,
+        "creative": 0.91,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
         "pop": 0.85
       }
     },
@@ -159,6 +189,34 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "silk": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.95,
+        "halo": 0.99,
+        "tokyo": 0.98,
+        "sidebar": 0.92,
+        "creative": 0.89,
+        "professional": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.97,
+        "wireframe": 0.99,
+        "moda": 0.96,
+        "noir": 0.99,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.94,
+        "quartz": 0.85,
+        "bronx": 0.87
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Music Teacher": {
@@ -207,6 +265,18 @@
         "bronx": 0.89,
         "mono": 0.98,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "sidebar": 0.99,
+        "creative": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.89
       }
     },
     "Art Teacher": {
@@ -253,6 +323,16 @@
         "quartz": 0.91,
         "bronx": 0.87,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.9
       }
     },
     "Physical Education Teacher": {
@@ -299,6 +379,17 @@
         "quartz": 0.92,
         "bronx": 0.85,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "sidebar": 0.96,
+        "creative": 0.95,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "pop": 0.86
       }
     },
     "Online Tutor": {
@@ -340,6 +431,13 @@
       "fit": {
         "berlin": 0.98,
         "bronx": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "pop": 0.96
       }
     },
     "Teaching English Abroad": {
@@ -396,6 +494,27 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "minimalist": 0.95,
+        "sidebar": 0.9,
+        "creative": 0.94,
+        "professional": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "wireframe": 0.99,
+        "mono": 0.95,
+        "pop": 0.94,
+        "cast": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Paraprofessional": {
@@ -442,6 +561,16 @@
         "quartz": 0.91,
         "bronx": 0.86,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.88
       }
     },
     "History Teacher": {
@@ -499,6 +628,29 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "silk": 0.93,
+        "minimalist": 0.97,
+        "sidebar": 0.88,
+        "creative": 0.88,
+        "professional": 0.95,
+        "elegant": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "wireframe": 0.96,
+        "moda": 0.95,
+        "mono": 0.95,
+        "pop": 0.86,
+        "cast": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Chemistry Teacher": {
@@ -556,6 +708,21 @@
         "bronx": 0.88,
         "mono": 0.97,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Coding Bootcamp Instructor": {
@@ -600,6 +767,18 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "professional": 0.97,
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "bronx": 0.85,
+        "pop": 0.9,
+        "quartz": 0.91
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     }
   }

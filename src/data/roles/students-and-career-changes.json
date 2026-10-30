@@ -87,6 +87,15 @@
         "berlin": 0.96,
         "quartz": 0.97,
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.95,
+        "iron": 0.99,
+        "ginto": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "pop": 0.99
       }
     },
     "College Student": {
@@ -137,6 +146,17 @@
         "iron": 0.92,
         "ginto": 0.92,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.91,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "quartz": 0.99,
+        "bronx": 0.96,
+        "mono": 0.97,
+        "pop": 0.91
       }
     },
     "Recent College Graduate": {
@@ -189,6 +209,19 @@
         "quartz": 0.99,
         "bronx": 0.98,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "opal": 0.96,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.94,
+        "pop": 0.86
       }
     },
     "Entry Level": {
@@ -229,6 +262,12 @@
       ],
       "fit": {
         "bronx": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.91,
+        "pop": 0.99
       }
     },
     "Internship": {
@@ -280,6 +319,17 @@
         "ginto": 0.92,
         "bronx": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.97,
+        "pop": 0.85
       }
     },
     "Career Change": {
@@ -346,6 +396,38 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "timeline": 0.99,
+        "executive": 0.89,
+        "academic": 0.96,
+        "tech": 0.96,
+        "silk": 0.9,
+        "opal": 0.91,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.99,
+        "tokyo": 0.9,
+        "prism": 0.96,
+        "sidebar": 0.97,
+        "creative": 0.99,
+        "swiss": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.99,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.88,
+        "iron": 0.91
+      },
+      "trimLetter": {
+        "berlin": 8,
+        "iron": 8
       }
     },
     "Stay-at-Home Parent Returning to Work": {
@@ -406,6 +488,20 @@
         "quartz": 0.94,
         "bronx": 0.93,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "executive": 0.98,
+        "silk": 0.99,
+        "minimalist": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.96,
+        "ginto": 0.97,
+        "path": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.98
       }
     },
     "Career Gap": {
@@ -471,6 +567,27 @@
         "mono": 0.94,
         "pop": 0.89,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.96,
+        "silk": 0.95,
+        "opal": 0.95,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "sidebar": 0.98,
+        "creative": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "symmetry": 0.96,
+        "path": 0.94,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.93
       }
     },
     "Older Worker": {
@@ -516,6 +633,15 @@
         "quartz": 0.95,
         "bronx": 0.92,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.92,
+        "iron": 0.91,
+        "ginto": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "pop": 0.92
       }
     },
     "First Job": {
@@ -553,7 +679,10 @@
         "Work habits: punctual, follows instructions, teamwork, works well outdoors",
         "Computer: Google Docs, Google Sheets",
         "Languages: English and basic Spanish"
-      ]
+      ],
+      "fitLetter": {
+        "bronx": 0.99
+      }
     },
     "Part-Time Job": {
       "summary": "Community college student seeking a part-time retail, cafe or front desk job with evening and weekend availability. Balance a full course load with 20 hours a week of work and earned a customer service award at my current grocery job. Brings cash handling, opening and closing experience and a steady schedule.",
@@ -593,6 +722,10 @@
       ],
       "fit": {
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "berlin": 0.99,
+        "bronx": 0.94
       }
     },
     "Summer Job": {
@@ -630,7 +763,10 @@
         "Certifications: Lifeguard with CPR/AED and First Aid, Water Safety Instructor in progress",
         "Skills: child supervision, activity planning, swimming instruction, teamwork",
         "Availability: full-time June 1 to August 15"
-      ]
+      ],
+      "fitLetter": {
+        "bronx": 0.97
+      }
     },
     "Nanny": {
       "summary": "Professional nanny with 7 years caring for infants through school-age children for 3 families. Supported one family through newborn twins, establishing a sleep routine that had both babies sleeping 7 hours by 4 months. Brings CPR and First Aid certification, newborn care training and a clean driving record.",
@@ -674,6 +810,14 @@
         "quartz": 0.97,
         "bronx": 0.91,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.93,
+        "iron": 0.92,
+        "ginto": 0.95,
+        "quartz": 0.91,
+        "bronx": 0.86,
+        "pop": 0.95
       }
     },
     "Babysitter": {
@@ -714,6 +858,11 @@
       ],
       "fit": {
         "bronx": 0.98
+      },
+      "fitLetter": {
+        "iron": 0.99,
+        "quartz": 0.98,
+        "bronx": 0.96
       }
     },
     "Freelancer": {
@@ -757,6 +906,14 @@
         "ginto": 0.99,
         "quartz": 0.97,
         "bronx": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.97,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "pop": 0.99
       }
     },
     "Gig Worker": {
@@ -811,6 +968,17 @@
         "ginto": 0.94,
         "mono": 0.97,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.95,
+        "bronx": 0.94,
+        "mono": 0.98,
+        "pop": 0.94
       }
     },
     "Computer Science Graduate": {
@@ -873,6 +1041,24 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.92,
+        "academic": 0.98,
+        "tech": 0.96,
+        "silk": 0.95,
+        "opal": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "swiss": 0.94,
+        "berlin": 0.9,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.88
       }
     }
   }

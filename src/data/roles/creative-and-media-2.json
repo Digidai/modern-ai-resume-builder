@@ -59,6 +59,24 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Translator": {
@@ -114,6 +132,23 @@
         "bronx": 0.88,
         "mono": 0.99,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.93,
+        "tokyo": 0.98,
+        "sidebar": 0.97,
+        "creative": 0.95,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.92,
+        "cast": 0.99
       }
     },
     "Interpreter": {
@@ -160,6 +195,15 @@
         "quartz": 0.98,
         "bronx": 0.89,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "pop": 0.92
       }
     },
     "YouTuber": {
@@ -206,6 +250,17 @@
         "quartz": 0.88,
         "bronx": 0.88,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "creative": 0.99,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.9
       }
     },
     "Voice Actor": {
@@ -266,6 +321,30 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.97,
+        "academic": 0.99,
+        "tech": 0.98,
+        "silk": 0.97,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.92,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.91,
+        "iron": 0.89
+      },
+      "trimLetter": {
+        "iron": 8
       }
     },
     "Actor": {
@@ -312,6 +391,14 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "pop": 0.88
       }
     },
     "Makeup Artist": {
@@ -373,6 +460,32 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.92,
+        "opal": 0.91,
+        "scholar": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.92,
+        "prism": 0.93,
+        "creative": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "moda": 0.98,
+        "mono": 0.87,
+        "cast": 0.91,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "pop": 0.9
+      },
+      "trimLetter": {
+        "iron": 8,
+        "ginto": 8,
+        "pop": 8
       }
     },
     "Fashion Designer": {
@@ -431,6 +544,28 @@
         "mono": 0.91,
         "pop": 0.86,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.9,
+        "opal": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "prism": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.92,
+        "iron": 0.94
+      },
+      "trimLetter": {
+        "iron": 8
       }
     },
     "Tattoo Artist": {
@@ -494,6 +629,34 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.97,
+        "tech": 0.98,
+        "silk": 0.88,
+        "opal": 0.91,
+        "scholar": 0.92,
+        "minimalist": 0.88,
+        "europa": 0.99,
+        "tokyo": 0.88,
+        "prism": 0.91,
+        "swiss": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.86,
+        "cast": 0.92,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "pop": 0.86
+      },
+      "trimLetter": {
+        "berlin": 8,
+        "iron": 8,
+        "ginto": 8,
+        "pop": 8
       }
     }
   }

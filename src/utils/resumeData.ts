@@ -53,7 +53,8 @@ export const sanitizeDesign = (input: unknown): ResumeDesign => {
   const accent = typeof raw.accent === 'string' && /^#[0-9a-f]{6}$/i.test(raw.accent) ? raw.accent : '';
   const font = typeof raw.font === 'string' && raw.font ? raw.font : DEFAULT_DESIGN.font;
   const scale = typeof raw.scale === 'number' && Number.isFinite(raw.scale) ? Math.min(1.15, Math.max(0.85, raw.scale)) : 1;
-  return { accent, font, scale };
+  const paper = raw.paper === 'letter' ? 'letter' : 'a4';
+  return { accent, font, scale, paper };
 };
 
 const obj = (value: unknown): Record<string, unknown> =>
@@ -143,15 +144,19 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   const known = ['fullName', 'title', 'summary', 'experience', 'education', 'skills', 'projects'];
   if (!known.some((key) => key in raw)) return null;
 
-  const experience: Experience[] = list(raw.experience).map((item) => ({
-    id: str(item.id) || createId(),
-    company: str(item.company),
-    role: str(item.role),
-    startDate: str(item.startDate),
-    endDate: str(item.endDate),
-    isCurrent: item.isCurrent === true,
-    description: str(item.description),
-  }));
+  const experience: Experience[] = list(raw.experience).map((item) => {
+    const hours = (typeof item.hours === 'number' ? String(item.hours) : str(item.hours)).trim();
+    return {
+      id: str(item.id) || createId(),
+      company: str(item.company),
+      role: str(item.role),
+      startDate: str(item.startDate),
+      endDate: str(item.endDate),
+      isCurrent: item.isCurrent === true,
+      description: str(item.description),
+      ...(hours ? { hours } : {}),
+    };
+  });
   const education: Education[] = list(raw.education).map((item) => ({
     id: str(item.id) || createId(),
     school: str(item.school),

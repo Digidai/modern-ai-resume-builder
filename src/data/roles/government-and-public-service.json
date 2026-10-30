@@ -86,6 +86,14 @@
         "berlin": 0.96,
         "quartz": 0.99,
         "bronx": 0.91
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.9,
+        "iron": 0.94,
+        "ginto": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.87
       }
     },
     "Policy Analyst": {
@@ -137,6 +145,20 @@
         "quartz": 0.89,
         "bronx": 0.88,
         "mono": 0.95
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.95,
+        "tokyo": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.98,
+        "ginto": 0.95,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "cast": 0.98
       }
     },
     "Senior Policy Analyst": {
@@ -194,6 +216,21 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "silk": 0.95,
+        "minimalist": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.87,
+        "cast": 0.99
       }
     },
     "Policy Advisor": {
@@ -247,6 +284,22 @@
         "bronx": 0.88,
         "mono": 0.94,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.98,
+        "silk": 0.95,
+        "opal": 0.99,
+        "minimalist": 0.95,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.96,
+        "symmetry": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.91
       }
     },
     "Legislative Assistant": {
@@ -306,6 +359,28 @@
         "bronx": 0.97,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.98,
+        "silk": 0.97,
+        "opal": 0.94,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "path": 0.94,
+        "quartz": 0.98,
+        "bronx": 0.92,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Legislative Director": {
@@ -375,6 +450,29 @@
         "mono": 0.9,
         "pop": 0.93,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.94,
+        "tech": 0.97,
+        "silk": 0.88,
+        "lateral": 0.97,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.92,
+        "path": 0.94,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.86,
+        "pop": 0.89,
+        "cast": 0.93
       }
     },
     "City Planner": {
@@ -431,6 +529,30 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.98,
+        "tech": 0.98,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "sidebar": 0.94,
+        "creative": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.87,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.95,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "bronx": 10
       }
     },
     "Transportation Planner": {
@@ -479,6 +601,19 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.87
       }
     },
     "Planning Director": {
@@ -538,6 +673,26 @@
         "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "silk": 0.93,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.99,
+        "bronx": 0.91,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Budget Analyst": {
@@ -606,6 +761,29 @@
         "mono": 0.89,
         "pop": 0.87,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.94,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.9,
+        "scholar": 0.98,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.94,
+        "creative": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "Management Analyst": {
@@ -667,6 +845,27 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "scholar": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.95,
+        "sidebar": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.95,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Program Analyst": {
@@ -730,6 +929,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Contract Specialist": {
@@ -789,6 +1009,26 @@
         "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.91,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Public Affairs Specialist": {
@@ -856,6 +1096,39 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.95,
+        "silk": 0.95,
+        "lateral": 0.96,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "tokyo": 0.91,
+        "prism": 0.92,
+        "sidebar": 0.99,
+        "creative": 0.99,
+        "swiss": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.92,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "noir": 0.96,
+        "mono": 0.87,
+        "cast": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "pop": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6,
+        "iron": 6,
+        "pop": 6
       }
     },
     "Intelligence Analyst": {
@@ -912,6 +1185,23 @@
         "bronx": 0.87,
         "mono": 0.94,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "silk": 0.93,
+        "minimalist": 0.95,
+        "tokyo": 0.97,
+        "creative": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.89,
+        "symmetry": 0.97,
+        "path": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.95,
+        "cast": 0.98
       }
     },
     "Emergency Management Specialist": {
@@ -969,6 +1259,25 @@
         "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "path": 0.94,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.94
       }
     },
     "Economic Development Specialist": {
@@ -1027,6 +1336,28 @@
         "mono": 0.92,
         "pop": 0.91,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.93,
+        "opal": 0.99,
+        "scholar": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.93,
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.99,
+        "path": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.87,
+        "cast": 0.95
       }
     },
     "Code Enforcement Officer": {
@@ -1085,6 +1416,24 @@
         "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "silk": 0.93,
+        "opal": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.94,
+        "bronx": 0.94,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.95
       }
     },
     "Police Officer": {
@@ -1139,6 +1488,22 @@
         "bronx": 0.88,
         "mono": 0.94,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "silk": 0.92,
+        "opal": 0.99,
+        "minimalist": 0.95,
+        "tokyo": 0.99,
+        "creative": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "symmetry": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.97
       }
     },
     "Firefighter": {
@@ -1206,6 +1571,28 @@
         "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.88,
+        "opal": 0.93,
+        "scholar": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.94,
+        "sidebar": 0.94,
+        "creative": 0.93,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "Probation Officer": {
@@ -1262,6 +1649,21 @@
         "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.99
       }
     },
     "City Clerk": {
@@ -1320,6 +1722,25 @@
         "bronx": 0.98,
         "mono": 0.93,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.97,
+        "silk": 0.95,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "bronx": 0.94,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Assistant City Manager": {
@@ -1381,6 +1802,28 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "tech": 0.98,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "prism": 0.99,
+        "sidebar": 0.99,
+        "creative": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "City Manager": {
@@ -1455,6 +1898,37 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.92,
+        "academic": 0.96,
+        "tech": 0.96,
+        "silk": 0.91,
+        "lateral": 0.94,
+        "opal": 0.9,
+        "meridian": 0.99,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.93,
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "professional": 0.99,
+        "elegant": 0.99,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "path": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 10
       }
     }
   }

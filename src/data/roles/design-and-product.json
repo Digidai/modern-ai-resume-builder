@@ -47,6 +47,19 @@
         "quartz": 0.89,
         "bronx": 0.87,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "silk": 0.95,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.87
       }
     },
     "Senior Product Designer": {
@@ -112,6 +125,30 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.99,
+        "meridian": 0.98,
+        "scholar": 0.93,
+        "minimalist": 0.87,
+        "tokyo": 0.92,
+        "prism": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Lead Product Designer": {
@@ -173,6 +210,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Principal Product Designer": {
@@ -239,6 +298,28 @@
         "bronx": 0.94,
         "mono": 0.89,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "tokyo": 0.92,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.92,
+        "path": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.85,
+        "pop": 0.88,
+        "cast": 0.96
       }
     },
     "Product Design Lead": {
@@ -301,6 +382,26 @@
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.95,
+        "silk": 0.92,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "UX Designer": {
@@ -355,6 +456,24 @@
         "bronx": 0.85,
         "mono": 0.99,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.99,
+        "sidebar": 0.99,
+        "creative": 0.96,
+        "swiss": 0.95,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.92,
+        "cast": 0.99,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Senior UX Designer": {
@@ -416,6 +535,29 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.9,
+        "opal": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "prism": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.91,
+        "quartz": 0.94
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "UX Researcher": {
@@ -466,6 +608,17 @@
         "quartz": 0.92,
         "bronx": 0.85,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "minimalist": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.98,
+        "ginto": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.96
       }
     },
     "User Researcher": {
@@ -522,6 +675,24 @@
         "bronx": 0.86,
         "mono": 0.99,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.93,
+        "sidebar": 0.96,
+        "creative": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "symmetry": 0.99,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.94,
+        "quartz": 0.89
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Research Operations Manager": {
@@ -583,6 +754,32 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "tech": 0.99,
+        "silk": 0.95,
+        "opal": 0.93,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "prism": 0.96,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93,
+        "quartz": 0.97
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "UI Designer": {
@@ -629,6 +826,16 @@
         "quartz": 0.9,
         "bronx": 0.87,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.96,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.93
       }
     },
     "Senior UI Designer": {
@@ -693,6 +900,29 @@
         "mono": 0.91,
         "pop": 0.86,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.92,
+        "lateral": 0.96,
+        "opal": 0.97,
+        "meridian": 0.94,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.93,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "UI/UX Designer": {
@@ -748,6 +978,25 @@
         "bronx": 0.86,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.93,
+        "tokyo": 0.95,
+        "prism": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "moda": 0.99,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Interaction Designer": {
@@ -798,6 +1047,18 @@
         "berlin": 0.94,
         "quartz": 0.95,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.96,
+        "ginto": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.95,
+        "pop": 0.98
       }
     },
     "Service Designer": {
@@ -854,6 +1115,29 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "sidebar": 0.94,
+        "creative": 0.9,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.92,
+        "symmetry": 0.97,
+        "mono": 0.9,
+        "pop": 0.91,
+        "cast": 0.97,
+        "quartz": 0.91,
+        "bronx": 0.87
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "UX Architect": {
@@ -911,6 +1195,23 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "UX Strategist": {
@@ -969,6 +1270,25 @@
         "bronx": 0.88,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.95,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "creative": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Design Strategist": {
@@ -1016,6 +1336,17 @@
       "fit": {
         "berlin": 0.96,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "UX Engineer": {
@@ -1062,6 +1393,18 @@
         "ginto": 0.92,
         "quartz": 0.93,
         "bronx": 0.91,
+        "pop": 0.95
+      },
+      "fitLetter": {
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.87,
+        "iron": 0.93,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.94,
         "pop": 0.95
       }
     },
@@ -1111,6 +1454,18 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.9,
+        "cast": 0.98
       }
     },
     "Visual Designer": {
@@ -1168,6 +1523,28 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.94,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "cast": 0.92,
+        "iron": 0.9
+      },
+      "trimLetter": {
+        "iron": 8
       }
     },
     "Brand Designer": {
@@ -1214,6 +1591,18 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.88
       }
     },
     "Graphic Designer": {
@@ -1260,6 +1649,16 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.92,
+        "ginto": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
       }
     },
     "Motion Designer": {
@@ -1317,6 +1716,30 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.94,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.95,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "sidebar": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "cast": 0.94,
+        "iron": 0.9,
+        "pop": 0.92
+      },
+      "trimLetter": {
+        "iron": 8,
+        "pop": 8
       }
     },
     "Content Designer": {
@@ -1363,6 +1786,15 @@
         "quartz": 0.95,
         "bronx": 0.92,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "pop": 0.92
       }
     },
     "UX Writer": {
@@ -1418,6 +1850,21 @@
         "bronx": 0.93,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.97,
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Design Manager": {
@@ -1477,6 +1924,27 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "prism": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Product Design Manager": {
@@ -1537,6 +2005,26 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "prism": 0.96,
+        "creative": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Design Operations Manager": {
@@ -1599,6 +2087,28 @@
         "mono": 0.91,
         "pop": 0.87,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.99,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Design Director": {
@@ -1658,6 +2168,23 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.9,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.95,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "VP of Design": {
@@ -1717,6 +2244,27 @@
         "bronx": 0.92,
         "mono": 0.96,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "prism": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Product Manager": {
@@ -1763,6 +2311,16 @@
         "quartz": 0.96,
         "bronx": 0.9,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "pop": 0.91
       }
     },
     "Technical Product Manager": {
@@ -1822,6 +2380,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7,
+        "bronx": 7
       }
     },
     "Growth Product Manager": {
@@ -1881,6 +2460,25 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.97,
+        "scholar": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.98,
+        "prism": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Senior Product Manager": {
@@ -1944,6 +2542,24 @@
         "bronx": 0.91,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.92,
+        "symmetry": 0.99,
+        "path": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.91,
+        "pop": 0.88,
+        "cast": 0.96
       }
     },
     "Group Product Manager": {
@@ -2004,6 +2620,26 @@
         "mono": 0.98,
         "pop": 0.88,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "path": 0.95,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Principal Product Manager": {
@@ -2064,6 +2700,26 @@
         "mono": 0.98,
         "pop": 0.88,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "silk": 0.94,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "prism": 0.98,
+        "creative": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Director of Product": {
@@ -2123,6 +2779,28 @@
         "mono": 0.95,
         "pop": 0.89,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.95,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "prism": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.91,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "iron": 6
       }
     },
     "Director of Product Management": {
@@ -2189,6 +2867,26 @@
         "mono": 0.9,
         "pop": 0.91,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.95,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.86,
+        "cast": 0.94
       }
     },
     "VP of Product": {
@@ -2264,6 +2962,38 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "timeline": 0.97,
+        "executive": 0.88,
+        "academic": 0.96,
+        "tech": 0.96,
+        "silk": 0.89,
+        "lateral": 0.95,
+        "opal": 0.91,
+        "meridian": 0.95,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "europa": 0.97,
+        "tokyo": 0.91,
+        "prism": 0.96,
+        "sidebar": 0.91,
+        "creative": 0.9,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Platform Product Manager": {
@@ -2312,6 +3042,19 @@
         "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "creative": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.88,
+        "cast": 0.96
       }
     },
     "Mobile Product Manager": {
@@ -2357,6 +3100,15 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.95,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.91
       }
     },
     "Data Product Manager": {
@@ -2403,6 +3155,16 @@
         "quartz": 0.91,
         "bronx": 0.85,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
       }
     },
     "AI Product Manager": {
@@ -2451,6 +3213,24 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "sidebar": 0.94,
+        "creative": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.88,
+        "cast": 0.98,
+        "quartz": 0.91
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Associate Product Manager": {
@@ -2506,6 +3286,24 @@
         "bronx": 0.92,
         "mono": 0.97,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.97,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Product Owner": {
@@ -2552,6 +3350,15 @@
         "quartz": 0.93,
         "bronx": 0.9,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "pop": 0.88
       }
     },
     "Product Operations Manager": {
@@ -2613,6 +3420,27 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Product Operations Analyst": {
@@ -2659,6 +3487,14 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.91,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.92
       }
     },
     "Creative Director": {
@@ -2719,6 +3555,28 @@
         "mono": 0.96,
         "pop": 0.87,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.95,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.96,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "iron": 6
       }
     },
     "Art Director": {
@@ -2765,6 +3623,14 @@
         "quartz": 0.88,
         "bronx": 0.88,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.91,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.88
       }
     },
     "Head of Product": {
@@ -2823,6 +3689,26 @@
         "bronx": 0.86,
         "mono": 0.98,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "prism": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Chief Product Officer (CPO)": {
@@ -2897,6 +3783,39 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "timeline": 0.97,
+        "executive": 0.88,
+        "academic": 0.94,
+        "tech": 0.96,
+        "silk": 0.89,
+        "lateral": 0.95,
+        "opal": 0.91,
+        "meridian": 0.95,
+        "vital": 0.97,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "europa": 0.97,
+        "tokyo": 0.9,
+        "prism": 0.94,
+        "sidebar": 0.95,
+        "creative": 0.92,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.87,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Product Design Intern": {
@@ -2943,6 +3862,14 @@
         "quartz": 0.93,
         "bronx": 0.9,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "pop": 0.92
       }
     },
     "Junior Product Designer": {
@@ -2993,6 +3920,16 @@
         "berlin": 0.92,
         "quartz": 0.89,
         "bronx": 0.87
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.99,
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.97
       }
     },
     "Junior UX Designer": {
@@ -3047,6 +3984,22 @@
         "quartz": 0.95,
         "bronx": 0.85,
         "mono": 0.96,
+        "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.93,
         "pop": 0.85
       }
     },
@@ -3111,6 +4064,34 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.91,
+        "academic": 0.98,
+        "tech": 0.96,
+        "silk": 0.95,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.88,
+        "tokyo": 0.97,
+        "prism": 0.94,
+        "sidebar": 0.98,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.9,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Web Designer": {
@@ -3158,6 +4139,14 @@
         "quartz": 0.89,
         "bronx": 0.89,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.93
       }
     },
     "Industrial Designer": {
@@ -3204,6 +4193,17 @@
         "quartz": 0.91,
         "bronx": 0.87,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.91,
+        "ginto": 0.88,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
       }
     },
     "Senior Graphic Designer": {
@@ -3264,6 +4264,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.93,
+        "opal": 0.95,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "creative": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Junior Graphic Designer": {
@@ -3319,6 +4341,23 @@
         "bronx": 0.9,
         "mono": 0.97,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.94,
+        "minimalist": 0.93,
+        "tokyo": 0.97,
+        "prism": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Product Management Intern": {
@@ -3369,6 +4408,17 @@
         "quartz": 0.92,
         "bronx": 0.9,
         "mono": 0.99
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "iron": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "Lead Product Manager": {
@@ -3429,6 +4479,25 @@
         "mono": 0.98,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.96,
+        "silk": 0.93,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
       }
     }
   }

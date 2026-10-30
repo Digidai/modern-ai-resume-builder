@@ -6,6 +6,7 @@
 import puppeteer from '@cloudflare/puppeteer';
 import { TEMPLATES, getTemplateById } from '../src/constants/templates';
 import { FONT_PRESETS } from '../src/constants/design';
+import { MM_TO_PX, paperSize } from '../src/constants/print';
 import { sanitizeResumeData } from '../src/utils/resumeData';
 import { encodeResumePayload } from '../src/shared/resumeLink';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
@@ -66,6 +67,7 @@ const listTemplates = (origin: string, atsOnly = false) =>
     atsFriendly: t.atsFriendly,
     photo: Boolean(t.photo),
     publications: Boolean(t.publications),
+    hours: Boolean(t.hours),
     preview: `${origin}/og/templates/${t.id}-page.jpg`,
     page: `${origin}/templates/${t.id}/`,
   }));
@@ -190,6 +192,10 @@ const prepareResume = (input: Json): PreparedResume => {
   }
   if (typeof input.scale === 'number' && Number.isFinite(input.scale)) resume.design.scale = Math.min(1.15, Math.max(0.85, input.scale));
   if (!FONT_IDS.includes(resume.design.font)) resume.design.font = 'template';
+  if (typeof input.paper === 'string' && input.paper) {
+    if (input.paper === 'a4' || input.paper === 'letter') resume.design.paper = input.paper;
+    else warnings.push(`Ignored paper "${input.paper}"; use "a4" or "letter".`);
+  }
 
   const rawLinks = Array.isArray(raw.links) ? raw.links.length : 0;
   if (rawLinks > 8) warnings.push(`Only the first 8 links are kept (got ${rawLinks}).`);
@@ -198,6 +204,11 @@ const prepareResume = (input: Json): PreparedResume => {
   if (rawPhoto && !resume.photo) warnings.push('Ignored photo: it must be a base64 JPEG, PNG or WebP data URL under 200 KB (remote image URLs are not loaded).');
   if (resume.photo && !getTemplateById(resume.templateId)?.photo) warnings.push(`Template "${resume.templateId}" doesn't show photos; photo templates: ${TEMPLATES.filter((t) => t.photo).map((t) => t.id).join(', ')}.`);
   if ((resume.publications?.length || resume.awards?.length || resume.talks?.length || resume.teaching?.length) && !getTemplateById(resume.templateId)?.publications) warnings.push(`Template "${resume.templateId}" doesn't show publications, grants and awards, talks or teaching; academic templates: ${TEMPLATES.filter((t) => t.publications).map((t) => t.id).join(', ')}.`);
+  if (getTemplateById(resume.templateId)?.hours) {
+    const missing = resume.experience.filter((exp) => !exp.hours).length;
+    if (missing) warnings.push(`${missing} experience entr${missing === 1 ? 'y has' : 'ies have'} no hours (hours per week); federal resumes on USAJOBS need them for every job.`);
+    if (resume.design.paper !== 'letter') warnings.push('Federal resumes are read on US Letter; pass paper "letter" so the page count matches USAJOBS.');
+  }
   if (!resume.fullName.trim()) warnings.push('fullName is empty.');
   if (!resume.email && !resume.phone) warnings.push('No email or phone; recruiters need a way to reach the candidate.');
   if (!resume.experience.length && !resume.education.length) warnings.push('No experience or education entries.');
@@ -312,7 +323,9 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       browser = await puppeteer.launch(env.BROWSER!);
       const page = await browser.newPage();
       await page.setBypassCSP(true);
-      await page.setViewport({ width: 794, height: 1123, deviceScaleFactor: 1 });
+      const { widthMm, heightMm } = paperSize(resume.design.paper);
+      const [widthPx, heightPx] = [Math.round(widthMm * MM_TO_PX), Math.round(heightMm * MM_TO_PX)];
+      await page.setViewport({ width: widthPx, height: heightPx, deviceScaleFactor: 1 });
       await page.goto(renderUrl, { waitUntil: 'networkidle0' });
       await page.waitForSelector('html[data-render-state]', { timeout: 20000 });
       const [state, pagesText, fitScaleText] = await page.evaluate(() => [
@@ -326,8 +339,8 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       if (format === 'pdf') await page.emulateMediaType('print');
       const bytes =
         format === 'pdf'
-          ? await page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true })
-          : await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: 794, height: 1123 } });
+          ? await page.pdf({ format: resume.design.paper === 'letter' ? 'Letter' : 'A4', printBackground: true, preferCSSPageSize: true })
+          : await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: widthPx, height: heightPx } });
       return { bytes: new Uint8Array(bytes), pages, fitScale: fitScaleText ? Number(fitScaleText) : null };
     })();
     const timeout = new Promise<never>((_, reject) => {
@@ -383,12 +396,13 @@ const RESUME_INPUT = {
   resume: {
     type: 'object',
     description:
-      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, links[{label,url}] for GitHub/portfolio/X/Scholar etc., optional photo (base64 JPEG/PNG data URL, shown only by photo templates), summary, experience[], education[], projects[], publications[{authors,title,venue,year,link}], awards[{title,issuer,year,detail}], talks[{title,event,location,year}] and teaching[{course,role,institution,year}] for academic CVs, skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
+      'The resume. ModernCV shape (fullName, title, email, phone, location, website, linkedin, links[{label,url}] for GitHub/portfolio/X/Scholar etc., optional photo (base64 JPEG/PNG data URL, shown only by photo templates), summary, experience[] (add hours, e.g. "40", per job for the federal template), education[], projects[], publications[{authors,title,venue,year,link}], awards[{title,issuer,year,detail}], talks[{title,event,location,year}] and teaching[{course,role,institution,year}] for academic CVs, skills[]; see get_resume_schema) or a JSON Resume document (https://jsonresume.org/schema). Experience descriptions use one bullet per line starting with "- ". Dates are "YYYY-MM". Skills may be grouped as "Category: item, item".',
   },
   template: { type: 'string', description: 'Template id from list_templates. Default "modern".' },
   accent: { type: 'string', description: 'Accent colour as #RRGGBB. Omit for the template default.' },
   font: { type: 'string', enum: FONT_IDS, description: 'Font preset. "template" keeps the template\'s own fonts.' },
   scale: { type: 'number', minimum: 0.85, maximum: 1.15, description: 'Text size, 0.85–1.15 (1 = default). Lower it to fit one page.' },
+  paper: { type: 'string', enum: ['a4', 'letter'], description: 'Paper size: "a4" (default) or "letter" (US Letter, for US and Canadian applications). Letter pages are shorter, so check the page count again.' },
 };
 
 interface ToolContext {
@@ -521,7 +535,7 @@ const TOOLS: Tool[] = [
     name: 'render_pdf',
     title: 'Render the resume as a PDF',
     description:
-      'Renders the resume to an A4 vector PDF (selectable text, embedded fonts) and returns it as an embedded resource, plus the page count and warnings. Many chat clients cannot save an embedded PDF, so also call create_editor_link and give the user that link (they can download the PDF there). The resume is not stored. Limited to 6 renders per minute.',
+      'Renders the resume to an A4 or US Letter (paper: "letter") vector PDF (selectable text, embedded fonts) and returns it as an embedded resource, plus the page count and warnings. Many chat clients cannot save an embedded PDF, so also call create_editor_link and give the user that link (they can download the PDF there). The resume is not stored. Limited to 6 renders per minute.',
     inputSchema: { type: 'object', properties: RESUME_INPUT, required: ['resume'] },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
@@ -537,7 +551,7 @@ const TOOLS: Tool[] = [
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
 Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.
-Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
+US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12". Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport

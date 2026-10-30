@@ -48,6 +48,20 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.86
       }
     },
     "Robotics Engineer": {
@@ -96,6 +110,23 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "professional": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.88,
+        "quartz": 0.96
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "FPGA Engineer": {
@@ -142,6 +173,21 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "professional": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.87,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7
       }
     },
     "Cybersecurity Analyst": {
@@ -193,6 +239,26 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.98,
+        "tech": 0.97,
+        "silk": 0.96,
+        "opal": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "SAP Consultant": {
@@ -241,6 +307,20 @@
         "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.9,
+        "cast": 0.98
       }
     },
     "ServiceNow Developer": {
@@ -288,6 +368,21 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "professional": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88,
+        "cast": 0.98,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 1
       }
     },
     "Mainframe Developer": {
@@ -334,6 +429,21 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.96,
+        "quartz": 0.93
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Technical Support Specialist": {
@@ -380,6 +490,17 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "sidebar": 0.99,
+        "creative": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.92,
+        "ginto": 0.94,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.94
       }
     },
     "Chemical Engineer": {
@@ -427,6 +548,17 @@
         "quartz": 0.94,
         "bronx": 0.93,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.96,
+        "pop": 0.95
       }
     },
     "Biomedical Engineer": {
@@ -472,6 +604,15 @@
         "quartz": 0.99,
         "bronx": 0.88,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "pop": 0.95
       }
     },
     "Aerospace Engineer": {
@@ -518,6 +659,14 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "berlin": 0.88,
+        "iron": 0.95,
+        "ginto": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "pop": 0.95
       }
     },
     "Environmental Engineer": {
@@ -555,7 +704,13 @@
         "Technical: stormwater design, NPDES permitting, site remediation, Phase I and II ESAs",
         "Software: HydroCAD, AutoCAD Civil 3D, ArcGIS Pro, EPA SWMM",
         "Licenses: PE (North Carolina), OSHA 40-hour HAZWOPER"
-      ]
+      ],
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "bronx": 0.94
+      }
     },
     "Industrial Engineer": {
       "summary": "Industrial engineer with 5 years improving throughput and labor efficiency in distribution and light manufacturing. Rebalanced a pack-out line that raised units per labor hour 18% without new equipment. Uses time studies, simulation and Lean tools to make changes that hold after the project ends.",
@@ -596,6 +751,13 @@
       "fit": {
         "berlin": 0.97,
         "bronx": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.96,
+        "ginto": 0.97,
+        "bronx": 0.89,
+        "pop": 0.95
       }
     },
     "Petroleum Engineer": {
@@ -636,6 +798,16 @@
       ],
       "fit": {
         "berlin": 0.99
+      },
+      "fitLetter": {
+        "minimalist": 0.99,
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "ginto": 0.95,
+        "quartz": 0.98,
+        "bronx": 0.97,
+        "mono": 0.98,
+        "pop": 0.99
       }
     },
     "Test Engineer": {
@@ -682,6 +854,16 @@
         "quartz": 0.97,
         "bronx": 0.96,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.97,
+        "berlin": 0.89,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.94,
+        "pop": 0.91
       }
     },
     "Automation Engineer": {
@@ -728,6 +910,15 @@
         "quartz": 0.92,
         "bronx": 0.9,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "pop": 0.91
       }
     },
     "Data Center Technician": {
@@ -771,6 +962,14 @@
         "iron": 0.97,
         "bronx": 0.92,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.91,
+        "ginto": 0.94,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "pop": 0.93
       }
     },
     "Telecommunications Technician": {
@@ -815,6 +1014,16 @@
         "ginto": 0.96,
         "bronx": 0.98,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.89,
+        "ginto": 0.94,
+        "quartz": 0.94,
+        "bronx": 0.94,
+        "mono": 0.98,
+        "pop": 0.96
       }
     },
     "Electronics Technician": {
@@ -857,6 +1066,14 @@
         "berlin": 0.98,
         "bronx": 0.98,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.97,
+        "ginto": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.94,
+        "pop": 0.94
       }
     },
     "Mechatronics Engineer": {
@@ -903,6 +1120,18 @@
         "quartz": 0.85,
         "bronx": 0.86,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "professional": 0.98,
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.92,
+        "bronx": 0.85,
+        "pop": 0.93,
+        "quartz": 0.9
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Mining Engineer": {
@@ -944,6 +1173,15 @@
       "fit": {
         "berlin": 0.97,
         "ginto": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "iron": 0.96,
+        "ginto": 0.96,
+        "bronx": 0.98,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "Nuclear Engineer": {
@@ -991,6 +1229,16 @@
         "quartz": 0.97,
         "bronx": 0.93,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.96,
+        "pop": 0.92
       }
     },
     "Materials Engineer": {
@@ -1032,6 +1280,13 @@
       "fit": {
         "berlin": 0.94,
         "bronx": 0.96
+      },
+      "fitLetter": {
+        "berlin": 0.9,
+        "iron": 0.98,
+        "ginto": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.92
       }
     },
     "Agricultural Engineer": {
@@ -1076,6 +1331,14 @@
         "iron": 0.99,
         "bronx": 0.95,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.95,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.91,
+        "pop": 0.92
       }
     },
     "Marine Engineer": {
@@ -1119,6 +1382,15 @@
         "iron": 0.96,
         "bronx": 0.96,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "swiss": 0.97,
+        "berlin": 0.89,
+        "iron": 0.91,
+        "ginto": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "pop": 0.91
       }
     },
     "Drupal Developer": {
@@ -1165,6 +1437,21 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "professional": 0.95,
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "mono": 0.96,
+        "pop": 0.92,
+        "quartz": 0.92,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 7
       }
     },
     "Low-Code Developer": {
@@ -1211,6 +1498,14 @@
         "quartz": 0.99,
         "bronx": 0.88,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.87,
+        "ginto": 0.92,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.91
       }
     },
     "RPA Developer": {
@@ -1257,6 +1552,18 @@
         "quartz": 0.91,
         "bronx": 0.9,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.86,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.86
       }
     }
   }

@@ -10,7 +10,7 @@ import {
   XIcon,
 } from './Icons';
 import { Button } from './Button';
-import { TEMPLATES } from '../constants/templates';
+import { TEMPLATES, getTemplateById } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
 import { PublicationImport } from './PublicationImport';
@@ -377,6 +377,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
   // All updates are functional so late async results (AI) never overwrite newer edits.
   const publications = data.publications ?? [];
+  const showHours = Boolean(getTemplateById(data.templateId)?.hours);
   const awards = data.awards ?? [];
   const talks = data.talks ?? [];
   const teaching = data.teaching ?? [];
@@ -677,6 +678,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                             I currently work here
                           </label>
                         </div>
+                        {(showHours || exp.hours) && (
+                          <Input
+                            label="Hours per week"
+                            value={exp.hours ?? ''}
+                            onChange={(v) => updateItem('experience', exp.id, { hours: v })}
+                            placeholder="40"
+                          />
+                        )}
                       </div>
                       <Textarea
                         label="What you did"
@@ -1020,8 +1029,8 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
         {activeTab === 'design' && (
           <>
-          <Section title="Style" description="Accent colour, font and size apply to every template.">
-            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} />
+          <Section title="Style" description="Accent colour, font, paper and size apply to every template.">
+            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} />
           </Section>
           <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">

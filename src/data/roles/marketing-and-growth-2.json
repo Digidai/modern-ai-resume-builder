@@ -49,6 +49,20 @@
         "bronx": 0.89,
         "mono": 0.98,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.95,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.9
       }
     },
     "Amazon Marketplace Manager": {
@@ -98,6 +112,20 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.89
       }
     },
     "TikTok Content Creator": {
@@ -160,6 +188,35 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.99,
+        "tech": 0.96,
+        "silk": 0.9,
+        "opal": 0.91,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "europa": 0.99,
+        "tokyo": 0.92,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "cast": 0.96,
+        "berlin": 0.89,
+        "ginto": 0.92,
+        "pop": 0.87
+      },
+      "trimLetter": {
+        "berlin": 8,
+        "ginto": 8,
+        "pop": 8
       }
     },
     "UGC Creator": {
@@ -218,6 +275,31 @@
         "bronx": 0.92,
         "mono": 0.96,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.97,
+        "tech": 0.98,
+        "silk": 0.96,
+        "opal": 0.91,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "europa": 0.99,
+        "tokyo": 0.92,
+        "prism": 0.98,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.98,
+        "berlin": 0.91
+      },
+      "trimLetter": {
+        "berlin": 8
       }
     },
     "Brand Ambassador": {
@@ -263,6 +345,16 @@
         "ginto": 0.96,
         "quartz": 0.99,
         "bronx": 0.93,
+        "pop": 0.96
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "berlin": 0.91,
+        "iron": 0.94,
+        "ginto": 0.9,
+        "quartz": 0.96,
+        "bronx": 0.87,
+        "mono": 0.98,
         "pop": 0.96
       }
     }

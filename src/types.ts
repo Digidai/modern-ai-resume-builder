@@ -1,3 +1,5 @@
+import type { PaperId } from './constants/print';
+
 export interface Experience {
   id: string;
   company: string;
@@ -6,6 +8,8 @@ export interface Experience {
   endDate: string;
   description: string;
   isCurrent: boolean;
+  /** Hours worked per week, e.g. "40"; shown by templates with `hours: true` (federal resumes require it). */
+  hours?: string;
 }
 
 export interface Education {
@@ -85,9 +89,11 @@ export interface ResumeDesign {
   font: string;
   /** Uniform text/layout scale, 0.85–1.15 (1 = template default). */
   scale: number;
+  /** Paper the resume prints on: A4 (default) or US Letter. */
+  paper: PaperId;
 }
 
-export const DEFAULT_DESIGN: ResumeDesign = { accent: '', font: 'template', scale: 1 };
+export const DEFAULT_DESIGN: ResumeDesign = { accent: '', font: 'template', scale: 1, paper: 'a4' };
 
 export interface ResumeData {
   templateId: string;

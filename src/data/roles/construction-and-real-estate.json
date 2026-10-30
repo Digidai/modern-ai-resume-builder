@@ -60,6 +60,25 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.98,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Site Supervisor": {
@@ -123,6 +142,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "prism": 0.99,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Construction Superintendent": {
@@ -187,6 +227,30 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.99,
+        "tech": 0.95,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.91,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "prism": 0.98,
+        "creative": 0.99,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.92,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Site Superintendent": {
@@ -236,6 +300,24 @@
         "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "silk": 0.91,
+        "scholar": 0.99,
+        "minimalist": 0.98,
+        "tokyo": 0.97,
+        "sidebar": 0.99,
+        "creative": 0.95,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.98
       }
     },
     "Construction Scheduler": {
@@ -288,6 +370,28 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.93,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.88,
+        "tokyo": 0.92,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Project Engineer": {
@@ -332,6 +436,16 @@
         "ginto": 0.99,
         "bronx": 0.91,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "swiss": 0.97,
+        "berlin": 0.93,
+        "iron": 0.91,
+        "ginto": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.86,
+        "mono": 0.96,
+        "pop": 0.95
       }
     },
     "Construction Project Manager": {
@@ -395,6 +509,30 @@
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.89,
+        "tokyo": 0.92,
+        "prism": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Civil Engineer": {
@@ -443,6 +581,18 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.86
       }
     },
     "Structural Engineer": {
@@ -512,6 +662,31 @@
         "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "academic": 0.98,
+        "tech": 0.98,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.97,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.92,
+        "path": 0.94,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "MEP Engineer": {
@@ -554,6 +729,14 @@
         "iron": 0.97,
         "bronx": 0.94,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.94,
+        "ginto": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "pop": 0.96
       }
     },
     "Architect": {
@@ -615,6 +798,27 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "tech": 0.99,
+        "silk": 0.94,
+        "opal": 0.93,
+        "scholar": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "sidebar": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Interior Designer": {
@@ -663,6 +867,22 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "silk": 0.97,
+        "minimalist": 0.96,
+        "tokyo": 0.96,
+        "sidebar": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Real Estate Agent": {
@@ -711,6 +931,26 @@
         "bronx": 0.9,
         "mono": 0.96,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "tech": 0.97,
+        "silk": 0.95,
+        "opal": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Real Estate Broker": {
@@ -761,6 +1001,23 @@
         "mono": 0.92,
         "pop": 0.9,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "silk": 0.91,
+        "opal": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "sidebar": 0.98,
+        "creative": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.93
       }
     },
     "Leasing Agent": {
@@ -811,6 +1068,23 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "silk": 0.95,
+        "scholar": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Real Estate Analyst": {
@@ -861,6 +1135,24 @@
         "mono": 0.95,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.99,
+        "opal": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Real Estate Appraiser": {
@@ -910,6 +1202,25 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.98,
+        "tech": 0.99,
+        "silk": 0.97,
+        "opal": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.98,
+        "creative": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Mortgage Loan Officer": {
@@ -953,6 +1264,15 @@
         "iron": 0.99,
         "bronx": 0.89,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
       }
     },
     "Title Examiner": {
@@ -1006,6 +1326,28 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.98,
+        "silk": 0.94,
+        "opal": 0.99,
+        "scholar": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.9,
+        "prism": 0.99,
+        "sidebar": 0.98,
+        "creative": 0.94,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.92
       }
     },
     "Property Manager": {
@@ -1057,6 +1399,23 @@
         "mono": 0.95,
         "pop": 0.94,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "silk": 0.95,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.93,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.89,
+        "cast": 0.96
       }
     },
     "Real Estate Development Manager": {
@@ -1123,6 +1482,29 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "academic": 0.98,
+        "silk": 0.89,
+        "lateral": 0.99,
+        "opal": 0.93,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.97,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Facilities Manager": {
@@ -1185,6 +1567,28 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "tech": 0.99,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.91,
+        "scholar": 0.95,
+        "minimalist": 0.91,
+        "tokyo": 0.94,
+        "creative": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Building Inspector": {
@@ -1238,6 +1642,29 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.9,
+        "opal": 0.98,
+        "meridian": 0.97,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.94,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "bronx": 7
       }
     },
     "Building Engineer": {
@@ -1286,6 +1713,26 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.97,
+        "opal": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "creative": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Safety Manager": {
@@ -1345,6 +1792,28 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.97,
+        "tech": 0.99,
+        "silk": 0.96,
+        "opal": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "HVAC Technician": {
@@ -1394,6 +1863,23 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "sidebar": 0.95,
+        "creative": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Electrician": {
@@ -1441,6 +1927,16 @@
         "bronx": 0.9,
         "mono": 0.98,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.95,
+        "berlin": 0.89,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.92
       }
     },
     "Plumber": {
@@ -1489,6 +1985,19 @@
         "bronx": 0.89,
         "mono": 0.96,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "tokyo": 0.97,
+        "creative": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.88
       }
     },
     "Carpenter": {
@@ -1538,6 +2047,20 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "silk": 0.91,
+        "minimalist": 0.96,
+        "sidebar": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.96
       }
     },
     "Foreman": {
@@ -1600,6 +2123,31 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "tech": 0.96,
+        "silk": 0.95,
+        "opal": 0.93,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "sidebar": 0.99,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "iron": 6
       }
     },
     "Quantity Surveyor": {
@@ -1654,6 +2202,28 @@
         "mono": 0.93,
         "pop": 0.91,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.98,
+        "silk": 0.93,
+        "lateral": 0.99,
+        "meridian": 0.99,
+        "scholar": 0.93,
+        "minimalist": 0.9,
+        "tokyo": 0.93,
+        "creative": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.98,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Surveyor": {
@@ -1704,6 +2274,24 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "creative": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Land Surveyor": {
@@ -1751,6 +2339,21 @@
         "quartz": 0.97,
         "bronx": 0.86,
         "mono": 0.98,
+        "pop": 0.88
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.94,
         "pop": 0.88
       }
     },
@@ -1801,6 +2404,23 @@
         "mono": 0.96,
         "pop": 0.91,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "sidebar": 0.98,
+        "creative": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "Construction Estimator": {
@@ -1862,6 +2482,29 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.95,
+        "lateral": 0.98,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.85,
+        "tokyo": 0.93,
+        "prism": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.99,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Assistant Project Manager": {
@@ -1911,6 +2554,18 @@
         "bronx": 0.92,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "minimalist": 0.92,
+        "tokyo": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.85
       }
     },
     "Field Engineer": {
@@ -1961,6 +2616,22 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "tokyo": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Construction Management Intern": {
@@ -2009,6 +2680,23 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "tokyo": 0.97,
+        "sidebar": 0.96,
+        "creative": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85
       }
     },
     "Assistant Property Manager": {
@@ -2059,6 +2747,23 @@
         "bronx": 0.88,
         "mono": 0.96,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "tech": 0.99,
+        "silk": 0.95,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "creative": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Escrow Officer": {
@@ -2109,6 +2814,26 @@
         "bronx": 0.89,
         "mono": 0.96,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "tech": 0.98,
+        "silk": 0.93,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "sidebar": 0.98,
+        "creative": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Real Estate Transaction Coordinator": {
@@ -2152,6 +2877,17 @@
         "iron": 0.97,
         "ginto": 0.99,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.93,
+        "iron": 0.96,
+        "ginto": 0.97,
+        "quartz": 0.95,
+        "bronx": 0.87,
+        "mono": 0.96,
+        "pop": 0.98
       }
     },
     "Preconstruction Manager": {
@@ -2212,6 +2948,27 @@
         "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.94,
+        "academic": 0.99,
+        "tech": 0.94,
+        "silk": 0.93,
+        "opal": 0.94,
+        "scholar": 0.99,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Real Estate Asset Manager": {
@@ -2278,6 +3035,26 @@
         "bronx": 0.9,
         "mono": 0.92,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.92,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.88,
+        "cast": 0.94
       }
     }
   }

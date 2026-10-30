@@ -44,6 +44,16 @@
         "ginto": 0.95,
         "bronx": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.95,
+        "bronx": 0.92,
+        "mono": 0.96,
+        "pop": 0.91
       }
     },
     "Game Designer": {
@@ -86,6 +96,12 @@
         "berlin": 0.93,
         "quartz": 0.96,
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "berlin": 0.96,
+        "ginto": 0.98,
+        "quartz": 0.9,
+        "bronx": 0.89
       }
     },
     "Conversational Designer": {
@@ -129,6 +145,15 @@
         "iron": 0.97,
         "bronx": 0.96,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.91,
+        "ginto": 0.96,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "pop": 0.91
       }
     },
     "Accessibility Specialist": {
@@ -175,6 +200,17 @@
         "quartz": 0.91,
         "bronx": 0.87,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.93
       }
     },
     "Furniture Designer": {
@@ -221,6 +257,16 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
       }
     },
     "Product Owner Intern": {
@@ -262,6 +308,15 @@
       "fit": {
         "berlin": 0.97,
         "bronx": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.98,
+        "ginto": 0.96,
+        "quartz": 0.98,
+        "bronx": 0.94,
+        "pop": 0.97
       }
     },
     "Design Intern": {
@@ -312,6 +367,18 @@
         "iron": 0.93,
         "ginto": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "quartz": 0.99,
+        "bronx": 0.97,
+        "mono": 0.95,
+        "pop": 0.91
       }
     }
   }

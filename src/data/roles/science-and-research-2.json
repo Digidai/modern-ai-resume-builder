@@ -48,6 +48,17 @@
         "bronx": 0.89,
         "mono": 0.98,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.9
       }
     },
     "Bioinformatician": {
@@ -96,6 +107,13 @@
         "berlin": 0.98,
         "quartz": 0.89,
         "bronx": 0.85
+      },
+      "fitLetter": {
+        "minimalist": 0.97,
+        "berlin": 0.94,
+        "iron": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85
       }
     },
     "Clinical Research Associate": {
@@ -141,6 +159,14 @@
         "ginto": 0.93,
         "quartz": 0.94,
         "bronx": 0.88,
+        "pop": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "quartz": 0.92,
+        "bronx": 0.85,
         "pop": 0.92
       }
     },
@@ -195,6 +221,24 @@
         "bronx": 0.85,
         "mono": 0.99,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "minimalist": 0.99,
+        "creative": 0.98,
+        "professional": 0.94,
+        "elegant": 0.98,
+        "swiss": 0.95,
+        "berlin": 0.86,
+        "iron": 0.95,
+        "ginto": 0.95,
+        "wireframe": 0.97,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.94,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Ecologist": {
@@ -252,6 +296,31 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.98,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "sidebar": 0.95,
+        "creative": 0.91,
+        "professional": 0.98,
+        "swiss": 0.93,
+        "berlin": 0.86,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "wireframe": 0.99,
+        "mono": 0.95,
+        "pop": 0.87,
+        "cast": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.87
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Marine Biologist": {
@@ -308,6 +377,27 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "sidebar": 0.87,
+        "creative": 0.9,
+        "elegant": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "wireframe": 0.99,
+        "bronx": 0.85,
+        "moda": 0.98,
+        "mono": 0.95,
+        "pop": 0.87,
+        "cast": 0.99,
+        "quartz": 0.9
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Neuroscientist": {
@@ -358,6 +448,20 @@
         "iron": 0.97,
         "quartz": 0.92,
         "bronx": 0.87
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.95,
+        "sidebar": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.97,
+        "ginto": 0.97,
+        "symmetry": 0.99,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.97
       }
     },
     "Pharmacologist": {
@@ -416,6 +520,30 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "silk": 0.95,
+        "minimalist": 0.95,
+        "tokyo": 0.96,
+        "sidebar": 0.9,
+        "creative": 0.92,
+        "professional": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "symmetry": 0.99,
+        "wireframe": 0.98,
+        "moda": 0.99,
+        "mono": 0.91,
+        "pop": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     }
   }

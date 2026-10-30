@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is a free, local-first AI resume builder with 52 templates (including photo and academic CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
+**ModernCV is a free, local-first AI resume builder with 53 templates (including photo and academic CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -55,7 +55,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 52 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, McDowell, billryan, Deedy, AltaCV) and 24 ATS-friendly single-column layouts.
+- 53 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, McDowell, billryan, Deedy, AltaCV) and 25 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - A template gallery (`/templates/`) with an ATS filter and a detail page per template.
 - 1,204 job titles in 21 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
@@ -65,7 +65,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - AI writing help (Cloudflare Workers AI) for summaries and experience bullets.
 - Local-first data storage with debounced segmented persistence for resume editing.
 - AI runs through the Cloudflare Worker's Workers AI binding; no API keys in the browser.
-- Vector PDF export rendered by Cloudflare Browser Rendering (selectable text, embedded fonts), with an in-browser image fallback.
+- Vector PDF export rendered by Cloudflare Browser Rendering (selectable text, embedded fonts), with an in-browser image fallback, on A4 or US Letter paper.
 - JSON export for portability or integration with other tools.
 - Light and dark themes.
 
@@ -84,13 +84,13 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - **本地数据存储** - 数据优先保存在浏览器（分片存储 + 自动保存）
 - **打印导出** - 使用 `Cmd/Ctrl + P` 或 PDF 导出功能生成高质量简历
 - **JSON 导出** - 支持 JSON 格式导出，便于备份和迁移
-- **矢量 PDF** - 服务端按预览原样渲染，文字可选中、字体内嵌
+- **矢量 PDF** - 服务端按预览原样渲染，文字可选中、字体内嵌，纸张可选 A4 或 US Letter
 - **明暗主题** - 支持浅色和深色主题切换
 - **社交分享图** - 构建时自动生成适配职位页与目录页的分享缩略图
 
 ## Templates
 
-ModernCV ships with 52 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar, Oxford, Standard, Lumen. Scholar, Oxford, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs. Publications can be imported from BibTeX or ORCID, a whole LaTeX CV can be imported (AI converts it; you preview before it replaces anything), and any resume can be opened in Overleaf or downloaded as LaTeX.
+ModernCV ships with 53 templates. Photo templates (Europa, Tokyo, Jade, Portrait, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar, Oxford, Standard, Lumen, Federal. Federal is the USAJOBS format for US government jobs: MM/YYYY dates and hours per week on every job, printed on US Letter. Scholar, Oxford, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs. Publications can be imported from BibTeX or ORCID, a whole LaTeX CV can be imported (AI converts it; you preview before it replaces anything), and any resume can be opened in Overleaf or downloaded as LaTeX.
 
 Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 
@@ -156,7 +156,7 @@ claude mcp add --transport http moderncv https://genedai.cv/mcp
 | `get_example_resume` | A complete example resume for a job title, in render-ready JSON |
 | `get_resume_schema` | JSON Schema of the resume object |
 | `render_preview` | Page 1 as a PNG plus the page count |
-| `render_pdf` | An A4 vector PDF with selectable text and embedded fonts |
+| `render_pdf` | An A4 or US Letter vector PDF with selectable text and embedded fonts |
 | `create_editor_link` | A link that opens the editor with the resume loaded (kept in the URL fragment) |
 
 **Agent skill:** [`/skills/moderncv-resume/SKILL.md`](https://genedai.cv/skills/moderncv-resume/SKILL.md) (source in `skills/`). **HTTP API:** the same tools under `/api/agent/` ([`/openapi.json`](https://genedai.cv/openapi.json)); rendering is limited to 6 requests per minute per IP and resumes are not stored.

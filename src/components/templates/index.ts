@@ -44,3 +44,4 @@ export * from './ScholarTemplate';
 export * from './OxfordTemplate';
 export * from './StandardTemplate';
 export * from './LumenTemplate';
+export * from './FederalTemplate';

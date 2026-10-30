@@ -1013,6 +1013,7 @@ const buildResumeSchema = (siteUrl, templates) => {
           accent: { type: 'string', pattern: '^(#[0-9A-Fa-f]{6})?$', description: 'Accent colour; empty for the template default.' },
           font: { type: 'string', enum: ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif', 'latin-modern'] },
           scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1 },
+          paper: { type: 'string', enum: ['a4', 'letter'], default: 'a4', description: 'Paper size: A4 or US Letter.' },
         },
       },
       fullName: { type: 'string' },
@@ -1042,6 +1043,7 @@ const buildResumeSchema = (siteUrl, templates) => {
           company: { type: 'string' },
           role: { type: 'string' },
           isCurrent: { type: 'boolean' },
+          hours: { type: 'string', description: 'Hours worked per week, e.g. "40". Shown by templates with hours: true in list_templates (Federal); USAJOBS requires it for every job.' },
           description: { type: 'string', description: 'One bullet per line, each starting with "- ".' },
         }),
       },
@@ -1137,6 +1139,7 @@ const buildOpenApi = (siteUrl, templates) => {
             accent: { type: 'string', pattern: '^#[0-9A-Fa-f]{6}$', description: 'Accent colour; omit for the template default.' },
             font: { type: 'string', enum: FONT_IDS, default: 'template' },
             scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1, description: 'Text size; lower it to fit one page.' },
+            paper: { type: 'string', enum: ['a4', 'letter'], default: 'a4', description: 'Paper size: A4, or US Letter for US and Canadian applications.' },
           },
         },
       },
@@ -1343,7 +1346,7 @@ const writeAgentFiles = async ({ siteUrl, templates, categories, jobItems, lastm
 
 Key facts:
 - Free, no account, no watermark. Data stays in the browser (localStorage).
-- Templates are A4 and support a custom accent colour, 10 fonts, text size and fit-to-one-page.
+- Templates print on A4 or US Letter and support a custom accent colour, 10 fonts, text size and fit-to-one-page.
 - Download PDF produces a vector PDF with selectable text and embedded fonts.
 - Import accepts a ModernCV JSON backup or a JSON Resume (jsonresume.org) document.
 - Open the editor with a template preselected: ${siteUrl}/editor/?template=<id> (ids are listed in ${siteUrl}/templates.json).

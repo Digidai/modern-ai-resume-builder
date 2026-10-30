@@ -116,6 +116,30 @@
         "mono": 0.9,
         "pop": 0.9,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.94,
+        "tech": 0.97,
+        "silk": 0.88,
+        "lateral": 0.95,
+        "opal": 0.93,
+        "meridian": 0.96,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "tokyo": 0.92,
+        "creative": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.87,
+        "path": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Licensed Master Social Worker (LMSW)": {
@@ -171,6 +195,22 @@
         "bronx": 0.87,
         "mono": 0.94,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "silk": 0.91,
+        "opal": 0.97,
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.93,
+        "ginto": 0.9,
+        "symmetry": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.9,
+        "cast": 0.98
       }
     },
     "Licensed Clinical Social Worker (LCSW)": {
@@ -228,6 +268,23 @@
         "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "silk": 0.96,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.97,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Child Welfare Caseworker": {
@@ -283,6 +340,22 @@
         "ginto": 0.91,
         "mono": 0.95,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.97,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Substance Abuse Counselor": {
@@ -337,6 +410,21 @@
         "ginto": 0.92,
         "mono": 0.98,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.91,
+        "symmetry": 0.98,
+        "bronx": 0.94,
+        "mono": 0.94,
+        "pop": 0.86,
+        "cast": 0.95
       }
     },
     "Peer Support Specialist": {
@@ -393,6 +481,22 @@
         "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.95,
+        "opal": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.98,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.86,
+        "cast": 0.97
       }
     },
     "Direct Support Professional": {
@@ -448,6 +552,24 @@
         "ginto": 0.9,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.98,
+        "bronx": 0.94,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Family Support Specialist": {
@@ -508,6 +630,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "tech": 0.98,
+        "silk": 0.92,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "prism": 0.98,
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Victim Advocate": {
@@ -564,6 +708,19 @@
         "bronx": 0.98,
         "mono": 0.97,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "bronx": 0.94,
+        "mono": 0.92,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "Housing Navigator": {
@@ -621,6 +778,24 @@
         "ginto": 0.86,
         "bronx": 0.95,
         "mono": 0.97,
+        "pop": 0.85,
+        "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.89,
+        "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
       }
@@ -683,6 +858,28 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.97,
+        "scholar": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "prism": 0.98,
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Community Health Worker": {
@@ -739,6 +936,22 @@
         "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "symmetry": 0.96,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.86,
+        "cast": 0.97
       }
     },
     "Community Outreach Coordinator": {
@@ -801,6 +1014,32 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "sidebar": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "iron": 6
       }
     },
     "Volunteer Coordinator": {
@@ -865,6 +1104,33 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.93,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Development Associate": {
@@ -927,6 +1193,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "prism": 0.96,
+        "sidebar": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Grant Writer": {
@@ -983,6 +1271,24 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "symmetry": 0.96,
+        "path": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.86,
+        "cast": 0.95
       }
     },
     "Grants Manager": {
@@ -1043,6 +1349,26 @@
         "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "silk": 0.91,
+        "lateral": 0.98,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.87,
+        "mono": 0.88,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "Annual Giving Manager": {
@@ -1104,6 +1430,25 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Major Gifts Officer": {
@@ -1166,6 +1511,28 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.93,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "prism": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Development Director": {
@@ -1223,6 +1590,27 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.99,
+        "academic": 0.99,
+        "tech": 0.99,
+        "silk": 0.97,
+        "opal": 0.94,
+        "scholar": 0.99,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Program Director": {
@@ -1279,6 +1667,25 @@
         "bronx": 0.96,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.98,
+        "quartz": 0.98,
+        "bronx": 0.9,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Social Services Director": {
@@ -1340,6 +1747,26 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "academic": 0.99,
+        "silk": 0.94,
+        "opal": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.88,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Executive Director": {
@@ -1406,6 +1833,26 @@
         "mono": 0.89,
         "pop": 0.93,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.98,
+        "silk": 0.96,
+        "opal": 0.91,
+        "minimalist": 0.9,
+        "tokyo": 0.98,
+        "creative": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.89,
+        "cast": 0.94
       }
     }
   }

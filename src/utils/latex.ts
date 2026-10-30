@@ -75,6 +75,9 @@ const richText = (text: string): string => {
 const entry = (primary: string, dates: string, secondary = '', extra = '') =>
   `\\entry{${escapeLatex(primary)}}{${escapeLatex(dates)}}{${escapeLatex(secondary)}}{${escapeLatex(extra)}}`;
 
+/** Federal resumes list hours per week on every job: "40" → "40 hours per week". */
+const hoursPerWeek = (hours = '') => (/^\d+(?:\.\d+)?$/.test(hours.trim()) ? `${hours.trim()} hours per week` : hours.trim());
+
 const sentence = (text: string) => (/[.?!]$/.test(text) ? text : `${text}.`);
 
 /** The resume as a complete .tex file. */
@@ -94,7 +97,7 @@ export const toLatex = (data: ResumeData): string => {
     .map((edu) => entry(edu.school || edu.degree, formatDateRange(edu.startDate, edu.endDate), edu.school ? edu.degree : ''))
     .join('\n');
   const experience = data.experience
-    .map((exp) => [entry(exp.company || exp.role, formatDateRange(exp.startDate, exp.endDate, exp.isCurrent), exp.company ? exp.role : ''), richText(exp.description)].filter(Boolean).join('\n'))
+    .map((exp) => [entry(exp.company || exp.role, formatDateRange(exp.startDate, exp.endDate, exp.isCurrent), [exp.company ? exp.role : '', hoursPerWeek(exp.hours)].filter(Boolean).join(', ')), richText(exp.description)].filter(Boolean).join('\n'))
     .join('\n\\medskip\n');
   const projects = data.projects
     .map((proj) => [`\\textbf{${escapeLatex(proj.name)}}${proj.link.trim() && validateUrl(proj.link) ? ` \\hfill ${link(proj.link)}` : ''}\\par`, richText(proj.description)].filter(Boolean).join('\n'))
@@ -149,10 +152,12 @@ export const toLatex = (data: ResumeData): string => {
       ? '% fontspec defaults to Latin Modern; xeCJK to the Fandol fonts bundled with TeX Live.\n\\usepackage{fontspec}\n\\usepackage{xeCJK}'
       : '\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{textcomp}';
 
+  const paper = data.design?.paper === 'letter' ? 'letterpaper' : 'a4paper';
+
   return `% ${data.fullName.trim() || 'Resume'}, exported from ModernCV (https://genedai.cv).
 % Compile with ${engine === 'xelatex' ? 'XeLaTeX' : 'pdfLaTeX'}; on Overleaf, Menu > Compiler.
-\\documentclass[11pt,a4paper]{article}
-\\usepackage[a4paper,margin=18mm]{geometry}
+\\documentclass[11pt,${paper}]{article}
+\\usepackage[${paper},margin=18mm]{geometry}
 ${fonts}
 \\usepackage{titlesec}
 \\usepackage{enumitem}

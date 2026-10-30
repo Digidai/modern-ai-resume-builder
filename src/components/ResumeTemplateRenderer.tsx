@@ -64,6 +64,7 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   oxford: () => import('./templates/OxfordTemplate').then((module) => ({ default: module.OxfordTemplate })),
   standard: () => import('./templates/StandardTemplate').then((module) => ({ default: module.StandardTemplate })),
   lumen: () => import('./templates/LumenTemplate').then((module) => ({ default: module.LumenTemplate })),
+  federal: () => import('./templates/FederalTemplate').then((module) => ({ default: module.FederalTemplate })),
   europa: () => import('./templates/EuropaTemplate').then((module) => ({ default: module.EuropaTemplate })),
   tokyo: () => import('./templates/TokyoTemplate').then((module) => ({ default: module.TokyoTemplate })),
   jade: () => import('./templates/JadeTemplate').then((module) => ({ default: module.JadeTemplate })),

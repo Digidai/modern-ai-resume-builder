@@ -2,31 +2,33 @@ import React, { useLayoutEffect, useRef, useState } from 'react';
 import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
-import { PAGE_HEIGHT_PX, PRINT_CONFIG } from '../constants/print';
+import { MM_TO_PX, PRINT_CONFIG, paperSize } from '../constants/print';
 import { measurePrintLayout, SUPPORTS_CLONE, type PrintLayout } from '../utils/printLayout';
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
 
-const ONE_PAGE: PrintLayout = { pages: 1, breaksMm: [], fillHeightPx: PAGE_HEIGHT_PX - 1, lastPageFill: 1 };
+const onePage = (pageHeightPx: number): PrintLayout => ({ pages: 1, breaksMm: [], fillHeightPx: pageHeightPx - 1, lastPageFill: 1 });
 
 interface ResumePreviewProps {
   data: ResumeData;
   /** DOM id used by PDF export; only the one preview that gets exported should keep the default. */
   id?: string;
-  /** Dashed A4 page-break guides (screen only). Off for thumbnails. */
+  /** Dashed page-break guides (screen only). Off for thumbnails. */
   showPageBreaks?: boolean;
 }
 
 /**
- * The A4 "paper". Templates render inside a flex column that fills at least one page;
- * a template's root should be `flex-1` (never a fixed 297mm height) so backgrounds reach the
+ * The "paper", A4 or US Letter (`design.paper`). Templates render inside a flex column that fills at
+ * least one page; a template's root should be `flex-1` (never a fixed page height) so backgrounds reach the
  * bottom at any scale. Design settings arrive as CSS custom properties plus a uniform zoom.
  */
 const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-preview-container', showPageBreaks = true }) => {
   const isFullBleed = isFullBleedTemplate(data.templateId);
   const scale = data.design?.scale || 1;
+  const page = paperSize(data.design?.paper);
+  const pageHeightPx = page.heightMm * MM_TO_PX;
   const paperRef = useRef<HTMLDivElement>(null);
-  const [layout, setLayout] = useState<PrintLayout>(ONE_PAGE);
+  const [layout, setLayout] = useState<PrintLayout>(() => onePage(pageHeightPx));
   // Thumbnails are never printed or paginated, so only the editor, export and render papers measure.
   const paginated = showPageBreaks || !!id;
 
@@ -34,9 +36,9 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
     const paper = paperRef.current;
     if (!paper || !paginated) return;
     const measure = () => {
-      // Up to one A4 tall (the paper's min-height) always prints on one page; only longer papers need
+      // Up to one page tall (the paper's min-height) always prints on one page; only longer papers need
       // the full print simulation.
-      const next = paper.offsetHeight <= PAGE_HEIGHT_PX + 1 ? ONE_PAGE : measurePrintLayout(paper, isFullBleed);
+      const next = paper.offsetHeight <= pageHeightPx + 1 ? onePage(pageHeightPx) : measurePrintLayout(paper, isFullBleed);
       setLayout((prev) =>
         prev.pages === next.pages && prev.breaksMm.join() === next.breaksMm.join() && prev.fillHeightPx === next.fillHeightPx && prev.lastPageFill === next.lastPageFill
           ? prev
@@ -47,7 +49,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
     const observer = new ResizeObserver(measure);
     observer.observe(paper);
     return () => observer.disconnect();
-  }, [data, isFullBleed, paginated]);
+  }, [data, isFullBleed, paginated, pageHeightPx]);
 
   const breaks = layout.breaksMm;
   const std = PRINT_CONFIG.MARGIN_STANDARD_MM;
@@ -58,23 +60,24 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
   // print skips the stretch (server PDFs measure the stretch in the engine that prints).
   const fillRule = !SUPPORTS_CLONE && layout.pages > 1 ? 'min-height: 0' : `min-height: ${layout.fillHeightPx}px`;
   const printStyles = !isFullBleed
-    ? `@page { size: A4; margin: ${std}mm; }
+    ? `@page { size: ${page.css}; margin: ${std}mm; }
        @media print { .resume-preview-container { padding: 0 !important; min-height: 0 !important; } }`
-    : `@page { size: A4; margin: 0; }
+    : `@page { size: ${page.css}; margin: 0; }
        @media print { .resume-preview-container { ${fillRule} !important; } }`;
 
   return (
     <div
       ref={paperRef}
-      className={`resume-paper resume-preview-container relative box-border flex min-h-[297mm] w-full flex-col overflow-hidden bg-white text-slate-900 print:overflow-visible ${
+      className={`resume-paper resume-preview-container relative box-border flex w-full flex-col overflow-hidden bg-white text-slate-900 print:overflow-visible ${
         isFullBleed ? '' : 'p-[15mm]'
       }`}
       id={id || undefined}
       data-template-id={data.templateId}
+      data-paper={page.id}
       data-full-bleed={isFullBleed || undefined}
       data-pages={layout.pages}
       data-last-page-fill={layout.lastPageFill.toFixed(2)}
-      style={data.design ? designStyle(data.design) : undefined}
+      style={{ ...(data.design ? designStyle(data.design) : undefined), minHeight: `${page.heightMm}mm` }}
     >
       <style nonce={getCspNonce()}>{printStyles}</style>
 

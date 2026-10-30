@@ -2,11 +2,9 @@ import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
 import { isFullBleedTemplate } from '../constants/templates';
-import { PAGE_HEIGHT_PX, MM_TO_PX } from '../constants/print';
-import { measurePrintLayout, pageBoxMm, repeatedFrameSpace, SUPPORTS_CLONE, withPrintedPages } from './printLayout';
+import { MM_TO_PX } from '../constants/print';
+import { measurePrintLayout, pageBoxMm, paperOf, repeatedFrameSpace, SUPPORTS_CLONE, withPrintedPages } from './printLayout';
 
-const A4_WIDTH_PT = 595.28;
-const A4_HEIGHT_PT = 841.89;
 const EXPORT_PIXEL_RATIO = 2;
 const MM_TO_PT = 72 / 25.4;
 
@@ -148,7 +146,7 @@ const capturePagesBySlicing = async (element: HTMLElement, fontEmbedCSS: string)
   if (!dataUrl) throw new Error('Failed to generate image from resume');
   const image = await loadImage(dataUrl);
   const ratio = image.width / widthPx;
-  const pageHeight = PAGE_HEIGHT_PX * ratio;
+  const pageHeight = paperOf(element).heightMm * MM_TO_PX * ratio;
   const cuts = [0, ...breaksMm.map((mm) => mm * MM_TO_PX * ratio), image.height];
   // Stretches one row of the capture over a band, so plain backgrounds (sidebars, dark pages) continue.
   const band = (context: CanvasRenderingContext2D, row: number, top: number, height: number) => {
@@ -196,7 +194,8 @@ export const exportResumeToPdf = async ({
   // Browser fallback: an image-based PDF of the same pagination print uses, so pages break, keep margins
   // and fill backgrounds like the vector PDF.
   const fullBleed = isFullBleedTemplate(data.templateId);
-  const box = pageBoxMm(fullBleed);
+  const box = pageBoxMm(fullBleed, element.dataset.paper);
+  const [pageWidthPt, pageHeightPt] = paperOf(element).pt;
   onProgress?.({ stage: 'browser' });
   try {
     // Our own font CSS: html-to-image's font discovery throws in Firefox (it reads `@font-face` rules'
@@ -210,10 +209,10 @@ export const exportResumeToPdf = async ({
       // Let the progress repaint between pages; encoding each one blocks the main thread.
       await nextFrame();
       const slice = await pdfDoc.embedPng(canvas.toDataURL('image/png'));
-      const page = pdfDoc.addPage([A4_WIDTH_PT, A4_HEIGHT_PT]);
+      const page = pdfDoc.addPage([pageWidthPt, pageHeightPt]);
       page.drawImage(slice, {
         x: box.inset * MM_TO_PT,
-        y: A4_HEIGHT_PT - (box.inset + box.height) * MM_TO_PT,
+        y: pageHeightPt - (box.inset + box.height) * MM_TO_PT,
         width: box.width * MM_TO_PT,
         height: box.height * MM_TO_PT,
       });

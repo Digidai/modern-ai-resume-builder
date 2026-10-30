@@ -52,6 +52,18 @@
         "quartz": 0.89,
         "bronx": 0.88,
         "mono": 0.97
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.95,
+        "ginto": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.97
       }
     },
     "Corporate Attorney": {
@@ -97,6 +109,14 @@
         "quartz": 0.96,
         "bronx": 0.87,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "berlin": 0.96,
+        "iron": 0.9,
+        "ginto": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "pop": 0.92
       }
     },
     "Investment Banking Analyst": {
@@ -156,6 +176,28 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "professional": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7
       }
     },
     "Private Equity Associate": {
@@ -201,6 +243,20 @@
         "ginto": 0.89,
         "quartz": 0.91,
         "bronx": 0.87,
+        "pop": 0.87
+      },
+      "fitLetter": {
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "sidebar": 0.97,
+        "creative": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
         "pop": 0.87
       }
     },
@@ -250,6 +306,23 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "tokyo": 0.99,
+        "creative": 0.98,
+        "professional": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7
       }
     },
     "Bank Manager": {
@@ -310,6 +383,31 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "silk": 0.96,
+        "lateral": 0.99,
+        "opal": 0.93,
+        "scholar": 0.97,
+        "minimalist": 0.91,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "professional": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.99,
+        "quartz": 0.92
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Mortgage Loan Processor": {
@@ -353,6 +451,16 @@
         "ginto": 0.96,
         "bronx": 0.93,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.95,
+        "berlin": 0.89,
+        "iron": 0.98,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.88,
+        "mono": 0.96,
+        "pop": 0.94
       }
     },
     "Junior Accountant": {
@@ -398,6 +506,13 @@
         "ginto": 0.98,
         "quartz": 0.98,
         "bronx": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "ginto": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "pop": 0.96
       }
     },
     "Accounting Clerk": {
@@ -441,6 +556,14 @@
         "iron": 0.99,
         "ginto": 0.97,
         "bronx": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.99,
+        "iron": 0.95,
+        "ginto": 0.93,
+        "quartz": 0.96,
+        "bronx": 0.88,
+        "pop": 0.99
       }
     },
     "Collections Specialist": {
@@ -483,6 +606,12 @@
         "ginto": 0.98,
         "quartz": 0.99,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "pop": 0.94
       }
     },
     "Court Clerk": {
@@ -531,6 +660,17 @@
         "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "creative": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.93,
+        "pop": 0.91
       }
     },
     "Litigation Paralegal": {
@@ -587,6 +727,26 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "tech": 0.98,
+        "silk": 0.95,
+        "opal": 0.99,
+        "scholar": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.9,
+        "symmetry": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87
       }
     },
     "Notary Public": {
@@ -632,6 +792,16 @@
         "quartz": 0.92,
         "bronx": 0.9,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "swiss": 0.95,
+        "berlin": 0.87,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.96,
+        "pop": 0.89
       }
     }
   }

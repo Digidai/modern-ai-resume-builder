@@ -2,6 +2,13 @@ import { describe, expect, it } from 'vitest';
 import { sanitizeResumeData } from './resumeData';
 
 describe('sanitizeResumeData', () => {
+  it('keeps a US Letter paper choice and reads older or unknown values as A4', () => {
+    const paper = (design: unknown) => sanitizeResumeData({ fullName: 'Pat', design })?.design.paper;
+    expect(paper({ paper: 'letter' })).toBe('letter');
+    expect(paper({ accent: '', font: 'template', scale: 1 })).toBe('a4');
+    expect(paper({ paper: 'legal' })).toBe('a4');
+  });
+
   it('imports a JSON Resume document', () => {
     const result = sanitizeResumeData({
       basics: {
@@ -41,6 +48,14 @@ describe('sanitizeResumeData', () => {
       { company: 'Acme', role: 'Lead', startDate: '2021-03', endDate: '', isCurrent: true, description: 'Owned the platform.\n- Cut costs 30%' },
       { company: 'Initech', startDate: '2018', endDate: '2021-02', isCurrent: false },
     ]);
+  });
+
+  it('keeps hours per week as text, accepting a number from agents and dropping blanks', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      experience: [{ role: 'Analyst', hours: 40 }, { role: 'Clerk', hours: ' 20 hours ' }, { role: 'Intern', hours: '  ' }],
+    });
+    expect(result?.experience.map((exp) => exp.hours)).toEqual(['40', '20 hours', undefined]);
   });
 
   it('keeps profile links with a URL and drops empty ones', () => {

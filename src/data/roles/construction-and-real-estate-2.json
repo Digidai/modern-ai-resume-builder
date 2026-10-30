@@ -47,6 +47,21 @@
         "quartz": 0.91,
         "bronx": 0.91,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "sidebar": 0.95,
+        "creative": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.85
       }
     },
     "Landscaper": {
@@ -95,6 +110,19 @@
         "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Groundskeeper": {
@@ -142,6 +170,20 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.9,
+        "cast": 0.98
       }
     },
     "Painter": {
@@ -190,6 +232,20 @@
         "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "sidebar": 0.96,
+        "creative": 0.98,
+        "professional": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.89
       }
     },
     "Roofer": {
@@ -237,6 +293,20 @@
         "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.99,
+        "swiss": 0.96,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Drywall Installer": {
@@ -283,6 +353,18 @@
         "quartz": 0.9,
         "bronx": 0.93,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.99,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.87
       }
     },
     "Mason": {
@@ -334,6 +416,21 @@
         "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "sidebar": 0.92,
+        "creative": 0.93,
+        "professional": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Heavy Equipment Operator": {
@@ -384,6 +481,24 @@
         "bronx": 0.86,
         "mono": 0.97,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.98,
+        "sidebar": 0.92,
+        "creative": 0.94,
+        "professional": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85,
+        "quartz": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7
       }
     },
     "Site Engineer": {
@@ -431,6 +546,18 @@
         "quartz": 0.92,
         "bronx": 0.92,
         "mono": 0.98
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.94
       }
     },
     "Leasing Consultant": {
@@ -477,6 +604,17 @@
         "quartz": 0.99,
         "bronx": 0.94,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.89
       }
     },
     "Home Inspector": {
@@ -524,6 +662,20 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.94,
+        "creative": 0.99,
+        "professional": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.86
       }
     },
     "Tile Setter": {
@@ -570,6 +722,14 @@
         "quartz": 0.9,
         "bronx": 0.93,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.86,
+        "bronx": 0.88,
+        "pop": 0.92
       }
     },
     "Flooring Installer": {
@@ -616,6 +776,15 @@
         "quartz": 0.88,
         "bronx": 0.9,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.9
       }
     },
     "Glazier": {
@@ -662,6 +831,19 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.95,
+        "creative": 0.94,
+        "swiss": 0.96,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.85
       }
     },
     "Insulation Installer": {
@@ -708,6 +890,14 @@
         "quartz": 0.93,
         "bronx": 0.93,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.93,
+        "pop": 0.89
       }
     },
     "Scaffolder": {
@@ -757,6 +947,20 @@
         "bronx": 0.9,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "silk": 0.96,
+        "sidebar": 0.94,
+        "creative": 0.96,
+        "professional": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.93,
+        "pop": 0.86
       }
     },
     "Construction Inspector": {
@@ -804,6 +1008,21 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.97,
+        "professional": 0.97,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Building Surveyor": {
@@ -850,6 +1069,17 @@
         "quartz": 0.95,
         "bronx": 0.88,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "creative": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.87
       }
     },
     "Real Estate Investor": {
@@ -898,6 +1128,19 @@
         "bronx": 0.9,
         "mono": 0.98,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85
       }
     },
     "Mortgage Broker": {
@@ -944,6 +1187,16 @@
         "quartz": 0.89,
         "bronx": 0.92,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "pop": 0.87
       }
     }
   }

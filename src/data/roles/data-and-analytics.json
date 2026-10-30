@@ -77,6 +77,35 @@
         "mono": 0.88,
         "pop": 0.88,
         "cast": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "timeline": 0.95,
+        "executive": 0.89,
+        "academic": 0.93,
+        "tech": 0.96,
+        "silk": 0.9,
+        "lateral": 0.93,
+        "opal": 0.89,
+        "meridian": 0.94,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "europa": 0.95,
+        "tokyo": 0.89,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.88,
+        "path": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 11
       }
     },
     "Senior Data Scientist": {
@@ -144,6 +173,28 @@
         "bronx": 0.91,
         "mono": 0.91,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.9,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Applied Scientist": {
@@ -217,6 +268,31 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.94,
+        "academic": 0.98,
+        "tech": 0.98,
+        "silk": 0.88,
+        "lateral": 0.97,
+        "opal": 0.88,
+        "meridian": 0.94,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.97,
+        "tokyo": 0.92,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.87,
+        "path": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Machine Learning Scientist": {
@@ -293,6 +369,35 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "timeline": 0.96,
+        "executive": 0.91,
+        "academic": 0.95,
+        "tech": 0.98,
+        "silk": 0.9,
+        "lateral": 0.93,
+        "opal": 0.91,
+        "meridian": 0.94,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "europa": 0.95,
+        "tokyo": 0.89,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.88,
+        "path": 0.89,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 11
       }
     },
     "Data Analyst": {
@@ -356,6 +461,26 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "meridian": 0.96,
+        "scholar": 0.92,
+        "minimalist": 0.89,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.96,
+        "bronx": 0.93,
+        "mono": 0.88,
+        "pop": 0.87,
+        "cast": 0.93
       }
     },
     "Senior Data Analyst": {
@@ -419,6 +544,29 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.95,
+        "academic": 0.97,
+        "tech": 0.98,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Product Analyst": {
@@ -486,6 +634,30 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.89,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.94,
+        "scholar": 0.91,
+        "minimalist": 0.88,
+        "tokyo": 0.92,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Marketing Analyst": {
@@ -545,6 +717,25 @@
         "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.96,
+        "scholar": 0.95,
+        "minimalist": 0.87,
+        "tokyo": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Business Analyst": {
@@ -608,6 +799,27 @@
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.92,
+        "opal": 0.98,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "path": 0.95,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "BI Analyst": {
@@ -670,6 +882,28 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.99,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.92,
+        "tokyo": 0.93,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Business Intelligence Analyst": {
@@ -736,6 +970,30 @@
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.91,
+        "lateral": 0.97,
+        "opal": 0.98,
+        "meridian": 0.94,
+        "scholar": 0.9,
+        "minimalist": 0.89,
+        "tokyo": 0.89,
+        "prism": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.87
       }
     },
     "Reporting Analyst": {
@@ -796,6 +1054,27 @@
         "mono": 0.96,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.95,
+        "academic": 0.97,
+        "tech": 0.97,
+        "silk": 0.92,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "path": 0.94,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Revenue Analyst": {
@@ -859,6 +1138,27 @@
         "mono": 0.92,
         "pop": 0.86,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.9,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "tokyo": 0.93,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Growth Analyst": {
@@ -918,6 +1218,24 @@
         "mono": 0.98,
         "pop": 0.88,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Customer Insights Analyst": {
@@ -982,6 +1300,29 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.95,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.92,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "noir": 0.96,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Experimentation Analyst": {
@@ -1050,6 +1391,29 @@
         "mono": 0.92,
         "pop": 0.9,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.93,
+        "academic": 0.96,
+        "tech": 0.98,
+        "silk": 0.9,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.91,
+        "symmetry": 0.93,
+        "path": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "BI Developer": {
@@ -1110,6 +1474,26 @@
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.94,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Analytics Engineer": {
@@ -1173,6 +1557,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Analytics Lead": {
@@ -1238,6 +1644,30 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.9,
+        "lateral": 0.95,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "tokyo": 0.92,
+        "prism": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Data Architect": {
@@ -1309,6 +1739,29 @@
         "mono": 0.88,
         "pop": 0.9,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.89,
+        "lateral": 0.97,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.93,
+        "minimalist": 0.88,
+        "europa": 0.99,
+        "tokyo": 0.93,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.9,
+        "symmetry": 0.92,
+        "path": 0.92,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.88,
+        "cast": 0.91
       }
     },
     "Data Modeler": {
@@ -1369,6 +1822,25 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Statistician": {
@@ -1441,6 +1913,37 @@
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.92,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.89,
+        "lateral": 0.98,
+        "opal": 0.91,
+        "meridian": 0.97,
+        "scholar": 0.97,
+        "minimalist": 0.88,
+        "tokyo": 0.93,
+        "sidebar": 0.96,
+        "creative": 0.98,
+        "professional": 0.99,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "path": 0.94,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85,
+        "quartz": 0.9
+      },
+      "trimLetter": {
+        "berlin": 10,
+        "quartz": 10
       }
     },
     "Data Steward": {
@@ -1502,6 +2005,27 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "path": 0.97,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Data Quality Analyst": {
@@ -1563,6 +2087,28 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.99,
+        "silk": 0.94,
+        "opal": 0.94,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "prism": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Data Quality Engineer": {
@@ -1627,6 +2173,30 @@
         "mono": 0.92,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.91,
+        "academic": 0.99,
+        "silk": 0.92,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Data Governance Analyst": {
@@ -1689,6 +2259,28 @@
         "bronx": 0.92,
         "mono": 0.92,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.91,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Data Governance Manager": {
@@ -1755,6 +2347,27 @@
         "mono": 0.94,
         "pop": 0.94,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "tech": 0.99,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.95,
+        "path": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.9,
+        "cast": 0.96
       }
     },
     "Quantitative Analyst": {
@@ -1826,6 +2439,34 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.92,
+        "tech": 0.99,
+        "silk": 0.91,
+        "lateral": 0.98,
+        "opal": 0.98,
+        "meridian": 0.97,
+        "scholar": 0.94,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "sidebar": 0.99,
+        "creative": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.91,
+        "path": 0.94,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.87,
+        "cast": 0.92,
+        "quartz": 0.88
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Operations Research Analyst": {
@@ -1894,6 +2535,28 @@
         "mono": 0.94,
         "pop": 0.94,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.98,
+        "silk": 0.92,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.92,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.88,
+        "pop": 0.88,
+        "cast": 0.94
       }
     },
     "Decision Scientist": {
@@ -1963,6 +2626,29 @@
         "mono": 0.9,
         "pop": 0.9,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "tech": 0.99,
+        "silk": 0.96,
+        "lateral": 0.95,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.92,
+        "path": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Risk Analyst": {
@@ -2024,6 +2710,27 @@
         "mono": 0.95,
         "pop": 0.89,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.94,
+        "opal": 0.98,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.91,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Fraud Analyst": {
@@ -2085,6 +2792,26 @@
         "mono": 0.93,
         "pop": 0.9,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "path": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Pricing Analyst": {
@@ -2147,6 +2874,27 @@
         "mono": 0.95,
         "pop": 0.88,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.94,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.95,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Data Visualization Specialist": {
@@ -2203,6 +2951,24 @@
         "bronx": 0.86,
         "mono": 0.97,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.94,
+        "quartz": 0.98,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.99
       }
     },
     "Analytics Manager": {
@@ -2265,6 +3031,33 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.96,
+        "lateral": 0.99,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.92,
+        "noir": 0.98,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.9,
+        "quartz": 0.94,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Analytics Director": {
@@ -2337,6 +3130,28 @@
         "mono": 0.89,
         "pop": 0.88,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.88,
+        "lateral": 0.93,
+        "opal": 0.91,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "tokyo": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.88,
+        "path": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Data Science Lead": {
@@ -2406,6 +3221,26 @@
         "mono": 0.92,
         "pop": 0.9,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.93,
+        "opal": 0.91,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.95,
+        "path": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Data Science Manager": {
@@ -2475,6 +3310,28 @@
         "mono": 0.9,
         "pop": 0.89,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.9,
+        "lateral": 0.97,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.87,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.9,
+        "cast": 0.93
       }
     },
     "Data Science Director": {
@@ -2548,6 +3405,41 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "timeline": 0.98,
+        "executive": 0.88,
+        "academic": 0.96,
+        "tech": 0.95,
+        "silk": 0.88,
+        "lateral": 0.94,
+        "opal": 0.91,
+        "meridian": 0.97,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "europa": 0.97,
+        "tokyo": 0.92,
+        "prism": 0.99,
+        "sidebar": 0.98,
+        "creative": 0.97,
+        "professional": 0.97,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.92,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.87,
+        "berlin": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.88
+      },
+      "trimLetter": {
+        "berlin": 10,
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Data Engineering Manager": {
@@ -2615,6 +3507,35 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.91,
+        "lateral": 0.96,
+        "opal": 0.92,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.91,
+        "prism": 0.99,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.93,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Chief Data Officer (CDO)": {
@@ -2684,6 +3605,28 @@
         "mono": 0.9,
         "pop": 0.92,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.93,
+        "academic": 0.98,
+        "silk": 0.93,
+        "lateral": 0.99,
+        "opal": 0.91,
+        "scholar": 0.95,
+        "minimalist": 0.86,
+        "tokyo": 0.91,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Director of Data": {
@@ -2744,6 +3687,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.98,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Data Analyst Intern": {
@@ -2811,6 +3775,31 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.9,
+        "lateral": 0.97,
+        "opal": 0.96,
+        "meridian": 0.96,
+        "scholar": 0.92,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.92,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "noir": 0.99,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Junior Data Analyst": {
@@ -2873,6 +3862,28 @@
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.99,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.93,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.86,
+        "cast": 0.95
       }
     },
     "Data Science Intern": {
@@ -2943,6 +3954,28 @@
         "mono": 0.92,
         "pop": 0.92,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "symmetry": 0.89,
+        "path": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.88,
+        "cast": 0.89
       }
     },
     "Junior Data Scientist": {
@@ -3005,6 +4038,27 @@
         "mono": 0.95,
         "pop": 0.88,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "silk": 0.9,
+        "opal": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "noir": 0.96,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Staff Data Scientist": {
@@ -3076,6 +4130,29 @@
         "mono": 0.9,
         "pop": 0.9,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "academic": 0.98,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.9,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.88,
+        "cast": 0.89
       }
     },
     "Principal Data Scientist": {
@@ -3133,6 +4210,23 @@
         "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.97,
+        "silk": 0.99,
+        "minimalist": 0.92,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "path": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.88,
+        "cast": 0.97
       }
     },
     "Senior Business Analyst": {
@@ -3192,6 +4286,26 @@
         "mono": 0.93,
         "pop": 0.9,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "silk": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "prism": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.96,
+        "quartz": 0.94,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Healthcare Data Analyst": {
@@ -3265,6 +4379,35 @@
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "timeline": 0.98,
+        "executive": 0.9,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.85,
+        "lateral": 0.98,
+        "opal": 0.91,
+        "meridian": 0.99,
+        "scholar": 0.91,
+        "minimalist": 0.86,
+        "europa": 0.96,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.91,
+        "path": 0.94,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.89,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 10
       }
     },
     "Power BI Developer": {
@@ -3325,6 +4468,26 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "tech": 0.99,
+        "silk": 0.96,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.92
       }
     },
     "Tableau Developer": {
@@ -3387,6 +4550,29 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.94,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "prism": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     }
   }

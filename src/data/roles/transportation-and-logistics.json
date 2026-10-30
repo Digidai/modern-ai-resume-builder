@@ -92,6 +92,23 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "sidebar": 0.97,
+        "creative": 0.97,
+        "professional": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.97,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Delivery Driver": {
@@ -140,6 +157,19 @@
         "bronx": 0.95,
         "mono": 0.98,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.98,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.94,
+        "pop": 0.91
       }
     },
     "Courier": {
@@ -188,6 +218,18 @@
         "bronx": 0.91,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.89,
+        "bronx": 0.9,
+        "mono": 0.92,
+        "pop": 0.85
       }
     },
     "Bus Driver": {
@@ -234,6 +276,17 @@
         "bronx": 0.93,
         "mono": 0.98,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "mono": 0.93,
+        "pop": 0.9
       }
     },
     "Driver Trainer": {
@@ -293,6 +346,28 @@
         "symmetry": 0.97,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.93,
+        "academic": 0.97,
+        "tech": 0.95,
+        "silk": 0.96,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.94,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Truck Dispatcher": {
@@ -340,6 +415,20 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.98,
+        "creative": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.89
       }
     },
     "Dispatch Supervisor": {
@@ -399,6 +488,25 @@
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "creative": 0.99,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Freight Broker": {
@@ -448,6 +556,20 @@
         "bronx": 0.89,
         "mono": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "tokyo": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.88
       }
     },
     "DOT Compliance Specialist": {
@@ -499,6 +621,30 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.91,
+        "creative": 0.92,
+        "professional": 0.93,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "wireframe": 0.98,
+        "moda": 0.97,
+        "mono": 0.91,
+        "pop": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7,
+        "bronx": 1
       }
     },
     "Terminal Manager": {
@@ -560,6 +706,32 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.95,
+        "tech": 0.99,
+        "silk": 0.96,
+        "opal": 0.95,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.94,
+        "professional": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.88
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Diesel Mechanic": {
@@ -609,6 +781,23 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "opal": 0.97,
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "sidebar": 0.96,
+        "creative": 0.93,
+        "professional": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85
       }
     },
     "Automotive Technician": {
@@ -658,6 +847,25 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.95,
+        "sidebar": 0.98,
+        "creative": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.98
       }
     },
     "Flight Instructor": {
@@ -706,6 +914,24 @@
         "quartz": 0.91,
         "bronx": 0.89,
         "mono": 0.98,
+        "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "silk": 0.98,
+        "opal": 0.97,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "sidebar": 0.95,
+        "creative": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
         "pop": 0.85
       }
     },
@@ -756,6 +982,24 @@
         "bronx": 0.86,
         "mono": 0.97,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "sidebar": 0.97,
+        "creative": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85
       }
     },
     "Airline Pilot": {
@@ -816,6 +1060,25 @@
         "bronx": 0.96,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.97,
+        "tech": 0.97,
+        "silk": 0.93,
+        "opal": 0.94,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "quartz": 0.95,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Flight Attendant": {
@@ -866,6 +1129,24 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.99,
+        "tech": 0.98,
+        "silk": 0.96,
+        "opal": 0.95,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Aircraft Mechanic": {
@@ -912,6 +1193,20 @@
         "quartz": 0.94,
         "bronx": 0.86,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "opal": 0.97,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.89,
+        "iron": 0.85,
+        "ginto": 0.9,
+        "quartz": 0.89,
+        "bronx": 0.87,
+        "mono": 0.94,
+        "pop": 0.87
       }
     },
     "Avionics Technician": {
@@ -968,6 +1263,34 @@
         "moda": 0.95,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "silk": 0.92,
+        "opal": 0.99,
+        "scholar": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.93,
+        "sidebar": 0.9,
+        "creative": 0.92,
+        "professional": 0.94,
+        "elegant": 0.97,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "wireframe": 0.98,
+        "moda": 0.95,
+        "noir": 0.98,
+        "mono": 0.91,
+        "pop": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 7,
+        "bronx": 7
       }
     },
     "Air Traffic Controller": {
@@ -1024,6 +1347,29 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "tech": 0.97,
+        "silk": 0.95,
+        "opal": 0.95,
+        "minimalist": 0.91,
+        "tokyo": 0.93,
+        "sidebar": 0.98,
+        "creative": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.89,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "wireframe": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.89,
+        "cast": 0.98
       }
     },
     "Aircraft Dispatcher": {
@@ -1083,6 +1429,27 @@
         "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.92,
+        "academic": 0.98,
+        "tech": 0.95,
+        "silk": 0.95,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "tokyo": 0.95,
+        "sidebar": 0.91,
+        "creative": 0.91,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.9
       }
     },
     "Ramp Agent": {
@@ -1128,6 +1495,17 @@
         "quartz": 0.97,
         "bronx": 0.94,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.94,
+        "pop": 0.91
       }
     },
     "Gate Agent": {
@@ -1171,6 +1549,16 @@
         "iron": 0.93,
         "ginto": 0.9,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.97,
+        "berlin": 0.88,
+        "iron": 0.91,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.94,
+        "mono": 0.94,
+        "pop": 0.94
       }
     },
     "Airport Operations Manager": {
@@ -1234,6 +1622,30 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "academic": 0.97,
+        "tech": 0.97,
+        "silk": 0.91,
+        "opal": 0.91,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "europa": 0.97,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.92
       }
     },
     "Locomotive Engineer": {
@@ -1284,6 +1696,21 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.98,
+        "sidebar": 0.92,
+        "creative": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.99,
+        "mono": 0.94,
+        "pop": 0.85
       }
     },
     "Train Conductor": {
@@ -1333,6 +1760,19 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "sidebar": 0.95,
+        "creative": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85
       }
     }
   }

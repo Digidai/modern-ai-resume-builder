@@ -1,7 +1,7 @@
-import { MM_TO_PX, PRINT_CONFIG } from '../constants/print';
+import { MM_TO_PX, PRINT_CONFIG, paperSize } from '../constants/print';
 
 export interface PrintLayout {
-  /** Printed A4 pages. */
+  /** Printed pages. */
   pages: number;
   /** Where each page after the first begins, in mm from the top of the on-screen paper. */
   breaksMm: number[];
@@ -14,14 +14,19 @@ export interface PrintLayout {
   lastPageFill: number;
 }
 
-const { PAGE_WIDTH_MM, PAGE_HEIGHT_MM, MARGIN_STANDARD_MM } = PRINT_CONFIG;
+const { MARGIN_STANDARD_MM } = PRINT_CONFIG;
 const GAP_PX = 40;
 
+/** The paper size a rendered paper prints on, from its `data-paper` (set by ResumePreview). */
+export const paperOf = (paper: HTMLElement) => paperSize(paper.dataset.paper);
+
 /** Size of one printed page's content box: standard templates print inside 15mm margins, full-bleed ones edge to edge. */
-export const pageBoxMm = (fullBleed: boolean) =>
-  fullBleed
-    ? { width: PAGE_WIDTH_MM, height: PAGE_HEIGHT_MM, inset: 0 }
-    : { width: PAGE_WIDTH_MM - 2 * MARGIN_STANDARD_MM, height: PAGE_HEIGHT_MM - 2 * MARGIN_STANDARD_MM, inset: MARGIN_STANDARD_MM };
+export const pageBoxMm = (fullBleed: boolean, paper: string | undefined = 'a4') => {
+  const { widthMm, heightMm } = paperSize(paper);
+  return fullBleed
+    ? { width: widthMm, height: heightMm, inset: 0 }
+    : { width: widthMm - 2 * MARGIN_STANDARD_MM, height: heightMm - 2 * MARGIN_STANDARD_MM, inset: MARGIN_STANDARD_MM };
+};
 
 interface PaginatedCopy {
   host: HTMLElement;
@@ -44,7 +49,7 @@ interface PaginatedCopy {
  * land exactly where they will in the PDF. Mirrors the print CSS in ResumePreview.
  */
 const createPaginatedCopy = (paper: HTMLElement, fullBleed: boolean, scale: number | undefined, visible: boolean): PaginatedCopy => {
-  const box = pageBoxMm(fullBleed);
+  const box = pageBoxMm(fullBleed, paper.dataset.paper);
   const columnWidthPx = box.width * MM_TO_PX;
   let columnHeightPx = box.height * MM_TO_PX;
   let trailingSpacePx = 0;
@@ -280,7 +285,7 @@ const countPages = ({ host, columnWidthPx }: PaginatedCopy) =>
 
 /**
  * Paginates the paper the way printing does:
- * - standard templates: 15mm margins on every page, so each page holds 180×267mm of content.
+ * - standard templates: 15mm margins on every page (on A4 each page holds 180×267mm of content).
  * - full-bleed templates: no page margins; the template's root (and any `.page-frame`) repeats its own
  *   padding and background on every page.
  * Pass `scale` to measure the resume at another text size without re-rendering it (break positions
@@ -417,7 +422,7 @@ const tallestWithPages = (paged: PaginatedCopy, pages: number) => {
 };
 
 /**
- * The paper as separate printed pages for the on-screen page view: one A4 sheet per page, each showing
+ * The paper as separate printed pages for the on-screen page view: one sheet per page, each showing
  * its page-sized column of a paginated copy inside the page's margins (15mm, or none for full-bleed
  * templates), so the preview breaks, repeats frames and fills the last page exactly as the PDF does.
  */
@@ -433,11 +438,12 @@ export const buildPageSheets = (paper: HTMLElement, fullBleed: boolean): HTMLEle
     host.remove();
     Object.assign(host.style, { position: 'absolute', left: '0', top: '0', opacity: '', visibility: '' });
     host.removeAttribute('aria-hidden');
-    const inset = pageBoxMm(fullBleed).inset * MM_TO_PX;
+    const inset = pageBoxMm(fullBleed, paper.dataset.paper).inset * MM_TO_PX;
+    const { widthMm, heightMm } = paperOf(paper);
     return Array.from({ length: pages }, (_, index) => {
       const sheet = document.createElement('div');
       sheet.className = 'resume-page-sheet';
-      Object.assign(sheet.style, { position: 'relative', width: `${PAGE_WIDTH_MM * MM_TO_PX}px`, height: `${PAGE_HEIGHT_MM * MM_TO_PX}px`, overflow: 'hidden', background: '#ffffff' });
+      Object.assign(sheet.style, { position: 'relative', width: `${widthMm * MM_TO_PX}px`, height: `${heightMm * MM_TO_PX}px`, overflow: 'hidden', background: '#ffffff' });
       const frame = document.createElement('div');
       Object.assign(frame.style, { position: 'absolute', left: `${inset}px`, top: `${inset}px`, width: `${columnWidthPx}px`, height: `${columnHeightPx}px`, overflow: 'hidden' });
       const column = host.cloneNode(true) as HTMLElement;

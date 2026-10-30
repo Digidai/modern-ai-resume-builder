@@ -8,9 +8,10 @@ import { isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
+import { paperSize } from '../constants/print';
 
 /**
- * Bare A4 paper for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
+ * Bare paper (A4 or US Letter) for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
  * Cloudflare Browser Rendering and prints it. Nothing is saved; `data-render-state` on <html> tells
  * the printer when the template and fonts are ready (`ready`) or the payload was invalid (`error`),
  * `data-render-pages` is the printed page count (paginated the way print does), and
@@ -71,9 +72,9 @@ const RenderView: React.FC = () => {
   }, [data, root]);
 
   if (!data) return null;
-  // In print the page box sets the width; a fixed 210mm would overflow the 180mm content area and shrink.
+  // In print the page box sets the width; a fixed page width would overflow the margin-inset content area and shrink.
   return (
-    <main className="mx-auto w-[210mm] bg-white print:w-full">
+    <main className="mx-auto bg-white print:w-full!" style={{ width: `${paperSize(data.design.paper).widthMm}mm` }}>
       <ResumePreview data={data} id="resume-render" showPageBreaks={false} />
     </main>
   );

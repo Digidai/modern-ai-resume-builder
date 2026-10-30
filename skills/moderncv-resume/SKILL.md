@@ -1,11 +1,11 @@
 ---
 name: moderncv-resume
-description: Write, design and export a professional resume with ModernCV (52 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
+description: Write, design and export a professional resume with ModernCV (53 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
 ---
 
 # ModernCV resume skill
 
-ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 PDF in one of 52 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
+ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 or US Letter PDF in one of 53 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
 If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`.
 
@@ -33,13 +33,13 @@ Base URL: `https://genedai.cv`. JSON in, JSON/PDF/PNG out. CORS is open. Renderi
 | `GET /api/agent/templates` | `?ats_only=true` | `{ templates: [{ id, name, description, bestFor, atsFriendly, preview, page }] }` |
 | `GET /api/agent/guide` | `?job_title=Data Analyst` | Writing guide JSON |
 | `GET /api/agent/example` | `?job_title=Registered Nurse (RN)` | `{ jobTitle, family, page, resume }`; `resume` is render-ready (placeholder name, no contact details) |
-| `POST /api/agent/link` | `{ resume, template?, accent?, font?, scale? }` | `{ url, template, warnings }` |
+| `POST /api/agent/link` | `{ resume, template?, accent?, font?, scale?, paper? }` | `{ url, template, warnings }` |
 | `POST /api/agent/preview` | same | `image/png` of page 1; headers `x-resume-pages`, `x-resume-warnings` |
-| `POST /api/agent/pdf` | same | `application/pdf` (A4, selectable text) |
+| `POST /api/agent/pdf` | same | `application/pdf` (A4 or US Letter, selectable text) |
 | `POST /api/agent/latex` | `{ resume }` | `{ filename, engine, tex, overleaf }` |
 | `POST /api/agent/publications` | `{ orcid }` or `{ bibtex }`, optional `kinds`, `from_year`, `to_year` | `{ source, listed, found, counts, returned, publications }` |
 
-`template` is an id from the templates list (default `modern`). `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif, latin-modern`. `scale` is 0.85–1.15.
+`template` is an id from the templates list (default `modern`). `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif, latin-modern`. `scale` is 0.85–1.15. `paper` is `a4` (default) or `letter`; use `letter` for US and Canadian applications, and check the page count again since Letter pages are shorter.
 
 ```bash
 curl -s https://genedai.cv/api/agent/pdf \
@@ -84,6 +84,7 @@ A JSON Resume document (https://jsonresume.org/schema) also works. The native sh
 - `photo` (optional) is a base64 JPEG/PNG/WebP data URL, 3:4, under 200 KB. Only photo templates (`list_templates` → `photo: true`) show it; leave it out for ATS portals and US or UK applications.
 - `publications` (optional) is a list of `{ authors, title, venue, year, link }` for academic and research CVs. Templates with `publications: true` in `list_templates` (Scholar, Oxford, Academic, Plain, Text, Graduate) show it, numbered or as a reference list, with the owner's name in bold.
 - `awards` (optional) is a list of `{ title, issuer, year, detail }` for grants, fellowships and prizes (`detail` holds an amount or role such as "$450,000, co-PI"), and `talks` (optional) is a list of `{ title, event, location, year }` for invited talks and conference presentations. `teaching` (optional) is a list of `{ course, role, institution, year }` for courses taught and TA roles. The same templates as publications show them.
+- `experience[].hours` (optional) is hours worked per week, e.g. `"40"`. The `federal` template (`list_templates` → `hours: true`) shows it; USAJOBS federal resumes need it for every job, along with month/year dates and the series and grade in the job title ("Program Analyst, GS-0343-12"). Use `paper: "letter"` for federal resumes.
 - `links` holds extra profiles (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, ORCID…). Leave `label` empty for well-known sites; templates detect the site and show its icon. Up to 8.
 
 ## Privacy

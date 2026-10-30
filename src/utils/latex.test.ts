@@ -26,6 +26,18 @@ describe('toLatex', () => {
     expect(tex.trim().endsWith('\\end{document}')).toBe(true);
   });
 
+  it('sets the LaTeX paper size from the design', () => {
+    expect(toLatex(data)).toContain('\\documentclass[11pt,a4paper]{article}');
+    expect(toLatex({ ...data, design: { ...data.design, paper: 'letter' } })).toContain('\\usepackage[letterpaper,margin=18mm]{geometry}');
+  });
+
+  it('keeps hours per week from federal resumes on the role line', () => {
+    const [first, ...rest] = data.experience;
+    const tex = toLatex({ ...data, experience: [{ ...first, hours: '40' }, ...rest] });
+    expect(tex).toContain('{Senior Product Designer, 40 hours per week}');
+    expect(tex).toContain('{UI/UX Designer}');
+  });
+
   it('picks XeLaTeX only when the resume has CJK text', () => {
     expect(latexEngine(data)).toBe('pdflatex');
     expect(latexEngine({ ...data, summary: '负责搜索排序' })).toBe('xelatex');

@@ -4,6 +4,8 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Federal template for US government jobs (USAJOBS format): one plain column, MM/YYYY dates and hours per week on every job. Positions get an optional Hours per week field (shown in the editor for this template, accepted by the schema, MCP and API), and the paper setting suggests US Letter. 53 templates.
+- Paper size: A4 or US Letter, under Template → Style. The preview, page count, Fit to one page, PDF (server and browser), LaTeX export and the agent API (`paper`) all follow it; example resumes have their own Letter text sizes so they still fit one page.
 - Three more ATS-friendly templates modelled on the most used LaTeX resumes: Oxford (moderncv classic: grey italic title, accent bars and a left date column; shows the academic sections), Standard (Gayle McDowell's CareerCup format: Times, small caps, firm · role · dates) and Lumen (billryan/resume: centred header, icon-led section titles). 52 templates.
 - Five ATS-friendly templates: Plain (the most basic black-and-white resume), Text (text only, no rules or colour), Graduate (education and skills first), Wall Street (investment-banking format) and Scholar (academic CV). 49 templates in total.
 - Publications: a new editor section (title, authors, venue, year, DOI) for academic and research CVs, shown by Scholar, Academic, Plain, Text and Graduate, with your name bolded in the author list. Accepted by the schema, MCP and API, and imported from JSON Resume.

@@ -52,6 +52,21 @@
         "bronx": 0.89,
         "mono": 0.99,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.94,
+        "ginto": 0.92,
+        "symmetry": 0.97,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.94
       }
     },
     "Research Analyst": {
@@ -93,6 +108,13 @@
       "fit": {
         "iron": 0.97,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "ginto": 0.95,
+        "quartz": 0.97,
+        "bronx": 0.95,
+        "pop": 0.99
       }
     },
     "Sports Analyst": {
@@ -135,6 +157,15 @@
         "berlin": 0.97,
         "quartz": 0.97,
         "bronx": 0.96
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.91,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "Credit Risk Analyst": {
@@ -178,6 +209,15 @@
         "ginto": 0.98,
         "bronx": 0.9,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "ginto": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "Supply Chain Data Analyst": {
@@ -218,6 +258,16 @@
       ],
       "fit": {
         "berlin": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.91,
+        "iron": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.96,
+        "bronx": 0.96,
+        "mono": 0.98,
+        "pop": 0.97
       }
     },
     "HR Data Analyst": {
@@ -259,6 +309,13 @@
       "fit": {
         "berlin": 0.97,
         "ginto": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "ginto": 0.95,
+        "bronx": 0.95,
+        "mono": 0.98
       }
     },
     "Clinical Data Analyst": {
@@ -303,6 +360,16 @@
         "ginto": 0.97,
         "bronx": 0.98,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.98,
+        "ginto": 0.92,
+        "quartz": 0.97,
+        "bronx": 0.94,
+        "mono": 0.98,
+        "pop": 0.94
       }
     },
     "Data Annotator": {
@@ -343,6 +410,14 @@
       ],
       "fit": {
         "berlin": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.95,
+        "ginto": 0.95,
+        "quartz": 0.98,
+        "bronx": 0.97,
+        "pop": 0.96
       }
     },
     "AI Trainer": {
@@ -385,6 +460,15 @@
         "berlin": 0.98,
         "iron": 0.95,
         "bronx": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.94,
+        "ginto": 0.94,
+        "quartz": 0.97,
+        "bronx": 0.92,
+        "pop": 0.94
       }
     }
   }

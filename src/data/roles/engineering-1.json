@@ -49,6 +49,23 @@
         "bronx": 0.9,
         "mono": 0.97,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.87
       }
     },
     "Junior Software Engineer": {
@@ -100,6 +117,24 @@
         "bronx": 0.9,
         "mono": 0.97,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.97,
+        "silk": 0.98,
+        "opal": 0.99,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.89
       }
     },
     "Senior Software Engineer": {
@@ -157,6 +192,27 @@
         "bronx": 0.94,
         "mono": 0.93,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.93,
+        "opal": 0.99,
+        "meridian": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.95,
+        "bronx": 0.9,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.97
       }
     },
     "Lead Software Engineer": {
@@ -215,6 +271,26 @@
         "bronx": 0.96,
         "mono": 0.92,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.97,
+        "silk": 0.97,
+        "opal": 0.95,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "tokyo": 0.93,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "symmetry": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Software Engineer Intern": {
@@ -256,6 +332,12 @@
       "fit": {
         "quartz": 0.93,
         "bronx": 0.85
+      },
+      "fitLetter": {
+        "berlin": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "pop": 0.99
       }
     },
     "Software Developer": {
@@ -321,6 +403,35 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.97,
+        "tech": 0.96,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.95,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "europa": 0.96,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "noir": 0.98,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 9
       }
     },
     "Senior Software Developer": {
@@ -388,6 +499,35 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.86,
+        "timeline": 0.97,
+        "executive": 0.89,
+        "academic": 0.93,
+        "tech": 0.94,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.9,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.96,
+        "tokyo": 0.91,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.99,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 10
       }
     },
     "Staff Software Engineer": {
@@ -449,6 +589,25 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.99,
+        "silk": 0.96,
+        "opal": 0.94,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Principal Software Engineer": {
@@ -518,6 +677,31 @@
         "mono": 0.89,
         "pop": 0.92,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "timeline": 0.98,
+        "executive": 0.94,
+        "academic": 0.96,
+        "tech": 0.98,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.85,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.87,
+        "cast": 0.94
       }
     },
     "Frontend Developer": {
@@ -584,6 +768,29 @@
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.89,
+        "lateral": 0.95,
+        "opal": 0.99,
+        "meridian": 0.94,
+        "scholar": 0.92,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Frontend Engineer": {
@@ -633,6 +840,20 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.92
       }
     },
     "Senior Frontend Developer": {
@@ -693,6 +914,27 @@
         "bronx": 0.86,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Backend Developer": {
@@ -761,6 +1003,34 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.95,
+        "tech": 0.96,
+        "silk": 0.91,
+        "lateral": 0.95,
+        "opal": 0.89,
+        "meridian": 0.96,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "europa": 0.95,
+        "tokyo": 0.9,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 9
       }
     },
     "Backend Engineer": {
@@ -828,6 +1098,35 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.91,
+        "tech": 0.99,
+        "silk": 0.9,
+        "lateral": 0.96,
+        "opal": 0.92,
+        "meridian": 0.96,
+        "scholar": 0.92,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.92,
+        "prism": 0.97,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.93,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "noir": 0.96,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.9,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Senior Backend Developer": {
@@ -892,6 +1191,33 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.93,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.93,
+        "lateral": 0.96,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.92,
+        "minimalist": 0.88,
+        "tokyo": 0.92,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Full Stack Developer": {
@@ -952,6 +1278,26 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.95,
+        "silk": 0.91,
+        "meridian": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.89,
+        "cast": 0.95
       }
     },
     "Full Stack Engineer": {
@@ -1014,6 +1360,28 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.95
       }
     },
     "Senior Full Stack Developer": {
@@ -1076,6 +1444,28 @@
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Web Developer": {
@@ -1123,6 +1513,17 @@
         "quartz": 0.89,
         "bronx": 0.87,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.92
       }
     },
     "JavaScript Developer": {
@@ -1181,6 +1582,26 @@
         "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.96,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "TypeScript Developer": {
@@ -1242,6 +1663,26 @@
         "mono": 0.96,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.96,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "React Developer": {
@@ -1301,6 +1742,25 @@
         "mono": 0.96,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "React.js Developer": {
@@ -1360,6 +1820,25 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.98
       }
     },
     "Next.js Developer": {
@@ -1420,6 +1899,26 @@
         "mono": 0.93,
         "pop": 0.9,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "silk": 0.96,
+        "opal": 0.99,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Angular Developer": {
@@ -1479,6 +1978,24 @@
         "bronx": 0.88,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "silk": 0.94,
+        "opal": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Vue.js Developer": {
@@ -1542,6 +2059,27 @@
         "mono": 0.93,
         "pop": 0.89,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.92,
+        "lateral": 0.98,
+        "meridian": 0.96,
+        "scholar": 0.95,
+        "minimalist": 0.88,
+        "tokyo": 0.95,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "symmetry": 0.92,
+        "path": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.87,
+        "pop": 0.87,
+        "cast": 0.93
       }
     },
     "Svelte Developer": {
@@ -1600,6 +2138,22 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.94,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.87
       }
     },
     "Electron Developer": {
@@ -1663,6 +2217,28 @@
         "bronx": 0.92,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "academic": 0.99,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Node.js Developer": {
@@ -1724,6 +2300,28 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.99,
+        "meridian": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "Express.js Developer": {
@@ -1787,6 +2385,27 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "silk": 0.9,
+        "opal": 0.99,
+        "meridian": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     ".NET Developer": {
@@ -1851,6 +2470,29 @@
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.93,
+        "lateral": 0.98,
+        "opal": 0.94,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.95,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.86,
+        "cast": 0.91
       }
     },
     "Java Developer": {
@@ -1921,6 +2563,36 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.86,
+        "timeline": 0.96,
+        "executive": 0.92,
+        "academic": 0.93,
+        "tech": 0.93,
+        "silk": 0.9,
+        "lateral": 0.93,
+        "opal": 0.93,
+        "meridian": 0.94,
+        "scholar": 0.89,
+        "minimalist": 0.85,
+        "europa": 0.96,
+        "tokyo": 0.87,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.88,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Spring Boot Developer": {
@@ -1983,6 +2655,27 @@
         "bronx": 0.93,
         "mono": 0.93,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.88,
+        "bronx": 0.88,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Python Developer": {
@@ -2044,6 +2737,28 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.99,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "Django Developer": {
@@ -2109,6 +2824,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.94,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Flask Developer": {
@@ -2169,6 +2905,26 @@
         "mono": 0.96,
         "pop": 0.88,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Go Developer": {
@@ -2233,6 +2989,28 @@
         "mono": 0.93,
         "pop": 0.87,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.87,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Rust Developer": {
@@ -2296,6 +3074,29 @@
         "mono": 0.93,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.96,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "noir": 0.98,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Scala Developer": {
@@ -2358,6 +3159,27 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.96,
+        "meridian": 0.94,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.96,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Elixir Developer": {
@@ -2418,6 +3240,28 @@
         "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.92,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Ruby on Rails Developer": {
@@ -2483,6 +3327,35 @@
         "mono": 0.93,
         "pop": 0.88,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.91,
+        "lateral": 0.96,
+        "opal": 0.98,
+        "meridian": 0.94,
+        "scholar": 0.95,
+        "minimalist": 0.88,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "noir": 0.98,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.93,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "PHP Developer": {
@@ -2551,6 +3424,36 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "timeline": 0.98,
+        "executive": 0.87,
+        "academic": 0.92,
+        "tech": 0.93,
+        "silk": 0.91,
+        "lateral": 0.96,
+        "opal": 0.91,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.94,
+        "tokyo": 0.91,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "noir": 0.98,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.93,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Laravel Developer": {
@@ -2609,6 +3512,23 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "opal": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.87,
+        "symmetry": 0.94,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.87
       }
     },
     "WordPress Developer": {
@@ -2658,6 +3578,19 @@
         "bronx": 0.85,
         "mono": 0.97,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.87,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.89
       }
     },
     "Shopify Developer": {
@@ -2705,6 +3638,16 @@
         "quartz": 0.91,
         "bronx": 0.89,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88
       }
     },
     "Salesforce Developer": {
@@ -2764,6 +3707,26 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.98,
+        "opal": 0.97,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Salesforce Administrator": {
@@ -2823,6 +3786,26 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.91,
+        "lateral": 0.98,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.96,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.86,
+        "cast": 0.97
       }
     },
     "C Developer": {
@@ -2871,6 +3854,19 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.97,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88
       }
     },
     "C++ Developer": {
@@ -2938,6 +3934,39 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.99,
+        "silk": 0.92,
+        "lateral": 0.95,
+        "opal": 0.92,
+        "meridian": 0.94,
+        "scholar": 0.91,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.9,
+        "prism": 0.99,
+        "professional": 0.97,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.89,
+        "path": 0.97,
+        "noir": 0.98,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.93,
+        "berlin": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6,
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "C# Developer": {
@@ -2999,6 +4028,30 @@
         "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "academic": 0.98,
+        "silk": 0.93,
+        "lateral": 0.98,
+        "opal": 0.95,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.87,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.92,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Kotlin Developer": {
@@ -3058,6 +4111,24 @@
         "bronx": 0.91,
         "mono": 0.95,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.94,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.86
       }
     },
     "Swift Developer": {
@@ -3117,6 +4188,24 @@
         "mono": 0.95,
         "pop": 0.91,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.96,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.89,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Solidity Developer": {
@@ -3182,6 +4271,28 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "silk": 0.9,
+        "lateral": 0.98,
+        "opal": 0.96,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Blockchain Developer": {
@@ -3243,6 +4354,25 @@
         "mono": 0.96,
         "pop": 0.86,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "opal": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Web3 Developer": {
@@ -3303,6 +4433,26 @@
         "bronx": 0.93,
         "mono": 0.95,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.9,
+        "opal": 0.99,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.89,
+        "symmetry": 0.96,
+        "path": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Mobile Developer (iOS/Android)": {
@@ -3344,6 +4494,13 @@
       "fit": {
         "quartz": 0.99,
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "pop": 0.95
       }
     },
     "Mobile Engineer": {
@@ -3410,6 +4567,36 @@
         "mono": 0.9,
         "pop": 0.86,
         "cast": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.92,
+        "academic": 0.98,
+        "tech": 0.99,
+        "silk": 0.91,
+        "lateral": 0.96,
+        "opal": 0.96,
+        "meridian": 0.96,
+        "scholar": 0.95,
+        "minimalist": 0.85,
+        "tokyo": 0.91,
+        "prism": 0.97,
+        "creative": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.9,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "noir": 0.96,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.9,
+        "iron": 0.86
+      },
+      "trimLetter": {
+        "iron": 5
       }
     },
     "iOS Developer": {
@@ -3468,6 +4655,25 @@
         "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.97,
+        "opal": 0.96,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.98,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.88,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "iOS Engineer": {
@@ -3535,6 +4741,38 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.89,
+        "academic": 0.98,
+        "tech": 0.99,
+        "silk": 0.91,
+        "lateral": 0.96,
+        "opal": 0.92,
+        "meridian": 0.96,
+        "scholar": 0.95,
+        "minimalist": 0.88,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "prism": 0.95,
+        "creative": 0.96,
+        "swiss": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.91,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "noir": 0.96,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6,
+        "iron": 5
       }
     },
     "Android Developer": {
@@ -3593,6 +4831,25 @@
         "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.95,
+        "silk": 0.97,
+        "minimalist": 0.92,
+        "tokyo": 0.99,
+        "prism": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.97
       }
     },
     "Android Engineer": {
@@ -3655,6 +4912,28 @@
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.94,
+        "tech": 0.99,
+        "silk": 0.93,
+        "opal": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.95,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91
       }
     },
     "Flutter Developer": {
@@ -3712,6 +4991,24 @@
         "bronx": 0.93,
         "mono": 0.96,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.94,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.91,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "React Native Developer": {
@@ -3770,6 +5067,24 @@
         "bronx": 0.88,
         "mono": 0.96,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "silk": 0.94,
+        "scholar": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.91,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.98
       }
     },
     "React Native Engineer": {
@@ -3831,6 +5146,32 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.95,
+        "opal": 0.94,
+        "scholar": 0.99,
+        "minimalist": 0.88,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.99,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "AR/VR Developer": {
@@ -3892,6 +5233,27 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "silk": 0.92,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.87,
+        "tokyo": 0.93,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.97,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Unity Developer": {
@@ -3953,6 +5315,26 @@
         "mono": 0.95,
         "pop": 0.9,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.95,
+        "opal": 0.98,
+        "scholar": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "symmetry": 0.93,
+        "path": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Game Developer": {
@@ -3994,6 +5376,14 @@
       "fit": {
         "berlin": 0.95,
         "bronx": 0.9
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.98,
+        "quartz": 0.99,
+        "bronx": 0.9,
+        "pop": 0.98
       }
     },
     "QA Engineer": {
@@ -4058,6 +5448,30 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.95,
+        "academic": 0.99,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.94,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.9,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "SDET (Software Development Engineer in Test)": {
@@ -4114,6 +5528,20 @@
         "bronx": 0.92,
         "mono": 0.98,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "swiss": 0.93,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.9,
+        "cast": 0.99
       }
     },
     "QA Analyst": {
@@ -4178,6 +5606,34 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.94,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.91,
+        "lateral": 0.98,
+        "opal": 0.95,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "prism": 0.99,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.9,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "QA Lead": {
@@ -4240,6 +5696,27 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "Associate Software Engineer": {
@@ -4288,6 +5765,16 @@
         "bronx": 0.88,
         "mono": 0.98,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.95,
+        "ginto": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.95
       }
     },
     "Junior Frontend Developer": {
@@ -4341,6 +5828,24 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "minimalist": 0.95,
+        "tokyo": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.98,
+        "ginto": 0.94,
+        "symmetry": 0.99,
+        "mono": 0.93,
+        "pop": 0.95,
+        "quartz": 0.92,
+        "bronx": 0.86
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Junior Web Developer": {
@@ -4401,6 +5906,27 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.9,
+        "opal": 0.94,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.91,
+        "prism": 0.98,
+        "creative": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "moda": 0.99,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.92
       }
     },
     "Junior Python Developer": {
@@ -4459,6 +5985,30 @@
         "bronx": 0.87,
         "mono": 0.96,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.93,
+        "silk": 0.95,
+        "opal": 0.92,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.93,
+        "prism": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "cast": 0.96,
+        "iron": 0.88,
+        "quartz": 0.95,
+        "pop": 0.92
+      },
+      "trimLetter": {
+        "iron": 8,
+        "quartz": 10,
+        "pop": 8
       }
     },
     "Senior Java Developer": {
@@ -4522,6 +6072,33 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.98,
+        "tech": 0.99,
+        "silk": 0.95,
+        "lateral": 0.98,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.95,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Lead Frontend Developer": {
@@ -4585,6 +6162,28 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "meridian": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Senior iOS Developer": {
@@ -4644,6 +6243,27 @@
         "mono": 0.96,
         "pop": 0.89,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.97,
+        "scholar": 0.99,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "prism": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.97,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Senior Android Developer": {
@@ -4708,6 +6328,32 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.92,
+        "academic": 0.96,
+        "tech": 0.97,
+        "silk": 0.95,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "prism": 0.97,
+        "swiss": 0.88,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.95,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 6
       }
     },
     "Magento Developer": {
@@ -4771,6 +6417,27 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Game Programmer": {
@@ -4811,6 +6478,12 @@
       ],
       "fit": {
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "berlin": 0.95,
+        "iron": 0.98,
+        "quartz": 0.94,
+        "bronx": 0.89
       }
     },
     "Unreal Engine Developer": {
@@ -4858,6 +6531,19 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.88,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.93
       }
     },
     "Graphics Engineer": {
@@ -4908,6 +6594,18 @@
         "berlin": 0.92,
         "quartz": 0.92,
         "bronx": 0.89
+      },
+      "fitLetter": {
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.88,
+        "iron": 0.98,
+        "ginto": 0.97,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.95,
+        "pop": 0.95
       }
     },
     "Embedded Software Engineer": {
@@ -4954,6 +6652,24 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.96,
+        "tokyo": 0.97,
+        "professional": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "mono": 0.98,
+        "pop": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.88
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Robotics Software Engineer": {
@@ -5004,6 +6720,17 @@
         "berlin": 0.93,
         "quartz": 0.98,
         "bronx": 0.94
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.93,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.89,
+        "quartz": 0.92,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.98
       }
     },
     "Senior Machine Learning Engineer": {
@@ -5069,6 +6796,26 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "silk": 0.95,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.9,
+        "symmetry": 0.93,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.9,
+        "pop": 0.88,
+        "cast": 0.96
       }
     },
     "Machine Learning Intern": {
@@ -5117,6 +6864,16 @@
         "berlin": 0.94,
         "quartz": 0.92,
         "bronx": 0.88
+      },
+      "fitLetter": {
+        "minimalist": 0.97,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.98,
+        "ginto": 0.99,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.98
       }
     }
   }

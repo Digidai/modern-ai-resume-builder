@@ -46,6 +46,14 @@
         "quartz": 0.92,
         "bronx": 0.95,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "berlin": 0.9,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.89,
+        "pop": 0.87
       }
     },
     "Production Worker": {
@@ -92,6 +100,14 @@
         "quartz": 0.92,
         "bronx": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.87,
+        "bronx": 0.89,
+        "pop": 0.91
       }
     },
     "Quality Inspector": {
@@ -138,6 +154,16 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "pop": 0.9
       }
     },
     "Solar Installer": {
@@ -184,6 +210,17 @@
         "quartz": 0.94,
         "bronx": 0.95,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "sidebar": 0.94,
+        "creative": 0.95,
+        "berlin": 0.92,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.98,
+        "pop": 0.88
       }
     },
     "Wind Turbine Technician": {
@@ -230,6 +267,17 @@
         "quartz": 0.91,
         "bronx": 0.88,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "creative": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88
       }
     },
     "Elevator Mechanic": {
@@ -276,6 +324,16 @@
         "quartz": 0.89,
         "bronx": 0.87,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "sidebar": 0.99,
+        "berlin": 0.94,
+        "iron": 0.86,
+        "ginto": 0.88,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
       }
     },
     "Auto Body Technician": {
@@ -322,6 +380,16 @@
         "quartz": 0.95,
         "bronx": 0.97,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "sidebar": 0.95,
+        "creative": 0.97,
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.9,
+        "bronx": 0.91,
+        "pop": 0.91
       }
     },
     "Locksmith": {
@@ -368,6 +436,16 @@
         "quartz": 0.97,
         "bronx": 0.91,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.94,
+        "mono": 0.98,
+        "pop": 0.88
       }
     },
     "Appliance Repair Technician": {
@@ -414,6 +492,17 @@
         "quartz": 0.94,
         "bronx": 0.94,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "creative": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.89,
+        "ginto": 0.89,
+        "quartz": 0.88,
+        "bronx": 0.91,
+        "mono": 0.96,
+        "pop": 0.9
       }
     }
   }

@@ -717,7 +717,7 @@ const PARSE_LATEX_PROMPT = [
   'fullName, title (headline or target role), email, phone, location, website, linkedin (URL),',
   'links: [{label, url}] for GitHub, Google Scholar, ORCID, portfolio and other profiles,',
   'summary (plain text; research interests for academic CVs),',
-  'experience: [{company, role, location, startDate, endDate, isCurrent, description}],',
+  'experience: [{company, role, location, startDate, endDate, isCurrent, hours, description}] (hours: hours per week, only when stated),',
   'education: [{school, degree, startDate, endDate}] (put thesis titles, GPA and honours in degree, e.g. "PhD in Physics; thesis: ..."),',
   'projects: [{name, link, description}],',
   'publications: [{authors, title, venue, year, link}] (authors as written; link is a DOI or URL),',
@@ -1009,7 +1009,9 @@ const PRINT_FIT_SCRIPT = `(expected) => {
   const paper = document.querySelector('.resume-preview-container');
   if (!paper) return 0;
   const fullBleed = paper.hasAttribute('data-full-bleed');
-  const MM = 96 / 25.4, W = (fullBleed ? 210 : 180) * MM, H = (fullBleed ? 297 : 267) * MM, GAP = 40;
+  const letter = paper.getAttribute('data-paper') === 'letter';
+  const PW = letter ? 215.9 : 210, PH = letter ? 279.4 : 297;
+  const MM = 96 / 25.4, W = (fullBleed ? PW : PW - 30) * MM, H = (fullBleed ? PH : PH - 30) * MM, GAP = 40;
   if (fullBleed) paper.style.setProperty('min-height', '0px', 'important');
   const host = document.createElement('div');
   host.style.cssText = 'position:absolute;left:-100000px;top:0;visibility:hidden;background:#fff;width:' + W + 'px';
@@ -1108,7 +1110,8 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
       const page = await browser.newPage();
       await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
-      const print = () => page.pdf({ format: 'A4', printBackground: true, preferCSSPageSize: true });
+      const format = /^<div[^>]*\bdata-paper="letter"/.test(html) ? 'Letter' : 'A4';
+      const print = () => page.pdf({ format, printBackground: true, preferCSSPageSize: true });
       const expected = Number(/^<div[^>]*\bdata-pages="(\d+)"/.exec(html)?.[1] ?? 0);
       const pages = Number(await page.evaluate(`(${PRINT_FIT_SCRIPT})(${expected})`));
       const pdf = await print();

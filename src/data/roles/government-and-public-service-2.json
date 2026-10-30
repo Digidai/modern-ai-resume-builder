@@ -46,6 +46,17 @@
         "quartz": 0.94,
         "bronx": 0.9,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.87,
+        "ginto": 0.89,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.89
       }
     },
     "Correctional Officer": {
@@ -102,6 +113,23 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "silk": 0.93,
+        "minimalist": 0.95,
+        "tokyo": 0.99,
+        "sidebar": 0.94,
+        "creative": 0.92,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.9,
+        "symmetry": 0.99,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.92
       }
     },
     "911 Dispatcher": {
@@ -161,6 +189,30 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.99,
+        "tech": 0.96,
+        "silk": 0.94,
+        "opal": 0.95,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "sidebar": 0.96,
+        "creative": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "path": 0.97,
+        "quartz": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.97,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "bronx": 10
       }
     },
     "Military to Civilian": {
@@ -228,6 +280,32 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "tech": 0.96,
+        "silk": 0.9,
+        "lateral": 0.95,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.98,
+        "tokyo": 0.9,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "noir": 0.99,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Veteran": {
@@ -276,6 +354,21 @@
         "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.98,
+        "sidebar": 0.97,
+        "creative": 0.95,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.86,
+        "ginto": 0.85,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Park Ranger": {
@@ -323,6 +416,19 @@
         "quartz": 0.91,
         "bronx": 0.89,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "sidebar": 0.99,
+        "creative": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.86,
+        "cast": 0.98
       }
     },
     "Customs and Border Protection Officer": {
@@ -383,6 +489,36 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "tech": 0.94,
+        "silk": 0.93,
+        "opal": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.96,
+        "portrait": 0.96,
+        "sidebar": 0.86,
+        "creative": 0.86,
+        "professional": 0.96,
+        "elegant": 0.98,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.97,
+        "wireframe": 0.97,
+        "moda": 0.97,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.99,
+        "quartz": 0.86,
+        "bronx": 0.85
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Legislative Aide": {
@@ -426,6 +562,15 @@
         "iron": 0.99,
         "bronx": 0.93,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.93,
+        "ginto": 0.96,
+        "quartz": 0.96,
+        "bronx": 0.89,
+        "pop": 0.94
       }
     }
   }

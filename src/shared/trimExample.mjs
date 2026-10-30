@@ -1,4 +1,4 @@
-// Dev/build helper: shortens a role example step by step so it fits one A4 page in every template.
+// Shortens a role example step by step so it fits one page in every template (build scripts, and US Letter previews).
 // Each level applies all earlier steps too; the least important content goes first (older roles'
 // later bullets, extra projects, long skill lists), never the summary or the dates.
 

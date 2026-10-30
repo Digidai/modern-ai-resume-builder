@@ -4,6 +4,7 @@ import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
 import { CheckIcon } from './Icons';
 import { useOnePageFit } from '../hooks/useOnePageFit';
+import { PAPERS, PAPER_IDS } from '../constants/print';
 
 const HEX = /^#[0-9a-f]{6}$/i;
 
@@ -12,9 +13,11 @@ const round = (n: number) => Math.round(n * 100) / 100;
 interface DesignControlsProps {
   design: ResumeDesign;
   onChange: (patch: Partial<ResumeDesign>) => void;
+  /** The template expects US Letter (the federal resume), so A4 gets a note. */
+  expectsLetter?: boolean;
 }
 
-export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
+export const DesignControls = ({ design, onChange, expectsLetter = false }: DesignControlsProps) => {
   const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum } = useOnePageFit(design, onChange);
   const [hexDraft, setHexDraft] = useState(design.accent);
 
@@ -146,6 +149,29 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
         </select>
       </div>
 
+      <fieldset>
+        <legend className="text-sm font-medium text-ink">Paper size</legend>
+        <div role="radiogroup" aria-label="Paper size" className="mt-2 grid grid-cols-2 gap-1 rounded-lg border border-rule bg-tint p-0.5 text-sm">
+          {PAPER_IDS.map((id) => (
+            <button
+              key={id}
+              type="button"
+              role="radio"
+              aria-checked={design.paper === id}
+              onClick={() => onChange({ paper: id })}
+              className={`focus-ring rounded-md px-3 py-1.5 font-medium transition-colors ${design.paper === id ? 'bg-surface text-ink shadow-card' : 'text-muted hover:text-ink'}`}
+            >
+              {PAPERS[id].label}
+            </button>
+          ))}
+        </div>
+        <p className="mt-2 text-xs leading-relaxed text-muted">
+          {expectsLetter && design.paper !== 'letter'
+            ? 'USAJOBS counts pages on US Letter: switch to it so the page count matches what HR sees.'
+            : 'A4 for most countries; US Letter for the United States and Canada. The PDF and page count follow it.'}
+        </p>
+      </fieldset>
+
       <div>
         <div className="flex items-baseline justify-between">
           <label htmlFor="design-scale" className="text-sm font-medium text-ink">
@@ -181,7 +207,8 @@ export const DesignControls = ({ design, onChange }: DesignControlsProps) => {
             {!isDefault && (
               <button
                 type="button"
-                onClick={() => onChange(DEFAULT_DESIGN)}
+                // The paper size is a choice about where you apply, not style, so it is kept.
+                onClick={() => onChange({ ...DEFAULT_DESIGN, paper: design.paper })}
                 className="focus-ring h-8 rounded-lg border border-rule bg-surface shadow-card px-3 text-xs font-medium text-ink hover:bg-tint"
               >
                 Reset style

@@ -65,6 +65,34 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.95,
+        "silk": 0.9,
+        "lateral": 0.97,
+        "opal": 0.9,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "europa": 0.97,
+        "tokyo": 0.92,
+        "prism": 0.97,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.93,
+        "iron": 0.85
+      },
+      "trimLetter": {
+        "iron": 10
       }
     },
     "Insurance Agent": {
@@ -114,6 +142,22 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "opal": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.93,
+        "pop": 0.85
       }
     },
     "Pharmaceutical Sales Representative": {
@@ -162,6 +206,23 @@
         "quartz": 0.93,
         "bronx": 0.85,
         "mono": 0.95,
+        "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "tech": 0.99,
+        "opal": 0.99,
+        "minimalist": 0.96,
+        "tokyo": 0.97,
+        "sidebar": 0.95,
+        "creative": 0.96,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
         "pop": 0.85
       }
     },
@@ -226,6 +287,30 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.93,
+        "lateral": 0.97,
+        "opal": 0.94,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.98,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95,
+        "quartz": 0.92
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Customer Support Specialist": {
@@ -270,6 +355,15 @@
         "quartz": 0.96,
         "bronx": 0.91,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.99,
+        "berlin": 0.93,
+        "iron": 0.98,
+        "ginto": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.87,
+        "pop": 0.94
       }
     },
     "Car Salesperson": {
@@ -331,6 +425,26 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.93,
+        "silk": 0.92,
+        "opal": 0.93,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "prism": 0.99,
+        "creative": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Telemarketer": {
@@ -373,6 +487,14 @@
       "fit": {
         "quartz": 0.98,
         "bronx": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.97,
+        "ginto": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "pop": 0.96
       }
     },
     "Bilingual Customer Service Representative": {
@@ -419,6 +541,19 @@
         "quartz": 0.95,
         "bronx": 0.89,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "creative": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.85
       }
     },
     "Retail Banking Associate": {
@@ -465,6 +600,16 @@
         "quartz": 0.94,
         "bronx": 0.93,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.88,
+        "quartz": 0.89,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.89
       }
     },
     "Real Estate Sales Agent": {
@@ -513,6 +658,18 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "silk": 0.98,
+        "creative": 0.97,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.96,
+        "pop": 0.88
       }
     },
     "Solar Sales Representative": {
@@ -559,6 +716,18 @@
         "quartz": 0.94,
         "bronx": 0.9,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "creative": 0.97,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.89,
+        "ginto": 0.87,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.98,
+        "pop": 0.86
       }
     },
     "Door-to-Door Sales Representative": {
@@ -596,7 +765,11 @@
         "Field Sales: door approach, objection handling, same-day closing, territory planning",
         "Tools: SalesRabbit, Spotio, Salesforce mobile, Google Maps",
         "Compliance: FTC Cooling-Off Rule, local solicitation permits, contract walkthroughs"
-      ]
+      ],
+      "fitLetter": {
+        "berlin": 0.94,
+        "bronx": 0.97
+      }
     },
     "Customer Service Manager": {
       "summary": "Customer service manager with 11 years in contact centers, leading 46 agents for a home appliance retailer. Raised CSAT from 81% to 89% and cut average speed of answer from 3:10 to 1:05 in 18 months. Runs a tight QA and coaching program and manages a $3.1M labor budget.",
@@ -656,6 +829,29 @@
         "mono": 0.93,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "prism": 0.99,
+        "professional": 0.96,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95,
+        "quartz": 0.91
+      },
+      "trimLetter": {
+        "quartz": 10
       }
     },
     "Chat Support Agent": {
@@ -693,7 +889,11 @@
         "Chat Support: concurrent chats, written tone, macros, troubleshooting, refunds",
         "Tools: Intercom, Zendesk, Shopify, Recharge, Slack",
         "Typing: 70 WPM"
-      ]
+      ],
+      "fitLetter": {
+        "berlin": 0.99,
+        "bronx": 0.97
+      }
     }
   }
 }

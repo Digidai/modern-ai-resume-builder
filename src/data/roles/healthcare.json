@@ -65,6 +65,38 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "timeline": 0.97,
+        "executive": 0.88,
+        "academic": 0.93,
+        "tech": 0.92,
+        "silk": 0.93,
+        "lateral": 0.98,
+        "opal": 0.89,
+        "meridian": 0.98,
+        "vital": 0.99,
+        "scholar": 0.95,
+        "minimalist": 0.88,
+        "europa": 0.97,
+        "tokyo": 0.91,
+        "prism": 0.98,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.94,
+        "quartz": 0.94,
+        "bronx": 0.86,
+        "noir": 0.99,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.94,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 11
       }
     },
     "Licensed Practical Nurse (LPN)": {
@@ -132,6 +164,35 @@
         "mono": 0.92,
         "pop": 0.86,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.88,
+        "timeline": 0.99,
+        "executive": 0.88,
+        "academic": 0.95,
+        "tech": 0.91,
+        "silk": 0.93,
+        "lateral": 0.96,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "vital": 0.97,
+        "scholar": 0.93,
+        "minimalist": 0.86,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.94,
+        "bronx": 0.96,
+        "noir": 0.99,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.92,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 11
       }
     },
     "Certified Nursing Assistant (CNA)": {
@@ -201,6 +262,32 @@
         "mono": 0.89,
         "pop": 0.88,
         "cast": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "timeline": 0.98,
+        "executive": 0.91,
+        "academic": 0.95,
+        "tech": 0.98,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.91,
+        "meridian": 0.98,
+        "scholar": 0.95,
+        "minimalist": 0.86,
+        "tokyo": 0.93,
+        "sidebar": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.86,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.9
       }
     },
     "Nurse Practitioner": {
@@ -273,6 +360,35 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "timeline": 0.95,
+        "executive": 0.91,
+        "academic": 0.95,
+        "tech": 0.94,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.91,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.97,
+        "tokyo": 0.91,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.89,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.96,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 12
       }
     },
     "Clinical Nurse Specialist": {
@@ -345,6 +461,35 @@
         "mono": 0.92,
         "pop": 0.89,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "timeline": 0.98,
+        "executive": 0.89,
+        "academic": 0.95,
+        "tech": 0.95,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.9,
+        "meridian": 0.96,
+        "scholar": 0.94,
+        "minimalist": 0.85,
+        "europa": 0.97,
+        "tokyo": 0.92,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "symmetry": 0.87,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.87,
+        "pop": 0.88,
+        "cast": 0.93,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 12
       }
     },
     "Nurse Manager": {
@@ -415,6 +560,28 @@
         "mono": 0.91,
         "pop": 0.87,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.98,
+        "tech": 0.97,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.88,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.87,
+        "mono": 0.85,
+        "pop": 0.86,
+        "cast": 0.94
       }
     },
     "Charge Nurse": {
@@ -472,6 +639,28 @@
         "bronx": 0.98,
         "mono": 0.93,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.95,
+        "academic": 0.99,
+        "tech": 0.98,
+        "silk": 0.94,
+        "opal": 0.94,
+        "minimalist": 0.89,
+        "tokyo": 0.98,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.97,
+        "bronx": 0.92,
+        "noir": 0.98,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Physician Assistant": {
@@ -538,6 +727,28 @@
         "mono": 0.94,
         "pop": 0.9,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.91,
+        "academic": 0.99,
+        "tech": 0.94,
+        "silk": 0.94,
+        "opal": 0.94,
+        "scholar": 0.98,
+        "minimalist": 0.86,
+        "tokyo": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.92,
+        "bronx": 0.89,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Medical Assistant": {
@@ -598,6 +809,27 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "silk": 0.97,
+        "lateral": 0.98,
+        "opal": 0.91,
+        "scholar": 0.97,
+        "minimalist": 0.87,
+        "tokyo": 0.95,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "path": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.86,
+        "pop": 0.87,
+        "cast": 0.95
       }
     },
     "Medical Receptionist": {
@@ -660,6 +892,30 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "academic": 0.99,
+        "tech": 0.99,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "europa": 0.98,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.89,
+        "bronx": 0.86,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Pharmacy Technician": {
@@ -718,6 +974,24 @@
         "bronx": 0.98,
         "mono": 0.97,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.93,
+        "silk": 0.96,
+        "opal": 0.99,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "quartz": 0.96,
+        "bronx": 0.95,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Pharmacist": {
@@ -780,6 +1054,28 @@
         "bronx": 0.98,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.91,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.98,
+        "silk": 0.93,
+        "lateral": 0.98,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.88,
+        "tokyo": 0.95,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Physical Therapist": {
@@ -852,6 +1148,35 @@
         "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.91
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "timeline": 0.98,
+        "executive": 0.89,
+        "academic": 0.97,
+        "tech": 0.95,
+        "silk": 0.89,
+        "lateral": 0.97,
+        "opal": 0.92,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.92,
+        "swiss": 0.85,
+        "iron": 0.87,
+        "ginto": 0.88,
+        "symmetry": 0.88,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.87,
+        "mono": 0.85,
+        "pop": 0.85,
+        "cast": 0.94,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 11
       }
     },
     "Occupational Therapist": {
@@ -923,6 +1248,30 @@
         "mono": 0.9,
         "pop": 0.91,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.91,
+        "tech": 0.99,
+        "silk": 0.88,
+        "lateral": 0.95,
+        "opal": 0.95,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.92,
+        "ginto": 0.88,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.86,
+        "pop": 0.89,
+        "cast": 0.96
       }
     },
     "Radiologic Technologist": {
@@ -979,6 +1328,25 @@
         "bronx": 0.93,
         "mono": 0.92,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.97,
+        "silk": 0.94,
+        "opal": 0.96,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.95,
+        "quartz": 0.94,
+        "bronx": 0.89,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Ultrasound Technician": {
@@ -1020,6 +1388,16 @@
       "fit": {
         "berlin": 0.94,
         "bronx": 0.89
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.91,
+        "iron": 0.97,
+        "ginto": 0.97,
+        "quartz": 0.96,
+        "bronx": 0.85,
+        "pop": 0.96
       }
     },
     "Sonographer": {
@@ -1084,6 +1462,29 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "academic": 0.99,
+        "silk": 0.92,
+        "opal": 0.92,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "prism": 0.99,
+        "professional": 0.99,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "path": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Medical Laboratory Technician": {
@@ -1143,6 +1544,25 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.95,
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "tokyo": 0.99,
+        "creative": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.93,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Medical Technologist": {
@@ -1201,6 +1621,23 @@
         "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "executive": 0.99,
+        "silk": 0.93,
+        "opal": 0.98,
+        "minimalist": 0.93,
+        "tokyo": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.9,
+        "bronx": 0.9,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Clinical Laboratory Scientist": {
@@ -1268,6 +1705,28 @@
         "mono": 0.89,
         "pop": 0.91,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.88,
+        "lateral": 0.97,
+        "opal": 0.95,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "tokyo": 0.94,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.86,
+        "symmetry": 0.9,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Clinical Research Coordinator": {
@@ -1328,6 +1787,29 @@
         "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.95,
+        "tech": 0.99,
+        "silk": 0.94,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.94,
+        "sidebar": 0.95,
+        "creative": 0.98,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Clinical Data Manager": {
@@ -1391,6 +1873,29 @@
         "mono": 0.92,
         "pop": 0.88,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.91,
+        "minimalist": 0.87,
+        "tokyo": 0.92,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.99,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Clinical Operations Manager": {
@@ -1462,6 +1967,29 @@
         "mono": 0.9,
         "pop": 0.89,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.94,
+        "silk": 0.9,
+        "lateral": 0.97,
+        "opal": 0.93,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "sidebar": 0.98,
+        "creative": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.87,
+        "cast": 0.93
       }
     },
     "Healthcare Administrator": {
@@ -1517,6 +2045,19 @@
         "bronx": 0.96,
         "mono": 0.97,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "silk": 0.99,
+        "minimalist": 0.99,
+        "swiss": 0.93,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.85,
+        "quartz": 0.94,
+        "bronx": 0.92,
+        "mono": 0.91,
+        "pop": 0.87,
+        "cast": 0.97
       }
     },
     "Public Health Specialist": {
@@ -1591,6 +2132,33 @@
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.88,
+        "timeline": 0.98,
+        "executive": 0.91,
+        "academic": 0.97,
+        "tech": 0.93,
+        "silk": 0.89,
+        "lateral": 0.97,
+        "opal": 0.9,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.86,
+        "europa": 0.99,
+        "tokyo": 0.93,
+        "creative": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.88,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Care Coordinator": {
@@ -1646,6 +2214,23 @@
         "ginto": 0.89,
         "mono": 0.97,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.97,
+        "silk": 0.95,
+        "opal": 0.96,
+        "minimalist": 0.91,
+        "tokyo": 0.99,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "bronx": 0.96,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Patient Care Coordinator": {
@@ -1707,6 +2292,27 @@
         "bronx": 0.92,
         "mono": 0.92,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.97,
+        "tech": 0.98,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Case Manager": {
@@ -1769,6 +2375,29 @@
         "bronx": 0.93,
         "mono": 0.93,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.91,
+        "academic": 0.99,
+        "tech": 0.97,
+        "silk": 0.91,
+        "lateral": 0.99,
+        "opal": 0.96,
+        "meridian": 0.96,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "quartz": 0.91,
+        "bronx": 0.91,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Social Worker": {
@@ -1839,6 +2468,33 @@
         "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "executive": 0.89,
+        "academic": 0.99,
+        "tech": 0.93,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.93,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.88,
+        "tokyo": 0.91,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.9,
+        "path": 0.98,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.96,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 12
       }
     },
     "Psychologist": {
@@ -1906,6 +2562,29 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.96,
+        "tech": 0.96,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.93,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.86,
+        "tokyo": 0.92,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.92,
+        "path": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.86,
+        "cast": 0.96
       }
     },
     "EMT (Emergency Medical Technician)": {
@@ -1965,6 +2644,24 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "silk": 0.93,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "minimalist": 0.91,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.95,
+        "quartz": 0.99,
+        "bronx": 0.94,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Paramedic": {
@@ -2026,6 +2723,27 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "tech": 0.99,
+        "silk": 0.94,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.99
       }
     },
     "Dental Assistant": {
@@ -2085,6 +2803,24 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.99,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Dental Hygienist": {
@@ -2146,6 +2882,29 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "europa": 0.98,
+        "tokyo": 0.94,
+        "sidebar": 0.96,
+        "creative": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Dentist": {
@@ -2214,6 +2973,34 @@
         "mono": 0.94,
         "pop": 0.87,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.92,
+        "silk": 0.89,
+        "meridian": 0.99,
+        "scholar": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.98,
+        "sidebar": 0.96,
+        "creative": 0.93,
+        "professional": 0.96,
+        "swiss": 0.88,
+        "berlin": 0.85,
+        "iron": 0.86,
+        "ginto": 0.86,
+        "symmetry": 0.93,
+        "path": 0.94,
+        "wireframe": 0.98,
+        "mono": 0.9,
+        "pop": 0.86,
+        "cast": 0.91,
+        "quartz": 0.85,
+        "bronx": 0.87
+      },
+      "trimLetter": {
+        "quartz": 10,
+        "bronx": 10
       }
     },
     "Chiropractor": {
@@ -2284,6 +3071,29 @@
         "mono": 0.89,
         "pop": 0.9,
         "cast": 0.98
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.94,
+        "tech": 0.99,
+        "silk": 0.89,
+        "lateral": 0.95,
+        "opal": 0.94,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.88,
+        "tokyo": 0.96,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.9,
+        "path": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.85,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Medical Coder": {
@@ -2348,6 +3158,32 @@
         "bronx": 0.9,
         "mono": 0.91,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "tech": 0.98,
+        "silk": 0.9,
+        "lateral": 0.96,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.9,
+        "tokyo": 0.93,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.85,
+        "cast": 0.98,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 7
       }
     },
     "Medical Biller": {
@@ -2408,6 +3244,26 @@
         "mono": 0.95,
         "pop": 0.86,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.95,
+        "silk": 0.95,
+        "opal": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.92,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "path": 0.99,
+        "quartz": 0.9,
+        "bronx": 0.88,
+        "mono": 0.91,
+        "pop": 0.86,
+        "cast": 0.93
       }
     },
     "Health Information Technician": {
@@ -2474,6 +3330,34 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.89,
+        "executive": 0.91,
+        "academic": 0.96,
+        "tech": 0.95,
+        "silk": 0.91,
+        "lateral": 0.98,
+        "opal": 0.97,
+        "meridian": 0.98,
+        "scholar": 0.94,
+        "minimalist": 0.87,
+        "tokyo": 0.93,
+        "prism": 0.99,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.93,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 9
       }
     },
     "Health Coach": {
@@ -2534,6 +3418,23 @@
         "mono": 0.92,
         "pop": 0.92,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.95,
+        "silk": 0.94,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.89,
+        "pop": 0.88,
+        "cast": 0.97
       }
     },
     "Mental Health Counselor": {
@@ -2599,6 +3500,25 @@
         "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.94,
+        "silk": 0.92,
+        "opal": 0.95,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.91,
+        "symmetry": 0.94,
+        "path": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.87,
+        "mono": 0.86,
+        "pop": 0.89,
+        "cast": 0.94
       }
     },
     "New Graduate Nurse": {
@@ -2643,6 +3563,18 @@
         "ginto": 0.97,
         "bronx": 0.87,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "minimalist": 0.98,
+        "swiss": 0.97,
+        "berlin": 0.88,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.92
       }
     },
     "ICU Nurse": {
@@ -2703,6 +3635,24 @@
         "bronx": 0.95,
         "mono": 0.95,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "modern": 0.98,
+        "executive": 0.99,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "minimalist": 0.91,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "mono": 0.91,
+        "pop": 0.9,
+        "cast": 0.97
       }
     },
     "Emergency Room Nurse": {
@@ -2761,6 +3711,24 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.87
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.95,
+        "silk": 0.94,
+        "minimalist": 0.94,
+        "tokyo": 0.97,
+        "creative": 0.99,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Travel Nurse": {
@@ -2824,6 +3792,26 @@
         "mono": 0.95,
         "pop": 0.87,
         "cast": 0.97
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.93,
+        "silk": 0.92,
+        "opal": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.97,
+        "prism": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.99,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Labor and Delivery Nurse": {
@@ -2886,6 +3874,28 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.92,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.97,
+        "silk": 0.92,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.97,
+        "minimalist": 0.9,
+        "tokyo": 0.97,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95
       }
     },
     "Operating Room Nurse": {
@@ -2945,6 +3955,24 @@
         "bronx": 0.87,
         "mono": 0.97,
         "pop": 0.85
+      },
+      "fitLetter": {
+        "modern": 0.95,
+        "executive": 0.99,
+        "silk": 0.94,
+        "opal": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.91,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Director of Nursing": {
@@ -3011,6 +4039,27 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.92,
+        "lateral": 0.99,
+        "opal": 0.95,
+        "scholar": 0.98,
+        "minimalist": 0.9,
+        "tokyo": 0.96,
+        "swiss": 0.87,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "path": 0.98,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.87,
+        "pop": 0.93,
+        "cast": 0.96
       }
     },
     "Respiratory Therapist": {
@@ -3075,6 +4124,35 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.86
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.97,
+        "silk": 0.92,
+        "lateral": 0.97,
+        "opal": 0.96,
+        "meridian": 0.98,
+        "scholar": 0.96,
+        "minimalist": 0.87,
+        "tokyo": 0.93,
+        "prism": 0.98,
+        "sidebar": 0.98,
+        "swiss": 0.87,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.88,
+        "path": 0.95,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 9
       }
     },
     "Physical Therapist Assistant": {
@@ -3127,6 +4205,26 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.89
+      },
+      "fitLetter": {
+        "modern": 0.96,
+        "executive": 0.98,
+        "silk": 0.94,
+        "scholar": 0.95,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "sidebar": 0.93,
+        "creative": 0.91,
+        "swiss": 0.9,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.96,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.94
       }
     },
     "Speech-Language Pathologist": {
@@ -3200,6 +4298,35 @@
         "mono": 0.92,
         "pop": 0.87,
         "cast": 0.95
+      },
+      "fitLetter": {
+        "modern": 0.87,
+        "timeline": 0.98,
+        "executive": 0.9,
+        "academic": 0.96,
+        "tech": 0.93,
+        "silk": 0.88,
+        "lateral": 0.96,
+        "opal": 0.92,
+        "meridian": 0.97,
+        "scholar": 0.95,
+        "minimalist": 0.85,
+        "europa": 0.96,
+        "tokyo": 0.91,
+        "swiss": 0.85,
+        "iron": 0.85,
+        "ginto": 0.86,
+        "symmetry": 0.91,
+        "path": 0.92,
+        "quartz": 0.86,
+        "bronx": 0.86,
+        "mono": 0.86,
+        "pop": 0.85,
+        "cast": 0.91,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 10
       }
     },
     "Surgical Technologist": {
@@ -3265,6 +4392,36 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.99
+      },
+      "fitLetter": {
+        "modern": 0.9,
+        "executive": 0.93,
+        "academic": 0.99,
+        "tech": 0.97,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.92,
+        "scholar": 0.94,
+        "minimalist": 0.89,
+        "europa": 0.98,
+        "tokyo": 0.93,
+        "prism": 0.98,
+        "creative": 0.98,
+        "professional": 0.99,
+        "swiss": 0.86,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.91,
+        "path": 0.95,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.89,
+        "pop": 0.85,
+        "cast": 0.95,
+        "berlin": 0.85
+      },
+      "trimLetter": {
+        "berlin": 10
       }
     },
     "Phlebotomist": {
@@ -3320,6 +4477,21 @@
         "ginto": 0.97,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "silk": 0.96,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.91,
+        "berlin": 0.85,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "symmetry": 0.97,
+        "quartz": 0.99,
+        "bronx": 0.94,
+        "mono": 0.92,
+        "pop": 0.88,
+        "cast": 0.97
       }
     },
     "Clinical Pharmacist": {
@@ -3375,6 +4547,21 @@
         "ginto": 0.91,
         "mono": 0.95,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "modern": 0.99,
+        "executive": 0.97,
+        "silk": 0.99,
+        "minimalist": 0.94,
+        "tokyo": 0.98,
+        "swiss": 0.91,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.9,
+        "symmetry": 0.95,
+        "bronx": 0.94,
+        "mono": 0.93,
+        "pop": 0.88
       }
     },
     "Medical Office Manager": {
@@ -3431,6 +4618,21 @@
         "bronx": 0.96,
         "mono": 0.93,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "silk": 0.96,
+        "minimalist": 0.98,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.91,
+        "ginto": 0.91,
+        "symmetry": 0.96,
+        "path": 0.98,
+        "quartz": 0.96,
+        "bronx": 0.92,
+        "mono": 0.89,
+        "pop": 0.89,
+        "cast": 0.97
       }
     },
     "Dental Office Manager": {
@@ -3490,6 +4692,26 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.95,
+        "silk": 0.94,
+        "lateral": 0.97,
+        "opal": 0.98,
+        "scholar": 0.98,
+        "minimalist": 0.89,
+        "tokyo": 0.94,
+        "swiss": 0.86,
+        "berlin": 0.85,
+        "iron": 0.87,
+        "ginto": 0.85,
+        "symmetry": 0.94,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "mono": 0.88,
+        "pop": 0.88,
+        "cast": 0.99
       }
     }
   }

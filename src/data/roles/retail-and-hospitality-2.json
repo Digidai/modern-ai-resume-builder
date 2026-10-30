@@ -46,6 +46,16 @@
         "quartz": 0.98,
         "bronx": 0.91,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.95,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.94
       }
     },
     "Dishwasher": {
@@ -93,6 +103,17 @@
         "bronx": 0.94,
         "mono": 0.98,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "tokyo": 0.99,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.86,
+        "bronx": 0.89,
+        "mono": 0.94,
+        "pop": 0.94
       }
     },
     "Food Service Worker": {
@@ -140,6 +161,17 @@
         "bronx": 0.93,
         "mono": 0.98,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.94,
+        "berlin": 0.86,
+        "iron": 0.88,
+        "ginto": 0.91,
+        "quartz": 0.93,
+        "bronx": 0.88,
+        "mono": 0.98,
+        "pop": 0.91
       }
     },
     "Hair Stylist": {
@@ -186,6 +218,14 @@
         "quartz": 0.89,
         "bronx": 0.89,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.89,
+        "ginto": 0.92,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "pop": 0.92
       }
     },
     "Cosmetologist": {
@@ -234,6 +274,18 @@
         "bronx": 0.87,
         "mono": 0.98,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "sidebar": 0.97,
+        "creative": 0.95,
+        "swiss": 0.92,
+        "berlin": 0.87,
+        "iron": 0.9,
+        "ginto": 0.88,
+        "quartz": 0.86,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.94
       }
     },
     "Esthetician": {
@@ -282,6 +334,18 @@
         "bronx": 0.92,
         "mono": 0.97,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "quartz": 0.88,
+        "bronx": 0.89,
+        "mono": 0.92,
+        "pop": 0.85,
+        "cast": 0.96
       }
     },
     "Nail Technician": {
@@ -328,6 +392,16 @@
         "quartz": 0.95,
         "bronx": 0.98,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "quartz": 0.91,
+        "bronx": 0.93,
+        "mono": 0.98,
+        "pop": 0.93
       }
     },
     "Personal Trainer": {
@@ -374,6 +448,16 @@
         "quartz": 0.98,
         "bronx": 0.89,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.86,
+        "ginto": 0.87,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "mono": 0.98,
+        "pop": 0.9
       }
     },
     "Fitness Instructor": {
@@ -420,6 +504,15 @@
         "quartz": 0.93,
         "bronx": 0.93,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.89,
+        "pop": 0.91
       }
     },
     "Yoga Instructor": {
@@ -466,6 +559,15 @@
         "quartz": 0.9,
         "bronx": 0.88,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "swiss": 0.96,
+        "berlin": 0.89,
+        "iron": 0.92,
+        "ginto": 0.9,
+        "quartz": 0.85,
+        "bronx": 0.86,
+        "pop": 0.9
       }
     },
     "Banquet Server": {
@@ -511,6 +613,16 @@
         "quartz": 0.94,
         "bronx": 0.95,
         "pop": 0.98
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.95,
+        "ginto": 0.96,
+        "quartz": 0.88,
+        "bronx": 0.89,
+        "mono": 0.96,
+        "pop": 0.94
       }
     },
     "Fast Food Worker": {
@@ -555,6 +667,14 @@
         "iron": 0.98,
         "quartz": 0.94,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.89,
+        "bronx": 0.91,
+        "pop": 0.99
       }
     },
     "Crew Member": {
@@ -600,6 +720,15 @@
         "ginto": 0.98,
         "quartz": 0.97,
         "bronx": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.91,
+        "iron": 0.94,
+        "ginto": 0.96,
+        "quartz": 0.93,
+        "bronx": 0.91,
+        "pop": 0.99
       }
     },
     "Grocery Clerk": {
@@ -646,6 +775,14 @@
         "quartz": 0.99,
         "bronx": 0.89,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "berlin": 0.96,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.93
       }
     },
     "Deli Clerk": {
@@ -692,6 +829,14 @@
         "quartz": 0.98,
         "bronx": 0.97,
         "pop": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.9,
+        "ginto": 0.89,
+        "quartz": 0.94,
+        "bronx": 0.91,
+        "pop": 0.9
       }
     },
     "Butcher": {
@@ -738,6 +883,16 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "creative": 0.99,
+        "berlin": 0.9,
+        "iron": 0.9,
+        "ginto": 0.85,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.91
       }
     },
     "Baker": {
@@ -784,6 +939,16 @@
         "quartz": 0.9,
         "bronx": 0.9,
         "pop": 0.97
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.91,
+        "ginto": 0.93,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.96
       }
     },
     "Prep Cook": {
@@ -830,6 +995,14 @@
         "quartz": 0.92,
         "bronx": 0.92,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.89,
+        "quartz": 0.87,
+        "bronx": 0.86,
+        "pop": 0.96
       }
     },
     "Busser": {
@@ -874,6 +1047,14 @@
         "ginto": 0.97,
         "quartz": 0.98,
         "bronx": 0.97
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.96,
+        "ginto": 0.95,
+        "quartz": 0.93,
+        "bronx": 0.93,
+        "pop": 0.96
       }
     },
     "Room Attendant": {
@@ -918,6 +1099,15 @@
         "iron": 0.99,
         "quartz": 0.99,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.9,
+        "iron": 0.95,
+        "ginto": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "pop": 0.95
       }
     },
     "Spa Manager": {
@@ -976,6 +1166,25 @@
         "bronx": 0.95,
         "mono": 0.95,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.93,
+        "executive": 0.95,
+        "academic": 0.99,
+        "silk": 0.95,
+        "scholar": 0.96,
+        "minimalist": 0.89,
+        "tokyo": 0.95,
+        "swiss": 0.89,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.87,
+        "symmetry": 0.94,
+        "quartz": 0.93,
+        "bronx": 0.91,
+        "mono": 0.89,
+        "pop": 0.86,
+        "cast": 0.98
       }
     },
     "Golf Course Attendant": {
@@ -1022,6 +1231,14 @@
         "quartz": 0.98,
         "bronx": 0.89,
         "pop": 0.95
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.9,
+        "ginto": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.85,
+        "pop": 0.91
       }
     }
   }

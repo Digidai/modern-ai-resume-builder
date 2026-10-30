@@ -88,6 +88,14 @@
         "ginto": 0.97,
         "quartz": 0.97,
         "bronx": 0.93
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.94,
+        "ginto": 0.93,
+        "quartz": 0.91,
+        "bronx": 0.89,
+        "pop": 0.96
       }
     },
     "Security Officer": {
@@ -134,6 +142,16 @@
         "quartz": 0.95,
         "bronx": 0.85,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.89,
+        "quartz": 0.9,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.88
       }
     },
     "Loss Prevention Officer": {
@@ -180,6 +198,17 @@
         "ginto": 0.93,
         "quartz": 0.97,
         "bronx": 0.94,
+        "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.92,
+        "bronx": 0.88,
+        "mono": 0.96,
         "pop": 0.94
       }
     },
@@ -238,6 +267,23 @@
         "bronx": 0.93,
         "mono": 0.97,
         "pop": 0.88
+      },
+      "fitLetter": {
+        "modern": 0.97,
+        "executive": 0.99,
+        "silk": 0.98,
+        "opal": 0.98,
+        "minimalist": 0.94,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.98,
+        "quartz": 0.93,
+        "bronx": 0.89,
+        "mono": 0.94,
+        "pop": 0.85,
+        "cast": 0.97
       }
     },
     "Janitor": {
@@ -284,6 +330,14 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "pop": 0.99
+      },
+      "fitLetter": {
+        "berlin": 0.92,
+        "iron": 0.94,
+        "ginto": 0.91,
+        "quartz": 0.88,
+        "bronx": 0.86,
+        "pop": 0.93
       }
     },
     "Custodian": {
@@ -330,6 +384,17 @@
         "ginto": 0.94,
         "bronx": 0.95,
         "pop": 0.96
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.92,
+        "berlin": 0.85,
+        "iron": 0.89,
+        "ginto": 0.9,
+        "quartz": 0.96,
+        "bronx": 0.9,
+        "mono": 0.96,
+        "pop": 0.92
       }
     },
     "Building Maintenance Worker": {
@@ -374,6 +439,16 @@
         "iron": 0.98,
         "ginto": 0.98,
         "bronx": 0.95
+      },
+      "fitLetter": {
+        "swiss": 0.98,
+        "berlin": 0.89,
+        "iron": 0.92,
+        "ginto": 0.92,
+        "quartz": 0.93,
+        "bronx": 0.9,
+        "mono": 0.98,
+        "pop": 0.94
       }
     },
     "Cleaner": {
@@ -418,6 +493,14 @@
         "ginto": 0.93,
         "quartz": 0.97,
         "bronx": 0.92
+      },
+      "fitLetter": {
+        "berlin": 0.94,
+        "iron": 0.92,
+        "ginto": 0.93,
+        "quartz": 0.93,
+        "bronx": 0.87,
+        "pop": 0.96
       }
     },
     "Pest Control Technician": {
@@ -465,6 +548,18 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "sidebar": 0.96,
+        "swiss": 0.96,
+        "berlin": 0.9,
+        "iron": 0.88,
+        "ginto": 0.86,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.96,
+        "pop": 0.87
       }
     },
     "Armed Security Guard": {
@@ -528,6 +623,29 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.96
+      },
+      "fitLetter": {
+        "modern": 0.94,
+        "executive": 0.95,
+        "silk": 0.9,
+        "lateral": 0.99,
+        "opal": 0.95,
+        "meridian": 0.96,
+        "scholar": 0.97,
+        "minimalist": 0.89,
+        "tokyo": 0.93,
+        "prism": 0.98,
+        "swiss": 0.85,
+        "berlin": 0.85,
+        "iron": 0.85,
+        "ginto": 0.85,
+        "symmetry": 0.92,
+        "path": 0.97,
+        "quartz": 0.85,
+        "bronx": 0.85,
+        "mono": 0.88,
+        "pop": 0.85,
+        "cast": 0.93
       }
     },
     "Event Security": {
@@ -574,6 +692,17 @@
         "quartz": 0.95,
         "bronx": 0.89,
         "pop": 0.92
+      },
+      "fitLetter": {
+        "minimalist": 0.98,
+        "swiss": 0.96,
+        "berlin": 0.88,
+        "iron": 0.93,
+        "ginto": 0.89,
+        "quartz": 0.89,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.88
       }
     },
     "Night Auditor": {
@@ -620,6 +749,17 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "pop": 0.94
+      },
+      "fitLetter": {
+        "minimalist": 0.96,
+        "swiss": 0.94,
+        "berlin": 0.87,
+        "iron": 0.85,
+        "ginto": 0.88,
+        "quartz": 0.88,
+        "bronx": 0.85,
+        "mono": 0.98,
+        "pop": 0.9
       }
     }
   }

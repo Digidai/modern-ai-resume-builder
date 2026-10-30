@@ -100,7 +100,7 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
     ],
     ['Best for', template.bestFor],
     ['Customize', 'Accent colour, font (10 options) and text size, plus fit-to-one-page.'],
-    ['Export', 'Vector PDF with selectable text, or print from the browser. A4 page size.'],
+    ['Export', 'Vector PDF with selectable text, or print from the browser. A4 or US Letter page size.'],
   ];
 
   return (

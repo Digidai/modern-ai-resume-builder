@@ -25,6 +25,7 @@ import { getTemplateById } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
 import { useOnePageFit } from '../hooks/useOnePageFit';
 import { DEFAULT_DESIGN, type ResumeDesign } from '../types';
+import { paperSize } from '../constants/print';
 import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
@@ -156,7 +157,7 @@ const readPreviewView = (): PreviewView => {
 
 /** Pages (as printed, the default) or one continuous sheet. */
 const PreviewViewToggle: React.FC<{ view: PreviewView; onChange: (view: PreviewView) => void }> = ({ view, onChange }) => (
-  <div className="mx-auto mb-3 flex w-full max-w-[210mm] justify-end print:hidden max-md:hidden">
+  <div className="mx-auto mb-3 flex w-full max-w-[216mm] justify-end print:hidden max-md:hidden">
     <div role="group" aria-label="Preview layout" className="inline-flex rounded-lg border border-rule bg-surface p-0.5 text-xs shadow-card">
       {(
         [
@@ -464,7 +465,10 @@ const EditorView: React.FC = () => {
           aria-label="Resume preview"
         >
           <PreviewViewToggle view={previewView} onChange={changePreviewView} />
-          <div className={`relative mx-auto w-full max-w-[210mm] print:max-w-none print:shadow-none ${previewView === 'pages' ? '' : 'bg-white shadow-sheet'}`}>
+          <div
+            className={`relative mx-auto w-full print:max-w-none! print:shadow-none ${previewView === 'pages' ? '' : 'bg-white shadow-sheet'}`}
+            style={{ maxWidth: `${paperSize(resumeData.design?.paper).widthMm}mm` }}
+          >
             <SectionErrorBoundary sectionName="Resume Preview">
               <ScaledResumePreview data={resumeData} mode="page" exportable view={previewView} />
             </SectionErrorBoundary>
