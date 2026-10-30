@@ -1241,6 +1241,86 @@ const buildOpenApi = (siteUrl, templates) => {
           responses: { 200: { description: 'PDF', headers: renderHeaders, content: { 'application/pdf': {} } }, 400: error, 429: error },
         },
       },
+      '/api/agent/latex': {
+        post: {
+          operationId: 'exportLatex',
+          summary: 'The resume as a standalone .tex file, with the filename, engine and Overleaf form fields',
+          requestBody: renderBody,
+          responses: {
+            200: {
+              description: 'LaTeX',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      filename: { type: 'string' },
+                      engine: { type: 'string', enum: ['pdflatex', 'xelatex'] },
+                      tex: { type: 'string' },
+                      overleaf: { type: 'object' },
+                      warnings: { type: 'array', items: { type: 'string' } },
+                    },
+                  },
+                },
+              },
+            },
+            400: error,
+          },
+        },
+      },
+      '/api/agent/publications': {
+        post: {
+          operationId: 'importPublications',
+          summary: 'Publications from a public ORCID record (up to 4,000 works) or BibTeX, filterable by kind and year',
+          requestBody: {
+            required: true,
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  properties: {
+                    orcid: { type: 'string', description: 'ORCID iD or orcid.org URL. Give this or bibtex.' },
+                    bibtex: { type: 'string', description: 'Contents of a .bib file. Give this or orcid.' },
+                    kinds: { type: 'array', items: { type: 'string', enum: ['journal', 'conference', 'preprint', 'book', 'thesis', 'other'] } },
+                    from_year: { type: 'integer' },
+                    to_year: { type: 'integer' },
+                  },
+                },
+              },
+            },
+          },
+          responses: {
+            200: {
+              description: 'Publications; put the chosen ones, without kind, in resume.publications',
+              content: {
+                'application/json': {
+                  schema: {
+                    type: 'object',
+                    properties: {
+                      source: { type: 'string' },
+                      listed: { type: 'integer', description: 'Works the record lists' },
+                      found: { type: 'integer', description: 'After merging duplicates' },
+                      counts: { type: 'object', additionalProperties: { type: 'integer' } },
+                      returned: { type: 'integer' },
+                      publications: {
+                        type: 'array',
+                        items: {
+                          type: 'object',
+                          properties: { authors: { type: 'string' }, title: { type: 'string' }, venue: { type: 'string' }, year: { type: 'string' }, link: { type: 'string' }, kind: { type: 'string' } },
+                        },
+                      },
+                    },
+                  },
+                },
+              },
+            },
+            400: error,
+            404: error,
+            429: error,
+            502: error,
+          },
+        },
+      },
     },
     components: {
       schemas: {
@@ -1281,7 +1361,7 @@ Key facts:
 
 - [Agent setup guide](${siteUrl}/agents/): MCP client config, skill install, copy-paste prompts.
 - MCP server (Streamable HTTP, no auth): \`${siteUrl}/mcp\`. Tools: ${MCP_TOOLS.map(([n]) => n).join(', ')}.
-- [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, example, link, preview, pdf).
+- [HTTP API (OpenAPI 3.1)](${siteUrl}/openapi.json): the same capabilities as REST endpoints under /api/agent/ (templates, guide, example, link, preview, pdf, latex, publications).
 - [Agent skill](${siteUrl}/skills/moderncv-resume/SKILL.md): step-by-step workflow for drafting, checking and exporting a resume.
 - Editor handoff link: ${siteUrl}/editor/#resume=<payload> opens the editor with a resume loaded. The payload is base64url-encoded resume JSON (or URL-encoded JSON); POST /api/agent/link builds a compact one. It stays in the URL fragment and never reaches the server.
 - [Template catalog (JSON)](${siteUrl}/templates.json): ids, names, descriptions, ATS status, preview images and editor links.

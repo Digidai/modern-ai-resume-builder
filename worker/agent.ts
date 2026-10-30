@@ -14,6 +14,9 @@ import jobTitles from '../src/data/jobTitles.json';
 import type { ResumeData } from '../src/types';
 import { slugifyJobTitle } from '../src/utils/slug';
 import { validateUrl } from '../src/utils/validation';
+import { latexEngine, toLatex } from '../src/utils/latex';
+import { PUBLICATION_KINDS, parseBibtex, type ImportedPublication, type PublicationKind } from '../src/utils/bibtex';
+import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
 export interface AgentEnv {
   ASSETS: { fetch: (request: Request) => Promise<Response> };
@@ -35,7 +38,7 @@ const SERVER_VERSION = '1.0.0';
 const MCP_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const MAX_AGENT_BODY_BYTES = 256 * 1024;
 const RENDER_TIMEOUT_MS = 45000;
-const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60 };
+const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60, orcidPerIp: 20 };
 const FONT_IDS: string[] = FONT_PRESETS.map((f) => f.id);
 
 class AgentError extends Error {
@@ -223,6 +226,72 @@ const createEditorLink = async (origin: string, input: Json) => {
   return { url, template: resume.templateId, warnings };
 };
 
+/** The resume as a standalone .tex file, with what is needed to open it in Overleaf. */
+const exportLatex = (input: Json) => {
+  const { resume, warnings } = prepareResume(input);
+  const tex = toLatex(resume);
+  const engine = latexEngine(resume);
+  const filename = `${(resume.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[^\p{L}\p{N}_.-]/gu, '').toLowerCase() || 'resume'}-resume.tex`;
+  return {
+    filename,
+    engine,
+    tex,
+    overleaf: {
+      note: 'Overleaf opens a .tex through a form POST (a browser action): POST https://www.overleaf.com/docs with form fields encoded_snip (URL-encoded tex), snip_name and engine. Or the user can create a blank Overleaf project and paste the file.',
+      action: 'https://www.overleaf.com/docs',
+      fields: { snip_name: filename, engine },
+    },
+    // The .tex has its own layout and includes every section, so template warnings don't apply.
+    warnings: warnings.filter((warning) => !/^(Template|Unknown template) "/.test(warning)),
+  };
+};
+
+const KIND_IDS = Object.keys(PUBLICATION_KINDS) as PublicationKind[];
+
+/**
+ * Publications from a public ORCID record or BibTeX source, each with a `kind`, optionally filtered by
+ * kind and an inclusive year range. Agents put the chosen ones (without `kind`) in `resume.publications`.
+ */
+const importPublications = async (input: Json, deps: AgentDeps) => {
+  const orcidInput = typeof input.orcid === 'string' ? input.orcid.trim() : '';
+  const bibtex = typeof input.bibtex === 'string' ? input.bibtex : '';
+  if (!orcidInput === !bibtex.trim()) throw new AgentError(400, 'INVALID_REQUEST', 'Give exactly one of `orcid` (an ORCID iD or orcid.org URL) or `bibtex` (the contents of a .bib file).');
+  let found: ImportedPublication[];
+  let listed: number;
+  let source: string;
+  if (orcidInput) {
+    const orcid = normalizeOrcid(orcidInput);
+    if (!orcid) throw new AgentError(400, 'INVALID_ORCID', 'Not a valid ORCID iD; use the form 0000-0002-1825-0097.');
+    if (!(await deps.rateLimit(`orcid:ip:${deps.clientIp}`, LIMITS.orcidPerIp))) throw new AgentError(429, 'RATE_LIMITED', 'Too many ORCID requests. Wait a minute and retry.');
+    try {
+      ({ publications: found, listed } = await fetchOrcidPublications(orcid));
+    } catch (error) {
+      if (error instanceof OrcidError) throw new AgentError(error.status, error.code, error.message);
+      throw new AgentError(502, 'UPSTREAM_UNAVAILABLE', 'Could not reach ORCID. Try again later.');
+    }
+    source = `https://orcid.org/${orcid}`;
+  } else {
+    found = parseBibtex(bibtex);
+    listed = found.length;
+    source = 'bibtex';
+  }
+  const kinds = Array.isArray(input.kinds) ? input.kinds.filter((kind): kind is PublicationKind => KIND_IDS.includes(kind as PublicationKind)) : [];
+  const year = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) ? value : typeof value === 'string' && /^\d{4}$/.test(value) ? Number(value) : null);
+  const fromYear = year(input.from_year);
+  const toYear = year(input.to_year);
+  const counts = Object.fromEntries(KIND_IDS.map((kind) => [kind, found.filter((pub) => pub.kind === kind).length]).filter(([, n]) => n));
+  // Works without a year are dropped only when a year range is given.
+  const publications = found
+    .filter((pub) => !kinds.length || kinds.includes(pub.kind))
+    .filter((pub) => {
+      if (fromYear === null && toYear === null) return true;
+      const y = Number(/\d{4}/.exec(pub.year)?.[0] ?? NaN);
+      return Number.isFinite(y) && (fromYear === null || y >= fromYear) && (toYear === null || y <= toYear);
+    })
+    .map(({ id: _id, ...pub }) => pub);
+  return { source, listed, found: found.length, counts, returned: publications.length, publications };
+};
+
 interface RenderResult {
   bytes: Uint8Array;
   pages: number;
@@ -403,6 +472,36 @@ const TOOLS: Tool[] = [
     },
   },
   {
+    name: 'import_publications',
+    title: 'Import publications from ORCID or BibTeX',
+    description:
+      'Reads publications from a public ORCID record (up to 4,000 works, duplicates merged, newest first) or from BibTeX text, and returns them as resume publications [{authors,title,venue,year,link,kind}] with counts per kind. Filter with kinds (journal, conference, preprint, book, thesis, other) and from_year/to_year to keep a CV focused. Put the chosen entries, without `kind`, in resume.publications and use an academic template (publications: true in list_templates).',
+    inputSchema: {
+      type: 'object',
+      properties: {
+        orcid: { type: 'string', description: 'ORCID iD or orcid.org URL, e.g. "0000-0002-1825-0097".' },
+        bibtex: { type: 'string', description: 'Contents of a .bib file (Google Scholar, DBLP, Zotero exports).' },
+        kinds: { type: 'array', items: { type: 'string', enum: KIND_IDS }, description: 'Only these kinds. Omit for all.' },
+        from_year: { type: 'integer', description: 'Earliest year to keep, inclusive.' },
+        to_year: { type: 'integer', description: 'Latest year to keep, inclusive.' },
+      },
+    },
+    annotations: { readOnlyHint: true, openWorldHint: true },
+    run: async (args, { deps }) => [text(await importPublications(args, deps))],
+  },
+  {
+    name: 'export_latex',
+    title: 'Export the resume as LaTeX',
+    description:
+      'Returns the resume as a standalone .tex file (article class, packages in every TeX Live; XeLaTeX with xeCJK when the text has CJK characters), with the filename, engine and how to open it in Overleaf. Includes publications, grants and awards, talks and teaching.',
+    inputSchema: { type: 'object', properties: { resume: RESUME_INPUT.resume }, required: ['resume'] },
+    annotations: { readOnlyHint: true, openWorldHint: false },
+    run: async (args) => {
+      const { tex, ...meta } = exportLatex(args);
+      return [text(meta), text(tex)];
+    },
+  },
+  {
     name: 'render_preview',
     title: 'Preview the first page as an image',
     description:
@@ -437,7 +536,8 @@ const TOOLS: Tool[] = [
 ];
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
-Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.`;
+Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.
+Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport
@@ -549,6 +649,12 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
   }
   if (route === 'example' && request.method === 'GET') {
     return json(await getExampleResume(ctx.env, ctx.origin, url.searchParams.get('job_title') ?? ''));
+  }
+  if (route === 'latex' || route === 'publications') {
+    if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');
+    const body = await readJson(request);
+    if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object.');
+    return json(route === 'latex' ? exportLatex(body as Json) : await importPublications(body as Json, ctx.deps));
   }
   if (route === 'link' || route === 'pdf' || route === 'preview') {
     if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');

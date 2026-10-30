@@ -7,7 +7,7 @@ description: Write, design and export a professional resume with ModernCV (49 te
 
 ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 PDF in one of 49 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
-If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `render_preview`, `render_pdf`, `create_editor_link`). Otherwise use the HTTP API below with `curl`.
+If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`.
 
 ## Workflow
 
@@ -17,6 +17,12 @@ If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `
 4. **Choose a template.** Prefer an ATS-friendly one (`classic`, `modern`, `ivy`, `banking` (Ledger), `meridian`, `keystone`, `vital`, `vanguard`, `timeline`, `executive`, `compact`, …) for online applications. `GET /api/agent/templates?ats_only=true` lists them.
 5. **Check the fit.** `POST /api/agent/preview` returns page 1 as PNG; the `x-resume-pages` header gives the page count. If it is over one page and the user wants one, the warnings (`x-resume-warnings`) give the largest `scale` that fits one page; use it, or shorten bullets, or switch to `compact`.
 6. **Deliver.** `POST /api/agent/pdf` for the PDF file, and always `POST /api/agent/link` for a link that opens the editor with the resume loaded so the user can tweak it. Give the user both.
+
+## Academic CVs and LaTeX
+
+- **Publications from ORCID or BibTeX.** `POST /api/agent/publications` with `{ "orcid": "0000-0002-1825-0097" }` or `{ "bibtex": "<.bib contents>" }` returns `{ listed, found, counts, publications: [{ authors, title, venue, year, link, kind }] }`. Narrow a long record with `kinds` (`journal`, `conference`, `preprint`, `book`, `thesis`, `other`) and `from_year` / `to_year`, then put the chosen entries, without `kind`, in `publications`. Ask the user which works to include rather than listing hundreds.
+- **An existing LaTeX CV** (Overleaf, moderncv, Awesome-CV, Jake's Resume): read the `.tex` and map it to the JSON below yourself; keep every fact and the wording of each `\item`.
+- **LaTeX out.** `POST /api/agent/latex` with `{ resume }` returns `{ filename, engine, tex, overleaf }`. Save `tex` as a file for the user. To open it in Overleaf, a browser form posts `encoded_snip` (the URL-encoded tex), `snip_name` and `engine` to `https://www.overleaf.com/docs`.
 
 ## HTTP API
 
@@ -30,6 +36,8 @@ Base URL: `https://genedai.cv`. JSON in, JSON/PDF/PNG out. CORS is open. Renderi
 | `POST /api/agent/link` | `{ resume, template?, accent?, font?, scale? }` | `{ url, template, warnings }` |
 | `POST /api/agent/preview` | same | `image/png` of page 1; headers `x-resume-pages`, `x-resume-warnings` |
 | `POST /api/agent/pdf` | same | `application/pdf` (A4, selectable text) |
+| `POST /api/agent/latex` | `{ resume }` | `{ filename, engine, tex, overleaf }` |
+| `POST /api/agent/publications` | `{ orcid }` or `{ bibtex }`, optional `kinds`, `from_year`, `to_year` | `{ source, listed, found, counts, returned, publications }` |
 
 `template` is an id from the templates list (default `modern`). `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif, latin-modern`. `scale` is 0.85–1.15.
 

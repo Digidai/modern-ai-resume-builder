@@ -37,6 +37,8 @@ export const MCP_TOOLS = [
   ['get_writing_guide', 'Section order, length, skills, metrics, example bullets and FAQs for a job title.'],
   ['get_example_resume', 'A complete, realistic example resume for a job title, in render-ready JSON.'],
   ['get_resume_schema', 'JSON Schema of the resume object.'],
+  ['import_publications', 'Publications from a public ORCID record or BibTeX, filterable by type and year, for academic CVs.'],
+  ['export_latex', 'The resume as a standalone .tex file for Overleaf or a local TeX install.'],
   ['render_preview', 'Page 1 as a PNG plus the page count, to check layout and length.'],
   ['render_pdf', 'An A4 vector PDF with selectable text and embedded fonts.'],
   ['create_editor_link', 'A link that opens the editor with the resume loaded (kept in the URL fragment, never stored).'],
