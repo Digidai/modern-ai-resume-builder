@@ -41,3 +41,6 @@ export * from './TextTemplate';
 export * from './GraduateTemplate';
 export * from './WallStreetTemplate';
 export * from './ScholarTemplate';
+export * from './OxfordTemplate';
+export * from './StandardTemplate';
+export * from './LumenTemplate';
