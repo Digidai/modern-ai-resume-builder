@@ -50,12 +50,12 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-[17px] bg-white px-[16mm] py-[15mm] font-source-sans text-neutral-900 [--accent:var(--rs-accent,#3873B3)]">
             {(name || title || contacts.length > 0) && (
                 <header className="flex items-start justify-between gap-[8mm] break-inside-avoid">
-                    <div className="min-w-0">
+                    <div className="min-w-[55mm] flex-1">
                         {name && <div role="heading" aria-level={1} className="text-[36px] font-normal leading-[1.05] tracking-[-0.01em] text-neutral-900 wrap-break-word">{name}</div>}
                         {title && <p className="mt-[5px] text-[17px] italic leading-snug text-neutral-500 wrap-break-word">{title}</p>}
                     </div>
                     {contacts.length > 0 && (
-                        <ul className="flex max-w-[78mm] shrink-0 flex-col items-end gap-[2px] pt-[3px] text-right text-[12.5px] leading-snug text-neutral-600">
+                        <ul className="flex max-w-[62%] shrink-0 flex-col items-end gap-[2px] pt-[3px] text-right text-[12.5px] leading-snug text-neutral-600">
                             {contacts.map((entry) => (
                                 <li key={entry.id} className="max-w-full">
                                     <ContactItem entry={entry} iconClassName="h-[12px] w-[12px] text-(--accent)" className="wrap-anywhere" />
