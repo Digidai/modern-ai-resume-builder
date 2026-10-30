@@ -128,13 +128,21 @@ export const getContactEntries = (data: ResumeData): ContactEntry[] => {
 };
 
 /** A contact value that is a real link when it has an href; inherits color from its parent. */
+/**
+ * Adds line-break opportunities to an email address or URL where typesetters break them: after
+ * "@" and before "." or "/". Narrow columns then wrap a long address at a natural point instead
+ * of mid-word; short values are unaffected, and <wbr> adds no characters to copied or parsed text.
+ */
+const breakable = (value: string): React.ReactNode =>
+    /\s/.test(value) ? value : value.split(/(?<=@)|(?=[./])/).flatMap((part, i) => (i ? [<wbr key={i} />, part] : [part]));
+
 export const ContactLink: React.FC<{ entry: ContactEntry; className?: string }> = ({ entry, className = '' }) =>
     entry.href ? (
         <a href={entry.href} target="_blank" rel="noopener noreferrer" className={`hover:underline underline-offset-2 ${className}`}>
-            {entry.value}
+            {breakable(entry.value)}
         </a>
     ) : (
-        <span className={className}>{entry.value}</span>
+        <span className={className}>{breakable(entry.value)}</span>
     );
 
 /** Icon + value pair; color comes from the parent so it works on light and dark templates. */

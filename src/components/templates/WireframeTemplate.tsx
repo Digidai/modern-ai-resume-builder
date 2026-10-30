@@ -37,7 +37,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         )}
                     </div>
                     {contacts.length > 0 && (
-                        <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-0.5 font-jetbrains text-[12px] max-w-[80mm] self-start">
+                        <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-0.5 font-jetbrains text-[12px] max-w-[110mm] self-start">
                             {contacts.map((entry) => (
                                 <React.Fragment key={entry.id}>
                                     <dt className="text-[11px] leading-[1.6] text-slate-500 tracking-widest">{entry.key === 'link' ? entry.label.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase() || 'URL' : CONTACT_LABELS[entry.key]}</dt>

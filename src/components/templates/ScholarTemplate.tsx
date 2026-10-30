@@ -57,9 +57,9 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {name && <div role="heading" aria-level={1} className="text-[30px] font-semibold leading-[1.1] tracking-[-0.005em] text-neutral-950 wrap-break-word">{name}</div>}
                     {title && <p className="mt-[3px] text-[16px] italic leading-snug text-neutral-700 wrap-break-word">{title}</p>}
                     {contacts.length > 0 && (
-                        <ul className="mt-[9px] grid grid-cols-2 gap-x-[8mm] gap-y-[2px] text-[13px] leading-snug text-neutral-700">
+                        <ul className="mt-[9px] grid grid-flow-row-dense grid-cols-2 gap-x-[8mm] gap-y-[2px] text-[13px] leading-snug text-neutral-700">
                             {contacts.map((entry) => (
-                                <li key={entry.id} className="min-w-0">
+                                <li key={entry.id} className={`min-w-0 ${entry.label.length + entry.value.length > 44 ? 'col-span-2' : ''}`}>
                                     <span className="text-neutral-500">{entry.label}: </span>
                                     <ContactLink entry={entry} className="wrap-anywhere" />
                                 </li>

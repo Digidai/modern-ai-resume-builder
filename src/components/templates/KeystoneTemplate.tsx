@@ -49,7 +49,7 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     )}
                     {contacts.length > 0 && (
-                        <ul className="flex min-w-0 max-w-[76mm] shrink-0 flex-col gap-[1px] text-[13px] leading-[1.45] text-slate-600">
+                        <ul className="flex min-w-0 max-w-[62%] shrink-0 flex-col gap-[1px] text-[13px] leading-[1.45] text-slate-600">
                             {contacts.map((entry) => (
                                 <li key={entry.id} className="min-w-0 text-right">
                                     <ContactLink entry={entry} className="wrap-anywhere" />

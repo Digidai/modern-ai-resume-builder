@@ -44,9 +44,9 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {name && <div role="heading" aria-level={1} className="text-[34px] font-bold leading-[1.1] tracking-[-0.01em] text-slate-900 wrap-break-word">{name}</div>}
                     {title && <p className="mt-[3px] text-[17px] font-semibold leading-snug text-(--accent) wrap-break-word">{title}</p>}
                     {contacts.length > 0 && (
-                        <dl className="mt-[10px] grid grid-cols-2 gap-x-[8mm] gap-y-[2px] border-t-2 border-(--accent) pt-[8px] text-[13.5px] leading-[1.45]">
+                        <dl className="mt-[10px] grid grid-flow-row-dense grid-cols-2 gap-x-[8mm] gap-y-[2px] border-t-2 border-(--accent) pt-[8px] text-[13.5px] leading-[1.45]">
                             {contacts.map((entry) => (
-                                <div key={entry.id} className="flex min-w-0 items-baseline gap-[8px]">
+                                <div key={entry.id} className={`flex min-w-0 items-baseline gap-[8px] ${entry.value.length > 34 ? 'col-span-2' : ''}`}>
                                     <dt className="w-[20mm] shrink-0 text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500 wrap-break-word">{entry.label}</dt>
                                     <dd className="min-w-0 text-slate-800">
                                         <ContactLink entry={entry} className="wrap-anywhere" />

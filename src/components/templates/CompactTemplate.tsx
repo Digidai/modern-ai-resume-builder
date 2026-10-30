@@ -28,7 +28,7 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
                     </div>
                 )}
                 {contacts.length > 0 && (
-                    <ul className="max-w-[48%] shrink-0 text-right text-[13px] leading-[1.45] text-slate-600">
+                    <ul className="max-w-[62%] shrink-0 text-right text-[13px] leading-[1.45] text-slate-600">
                         {contacts.map((entry) => (
                             <li key={entry.id} className="wrap-anywhere">
                                 <ContactLink entry={entry} />

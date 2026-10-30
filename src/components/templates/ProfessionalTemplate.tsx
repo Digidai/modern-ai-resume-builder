@@ -28,7 +28,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {data.title && <p className="text-(--accent-light) text-[16px] font-medium mt-1.5 wrap-break-word">{data.title}</p>}
                 </div>
                 {contacts.length > 0 && (
-                    <ul className="max-w-[46%] shrink-0 flex flex-col items-end gap-1.5 text-[13px] text-white/85">
+                    <ul className="max-w-[66%] shrink-0 flex flex-col items-end gap-1.5 text-[13px] text-white/85">
                         {contacts.map((entry) => {
                             const Icon = entry.icon;
                             return (
