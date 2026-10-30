@@ -157,7 +157,7 @@
         "berlin": 0.91,
         "iron": 0.92,
         "ginto": 0.95,
-        "quartz": 0.95,
+        "quartz": 0.98,
         "bronx": 0.89,
         "pop": 0.94
       }
@@ -489,7 +489,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.89,
+        "quartz": 0.91,
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,

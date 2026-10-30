@@ -127,7 +127,6 @@ export const getContactEntries = (data: ResumeData): ContactEntry[] => {
     return entries;
 };
 
-/** A contact value that is a real link when it has an href; inherits color from its parent. */
 /**
  * Adds line-break opportunities to an email address or URL where typesetters break them: after
  * "@" and before "." or "/". Narrow columns then wrap a long address at a natural point instead
@@ -136,26 +135,87 @@ export const getContactEntries = (data: ResumeData): ContactEntry[] => {
 const breakable = (value: string): React.ReactNode =>
     /\s/.test(value) ? value : value.split(/(?<=@)|(?=[./])/).flatMap((part, i) => (i ? [<wbr key={i} />, part] : [part]));
 
-export const ContactLink: React.FC<{ entry: ContactEntry; className?: string }> = ({ entry, className = '' }) =>
-    entry.href ? (
+/** Smallest font size, relative to the column's, that `fit` shrinks a contact to; below it the contact wraps. */
+const FIT_MIN = 0.75;
+
+/**
+ * Keeps one line of text on one line in a narrow column: when it is wider than the column, its font
+ * shrinks just enough to fit. Text that would need less than FIT_MIN keeps its size and wraps at its
+ * break points. The size is an inline style, so PDF snapshots and the server renderer keep it.
+ */
+const FitLine: React.FC<{ children: React.ReactNode }> = ({ children }) => {
+    const ref = React.useRef<HTMLSpanElement>(null);
+    React.useLayoutEffect(() => {
+        const el = ref.current;
+        const parent = el?.parentElement;
+        if (!el || !parent) return;
+        // Chrome still breaks at <wbr> under `white-space: nowrap`, so one-line mode hides them too.
+        const setOneLine = (on: boolean) => {
+            el.style.whiteSpace = on ? 'nowrap' : '';
+            el.querySelectorAll('wbr').forEach((wbr) => {
+                wbr.style.display = on ? 'none' : '';
+            });
+        };
+        const fit = () => {
+            el.style.fontSize = '';
+            setOneLine(false);
+            // Wrapping, the span is as wide as the column allows; on one line, its scroll width is the text's.
+            const available = el.clientWidth;
+            setOneLine(true);
+            const natural = el.scrollWidth;
+            if (!available || natural <= available) return setOneLine(false);
+            let scale = Math.floor((available / natural) * 100) / 100;
+            el.style.fontSize = `${scale}em`;
+            while (scale >= FIT_MIN && el.scrollWidth > available) el.style.fontSize = `${(scale -= 0.01)}em`;
+            if (scale < FIT_MIN) {
+                el.style.fontSize = '';
+                setOneLine(false);
+            }
+        };
+        fit();
+        let active = true;
+        void document.fonts?.ready.then(() => active && fit());
+        const observer = new ResizeObserver(() => fit());
+        observer.observe(parent);
+        return () => {
+            active = false;
+            observer.disconnect();
+        };
+    }, [children]);
+    return (
+        <span ref={ref} className="block min-w-0 max-w-full">
+            {children}
+        </span>
+    );
+};
+
+/**
+ * A contact value that is a real link when it has an href; inherits color from its parent.
+ * `fit` shrinks a value too long for a narrow column (sidebars) so it stays on one line.
+ */
+export const ContactLink: React.FC<{ entry: ContactEntry; className?: string; fit?: boolean }> = ({ entry, className = '', fit = false }) => {
+    const link = entry.href ? (
         <a href={entry.href} target="_blank" rel="noopener noreferrer" className={`hover:underline underline-offset-2 ${className}`}>
             {breakable(entry.value)}
         </a>
     ) : (
         <span className={className}>{breakable(entry.value)}</span>
     );
+    return fit ? <FitLine>{link}</FitLine> : link;
+};
 
 /** Icon + value pair; color comes from the parent so it works on light and dark templates. */
-export const ContactItem: React.FC<{ entry: ContactEntry; iconClassName?: string; className?: string }> = ({
+export const ContactItem: React.FC<{ entry: ContactEntry; iconClassName?: string; className?: string; fit?: boolean }> = ({
     entry,
     iconClassName = 'w-3.5 h-3.5 opacity-70',
     className = '',
+    fit = false,
 }) => {
     const Icon = entry.icon;
     return (
         <span className={`inline-flex items-center gap-1.5 min-w-0 ${className}`}>
             <Icon className={`shrink-0 ${iconClassName}`} />
-            <ContactLink entry={entry} className="wrap-anywhere" />
+            <ContactLink entry={entry} className="wrap-anywhere" fit={fit} />
         </span>
     );
 };

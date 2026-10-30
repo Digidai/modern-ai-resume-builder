@@ -84,7 +84,6 @@
         "Skills: defensive driving (Smith System), load securement, trip planning"
       ],
       "fit": {
-        "creative": 0.98,
         "swiss": 0.98,
         "berlin": 0.9,
         "iron": 0.85,
@@ -232,7 +231,6 @@
         "berlin": 0.91,
         "iron": 0.93,
         "ginto": 0.85,
-        "quartz": 0.98,
         "bronx": 0.93,
         "mono": 0.98,
         "pop": 0.94
@@ -491,7 +489,7 @@
       ],
       "fit": {
         "sidebar": 0.97,
-        "creative": 0.93,
+        "creative": 0.96,
         "professional": 0.99,
         "swiss": 0.93,
         "berlin": 0.87,
@@ -557,7 +555,7 @@
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.85,
+        "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
@@ -602,6 +600,7 @@
         "Shop: Fleetio and TMT work orders, PM programs, welding and fabrication"
       ],
       "fit": {
+        "creative": 0.99,
         "swiss": 0.98,
         "berlin": 0.88,
         "iron": 0.89,
@@ -699,7 +698,7 @@
         "Systems: Flight Schedule Pro, ForeFlight, Garmin G1000 NXi"
       ],
       "fit": {
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.98,
         "berlin": 0.87,
         "iron": 0.86,
@@ -863,7 +862,7 @@
         "berlin": 0.87,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.93,
+        "quartz": 0.95,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85
@@ -1276,6 +1275,7 @@
       ],
       "fit": {
         "sidebar": 0.98,
+        "creative": 0.99,
         "swiss": 0.96,
         "berlin": 0.88,
         "iron": 0.88,
@@ -1324,12 +1324,12 @@
         "Equipment: hand brakes, EOT devices, remote control locomotives"
       ],
       "fit": {
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.98,
         "berlin": 0.87,
         "iron": 0.86,
         "ginto": 0.86,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9

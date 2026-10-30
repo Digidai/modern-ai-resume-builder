@@ -51,7 +51,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                             <div key={entry.id} className="min-w-0">
                                 <dt className="mb-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">{entry.key === 'link' ? entry.label : CONTACT_LABELS[entry.key]}</dt>
                                 <dd className="text-white">
-                                    <ContactLink entry={entry} className="wrap-anywhere" />
+                                    <ContactLink entry={entry} className="wrap-anywhere" fit />
                                 </dd>
                             </div>
                         ))}

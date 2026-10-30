@@ -93,7 +93,7 @@
       "fit": {
         "silk": 0.99,
         "minimalist": 0.99,
-        "creative": 0.99,
+        "creative": 0.98,
         "swiss": 0.94,
         "berlin": 0.88,
         "iron": 0.97,
@@ -153,12 +153,11 @@
       "fit": {
         "modern": 0.96,
         "silk": 0.98,
-        "creative": 0.98,
         "swiss": 0.91,
         "berlin": 0.85,
         "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85

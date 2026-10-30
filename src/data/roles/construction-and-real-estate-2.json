@@ -44,7 +44,7 @@
         "berlin": 0.9,
         "iron": 0.89,
         "ginto": 0.86,
-        "quartz": 0.89,
+        "quartz": 0.91,
         "bronx": 0.91,
         "pop": 0.88
       }
@@ -135,11 +135,10 @@
         "Maintenance: small engine repair, preventive maintenance logs, work orders"
       ],
       "fit": {
-        "creative": 0.99,
         "berlin": 0.9,
         "iron": 0.89,
         "ginto": 0.88,
-        "quartz": 0.88,
+        "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.9
@@ -326,7 +325,7 @@
       "fit": {
         "silk": 0.98,
         "sidebar": 0.98,
-        "creative": 0.99,
+        "creative": 0.98,
         "swiss": 0.95,
         "berlin": 0.87,
         "iron": 0.9,
@@ -376,7 +375,7 @@
       ],
       "fit": {
         "sidebar": 0.98,
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.96,
         "berlin": 0.88,
         "iron": 0.88,
@@ -475,7 +474,7 @@
         "berlin": 0.93,
         "iron": 0.91,
         "ginto": 0.92,
-        "quartz": 0.97,
+        "quartz": 0.99,
         "bronx": 0.94,
         "pop": 0.93
       }
@@ -518,11 +517,11 @@
         "Software: Spectora report writing, InterNACHI Standards of Practice"
       ],
       "fit": {
-        "creative": 0.97,
+        "creative": 0.98,
         "berlin": 0.92,
         "iron": 0.89,
         "ginto": 0.89,
-        "quartz": 0.85,
+        "quartz": 0.87,
         "bronx": 0.85,
         "pop": 0.9
       }
@@ -657,11 +656,10 @@
         "Safety: OSHA 30 Construction, fall protection, MEWP operator"
       ],
       "fit": {
-        "creative": 0.99,
         "berlin": 0.92,
         "iron": 0.87,
         "ginto": 0.89,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.88
       }
@@ -750,6 +748,7 @@
         "Other: engineered drawing reading, rigging and tag lines, scaffold tagging"
       ],
       "fit": {
+        "creative": 0.99,
         "swiss": 0.96,
         "berlin": 0.88,
         "iron": 0.88,
@@ -801,7 +800,7 @@
         "berlin": 0.9,
         "iron": 0.87,
         "ginto": 0.88,
-        "quartz": 0.85,
+        "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.88
@@ -848,7 +847,7 @@
         "berlin": 0.92,
         "iron": 0.89,
         "ginto": 0.85,
-        "quartz": 0.93,
+        "quartz": 0.95,
         "bronx": 0.88,
         "pop": 0.93
       }

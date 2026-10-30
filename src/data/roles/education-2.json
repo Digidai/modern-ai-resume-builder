@@ -93,7 +93,7 @@
       ],
       "fit": {
         "minimalist": 0.98,
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.93,
         "berlin": 0.87,
         "iron": 0.87,
@@ -296,7 +296,7 @@
         "berlin": 0.92,
         "iron": 0.91,
         "ginto": 0.93,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.85,
         "pop": 0.92
       }
@@ -387,7 +387,7 @@
       ],
       "fit": {
         "sidebar": 0.95,
-        "creative": 0.94,
+        "creative": 0.97,
         "swiss": 0.95,
         "berlin": 0.88,
         "iron": 0.94,
@@ -490,7 +490,7 @@
       "fit": {
         "silk": 0.95,
         "sidebar": 0.94,
-        "creative": 0.94,
+        "creative": 0.93,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.89,

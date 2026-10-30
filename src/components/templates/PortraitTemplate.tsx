@@ -40,7 +40,7 @@ export const PortraitTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <SideHeading>Contact</SideHeading>
                         <div className="flex flex-col gap-[6px] text-[12.5px] leading-snug text-slate-700">
                             {contacts.map((entry) => (
-                                <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" />
+                                <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" fit />
                             ))}
                         </div>
                     </section>

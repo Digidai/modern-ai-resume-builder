@@ -164,7 +164,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                                             <div key={entry.id}>
                                                 <dt className="text-[14px] font-bold uppercase tracking-[0.02em] text-[#333333]">{entry.label}</dt>
                                                 <dd className="font-raleway text-[13px] font-medium text-[#555555]">
-                                                    <ContactLink entry={entry} className="wrap-anywhere" />
+                                                    <ContactLink entry={entry} className="wrap-anywhere" fit />
                                                 </dd>
                                             </div>
                                         ))}

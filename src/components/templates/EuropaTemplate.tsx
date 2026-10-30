@@ -50,7 +50,7 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {contacts.length > 0 && (
                             <div className="mt-[10px] grid grid-cols-2 gap-x-[6mm] gap-y-[4px] border-t border-slate-200 pt-[9px] text-[13px] text-slate-700">
                                 {contacts.map((entry) => (
-                                    <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" />
+                                    <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" fit />
                                 ))}
                             </div>
                         )}

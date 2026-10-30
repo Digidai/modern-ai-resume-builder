@@ -301,9 +301,7 @@
         "Regulatory: FDA promotional labeling basics, ISI review"
       ],
       "fit": {
-        "swiss": 0.98,
         "berlin": 0.91,
-        "quartz": 0.99,
         "bronx": 0.87
       }
     },
@@ -789,7 +787,7 @@
         "berlin": 0.94,
         "iron": 0.88,
         "ginto": 0.93,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.9
       }
@@ -939,11 +937,10 @@
         "Growth: launch plans, cross-promotion, audience analytics"
       ],
       "fit": {
-        "creative": 0.99,
         "berlin": 0.92,
         "iron": 0.9,
         "ginto": 0.89,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.92
       }
@@ -1153,7 +1150,7 @@
         "berlin": 0.88,
         "iron": 0.93,
         "ginto": 0.91,
-        "quartz": 0.85,
+        "quartz": 0.87,
         "bronx": 0.85,
         "pop": 0.9
       }
@@ -1291,7 +1288,7 @@
         "berlin": 0.94,
         "iron": 0.92,
         "ginto": 0.91,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "pop": 0.96
       }
@@ -1463,7 +1460,7 @@
         "berlin": 0.88,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.93,
+        "quartz": 0.95,
         "bronx": 0.88,
         "mono": 0.96,
         "pop": 0.85

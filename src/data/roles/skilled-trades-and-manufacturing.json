@@ -94,12 +94,12 @@
         "opal": 0.98,
         "minimalist": 0.95,
         "sidebar": 0.98,
-        "creative": 0.95,
+        "creative": 0.96,
         "swiss": 0.92,
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.87,
-        "quartz": 0.85,
+        "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.91,
@@ -305,6 +305,7 @@
       ],
       "fit": {
         "minimalist": 0.98,
+        "creative": 0.99,
         "swiss": 0.96,
         "berlin": 0.89,
         "iron": 0.85,
@@ -353,7 +354,7 @@
         "Fabrication: blueprint and weld symbol reading, fit-up, Lincoln and Miller machines"
       ],
       "fit": {
-        "creative": 0.96,
+        "creative": 0.97,
         "swiss": 0.96,
         "berlin": 0.88,
         "iron": 0.87,
@@ -417,7 +418,7 @@
         "berlin": 0.88,
         "iron": 0.86,
         "ginto": 0.86,
-        "quartz": 0.95,
+        "quartz": 0.98,
         "bronx": 0.92,
         "mono": 0.95,
         "pop": 0.88
@@ -598,11 +599,11 @@
         "Quality: AS9100 travelers, first-article inspection, SPC check sheets"
       ],
       "fit": {
-        "creative": 0.98,
+        "creative": 0.99,
         "berlin": 0.9,
         "iron": 0.86,
         "ginto": 0.85,
-        "quartz": 0.88,
+        "quartz": 0.9,
         "bronx": 0.85,
         "pop": 0.9
       }
@@ -649,7 +650,7 @@
         "berlin": 0.87,
         "iron": 0.86,
         "ginto": 0.9,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.91
@@ -1047,12 +1048,12 @@
       ],
       "fit": {
         "sidebar": 0.98,
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.96,
         "berlin": 0.89,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
@@ -1316,7 +1317,7 @@
         "berlin": 0.92,
         "iron": 0.95,
         "ginto": 0.92,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.98

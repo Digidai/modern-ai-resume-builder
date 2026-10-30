@@ -305,12 +305,12 @@
         "Certifications: ServSafe Manager"
       ],
       "fit": {
-        "creative": 0.97,
+        "creative": 0.98,
         "swiss": 0.99,
         "berlin": 0.88,
         "iron": 0.85,
         "ginto": 0.86,
-        "quartz": 0.88,
+        "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.9,
@@ -407,11 +407,12 @@
       ],
       "fit": {
         "silk": 0.99,
+        "creative": 0.99,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.88,
         "ginto": 0.85,
-        "quartz": 0.89,
+        "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.9,
@@ -646,7 +647,6 @@
         "ginto": 0.85,
         "symmetry": 0.98,
         "path": 0.99,
-        "quartz": 0.98,
         "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.85,
@@ -695,7 +695,7 @@
         "berlin": 0.89,
         "iron": 0.92,
         "ginto": 0.92,
-        "quartz": 0.88,
+        "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.96
@@ -904,7 +904,7 @@
         "berlin": 0.88,
         "iron": 0.88,
         "ginto": 0.91,
-        "quartz": 0.94,
+        "quartz": 0.96,
         "bronx": 0.9,
         "pop": 0.92,
         "cast": 0.99
@@ -1213,7 +1213,7 @@
         "iron": 0.85,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.86
@@ -1365,7 +1365,7 @@
         "berlin": 0.87,
         "iron": 0.88,
         "ginto": 0.86,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.88,
@@ -1414,7 +1414,7 @@
         "berlin": 0.9,
         "iron": 0.87,
         "ginto": 0.88,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "pop": 0.92
       }
@@ -1562,7 +1562,7 @@
         "berlin": 0.94,
         "iron": 0.92,
         "ginto": 0.9,
-        "quartz": 0.88,
+        "quartz": 0.91,
         "bronx": 0.9,
         "pop": 0.94
       }
@@ -1722,7 +1722,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.93,
+        "quartz": 0.96,
         "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.85,
@@ -1774,7 +1774,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.91,
+        "quartz": 0.94,
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.86
@@ -1833,7 +1833,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.85,
-        "quartz": 0.94,
+        "quartz": 0.96,
         "bronx": 0.86,
         "mono": 0.93,
         "pop": 0.85,
@@ -1881,6 +1881,7 @@
       "fit": {
         "silk": 0.98,
         "minimalist": 0.98,
+        "creative": 0.99,
         "swiss": 0.95,
         "berlin": 0.87,
         "iron": 0.86,

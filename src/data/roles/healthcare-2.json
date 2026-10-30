@@ -333,7 +333,7 @@
         "silk": 0.93,
         "minimalist": 0.99,
         "tokyo": 0.98,
-        "creative": 0.97,
+        "creative": 0.98,
         "swiss": 0.9,
         "berlin": 0.85,
         "iron": 0.91,
@@ -748,7 +748,7 @@
         "berlin": 0.9,
         "iron": 0.96,
         "ginto": 0.89,
-        "quartz": 0.86,
+        "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.95
       }
@@ -887,7 +887,7 @@
         "silk": 0.96,
         "opal": 0.99,
         "minimalist": 0.96,
-        "creative": 0.99,
+        "creative": 0.98,
         "swiss": 0.93,
         "berlin": 0.85,
         "iron": 0.85,
@@ -1044,7 +1044,7 @@
         "berlin": 0.91,
         "iron": 0.95,
         "ginto": 0.92,
-        "quartz": 0.92,
+        "quartz": 0.95,
         "bronx": 0.86,
         "pop": 0.94
       }
@@ -1191,7 +1191,7 @@
         "minimalist": 0.93,
         "tokyo": 0.98,
         "sidebar": 0.98,
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.92,
         "berlin": 0.85,
         "iron": 0.87,
@@ -1383,7 +1383,7 @@
         "berlin": 0.94,
         "iron": 0.95,
         "ginto": 0.94,
-        "quartz": 0.92,
+        "quartz": 0.95,
         "bronx": 0.85,
         "pop": 0.98
       }
@@ -1765,7 +1765,7 @@
         "silk": 0.97,
         "minimalist": 0.97,
         "sidebar": 0.96,
-        "creative": 0.93,
+        "creative": 0.92,
         "professional": 0.97,
         "swiss": 0.94,
         "berlin": 0.86,
@@ -1872,7 +1872,7 @@
         "silk": 0.95,
         "minimalist": 0.93,
         "tokyo": 0.96,
-        "creative": 0.98,
+        "creative": 0.97,
         "swiss": 0.87,
         "berlin": 0.85,
         "iron": 0.9,
@@ -1969,7 +1969,7 @@
         "Credentials: RN (Colorado), NCSN, Colorado special services license (school nurse), BLS"
       ],
       "fit": {
-        "creative": 0.99,
+        "creative": 0.98,
         "swiss": 0.96,
         "berlin": 0.88,
         "iron": 0.86,
@@ -2021,7 +2021,7 @@
         "berlin": 0.94,
         "iron": 0.91,
         "ginto": 0.96,
-        "quartz": 0.93,
+        "quartz": 0.96,
         "bronx": 0.85,
         "pop": 0.93
       }

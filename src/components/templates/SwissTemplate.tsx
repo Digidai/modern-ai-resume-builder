@@ -37,7 +37,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {contacts.map((entry) => (
                             <li key={entry.id} className="min-w-0 border-t-2 border-slate-900 pt-1.5 leading-snug">
                                 <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600">{entry.label}</span>
-                                <ContactLink entry={entry} className="wrap-anywhere" />
+                                <ContactLink entry={entry} className="wrap-anywhere" fit />
                             </li>
                         ))}
                     </ul>

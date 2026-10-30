@@ -87,7 +87,7 @@
         "berlin": 0.95,
         "iron": 0.9,
         "ginto": 0.97,
-        "quartz": 0.95,
+        "quartz": 0.97,
         "bronx": 0.87,
         "pop": 0.96
       }
@@ -136,7 +136,7 @@
         "berlin": 0.85,
         "iron": 0.85,
         "ginto": 0.86,
-        "quartz": 0.9,
+        "quartz": 0.92,
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.89,
@@ -323,7 +323,7 @@
         "berlin": 0.85,
         "iron": 0.92,
         "ginto": 0.95,
-        "quartz": 0.87,
+        "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.93
@@ -571,7 +571,7 @@
         "berlin": 0.87,
         "iron": 0.99,
         "ginto": 0.93,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.94
       }
@@ -850,12 +850,11 @@
         "Lab: nucleic acid extraction automation, BSL-2 handling"
       ],
       "fit": {
-        "creative": 0.99,
         "swiss": 0.94,
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.87
@@ -915,7 +914,7 @@
         "iron": 0.86,
         "ginto": 0.87,
         "symmetry": 0.97,
-        "quartz": 0.96,
+        "quartz": 0.99,
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.9
@@ -978,7 +977,7 @@
         "iron": 0.86,
         "ginto": 0.85,
         "symmetry": 0.98,
-        "quartz": 0.86,
+        "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85

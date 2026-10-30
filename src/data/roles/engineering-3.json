@@ -44,7 +44,7 @@
         "berlin": 0.91,
         "iron": 0.9,
         "ginto": 0.9,
-        "quartz": 0.92,
+        "quartz": 0.94,
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.92
@@ -331,7 +331,7 @@
         "berlin": 0.94,
         "iron": 0.97,
         "ginto": 0.94,
-        "quartz": 0.87,
+        "quartz": 0.89,
         "bronx": 0.85,
         "pop": 0.99
       }
@@ -377,7 +377,7 @@
         "berlin": 0.92,
         "iron": 0.93,
         "ginto": 0.98,
-        "quartz": 0.91,
+        "quartz": 0.94,
         "bronx": 0.85,
         "pop": 0.95
       }
@@ -679,7 +679,7 @@
         "berlin": 0.93,
         "iron": 0.95,
         "ginto": 0.94,
-        "quartz": 0.96,
+        "quartz": 0.97,
         "bronx": 0.96,
         "pop": 0.97
       }
@@ -769,7 +769,6 @@
       "fit": {
         "berlin": 0.99,
         "iron": 0.97,
-        "quartz": 0.98,
         "bronx": 0.92,
         "pop": 0.98
       }
@@ -1209,7 +1208,7 @@
         "berlin": 0.94,
         "iron": 0.92,
         "ginto": 0.95,
-        "quartz": 0.96,
+        "quartz": 0.99,
         "bronx": 0.88,
         "pop": 0.96
       }
