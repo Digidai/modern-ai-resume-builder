@@ -1538,6 +1538,29 @@ const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise
   if (!orcid) return errorResponse(400, 'INVALID_REQUEST', 'Enter an ORCID iD such as 0000-0002-1825-0097.');
   const limit = await consumeRateLimit(env, `orcid:ip:${getClientIp(request)}`, ORCID_RATE_LIMIT);
   if (!limit.allowed) return appendRateLimitHeaders(errorResponse(429, 'RATE_LIMITED', 'Rate limit reached. Please wait a minute and try again.'), limit);
+  if (url.searchParams.get('stream') === '1') {
+    // NDJSON: { type: 'progress', total, read } lines, then { type: 'done', orcid, publications } or { type: 'error', code, error }.
+    const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();
+    const writer = writable.getWriter();
+    const encoder = new TextEncoder();
+    const send = (event: Record<string, unknown>) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`)).catch(() => undefined);
+    void (async () => {
+      try {
+        const publications = await fetchOrcidPublications(orcid, (progress) => void send({ type: 'progress', ...progress }));
+        await send({ type: 'done', orcid, publications: publications.map(({ id: _id, ...rest }) => rest) });
+      } catch (error) {
+        if (!(error instanceof OrcidError)) console.error('[orcid] failed', error);
+        await send(
+          error instanceof OrcidError
+            ? { type: 'error', code: error.code, error: error.message }
+            : { type: 'error', code: 'UPSTREAM_UNAVAILABLE', error: 'Could not reach ORCID. Try again later.' }
+        );
+      } finally {
+        await writer.close().catch(() => undefined);
+      }
+    })();
+    return appendRateLimitHeaders(new Response(readable, { headers: { 'content-type': 'application/x-ndjson; charset=utf-8', 'cache-control': 'no-store' } }), limit);
+  }
   try {
     const publications = await fetchOrcidPublications(orcid);
     return jsonResponse({ orcid, publications: publications.map(({ id: _id, ...rest }) => rest) });

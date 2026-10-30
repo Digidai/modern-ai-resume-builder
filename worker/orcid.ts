@@ -70,17 +70,31 @@ const getJson = async (path: string): Promise<Json> => {
   return (await response.json()) as Json;
 };
 
+/** Progress of a fetch: how many works the record lists, then how many have been read. */
+export type OrcidProgress = { total: number; read: number };
+
 /** The record's public works as publications, newest first. */
-export const fetchOrcidPublications = async (orcid: string): Promise<Publication[]> => {
+export const fetchOrcidPublications = async (orcid: string, onProgress?: (progress: OrcidProgress) => void): Promise<Publication[]> => {
   const summary = await getJson(`${orcid}/works`);
   const putCodes = ((summary.group as Json[] | undefined) ?? [])
     .map((group) => at((group['work-summary'] as Json[] | undefined)?.[0], 'put-code'))
     .filter((code): code is number => typeof code === 'number')
     .slice(0, MAX_WORKS);
+  onProgress?.({ total: putCodes.length, read: 0 });
 
   const batches: number[][] = [];
   for (let i = 0; i < putCodes.length; i += BULK_SIZE) batches.push(putCodes.slice(i, i + BULK_SIZE));
-  const works = (await Promise.all(batches.map((batch) => getJson(`${orcid}/works/${batch.join(',')}`))))
+  let read = 0;
+  const works = (
+    await Promise.all(
+      batches.map(async (batch) => {
+        const bulk = await getJson(`${orcid}/works/${batch.join(',')}`);
+        read += batch.length;
+        onProgress?.({ total: putCodes.length, read });
+        return bulk;
+      })
+    )
+  )
     .flatMap((bulk) => (bulk.bulk as Json[] | undefined) ?? [])
     .map((item) => item.work as Json | undefined)
     .filter((work): work is Json => !!work);

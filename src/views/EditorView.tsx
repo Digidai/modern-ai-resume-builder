@@ -254,7 +254,7 @@ const EditorView: React.FC = () => {
   // Agent handoff: /editor/#resume=<payload> opens the editor with that resume (see src/shared/resumeLink.ts).
   // The fragment never reaches the server; it is removed once read so a reload doesn't load it again.
   // `hashchange` covers a second link opened while the editor is already showing.
-  const { showError } = useToast();
+  const { showError, showToast } = useToast();
   const currentTemplateRef = useRef(resumeData.templateId);
   currentTemplateRef.current = resumeData.templateId;
   useEffect(() => {
@@ -343,7 +343,11 @@ const EditorView: React.FC = () => {
         label: 'Open in Overleaf',
         description: 'Continue in LaTeX: a new Overleaf project with this resume.',
         icon: <CodeIcon className="h-4 w-4" />,
-        onSelect: () => openInOverleaf(resumeData),
+        onSelect: () => {
+          openInOverleaf(resumeData);
+          // The rest happens in Overleaf's tab: it creates the project, then compiles the PDF.
+          showToast('Opening Overleaf in a new tab. It creates the project, then compiles the PDF there.', 'info', { duration: 8000 });
+        },
       },
       {
         label: 'Download LaTeX (.tex)',

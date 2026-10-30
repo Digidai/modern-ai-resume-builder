@@ -4,8 +4,19 @@ import { parseBibtex } from '../utils/bibtex';
 import { createId } from '../utils/resumeData';
 import { Button } from './Button';
 import { Input, Textarea } from './Input';
+import { TaskProgress } from './TaskProgress';
 
 type Mode = 'bibtex' | 'orcid';
+
+type OrcidEvent =
+  | { type: 'progress'; total: number; read: number }
+  | { type: 'done'; publications: Omit<Publication, 'id'>[] }
+  | { type: 'error'; error: string };
+
+/** Fetch progress: null before the record answers, then works listed and read so far. */
+type OrcidProgress = { total: number; read: number } | null;
+
+const ORCID_STEPS = ['Find record', 'Read works', 'Review'] as const;
 
 const titleKey = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '');
 
@@ -18,6 +29,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const [bibtex, setBibtex] = useState('');
   const [orcid, setOrcid] = useState('');
   const [loading, setLoading] = useState(false);
+  const [progress, setProgress] = useState<OrcidProgress>(null);
   const [error, setError] = useState('');
   const [found, setFound] = useState<Publication[] | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -45,23 +57,39 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
 
   const fetchOrcid = async () => {
     setLoading(true);
+    setProgress(null);
     setError('');
+    setFound(null);
+    const fail = (message?: string) => setError(message || 'Could not load that ORCID record. Try again later.');
     try {
-      const response = await fetch(`/api/orcid?id=${encodeURIComponent(orcid.trim())}`);
-      const body = (await response.json().catch(() => null)) as { publications?: Omit<Publication, 'id'>[]; error?: string } | null;
-      if (!response.ok || !body?.publications) {
-        setError(body?.error || 'Could not load that ORCID record. Try again later.');
-        setFound(null);
-        return;
+      const response = await fetch(`/api/orcid?id=${encodeURIComponent(orcid.trim())}&stream=1`);
+      if (!response.ok || !response.body || !(response.headers.get('content-type') || '').includes('ndjson')) {
+        const body = (await response.json().catch(() => null)) as { publications?: Omit<Publication, 'id'>[]; error?: string } | null;
+        if (!response.ok || !body?.publications) return fail(body?.error);
+        return review(body.publications.map((pub) => ({ ...pub, id: createId() })), 'That ORCID record has no public works yet.');
       }
-      review(
-        body.publications.map((pub) => ({ ...pub, id: createId() })),
-        'That ORCID record has no public works yet.'
-      );
+      const reader = response.body.getReader();
+      const decoder = new TextDecoder();
+      let buffer = '';
+      for (;;) {
+        const { value, done } = await reader.read();
+        buffer += decoder.decode(value, { stream: !done });
+        const lines = buffer.split('\n');
+        buffer = done ? '' : lines.pop() ?? '';
+        for (const line of lines) {
+          if (!line.trim()) continue;
+          const event = JSON.parse(line) as OrcidEvent;
+          if (event.type === 'progress') setProgress({ total: event.total, read: event.read });
+          else if (event.type === 'error') return fail(event.error);
+          else return review(event.publications.map((pub) => ({ ...pub, id: createId() })), 'That ORCID record has no public works yet.');
+        }
+        if (done) return fail();
+      }
     } catch {
       setError('Could not reach ORCID. Check your connection and try again.');
     } finally {
       setLoading(false);
+      setProgress(null);
     }
   };
 
@@ -150,6 +178,24 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                 Fetch works
               </Button>
             </form>
+          )}
+
+          {mode === 'orcid' && loading && (
+            <TaskProgress
+              data-testid="orcid-progress"
+              steps={ORCID_STEPS}
+              step={progress ? 1 : 0}
+              status={
+                !progress
+                  ? 'Looking up the ORCID record…'
+                  : progress.total === 0
+                    ? 'No public works listed…'
+                    : `Reading ${progress.read} of ${progress.total} works…`
+              }
+              label="ORCID import progress"
+              percent={progress && progress.total ? Math.max(4, Math.round((progress.read / progress.total) * 100)) : null}
+              note={progress ? 'ORCID sends the details of up to 100 works at a time (300 at most).' : 'Reading from orcid.org.'}
+            />
           )}
 
           {error && (
