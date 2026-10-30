@@ -17,20 +17,28 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title
     </section>
 );
 
-/** Left (bold), centre (italic), right (dates). Firm and dates take their natural width; the role gets the rest. */
+/**
+ * Firm (bold) on the left, dates on the right, role (italic) between them. The dates float right so
+ * they always stay on the first line; the firm and role share the rest of it with equal space on
+ * each side of the role. A role too long to fit there moves whole to the next line, left-aligned,
+ * instead of breaking mid-phrase in a narrow centre column.
+ */
 const EntryHead: React.FC<{ left: string; center?: string; right?: string; href?: string }> = ({ left, center, right, href }) => (
-    <div className="grid grid-cols-[auto_minmax(0,1fr)_auto] items-baseline gap-x-[4mm] text-[14px] leading-snug">
-        <p className="min-w-0 max-w-[80mm] font-bold wrap-break-word">
-            {href ? (
-                <a href={href} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-2">
-                    {left}
-                </a>
-            ) : (
-                left
-            )}
-        </p>
-        <p className="min-w-0 text-center italic wrap-break-word">{center}</p>
-        <p className="text-right tabular-nums whitespace-nowrap">{right}</p>
+    <div className="text-[14px] leading-snug">
+        {right && <p className="float-right ml-[4mm] tabular-nums whitespace-nowrap">{right}</p>}
+        <div className="flex flex-wrap items-baseline justify-between gap-x-[4mm] overflow-hidden">
+            <p className="min-w-0 max-w-full font-bold wrap-break-word">
+                {href ? (
+                    <a href={href} target="_blank" rel="noopener noreferrer" className="hover:underline underline-offset-2">
+                        {left}
+                    </a>
+                ) : (
+                    left
+                )}
+            </p>
+            {center && <p className="min-w-0 max-w-full italic wrap-break-word">{center}</p>}
+            <span aria-hidden="true" />
+        </div>
     </div>
 );
 
