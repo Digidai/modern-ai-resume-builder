@@ -1758,8 +1758,8 @@
       ],
       "fit": {
         "berlin": 0.92,
-        "iron": 0.97,
-        "ginto": 0.96,
+        "iron": 0.94,
+        "ginto": 0.94,
         "quartz": 0.96,
         "bronx": 0.9,
         "pop": 0.94
@@ -2609,7 +2609,7 @@
         "berlin": 0.85,
         "iron": 0.87,
         "ginto": 0.85,
-        "quartz": 0.98,
+        "quartz": 0.96,
         "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.86,
