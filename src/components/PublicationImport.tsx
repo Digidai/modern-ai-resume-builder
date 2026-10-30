@@ -9,12 +9,12 @@ import { TaskProgress } from './TaskProgress';
 type Mode = 'bibtex' | 'orcid';
 
 type OrcidEvent =
-  | { type: 'progress'; total: number; read: number }
-  | { type: 'done'; publications: Omit<Publication, 'id'>[] }
+  | { type: 'progress'; total: number; read: number; listed: number }
+  | { type: 'done'; publications: Omit<Publication, 'id'>[]; listed?: number }
   | { type: 'error'; error: string };
 
 /** Fetch progress: null before the record answers, then works listed and read so far. */
-type OrcidProgress = { total: number; read: number } | null;
+type OrcidProgress = { total: number; read: number; listed: number } | null;
 
 const ORCID_STEPS = ['Find record', 'Read works', 'Review'] as const;
 
@@ -30,6 +30,8 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const [orcid, setOrcid] = useState('');
   const [loading, setLoading] = useState(false);
   const [progress, setProgress] = useState<OrcidProgress>(null);
+  /** Works the ORCID record lists when more than were read (the Worker reads the newest 4,000). */
+  const [skipped, setSkipped] = useState<{ read: number; listed: number } | null>(null);
   const [error, setError] = useState('');
   const [found, setFound] = useState<Publication[] | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
@@ -58,8 +60,10 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const fetchOrcid = async () => {
     setLoading(true);
     setProgress(null);
+    setSkipped(null);
     setError('');
     setFound(null);
+    let read = 0;
     const fail = (message?: string) => setError(message || 'Could not load that ORCID record. Try again later.');
     try {
       const response = await fetch(`/api/orcid?id=${encodeURIComponent(orcid.trim())}&stream=1`);
@@ -79,9 +83,15 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
         for (const line of lines) {
           if (!line.trim()) continue;
           const event = JSON.parse(line) as OrcidEvent;
-          if (event.type === 'progress') setProgress({ total: event.total, read: event.read });
+          if (event.type === 'progress') {
+            read = event.total;
+            setProgress({ total: event.total, read: event.read, listed: event.listed });
+          }
           else if (event.type === 'error') return fail(event.error);
-          else return review(event.publications.map((pub) => ({ ...pub, id: createId() })), 'That ORCID record has no public works yet.');
+          else {
+            if (event.listed && event.listed > read) setSkipped({ read, listed: event.listed });
+            return review(event.publications.map((pub) => ({ ...pub, id: createId() })), 'That ORCID record has no public works yet.');
+          }
         }
         if (done) return fail();
       }
@@ -194,7 +204,13 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
               }
               label="ORCID import progress"
               percent={progress && progress.total ? Math.max(4, Math.round((progress.read / progress.total) * 100)) : null}
-              note={progress ? 'ORCID sends the details of up to 100 works at a time (300 at most).' : 'Reading from orcid.org.'}
+              note={
+                !progress
+                  ? 'Reading from orcid.org.'
+                  : progress.listed > progress.total
+                    ? `The record lists ${progress.listed.toLocaleString('en')} works; the newest ${progress.total.toLocaleString('en')} are read.`
+                    : 'ORCID sends the details of 100 works at a time.'
+              }
             />
           )}
 
@@ -208,7 +224,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
             <div className="space-y-2">
               <div className="flex items-center justify-between gap-2 text-sm">
                 <span className="font-medium text-ink">
-                  {found.length} found · {selected.size} selected
+                  {found.length.toLocaleString('en')} found · {selected.size.toLocaleString('en')} selected
                 </span>
                 <span className="flex gap-3 text-muted">
                   <button type="button" className="hover:text-ink" onClick={() => setSelected(new Set(found.map((pub) => pub.id)))}>
@@ -219,6 +235,12 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                   </button>
                 </span>
               </div>
+              {skipped && (
+                <p className="text-xs text-muted">
+                  The record lists {skipped.listed.toLocaleString('en')} works; the newest {skipped.read.toLocaleString('en')} were read. Add older ones with Import BibTeX.
+                </p>
+              )}
+              <p className="text-xs text-muted">Duplicates (the same title from several sources) are listed once.</p>
               <ul className="max-h-72 space-y-1 overflow-y-auto rounded-md border border-rule bg-surface p-2" data-testid="publication-import-list">
                 {found.map((pub) => (
                   <li key={pub.id}>

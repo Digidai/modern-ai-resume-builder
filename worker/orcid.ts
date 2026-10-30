@@ -8,7 +8,13 @@ import { formatAuthors, latexToText, parseBibtex } from '../src/utils/bibtex';
 
 const ORCID_API = 'https://pub.orcid.org/v3.0';
 const BULK_SIZE = 100;
-const MAX_WORKS = 300;
+/**
+ * Most works read from one record: 40 bulk calls plus the summary, under the 50 subrequests a Worker
+ * may make on any plan. Records this long are rare; the newest works are kept.
+ */
+export const MAX_WORKS = 4000;
+/** Bulk calls in flight at once, well inside ORCID's public API limit (24 requests a second). */
+const CONCURRENCY = 4;
 
 /** "0000-0002-1825-0097", an orcid.org URL, or the bare 16 characters → canonical iD, or null. */
 export const normalizeOrcid = (input: string): string | null => {
@@ -70,40 +76,47 @@ const getJson = async (path: string): Promise<Json> => {
   return (await response.json()) as Json;
 };
 
-/** Progress of a fetch: how many works the record lists, then how many have been read. */
-export type OrcidProgress = { total: number; read: number };
+/** Progress of a fetch: works to read (at most MAX_WORKS), how many are read, and how many the record lists. */
+export type OrcidProgress = { total: number; read: number; listed: number };
 
-/** The record's public works as publications, newest first. */
-export const fetchOrcidPublications = async (orcid: string, onProgress?: (progress: OrcidProgress) => void): Promise<Publication[]> => {
+/** The record's public works as publications, newest first, and how many works the record lists. */
+export const fetchOrcidPublications = async (
+  orcid: string,
+  onProgress?: (progress: OrcidProgress) => void
+): Promise<{ publications: Publication[]; listed: number }> => {
   const summary = await getJson(`${orcid}/works`);
-  const putCodes = ((summary.group as Json[] | undefined) ?? [])
+  const allCodes = ((summary.group as Json[] | undefined) ?? [])
     .map((group) => at((group['work-summary'] as Json[] | undefined)?.[0], 'put-code'))
-    .filter((code): code is number => typeof code === 'number')
-    .slice(0, MAX_WORKS);
-  onProgress?.({ total: putCodes.length, read: 0 });
+    .filter((code): code is number => typeof code === 'number');
+  const putCodes = allCodes.slice(0, MAX_WORKS);
+  const listed = allCodes.length;
+  onProgress?.({ total: putCodes.length, read: 0, listed });
 
   const batches: number[][] = [];
   for (let i = 0; i < putCodes.length; i += BULK_SIZE) batches.push(putCodes.slice(i, i + BULK_SIZE));
+  // Each batch is turned into publications as it arrives, so only one batch's JSON is held per call.
+  const results: Publication[][] = new Array(batches.length);
+  let next = 0;
   let read = 0;
-  const works = (
-    await Promise.all(
-      batches.map(async (batch) => {
-        const bulk = await getJson(`${orcid}/works/${batch.join(',')}`);
-        read += batch.length;
-        onProgress?.({ total: putCodes.length, read });
-        return bulk;
-      })
-    )
-  )
-    .flatMap((bulk) => (bulk.bulk as Json[] | undefined) ?? [])
-    .map((item) => item.work as Json | undefined)
-    .filter((work): work is Json => !!work);
+  const worker = async () => {
+    while (next < batches.length) {
+      const index = next++;
+      const bulk = await getJson(`${orcid}/works/${batches[index].join(',')}`);
+      results[index] = ((bulk.bulk as Json[] | undefined) ?? [])
+        .map((item) => item.work as Json | undefined)
+        .filter((work): work is Json => !!work)
+        .map(fromWork)
+        .filter((pub): pub is Publication => !!pub);
+      read += batches[index].length;
+      onProgress?.({ total: putCodes.length, read, listed });
+    }
+  };
+  await Promise.all(Array.from({ length: Math.min(CONCURRENCY, batches.length) }, worker));
 
   // ORCID often holds one work several times (a preprint and its versions, or one per source).
   const seen = new Set<string>();
-  return works
-    .map(fromWork)
-    .filter((pub): pub is Publication => !!pub)
+  const publications = results
+    .flat()
     .filter((pub) => {
       const key = pub.title.toLowerCase().replace(/[^a-z0-9]+/g, '');
       if (seen.has(key)) return false;
@@ -111,4 +124,5 @@ export const fetchOrcidPublications = async (orcid: string, onProgress?: (progre
       return true;
     })
     .sort((a, b) => (Number(b.year.slice(0, 4)) || 0) - (Number(a.year.slice(0, 4)) || 0));
+  return { publications, listed };
 };

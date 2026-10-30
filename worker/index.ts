@@ -1546,8 +1546,8 @@ const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise
     const send = (event: Record<string, unknown>) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`)).catch(() => undefined);
     void (async () => {
       try {
-        const publications = await fetchOrcidPublications(orcid, (progress) => void send({ type: 'progress', ...progress }));
-        await send({ type: 'done', orcid, publications: publications.map(({ id: _id, ...rest }) => rest) });
+        const { publications, listed } = await fetchOrcidPublications(orcid, (progress) => void send({ type: 'progress', ...progress }));
+        await send({ type: 'done', orcid, listed, publications: publications.map(({ id: _id, ...rest }) => rest) });
       } catch (error) {
         if (!(error instanceof OrcidError)) console.error('[orcid] failed', error);
         await send(
@@ -1562,8 +1562,8 @@ const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise
     return appendRateLimitHeaders(new Response(readable, { headers: { 'content-type': 'application/x-ndjson; charset=utf-8', 'cache-control': 'no-store' } }), limit);
   }
   try {
-    const publications = await fetchOrcidPublications(orcid);
-    return jsonResponse({ orcid, publications: publications.map(({ id: _id, ...rest }) => rest) });
+    const { publications, listed } = await fetchOrcidPublications(orcid);
+    return jsonResponse({ orcid, listed, publications: publications.map(({ id: _id, ...rest }) => rest) });
   } catch (error) {
     if (error instanceof OrcidError) return errorResponse(error.status, error.code, error.message);
     console.error('[orcid] failed', error);
