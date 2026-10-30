@@ -136,7 +136,7 @@ const breakable = (value: string): React.ReactNode =>
     /\s/.test(value) ? value : value.split(/(?<=@)|(?=[./])/).flatMap((part, i) => (i ? [<wbr key={i} />, part] : [part]));
 
 /** Smallest font size, relative to the column's, that `fit` shrinks a contact to; below it the contact wraps. */
-const FIT_MIN = 0.75;
+const FIT_MIN = 0.7;
 
 /**
  * Keeps one line of text on one line in a narrow column: when it is wider than the column, its font
