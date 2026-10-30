@@ -1,6 +1,5 @@
 import type { AiErrorCode } from '../src/shared/aiContract';
-import type { Publication } from '../src/types';
-import { formatAuthors, latexToText, parseBibtex } from '../src/utils/bibtex';
+import { type ImportedPublication, type PublicationKind, formatAuthors, latexToText, parseBibtex } from '../src/utils/bibtex';
 
 // Publications from a public ORCID record, through ORCID's public API (no key needed). The work
 // summaries list every work; the bulk endpoint (≤ 100 put-codes per call) adds contributors and,
@@ -35,7 +34,24 @@ const text = (value: unknown): string => (typeof value === 'string' ? value.trim
 
 const VENUE_BY_TYPE: Record<string, string> = { 'dissertation-thesis': 'Thesis', preprint: 'Preprint' };
 
-const fromWork = (work: Json): Publication | null => {
+const ORCID_KINDS: Record<string, PublicationKind> = {
+  'journal-article': 'journal',
+  'journal-issue': 'journal',
+  review: 'journal',
+  'conference-paper': 'conference',
+  'conference-abstract': 'conference',
+  'conference-poster': 'conference',
+  'conference-presentation': 'conference',
+  'conference-output': 'conference',
+  preprint: 'preprint',
+  'working-paper': 'preprint',
+  book: 'book',
+  'book-chapter': 'book',
+  'edited-book': 'book',
+  'dissertation-thesis': 'thesis',
+};
+
+const fromWork = (work: Json): ImportedPublication | null => {
   const citationType = text(at(work, 'citation', 'citation-type'));
   const citation = text(at(work, 'citation', 'citation-value'));
   const fromBib = citationType === 'bibtex' && citation ? parseBibtex(citation)[0] : undefined;
@@ -48,8 +64,9 @@ const fromWork = (work: Json): Publication | null => {
     .filter(Boolean);
   const url = text(at(work, 'url', 'value')).replace(/^https?:\/\//, '');
 
-  const pub: Publication = {
+  const pub: ImportedPublication = {
     id: '',
+    kind: ORCID_KINDS[text(work.type)] ?? fromBib?.kind ?? 'other',
     title: fromBib?.title || latexToText(text(at(work, 'title', 'title', 'value'))),
     authors: fromBib?.authors || (contributors.length ? formatAuthors(contributors.map((name) => (name.includes(',') ? `{${name}}` : name)).join(' and ')) : ''),
     venue: fromBib?.venue || text(at(work, 'journal-title', 'value')) || VENUE_BY_TYPE[text(work.type)] || '',
@@ -83,7 +100,7 @@ export type OrcidProgress = { total: number; read: number; listed: number };
 export const fetchOrcidPublications = async (
   orcid: string,
   onProgress?: (progress: OrcidProgress) => void
-): Promise<{ publications: Publication[]; listed: number }> => {
+): Promise<{ publications: ImportedPublication[]; listed: number }> => {
   const summary = await getJson(`${orcid}/works`);
   const allCodes = ((summary.group as Json[] | undefined) ?? [])
     .map((group) => at((group['work-summary'] as Json[] | undefined)?.[0], 'put-code'))
@@ -95,7 +112,7 @@ export const fetchOrcidPublications = async (
   const batches: number[][] = [];
   for (let i = 0; i < putCodes.length; i += BULK_SIZE) batches.push(putCodes.slice(i, i + BULK_SIZE));
   // Each batch is turned into publications as it arrives, so only one batch's JSON is held per call.
-  const results: Publication[][] = new Array(batches.length);
+  const results: ImportedPublication[][] = new Array(batches.length);
   let next = 0;
   let read = 0;
   const worker = async () => {
@@ -106,7 +123,7 @@ export const fetchOrcidPublications = async (
         .map((item) => item.work as Json | undefined)
         .filter((work): work is Json => !!work)
         .map(fromWork)
-        .filter((pub): pub is Publication => !!pub);
+        .filter((pub): pub is ImportedPublication => !!pub);
       read += batches[index].length;
       onProgress?.({ total: putCodes.length, read, listed });
     }

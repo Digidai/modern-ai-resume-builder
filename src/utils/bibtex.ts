@@ -210,7 +210,35 @@ export const parseBibtexEntries = (source: string): RawEntry[] => {
 
 const THESIS: Record<string, string> = { phdthesis: 'PhD thesis', mastersthesis: "Master's thesis" };
 
-const toPublication = ({ type, fields }: RawEntry): Publication => {
+/** Broad kind of a work, used to filter an import list; not stored on the resume. */
+export type PublicationKind = 'journal' | 'conference' | 'preprint' | 'book' | 'thesis' | 'other';
+export const PUBLICATION_KINDS: Record<PublicationKind, string> = {
+  journal: 'Journal articles',
+  conference: 'Conference papers',
+  preprint: 'Preprints',
+  book: 'Books and chapters',
+  thesis: 'Theses',
+  other: 'Other',
+};
+/** A publication read for import, with its kind. */
+export type ImportedPublication = Publication & { kind: PublicationKind };
+
+const BIBTEX_KINDS: Record<string, PublicationKind> = {
+  article: 'journal',
+  inproceedings: 'conference',
+  conference: 'conference',
+  proceedings: 'conference',
+  unpublished: 'preprint',
+  book: 'book',
+  inbook: 'book',
+  incollection: 'book',
+  booklet: 'book',
+  phdthesis: 'thesis',
+  mastersthesis: 'thesis',
+  thesis: 'thesis',
+};
+
+const toPublication = ({ type, fields }: RawEntry): ImportedPublication => {
   const f = (name: string) => latexToText(fields[name] ?? '');
   const arxiv = /arxiv/i.test(fields.archiveprefix ?? fields.eprinttype ?? '') || /arxiv/i.test(fields.journal ?? '');
   const eprint = f('eprint');
@@ -229,6 +257,7 @@ const toPublication = ({ type, fields }: RawEntry): Publication => {
   const url = f('url');
   return {
     id: createId(),
+    kind: arxiv ? 'preprint' : BIBTEX_KINDS[type] ?? 'other',
     authors: fields.author ? formatAuthors(fields.author) : fields.editor ? `${formatAuthors(fields.editor)} (Ed.)` : '',
     title: f('title'),
     venue,
@@ -238,7 +267,7 @@ const toPublication = ({ type, fields }: RawEntry): Publication => {
 };
 
 /** Publications from a .bib file, in file order; entries without a title or authors are skipped. */
-export const parseBibtex = (source: string): Publication[] =>
+export const parseBibtex = (source: string): ImportedPublication[] =>
   parseBibtexEntries(source)
     .map(toPublication)
     .filter((pub) => pub.title || pub.authors);

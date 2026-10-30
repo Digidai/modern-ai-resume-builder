@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { formatAuthors, latexToText, parseBibtex } from './bibtex';
 
-const strip = (pubs: ReturnType<typeof parseBibtex>) => pubs.map(({ id: _id, ...rest }) => rest);
+const strip = (pubs: ReturnType<typeof parseBibtex>) => pubs.map(({ id: _id, kind: _kind, ...rest }) => rest);
 
 describe('parseBibtex', () => {
   it('reads Google Scholar, DBLP and arXiv style entries', () => {
@@ -34,6 +34,8 @@ describe('parseBibtex', () => {
 @comment{ignored @article{fake, title={no}} }
 @misc{empty, note = {no title or author}}
 `;
+    // Kinds come from the entry type; an arXiv @misc is a preprint.
+    expect(parseBibtex(bib).map((pub) => pub.kind)).toEqual(['conference', 'journal', 'preprint', 'thesis']);
     expect(strip(parseBibtex(bib))).toEqual([
       {
         authors: 'Lee, P., Chen, J., Müller, A., et al.',
