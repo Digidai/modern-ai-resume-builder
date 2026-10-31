@@ -43,4 +43,14 @@ describe('toLatex', () => {
     expect(latexEngine({ ...data, summary: '负责搜索排序' })).toBe('xelatex');
     expect(toLatex({ ...data, summary: '负责搜索排序' })).toContain('\\usepackage{xeCJK}');
   });
+
+  it('switches to XeLaTeX for characters pdfLaTeX cannot set, and keeps edge cases compilable', () => {
+    expect(latexEngine({ ...data, summary: 'Café, naïve – “quoted” …' })).toBe('pdflatex');
+    expect(latexEngine({ ...data, summary: 'Shipped → 🚀' })).toBe('xelatex');
+    expect(latexEngine({ ...data, summary: 'Ελληνικά' })).toBe('xelatex');
+    const tex = toLatex({ ...data, fullName: 'Pat\n\\documentclass Lee', summary: 'Lead\u200Bership\n- [Beta] shipped X' });
+    expect(tex.split('\n')[0]).toBe('% Pat \\documentclass Lee, exported from ModernCV (https://genedai.cv).');
+    expect(tex).toContain('Leadership');
+    expect(tex).toContain('\\item{} [Beta] shipped X');
+  });
 });

@@ -77,7 +77,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
             {data.projects.length > 0 && (
                 <section>
                     <SectionHeading>Projects</SectionHeading>
-                    <div className={data.projects.length > 1 ? 'grid grid-cols-2 gap-3' : 'flex flex-col'}>
+                    <div className="flex flex-col gap-3">
                         {data.projects.map((proj) => (
                             <div key={proj.id} className="min-w-0 bg-(--accent)/5 px-5 py-3.5 rounded-xl break-inside-avoid">
                                 {proj.name && <h3 className="font-semibold text-slate-900 text-[14.5px] leading-snug wrap-break-word">{proj.name}</h3>}

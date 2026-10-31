@@ -5,7 +5,8 @@ import { validateUrl } from './validation';
 // The resume as a standalone LaTeX document for Overleaf or a local TeX install. It uses only
 // packages in every TeX Live (article, geometry, titlesec, enumitem, hyperref) and the classic CV
 // look: small-caps section titles over a rule, dates flush right, Latin Modern. Text with CJK
-// characters switches to XeLaTeX with xeCJK.
+// characters, or any character pdfLaTeX's T1/textcomp setup can't typeset (emoji, arrows, Greek,
+// Cyrillic), switches to XeLaTeX with fontspec and xeCJK.
 
 const SPECIAL: Record<string, string> = {
   '\\': '\\textbackslash{}',
@@ -26,6 +27,7 @@ export const escapeLatex = (value: string): string => escapeRaw(value).replace(/
 /** Escaping without trimming, for pieces of a line. */
 const escapeRaw = (value: string): string =>
   value
+    .replace(/[\u200B-\u200D\uFEFF]/g, '')
     .replace(/[\\{}$&#%_~^]/g, (ch) => SPECIAL[ch])
     .replace(/–/g, '--')
     .replace(/—/g, '---')
@@ -39,7 +41,13 @@ const link = (url: string, label = displayUrl(url)) => `\\href{${escapeUrl(toHre
 
 const CJK = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]/;
 
-export const latexEngine = (data: ResumeData): 'pdflatex' | 'xelatex' => (CJK.test(JSON.stringify(data)) ? 'xelatex' : 'pdflatex');
+/** Characters pdfLaTeX typesets with inputenc utf8 + T1 + textcomp: Latin-1, Latin Extended-A and the punctuation escapeRaw maps. */
+const PDFLATEX_SAFE = /^[\x00-\u017F\u2013\u2014\u2018\u2019\u201C\u201D\u2022\u2026\u20AC\u200B-\u200D\uFEFF]*$/;
+
+export const latexEngine = (data: ResumeData): 'pdflatex' | 'xelatex' => {
+  const text = JSON.stringify(data);
+  return CJK.test(text) || !PDFLATEX_SAFE.test(text) ? 'xelatex' : 'pdflatex';
+};
 
 const bold = (text: string, owner: string) => {
   const pattern = ownerNamePattern(owner);
@@ -57,7 +65,7 @@ const richText = (text: string): string => {
   const out: string[] = [];
   let items: string[] = [];
   const flush = () => {
-    if (items.length) out.push(`\\begin{itemize}\n${items.map((item) => `  \\item ${escapeLatex(item)}`).join('\n')}\n\\end{itemize}`);
+    if (items.length) out.push(`\\begin{itemize}\n${items.map((item) => `  \\item{} ${escapeLatex(item)}`).join('\n')}\n\\end{itemize}`);
     items = [];
   };
   for (const line of text.split(/\r?\n/)) {
@@ -154,7 +162,7 @@ export const toLatex = (data: ResumeData): string => {
 
   const paper = data.design?.paper === 'letter' ? 'letterpaper' : 'a4paper';
 
-  return `% ${data.fullName.trim() || 'Resume'}, exported from ModernCV (https://genedai.cv).
+  return `% ${data.fullName.replace(/\s+/g, ' ').trim() || 'Resume'}, exported from ModernCV (https://genedai.cv).
 % Compile with ${engine === 'xelatex' ? 'XeLaTeX' : 'pdfLaTeX'}; on Overleaf, Menu > Compiler.
 \\documentclass[11pt,${paper}]{article}
 \\usepackage[${paper},margin=18mm]{geometry}

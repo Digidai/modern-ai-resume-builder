@@ -24,7 +24,7 @@ import { buildEditorSeoKeywords } from '../utils/seo';
 import { getTemplateById } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
 import { pageLimitNote, useOnePageFit } from '../hooks/useOnePageFit';
-import { DEFAULT_DESIGN, type ResumeDesign } from '../types';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, type ResumeData, type ResumeDesign } from '../types';
 import { paperSize } from '../constants/print';
 import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
@@ -269,6 +269,58 @@ const PageLimitDialog: React.FC<{
   );
 };
 
+const isBlank = (data: ResumeData) =>
+  !data.fullName.trim() &&
+  !data.summary.trim() &&
+  data.experience.every((e) => !e.role.trim() && !e.company.trim() && !e.description.trim());
+
+/** Content only: switching template or design doesn't make the sample the user's own work. */
+const content = ({ templateId: _t, design: _d, ...rest }: ResumeData) => JSON.stringify(rest);
+const SAMPLE_CONTENT = content(INITIAL_RESUME_DATA);
+const isUntouched = (data: ResumeData) => isBlank(data) || content(data) === SAMPLE_CONTENT;
+
+/** Asks before a #resume= link replaces a resume the user has written (anyone can craft such a link). */
+const ReplaceFromLinkDialog: React.FC<{ incoming: ResumeData | null; onReplace: () => void; onClose: () => void }> = ({
+  incoming,
+  onReplace,
+  onClose,
+}) => {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (incoming && !dialog.open) dialog.showModal();
+    if (!incoming && dialog.open) dialog.close();
+  }, [incoming]);
+  const name = incoming?.fullName.trim();
+  return (
+    <dialog
+      ref={dialogRef}
+      onClose={onClose}
+      aria-labelledby="replace-link-title"
+      aria-describedby="replace-link-text"
+      className="m-auto w-[min(28rem,calc(100vw-2rem))] rounded-xl border border-rule bg-surface p-0 text-ink shadow-raised backdrop:bg-black/40"
+    >
+      <div className="px-5 py-4">
+        <h2 id="replace-link-title" className="text-base font-semibold">
+          Open {name ? `${name}'s resume` : 'the resume'} from this link?
+        </h2>
+        <p id="replace-link-text" className="mt-1.5 text-sm leading-relaxed text-muted">
+          It replaces the resume saved in this browser. Download a backup first if you want to keep it.
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-end gap-2 border-t border-rule px-5 py-3">
+        <Button variant="secondary" size="sm" onClick={onClose} autoFocus>
+          Keep my resume
+        </Button>
+        <Button size="sm" onClick={onReplace}>
+          Replace
+        </Button>
+      </div>
+    </dialog>
+  );
+};
+
 const EditorView: React.FC = () => {
   const {
     resumeData,
@@ -305,10 +357,7 @@ const EditorView: React.FC = () => {
     if (limit.overLimit) setLimitDialogOpen(true);
     else void handleDownloadPdf();
   };
-  const isBlankResume =
-    !resumeData.fullName.trim() &&
-    !resumeData.summary.trim() &&
-    resumeData.experience.every((e) => !e.role.trim() && !e.company.trim() && !e.description.trim());
+  const isBlankResume = isBlank(resumeData);
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -326,8 +375,10 @@ const EditorView: React.FC = () => {
   // The fragment never reaches the server; it is removed once read so a reload doesn't load it again.
   // `hashchange` covers a second link opened while the editor is already showing.
   const { showError, showToast } = useToast();
-  const currentTemplateRef = useRef(resumeData.templateId);
-  currentTemplateRef.current = resumeData.templateId;
+  const currentResumeRef = useRef(resumeData);
+  currentResumeRef.current = resumeData;
+  const [linkResume, setLinkResume] = useState<ResumeData | null>(null);
+  const linkMessage = (data: ResumeData) => `Loaded ${data.fullName ? `${data.fullName}'s resume` : 'the resume'} from the link.`;
   useEffect(() => {
     const loadFromHash = () => {
       const payload = readResumeHash(window.location.hash);
@@ -341,8 +392,11 @@ const EditorView: React.FC = () => {
         }
         // Keep the user's current template unless the link names a valid one.
         const named = raw && typeof raw === 'object' && typeof (raw as { templateId?: unknown }).templateId === 'string';
-        if (!named || !getTemplateById(parsed.templateId)) parsed.templateId = currentTemplateRef.current;
-        loadResume(parsed, `Loaded ${parsed.fullName ? `${parsed.fullName}'s resume` : 'the resume'} from the link.`);
+        const current = currentResumeRef.current;
+        if (!named || !getTemplateById(parsed.templateId)) parsed.templateId = current.templateId;
+        // Replace silently only when nothing of the user's would be lost: a blank resume or the untouched sample.
+        if (isUntouched(current)) loadResume(parsed, linkMessage(parsed));
+        else setLinkResume(parsed);
       });
     };
     loadFromHash();
@@ -494,6 +548,14 @@ const EditorView: React.FC = () => {
             <span className="max-sm:sr-only">{isExportingPdf ? 'Exporting…' : 'Download PDF'}</span>
           </Button>
           {pdfProgress && <PdfProgress progress={pdfProgress} />}
+          <ReplaceFromLinkDialog
+            incoming={linkResume}
+            onReplace={() => {
+              if (linkResume) loadResume(linkResume, linkMessage(linkResume));
+              setLinkResume(null);
+            }}
+            onClose={() => setLinkResume(null)}
+          />
           {maxPages && limit.pageCount !== null && (
             <PageLimitDialog
               open={limitDialogOpen}
