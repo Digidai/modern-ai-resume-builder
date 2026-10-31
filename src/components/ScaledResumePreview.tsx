@@ -131,14 +131,16 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
   return (
     <div
       ref={outerRef}
-      className={`relative w-full ${isThumbnail ? 'overflow-hidden select-none pointer-events-none' : ''} ${className}`}
+      // Printing the editor (Cmd+P) prints the paper as laid out, at full size: the screen-fitted height, centering
+      // offset and scale set inline below would otherwise clip its right edge and add a blank page.
+      className={`relative w-full ${isThumbnail ? 'overflow-hidden select-none pointer-events-none' : 'print:h-auto! print:aspect-auto!'} ${className}`}
       style={{ height: scale ? height : undefined, aspectRatio: scale ? undefined : `${page.widthMm} / ${page.heightMm}` }}
       aria-hidden={isThumbnail || undefined}
       inert={isThumbnail || undefined}
     >
       <div
         ref={innerRef}
-        className="absolute top-0 origin-top-left"
+        className={`absolute top-0 origin-top-left ${isThumbnail ? '' : 'print:static! print:w-full! print:transform-none!'}`}
         style={{
           width: PAGE_WIDTH_PX,
           transform: `scale(${scale || 0.0001})`,
