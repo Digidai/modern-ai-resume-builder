@@ -20,6 +20,8 @@ export interface TemplateConfig {
   publications?: boolean;
   /** Shows hours per week on each job (`experience[].hours`), as federal resumes require. */
   hours?: boolean;
+  /** Page limit the format enforces (USAJOBS: 2); the editor and agents warn above it. */
+  maxPages?: number;
 }
 
 /** Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs. */
@@ -48,7 +50,7 @@ const TEMPLATE_CATALOG = [
   { id: 'oxford', name: 'Oxford', description: "moderncv classic: grey title, accent bars and a left date column", bestFor: 'Academic CVs, European applications and research roles', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'standard', name: 'Standard', description: "McDowell/CareerCup format: Times, small caps, firm · role · dates", bestFor: 'Software engineers and tech recruiting pipelines', atsFriendly: true, isFullBleed: true },
   { id: 'lumen', name: 'Lumen', description: "billryan-style centred header with icon-led section titles", bestFor: 'Engineers and graduates who want a clean, slightly warmer page', atsFriendly: true, isFullBleed: true },
-  { id: 'federal', name: 'Federal', description: "USAJOBS-style federal resume: MM/YYYY dates and hours per week on every job", bestFor: 'US federal government jobs applied for through USAJOBS', atsFriendly: true, isFullBleed: true, hours: true },
+  { id: 'federal', name: 'Federal', description: "USAJOBS-style federal resume: MM/YYYY dates and hours per week on every job", bestFor: 'US federal government jobs applied for through USAJOBS', atsFriendly: true, isFullBleed: true, hours: true, maxPages: 2 },
   { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", bestFor: 'Senior professionals with a quiet, serif style', atsFriendly: false, isFullBleed: false },
   { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", bestFor: 'Designers and engineers who want a two-column summary', atsFriendly: false, isFullBleed: true },
   { id: 'altitude', name: 'Altitude', description: "AltaCV-style two columns with outlined skill tags", bestFor: 'Engineers and researchers who want a lively two-column page', atsFriendly: false, isFullBleed: true },

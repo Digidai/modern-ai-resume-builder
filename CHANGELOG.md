@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Federal resumes warn when they run past 2 pages, the USAJOBS limit: under the preview and in Template → Style, where Fit now aims straight for 2 pages. Agents get the same warning from render_pdf and render_preview, and `list_templates` reports `maxPages`.
 - Federal template for US government jobs (USAJOBS format): one plain column, MM/YYYY dates and hours per week on every job. Positions get an optional Hours per week field (shown in the editor for this template, accepted by the schema, MCP and API), and the paper setting suggests US Letter. 53 templates.
 - Paper size: A4 or US Letter, under Template → Style. The preview, page count, Fit to one page, PDF (server and browser), LaTeX export and the agent API (`paper`) all follow it; example resumes have their own Letter text sizes so they still fit one page.
 - Three more ATS-friendly templates modelled on the most used LaTeX resumes: Oxford (moderncv classic: grey italic title, accent bars and a left date column; shows the academic sections), Standard (Gayle McDowell's CareerCup format: Times, small caps, firm · role · dates) and Lumen (billryan/resume: centred header, icon-led section titles). 52 templates.

@@ -68,6 +68,7 @@ const listTemplates = (origin: string, atsOnly = false) =>
     photo: Boolean(t.photo),
     publications: Boolean(t.publications),
     hours: Boolean(t.hours),
+    ...(t.maxPages ? { maxPages: t.maxPages } : {}),
     preview: `${origin}/og/templates/${t.id}-page.jpg`,
     page: `${origin}/templates/${t.id}/`,
   }));
@@ -347,7 +348,12 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       timeoutId = setTimeout(() => reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.')), RENDER_TIMEOUT_MS);
     });
     const { bytes, pages, fitScale } = await Promise.race([job, timeout]);
-    if (pages > 1) {
+    const maxPages = getTemplateById(resume.templateId)?.maxPages;
+    if (maxPages) {
+      // Formats with a page limit (USAJOBS: 2) are judged against it, not against one page.
+      if (pages > maxPages)
+        warnings.push(`The resume runs to ${pages} pages, but USAJOBS limits federal resumes to ${maxPages} and may not consider longer ones. Shorten older roles and bullets, or lower "scale" (down to 0.85).`);
+    } else if (pages > 1) {
       warnings.push(
         fitScale
           ? `The resume runs to ${pages} pages. It fits on one page at "scale": ${fitScale}, or shorten a few bullets.`
@@ -551,7 +557,7 @@ const TOOLS: Tool[] = [
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
 Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.
-US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12". Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
+US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport

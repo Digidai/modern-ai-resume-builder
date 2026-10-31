@@ -1030,7 +1030,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
         {activeTab === 'design' && (
           <>
           <Section title="Style" description="Accent colour, font, paper and size apply to every template.">
-            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} />
+            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} maxPages={getTemplateById(data.templateId)?.maxPages} />
           </Section>
           <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">

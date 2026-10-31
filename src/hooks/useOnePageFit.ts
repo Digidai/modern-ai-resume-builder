@@ -48,15 +48,20 @@ export const usePreviewPages = () => {
 
 const pagesLabel = (pages: number) => (pages === 1 ? 'one page' : `${pages} pages`);
 
+/** Shown when a resume runs past its template's page limit. */
+export const pageLimitNote = (pages: number, maxPages: number) =>
+  `USAJOBS limits federal resumes to ${maxPages} pages, and longer ones may not be considered. This one runs to ${pages}: shorten older roles and bullets, or try Fit to ${pagesLabel(maxPages)}.`;
+
 /**
  * Page count plus "Fit to N−1 pages" (one page for a two-page resume): picks the largest text size, down
  * to the minimum, that drops the last page, measured off-screen, and applies it in one step. If nothing
  * fits, the size is left alone and `note` says why.
  */
-export const useOnePageFit = (design: ResumeDesign, onChange: (patch: Partial<ResumeDesign>) => void) => {
+export const useOnePageFit = (design: ResumeDesign, onChange: (patch: Partial<ResumeDesign>) => void, maxPages?: number) => {
   const preview = usePreviewPages();
   const pageCount = preview?.pages ?? null;
-  const target = pageCount && pageCount > 1 ? pageCount - 1 : 1;
+  // Over a format's page limit, the goal is the limit itself (3 → 2 for USAJOBS), not just one page fewer.
+  const target = pageCount && maxPages && pageCount > maxPages ? maxPages : pageCount && pageCount > 1 ? pageCount - 1 : 1;
   const [note, setNote] = useState('');
 
   useEffect(() => setNote(''), [pageCount]);
@@ -85,5 +90,7 @@ export const useOnePageFit = (design: ResumeDesign, onChange: (patch: Partial<Re
     fit,
     note,
     atMinimum: design.scale <= SCALE_MIN + 1e-6,
+    /** The resume runs past the template's page limit (USAJOBS: 2 pages). */
+    overLimit: !!maxPages && pageCount !== null && pageCount > maxPages,
   };
 };

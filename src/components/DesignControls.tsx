@@ -3,7 +3,7 @@ import type { ResumeDesign } from '../types';
 import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
 import { CheckIcon } from './Icons';
-import { useOnePageFit } from '../hooks/useOnePageFit';
+import { pageLimitNote, useOnePageFit } from '../hooks/useOnePageFit';
 import { PAPERS, PAPER_IDS } from '../constants/print';
 
 const HEX = /^#[0-9a-f]{6}$/i;
@@ -15,10 +15,12 @@ interface DesignControlsProps {
   onChange: (patch: Partial<ResumeDesign>) => void;
   /** The template expects US Letter (the federal resume), so A4 gets a note. */
   expectsLetter?: boolean;
+  /** The template's page limit (Federal: 2); above it the page count turns into a warning. */
+  maxPages?: number;
 }
 
-export const DesignControls = ({ design, onChange, expectsLetter = false }: DesignControlsProps) => {
-  const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum } = useOnePageFit(design, onChange);
+export const DesignControls = ({ design, onChange, expectsLetter = false, maxPages }: DesignControlsProps) => {
+  const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum, overLimit } = useOnePageFit(design, onChange, maxPages);
   const [hexDraft, setHexDraft] = useState(design.accent);
 
   useEffect(() => setHexDraft(design.accent), [design.accent]);
@@ -216,6 +218,11 @@ export const DesignControls = ({ design, onChange, expectsLetter = false }: Desi
             )}
           </div>
         </div>
+        {overLimit && maxPages && pageCount !== null && (
+          <p className="mt-2 text-xs leading-relaxed text-amber-800 dark:text-amber-300" role="status">
+            {pageLimitNote(pageCount, maxPages)}
+          </p>
+        )}
         {fitNote && (
           <p className="mt-2 text-xs leading-relaxed text-amber-800 dark:text-amber-300" role="status">
             {fitNote}
