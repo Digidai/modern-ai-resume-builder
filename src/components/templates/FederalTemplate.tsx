@@ -4,10 +4,11 @@ import { TemplateProps, AwardLine, ContactLink, RichText, displayUrl, getContact
 // "Federal": a USAJOBS-style federal resume. One plain column in a system sans, black text, and the
 // details HR specialists check for every job spelled out: title (with series and grade), employer,
 // start and end dates as MM/YYYY and hours per week. Duties and accomplishments follow as bullets.
-// Skill groups named "Certifications: …" or "Licenses: …" get their own section, one per line, and
+// Skill groups named "Certifications: …", "Licenses: …" or "Security Clearance: …" get their own section, one per line, and
 // grants and awards (`data.awards`) are listed as Honors and Awards.
 
-const CREDENTIALS = /certif|licen[cs]/i;
+const CLEARANCE = /clearance/i;
+const CREDENTIALS = /certif|licen[cs]|clearance/i;
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
@@ -43,12 +44,18 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
     const contacts = getContactEntries(data);
     const allGroups = groupSkills(data.skills);
     // One credential per line. With semicolons ("PMP, PMI, 2022; CGFM, AGA, 2020") each part keeps its commas.
-    const credentials = data.skills.flatMap((raw) => {
+    // A clearance ("Security Clearance: Top Secret/SCI, active") stays whole, keeps its label and comes first.
+    const clearances: string[] = [];
+    const certificates: string[] = [];
+    for (const raw of data.skills) {
         const match = /^([^:]{1,40}):\s*(.+)$/.exec(raw.trim());
-        if (!match || !CREDENTIALS.test(match[1])) return [];
-        const list = match[2];
-        return list.includes(';') ? list.split(/\s*;\s*/).filter(Boolean) : groupSkills([raw])[0].items;
-    });
+        if (!match || !CREDENTIALS.test(match[1])) continue;
+        const [, category, list] = match;
+        if (CLEARANCE.test(category)) clearances.push(...list.split(/\s*;\s*/).filter(Boolean).map((item) => `${category.trim()}: ${item}`));
+        else certificates.push(...(list.includes(';') ? list.split(/\s*;\s*/).filter(Boolean) : groupSkills([raw])[0].items));
+    }
+    const credentials = [...clearances, ...certificates];
+    const credentialsTitle = clearances.length ? (certificates.length ? 'Clearance, Certifications and Licenses' : 'Security Clearance') : 'Certifications and Licenses';
     const skillGroups = allGroups.filter((group) => !CREDENTIALS.test(group.category));
     const awards = data.awards ?? [];
     const name = data.fullName.trim();
@@ -134,7 +141,7 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {credentials.length > 0 && (
-                <Section title="Certifications and Licenses">
+                <Section title={credentialsTitle}>
                     <ul className={`${listClass} ${bodyText}`}>
                         {credentials.map((item, index) => (
                             <li key={index} className="break-inside-avoid">

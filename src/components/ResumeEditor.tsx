@@ -762,7 +762,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
               title="Skills"
               description={
                 showHours
-                  ? 'Tools, methods and languages you\'d want to be asked about. Federal lists a “Certifications: …” or “Licenses: …” group as its own section, one per line; separate them with semicolons to keep issuer and year, e.g. “Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024”.'
+                  ? 'Tools, methods and languages you\'d want to be asked about. Federal lists “Security Clearance: …”, “Certifications: …” and “Licenses: …” groups in their own section, one per line; separate them with semicolons to keep issuer and year, e.g. “Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024”.'
                   : "Tools, methods and languages you'd want to be asked about."
               }
             >
