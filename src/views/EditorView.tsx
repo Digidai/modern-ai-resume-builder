@@ -216,6 +216,59 @@ const PageStatus: React.FC<{ design: ResumeDesign; onChange: (patch: Partial<Res
   );
 };
 
+/** Asks before downloading a PDF that runs past the template's page limit (Federal: 2 pages for USAJOBS). */
+const PageLimitDialog: React.FC<{
+  open: boolean;
+  pages: number;
+  maxPages: number;
+  canFit: boolean;
+  fitLabel: string;
+  onFit: () => void;
+  onDownload: () => void;
+  onClose: () => void;
+}> = ({ open, pages, maxPages, canFit, fitLabel, onFit, onDownload, onClose }) => {
+  const dialogRef = useRef<HTMLDialogElement>(null);
+  useEffect(() => {
+    const dialog = dialogRef.current;
+    if (!dialog) return;
+    if (open && !dialog.open) dialog.showModal();
+    if (!open && dialog.open) dialog.close();
+  }, [open]);
+  return (
+    <dialog
+      ref={dialogRef}
+      onClose={onClose}
+      aria-labelledby="page-limit-title"
+      aria-describedby="page-limit-text"
+      className="m-auto w-[min(28rem,calc(100vw-2rem))] rounded-xl border border-rule bg-surface p-0 text-ink shadow-raised backdrop:bg-black/40"
+    >
+      <div className="px-5 py-4">
+        <h2 id="page-limit-title" className="text-base font-semibold">
+          This resume is {pages} pages
+        </h2>
+        <p id="page-limit-text" className="mt-1.5 text-sm leading-relaxed text-muted">
+          USAJOBS limits federal resumes to {maxPages} pages, and longer ones may not be considered. Shorten older roles and bullets
+          {canFit ? `, or ${fitLabel.toLowerCase()} at a smaller text size` : ''} before you apply.
+        </p>
+      </div>
+      <div className="flex flex-wrap justify-end gap-2 border-t border-rule px-5 py-3">
+        <Button variant="secondary" size="sm" onClick={onDownload}>
+          Download {pages} pages anyway
+        </Button>
+        {canFit ? (
+          <Button size="sm" onClick={onFit} autoFocus>
+            {fitLabel}
+          </Button>
+        ) : (
+          <Button size="sm" onClick={onClose} autoFocus>
+            Keep editing
+          </Button>
+        )}
+      </div>
+    </dialog>
+  );
+};
+
 const EditorView: React.FC = () => {
   const {
     resumeData,
@@ -245,6 +298,13 @@ const EditorView: React.FC = () => {
     (patch: Partial<ResumeDesign>) => setResumeData((prev) => ({ ...prev, design: { ...(prev.design ?? DEFAULT_DESIGN), ...patch } })),
     [setResumeData]
   );
+  const maxPages = getTemplateById(resumeData.templateId)?.maxPages;
+  const limit = useOnePageFit(resumeData.design ?? DEFAULT_DESIGN, updateDesign, maxPages);
+  const [limitDialogOpen, setLimitDialogOpen] = useState(false);
+  const downloadPdf = () => {
+    if (limit.overLimit) setLimitDialogOpen(true);
+    else void handleDownloadPdf();
+  };
   const isBlankResume =
     !resumeData.fullName.trim() &&
     !resumeData.summary.trim() &&
@@ -425,7 +485,7 @@ const EditorView: React.FC = () => {
         />
         <div className="relative">
           <Button
-            onClick={handleDownloadPdf}
+            onClick={downloadPdf}
             isLoading={isExportingPdf}
             leftIcon={<DownloadIcon className="h-4 w-4" />}
             className="max-sm:h-9 max-sm:w-9 max-sm:px-0"
@@ -434,6 +494,24 @@ const EditorView: React.FC = () => {
             <span className="max-sm:sr-only">{isExportingPdf ? 'Exporting…' : 'Download PDF'}</span>
           </Button>
           {pdfProgress && <PdfProgress progress={pdfProgress} />}
+          {maxPages && limit.pageCount !== null && (
+            <PageLimitDialog
+              open={limitDialogOpen}
+              pages={limit.pageCount}
+              maxPages={maxPages}
+              canFit={!limit.atMinimum}
+              fitLabel={limit.fitLabel}
+              onFit={() => {
+                setLimitDialogOpen(false);
+                limit.fit();
+              }}
+              onDownload={() => {
+                setLimitDialogOpen(false);
+                void handleDownloadPdf();
+              }}
+              onClose={() => setLimitDialogOpen(false)}
+            />
+          )}
         </div>
         <input
           ref={fileInputRef}
@@ -489,7 +567,7 @@ const EditorView: React.FC = () => {
               </p>
             )}
           </div>
-          <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} view={previewView} maxPages={getTemplateById(resumeData.templateId)?.maxPages} />
+          <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} view={previewView} maxPages={maxPages} />
         </main>
       </div>
     </div>
