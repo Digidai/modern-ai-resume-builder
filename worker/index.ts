@@ -6,7 +6,7 @@ import {
   MAX_LATEX_SOURCE_CHARS,
   finishAiText,
 } from '../src/shared/aiContract';
-import { handleAgentRequest } from './agent';
+import { handleAgentRequest, pdfPageCount } from './agent';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
 interface Env {
@@ -90,6 +90,8 @@ const API_PATH = '/api/ai';
 const PDF_PATH = '/api/pdf';
 const ORCID_PATH = '/api/orcid';
 const ORCID_RATE_LIMIT = 20;
+/** Whole-site ORCID imports per minute. One import makes up to 41 ORCID calls; 30/min stays under ORCID's ~24 requests/s. */
+export const ORCID_GLOBAL_RATE_LIMIT = 30;
 const MAX_PDF_BODY_BYTES = 6 * 1024 * 1024;
 const PDF_TIMEOUT_MS = 45000;
 const SESSION_PATH = '/api/ai/session';
@@ -447,8 +449,19 @@ const withCorsHeaders = (request: Request, env: Env, response: Response): Respon
   });
 };
 
-const getClientIp = (request: Request): string => {
-  return normalizeText(request.headers.get('cf-connecting-ip')) || 'unknown';
+/**
+ * The caller's address for rate limits. IPv6 hosts usually own a whole /64, so one machine could rotate
+ * through billions of addresses; IPv6 is keyed by its /64 prefix instead.
+ */
+export const getClientIp = (request: Request): string => {
+  const ip = normalizeText(request.headers.get('cf-connecting-ip'));
+  if (!ip) return 'unknown';
+  if (!ip.includes(':')) return ip;
+  const [head, tail = ''] = ip.split('::');
+  const left = head ? head.split(':') : [];
+  const right = tail ? tail.split(':') : [];
+  const groups = ip.includes('::') ? [...left, ...Array(Math.max(0, 8 - left.length - right.length)).fill('0'), ...right] : left;
+  return `${groups.slice(0, 4).map((g) => (g || '0').toLowerCase().replace(/^0+(?=.)/, '')).join(':')}::/64`;
 };
 
 const getSigningSecret = (env: Env): string => {
@@ -780,18 +793,22 @@ const extractJsonObject = (raw: string): string => {
   }
 };
 
+// The 160 KB body limit exists for parse_latex; the other actions get field limits well above any real
+// summary or bullet list so a 20/min caller can't spend ~80k input tokens on each "improve".
+const MAX_IMPROVE_TEXT_CHARS = 8000;
+
 const validateRequest = (body: unknown): AiRequest | null => {
   if (!body || typeof body !== 'object') return null;
   const value = body as Record<string, unknown>;
 
   if (value.action === 'improve') {
     const text = normalizeText(value.text);
-    if (!text) return null;
+    if (!text || text.length > MAX_IMPROVE_TEXT_CHARS) return null;
 
     return {
       action: 'improve',
       text,
-      context: normalizeText(value.context) || 'resume',
+      context: normalizeText(value.context).slice(0, 60) || 'resume',
       stream: value.stream === true,
     };
   }
@@ -804,12 +821,12 @@ const validateRequest = (body: unknown): AiRequest | null => {
 
   if (value.action === 'summary') {
     const skills = Array.isArray(value.skills)
-      ? value.skills.filter((item): item is string => typeof item === 'string')
+      ? value.skills.filter((item): item is string => typeof item === 'string').slice(0, 60).map((skill) => skill.slice(0, 80))
       : [];
 
     return {
       action: 'summary',
-      role: normalizeText(value.role) || 'Professional',
+      role: normalizeText(value.role).slice(0, 120) || 'Professional',
       skills,
       stream: value.stream === true,
     };
@@ -993,7 +1010,7 @@ const buildPdfDocument = (html: string, css: string): string =>
   `<meta http-equiv="Content-Security-Policy" content="${PDF_SANDBOX_CSP}">` +
   // `</style` can't appear inside the CSS we were given; neutralize it if it does.
   `<style>${css.replace(/<\/style/gi, '<\\/style')}</style></head>` +
-  `<body style="margin:0">${html.replace(/<script[\s\S]*?<\/script>/gi, '')}</body></html>`;
+  `<body style="margin:0">${html.replace(/<script[\s\S]*?<\/script>/gi, '').replace(/<meta\b[^>]*>/gi, '')}</body></html>`;
 
 /**
  * Runs in the PDF page, in the engine that prints, and returns the page count. Same method as
@@ -1073,12 +1090,6 @@ const PRINT_FIT_SCRIPT = `(expected) => {
   }
 }`;
 
-/** Page count of a Chromium-generated PDF (its single page tree's /Count). */
-const pdfPageCount = (pdf: Uint8Array): number => {
-  const text = new TextDecoder('latin1').decode(pdf);
-  return Math.max(0, ...Array.from(text.matchAll(/\/Count (\d+)/g), (match) => Number(match[1])));
-};
-
 const handlePdfRequest = async (request: Request, env: Env): Promise<Response> => {
   if (request.method !== 'POST') {
     return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
@@ -1108,6 +1119,10 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
     const render = (async () => {
       browser = await puppeteer.launch(env.BROWSER!);
       const page = await browser.newPage();
+      // The CSP blocks scripts and subresources but not navigation (e.g. <meta refresh>), so every request
+      // except inline data: fonts and images is aborted: the page can never load or print another URL.
+      await page.setRequestInterception(true);
+      page.on('request', (req) => void (req.url().startsWith('data:') ? req.continue() : req.abort()).catch(() => undefined));
       await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
       const format = /^<div[^>]*\bdata-paper="letter"/.test(html) ? 'Letter' : 'A4';
@@ -1132,7 +1147,7 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
     const message = error instanceof Error ? error.message : String(error);
     console.error('[pdf] render failed', { message });
     if (message === 'UPSTREAM_TIMEOUT') return errorResponse(504, 'UPSTREAM_TIMEOUT', 'PDF rendering timed out.');
-    if (/\b429\b|limit/i.test(message)) {
+    if (/\b429\b|rate.?limit/i.test(message)) {
       return errorResponse(429, 'UPSTREAM_RATE_LIMIT', 'PDF rendering is busy. Please try again shortly.');
     }
     return errorResponse(503, 'UPSTREAM_UNAVAILABLE', 'PDF rendering is temporarily unavailable.');
@@ -1541,6 +1556,8 @@ const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise
   if (!orcid) return errorResponse(400, 'INVALID_REQUEST', 'Enter an ORCID iD such as 0000-0002-1825-0097.');
   const limit = await consumeRateLimit(env, `orcid:ip:${getClientIp(request)}`, ORCID_RATE_LIMIT);
   if (!limit.allowed) return appendRateLimitHeaders(errorResponse(429, 'RATE_LIMITED', 'Rate limit reached. Please wait a minute and try again.'), limit);
+  const global = await consumeRateLimit(env, 'orcid:global', ORCID_GLOBAL_RATE_LIMIT);
+  if (!global.allowed) return appendRateLimitHeaders(errorResponse(429, 'RATE_LIMITED', 'Many ORCID imports are running right now. Please try again in a minute.'), global);
   if (url.searchParams.get('stream') === '1') {
     // NDJSON: { type: 'progress', total, read } lines, then { type: 'done', orcid, publications } or { type: 'error', code, error }.
     const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();

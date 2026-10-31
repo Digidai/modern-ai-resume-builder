@@ -39,7 +39,7 @@ const SERVER_VERSION = '1.0.0';
 const MCP_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const MAX_AGENT_BODY_BYTES = 256 * 1024;
 const RENDER_TIMEOUT_MS = 45000;
-const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60, orcidPerIp: 20 };
+const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60, orcidPerIp: 20, orcidGlobal: 30 };
 const FONT_IDS: string[] = FONT_PRESETS.map((f) => f.id);
 
 class AgentError extends Error {
@@ -278,6 +278,7 @@ const importPublications = async (input: Json, deps: AgentDeps) => {
     const orcid = normalizeOrcid(orcidInput);
     if (!orcid) throw new AgentError(400, 'INVALID_ORCID', 'Not a valid ORCID iD; use the form 0000-0002-1825-0097.');
     if (!(await deps.rateLimit(`orcid:ip:${deps.clientIp}`, LIMITS.orcidPerIp))) throw new AgentError(429, 'RATE_LIMITED', 'Too many ORCID requests. Wait a minute and retry.');
+    if (!(await deps.rateLimit('orcid:global', LIMITS.orcidGlobal))) throw new AgentError(429, 'RATE_LIMITED', 'Many ORCID imports are running right now. Wait a minute and retry.');
     try {
       ({ publications: found, listed } = await fetchOrcidPublications(orcid));
     } catch (error) {
@@ -305,6 +306,12 @@ const importPublications = async (input: Json, deps: AgentDeps) => {
     })
     .map(({ id: _id, ...pub }) => pub);
   return { source, listed, found: found.length, counts, returned: publications.length, publications };
+};
+
+/** Page count of a Chromium-generated PDF (its single page tree's /Count). */
+export const pdfPageCount = (pdf: Uint8Array): number => {
+  const text = new TextDecoder('latin1').decode(pdf);
+  return Math.max(0, ...Array.from(text.matchAll(/\/Count (\d+)/g), (match) => Number(match[1])));
 };
 
 interface RenderResult {
@@ -339,13 +346,15 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       ]);
       if (state !== 'ready') throw new AgentError(400, 'INVALID_RESUME', 'The resume could not be rendered.');
       // RenderView paginates like print; the PNG is page 1 in screen layout; only the PDF switches to print media.
-      const pages = Math.max(1, Number(pagesText) || 1);
+      // A PDF reports the pages it actually has, so `pages` and the warnings can never disagree with the file.
       if (format === 'pdf') await page.emulateMediaType('print');
-      const bytes =
+      const bytes = new Uint8Array(
         format === 'pdf'
           ? await page.pdf({ format: resume.design.paper === 'letter' ? 'Letter' : 'A4', printBackground: true, preferCSSPageSize: true })
-          : await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: widthPx, height: heightPx } });
-      return { bytes: new Uint8Array(bytes), pages, fitScale: fitScaleText ? Number(fitScaleText) : null };
+          : await page.screenshot({ type: 'png', clip: { x: 0, y: 0, width: widthPx, height: heightPx } })
+      );
+      const pages = Math.max(1, (format === 'pdf' && pdfPageCount(bytes)) || Number(pagesText) || 1);
+      return { bytes, pages, fitScale: fitScaleText ? Number(fitScaleText) : null };
     })();
     const timeout = new Promise<never>((_, reject) => {
       timeoutId = setTimeout(() => reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.')), RENDER_TIMEOUT_MS);
@@ -368,7 +377,7 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
     if (error instanceof AgentError) throw error;
     const message = error instanceof Error ? error.message : String(error);
     console.error('[agent] render failed', { message });
-    if (/\b429\b|limit/i.test(message)) throw new AgentError(429, 'UPSTREAM_RATE_LIMIT', 'Rendering is busy. Try again in a minute.');
+    if (/\b429\b|rate.?limit/i.test(message)) throw new AgentError(429, 'UPSTREAM_RATE_LIMIT', 'Rendering is busy. Try again in a minute.');
     throw new AgentError(503, 'UPSTREAM_UNAVAILABLE', 'Rendering is temporarily unavailable.');
   } finally {
     clearTimeout(timeoutId);

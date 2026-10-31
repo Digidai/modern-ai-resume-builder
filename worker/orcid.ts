@@ -86,8 +86,18 @@ export class OrcidError extends Error {
   }
 }
 
+const ORCID_TIMEOUT_MS = 15000;
+
 const getJson = async (path: string): Promise<Json> => {
-  const response = await fetch(`${ORCID_API}/${path}`, { headers: { Accept: 'application/json', 'User-Agent': 'ModernCV (https://genedai.cv)' } });
+  let response: Response;
+  try {
+    response = await fetch(`${ORCID_API}/${path}`, {
+      headers: { Accept: 'application/json', 'User-Agent': 'ModernCV (https://genedai.cv)' },
+      signal: AbortSignal.timeout(ORCID_TIMEOUT_MS),
+    });
+  } catch {
+    throw new OrcidError(504, 'UPSTREAM_TIMEOUT', 'ORCID did not answer in time. Try again later.');
+  }
   if (response.status === 404) throw new OrcidError(404, 'NOT_FOUND', 'No public ORCID record with that iD.');
   if (!response.ok) throw new OrcidError(502, 'UPSTREAM_UNAVAILABLE', `ORCID returned ${response.status}. Try again later.`);
   return (await response.json()) as Json;
@@ -115,10 +125,18 @@ export const fetchOrcidPublications = async (
   const results: ImportedPublication[][] = new Array(batches.length);
   let next = 0;
   let read = 0;
+  let failed = false;
   const worker = async () => {
-    while (next < batches.length) {
+    // After one batch fails the whole import fails, so the other workers stop instead of fetching the rest.
+    while (next < batches.length && !failed) {
       const index = next++;
-      const bulk = await getJson(`${orcid}/works/${batches[index].join(',')}`);
+      let bulk: Json;
+      try {
+        bulk = await getJson(`${orcid}/works/${batches[index].join(',')}`);
+      } catch (error) {
+        failed = true;
+        throw error;
+      }
       results[index] = ((bulk.bulk as Json[] | undefined) ?? [])
         .map((item) => item.work as Json | undefined)
         .filter((work): work is Json => !!work)
