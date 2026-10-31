@@ -37,8 +37,10 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
     if (!paper || !paginated) return;
     const measure = () => {
       // Up to one page tall (the paper's min-height) always prints on one page; only longer papers need
-      // the full print simulation.
-      const next = paper.offsetHeight <= pageHeightPx + 1 ? onePage(pageHeightPx) : measurePrintLayout(paper, isFullBleed);
+      // the full print simulation. Exact layout height (offsetHeight rounds, and the paper may be visually
+      // scaled): Chromium prints a second page for an overflow under a pixel, so allow only rounding of the
+      // computed value (2 decimals).
+      const next = parseFloat(getComputedStyle(paper).height) <= pageHeightPx + 0.01 ? onePage(pageHeightPx) : measurePrintLayout(paper, isFullBleed);
       setLayout((prev) =>
         prev.pages === next.pages && prev.breaksMm.join() === next.breaksMm.join() && prev.fillHeightPx === next.fillHeightPx && prev.lastPageFill === next.lastPageFill
           ? prev

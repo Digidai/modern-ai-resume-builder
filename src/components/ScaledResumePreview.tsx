@@ -7,7 +7,8 @@ import { MM_TO_PX, paperSize } from '../constants/print';
 
 /** Space between sheets in the page view, in unscaled px. */
 const SHEET_GAP_PX = 28;
-
+/** The page view rebuilds its sheets after the paper has been unchanged this long. */
+const REBUILD_IDLE_MS = 250;
 
 interface ScaledResumePreviewProps {
   data: ResumeData;
@@ -44,10 +45,12 @@ const PageSheets: React.FC<{ paperHost: React.RefObject<HTMLDivElement | null>; 
     if (!paper || !sheets) return;
     const rebuild = () => sheets.replaceChildren(...buildPageSheets(paper, fullBleed));
     rebuild();
-    let frame = 0;
+    // Typing changes the paper on every keystroke and a long CV takes a while to paginate, so rebuild
+    // once the paper has stopped changing.
+    let timer = 0;
     const schedule = () => {
-      cancelAnimationFrame(frame);
-      frame = requestAnimationFrame(rebuild);
+      window.clearTimeout(timer);
+      timer = window.setTimeout(rebuild, REBUILD_IDLE_MS);
     };
     const mutation = new MutationObserver(schedule);
     mutation.observe(paper, { subtree: true, childList: true, characterData: true, attributes: true });
@@ -55,7 +58,7 @@ const PageSheets: React.FC<{ paperHost: React.RefObject<HTMLDivElement | null>; 
     resize.observe(paper);
     document.fonts?.addEventListener('loadingdone', schedule);
     return () => {
-      cancelAnimationFrame(frame);
+      window.clearTimeout(timer);
       mutation.disconnect();
       resize.disconnect();
       document.fonts?.removeEventListener('loadingdone', schedule);

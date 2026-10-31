@@ -99,30 +99,40 @@ const newCanvas = (width: number, height: number) => {
   return { canvas, context };
 };
 
+/** Receives each page's PNG (data URL) as soon as it is captured, so only one page image exists at a time. */
+type AddPage = (png: string, index: number, pages: number) => Promise<void>;
+
 /**
- * Captures the print layout itself (page-sized columns of the paper, with repeating page frames) and cuts
- * it into pages. For browsers that repeat frames on every page (Chromium, Firefox) and standard templates.
+ * Captures the print layout itself (page-sized columns of the paper, with repeating page frames), one
+ * page-sized capture per column with the host shifted left to that column (a host cut down to that page when
+ * possible, so each capture copies one page's elements). For browsers that repeat frames on every page
+ * (Chromium, Firefox) and standard templates. Separate captures keep every page at EXPORT_PIXEL_RATIO
+ * (html-to-image shrinks canvases over 16384px, which one strip of 10+ pages exceeds).
  */
-const capturePagesAsColumns = (element: HTMLElement, fullBleed: boolean, fontEmbedCSS: string) =>
-  withPrintedPages(element, fullBleed, async (host, layout) => {
+const capturePagesAsColumns = (element: HTMLElement, fullBleed: boolean, fontEmbedCSS: string, addPage: AddPage) =>
+  withPrintedPages(element, fullBleed, async (layout) => {
     await nextFrame();
-    const width = layout.pages * layout.columnWidthPx + (layout.pages - 1) * layout.gapPx;
-    const dataUrl = await withExactFontSizes(host, () => toPng(host, {
-      ...captureOptions(fontEmbedCSS),
-      width,
-      height: layout.columnHeightPx,
-      // `width` above sizes the canvas to include the overflowing columns; the host keeps its measured width.
-      style: { position: 'static', left: '0', top: '0', opacity: '1', width: `${layout.columnWidthPx}px` },
-    }));
-    if (!dataUrl) throw new Error('Failed to generate image from resume');
-    const image = await loadImage(dataUrl);
-    // html-to-image shrinks very wide canvases (about 10+ pages), so use the scale it actually produced.
-    const ratio = image.width / width;
-    return Array.from({ length: layout.pages }, (_, index) => {
-      const { canvas, context } = newCanvas(layout.columnWidthPx * ratio, layout.columnHeightPx * ratio);
-      context.drawImage(image, Math.round(index * (layout.columnWidthPx + layout.gapPx) * ratio), 0, canvas.width, canvas.height, 0, 0, canvas.width, canvas.height);
-      return canvas;
-    });
+    const options = captureOptions(fontEmbedCSS);
+    for (let index = 0; index < layout.pages; index += 1) {
+      const host = layout.pageHost(index);
+      const dataUrl = await withExactFontSizes(host, () =>
+        toPng(host, {
+          ...options,
+          width: layout.columnWidthPx,
+          height: layout.columnHeightPx,
+          style: {
+            position: 'static',
+            left: '0',
+            top: '0',
+            opacity: '1',
+            width: `${layout.columnWidthPx}px`,
+            transform: `translateX(${-index * (layout.columnWidthPx + layout.gapPx)}px)`,
+          },
+        })
+      );
+      if (!dataUrl) throw new Error('Failed to generate image from resume');
+      await addPage(dataUrl, index, layout.pages);
+    }
   });
 
 /**
@@ -201,14 +211,12 @@ export const exportResumeToPdf = async ({
     // Our own font CSS: html-to-image's font discovery throws in Firefox (it reads `@font-face` rules'
     // `style.fontFamily`, which Firefox doesn't expose).
     const fontEmbedCSS = await import('./serverPdf').then(({ buildFontEmbedCss }) => buildFontEmbedCss(element));
-    const pageImages = fullBleed && !SUPPORTS_CLONE ? await capturePagesBySlicing(element, fontEmbedCSS) : await capturePagesAsColumns(element, fullBleed, fontEmbedCSS);
-
     const pdfDoc = await PDFDocument.create();
-    for (const [index, canvas] of pageImages.entries()) {
-      onProgress?.({ stage: 'building', page: index + 1, pages: pageImages.length });
-      // Let the progress repaint between pages; encoding each one blocks the main thread.
+    const addPage: AddPage = async (png, index, pages) => {
+      onProgress?.({ stage: 'building', page: index + 1, pages });
+      // Let the progress repaint between pages; capturing and encoding each one blocks the main thread.
       await nextFrame();
-      const slice = await pdfDoc.embedPng(canvas.toDataURL('image/png'));
+      const slice = await pdfDoc.embedPng(png);
       const page = pdfDoc.addPage([pageWidthPt, pageHeightPt]);
       page.drawImage(slice, {
         x: box.inset * MM_TO_PT,
@@ -216,6 +224,12 @@ export const exportResumeToPdf = async ({
         width: box.width * MM_TO_PT,
         height: box.height * MM_TO_PT,
       });
+    };
+    if (fullBleed && !SUPPORTS_CLONE) {
+      const pageImages = await capturePagesBySlicing(element, fontEmbedCSS);
+      for (const [index, canvas] of pageImages.entries()) await addPage(canvas.toDataURL('image/png'), index, pageImages.length);
+    } else {
+      await capturePagesAsColumns(element, fullBleed, fontEmbedCSS, addPage);
     }
 
     onProgress?.({ stage: 'saving' });

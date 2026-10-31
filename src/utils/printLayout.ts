@@ -283,6 +283,17 @@ const applyColumns = ({ host, columnWidthPx, columnHeightPx }: PaginatedCopy) =>
 const countPages = ({ host, columnWidthPx }: PaginatedCopy) =>
   Math.max(1, Math.round((host.scrollWidth + GAP_PX) / (columnWidthPx + GAP_PX)));
 
+/** The copy's exact unfragmented height (offsetHeight rounds to whole pixels; the copy is never transformed). */
+const naturalHeight = (copy: HTMLElement) => copy.getBoundingClientRect().height;
+
+/**
+ * Whether an unfragmented copy prints on one page without laying it out in columns: only when it is no taller
+ * than the page box. Chromium prints a second page for some overflows well under a pixel (0.54px in one
+ * template, 0.76px in another), so there is no slack: anything taller is counted in columns, which start
+ * another one at any overflow (so a fraction of a pixel over may count a page more than prints, never fewer).
+ */
+const fitsOnePage = (naturalPx: number, columnHeightPx: number) => naturalPx <= columnHeightPx;
+
 /**
  * Paginates the paper the way printing does:
  * - standard templates: 15mm margins on every page (on A4 each page holds 180×267mm of content).
@@ -299,8 +310,8 @@ export const measurePrintLayout = (paper: HTMLElement, fullBleed: boolean, scale
 
   try {
     // Unfragmented height first: a resume that fits needs no column layout.
-    const naturalPx = copy.offsetHeight;
-    if (naturalPx <= columnHeightPx + 2) return { pages: 1, breaksMm: [], fillHeightPx: columnHeightPx - 1, lastPageFill: 1 };
+    const naturalPx = naturalHeight(copy);
+    if (fitsOnePage(naturalPx, columnHeightPx)) return { pages: 1, breaksMm: [], fillHeightPx: columnHeightPx - 1, lastPageFill: 1 };
     // Unsplit tops of the leaves, for the trailing-space check below (Safari model only).
     // Absolutely positioned decorations (timeline rules) are left out: they stretch to fill pages.
     const unsplitTops =
@@ -362,23 +373,35 @@ export const measurePrintLayout = (paper: HTMLElement, fullBleed: boolean, scale
 };
 
 /**
- * Lays the paper out as printed pages for an image export: `render` receives the host (one page-sized
- * column per page, side by side with `gapPx` between) and its size, and must finish before the copy is removed.
+ * Lays the paper out as printed pages for an image export: `render` receives the layout (one page-sized
+ * column per page, side by side with `gapPx` between) and must finish before the copies are removed.
+ * `pageHost(index)` is an attached host showing page `index` in its column `index`: a copy cut down to that
+ * page where that lays out the same (see prunedPages, attached until the next call), else the full copy.
  */
 export const withPrintedPages = async <T,>(
   paper: HTMLElement,
   fullBleed: boolean,
-  render: (host: HTMLElement, layout: { pages: number; columnWidthPx: number; columnHeightPx: number; gapPx: number }) => Promise<T>
+  render: (layout: { pages: number; columnWidthPx: number; columnHeightPx: number; gapPx: number; pageHost: (index: number) => HTMLElement }) => Promise<T>
 ): Promise<T> => {
   const paged = createPaginatedCopy(paper, fullBleed, undefined, true);
+  let attached: HTMLElement | null = null;
   try {
-    const naturalPx = paged.copy.offsetHeight;
+    const naturalPx = naturalHeight(paged.copy);
     applyColumns(paged);
     const pages = countPages(paged);
     // As in print: full-bleed papers fill their last page so backgrounds reach the bottom edge.
     if (fullBleed) paged.copy.style.minHeight = `${heightToFillLastPage(paged, naturalPx, pages)}px`;
-    return await render(paged.host, { pages, columnWidthPx: paged.columnWidthPx, columnHeightPx: paged.columnHeightPx, gapPx: GAP_PX });
+    const pruned = prunedPages(paged, pages);
+    const pageHost = (index: number) => {
+      attached?.remove();
+      attached = pruned[index];
+      if (!attached) return paged.host;
+      document.body.appendChild(attached);
+      return attached;
+    };
+    return await render({ pages, columnWidthPx: paged.columnWidthPx, columnHeightPx: paged.columnHeightPx, gapPx: GAP_PX, pageHost });
   } finally {
+    (attached as HTMLElement | null)?.remove();
     paged.host.remove();
   }
 };
@@ -421,38 +444,250 @@ const tallestWithPages = (paged: PaginatedCopy, pages: number) => {
   target.style.minHeight = `${Math.max(0, low - 1)}px`;
 };
 
+/** One box (fragment) of an element in the paginated copy, relative to the host; `column` is its page. */
+interface PageBox {
+  column: number;
+  left: number;
+  top: number;
+  width: number;
+  height: number;
+}
+
+/**
+ * How a sheet's copy can be cut down below an element: `flow` (block or column flexbox of block-level
+ * children) replaces children off the sheet by empty boxes of the same height, `grid` (grids and row
+ * flexboxes) by an empty copy of each child at its size, and `leaf` (inline content, floats, numbered
+ * lists, anything else) is copied whole.
+ */
+type PruneMode = 'flow' | 'grid' | 'leaf';
+
+/** Larger differences between a cut-down sheet and the full copy fall back to the full copy. */
+const SHEET_TOLERANCE_PX = 0.5;
+
+/** Unnumbered list markers (numbered ones count their siblings, so those lists aren't cut down). */
+const PLAIN_MARKERS = new Set(['none', 'disc', 'circle', 'square', 'disclosure-open', 'disclosure-closed']);
+
+/**
+ * Measures the copy laid out in columns, for cutting each sheet down to its own page: every element's
+ * boxes, the range of pages it or its descendants touch, and the styles the empty stand-ins copy.
+ */
+const measureForSheets = ({ host, copy, columnWidthPx }: PaginatedCopy) => {
+  const elements: Element[] = [copy, ...Array.from(copy.querySelectorAll('*'))];
+  const indexOf = new Map(elements.map((element, index) => [element, index]));
+  const hostRect = host.getBoundingClientRect();
+  const columnAt = (left: number) => Math.max(0, Math.floor((left + GAP_PX / 2) / (columnWidthPx + GAP_PX)));
+  const boxesOf = (element: Element, origin: DOMRect): PageBox[] =>
+    Array.from(element.getClientRects())
+      .filter((rect) => rect.width > 0 || rect.height > 0)
+      .map((rect) => ({ column: columnAt(rect.left - origin.left), left: rect.left - origin.left, top: rect.top - origin.top, width: rect.width, height: rect.height }));
+  const boxes = elements.map((element) => boxesOf(element, hostRect));
+  const first = boxes.map((own) => Math.min(...own.map((box) => box.column)));
+  const last = boxes.map((own) => Math.max(...own.map((box) => box.column)));
+  for (let index = elements.length - 1; index > 0; index -= 1) {
+    const parent = indexOf.get(elements[index].parentElement!)!;
+    first[parent] = Math.min(first[parent], first[index]);
+    last[parent] = Math.max(last[parent], last[index]);
+  }
+  const styles = elements.map((element) => getComputedStyle(element));
+  const outOfFlow = styles.map((style) => style.position === 'absolute' || style.position === 'fixed');
+  const mode = elements.map((element, index): PruneMode => {
+    const style = styles[index];
+    if (style.columnCount !== 'auto' || style.columnWidth !== 'auto') return 'leaf';
+    const flow = ['block', 'flow-root', 'list-item'].includes(style.display) || (style.display === 'flex' && style.flexDirection === 'column' && style.flexWrap === 'nowrap');
+    const grid = style.display === 'grid' || (style.display === 'flex' && style.flexDirection === 'row');
+    if (!flow && !grid) return 'leaf';
+    for (const node of Array.from(element.childNodes)) {
+      if (node.nodeType === Node.TEXT_NODE && /\S/.test(node.textContent ?? '')) return 'leaf';
+      const child = node instanceof Element ? indexOf.get(node) : undefined;
+      if (child === undefined) continue;
+      const childStyle = styles[child];
+      if (outOfFlow[child] || childStyle.display === 'none') continue;
+      if (childStyle.display === 'contents' || childStyle.display.startsWith('inline') || childStyle.float !== 'none' || childStyle.order !== '0') return 'leaf';
+      if (childStyle.display === 'list-item' && !PLAIN_MARKERS.has(childStyle.listStyleType)) return 'leaf';
+    }
+    return flow ? 'flow' : 'grid';
+  });
+  return {
+    elements,
+    indexOf,
+    boxes,
+    first,
+    last,
+    mode,
+    outOfFlow,
+    margins: styles.map((style) => ({ top: style.marginTop, bottom: style.marginBottom, before: style.breakBefore, after: style.breakAfter })),
+    boxesOf,
+  };
+};
+
+/** An invisible block that takes up space in the flow. */
+const standIn = (style: Partial<CSSStyleDeclaration>) => {
+  const box = document.createElement('div');
+  Object.assign(box.style, { display: 'block', visibility: 'hidden', boxSizing: 'border-box', padding: '0', border: '0', flex: 'none', ...style });
+  return box;
+};
+
+/**
+ * The copy cut down to what shows on page `page` (0-based): elements whose boxes touch that page are kept
+ * (with their ancestors); in a flow, each run of siblings on one earlier page becomes one empty box of their
+ * height, margins and break rules (so later content breaks as before), and everything after the page becomes
+ * one empty box a page tall (so containers still continue past it); in grids and rows, each child off the page
+ * becomes an empty copy of itself at its size. `kept` pairs the copied elements with the originals' indexes.
+ */
+const pruneToPage = (measured: ReturnType<typeof measureForSheets>, page: number, columnHeightPx: number) => {
+  const { elements, indexOf, boxes, first, last, mode, outOfFlow, margins } = measured;
+  const kept: [number, Element][] = [];
+  const whole = (index: number) => {
+    const clone = elements[index].cloneNode(true) as Element;
+    kept.push([index, clone]);
+    return clone;
+  };
+  const sized = (index: number) => {
+    const clone = elements[index].cloneNode(false) as HTMLElement;
+    clone.removeAttribute('id');
+    const own = boxes[index];
+    Object.assign(clone.style, {
+      boxSizing: 'border-box',
+      width: `${own[0]?.width ?? 0}px`,
+      height: `${own.reduce((sum, box) => sum + box.height, 0)}px`,
+      minWidth: '0',
+      minHeight: '0',
+      maxWidth: 'none',
+      maxHeight: 'none',
+      flex: '0 0 auto',
+      visibility: 'hidden',
+    });
+    return clone;
+  };
+  const build = (index: number): Element => {
+    const out = elements[index].cloneNode(false) as Element;
+    kept.push([index, out]);
+    let run: number[] = [];
+    const flush = () => {
+      if (!run.length) return;
+      const top = Math.min(...run.map((child) => boxes[child][0].top));
+      const bottom = Math.max(...run.map((child) => boxes[child][0].top + boxes[child][0].height));
+      const head = margins[run[0]];
+      const tail = margins[run[run.length - 1]];
+      out.appendChild(standIn({ height: `${bottom - top}px`, marginTop: head.top, marginBottom: tail.bottom, breakInside: 'avoid', breakBefore: head.before, breakAfter: tail.after }));
+      run = [];
+    };
+    for (const node of Array.from(elements[index].childNodes)) {
+      // Only whitespace text is left in containers that aren't copied whole (see measureForSheets).
+      const child = node instanceof Element ? indexOf.get(node) : undefined;
+      if (child === undefined) continue;
+      const onPage = first[child] <= page && page <= last[child];
+      if (onPage) {
+        flush();
+        out.appendChild(mode[child] === 'leaf' ? whole(child) : build(child));
+      } else if (outOfFlow[child]) {
+        continue;
+      } else if (first[child] > last[child]) {
+        // Renders nothing.
+        flush();
+        out.appendChild(node.cloneNode(false));
+      } else if (mode[index] === 'grid') {
+        flush();
+        out.appendChild(sized(child));
+      } else if (first[child] > page) {
+        flush();
+        out.appendChild(standIn({ height: `${columnHeightPx}px` }));
+        break;
+      } else if (first[child] === last[child] && boxes[child].length === 1) {
+        if (run.length && first[run[0]] !== first[child]) flush();
+        run.push(child);
+      } else {
+        // Split across earlier pages: cut down inside it.
+        flush();
+        out.appendChild(mode[child] === 'leaf' ? whole(child) : build(child));
+      }
+    }
+    flush();
+    return out;
+  };
+  return { root: build(0) as HTMLElement, kept };
+};
+
+/** Whether every kept element has exactly the boxes on `page` that it has in the full copy. */
+const matchesFullCopy = (measured: ReturnType<typeof measureForSheets>, page: number, column: HTMLElement, kept: [number, Element][]) => {
+  const origin = column.getBoundingClientRect();
+  const close = (a: PageBox, b: PageBox) =>
+    Math.abs(a.left - b.left) <= SHEET_TOLERANCE_PX &&
+    Math.abs(a.top - b.top) <= SHEET_TOLERANCE_PX &&
+    Math.abs(a.width - b.width) <= SHEET_TOLERANCE_PX &&
+    Math.abs(a.height - b.height) <= SHEET_TOLERANCE_PX;
+  return kept.every(([index, clone]) => {
+    const want = measured.boxes[index].filter((box) => box.column === page);
+    const got = measured.boxesOf(clone, origin).filter((box) => box.column === page);
+    return want.length === got.length && want.every((box, k) => close(box, got[k]));
+  });
+};
+
+/**
+ * Each page's cut-down copy (see pruneToPage) in a host styled like the full one, detached; null for pages
+ * whose cut-down layout differs at all from the full copy (and for every page in Safari, which reports one box
+ * for a block split across columns, so what is on which page can't be told).
+ */
+const prunedPages = (paged: PaginatedCopy, pages: number): (HTMLElement | null)[] => {
+  const columns: (HTMLElement | null)[] = Array(pages).fill(null);
+  if (pages < 2 || !SUPPORTS_CLONE) return columns;
+  const measured = measureForSheets(paged);
+  const pruned = Array.from({ length: pages }, (_, page) => {
+    const { root, kept } = pruneToPage(measured, page, paged.columnHeightPx);
+    const probe = paged.host.cloneNode(false) as HTMLElement;
+    probe.appendChild(root);
+    return { probe, kept };
+  });
+  try {
+    pruned.forEach(({ probe }) => document.body.appendChild(probe));
+    pruned.forEach(({ probe, kept }, page) => {
+      if (matchesFullCopy(measured, page, probe, kept)) columns[page] = probe;
+    });
+  } finally {
+    pruned.forEach(({ probe }) => probe.remove());
+  }
+  return columns;
+};
+
 /**
  * The paper as separate printed pages for the on-screen page view: one sheet per page, each showing
  * its page-sized column of a paginated copy inside the page's margins (15mm, or none for full-bleed
  * templates), so the preview breaks, repeats frames and fills the last page exactly as the PDF does.
+ * Each sheet holds only what shows on its page where that lays out the same (see prunedPages), so a long CV
+ * costs about one copy in all rather than one per page.
  */
 export const buildPageSheets = (paper: HTMLElement, fullBleed: boolean): HTMLElement[] => {
   const paged = createPaginatedCopy(paper, fullBleed, undefined, true);
   try {
     const { host, copy, columnWidthPx, columnHeightPx } = paged;
-    const naturalPx = copy.offsetHeight;
+    const naturalPx = naturalHeight(copy);
     applyColumns(paged);
-    const pages = naturalPx <= columnHeightPx + 2 ? 1 : countPages(paged);
+    const pages = fitsOnePage(naturalPx, columnHeightPx) ? 1 : countPages(paged);
     if (fullBleed && pages > 1 && !SUPPORTS_CLONE) tallestWithPages(paged, pages);
     else if (fullBleed) copy.style.minHeight = `${pages === 1 ? columnHeightPx - 1 : heightToFillLastPage(paged, naturalPx, pages)}px`;
+    const pruned = prunedPages(paged, pages);
     host.remove();
-    Object.assign(host.style, { position: 'absolute', left: '0', top: '0', opacity: '', visibility: '' });
-    host.removeAttribute('aria-hidden');
-    const inset = pageBoxMm(fullBleed, paper.dataset.paper).inset * MM_TO_PX;
-    const { widthMm, heightMm } = paperOf(paper);
-    return Array.from({ length: pages }, (_, index) => {
-      const sheet = document.createElement('div');
-      sheet.className = 'resume-page-sheet';
-      Object.assign(sheet.style, { position: 'relative', width: `${widthMm * MM_TO_PX}px`, height: `${heightMm * MM_TO_PX}px`, overflow: 'hidden', background: '#ffffff' });
-      const frame = document.createElement('div');
-      Object.assign(frame.style, { position: 'absolute', left: `${inset}px`, top: `${inset}px`, width: `${columnWidthPx}px`, height: `${columnHeightPx}px`, overflow: 'hidden' });
-      const column = host.cloneNode(true) as HTMLElement;
-      column.style.left = `${-index * (columnWidthPx + GAP_PX)}px`;
-      frame.appendChild(column);
-      sheet.appendChild(frame);
-      return sheet;
+    return pruned.map((column, index) => {
+      const sheetColumn = column ?? (host.cloneNode(true) as HTMLElement);
+      Object.assign(sheetColumn.style, { position: 'absolute', left: `${-index * (columnWidthPx + GAP_PX)}px`, top: '0', opacity: '', visibility: '' });
+      sheetColumn.removeAttribute('aria-hidden');
+      return sheetFor(paper, fullBleed, sheetColumn, columnWidthPx, columnHeightPx);
     });
   } finally {
     paged.host.remove();
   }
+};
+
+/** A sheet of paper showing `column` (one page of the paginated copy) inside the page's margins. */
+const sheetFor = (paper: HTMLElement, fullBleed: boolean, column: HTMLElement, columnWidthPx: number, columnHeightPx: number) => {
+  const inset = pageBoxMm(fullBleed, paper.dataset.paper).inset * MM_TO_PX;
+  const { widthMm, heightMm } = paperOf(paper);
+  const sheet = document.createElement('div');
+  sheet.className = 'resume-page-sheet';
+  Object.assign(sheet.style, { position: 'relative', width: `${widthMm * MM_TO_PX}px`, height: `${heightMm * MM_TO_PX}px`, overflow: 'hidden', background: '#ffffff' });
+  const frame = document.createElement('div');
+  Object.assign(frame.style, { position: 'absolute', left: `${inset}px`, top: `${inset}px`, width: `${columnWidthPx}px`, height: `${columnHeightPx}px`, overflow: 'hidden' });
+  frame.appendChild(column);
+  sheet.appendChild(frame);
+  return sheet;
 };

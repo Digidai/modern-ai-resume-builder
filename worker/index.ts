@@ -1041,8 +1041,8 @@ const PRINT_FIT_SCRIPT = `(expected) => {
   const count = () => Math.max(1, Math.round((host.scrollWidth + GAP) / (W + GAP)));
   const measure = () => {
     host.style.height = host.style.columnWidth = host.style.columnGap = host.style.columnFill = '';
-    const natural = copy.offsetHeight;
-    if (natural <= H + 2) return { pages: 1, natural };
+    const natural = copy.getBoundingClientRect().height;
+    if (natural <= H) return { pages: 1, natural }; // no slack: Chromium prints a second page from ~0.6 px over
     host.style.height = H + 'px';
     host.style.columnWidth = W + 'px';
     host.style.columnGap = GAP + 'px';
