@@ -367,7 +367,8 @@
         "bronx": 0.94,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "federal": 0.96
       }
     },
     "Truck Dispatcher": {
@@ -1645,7 +1646,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "federal": 0.98
       }
     },
     "Locomotive Engineer": {

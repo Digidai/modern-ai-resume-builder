@@ -1949,7 +1949,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "federal": 0.97
       }
     },
     "Quality Control Inspector": {

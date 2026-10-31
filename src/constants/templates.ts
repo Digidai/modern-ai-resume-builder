@@ -18,6 +18,8 @@ export interface TemplateConfig {
   photo?: boolean;
   /** Shows the Publications section (`data.publications`). */
   publications?: boolean;
+  /** Shows Grants and awards (`data.awards`) without the other academic sections. Academic templates show it too. */
+  awards?: boolean;
   /** Shows hours per week on each job (`experience[].hours`), as federal resumes require. */
   hours?: boolean;
   /** Page limit the format enforces (USAJOBS: 2); the editor and agents warn above it. */
@@ -50,7 +52,7 @@ const TEMPLATE_CATALOG = [
   { id: 'oxford', name: 'Oxford', description: "moderncv classic: grey title, accent bars and a left date column", bestFor: 'Academic CVs, European applications and research roles', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'standard', name: 'Standard', description: "McDowell/CareerCup format: Times, small caps, firm · role · dates", bestFor: 'Software engineers and tech recruiting pipelines', atsFriendly: true, isFullBleed: true },
   { id: 'lumen', name: 'Lumen', description: "billryan-style centred header with icon-led section titles", bestFor: 'Engineers and graduates who want a clean, slightly warmer page', atsFriendly: true, isFullBleed: true },
-  { id: 'federal', name: 'Federal', description: "USAJOBS-style federal resume: MM/YYYY dates and hours per week on every job", bestFor: 'US federal government jobs applied for through USAJOBS', atsFriendly: true, isFullBleed: true, hours: true, maxPages: 2 },
+  { id: 'federal', name: 'Federal', description: "USAJOBS-style federal resume: MM/YYYY dates and hours per week on every job", bestFor: 'US federal government jobs applied for through USAJOBS', atsFriendly: true, isFullBleed: true, hours: true, maxPages: 2, awards: true },
   { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", bestFor: 'Senior professionals with a quiet, serif style', atsFriendly: false, isFullBleed: false },
   { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", bestFor: 'Designers and engineers who want a two-column summary', atsFriendly: false, isFullBleed: true },
   { id: 'altitude', name: 'Altitude', description: "AltaCV-style two columns with outlined skill tags", bestFor: 'Engineers and researchers who want a lively two-column page', atsFriendly: false, isFullBleed: true },
@@ -87,6 +89,9 @@ export type TemplateId = (typeof TEMPLATE_CATALOG)[number]['id'];
  * All available resume templates with their configurations
  */
 export const TEMPLATES: ReadonlyArray<TemplateConfig & { id: TemplateId }> = TEMPLATE_CATALOG;
+
+/** Templates that show `data.awards`: the academic ones and those with `awards: true` (Federal). */
+export const showsAwards = (template: TemplateConfig | undefined): boolean => Boolean(template?.publications || template?.awards);
 
 /** All template IDs */
 export const TEMPLATE_IDS: TemplateId[] = TEMPLATES.map((template) => template.id) as TemplateId[];

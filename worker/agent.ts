@@ -4,7 +4,7 @@
 // for rendering live only for the duration of the request.
 
 import puppeteer from '@cloudflare/puppeteer';
-import { TEMPLATES, getTemplateById } from '../src/constants/templates';
+import { TEMPLATES, getTemplateById, showsAwards } from '../src/constants/templates';
 import { FONT_PRESETS } from '../src/constants/design';
 import { MM_TO_PX, paperSize } from '../src/constants/print';
 import { sanitizeResumeData } from '../src/utils/resumeData';
@@ -68,6 +68,7 @@ const listTemplates = (origin: string, atsOnly = false) =>
     photo: Boolean(t.photo),
     publications: Boolean(t.publications),
     hours: Boolean(t.hours),
+    awards: showsAwards(t),
     ...(t.maxPages ? { maxPages: t.maxPages } : {}),
     preview: `${origin}/og/templates/${t.id}-page.jpg`,
     page: `${origin}/templates/${t.id}/`,
@@ -204,7 +205,9 @@ const prepareResume = (input: Json): PreparedResume => {
   const rawPhoto = typeof raw.photo === 'string' ? raw.photo : typeof (raw.basics as Json | undefined)?.image === 'string' ? String((raw.basics as Json).image) : '';
   if (rawPhoto && !resume.photo) warnings.push('Ignored photo: it must be a base64 JPEG, PNG or WebP data URL under 200 KB (remote image URLs are not loaded).');
   if (resume.photo && !getTemplateById(resume.templateId)?.photo) warnings.push(`Template "${resume.templateId}" doesn't show photos; photo templates: ${TEMPLATES.filter((t) => t.photo).map((t) => t.id).join(', ')}.`);
-  if ((resume.publications?.length || resume.awards?.length || resume.talks?.length || resume.teaching?.length) && !getTemplateById(resume.templateId)?.publications) warnings.push(`Template "${resume.templateId}" doesn't show publications, grants and awards, talks or teaching; academic templates: ${TEMPLATES.filter((t) => t.publications).map((t) => t.id).join(', ')}.`);
+  const config = getTemplateById(resume.templateId);
+  if ((resume.publications?.length || resume.talks?.length || resume.teaching?.length) && !config?.publications) warnings.push(`Template "${resume.templateId}" doesn't show publications, talks or teaching; academic templates: ${TEMPLATES.filter((t) => t.publications).map((t) => t.id).join(', ')}.`);
+  if (resume.awards?.length && !showsAwards(config)) warnings.push(`Template "${resume.templateId}" doesn't show grants and awards; templates that do: ${TEMPLATES.filter(showsAwards).map((t) => t.id).join(', ')}.`);
   if (getTemplateById(resume.templateId)?.hours) {
     const missing = resume.experience.filter((exp) => !exp.hours).length;
     if (missing) warnings.push(`${missing} experience entr${missing === 1 ? 'y has' : 'ies have'} no hours (hours per week); federal resumes on USAJOBS need them for every job.`);
@@ -557,7 +560,7 @@ const TOOLS: Tool[] = [
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
 Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.
-US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
+US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport

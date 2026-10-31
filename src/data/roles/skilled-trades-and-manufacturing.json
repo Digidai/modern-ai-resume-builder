@@ -556,7 +556,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "federal": 0.98
       }
     },
     "Pipefitter": {

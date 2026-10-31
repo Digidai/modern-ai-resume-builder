@@ -2512,7 +2512,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "federal": 0.97
       },
       "trimLetter": {
         "berlin": 5,
@@ -2775,7 +2776,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "federal": 0.97
       }
     },
     "Technical Account Manager": {

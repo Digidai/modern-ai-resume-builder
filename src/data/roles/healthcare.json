@@ -64,7 +64,8 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "federal": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -93,7 +94,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -189,7 +191,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.92,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.96
       },
       "trimLetter": {
         "berlin": 11
@@ -385,7 +388,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.96,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.96
       },
       "trimLetter": {
         "berlin": 12
@@ -486,7 +490,8 @@
         "mono": 0.87,
         "pop": 0.88,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.98
       },
       "trimLetter": {
         "berlin": 12
@@ -1173,7 +1178,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.98
       },
       "trimLetter": {
         "berlin": 11
@@ -1484,7 +1490,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "federal": 0.98
       }
     },
     "Medical Laboratory Technician": {
@@ -2743,7 +2750,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "federal": 0.96
       }
     },
     "Dental Assistant": {
@@ -3811,7 +3819,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "federal": 0.96
       }
     },
     "Labor and Delivery Nurse": {

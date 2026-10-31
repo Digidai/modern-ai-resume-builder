@@ -10,7 +10,7 @@ import {
   XIcon,
 } from './Icons';
 import { Button } from './Button';
-import { TEMPLATES, getTemplateById } from '../constants/templates';
+import { TEMPLATES, getTemplateById, showsAwards } from '../constants/templates';
 import { getEmailError, getPhoneError, getUrlError } from '../utils/validation';
 import { useToast } from './Toast';
 import { PublicationImport } from './PublicationImport';
@@ -25,6 +25,7 @@ import { formatDateRange, describeLink } from './templates/shared';
 const MAX_LINKS = 8;
 
 const PUBLICATION_TEMPLATE_NAMES = TEMPLATES.filter((t) => t.publications).map((t) => t.name).join(', ');
+const AWARD_TEMPLATE_NAMES = TEMPLATES.filter(showsAwards).map((t) => t.name).join(', ');
 const newPublication = (): Publication => ({ id: createId(), authors: '', title: '', venue: '', year: '', link: '' });
 const newAward = (): Award => ({ id: createId(), title: '', issuer: '', year: '', detail: '' });
 const newTalk = (): Talk => ({ id: createId(), title: '', event: '', location: '', year: '' });
@@ -757,7 +758,14 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
         {activeTab === 'skills' && (
           <>
-            <Section title="Skills" description="Tools, methods and languages you'd want to be asked about.">
+            <Section
+              title="Skills"
+              description={
+                showHours
+                  ? 'Tools, methods and languages you\'d want to be asked about. Federal lists a “Certifications: …” or “Licenses: …” group as its own section, one per line; separate them with semicolons to keep issuer and year, e.g. “Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024”.'
+                  : "Tools, methods and languages you'd want to be asked about."
+              }
+            >
               <SkillsInput skills={data.skills} onChange={(skills) => setField('skills', skills)} />
             </Section>
 
@@ -891,7 +899,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
 
             <Section
               title="Grants and awards"
-              description={`Grants, fellowships, scholarships and prizes. Shown by ${PUBLICATION_TEMPLATE_NAMES}.`}
+              description={`Grants, fellowships, scholarships, prizes and performance awards. Shown by ${AWARD_TEMPLATE_NAMES}.`}
               action={
                 awards.length > 0 && (
                   <Button variant="secondary" size="sm" leftIcon={<PlusIcon className="h-4 w-4" />} onClick={() => addItem('awards', newAward(), 'end')}>

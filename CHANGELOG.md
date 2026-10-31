@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Federal shows Honors and Awards (from Grants and awards) and a Certifications and Licenses section, built from skill groups named "Certifications: …" or "Licenses: …". Agents can check `awards` in `list_templates`.
 - Federal resumes warn when they run past 2 pages, the USAJOBS limit: under the preview and in Template → Style, where Fit now aims straight for 2 pages. Download PDF asks first when a Federal resume is over 2 pages (fit it to 2 pages, or download anyway). Agents get the same warning from render_pdf and render_preview, and `list_templates` reports `maxPages`.
 - Federal template for US government jobs (USAJOBS format): one plain column, MM/YYYY dates and hours per week on every job. Positions get an optional Hours per week field (shown in the editor for this template, accepted by the schema, MCP and API), and the paper setting suggests US Letter. 53 templates.
 - Paper size: A4 or US Letter, under Template → Style. The preview, page count, Fit to one page, PDF (server and browser), LaTeX export and the agent API (`paper`) all follow it; example resumes have their own Letter text sizes so they still fit one page.

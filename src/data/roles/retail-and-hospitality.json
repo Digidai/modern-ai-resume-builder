@@ -873,7 +873,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "federal": 0.99
       },
       "trimLetter": {
         "berlin": 2
