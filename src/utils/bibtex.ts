@@ -12,7 +12,7 @@ const ACCENTS: Record<string, string> = {
 };
 const SYMBOLS: Record<string, string> = {
   ss: 'ß', ae: 'æ', AE: 'Æ', oe: 'œ', OE: 'Œ', aa: 'å', AA: 'Å', o: 'ø', O: 'Ø', l: 'ł', L: 'Ł', i: 'ı', j: 'ȷ',
-  '&': '&', '%': '%', '$': '$', '#': '#', _: '_', '{': '{', '}': '}', textendash: '–', textemdash: '—', textquoteright: '’',
+  '&': '&', '%': '%', '$': '$', '#': '#', _: '_', '{': '{', '}': '}', textendash: '–', textemdash: '—', textquoteright: '’', dots: '…', ldots: '…',
 };
 const GREEK: Record<string, string> = Object.fromEntries(
   'alpha α beta β gamma γ delta δ epsilon ε varepsilon ε zeta ζ eta η theta θ kappa κ lambda λ mu μ nu ν xi ξ pi π rho ρ sigma σ tau τ phi φ varphi φ chi χ psi ψ omega ω Gamma Γ Delta Δ Theta Θ Lambda Λ Pi Π Sigma Σ Phi Φ Psi Ψ Omega Ω ell ℓ infty ∞ times × pm ± leq ≤ geq ≥ approx ≈ to →'
@@ -24,11 +24,11 @@ const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', '
 /** LaTeX markup → plain text: accents, escapes, dashes, quotes; drops braces, math delimiters and font commands. */
 export const latexToText = (value: string): string =>
   value
-    // Accents: \"{o}, \"o, {\"o}, \'{\i}
-    .replace(/\\([`'^"~=.uvHckrdb])\s*\{?\\?([A-Za-z])\}?/g, (_, accent: string, letter: string) =>
-      `${letter === 'i' ? 'i' : letter}${ACCENTS[accent] ?? ''}`.normalize('NFC')
+    // Accents: \"{o}, \"o, {\"o}, \'{\i}. Letter accents (\u, \v, \c…) need a brace or space, so \url, \cite, \dots stay commands.
+    .replace(/\\(?:([`'^"~=.])\s*|([uvHckrdb])(?:\s+|(?=\{)))\{?\\?([A-Za-z])\}?/g, (_, symbol: string | undefined, named: string | undefined, letter: string) =>
+      `${letter}${ACCENTS[symbol ?? named ?? ''] ?? ''}`.normalize('NFC')
     )
-    .replace(/\\(ss|ae|AE|oe|OE|aa|AA|o|O|l|L|i|j|textendash|textemdash|textquoteright)(?![A-Za-z])\s?/g, (_, name: string) => SYMBOLS[name])
+    .replace(/\\(ss|ae|AE|oe|OE|aa|AA|o|O|l|L|i|j|textendash|textemdash|textquoteright|dots|ldots)(?![A-Za-z])\s?/g, (_, name: string) => SYMBOLS[name])
     .replace(/\\([&%$#_{}])/g, (_, ch: string) => SYMBOLS[ch])
     .replace(/\\([A-Za-z]+)(?![A-Za-z])/g, (whole, name: string) => GREEK[name] ?? whole)
     // \textit{x}, \emph{x}, \url{x} … keep the argument.
@@ -176,6 +176,8 @@ export const parseBibtexEntries = (source: string): RawEntry[] => {
       const comma = source.indexOf(',', pos);
       const end = source.indexOf(close, pos);
       if (comma < 0 || (end >= 0 && end < comma)) {
+        // No key or a truncated entry: skip it (or stop, when nothing closes it).
+        if (end < 0) break;
         pos = end + 1;
         continue;
       }
@@ -253,8 +255,10 @@ const toPublication = ({ type, fields }: RawEntry): ImportedPublication => {
     f('publisher') ||
     f('howpublished') ||
     f('organization');
-  const doi = f('doi').replace(/^https?:\/\/(dx\.)?doi\.org\//i, '');
-  const url = f('url');
+  // URLs and DOIs are read raw: ~ and -- are part of the address, not LaTeX spacing or dashes.
+  const raw = (name: string) => (fields[name] ?? '').replace(/\\url\s*\{([^{}]*)\}/g, '$1').replace(/\\([_%#&])/g, '$1').replace(/[{}]/g, '').trim();
+  const doi = raw('doi').replace(/^https?:\/\/(dx\.)?doi\.org\//i, '');
+  const url = raw('url');
   return {
     id: createId(),
     kind: arxiv ? 'preprint' : BIBTEX_KINDS[type] ?? 'other',

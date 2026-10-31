@@ -45,6 +45,28 @@ describe('useResumeData', () => {
     expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
   });
 
+  it('writes a replaced resume at once, so closing the tab right after an import keeps it', () => {
+    localStorage.setItem(FULL_NAME_KEY, JSON.stringify('Old Name'));
+    const { result } = renderHook(() => useResumeData());
+
+    act(() => {
+      result.current.replaceData({ ...result.current.resumeData, fullName: 'Imported Name', templateId: 'federal' });
+    });
+
+    // No timers have run: the new resume must already be stored, not an empty or half-written one.
+    expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Imported Name'));
+    expect(localStorage.getItem(TEMPLATE_ID_KEY)).toBe(JSON.stringify('federal'));
+  });
+
+  it('ignores another tab removing a field instead of loading sample data', () => {
+    const { result } = renderHook(() => useResumeData());
+    act(() => {
+      result.current.replaceData({ ...result.current.resumeData, fullName: 'Pat Candidate' });
+    });
+    act(() => dispatchStorageEvent(FULL_NAME_KEY, null));
+    expect(result.current.resumeData.fullName).toBe('Pat Candidate');
+  });
+
   it('migrates fields saved in sessionStorage by older versions to localStorage', () => {
     sessionStorage.setItem(FULL_NAME_KEY, JSON.stringify('Legacy Name'));
 

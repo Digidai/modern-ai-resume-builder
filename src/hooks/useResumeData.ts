@@ -106,16 +106,6 @@ const isValidFieldValue = (field: keyof ResumeData, value: unknown): boolean => 
   }
 };
 
-const clearSegmentedStorage = (): void => {
-  for (const field of RESUME_FIELDS) {
-    localStorage.removeItem(getFieldStorageKey(field));
-  }
-  for (const field of LEGACY_SESSION_FIELDS) {
-    sessionStorage.removeItem(getFieldStorageKey(field));
-  }
-  localStorage.removeItem(STORAGE_VERSION_KEY);
-};
-
 const loadFromSegmentedStorage = (): Partial<ResumeData> | null => {
   const nextData: Partial<ResumeData> = {};
   let hasAnyField = false;
@@ -243,6 +233,8 @@ export const useResumeData = () => {
         saveStatusTimerRef.current = null;
       }, SAVED_STATUS_DURATION_MS);
     } else {
+      // Keep the fields that weren't written, so the next save retries them instead of reporting "Saved".
+      for (const field of pendingFields) pendingFieldsRef.current.add(field);
       setSaveError('Failed to save changes locally');
       setSaveStatus('error');
     }
@@ -321,15 +313,8 @@ export const useResumeData = () => {
         return;
       }
 
-      if (event.newValue === null) {
-        setResumeData((prev) => ({
-          ...prev,
-          [fieldName]: INITIAL_RESUME_DATA[fieldName],
-        }));
-        setSaveError(null);
-        setSaveStatus('idle');
-        return;
-      }
+      // A removed key is never a resume value ("Start over" writes the new resume), so it must not load sample data here.
+      if (event.newValue === null) return;
 
       try {
         const parsed = JSON.parse(event.newValue);
@@ -360,15 +345,19 @@ export const useResumeData = () => {
       saveTimerRef.current = null;
     }
 
+    // Write the new resume straight away, field by field: clearing storage first and saving after the
+    // debounce lost both resumes when the tab closed in between.
+    const merged = mergeResumeData(next);
     pendingFieldsRef.current.clear();
-    clearSegmentedStorage();
-    localStorage.removeItem(LEGACY_STORAGE_KEY);
+    const success = saveFieldsToStorage(merged, RESUME_FIELDS);
+    if (!success) for (const field of RESUME_FIELDS) pendingFieldsRef.current.add(field);
+    latestDataRef.current = merged;
+    previousDataRef.current = merged;
+    hasInitializedRef.current = true;
 
-    // Treat the next effect run as an initial sync, which persists every field.
-    hasInitializedRef.current = false;
-
-    setResumeData(mergeResumeData(next));
-    setSaveError(null);
+    setResumeData(merged);
+    setSaveError(success ? null : 'Failed to save changes locally');
+    setSaveStatus(success ? 'idle' : 'error');
   }, []);
 
   useEffect(() => {

@@ -67,3 +67,16 @@ describe('latexToText', () => {
     expect(latexToText("Erd\\H{o}s, G{\\\"o}del and \\'Eric \\textit{et al.} 50\\% $\\alpha$")).toBe('Erdős, Gödel and Éric et al. 50% α');
   });
 });
+
+describe('BibTeX edge cases', () => {
+  it('stops on a truncated entry instead of looping forever', () => {
+    expect(parseBibtex('@article{key')).toEqual([]);
+  });
+
+  it('keeps commands that start with an accent letter and reads URLs raw', () => {
+    expect(latexToText('\\cite{x}, {\\bf Bold}, a\\dots{} b, \\v{c}, \\c c')).toBe('x, Bold, a… b, č, ç');
+    const [pub] = parseBibtex('@misc{a, title={T}, author={Lee, P.}, howpublished={\\url{https://x.org/a}}, url={https://cs.edu/~pat/p--1\\_x.pdf}}');
+    expect(pub.venue).toBe('https://x.org/a');
+    expect(pub.link).toBe('cs.edu/~pat/p--1_x.pdf');
+  });
+});
