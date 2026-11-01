@@ -23,6 +23,16 @@
     "binding": "BROWSER",
     "remote": true
   },
+  // Workers Logs keeps the Worker's console output (render, AI and ORCID failures, rate-limit warnings;
+  // never resume content) searchable in the dashboard. Per-request invocation logs are off: every page
+  // view runs the Worker, and the console lines are what explain failures.
+  "observability": {
+    "enabled": true,
+    "head_sampling_rate": 1,
+    "logs": {
+      "invocation_logs": false
+    }
+  },
   "durable_objects": {
     "bindings": [
       {
