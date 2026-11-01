@@ -436,7 +436,12 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
     if (maxPages) {
       // Formats with a page limit (USAJOBS: 2) are judged against it, not against one page.
       if (pages > maxPages)
-        warnings.push(`The resume runs to ${pages} pages, but USAJOBS limits federal resumes to ${maxPages} and may not consider longer ones. Shorten older roles and bullets, or lower "scale" (down to 0.85).`);
+        warnings.push(
+          `The resume runs to ${pages} pages, but USAJOBS limits federal resumes to ${maxPages} and may not consider longer ones. ` +
+            (fitScale
+              ? `It fits on ${maxPages} pages at "scale": ${fitScale}, or shorten older roles and bullets.`
+              : `It doesn't fit on ${maxPages} even at the smallest scale (0.85); shorten older roles and bullets.`)
+        );
     } else if (pages > 1) {
       warnings.push(
         fitScale

@@ -4,7 +4,7 @@ import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
 import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
 import { largestScaleForPages, measurePrintLayout } from '../utils/printLayout';
 import { SCALE_MIN } from '../constants/design';
-import { isFullBleedTemplate } from '../constants/templates';
+import { getTemplateById, isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
@@ -15,7 +15,8 @@ import { paperSize } from '../constants/print';
  * Cloudflare Browser Rendering and prints it. Nothing is saved; `data-render-state` on <html> tells
  * the printer when the template and fonts are ready (`ready`) or the payload was invalid (`error`),
  * `data-render-pages` is the printed page count (paginated the way print does), and
- * `data-render-fit-scale` the largest scale that fits one page when it runs longer.
+ * `data-render-fit-scale` the largest scale that fits the template's page limit (one page, or 2 for Federal) when
+ * it runs longer.
  */
 const RenderView: React.FC = () => {
   const [data, setData] = useState<ResumeData | null>(null);
@@ -61,8 +62,9 @@ const RenderView: React.FC = () => {
           const fullBleed = isFullBleedTemplate(data.templateId);
           const pages = measurePrintLayout(paper, fullBleed).pages;
           root.dataset.renderPages = String(pages);
-          // For a longer resume, the largest text size that would fit one page (empty when none does).
-          if (pages > 1) root.dataset.renderFitScale = String(largestScaleForPages(paper, fullBleed, data.design.scale, SCALE_MIN) ?? '');
+          // For a longer resume, the largest text size that would fit the page limit (empty when none does).
+          const limit = getTemplateById(data.templateId)?.maxPages ?? 1;
+          if (pages > limit) root.dataset.renderFitScale = String(largestScaleForPages(paper, fullBleed, data.design.scale, SCALE_MIN, limit) ?? '');
           root.dataset.renderState = 'ready';
         })
       );
