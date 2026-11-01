@@ -18,11 +18,13 @@ const check = (ok, label, detail = '') => {
   return ok;
 };
 
+// 429: wait out the per-IP render limit. 503: Browser Rendering occasionally fails one launch when
+// several start within seconds; one retry tells that apart from an outage (and is logged).
 const fetchWithRetry = async (url, init) => {
   const response = await fetch(url, init);
-  if (response.status !== 429) return response;
-  const wait = Number(response.headers.get('retry-after') || 60);
-  console.log(`     rate limited, waiting ${wait}s`);
+  if (response.status !== 429 && response.status !== 503) return response;
+  const wait = response.status === 503 ? 10 : Number(response.headers.get('retry-after') || 60);
+  console.log(`     ${response.status === 503 ? `503 (${(await response.text()).slice(0, 120)}), retrying` : 'rate limited'} in ${wait}s`);
   await new Promise((resolve) => setTimeout(resolve, wait * 1000));
   return fetch(url, init);
 };
