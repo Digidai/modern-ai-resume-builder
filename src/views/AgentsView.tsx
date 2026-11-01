@@ -178,7 +178,7 @@ const AgentsView: React.FC = () => {
           <H2 id="api">HTTP API</H2>
           <p className="text-base leading-[26px] text-muted">
             The same tools as REST endpoints, described in <a href={`${siteUrl}/openapi.json`} className={link}>openapi.json</a> (usable as GPT Actions). CORS is
-            open. Rendering is limited to 6 requests per minute per IP.
+            open. Rendering is rate limited per IP and globally.
           </p>
           <ul className="divide-y divide-rule border-y border-rule font-label text-[13px] text-ink">
             <li className="py-1.5">GET  /api/agent/templates?ats_only=true</li>

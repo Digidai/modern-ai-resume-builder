@@ -1126,6 +1126,9 @@ const FONT_IDS = ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-
 
 /** OpenAPI 3.1 description of the agent HTTP API served by the Worker (worker/agent.ts). */
 const buildOpenApi = (siteUrl, templates) => {
+  // Inlined (not an external $ref) so GPT Actions and function-calling generators can read it.
+  const { $schema, $id, required: _required, ...resumeSchema } = buildResumeSchema(siteUrl, templates);
+  const resumeProp = { $ref: '#/components/schemas/Resume' };
   const renderBody = {
     required: true,
     content: {
@@ -1134,7 +1137,7 @@ const buildOpenApi = (siteUrl, templates) => {
           type: 'object',
           required: ['resume'],
           properties: {
-            resume: { $ref: `${siteUrl}/resume.schema.json`, description: 'ModernCV resume object, or a JSON Resume document.' },
+            resume: resumeProp,
             template: { type: 'string', enum: templates.map((t) => t.id), default: 'modern' },
             accent: { type: 'string', pattern: '^#[0-9A-Fa-f]{6}$', description: 'Accent colour; omit for the template default.' },
             font: { type: 'string', enum: FONT_IDS, default: 'template' },
@@ -1147,7 +1150,7 @@ const buildOpenApi = (siteUrl, templates) => {
   };
   const error = { description: 'Error', content: { 'application/json': { schema: { $ref: '#/components/schemas/Error' } } } };
   const renderHeaders = {
-    'x-resume-pages': { description: 'Height in A4 pages.', schema: { type: 'integer' } },
+    'x-resume-pages': { description: 'Page count on the chosen paper (A4 or US Letter).', schema: { type: 'integer' } },
     'x-resume-warnings': { description: 'URL-encoded JSON array of content warnings.', schema: { type: 'string' } },
   };
   return {
@@ -1156,7 +1159,7 @@ const buildOpenApi = (siteUrl, templates) => {
       title: 'ModernCV Agent API',
       version: '1.0.0',
       description:
-        `Draft-to-PDF resume API for AI agents: writing guides, example resumes, ${templates.length} templates, PNG previews, vector PDFs and editor handoff links. No auth; rendering is limited to 6 requests per minute per IP. Resumes are not stored. The same tools are available over MCP at ` +
+        `Draft-to-PDF resume API for AI agents: writing guides, example resumes, ${templates.length} templates, PNG previews, vector PDFs and editor handoff links. No auth; rendering is rate limited per IP and globally (HTTP 429 or 503 with retry-after). Resumes are not stored. The same tools are available over MCP at ` +
         `${siteUrl}/mcp.`,
     },
     servers: [{ url: siteUrl }],
@@ -1233,15 +1236,15 @@ const buildOpenApi = (siteUrl, templates) => {
           operationId: 'renderPreview',
           summary: 'Render page 1 as PNG',
           requestBody: renderBody,
-          responses: { 200: { description: 'PNG', headers: renderHeaders, content: { 'image/png': {} } }, 400: error, 429: error },
+          responses: { 200: { description: 'PNG', headers: renderHeaders, content: { 'image/png': {} } }, 400: error, 413: error, 429: error, 503: error, 504: error },
         },
       },
       '/api/agent/pdf': {
         post: {
           operationId: 'renderPdf',
-          summary: 'Render an A4 vector PDF',
+          summary: 'Render a vector PDF on A4 or US Letter',
           requestBody: renderBody,
-          responses: { 200: { description: 'PDF', headers: renderHeaders, content: { 'application/pdf': {} } }, 400: error, 429: error },
+          responses: { 200: { description: 'PDF', headers: renderHeaders, content: { 'application/pdf': {} } }, 400: error, 413: error, 429: error, 503: error, 504: error },
         },
       },
       '/api/agent/download/{token}/{filename}': {
@@ -1257,6 +1260,8 @@ const buildOpenApi = (siteUrl, templates) => {
             404: error,
             410: error,
             429: error,
+            503: error,
+            504: error,
           },
         },
       },
@@ -1264,7 +1269,10 @@ const buildOpenApi = (siteUrl, templates) => {
         post: {
           operationId: 'exportLatex',
           summary: 'The resume as a standalone .tex file, with the filename, engine and Overleaf form fields',
-          requestBody: renderBody,
+          requestBody: {
+            required: true,
+            content: { 'application/json': { schema: { type: 'object', required: ['resume'], properties: { resume: resumeProp } } } },
+          },
           responses: {
             200: {
               description: 'LaTeX',
@@ -1343,6 +1351,7 @@ const buildOpenApi = (siteUrl, templates) => {
     },
     components: {
       schemas: {
+        Resume: { ...resumeSchema, description: 'ModernCV resume object, or a JSON Resume document (https://jsonresume.org/schema).' },
         Error: {
           type: 'object',
           properties: { error: { type: 'object', properties: { code: { type: 'string' }, message: { type: 'string' } } } },
@@ -1431,14 +1440,17 @@ Remote MCP server: ${siteUrl}/mcp (Streamable HTTP, stateless, no auth). Add it 
 
 | Tool / endpoint | Purpose |
 |---|---|
-| list_templates · GET /api/agent/templates | Templates with id, description, best-for, ATS status, preview |
-| get_writing_guide · GET /api/agent/guide?job_title= | Section order, skills, metrics, example bullets, recommended templates |
-| get_resume_schema · ${siteUrl}/resume.schema.json | JSON Schema of the resume object |
+| list_templates · GET /api/agent/templates | Templates with id, description, best-for, ATS status, photo/publications/hours/awards support, page limit, preview |
+| get_writing_guide · GET /api/agent/guide?job_title= | Section order, length, skills, metrics, example bullets, recommended templates |
+| get_example_resume · GET /api/agent/example?job_title= | A complete, render-ready example resume for the role |
+| get_resume_schema · GET ${siteUrl}/resume.schema.json | JSON Schema of the resume object |
+| import_publications · POST /api/agent/publications | Publications from an ORCID iD or BibTeX |
 | render_preview · POST /api/agent/preview | Page 1 as PNG plus page count (header x-resume-pages) |
-| render_pdf · POST /api/agent/pdf | A4 vector PDF |
+| render_pdf · POST /api/agent/pdf | Vector PDF on A4 or US Letter (over MCP: a 7-day download link) |
 | create_editor_link · POST /api/agent/link | Editor URL with the resume preloaded (in the URL fragment) |
+| export_latex · POST /api/agent/latex | The resume as a .tex file plus Overleaf form fields |
 
-POST bodies are \`{ "resume": {...}, "template": "classic", "accent": "#1F6E73", "font": "inter", "scale": 0.95 }\`; only \`resume\` is required. Rendering is limited to 6 per minute per IP. Resumes are rendered and discarded, never stored. Never invent facts for a user's resume.
+POST bodies are \`{ "resume": {...}, "template": "classic", "accent": "#1F6E73", "font": "inter", "scale": 0.95, "paper": "letter" }\`; only \`resume\` is required. Rendering is rate limited per IP and globally. Resumes are rendered and discarded, never stored. Never invent facts for a user's resume.
 
 ## Import format
 

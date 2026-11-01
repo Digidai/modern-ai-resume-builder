@@ -41,12 +41,15 @@ export const AGENT_API_PREFIX = '/api/agent/';
 const SERVER_VERSION = '1.0.0';
 const MCP_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const MAX_AGENT_BODY_BYTES = 256 * 1024;
+const MAX_RPC_BATCH = 10;
 const RENDER_TIMEOUT_MS = 45000;
 const DOWNLOAD_PATH = 'download/';
 const DOWNLOAD_TTL_MS = 7 * 24 * 60 * 60 * 1000;
 /** Longer links (big academic CVs) fall back to an embedded PDF; Cloudflare rejects URLs over 16 KB. */
 const MAX_DOWNLOAD_URL_CHARS = 12000;
-const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60, orcidPerIp: 20, orcidGlobal: 30 };
+// Hosted agents (claude.ai and ChatGPT connectors, cloud agents) reach us from a few shared egress IPs, so
+// the per-IP limits are generous and the global render budget is what bounds cost.
+const LIMITS = { requestsPerIp: 120, rendersPerIp: 20, rendersGlobal: 60, orcidPerIp: 20, orcidGlobal: 30 };
 const FONT_IDS: string[] = FONT_PRESETS.map((f) => f.id);
 
 class AgentError extends Error {
@@ -148,17 +151,45 @@ const getExampleResume = async (env: AgentEnv, origin: string, jobTitle: string)
       return { ...data, matchedTitle: data.jobTitle, exact: String(data.jobTitle).toLowerCase() === title.toLowerCase() };
     }
   }
-  throw new AgentError(404, 'NOT_FOUND', `No example for "${title}". Use get_writing_guide instead, or try a more common title.`);
+  throw new AgentError(404, 'NOT_FOUND', `No example for "${title}". Use get_writing_guide (GET /api/agent/guide) instead, or try a more common job title such as "Program Analyst".`);
+};
+
+const FEDERAL_TITLE = /\b(federal|usajobs|gs-?\d{1,2})\b/i;
+const FEDERAL_GUIDE = {
+  template: 'federal',
+  paper: 'letter',
+  maxPages: 2,
+  rules: [
+    'Hours per week on every job: experience[].hours, e.g. "40".',
+    'Series and grade in the job title, e.g. "Program Analyst, GS-0343-12".',
+    'Dates as YYYY-MM; the federal template prints them as MM/YYYY.',
+    'Certifications as a skills group "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" and a clearance as "Security Clearance: Secret, active".',
+    'Awards in awards[] (shown as Honors and Awards).',
+  ],
 };
 
 const getWritingGuide = (jobTitle: string) => {
   const title = jobTitle.trim().slice(0, 120);
   if (!title) throw new AgentError(400, 'INVALID_REQUEST', 'job_title is required.');
+  const matched = resolveTitle(title);
   const category = guessCategory(title);
   const guide = buildRoleGuide({ title, category, data: roleGuides, templates: TEMPLATES });
+  // US federal jobs (USAJOBS) have their own format: the federal template, Letter, up to 2 pages.
+  const federal = FEDERAL_TITLE.test(title);
+  if (federal) {
+    guide.length = 'Up to 2 pages on US Letter: USAJOBS may not consider longer federal resumes.';
+    const fed = TEMPLATES.find((t) => t.id === 'federal');
+    if (fed) guide.recommended = [fed, ...guide.recommended.filter((t) => t.id !== 'federal')];
+  } else if (category === 'Government & Public Service') {
+    guide.length += ' For US federal jobs on USAJOBS, use the "federal" template on paper "letter", up to 2 pages.';
+  }
   return {
     jobTitle: title,
+    matchedTitle: matched ?? null,
+    exact: !!matched && matched.toLowerCase() === title.toLowerCase(),
     jobFamily: category ?? 'General',
+    family: category ?? 'General',
+    ...(federal ? { federal: FEDERAL_GUIDE } : {}),
     ...guide,
     recommended: guide.recommended.map((t: { id: string; name: string; description: string; atsFriendly: boolean }) => ({
       id: t.id,
@@ -175,7 +206,39 @@ interface PreparedResume {
 }
 
 /** Validates an agent's resume plus optional design overrides into the editor's data shape. */
+const MONTHS = ['jan', 'feb', 'mar', 'apr', 'may', 'jun', 'jul', 'aug', 'sep', 'oct', 'nov', 'dec'];
+const pad = (month: number) => String(month).padStart(2, '0');
+
+/** A date as YYYY-MM (or YYYY), "present" for an ongoing role, or null when it can't be read. */
+const normalizeDate = (value: string): string | null => {
+  const v = value.trim();
+  if (!v || /^\d{4}(-(0[1-9]|1[0-2]))?$/.test(v)) return v;
+  if (/^(present|current|now|ongoing|today)$/i.test(v)) return 'present';
+  let m = /^(\d{4})[-/.](\d{1,2})([-/.]\d{1,2})?$/.exec(v);
+  if (m && +m[2] >= 1 && +m[2] <= 12) return `${m[1]}-${pad(+m[2])}`;
+  m = /^(\d{1,2})[/.-](\d{4})$/.exec(v);
+  if (m && +m[1] >= 1 && +m[1] <= 12) return `${m[2]}-${pad(+m[1])}`;
+  m = /^([a-z]{3,9})\.?,?\s+(\d{4})$/i.exec(v);
+  const month = m ? MONTHS.indexOf(m[1].slice(0, 3).toLowerCase()) : -1;
+  if (m && month >= 0) return `${m[2]}-${pad(month + 1)}`;
+  return null;
+};
+
+/** A template id, matched case-insensitively against ids and display names ("Ledger" → "banking"). */
+const resolveTemplate = (value: string) => {
+  const key = value.trim().toLowerCase();
+  return TEMPLATES.find((t) => t.id === key) ?? TEMPLATES.find((t) => t.name.toLowerCase() === key);
+};
+
 const prepareResume = (input: Json): PreparedResume => {
+  if (typeof input.resume === 'string') {
+    // Models sometimes pass the resume as a JSON string.
+    try {
+      input = { ...input, resume: JSON.parse(input.resume) };
+    } catch {
+      throw new AgentError(400, 'INVALID_RESUME', '`resume` must be a JSON object, not a string.');
+    }
+  }
   const resume = sanitizeResumeData(input.resume);
   if (!resume) {
     throw new AgentError(
@@ -188,8 +251,11 @@ const prepareResume = (input: Json): PreparedResume => {
   const raw = input.resume as Json;
   const template =
     typeof input.template === 'string' ? input.template : typeof input.templateId === 'string' ? input.templateId : typeof raw.templateId === 'string' ? raw.templateId : '';
-  if (template && !getTemplateById(template)) warnings.push(`Unknown template "${template}"; used "modern". Call list_templates for valid ids.`);
-  resume.templateId = template && getTemplateById(template) ? template : 'modern';
+  const resolved = template ? resolveTemplate(template) : undefined;
+  if (template && !resolved) {
+    throw new AgentError(400, 'INVALID_TEMPLATE', `Unknown template "${template}". Valid ids: ${TEMPLATES.map((t) => t.id).join(', ')} (list_templates / GET /api/agent/templates describes them).`);
+  }
+  resume.templateId = resolved?.id ?? 'modern';
 
   if (typeof input.accent === 'string' && input.accent) {
     if (/^#[0-9a-f]{6}$/i.test(input.accent)) resume.design.accent = input.accent;
@@ -199,12 +265,37 @@ const prepareResume = (input: Json): PreparedResume => {
     if (FONT_IDS.includes(input.font)) resume.design.font = input.font;
     else warnings.push(`Ignored font "${input.font}"; valid fonts: ${FONT_IDS.join(', ')}.`);
   }
-  if (typeof input.scale === 'number' && Number.isFinite(input.scale)) resume.design.scale = Math.min(1.15, Math.max(0.85, input.scale));
+  if (input.scale !== undefined && input.scale !== null && input.scale !== '') {
+    const scale = typeof input.scale === 'number' ? input.scale : typeof input.scale === 'string' ? Number(input.scale) : NaN;
+    if (!Number.isFinite(scale)) warnings.push(`Ignored scale ${JSON.stringify(input.scale)}; use a number from 0.85 to 1.15.`);
+    else {
+      resume.design.scale = Math.min(1.15, Math.max(0.85, scale));
+      if (resume.design.scale !== scale) warnings.push(`scale ${scale} is out of range; used ${resume.design.scale} (allowed 0.85–1.15).`);
+    }
+  }
   if (!FONT_IDS.includes(resume.design.font)) resume.design.font = 'template';
   if (typeof input.paper === 'string' && input.paper) {
-    if (input.paper === 'a4' || input.paper === 'letter') resume.design.paper = input.paper;
+    const paper = input.paper.trim().toLowerCase().replace(/^us[\s-]?letter$/, 'letter');
+    if (paper === 'a4' || paper === 'letter') resume.design.paper = paper;
     else warnings.push(`Ignored paper "${input.paper}"; use "a4" or "letter".`);
   }
+
+  // Dates: YYYY-MM is the contract; common other forms are converted rather than printed as typed.
+  const fixDate = (entry: { startDate: string; endDate: string }, where: string, current?: { isCurrent?: boolean }) => {
+    for (const key of ['startDate', 'endDate'] as const) {
+      const fixed = normalizeDate(entry[key]);
+      if (fixed === 'present') {
+        entry[key] = '';
+        if (key === 'endDate' && current) current.isCurrent = true;
+      } else if (fixed === null) warnings.push(`${where}.${key} "${entry[key]}" isn't a date; use "YYYY-MM" (e.g. "2021-03").`);
+      else entry[key] = fixed;
+    }
+  };
+  resume.experience.forEach((exp, i) => {
+    fixDate(exp, `experience[${i}]`, exp);
+    if (exp.startDate && !exp.endDate && !exp.isCurrent) warnings.push(`experience[${i}] (${exp.role || exp.company || 'untitled'}) has no endDate; set "isCurrent": true for a current role, or add the end date.`);
+  });
+  resume.education.forEach((edu, i) => fixDate(edu, `education[${i}]`));
 
   const rawLinks = Array.isArray(raw.links) ? raw.links.length : 0;
   if (rawLinks > 8) warnings.push(`Only the first 8 links are kept (got ${rawLinks}).`);
@@ -298,7 +389,8 @@ const importPublications = async (input: Json, deps: AgentDeps) => {
     listed = found.length;
     source = 'bibtex';
   }
-  const kinds = Array.isArray(input.kinds) ? input.kinds.filter((kind): kind is PublicationKind => KIND_IDS.includes(kind as PublicationKind)) : [];
+  const kindList = typeof input.kinds === 'string' ? input.kinds.split(/[\s,]+/) : input.kinds;
+  const kinds = Array.isArray(kindList) ? kindList.filter((kind): kind is PublicationKind => KIND_IDS.includes(kind as PublicationKind)) : [];
   const year = (value: unknown) => (typeof value === 'number' && Number.isFinite(value) ? value : typeof value === 'string' && /^\d{4}$/.test(value) ? Number(value) : null);
   const fromYear = year(input.from_year);
   const toYear = year(input.to_year);
@@ -394,16 +486,24 @@ interface RenderResult {
 }
 
 /** Opens `/render/#resume=…` in Cloudflare Browser Rendering and prints it (pdf) or snapshots page 1 (png). */
-const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 'pdf' | 'png'): Promise<RenderResult> => {
+const renderResume = async (env: AgentEnv, deps: AgentDeps, origin: string, input: Json, format: 'pdf' | 'png'): Promise<RenderResult> => {
   const { resume, warnings } = prepareResume(input);
   if (!env.BROWSER) throw new AgentError(503, 'UPSTREAM_UNAVAILABLE', 'Rendering is not configured on this server.');
+  // Only valid input spends the render budget.
+  await consumeRender(deps);
   const renderUrl = `${env.RENDER_ORIGIN || origin}/render/#resume=${await encodeResumePayload(toLinkPayload(resume))}`;
 
   let browser: Awaited<ReturnType<typeof puppeteer.launch>> | undefined;
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
+  let timedOut = false;
   try {
     const job = (async () => {
       browser = await puppeteer.launch(env.BROWSER!);
+      // A launch that finishes after the timeout would otherwise keep its browser open until it idles out.
+      if (timedOut) {
+        await browser.close().catch(() => undefined);
+        throw new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.');
+      }
       const page = await browser.newPage();
       await page.setBypassCSP(true);
       const { widthMm, heightMm } = paperSize(resume.design.paper);
@@ -429,7 +529,10 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
       return { bytes, pages, fitScale: fitScaleText ? Number(fitScaleText) : null };
     })();
     const timeout = new Promise<never>((_, reject) => {
-      timeoutId = setTimeout(() => reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.')), RENDER_TIMEOUT_MS);
+      timeoutId = setTimeout(() => {
+        timedOut = true;
+        reject(new AgentError(504, 'UPSTREAM_TIMEOUT', 'Rendering timed out.'));
+      }, RENDER_TIMEOUT_MS);
     });
     const { bytes, pages, fitScale } = await Promise.race([job, timeout]);
     const maxPages = getTemplateById(resume.templateId)?.maxPages;
@@ -614,12 +717,11 @@ const TOOLS: Tool[] = [
     name: 'render_preview',
     title: 'Preview the first page as an image',
     description:
-      'Renders the resume with the chosen template and returns page 1 as a PNG, plus the page count and warnings. Use it to check layout and length before rendering the PDF. Limited to 6 renders per minute.',
+      'Renders the resume with the chosen template and returns page 1 as a PNG, plus the page count and warnings. Use it to check layout and length before rendering the PDF. Rendering is rate limited; after a rate-limit error wait a minute and retry.',
     inputSchema: { type: 'object', properties: RESUME_INPUT, required: ['resume'] },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
-      await consumeRender(deps);
-      const result = await renderResume(env, origin, args, 'png');
+      const result = await renderResume(env, deps, origin, args, 'png');
       return [
         { type: 'image', data: toBase64(result.bytes), mimeType: 'image/png' },
         text({ pages: result.pages, template: result.template, warnings: result.warnings }),
@@ -630,12 +732,11 @@ const TOOLS: Tool[] = [
     name: 'render_pdf',
     title: 'Render the resume as a PDF',
     description:
-      'Renders the resume to an A4 or US Letter (paper: "letter") vector PDF (selectable text, embedded fonts) and returns download_url, a link that downloads the PDF for 7 days, plus the page count and warnings. Give the user download_url as a clickable link, and also create_editor_link so they can edit. The link carries the resume encrypted; nothing is stored on the server. Limited to 6 renders per minute.',
+      'Renders the resume to an A4 or US Letter (paper: "letter") vector PDF (selectable text, embedded fonts) and returns download_url, a link that downloads the PDF for 7 days, plus the page count and warnings; if the resume is too long for a link, the PDF is embedded instead. Give the user download_url as a clickable link, and also create_editor_link so they can edit. The link carries the resume encrypted; nothing is stored on the server. Rendering is rate limited; after a rate-limit error wait a minute and retry.',
     inputSchema: { type: 'object', properties: RESUME_INPUT, required: ['resume'] },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
-      await consumeRender(deps);
-      const result = await renderResume(env, origin, args, 'pdf');
+      const result = await renderResume(env, deps, origin, args, 'pdf');
       const link = await pdfDownloadLink(env, origin, result.resume);
       const summary = { pages: result.pages, template: result.template, bytes: result.bytes.length, warnings: result.warnings };
       if (link) return [text({ download_url: link.url, expires_at: link.expiresAt, ...summary })];
@@ -650,7 +751,7 @@ const TOOLS: Tool[] = [
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
 Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf returns download_url (a 7-day PDF download link) to give the user, and create_editor_link so they can review and edit it in the browser.
-US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line; a clearance goes in skills as "Security Clearance: Top Secret/SCI, active" and is listed first in that section. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
+US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), dates as YYYY-MM like every template (federal prints them as MM/YYYY) and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line; a clearance goes in skills as "Security Clearance: Top Secret/SCI, active" and is listed first in that section. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport
@@ -658,7 +759,7 @@ US federal jobs (USAJOBS): template "federal" with paper "letter", hours per wee
 
 const AGENT_CORS_HEADERS: Record<string, string> = {
   'access-control-allow-origin': '*',
-  'access-control-allow-methods': 'GET, POST, OPTIONS',
+  'access-control-allow-methods': 'GET, HEAD, POST, OPTIONS',
   'access-control-allow-headers': 'content-type, accept, mcp-protocol-version, mcp-session-id, authorization',
   'access-control-expose-headers': 'x-resume-pages, x-resume-warnings',
   'access-control-max-age': '86400',
@@ -694,6 +795,7 @@ const handleRpcMessage = async (message: unknown, ctx: ToolContext): Promise<Jso
   }
   const { id, method, params } = message as { id?: unknown; method?: unknown; params?: Json };
   if (id === undefined) return null; // notification (e.g. notifications/initialized): nothing to return
+  if (id === null || (typeof id !== 'string' && typeof id !== 'number')) return rpcError(null, -32600, 'Request id must be a string or number.');
   if (method === undefined && ('result' in (message as Json) || 'error' in (message as Json))) return null; // a client response: accept, no reply
   const reply = (result: unknown) => ({ jsonrpc: '2.0', id, result });
 
@@ -716,6 +818,10 @@ const handleRpcMessage = async (message: unknown, ctx: ToolContext): Promise<Jso
     case 'tools/call': {
       const tool = TOOLS.find((t) => t.name === params?.name);
       if (!tool) return rpcError(id, -32602, `Unknown tool: ${String(params?.name)}`);
+      // initialize, tools/list and ping are free; every tool call counts toward the per-IP request limit.
+      if (!(await ctx.deps.rateLimit(`agent:ip:${ctx.deps.clientIp}`, LIMITS.requestsPerIp))) {
+        return reply({ content: [text('Too many requests from this network. Wait a minute and retry.')], isError: true });
+      }
       const args = params?.arguments && typeof params.arguments === 'object' ? (params.arguments as Json) : {};
       try {
         return reply({ content: await tool.run(args, ctx) });
@@ -744,6 +850,9 @@ const handleMcp = async (request: Request, ctx: ToolContext): Promise<Response> 
     const err = error as AgentError;
     return json(rpcError(null, err.code === 'INVALID_JSON' ? -32700 : -32600, err.message), err.status);
   }
+  if (Array.isArray(body) && (!body.length || body.length > MAX_RPC_BATCH)) {
+    return json(rpcError(null, -32600, body.length ? `Batches are limited to ${MAX_RPC_BATCH} messages.` : 'Empty batch.'), 400);
+  }
   const messages = Array.isArray(body) ? body : [body];
   const replies = (await Promise.all(messages.map((m) => handleRpcMessage(m, ctx)))).filter((r): r is Json => r !== null);
   if (!replies.length) return new Response(null, { status: 202 });
@@ -770,11 +879,12 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     return json(route === 'latex' ? exportLatex(body as Json) : await importPublications(body as Json, ctx.deps));
   }
   if (route.startsWith(DOWNLOAD_PATH)) {
-    if (request.method !== 'GET') return fail(405, 'METHOD_NOT_ALLOWED', 'Open the link with GET.');
+    if (request.method !== 'GET' && request.method !== 'HEAD') return fail(405, 'METHOD_NOT_ALLOWED', 'Open the link with GET.');
     const [token = '', name = 'resume.pdf'] = route.slice(DOWNLOAD_PATH.length).split('/');
     const input = await openDownloadLink(ctx.env, token);
-    await consumeRender(ctx.deps);
-    const result = await renderResume(ctx.env, ctx.origin, input, 'pdf');
+    // Link previews and mail scanners often probe with HEAD: answer without spending a render.
+    if (request.method === 'HEAD') return new Response(null, { headers: { 'content-type': 'application/pdf' } });
+    const result = await renderResume(ctx.env, ctx.deps, ctx.origin, input, 'pdf');
     const filename = decodeURIComponent(name).replace(/[^\p{L}\p{N}_.-]/gu, '') || 'resume.pdf';
     return new Response(new Blob([result.bytes as BlobPart]), {
       headers: {
@@ -789,12 +899,11 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     const body = await readJson(request);
     if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object with `resume`.');
     if (route === 'link') return json(await createEditorLink(ctx.origin, body as Json));
-    await consumeRender(ctx.deps);
-    const result = await renderResume(ctx.env, ctx.origin, body as Json, route === 'pdf' ? 'pdf' : 'png');
+    const result = await renderResume(ctx.env, ctx.deps, ctx.origin, body as Json, route === 'pdf' ? 'pdf' : 'png');
     return new Response(new Blob([result.bytes as BlobPart]), {
       headers: {
         'content-type': route === 'pdf' ? 'application/pdf' : 'image/png',
-        ...(route === 'pdf' ? { 'content-disposition': 'attachment; filename="resume.pdf"' } : {}),
+        ...(route === 'pdf' ? { 'content-disposition': `attachment; filename="${pdfFilename(result.resume).replace(/[^\x20-\x7e]/g, '_')}"; filename*=UTF-8''${encodeURIComponent(pdfFilename(result.resume))}` } : {}),
         'x-resume-pages': String(result.pages),
         'x-resume-warnings': encodeURIComponent(JSON.stringify(result.warnings)),
       },
@@ -812,7 +921,7 @@ export const handleAgentRequest = async (request: Request, env: AgentEnv, deps: 
 
   const ctx: ToolContext = { env, origin: url.origin, deps };
   try {
-    if (!(await deps.rateLimit(`agent:ip:${deps.clientIp}`, LIMITS.requestsPerIp))) {
+    if (!isMcp && !(await deps.rateLimit(`agent:ip:${deps.clientIp}`, LIMITS.requestsPerIp))) {
       throw new AgentError(429, 'RATE_LIMITED', 'Too many requests. Wait a minute and retry.');
     }
     return withAgentHeaders(isMcp ? await handleMcp(request, ctx) : await handleHttpApi(request, url, ctx));

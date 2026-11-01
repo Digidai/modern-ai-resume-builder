@@ -155,11 +155,13 @@ claude mcp add --transport http moderncv https://genedai.cv/mcp
 | `get_writing_guide` | Section order, skills, metrics, example bullets and FAQs for a job title |
 | `get_example_resume` | A complete example resume for a job title, in render-ready JSON |
 | `get_resume_schema` | JSON Schema of the resume object |
+| `import_publications` | Publications from an ORCID iD or BibTeX, filterable by kind and year |
 | `render_preview` | Page 1 as a PNG plus the page count |
-| `render_pdf` | A link that downloads an A4 or US Letter vector PDF (selectable text, embedded fonts) for 7 days |
+| `render_pdf` | A link that downloads an A4 or US Letter vector PDF (selectable text, embedded fonts) for 7 days (embedded instead when the resume is too long for a link) |
 | `create_editor_link` | A link that opens the editor with the resume loaded (kept in the URL fragment) |
+| `export_latex` | The resume as a standalone .tex file, ready for Overleaf |
 
-**Agent skill:** [`/skills/moderncv-resume/SKILL.md`](https://genedai.cv/skills/moderncv-resume/SKILL.md) (source in `skills/`). **HTTP API:** the same tools under `/api/agent/` ([`/openapi.json`](https://genedai.cv/openapi.json)); rendering is limited to 6 requests per minute per IP and resumes are not stored.
+**Agent skill:** [`/skills/moderncv-resume/SKILL.md`](https://genedai.cv/skills/moderncv-resume/SKILL.md) (source in `skills/`). **HTTP API:** the same tools under `/api/agent/` (the schema is the static [`/resume.schema.json`](https://genedai.cv/resume.schema.json); spec: [`/openapi.json`](https://genedai.cv/openapi.json)); rendering is rate limited per IP and globally, and resumes are not stored.
 
 The build also publishes plain files:
 

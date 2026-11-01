@@ -6,8 +6,8 @@
 //
 // Checks that PDFs render with the page count reported in x-resume-pages, that an over-long resume
 // gets a "scale" hint that really fits (one page, or two for Federal), and that MCP render_pdf returns
-// a download link that downloads the same PDF and rejects a tampered link. It uses exactly 6 renders,
-// the per-IP limit per minute; on a 429 it waits for retry-after and tries once more.
+// a download link that downloads the same PDF and rejects a tampered link. It uses exactly 6 renders;
+// on a 429 it waits for retry-after and tries once more.
 
 const BASE = (process.argv[2] || process.env.SMOKE_BASE_URL || 'https://genedai.cv').replace(/\/$/, '');
 
@@ -136,6 +136,22 @@ if (first.headers.get('cf-mitigated') === 'challenge' || !first.headers.get('con
 const templates = await first.json();
 check(Array.isArray(templates.templates) && templates.templates.some((t) => t.id === 'federal' && t.maxPages === 2), 'GET /api/agent/templates lists federal with maxPages 2', `${templates.templates?.length} templates`);
 
+// Input handling (no renders): template names resolve, unknown ids are rejected, dates are normalized.
+const postLink = async (body) => {
+  const response = await fetch(`${BASE}/api/agent/link`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+  return { status: response.status, body: await response.json() };
+};
+const byName = await postLink({ template: 'Ledger', resume: designer });
+check(byName.status === 200 && byName.body.template === 'banking', 'template display name "Ledger" resolves to banking', `${byName.status} ${byName.body.template}`);
+const unknown = await postLink({ template: 'nope', resume: designer });
+check(unknown.status === 400 && unknown.body.error?.code === 'INVALID_TEMPLATE', 'unknown template is a 400 INVALID_TEMPLATE', `${unknown.status} ${unknown.body.error?.code}`);
+const asString = await postLink({ resume: JSON.stringify({ ...designer, experience: [{ ...designer.experience[0], startDate: 'March 2021', endDate: '' }] }) });
+check(
+  asString.status === 200 && asString.body.warnings.some((w) => /no endDate/.test(w)) && !asString.body.warnings.some((w) => /isn't a date/.test(w)),
+  'resume as a JSON string is accepted; "March 2021" parses; a missing endDate is warned about',
+  asString.body.warnings?.join(' | ')
+);
+
 // 1 render
 const short = await renderPdf({ template: 'classic', resume: designer });
 check(short.status === 200 && short.pdfPages === 1 && short.pages === 1 && short.warnings.length === 0, 'short resume: 1-page PDF, no warnings', `status ${short.status}, header ${short.pages}, pdf ${short.pdfPages}`);
@@ -153,6 +169,14 @@ const init = await mcp('initialize', { protocolVersion: '2025-06-18', capabiliti
 check(init.body.result?.serverInfo?.name === 'moderncv', 'MCP initialize', init.body.result?.serverInfo?.version);
 const tools = await mcp('tools/list');
 check(tools.body.result?.tools?.some((t) => t.name === 'render_pdf'), 'MCP tools/list includes render_pdf', `${tools.body.result?.tools?.length} tools`);
+const rawMcp = async (body) => {
+  const response = await fetch(`${BASE}/mcp`, { method: 'POST', headers: { 'content-type': 'application/json', accept: 'application/json, text/event-stream' }, body: JSON.stringify(body) });
+  return response.json();
+};
+check((await rawMcp([])).error?.code === -32600, 'MCP empty batch is an Invalid Request');
+check((await rawMcp({ jsonrpc: '2.0', id: null, method: 'ping' })).error?.code === -32600, 'MCP null request id is an Invalid Request');
+const noResume = await mcp('tools/call', { name: 'render_pdf', arguments: {} });
+check(noResume.body.result?.isError === true && noResume.body.id === rpcId, 'MCP render_pdf without a resume is a tool error (no render spent)');
 
 // 2 renders: MCP render_pdf, then its download link
 const call = await mcp('tools/call', { name: 'render_pdf', arguments: { template: 'federal', paper: 'letter', resume: federal } });
@@ -165,6 +189,8 @@ if (check(typeof summary.download_url === 'string' && summary.download_url.start
   const download = await fetchWithRetry(summary.download_url);
   const bytes = new Uint8Array(await download.arrayBuffer());
   check(download.status === 200 && pdfPages(bytes) === summary.pages, 'download_url serves the same PDF', `status ${download.status}, pdf ${pdfPages(bytes)}, ${download.headers.get('content-disposition')}`);
+  const head = await fetch(summary.download_url, { method: 'HEAD' });
+  check(head.status === 200 && head.headers.get('content-type') === 'application/pdf', 'HEAD on download_url answers without rendering', `status ${head.status}`);
   const tampered = summary.download_url.replace(/\/download\/(.)/, (_, c) => `/download/${c === 'A' ? 'B' : 'A'}`);
   const bad = await fetch(tampered);
   check(bad.status === 404, 'tampered download link is rejected', `status ${bad.status}`);
