@@ -1,0 +1,52 @@
+name: Agent smoke test
+
+# Production is deployed by Cloudflare Workers Builds, which reports back as the check run
+# "Workers Builds: modern-ai-resume-builder" once the deploy finishes. Wait for that check on the
+# pushed commit, then run scripts/agent-smoke.mjs against https://genedai.cv.
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: smoke-agent
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+  checks: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - name: Wait for the Cloudflare deploy of this commit
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          CHECK_NAME: 'Workers Builds: modern-ai-resume-builder'
+        run: |
+          for i in $(seq 1 60); do
+            conclusion=$(gh api "repos/${{ github.repository }}/commits/${{ github.sha }}/check-runs" \
+              --jq ".check_runs[] | select(.name == env.CHECK_NAME and .status == \"completed\") | .conclusion" | head -n1)
+            if [ -n "$conclusion" ]; then
+              echo "Deploy check: $conclusion"
+              [ "$conclusion" = "success" ] || { echo "::error::Cloudflare deploy did not succeed ($conclusion)"; exit 1; }
+              sleep 20 # let the new version reach every edge location
+              exit 0
+            fi
+            sleep 20
+          done
+          echo "::error::No completed '$CHECK_NAME' check after 20 minutes"
+          exit 1
+
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Smoke-test the agent API and MCP server
+        run: node scripts/agent-smoke.mjs https://genedai.cv
