@@ -1,7 +1,7 @@
 import React from 'react';
 import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
 
-// "Scholar": an academic CV for PhD students, postdocs and researchers. Source Serif, small-caps
+// "Scholar": an academic CV for PhD students, postdocs and researchers. Source Serif, spaced-capital
 // section headings over a hairline, and a left gutter that carries the years of each entry and the
 // numbers of the publication list. Publications come right after education, numbered, with the
 // owner's name in bold, followed by grants and awards, talks and teaching. Academic CVs run to several pages; entries never split across a page break.
@@ -13,7 +13,7 @@ const gutterText = 'pt-[1px] text-[13px] leading-snug text-neutral-600 tabular-n
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[8px] border-b border-(--accent)/40 pb-[2px] text-[17px] font-semibold tracking-[0.05em] text-(--accent) [font-variant-caps:small-caps] break-after-avoid">
+        <h2 className="mb-[8px] border-b border-(--accent)/40 pb-[2px] text-[13.5px] font-semibold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
             {title}
         </h2>
         <div className="flex flex-col gap-[9px]">{children}</div>
