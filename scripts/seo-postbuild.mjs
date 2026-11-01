@@ -1244,6 +1244,22 @@ const buildOpenApi = (siteUrl, templates) => {
           responses: { 200: { description: 'PDF', headers: renderHeaders, content: { 'application/pdf': {} } }, 400: error, 429: error },
         },
       },
+      '/api/agent/download/{token}/{filename}': {
+        get: {
+          operationId: 'downloadPdf',
+          summary: 'Download link returned by the MCP render_pdf tool: renders the PDF again from the encrypted resume in the link (valid 7 days)',
+          parameters: [
+            { name: 'token', in: 'path', required: true, schema: { type: 'string' } },
+            { name: 'filename', in: 'path', required: true, schema: { type: 'string' } },
+          ],
+          responses: {
+            200: { description: 'PDF', content: { 'application/pdf': {} } },
+            404: error,
+            410: error,
+            429: error,
+          },
+        },
+      },
       '/api/agent/latex': {
         post: {
           operationId: 'exportLatex',

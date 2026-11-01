@@ -156,7 +156,7 @@ claude mcp add --transport http moderncv https://genedai.cv/mcp
 | `get_example_resume` | A complete example resume for a job title, in render-ready JSON |
 | `get_resume_schema` | JSON Schema of the resume object |
 | `render_preview` | Page 1 as a PNG plus the page count |
-| `render_pdf` | An A4 or US Letter vector PDF with selectable text and embedded fonts |
+| `render_pdf` | A link that downloads an A4 or US Letter vector PDF (selectable text, embedded fonts) for 7 days |
 | `create_editor_link` | A link that opens the editor with the resume loaded (kept in the URL fragment) |
 
 **Agent skill:** [`/skills/moderncv-resume/SKILL.md`](https://genedai.cv/skills/moderncv-resume/SKILL.md) (source in `skills/`). **HTTP API:** the same tools under `/api/agent/` ([`/openapi.json`](https://genedai.cv/openapi.json)); rendering is limited to 6 requests per minute per IP and resumes are not stored.

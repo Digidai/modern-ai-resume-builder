@@ -1,7 +1,8 @@
 // Agent mode: the same capabilities over a remote MCP server (`/mcp`, Streamable HTTP, stateless)
 // and a plain HTTP API (`/api/agent/*`) for agents that use skills or function calling instead.
 // No accounts or keys: requests are anonymous, rate limited per IP, and never stored. Resumes sent
-// for rendering live only for the duration of the request.
+// for rendering live only for the duration of the request. A PDF download link carries the resume
+// itself, encrypted, and renders it again when opened.
 
 import puppeteer from '@cloudflare/puppeteer';
 import { TEMPLATES, getTemplateById, showsAwards } from '../src/constants/templates';
@@ -24,6 +25,8 @@ export interface AgentEnv {
   BROWSER?: Parameters<typeof puppeteer.launch>[0];
   /** Origin the headless browser loads `/render/` from; defaults to the request's origin. */
   RENDER_ORIGIN?: string;
+  /** Also keys the encryption of PDF download links (see pdfDownloadLink). */
+  AI_SIGNING_SECRET?: string;
 }
 
 export interface AgentDeps {
@@ -39,6 +42,10 @@ const SERVER_VERSION = '1.0.0';
 const MCP_PROTOCOL_VERSIONS = ['2025-06-18', '2025-03-26', '2024-11-05'];
 const MAX_AGENT_BODY_BYTES = 256 * 1024;
 const RENDER_TIMEOUT_MS = 45000;
+const DOWNLOAD_PATH = 'download/';
+const DOWNLOAD_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+/** Longer links (big academic CVs) fall back to an embedded PDF; Cloudflare rejects URLs over 16 KB. */
+const MAX_DOWNLOAD_URL_CHARS = 12000;
 const LIMITS = { requestsPerIp: 120, rendersPerIp: 6, rendersGlobal: 60, orcidPerIp: 20, orcidGlobal: 30 };
 const FONT_IDS: string[] = FONT_PRESETS.map((f) => f.id);
 
@@ -314,10 +321,75 @@ export const pdfPageCount = (pdf: Uint8Array): number => {
   return Math.max(0, ...Array.from(text.matchAll(/\/Count (\d+)/g), (match) => Number(match[1])));
 };
 
+// ---------------------------------------------------------------------------------------------
+// PDF download links. Stateless: the link holds the prepared resume and an expiry, deflated and
+// encrypted with AES-GCM (key derived from AI_SIGNING_SECRET), so nothing is stored and URL logs or
+// browser history only ever see ciphertext. Opening it renders the PDF again.
+// ---------------------------------------------------------------------------------------------
+
+const pipeBytes = async (bytes: Uint8Array, stream: CompressionStream | DecompressionStream) =>
+  new Uint8Array(await new Response(new Blob([bytes as BlobPart]).stream().pipeThrough(stream)).arrayBuffer());
+
+const toBase64Url = (bytes: Uint8Array) => toBase64(bytes).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
+const fromBase64Url = (value: string) => {
+  const base64 = value.replace(/-/g, '+').replace(/_/g, '/');
+  return Uint8Array.from(atob(base64 + '='.repeat((4 - (base64.length % 4)) % 4)), (c) => c.charCodeAt(0));
+};
+
+const linkKey = async (env: AgentEnv): Promise<CryptoKey | null> => {
+  const secret = env.AI_SIGNING_SECRET?.trim();
+  if (!secret) return null;
+  const base = await crypto.subtle.importKey('raw', new TextEncoder().encode(secret), 'HKDF', false, ['deriveKey']);
+  return crypto.subtle.deriveKey(
+    { name: 'HKDF', hash: 'SHA-256', salt: new Uint8Array(), info: new TextEncoder().encode('moderncv:pdf-download-link:v1') },
+    base,
+    { name: 'AES-GCM', length: 256 },
+    false,
+    ['encrypt', 'decrypt']
+  );
+};
+
+const pdfFilename = (resume: ResumeData) =>
+  `${(resume.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[^\p{L}\p{N}_.-]/gu, '').toLowerCase() || 'resume'}-resume.pdf`;
+
+/** A URL that downloads this resume as a PDF for 7 days, or null (no secret configured, or too long). */
+const pdfDownloadLink = async (env: AgentEnv, origin: string, resume: ResumeData) => {
+  const key = await linkKey(env);
+  if (!key) return null;
+  const expires = Date.now() + DOWNLOAD_TTL_MS;
+  const plain = await pipeBytes(new TextEncoder().encode(JSON.stringify({ exp: expires, resume: toLinkPayload(resume) })), new CompressionStream('deflate-raw'));
+  const iv = crypto.getRandomValues(new Uint8Array(12));
+  const sealed = new Uint8Array(await crypto.subtle.encrypt({ name: 'AES-GCM', iv }, key, plain));
+  const token = new Uint8Array(iv.length + sealed.length);
+  token.set(iv);
+  token.set(sealed, iv.length);
+  const url = `${origin}${AGENT_API_PREFIX}${DOWNLOAD_PATH}${toBase64Url(token)}/${encodeURIComponent(pdfFilename(resume))}`;
+  return url.length > MAX_DOWNLOAD_URL_CHARS ? null : { url, expiresAt: new Date(expires).toISOString() };
+};
+
+/** The resume input a download link was made from; throws when the link is invalid or expired. */
+const openDownloadLink = async (env: AgentEnv, token: string): Promise<Json> => {
+  const key = await linkKey(env);
+  if (!key) throw new AgentError(503, 'UPSTREAM_UNAVAILABLE', 'Download links are not configured on this server.');
+  let payload: { exp?: unknown; resume?: unknown };
+  try {
+    const bytes = fromBase64Url(token);
+    const plain = await crypto.subtle.decrypt({ name: 'AES-GCM', iv: bytes.subarray(0, 12) }, key, bytes.subarray(12));
+    payload = JSON.parse(new TextDecoder().decode(await pipeBytes(new Uint8Array(plain), new DecompressionStream('deflate-raw'))));
+  } catch {
+    throw new AgentError(404, 'INVALID_LINK', 'This download link is not valid. Ask the assistant for a new one.');
+  }
+  if (typeof payload.exp !== 'number' || payload.exp < Date.now()) {
+    throw new AgentError(410, 'LINK_EXPIRED', 'This download link has expired (links last 7 days). Ask the assistant for a new one.');
+  }
+  return { resume: payload.resume };
+};
+
 interface RenderResult {
   bytes: Uint8Array;
   pages: number;
   template: string;
+  resume: ResumeData;
   warnings: string[];
 }
 
@@ -372,7 +444,7 @@ const renderResume = async (env: AgentEnv, origin: string, input: Json, format: 
           : `The resume runs to ${pages} pages and doesn't fit on one even at the smallest scale (0.85). Shorten bullets, drop older roles, or use the "compact" template.`
       );
     }
-    return { bytes, pages, template: resume.templateId, warnings };
+    return { bytes, pages, template: resume.templateId, resume, warnings };
   } catch (error) {
     if (error instanceof AgentError) throw error;
     const message = error instanceof Error ? error.message : String(error);
@@ -553,14 +625,18 @@ const TOOLS: Tool[] = [
     name: 'render_pdf',
     title: 'Render the resume as a PDF',
     description:
-      'Renders the resume to an A4 or US Letter (paper: "letter") vector PDF (selectable text, embedded fonts) and returns it as an embedded resource, plus the page count and warnings. Many chat clients cannot save an embedded PDF, so also call create_editor_link and give the user that link (they can download the PDF there). The resume is not stored. Limited to 6 renders per minute.',
+      'Renders the resume to an A4 or US Letter (paper: "letter") vector PDF (selectable text, embedded fonts) and returns download_url, a link that downloads the PDF for 7 days, plus the page count and warnings. Give the user download_url as a clickable link, and also create_editor_link so they can edit. The link carries the resume encrypted; nothing is stored on the server. Limited to 6 renders per minute.',
     inputSchema: { type: 'object', properties: RESUME_INPUT, required: ['resume'] },
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
       await consumeRender(deps);
       const result = await renderResume(env, origin, args, 'pdf');
+      const link = await pdfDownloadLink(env, origin, result.resume);
+      const summary = { pages: result.pages, template: result.template, bytes: result.bytes.length, warnings: result.warnings };
+      if (link) return [text({ download_url: link.url, expires_at: link.expiresAt, ...summary })];
+      // Too long for a URL (or links not configured): embed the file instead.
       return [
-        text({ pages: result.pages, template: result.template, bytes: result.bytes.length, warnings: result.warnings }),
+        text({ ...summary, note: 'The PDF is embedded below; it was too large for a download link. Also give the user create_editor_link.' }),
         { type: 'resource', resource: { uri: 'moderncv://resume.pdf', mimeType: 'application/pdf', blob: toBase64(result.bytes) } },
       ];
     },
@@ -568,7 +644,7 @@ const TOOLS: Tool[] = [
 ];
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
-Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf for the file, and create_editor_link so the user can review and edit it in the browser.
+Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf returns download_url (a 7-day PDF download link) to give the user, and create_editor_link so they can review and edit it in the browser.
 US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), MM/YYYY dates and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line; a clearance goes in skills as "Security Clearance: Top Secret/SCI, active" and is listed first in that section. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
 
 // ---------------------------------------------------------------------------------------------
@@ -687,6 +763,21 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     const body = await readJson(request);
     if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object.');
     return json(route === 'latex' ? exportLatex(body as Json) : await importPublications(body as Json, ctx.deps));
+  }
+  if (route.startsWith(DOWNLOAD_PATH)) {
+    if (request.method !== 'GET') return fail(405, 'METHOD_NOT_ALLOWED', 'Open the link with GET.');
+    const [token = '', name = 'resume.pdf'] = route.slice(DOWNLOAD_PATH.length).split('/');
+    const input = await openDownloadLink(ctx.env, token);
+    await consumeRender(ctx.deps);
+    const result = await renderResume(ctx.env, ctx.origin, input, 'pdf');
+    const filename = decodeURIComponent(name).replace(/[^\p{L}\p{N}_.-]/gu, '') || 'resume.pdf';
+    return new Response(new Blob([result.bytes as BlobPart]), {
+      headers: {
+        'content-type': 'application/pdf',
+        'content-disposition': `attachment; filename="${filename.replace(/[^\x20-\x7e]/g, '_')}"; filename*=UTF-8''${encodeURIComponent(filename)}`,
+        'x-resume-pages': String(result.pages),
+      },
+    });
   }
   if (route === 'link' || route === 'pdf' || route === 'preview') {
     if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');

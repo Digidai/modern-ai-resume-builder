@@ -7,7 +7,7 @@ description: Write, design and export a professional resume with ModernCV (53 te
 
 ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 or US Letter PDF in one of 53 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
-If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`.
+If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`. Over MCP, `render_pdf` returns `download_url`, a link that downloads the PDF for 7 days; give it to the user as a clickable link.
 
 ## Workflow
 
@@ -89,4 +89,4 @@ A JSON Resume document (https://jsonresume.org/schema) also works. The native sh
 
 ## Privacy
 
-Resumes sent to `/api/agent/pdf` or `/preview` are rendered and discarded, never stored. Editor links carry the resume in the URL fragment (`#resume=…`), which browsers don't send to servers; the user's edits are saved only in their browser.
+Resumes sent to `/api/agent/pdf` or `/preview` are rendered and discarded, never stored. A `download_url` carries the resume encrypted and renders it again when opened; nothing is kept on the server. Editor links carry the resume in the URL fragment (`#resume=…`), which browsers don't send to servers; the user's edits are saved only in their browser.
