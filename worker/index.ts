@@ -91,7 +91,7 @@ const PDF_PATH = '/api/pdf';
 const ORCID_PATH = '/api/orcid';
 const ORCID_RATE_LIMIT = 20;
 /** Whole-site ORCID imports per minute. One import makes up to 41 ORCID calls; 30/min stays under ORCID's ~24 requests/s. */
-export const ORCID_GLOBAL_RATE_LIMIT = 30;
+const ORCID_GLOBAL_RATE_LIMIT = 30;
 const MAX_PDF_BODY_BYTES = 6 * 1024 * 1024;
 const PDF_TIMEOUT_MS = 45000;
 const SESSION_PATH = '/api/ai/session';
@@ -453,7 +453,7 @@ const withCorsHeaders = (request: Request, env: Env, response: Response): Respon
  * The caller's address for rate limits. IPv6 hosts usually own a whole /64, so one machine could rotate
  * through billions of addresses; IPv6 is keyed by its /64 prefix instead.
  */
-export const getClientIp = (request: Request): string => {
+const getClientIp = (request: Request): string => {
   const ip = normalizeText(request.headers.get('cf-connecting-ip'));
   if (!ip) return 'unknown';
   if (!ip.includes(':')) return ip;
