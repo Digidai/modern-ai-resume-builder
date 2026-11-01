@@ -293,6 +293,7 @@ Notes:
 | `npm run preview` | Preview the production build |
 | `npm run test` | Run unit/integration tests (Vitest) |
 | `npm run test:watch` | Run tests in watch mode |
+| `npm run smoke:agent [-- <url>]` | Smoke-test the agent API and MCP server on a live deployment (default https://genedai.cv; uses 6 renders) |
 | `npm run seo:postbuild` | Run SEO postbuild only |
 | `npm run jobtitles:validate` | Validate job titles (duplicates, slug collisions) |
 | `npm run roles:sync` | Merge `src/data/roles/*.json` into `jobTitles.json` and `roleGuides.json` (`--check` reports missing examples, duplicates, collisions) |
