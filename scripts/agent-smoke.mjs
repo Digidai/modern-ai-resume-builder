@@ -125,7 +125,13 @@ const federal = {
 
 console.log(`Agent smoke test against ${BASE}\n`);
 
-const templates = await fetch(`${BASE}/api/agent/templates`).then((r) => r.json());
+const first = await fetch(`${BASE}/api/agent/templates`);
+if (first.headers.get('cf-mitigated') === 'challenge' || !first.headers.get('content-type')?.includes('json')) {
+  // Bot Fight Mode (or a WAF rule) answered instead of the Worker; every other request would fail the same way.
+  console.log(`FAIL GET /api/agent/templates returned ${first.status} ${first.headers.get('cf-mitigated') === 'challenge' ? 'a Cloudflare bot challenge' : first.headers.get('content-type')}, not the API`);
+  process.exit(1);
+}
+const templates = await first.json();
 check(Array.isArray(templates.templates) && templates.templates.some((t) => t.id === 'federal' && t.maxPages === 2), 'GET /api/agent/templates lists federal with maxPages 2', `${templates.templates?.length} templates`);
 
 // 1 render
