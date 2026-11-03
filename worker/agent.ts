@@ -622,6 +622,11 @@ interface Tool {
 
 const isTruthy = (value: unknown) => value === true || value === 1 || (typeof value === 'string' && /^(1|true|yes)$/i.test(value));
 
+const serverIcons = (origin: string) => [
+  { src: `${origin}/icon-256.png`, mimeType: 'image/png', sizes: ['256x256'] },
+  { src: `${origin}/favicon.svg`, mimeType: 'image/svg+xml', sizes: ['any'] },
+];
+
 const text = (value: unknown): Json => ({ type: 'text', text: typeof value === 'string' ? value : JSON.stringify(value, null, 2) });
 
 const TOOLS: Tool[] = [
@@ -632,7 +637,7 @@ const TOOLS: Tool[] = [
       `Lists the ${TEMPLATES.length} resume templates with id, description, who each suits, ATS status and a preview image URL. ATS-friendly templates are single-column and parse reliably in applicant tracking systems; recommend them for online applications.`,
     inputSchema: { type: 'object', properties: { ats_only: { type: 'boolean', description: 'Only ATS-friendly templates.' } } },
     annotations: { readOnlyHint: true, openWorldHint: false },
-    run: async (args, { origin }) => [text(listTemplates(origin, isTruthy(args.ats_only)))],
+    run: async (args, { origin }) => [text({ templates: listTemplates(origin, isTruthy(args.ats_only)) })],
   },
   {
     name: 'get_writing_guide',
@@ -805,7 +810,7 @@ const handleRpcMessage = async (message: unknown, ctx: ToolContext): Promise<Jso
       return reply({
         protocolVersion: MCP_PROTOCOL_VERSIONS.includes(requested) ? requested : MCP_PROTOCOL_VERSIONS[0],
         capabilities: { tools: { listChanged: false } },
-        serverInfo: { name: 'moderncv', title: 'ModernCV Resume Builder', version: SERVER_VERSION, websiteUrl: ctx.origin },
+        serverInfo: { name: 'moderncv', title: 'ModernCV Resume Builder', version: SERVER_VERSION, websiteUrl: ctx.origin, icons: serverIcons(ctx.origin) },
         instructions: SERVER_INSTRUCTIONS,
       });
     }
@@ -824,7 +829,11 @@ const handleRpcMessage = async (message: unknown, ctx: ToolContext): Promise<Jso
       }
       const args = params?.arguments && typeof params.arguments === 'object' ? (params.arguments as Json) : {};
       try {
-        return reply({ content: await tool.run(args, ctx) });
+        const content = await tool.run(args, ctx);
+        // JSON results also go out as structuredContent so clients can read fields without parsing text.
+        const first = content[0];
+        const structured = first?.type === 'text' && typeof first.text === 'string' && first.text.startsWith('{') ? JSON.parse(first.text) : undefined;
+        return reply(structured ? { content, structuredContent: structured } : { content });
       } catch (error) {
         const messageText = error instanceof AgentError ? error.message : 'The tool failed unexpectedly.';
         if (!(error instanceof AgentError)) console.error('[mcp] tool failed', { tool: tool.name, error: String(error) });

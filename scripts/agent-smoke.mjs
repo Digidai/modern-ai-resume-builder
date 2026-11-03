@@ -166,7 +166,7 @@ if (check(longScale !== null, 'long resume: warning names a scale', long.warning
 }
 
 const init = await mcp('initialize', { protocolVersion: '2025-06-18', capabilities: {}, clientInfo: { name: 'agent-smoke', version: '1' } });
-check(init.body.result?.serverInfo?.name === 'moderncv', 'MCP initialize', init.body.result?.serverInfo?.version);
+check(init.body.result?.serverInfo?.name === 'moderncv' && init.body.result.serverInfo.icons?.length > 0, 'MCP initialize (with server icons)', init.body.result?.serverInfo?.version);
 const tools = await mcp('tools/list');
 check(tools.body.result?.tools?.some((t) => t.name === 'render_pdf'), 'MCP tools/list includes render_pdf', `${tools.body.result?.tools?.length} tools`);
 const rawMcp = async (body) => {
@@ -185,6 +185,7 @@ const summary = content[0]?.type === 'text' ? JSON.parse(content[0].text) : {};
 check(!call.body.result?.isError && content.every((c) => c.type === 'text'), 'MCP render_pdf returns text only (no embedded PDF)', content.map((c) => c.type).join(', '));
 const fedScale = scaleIn(summary.warnings ?? []);
 check(summary.pages > 2 && fedScale !== null && /limits federal resumes to 2/.test(summary.warnings.join(' ')), 'federal over 2 pages: warning names a 2-page scale', (summary.warnings ?? []).join(' | '));
+check(call.body.result?.structuredContent?.download_url === summary.download_url, 'MCP render_pdf also returns structuredContent');
 if (check(typeof summary.download_url === 'string' && summary.download_url.startsWith(`${BASE}/api/agent/download/`), 'MCP render_pdf returns download_url', summary.expires_at)) {
   const download = await fetchWithRetry(summary.download_url);
   const bytes = new Uint8Array(await download.arrayBuffer());
