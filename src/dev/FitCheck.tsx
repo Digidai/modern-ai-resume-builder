@@ -9,6 +9,7 @@ import { BLANK_RESUME_DATA, createId } from '../utils/resumeData';
 import type { ResumeData } from '../types';
 import { trimExample, TRIM_LEVELS } from '../shared/trimExample.mjs';
 import { MM_TO_PX, paperSize } from '../constants/print';
+import { resumeFontsReady } from '../fonts';
 /** Highest page ratio at scale 1 that still fits at the 0.85 minimum (zoom shrinks height at least linearly). */
 const MAX_RATIO = 1.22;
 
@@ -53,7 +54,7 @@ const FitCheck: React.FC = () => {
         frame = requestAnimationFrame(measure);
         return;
       }
-      void document.fonts.ready.then(() =>
+      void resumeFontsReady().then(() =>
         requestAnimationFrame(() => {
           const heights: Record<string, number> = {};
           document.querySelectorAll<HTMLElement>('[data-fit-id]').forEach((el) => {

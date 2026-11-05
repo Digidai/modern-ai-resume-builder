@@ -20,3 +20,5 @@ jobs:
       - run: npm run typecheck
       - run: npm test
       - run: npm run build
+      # Bundles the Worker the way Workers Builds does (it imports app code from src/), without deploying.
+      - run: npx wrangler deploy --dry-run --outdir /tmp/worker-bundle

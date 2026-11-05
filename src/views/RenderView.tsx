@@ -9,6 +9,7 @@ import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
 import { paperSize } from '../constants/print';
+import { resumeFontsReady } from '../fonts';
 
 /**
  * Bare paper (A4 or US Letter) for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
@@ -57,7 +58,7 @@ const RenderView: React.FC = () => {
         frame = requestAnimationFrame(waitForTemplate);
         return;
       }
-      void document.fonts.ready.then(() =>
+      void resumeFontsReady().then(() =>
         requestAnimationFrame(() => {
           const fullBleed = isFullBleedTemplate(data.templateId);
           const pages = measurePrintLayout(paper, fullBleed).pages;

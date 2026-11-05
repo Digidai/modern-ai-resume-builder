@@ -6,7 +6,12 @@ import { preloadPage } from './routes';
 import { preloadRoleExample } from './data/roleExamples';
 import { preloadResumeTemplate } from './components/ResumeTemplateRenderer';
 import { isPrerendered } from './prerender';
-import './resumeFonts';
+// The site's own text; the resume fonts load after the page (src/fonts.ts).
+import '@fontsource/inter/400.css';
+import '@fontsource/inter/500.css';
+import '@fontsource/inter/600.css';
+import '@fontsource/inter/700.css';
+import { loadResumeFonts } from './fonts';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 const computeBasename = () => {
@@ -22,6 +27,8 @@ const computeBasename = () => {
   }
   return '/';
 };
+
+void loadResumeFonts();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

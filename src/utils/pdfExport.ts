@@ -4,6 +4,7 @@ import { ResumeData } from '../types';
 import { isFullBleedTemplate } from '../constants/templates';
 import { MM_TO_PX } from '../constants/print';
 import { measurePrintLayout, pageBoxMm, paperOf, repeatedFrameSpace, SUPPORTS_CLONE, withPrintedPages } from './printLayout';
+import { resumeFontsReady } from '../fonts';
 
 const EXPORT_PIXEL_RATIO = 2;
 const MM_TO_PT = 72 / 25.4;
@@ -180,9 +181,7 @@ export const exportResumeToPdf = async ({
   previewElementId = 'resume-preview-container',
   onProgress,
 }: ExportResumeToPdfOptions) => {
-  if (document.fonts?.ready) {
-    await document.fonts.ready;
-  }
+  await resumeFontsReady();
 
   const element = await getPreviewElement(previewElementId);
   await nextFrame();

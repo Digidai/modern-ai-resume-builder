@@ -1,4 +1,5 @@
 import { postWithAiSession } from '../services/aiService';
+import { resumeFontsReady } from '../fonts';
 
 const stripQuotes = (value: string) => value.trim().replace(/^["']|["']$/g, '');
 
@@ -44,7 +45,7 @@ const inlineFontFace = async (rule: CSSFontFaceRule, baseUrl: string): Promise<s
 
 /** `@font-face` rules for the fonts the element uses, with their files inlined as data: URLs. */
 export const buildFontEmbedCss = async (element: HTMLElement): Promise<string> => {
-  await document.fonts.ready;
+  await resumeFontsReady();
   const usedFamilies = collectUsedFamilies(element);
   const jobs: Promise<string | null>[] = [];
   for (const sheet of Array.from(document.styleSheets)) {

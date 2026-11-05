@@ -174,11 +174,15 @@ const FitLine: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         };
         fit();
         let active = true;
-        void document.fonts?.ready.then(() => active && fit());
+        // Refit whenever fonts arrive: the resume fonts' stylesheet loads after the page (src/fonts.ts).
+        const refit = () => active && fit();
+        void document.fonts?.ready.then(refit);
+        document.fonts?.addEventListener('loadingdone', refit);
         const observer = new ResizeObserver(() => fit());
         observer.observe(parent);
         return () => {
             active = false;
+            document.fonts?.removeEventListener('loadingdone', refit);
             observer.disconnect();
         };
     }, [children]);
