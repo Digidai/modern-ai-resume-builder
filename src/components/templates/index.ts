@@ -56,3 +56,6 @@ export * from './LinenTemplate';
 export * from './BannerTemplate';
 export * from './WaveTemplate';
 export * from './FrameTemplate';
+export * from './EssentialTemplate';
+export * from './CapitalTemplate';
+export * from './CampusTemplate';

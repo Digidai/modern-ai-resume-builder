@@ -1065,7 +1065,7 @@ const buildResumeSchema = (siteUrl, templates) => {
       },
       awards: {
         type: 'array',
-        description: 'Grants, fellowships, scholarships, prizes and performance awards. Shown by templates with awards: true in list_templates (the academic ones and Federal).',
+        description: 'Grants, fellowships, scholarships, prizes and performance awards. Shown by templates with awards: true in list_templates (the academic ones, Federal, Capital and Campus).',
         items: {
           type: 'object',
           required: ['title'],

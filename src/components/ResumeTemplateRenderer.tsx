@@ -80,6 +80,9 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   banner: () => import('./templates/BannerTemplate').then((module) => ({ default: module.BannerTemplate })),
   wave: () => import('./templates/WaveTemplate').then((module) => ({ default: module.WaveTemplate })),
   frame: () => import('./templates/FrameTemplate').then((module) => ({ default: module.FrameTemplate })),
+  essential: () => import('./templates/EssentialTemplate').then((module) => ({ default: module.EssentialTemplate })),
+  capital: () => import('./templates/CapitalTemplate').then((module) => ({ default: module.CapitalTemplate })),
+  campus: () => import('./templates/CampusTemplate').then((module) => ({ default: module.CampusTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 
