@@ -7,7 +7,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 // right-aligned), then the role in italics. One column, real text, standard headings.
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] break-after-avoid border-l-[3px] border-(--accent) bg-(--accent)/8 px-[10px] py-[3px] text-[13.5px] font-bold uppercase leading-[1.5] tracking-[0.14em] text-(--accent)">
+    <h2 className="mb-[9px] break-after-avoid border-l-[3px] border-(--accent) bg-(--accent)/8 px-[10px] py-[3px] text-[13.5px] font-bold uppercase leading-[1.5] tracking-[0.08em] text-(--accent)">
         {children}
     </h2>
 );

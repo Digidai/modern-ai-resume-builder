@@ -43,3 +43,20 @@ describe('TalkLine, AwardLine and TeachingLine', () => {
     expect(text(createElement(TeachingLine, { entry, showYear: false }))).toBe('CS 229, Teaching Assistant.');
   });
 });
+
+describe('ATS-friendly templates', () => {
+  // Chrome's PDFs place letter-spaced glyphs one by one; past about 0.1em, text extraction (pdftotext,
+  // which ATS parsers resemble) reads "E D U C AT I O N" and misses the heading.
+  it('keep letter-spacing at or below 0.08em so PDF text extracts as words', async () => {
+    const { TEMPLATES } = await import('../../constants/templates');
+    const { TEMPLATE_LOADERS } = await import('../ResumeTemplateRenderer');
+    const { FIXTURES } = await import('../../dev/fixtures');
+    const wide: string[] = [];
+    for (const template of TEMPLATES.filter((t) => t.atsFriendly)) {
+      const { default: Template } = await TEMPLATE_LOADERS[template.id as keyof typeof TEMPLATE_LOADERS]();
+      const html = renderToStaticMarkup(createElement(Template, { data: { ...FIXTURES.default, templateId: template.id } }));
+      for (const [cls, value] of html.matchAll(/tracking-\[([\d.]+)em\]|tracking-widest/g)) if (!value || Number(value) > 0.08) wide.push(`${template.id}: ${cls}`);
+    }
+    expect(wide).toEqual([]);
+  });
+});

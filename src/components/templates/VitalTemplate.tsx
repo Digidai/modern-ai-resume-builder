@@ -7,7 +7,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 // Headings carry a short accent bar; dates sit right-aligned on the entry's first line.
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[8px] flex items-center gap-[9px] break-after-avoid border-b border-slate-200 pb-[5px] text-[14px] font-bold uppercase leading-tight tracking-[0.12em] text-slate-900">
+    <h2 className="mb-[8px] flex items-center gap-[9px] break-after-avoid border-b border-slate-200 pb-[5px] text-[14px] font-bold uppercase leading-tight tracking-[0.08em] text-slate-900">
         <span aria-hidden className="h-[14px] w-[4px] shrink-0 rounded-[1px] bg-(--accent)" />
         {children}
     </h2>
@@ -47,7 +47,7 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <dl className="mt-[10px] grid grid-flow-row-dense grid-cols-2 gap-x-[8mm] gap-y-[2px] border-t-2 border-(--accent) pt-[8px] text-[13.5px] leading-[1.45]">
                             {contacts.map((entry) => (
                                 <div key={entry.id} className={`flex min-w-0 items-baseline gap-[8px] ${entry.value.length > 34 ? 'col-span-2' : ''}`}>
-                                    <dt className="w-[20mm] shrink-0 text-[11px] font-semibold uppercase tracking-[0.1em] text-slate-500 wrap-break-word">{entry.label}</dt>
+                                    <dt className="w-[20mm] shrink-0 text-[11px] font-semibold uppercase tracking-[0.08em] text-slate-500 wrap-break-word">{entry.label}</dt>
                                     <dd className="min-w-0 text-slate-800">
                                         <ContactLink entry={entry} className="wrap-anywhere" />
                                     </dd>

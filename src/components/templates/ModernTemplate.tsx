@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3 border-b border-(--accent)/30 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.1em] text-(--accent) break-after-avoid">
+    <h2 className="mb-3 border-b border-(--accent)/30 pb-1.5 text-[13.5px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
         {children}
     </h2>
 );

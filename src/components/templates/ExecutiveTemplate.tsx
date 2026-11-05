@@ -5,7 +5,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <div className="mb-3 flex items-center gap-4 break-after-avoid">
         <div aria-hidden="true" className="h-px flex-1 bg-(--accent)/35" />
-        <h2 className="shrink-0 font-playfair text-[17px] font-bold uppercase tracking-[0.16em] text-(--accent)">{children}</h2>
+        <h2 className="shrink-0 font-playfair text-[17px] font-bold uppercase tracking-[0.08em] text-(--accent)">{children}</h2>
         <div aria-hidden="true" className="h-px flex-1 bg-(--accent)/35" />
     </div>
 );
@@ -28,7 +28,7 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div role="heading" aria-level={1} className="font-playfair text-[40px] font-bold leading-[1.1] tracking-[0.01em] text-slate-900 wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title.trim() && (
-                    <p className="mt-2 text-[14px] font-bold uppercase tracking-[0.24em] text-(--accent) wrap-break-word">{data.title}</p>
+                    <p className="mt-2 text-[14px] font-bold uppercase tracking-[0.08em] text-(--accent) wrap-break-word">{data.title}</p>
                 )}
                 {contacts.length > 0 && (
                     <div className="mt-4 flex w-full flex-wrap justify-center gap-x-6 gap-y-1 border-y border-(--accent) py-2 text-[13.5px] text-slate-700">

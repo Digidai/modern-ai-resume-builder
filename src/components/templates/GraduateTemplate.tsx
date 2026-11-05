@@ -7,7 +7,7 @@ import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactItem
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[7px] flex items-center gap-[10px] text-[13px] font-bold uppercase tracking-[0.12em] text-(--accent) break-after-avoid">
+        <h2 className="mb-[7px] flex items-center gap-[10px] text-[13px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
             {title}
             <span aria-hidden className="h-px flex-1 bg-(--accent)/35" />
         </h2>

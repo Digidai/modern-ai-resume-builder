@@ -7,7 +7,7 @@ import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[8px] border-b border-neutral-300 pb-[3px] text-[12.5px] font-semibold uppercase tracking-[0.1em] text-(--accent) break-after-avoid">{title}</h2>
+        <h2 className="mb-[8px] border-b border-neutral-300 pb-[3px] text-[12.5px] font-semibold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">{title}</h2>
         {children}
     </section>
 );

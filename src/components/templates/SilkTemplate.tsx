@@ -41,7 +41,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
             <header className="mb-6 text-center">
                 <div role="heading" aria-level={1} className="font-garamond text-[42px] leading-tight italic text-stone-900">{data.fullName}</div>
                 {data.title.trim() && (
-                    <p className="mt-1.5 text-[13px] font-semibold tracking-[0.28em] uppercase text-stone-600">{data.title}</p>
+                    <p className="mt-1.5 text-[13px] font-semibold tracking-[0.08em] uppercase text-stone-600">{data.title}</p>
                 )}
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1 text-[13.5px] text-stone-700">
@@ -75,7 +75,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
                                             </>
                                         }
                                     >
-                                        {exp.role && <h3 className="pt-0.5 text-[13.5px] font-bold tracking-[0.12em] uppercase text-stone-900">{exp.role}</h3>}
+                                        {exp.role && <h3 className="pt-0.5 text-[13.5px] font-bold tracking-[0.08em] uppercase text-stone-900">{exp.role}</h3>}
                                         <RichText text={exp.description} className={`mt-1.5 ${body}`} listClassName={descriptionList} />
                                     </Entry>
                                 );

@@ -58,7 +58,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
                     </div>
                 )}
                 {data.title.trim() && (
-                    <p className="mt-2 font-roboto text-[13px] font-medium uppercase tracking-[0.14em] text-(--accent) wrap-break-word">{data.title}</p>
+                    <p className="mt-2 font-roboto text-[13px] font-medium uppercase tracking-[0.08em] text-(--accent) wrap-break-word">{data.title}</p>
                 )}
                 {location && <p className="mt-1.5 text-[13px] italic text-[#666666] wrap-break-word">{location.value}</p>}
                 {links.length > 0 && (

@@ -4,7 +4,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 /** One section: a side label in the left column, content on the right (DOM order = reading order). */
 const Row: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
     <section className="grid grid-cols-[30mm_minmax(0,1fr)] gap-[7mm]">
-        <h2 className="text-[12px] font-bold uppercase tracking-[0.14em] leading-[20px] text-(--accent)">{label}</h2>
+        <h2 className="text-[12px] font-bold uppercase tracking-[0.08em] leading-[20px] text-(--accent)">{label}</h2>
         <div className="min-w-0">{children}</div>
     </section>
 );

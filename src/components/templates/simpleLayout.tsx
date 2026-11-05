@@ -32,10 +32,10 @@ const listClass = 'list-disc pl-[1.1em] space-y-[1px] marker:text-(--accent)';
 const COLUMN = 'grid grid-cols-[35mm_minmax(0,1fr)] gap-x-[5mm]';
 
 const HEADINGS: Record<SimpleStyle['heading'], string> = {
-    rule: 'border-b border-neutral-800 pb-[3px] text-[13.5px] font-bold uppercase tracking-[0.1em] text-(--accent)',
-    line: 'flex items-center gap-[10px] text-[13.5px] font-bold uppercase tracking-[0.14em] text-(--accent) after:h-px after:flex-1 after:bg-neutral-300 after:content-[""]',
+    rule: 'border-b border-neutral-800 pb-[3px] text-[13.5px] font-bold uppercase tracking-[0.08em] text-(--accent)',
+    line: 'flex items-center gap-[10px] text-[13.5px] font-bold uppercase tracking-[0.08em] text-(--accent) after:h-px after:flex-1 after:bg-neutral-300 after:content-[""]',
     bar: 'border-l-[4px] border-(--accent) pl-[9px] text-[15px] font-bold leading-tight text-neutral-900',
-    tint: 'bg-neutral-100 px-[8px] py-[3px] text-[13.5px] font-bold uppercase tracking-[0.12em] text-(--accent) print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]',
+    tint: 'bg-neutral-100 px-[8px] py-[3px] text-[13.5px] font-bold uppercase tracking-[0.08em] text-(--accent) print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]',
     short: 'text-[15px] font-bold uppercase tracking-[0.08em] text-neutral-900 after:mt-[4px] after:block after:h-[2px] after:w-[30px] after:bg-(--accent) after:content-[""]',
 };
 

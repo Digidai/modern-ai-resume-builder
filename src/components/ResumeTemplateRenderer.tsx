@@ -16,7 +16,7 @@ type TemplateLoader = () => Promise<{ default: TemplateComponent }>;
 
 const createLazyTemplate = (loader: TemplateLoader): React.LazyExoticComponent<TemplateComponent> => lazy(loader);
 
-const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
+export const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   modern: () => import('./templates/ModernTemplate').then((module) => ({ default: module.ModernTemplate })),
   minimalist: () => import('./templates/MinimalistTemplate').then((module) => ({ default: module.MinimalistTemplate })),
   sidebar: () => import('./templates/SidebarTemplate').then((module) => ({ default: module.SidebarTemplate })),

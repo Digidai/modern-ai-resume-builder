@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.25em] text-(--accent) mb-3.5 break-after-avoid">
+    <h2 className="flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-(--accent) mb-3.5 break-after-avoid">
         <span className="h-px flex-1 bg-(--accent)/20" aria-hidden="true" />
         {children}
         <span className="h-px flex-1 bg-(--accent)/20" aria-hidden="true" />
@@ -27,7 +27,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-col flex-1 gap-6 px-[16mm] pt-[13mm] pb-[12mm] bg-white font-inter text-[14px] leading-normal text-slate-700 [--accent:var(--rs-accent,#47607A)]">
             <header className="text-center">
                 <div role="heading" aria-level={1} className="font-raleway text-[38px] font-light tracking-wide leading-tight text-slate-900 wrap-break-word">{data.fullName}</div>
-                {data.title && <p className="mt-1.5 text-[13px] font-semibold uppercase tracking-[0.22em] text-(--accent) wrap-break-word">{data.title}</p>}
+                {data.title && <p className="mt-1.5 text-[13px] font-semibold uppercase tracking-[0.08em] text-(--accent) wrap-break-word">{data.title}</p>}
                 {contacts.length > 0 && (
                     <ul className="mt-4 flex justify-center flex-wrap gap-2 text-[12.5px] font-medium text-slate-700">
                         {contacts.map((entry) => (

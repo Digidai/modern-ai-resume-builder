@@ -1,16 +1,14 @@
 import React from 'react';
 import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
-// "Meridian": a modern take on the Harvard serif resume. Left-aligned serif name, small-caps
-// accent headings over a hairline, and a right-hand date rail: every dated entry carries its dates
+// "Meridian": a modern take on the Harvard serif resume. Left-aligned serif name, capitalised
+// accent headings over a hairline (synthesised small caps extract as "E ducation", so ATS misses them), and a right-hand date rail: every dated entry carries its dates
 // in a narrow column fenced off by a vertical hairline. Dates follow the heading in the DOM (grid
 // placement moves them into the rail), so text extracts as heading → dates → company → bullets.
 
-const SMALL_CAPS = '[font-variant-caps:small-caps]';
-
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className={`mb-[9px] flex items-center gap-3 break-after-avoid text-[19px] font-semibold leading-tight tracking-[0.06em] text-(--accent) ${SMALL_CAPS}`}>
+        <h2 className={`mb-[9px] flex items-center gap-3 break-after-avoid text-[15px] font-semibold uppercase leading-tight tracking-[0.06em] text-(--accent)`}>
             <span className="shrink-0">{title}</span>
             <span aria-hidden className="h-px min-w-6 flex-1 bg-(--accent)/30" />
         </h2>
