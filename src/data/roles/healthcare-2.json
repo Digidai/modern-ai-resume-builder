@@ -819,7 +819,8 @@
         "dubai": 0.98,
         "linen": 0.92,
         "wave": 0.94,
-        "frame": 0.96
+        "frame": 0.96,
+        "crest": 0.98
       },
       "trimLetter": {
         "quartz": 10,

@@ -267,7 +267,8 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "crest": 0.99
       }
     },
     "SAP Consultant": {

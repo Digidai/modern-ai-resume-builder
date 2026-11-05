@@ -1150,7 +1150,8 @@
         "pop": 0.85,
         "munich": 0.98,
         "seoul": 0.92,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -1973,7 +1974,8 @@
         "dubai": 0.97,
         "linen": 0.95,
         "wave": 0.97,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 10

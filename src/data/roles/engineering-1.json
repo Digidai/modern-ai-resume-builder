@@ -442,7 +442,8 @@
         "munich": 0.95,
         "seoul": 0.93,
         "dubai": 0.95,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -544,7 +545,8 @@
         "munich": 0.95,
         "seoul": 0.91,
         "dubai": 0.95,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.94
       },
       "trimLetter": {
         "berlin": 10
@@ -729,7 +731,8 @@
         "munich": 0.95,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.99
       }
     },
     "Frontend Developer": {
@@ -1069,7 +1072,9 @@
         "munich": 0.91,
         "seoul": 0.93,
         "dubai": 0.95,
-        "meadow": 0.94
+        "meadow": 0.94,
+        "crest": 0.96,
+        "sage": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -2653,7 +2658,8 @@
         "cast": 0.92,
         "munich": 0.95,
         "seoul": 0.95,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       },
       "fitLetter": {
         "modern": 0.86,
@@ -2685,7 +2691,8 @@
         "munich": 0.93,
         "seoul": 0.91,
         "dubai": 0.95,
-        "meadow": 0.92
+        "meadow": 0.92,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3207,7 +3214,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       }
     },
     "Scala Developer": {
@@ -3473,7 +3481,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3547,7 +3556,8 @@
         "cast": 0.99,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       },
       "fitLetter": {
         "modern": 0.87,
@@ -3578,7 +3588,8 @@
         "munich": 0.93,
         "seoul": 0.91,
         "dubai": 0.91,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.94
       },
       "trimLetter": {
         "berlin": 6
@@ -4103,7 +4114,8 @@
         "dubai": 0.97,
         "wave": 0.99,
         "frame": 0.95,
-        "meadow": 0.94
+        "meadow": 0.94,
+        "sage": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -4755,7 +4767,8 @@
         "dubai": 0.95,
         "manila": 0.99,
         "nova": 0.99,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.97
       },
       "trimLetter": {
         "iron": 5
@@ -4939,7 +4952,8 @@
         "dubai": 0.95,
         "manila": 0.99,
         "nova": 0.99,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 6,
@@ -5347,7 +5361,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6307,7 +6322,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6571,7 +6587,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -7045,7 +7062,8 @@
         "cast": 0.96,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     },
     "Machine Learning Intern": {

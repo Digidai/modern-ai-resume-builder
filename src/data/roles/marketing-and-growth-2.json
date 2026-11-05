@@ -215,7 +215,8 @@
         "pop": 0.87,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 8,

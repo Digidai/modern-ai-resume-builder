@@ -262,7 +262,8 @@
         "munich": 0.97,
         "seoul": 0.95,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       }
     },
     "CI/CD Engineer": {
@@ -627,7 +628,8 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       }
     },
     "Application Security Engineer": {
@@ -801,7 +803,8 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.95,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.98
       }
     },
     "Security Architect": {
@@ -901,7 +904,8 @@
         "linen": 0.95,
         "wave": 0.97,
         "frame": 0.95,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.94
       },
       "trimLetter": {
         "berlin": 10,
@@ -1185,7 +1189,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1281,7 +1286,8 @@
         "munich": 0.95,
         "seoul": 0.92,
         "dubai": 0.99,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.98
       }
     },
     "Threat Intelligence Analyst": {
@@ -1587,7 +1593,8 @@
         "munich": 0.97,
         "seoul": 0.91,
         "dubai": 0.93,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.94
       },
       "trimLetter": {
         "berlin": 8
@@ -1994,7 +2001,8 @@
         "seoul": 0.95,
         "dubai": 0.95,
         "frame": 0.99,
-        "meadow": 0.95
+        "meadow": 0.95,
+        "crest": 0.95
       },
       "trimLetter": {
         "quartz": 12
@@ -2221,7 +2229,8 @@
         "munich": 0.95,
         "seoul": 0.97,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.97
       }
     },
     "MLOps Engineer": {
@@ -2388,7 +2397,8 @@
         "munich": 0.97,
         "seoul": 0.95,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       }
     },
     "AI Research Engineer": {
@@ -2958,7 +2968,8 @@
         "seoul": 0.92,
         "dubai": 0.95,
         "frame": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 7
@@ -3662,7 +3673,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       }
     },
     "Kubernetes Engineer": {
@@ -4530,7 +4542,8 @@
         "cast": 0.91,
         "munich": 0.96,
         "seoul": 0.92,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.96
       }
     },
     "DataOps Engineer": {
@@ -5178,7 +5191,8 @@
         "pop": 0.86,
         "cast": 0.91,
         "munich": 0.99,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "crest": 0.99
       }
     },
     "Technical Architect": {
@@ -6238,7 +6252,8 @@
         "cast": 0.94,
         "bronx": 0.85,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       },
       "trimLetter": {
         "bronx": 12
@@ -6889,7 +6904,8 @@
         "seoul": 0.89,
         "dubai": 0.95,
         "manila": 0.98,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.97
       }
     }
   }

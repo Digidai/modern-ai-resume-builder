@@ -88,7 +88,8 @@
         "pop": 0.86,
         "cast": 0.96,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Substitute Teacher": {
@@ -781,7 +782,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.86,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "crest": 0.99
       }
     },
     "Curriculum Developer": {
@@ -975,7 +977,8 @@
         "mono": 0.88,
         "pop": 0.93,
         "cast": 0.96,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "crest": 0.99
       }
     },
     "Academic Coordinator": {
@@ -1138,7 +1141,8 @@
         "pop": 0.87,
         "cast": 0.93,
         "munich": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Student Success Coach": {
@@ -1232,7 +1236,8 @@
         "cast": 0.87,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.98
       }
     },
     "Instructional Coach": {
@@ -1416,7 +1421,8 @@
         "munich": 0.97,
         "seoul": 0.95,
         "dubai": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.97
       }
     },
     "Assistant Principal": {
@@ -1684,7 +1690,8 @@
         "dubai": 0.97,
         "linen": 0.99,
         "wave": 0.98,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.99
       }
     },
     "School Administrator": {
@@ -2024,7 +2031,8 @@
         "pop": 0.88,
         "cast": 0.96,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Teaching Assistant": {
@@ -3561,7 +3569,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.92,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.97
       }
     },
     "Reading Specialist": {
@@ -3651,7 +3660,8 @@
         "pop": 0.86,
         "cast": 0.94,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Adjunct Professor": {

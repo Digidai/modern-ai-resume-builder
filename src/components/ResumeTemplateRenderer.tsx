@@ -93,6 +93,16 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   cameo: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CameoTemplate })),
   sterling: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SterlingTemplate })),
   meadow: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MeadowTemplate })),
+  quill: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.QuillTemplate })),
+  cobalt: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CobaltTemplate })),
+  granite: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.GraniteTemplate })),
+  bedrock: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.BedrockTemplate })),
+  linear: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.LinearTemplate })),
+  crest: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CrestTemplate })),
+  vista: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.VistaTemplate })),
+  ember: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.EmberTemplate })),
+  sage: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SageTemplate })),
+  pearl: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.PearlTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

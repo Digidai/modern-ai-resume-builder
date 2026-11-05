@@ -431,7 +431,8 @@
         "seoul": 0.9,
         "dubai": 0.96,
         "manila": 0.99,
-        "nova": 0.99
+        "nova": 0.99,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 8,
@@ -1073,7 +1074,8 @@
         "mono": 0.92,
         "pop": 0.88,
         "seoul": 0.91,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     }
   }

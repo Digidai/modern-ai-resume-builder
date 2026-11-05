@@ -425,7 +425,8 @@
         "pop": 0.88,
         "cast": 0.98,
         "munich": 0.99,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "crest": 0.99
       }
     },
     "Research Scientist": {
@@ -607,7 +608,8 @@
         "dubai": 0.94,
         "manila": 0.99,
         "nova": 0.98,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.95
       }
     },
     "Principal Scientist": {
@@ -929,7 +931,8 @@
         "cast": 0.93,
         "munich": 0.99,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Laboratory Manager": {
@@ -1582,7 +1585,8 @@
         "linen": 0.96,
         "wave": 0.97,
         "frame": 0.96,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 10,

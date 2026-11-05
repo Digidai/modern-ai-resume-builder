@@ -1,11 +1,11 @@
 ---
 name: moderncv-resume
-description: Write, design and export a professional resume with ModernCV (77 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
+description: Write, design and export a professional resume with ModernCV (87 templates, vector PDF, free, no account). Use when the user asks to create, rewrite, tailor, format or export a resume or CV, or wants a resume PDF for a job application.
 ---
 
 # ModernCV resume skill
 
-ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 or US Letter PDF in one of 77 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
+ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 or US Letter PDF in one of 87 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
 If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`. Over MCP, `render_pdf` returns `download_url`, a link that downloads the PDF for 7 days; give it to the user as a clickable link (a resume too long for a link comes back as an embedded PDF instead). Tool names map to HTTP routes: `get_writing_guide` → `GET /api/agent/guide`, `get_example_resume` → `GET /api/agent/example`, `get_resume_schema` → `GET /resume.schema.json`, `list_templates` → `GET /api/agent/templates`, `import_publications` → `POST /api/agent/publications`, `render_preview` / `render_pdf` / `create_editor_link` / `export_latex` → `POST /api/agent/preview` / `pdf` / `link` / `latex`.
 

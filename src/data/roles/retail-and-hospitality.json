@@ -790,7 +790,8 @@
         "iron": 0.85,
         "munich": 0.98,
         "seoul": 0.96,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       },
       "trimLetter": {
         "iron": 5
@@ -894,7 +895,8 @@
         "dubai": 0.95,
         "manila": 0.97,
         "nova": 0.98,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 2
@@ -2324,7 +2326,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 6

@@ -66,7 +66,8 @@
         "pop": 0.85,
         "cast": 0.98,
         "federal": 0.99,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "crest": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -101,7 +102,8 @@
         "seoul": 0.91,
         "dubai": 0.94,
         "nova": 0.99,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 11
@@ -206,7 +208,8 @@
         "dubai": 0.92,
         "manila": 0.98,
         "nova": 0.97,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -309,7 +312,8 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.94,
-        "nova": 0.98
+        "nova": 0.98,
+        "crest": 0.96
       }
     },
     "Nurse Practitioner": {
@@ -415,7 +419,8 @@
         "seoul": 0.9,
         "dubai": 0.95,
         "linen": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 12
@@ -523,7 +528,8 @@
         "munich": 0.93,
         "seoul": 0.93,
         "dubai": 0.95,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 12
@@ -794,7 +800,8 @@
         "cast": 0.96,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     },
     "Medical Assistant": {
@@ -1133,7 +1140,8 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.97,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.98
       }
     },
     "Physical Therapist": {
@@ -1238,7 +1246,8 @@
         "munich": 0.95,
         "seoul": 0.92,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -1340,7 +1349,8 @@
         "munich": 0.95,
         "seoul": 0.95,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.99
       }
     },
     "Radiologic Technologist": {
@@ -1562,7 +1572,8 @@
         "seoul": 0.92,
         "dubai": 0.99,
         "linen": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.98
       }
     },
     "Medical Laboratory Technician": {
@@ -2255,7 +2266,8 @@
         "munich": 0.95,
         "seoul": 0.92,
         "dubai": 0.95,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.97
       }
     },
     "Care Coordinator": {
@@ -2500,7 +2512,8 @@
         "cast": 0.97,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.98
       }
     },
     "Social Worker": {
@@ -2599,7 +2612,8 @@
         "munich": 0.99,
         "seoul": 0.92,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 12
@@ -3221,7 +3235,8 @@
         "pop": 0.86,
         "cast": 0.93,
         "munich": 0.99,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "crest": 0.99
       }
     },
     "Medical Coder": {
@@ -3490,7 +3505,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.9,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -4485,7 +4501,8 @@
         "munich": 0.94,
         "seoul": 0.94,
         "dubai": 0.97,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 10

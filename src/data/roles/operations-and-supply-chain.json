@@ -340,7 +340,8 @@
         "cast": 0.91,
         "munich": 0.97,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.95
       }
     },
     "Logistics Manager": {
@@ -2416,7 +2417,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 6

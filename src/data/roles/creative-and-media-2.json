@@ -345,7 +345,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "iron": 0.89,
-        "seoul": 0.91
+        "seoul": 0.91,
+        "crest": 0.98
       },
       "trimLetter": {
         "iron": 8

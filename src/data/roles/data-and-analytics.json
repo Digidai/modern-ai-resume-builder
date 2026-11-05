@@ -80,7 +80,8 @@
         "munich": 0.97,
         "seoul": 0.94,
         "dubai": 0.98,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -112,7 +113,9 @@
         "dubai": 0.92,
         "manila": 0.97,
         "nova": 0.98,
-        "meadow": 0.95
+        "meadow": 0.95,
+        "crest": 0.94,
+        "sage": 0.99
       },
       "trimLetter": {
         "berlin": 11
@@ -312,7 +315,8 @@
         "dubai": 0.99,
         "linen": 0.99,
         "frame": 0.99,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.97
       }
     },
     "Machine Learning Scientist": {
@@ -421,7 +425,9 @@
         "munich": 0.92,
         "seoul": 0.93,
         "dubai": 0.95,
-        "meadow": 0.95
+        "meadow": 0.95,
+        "crest": 0.97,
+        "sage": 0.99
       },
       "trimLetter": {
         "berlin": 11
@@ -600,7 +606,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "munich": 0.98,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "crest": 0.98
       }
     },
     "Product Analyst": {
@@ -1381,7 +1388,8 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.98
       }
     },
     "Experimentation Analyst": {
@@ -1475,7 +1483,8 @@
         "cast": 0.94,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     },
     "BI Developer": {
@@ -1741,7 +1750,8 @@
         "dubai": 0.99,
         "linen": 0.99,
         "wave": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       }
     },
     "Data Architect": {
@@ -1839,7 +1849,8 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.99
       }
     },
     "Data Modeler": {
@@ -2026,7 +2037,8 @@
         "linen": 0.98,
         "wave": 0.99,
         "frame": 0.96,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.97
       },
       "trimLetter": {
         "berlin": 10,
@@ -2199,7 +2211,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "crest": 0.98
       }
     },
     "Data Quality Engineer": {
@@ -2464,7 +2477,8 @@
         "pop": 0.9,
         "cast": 0.96,
         "seoul": 0.98,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     },
     "Quantitative Analyst": {
@@ -2565,7 +2579,8 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "linen": 0.99,
-        "frame": 0.96
+        "frame": 0.96,
+        "crest": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -2661,7 +2676,8 @@
         "cast": 0.94,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.99
       }
     },
     "Decision Scientist": {
@@ -2758,7 +2774,8 @@
         "munich": 0.97,
         "seoul": 0.98,
         "dubai": 0.97,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.99
       }
     },
     "Risk Analyst": {
@@ -3010,7 +3027,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "crest": 0.99
       }
     },
     "Data Visualization Specialist": {
@@ -3174,7 +3192,8 @@
         "munich": 0.98,
         "seoul": 0.97,
         "dubai": 0.97,
-        "frame": 0.97
+        "frame": 0.97,
+        "crest": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3368,7 +3387,8 @@
         "cast": 0.91,
         "munich": 0.99,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "crest": 0.99
       }
     },
     "Data Science Manager": {
@@ -3463,7 +3483,8 @@
         "munich": 0.99,
         "seoul": 0.98,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.99
       }
     },
     "Data Science Director": {
@@ -3576,7 +3597,8 @@
         "wave": 0.98,
         "frame": 0.95,
         "nova": 0.98,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -3681,7 +3703,8 @@
         "munich": 0.95,
         "seoul": 0.93,
         "dubai": 0.95,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3778,7 +3801,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.94,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "crest": 0.97
       }
     },
     "Director of Data": {
@@ -3958,7 +3982,8 @@
         "munich": 0.95,
         "seoul": 0.92,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.98
       }
     },
     "Junior Data Analyst": {
@@ -4142,7 +4167,8 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.99
       }
     },
     "Junior Data Scientist": {
@@ -4325,7 +4351,8 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.95,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "crest": 0.97
       }
     },
     "Principal Data Scientist": {
@@ -4591,7 +4618,8 @@
         "linen": 0.98,
         "wave": 0.97,
         "frame": 0.98,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "crest": 0.95
       },
       "trimLetter": {
         "berlin": 10

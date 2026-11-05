@@ -3043,7 +3043,8 @@
         "dubai": 0.95,
         "manila": 0.97,
         "nova": 0.98,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "crest": 0.95
       },
       "trimLetter": {
         "berlin": 6
@@ -3884,7 +3885,8 @@
         "dubai": 0.93,
         "manila": 0.97,
         "nova": 0.96,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "crest": 0.95
       },
       "trimLetter": {
         "berlin": 6
@@ -4165,7 +4167,8 @@
         "berlin": 0.85,
         "seoul": 0.93,
         "dubai": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "crest": 0.98
       },
       "trimLetter": {
         "berlin": 6
