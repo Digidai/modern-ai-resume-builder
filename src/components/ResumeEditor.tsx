@@ -1062,6 +1062,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                     <span className="mt-2 flex items-baseline justify-between gap-2">
                       <span className={`text-sm ${selected ? 'font-semibold text-ink' : 'font-medium text-ink'}`}>{t.name}</span>
                       {t.atsFriendly && <span className="tag">ATS</span>}
+                      {t.twoColumn && <span className="tag whitespace-nowrap">2 columns</span>}
                     </span>
                     <span className="mt-0.5 block text-xs leading-snug text-muted">{t.description}</span>
                     {/* Overlay control: previews contain links, which must not nest inside a button. */}

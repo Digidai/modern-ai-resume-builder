@@ -253,6 +253,7 @@ const HomeView: React.FC = () => {
                   <p className="mt-3 flex items-center justify-between gap-2">
                     <span className="font-display text-[15px] font-semibold text-ink">{template.name}</span>
                     {template.atsFriendly && <span className="tag">ATS</span>}
+                    {template.twoColumn && <span className="tag whitespace-nowrap">2 columns</span>}
                   </p>
                   <p className="mt-0.5 text-sm leading-5 text-muted">{template.description}</p>
                   <button

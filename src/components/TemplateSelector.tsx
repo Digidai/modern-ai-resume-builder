@@ -344,6 +344,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                                     <span className={`mt-1.5 flex items-baseline justify-between gap-1 text-xs ${selected ? 'font-semibold text-ink' : 'text-muted'}`} title={t.description}>
                                         <span className="truncate">{t.name}</span>
                                         {t.atsFriendly && <span className="tag shrink-0">ATS</span>}
+                                        {t.twoColumn && <span className="tag shrink-0 whitespace-nowrap">2 columns</span>}
                                     </span>
                                     {/* Overlay control: previews contain links, which must not nest inside a button. */}
                                     <button

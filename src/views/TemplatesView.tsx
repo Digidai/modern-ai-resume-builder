@@ -131,8 +131,11 @@ const TemplatesView: React.FC = () => {
                 >
                   {t.name}
                 </Link>
-                {t.atsFriendly && <AtsBadge />}
-                {t.photo && <PhotoBadge />}
+                <span className="flex gap-1.5">
+                  {t.atsFriendly && <AtsBadge />}
+                  {t.twoColumn && <span className="tag whitespace-nowrap">2 columns</span>}
+                  {t.photo && <PhotoBadge />}
+                </span>
               </div>
               <p className="mt-0.5 text-sm leading-5 text-muted">{t.description}</p>
             </li>
