@@ -26,17 +26,23 @@ export interface TemplateConfig {
   maxPages?: number;
 }
 
-/** Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs. */
+/**
+ * Ordered for the picker: proven, ATS-friendly classics first, then two-column and expressive designs.
+ * The first eight are the first screen of /templates and the job pages' picker, so they share three
+ * resume font families (Charis SIL, Tinos, Source Sans 3) besides the site's Inter.
+ */
 const TEMPLATE_CATALOG = [
   { id: 'classic', name: 'Classic', description: "Jake's-style LaTeX classic: small caps and hairline rules", bestFor: 'Engineers, students and anyone applying through ATS portals', atsFriendly: true, isFullBleed: true },
   { id: 'modern', name: 'Modern', description: "Clean single column with accent headings and rules", bestFor: 'Tech, product and business roles that want a clean, current look', atsFriendly: true, isFullBleed: false },
   { id: 'ivy', name: 'Ivy', description: "Harvard-style Times layout with centered headings", bestFor: 'Finance, law, consulting and new graduates', atsFriendly: true, isFullBleed: true },
+  { id: 'timeline', name: 'Timeline', description: "Clean accent layout with a dated career timeline", bestFor: 'Career progressions and frequent promotions', atsFriendly: true, isFullBleed: true },
+  { id: 'compact', name: 'Compact', description: "Dense single column that fits long histories", bestFor: 'Long careers that need to fit on one page', atsFriendly: true, isFullBleed: false },
+  { id: 'wallstreet', name: 'Wall Street', description: "Investment-banking format: Times, education first, bold firms", bestFor: 'Investment banking, private equity, consulting and finance', atsFriendly: true, isFullBleed: true },
+  { id: 'graduate', name: 'Graduate', description: "Education and skills first, then internships and projects", bestFor: 'Students, new graduates and interns', atsFriendly: true, isFullBleed: true, publications: true },
+  { id: 'academic', name: 'Academic', description: "Scholarly CV with small-caps headings and rules", bestFor: 'Researchers, teachers and academic CVs', atsFriendly: true, isFullBleed: false, publications: true },
   { id: 'banking', name: 'Ledger', description: "moderncv banking: accent name, bold dates on the right", bestFor: 'Banking, finance and corporate roles', atsFriendly: true, isFullBleed: true },
   { id: 'vanguard', name: 'Vanguard', description: "Bold display name, accent-led headings with line rules", bestFor: 'Experienced professionals who want a confident header', atsFriendly: true, isFullBleed: true },
-  { id: 'timeline', name: 'Timeline', description: "Clean accent layout with a dated career timeline", bestFor: 'Career progressions and frequent promotions', atsFriendly: true, isFullBleed: true },
   { id: 'executive', name: 'Executive', description: "Centered executive layout with serif headings", bestFor: 'Directors, VPs and senior leadership', atsFriendly: true, isFullBleed: false },
-  { id: 'compact', name: 'Compact', description: "Dense single column that fits long histories", bestFor: 'Long careers that need to fit on one page', atsFriendly: true, isFullBleed: false },
-  { id: 'academic', name: 'Academic', description: "Scholarly CV with small-caps headings and rules", bestFor: 'Researchers, teachers and academic CVs', atsFriendly: true, isFullBleed: false, publications: true },
   { id: 'tech', name: 'Tech', description: "Developer style: mono headings and tags, sans body", bestFor: 'Software engineers and developers', atsFriendly: true, isFullBleed: false },
   { id: 'silk', name: 'Silk', description: "Elegant Garamond serif with centered hairline headings", bestFor: 'Editorial, communications and humanities roles', atsFriendly: true, isFullBleed: true },
   { id: 'lateral', name: 'Lateral', description: "Calm side-label grid with one quiet accent rule", bestFor: 'Consultants and analysts who like a structured grid', atsFriendly: true, isFullBleed: true },
@@ -46,8 +52,6 @@ const TEMPLATE_CATALOG = [
   { id: 'vital', name: 'Vital', description: "Clean clinical layout with a credentials block", bestFor: 'Nurses, clinicians and other licensed professionals', atsFriendly: true, isFullBleed: true },
   { id: 'plain', name: 'Plain', description: "The most basic resume: black text, one column, one hairline per section", bestFor: 'Anyone who wants a plain, no-design resume that every ATS reads', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'text', name: 'Text', description: "Text only: no rules, colour or icons, just weight and white space", bestFor: 'Minimalists and conservative industries', atsFriendly: true, isFullBleed: true, publications: true },
-  { id: 'graduate', name: 'Graduate', description: "Education and skills first, then internships and projects", bestFor: 'Students, new graduates and interns', atsFriendly: true, isFullBleed: true, publications: true },
-  { id: 'wallstreet', name: 'Wall Street', description: "Investment-banking format: Times, education first, bold firms", bestFor: 'Investment banking, private equity, consulting and finance', atsFriendly: true, isFullBleed: true },
   { id: 'scholar', name: 'Scholar', description: "Academic CV with numbered publications and a year gutter", bestFor: 'PhD students, postdocs, researchers and faculty', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'oxford', name: 'Oxford', description: "moderncv classic: grey title, accent bars and a left date column", bestFor: 'Academic CVs, European applications and research roles', atsFriendly: true, isFullBleed: true, publications: true },
   { id: 'standard', name: 'Standard', description: "McDowell/CareerCup format: Times, small caps, firm · role · dates", bestFor: 'Software engineers and tech recruiting pipelines', atsFriendly: true, isFullBleed: true },
