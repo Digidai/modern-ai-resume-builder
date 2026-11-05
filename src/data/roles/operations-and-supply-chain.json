@@ -93,8 +93,7 @@
         "seoul": 0.94,
         "dubai": 0.97,
         "meadow": 0.99,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -343,9 +342,7 @@
         "munich": 0.97,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.95,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Logistics Manager": {
@@ -2425,9 +2422,7 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.96,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -2914,8 +2909,7 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "meadow": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       },
       "trimLetter": {
         "iron": 6

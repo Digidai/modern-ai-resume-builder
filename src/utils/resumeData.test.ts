@@ -9,6 +9,14 @@ describe('sanitizeResumeData', () => {
     expect(paper({ paper: 'legal' })).toBe('a4');
   });
 
+  it('opens a resume saved with a retired template in its replacement, and leaves other ids alone', () => {
+    const template = (templateId: unknown) => sanitizeResumeData({ fullName: 'Pat', templateId })?.templateId;
+    expect(template('pearl')).toBe('aurora');
+    expect(template('quill')).toBe('folio');
+    expect(template('classic')).toBe('classic');
+    expect(template('constructor')).toBe('constructor');
+  });
+
   it('imports a JSON Resume document', () => {
     const result = sanitizeResumeData({
       basics: {

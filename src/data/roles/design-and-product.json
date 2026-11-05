@@ -3056,9 +3056,7 @@
         "manila": 0.97,
         "nova": 0.98,
         "meadow": 0.99,
-        "crest": 0.95,
-        "marble": 0.94,
-        "zenith": 0.95
+        "marble": 0.94
       },
       "trimLetter": {
         "berlin": 6
@@ -3905,9 +3903,7 @@
         "manila": 0.97,
         "nova": 0.96,
         "meadow": 0.97,
-        "crest": 0.95,
-        "marble": 0.92,
-        "zenith": 0.94
+        "marble": 0.92
       },
       "trimLetter": {
         "berlin": 6
@@ -4189,9 +4185,7 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 6

@@ -21,7 +21,7 @@ import ThemeToggle from '../components/ThemeToggle';
 import { useResume } from '../contexts/ResumeContext';
 import { SectionErrorBoundary } from '../components/ErrorBoundary';
 import { buildEditorSeoKeywords } from '../utils/seo';
-import { getTemplateById } from '../constants/templates';
+import { getTemplateById, currentTemplateId } from '../constants/templates';
 import type { ResumeSaveStatus } from '../hooks/useResumeData';
 import { pageLimitNote, useOnePageFit } from '../hooks/useOnePageFit';
 import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, type ResumeData, type ResumeDesign } from '../types';
@@ -363,7 +363,7 @@ const EditorView: React.FC = () => {
 
   // Deep link: /editor/?template=<id> (used by the template pages, llms.txt and agents).
   useEffect(() => {
-    const requested = searchParams.get('template');
+    const requested = currentTemplateId(searchParams.get('template') ?? '');
     if (!requested) return;
     if (getTemplateById(requested)) setResumeData((prev) => ({ ...prev, templateId: requested }));
     const next = new URLSearchParams(searchParams);

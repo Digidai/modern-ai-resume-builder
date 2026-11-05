@@ -1,4 +1,4 @@
-import { DEFAULT_TEMPLATE_ID } from '../constants/templates';
+import { DEFAULT_TEMPLATE_ID, currentTemplateId } from '../constants/templates';
 import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
@@ -216,7 +216,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     : [];
 
   return {
-    templateId: str(raw.templateId) || DEFAULT_TEMPLATE_ID,
+    templateId: currentTemplateId(str(raw.templateId)) || DEFAULT_TEMPLATE_ID,
     design: sanitizeDesign(raw.design),
     fullName: str(raw.fullName),
     title: str(raw.title),

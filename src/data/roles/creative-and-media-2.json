@@ -346,7 +346,6 @@
         "cast": 0.91,
         "iron": 0.89,
         "seoul": 0.91,
-        "crest": 0.98,
         "marble": 0.99
       },
       "trimLetter": {
@@ -489,8 +488,7 @@
         "pop": 0.9,
         "seoul": 0.96,
         "dubai": 0.98,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "iron": 8,

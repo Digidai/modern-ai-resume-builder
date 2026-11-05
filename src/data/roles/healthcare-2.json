@@ -455,8 +455,7 @@
         "linen": 0.97,
         "wave": 0.97,
         "frame": 0.95,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -822,9 +821,7 @@
         "linen": 0.92,
         "wave": 0.94,
         "frame": 0.96,
-        "crest": 0.98,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -2084,8 +2081,7 @@
         "cast": 0.95,
         "seoul": 0.97,
         "dubai": 0.97,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "CT Technologist": {

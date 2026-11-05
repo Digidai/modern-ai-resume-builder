@@ -66,8 +66,7 @@
         "pop": 0.85,
         "cast": 0.98,
         "federal": 0.99,
-        "seoul": 0.95,
-        "crest": 0.99
+        "seoul": 0.95
       },
       "fitLetter": {
         "modern": 0.87,
@@ -103,9 +102,7 @@
         "dubai": 0.94,
         "nova": 0.99,
         "meadow": 0.97,
-        "crest": 0.96,
-        "marble": 0.95,
-        "zenith": 0.96
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 11
@@ -178,8 +175,7 @@
         "cast": 0.96,
         "seoul": 0.95,
         "dubai": 0.98,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -213,9 +209,7 @@
         "manila": 0.98,
         "nova": 0.97,
         "meadow": 0.97,
-        "crest": 0.94,
-        "marble": 0.94,
-        "zenith": 0.95
+        "marble": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -320,9 +314,7 @@
         "seoul": 0.95,
         "dubai": 0.94,
         "nova": 0.98,
-        "crest": 0.96,
-        "marble": 0.95,
-        "zenith": 0.96
+        "marble": 0.95
       }
     },
     "Nurse Practitioner": {
@@ -429,9 +421,7 @@
         "dubai": 0.95,
         "linen": 0.99,
         "meadow": 0.98,
-        "crest": 0.96,
-        "marble": 0.95,
-        "zenith": 0.96
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 12
@@ -540,10 +530,8 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "meadow": 0.96,
-        "crest": 0.97,
         "marble": 0.95,
-        "willow": 0.99,
-        "zenith": 0.98
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 12
@@ -815,9 +803,7 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Medical Assistant": {
@@ -1157,7 +1143,6 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "meadow": 0.99,
-        "crest": 0.98,
         "marble": 0.99
       }
     },
@@ -1264,9 +1249,7 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 11
@@ -1369,9 +1352,7 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Radiologic Technologist": {
@@ -1594,7 +1575,6 @@
         "dubai": 0.99,
         "linen": 0.99,
         "frame": 0.99,
-        "crest": 0.98,
         "marble": 0.98
       }
     },
@@ -2292,9 +2272,7 @@
         "seoul": 0.92,
         "dubai": 0.95,
         "meadow": 0.98,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Care Coordinator": {
@@ -2540,7 +2518,6 @@
         "munich": 0.97,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98,
         "marble": 0.99
       }
     },
@@ -2641,9 +2618,7 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 12
@@ -3168,8 +3143,7 @@
         "linen": 0.96,
         "wave": 0.97,
         "frame": 0.95,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -3268,8 +3242,7 @@
         "pop": 0.86,
         "cast": 0.93,
         "munich": 0.99,
-        "seoul": 0.97,
-        "crest": 0.99
+        "seoul": 0.97
       }
     },
     "Medical Coder": {
@@ -3540,9 +3513,7 @@
         "munich": 0.98,
         "seoul": 0.9,
         "dubai": 0.97,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 9
@@ -4540,9 +4511,7 @@
         "seoul": 0.94,
         "dubai": 0.97,
         "meadow": 0.97,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.97
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 10

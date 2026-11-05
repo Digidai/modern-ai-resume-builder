@@ -425,8 +425,7 @@
         "pop": 0.88,
         "cast": 0.98,
         "munich": 0.99,
-        "seoul": 0.95,
-        "crest": 0.99
+        "seoul": 0.95
       }
     },
     "Research Scientist": {
@@ -610,10 +609,8 @@
         "manila": 0.99,
         "nova": 0.98,
         "meadow": 0.96,
-        "crest": 0.95,
         "marble": 0.93,
-        "willow": 0.99,
-        "zenith": 0.94
+        "willow": 0.99
       }
     },
     "Principal Scientist": {
@@ -936,7 +933,6 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.99,
         "marble": 0.98
       }
     },
@@ -1593,9 +1589,7 @@
         "wave": 0.97,
         "frame": 0.96,
         "meadow": 0.99,
-        "crest": 0.97,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 10,

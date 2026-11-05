@@ -792,9 +792,7 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "iron": 5
@@ -899,10 +897,8 @@
         "manila": 0.97,
         "nova": 0.98,
         "meadow": 0.96,
-        "crest": 0.97,
         "marble": 0.95,
-        "willow": 0.99,
-        "zenith": 0.96
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 2
@@ -2335,9 +2331,7 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.97,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 6

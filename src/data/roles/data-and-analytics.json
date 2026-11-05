@@ -81,9 +81,7 @@
         "seoul": 0.94,
         "dubai": 0.98,
         "meadow": 0.99,
-        "crest": 0.98,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "fitLetter": {
         "modern": 0.9,
@@ -116,11 +114,9 @@
         "manila": 0.97,
         "nova": 0.98,
         "meadow": 0.95,
-        "crest": 0.94,
         "sage": 0.99,
         "marble": 0.91,
-        "willow": 0.97,
-        "zenith": 0.94
+        "willow": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -321,7 +317,6 @@
         "linen": 0.99,
         "frame": 0.99,
         "meadow": 0.96,
-        "crest": 0.97,
         "marble": 0.98,
         "willow": 0.99
       }
@@ -433,11 +428,9 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "meadow": 0.95,
-        "crest": 0.97,
         "sage": 0.99,
         "marble": 0.95,
-        "willow": 0.97,
-        "zenith": 0.98
+        "willow": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -617,8 +610,7 @@
         "pop": 0.85,
         "cast": 0.95,
         "munich": 0.98,
-        "seoul": 0.95,
-        "crest": 0.98
+        "seoul": 0.95
       }
     },
     "Product Analyst": {
@@ -1061,8 +1053,7 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.96,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "Reporting Analyst": {
@@ -1407,9 +1398,7 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.98,
-        "marble": 0.98,
-        "zenith": 0.98
+        "marble": 0.98
       }
     },
     "Experimentation Analyst": {
@@ -1504,7 +1493,6 @@
         "munich": 0.99,
         "seoul": 0.98,
         "dubai": 0.97,
-        "crest": 0.99,
         "marble": 0.96
       }
     },
@@ -1773,8 +1761,7 @@
         "dubai": 0.99,
         "linen": 0.99,
         "wave": 0.99,
-        "meadow": 0.98,
-        "crest": 0.98
+        "meadow": 0.98
       }
     },
     "Data Architect": {
@@ -1872,8 +1859,7 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.99,
-        "crest": 0.99
+        "meadow": 0.99
       }
     },
     "Data Modeler": {
@@ -2061,9 +2047,7 @@
         "wave": 0.99,
         "frame": 0.96,
         "meadow": 0.99,
-        "crest": 0.97,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -2237,9 +2221,7 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "Data Quality Engineer": {
@@ -2330,8 +2312,7 @@
         "cast": 0.93,
         "seoul": 0.97,
         "dubai": 0.97,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "Data Governance Analyst": {
@@ -2507,7 +2488,6 @@
         "cast": 0.96,
         "seoul": 0.98,
         "dubai": 0.97,
-        "crest": 0.99,
         "marble": 0.96
       }
     },
@@ -2610,9 +2590,7 @@
         "dubai": 0.97,
         "linen": 0.99,
         "frame": 0.96,
-        "crest": 0.99,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -2709,9 +2687,7 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Decision Scientist": {
@@ -2809,9 +2785,7 @@
         "seoul": 0.98,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Risk Analyst": {
@@ -3064,8 +3038,7 @@
         "pop": 0.85,
         "cast": 0.91,
         "munich": 0.98,
-        "seoul": 0.97,
-        "crest": 0.99
+        "seoul": 0.97
       }
     },
     "Data Visualization Specialist": {
@@ -3230,7 +3203,6 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "frame": 0.97,
-        "crest": 0.97,
         "marble": 0.97
       },
       "trimLetter": {
@@ -3427,7 +3399,6 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.99,
         "marble": 0.98
       }
     },
@@ -3524,7 +3495,6 @@
         "seoul": 0.98,
         "dubai": 0.99,
         "meadow": 0.98,
-        "crest": 0.99,
         "marble": 0.98
       }
     },
@@ -3639,9 +3609,7 @@
         "frame": 0.95,
         "nova": 0.98,
         "meadow": 0.97,
-        "crest": 0.95,
-        "marble": 0.94,
-        "zenith": 0.95
+        "marble": 0.94
       },
       "trimLetter": {
         "berlin": 10,
@@ -3747,10 +3715,8 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "meadow": 0.96,
-        "crest": 0.96,
         "marble": 0.95,
-        "willow": 0.99,
-        "zenith": 0.98
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -3848,9 +3814,7 @@
         "munich": 0.97,
         "seoul": 0.94,
         "dubai": 0.97,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Director of Data": {
@@ -4032,9 +3996,7 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "Junior Data Analyst": {
@@ -4220,7 +4182,6 @@
         "seoul": 0.97,
         "dubai": 0.99,
         "meadow": 0.96,
-        "crest": 0.99,
         "marble": 0.96
       }
     },
@@ -4406,9 +4367,7 @@
         "seoul": 0.97,
         "dubai": 0.95,
         "meadow": 0.98,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Principal Data Scientist": {
@@ -4564,8 +4523,7 @@
         "cast": 0.9,
         "seoul": 0.97,
         "dubai": 0.97,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "Healthcare Data Analyst": {
@@ -4677,10 +4635,8 @@
         "wave": 0.97,
         "frame": 0.98,
         "meadow": 0.96,
-        "crest": 0.95,
         "marble": 0.94,
-        "willow": 0.99,
-        "zenith": 0.96
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 10

@@ -1,6 +1,6 @@
 import React, { Suspense, lazy } from 'react';
 import { ResumeData } from '../types';
-import { DEFAULT_TEMPLATE_ID, TEMPLATE_IDS, TemplateId } from '../constants/templates';
+import { DEFAULT_TEMPLATE_ID, TEMPLATE_IDS, TemplateId, currentTemplateId } from '../constants/templates';
 
 interface ResumeTemplateRendererProps {
   data: ResumeData;
@@ -93,33 +93,24 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   cameo: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CameoTemplate })),
   sterling: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SterlingTemplate })),
   meadow: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MeadowTemplate })),
-  quill: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.QuillTemplate })),
   cobalt: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CobaltTemplate })),
   granite: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.GraniteTemplate })),
   bedrock: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.BedrockTemplate })),
   linear: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.LinearTemplate })),
-  crest: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CrestTemplate })),
   vista: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.VistaTemplate })),
   ember: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.EmberTemplate })),
   sage: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SageTemplate })),
-  pearl: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.PearlTemplate })),
-  beacon: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.BeaconTemplate })),
   folio: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.FolioTemplate })),
   slate: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SlateTemplate })),
-  tribune: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.TribuneTemplate })),
-  keel: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.KeelTemplate })),
   marble: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MarbleTemplate })),
   willow: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.WillowTemplate })),
-  haven: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.HavenTemplate })),
   ivory: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.IvoryTemplate })),
-  zenith: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.ZenithTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 
 const resolveTemplateId = (templateId: string): TemplateId => {
-  return templateId in TEMPLATE_LOADERS
-    ? (templateId as TemplateId)
-    : DEFAULT_TEMPLATE_ID;
+  const id = currentTemplateId(templateId);
+  return id in TEMPLATE_LOADERS ? (id as TemplateId) : DEFAULT_TEMPLATE_ID;
 };
 
 const TEMPLATES = TEMPLATE_IDS.reduce<Record<TemplateId, React.LazyExoticComponent<TemplateComponent>>>(

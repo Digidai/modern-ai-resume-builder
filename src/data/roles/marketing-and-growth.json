@@ -186,7 +186,6 @@
         "seoul": 0.95,
         "dubai": 0.99,
         "meadow": 0.96,
-        "crest": 0.98,
         "marble": 0.98,
         "willow": 0.99
       }
@@ -280,8 +279,7 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.97,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "Growth Marketer": {
@@ -458,7 +456,6 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "frame": 0.99,
-        "crest": 0.96,
         "marble": 0.99
       }
     },
@@ -1385,9 +1382,7 @@
         "dubai": 0.98,
         "frame": 0.98,
         "meadow": 0.99,
-        "crest": 0.97,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 10
@@ -1482,9 +1477,7 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "Paid Search Manager": {
@@ -1671,10 +1664,8 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.99,
         "marble": 0.96,
-        "willow": 0.99,
-        "zenith": 0.98
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -1764,9 +1755,7 @@
         "munich": 0.98,
         "seoul": 0.97,
         "dubai": 0.97,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "Paid Media Manager": {
@@ -1860,9 +1849,7 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "Acquisition Manager": {
@@ -1959,8 +1946,7 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "meadow": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       }
     },
     "User Acquisition Manager": {
@@ -2050,7 +2036,6 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98,
         "marble": 0.98
       },
       "trimLetter": {
@@ -2720,8 +2705,7 @@
         "cast": 0.93,
         "seoul": 0.97,
         "dubai": 0.97,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       }
     },
     "Marketing Operations Specialist": {
@@ -2819,9 +2803,7 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.96,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -3025,9 +3007,7 @@
         "frame": 0.96,
         "nova": 0.98,
         "meadow": 0.99,
-        "crest": 0.95,
-        "marble": 0.94,
-        "zenith": 0.95
+        "marble": 0.94
       },
       "trimLetter": {
         "berlin": 6,
@@ -3364,7 +3344,6 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98,
         "marble": 0.98
       },
       "trimLetter": {
@@ -3532,9 +3511,7 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Communications Manager": {
@@ -3625,7 +3602,6 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98,
         "marble": 0.98
       },
       "trimLetter": {
@@ -3726,9 +3702,7 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Event Marketing Manager": {
@@ -3910,9 +3884,7 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -4010,9 +3982,7 @@
         "cast": 0.9,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       }
     },
     "Affiliate Marketing Manager": {
@@ -4104,9 +4074,7 @@
         "munich": 0.96,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -4211,9 +4179,7 @@
         "dubai": 0.97,
         "linen": 0.99,
         "frame": 0.98,
-        "crest": 0.97,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -4378,8 +4344,7 @@
         "iron": 0.85,
         "seoul": 0.95,
         "dubai": 0.97,
-        "marble": 0.97,
-        "zenith": 0.98
+        "marble": 0.97
       },
       "trimLetter": {
         "iron": 6
@@ -4472,9 +4437,7 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -4573,7 +4536,6 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98,
         "marble": 0.97
       }
     },
@@ -4844,9 +4806,7 @@
         "seoul": 0.96,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -4939,9 +4899,7 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.96,
-        "zenith": 0.98
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -5042,10 +5000,8 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.97,
         "marble": 0.96,
-        "willow": 0.99,
-        "zenith": 0.98
+        "willow": 0.99
       },
       "trimLetter": {
         "berlin": 5

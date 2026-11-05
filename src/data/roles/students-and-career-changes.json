@@ -433,9 +433,7 @@
         "dubai": 0.96,
         "manila": 0.99,
         "nova": 0.99,
-        "crest": 0.96,
-        "marble": 0.94,
-        "zenith": 0.96
+        "marble": 0.94
       },
       "trimLetter": {
         "berlin": 8,
@@ -1078,9 +1076,7 @@
         "pop": 0.88,
         "seoul": 0.91,
         "dubai": 0.97,
-        "crest": 0.99,
-        "marble": 0.98,
-        "zenith": 0.99
+        "marble": 0.98
       }
     }
   }

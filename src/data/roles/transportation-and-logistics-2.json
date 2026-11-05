@@ -842,8 +842,7 @@
         "pop": 0.85,
         "cast": 0.95,
         "munich": 0.98,
-        "seoul": 0.94,
-        "crest": 0.98
+        "seoul": 0.94
       }
     },
     "Baggage Handler": {

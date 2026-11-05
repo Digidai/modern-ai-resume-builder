@@ -7,6 +7,7 @@ import {
   finishAiText,
 } from '../src/shared/aiContract';
 import { handleAgentRequest, pdfPageCount } from './agent';
+import { currentTemplateId } from '../src/constants/templates';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
 interface Env {
@@ -1637,6 +1638,12 @@ export default {
     if (url.pathname.startsWith('/api/')) {
       response = errorResponse(404, 'NOT_FOUND', 'API route not found.');
       return finalizeResponse(request, env, response);
+    }
+
+    // Retired templates' pages move permanently to the template that replaced them.
+    const retired = /^\/templates\/([a-z0-9-]+)\/?$/.exec(url.pathname);
+    if (retired && currentTemplateId(retired[1]) !== retired[1]) {
+      return Response.redirect(new URL(`/templates/${currentTemplateId(retired[1])}/`, url).toString(), 301);
     }
 
     // HTML is personalised per response (nonce + client token), so ask for the full page, never a 304.

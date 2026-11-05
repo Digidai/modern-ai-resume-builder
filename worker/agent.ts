@@ -5,7 +5,7 @@
 // itself, encrypted, and renders it again when opened.
 
 import puppeteer from '@cloudflare/puppeteer';
-import { TEMPLATES, getTemplateById, showsAwards } from '../src/constants/templates';
+import { TEMPLATES, currentTemplateId, getTemplateById, showsAwards } from '../src/constants/templates';
 import { FONT_PRESETS } from '../src/constants/design';
 import { MM_TO_PX, paperSize } from '../src/constants/print';
 import { sanitizeResumeData } from '../src/utils/resumeData';
@@ -226,7 +226,7 @@ const normalizeDate = (value: string): string | null => {
 
 /** A template id, matched case-insensitively against ids and display names ("Ledger" → "banking"). */
 const resolveTemplate = (value: string) => {
-  const key = value.trim().toLowerCase();
+  const key = currentTemplateId(value.trim().toLowerCase());
   return TEMPLATES.find((t) => t.id === key) ?? TEMPLATES.find((t) => t.name.toLowerCase() === key);
 };
 

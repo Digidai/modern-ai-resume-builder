@@ -57,16 +57,12 @@ const TEMPLATE_CATALOG = [
   { id: 'metro', name: 'Metro', description: "Name left, contacts stacked right, accent-bar headings", bestFor: 'Tech, operations and business roles', atsFriendly: true, isFullBleed: true },
   { id: 'atlas', name: 'Atlas', description: "Tinted section bands, role and employer on one line", bestFor: 'Experienced professionals with many roles', atsFriendly: true, isFullBleed: true },
   { id: 'chronicle', name: 'Chronicle', description: "Garamond with dates in a left column", bestFor: 'Writers, researchers and long, steady careers', atsFriendly: true, isFullBleed: true },
-  { id: 'quill', name: 'Quill', description: "Charis serif, centred capitalised name, ruled headings", bestFor: 'Law, publishing, academia and traditional employers', atsFriendly: true, isFullBleed: true },
   { id: 'cobalt', name: 'Cobalt', description: "Montserrat with short accent strokes under headings", bestFor: 'Marketing, sales and startup roles that still need ATS', atsFriendly: true, isFullBleed: true },
   { id: 'granite', name: 'Granite', description: "IBM Plex Serif, contacts stacked right, ruled headings", bestFor: 'Engineering, finance and operations leaders', atsFriendly: true, isFullBleed: true },
   { id: 'bedrock', name: 'Bedrock', description: "Dates in a left column, headings with a trailing rule", bestFor: 'Long careers with many dated roles', atsFriendly: true, isFullBleed: true },
   { id: 'linear', name: 'Linear', description: "LaTeX look in Latin Modern, centred header", bestFor: 'Engineers, scientists and students who like a LaTeX CV', atsFriendly: true, isFullBleed: true },
-  { id: 'beacon', name: 'Beacon', description: "Roboto, capitalised name, short accent strokes", bestFor: 'Tech, product and operations roles', atsFriendly: true, isFullBleed: true },
   { id: 'folio', name: 'Folio', description: "EB Garamond, centred header, ruled headings", bestFor: 'Consulting, law, finance and senior roles', atsFriendly: true, isFullBleed: true },
   { id: 'slate', name: 'Slate', description: "Lato, contacts stacked right, dates in a left column", bestFor: 'Business, marketing and project managers', atsFriendly: true, isFullBleed: true },
-  { id: 'tribune', name: 'Tribune', description: "Times, centred capitalised name, headings with a trailing rule", bestFor: 'Traditional employers, government and education', atsFriendly: true, isFullBleed: true },
-  { id: 'keel', name: 'Keel', description: "Raleway, accent-bar headings, dates in a left column", bestFor: 'Engineering, logistics and healthcare roles', atsFriendly: true, isFullBleed: true },
   { id: 'federal', name: 'Federal', description: "USAJOBS-style federal resume: MM/YYYY dates and hours per week on every job", bestFor: 'US federal government jobs applied for through USAJOBS', atsFriendly: true, isFullBleed: true, hours: true, maxPages: 2, awards: true },
   { id: 'minimalist', name: 'Minimalist', description: "Quiet serif header with a left date gutter", bestFor: 'Senior professionals with a quiet, serif style', atsFriendly: false, isFullBleed: false },
   { id: 'duo', name: 'Duo', description: "Two columns with an airy display name", bestFor: 'Designers and engineers who want a two-column summary', atsFriendly: false, isFullBleed: true },
@@ -95,16 +91,12 @@ const TEMPLATE_CATALOG = [
   { id: 'cameo', name: 'Cameo', description: "Round photo left, name centre, contacts stacked right", bestFor: 'Business, sales and marketing roles that use a photo', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'sterling', name: 'Sterling', description: "Times resume with a capitalised name and a small photo", bestFor: 'Finance, law and corporate roles in Europe and Asia', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'meadow', name: 'Meadow', description: "Photo left, tinted headings, dates in a left column", bestFor: 'Applications in Germany, the Nordics and the Netherlands', atsFriendly: false, isFullBleed: true, photo: true },
-  { id: 'crest', name: 'Crest', description: "Serif layout with a centred round photo", bestFor: 'Hospitality, education and client-facing roles', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'vista', name: 'Vista', description: "Raleway with a round photo on the right", bestFor: 'Marketing, sales and creative business roles', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'ember', name: 'Ember', description: "Photo left, contacts stacked right, tinted headings", bestFor: 'Business and operations roles that use a photo', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'sage', name: 'Sage', description: "Round photo left, dates in a left column", bestFor: 'Applications in Europe with long, dated careers', atsFriendly: false, isFullBleed: true, photo: true },
-  { id: 'pearl', name: 'Pearl', description: "Neutral Inter layout with a 3:4 photo and accent bars", bestFor: 'Any role in markets that expect a photo', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'marble', name: 'Marble', description: "Serif layout with a centred 3:4 photo and tinted headings", bestFor: 'Hospitality, education and administration', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'willow', name: 'Willow', description: "Round photo on the right, dates in a left column", bestFor: 'Applications in Europe with long, dated careers', atsFriendly: false, isFullBleed: true, photo: true },
-  { id: 'haven', name: 'Haven', description: "Garamond, round photo left, contacts stacked right", bestFor: 'Client-facing, legal and finance roles that use a photo', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'ivory', name: 'Ivory', description: "Serif, 3:4 photo left, capitalised name, accent bars", bestFor: 'Corporate and banking roles in markets that expect a photo', atsFriendly: false, isFullBleed: true, photo: true },
-  { id: 'zenith', name: 'Zenith', description: "Roboto with a centred round photo", bestFor: 'Students, graduates and early-career roles', atsFriendly: false, isFullBleed: true, photo: true },
   { id: 'prism', name: 'Prism', description: "Angled accent header with skewed date tags", bestFor: 'Sales, marketing and startup roles that want energy', atsFriendly: false, isFullBleed: true },
   { id: 'sidebar', name: 'Sidebar', description: "Dark accent sidebar beside a timeline main column", bestFor: 'Tech and product roles with many skills', atsFriendly: false, isFullBleed: true },
   { id: 'creative', name: 'Creative', description: "Bold accent header band with a tinted sidebar", bestFor: 'Marketing, design and media roles', atsFriendly: false, isFullBleed: true },
@@ -144,6 +136,24 @@ export const TEMPLATE_IDS: TemplateId[] = TEMPLATES.map((template) => template.i
 export const FULL_BLEED_TEMPLATE_IDS: TemplateId[] = TEMPLATES
   .filter((template) => template.isFullBleed)
   .map((template) => template.id) as TemplateId[];
+
+/**
+ * Templates retired as near-duplicates of another template, mapped to the one that replaced them,
+ * so saved resumes, share links, agent calls and /templates/<id> pages keep working.
+ */
+export const RETIRED_TEMPLATE_IDS: Readonly<Record<string, TemplateId>> = {
+  quill: 'folio',
+  tribune: 'harbor',
+  beacon: 'cobalt',
+  keel: 'bedrock',
+  crest: 'nova',
+  zenith: 'nova',
+  pearl: 'aurora',
+  haven: 'cameo',
+};
+
+/** A template id with retired ids replaced by their successor. */
+export const currentTemplateId = (id: string): string => (Object.hasOwn(RETIRED_TEMPLATE_IDS, id) ? RETIRED_TEMPLATE_IDS[id] : id);
 
 /** Default template ID */
 export const DEFAULT_TEMPLATE_ID: TemplateId = 'modern';

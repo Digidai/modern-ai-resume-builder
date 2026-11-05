@@ -1152,9 +1152,7 @@
         "munich": 0.98,
         "seoul": 0.92,
         "dubai": 0.95,
-        "crest": 0.98,
-        "marble": 0.95,
-        "zenith": 0.98
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 6,
@@ -1981,9 +1979,7 @@
         "linen": 0.95,
         "wave": 0.97,
         "meadow": 0.99,
-        "crest": 0.97,
-        "marble": 0.96,
-        "zenith": 0.97
+        "marble": 0.96
       },
       "trimLetter": {
         "berlin": 10
