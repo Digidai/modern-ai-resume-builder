@@ -242,6 +242,29 @@ html.dark {
   }
 }
 
+/* ScaledResumePreview before it has measured its box (prerendered HTML, before hydration): the paper
+   is fitted to the box's width in CSS where `calc()` can divide lengths, and hidden elsewhere. */
+.resume-fit {
+  container-type: inline-size;
+}
+.resume-fit-pending {
+  visibility: hidden;
+  transform: scale(0.0001);
+}
+@supports (scale: calc(1px / 1px)) {
+  .resume-fit-pending {
+    --fit: min(var(--max-scale), 100cqw / var(--paper-w));
+    visibility: visible;
+    transform: scale(var(--fit));
+    left: max(0px, (100cqw - var(--paper-w) * var(--fit)) / 2);
+  }
+}
+/* A prerendered page shows the sample resume; when the visitor has saved their own (index.html's boot
+   script), keep previews blank until hydration has swapped it in. */
+html.saved-resume:not(.hydrated) :is(.resume-fit, .user-resume) {
+  opacity: 0;
+}
+
 /* Print specific overrides */
 @media print {
   @page {

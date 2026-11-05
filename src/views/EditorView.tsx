@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { useSeo, SEO_ROBOTS_NOINDEX, getSiteUrl } from '../hooks/useSeo';
 import ResumeEditor from '../components/ResumeEditor';
@@ -26,6 +26,7 @@ import type { ResumeSaveStatus } from '../hooks/useResumeData';
 import { pageLimitNote, useOnePageFit } from '../hooks/useOnePageFit';
 import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, type ResumeData, type ResumeDesign } from '../types';
 import { paperSize } from '../constants/print';
+import { isPrerendered } from '../prerender';
 import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
@@ -337,7 +338,11 @@ const EditorView: React.FC = () => {
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
   const [latexImportOpen, setLatexImportOpen] = useState(false);
-  const [previewView, setPreviewView] = useState<PreviewView>(readPreviewView);
+  // Prerendered as 'pages'; the saved choice applies once hydrated, before the first paint.
+  const [previewView, setPreviewView] = useState<PreviewView>(() => (isPrerendered ? 'pages' : readPreviewView()));
+  useLayoutEffect(() => {
+    if (isPrerendered) setPreviewView(readPreviewView());
+  }, []);
   const changePreviewView = useCallback((view: PreviewView) => {
     setPreviewView(view);
     try {
@@ -590,7 +595,7 @@ const EditorView: React.FC = () => {
 
       <div className="flex min-h-0 flex-1">
         <aside
-          className={`custom-scrollbar w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
+          className={`user-resume custom-scrollbar w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
             mobileView === 'preview' ? 'max-md:hidden' : ''
           }`}
         >

@@ -133,24 +133,29 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
       ref={outerRef}
       // Printing the editor (Cmd+P) prints the paper as laid out, at full size: the screen-fitted height, centering
       // offset and scale set inline below would otherwise clip its right edge and add a blank page.
-      className={`relative w-full ${isThumbnail ? 'overflow-hidden select-none pointer-events-none' : 'print:h-auto! print:aspect-auto!'} ${className}`}
+      className={`resume-fit relative w-full ${isThumbnail ? 'overflow-hidden select-none pointer-events-none' : 'print:h-auto! print:aspect-auto!'} ${className}`}
       style={{ height: scale ? height : undefined, aspectRatio: scale ? undefined : `${page.widthMm} / ${page.heightMm}` }}
       aria-hidden={isThumbnail || undefined}
       inert={isThumbnail || undefined}
     >
       <div
         ref={innerRef}
-        className={`absolute top-0 origin-top-left ${isThumbnail ? '' : 'print:static! print:w-full! print:transform-none!'}`}
-        style={{
-          width: PAGE_WIDTH_PX,
-          transform: `scale(${scale || 0.0001})`,
-          // Centered when capped by maxScale and narrower than the container.
-          left: Math.max(0, (outerWidth - PAGE_WIDTH_PX * scale) / 2),
-          visibility: scale ? 'visible' : 'hidden',
-        }}
+        className={`absolute top-0 origin-top-left ${scale ? '' : 'resume-fit-pending'} ${isThumbnail ? '' : 'print:static! print:w-full! print:transform-none!'}`}
+        style={
+          scale
+            ? {
+                width: PAGE_WIDTH_PX,
+                transform: `scale(${scale})`,
+                // Centered when capped by maxScale and narrower than the container.
+                left: Math.max(0, (outerWidth - PAGE_WIDTH_PX * scale) / 2),
+              }
+            : // Not measured yet (prerendered HTML, or the frame before the layout effect): CSS fits the paper (index.css).
+              ({ width: PAGE_WIDTH_PX, '--paper-w': `${PAGE_WIDTH_PX}px`, '--max-scale': mode === 'page' ? maxScale : 100 } as React.CSSProperties)
+        }
       >
-        {/* In the page view the paper stays laid out (for export, measuring and screen readers) but invisible. */}
-        <div ref={paperHostRef} className={paged ? 'pointer-events-none absolute inset-x-0 top-0 opacity-0 print:static print:opacity-100' : undefined}>
+        {/* In the page view the paper stays laid out (for export, measuring and screen readers) but invisible;
+            until it has been measured (prerendered HTML) the sheets are empty, so the paper itself shows. */}
+        <div ref={paperHostRef} className={paged && scale ? 'pointer-events-none absolute inset-x-0 top-0 opacity-0 print:static print:opacity-100' : undefined}>
           <ResumePreview data={resolvedData} id={exportable ? 'resume-preview-container' : ''} showPageBreaks={!isThumbnail && !paged} />
         </div>
         {paged && <PageSheets paperHost={paperHostRef} fullBleed={isFullBleedTemplate(resolvedData.templateId)} />}

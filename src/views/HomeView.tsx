@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useLayoutEffect, useMemo, useState } from 'react';
 import { Link, useNavigate } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { ScaledResumePreview } from '../components/ScaledResumePreview';
@@ -118,6 +118,10 @@ const HomeView: React.FC = () => {
   const [heroTemplateId, setHeroTemplateId] = useState(() =>
     hasOwnResume && TEMPLATES.some((t) => t.id === resumeData.templateId) ? resumeData.templateId : 'modern',
   );
+  // Prerendered pages hydrate with the sample; show the visitor's own template once their resume loads.
+  useLayoutEffect(() => {
+    if (hasOwnResume && TEMPLATES.some((t) => t.id === resumeData.templateId)) setHeroTemplateId(resumeData.templateId);
+  }, [hasOwnResume]);
   const heroTemplate = TEMPLATES.find((t) => t.id === heroTemplateId);
   // The hero is the first demo visitors see, so it always shows exactly one page: a long resume is shrunk
   // for display only (saved data is untouched), and if it still won't fit, the built-in sample is shown.

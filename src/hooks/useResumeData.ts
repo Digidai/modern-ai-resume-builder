@@ -1,6 +1,7 @@
-import { useState, useEffect, useCallback, useRef } from 'react';
+import { useState, useEffect, useLayoutEffect, useCallback, useRef } from 'react';
 import { ResumeData, INITIAL_RESUME_DATA } from '../types';
 import { sanitizeDesign } from '../utils/resumeData';
+import { isPrerendered, markHydrated } from '../prerender';
 
 const LEGACY_STORAGE_KEY = 'resumeData';
 const STORAGE_PREFIX = 'resumeData:v2';
@@ -11,7 +12,7 @@ const SAVED_STATUS_DURATION_MS = 1500;
 
 export type ResumeSaveStatus = 'idle' | 'saving' | 'saved' | 'error';
 
-const RESUME_FIELDS: Array<keyof ResumeData> = [
+export const RESUME_FIELDS: Array<keyof ResumeData> = [
   'templateId',
   'design',
   'fullName',
@@ -204,7 +205,11 @@ const saveFieldsToStorage = (data: ResumeData, fields: Array<keyof ResumeData>):
 };
 
 export const useResumeData = () => {
-  const [resumeData, setResumeData] = useState<ResumeData>(loadFromStorage);
+  // A prerendered page hydrates with the sample resume it was built with, then shows the saved one
+  // before the first paint (the boot script in index.html hides previews until then).
+  const [resumeData, setResumeData] = useState<ResumeData>(() =>
+    isPrerendered || typeof window === 'undefined' ? INITIAL_RESUME_DATA : loadFromStorage()
+  );
   const [saveError, setSaveError] = useState<string | null>(null);
   const [saveStatus, setSaveStatus] = useState<ResumeSaveStatus>('idle');
 
@@ -238,6 +243,13 @@ export const useResumeData = () => {
       setSaveError('Failed to save changes locally');
       setSaveStatus('error');
     }
+  }, []);
+
+  useLayoutEffect(() => {
+    if (!isPrerendered) return;
+    const saved = loadFromStorage();
+    if (saved !== INITIAL_RESUME_DATA) setResumeData(saved);
+    markHydrated();
   }, []);
 
   useEffect(() => {

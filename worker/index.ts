@@ -1446,6 +1446,8 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
         "default-src 'self'",
         `script-src 'self' 'nonce-${nonce}'`,
         `style-src 'self' 'nonce-${nonce}'`,
+        // Prerendered pages carry React's inline style attributes (resume layout, accent colours).
+        "style-src-attr 'unsafe-inline'",
         "img-src 'self' data: blob:",
         "font-src 'self' data:",
         "connect-src 'self' data:",
@@ -1471,6 +1473,8 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
 
     const withNonce = html
       .replace(/<style>/g, `<style nonce="${nonce}">`)
+      // The boot script in <head> (theme before first paint; src/entry-server.tsx).
+      .replace(/<script>/g, `<script nonce="${nonce}">`)
       .replace(
         /<script(?![^>]*nonce=)([^>]*)type="application\/ld\+json"/g,
         `<script nonce="${nonce}"$1type="application/ld+json"`

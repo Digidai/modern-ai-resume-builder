@@ -18,7 +18,7 @@ import NotFoundView from '../views/NotFoundView';
 import { RoleExampleArticle } from './RoleExampleArticle';
 import { AgentPromptCard } from './AgentPromptCard';
 import { buildAgentPrompt } from '../shared/agentPrompt.mjs';
-import { loadRoleExample, type RoleExample } from '../data/roleExamples';
+import { getLoadedRoleExample, loadRoleExample, type RoleExample } from '../data/roleExamples';
 import { buildJobPageTitle, describeExample, exampleToResume } from '../shared/roleExample.mjs';
 import { trimExample } from '../shared/trimExample.mjs';
 import { getPersonaFullNameForJobTitle } from '../data/personas';
@@ -80,7 +80,8 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     const ogImageAlt = `Resume templates for ${resolvedJobTitle}`;
     const ogImageUrl = `${siteUrl}${ogImagePath}`;
     // The role's example resume (lazy-loaded per job family); previews show it instead of the user's own data.
-    const [example, setExample] = useState<RoleExample | null>(null);
+    // Prerendering and hydration load it first (getLoadedRoleExample), so the page renders with it straight away.
+    const [example, setExample] = useState<RoleExample | null>(() => getLoadedRoleExample(resolvedJobTitle) ?? null);
     useEffect(() => {
         let cancelled = false;
         void loadRoleExample(resolvedJobTitle, categoryName).then((found) => {
@@ -338,7 +339,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                                             selected ? 'outline-2 outline-accent' : 'shadow-card ring-1 ring-rule group-hover:shadow-raised'
                                         }`}
                                     >
-                                        <LazyResumePreview data={thumbnailData?.[t.id] ?? previewData} templateId={t.id} />
+                                        <LazyResumePreview data={thumbnailData?.[t.id] ?? previewData} templateId={t.id} eager={index < 9} />
                                     </div>
                                     <span className={`mt-1.5 flex items-baseline justify-between gap-1 text-xs ${selected ? 'font-semibold text-ink' : 'text-muted'}`} title={t.description}>
                                         <span className="truncate">{t.name}</span>

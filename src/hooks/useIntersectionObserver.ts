@@ -5,6 +5,8 @@ interface UseIntersectionObserverProps {
     root?: Element | null;
     rootMargin?: string;
     freezeOnceVisible?: boolean;
+    /** Start as visible (and frozen, with `freezeOnceVisible`): for content the server prerenders. */
+    initialVisible?: boolean;
 }
 
 export function useIntersectionObserver({
@@ -12,9 +14,10 @@ export function useIntersectionObserver({
     root = null,
     rootMargin = '0%',
     freezeOnceVisible = false,
+    initialVisible = false,
 }: UseIntersectionObserverProps = {}): [React.RefObject<HTMLDivElement | null>, boolean] {
     const [entry, setEntry] = useState<IntersectionObserverEntry>();
-    const [frozen, setFrozen] = useState(false);
+    const [frozen, setFrozen] = useState(initialVisible && freezeOnceVisible);
     const ref = useRef<HTMLDivElement>(null);
 
     const frozenState = frozen;

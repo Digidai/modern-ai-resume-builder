@@ -111,11 +111,17 @@ const buildCanonicalUrl = (canonical: string | undefined, origin: string) => {
   return `${origin}${normalizedPath}`;
 };
 
+let serverSiteUrl = '';
+/** The site URL prerendered pages are built with (src/entry-server.tsx); browsers use their own origin. */
+export const setServerSiteUrl = (url: string) => {
+  serverSiteUrl = url.replace(/\/+$/, '');
+};
+
 const getRuntimeSiteUrl = () => {
   const envSiteUrl = import.meta.env.VITE_SITE_URL;
   if (envSiteUrl) return envSiteUrl.replace(/\/+$/, '');
   if (typeof window !== 'undefined') return window.location.origin;
-  return '';
+  return serverSiteUrl;
 };
 
 const ensureLdJson = (payload: string) => {

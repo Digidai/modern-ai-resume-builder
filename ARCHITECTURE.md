@@ -37,7 +37,8 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 
 ## Template System
 
-- Pages are lazy-loaded chunks registered in `src/routes.tsx` (add new routes there and in `App.tsx`). `index.tsx` loads the current page's chunk before mounting, so the pre-rendered HTML stays on screen until React replaces it.
+- Pages are lazy-loaded chunks registered in `src/routes.tsx` (add new routes there and in `App.tsx`).
+- Prerendering: the build renders each page with the app itself (`vite build --ssr src/entry-server.tsx`, called from `scripts/seo-postbuild.mjs`), so the first HTML is the real page. `index.tsx` loads the page chunk, a job page's example and the templates its previews show, then hydrates that markup instead of replacing it. Prerendered pages use the sample resume, the light theme and no query string: the first client render must match (`src/prerender.ts`), and the visitor's saved resume and settings apply in layout effects before the first paint. A boot script in `<head>` sets the dark theme and, for a visitor with their own resume, hides previews until hydration. The build fails if a page doesn't prerender completely.
 - Template components live in `src/components/ResumeTemplates.tsx` and `src/components/templates/`.
 - Template metadata (name, description, ATS flag, full-bleed) lives in `src/constants/templates.ts`.
 - Design settings (`ResumeData.design`: accent, font, scale) are applied by `ResumePreview` as CSS variables (`--rs-accent`, `--font-*`) plus `zoom`; see `src/constants/design.ts`.
@@ -64,7 +65,7 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 ## SEO Pipeline
 
 - `src/hooks/useSeo.ts` applies meta tags and JSON-LD at runtime.
-- `scripts/seo-postbuild.mjs` pre-renders `/`, `/directory`, `/templates`, `/templates/*` and `/resume_tmpl/*` with meta tags and JSON-LD, and writes `sitemap.xml`, `robots.txt`, `404.html`, `llms.txt`, `llms-full.txt`, `templates.json` and `resume.schema.json`.
+- `scripts/seo-postbuild.mjs` prerenders `/`, `/directory`, `/editor`, `/agents`, `/templates`, `/templates/*` and `/resume_tmpl/*` with meta tags and JSON-LD, and writes `sitemap.xml`, `robots.txt`, `404.html`, `llms.txt`, `llms-full.txt`, `templates.json` and `resume.schema.json`.
 - Role guides come from `src/data/roleGuides.json` through `src/shared/roleGuide.mjs`, which both the React page (`RoleGuide.tsx`) and the build script use, so the prerendered text matches the app.
 - The template list is read from `src/constants/templates.ts`; the home FAQ from `src/data/homeFaq.json`.
 - The postbuild step also generates Open Graph share images (PNG) under `dist/og`.

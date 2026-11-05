@@ -1,9 +1,10 @@
 import { promises as fs } from 'node:fs';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
 import { slugifyJobTitle } from './slugify.mjs';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
-import { buildJobPageTitle, describeExample, exampleToResume, formatRange, toBullets } from '../src/shared/roleExample.mjs';
+import { buildJobPageTitle, describeExample, exampleToResume } from '../src/shared/roleExample.mjs';
 import { MCP_TOOLS } from '../src/shared/agentPrompt.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
@@ -92,27 +93,6 @@ const loadRoleExamples = async () => {
     for (const [title, example] of Object.entries(data.titles ?? {})) map.set(title, example);
   }
   return map;
-};
-
-const renderExampleHtml = (title, example) => {
-  const experience = example.experience
-    .map(
-      (e) =>
-        `<h4>${escapeHtml(e.role)}, ${escapeHtml(e.company)}${e.location ? ` (${escapeHtml(e.location)})` : ''}</h4><p>${escapeHtml(formatRange(e))}</p>${htmlList(toBullets(e.description))}`
-    )
-    .join('');
-  const projects = (example.projects ?? [])
-    .map((p) => `<h4>${escapeHtml(p.name)}${p.link ? ` (${escapeHtml(p.link)})` : ''}</h4><p>${escapeHtml(p.description)}</p>`)
-    .join('');
-  const education = example.education.map((ed) => `<li>${escapeHtml(ed.degree)}, ${escapeHtml(ed.school)} (${escapeHtml(formatRange(ed))})</li>`).join('');
-  return `<section id="example"><h2>${escapeHtml(title)} resume example</h2>
-    <article>
-      <h3>Summary</h3><p>${escapeHtml(example.summary)}</p>
-      <h3>Experience</h3>${experience}
-      ${projects ? `<h3>Projects</h3>${projects}` : ''}
-      ${education ? `<h3>Education</h3><ul>${education}</ul>` : ''}
-      ${example.skills.length ? `<h3>Skills</h3>${htmlList(example.skills)}` : ''}
-    </article></section>`;
 };
 
 const BASE_KEYWORDS = [
@@ -317,9 +297,29 @@ const setLdJson = (html, json) => {
   return `${before}${payload}${after}`;
 };
 
-const setRootContent = (html, rootHtml) => {
-  if (!rootHtml) return html;
-  return html.replace(/<div id="root"><\/div>/i, `<div id="root">\n${rootHtml}\n</div>`);
+const setRootContent = (html, rootHtml) => html.replace(/<div id="root"><\/div>/i, `<div id="root">${rootHtml}</div>`);
+
+/** Runs before the first paint (see `bootScript` in src/entry-server.tsx); the Worker adds the CSP nonce. */
+const setBootScript = (html, script) => html.replace(/<meta charset="UTF-8" \/>/i, (meta) => `${meta}\n  <script>${script}</script>`);
+
+const setFontPreloads = (html, files) =>
+  html.replace(
+    '</head>',
+    `${files.map((f) => `  <link rel="preload" href="/assets/${f}" as="font" type="font/woff2" crossorigin />`).join('\n')}\n</head>`
+  );
+
+// The page markup comes from the app itself (`vite build --ssr src/entry-server.tsx`), so the HTML
+// a visitor first sees is the page React then hydrates.
+process.env.NODE_ENV ??= 'production';
+const ssr = await import(pathToFileURL(path.join(projectRoot, 'dist-ssr', 'entry-server.js')).href);
+
+/** The prerendered markup of a page; fails the build if any part of it would only render in the browser. */
+const renderPage = async (routePath, siteUrl) => {
+  const html = await ssr.render(routePath, siteUrl);
+  if (html.includes('<!--$!-->') || html.includes('<!--$?-->') || html.includes('<script')) {
+    throw new Error(`Prerendering ${routePath} did not complete (a component errored or suspended).`);
+  }
+  return html;
 };
 
 const ensureDir = async (dirPath) => {
@@ -826,165 +826,6 @@ const buildEditorOgSvg = () => {
 
   return buildOgSvgShell(content);
 };
-
-const renderHomeRoot = ({ featuredTitles, templates, titleCount, toPath }) => {
-  const roleLinks = featuredTitles
-    .map((title) => {
-      const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
-      return `<li><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
-    })
-    .join('\n');
-
-  const templateLinks = templates
-    .map((template) => `<li><a href="${escapeAttr(toPath(`/templates/${template.id}/`))}">${escapeHtml(template.name)}</a></li>`)
-    .join('\n');
-
-  return `
-  <main class="max-w-6xl mx-auto p-6 md:p-10">
-    <header class="mb-10">
-      <h1 class="text-3xl md:text-5xl font-bold text-slate-900 dark:text-white">Start from a real resume for your job.</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Pick from ${titleCount} job titles to get a complete example and writing guide, or write your own. Switch between ${templates.length} templates and download a PDF that applicant tracking systems can read. No account needed.</p>
-      <div class="mt-6 flex flex-wrap gap-4">
-        <a class="inline-flex h-10 items-center justify-center rounded-lg bg-ink px-5 text-paper font-medium hover:bg-ink-hover transition-colors" href="${escapeAttr(toPath('/editor'))}">Start building</a>
-        <a class="inline-flex items-center justify-center rounded-xl border border-slate-300 dark:border-slate-700 px-5 py-3 text-slate-900 dark:text-white hover:bg-white/60 dark:hover:bg-slate-900/60 transition-colors" href="${escapeAttr(toPath('/directory'))}">Browse job titles</a>
-      </div>
-    </header>
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">Popular roles</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm">
-        ${roleLinks}
-      </ul>
-    </section>
-    <section class="mb-10">
-      <h2 class="text-xl font-semibold text-slate-900 dark:text-white mb-3">Templates</h2>
-      <ul class="grid grid-cols-2 md:grid-cols-3 gap-2 text-sm text-slate-700 dark:text-slate-200">
-        ${templateLinks}
-      </ul>
-    </section>
-    <noscript>
-      <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the interactive resume editor.</p>
-    </noscript>
-  </main>`;
-};
-
-const renderDirectoryRoot = (categories, toPath) => {
-  const categoryCards = categories
-    .map((category) => {
-      const links = category.titles
-        .map((title) => {
-          const href = toPath(`/resume_tmpl/${slugifyJobTitle(title)}`);
-          return `<li><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(href)}">${escapeHtml(title)}</a></li>`;
-        })
-        .join('\n');
-      return `
-      <section class="bg-white/80 dark:bg-slate-900/80 border border-slate-200 dark:border-slate-800 rounded-2xl p-6">
-        <h2 class="text-lg font-bold text-slate-900 dark:text-white mb-3">${escapeHtml(category.name)}</h2>
-        <ul class="space-y-1 text-sm">${links}</ul>
-      </section>`;
-    })
-    .join('\n');
-
-  return `
-  <main class="max-w-7xl mx-auto p-6 md:p-10">
-    <header class="mb-10">
-      <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Browse Resume Templates by Job Title</h1>
-      <p class="mt-3 text-slate-600 dark:text-slate-400 max-w-3xl">Pick your role to preview templates, then open the editor to customize content and export to PDF.</p>
-      <p class="mt-4"><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(toPath('/'))}">Back to ModernCV</a></p>
-    </header>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      ${categoryCards}
-    </div>
-    <noscript>
-      <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the interactive resume editor.</p>
-    </noscript>
-  </main>`;
-};
-
-const htmlList = (items, tag = 'ul') => `<${tag}>${items.map((i) => `<li>${escapeHtml(i)}</li>`).join('')}</${tag}>`;
-
-const renderJobRoot = (title, guide, relatedTitles, toPath, example) => {
-  const recommended = guide.recommended
-    .map((t) => `<li><a href="${escapeAttr(toPath(`/templates/${t.id}/`))}">${escapeHtml(t.name)}</a>${t.atsFriendly ? ' (ATS-friendly)' : ''}: ${escapeHtml(t.description)}</li>`)
-    .join('');
-  const related = (relatedTitles ?? [])
-    .map((r) => `<li><a href="${escapeAttr(toPath(`/resume_tmpl/${slugifyJobTitle(r)}/`))}">${escapeHtml(r)}</a></li>`)
-    .join('');
-  const faqs = guide.faqs.map((f) => `<h3>${escapeHtml(f.question)}</h3><p>${escapeHtml(f.answer)}</p>`).join('');
-
-  return `
-  <main class="max-w-4xl mx-auto p-6">
-    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <a href="${escapeAttr(toPath('/directory/'))}">Resume examples</a> / <span aria-current="page">${escapeHtml(title)}</span></nav>
-    <h1>${escapeHtml(title)} resume example &amp; templates</h1>
-    <p>${example ? `A realistic ${escapeHtml(title)} resume shown in every design. Start from the example or use the design with your own resume.` : `See your resume as a ${escapeHtml(title)} in every design. Pick one, edit the content, and download a PDF.`}</p>
-    <p><a href="${escapeAttr(toPath('/editor/'))}">Open the resume editor</a></p>
-    ${example ? renderExampleHtml(title, example) : ''}
-    <h2>How to write a ${escapeHtml(title)} resume</h2>
-    <p>${escapeHtml(guide.intro)} ${escapeHtml(guide.advice)}</p>
-    <h3>Sections, in order</h3>${htmlList(guide.sections, 'ol')}
-    <p><strong>Length:</strong> ${escapeHtml(guide.length)}</p>
-    <p><strong>Summary:</strong> ${escapeHtml(guide.summaryTip)}</p>
-    <h3>Skills to feature</h3>${htmlList(guide.skills)}
-    <h3>Example bullet points</h3>${htmlList(guide.bullets)}
-    <h3>Tips from recruiters</h3>${htmlList(guide.tips)}
-    <h3>Recommended templates</h3><ul>${recommended}</ul>
-    <h2>${escapeHtml(title)} resume FAQ</h2>${faqs}
-    ${related ? `<h2>Related roles</h2><ul>${related}</ul>` : ''}
-  </main>`;
-};
-
-const renderTemplatesRoot = (templates, toPath) => `
-  <main class="max-w-6xl mx-auto p-6">
-    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <span aria-current="page">Templates</span></nav>
-    <h1>Resume templates</h1>
-    <p>${templates.length} free resume templates. ${templates.filter((t) => t.atsFriendly).length} are single-column with standard headings, so applicant tracking systems (ATS) read them reliably. Every template supports your own accent colour, font and text size.</p>
-    <ul>${templates
-      .map(
-        (t) =>
-          `<li><a href="${escapeAttr(toPath(`/templates/${t.id}/`))}"><img src="/og/templates/${escapeAttr(t.id)}-page.jpg" alt="${escapeAttr(`${t.name} resume template preview`)}" width="599" height="848" loading="lazy"> ${escapeHtml(t.name)}</a>${t.atsFriendly ? ' (ATS-friendly)' : ''}: ${escapeHtml(t.description)}</li>`
-      )
-      .join('')}</ul>
-  </main>`;
-
-const renderTemplateRoot = (t, roles, toPath) => `
-  <main class="max-w-6xl mx-auto p-6">
-    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <a href="${escapeAttr(toPath('/templates/'))}">Templates</a> / <span aria-current="page">${escapeHtml(t.name)}</span></nav>
-    <h1>${escapeHtml(t.name)} resume template</h1>
-    <p>${escapeHtml(t.description)}.</p>
-    <img src="/og/templates/${escapeAttr(t.id)}-page.jpg" alt="${escapeAttr(`${t.name} resume template preview`)}" width="599" height="848">
-    <p><a href="${escapeAttr(toPath(`/editor/?template=${t.id}`))}">Use this template</a></p>
-    <dl>
-      <dt>ATS</dt><dd>${t.atsFriendly ? 'Friendly: single column, standard headings and real text in reading order.' : 'Use with care: multi-column or decorative layouts can confuse some applicant tracking systems.'}</dd>
-      <dt>Best for</dt><dd>${escapeHtml(t.bestFor)}</dd>
-      <dt>Customize</dt><dd>Accent colour, font (10 options) and text size, plus fit-to-one-page.</dd>
-      <dt>Export</dt><dd>Vector PDF with selectable text, or print from the browser. A4 page size.</dd>
-    </dl>
-    ${roles.length ? `<h2>Popular with</h2><ul>${roles.map((r) => `<li><a href="${escapeAttr(toPath(`/resume_tmpl/${slugifyJobTitle(r)}/`))}">${escapeHtml(r)}</a></li>`).join('')}</ul>` : ''}
-  </main>`;
-
-const renderAgentsRoot = (siteUrl, tools, templateCount, toPath) => `
-  <main class="max-w-3xl mx-auto p-6 md:p-10">
-    <nav aria-label="Breadcrumb"><a href="${escapeAttr(toPath('/'))}">Home</a> / <span aria-current="page">AI agents</span></nav>
-    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">Use ModernCV from AI agents</h1>
-    <p class="mt-4">Connect Claude, ChatGPT, Cursor or any MCP client to ModernCV. Agents can read writing guides and example resumes, render any of the ${templateCount} templates to a PNG preview or a vector PDF, and hand the user an editor link. Free, no account, no API key.</p>
-    <h2>MCP server</h2>
-    <p>Remote MCP over Streamable HTTP: <code>${escapeHtml(siteUrl)}/mcp</code></p>
-    <ul>${tools.map(([name, desc]) => `<li><code>${escapeHtml(name)}</code>: ${escapeHtml(desc)}</li>`).join('')}</ul>
-    <h2>Agent skill</h2>
-    <p><a href="${escapeAttr(`${siteUrl}/skills/moderncv-resume/SKILL.md`)}">SKILL.md</a>: a step-by-step workflow for drafting, checking and exporting a resume.</p>
-    <h2>HTTP API</h2>
-    <p>The same capabilities as REST endpoints under <code>/api/agent/</code>. <a href="${escapeAttr(`${siteUrl}/openapi.json`)}">OpenAPI 3.1 spec</a>.</p>
-    <p><a href="${escapeAttr(toPath('/templates/'))}">Browse templates</a> · <a href="${escapeAttr(`${siteUrl}/llms.txt`)}">llms.txt</a></p>
-  </main>`;
-
-const renderEditorRoot = (toPath) => `
-  <main class="max-w-3xl mx-auto p-6 md:p-10">
-    <h1 class="text-3xl md:text-4xl font-bold text-slate-900 dark:text-white">ModernCV Resume Editor</h1>
-    <p class="mt-4 text-slate-600 dark:text-slate-400">This interactive editor requires JavaScript. If you're looking for templates, start in the directory.</p>
-    <p class="mt-6"><a class="text-accent underline underline-offset-2 hover:text-ink" href="${escapeAttr(toPath('/directory'))}">Browse templates by job title</a></p>
-    <noscript>
-      <p class="mt-10 text-sm text-slate-600">JavaScript is required to use the editor.</p>
-    </noscript>
-  </main>`;
 
 /** JSON Schema for the editor's import/backup format (JSON Resume documents are accepted too). */
 const buildResumeSchema = (siteUrl, templates) => {
@@ -1529,7 +1370,9 @@ const main = async () => {
   const lastmodIso = new Date().toISOString();
 
   const templateHtmlPath = path.join(distDir, 'index.html');
-  const templateHtml = await fs.readFile(templateHtmlPath, 'utf8');
+  // The site's own text (Inter 400/500/600) is ready at first paint instead of swapping in and reflowing.
+  const uiFonts = (await fs.readdir(path.join(distDir, 'assets'))).filter((f) => /^inter-latin-(400|500|600)-normal-.+\.woff2$/.test(f));
+  const templateHtml = setFontPreloads(setBootScript(await fs.readFile(templateHtmlPath, 'utf8'), ssr.bootScript()), uiFonts);
   const publicDirReady = shouldWritePublic()
     && (await fs.stat(publicDir).then(() => true).catch(() => false));
 
@@ -1659,8 +1502,6 @@ const main = async () => {
     })
     .filter(Boolean);
 
-  const toPath = (p) => p;
-
   const writePage = async ({
     routePath,
     title,
@@ -1668,7 +1509,7 @@ const main = async () => {
     keywords,
     robots,
     ldJson,
-    rootHtml,
+    prerender = true,
     ogImage,
     ogImageType = 'image/png',
     imageAlt,
@@ -1717,7 +1558,7 @@ const main = async () => {
     html = setMetaByName(html, 'twitter:image:alt', resolvedImageAlt);
 
     html = setLdJson(html, ldJson);
-    html = setRootContent(html, rootHtml);
+    if (prerender) html = setRootContent(html, await renderPage(routePath, siteUrl));
 
     const outPath =
       routePath === '/'
@@ -1735,7 +1576,6 @@ const main = async () => {
     keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),
-    rootHtml: renderHomeRoot({ featuredTitles, templates, titleCount: allTitles.length, toPath }),
     ogImage: homeOgPath,
     imageAlt: 'ModernCV resume builder preview',
   });
@@ -1748,7 +1588,6 @@ const main = async () => {
     keywords: buildDirectoryKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl, lastmodIso),
-    rootHtml: renderDirectoryRoot(categories, toPath),
     ogImage: directoryOgPath,
     imageAlt: 'ModernCV job title resume template directory preview',
   });
@@ -1760,7 +1599,6 @@ const main = async () => {
     keywords: buildEditorKeywords(),
     robots: ROBOTS_NOINDEX,
     ldJson: buildEditorSchema(siteUrl, resolveOgImageUrl(siteUrl, editorOgPath), lastmodIso),
-    rootHtml: renderEditorRoot(toPath),
     ogImage: editorOgPath,
     imageAlt: 'ModernCV resume editor preview',
   });
@@ -1773,7 +1611,7 @@ const main = async () => {
     keywords: '',
     robots: ROBOTS_NOINDEX,
     ldJson: [],
-    rootHtml: '',
+    prerender: false,
     ogImage: editorOgPath,
   });
 
@@ -1797,7 +1635,6 @@ const main = async () => {
       keywords,
       robots: ROBOTS_INDEX,
       ldJson: buildJobPageSchema(siteUrl, item.title, pageUrl, guide.recommended, jobOgImageUrl, lastmodIso, guide.faqs, { category: categoryName, skills: guide.skills }),
-      rootHtml: renderJobRoot(item.title, guide, relatedTitles, toPath, example),
       ogImage: jobOgPath,
       imageAlt: `Resume templates for ${item.title}`,
     });
@@ -1876,7 +1713,6 @@ const main = async () => {
         },
       ],
     },
-    rootHtml: renderTemplatesRoot(templates, toPath),
     ogImage: '/og/templates/classic.jpg',
     ogImageType: 'image/jpeg',
     imageAlt: 'ModernCV resume templates',
@@ -1935,7 +1771,6 @@ const main = async () => {
           },
         ],
       },
-      rootHtml: renderTemplateRoot(t, roles, toPath),
       ogImage: `/og/templates/${t.id}.jpg`,
       ogImageType: 'image/jpeg',
       imageAlt: `${t.name} resume template preview`,
@@ -1985,7 +1820,6 @@ const main = async () => {
         },
       ],
     },
-    rootHtml: renderAgentsRoot(siteUrl, MCP_TOOLS, templates.length, toPath),
     ogImage: '/og/templates/classic.jpg',
     ogImageType: 'image/jpeg',
     imageAlt: 'ModernCV for AI agents',
@@ -1998,10 +1832,7 @@ const main = async () => {
   notFoundHtml = setTitleTag(notFoundHtml, 'Page not found | ModernCV');
   notFoundHtml = setMetaByName(notFoundHtml, 'robots', ROBOTS_NOINDEX);
   notFoundHtml = setMetaByName(notFoundHtml, 'googlebot', ROBOTS_NOINDEX);
-  notFoundHtml = setRootContent(
-    notFoundHtml,
-    `<main class="max-w-3xl mx-auto p-6"><h1>We couldn't find that page</h1><p><a href="/editor/">Open the editor</a> · <a href="/templates/">Browse templates</a> · <a href="/directory/">Resume examples by job</a></p></main>`
-  );
+  notFoundHtml = setRootContent(notFoundHtml, await renderPage('/404', siteUrl));
   await writeFileEnsuringDir(path.join(distDir, '404.html'), notFoundHtml);
 
   // Redirect rules: only keep legacy-to-canonical redirects. Avoid `.html`/`/index` rewrite targets,

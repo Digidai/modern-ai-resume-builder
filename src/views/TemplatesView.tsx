@@ -118,11 +118,11 @@ const TemplatesView: React.FC = () => {
         </div>
 
         <ul className="mt-10 grid grid-cols-2 gap-x-5 gap-y-10 sm:grid-cols-3 lg:grid-cols-4">
-          {visible.map((t) => (
+          {visible.map((t, index) => (
             <li key={t.id} className="group relative flex flex-col">
               {/* Stretched link instead of wrapping the preview: previews contain their own <a> elements. */}
               <div className="rounded-xl border border-rule bg-tint p-3 transition-[box-shadow,border-color] duration-200 group-hover:border-muted/30 group-hover:shadow-raised group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent sm:p-4"><div className="overflow-hidden rounded-[2px] bg-white shadow-card">
-                <LazyResumePreview data={resumeData} templateId={t.id} />
+                <LazyResumePreview data={resumeData} templateId={t.id} eager={index < 8} />
               </div></div>
               <div className="mt-3 flex items-center justify-between gap-2">
                 <Link

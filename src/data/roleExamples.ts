@@ -17,16 +17,38 @@ const loadFromSource = async (title: string, family?: string): Promise<RoleExamp
   return null;
 };
 
+// Examples loaded so far, by job-title slug (null: the title has none).
+const loaded = new Map<string, RoleExample | null>();
+
+const fetchExample = async (slug: string): Promise<RoleExample | null | undefined> => {
+  try {
+    const response = await fetch(`/role-examples/${slug}.json`);
+    if (response.ok) return (await response.json()) as RoleExample;
+    return response.status === 404 ? null : undefined;
+  } catch {
+    return undefined;
+  }
+};
+
 /**
  * The example resume for a job title, or null if there is none. Production builds fetch the one
  * small /role-examples/<slug>.json file written by scripts/seo-postbuild.mjs.
  */
 export const loadRoleExample = async (title: string, family?: string): Promise<RoleExample | null> => {
-  if (import.meta.env.DEV) return loadFromSource(title, family);
-  try {
-    const response = await fetch(`/role-examples/${slugifyJobTitle(title)}.json`);
-    return response.ok ? ((await response.json()) as RoleExample) : null;
-  } catch {
-    return null;
-  }
+  const slug = slugifyJobTitle(title);
+  const cached = loaded.get(slug);
+  if (cached !== undefined) return cached;
+  const found = import.meta.env.DEV || import.meta.env.SSR ? await loadFromSource(title, family) : await fetchExample(slug);
+  if (found !== undefined) loaded.set(slug, found);
+  return found ?? null;
+};
+
+/** The example for a title if it has already been loaded, else undefined. */
+export const getLoadedRoleExample = (title: string): RoleExample | null | undefined => loaded.get(slugifyJobTitle(title));
+
+/** Loads a job page's example before hydration, so the first render matches the prerendered page. */
+export const preloadRoleExample = async (slug: string): Promise<void> => {
+  if (import.meta.env.DEV || loaded.has(slug)) return;
+  const found = await fetchExample(slug);
+  if (found !== undefined) loaded.set(slug, found);
 };

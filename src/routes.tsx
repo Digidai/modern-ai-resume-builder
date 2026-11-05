@@ -1,9 +1,9 @@
 import { lazy, type ComponentType } from 'react';
 
 // Each page is its own chunk, so a visitor downloads only the page they open. Pages are
-// pre-rendered as static HTML, which stays on screen until React mounts: index.tsx loads the
-// current page's chunk before the first render, so the page never flashes empty. Later
-// navigations are React transitions, which keep the previous page visible while a chunk loads.
+// prerendered (src/entry-server.tsx) and index.tsx loads the current page's chunk before it
+// hydrates, so the first render needs no fallback. Later navigations are React transitions, which
+// keep the previous page visible while a chunk loads.
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type Loader = () => Promise<{ default: ComponentType<any> }>;
@@ -18,7 +18,7 @@ const page = (load: Loader) => {
     }));
   const Lazy = lazy(preload);
   // Once the chunk is in, render it directly: `lazy` alone would suspend for one tick even then,
-  // and that would replace the pre-rendered page with the (empty) fallback.
+  // and that would replace the prerendered page with the (empty) fallback.
   const Page = (props: Record<string, unknown>) => {
     const Loaded = loaded;
     return Loaded ? <Loaded {...props} /> : <Lazy {...props} />;

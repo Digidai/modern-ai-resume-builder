@@ -3,7 +3,7 @@ import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
 
-export default defineConfig({
+export default defineConfig(({ isSsrBuild }) => ({
   // Use absolute paths to support deep linking (SPA routing) correctly.
   base: '/',
   server: {
@@ -21,10 +21,12 @@ export default defineConfig({
     },
     // Dist can contain thousands of generated static role pages; full deletion is extremely slow.
     emptyOutDir: false,
+    // The prerender bundle (src/entry-server.tsx) only renders HTML; public/ belongs to the site build.
+    copyPublicDir: !isSsrBuild,
   },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, './src'),
     },
   },
-});
+}));

@@ -1,6 +1,7 @@
 import { act, renderHook } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { useResumeData } from './useResumeData';
+import { bootScript } from '../entry-server';
 
 const FULL_NAME_KEY = 'resumeData:v2:fullName';
 const TEMPLATE_ID_KEY = 'resumeData:v2:templateId';
@@ -43,6 +44,29 @@ describe('useResumeData', () => {
     });
 
     expect(localStorage.getItem(FULL_NAME_KEY)).toBe(JSON.stringify('Pat Candidate'));
+  });
+
+  it("lets index.html's boot script tell the stored sample from the visitor's own resume", () => {
+    const savedResume = () => {
+      document.documentElement.className = '';
+      new Function(bootScript())();
+      return document.documentElement.classList.contains('saved-resume');
+    };
+    const { result } = renderHook(() => useResumeData());
+    act(() => {
+      vi.advanceTimersByTime(350);
+    });
+    expect(localStorage.getItem(FULL_NAME_KEY)).not.toBeNull();
+    // The untouched sample shows the prerendered page as is.
+    expect(savedResume()).toBe(false);
+
+    act(() => {
+      result.current.setResumeData((prev) => ({ ...prev, templateId: 'classic' }));
+    });
+    act(() => {
+      vi.advanceTimersByTime(350);
+    });
+    expect(savedResume()).toBe(true);
   });
 
   it('writes a replaced resume at once, so closing the tab right after an import keeps it', () => {

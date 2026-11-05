@@ -113,9 +113,17 @@ const resolveTemplateId = (templateId: string): TemplateId => {
   return id in TEMPLATE_LOADERS ? (id as TemplateId) : DEFAULT_TEMPLATE_ID;
 };
 
+// Templates whose chunk has loaded render directly: `lazy` alone would suspend once even then.
+const loadedTemplates: Partial<Record<TemplateId, TemplateComponent>> = {};
+const loadTemplate = (templateId: TemplateId) =>
+  TEMPLATE_LOADERS[templateId]().then((module) => {
+    loadedTemplates[templateId] = module.default;
+    return module;
+  });
+
 const TEMPLATES = TEMPLATE_IDS.reduce<Record<TemplateId, React.LazyExoticComponent<TemplateComponent>>>(
   (map, templateId) => {
-    map[templateId] = createLazyTemplate(TEMPLATE_LOADERS[templateId]);
+    map[templateId] = createLazyTemplate(() => loadTemplate(templateId));
     return map;
   },
   {} as Record<TemplateId, React.LazyExoticComponent<TemplateComponent>>
@@ -126,14 +134,17 @@ const TemplateFallback: React.FC = () => (
 );
 
 export const preloadResumeTemplate = async (templateId: string): Promise<void> => {
-  const resolvedId = resolveTemplateId(templateId);
-  await TEMPLATE_LOADERS[resolvedId]();
+  await loadTemplate(resolveTemplateId(templateId));
 };
 
 export const ResumeTemplateRenderer: React.FC<ResumeTemplateRendererProps> = ({ data, templateId }) => {
   const resolvedId = resolveTemplateId(templateId);
-  const Template = TEMPLATES[resolvedId];
+  // No Suspense boundary once loaded: prerendering would emit a large one out of order (with an inline
+  // script the CSP blocks), and the client preloads the prerendered templates so hydration matches.
+  const Loaded = loadedTemplates[resolvedId];
+  if (Loaded) return <Loaded data={data} />;
 
+  const Template = TEMPLATES[resolvedId];
   return (
     <Suspense fallback={<TemplateFallback />}>
       <Template data={data} />
