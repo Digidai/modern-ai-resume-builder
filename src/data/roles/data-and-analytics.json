@@ -81,7 +81,9 @@
         "seoul": 0.94,
         "dubai": 0.98,
         "meadow": 0.99,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -115,7 +117,10 @@
         "nova": 0.98,
         "meadow": 0.95,
         "crest": 0.94,
-        "sage": 0.99
+        "sage": 0.99,
+        "marble": 0.91,
+        "willow": 0.97,
+        "zenith": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -316,7 +321,9 @@
         "linen": 0.99,
         "frame": 0.99,
         "meadow": 0.96,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98,
+        "willow": 0.99
       }
     },
     "Machine Learning Scientist": {
@@ -427,7 +434,10 @@
         "dubai": 0.95,
         "meadow": 0.95,
         "crest": 0.97,
-        "sage": 0.99
+        "sage": 0.99,
+        "marble": 0.95,
+        "willow": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 11
@@ -517,7 +527,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Senior Data Analyst": {
@@ -700,7 +711,8 @@
         "pop": 0.85,
         "cast": 0.9,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.98
       }
     },
     "Marketing Analyst": {
@@ -865,7 +877,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "BI Analyst": {
@@ -952,7 +965,8 @@
         "cast": 0.93,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Business Intelligence Analyst": {
@@ -1046,7 +1060,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Reporting Analyst": {
@@ -1217,7 +1233,8 @@
         "cast": 0.91,
         "munich": 0.96,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Growth Analyst": {
@@ -1296,7 +1313,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Customer Insights Analyst": {
@@ -1389,7 +1407,9 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98,
+        "zenith": 0.98
       }
     },
     "Experimentation Analyst": {
@@ -1484,7 +1504,8 @@
         "munich": 0.99,
         "seoul": 0.98,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96
       }
     },
     "BI Developer": {
@@ -1566,7 +1587,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Analytics Engineer": {
@@ -1654,7 +1676,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Analytics Lead": {
@@ -2038,7 +2061,9 @@
         "wave": 0.99,
         "frame": 0.96,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -2212,7 +2237,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Data Quality Engineer": {
@@ -2302,7 +2329,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Data Governance Analyst": {
@@ -2478,7 +2507,8 @@
         "cast": 0.96,
         "seoul": 0.98,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96
       }
     },
     "Quantitative Analyst": {
@@ -2580,7 +2610,9 @@
         "dubai": 0.97,
         "linen": 0.99,
         "frame": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -2677,7 +2709,9 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Decision Scientist": {
@@ -2775,7 +2809,9 @@
         "seoul": 0.98,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Risk Analyst": {
@@ -2860,7 +2896,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Fraud Analyst": {
@@ -3193,7 +3230,8 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "frame": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3295,7 +3333,8 @@
         "munich": 0.97,
         "seoul": 0.99,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Data Science Lead": {
@@ -3388,7 +3427,8 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Data Science Manager": {
@@ -3484,7 +3524,8 @@
         "seoul": 0.98,
         "dubai": 0.99,
         "meadow": 0.98,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Data Science Director": {
@@ -3598,7 +3639,9 @@
         "frame": 0.95,
         "nova": 0.98,
         "meadow": 0.97,
-        "crest": 0.95
+        "crest": 0.95,
+        "marble": 0.94,
+        "zenith": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -3704,7 +3747,10 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "meadow": 0.96,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.95,
+        "willow": 0.99,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -3802,7 +3848,9 @@
         "munich": 0.97,
         "seoul": 0.94,
         "dubai": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Director of Data": {
@@ -3885,7 +3933,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Data Analyst Intern": {
@@ -3983,7 +4032,9 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Junior Data Analyst": {
@@ -4070,7 +4121,8 @@
         "cast": 0.95,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Data Science Intern": {
@@ -4168,7 +4220,8 @@
         "seoul": 0.97,
         "dubai": 0.99,
         "meadow": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96
       }
     },
     "Junior Data Scientist": {
@@ -4253,7 +4306,8 @@
         "pop": 0.85,
         "cast": 0.9,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.98
       }
     },
     "Staff Data Scientist": {
@@ -4352,7 +4406,9 @@
         "seoul": 0.97,
         "dubai": 0.95,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Principal Data Scientist": {
@@ -4507,7 +4563,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Healthcare Data Analyst": {
@@ -4619,7 +4677,10 @@
         "wave": 0.97,
         "frame": 0.98,
         "meadow": 0.96,
-        "crest": 0.95
+        "crest": 0.95,
+        "marble": 0.94,
+        "willow": 0.99,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 10
@@ -4792,7 +4853,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     }
   }

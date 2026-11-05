@@ -454,7 +454,9 @@
         "dubai": 0.98,
         "linen": 0.97,
         "wave": 0.97,
-        "frame": 0.95
+        "frame": 0.95,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -820,7 +822,9 @@
         "linen": 0.92,
         "wave": 0.94,
         "frame": 0.96,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -1315,7 +1319,8 @@
         "seoul": 0.96,
         "linen": 0.98,
         "wave": 0.98,
-        "frame": 0.95
+        "frame": 0.95,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -2078,7 +2083,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "CT Technologist": {
@@ -2540,7 +2547,8 @@
         "seoul": 0.94,
         "linen": 0.98,
         "frame": 0.98,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "marble": 0.99
       },
       "trimLetter": {
         "bronx": 10

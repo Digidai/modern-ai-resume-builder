@@ -346,7 +346,8 @@
         "cast": 0.91,
         "iron": 0.89,
         "seoul": 0.91,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "iron": 8
@@ -487,7 +488,9 @@
         "ginto": 0.92,
         "pop": 0.9,
         "seoul": 0.96,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 8,
@@ -571,7 +574,8 @@
         "cast": 0.92,
         "iron": 0.94,
         "munich": 0.98,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "iron": 8
@@ -664,7 +668,8 @@
         "pop": 0.86,
         "munich": 0.97,
         "seoul": 0.94,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "berlin": 8,

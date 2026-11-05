@@ -216,7 +216,9 @@
         "munich": 0.98,
         "seoul": 0.94,
         "dubai": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 8,
@@ -304,7 +306,8 @@
         "cast": 0.98,
         "berlin": 0.91,
         "munich": 0.98,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "marble": 0.99
       },
       "trimLetter": {
         "berlin": 8

@@ -145,7 +145,8 @@
         "munich": 0.97,
         "seoul": 0.94,
         "dubai": 0.99,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "marble": 0.98
       }
     },
     "Licensed Master Social Worker (LMSW)": {
@@ -1051,7 +1052,8 @@
         "cast": 0.93,
         "iron": 0.85,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -1149,7 +1151,9 @@
         "dubai": 0.95,
         "manila": 0.99,
         "nova": 0.99,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1473,7 +1477,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Major Gifts Officer": {
@@ -1559,7 +1564,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Development Director": {
@@ -1798,7 +1804,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Executive Director": {

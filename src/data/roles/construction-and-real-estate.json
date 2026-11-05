@@ -167,7 +167,8 @@
         "cast": 0.95,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Construction Superintendent": {
@@ -547,7 +548,8 @@
         "munich": 0.96,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98
       }
     },
     "Civil Engineer": {
@@ -2184,7 +2186,8 @@
         "iron": 0.85,
         "seoul": 0.95,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -2550,7 +2553,8 @@
         "munich": 0.95,
         "seoul": 0.98,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Assistant Project Manager": {
@@ -3022,7 +3026,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "seoul": 0.93,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Real Estate Asset Manager": {

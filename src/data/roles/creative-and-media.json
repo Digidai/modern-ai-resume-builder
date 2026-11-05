@@ -171,7 +171,8 @@
         "mono": 0.96,
         "pop": 0.85,
         "cast": 0.96,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -197,7 +198,9 @@
         "dubai": 0.94,
         "manila": 0.99,
         "frame": 0.99,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.93,
+        "zenith": 0.96
       },
       "trimLetter": {
         "iron": 8,
@@ -476,7 +479,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Video Editor": {
@@ -672,7 +676,9 @@
         "pop": 0.85,
         "cast": 0.97,
         "seoul": 0.96,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Motion Graphics Designer": {
@@ -1084,7 +1090,8 @@
         "iron": 0.85,
         "pop": 0.85,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "iron": 6,
@@ -1287,7 +1294,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.98
       }
     },
     "Sound Designer": {
@@ -1363,7 +1371,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "seoul": 0.96,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.99
       }
     },
     "Music Producer": {
@@ -1753,7 +1762,9 @@
         "seoul": 0.96,
         "dubai": 0.96,
         "frame": 0.95,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -1893,7 +1904,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "iron": 0.92,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "iron": 8
@@ -2003,7 +2015,9 @@
         "manila": 0.97,
         "nova": 0.98,
         "meadow": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.94,
+        "zenith": 0.95
       },
       "trimLetter": {
         "berlin": 9
@@ -2175,7 +2189,8 @@
         "iron": 0.85,
         "pop": 0.85,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "iron": 9,
@@ -2261,7 +2276,8 @@
         "cast": 0.95,
         "pop": 0.85,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "pop": 6
@@ -2440,7 +2456,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "iron": 0.91,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "marble": 0.99
       },
       "trimLetter": {
         "iron": 8

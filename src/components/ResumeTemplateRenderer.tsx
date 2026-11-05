@@ -103,6 +103,16 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   ember: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.EmberTemplate })),
   sage: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SageTemplate })),
   pearl: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.PearlTemplate })),
+  beacon: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.BeaconTemplate })),
+  folio: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.FolioTemplate })),
+  slate: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SlateTemplate })),
+  tribune: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.TribuneTemplate })),
+  keel: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.KeelTemplate })),
+  marble: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MarbleTemplate })),
+  willow: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.WillowTemplate })),
+  haven: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.HavenTemplate })),
+  ivory: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.IvoryTemplate })),
+  zenith: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.ZenithTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

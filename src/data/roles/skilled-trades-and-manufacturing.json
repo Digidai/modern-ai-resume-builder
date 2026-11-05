@@ -277,7 +277,8 @@
         "mono": 0.89,
         "pop": 0.86,
         "cast": 0.97,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "marble": 0.99
       }
     },
     "Industrial Electrician": {
@@ -578,7 +579,8 @@
         "federal": 0.98,
         "munich": 0.99,
         "seoul": 0.96,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Pipefitter": {

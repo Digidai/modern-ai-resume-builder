@@ -443,7 +443,9 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "meadow": 0.96,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -515,7 +517,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "seoul": 0.96,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "fitLetter": {
         "modern": 0.86,
@@ -546,7 +550,9 @@
         "seoul": 0.91,
         "dubai": 0.95,
         "meadow": 0.98,
-        "crest": 0.94
+        "crest": 0.94,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 10
@@ -632,7 +638,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Principal Software Engineer": {
@@ -732,7 +739,8 @@
         "seoul": 0.97,
         "dubai": 0.99,
         "meadow": 0.98,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Frontend Developer": {
@@ -825,7 +833,8 @@
         "munich": 0.98,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Frontend Engineer": {
@@ -1074,7 +1083,10 @@
         "dubai": 0.95,
         "meadow": 0.94,
         "crest": 0.96,
-        "sage": 0.98
+        "sage": 0.98,
+        "marble": 0.97,
+        "willow": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -1176,7 +1188,10 @@
         "munich": 0.93,
         "seoul": 0.97,
         "dubai": 0.97,
-        "meadow": 0.96
+        "meadow": 0.96,
+        "marble": 0.95,
+        "willow": 0.99,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1272,7 +1287,8 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -1529,7 +1545,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Web Developer": {
@@ -1752,7 +1769,8 @@
         "cast": 0.93,
         "seoul": 0.98,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       }
     },
     "React Developer": {
@@ -1912,7 +1930,8 @@
         "mono": 0.92,
         "pop": 0.88,
         "cast": 0.98,
-        "munich": 0.98
+        "munich": 0.98,
+        "marble": 0.98
       }
     },
     "Next.js Developer": {
@@ -1995,7 +2014,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Angular Developer": {
@@ -2159,7 +2179,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Svelte Developer": {
@@ -2407,7 +2428,8 @@
         "cast": 0.97,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Express.js Developer": {
@@ -2494,7 +2516,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97
       }
     },
     ".NET Developer": {
@@ -2585,7 +2608,8 @@
         "munich": 0.96,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Java Developer": {
@@ -2692,7 +2716,10 @@
         "seoul": 0.91,
         "dubai": 0.95,
         "meadow": 0.92,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.96,
+        "willow": 0.99,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2781,7 +2808,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Python Developer": {
@@ -2955,7 +2983,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Flask Developer": {
@@ -3125,7 +3154,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97
       }
     },
     "Rust Developer": {
@@ -3215,7 +3245,8 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98
       }
     },
     "Scala Developer": {
@@ -3386,7 +3417,8 @@
         "munich": 0.98,
         "seoul": 0.98,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       }
     },
     "Ruby on Rails Developer": {
@@ -3482,7 +3514,9 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -3557,7 +3591,9 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "fitLetter": {
         "modern": 0.87,
@@ -3589,7 +3625,10 @@
         "seoul": 0.91,
         "dubai": 0.91,
         "meadow": 0.96,
-        "crest": 0.94
+        "crest": 0.94,
+        "marble": 0.96,
+        "willow": 0.99,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -4115,7 +4154,10 @@
         "wave": 0.99,
         "frame": 0.95,
         "meadow": 0.94,
-        "sage": 0.98
+        "sage": 0.98,
+        "marble": 0.95,
+        "willow": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -4208,7 +4250,8 @@
         "cast": 0.95,
         "munich": 0.96,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Kotlin Developer": {
@@ -4455,7 +4498,8 @@
         "cast": 0.93,
         "seoul": 0.97,
         "dubai": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       }
     },
     "Blockchain Developer": {
@@ -4537,7 +4581,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Web3 Developer": {
@@ -4768,7 +4813,10 @@
         "manila": 0.99,
         "nova": 0.99,
         "meadow": 0.96,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "willow": 0.99,
+        "zenith": 0.96
       },
       "trimLetter": {
         "iron": 5
@@ -4953,7 +5001,9 @@
         "manila": 0.99,
         "nova": 0.99,
         "meadow": 0.96,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 6,
@@ -5120,7 +5170,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Flutter Developer": {
@@ -5197,7 +5248,8 @@
         "pop": 0.87,
         "cast": 0.97,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "React Native Developer": {
@@ -5362,7 +5414,9 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -5449,7 +5503,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "marble": 0.98
       }
     },
     "Unity Developer": {
@@ -5532,7 +5587,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Game Developer": {
@@ -5840,7 +5896,9 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "frame": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6146,7 +6204,9 @@
         "cast": 0.92,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Junior Python Developer": {
@@ -6227,7 +6287,9 @@
         "pop": 0.92,
         "seoul": 0.93,
         "dubai": 0.98,
-        "frame": 0.97
+        "frame": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 8,
@@ -6323,7 +6385,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6496,7 +6560,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Senior Android Developer": {
@@ -6588,7 +6653,9 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6678,7 +6745,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.98
       }
     },
     "Game Programmer": {
@@ -7063,7 +7131,8 @@
         "munich": 0.99,
         "seoul": 0.98,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Machine Learning Intern": {

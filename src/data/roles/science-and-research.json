@@ -576,7 +576,8 @@
         "cast": 0.95,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -609,7 +610,10 @@
         "manila": 0.99,
         "nova": 0.98,
         "meadow": 0.96,
-        "crest": 0.95
+        "crest": 0.95,
+        "marble": 0.93,
+        "willow": 0.99,
+        "zenith": 0.94
       }
     },
     "Principal Scientist": {
@@ -932,7 +936,8 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Laboratory Manager": {
@@ -1082,7 +1087,8 @@
         "ginto": 0.85,
         "munich": 0.98,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       },
       "trimLetter": {
         "ginto": 10
@@ -1420,7 +1426,8 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.99,
-        "meadow": 0.94
+        "meadow": 0.94,
+        "marble": 0.98
       }
     },
     "Quality Control Chemist": {
@@ -1586,7 +1593,9 @@
         "wave": 0.97,
         "frame": 0.96,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "berlin": 10,

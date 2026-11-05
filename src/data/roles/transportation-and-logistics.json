@@ -377,7 +377,9 @@
         "munich": 0.97,
         "seoul": 0.92,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Truck Dispatcher": {
@@ -746,7 +748,8 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.99,
-        "frame": 0.97
+        "frame": 0.97,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -1708,7 +1711,8 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "meadow": 0.99,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97
       }
     },
     "Locomotive Engineer": {

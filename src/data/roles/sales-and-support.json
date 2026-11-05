@@ -166,7 +166,9 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Sales Development Representative (SDR)": {
@@ -408,7 +410,8 @@
         "pop": 0.86,
         "cast": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "BDR Manager": {
@@ -495,7 +498,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Account Executive": {
@@ -581,7 +585,9 @@
         "munich": 0.98,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Enterprise Account Executive": {
@@ -668,7 +674,8 @@
         "cast": 0.98,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.97
       }
     },
     "Account Manager": {
@@ -763,7 +770,9 @@
         "seoul": 0.96,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "pop": 6
@@ -861,7 +870,9 @@
         "seoul": 0.96,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Partner Account Manager": {
@@ -943,7 +954,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Sales Manager": {
@@ -1034,7 +1047,9 @@
         "munich": 0.96,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 5
@@ -1124,7 +1139,8 @@
         "munich": 0.98,
         "seoul": 0.98,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Sales Operations Manager": {
@@ -1206,7 +1222,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Revenue Operations (RevOps) Manager": {
@@ -1303,7 +1320,9 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1402,7 +1421,9 @@
         "munich": 0.96,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 5
@@ -1487,7 +1508,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Customer Success Manager": {
@@ -1586,7 +1608,9 @@
         "dubai": 0.97,
         "frame": 0.99,
         "meadow": 0.98,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -1677,7 +1701,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Customer Success Director": {
@@ -1781,7 +1807,9 @@
         "linen": 0.99,
         "frame": 0.96,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -1869,7 +1897,9 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Customer Support Representative": {
@@ -1962,7 +1992,9 @@
         "munich": 0.97,
         "seoul": 0.96,
         "dubai": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 1,
@@ -2058,7 +2090,9 @@
         "seoul": 0.96,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -2162,7 +2196,9 @@
         "frame": 0.94,
         "nova": 0.98,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.94,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 1,
@@ -2262,7 +2298,9 @@
         "dubai": 0.95,
         "manila": 0.99,
         "nova": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -2356,7 +2394,9 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.94
+        "crest": 0.94,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -2533,7 +2573,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97
       }
     },
     "Implementation Project Manager": {
@@ -2602,7 +2643,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -2632,7 +2674,9 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.95,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5,
@@ -2727,7 +2771,9 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "frame": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "quartz": 7
@@ -2908,7 +2954,9 @@
         "dubai": 0.95,
         "manila": 0.99,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       }
     },
     "Technical Account Manager": {
@@ -2994,7 +3042,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Renewal Manager": {
@@ -3080,7 +3129,9 @@
         "cast": 0.95,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Channel Sales Manager": {
@@ -3165,7 +3216,9 @@
         "cast": 0.96,
         "seoul": 0.96,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Partner Manager": {
@@ -3249,7 +3302,9 @@
         "cast": 0.95,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Solutions Consultant": {
@@ -3341,7 +3396,9 @@
         "manila": 0.99,
         "frame": 0.99,
         "nova": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -3439,7 +3496,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Head of Sales": {
@@ -3527,7 +3586,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Sales Intern": {
@@ -3705,7 +3765,9 @@
         "dubai": 0.95,
         "manila": 0.99,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -3881,7 +3943,9 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -3967,7 +4031,8 @@
         "cast": 0.96,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Sales Director": {
@@ -4209,7 +4274,9 @@
         "cast": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       }
     },
     "Customer Onboarding Specialist": {
@@ -4296,7 +4363,8 @@
         "cast": 0.9,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Call Center Representative": {
@@ -4375,7 +4443,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Call Center Supervisor": {

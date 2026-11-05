@@ -82,7 +82,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "FP&A Analyst": {
@@ -363,7 +364,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Bookkeeper": {
@@ -703,7 +705,8 @@
         "seoul": 0.99,
         "linen": 0.98,
         "wave": 0.95,
-        "frame": 0.96
+        "frame": 0.96,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -796,7 +799,8 @@
         "pop": 0.87,
         "cast": 0.93,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Controller": {
@@ -887,7 +891,8 @@
         "pop": 0.89,
         "cast": 0.93,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Internal Auditor": {
@@ -1049,7 +1054,8 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.99,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -1298,7 +1304,8 @@
         "seoul": 0.9,
         "dubai": 0.98,
         "meadow": 0.95,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98
       }
     },
     "Enterprise Risk Manager": {
@@ -1400,7 +1407,9 @@
         "dubai": 0.97,
         "frame": 0.98,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -1721,7 +1730,8 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Finance Business Partner": {
@@ -1905,7 +1915,8 @@
         "seoul": 0.95,
         "dubai": 0.99,
         "meadow": 0.96,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Legal Counsel": {
@@ -2094,7 +2105,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Contract Analyst": {
@@ -2393,7 +2405,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Regulatory Affairs Specialist": {
@@ -2781,7 +2794,8 @@
         "dubai": 0.99,
         "linen": 0.99,
         "frame": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Employment Counsel": {
@@ -3144,7 +3158,8 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "meadow": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Audit Associate": {
@@ -3242,7 +3257,10 @@
         "frame": 0.98,
         "meadow": 0.94,
         "crest": 0.98,
-        "sage": 0.99
+        "sage": 0.99,
+        "marble": 0.97,
+        "willow": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5,

@@ -101,7 +101,9 @@
         "manila": 0.99,
         "nova": 0.98,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.95,
+        "zenith": 0.96
       }
     },
     "Chief of Staff to CEO": {
@@ -202,7 +204,9 @@
         "seoul": 0.93,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -458,7 +462,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.99,
+        "zenith": 0.98
       }
     },
     "Program Coordinator": {
@@ -545,7 +551,9 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Technical Program Manager": {
@@ -636,7 +644,8 @@
         "cast": 0.92,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98
       }
     },
     "PMO Manager": {
@@ -805,7 +814,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Scrum Master": {
@@ -890,7 +901,8 @@
         "cast": 0.9,
         "seoul": 0.97,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       }
     },
     "Agile Coach": {
@@ -1061,7 +1073,9 @@
         "iron": 0.85,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -1164,7 +1178,9 @@
         "munich": 0.96,
         "seoul": 0.97,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1258,7 +1274,9 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1355,7 +1373,8 @@
         "munich": 0.99,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96
       }
     },
     "Management Consultant": {
@@ -1440,7 +1459,9 @@
         "cast": 0.93,
         "iron": 0.85,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 10
@@ -1535,7 +1556,9 @@
         "iron": 0.85,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -1622,7 +1645,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Strategy Manager": {
@@ -1794,7 +1818,9 @@
         "dubai": 0.98,
         "linen": 0.97,
         "wave": 0.97,
-        "frame": 0.98
+        "frame": 0.98,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -1866,7 +1892,8 @@
         "pop": 0.85,
         "cast": 0.92,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -1895,7 +1922,9 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -1985,7 +2014,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Corporate Development Manager": {
@@ -2086,7 +2116,9 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -2184,7 +2216,8 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Product Strategy Manager": {
@@ -2269,7 +2302,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Growth Strategy Manager": {
@@ -2357,7 +2391,9 @@
         "pop": 0.85,
         "cast": 0.97,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Strategic Partnerships Manager": {
@@ -2424,7 +2460,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -2456,7 +2493,9 @@
         "dubai": 0.93,
         "manila": 0.99,
         "nova": 0.99,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.95,
+        "zenith": 0.96
       },
       "trimLetter": {
         "berlin": 6,
@@ -2550,7 +2589,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Business Development Analyst": {
@@ -2637,7 +2678,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Change Management Consultant": {
@@ -2733,7 +2776,8 @@
         "cast": 0.94,
         "munich": 0.99,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Transformation Manager": {
@@ -2827,7 +2871,9 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Business Transformation Consultant": {
@@ -2933,7 +2979,9 @@
         "dubai": 0.95,
         "frame": 0.97,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.96
       }
     },
     "Portfolio Manager": {
@@ -3116,7 +3164,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Project Management Intern": {
@@ -3280,7 +3330,9 @@
         "munich": 0.96,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "iron": 5
@@ -3375,7 +3427,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.96
       }
     },
     "IT Project Manager": {
@@ -3747,7 +3801,9 @@
         "seoul": 0.92,
         "dubai": 0.97,
         "meadow": 0.96,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.96,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 5,
@@ -3858,7 +3914,9 @@
         "linen": 0.95,
         "wave": 0.96,
         "frame": 0.95,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3948,7 +4006,8 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.98
       }
     },
     "VP of Strategy": {

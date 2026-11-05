@@ -63,3 +63,33 @@ export const SageTemplate = createSimpleTemplate({ font: 'font-lato', accent: '#
 
 /** Inter, 3:4 photo right, accent-bar headings, "Role, Employer" on one line. */
 export const PearlTemplate = createSimpleTemplate({ font: 'font-inter', accent: '#475569', header: 'left', heading: 'bar', dates: 'right', company: 'inline', icons: true, photo: { side: 'right', shape: 'rect' } });
+
+/** Roboto, capitalised name, short accent strokes, "Role, Employer" on one line. */
+export const BeaconTemplate = createSimpleTemplate({ font: 'font-roboto', accent: '#111827', header: 'left', upperName: true, heading: 'short', dates: 'right', company: 'inline' });
+
+/** EB Garamond, centred header, ruled headings, employer in the accent colour. */
+export const FolioTemplate = createSimpleTemplate({ font: 'font-garamond', accent: '#1F3A5F', header: 'center', heading: 'rule', dates: 'right', company: 'accent' });
+
+/** Lato, contacts stacked right, dates in a left column. */
+export const SlateTemplate = createSimpleTemplate({ font: 'font-lato', accent: '#334155', header: 'split', heading: 'line', dates: 'column', company: 'italic' });
+
+/** Times, centred capitalised name, headings with a trailing rule. */
+export const TribuneTemplate = createSimpleTemplate({ font: 'font-tinos', accent: '#111111', header: 'center', upperName: true, heading: 'line', dates: 'right', company: 'inline' });
+
+/** Raleway, accent-bar headings, dates in a left column. */
+export const KeelTemplate = createSimpleTemplate({ font: 'font-raleway', accent: '#0E7490', header: 'left', heading: 'bar', dates: 'column', company: 'accent' });
+
+/** Charis, centred 3:4 photo above the name, tinted headings. */
+export const MarbleTemplate = createSimpleTemplate({ font: 'font-charis', accent: '#57534E', header: 'center', heading: 'tint', dates: 'right', company: 'italic', icons: true, photo: { side: 'top', shape: 'rect' } });
+
+/** Lato, round photo right, dates in a left column. */
+export const WillowTemplate = createSimpleTemplate({ font: 'font-lato', accent: '#0F766E', header: 'left', heading: 'rule', dates: 'column', company: 'accent', icons: true, photo: { side: 'right', shape: 'round' } });
+
+/** EB Garamond, round photo left, contacts stacked right, short strokes. */
+export const HavenTemplate = createSimpleTemplate({ font: 'font-garamond', accent: '#7A2E2E', header: 'split', heading: 'short', dates: 'right', company: 'italic', icons: true, photo: { side: 'left', shape: 'round' } });
+
+/** Source Serif, 3:4 photo left, capitalised name, accent bars. */
+export const IvoryTemplate = createSimpleTemplate({ font: 'font-source-serif', accent: '#1E3A5F', header: 'left', upperName: true, heading: 'bar', dates: 'right', company: 'inline', icons: true, photo: { side: 'left', shape: 'rect' } });
+
+/** Roboto, centred round photo, short accent strokes. */
+export const ZenithTemplate = createSimpleTemplate({ font: 'font-roboto', accent: '#1D4ED8', header: 'center', heading: 'short', dates: 'right', company: 'accent', icons: true, photo: { side: 'top', shape: 'round' } });

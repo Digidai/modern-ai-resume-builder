@@ -336,7 +336,9 @@
         "munich": 0.98,
         "seoul": 0.94,
         "dubai": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "High School Teacher": {
@@ -887,7 +889,9 @@
         "linen": 0.96,
         "wave": 0.97,
         "frame": 0.95,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -1142,7 +1146,8 @@
         "cast": 0.93,
         "munich": 0.99,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Student Success Coach": {
@@ -1237,7 +1242,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Instructional Coach": {
@@ -1325,7 +1332,8 @@
         "pop": 0.9,
         "cast": 0.96,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "School Principal": {
@@ -1422,7 +1430,8 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "frame": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98
       }
     },
     "Assistant Principal": {
@@ -1691,7 +1700,8 @@
         "linen": 0.99,
         "wave": 0.98,
         "frame": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.96
       }
     },
     "School Administrator": {
@@ -1849,7 +1859,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.98
       }
     },
     "University Professor": {
@@ -2032,7 +2043,8 @@
         "cast": 0.96,
         "seoul": 0.95,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Teaching Assistant": {
@@ -2188,7 +2200,8 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2723,7 +2736,9 @@
         "dubai": 0.98,
         "linen": 0.93,
         "wave": 0.95,
-        "frame": 0.95
+        "frame": 0.95,
+        "marble": 0.98,
+        "zenith": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -3300,7 +3315,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.92,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Math Teacher": {
@@ -3570,7 +3586,8 @@
         "cast": 0.93,
         "seoul": 0.92,
         "dubai": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98
       }
     },
     "Reading Specialist": {
@@ -3661,7 +3678,8 @@
         "cast": 0.94,
         "seoul": 0.95,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       }
     },
     "Adjunct Professor": {

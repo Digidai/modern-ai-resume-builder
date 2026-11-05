@@ -704,7 +704,8 @@
         "cast": 0.99,
         "munich": 0.99,
         "seoul": 0.91,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.97
       }
     },
     "Budget Analyst": {
@@ -1151,7 +1152,9 @@
         "munich": 0.98,
         "seoul": 0.92,
         "dubai": 0.95,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -1391,7 +1394,8 @@
         "munich": 0.99,
         "seoul": 0.96,
         "linen": 0.98,
-        "wave": 0.99
+        "wave": 0.99,
+        "marble": 0.99
       }
     },
     "Code Enforcement Officer": {
@@ -1779,7 +1783,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.96,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Assistant City Manager": {
@@ -1865,7 +1870,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.94,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "City Manager": {
@@ -1975,7 +1981,9 @@
         "linen": 0.95,
         "wave": 0.97,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.96,
+        "zenith": 0.97
       },
       "trimLetter": {
         "berlin": 10

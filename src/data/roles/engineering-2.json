@@ -171,7 +171,8 @@
         "munich": 0.99,
         "seoul": 0.98,
         "dubai": 0.99,
-        "meadow": 0.99
+        "meadow": 0.99,
+        "marble": 0.99
       }
     },
     "Observability Engineer": {
@@ -263,7 +264,8 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97
       }
     },
     "CI/CD Engineer": {
@@ -534,7 +536,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.97
       }
     },
     "Security Engineer": {
@@ -629,7 +632,8 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98
       }
     },
     "Application Security Engineer": {
@@ -804,7 +808,8 @@
         "seoul": 0.93,
         "dubai": 0.95,
         "frame": 0.99,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98
       }
     },
     "Security Architect": {
@@ -905,7 +910,8 @@
         "wave": 0.97,
         "frame": 0.95,
         "meadow": 0.96,
-        "crest": 0.94
+        "crest": 0.94,
+        "marble": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -1003,7 +1009,8 @@
         "seoul": 0.99,
         "dubai": 0.99,
         "frame": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 7
@@ -1190,7 +1197,9 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.97,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.95,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1287,7 +1296,8 @@
         "seoul": 0.92,
         "dubai": 0.99,
         "meadow": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.98
       }
     },
     "Threat Intelligence Analyst": {
@@ -1565,7 +1575,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "seoul": 0.95,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1594,7 +1606,8 @@
         "seoul": 0.91,
         "dubai": 0.93,
         "meadow": 0.98,
-        "crest": 0.94
+        "crest": 0.94,
+        "marble": 0.95
       },
       "trimLetter": {
         "berlin": 8
@@ -1732,7 +1745,8 @@
         "cast": 0.94,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "SOC Analyst": {
@@ -1818,7 +1832,8 @@
         "cast": 0.9,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Incident Response Analyst": {
@@ -2002,7 +2017,9 @@
         "dubai": 0.95,
         "frame": 0.99,
         "meadow": 0.95,
-        "crest": 0.95
+        "crest": 0.95,
+        "marble": 0.98,
+        "willow": 0.99
       },
       "trimLetter": {
         "quartz": 12
@@ -2230,7 +2247,8 @@
         "seoul": 0.97,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.98
       }
     },
     "MLOps Engineer": {
@@ -2398,7 +2416,9 @@
         "seoul": 0.95,
         "dubai": 0.97,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "AI Research Engineer": {
@@ -2714,7 +2734,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "marble": 0.99
       }
     },
     "Cloud Solutions Architect": {
@@ -2795,7 +2816,8 @@
         "pop": 0.85,
         "cast": 0.92,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "AWS Solutions Architect": {
@@ -2969,7 +2991,9 @@
         "dubai": 0.95,
         "frame": 0.99,
         "meadow": 0.98,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       },
       "trimLetter": {
         "berlin": 7
@@ -3311,7 +3335,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Site Reliability Engineer (SRE)": {
@@ -3399,7 +3424,8 @@
         "seoul": 0.97,
         "dubai": 0.99,
         "frame": 0.97,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -3492,7 +3518,8 @@
         "cast": 0.95,
         "munich": 0.97,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Platform Engineer": {
@@ -3587,7 +3614,8 @@
         "munich": 0.95,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Infrastructure Engineer": {
@@ -3674,7 +3702,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "crest": 0.98
+        "crest": 0.98,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "Kubernetes Engineer": {
@@ -3751,7 +3781,8 @@
         "pop": 0.85,
         "seoul": 0.97,
         "dubai": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.99
       }
     },
     "Network Engineer": {
@@ -3972,7 +4003,8 @@
         "munich": 0.95,
         "seoul": 0.92,
         "dubai": 0.99,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "marble": 0.98
       }
     },
     "Linux System Administrator": {
@@ -4133,7 +4165,8 @@
         "munich": 0.96,
         "seoul": 0.97,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Database Engineer": {
@@ -4514,7 +4547,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -4543,7 +4577,9 @@
         "munich": 0.96,
         "seoul": 0.92,
         "dubai": 0.95,
-        "crest": 0.96
+        "crest": 0.96,
+        "marble": 0.97,
+        "zenith": 0.98
       }
     },
     "DataOps Engineer": {
@@ -4949,7 +4985,9 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "marble": 0.95,
+        "zenith": 0.98
       }
     },
     "Microservices Engineer": {
@@ -5094,7 +5132,8 @@
         "munich": 0.98,
         "seoul": 0.97,
         "dubai": 0.97,
-        "frame": 0.97
+        "frame": 0.97,
+        "marble": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -5271,7 +5310,8 @@
         "cast": 0.95,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Solutions Architect": {
@@ -5353,7 +5393,8 @@
         "cast": 0.97,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.99
       }
     },
     "Technical Lead": {
@@ -5767,7 +5808,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.94,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Help Desk Technician": {
@@ -6253,7 +6295,8 @@
         "bronx": 0.85,
         "seoul": 0.98,
         "dubai": 0.99,
-        "crest": 0.99
+        "crest": 0.99,
+        "marble": 0.98
       },
       "trimLetter": {
         "bronx": 12
@@ -6338,7 +6381,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "marble": 0.98
       }
     },
     "Junior DevOps Engineer": {
@@ -6475,7 +6519,8 @@
         "cast": 0.95,
         "seoul": 0.98,
         "dubai": 0.99,
-        "meadow": 0.98
+        "meadow": 0.98,
+        "marble": 0.98
       }
     },
     "Senior QA Engineer": {
@@ -6563,7 +6608,8 @@
         "seoul": 0.97,
         "dubai": 0.98,
         "frame": 0.98,
-        "meadow": 0.97
+        "meadow": 0.97,
+        "marble": 0.98
       }
     },
     "Electrical Engineer": {
@@ -6905,7 +6951,9 @@
         "dubai": 0.95,
         "manila": 0.98,
         "meadow": 0.99,
-        "crest": 0.97
+        "crest": 0.97,
+        "marble": 0.94,
+        "zenith": 0.95
       }
     }
   }
