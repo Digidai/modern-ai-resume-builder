@@ -20,12 +20,12 @@ import { TEMPLATE_IDS } from './constants/templates';
 
 const ALL_JOB_TITLES = (jobTitlesData as Array<{ titles: string[] }>).flatMap((category) => category.titles);
 // Loaded templates render without suspending, so each page comes out complete and in order.
-const templatesLoaded = Promise.all(TEMPLATE_IDS.map(preloadResumeTemplate));
+let templatesLoaded: Promise<unknown> | undefined;
 
 /** The markup of the page at `path` (no basename, no query), for `<div id="root">`. */
 export const render = async (path: string, siteUrl: string): Promise<string> => {
   setServerSiteUrl(siteUrl);
-  await Promise.all([preloadPage(path), templatesLoaded]);
+  await Promise.all([preloadPage(path), (templatesLoaded ??= Promise.all(TEMPLATE_IDS.map(preloadResumeTemplate)))]);
   const job = path.match(/^\/resume_tmpl\/([^/]+)\/?$/);
   const jobTitle = job && findJobTitleBySlug(job[1], ALL_JOB_TITLES);
   if (jobTitle) await loadRoleExample(jobTitle);
