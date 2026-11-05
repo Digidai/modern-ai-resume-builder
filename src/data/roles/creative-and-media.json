@@ -1965,7 +1965,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.89,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.94
       },
       "trimLetter": {
         "berlin": 9

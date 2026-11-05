@@ -212,7 +212,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "quartz": 0.85,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -510,7 +511,8 @@
         "pop": 0.94,
         "cast": 0.99,
         "quartz": 0.88,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -646,7 +648,8 @@
         "pop": 0.86,
         "cast": 0.97,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,

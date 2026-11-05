@@ -211,7 +211,8 @@
         "cast": 0.96,
         "berlin": 0.89,
         "ginto": 0.92,
-        "pop": 0.87
+        "pop": 0.87,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 8,
@@ -296,7 +297,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.98,
-        "berlin": 0.91
+        "berlin": 0.91,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 8

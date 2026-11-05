@@ -45,3 +45,7 @@ export * from './OxfordTemplate';
 export * from './StandardTemplate';
 export * from './LumenTemplate';
 export * from './FederalTemplate';
+export * from './MunichTemplate';
+export * from './OnyxTemplate';
+export * from './RivieraTemplate';
+export * from './SummitTemplate';

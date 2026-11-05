@@ -124,7 +124,8 @@
         "moda": 0.99,
         "mono": 0.88,
         "pop": 0.87,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.97
       }
     },
     "Journeyman Electrician": {
@@ -342,7 +343,8 @@
         "bronx": 0.88,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.98
       }
     },
     "Lineman": {
@@ -557,7 +559,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "federal": 0.98
+        "federal": 0.98,
+        "munich": 0.99
       }
     },
     "Pipefitter": {
@@ -1003,7 +1006,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Machine Operator": {

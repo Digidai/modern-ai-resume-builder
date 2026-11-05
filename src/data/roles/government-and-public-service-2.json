@@ -305,7 +305,8 @@
         "noir": 0.99,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.95
       }
     },
     "Veteran": {
@@ -514,7 +515,8 @@
         "pop": 0.86,
         "cast": 0.99,
         "quartz": 0.86,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "onyx": 0.96
       },
       "trimLetter": {
         "quartz": 10,

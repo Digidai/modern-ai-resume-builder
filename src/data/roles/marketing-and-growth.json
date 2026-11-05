@@ -84,7 +84,8 @@
         "noir": 0.99,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       }
     },
     "Digital Marketing Specialist": {
@@ -151,7 +152,8 @@
         "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -176,7 +178,8 @@
         "bronx": 0.88,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.93
       }
     },
     "Performance Marketing Manager": {
@@ -264,7 +267,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.97
       }
     },
     "Growth Marketer": {
@@ -345,7 +349,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Growth Manager": {
@@ -432,7 +437,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Growth Hacker": {
@@ -513,7 +519,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.98
       }
     },
     "Content Strategist": {
@@ -590,7 +597,8 @@
         "bronx": 0.9,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Content Marketing Manager": {
@@ -754,7 +762,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Content SEO Specialist": {
@@ -909,7 +918,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "SEO Manager": {
@@ -1144,7 +1154,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       }
     },
     "CRO Specialist": {
@@ -1231,7 +1242,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1329,7 +1341,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 10
@@ -1420,7 +1433,8 @@
         "bronx": 0.87,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Paid Search Manager": {
@@ -1502,7 +1516,8 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Paid Social Specialist": {
@@ -1568,7 +1583,8 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -1596,7 +1612,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 6
@@ -1682,7 +1699,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Paid Media Manager": {
@@ -1772,7 +1790,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Acquisition Manager": {
@@ -1864,7 +1883,8 @@
         "noir": 0.98,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.88
+        "cast": 0.88,
+        "munich": 0.96
       }
     },
     "User Acquisition Manager": {
@@ -1950,7 +1970,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2028,7 +2049,8 @@
         "quartz": 0.93,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.86
+        "pop": 0.86,
+        "munich": 0.99
       }
     },
     "Social Media Strategist": {
@@ -2105,7 +2127,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Community Manager": {
@@ -2189,7 +2212,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Community Lead": {
@@ -2350,7 +2374,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -2432,7 +2457,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Demand Generation Manager": {
@@ -2514,7 +2540,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Marketing Operations Manager": {
@@ -2686,7 +2713,8 @@
         "pop": 0.85,
         "cast": 0.88,
         "berlin": 0.85,
-        "federal": 0.97
+        "federal": 0.97,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -2775,7 +2803,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Brand Manager": {
@@ -2877,7 +2906,8 @@
         "cast": 0.87,
         "berlin": 0.85,
         "quartz": 0.9,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6,
@@ -3204,7 +3234,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3367,7 +3398,8 @@
         "noir": 0.98,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Communications Manager": {
@@ -3453,7 +3485,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.97,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -3548,7 +3581,8 @@
         "noir": 0.96,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Event Marketing Manager": {
@@ -3722,7 +3756,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3905,7 +3940,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -4004,7 +4040,8 @@
         "cast": 0.92,
         "berlin": 0.85,
         "quartz": 0.91,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -4254,7 +4291,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -4349,7 +4387,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.96
       }
     },
     "Digital Marketing Manager": {
@@ -4430,7 +4469,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Email Marketing Manager": {
@@ -4514,7 +4554,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.96
       }
     },
     "CRM Manager": {
@@ -4606,7 +4647,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 5
@@ -4695,7 +4737,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -4763,7 +4806,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -4789,7 +4833,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 5
@@ -4877,7 +4922,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.88,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "VP of Marketing": {
@@ -4959,7 +5005,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Head of Growth": {

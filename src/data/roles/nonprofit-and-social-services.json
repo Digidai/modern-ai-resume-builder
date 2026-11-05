@@ -115,7 +115,8 @@
         "bronx": 0.88,
         "mono": 0.9,
         "pop": 0.9,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -139,7 +140,8 @@
         "bronx": 0.86,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Licensed Master Social Worker (LMSW)": {
@@ -1127,7 +1129,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1766,7 +1769,8 @@
         "bronx": 0.88,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Executive Director": {
@@ -1852,7 +1856,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.89,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     }
   }

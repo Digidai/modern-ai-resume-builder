@@ -334,7 +334,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       }
     },
     "Fulfillment Associate": {

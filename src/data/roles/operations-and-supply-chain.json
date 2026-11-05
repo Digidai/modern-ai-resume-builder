@@ -87,7 +87,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 11
@@ -327,7 +328,8 @@
         "bronx": 0.87,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.97
       }
     },
     "Logistics Manager": {
@@ -540,7 +542,8 @@
         "bronx": 0.92,
         "mono": 0.86,
         "pop": 0.9,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.99
       }
     },
     "Fleet Manager": {
@@ -828,7 +831,8 @@
         "bronx": 0.88,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Buyer": {
@@ -901,7 +905,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Sourcing Specialist": {
@@ -1411,7 +1416,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Demand Planner": {
@@ -1561,7 +1567,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Operations Supervisor": {
@@ -1702,7 +1709,8 @@
         "bronx": 0.92,
         "mono": 0.91,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       }
     },
     "Warehouse Supervisor": {
@@ -1769,7 +1777,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.97
       }
     },
     "Quality Manager": {
@@ -1856,7 +1865,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1950,7 +1960,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "federal": 0.97
+        "federal": 0.97,
+        "munich": 0.95
       }
     },
     "Quality Control Inspector": {
@@ -2276,7 +2287,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Manufacturing Manager": {
@@ -2367,7 +2379,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2456,7 +2469,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Maintenance Manager": {
@@ -2608,7 +2622,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Lean Six Sigma Black Belt": {
@@ -2752,7 +2767,8 @@
         "bronx": 0.87,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Continuous Improvement Manager": {
@@ -2840,7 +2856,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -2995,7 +3012,8 @@
         "bronx": 0.91,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Production Supervisor": {
@@ -3349,7 +3367,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.99
       }
     },
     "Inventory Control Specialist": {

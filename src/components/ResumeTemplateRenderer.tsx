@@ -69,6 +69,10 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   tokyo: () => import('./templates/TokyoTemplate').then((module) => ({ default: module.TokyoTemplate })),
   jade: () => import('./templates/JadeTemplate').then((module) => ({ default: module.JadeTemplate })),
   portrait: () => import('./templates/PortraitTemplate').then((module) => ({ default: module.PortraitTemplate })),
+  munich: () => import('./templates/MunichTemplate').then((module) => ({ default: module.MunichTemplate })),
+  onyx: () => import('./templates/OnyxTemplate').then((module) => ({ default: module.OnyxTemplate })),
+  riviera: () => import('./templates/RivieraTemplate').then((module) => ({ default: module.RivieraTemplate })),
+  summit: () => import('./templates/SummitTemplate').then((module) => ({ default: module.SummitTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

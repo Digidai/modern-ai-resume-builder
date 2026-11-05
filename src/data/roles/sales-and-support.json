@@ -162,7 +162,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Sales Development Representative (SDR)": {
@@ -485,7 +486,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Account Executive": {
@@ -567,7 +569,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.98
       }
     },
     "Enterprise Account Executive": {
@@ -651,7 +654,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.98
       }
     },
     "Account Manager": {
@@ -716,7 +720,8 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -740,7 +745,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "cast": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "pop": 6
@@ -833,7 +839,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.96
       }
     },
     "Partner Account Manager": {
@@ -911,7 +918,8 @@
         "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.98
       }
     },
     "Sales Manager": {
@@ -998,7 +1006,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.91,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "iron": 5
@@ -1084,7 +1093,8 @@
         "bronx": 0.9,
         "mono": 0.87,
         "pop": 0.88,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Sales Operations Manager": {
@@ -1255,7 +1265,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1350,7 +1361,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "iron": 5
@@ -1525,7 +1537,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 5
@@ -1612,7 +1625,8 @@
         "noir": 0.98,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.98
       }
     },
     "Customer Success Director": {
@@ -1709,7 +1723,8 @@
         "pop": 0.85,
         "cast": 0.9,
         "quartz": 0.89,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -1793,7 +1808,8 @@
         "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.96
       }
     },
     "Customer Support Representative": {
@@ -1882,7 +1898,8 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.97
       },
       "trimLetter": {
         "berlin": 1,
@@ -1973,7 +1990,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.94,
-        "quartz": 0.94
+        "quartz": 0.94,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -2068,7 +2086,8 @@
         "berlin": 0.85,
         "iron": 0.85,
         "quartz": 0.89,
-        "bronx": 0.86
+        "bronx": 0.86,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 1,
@@ -2161,7 +2180,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -2249,7 +2269,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.96,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -2330,7 +2351,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.99,
-        "quartz": 0.9
+        "quartz": 0.9,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -2513,7 +2535,8 @@
         "cast": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "federal": 0.97
+        "federal": 0.97,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5,
@@ -2686,7 +2709,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Pre-Sales Engineer": {
@@ -2777,7 +2801,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.9,
-        "federal": 0.97
+        "federal": 0.97,
+        "munich": 0.98
       }
     },
     "Technical Account Manager": {
@@ -3192,7 +3217,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.94,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -3285,7 +3311,8 @@
         "bronx": 0.88,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Head of Sales": {
@@ -3370,7 +3397,8 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Sales Intern": {
@@ -3540,7 +3568,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -3711,7 +3740,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -3794,7 +3824,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.98
       }
     },
     "Sales Director": {
@@ -4116,7 +4147,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.98
       }
     },
     "Call Center Representative": {

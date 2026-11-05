@@ -94,7 +94,8 @@
         "bronx": 0.86,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.89
+        "cast": 0.89,
+        "munich": 0.97
       }
     },
     "Chief of Staff to CEO": {
@@ -189,7 +190,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.87,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 6
@@ -439,7 +441,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Program Coordinator": {
@@ -523,7 +526,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Technical Program Manager": {
@@ -693,7 +697,8 @@
         "bronx": 0.88,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "PMO Analyst": {
@@ -1024,7 +1029,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "iron": 6
@@ -1122,7 +1128,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1213,7 +1220,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1306,7 +1314,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Management Consultant": {
@@ -1564,7 +1573,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Strategy Manager": {
@@ -1730,7 +1740,8 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "quartz": 0.89
+        "quartz": 0.89,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -1825,7 +1836,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 5
@@ -1912,7 +1924,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Corporate Development Manager": {
@@ -2007,7 +2020,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6,
@@ -2101,7 +2115,8 @@
         "bronx": 0.86,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Product Strategy Manager": {
@@ -2183,7 +2198,8 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Growth Strategy Manager": {
@@ -2360,7 +2376,8 @@
         "pop": 0.85,
         "cast": 0.88,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -2629,7 +2646,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Transformation Manager": {
@@ -2719,7 +2737,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Business Transformation Consultant": {
@@ -2818,7 +2837,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Portfolio Manager": {
@@ -3157,7 +3177,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "iron": 5
@@ -3247,7 +3268,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "IT Project Manager": {
@@ -3330,7 +3352,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Senior Program Manager": {
@@ -3419,7 +3442,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Director of Program Management": {
@@ -3511,7 +3535,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Associate Consultant": {
@@ -3577,7 +3602,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -3604,7 +3630,8 @@
         "pop": 0.85,
         "cast": 0.86,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 5,
@@ -3706,7 +3733,9 @@
         "pop": 0.85,
         "cast": 0.94,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.98,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -3792,7 +3821,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "VP of Strategy": {

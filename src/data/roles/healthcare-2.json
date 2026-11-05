@@ -792,7 +792,9 @@
         "pop": 0.85,
         "cast": 0.99,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.97,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -1188,7 +1190,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.98
       }
     },
     "Nurse Educator": {
@@ -1593,7 +1596,9 @@
         "pop": 0.85,
         "cast": 0.97,
         "quartz": 0.87,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.99,
+        "onyx": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -2322,7 +2327,8 @@
         "pop": 0.86,
         "cast": 0.97,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "onyx": 0.97
       },
       "trimLetter": {
         "quartz": 10,

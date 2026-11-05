@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Four more photo templates in classic, widely used styles: Munich (German tabular Lebenslauf with a 3:4 passport photo and a date column), Onyx (charcoal sidebar with a round photo), Riviera (centred round photo above a serif name, common in France, Spain and Italy) and Summit (accent header band with a square photo and two columns). 57 templates.
 - Federal lists a security clearance (a "Security Clearance: Top Secret/SCI, active" skill group) first in its credentials section, kept on one line with its label; the section is titled Clearance, Certifications and Licenses when it has both.
 - Federal shows Honors and Awards (from Grants and awards) and a Certifications and Licenses section, built from skill groups named "Certifications: …" or "Licenses: …". Agents can check `awards` in `list_templates`.
 - Federal resumes warn when they run past 2 pages, the USAJOBS limit: under the preview and in Template → Style, where Fit now aims straight for 2 pages. Download PDF asks first when a Federal resume is over 2 pages (fit it to 2 pages, or download anyway). Agents get the same warning from render_pdf and render_preview, and `list_templates` reports `maxPages`.

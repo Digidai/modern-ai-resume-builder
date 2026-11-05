@@ -78,7 +78,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Site Supervisor": {
@@ -162,7 +163,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.96
       }
     },
     "Construction Superintendent": {
@@ -250,7 +252,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Site Superintendent": {
@@ -391,7 +394,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Project Engineer": {
@@ -532,7 +536,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Civil Engineer": {
@@ -686,7 +691,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.97
       }
     },
     "MEP Engineer": {
@@ -1152,7 +1158,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Real Estate Appraiser": {
@@ -1347,7 +1354,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "munich": 0.98
       }
     },
     "Property Manager": {
@@ -1504,7 +1512,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Facilities Manager": {
@@ -1588,7 +1597,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Building Inspector": {
@@ -1661,7 +1671,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.99
       },
       "trimLetter": {
         "bronx": 7
@@ -2223,7 +2234,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Surveyor": {
@@ -2291,7 +2303,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.97
       }
     },
     "Land Surveyor": {
@@ -2504,7 +2517,8 @@
         "bronx": 0.88,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.95
       }
     },
     "Assistant Project Manager": {
@@ -2631,7 +2645,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.99
       }
     },
     "Construction Management Intern": {
@@ -3054,7 +3069,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.88,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.97
       }
     }
   }

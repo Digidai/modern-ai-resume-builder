@@ -82,7 +82,8 @@
         "bronx": 0.86,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.96
       }
     },
     "Performance Engineer": {
@@ -163,7 +164,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.99
       }
     },
     "Observability Engineer": {
@@ -250,7 +252,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.97
       }
     },
     "CI/CD Engineer": {
@@ -337,7 +340,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "quartz": 0.91,
-        "bronx": 0.88
+        "bronx": 0.88,
+        "munich": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -426,7 +430,8 @@
         "cast": 0.99,
         "berlin": 0.85,
         "quartz": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.97
       },
       "trimLetter": {
         "berlin": 10,
@@ -598,7 +603,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Application Security Engineer": {
@@ -676,7 +682,8 @@
         "bronx": 0.92,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       }
     },
     "DevSecOps Engineer": {
@@ -766,7 +773,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Security Architect": {
@@ -858,7 +866,8 @@
         "cast": 0.93,
         "berlin": 0.85,
         "quartz": 0.89,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -951,7 +960,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.97,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "quartz": 7
@@ -1131,7 +1141,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -1222,7 +1233,8 @@
         "bronx": 0.9,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.95
       }
     },
     "Threat Intelligence Analyst": {
@@ -1519,7 +1531,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.96,
-        "berlin": 0.89
+        "berlin": 0.89,
+        "munich": 0.97
       },
       "trimLetter": {
         "berlin": 8
@@ -1654,7 +1667,8 @@
         "bronx": 0.87,
         "mono": 0.88,
         "pop": 0.87,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "SOC Analyst": {
@@ -1737,7 +1751,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.98
       }
     },
     "Incident Response Analyst": {
@@ -1886,7 +1901,8 @@
         "quartz": 0.89,
         "bronx": 0.88,
         "mono": 0.89,
-        "pop": 0.89
+        "pop": 0.89,
+        "munich": 0.97
       },
       "fitLetter": {
         "modern": 0.88,
@@ -1912,7 +1928,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.96,
-        "quartz": 0.92
+        "quartz": 0.92,
+        "munich": 0.95
       },
       "trimLetter": {
         "quartz": 12
@@ -2135,7 +2152,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.95
       }
     },
     "MLOps Engineer": {
@@ -2297,7 +2315,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.97
       }
     },
     "AI Research Engineer": {
@@ -2601,7 +2620,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Cloud Solutions Architect": {
@@ -2846,7 +2866,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.92,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.97
       },
       "trimLetter": {
         "berlin": 7
@@ -3358,7 +3379,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Platform Engineer": {
@@ -3448,7 +3470,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.95
       }
     },
     "Infrastructure Engineer": {
@@ -3531,7 +3554,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Kubernetes Engineer": {
@@ -3821,7 +3845,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.95
       }
     },
     "Linux System Administrator": {
@@ -3978,7 +4003,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.96
       }
     },
     "Database Engineer": {
@@ -4066,7 +4092,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "quartz": 0.93,
-        "bronx": 0.88
+        "bronx": 0.88,
+        "munich": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -4280,7 +4307,8 @@
         "mono": 0.9,
         "pop": 0.94,
         "quartz": 0.89,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "munich": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -4374,7 +4402,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.96
       }
     },
     "DataOps Engineer": {
@@ -4771,7 +4800,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Microservices Engineer": {
@@ -4911,7 +4941,8 @@
         "pop": 0.85,
         "cast": 0.92,
         "quartz": 0.93,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -5006,7 +5037,8 @@
         "bronx": 0.86,
         "mono": 0.86,
         "pop": 0.86,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.99
       }
     },
     "Technical Architect": {
@@ -5082,7 +5114,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       }
     },
     "Solutions Architect": {
@@ -5161,7 +5194,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Technical Lead": {
@@ -5324,7 +5358,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.96
       }
     },
     "Director of Engineering": {
@@ -5405,7 +5440,8 @@
         "bronx": 0.92,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "VP of Engineering": {
@@ -5482,7 +5518,8 @@
         "bronx": 0.89,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "CTO": {
@@ -6345,7 +6382,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Electrical Engineer": {
@@ -6680,7 +6718,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     }
   }

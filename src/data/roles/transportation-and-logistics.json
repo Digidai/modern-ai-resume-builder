@@ -368,7 +368,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.94,
-        "federal": 0.96
+        "federal": 0.96,
+        "munich": 0.97
       }
     },
     "Truck Dispatcher": {
@@ -728,7 +729,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "quartz": 0.93,
-        "bronx": 0.88
+        "bronx": 0.88,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -1079,7 +1081,8 @@
         "bronx": 0.91,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.99
       }
     },
     "Flight Attendant": {
@@ -1287,7 +1290,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "onyx": 0.98
       },
       "trimLetter": {
         "quartz": 7,
@@ -1647,7 +1651,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.92,
-        "federal": 0.98
+        "federal": 0.98,
+        "munich": 0.96
       }
     },
     "Locomotive Engineer": {

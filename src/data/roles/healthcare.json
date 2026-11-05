@@ -95,7 +95,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "berlin": 0.85,
-        "federal": 0.94
+        "federal": 0.94,
+        "munich": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -192,7 +193,8 @@
         "pop": 0.85,
         "cast": 0.92,
         "berlin": 0.85,
-        "federal": 0.96
+        "federal": 0.96,
+        "munich": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -290,7 +292,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "munich": 0.99
       }
     },
     "Nurse Practitioner": {
@@ -362,7 +365,8 @@
         "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -389,7 +393,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "berlin": 0.85,
-        "federal": 0.96
+        "federal": 0.96,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 12
@@ -464,7 +469,8 @@
         "bronx": 0.91,
         "mono": 0.92,
         "pop": 0.89,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -491,7 +497,8 @@
         "pop": 0.88,
         "cast": 0.93,
         "berlin": 0.85,
-        "federal": 0.98
+        "federal": 0.98,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 12
@@ -586,7 +593,8 @@
         "bronx": 0.87,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.97
       }
     },
     "Charge Nurse": {
@@ -753,7 +761,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Medical Assistant": {
@@ -834,7 +843,8 @@
         "bronx": 0.92,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Medical Receptionist": {
@@ -920,7 +930,8 @@
         "bronx": 0.86,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       }
     },
     "Pharmacy Technician": {
@@ -1080,7 +1091,8 @@
         "bronx": 0.92,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.96
       }
     },
     "Physical Therapist": {
@@ -1152,7 +1164,8 @@
         "quartz": 0.92,
         "bronx": 0.91,
         "mono": 0.9,
-        "pop": 0.91
+        "pop": 0.91,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -1179,7 +1192,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "berlin": 0.85,
-        "federal": 0.98
+        "federal": 0.98,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 11
@@ -1277,7 +1291,8 @@
         "bronx": 0.86,
         "mono": 0.86,
         "pop": 0.89,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.95
       }
     },
     "Radiologic Technologist": {
@@ -1352,7 +1367,8 @@
         "bronx": 0.89,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       }
     },
     "Ultrasound Technician": {
@@ -1491,7 +1507,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "federal": 0.98
+        "federal": 0.98,
+        "munich": 0.96
       }
     },
     "Medical Laboratory Technician": {
@@ -1733,7 +1750,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Clinical Research Coordinator": {
@@ -1816,7 +1834,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.98
       }
     },
     "Clinical Data Manager": {
@@ -1902,7 +1921,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.95
       }
     },
     "Clinical Operations Manager": {
@@ -2165,7 +2185,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.95
       }
     },
     "Care Coordinator": {
@@ -2319,7 +2340,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Case Manager": {
@@ -2404,7 +2426,8 @@
         "bronx": 0.91,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       }
     },
     "Social Worker": {
@@ -2498,7 +2521,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.96,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.99
       },
       "trimLetter": {
         "berlin": 12
@@ -2591,7 +2615,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.97
       }
     },
     "EMT (Emergency Medical Technician)": {
@@ -2751,7 +2776,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99,
-        "federal": 0.96
+        "federal": 0.96,
+        "munich": 0.97
       }
     },
     "Dental Assistant": {
@@ -2912,7 +2938,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.95
       }
     },
     "Dentist": {
@@ -3004,7 +3031,8 @@
         "pop": 0.86,
         "cast": 0.91,
         "quartz": 0.85,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "onyx": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -3101,7 +3129,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Medical Coder": {
@@ -3188,7 +3217,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.98,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 7
@@ -3362,7 +3392,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -3660,7 +3691,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.9,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Emergency Room Nurse": {
@@ -3904,7 +3936,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Operating Room Nurse": {
@@ -3981,7 +4014,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Director of Nursing": {
@@ -4158,7 +4192,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 9
@@ -4332,7 +4367,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.94
       },
       "trimLetter": {
         "berlin": 10
@@ -4427,7 +4463,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 10
@@ -4720,7 +4757,8 @@
         "bronx": 0.86,
         "mono": 0.88,
         "pop": 0.88,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.98
       }
     }
   }

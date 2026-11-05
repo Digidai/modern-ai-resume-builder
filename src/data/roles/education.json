@@ -237,7 +237,8 @@
         "bronx": 0.96,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.97
       }
     },
     "Elementary School Teacher": {
@@ -324,7 +325,8 @@
         "bronx": 0.87,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "High School Teacher": {
@@ -410,7 +412,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.89,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Special Education Teacher": {
@@ -674,7 +677,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.97
       }
     },
     "Learning Experience Designer": {
@@ -854,7 +858,8 @@
         "pop": 0.86,
         "cast": 0.91,
         "quartz": 0.86,
-        "bronx": 0.86
+        "bronx": 0.86,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -1103,7 +1108,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.99
       }
     },
     "Student Success Coach": {
@@ -1194,7 +1200,8 @@
         "bronx": 0.86,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.87
+        "cast": 0.87,
+        "munich": 0.98
       }
     },
     "Instructional Coach": {
@@ -1372,7 +1379,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Assistant Principal": {
@@ -1540,7 +1548,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.92,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "Dean of Students": {
@@ -1630,7 +1639,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.91,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.99
       }
     },
     "School Administrator": {
@@ -1785,7 +1795,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "University Professor": {
@@ -2111,7 +2122,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2204,7 +2216,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.86,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.99
       }
     },
     "School Librarian": {
@@ -2371,7 +2384,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "College Admissions Counselor": {
@@ -2627,7 +2641,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "quartz": 0.85,
-        "bronx": 0.86
+        "bronx": 0.86,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -2883,7 +2898,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.98
       }
     },
     "Youth Program Coordinator": {
@@ -3361,7 +3377,8 @@
         "bronx": 0.86,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.97
       }
     },
     "ESL Teacher": {

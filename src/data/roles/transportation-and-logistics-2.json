@@ -418,7 +418,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Railroad Conductor": {
@@ -832,7 +833,8 @@
         "bronx": 0.91,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Baggage Handler": {

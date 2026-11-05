@@ -89,7 +89,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "iron": 10
@@ -307,7 +308,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "quartz": 0.92
+        "quartz": 0.92,
+        "munich": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -444,7 +446,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Telemarketer": {

@@ -269,7 +269,8 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Senior Accountant": {
@@ -424,7 +425,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.99
       }
     },
     "Accounts Payable Specialist": {
@@ -1026,7 +1028,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 9
@@ -1114,7 +1117,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.97
       }
     },
     "Compliance Analyst": {
@@ -1263,7 +1267,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.96,
-        "federal": 0.99
+        "federal": 0.99,
+        "munich": 0.97
       }
     },
     "Enterprise Risk Manager": {
@@ -1359,7 +1364,8 @@
         "pop": 0.87,
         "cast": 0.94,
         "quartz": 0.89,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "munich": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -1434,7 +1440,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Treasury Analyst": {
@@ -1672,7 +1679,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Finance Business Partner": {
@@ -1754,7 +1762,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "CFO": {
@@ -1848,7 +1857,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.9,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.97
       }
     },
     "Legal Counsel": {
@@ -2329,7 +2339,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.97
       }
     },
     "Regulatory Affairs Specialist": {
@@ -2475,7 +2486,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Legal Assistant": {
@@ -2706,7 +2718,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.89
+        "cast": 0.89,
+        "munich": 0.97
       }
     },
     "Employment Counsel": {
@@ -3125,7 +3138,8 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.88,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -3152,7 +3166,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 5,

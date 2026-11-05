@@ -423,7 +423,8 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.88,
-        "iron": 0.91
+        "iron": 0.91,
+        "munich": 0.97
       },
       "trimLetter": {
         "berlin": 8,

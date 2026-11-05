@@ -290,7 +290,8 @@
         "bronx": 0.92,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       }
     },
     "Software Engineer Intern": {
@@ -402,7 +403,8 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.86,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -428,7 +430,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 9
@@ -524,7 +527,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 10
@@ -607,7 +611,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Principal Software Engineer": {
@@ -701,7 +706,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.87,
-        "cast": 0.94
+        "cast": 0.94,
+        "munich": 0.95
       }
     },
     "Frontend Developer": {
@@ -790,7 +796,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Frontend Engineer": {
@@ -934,7 +941,8 @@
         "bronx": 0.88,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Backend Developer": {
@@ -1002,7 +1010,8 @@
         "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -1027,7 +1036,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.91
       },
       "trimLetter": {
         "berlin": 9
@@ -1097,7 +1107,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -1123,7 +1134,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 6
@@ -1214,7 +1226,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1297,7 +1310,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.89,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Full Stack Engineer": {
@@ -1381,7 +1395,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.95
       }
     },
     "Senior Full Stack Developer": {
@@ -1465,7 +1480,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Web Developer": {
@@ -1601,7 +1617,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "TypeScript Developer": {
@@ -1760,7 +1777,8 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "React.js Developer": {
@@ -1838,7 +1856,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.88,
-        "cast": 0.98
+        "cast": 0.98,
+        "munich": 0.98
       }
     },
     "Next.js Developer": {
@@ -1918,7 +1937,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Angular Developer": {
@@ -2079,7 +2099,8 @@
         "bronx": 0.86,
         "mono": 0.87,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Svelte Developer": {
@@ -2238,7 +2259,8 @@
         "bronx": 0.86,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       }
     },
     "Node.js Developer": {
@@ -2321,7 +2343,8 @@
         "bronx": 0.88,
         "mono": 0.91,
         "pop": 0.87,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Express.js Developer": {
@@ -2405,7 +2428,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     ".NET Developer": {
@@ -2492,7 +2516,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.96
       }
     },
     "Java Developer": {
@@ -2562,7 +2587,8 @@
         "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "munich": 0.95
       },
       "fitLetter": {
         "modern": 0.86,
@@ -2590,7 +2616,8 @@
         "pop": 0.85,
         "cast": 0.88,
         "berlin": 0.85,
-        "federal": 0.97
+        "federal": 0.97,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 6
@@ -2676,7 +2703,8 @@
         "bronx": 0.88,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Python Developer": {
@@ -2759,7 +2787,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.87,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Django Developer": {
@@ -2845,7 +2874,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Flask Developer": {
@@ -3011,7 +3041,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Rust Developer": {
@@ -3097,7 +3128,8 @@
         "noir": 0.98,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "munich": 0.98
       }
     },
     "Scala Developer": {
@@ -3180,7 +3212,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Elixir Developer": {
@@ -3262,7 +3295,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Ruby on Rails Developer": {
@@ -3353,7 +3387,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3424,7 +3459,8 @@
         "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -3451,7 +3487,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.93
       },
       "trimLetter": {
         "berlin": 6
@@ -3727,7 +3764,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Salesforce Administrator": {
@@ -3934,7 +3972,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.97
       },
       "fitLetter": {
         "modern": 0.92,
@@ -3962,7 +4001,8 @@
         "cast": 0.93,
         "berlin": 0.85,
         "quartz": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "munich": 0.95
       },
       "trimLetter": {
         "berlin": 6,
@@ -4052,7 +4092,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.96
       }
     },
     "Kotlin Developer": {
@@ -4129,7 +4170,8 @@
         "quartz": 0.86,
         "bronx": 0.86,
         "mono": 0.89,
-        "pop": 0.86
+        "pop": 0.86,
+        "munich": 0.98
       }
     },
     "Swift Developer": {
@@ -4567,7 +4609,8 @@
         "bronx": 0.93,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.92
+        "cast": 0.92,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -4594,7 +4637,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.9,
-        "iron": 0.86
+        "iron": 0.86,
+        "munich": 0.93
       },
       "trimLetter": {
         "iron": 5
@@ -4741,7 +4785,8 @@
         "bronx": 0.93,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -4769,7 +4814,8 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "iron": 0.85
+        "iron": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6,
@@ -5169,7 +5215,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -5254,7 +5301,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Unity Developer": {
@@ -5448,7 +5496,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -5472,7 +5521,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.95
       }
     },
     "SDET (Software Development Engineer in Test)": {
@@ -5631,7 +5681,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -5717,7 +5768,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.87,
-        "cast": 0.97
+        "cast": 0.97,
+        "munich": 0.98
       }
     },
     "Associate Software Engineer": {
@@ -5927,7 +5979,8 @@
         "moda": 0.99,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "munich": 0.98
       }
     },
     "Junior Python Developer": {
@@ -6096,7 +6149,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -6264,7 +6318,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "munich": 0.98
       }
     },
     "Senior Android Developer": {
@@ -6351,7 +6406,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "munich": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -6438,7 +6494,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "munich": 0.98
       }
     },
     "Game Programmer": {
@@ -6816,7 +6873,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.88,
-        "cast": 0.96
+        "cast": 0.96,
+        "munich": 0.99
       }
     },
     "Machine Learning Intern": {
