@@ -115,7 +115,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     useEffect(() => {
         if (!canonicalSlug || !jobTitle) return;
         if (jobTitle !== canonicalSlug) {
-            navigate(`/resume_tmpl/${canonicalSlug}`, { replace: true });
+            navigate(`/resume_tmpl/${canonicalSlug}/`, { replace: true });
         }
     }, [canonicalSlug, jobTitle, navigate]);
 
@@ -255,7 +255,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
             },
             `Opened the ${resolvedJobTitle} example. Replace the details with your own.`
         );
-        navigate('/editor');
+        navigate('/editor/');
     };
 
     // The picker shows 8 templates until expanded; the selected one is always included.
@@ -287,7 +287,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                     <nav aria-label="Breadcrumb" className="text-sm text-muted">
                         <Link className="focus-ring hover:text-ink" to="/">Home</Link>
                         <span className="mx-2" aria-hidden="true">/</span>
-                        <Link className="focus-ring hover:text-ink" to="/directory">Resume examples</Link>
+                        <Link className="focus-ring hover:text-ink" to="/directory/">Resume examples</Link>
                         <span className="mx-2" aria-hidden="true">/</span>
                         <span className="text-ink" aria-current="page">{resolvedJobTitle}</span>
                     </nav>
@@ -377,7 +377,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                             <ul className="mt-2 columns-2 gap-6 text-sm">
                                 {relatedTitles.map((title) => (
                                     <li key={title} className="break-inside-avoid py-1">
-                                        <Link to={`/resume_tmpl/${slugifyJobTitle(title)}`} className="focus-ring text-ink hover:text-accent hover:underline hover:underline-offset-4">
+                                        <Link to={`/resume_tmpl/${slugifyJobTitle(title)}/`} className="focus-ring text-ink hover:text-accent hover:underline hover:underline-offset-4">
                                             {title}
                                         </Link>
                                     </li>

@@ -88,7 +88,7 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
   const next = TEMPLATES[(index + 1) % TEMPLATES.length];
   const useIt = () => {
     setResumeData((d) => ({ ...d, templateId: template.id }));
-    navigate('/editor');
+    navigate('/editor/');
   };
 
   const facts: [string, React.ReactNode][] = [

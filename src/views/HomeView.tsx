@@ -112,7 +112,7 @@ const HomeView: React.FC = () => {
 
   const useTemplate = (templateId: string) => {
     setResumeData((prev) => ({ ...prev, templateId }));
-    navigate('/editor');
+    navigate('/editor/');
   };
 
   const [heroTemplateId, setHeroTemplateId] = useState(() =>
@@ -158,10 +158,10 @@ const HomeView: React.FC = () => {
               templates any time and download a PDF that applicant tracking systems can read. No account needed.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link to="/editor" className={primaryLinkClass}>
+              <Link to="/editor/" className={primaryLinkClass}>
                 {hasOwnResume ? 'Continue editing' : 'Create my resume'}
               </Link>
-              <Link to="/directory" className={secondaryLinkClass}>
+              <Link to="/directory/" className={secondaryLinkClass}>
                 Find my job title
               </Link>
             </div>
@@ -199,7 +199,7 @@ const HomeView: React.FC = () => {
                 <ScaledResumePreview data={heroData} templateId={heroTemplateId} onPages={onHeroPages} />
               </SectionErrorBoundary>
               <Link
-                to="/editor"
+                to="/editor/"
                 className="absolute inset-0 focus-visible:outline-none"
                 aria-label={hasOwnResume ? 'Continue editing your resume' : 'Open the sample resume in the editor'}
               />
@@ -308,7 +308,7 @@ const HomeView: React.FC = () => {
               <p className="font-display text-2xl font-semibold leading-8 tracking-display text-ink">Ready when you are.</p>
               <p className="mt-1.5 text-base text-muted">Free, no account, and you can download the PDF as often as you like.</p>
             </div>
-            <Link to="/editor" className={`${primaryLinkClass} shrink-0`}>
+            <Link to="/editor/" className={`${primaryLinkClass} shrink-0`}>
               {hasOwnResume ? 'Continue editing' : 'Start my resume'}
             </Link>
           </div>

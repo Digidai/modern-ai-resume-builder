@@ -44,7 +44,7 @@ function AppRoutes() {
       title: prev.title.trim() ? prev.title : jobTitle,
       templateId: templateId
     }));
-    navigate('/editor');
+    navigate('/editor/');
   };
 
   return (

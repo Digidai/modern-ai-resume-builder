@@ -19,7 +19,7 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 
 const NavItems: React.FC = () => (
   <>
-    <NavLink to="/directory" className={navLinkClass}>
+    <NavLink to="/directory/" className={navLinkClass}>
       Resume examples
     </NavLink>
     <NavLink to="/templates/" className={navLinkClass}>
@@ -45,7 +45,7 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
       <div className="ml-auto flex items-center gap-1 sm:gap-3">
         <ThemeToggle />
         <Link
-          to="/editor"
+          to="/editor/"
           className="focus-ring inline-flex h-9 items-center rounded-lg bg-ink px-4 text-sm font-medium text-paper transition-colors shadow-button hover:bg-ink-hover"
         >
           {ctaLabel}
@@ -67,13 +67,13 @@ export const SiteFooter: React.FC = () => (
         © {new Date().getFullYear()} <span className="font-display font-semibold text-ink">ModernCV</span> · Free resume builder. Your data stays in your browser.
       </p>
       <nav className="flex flex-wrap gap-x-5 gap-y-1" aria-label="Footer">
-        <Link to="/directory" className={footerLink}>
+        <Link to="/directory/" className={footerLink}>
           Resume examples
         </Link>
         <Link to="/templates/" className={footerLink}>
           Templates
         </Link>
-        <Link to="/editor" className={footerLink}>
+        <Link to="/editor/" className={footerLink}>
           Editor
         </Link>
         <Link to="/agents/" className={footerLink}>

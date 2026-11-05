@@ -40,7 +40,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category, isSearching, isEx
                 {visibleTitles.map((title) => (
                     <li key={title}>
                         <Link
-                            to={`/resume_tmpl/${slugifyJobTitle(title)}`}
+                            to={`/resume_tmpl/${slugifyJobTitle(title)}/`}
                             className="focus-ring block rounded-md px-2 py-1.5 text-[15px] leading-6 text-ink transition-colors hover:bg-tint"
                         >
                             {title}
@@ -219,7 +219,7 @@ const JobTitles: React.FC = () => {
 
     const useCustomTitle = () => {
         setResumeData((prev) => ({ ...prev, title: search.trim() }));
-        navigate('/editor');
+        navigate('/editor/');
     };
 
     return (
