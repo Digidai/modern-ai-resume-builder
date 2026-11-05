@@ -99,7 +99,9 @@
         "federal": 0.94,
         "munich": 0.94,
         "seoul": 0.91,
-        "dubai": 0.94
+        "dubai": 0.94,
+        "nova": 0.99,
+        "meadow": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -202,7 +204,9 @@
         "munich": 0.94,
         "seoul": 0.9,
         "dubai": 0.92,
-        "manila": 0.98
+        "manila": 0.98,
+        "nova": 0.97,
+        "meadow": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -304,7 +308,8 @@
         "cast": 0.9,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.94
+        "dubai": 0.94,
+        "nova": 0.98
       }
     },
     "Nurse Practitioner": {
@@ -409,7 +414,8 @@
         "munich": 0.95,
         "seoul": 0.9,
         "dubai": 0.95,
-        "linen": 0.99
+        "linen": 0.99,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 12
@@ -516,7 +522,8 @@
         "federal": 0.98,
         "munich": 0.93,
         "seoul": 0.93,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 12
@@ -959,7 +966,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "munich": 0.97,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "meadow": 0.98
       }
     },
     "Pharmacy Technician": {
@@ -1124,7 +1132,8 @@
         "cast": 0.97,
         "munich": 0.96,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.99
       }
     },
     "Physical Therapist": {
@@ -1228,7 +1237,8 @@
         "federal": 0.98,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 11
@@ -1329,7 +1339,8 @@
         "cast": 0.96,
         "munich": 0.95,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "Radiologic Technologist": {
@@ -1797,7 +1808,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Clinical Research Coordinator": {
@@ -1972,7 +1984,8 @@
         "cast": 0.95,
         "munich": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Clinical Operations Manager": {
@@ -2241,7 +2254,8 @@
         "cast": 0.93,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.98
       }
     },
     "Care Coordinator": {
@@ -2584,7 +2598,8 @@
         "berlin": 0.85,
         "munich": 0.99,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 12
@@ -2680,7 +2695,8 @@
         "cast": 0.96,
         "munich": 0.97,
         "seoul": 0.94,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.98
       }
     },
     "EMT (Emergency Medical Technician)": {
@@ -3007,7 +3023,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "munich": 0.95,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "meadow": 0.98
       }
     },
     "Dentist": {
@@ -4285,7 +4302,8 @@
         "cast": 0.95,
         "berlin": 0.85,
         "munich": 0.95,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 9
@@ -4466,7 +4484,8 @@
         "berlin": 0.85,
         "munich": 0.94,
         "seoul": 0.94,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.97
       },
       "trimLetter": {
         "berlin": 10
@@ -4566,7 +4585,8 @@
         "munich": 0.96,
         "seoul": 0.93,
         "dubai": 0.99,
-        "frame": 0.97
+        "frame": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 10

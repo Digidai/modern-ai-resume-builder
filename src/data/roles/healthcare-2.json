@@ -2538,7 +2538,8 @@
         "bronx": 0.87,
         "seoul": 0.94,
         "linen": 0.98,
-        "frame": 0.98
+        "frame": 0.98,
+        "meadow": 0.96
       },
       "trimLetter": {
         "bronx": 10

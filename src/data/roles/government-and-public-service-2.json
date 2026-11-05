@@ -318,7 +318,8 @@
         "cast": 0.9,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "Veteran": {

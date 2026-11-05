@@ -334,7 +334,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "High School Teacher": {
@@ -693,7 +694,8 @@
         "cast": 0.96,
         "munich": 0.97,
         "seoul": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.98
       }
     },
     "Learning Experience Designer": {
@@ -882,7 +884,8 @@
         "dubai": 0.98,
         "linen": 0.96,
         "wave": 0.97,
-        "frame": 0.95
+        "frame": 0.95,
+        "meadow": 0.99
       },
       "trimLetter": {
         "quartz": 10,

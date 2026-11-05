@@ -79,7 +79,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "meadow": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -109,7 +110,9 @@
         "munich": 0.92,
         "seoul": 0.93,
         "dubai": 0.92,
-        "manila": 0.97
+        "manila": 0.97,
+        "nova": 0.98,
+        "meadow": 0.95
       },
       "trimLetter": {
         "berlin": 11
@@ -308,7 +311,8 @@
         "seoul": 0.95,
         "dubai": 0.99,
         "linen": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.96
       }
     },
     "Machine Learning Scientist": {
@@ -386,7 +390,8 @@
         "pop": 0.87,
         "cast": 0.93,
         "munich": 0.97,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "meadow": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -415,7 +420,8 @@
         "berlin": 0.85,
         "munich": 0.92,
         "seoul": 0.93,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.95
       },
       "trimLetter": {
         "berlin": 11
@@ -938,7 +944,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Business Intelligence Analyst": {
@@ -1031,7 +1038,8 @@
         "cast": 0.87,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.96
       }
     },
     "Reporting Analyst": {
@@ -1732,7 +1740,8 @@
         "seoul": 0.95,
         "dubai": 0.99,
         "linen": 0.99,
-        "wave": 0.99
+        "wave": 0.99,
+        "meadow": 0.98
       }
     },
     "Data Architect": {
@@ -1829,7 +1838,8 @@
         "cast": 0.91,
         "munich": 0.97,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.99
       }
     },
     "Data Modeler": {
@@ -2015,7 +2025,8 @@
         "dubai": 0.97,
         "linen": 0.98,
         "wave": 0.99,
-        "frame": 0.96
+        "frame": 0.96,
+        "meadow": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -2363,7 +2374,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.96
+        "munich": 0.96,
+        "meadow": 0.98
       }
     },
     "Data Governance Manager": {
@@ -2745,7 +2757,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.98,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.96
       }
     },
     "Risk Analyst": {
@@ -3262,7 +3275,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Data Science Lead": {
@@ -3448,7 +3462,8 @@
         "cast": 0.93,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Data Science Director": {
@@ -3559,7 +3574,9 @@
         "manila": 0.99,
         "linen": 0.99,
         "wave": 0.98,
-        "frame": 0.95
+        "frame": 0.95,
+        "nova": 0.98,
+        "meadow": 0.97
       },
       "trimLetter": {
         "berlin": 10,
@@ -3663,7 +3680,8 @@
         "berlin": 0.85,
         "munich": 0.95,
         "seoul": 0.93,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 6
@@ -3939,7 +3957,8 @@
         "cast": 0.91,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "Junior Data Analyst": {
@@ -4025,7 +4044,8 @@
         "pop": 0.86,
         "cast": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Data Science Intern": {
@@ -4121,7 +4141,8 @@
         "cast": 0.89,
         "munich": 0.97,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.96
       }
     },
     "Junior Data Scientist": {
@@ -4303,7 +4324,8 @@
         "cast": 0.89,
         "munich": 0.99,
         "seoul": 0.97,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.98
       }
     },
     "Principal Data Scientist": {
@@ -4568,7 +4590,8 @@
         "manila": 0.99,
         "linen": 0.98,
         "wave": 0.97,
-        "frame": 0.98
+        "frame": 0.98,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 10

@@ -430,7 +430,8 @@
         "munich": 0.97,
         "seoul": 0.9,
         "dubai": 0.96,
-        "manila": 0.99
+        "manila": 0.99,
+        "nova": 0.99
       },
       "trimLetter": {
         "berlin": 8,

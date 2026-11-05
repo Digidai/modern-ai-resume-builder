@@ -83,6 +83,16 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   essential: () => import('./templates/EssentialTemplate').then((module) => ({ default: module.EssentialTemplate })),
   capital: () => import('./templates/CapitalTemplate').then((module) => ({ default: module.CapitalTemplate })),
   campus: () => import('./templates/CampusTemplate').then((module) => ({ default: module.CampusTemplate })),
+  clarity: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.ClarityTemplate })),
+  harbor: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.HarborTemplate })),
+  metro: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MetroTemplate })),
+  atlas: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.AtlasTemplate })),
+  chronicle: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.ChronicleTemplate })),
+  aurora: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.AuroraTemplate })),
+  nova: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.NovaTemplate })),
+  cameo: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.CameoTemplate })),
+  sterling: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.SterlingTemplate })),
+  meadow: () => import('./templates/SimpleTemplates').then((module) => ({ default: module.MeadowTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

@@ -143,7 +143,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "seoul": 0.95,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.99
       }
     },
     "HR Business Partner": {
@@ -301,7 +302,8 @@
         "pop": 0.85,
         "cast": 0.96,
         "munich": 0.96,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "meadow": 0.99
       }
     },
     "HR Assistant": {
@@ -440,7 +442,8 @@
         "pop": 0.86,
         "cast": 0.94,
         "munich": 0.97,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "meadow": 0.97
       }
     },
     "Senior Recruiter": {
@@ -520,7 +523,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "meadow": 0.99
       }
     },
     "Technical Recruiter": {
@@ -875,7 +879,8 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.95,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "meadow": 0.99
       }
     },
     "Recruiting Manager": {
@@ -1024,7 +1029,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "munich": 0.96,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "meadow": 0.99
       }
     },
     "People Operations Specialist": {
@@ -1944,7 +1950,8 @@
         "cast": 0.91,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.98
       }
     },
     "Learning and Development Specialist": {
@@ -3333,7 +3340,8 @@
         "cast": 0.91,
         "munich": 0.99,
         "seoul": 0.92,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "meadow": 0.98
       }
     },
     "Onboarding Specialist": {

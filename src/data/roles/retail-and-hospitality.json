@@ -892,7 +892,9 @@
         "munich": 0.94,
         "seoul": 0.93,
         "dubai": 0.95,
-        "manila": 0.97
+        "manila": 0.97,
+        "nova": 0.98,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 2
@@ -1715,7 +1717,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "munich": 0.97,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "meadow": 0.98
       }
     },
     "Reservation Agent": {

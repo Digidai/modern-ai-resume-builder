@@ -85,7 +85,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "munich": 0.96,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "meadow": 0.99
       }
     },
     "Performance Engineer": {
@@ -169,7 +170,8 @@
         "cast": 0.97,
         "munich": 0.99,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.99
       }
     },
     "Observability Engineer": {
@@ -259,7 +261,8 @@
         "cast": 0.99,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "CI/CD Engineer": {
@@ -350,7 +353,8 @@
         "munich": 0.97,
         "linen": 0.95,
         "wave": 0.95,
-        "frame": 0.94
+        "frame": 0.94,
+        "meadow": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -622,7 +626,8 @@
         "cast": 0.93,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "Application Security Engineer": {
@@ -895,7 +900,8 @@
         "dubai": 0.99,
         "linen": 0.95,
         "wave": 0.97,
-        "frame": 0.95
+        "frame": 0.95,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 10,
@@ -992,7 +998,8 @@
         "munich": 0.95,
         "seoul": 0.99,
         "dubai": 0.99,
-        "frame": 0.97
+        "frame": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "quartz": 7
@@ -1273,7 +1280,8 @@
         "cast": 0.93,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.97
       }
     },
     "Threat Intelligence Analyst": {
@@ -1578,7 +1586,8 @@
         "berlin": 0.89,
         "munich": 0.97,
         "seoul": 0.91,
-        "dubai": 0.93
+        "dubai": 0.93,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 8
@@ -1984,7 +1993,8 @@
         "munich": 0.95,
         "seoul": 0.95,
         "dubai": 0.95,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.95
       },
       "trimLetter": {
         "quartz": 12
@@ -2210,7 +2220,8 @@
         "cast": 0.91,
         "munich": 0.95,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "MLOps Engineer": {
@@ -2376,7 +2387,8 @@
         "cast": 0.9,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       }
     },
     "AI Research Engineer": {
@@ -2945,7 +2957,8 @@
         "munich": 0.97,
         "seoul": 0.92,
         "dubai": 0.95,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 7
@@ -3374,7 +3387,8 @@
         "bronx": 0.85,
         "seoul": 0.97,
         "dubai": 0.99,
-        "frame": 0.97
+        "frame": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -3561,7 +3575,8 @@
         "cast": 0.95,
         "munich": 0.95,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Infrastructure Engineer": {
@@ -3944,7 +3959,8 @@
         "cast": 0.9,
         "munich": 0.95,
         "seoul": 0.92,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.97
       }
     },
     "Linux System Administrator": {
@@ -4104,7 +4120,8 @@
         "cast": 0.98,
         "munich": 0.96,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Database Engineer": {
@@ -6442,7 +6459,8 @@
         "pop": 0.86,
         "cast": 0.95,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Senior QA Engineer": {
@@ -6529,7 +6547,8 @@
         "munich": 0.99,
         "seoul": 0.97,
         "dubai": 0.98,
-        "frame": 0.98
+        "frame": 0.98,
+        "meadow": 0.97
       }
     },
     "Electrical Engineer": {
@@ -6869,7 +6888,8 @@
         "munich": 0.98,
         "seoul": 0.89,
         "dubai": 0.95,
-        "manila": 0.98
+        "manila": 0.98,
+        "meadow": 0.99
       }
     }
   }

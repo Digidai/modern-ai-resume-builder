@@ -1295,7 +1295,8 @@
         "federal": 0.99,
         "munich": 0.97,
         "seoul": 0.9,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "meadow": 0.95
       }
     },
     "Enterprise Risk Manager": {
@@ -1395,7 +1396,8 @@
         "munich": 0.96,
         "seoul": 0.96,
         "dubai": 0.97,
-        "frame": 0.98
+        "frame": 0.98,
+        "meadow": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -1897,7 +1899,8 @@
         "cast": 0.91,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.96
       }
     },
     "Legal Counsel": {
@@ -2384,7 +2387,8 @@
         "pop": 0.87,
         "cast": 0.93,
         "munich": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Regulatory Affairs Specialist": {
@@ -2771,7 +2775,8 @@
         "seoul": 0.95,
         "dubai": 0.99,
         "linen": 0.99,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.98
       }
     },
     "Employment Counsel": {
@@ -3105,7 +3110,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.91,
-        "cast": 0.97
+        "cast": 0.97,
+        "meadow": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -3131,7 +3137,8 @@
         "pop": 0.86,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.97
       }
     },
     "Audit Associate": {
@@ -3226,7 +3233,8 @@
         "munich": 0.93,
         "seoul": 0.94,
         "dubai": 0.98,
-        "frame": 0.98
+        "frame": 0.98,
+        "meadow": 0.94
       },
       "trimLetter": {
         "berlin": 5,

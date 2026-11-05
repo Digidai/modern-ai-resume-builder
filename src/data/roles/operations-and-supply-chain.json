@@ -91,7 +91,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.94,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.99
       },
       "trimLetter": {
         "berlin": 11
@@ -1988,7 +1989,8 @@
         "federal": 0.97,
         "munich": 0.95,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Quality Control Inspector": {
@@ -2318,7 +2320,8 @@
         "cast": 0.93,
         "munich": 0.96,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Manufacturing Manager": {
@@ -2897,7 +2900,8 @@
         "iron": 0.85,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "iron": 6

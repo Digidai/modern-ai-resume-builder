@@ -605,7 +605,9 @@
         "munich": 0.95,
         "seoul": 0.89,
         "dubai": 0.94,
-        "manila": 0.99
+        "manila": 0.99,
+        "nova": 0.98,
+        "meadow": 0.96
       }
     },
     "Principal Scientist": {
@@ -1317,7 +1319,8 @@
         "quartz": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "frame": 0.99
+        "frame": 0.99,
+        "meadow": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -1413,7 +1416,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.94
       }
     },
     "Quality Control Chemist": {
@@ -1577,7 +1581,8 @@
         "dubai": 0.98,
         "linen": 0.96,
         "wave": 0.97,
-        "frame": 0.96
+        "frame": 0.96,
+        "meadow": 0.99
       },
       "trimLetter": {
         "berlin": 10,

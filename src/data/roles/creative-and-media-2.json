@@ -662,7 +662,8 @@
         "ginto": 0.86,
         "pop": 0.86,
         "munich": 0.97,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 8,

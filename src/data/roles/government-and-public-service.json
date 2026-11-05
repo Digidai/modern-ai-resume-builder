@@ -1972,7 +1972,8 @@
         "seoul": 0.96,
         "dubai": 0.97,
         "linen": 0.95,
-        "wave": 0.97
+        "wave": 0.97,
+        "meadow": 0.99
       },
       "trimLetter": {
         "berlin": 10

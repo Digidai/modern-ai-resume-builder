@@ -98,7 +98,9 @@
         "munich": 0.97,
         "seoul": 0.97,
         "dubai": 0.95,
-        "manila": 0.99
+        "manila": 0.99,
+        "nova": 0.98,
+        "meadow": 0.98
       }
     },
     "Chief of Staff to CEO": {
@@ -197,7 +199,8 @@
         "berlin": 0.85,
         "munich": 0.95,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -1156,7 +1159,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 6
@@ -2073,7 +2077,8 @@
         "iron": 0.85,
         "munich": 0.96,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.98
       },
       "trimLetter": {
         "berlin": 6,
@@ -2170,7 +2175,8 @@
         "cast": 0.93,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "meadow": 0.98
       }
     },
     "Product Strategy Manager": {
@@ -2440,7 +2446,8 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.93,
-        "manila": 0.99
+        "manila": 0.99,
+        "nova": 0.99
       },
       "trimLetter": {
         "berlin": 6,
@@ -2915,7 +2922,8 @@
         "munich": 0.98,
         "seoul": 0.93,
         "dubai": 0.95,
-        "frame": 0.97
+        "frame": 0.97,
+        "meadow": 0.99
       }
     },
     "Portfolio Manager": {
@@ -3724,7 +3732,8 @@
         "iron": 0.85,
         "munich": 0.96,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "meadow": 0.96
       },
       "trimLetter": {
         "berlin": 5,

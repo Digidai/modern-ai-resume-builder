@@ -59,3 +59,4 @@ export * from './FrameTemplate';
 export * from './EssentialTemplate';
 export * from './CapitalTemplate';
 export * from './CampusTemplate';
+export * from './SimpleTemplates';

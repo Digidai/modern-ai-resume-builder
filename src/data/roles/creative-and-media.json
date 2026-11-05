@@ -1997,7 +1997,9 @@
         "munich": 0.94,
         "seoul": 0.94,
         "dubai": 0.95,
-        "manila": 0.97
+        "manila": 0.97,
+        "nova": 0.98,
+        "meadow": 0.97
       },
       "trimLetter": {
         "berlin": 9
