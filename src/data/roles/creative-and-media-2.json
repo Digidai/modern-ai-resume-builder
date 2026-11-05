@@ -261,7 +261,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.9
+        "pop": 0.9,
+        "frame": 0.99
       }
     },
     "Voice Actor": {

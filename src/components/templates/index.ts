@@ -52,3 +52,7 @@ export * from './SummitTemplate';
 export * from './SeoulTemplate';
 export * from './DubaiTemplate';
 export * from './ManilaTemplate';
+export * from './LinenTemplate';
+export * from './BannerTemplate';
+export * from './WaveTemplate';
+export * from './FrameTemplate';

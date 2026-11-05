@@ -408,7 +408,8 @@
         "federal": 0.96,
         "munich": 0.95,
         "seoul": 0.9,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "linen": 0.99
       },
       "trimLetter": {
         "berlin": 12
@@ -1548,7 +1549,9 @@
         "federal": 0.98,
         "munich": 0.96,
         "seoul": 0.92,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Medical Laboratory Technician": {
@@ -1879,7 +1882,8 @@
         "pop": 0.85,
         "cast": 0.99,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Clinical Data Manager": {
@@ -2675,7 +2679,8 @@
         "pop": 0.86,
         "cast": 0.96,
         "munich": 0.97,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "frame": 0.99
       }
     },
     "EMT (Emergency Medical Technician)": {
@@ -2838,7 +2843,8 @@
         "federal": 0.96,
         "munich": 0.97,
         "seoul": 0.94,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Dental Assistant": {
@@ -3096,7 +3102,10 @@
         "bronx": 0.87,
         "onyx": 0.98,
         "seoul": 0.96,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.96,
+        "wave": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -4182,7 +4191,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.93,
-        "cast": 0.96
+        "cast": 0.96,
+        "frame": 0.99
       }
     },
     "Respiratory Therapist": {
@@ -4352,7 +4362,8 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.94,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "frame": 0.96
       }
     },
     "Speech-Language Pathologist": {
@@ -4554,7 +4565,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.93,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "berlin": 10

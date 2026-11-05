@@ -13,7 +13,7 @@
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](http://makeapullrequest.com)
 [![Cloudflare](https://img.shields.io/badge/Deploy-Cloudflare-F38020?logo=cloudflare&logoColor=white)](https://pages.cloudflare.com/)
 
-**ModernCV is a free, local-first AI resume builder with 60 templates (including photo and academic CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
+**ModernCV is a free, local-first AI resume builder with 64 templates (including photo and academic CVs), a vector PDF export, 1,204 job-specific resume examples, and an MCP server so AI agents can build resumes with it.**
 
 [Live Demo](https://genedai.cv) | [Report Bug](../../issues) | [Request Feature](../../issues) | [Architecture](./ARCHITECTURE.md) | [Roadmap](./ROADMAP.md)
 
@@ -55,7 +55,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Highlights
 
-- 60 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, McDowell, billryan, Deedy, AltaCV) and 25 ATS-friendly single-column layouts.
+- 64 resume templates, including research-based classics (Jake's, Harvard, Awesome-CV, moderncv, McDowell, billryan, Deedy, AltaCV) and 25 ATS-friendly single-column layouts.
 - Style controls for every template: accent colour (with contrast check), 10 self-hosted fonts, text size, and fit to one page.
 - A template gallery (`/templates/`) with an ATS filter and a detail page per template.
 - 1,204 job titles in 21 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
@@ -90,7 +90,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 
 ## Templates
 
-ModernCV ships with 60 templates. Photo templates (Europa, Munich, Tokyo, Seoul, Jade, Manila, Dubai, Portrait, Onyx, Riviera, Summit, Halo) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar, Oxford, Standard, Lumen, Federal. Federal is the USAJOBS format for US government jobs: MM/YYYY dates and hours per week on every job, printed on US Letter, with a warning past the 2-page USAJOBS limit, plus Honors and Awards and a Certifications and Licenses section. Scholar, Oxford, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs. Publications can be imported from BibTeX or ORCID, a whole LaTeX CV can be imported (AI converts it; you preview before it replaces anything), and any resume can be opened in Overleaf or downloaded as LaTeX.
+ModernCV ships with 64 templates. Photo templates (Banner, Frame, Linen, Wave, Portrait, Onyx, Riviera, Summit, Halo, Europa, Munich, Tokyo, Seoul, Jade, Manila, Dubai) show an optional headshot for markets that expect one. ATS-friendly (single column, standard headings): Classic, Modern, Ivy, Ledger, Vanguard, Timeline, Executive, Compact, Academic, Tech, Silk, Lateral, Opal, Meridian, Keystone, Vital, Plain, Text, Graduate, Wall Street, Scholar, Oxford, Standard, Lumen, Federal. Federal is the USAJOBS format for US government jobs: MM/YYYY dates and hours per week on every job, printed on US Letter, with a warning past the 2-page USAJOBS limit, plus Honors and Awards and a Certifications and Licenses section. Scholar, Oxford, Academic, Plain, Text and Graduate show Publications, Grants and awards, Talks and Teaching sections for academic CVs. Publications can be imported from BibTeX or ORCID, a whole LaTeX CV can be imported (AI converts it; you preview before it replaces anything), and any resume can be opened in Overleaf or downloaded as LaTeX.
 
 Two-column and expressive: Minimalist, Duo, Altitude, Halo, Prism, Sidebar, Creative, Professional, Elegant, Swiss, Berlin, Iron, Ginto, Symmetry, Path, Wireframe, Quartz, Bronx, Paper, Moda, Noir, Mono, Pop, Cast.
 

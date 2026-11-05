@@ -1573,7 +1573,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.92
+        "pop": 0.92,
+        "frame": 0.99
       }
     },
     "JavaScript Developer": {
@@ -1736,7 +1737,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "React Developer": {
@@ -1816,7 +1818,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "munich": 0.98,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "frame": 0.99
       }
     },
     "React.js Developer": {
@@ -3361,7 +3364,8 @@
         "cast": 0.97,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Ruby on Rails Developer": {
@@ -3701,7 +3705,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.89
+        "pop": 0.89,
+        "frame": 0.99
       }
     },
     "Shopify Developer": {
@@ -3758,7 +3763,8 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "Salesforce Developer": {
@@ -3979,7 +3985,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "C++ Developer": {
@@ -4078,7 +4085,9 @@
         "bronx": 0.85,
         "munich": 0.95,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "wave": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "berlin": 6,
@@ -4416,7 +4425,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       }
     },
     "Blockchain Developer": {
@@ -5791,7 +5801,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -5879,7 +5890,8 @@
         "pop": 0.87,
         "cast": 0.97,
         "munich": 0.98,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Associate Software Engineer": {
@@ -6005,7 +6017,10 @@
         "pop": 0.95,
         "quartz": 0.92,
         "bronx": 0.86,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.98,
+        "wave": 0.95,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -6173,7 +6188,8 @@
         "quartz": 0.95,
         "pop": 0.92,
         "seoul": 0.93,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "frame": 0.97
       },
       "trimLetter": {
         "iron": 8,
@@ -6357,7 +6373,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Senior iOS Developer": {
@@ -6849,7 +6866,10 @@
         "mono": 0.98,
         "pop": 0.91,
         "quartz": 0.91,
-        "bronx": 0.88
+        "bronx": 0.88,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.94
       },
       "trimLetter": {
         "quartz": 10,

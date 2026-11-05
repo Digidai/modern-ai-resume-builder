@@ -122,7 +122,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "linen": 0.99
       }
     },
     "Groundskeeper": {
@@ -183,7 +184,8 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.9,
-        "cast": 0.98
+        "cast": 0.98,
+        "frame": 0.99
       }
     },
     "Painter": {
@@ -245,7 +247,10 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.89
+        "pop": 0.89,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.97
       }
     },
     "Roofer": {
@@ -430,7 +435,10 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "linen": 0.94,
+        "wave": 0.95,
+        "frame": 0.97
       }
     },
     "Heavy Equipment Operator": {
@@ -496,7 +504,10 @@
         "mono": 0.94,
         "pop": 0.85,
         "quartz": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.94,
+        "wave": 0.95,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 7
@@ -676,7 +687,10 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.86
+        "pop": 0.86,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.97
       }
     },
     "Tile Setter": {
@@ -844,7 +858,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.85
+        "pop": 0.85,
+        "linen": 0.98,
+        "frame": 0.97
       }
     },
     "Insulation Installer": {
@@ -961,7 +977,9 @@
         "quartz": 0.85,
         "bronx": 0.86,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "linen": 0.96,
+        "wave": 0.96
       }
     },
     "Construction Inspector": {
@@ -1023,7 +1041,10 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "linen": 0.96,
+        "wave": 0.96,
+        "frame": 0.97
       }
     },
     "Building Surveyor": {
@@ -1141,7 +1162,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.85
+        "pop": 0.85,
+        "frame": 0.99
       }
     },
     "Mortgage Broker": {

@@ -60,7 +60,8 @@
         "mono": 0.98,
         "pop": 0.85,
         "quartz": 0.85,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7
@@ -249,7 +250,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.91
+        "pop": 0.91,
+        "frame": 0.99
       }
     },
     "Startup Founder": {

@@ -126,7 +126,10 @@
         "pop": 0.87,
         "cast": 0.96,
         "munich": 0.97,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "linen": 0.99,
+        "wave": 0.99,
+        "frame": 0.98
       }
     },
     "Journeyman Electrician": {
@@ -195,7 +198,10 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.96,
+        "wave": 0.96,
+        "frame": 0.98
       }
     },
     "Master Electrician": {
@@ -348,7 +354,8 @@
         "pop": 0.85,
         "cast": 0.98,
         "munich": 0.98,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.97
       }
     },
     "Lineman": {
@@ -418,7 +425,9 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Welder": {
@@ -485,7 +494,10 @@
         "moda": 0.97,
         "noir": 0.98,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "linen": 0.94,
+        "wave": 0.95,
+        "frame": 0.96
       }
     },
     "Welding Inspector": {
@@ -871,7 +883,9 @@
         "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.86,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.99,
+        "wave": 0.98
       }
     },
     "CNC Programmer": {
@@ -935,7 +949,10 @@
         "mono": 0.94,
         "pop": 0.87,
         "cast": 0.98,
-        "quartz": 0.9
+        "quartz": 0.9,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -1084,7 +1101,10 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.98
+        "cast": 0.98,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.96
       }
     },
     "Assembly Technician": {
@@ -1211,7 +1231,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.87
+        "pop": 0.87,
+        "frame": 0.99
       }
     },
     "Quality Technician": {
@@ -1277,7 +1298,10 @@
         "pop": 0.86,
         "cast": 0.98,
         "quartz": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 7
@@ -1345,7 +1369,10 @@
         "mono": 0.89,
         "pop": 0.91,
         "cast": 0.98,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 7
@@ -1413,7 +1440,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "linen": 0.98,
+        "frame": 0.97
       }
     },
     "Maintenance Planner": {
@@ -1759,7 +1788,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.9,
-        "pop": 0.94
+        "pop": 0.94,
+        "linen": 0.98,
+        "wave": 0.99
       }
     }
   }

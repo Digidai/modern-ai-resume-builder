@@ -1388,7 +1388,9 @@
         "pop": 0.87,
         "cast": 0.95,
         "munich": 0.99,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.98,
+        "wave": 0.99
       }
     },
     "Code Enforcement Officer": {
@@ -1624,7 +1626,8 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.87,
-        "cast": 0.94
+        "cast": 0.94,
+        "frame": 0.98
       }
     },
     "Probation Officer": {
@@ -1967,7 +1970,9 @@
         "berlin": 0.85,
         "munich": 0.98,
         "seoul": 0.96,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.95,
+        "wave": 0.97
       },
       "trimLetter": {
         "berlin": 10

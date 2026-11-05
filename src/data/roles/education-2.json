@@ -63,7 +63,9 @@
         "quartz": 0.85,
         "bronx": 0.86,
         "mono": 0.93,
-        "pop": 0.94
+        "pop": 0.94,
+        "linen": 0.98,
+        "wave": 0.98
       }
     },
     "Daycare Teacher": {
@@ -132,7 +134,9 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.98,
+        "wave": 0.98
       }
     },
     "Science Teacher": {
@@ -189,7 +193,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.9
+        "pop": 0.9,
+        "linen": 0.96,
+        "wave": 0.98
       },
       "fitLetter": {
         "modern": 0.95,
@@ -215,7 +221,11 @@
         "quartz": 0.85,
         "bronx": 0.87,
         "onyx": 0.99,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "linen": 0.9,
+        "banner": 0.99,
+        "wave": 0.92,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -392,7 +402,8 @@
         "ginto": 0.91,
         "quartz": 0.87,
         "bronx": 0.85,
-        "pop": 0.86
+        "pop": 0.86,
+        "frame": 0.99
       }
     },
     "Online Tutor": {
@@ -514,7 +525,10 @@
         "cast": 0.99,
         "quartz": 0.88,
         "bronx": 0.85,
-        "onyx": 0.99
+        "onyx": 0.99,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.94
       },
       "trimLetter": {
         "quartz": 10,
@@ -631,7 +645,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.88
+        "pop": 0.88,
+        "linen": 0.98,
+        "wave": 0.98
       },
       "fitLetter": {
         "silk": 0.93,
@@ -651,7 +667,11 @@
         "cast": 0.97,
         "quartz": 0.85,
         "bronx": 0.85,
-        "onyx": 0.99
+        "onyx": 0.99,
+        "linen": 0.92,
+        "banner": 0.98,
+        "wave": 0.92,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -728,7 +748,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "frame": 0.99
       }
     },
     "Coding Bootcamp Instructor": {
@@ -781,7 +802,10 @@
         "ginto": 0.93,
         "bronx": 0.85,
         "pop": 0.9,
-        "quartz": 0.91
+        "quartz": 0.91,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10

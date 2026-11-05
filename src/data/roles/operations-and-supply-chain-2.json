@@ -251,7 +251,8 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.92
+        "pop": 0.92,
+        "frame": 0.99
       }
     },
     "Distribution Center Manager": {
@@ -338,7 +339,10 @@
         "cast": 0.99,
         "munich": 0.99,
         "seoul": 0.92,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "Fulfillment Associate": {
@@ -449,7 +453,10 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "linen": 0.97,
+        "wave": 0.99,
+        "frame": 0.99
       }
     }
   }

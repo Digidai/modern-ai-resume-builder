@@ -882,7 +882,8 @@
         "pop": 0.85,
         "cast": 0.9,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Agile Coach": {
@@ -963,7 +964,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.91,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Delivery Manager": {
@@ -1779,7 +1781,10 @@
         "quartz": 0.89,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -2909,7 +2914,8 @@
         "cast": 0.91,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "frame": 0.97
       }
     },
     "Portfolio Manager": {
@@ -3825,7 +3831,10 @@
         "munich": 0.98,
         "onyx": 0.99,
         "seoul": 0.91,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.95,
+        "wave": 0.96,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -3914,7 +3923,8 @@
         "cast": 0.93,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "VP of Strategy": {

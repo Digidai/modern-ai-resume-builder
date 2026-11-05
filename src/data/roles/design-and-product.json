@@ -59,7 +59,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.87
+        "pop": 0.87,
+        "frame": 0.99
       }
     },
     "Senior Product Designer": {
@@ -152,7 +153,8 @@
         "cast": 0.9,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Lead Product Designer": {
@@ -477,7 +479,9 @@
         "mono": 0.93,
         "pop": 0.92,
         "cast": 0.99,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10
@@ -562,7 +566,8 @@
         "pop": 0.85,
         "cast": 0.91,
         "quartz": 0.94,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -697,7 +702,8 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.94,
-        "quartz": 0.89
+        "quartz": 0.89,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10
@@ -785,7 +791,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "quartz": 0.97,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -844,7 +851,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.93
+        "pop": 0.93,
+        "frame": 0.99
       }
     },
     "Senior UI Designer": {
@@ -1145,7 +1153,9 @@
         "pop": 0.91,
         "cast": 0.97,
         "quartz": 0.91,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "linen": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -1615,7 +1625,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "Graphic Designer": {
@@ -2423,7 +2434,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7,
@@ -2668,7 +2680,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Principal Product Manager": {
@@ -3091,7 +3104,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.88,
-        "cast": 0.96
+        "cast": 0.96,
+        "wave": 0.99
       }
     },
     "Mobile Product Manager": {
@@ -3145,7 +3159,8 @@
         "ginto": 0.89,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.91
+        "pop": 0.91,
+        "frame": 0.99
       }
     },
     "Data Product Manager": {
@@ -3264,7 +3279,8 @@
         "mono": 0.94,
         "pop": 0.88,
         "cast": 0.98,
-        "quartz": 0.91
+        "quartz": 0.91,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -3672,7 +3688,8 @@
         "ginto": 0.87,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "Head of Product": {
@@ -4142,7 +4159,8 @@
         "cast": 0.9,
         "berlin": 0.85,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -4200,7 +4218,8 @@
         "ginto": 0.93,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.93
+        "pop": 0.93,
+        "frame": 0.99
       }
     },
     "Industrial Designer": {

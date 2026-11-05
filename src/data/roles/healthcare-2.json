@@ -121,7 +121,8 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.87,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.99
       }
     },
     "Personal Care Aide": {
@@ -244,7 +245,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Veterinary Technician": {
@@ -448,7 +451,10 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -532,7 +538,10 @@
         "cast": 0.99,
         "quartz": 0.86,
         "bronx": 0.85,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.94,
+        "wave": 0.97,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -655,7 +664,8 @@
         "mono": 0.94,
         "pop": 0.9,
         "cast": 0.98,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Patient Access Representative": {
@@ -775,7 +785,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.87,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -805,7 +816,10 @@
         "munich": 0.97,
         "onyx": 0.99,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.92,
+        "wave": 0.94,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -887,7 +901,10 @@
         "cast": 0.97,
         "quartz": 0.89,
         "bronx": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.95,
+        "wave": 0.95,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -1009,7 +1026,9 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.89,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 7
@@ -1066,7 +1085,8 @@
         "ginto": 0.94,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.9
+        "pop": 0.9,
+        "frame": 0.99
       }
     },
     "Psychiatric Nurse": {
@@ -1130,7 +1150,8 @@
         "mono": 0.96,
         "pop": 0.85,
         "cast": 0.98,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "frame": 0.99
       }
     },
     "Oncology Nurse": {
@@ -1206,7 +1227,10 @@
         "pop": 0.85,
         "cast": 0.98,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.98
       }
     },
     "Nurse Educator": {
@@ -1287,7 +1311,10 @@
         "cast": 0.96,
         "quartz": 0.89,
         "bronx": 0.86,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -1589,7 +1616,8 @@
         "moda": 0.99,
         "mono": 0.94,
         "pop": 0.89,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "linen": 0.99
       },
       "fitLetter": {
         "modern": 0.95,
@@ -1619,7 +1647,11 @@
         "bronx": 0.85,
         "munich": 0.99,
         "onyx": 0.99,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.93,
+        "banner": 0.97,
+        "wave": 0.94,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -2325,7 +2357,9 @@
         "moda": 0.96,
         "mono": 0.96,
         "pop": 0.88,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.96,
+        "wave": 0.97
       },
       "fitLetter": {
         "modern": 0.95,
@@ -2354,7 +2388,11 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "onyx": 0.97,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "linen": 0.91,
+        "banner": 0.95,
+        "wave": 0.91,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -2498,7 +2536,9 @@
         "pop": 0.85,
         "cast": 0.92,
         "bronx": 0.87,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "linen": 0.98,
+        "frame": 0.98
       },
       "trimLetter": {
         "bronx": 10
@@ -2631,7 +2671,10 @@
         "cast": 0.95,
         "quartz": 0.97,
         "bronx": 0.89,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,

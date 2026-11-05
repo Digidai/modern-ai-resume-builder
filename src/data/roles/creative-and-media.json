@@ -195,7 +195,8 @@
         "ginto": 0.93,
         "seoul": 0.91,
         "dubai": 0.94,
-        "manila": 0.99
+        "manila": 0.99,
+        "frame": 0.99
       },
       "trimLetter": {
         "iron": 8,
@@ -532,7 +533,8 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.88,
-        "quartz": 0.93
+        "quartz": 0.93,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -998,7 +1000,8 @@
         "ginto": 0.87,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.85
+        "pop": 0.85,
+        "frame": 0.99
       }
     },
     "Producer (Film/TV)": {
@@ -1198,7 +1201,8 @@
         "quartz": 0.85,
         "mono": 0.94,
         "pop": 0.88,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "frame": 0.99
       },
       "trimLetter": {
         "bronx": 10
@@ -1357,7 +1361,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "frame": 0.99
       }
     },
     "Music Producer": {
@@ -1412,7 +1417,8 @@
         "ginto": 0.91,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.89
+        "pop": 0.89,
+        "frame": 0.99
       }
     },
     "Content Creator": {
@@ -1474,7 +1480,8 @@
         "pop": 0.87,
         "cast": 0.98,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7,
@@ -1532,7 +1539,8 @@
         "ginto": 0.93,
         "quartz": 0.86,
         "bronx": 0.85,
-        "pop": 0.95
+        "pop": 0.95,
+        "frame": 0.99
       }
     },
     "Creative Strategist": {
@@ -1589,7 +1597,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "Scriptwriter": {
@@ -1647,7 +1656,8 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.9,
-        "quartz": 0.94
+        "quartz": 0.94,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -1740,7 +1750,8 @@
         "quartz": 0.89,
         "bronx": 0.87,
         "seoul": 0.96,
-        "dubai": 0.96
+        "dubai": 0.96,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -2068,7 +2079,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.92,
-        "cast": 0.96
+        "cast": 0.96,
+        "frame": 0.99
       }
     },
     "Editor-in-Chief": {

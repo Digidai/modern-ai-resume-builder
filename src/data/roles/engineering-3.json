@@ -124,7 +124,10 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.88,
-        "quartz": 0.96
+        "quartz": 0.96,
+        "linen": 0.96,
+        "wave": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10
@@ -185,7 +188,10 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.87,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7
@@ -382,7 +388,10 @@
         "mono": 0.96,
         "pop": 0.88,
         "cast": 0.98,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 1
@@ -443,7 +452,8 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.96,
-        "quartz": 0.93
+        "quartz": 0.93,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -1131,7 +1141,10 @@
         "ginto": 0.92,
         "bronx": 0.85,
         "pop": 0.93,
-        "quartz": 0.9
+        "quartz": 0.9,
+        "linen": 0.97,
+        "wave": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -1450,7 +1463,10 @@
         "mono": 0.96,
         "pop": 0.92,
         "quartz": 0.92,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.94
       },
       "trimLetter": {
         "quartz": 10,

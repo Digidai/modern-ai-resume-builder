@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Four photo templates in the most widely used online-builder layouts: Linen (beige minimalist with a round photo, serif name and timeline), Banner (square photo beside the name and profile, accent contact strip, skill tags), Wave (wavy accent header with an overlapping round photo) and Frame (edge-to-edge photo atop a light grey sidebar). 64 templates.
 - Three regional photo templates: Seoul (Korean 이력서 layout: 3×4 photo, labelled details grid, history in tables with a header row), Dubai (Gulf CV: gold rule, framed photo, Core Competencies grid) and Manila (Southeast Asian resume: square 2×2 ID photo, tinted section bars). 60 templates.
 - Four more photo templates in classic, widely used styles: Munich (German tabular Lebenslauf with a 3:4 passport photo and a date column), Onyx (charcoal sidebar with a round photo), Riviera (centred round photo above a serif name, common in France, Spain and Italy) and Summit (accent header band with a square photo and two columns). 57 templates.
 - Federal lists a security clearance (a "Security Clearance: Top Secret/SCI, active" skill group) first in its credentials section, kept on one line with its label; the section is titled Clearance, Certifications and Licenses when it has both.

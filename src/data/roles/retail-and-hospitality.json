@@ -426,7 +426,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "bronx": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.98
       },
       "trimLetter": {
         "bronx": 1
@@ -1024,7 +1025,8 @@
         "pop": 0.87,
         "cast": 0.98,
         "bronx": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.98
       },
       "trimLetter": {
         "bronx": 1
@@ -1498,7 +1500,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.98,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.98
       }
     },
     "Housekeeping Supervisor": {
@@ -1903,7 +1906,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Event Coordinator": {
@@ -2548,7 +2553,8 @@
         "pop": 0.85,
         "cast": 0.98,
         "bronx": 0.85,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.98
       },
       "trimLetter": {
         "bronx": 1
@@ -2624,7 +2630,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "frame": 0.96
       }
     },
     "Hotel Sales Manager": {

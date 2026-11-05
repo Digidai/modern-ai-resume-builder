@@ -76,6 +76,10 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   seoul: () => import('./templates/SeoulTemplate').then((module) => ({ default: module.SeoulTemplate })),
   dubai: () => import('./templates/DubaiTemplate').then((module) => ({ default: module.DubaiTemplate })),
   manila: () => import('./templates/ManilaTemplate').then((module) => ({ default: module.ManilaTemplate })),
+  linen: () => import('./templates/LinenTemplate').then((module) => ({ default: module.LinenTemplate })),
+  banner: () => import('./templates/BannerTemplate').then((module) => ({ default: module.BannerTemplate })),
+  wave: () => import('./templates/WaveTemplate').then((module) => ({ default: module.WaveTemplate })),
+  frame: () => import('./templates/FrameTemplate').then((module) => ({ default: module.FrameTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

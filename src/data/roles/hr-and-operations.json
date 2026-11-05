@@ -142,7 +142,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "frame": 0.99
       }
     },
     "HR Business Partner": {
@@ -1543,7 +1544,8 @@
         "mono": 0.91,
         "pop": 0.86,
         "bronx": 0.87,
-        "munich": 0.99
+        "munich": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "bronx": 10
@@ -1767,7 +1769,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "frame": 0.99
       }
     },
     "Payroll Manager": {
@@ -3071,7 +3074,11 @@
         "mono": 0.91,
         "pop": 0.89,
         "cast": 0.98,
-        "seoul": 0.94
+        "seoul": 0.94,
+        "linen": 0.96,
+        "banner": 0.97,
+        "wave": 0.95,
+        "frame": 0.97
       }
     },
     "HR Specialist": {
@@ -3815,7 +3822,10 @@
         "quartz": 0.93,
         "bronx": 0.85,
         "munich": 0.99,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3884,7 +3894,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "frame": 0.99
       }
     }
   }

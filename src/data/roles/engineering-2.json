@@ -347,7 +347,10 @@
         "cast": 0.95,
         "quartz": 0.91,
         "bronx": 0.88,
-        "munich": 0.97
+        "munich": 0.97,
+        "linen": 0.95,
+        "wave": 0.95,
+        "frame": 0.94
       },
       "trimLetter": {
         "quartz": 10,
@@ -439,7 +442,10 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "munich": 0.97,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -789,7 +795,8 @@
         "cast": 0.93,
         "munich": 0.96,
         "seoul": 0.93,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "frame": 0.99
       }
     },
     "Security Architect": {
@@ -885,7 +892,10 @@
         "bronx": 0.85,
         "munich": 0.95,
         "seoul": 0.9,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.95,
+        "wave": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -981,7 +991,8 @@
         "quartz": 0.85,
         "munich": 0.95,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7
@@ -1476,7 +1487,8 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.97,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Malware Analyst": {
@@ -1971,7 +1983,8 @@
         "quartz": 0.92,
         "munich": 0.95,
         "seoul": 0.95,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "frame": 0.99
       },
       "trimLetter": {
         "quartz": 12
@@ -2434,7 +2447,9 @@
         "mono": 0.91,
         "pop": 0.95,
         "bronx": 0.87,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.99,
+        "frame": 0.98
       },
       "trimLetter": {
         "bronx": 12
@@ -2506,7 +2521,10 @@
         "quartz": 0.93,
         "bronx": 0.86,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.99,
+        "wave": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -2926,7 +2944,8 @@
         "berlin": 0.85,
         "munich": 0.97,
         "seoul": 0.92,
-        "dubai": 0.95
+        "dubai": 0.95,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 7
@@ -3180,7 +3199,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "frame": 0.99
       }
     },
     "DevOps Engineer": {
@@ -3353,7 +3373,8 @@
         "quartz": 0.93,
         "bronx": 0.85,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3702,7 +3723,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Network Engineer": {
@@ -4173,7 +4195,8 @@
         "bronx": 0.88,
         "munich": 0.96,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -4389,7 +4412,9 @@
         "quartz": 0.89,
         "bronx": 0.87,
         "munich": 0.99,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -4608,7 +4633,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.89,
-        "cast": 0.98
+        "cast": 0.98,
+        "frame": 0.99
       }
     },
     "Embedded Systems Engineer": {
@@ -4733,7 +4759,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.96,
-        "quartz": 0.96
+        "quartz": 0.96,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -4799,7 +4826,8 @@
         "pop": 0.86,
         "quartz": 0.94,
         "bronx": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -4890,7 +4918,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       }
     },
     "Microservices Engineer": {
@@ -5034,7 +5063,8 @@
         "bronx": 0.85,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -5372,7 +5402,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Engineering Manager": {
@@ -5457,7 +5488,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "frame": 0.99
       }
     },
     "Director of Engineering": {
@@ -6496,7 +6528,8 @@
         "cast": 0.96,
         "munich": 0.99,
         "seoul": 0.97,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "frame": 0.98
       }
     },
     "Electrical Engineer": {

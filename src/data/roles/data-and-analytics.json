@@ -306,7 +306,9 @@
         "cast": 0.94,
         "munich": 0.93,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Machine Learning Scientist": {
@@ -1370,7 +1372,8 @@
         "cast": 0.9,
         "munich": 0.98,
         "seoul": 0.93,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       }
     },
     "Experimentation Analyst": {
@@ -1727,7 +1730,9 @@
         "cast": 0.93,
         "munich": 0.95,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.99,
+        "wave": 0.99
       }
     },
     "Data Architect": {
@@ -2007,7 +2012,10 @@
         "quartz": 0.9,
         "munich": 0.96,
         "seoul": 0.91,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "berlin": 10,
@@ -2543,7 +2551,9 @@
         "quartz": 0.88,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10
@@ -3150,7 +3160,8 @@
         "bronx": 0.85,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3545,7 +3556,10 @@
         "munich": 0.96,
         "seoul": 0.94,
         "dubai": 0.95,
-        "manila": 0.99
+        "manila": 0.99,
+        "linen": 0.99,
+        "wave": 0.98,
+        "frame": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -4551,7 +4565,10 @@
         "munich": 0.94,
         "seoul": 0.92,
         "dubai": 0.95,
-        "manila": 0.99
+        "manila": 0.99,
+        "linen": 0.98,
+        "wave": 0.97,
+        "frame": 0.98
       },
       "trimLetter": {
         "berlin": 10

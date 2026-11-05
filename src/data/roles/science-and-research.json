@@ -1146,7 +1146,8 @@
         "mono": 0.92,
         "pop": 0.86,
         "cast": 0.98,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Microbiologist": {
@@ -1315,7 +1316,8 @@
         "cast": 0.97,
         "quartz": 0.95,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -1572,7 +1574,10 @@
         "bronx": 0.85,
         "munich": 0.96,
         "seoul": 0.92,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.96,
+        "wave": 0.97,
+        "frame": 0.96
       },
       "trimLetter": {
         "berlin": 10,

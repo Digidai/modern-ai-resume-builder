@@ -595,7 +595,10 @@
         "mono": 0.91,
         "pop": 0.87,
         "cast": 0.93,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "Older Worker": {

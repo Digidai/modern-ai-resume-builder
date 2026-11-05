@@ -113,7 +113,8 @@
         "berlin": 0.94,
         "iron": 0.98,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "frame": 0.99
       }
     },
     "Clinical Research Associate": {
@@ -220,7 +221,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.99,
-        "pop": 0.97
+        "pop": 0.97,
+        "frame": 0.99
       },
       "fitLetter": {
         "minimalist": 0.99,
@@ -235,7 +237,10 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.94,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "linen": 0.94,
+        "wave": 0.95,
+        "frame": 0.93
       },
       "trimLetter": {
         "quartz": 10
@@ -316,7 +321,10 @@
         "pop": 0.87,
         "cast": 0.99,
         "quartz": 0.87,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "linen": 0.96,
+        "wave": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -394,7 +402,11 @@
         "mono": 0.95,
         "pop": 0.87,
         "cast": 0.99,
-        "quartz": 0.9
+        "quartz": 0.9,
+        "linen": 0.94,
+        "banner": 0.99,
+        "wave": 0.96,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10
@@ -539,7 +551,10 @@
         "mono": 0.91,
         "pop": 0.89,
         "quartz": 0.86,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,

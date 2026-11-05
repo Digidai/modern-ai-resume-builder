@@ -163,7 +163,8 @@
         "ginto": 0.89,
         "quartz": 0.85,
         "bronx": 0.85,
-        "pop": 0.9
+        "pop": 0.9,
+        "frame": 0.99
       }
     },
     "Solar Installer": {
@@ -277,7 +278,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "linen": 0.99
       }
     },
     "Elevator Mechanic": {
@@ -333,7 +335,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.98,
-        "pop": 0.9
+        "pop": 0.9,
+        "frame": 0.99
       }
     },
     "Auto Body Technician": {

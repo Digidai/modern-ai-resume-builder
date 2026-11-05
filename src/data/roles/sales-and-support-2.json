@@ -160,7 +160,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "frame": 0.99
       }
     },
     "Pharmaceutical Sales Representative": {
@@ -314,7 +315,8 @@
         "quartz": 0.92,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -454,7 +456,8 @@
         "cast": 0.95,
         "munich": 0.98,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Telemarketer": {
@@ -679,7 +682,10 @@
         "quartz": 0.85,
         "bronx": 0.86,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.97
       }
     },
     "Solar Sales Representative": {
@@ -858,7 +864,10 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "quartz": 0.91
+        "quartz": 0.91,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10

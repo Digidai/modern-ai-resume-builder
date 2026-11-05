@@ -1292,7 +1292,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -1571,7 +1572,8 @@
         "berlin": 0.85,
         "munich": 0.96,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 5
@@ -1761,7 +1763,9 @@
         "bronx": 0.85,
         "munich": 0.98,
         "seoul": 0.96,
-        "dubai": 0.96
+        "dubai": 0.96,
+        "linen": 0.99,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -2034,7 +2038,8 @@
         "quartz": 0.94,
         "munich": 0.98,
         "seoul": 0.96,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -2133,7 +2138,9 @@
         "munich": 0.95,
         "seoul": 0.94,
         "dubai": 0.94,
-        "manila": 0.98
+        "manila": 0.98,
+        "linen": 0.99,
+        "frame": 0.94
       },
       "trimLetter": {
         "berlin": 1,
@@ -2408,7 +2415,8 @@
         "quartz": 0.9,
         "munich": 0.98,
         "seoul": 0.98,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -2691,7 +2699,8 @@
         "cast": 0.91,
         "quartz": 0.85,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.97
       },
       "trimLetter": {
         "quartz": 7
@@ -3297,7 +3306,8 @@
         "munich": 0.98,
         "seoul": 0.95,
         "dubai": 0.95,
-        "manila": 0.99
+        "manila": 0.99,
+        "frame": 0.99
       },
       "trimLetter": {
         "berlin": 5

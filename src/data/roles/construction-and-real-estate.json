@@ -79,7 +79,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "frame": 0.99
       }
     },
     "Site Supervisor": {
@@ -833,7 +834,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.97
       }
     },
     "Interior Designer": {
@@ -1368,7 +1370,8 @@
         "pop": 0.85,
         "cast": 0.92,
         "munich": 0.98,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "frame": 0.98
       }
     },
     "Property Manager": {
@@ -1686,7 +1689,8 @@
         "cast": 0.94,
         "bronx": 0.85,
         "munich": 0.99,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       },
       "trimLetter": {
         "bronx": 7
@@ -2024,7 +2028,8 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.88
+        "pop": 0.88,
+        "frame": 0.99
       }
     },
     "Carpenter": {
@@ -2174,7 +2179,8 @@
         "cast": 0.93,
         "iron": 0.85,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -2871,7 +2877,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.96,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Real Estate Transaction Coordinator": {
@@ -3097,7 +3105,8 @@
         "pop": 0.88,
         "cast": 0.94,
         "munich": 0.97,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     }
   }

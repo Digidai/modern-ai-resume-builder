@@ -692,7 +692,8 @@
         "pop": 0.87,
         "cast": 0.96,
         "munich": 0.97,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Learning Experience Designer": {
@@ -878,7 +879,10 @@
         "bronx": 0.86,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.96,
+        "wave": 0.97,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -1408,7 +1412,8 @@
         "cast": 0.93,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.99
       }
     },
     "Assistant Principal": {
@@ -1579,7 +1584,8 @@
         "pop": 0.92,
         "cast": 0.94,
         "munich": 0.99,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "frame": 0.99
       }
     },
     "Dean of Students": {
@@ -1672,7 +1678,10 @@
         "cast": 0.98,
         "munich": 0.99,
         "seoul": 0.95,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "linen": 0.99,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "School Administrator": {
@@ -1920,7 +1929,10 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.94,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.97,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "University Lecturer": {
@@ -2070,7 +2082,8 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.94,
-        "quartz": 0.91
+        "quartz": 0.91,
+        "frame": 0.99
       },
       "trimLetter": {
         "quartz": 12
@@ -2260,7 +2273,8 @@
         "cast": 0.94,
         "munich": 0.99,
         "seoul": 0.99,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "School Librarian": {
@@ -2349,7 +2363,8 @@
         "mono": 0.85,
         "pop": 0.89,
         "cast": 0.96,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Admissions Counselor": {
@@ -2592,7 +2607,8 @@
         "pop": 0.85,
         "cast": 0.97,
         "seoul": 0.97,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "frame": 0.99
       }
     },
     "Education Program Manager": {
@@ -2663,7 +2679,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.87
+        "pop": 0.87,
+        "linen": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -2692,7 +2709,10 @@
         "bronx": 0.86,
         "munich": 0.98,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "linen": 0.93,
+        "wave": 0.95,
+        "frame": 0.95
       },
       "trimLetter": {
         "quartz": 10,
@@ -2781,7 +2801,8 @@
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.94,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.98
       }
     },
     "Education Technology Specialist": {
@@ -2871,7 +2892,10 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "eLearning Developer": {
@@ -2951,7 +2975,8 @@
         "pop": 0.86,
         "cast": 0.99,
         "munich": 0.98,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "frame": 0.99
       }
     },
     "Youth Program Coordinator": {
@@ -3706,7 +3731,10 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.86,
-        "seoul": 0.96
+        "seoul": 0.96,
+        "linen": 0.98,
+        "wave": 0.98,
+        "frame": 0.99
       }
     },
     "Registrar": {

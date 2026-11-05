@@ -700,7 +700,10 @@
         "pop": 0.89,
         "cast": 0.95,
         "quartz": 0.85,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.98,
+        "wave": 0.95,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10
@@ -1391,7 +1394,8 @@
         "bronx": 0.87,
         "munich": 0.96,
         "seoul": 0.96,
-        "dubai": 0.97
+        "dubai": 0.97,
+        "frame": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -2154,7 +2158,8 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.98,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.99
       }
     },
     "Legal Operations Manager": {
@@ -2764,7 +2769,9 @@
         "cast": 0.89,
         "munich": 0.97,
         "seoul": 0.95,
-        "dubai": 0.99
+        "dubai": 0.99,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "Employment Counsel": {
@@ -2834,7 +2841,8 @@
         "quartz": 0.85,
         "mono": 0.9,
         "pop": 0.95,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "frame": 0.99
       },
       "trimLetter": {
         "bronx": 12
@@ -3217,7 +3225,8 @@
         "bronx": 0.85,
         "munich": 0.93,
         "seoul": 0.94,
-        "dubai": 0.98
+        "dubai": 0.98,
+        "frame": 0.98
       },
       "trimLetter": {
         "berlin": 5,
@@ -3419,7 +3428,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "frame": 0.97
       }
     },
     "Insurance Underwriter": {
@@ -3490,7 +3500,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.94,
-        "seoul": 0.93
+        "seoul": 0.93,
+        "frame": 0.99
       }
     },
     "Claims Adjuster": {
@@ -3567,7 +3578,8 @@
         "pop": 0.85,
         "cast": 0.93,
         "bronx": 0.87,
-        "seoul": 0.98
+        "seoul": 0.98,
+        "frame": 0.99
       },
       "trimLetter": {
         "bronx": 10
@@ -3723,7 +3735,10 @@
         "mono": 0.9,
         "pop": 0.91,
         "cast": 0.97,
-        "quartz": 0.86
+        "quartz": 0.86,
+        "linen": 0.95,
+        "wave": 0.95,
+        "frame": 0.96
       },
       "trimLetter": {
         "quartz": 10
@@ -3801,7 +3816,10 @@
         "pop": 0.85,
         "cast": 0.93,
         "bronx": 0.85,
-        "seoul": 0.93
+        "seoul": 0.93,
+        "linen": 0.97,
+        "wave": 0.96,
+        "frame": 0.94
       },
       "trimLetter": {
         "bronx": 10

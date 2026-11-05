@@ -131,7 +131,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.92,
-        "seoul": 0.99
+        "seoul": 0.99,
+        "linen": 0.99,
+        "frame": 0.99
       }
     },
     "911 Dispatcher": {
@@ -213,7 +215,10 @@
         "pop": 0.85,
         "cast": 0.97,
         "bronx": 0.85,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.99
       },
       "trimLetter": {
         "bronx": 10
@@ -497,7 +502,10 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.92,
-        "seoul": 0.97
+        "seoul": 0.97,
+        "linen": 0.98,
+        "wave": 0.99,
+        "frame": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -525,7 +533,10 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "onyx": 0.96,
-        "seoul": 0.92
+        "seoul": 0.92,
+        "linen": 0.92,
+        "wave": 0.93,
+        "frame": 0.92
       },
       "trimLetter": {
         "quartz": 10,

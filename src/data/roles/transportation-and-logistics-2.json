@@ -168,7 +168,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.89
+        "pop": 0.89,
+        "frame": 0.97
       }
     },
     "School Bus Driver": {
@@ -421,7 +422,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "munich": 0.97,
-        "seoul": 0.95
+        "seoul": 0.95,
+        "linen": 0.97,
+        "wave": 0.98
       }
     },
     "Railroad Conductor": {
