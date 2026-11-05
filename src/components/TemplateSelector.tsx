@@ -422,8 +422,8 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                     </p>
                     {exampleResume ? (
                         <div className="flex items-center gap-2">
-                            <Button variant="secondary" className="flex-1" onClick={useSelected} aria-label={`Use ${selectedTemplate?.name} with my resume`}>Use my resume</Button>
-                            <Button className="flex-1" onClick={startFromExample} aria-label={`Start from the example in ${selectedTemplate?.name}`}>
+                            <Button variant="secondary" className="flex-1" onClick={useSelected} aria-label={`Use my resume in ${selectedTemplate?.name}`}>Use my resume</Button>
+                            <Button className="flex-1" onClick={startFromExample} aria-label={`Start from example in ${selectedTemplate?.name}`}>
                                 Start from example
                             </Button>
                         </div>
