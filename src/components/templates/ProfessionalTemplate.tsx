@@ -2,13 +2,13 @@ import React from 'react';
 import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="text-[13px] font-bold uppercase tracking-[0.14em] text-(--accent) border-b border-(--accent)/35 pb-1.5 mb-3.5 break-after-avoid">
+    <h2 className="text-[13px] font-bold uppercase tracking-[0.08em] text-(--accent) border-b border-(--accent)/35 pb-1.5 mb-3.5 break-after-avoid">
         {children}
     </h2>
 );
 
 const SideHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="text-[12px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3 break-after-avoid">{children}</h2>
+    <h2 className="text-[12px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">{children}</h2>
 );
 
 const listClass = 'list-disc pl-4 space-y-1 marker:text-(--accent)';

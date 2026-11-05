@@ -7,7 +7,7 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // education). The right column is a `.page-frame` so its margins continue on later pages.
 
 const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] border-b-[2px] border-(--accent) pb-[3px] text-[14.5px] font-bold uppercase tracking-[0.1em] text-(--accent) break-after-avoid">{children}</h2>
+    <h2 className="mb-[9px] border-b-[2px] border-(--accent) pb-[3px] text-[14.5px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">{children}</h2>
 );
 
 const bodyText = 'text-[13.5px] leading-[1.5] text-slate-700 wrap-break-word';

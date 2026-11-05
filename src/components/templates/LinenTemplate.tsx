@@ -7,7 +7,7 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // `.page-frame`s, so the paper colour and margins continue on every printed page.
 
 const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[10px] border-b border-(--accent)/35 pb-[4px] text-[13.5px] font-bold uppercase tracking-[0.22em] text-(--accent) break-after-avoid">{children}</h2>
+    <h2 className="mb-[10px] border-b border-(--accent)/35 pb-[4px] text-[13.5px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">{children}</h2>
 );
 
 const bodyText = 'text-[13.5px] leading-[1.5] text-[#4A4038] wrap-break-word';
@@ -30,7 +30,7 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
                 />
                 <div className="min-w-0 flex-1">
                     {name && <div role="heading" aria-level={1} className="font-playfair text-[38px] font-semibold leading-[1.05] text-[#2F2924] wrap-break-word">{name}</div>}
-                    {title && <p className="mt-[8px] text-[14px] font-semibold uppercase leading-snug tracking-[0.3em] text-(--accent) wrap-break-word">{title}</p>}
+                    {title && <p className="mt-[8px] text-[14px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                 </div>
             </header>
 

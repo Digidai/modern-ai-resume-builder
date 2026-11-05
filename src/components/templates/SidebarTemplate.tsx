@@ -10,11 +10,11 @@ const CONTACT_LABELS = {
 } as const;
 
 const SidebarHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3 border-b border-white/15 pb-2 text-[11.5px] font-bold uppercase tracking-[0.2em] text-white break-after-avoid">{children}</h2>
+    <h2 className="mb-3 border-b border-white/15 pb-2 text-[11.5px] font-bold uppercase tracking-[0.08em] text-white break-after-avoid">{children}</h2>
 );
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3.5 flex items-center gap-3 text-[15px] font-bold uppercase tracking-[0.12em] text-slate-900 break-after-avoid">
+    <h2 className="mb-3.5 flex items-center gap-3 text-[15px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
         <span aria-hidden="true" className="h-[3px] w-6 shrink-0 rounded-full bg-(--accent)" />
         {children}
     </h2>
@@ -49,7 +49,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <dl className="flex flex-col gap-2.5 text-[13px] leading-snug">
                         {contacts.map((entry) => (
                             <div key={entry.id} className="min-w-0">
-                                <dt className="mb-0.5 text-[11px] font-semibold uppercase tracking-[0.14em] text-white/60">{entry.key === 'link' ? entry.label : CONTACT_LABELS[entry.key]}</dt>
+                                <dt className="mb-0.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">{entry.key === 'link' ? entry.label : CONTACT_LABELS[entry.key]}</dt>
                                 <dd className="text-white">
                                     <ContactLink entry={entry} className="wrap-anywhere" fit />
                                 </dd>

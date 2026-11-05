@@ -11,7 +11,7 @@ const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-(--accent)';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[9px] flex items-center gap-[9px] text-[14.5px] font-bold uppercase tracking-[0.16em] text-[#14324A] break-after-avoid">
+        <h2 className="mb-[9px] flex items-center gap-[9px] text-[14.5px] font-bold uppercase tracking-[0.08em] text-[#14324A] break-after-avoid">
             <span aria-hidden className="h-[8px] w-[8px] rotate-45 bg-(--accent)" />
             {title}
             <span aria-hidden className="h-px flex-1 bg-(--accent)/40" />
@@ -40,7 +40,7 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
                     />
                     <div className="min-w-0 flex-1">
                         {name && <div role="heading" aria-level={1} className="text-[33px] font-bold leading-[1.08] text-[#14324A] wrap-break-word">{name}</div>}
-                        {title && <p className="mt-[6px] text-[15.5px] font-semibold uppercase leading-snug tracking-[0.12em] text-(--accent) wrap-break-word">{title}</p>}
+                        {title && <p className="mt-[6px] text-[15.5px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                     </div>
                 </div>
                 {contacts.length > 0 && (

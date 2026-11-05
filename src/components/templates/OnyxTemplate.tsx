@@ -7,11 +7,11 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // `.page-frame`s, so the dark column and the margins continue on every printed page.
 
 const SideHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] border-b border-white/20 pb-[4px] text-[12.5px] font-semibold uppercase tracking-[0.2em] text-white break-after-avoid">{children}</h2>
+    <h2 className="mb-[9px] border-b border-white/20 pb-[4px] text-[12.5px] font-semibold uppercase tracking-[0.08em] text-white break-after-avoid">{children}</h2>
 );
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[10px] text-[15px] font-bold uppercase tracking-[0.16em] text-neutral-900 break-after-avoid">
+    <h2 className="mb-[10px] text-[15px] font-bold uppercase tracking-[0.08em] text-neutral-900 break-after-avoid">
         {children}
         <span aria-hidden className="mt-[5px] block h-[3px] w-[28px] bg-(--accent)" />
     </h2>
@@ -93,7 +93,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {(name || title) && (
                     <header className="break-inside-avoid">
                         {name && <div role="heading" aria-level={1} className="text-[32px] font-bold uppercase leading-[1.08] tracking-[0.04em] text-neutral-900 wrap-break-word">{name}</div>}
-                        {title && <p className="mt-[6px] text-[14.5px] font-medium uppercase leading-snug tracking-[0.18em] text-(--accent) wrap-break-word">{title}</p>}
+                        {title && <p className="mt-[6px] text-[14.5px] font-medium uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                     </header>
                 )}
 

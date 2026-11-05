@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const Label: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="inline-block bg-(--accent) text-white px-3 py-1 font-montserrat text-[12px] font-extrabold uppercase tracking-[0.2em] mb-4 break-after-avoid">
+    <h2 className="inline-block bg-(--accent) text-white px-3 py-1 font-montserrat text-[12px] font-extrabold uppercase tracking-[0.08em] mb-4 break-after-avoid">
         {children}
     </h2>
 );
@@ -25,7 +25,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div role="heading" aria-level={1} className="font-montserrat text-[42px] font-black uppercase tracking-tight leading-[1.05] wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title && (
-                    <p className="font-montserrat text-[15px] font-bold uppercase tracking-[0.18em] text-(--accent-light) mt-3 leading-snug wrap-break-word">{data.title}</p>
+                    <p className="font-montserrat text-[15px] font-bold uppercase tracking-[0.08em] text-(--accent-light) mt-3 leading-snug wrap-break-word">{data.title}</p>
                 )}
                 {contacts.length > 0 && (
                     <ul className="flex flex-wrap gap-x-6 gap-y-1.5 mt-5 pt-4 border-t border-neutral-700 text-[12.5px] font-medium text-neutral-200">
@@ -119,7 +119,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">
                                             {group.category && (
-                                                <div className="text-[12px] font-bold uppercase tracking-[0.12em] text-neutral-500 mb-1.5 wrap-break-word">{group.category}</div>
+                                                <div className="text-[12px] font-bold uppercase tracking-[0.08em] text-neutral-500 mb-1.5 wrap-break-word">{group.category}</div>
                                             )}
                                             <ul className="flex flex-wrap gap-x-3 gap-y-2.5">
                                                 {group.items.map((skill, i) => (

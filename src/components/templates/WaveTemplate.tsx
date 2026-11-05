@@ -7,7 +7,7 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // and a right column with contact details, skills and education.
 
 const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] text-[15px] font-bold uppercase tracking-[0.12em] text-slate-900 break-after-avoid">
+    <h2 className="mb-[9px] text-[15px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
         {children}
         <span aria-hidden className="mt-[4px] block h-[2px] w-[34px] rounded-full bg-(--accent)" />
     </h2>
@@ -38,7 +38,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
                 />
                 <div className="min-w-0 flex-1 pt-[25mm]">
                     {name && <div role="heading" aria-level={1} className="text-[31px] font-bold leading-[1.08] tracking-[-0.005em] text-slate-900 wrap-break-word">{name}</div>}
-                    {title && <p className="mt-[6px] text-[14.5px] font-semibold uppercase leading-snug tracking-[0.16em] text-(--accent) wrap-break-word">{title}</p>}
+                    {title && <p className="mt-[6px] text-[14.5px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                 </div>
             </header>
 

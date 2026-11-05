@@ -10,7 +10,7 @@ const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-(--accent)';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[10px] flex items-center gap-[12px] text-[13.5px] font-semibold uppercase tracking-[0.24em] text-(--accent) break-after-avoid">
+        <h2 className="mb-[10px] flex items-center gap-[12px] text-[13.5px] font-semibold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
             <span aria-hidden className="h-px flex-1 bg-stone-300" />
             {title}
             <span aria-hidden className="h-px flex-1 bg-stone-300" />
@@ -35,7 +35,7 @@ export const RivieraTemplate: React.FC<TemplateProps> = ({ data }) => {
                     fallbackClassName="bg-(--accent)/10 text-[34px] font-semibold tracking-[0.04em] text-(--accent)"
                 />
                 {name && <div role="heading" aria-level={1} className="font-playfair text-[34px] font-semibold leading-[1.1] text-stone-900 wrap-break-word">{name}</div>}
-                {title && <p className="mt-[5px] text-[13.5px] font-semibold uppercase leading-snug tracking-[0.22em] text-(--accent) wrap-break-word">{title}</p>}
+                {title && <p className="mt-[5px] text-[13.5px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                 {contacts.length > 0 && (
                     <ul className="mt-[9px] flex flex-wrap justify-center gap-x-[14px] gap-y-[3px] text-[12.5px] leading-snug text-stone-600">
                         {contacts.map((entry) => (

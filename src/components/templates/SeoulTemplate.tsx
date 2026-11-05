@@ -22,7 +22,7 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title
 
 /** Grey header row of a section table. */
 const HeadRow: React.FC<{ cells: [string, string, string] }> = ({ cells }) => (
-    <div aria-hidden className={`${GRID} bg-neutral-100 px-[8px] py-[4px] text-[11.5px] font-semibold uppercase tracking-[0.1em] text-neutral-500 break-after-avoid`}>
+    <div aria-hidden className={`${GRID} bg-neutral-100 px-[8px] py-[4px] text-[11.5px] font-semibold uppercase tracking-[0.08em] text-neutral-500 break-after-avoid`}>
         {cells.map((cell, index) => <span key={index}>{cell}</span>)}
     </div>
 );

@@ -13,7 +13,7 @@ const leftText = 'pt-[1px] text-[12.5px] leading-snug text-neutral-500 tabular-n
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[9px] border-b-[1.5px] border-(--accent) pb-[3px] text-[14px] font-bold uppercase tracking-[0.12em] text-(--accent) break-after-avoid">{title}</h2>
+        <h2 className="mb-[9px] border-b-[1.5px] border-(--accent) pb-[3px] text-[14px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">{title}</h2>
         <div className="flex flex-col gap-[10px]">{children}</div>
     </section>
 );

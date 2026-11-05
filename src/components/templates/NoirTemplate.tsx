@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3.5 text-xs font-bold tracking-[0.25em] text-(--accent-light) uppercase break-after-avoid">{children}</h2>
+    <h2 className="mb-3.5 text-xs font-bold tracking-[0.08em] text-(--accent-light) uppercase break-after-avoid">{children}</h2>
 );
 
 const descriptionList = 'list-disc space-y-1 pl-4 marker:text-(--accent-light)/70';
@@ -67,7 +67,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
             <header className="mb-6 border-b border-zinc-700 pb-6">
                 <div role="heading" aria-level={1} className="font-raleway text-[42px] leading-tight font-light tracking-wide text-white">{data.fullName}</div>
                 {data.title.trim() && (
-                    <p className="mt-1.5 text-[14px] font-medium tracking-[0.28em] text-(--accent-light) uppercase">{data.title}</p>
+                    <p className="mt-1.5 text-[14px] font-medium tracking-[0.08em] text-(--accent-light) uppercase">{data.title}</p>
                 )}
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap gap-x-7 gap-y-1.5 text-[13.5px] text-zinc-300">

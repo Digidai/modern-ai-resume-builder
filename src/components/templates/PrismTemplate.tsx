@@ -7,7 +7,7 @@ import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getC
 // side by side.
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] flex items-center gap-[10px] break-after-avoid font-montserrat text-[14.5px] font-bold uppercase leading-tight tracking-[0.14em] text-slate-900">
+    <h2 className="mb-[9px] flex items-center gap-[10px] break-after-avoid font-montserrat text-[14.5px] font-bold uppercase leading-tight tracking-[0.08em] text-slate-900">
         <span aria-hidden className="h-[15px] w-[11px] shrink-0 -skew-x-[18deg] bg-(--accent)" />
         <span className="shrink-0">{children}</span>
         <span aria-hidden className="h-px min-w-6 flex-1 bg-slate-200" />
@@ -39,7 +39,7 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div aria-hidden className="absolute inset-0 bg-(--accent)/30 [clip-path:polygon(0_0,100%_0,100%_100%,0_calc(100%-10mm))]" />
                     <div className="relative bg-(--accent) px-[15mm] pt-[12mm] pb-[15mm] text-white [clip-path:polygon(0_0,100%_0,100%_calc(100%-11mm),0_calc(100%-2mm))]">
                         {name && <div role="heading" aria-level={1} className="font-montserrat text-[34px] font-extrabold uppercase leading-[1.08] tracking-[-0.005em] wrap-break-word">{name}</div>}
-                        {title && <p className="mt-[5px] font-montserrat text-[14px] font-semibold uppercase leading-snug tracking-[0.18em] text-(--accent-light) wrap-break-word">{title}</p>}
+                        {title && <p className="mt-[5px] font-montserrat text-[14px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent-light) wrap-break-word">{title}</p>}
                         {contacts.length > 0 && (
                             <div className="mt-[10px] flex flex-wrap gap-x-[18px] gap-y-[4px] text-[13.5px] text-white">
                                 {contacts.map((entry) => (

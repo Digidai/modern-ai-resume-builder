@@ -7,11 +7,11 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // `.page-frame`s, so the sidebar tint and the margins continue on every printed page.
 
 const SideHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[8px] text-[12.5px] font-bold uppercase tracking-[0.18em] text-slate-900 break-after-avoid">{children}</h2>
+    <h2 className="mb-[8px] text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">{children}</h2>
 );
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] flex items-center gap-[9px] text-[15px] font-bold uppercase tracking-[0.12em] text-slate-900 break-after-avoid">
+    <h2 className="mb-[9px] flex items-center gap-[9px] text-[15px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
         <span aria-hidden className="h-[14px] w-[4px] bg-(--accent)" />
         {children}
     </h2>

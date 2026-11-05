@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3 text-xs font-bold tracking-[0.25em] text-(--accent) uppercase break-after-avoid">{children}</h2>
+    <h2 className="mb-3 text-xs font-bold tracking-[0.08em] text-(--accent) uppercase break-after-avoid">{children}</h2>
 );
 
 const descriptionList = 'list-disc space-y-0.5 pl-4 marker:text-(--accent)/50';
@@ -68,7 +68,7 @@ export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col bg-white px-[16mm] pt-[14mm] pb-[12mm] font-sans text-slate-900 wrap-break-word [--accent:var(--rs-accent,#8A2C3F)]">
             <header className="mb-7 border-b border-(--accent) pb-6 text-center">
                 <div role="heading" aria-level={1} className="font-playfair text-[44px] leading-[1.1] font-bold text-slate-950">{data.fullName}</div>
-                {data.title.trim() && <p className="mt-2 text-[13px] font-medium tracking-[0.3em] text-slate-600 uppercase">{data.title}</p>}
+                {data.title.trim() && <p className="mt-2 text-[13px] font-medium tracking-[0.08em] text-slate-600 uppercase">{data.title}</p>}
                 {contacts.length > 0 && (
                     <div className="mt-4 flex flex-wrap justify-center gap-x-6 gap-y-1.5 text-[13px] text-slate-700">
                         {contacts.map((entry) => (

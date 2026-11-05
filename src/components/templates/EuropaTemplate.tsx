@@ -13,7 +13,7 @@ const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-(--accent)/70'
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section className="flex flex-col gap-[10px]">
         <h2 className="grid grid-cols-[36mm_minmax(0,1fr)] items-center gap-x-[6mm] break-after-avoid">
-            <span className="text-right text-[13px] font-bold uppercase tracking-[0.12em] text-(--accent)">{title}</span>
+            <span className="text-right text-[13px] font-bold uppercase tracking-[0.08em] text-(--accent)">{title}</span>
             <span aria-hidden className="h-[1.5px] bg-(--accent)/70" />
         </h2>
         {children}

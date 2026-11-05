@@ -5,7 +5,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 const Milestone: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section className="relative pl-9">
         <span className="absolute left-0 top-[3px] w-4 h-4 rounded-full bg-(--accent) ring-4 ring-white" aria-hidden="true" />
-        <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3.5 leading-[22px] break-after-avoid">{title}</h2>
+        <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3.5 leading-[22px] break-after-avoid">{title}</h2>
         {children}
     </section>
 );
@@ -103,7 +103,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className={hasTimeline ? 'w-[33%] shrink-0 flex flex-col gap-7' : 'flex-1 flex flex-col gap-7'}>
                         {skillGroups.length > 0 && (
                             <section className="bg-slate-50 border border-slate-100 p-5 rounded-2xl break-inside-avoid">
-                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3 break-after-avoid">Skills</h2>
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">Skills</h2>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">
@@ -121,7 +121,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.projects.length > 0 && (
                             <section>
-                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.16em] text-slate-900 mb-3 break-after-avoid">Projects</h2>
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">Projects</h2>
                                 <div className="flex flex-col gap-4">
                                     {data.projects.map((proj) => (
                                         <article key={proj.id} className="border-l-2 border-(--accent)/30 pl-4 py-0.5 break-inside-avoid">

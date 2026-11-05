@@ -42,7 +42,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
                     )}
                     <div className="min-w-0 flex-1">
                         {name && <div role="heading" aria-level={1} className="font-plex-serif text-[34px] font-semibold leading-[1.1] text-slate-900 wrap-break-word">{name}</div>}
-                        {title && <p className="mt-[4px] text-[14px] font-semibold uppercase leading-snug tracking-[0.14em] text-(--accent) wrap-break-word">{title}</p>}
+                        {title && <p className="mt-[4px] text-[14px] font-semibold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                         {contacts.length > 0 && (
                             <div className="mt-[9px] flex flex-wrap gap-x-[16px] gap-y-[4px] text-[13px] text-slate-700">
                                 {contacts.map((entry) => (

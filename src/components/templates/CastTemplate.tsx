@@ -3,7 +3,7 @@ import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getC
 
 /** Screenplay-style scene heading ("INT. EXPERIENCE — CONTINUOUS") trailed by an accent hairline. */
 const SceneHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-2.5 flex items-center gap-3 text-[13px] font-bold tracking-[0.18em] text-(--accent) uppercase break-after-avoid">
+    <h2 className="mb-2.5 flex items-center gap-3 text-[13px] font-bold tracking-[0.08em] text-(--accent) uppercase break-after-avoid">
         <span className="shrink-0">{children}</span>
         <span aria-hidden className="h-px flex-1 bg-(--accent)/30" />
     </h2>
@@ -28,8 +28,8 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-[#fafafa] px-[16mm] pt-[9mm] pb-[7mm] font-jetbrains text-[13.5px] leading-normal text-slate-800 wrap-break-word [--accent:var(--rs-accent,#1E293B)]">
             <header className="mb-4 border-b-2 border-(--accent) pb-4 text-center">
-                <div className="mb-1.5 text-[11px] tracking-[0.3em] text-(--accent) uppercase">Fade in:</div>
-                <div role="heading" aria-level={1} className="text-[28px] leading-tight font-bold tracking-[0.15em] text-slate-950 uppercase">{data.fullName}</div>
+                <div className="mb-1.5 text-[11px] tracking-[0.08em] text-(--accent) uppercase">Fade in:</div>
+                <div role="heading" aria-level={1} className="text-[28px] leading-tight font-bold tracking-[0.08em] text-slate-950 uppercase">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-1.5 text-[14px] tracking-wide text-slate-700">({data.title})</p>}
                 {contacts.length > 0 && (
                     <div className="mt-3 flex flex-wrap justify-center gap-x-6 gap-y-1 text-[12.5px] text-slate-700">

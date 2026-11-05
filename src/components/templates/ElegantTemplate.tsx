@@ -58,7 +58,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                                                     {exp.role && <h3 className="font-bold text-[15.5px] text-stone-900 leading-snug min-w-0 wrap-break-word">{exp.role}</h3>}
                                                     {dates && <span className="ml-auto shrink-0 whitespace-nowrap text-[13px] italic text-stone-500 tabular-nums">{dates}</span>}
                                                 </div>
-                                                {exp.company && <div className="text-(--accent) font-bold mt-0.5 text-[12.5px] uppercase tracking-[0.12em] wrap-break-word">{exp.company}</div>}
+                                                {exp.company && <div className="text-(--accent) font-bold mt-0.5 text-[12.5px] uppercase tracking-[0.08em] wrap-break-word">{exp.company}</div>}
                                                 {exp.description && (
                                                     <RichText text={exp.description} className="mt-2 text-stone-700 wrap-break-word" listClassName={listClass} />
                                                 )}
@@ -118,7 +118,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="break-inside-avoid">
-                                            {group.category && <h3 className="text-[12px] font-bold uppercase tracking-[0.12em] text-stone-500 mb-1 wrap-break-word">{group.category}</h3>}
+                                            {group.category && <h3 className="text-[12px] font-bold uppercase tracking-[0.08em] text-stone-500 mb-1 wrap-break-word">{group.category}</h3>}
                                             <ul className="flex flex-col gap-1 text-[14px] text-stone-800 leading-snug">
                                                 {group.items.map((skill, i) => (
                                                     <li key={i} className="wrap-break-word">{skill}</li>

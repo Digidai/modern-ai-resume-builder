@@ -6,7 +6,7 @@ const CONTACT_LABELS = { email: 'Email', phone: 'Phone', location: 'Location', w
 /** One row of the grid: label in the narrow left column, content in the wide right column. */
 const Section: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
     <section className="grid grid-cols-[36mm_minmax(0,1fr)] gap-x-6 border-t-[3px] border-slate-900 pt-2.5">
-        <h2 className="text-[12px] font-black uppercase tracking-[0.16em] text-slate-900 pt-[3px] break-after-avoid">{label}</h2>
+        <h2 className="text-[12px] font-black uppercase tracking-[0.08em] text-slate-900 pt-[3px] break-after-avoid">{label}</h2>
         <div className="min-w-0">{children}</div>
     </section>
 );
@@ -36,7 +36,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <ul className="grid grid-cols-3 gap-x-6 gap-y-2 text-[13px] font-medium">
                         {contacts.map((entry) => (
                             <li key={entry.id} className="min-w-0 border-t-2 border-slate-900 pt-1.5 leading-snug">
-                                <span className="block text-[11px] font-bold uppercase tracking-[0.14em] text-slate-600">{entry.label}</span>
+                                <span className="block text-[11px] font-bold uppercase tracking-[0.08em] text-slate-600">{entry.label}</span>
                                 <ContactLink entry={entry} className="wrap-anywhere" fit />
                             </li>
                         ))}

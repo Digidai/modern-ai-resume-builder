@@ -50,7 +50,7 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid border-y border-slate-200 py-3.5 text-center">
-                    <h2 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.22em] text-(--accent)">Skills</h2>
+                    <h2 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.08em] text-(--accent)">Skills</h2>
                     <div className="flex flex-col gap-1.5">
                         {skillGroups.map((group, groupIndex) => (
                             <ul key={groupIndex} className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[14.5px] leading-snug text-slate-800">

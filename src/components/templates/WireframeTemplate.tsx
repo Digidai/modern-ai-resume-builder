@@ -4,7 +4,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 const CONTACT_LABELS = { email: 'EML', phone: 'TEL', location: 'LOC', website: 'WEB', linkedin: 'LNK' } as const;
 
 const Heading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="flex items-center gap-2 font-jetbrains text-[12px] font-bold uppercase tracking-[0.18em] text-slate-900 mb-3.5 break-after-avoid">
+    <h2 className="flex items-center gap-2 font-jetbrains text-[12px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3.5 break-after-avoid">
         <span className="w-2 h-2 bg-(--accent) shrink-0" aria-hidden="true" />
         {children}
     </h2>
@@ -31,7 +31,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="page-frame flex-1 flex flex-col border-2 border-(--accent)">
                 <header className="border-b-2 border-(--accent) grid grid-cols-[minmax(0,1fr)_auto] gap-8 px-6 py-6">
                     <div className="min-w-0">
-                        <div role="heading" aria-level={1} className="font-jetbrains text-[26px] leading-tight font-bold uppercase tracking-[0.1em] text-slate-900 wrap-break-word">{data.fullName}</div>
+                        <div role="heading" aria-level={1} className="font-jetbrains text-[26px] leading-tight font-bold uppercase tracking-[0.08em] text-slate-900 wrap-break-word">{data.fullName}</div>
                         {data.title && (
                             <p className="inline-block max-w-full mt-3 border border-(--accent) px-2 py-0.5 font-jetbrains text-[13px] text-slate-900 wrap-break-word">{data.title}</p>
                         )}
@@ -40,7 +40,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <dl className="grid grid-cols-[auto_minmax(0,1fr)] gap-x-3 gap-y-0.5 font-jetbrains text-[12px] max-w-[110mm] self-start">
                             {contacts.map((entry) => (
                                 <React.Fragment key={entry.id}>
-                                    <dt className="text-[11px] leading-[1.6] text-slate-500 tracking-widest">{entry.key === 'link' ? entry.label.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase() || 'URL' : CONTACT_LABELS[entry.key]}</dt>
+                                    <dt className="text-[11px] leading-[1.6] text-slate-500 tracking-[0.08em]">{entry.key === 'link' ? entry.label.replace(/[^A-Za-z]/g, '').slice(0, 3).toUpperCase() || 'URL' : CONTACT_LABELS[entry.key]}</dt>
                                     <dd className="border-b border-dashed border-slate-300 pb-0.5 wrap-anywhere text-slate-900">
                                         <ContactLink entry={entry} />
                                     </dd>

@@ -5,7 +5,7 @@ import { TemplateProps, ContactLink, Portrait, RichText, displayUrl, formatDate,
 // and a 3×4 photo box on the right, then every section is a bordered table: a tinted heading bar,
 // a narrow date column (start → end on two lines, as on the form) and the entry on the right.
 
-const CELL_LABEL = 'text-[10.5px] font-semibold uppercase tracking-[0.14em] text-slate-500';
+const CELL_LABEL = 'text-[10.5px] font-semibold uppercase tracking-[0.08em] text-slate-500';
 const bodyText = 'text-[13.5px] leading-[1.5] text-slate-700 wrap-break-word';
 const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-slate-400';
 const RULE = 'border-slate-400';
@@ -13,7 +13,7 @@ const RULE = 'border-slate-400';
 /** A bordered table section with a tinted heading bar; rows draw their own top rule. */
 const Table: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section className={`border ${RULE}`}>
-        <h2 className={`flex items-center gap-[8px] border-b ${RULE} bg-(--accent)/7 px-[10px] py-[5px] text-[13px] font-bold uppercase tracking-[0.16em] text-slate-900 break-after-avoid`}>
+        <h2 className={`flex items-center gap-[8px] border-b ${RULE} bg-(--accent)/7 px-[10px] py-[5px] text-[13px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid`}>
             <span aria-hidden className="h-[11px] w-[3px] bg-(--accent)" />
             {title}
         </h2>
@@ -48,7 +48,7 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-[12px] bg-white px-[13mm] pt-[12mm] pb-[11mm] font-sans text-slate-800 [--accent:var(--rs-accent,#A3243A)]">
             {(name || title || contacts.length > 0) && (
                 <header className="flex flex-col gap-[6px] break-inside-avoid">
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.3em] text-(--accent)">Résumé</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-(--accent)">Résumé</p>
                     <div className={`flex border ${RULE}`}>
                         <div className={`min-w-0 flex-1 divide-y divide-slate-300 ${hasPhoto ? `border-r ${RULE}` : ''}`}>
                             {name && (
@@ -91,7 +91,7 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {summary && (
                 <section className={`border ${RULE} break-inside-avoid`}>
-                    <h2 className={`flex items-center gap-[8px] border-b ${RULE} bg-(--accent)/7 px-[10px] py-[5px] text-[13px] font-bold uppercase tracking-[0.16em] text-slate-900`}>
+                    <h2 className={`flex items-center gap-[8px] border-b ${RULE} bg-(--accent)/7 px-[10px] py-[5px] text-[13px] font-bold uppercase tracking-[0.08em] text-slate-900`}>
                         <span aria-hidden className="h-[11px] w-[3px] bg-(--accent)" />
                         Profile
                     </h2>

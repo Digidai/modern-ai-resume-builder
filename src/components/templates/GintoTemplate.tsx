@@ -15,7 +15,7 @@ const Section: React.FC<{ index: number; title: string; children: React.ReactNod
             {String(index).padStart(2, '0')}
         </div>
         <div className="min-w-0">
-            <h2 className="font-montserrat text-[12px] font-bold uppercase tracking-[0.2em] text-(--accent) mb-3 pt-1 break-after-avoid">{title}</h2>
+            <h2 className="font-montserrat text-[12px] font-bold uppercase tracking-[0.08em] text-(--accent) mb-3 pt-1 break-after-avoid">{title}</h2>
             {children}
         </div>
     </section>
@@ -142,7 +142,7 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
                     </div>
                 )}
                 {data.title && (
-                    <p className="font-montserrat text-[16px] font-bold uppercase tracking-[0.14em] leading-snug mt-2.5 wrap-break-word">{data.title}</p>
+                    <p className="font-montserrat text-[16px] font-bold uppercase tracking-[0.08em] leading-snug mt-2.5 wrap-break-word">{data.title}</p>
                 )}
                 <div className="h-1 bg-slate-900 mt-4" aria-hidden="true" />
                 {contacts.length > 0 && (

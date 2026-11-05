@@ -3,7 +3,7 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 
 /** Newspaper column head: small tracked caps over an accent rule. */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3 border-b border-(--accent) pb-1 text-xs font-bold tracking-[0.2em] text-black uppercase break-after-avoid">{children}</h2>
+    <h2 className="mb-3 border-b border-(--accent) pb-1 text-xs font-bold tracking-[0.08em] text-black uppercase break-after-avoid">{children}</h2>
 );
 
 const descriptionList = 'list-disc space-y-0.5 pl-4 marker:text-(--accent)';

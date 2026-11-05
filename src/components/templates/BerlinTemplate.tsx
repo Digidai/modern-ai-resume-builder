@@ -11,7 +11,7 @@ const nameSizeClass = (name: string): string => {
 
 const Row: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
     <section className="grid grid-cols-[34mm_minmax(0,1fr)] gap-6 py-5 first:pt-0 last:pb-0">
-        <h2 className="text-[12px] font-bold uppercase tracking-[0.2em] text-(--accent) pt-[3px] break-after-avoid">{label}</h2>
+        <h2 className="text-[12px] font-bold uppercase tracking-[0.08em] text-(--accent) pt-[3px] break-after-avoid">{label}</h2>
         <div className="min-w-0">{children}</div>
     </section>
 );
@@ -113,7 +113,7 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div className="flex flex-col gap-2">
                             {skillGroups.map((group, gi) => (
                                 <div key={gi} className="flex flex-wrap items-baseline gap-x-5 gap-y-1.5 font-semibold">
-                                    {group.category && <h3 className="w-full text-[12px] font-bold uppercase tracking-[0.14em] text-neutral-600">{group.category}</h3>}
+                                    {group.category && <h3 className="w-full text-[12px] font-bold uppercase tracking-[0.08em] text-neutral-600">{group.category}</h3>}
                                     {group.items.map((skill, i) => (
                                         <span key={i} className="flex items-center gap-2 min-w-0 wrap-break-word">
                                             <span className="w-1.5 h-1.5 bg-(--accent) shrink-0" aria-hidden="true" />

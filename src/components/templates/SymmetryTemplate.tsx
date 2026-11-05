@@ -16,7 +16,7 @@ const Meta: React.FC<{ secondary?: React.ReactNode; dates?: string }> = ({ secon
         <div className="flex flex-wrap justify-center items-baseline gap-x-2 text-[13px] leading-snug mt-0.5">
             {secondary && <span className="italic text-slate-700 min-w-0 wrap-break-word">{secondary}</span>}
             {secondary && dates && <span className="text-(--accent)" aria-hidden="true">·</span>}
-            {dates && <span className="text-[12px] uppercase tracking-[0.12em] text-slate-500 tabular-nums whitespace-nowrap">{dates}</span>}
+            {dates && <span className="text-[12px] uppercase tracking-[0.08em] text-slate-500 tabular-nums whitespace-nowrap">{dates}</span>}
         </div>
     ) : null;
 
@@ -68,7 +68,7 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div role="heading" aria-level={1} className="font-playfair text-[38px] tracking-wide text-slate-900 leading-[1.15] wrap-break-word">{data.fullName}</div>
                 )}
                 {data.title && (
-                    <p className="text-[12.5px] uppercase tracking-[0.28em] text-(--accent) mt-2 wrap-break-word">{data.title}</p>
+                    <p className="text-[12.5px] uppercase tracking-[0.08em] text-(--accent) mt-2 wrap-break-word">{data.title}</p>
                 )}
                 {contacts.length > 0 && (
                     <ul className="flex flex-wrap justify-center gap-x-5 gap-y-1 mt-3 text-[13px] italic text-slate-600">

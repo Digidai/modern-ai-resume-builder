@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3.5 border-b-2 border-(--accent) pb-1.5 font-jetbrains text-[12px] font-bold uppercase tracking-[0.16em] text-slate-900 break-after-avoid">
+    <h2 className="mb-3.5 border-b-2 border-(--accent) pb-1.5 font-jetbrains text-[12px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
         {children}
     </h2>
 );
@@ -83,7 +83,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div role="heading" aria-level={1} className="text-[38px] font-bold uppercase leading-[1.05] tracking-tight text-slate-900">{data.fullName}</div>
                     )}
                     {data.title.trim() && (
-                        <p className="mt-3 inline-block max-w-full bg-(--accent) px-2.5 py-1 text-[13px] font-semibold uppercase leading-snug tracking-[0.16em] text-white">
+                        <p className="mt-3 inline-block max-w-full bg-(--accent) px-2.5 py-1 text-[13px] font-semibold uppercase leading-snug tracking-[0.08em] text-white">
                             {data.title}
                         </p>
                     )}

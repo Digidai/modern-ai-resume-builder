@@ -2,7 +2,7 @@ import React from 'react';
 import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
 
 const SidebarHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-3 border-b-2 border-(--accent)/25 pb-1.5 font-montserrat text-[12px] font-bold uppercase tracking-[0.14em] text-(--accent) break-after-avoid">
+    <h2 className="mb-3 border-b-2 border-(--accent)/25 pb-1.5 font-montserrat text-[12px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
         {children}
     </h2>
 );
@@ -35,7 +35,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div role="heading" aria-level={1} className="font-montserrat text-[36px] font-extrabold leading-[1.1] tracking-[-0.02em] wrap-break-word">{data.fullName}</div>
                     )}
                     {data.title.trim() && (
-                        <p className="mt-2 text-[17px] font-bold uppercase tracking-[0.12em] text-white/90 wrap-break-word">{data.title}</p>
+                        <p className="mt-2 text-[17px] font-bold uppercase tracking-[0.08em] text-white/90 wrap-break-word">{data.title}</p>
                     )}
                 </header>
             )}

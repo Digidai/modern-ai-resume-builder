@@ -40,7 +40,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     )}
                     {data.title.trim() && (
-                        <p className="mt-1 font-raleway text-[14px] font-medium uppercase tracking-[0.16em] text-(--accent) wrap-break-word">{data.title}</p>
+                        <p className="mt-1 font-raleway text-[14px] font-medium uppercase tracking-[0.08em] text-(--accent) wrap-break-word">{data.title}</p>
                     )}
                     {headerContacts.length > 0 && (
                         <div className="mt-2 flex flex-wrap items-center justify-center gap-x-7 gap-y-0.5 font-raleway text-[14px] font-medium text-[#5F5F5F]">

@@ -12,7 +12,7 @@ const nameSizeClass = (name: string): string => {
 
 const Heading: React.FC<{ children: React.ReactNode; ruled?: boolean }> = ({ children, ruled }) => (
     <h2
-        className={`font-montserrat text-[12px] font-extrabold uppercase tracking-[0.22em] break-after-avoid ${
+        className={`font-montserrat text-[12px] font-extrabold uppercase tracking-[0.08em] break-after-avoid ${
             ruled ? 'border-b-2 border-(--accent) pb-2 mb-5' : 'border-b border-neutral-300 pb-2 mb-3.5'
         }`}
     >
@@ -76,7 +76,7 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">
                                             {group.category && (
-                                                <div className="text-[12px] font-semibold uppercase tracking-[0.12em] text-neutral-500 mb-1 wrap-break-word">{group.category}</div>
+                                                <div className="text-[12px] font-semibold uppercase tracking-[0.08em] text-neutral-500 mb-1 wrap-break-word">{group.category}</div>
                                             )}
                                             <ul className="flex flex-col gap-0.5">
                                                 {group.items.map((skill, i) => (

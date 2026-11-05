@@ -10,7 +10,7 @@ const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-(--accent)';
 
 const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
     <section>
-        <h2 className="mb-[9px] border-l-[4px] border-(--accent) bg-(--accent)/10 px-[10px] py-[4px] text-[14px] font-bold uppercase tracking-[0.14em] text-(--accent) break-after-avoid print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
+        <h2 className="mb-[9px] border-l-[4px] border-(--accent) bg-(--accent)/10 px-[10px] py-[4px] text-[14px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
             {title}
         </h2>
         <div className="px-[2px]">{children}</div>

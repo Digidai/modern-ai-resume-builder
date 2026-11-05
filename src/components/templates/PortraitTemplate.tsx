@@ -6,11 +6,11 @@ import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateR
 // are `.page-frame`s, so the tint and the margins continue on every printed page.
 
 const SideHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[8px] text-[12px] font-bold uppercase tracking-[0.18em] text-(--accent) break-after-avoid">{children}</h2>
+    <h2 className="mb-[8px] text-[12px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">{children}</h2>
 );
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
-    <h2 className="mb-[9px] flex items-center gap-[10px] text-[15px] font-bold uppercase tracking-[0.14em] text-slate-900 break-after-avoid">
+    <h2 className="mb-[9px] flex items-center gap-[10px] text-[15px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
         {children}
         <span aria-hidden className="h-px flex-1 bg-slate-200" />
     </h2>
@@ -91,7 +91,7 @@ export const PortraitTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {(name || title) && (
                     <header className="break-inside-avoid">
                         {name && <div role="heading" aria-level={1} className="text-[33px] font-bold leading-[1.1] tracking-[-0.005em] text-slate-900 wrap-break-word">{name}</div>}
-                        {title && <p className="mt-[5px] text-[15px] font-bold uppercase leading-snug tracking-[0.12em] text-(--accent) wrap-break-word">{title}</p>}
+                        {title && <p className="mt-[5px] text-[15px] font-bold uppercase leading-snug tracking-[0.08em] text-(--accent) wrap-break-word">{title}</p>}
                     </header>
                 )}
 
