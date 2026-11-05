@@ -5,6 +5,7 @@ import {
   type AiStreamEvent,
   MAX_LATEX_SOURCE_CHARS,
   finishAiText,
+  isParseRequest,
 } from '../src/shared/aiContract';
 import { handleAgentRequest, pdfPageCount } from './agent';
 import { currentTemplateId } from '../src/constants/templates';
@@ -98,12 +99,12 @@ const PDF_TIMEOUT_MS = 45000;
 const SESSION_PATH = '/api/ai/session';
 const RATE_LIMIT_DO_PATH = 'https://rate-limiter/consume';
 const MAX_BODY_BYTES = 64 * 1024;
-/** /api/ai bodies: a LaTeX source of MAX_LATEX_SOURCE_CHARS characters, CJK included (3 bytes each). */
+/** /api/ai bodies: a resume source of MAX_LATEX_SOURCE_CHARS characters, CJK included (3 bytes each). */
 const MAX_AI_BODY_BYTES = 160 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = '@cf/zai-org/glm-5.3-flash';
 const MAX_OUTPUT_TOKENS = 600;
-/** A whole resume as JSON, plus reasoning; LaTeX parsing gets a longer budget and deadline. */
+/** A whole resume as JSON, plus reasoning; parsing gets a longer budget and deadline. */
 const PARSE_OUTPUT_TOKENS = 8000;
 const PARSE_TIMEOUT_MS = 150000;
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
@@ -725,8 +726,8 @@ const SYSTEM_PROMPT = [
   'Return only the final text: no preamble, no quotes, no markdown, no bullet symbols.',
 ].join(' ');
 
-const PARSE_LATEX_PROMPT = [
-  'You convert a LaTeX resume or academic CV (moderncv, Awesome-CV, AltaCV, Jake\'s Resume, res, custom macros) into JSON.',
+/** The JSON both parsers return, and the rules for its fields. */
+const PARSE_SCHEMA = [
   'Return only one JSON object, no markdown fences or commentary, with these keys (omit empty ones):',
   'fullName, title (headline or target role), email, phone, location, website, linkedin (URL),',
   'links: [{label, url}] for GitHub, Google Scholar, ORCID, portfolio and other profiles,',
@@ -740,14 +741,30 @@ const PARSE_LATEX_PROMPT = [
   'teaching: [{course, role, institution, year}] for courses taught and TA roles,',
   'skills: ["Category: item, item", ...] (keep categories when the CV groups skills; put languages and certifications here too).',
   'Rules: dates are "YYYY-MM" (or "YYYY" when only the year is given); a current role has endDate "" and isCurrent true.',
-  'description is a single string with one bullet per line, each starting with "- ", taken from \\item lines; keep the wording.',
   'Activities, leadership, service, committees and volunteering go in experience (organisation as company); put a LinkedIn URL in linkedin, not links.',
+  'Keep the CV\'s language and every fact; never invent, summarise away or reorder entries.',
+];
+
+const PARSE_LATEX_PROMPT = [
+  'You convert a LaTeX resume or academic CV (moderncv, Awesome-CV, AltaCV, Jake\'s Resume, res, custom macros) into JSON.',
+  ...PARSE_SCHEMA,
+  'description is a single string with one bullet per line, each starting with "- ", taken from \\item lines; keep the wording.',
   'Turn LaTeX into plain Unicode text: expand accents and escapes (\\& to &, -- to an en dash), drop formatting commands, icons and spacing.',
-  'Keep the CV\'s language and every fact; never invent, summarise away or reorder entries. Ignore the preamble except for name and contact macros.',
+  'Ignore the preamble except for name and contact macros.',
+].join('\n');
+
+const PARSE_TEXT_PROMPT = [
+  'You convert the text of a resume or CV into JSON. The text was read from a PDF or Word file or pasted, so lines may be broken mid-sentence,',
+  'columns may be interleaved (a sidebar of contacts or skills mixed into the main column), and bullets may be symbols such as •, ▪ or numbers.',
+  ...PARSE_SCHEMA,
+  'description is a single string with one bullet per line, each starting with "- "; join a bullet that was broken across lines; keep the wording.',
+  'A paragraph without bullets stays as one "- " line. Ignore page numbers, repeated page headers or footers and "References available" lines.',
+  'URLs listed at the end under "Links in the file" belong to the profile, project or publication whose text they were attached to.',
 ].join('\n');
 
 const buildUserPrompt = (payload: AiRequest): string => {
   if (payload.action === 'parse_latex') return `LaTeX source:\n\n${payload.source}`;
+  if (payload.action === 'parse_text') return `Resume text:\n\n${payload.source}`;
   if (payload.action === 'improve') {
     return [
       `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
@@ -779,7 +796,7 @@ const modelContent = (data: unknown): string => {
 
 /** What `{ text }` carries for a raw model reply: the JSON object for a parse, cleaned text otherwise. */
 const finishReply = (payload: AiRequest, raw: string): string =>
-  payload.action === 'parse_latex' ? extractJsonObject(raw) : finishAiText(raw, payload.action === 'improve' ? payload.text : undefined);
+  isParseRequest(payload) ? extractJsonObject(raw) : finishAiText(raw, payload.action === 'improve' ? payload.text : undefined);
 
 /** The outermost JSON object in model text, re-serialised; '' when there is none. */
 const extractJsonObject = (raw: string): string => {
@@ -794,7 +811,7 @@ const extractJsonObject = (raw: string): string => {
   }
 };
 
-// The 160 KB body limit exists for parse_latex; the other actions get field limits well above any real
+// The 160 KB body limit exists for the parsers; the other actions get field limits well above any real
 // summary or bullet list so a 20/min caller can't spend ~80k input tokens on each "improve".
 const MAX_IMPROVE_TEXT_CHARS = 8000;
 
@@ -814,10 +831,10 @@ const validateRequest = (body: unknown): AiRequest | null => {
     };
   }
 
-  if (value.action === 'parse_latex') {
+  if (value.action === 'parse_latex' || value.action === 'parse_text') {
     const source = normalizeText(value.source);
     if (!source || source.length > MAX_LATEX_SOURCE_CHARS) return null;
-    return { action: 'parse_latex', source, stream: value.stream === true };
+    return { action: value.action, source, stream: value.stream === true };
   }
 
   if (value.action === 'summary') {
@@ -856,10 +873,11 @@ const parseJsonBody = async (request: Request, maxBytes = MAX_BODY_BYTES): Promi
 
 const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> => {
   const reasoningEffort = normalizeText(env.AI_REASONING_EFFORT);
-  const parsing = payload.action === 'parse_latex';
+  const parsing = isParseRequest(payload);
+  const system = payload.action === 'parse_latex' ? PARSE_LATEX_PROMPT : payload.action === 'parse_text' ? PARSE_TEXT_PROMPT : SYSTEM_PROMPT;
   return {
     messages: [
-      { role: 'system', content: parsing ? PARSE_LATEX_PROMPT : SYSTEM_PROMPT },
+      { role: 'system', content: system },
       { role: 'user', content: buildUserPrompt(payload) },
     ],
     max_tokens: parsing ? PARSE_OUTPUT_TOKENS : MAX_OUTPUT_TOKENS,
@@ -881,7 +899,7 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
   if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
 
   const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
-  const parsing = payload.action === 'parse_latex';
+  const parsing = isParseRequest(payload);
   const input = buildAiInput(env, payload);
 
   let timeoutId: ReturnType<typeof setTimeout> | undefined;
@@ -930,7 +948,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
   const send = (event: AiStreamEvent) => writer.write(encoder.encode(`${JSON.stringify(event)}\n`));
 
   const relay = async () => {
-    const deadline = Date.now() + (payload.action === 'parse_latex' ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
+    const deadline = Date.now() + (isParseRequest(payload) ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
     let content = '';
     let lastThinking = 0;
     try {
@@ -982,7 +1000,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
         content = modelContent(upstream);
       }
       const text = finishReply(payload, content);
-      const empty = payload.action === 'parse_latex' ? "The AI didn't return a resume. Please try again." : 'AI returned an empty response. Please try again.';
+      const empty = isParseRequest(payload) ? "The AI didn't return a resume. Please try again." : 'AI returned an empty response. Please try again.';
       await send(text ? { type: 'done', text } : { type: 'error', code: 'EMPTY_RESPONSE', error: empty });
     } catch (error) {
       console.error('[ai] parse stream failed', { model, message: error instanceof Error ? error.message : String(error) });

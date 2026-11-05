@@ -124,7 +124,8 @@ export const Textarea: React.FC<TextareaProps> = ({
     const el = ref.current;
     if (!el) return;
     el.style.height = 'auto';
-    el.style.height = `${el.scrollHeight + 2}px`;
+    // A hidden textarea (in a closed dialog) measures 0; leave it at its rows until it is shown.
+    if (el.scrollHeight) el.style.height = `${el.scrollHeight + 2}px`;
   }, [value]);
 
   return (

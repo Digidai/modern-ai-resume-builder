@@ -2,18 +2,19 @@ import React, { useEffect, useRef, useState } from 'react';
 import type { ResumeData } from '../types';
 import { MAX_LATEX_SOURCE_CHARS } from '../shared/aiContract';
 import { getTemplateById } from '../constants/templates';
-import { AiError, parseLatexResume } from '../services/aiService';
+import { AiError, parseLatexResume, parseResumeText } from '../services/aiService';
 import { latexParseProgress, latexSourceProblem, prepareLatexSource, resumeFromParsedLatex, type LatexProgressSection } from '../utils/latexImport';
 import { Button } from './Button';
 import { Textarea } from './Input';
 import { ScaledResumePreview } from './ScaledResumePreview';
 import { TaskProgress } from './TaskProgress';
-import { XIcon } from './Icons';
+import { UploadIcon, XIcon } from './Icons';
+import { looksLikeLatex, readResumeFile, ResumeFileError, tidyResumeText, type ResumeSource } from '../utils/resumeFile';
 
 const PROBLEMS = {
-  empty: 'Paste your .tex source or choose a file first.',
-  'not-latex': "This doesn't look like LaTeX. Paste the .tex source, not the PDF text.",
-  'too-long': `That's longer than ${MAX_LATEX_SOURCE_CHARS.toLocaleString('en')} characters after comments are removed. Leave out unused sections or long macro files.`,
+  empty: 'Choose a file or paste your resume first.',
+  'not-latex': "This doesn't look like LaTeX.",
+  'too-long': `That's longer than ${MAX_LATEX_SOURCE_CHARS.toLocaleString('en')} characters. Leave out unused sections or long macro files.`,
 } as const;
 
 const count = (n: number, one: string, many = `${one}s`) => (n ? `${n} ${n === 1 ? one : many}` : '');
@@ -55,7 +56,7 @@ interface Progress {
 const STEPS = ['Send', 'Read', 'Write'] as const;
 
 /** Stage and the entries found so far while the AI converts the CV. */
-const ConversionProgress: React.FC<{ progress: Progress; expected: number }> = ({ progress, expected }) => {
+const ConversionProgress: React.FC<{ progress: Progress; expected: number; latex: boolean }> = ({ progress, expected, latex }) => {
   const step = progress.stage === 'sending' ? 0 : progress.stage === 'reading' ? 1 : 2;
   const found = (Object.keys(SECTION_NAMES) as LatexProgressSection[])
     .map((section) => count(progress.counts[section] ?? 0, SECTION_NAMES[section][1], SECTION_NAMES[section][2]))
@@ -65,13 +66,15 @@ const ConversionProgress: React.FC<{ progress: Progress; expected: number }> = (
     progress.stage === 'sending'
       ? 'Sending your CV…'
       : progress.stage === 'reading'
-        ? 'AI is reading the LaTeX…'
+        ? latex
+          ? 'AI is reading the LaTeX…'
+          : 'AI is reading your resume…'
         : progress.section
           ? `Writing ${SECTION_NAMES[progress.section][0]}…`
           : 'Writing your resume…';
   return (
     <TaskProgress
-      data-testid="latex-import-progress"
+      data-testid="resume-import-progress"
       steps={STEPS}
       step={step}
       status={status}
@@ -84,10 +87,10 @@ const ConversionProgress: React.FC<{ progress: Progress; expected: number }> = (
 };
 
 /**
- * Import LaTeX: the .tex goes to the AI parser, and the result is shown as pages before it replaces
- * the resume (the editor's undo toast can bring the old one back).
+ * Import resume: the text of a PDF, Word file, .tex or paste goes to the AI parser, and the result is
+ * shown as pages before it replaces the resume (the editor's undo toast can bring the old one back).
  */
-export const LatexImportDialog: React.FC<{
+export const ResumeImportDialog: React.FC<{
   open: boolean;
   current: ResumeData;
   onClose: () => void;
@@ -101,6 +104,9 @@ export const LatexImportDialog: React.FC<{
   const [result, setResult] = useState<ResumeData | null>(null);
   const [progress, setProgress] = useState<Progress | null>(null);
   const [expected, setExpected] = useState(1);
+  const [latex, setLatex] = useState(false);
+  const [reading, setReading] = useState('');
+  const [dragging, setDragging] = useState(false);
 
 
   useEffect(() => {
@@ -115,25 +121,27 @@ export const LatexImportDialog: React.FC<{
     if (!open && dialog.open) dialog.close();
   }, [open]);
 
-  const convert = async () => {
-    const prepared = prepareLatexSource(source);
-    const problem = latexSourceProblem(prepared);
+  const convert = async ({ kind, text }: ResumeSource) => {
+    const isLatex = kind === 'latex';
+    const prepared = isLatex ? prepareLatexSource(text) : tidyResumeText(text);
+    const problem = isLatex ? latexSourceProblem(prepared) : !prepared ? 'empty' : prepared.length > MAX_LATEX_SOURCE_CHARS ? 'too-long' : null;
     if (problem) {
       setError(PROBLEMS[problem]);
       return;
     }
     setLoading(true);
+    setLatex(isLatex);
     setError('');
     setResult(null);
-    // The JSON reply comes out at roughly 60% of the trimmed LaTeX.
-    setExpected(prepared.length * 0.6);
+    // The JSON reply comes out at roughly 60% of the trimmed LaTeX, and a bit longer than plain text.
+    setExpected(prepared.length * (isLatex ? 0.6 : 1.2));
     setProgress({ stage: 'sending', written: 0, section: null, counts: {} });
     let written = '';
     let lastUpdate = 0;
     // The upload takes a moment; after that the model is reading the prompt, even before it says so.
-    const reading = window.setTimeout(() => setProgress((previous) => (previous?.stage === 'sending' ? { ...previous, stage: 'reading' } : previous)), 1500);
+    const readingTimer = window.setTimeout(() => setProgress((previous) => (previous?.stage === 'sending' ? { ...previous, stage: 'reading' } : previous)), 1500);
     try {
-      const reply = await parseLatexResume(prepared, (event) => {
+      const reply = await (isLatex ? parseLatexResume : parseResumeText)(prepared, (event) => {
         if (event.type === 'thinking') setProgress((previous) => (previous?.stage === 'sending' ? { ...previous, stage: 'reading' } : previous));
         if (event.type !== 'delta') return;
         written += event.text;
@@ -145,7 +153,7 @@ export const LatexImportDialog: React.FC<{
       });
       const parsed = resumeFromParsedLatex(reply, current);
       if (!parsed) {
-        setError("Couldn't find resume content in that LaTeX. Check it is the main .tex file and try again.");
+        setError(isLatex ? "Couldn't find resume content in that LaTeX. Check it is the main .tex file and try again." : "Couldn't find resume content in that text. Check it is your resume and try again.");
         return;
       }
       // Academic sections only show in academic templates; switch to Scholar rather than hide them.
@@ -154,14 +162,34 @@ export const LatexImportDialog: React.FC<{
     } catch (err) {
       setError(err instanceof AiError ? err.message : 'Conversion failed. Please try again.');
     } finally {
-      window.clearTimeout(reading);
+      window.clearTimeout(readingTimer);
       setLoading(false);
       setProgress(null);
     }
   };
 
+  const busy = loading || reading !== '';
+
+  /** Reads the file's text into the box (so it can be checked or fixed), then converts it. */
+  const openFile = async (file: File | undefined) => {
+    if (!file || busy) return;
+    setError('');
+    setReading(file.name);
+    let read: ResumeSource;
+    try {
+      read = await readResumeFile(file);
+    } catch (err) {
+      setError(err instanceof ResumeFileError ? err.message : "Couldn't read that file. Paste the text instead.");
+      return;
+    } finally {
+      setReading('');
+    }
+    setSource(read.text);
+    await convert(read);
+  };
+
   const close = () => {
-    if (!loading) onClose();
+    if (!busy) onClose();
   };
 
   const switchedTemplate = result && result.templateId !== current.templateId ? getTemplateById(result.templateId)?.name : null;
@@ -171,64 +199,73 @@ export const LatexImportDialog: React.FC<{
       ref={dialogRef}
       onClose={onClose}
       onCancel={(event) => {
-        if (loading) event.preventDefault();
+        if (busy) event.preventDefault();
       }}
-      aria-labelledby="latex-import-title"
+      aria-labelledby="resume-import-title"
       className="m-auto w-[min(56rem,calc(100vw-2rem))] max-h-[calc(100vh-2rem)] overflow-hidden rounded-xl border border-rule bg-surface p-0 text-ink shadow-raised backdrop:bg-black/40"
     >
       <div className="flex max-h-[calc(100vh-2rem)] flex-col">
         <div className="flex items-start justify-between gap-4 border-b border-rule px-5 py-4">
           <div>
-            <h2 id="latex-import-title" className="text-base font-semibold">
-              Import a LaTeX resume
+            <h2 id="resume-import-title" className="text-base font-semibold">
+              Import a resume
             </h2>
             <p className="mt-0.5 text-sm text-muted">
-              From Overleaf or a .tex file (moderncv, Awesome-CV, Jake&apos;s Resume and others). AI reads it; you check the result before anything changes.
+              From a PDF, Word (.docx) or LaTeX file, or pasted text. AI fills in the editor; you check the result before anything changes.
             </p>
           </div>
-          <Button variant="icon" onClick={close} aria-label="Close" disabled={loading}>
+          <Button variant="icon" onClick={close} aria-label="Close" disabled={busy}>
             <XIcon className="h-4 w-4" />
           </Button>
         </div>
 
         {!result ? (
-          <div className="space-y-3 overflow-y-auto px-5 py-4">
-            <Textarea
-              label="LaTeX source"
-              value={source}
-              onChange={setSource}
-              minRows={12}
-              disabled={loading}
-              placeholder={'\\documentclass{moderncv}\n\\name{Pat}{Lee}\n\\begin{document}\n\\section{Experience}\n\\cventry{2021--2026}{PhD researcher}{CMU}{}{}{...}'}
-              hint="Paste the main .tex file. If your CV is split across several files, paste them one after another."
-            />
-            <div className="flex flex-wrap items-center gap-2">
-              <Button onClick={() => void convert()} isLoading={loading} disabled={!source.trim()}>
-                {loading ? 'Converting…' : 'Convert'}
+          <div className="space-y-4 overflow-y-auto px-5 py-4">
+            <div
+              data-testid="resume-import-drop"
+              onDragOver={(event) => {
+                event.preventDefault();
+                if (!busy) setDragging(true);
+              }}
+              onDragLeave={() => setDragging(false)}
+              onDrop={(event) => {
+                event.preventDefault();
+                setDragging(false);
+                void openFile(event.dataTransfer.files[0]);
+              }}
+              className={`flex flex-col items-center gap-2 rounded-xl border border-dashed px-4 py-6 text-center transition-colors ${dragging ? 'border-accent bg-accent/5' : 'border-rule bg-tint/40'}`}
+            >
+              <UploadIcon className="h-5 w-5 text-muted" />
+              <Button variant="secondary" onClick={() => fileRef.current?.click()} disabled={busy} isLoading={reading !== ''}>
+                {reading ? `Reading ${reading}…` : 'Choose a file'}
               </Button>
-              <Button variant="ghost" onClick={() => fileRef.current?.click()} disabled={loading}>
-                Choose .tex file
-              </Button>
+              <p className="text-xs text-muted">or drop it here · PDF, DOCX, TEX or TXT · the file stays on your device; only its text is sent to the AI</p>
               <input
                 ref={fileRef}
                 type="file"
-                accept=".tex,.ltx,.txt,text/plain,application/x-tex"
+                accept=".pdf,.docx,.tex,.ltx,.txt,.md,application/pdf,application/vnd.openxmlformats-officedocument.wordprocessingml.document,text/plain,application/x-tex"
                 className="hidden"
-                aria-label="Choose a .tex file"
-                onChange={async (event) => {
+                aria-label="Choose a resume file"
+                onChange={(event) => {
                   const file = event.target.files?.[0];
                   event.target.value = '';
-                  if (!file) return;
-                  if (file.size > 1_000_000) {
-                    setError('That file is larger than 1 MB.');
-                    return;
-                  }
-                  setSource(await file.text());
-                  setError('');
+                  void openFile(file);
                 }}
               />
             </div>
-            {loading && progress && <ConversionProgress progress={progress} expected={expected} />}
+            <Textarea
+              label="Or paste your resume"
+              value={source}
+              onChange={setSource}
+              minRows={8}
+              disabled={busy}
+              placeholder={'Pat Lee\nSoftware Engineer · pat@example.com\n\nExperience\nAcme Corp, Senior Engineer, 2021 – present\n• Led …'}
+              hint="Plain text from any resume, or a .tex source. Text read from a file shows here, so you can fix it and convert again."
+            />
+            <Button onClick={() => void convert({ kind: looksLikeLatex(source) ? 'latex' : 'text', text: source })} isLoading={loading} disabled={!source.trim() || busy}>
+              {loading ? 'Converting…' : 'Convert'}
+            </Button>
+            {loading && progress && <ConversionProgress progress={progress} expected={expected} latex={latex} />}
             {error && (
               <p role="alert" className="text-sm text-danger">
                 {error}
@@ -237,7 +274,7 @@ export const LatexImportDialog: React.FC<{
           </div>
         ) : (
           <div className="grid min-h-0 flex-1 gap-5 overflow-hidden px-5 py-4 md:grid-cols-[minmax(0,1fr)_17rem]">
-            <div className="custom-scrollbar min-h-0 overflow-y-auto rounded-lg bg-tint p-4" data-testid="latex-import-preview">
+            <div className="custom-scrollbar min-h-0 overflow-y-auto rounded-lg bg-tint p-4" data-testid="resume-import-preview">
               <ScaledResumePreview data={result} mode="page" view="pages" />
             </div>
             <div className="flex flex-col gap-3 text-sm">
@@ -245,7 +282,7 @@ export const LatexImportDialog: React.FC<{
               <p className="text-muted">{describe(result) || 'No sections found.'}</p>
               {switchedTemplate && <p className="text-muted">Shown in {switchedTemplate} so the academic sections appear. You can change the template afterwards.</p>}
               <p className="rounded-lg border border-amber-300/60 bg-amber-50 px-3 py-2 text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
-                Check every entry: AI can misread custom macros. Importing replaces your current resume; Undo brings it back.
+                Check every entry: AI can misread columns, tables and custom macros. Importing replaces your current resume; Undo brings it back.
               </p>
               <div className="mt-auto flex flex-wrap gap-2">
                 <Button

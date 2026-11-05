@@ -1,0 +1,4 @@
+# The site's pages are cross-origin isolated (COEP credentialless, set by the Worker); Chrome only starts
+# a dedicated worker whose script sends a COEP header too. Import resume reads PDFs in the pdf.js worker.
+/assets/pdf.worker*
+  Cross-Origin-Embedder-Policy: credentialless

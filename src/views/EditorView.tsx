@@ -31,7 +31,7 @@ import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import { downloadLatex, openInOverleaf } from '../utils/latex';
-import { LatexImportDialog } from '../components/LatexImportDialog';
+import { ResumeImportDialog } from '../components/ResumeImportDialog';
 import { TaskProgress } from '../components/TaskProgress';
 import type { PdfExportProgress } from '../utils/pdfExport';
 
@@ -337,7 +337,7 @@ const EditorView: React.FC = () => {
     saveStatus,
   } = useResume();
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
-  const [latexImportOpen, setLatexImportOpen] = useState(false);
+  const [importOpen, setImportOpen] = useState(false);
   // Prerendered as 'pages'; the saved choice applies once hydrated, before the first paint.
   const [previewView, setPreviewView] = useState<PreviewView>(() => (isPrerendered ? 'pages' : readPreviewView()));
   useLayoutEffect(() => {
@@ -366,13 +366,17 @@ const EditorView: React.FC = () => {
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // Deep link: /editor/?template=<id> (used by the template pages, llms.txt and agents).
+  // Deep links: /editor/?template=<id> (used by the template pages, llms.txt and agents) and
+  // /editor/?import, which opens Import resume (the home page links to it).
   useEffect(() => {
     const requested = currentTemplateId(searchParams.get('template') ?? '');
-    if (!requested) return;
-    if (getTemplateById(requested)) setResumeData((prev) => ({ ...prev, templateId: requested }));
+    const importing = searchParams.has('import');
+    if (!requested && !importing) return;
+    if (requested && getTemplateById(requested)) setResumeData((prev) => ({ ...prev, templateId: requested }));
+    if (importing) setImportOpen(true);
     const next = new URLSearchParams(searchParams);
     next.delete('template');
+    next.delete('import');
     setSearchParams(next, { replace: true });
   }, [searchParams, setSearchParams, setResumeData]);
 
@@ -462,10 +466,10 @@ const EditorView: React.FC = () => {
         onSelect: () => fileInputRef.current?.click(),
       },
       {
-        label: 'Import LaTeX (.tex)',
-        description: 'Convert a LaTeX resume or CV from Overleaf; preview it first.',
+        label: 'Import resume (PDF, Word, LaTeX)',
+        description: 'AI fills the editor from your old resume; preview it first.',
         icon: <CodeIcon className="h-4 w-4" />,
-        onSelect: () => setLatexImportOpen(true),
+        onSelect: () => setImportOpen(true),
       },
     ],
     [
@@ -533,13 +537,13 @@ const EditorView: React.FC = () => {
           <ThemeToggle />
         </div>
         <ActionsMenu items={menuItems} />
-        <LatexImportDialog
-          open={latexImportOpen}
+        <ResumeImportDialog
+          open={importOpen}
           current={resumeData}
-          onClose={() => setLatexImportOpen(false)}
+          onClose={() => setImportOpen(false)}
           onImport={(data) => {
-            setLatexImportOpen(false);
-            loadResume(data, 'Imported your LaTeX resume.');
+            setImportOpen(false);
+            loadResume(data, 'Imported your resume.');
           }}
         />
         <div className="relative">

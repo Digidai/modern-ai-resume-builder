@@ -309,6 +309,10 @@ export const generateSummary = async (role: string, skills: string[], onPartial?
 export const parseLatexResume = (source: string, onEvent?: (event: AiStreamEvent) => void): Promise<string> =>
   streamAiRequest({ action: 'parse_latex', source, stream: true }, onEvent);
 
+/** Like parseLatexResume, for the text of a resume read from a PDF, Word file or paste. */
+export const parseResumeText = (source: string, onEvent?: (event: AiStreamEvent) => void): Promise<string> =>
+  streamAiRequest({ action: 'parse_text', source, stream: true }, onEvent);
+
 /** Posts a `stream: true` request and resolves to the `done` text; `onEvent` sees every event before it. */
 const streamAiRequest = async (payload: AiRequest, onEvent?: (event: AiStreamEvent) => void): Promise<string> => {
   const response = await sendAiRequest(payload);

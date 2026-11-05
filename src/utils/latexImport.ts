@@ -2,7 +2,7 @@ import { MAX_LATEX_SOURCE_CHARS } from '../shared/aiContract';
 import type { ResumeData } from '../types';
 import { sanitizeResumeData } from './resumeData';
 
-// Client side of "Import LaTeX": trims the .tex before it is sent to the AI parser, and turns the
+// Client side of Import resume for LaTeX (and of its JSON reply for any source): trims the .tex before it is sent to the AI parser, and turns the
 // parser's JSON reply into a resume.
 
 /** Package, class and colour setup that says nothing about the resume. */

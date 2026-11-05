@@ -1,4 +1,4 @@
-export const AI_ACTIONS = ['improve', 'summary', 'parse_latex'] as const;
+export const AI_ACTIONS = ['improve', 'summary', 'parse_latex', 'parse_text'] as const;
 export type AiAction = (typeof AI_ACTIONS)[number];
 
 export const AI_ERROR_CODES = [
@@ -50,6 +50,18 @@ export interface AiParseLatexRequest extends AiStreamOption {
   source: string;
 }
 
+/** Converts the text of a resume read from a PDF, Word file or paste to ModernCV JSON; the reply's `text` is that JSON. */
+export interface AiParseTextRequest extends AiStreamOption {
+  action: 'parse_text';
+  source: string;
+}
+
+export type AiParseRequest = AiParseLatexRequest | AiParseTextRequest;
+
+/** The actions that turn a whole resume into JSON (long budget, JSON reply). */
+export const isParseRequest = (payload: AiRequest): payload is AiParseRequest =>
+  payload.action === 'parse_latex' || payload.action === 'parse_text';
+
 /**
  * One line of a streamed reply: `thinking` while the model reads or reasons, `delta` for each piece
  * of text it writes, then `done` with the finished text (as `{ text }` would carry it), or `error`.
@@ -60,10 +72,10 @@ export type AiStreamEvent =
   | { type: 'done'; text: string }
   | { type: 'error'; code: AiErrorCode; error: string };
 
-/** Longest .tex source (after comments are stripped) the parser accepts. */
+/** Longest source the parsers accept: a .tex after comments are stripped, or a resume's text. */
 export const MAX_LATEX_SOURCE_CHARS = 40_000;
 
-export type AiRequest = AiImproveRequest | AiSummaryRequest | AiParseLatexRequest;
+export type AiRequest = AiImproveRequest | AiSummaryRequest | AiParseRequest;
 
 /**
  * Model text as the editor shows it: think blocks and the quotes or bullets models add despite

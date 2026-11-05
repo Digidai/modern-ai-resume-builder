@@ -14,9 +14,10 @@
     // Hashed bundles, fonts, and OG images don't need it.
     "run_worker_first": ["/*", "!/assets/*", "!/fonts/*", "!/og/*"]
   },
-  // Workers AI; model and options are set in "vars" below.
+  // Workers AI; model and options are set in "vars" below. `remote` lets `wrangler dev` call it.
   "ai": {
-    "binding": "AI"
+    "binding": "AI",
+    "remote": true
   },
   // Browser Rendering prints resumes to vector PDF (/api/pdf). `remote` lets `wrangler dev` use it too.
   "browser": {

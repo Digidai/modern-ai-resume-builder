@@ -165,6 +165,12 @@ const HomeView: React.FC = () => {
                 Find my job title
               </Link>
             </div>
+            <p className="mt-4 text-sm text-muted">
+              Already have a resume?{' '}
+              <Link to="/editor/?import" className="font-medium text-ink underline decoration-rule underline-offset-4 hover:decoration-ink focus-ring rounded-sm">
+                Import a PDF or Word file
+              </Link>
+            </p>
           </div>
 
           <figure className="mx-auto w-full max-w-md rounded-2xl border border-rule bg-tint p-4 sm:p-6 lg:max-w-[500px]">
