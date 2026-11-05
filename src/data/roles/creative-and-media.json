@@ -170,7 +170,8 @@
         "bronx": 0.85,
         "mono": 0.96,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -191,7 +192,10 @@
         "pop": 0.85,
         "cast": 0.96,
         "iron": 0.88,
-        "ginto": 0.93
+        "ginto": 0.93,
+        "seoul": 0.91,
+        "dubai": 0.94,
+        "manila": 0.99
       },
       "trimLetter": {
         "iron": 8,
@@ -468,7 +472,9 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Video Editor": {
@@ -661,7 +667,9 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.96,
+        "dubai": 0.98
       }
     },
     "Motion Graphics Designer": {
@@ -1070,7 +1078,9 @@
         "mono": 0.92,
         "cast": 0.95,
         "iron": 0.85,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6,
@@ -1270,7 +1280,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Sound Designer": {
@@ -1344,7 +1356,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.96
       }
     },
     "Music Producer": {
@@ -1725,7 +1738,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "quartz": 0.89,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "seoul": 0.96,
+        "dubai": 0.96
       },
       "trimLetter": {
         "quartz": 10,
@@ -1864,7 +1879,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96,
-        "iron": 0.92
+        "iron": 0.92,
+        "seoul": 0.98
       },
       "trimLetter": {
         "iron": 8
@@ -1939,7 +1955,8 @@
         "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -1966,7 +1983,10 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.94,
+        "dubai": 0.95,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 9
@@ -2135,7 +2155,9 @@
         "mono": 0.86,
         "cast": 0.9,
         "iron": 0.85,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 9,
@@ -2219,7 +2241,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "cast": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "pop": 6
@@ -2397,7 +2421,8 @@
         "mono": 0.95,
         "pop": 0.85,
         "cast": 0.96,
-        "iron": 0.91
+        "iron": 0.91,
+        "seoul": 0.96
       },
       "trimLetter": {
         "iron": 8

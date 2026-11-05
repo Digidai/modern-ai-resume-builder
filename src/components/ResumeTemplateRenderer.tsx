@@ -73,6 +73,9 @@ const TEMPLATE_LOADERS: Record<TemplateId, TemplateLoader> = {
   onyx: () => import('./templates/OnyxTemplate').then((module) => ({ default: module.OnyxTemplate })),
   riviera: () => import('./templates/RivieraTemplate').then((module) => ({ default: module.RivieraTemplate })),
   summit: () => import('./templates/SummitTemplate').then((module) => ({ default: module.SummitTemplate })),
+  seoul: () => import('./templates/SeoulTemplate').then((module) => ({ default: module.SeoulTemplate })),
+  dubai: () => import('./templates/DubaiTemplate').then((module) => ({ default: module.DubaiTemplate })),
+  manila: () => import('./templates/ManilaTemplate').then((module) => ({ default: module.ManilaTemplate })),
   prism: () => import('./templates/PrismTemplate').then((module) => ({ default: module.PrismTemplate })),
 };
 

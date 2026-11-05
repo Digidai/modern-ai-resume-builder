@@ -396,7 +396,8 @@
         "quartz": 0.86,
         "bronx": 0.89,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -419,7 +420,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95
       }
     },
     "Railroad Conductor": {
@@ -813,7 +815,8 @@
         "quartz": 0.91,
         "bronx": 0.94,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -834,7 +837,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.94
       }
     },
     "Baggage Handler": {

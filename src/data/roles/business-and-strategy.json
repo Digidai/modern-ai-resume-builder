@@ -95,7 +95,10 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.89,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.95,
+        "manila": 0.99
       }
     },
     "Chief of Staff to CEO": {
@@ -162,7 +165,8 @@
         "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.9,
@@ -191,7 +195,9 @@
         "pop": 0.85,
         "cast": 0.87,
         "berlin": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -280,7 +286,8 @@
         "bronx": 0.87,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.95
       }
     },
     "Project Coordinator": {
@@ -359,7 +366,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       }
     },
     "Program Manager": {
@@ -442,7 +450,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Program Coordinator": {
@@ -527,7 +537,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Technical Program Manager": {
@@ -615,7 +627,9 @@
         "bronx": 0.88,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "PMO Manager": {
@@ -698,7 +712,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98
       }
     },
     "PMO Analyst": {
@@ -781,7 +796,9 @@
         "bronx": 0.9,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Scrum Master": {
@@ -863,7 +880,9 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Agile Coach": {
@@ -943,7 +962,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "seoul": 0.97
       }
     },
     "Delivery Manager": {
@@ -1030,7 +1050,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "iron": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 6
@@ -1100,7 +1122,8 @@
         "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -1129,7 +1152,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -1221,7 +1246,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -1315,7 +1342,9 @@
         "mono": 0.88,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Management Consultant": {
@@ -1398,7 +1427,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 10
@@ -1464,7 +1495,8 @@
         "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -1489,7 +1521,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 6
@@ -1574,7 +1608,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Strategy Manager": {
@@ -1741,7 +1777,9 @@
         "cast": 0.89,
         "berlin": 0.85,
         "quartz": 0.89,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.94,
+        "dubai": 0.98
       },
       "trimLetter": {
         "berlin": 10,
@@ -1811,7 +1849,9 @@
         "bronx": 0.9,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.99,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -1837,7 +1877,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -1925,7 +1967,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Corporate Development Manager": {
@@ -1993,7 +2037,8 @@
         "bronx": 0.87,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.89,
@@ -2021,7 +2066,9 @@
         "cast": 0.91,
         "berlin": 0.85,
         "iron": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.92,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6,
@@ -2116,7 +2163,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Product Strategy Manager": {
@@ -2199,7 +2248,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Growth Strategy Manager": {
@@ -2285,7 +2336,9 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Strategic Partnerships Manager": {
@@ -2350,7 +2403,9 @@
         "bronx": 0.9,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -2377,7 +2432,10 @@
         "cast": 0.88,
         "berlin": 0.85,
         "iron": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.93,
+        "manila": 0.99
       },
       "trimLetter": {
         "berlin": 6,
@@ -2445,7 +2503,8 @@
         "bronx": 0.9,
         "mono": 0.95,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -2468,7 +2527,9 @@
         "bronx": 0.88,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Business Development Analyst": {
@@ -2553,7 +2614,9 @@
         "bronx": 0.86,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Change Management Consultant": {
@@ -2647,7 +2710,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Transformation Manager": {
@@ -2712,7 +2777,8 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -2738,7 +2804,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Business Transformation Consultant": {
@@ -2811,7 +2879,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -2838,7 +2907,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.95
       }
     },
     "Portfolio Manager": {
@@ -2927,7 +2998,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.94
       }
     },
     "Business Process Analyst": {
@@ -2993,7 +3065,8 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.86,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -3017,7 +3090,9 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Project Management Intern": {
@@ -3178,7 +3253,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "iron": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 5
@@ -3245,7 +3322,8 @@
         "bronx": 0.89,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -3269,7 +3347,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "IT Project Manager": {
@@ -3353,7 +3433,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98
       }
     },
     "Senior Program Manager": {
@@ -3443,7 +3524,8 @@
         "mono": 0.88,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "Director of Program Management": {
@@ -3536,7 +3618,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       }
     },
     "Associate Consultant": {
@@ -3603,7 +3686,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -3631,7 +3716,9 @@
         "cast": 0.86,
         "berlin": 0.85,
         "iron": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.92,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5,
@@ -3706,7 +3793,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.87,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.89,
@@ -3735,7 +3823,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "munich": 0.98,
-        "onyx": 0.99
+        "onyx": 0.99,
+        "seoul": 0.91,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3822,7 +3912,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "VP of Strategy": {
@@ -3910,7 +4002,9 @@
         "bronx": 0.86,
         "mono": 0.88,
         "pop": 0.89,
-        "cast": 0.89
+        "cast": 0.89,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     }
   }

@@ -85,7 +85,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.96,
+        "dubai": 0.99
       }
     },
     "Digital Marketing Specialist": {
@@ -179,7 +181,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Performance Marketing Manager": {
@@ -268,7 +272,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Growth Marketer": {
@@ -350,7 +356,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Growth Manager": {
@@ -412,7 +419,8 @@
         "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -438,7 +446,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.93,
+        "dubai": 0.95
       }
     },
     "Growth Hacker": {
@@ -520,7 +530,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.99
       }
     },
     "Content Strategist": {
@@ -598,7 +609,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "Content Marketing Manager": {
@@ -680,7 +692,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       }
     },
     "Content Marketing Specialist": {
@@ -763,7 +776,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Content SEO Specialist": {
@@ -919,7 +934,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "SEO Manager": {
@@ -1070,7 +1086,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "quartz": 0.9
+        "quartz": 0.9,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -1155,7 +1173,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97
       }
     },
     "CRO Specialist": {
@@ -1219,7 +1238,8 @@
         "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -1243,7 +1263,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -1342,7 +1364,9 @@
         "pop": 0.85,
         "cast": 0.94,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.98
       },
       "trimLetter": {
         "berlin": 10
@@ -1434,7 +1458,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "Paid Search Manager": {
@@ -1517,7 +1543,9 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Paid Social Specialist": {
@@ -1584,7 +1612,8 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -1613,7 +1642,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -1700,7 +1731,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Paid Media Manager": {
@@ -1791,7 +1824,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "Acquisition Manager": {
@@ -1884,7 +1919,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.88,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "User Acquisition Manager": {
@@ -1971,7 +2008,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -2128,7 +2167,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.99
       }
     },
     "Community Manager": {
@@ -2213,7 +2253,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Community Lead": {
@@ -2291,7 +2333,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Email Marketing Specialist": {
@@ -2353,7 +2397,8 @@
         "bronx": 0.92,
         "mono": 0.96,
         "pop": 0.87,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -2375,7 +2420,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -2458,7 +2505,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Demand Generation Manager": {
@@ -2541,7 +2590,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Marketing Operations Manager": {
@@ -2621,7 +2672,9 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Marketing Operations Specialist": {
@@ -2686,7 +2739,9 @@
         "bronx": 0.9,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -2714,7 +2769,9 @@
         "cast": 0.88,
         "berlin": 0.85,
         "federal": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -2804,7 +2861,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Brand Manager": {
@@ -2877,7 +2936,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.88,
-        "cast": 0.93
+        "cast": 0.93,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.88,
@@ -2907,7 +2967,10 @@
         "berlin": 0.85,
         "quartz": 0.9,
         "bronx": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.94,
+        "dubai": 0.95,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 6,
@@ -2990,7 +3053,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       }
     },
     "Brand Strategist": {
@@ -3067,7 +3131,9 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Partnerships Manager": {
@@ -3145,7 +3211,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       }
     },
     "Partnership Marketing Manager": {
@@ -3208,7 +3275,8 @@
         "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -3235,7 +3303,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 6
@@ -3399,7 +3469,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.97
       }
     },
     "Communications Manager": {
@@ -3462,7 +3534,8 @@
         "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.93,
@@ -3486,7 +3559,9 @@
         "pop": 0.85,
         "cast": 0.97,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -3555,7 +3630,8 @@
         "bronx": 0.92,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -3582,7 +3658,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.97
       }
     },
     "Event Marketing Manager": {
@@ -3663,7 +3741,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Field Marketing Manager": {
@@ -3730,7 +3810,8 @@
         "bronx": 0.92,
         "mono": 0.94,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.92,
@@ -3757,7 +3838,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -3852,7 +3935,9 @@
         "noir": 0.94,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.96,
+        "dubai": 0.97
       }
     },
     "Affiliate Marketing Manager": {
@@ -3941,7 +4026,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -4041,7 +4128,9 @@
         "berlin": 0.85,
         "quartz": 0.91,
         "bronx": 0.87,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 10,
@@ -4179,7 +4268,8 @@
         "quartz": 0.94,
         "bronx": 0.86,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -4202,7 +4292,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.95,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 6
@@ -4292,7 +4384,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -4388,7 +4482,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Digital Marketing Manager": {
@@ -4470,7 +4566,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Email Marketing Manager": {
@@ -4555,7 +4653,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "CRM Manager": {
@@ -4648,7 +4748,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -4738,7 +4840,9 @@
         "pop": 0.85,
         "cast": 0.94,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5
@@ -4807,7 +4911,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -4834,7 +4939,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 5

@@ -59,7 +59,8 @@
         "bronx": 0.85,
         "mono": 0.98,
         "pop": 0.85,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "seoul": 0.97
       },
       "trimLetter": {
         "quartz": 7
@@ -327,7 +328,9 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     }
   }

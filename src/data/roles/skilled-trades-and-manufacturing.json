@@ -125,7 +125,8 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.96,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "Journeyman Electrician": {
@@ -193,7 +194,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.97
       }
     },
     "Master Electrician": {
@@ -268,7 +270,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.96
       }
     },
     "Industrial Electrician": {
@@ -344,7 +347,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.98,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95
       }
     },
     "Lineman": {
@@ -560,7 +564,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "federal": 0.98,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.96,
+        "dubai": 0.99
       }
     },
     "Pipefitter": {
@@ -678,7 +684,8 @@
         "quartz": 0.89,
         "bronx": 0.88,
         "mono": 0.94,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       }
     },
     "Millwright": {
@@ -798,7 +805,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.97
       }
     },
     "CNC Machinist": {
@@ -862,7 +870,8 @@
         "quartz": 0.86,
         "bronx": 0.88,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.99
       }
     },
     "CNC Programmer": {
@@ -1142,7 +1151,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97
       }
     },
     "Manufacturing Technician": {
@@ -1266,7 +1276,8 @@
         "mono": 0.89,
         "pop": 0.86,
         "cast": 0.98,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 7
@@ -1680,7 +1691,8 @@
         "quartz": 0.9,
         "bronx": 0.88,
         "mono": 0.94,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Production Associate": {

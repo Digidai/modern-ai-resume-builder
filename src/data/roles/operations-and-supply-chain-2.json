@@ -312,7 +312,8 @@
         "quartz": 0.88,
         "bronx": 0.87,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.89,
@@ -335,7 +336,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.92,
+        "dubai": 0.97
       }
     },
     "Fulfillment Associate": {

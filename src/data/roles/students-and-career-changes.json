@@ -221,7 +221,8 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "mono": 0.94,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.98
       }
     },
     "Entry Level": {
@@ -329,7 +330,8 @@
         "quartz": 0.95,
         "bronx": 0.9,
         "mono": 0.97,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Career Change": {
@@ -395,7 +397,8 @@
         "bronx": 0.87,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.94
       },
       "fitLetter": {
         "modern": 0.91,
@@ -424,7 +427,10 @@
         "cast": 0.89,
         "berlin": 0.88,
         "iron": 0.91,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.9,
+        "dubai": 0.96,
+        "manila": 0.99
       },
       "trimLetter": {
         "berlin": 8,
@@ -588,7 +594,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99
       }
     },
     "Older Worker": {
@@ -1041,7 +1048,8 @@
         "quartz": 0.93,
         "bronx": 0.87,
         "mono": 0.98,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.95
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1059,7 +1067,9 @@
         "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.88
+        "pop": 0.88,
+        "seoul": 0.91,
+        "dubai": 0.97
       }
     }
   }

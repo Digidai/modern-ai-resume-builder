@@ -164,7 +164,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Construction Superintendent": {
@@ -253,7 +255,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Site Superintendent": {
@@ -395,7 +399,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95
       }
     },
     "Project Engineer": {
@@ -537,7 +542,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Civil Engineer": {
@@ -692,7 +699,8 @@
         "mono": 0.86,
         "pop": 0.87,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "MEP Engineer": {
@@ -824,7 +832,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97
       }
     },
     "Interior Designer": {
@@ -956,7 +965,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.96
       }
     },
     "Real Estate Broker": {
@@ -1159,7 +1169,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       }
     },
     "Real Estate Appraiser": {
@@ -1227,7 +1238,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.95
       }
     },
     "Mortgage Loan Officer": {
@@ -1355,7 +1367,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.92,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96
       }
     },
     "Property Manager": {
@@ -1672,7 +1685,8 @@
         "pop": 0.85,
         "cast": 0.94,
         "bronx": 0.85,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       },
       "trimLetter": {
         "bronx": 7
@@ -1743,7 +1757,8 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98
       }
     },
     "Safety Manager": {
@@ -1824,7 +1839,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       }
     },
     "HVAC Technician": {
@@ -2133,7 +2149,8 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -2155,7 +2172,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.95,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -2518,7 +2537,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Assistant Project Manager": {
@@ -2778,7 +2799,8 @@
         "bronx": 0.88,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98
       }
     },
     "Escrow Officer": {
@@ -2848,7 +2870,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.95
       }
     },
     "Real Estate Transaction Coordinator": {
@@ -2962,7 +2985,8 @@
         "ginto": 0.85,
         "bronx": 0.94,
         "mono": 0.92,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -2983,7 +3007,9 @@
         "bronx": 0.89,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.98
       }
     },
     "Real Estate Asset Manager": {
@@ -3070,7 +3096,8 @@
         "mono": 0.86,
         "pop": 0.88,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.99
       }
     }
   }

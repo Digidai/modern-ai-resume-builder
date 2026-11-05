@@ -59,7 +59,8 @@
         "symmetry": 0.99,
         "bronx": 0.92,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -83,7 +84,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.96
       }
     },
     "Performance Engineer": {
@@ -165,7 +167,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Observability Engineer": {
@@ -253,7 +257,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "CI/CD Engineer": {
@@ -408,7 +414,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.92,
@@ -431,7 +438,8 @@
         "berlin": 0.85,
         "quartz": 0.94,
         "bronx": 0.85,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95
       },
       "trimLetter": {
         "berlin": 10,
@@ -514,7 +522,8 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "dubai": 0.99
       }
     },
     "Security Engineer": {
@@ -580,7 +589,8 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -604,7 +614,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Application Security Engineer": {
@@ -749,7 +761,8 @@
         "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -774,7 +787,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.95
       }
     },
     "Security Architect": {
@@ -839,7 +854,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.9,
@@ -867,7 +883,9 @@
         "berlin": 0.85,
         "quartz": 0.89,
         "bronx": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.9,
+        "dubai": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -961,7 +979,9 @@
         "pop": 0.85,
         "cast": 0.97,
         "quartz": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.99,
+        "dubai": 0.99
       },
       "trimLetter": {
         "quartz": 7
@@ -1046,7 +1066,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99
       }
     },
     "Security Operations Engineer": {
@@ -1113,7 +1134,9 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.88,
@@ -1142,7 +1165,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -1209,7 +1234,8 @@
         "bronx": 0.92,
         "mono": 0.93,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1234,7 +1260,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.99
       }
     },
     "Threat Intelligence Analyst": {
@@ -1290,7 +1318,8 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.93
+        "pop": 0.93,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.97,
@@ -1446,7 +1475,8 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       }
     },
     "Malware Analyst": {
@@ -1507,7 +1537,9 @@
         "quartz": 0.95,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.95,
+        "dubai": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1532,7 +1564,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "berlin": 0.89,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.91,
+        "dubai": 0.93
       },
       "trimLetter": {
         "berlin": 8
@@ -1668,7 +1702,9 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "SOC Analyst": {
@@ -1752,7 +1788,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Incident Response Analyst": {
@@ -1828,7 +1866,8 @@
         "mono": 0.87,
         "pop": 0.92,
         "cast": 0.98,
-        "bronx": 0.86
+        "bronx": 0.86,
+        "seoul": 0.99
       },
       "trimLetter": {
         "bronx": 12
@@ -1902,7 +1941,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.89,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.88,
@@ -1929,7 +1969,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "quartz": 0.92,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.95,
+        "dubai": 0.95
       },
       "trimLetter": {
         "quartz": 12
@@ -2153,7 +2195,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.91,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "MLOps Engineer": {
@@ -2291,7 +2335,8 @@
         "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -2316,7 +2361,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "AI Research Engineer": {
@@ -2386,7 +2433,8 @@
         "quartz": 0.85,
         "mono": 0.91,
         "pop": 0.95,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "seoul": 0.99
       },
       "trimLetter": {
         "bronx": 12
@@ -2456,7 +2504,9 @@
         "mono": 0.93,
         "pop": 0.86,
         "quartz": 0.93,
-        "bronx": 0.86
+        "bronx": 0.86,
+        "seoul": 0.95,
+        "dubai": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -2536,7 +2586,8 @@
         "bronx": 0.9,
         "mono": 0.91,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "dubai": 0.99
       }
     },
     "Cloud Architect": {
@@ -2621,7 +2672,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Cloud Solutions Architect": {
@@ -2700,7 +2753,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "AWS Solutions Architect": {
@@ -2776,7 +2831,8 @@
         "bronx": 0.94,
         "mono": 0.91,
         "pop": 0.87,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       }
     },
     "Azure Solutions Architect": {
@@ -2842,7 +2898,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.86,
@@ -2867,7 +2924,9 @@
         "pop": 0.85,
         "cast": 0.92,
         "berlin": 0.85,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.92,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 7
@@ -2931,7 +2990,8 @@
         "quartz": 0.92,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.9
+        "pop": 0.9,
+        "seoul": 0.98
       }
     },
     "AWS Cloud Engineer": {
@@ -3205,7 +3265,9 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Site Reliability Engineer (SRE)": {
@@ -3289,7 +3351,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "quartz": 0.93,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -3380,7 +3444,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Platform Engineer": {
@@ -3445,7 +3511,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.93,
@@ -3471,7 +3538,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Infrastructure Engineer": {
@@ -3555,7 +3624,9 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Kubernetes Engineer": {
@@ -3629,7 +3700,9 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Network Engineer": {
@@ -3821,7 +3894,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -3846,7 +3920,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.99
       }
     },
     "Linux System Administrator": {
@@ -4004,7 +4080,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.98,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Database Engineer": {
@@ -4093,7 +4171,9 @@
         "cast": 0.95,
         "quartz": 0.93,
         "bronx": 0.88,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -4308,7 +4388,8 @@
         "pop": 0.94,
         "quartz": 0.89,
         "bronx": 0.87,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -4377,7 +4458,9 @@
         "bronx": 0.87,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -4403,7 +4486,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.92,
+        "dubai": 0.95
       }
     },
     "DataOps Engineer": {
@@ -4713,7 +4798,8 @@
         "mono": 0.96,
         "pop": 0.86,
         "quartz": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 10,
@@ -4779,7 +4865,8 @@
         "bronx": 0.85,
         "mono": 0.95,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -4801,7 +4888,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Microservices Engineer": {
@@ -4915,7 +5004,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -4942,7 +5032,9 @@
         "cast": 0.92,
         "quartz": 0.93,
         "bronx": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -5038,7 +5130,8 @@
         "mono": 0.86,
         "pop": 0.86,
         "cast": 0.91,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       }
     },
     "Technical Architect": {
@@ -5115,7 +5208,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Solutions Architect": {
@@ -5195,7 +5290,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Technical Lead": {
@@ -5274,7 +5371,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99
       }
     },
     "Engineering Manager": {
@@ -5441,7 +5539,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "VP of Engineering": {
@@ -5519,7 +5619,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "dubai": 0.99
       }
     },
     "CTO": {
@@ -5602,7 +5703,8 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "dubai": 0.99
       }
     },
     "Help Desk Technician": {
@@ -5842,7 +5944,8 @@
         "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.88
+        "pop": 0.88,
+        "seoul": 0.99
       }
     },
     "IT Manager": {
@@ -5999,7 +6102,9 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.9,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "Chief Information Security Officer (CISO)": {
@@ -6082,7 +6187,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "bronx": 12
@@ -6165,7 +6272,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Junior DevOps Engineer": {
@@ -6299,7 +6408,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Senior QA Engineer": {
@@ -6383,7 +6494,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.98
       }
     },
     "Electrical Engineer": {
@@ -6693,7 +6806,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.94
       },
       "fitLetter": {
         "modern": 0.89,
@@ -6719,7 +6833,10 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.89,
+        "dubai": 0.95,
+        "manila": 0.98
       }
     }
   }

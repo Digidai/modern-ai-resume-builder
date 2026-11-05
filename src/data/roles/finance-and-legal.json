@@ -80,7 +80,9 @@
         "bronx": 0.85,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "FP&A Analyst": {
@@ -204,7 +206,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.96
       }
     },
     "Accountant": {
@@ -358,7 +361,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Bookkeeper": {
@@ -426,7 +431,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.98,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98
       }
     },
     "Accounts Payable Specialist": {
@@ -693,7 +699,8 @@
         "mono": 0.89,
         "pop": 0.89,
         "cast": 0.95,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -784,7 +791,9 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Controller": {
@@ -873,7 +882,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.89,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "Internal Auditor": {
@@ -939,7 +950,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98
       }
     },
     "Audit Manager": {
@@ -1003,7 +1015,9 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.99,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1029,7 +1043,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.99
       },
       "trimLetter": {
         "berlin": 9
@@ -1118,7 +1134,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Compliance Analyst": {
@@ -1169,7 +1187,8 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.88
+        "pop": 0.88,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.94,
@@ -1188,7 +1207,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.96
       }
     },
     "Risk Manager": {
@@ -1243,7 +1263,9 @@
         "quartz": 0.95,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.96,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.88,
@@ -1268,7 +1290,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "federal": 0.99,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.9,
+        "dubai": 0.98
       }
     },
     "Enterprise Risk Manager": {
@@ -1365,7 +1389,9 @@
         "cast": 0.94,
         "quartz": 0.89,
         "bronx": 0.87,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -1441,7 +1467,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95
       }
     },
     "Treasury Analyst": {
@@ -1507,7 +1534,8 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.98
       }
     },
     "Finance Manager": {
@@ -1587,7 +1615,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.99
       }
     },
     "Finance Director": {
@@ -1680,7 +1709,9 @@
         "mono": 0.87,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Finance Business Partner": {
@@ -1763,7 +1794,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "CFO": {
@@ -1858,7 +1891,9 @@
         "mono": 0.85,
         "pop": 0.9,
         "cast": 0.91,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Legal Counsel": {
@@ -2045,7 +2080,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Contract Analyst": {
@@ -2116,7 +2153,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.95
       }
     },
     "Legal Operations Manager": {
@@ -2340,7 +2378,8 @@
         "mono": 0.86,
         "pop": 0.87,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "dubai": 0.99
       }
     },
     "Regulatory Affairs Specialist": {
@@ -2461,7 +2500,8 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.88
+        "pop": 0.88,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -2487,7 +2527,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.92
       }
     },
     "Legal Assistant": {
@@ -2539,7 +2580,8 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.95,
@@ -2556,7 +2598,8 @@
         "quartz": 0.9,
         "bronx": 0.88,
         "mono": 0.92,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Litigation Support Specialist": {
@@ -2719,7 +2762,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.89,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Employment Counsel": {
@@ -2979,7 +3024,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.87,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.99
       }
     },
     "Accounting Manager": {
@@ -3075,7 +3121,9 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Audit Associate": {
@@ -3167,7 +3215,9 @@
         "cast": 0.93,
         "berlin": 0.85,
         "bronx": 0.85,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.94,
+        "dubai": 0.98
       },
       "trimLetter": {
         "berlin": 5,
@@ -3298,7 +3348,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       }
     },
     "Personal Banker": {
@@ -3418,7 +3469,8 @@
         "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.95,
@@ -3437,7 +3489,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.93
       }
     },
     "Claims Adjuster": {
@@ -3513,7 +3566,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "bronx": 0.87
+        "bronx": 0.87,
+        "seoul": 0.98
       },
       "trimLetter": {
         "bronx": 10
@@ -3568,7 +3622,8 @@
         "quartz": 0.92,
         "bronx": 0.87,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.96,
@@ -3589,7 +3644,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       }
     },
     "Associate Attorney": {
@@ -3722,7 +3778,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.88,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.95,
@@ -3743,7 +3800,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.93
       },
       "trimLetter": {
         "bronx": 10

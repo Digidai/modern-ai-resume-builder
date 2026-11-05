@@ -56,7 +56,8 @@
         "quartz": 0.88,
         "bronx": 0.86,
         "mono": 0.98,
-        "pop": 0.89
+        "pop": 0.89,
+        "seoul": 0.99
       }
     },
     "Correctional Officer": {
@@ -129,7 +130,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.88,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.99
       }
     },
     "911 Dispatcher": {
@@ -188,7 +190,8 @@
         "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.94,
@@ -209,7 +212,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.97,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.97
       },
       "trimLetter": {
         "bronx": 10
@@ -279,7 +283,8 @@
         "bronx": 0.86,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.93,
@@ -306,7 +311,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.97
       }
     },
     "Veteran": {
@@ -489,7 +496,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.93,
@@ -516,7 +524,8 @@
         "cast": 0.99,
         "quartz": 0.86,
         "bronx": 0.85,
-        "onyx": 0.96
+        "onyx": 0.96,
+        "seoul": 0.92
       },
       "trimLetter": {
         "quartz": 10,

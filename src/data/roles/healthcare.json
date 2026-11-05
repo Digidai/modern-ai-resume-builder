@@ -65,7 +65,8 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.98,
-        "federal": 0.99
+        "federal": 0.99,
+        "seoul": 0.95
       },
       "fitLetter": {
         "modern": 0.87,
@@ -96,7 +97,9 @@
         "cast": 0.94,
         "berlin": 0.85,
         "federal": 0.94,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.91,
+        "dubai": 0.94
       },
       "trimLetter": {
         "berlin": 11
@@ -166,7 +169,9 @@
         "noir": 0.99,
         "mono": 0.92,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -194,7 +199,10 @@
         "cast": 0.92,
         "berlin": 0.85,
         "federal": 0.96,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.9,
+        "dubai": 0.92,
+        "manila": 0.98
       },
       "trimLetter": {
         "berlin": 11
@@ -266,7 +274,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -293,7 +302,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95,
+        "dubai": 0.94
       }
     },
     "Nurse Practitioner": {
@@ -366,7 +377,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.93
       },
       "fitLetter": {
         "modern": 0.89,
@@ -394,7 +406,9 @@
         "cast": 0.96,
         "berlin": 0.85,
         "federal": 0.96,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.9,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 12
@@ -470,7 +484,8 @@
         "mono": 0.92,
         "pop": 0.89,
         "cast": 0.99,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.91,
@@ -498,7 +513,9 @@
         "cast": 0.93,
         "berlin": 0.85,
         "federal": 0.98,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.93,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 12
@@ -571,7 +588,8 @@
         "bronx": 0.91,
         "mono": 0.91,
         "pop": 0.87,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.92,
@@ -594,7 +612,8 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.92
       }
     },
     "Charge Nurse": {
@@ -651,7 +670,8 @@
         "ginto": 0.93,
         "bronx": 0.98,
         "mono": 0.93,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -673,7 +693,8 @@
         "noir": 0.98,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.95
       }
     },
     "Physician Assistant": {
@@ -739,7 +760,8 @@
         "bronx": 0.94,
         "mono": 0.94,
         "pop": 0.9,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.91,
@@ -762,7 +784,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Medical Assistant": {
@@ -822,7 +846,8 @@
         "bronx": 0.96,
         "mono": 0.92,
         "pop": 0.87,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.94,
@@ -844,7 +869,8 @@
         "mono": 0.86,
         "pop": 0.87,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.96
       }
     },
     "Medical Receptionist": {
@@ -931,7 +957,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97
       }
     },
     "Pharmacy Technician": {
@@ -1007,7 +1034,8 @@
         "bronx": 0.95,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "dubai": 0.99
       }
     },
     "Pharmacist": {
@@ -1069,7 +1097,8 @@
         "symmetry": 0.97,
         "bronx": 0.98,
         "mono": 0.92,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -1092,7 +1121,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.97
       }
     },
     "Physical Therapist": {
@@ -1165,7 +1196,8 @@
         "bronx": 0.91,
         "mono": 0.9,
         "pop": 0.91,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.89,
@@ -1193,7 +1225,9 @@
         "cast": 0.94,
         "berlin": 0.85,
         "federal": 0.98,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -1292,7 +1326,9 @@
         "mono": 0.86,
         "pop": 0.89,
         "cast": 0.96,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Radiologic Technologist": {
@@ -1368,7 +1404,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.96
       }
     },
     "Ultrasound Technician": {
@@ -1483,7 +1520,8 @@
         "bronx": 0.85,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -1508,7 +1546,9 @@
         "pop": 0.85,
         "cast": 0.93,
         "federal": 0.98,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.92,
+        "dubai": 0.99
       }
     },
     "Medical Laboratory Technician": {
@@ -1586,7 +1626,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.95
       }
     },
     "Medical Technologist": {
@@ -1751,7 +1792,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "Clinical Research Coordinator": {
@@ -1835,7 +1878,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Clinical Data Manager": {
@@ -1922,7 +1966,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Clinical Operations Manager": {
@@ -2016,7 +2062,9 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.87,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Healthcare Administrator": {
@@ -2158,7 +2206,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.87,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.88,
@@ -2186,7 +2235,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.95
       }
     },
     "Care Coordinator": {
@@ -2258,7 +2309,8 @@
         "bronx": 0.96,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.96
       }
     },
     "Patient Care Coordinator": {
@@ -2341,7 +2393,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Case Manager": {
@@ -2427,7 +2480,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "Social Worker": {
@@ -2497,7 +2552,8 @@
         "quartz": 0.94,
         "bronx": 0.87,
         "mono": 0.91,
-        "pop": 0.88
+        "pop": 0.88,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.87,
@@ -2522,7 +2578,9 @@
         "pop": 0.85,
         "cast": 0.96,
         "berlin": 0.85,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.92,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 12
@@ -2616,7 +2674,8 @@
         "mono": 0.87,
         "pop": 0.86,
         "cast": 0.96,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94
       }
     },
     "EMT (Emergency Medical Technician)": {
@@ -2777,7 +2836,9 @@
         "pop": 0.85,
         "cast": 0.99,
         "federal": 0.96,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94,
+        "dubai": 0.99
       }
     },
     "Dental Assistant": {
@@ -2939,7 +3000,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.99
       }
     },
     "Dentist": {
@@ -3032,7 +3094,9 @@
         "cast": 0.91,
         "quartz": 0.85,
         "bronx": 0.87,
-        "onyx": 0.98
+        "onyx": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -3130,7 +3194,8 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       }
     },
     "Medical Coder": {
@@ -3194,7 +3259,8 @@
         "quartz": 0.92,
         "bronx": 0.9,
         "mono": 0.91,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.92,
@@ -3218,7 +3284,9 @@
         "pop": 0.85,
         "cast": 0.98,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 7
@@ -3367,7 +3435,8 @@
         "bronx": 0.94,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.94
       },
       "fitLetter": {
         "modern": 0.89,
@@ -3393,7 +3462,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.9,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 9
@@ -3557,7 +3628,9 @@
         "bronx": 0.87,
         "mono": 0.86,
         "pop": 0.89,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "New Graduate Nurse": {
@@ -3613,7 +3686,8 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "mono": 0.96,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.98
       }
     },
     "ICU Nurse": {
@@ -3768,7 +3842,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.96
       }
     },
     "Travel Nurse": {
@@ -3852,7 +3927,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "federal": 0.96
+        "federal": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Labor and Delivery Nurse": {
@@ -3914,7 +3991,8 @@
         "quartz": 0.92,
         "bronx": 0.9,
         "mono": 0.95,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.92,
@@ -3937,7 +4015,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95
       }
     },
     "Operating Room Nurse": {
@@ -4015,7 +4094,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Director of Nursing": {
@@ -4166,7 +4246,8 @@
         "quartz": 0.94,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -4193,7 +4274,8 @@
         "pop": 0.85,
         "cast": 0.95,
         "berlin": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.94
       },
       "trimLetter": {
         "berlin": 9
@@ -4248,7 +4330,8 @@
         "quartz": 0.88,
         "bronx": 0.87,
         "mono": 0.98,
-        "pop": 0.89
+        "pop": 0.89,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.96,
@@ -4268,7 +4351,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.94
       }
     },
     "Speech-Language Pathologist": {
@@ -4341,7 +4425,8 @@
         "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.87,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.95
       },
       "fitLetter": {
         "modern": 0.87,
@@ -4368,7 +4453,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.94,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 10
@@ -4436,7 +4523,8 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.93
       },
       "fitLetter": {
         "modern": 0.9,
@@ -4464,7 +4552,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.93,
+        "dubai": 0.99
       },
       "trimLetter": {
         "berlin": 10
@@ -4758,7 +4848,8 @@
         "mono": 0.88,
         "pop": 0.88,
         "cast": 0.99,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.99
       }
     }
   }

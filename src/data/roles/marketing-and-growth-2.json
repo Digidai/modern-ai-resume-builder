@@ -187,7 +187,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -212,7 +213,9 @@
         "berlin": 0.89,
         "ginto": 0.92,
         "pop": 0.87,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.94,
+        "dubai": 0.98
       },
       "trimLetter": {
         "berlin": 8,
@@ -275,7 +278,8 @@
         "quartz": 0.94,
         "bronx": 0.92,
         "mono": 0.96,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.93,
@@ -298,7 +302,8 @@
         "pop": 0.85,
         "cast": 0.98,
         "berlin": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96
       },
       "trimLetter": {
         "berlin": 8

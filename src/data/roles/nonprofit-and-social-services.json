@@ -116,7 +116,8 @@
         "mono": 0.9,
         "pop": 0.9,
         "cast": 0.95,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.91,
@@ -141,7 +142,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94,
+        "dubai": 0.99
       }
     },
     "Licensed Master Social Worker (LMSW)": {
@@ -286,7 +289,8 @@
         "bronx": 0.89,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.96
       }
     },
     "Child Welfare Caseworker": {
@@ -498,7 +502,8 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.86,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       }
     },
     "Direct Support Professional": {
@@ -631,7 +636,8 @@
         "bronx": 0.88,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.96,
@@ -653,7 +659,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.94
       }
     },
     "Victim Advocate": {
@@ -722,7 +729,8 @@
         "bronx": 0.94,
         "mono": 0.92,
         "pop": 0.87,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       }
     },
     "Housing Navigator": {
@@ -799,7 +807,8 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       }
     },
     "Residential Counselor": {
@@ -881,7 +890,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99
       }
     },
     "Community Health Worker": {
@@ -1038,7 +1048,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -1105,7 +1117,8 @@
         "bronx": 0.89,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1130,7 +1143,10 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.95,
+        "manila": 0.99
       },
       "trimLetter": {
         "berlin": 6
@@ -1217,7 +1233,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.94
       }
     },
     "Grant Writer": {
@@ -1451,7 +1468,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Major Gifts Officer": {
@@ -1535,7 +1554,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Development Director": {
@@ -1613,7 +1634,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98
       }
     },
     "Program Director": {
@@ -1688,7 +1710,8 @@
         "bronx": 0.9,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       }
     },
     "Social Services Director": {
@@ -1770,7 +1793,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Executive Director": {

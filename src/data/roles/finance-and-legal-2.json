@@ -194,7 +194,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.99,
-        "quartz": 0.85
+        "quartz": 0.85,
+        "seoul": 0.95
       },
       "trimLetter": {
         "quartz": 7
@@ -406,7 +407,8 @@
         "cast": 0.99,
         "quartz": 0.92,
         "munich": 0.98,
-        "onyx": 0.99
+        "onyx": 0.99,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 10
@@ -748,7 +750,8 @@
         "quartz": 0.85,
         "bronx": 0.85,
         "mono": 0.91,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.99
       }
     },
     "Notary Public": {

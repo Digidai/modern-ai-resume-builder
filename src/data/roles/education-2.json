@@ -131,7 +131,8 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.95
       }
     },
     "Science Teacher": {
@@ -213,7 +214,8 @@
         "cast": 0.94,
         "quartz": 0.85,
         "bronx": 0.87,
-        "onyx": 0.99
+        "onyx": 0.99,
+        "seoul": 0.98
       },
       "trimLetter": {
         "quartz": 10,
@@ -725,7 +727,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.94
       }
     },
     "Coding Bootcamp Instructor": {

@@ -64,7 +64,9 @@
         "quartz": 0.91,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.94,
+        "dubai": 0.99
       }
     },
     "HR Generalist": {
@@ -139,7 +141,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.95
       }
     },
     "HR Business Partner": {
@@ -271,7 +274,8 @@
         "quartz": 0.97,
         "bronx": 0.9,
         "mono": 0.9,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.95,
@@ -295,7 +299,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.96
       }
     },
     "HR Assistant": {
@@ -433,7 +438,8 @@
         "mono": 0.88,
         "pop": 0.86,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95
       }
     },
     "Senior Recruiter": {
@@ -707,7 +713,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.86,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.98
       }
     },
     "Talent Acquisition Specialist": {
@@ -780,7 +787,8 @@
         "mono": 0.89,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       }
     },
     "Talent Acquisition Manager": {
@@ -865,7 +873,8 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.96
       }
     },
     "Recruiting Manager": {
@@ -1013,7 +1022,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.96
       }
     },
     "People Operations Specialist": {
@@ -1069,7 +1079,8 @@
         "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.94,
@@ -1090,7 +1101,8 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.96
       }
     },
     "People Operations Director": {
@@ -1384,7 +1396,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.96
       }
     },
     "HRIS Manager": {
@@ -1462,7 +1475,8 @@
         "bronx": 0.87,
         "mono": 0.86,
         "pop": 0.86,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98
       }
     },
     "Compensation & Benefits Specialist": {
@@ -1601,7 +1615,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.95
       }
     },
     "Benefits Manager": {
@@ -1680,7 +1695,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.97
       }
     },
     "Payroll Specialist": {
@@ -1896,7 +1912,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.91,
@@ -1922,7 +1939,9 @@
         "mono": 0.85,
         "pop": 0.87,
         "cast": 0.91,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "Learning and Development Specialist": {
@@ -2052,7 +2071,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98
       }
     },
     "Organizational Development Consultant": {
@@ -2141,7 +2161,9 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.86,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.94,
+        "dubai": 0.99
       }
     },
     "Employee Relations Specialist": {
@@ -2209,7 +2231,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.97
       }
     },
     "DEI Manager": {
@@ -2270,7 +2293,8 @@
         "symmetry": 0.98,
         "bronx": 0.93,
         "mono": 0.9,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -2293,7 +2317,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.92,
+        "dubai": 0.97
       }
     },
     "Office Manager": {
@@ -2436,7 +2462,8 @@
         "bronx": 0.86,
         "mono": 0.94,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.98
       }
     },
     "Executive Assistant": {
@@ -2594,7 +2621,8 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "Administrative Assistant": {
@@ -2644,7 +2672,8 @@
         "quartz": 0.97,
         "bronx": 0.92,
         "mono": 0.95,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.96,
@@ -2661,7 +2690,8 @@
         "bronx": 0.88,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97
       }
     },
     "Operations Manager": {
@@ -2803,7 +2833,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.98
       }
     },
     "Chief People Officer": {
@@ -2965,7 +2996,9 @@
         "bronx": 0.85,
         "mono": 0.85,
         "pop": 0.87,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "HR Intern": {
@@ -3015,7 +3048,8 @@
         "quartz": 0.87,
         "bronx": 0.85,
         "mono": 0.97,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.98,
@@ -3036,7 +3070,8 @@
         "moda": 0.94,
         "mono": 0.91,
         "pop": 0.89,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.94
       }
     },
     "HR Specialist": {
@@ -3186,7 +3221,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.97
       }
     },
     "VP of Human Resources": {
@@ -3260,7 +3297,8 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.88,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.86,
@@ -3286,7 +3324,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.92,
+        "dubai": 0.95
       }
     },
     "Onboarding Specialist": {
@@ -3412,7 +3452,8 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97
       }
     },
     "Employee Engagement Manager": {
@@ -3492,7 +3533,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.96,
+        "dubai": 0.99
       }
     },
     "Receptionist": {
@@ -3629,7 +3672,8 @@
         "pop": 0.87,
         "cast": 0.96,
         "bronx": 0.85,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97
       },
       "trimLetter": {
         "bronx": 10
@@ -3770,7 +3814,8 @@
         "cast": 0.96,
         "quartz": 0.93,
         "bronx": 0.85,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "trimLetter": {
         "quartz": 10,

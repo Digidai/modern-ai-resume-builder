@@ -124,7 +124,8 @@
         "bronx": 0.87,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.94
+        "cast": 0.94,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -149,7 +150,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Lead Product Designer": {
@@ -232,7 +235,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Principal Product Designer": {
@@ -556,7 +561,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.91,
-        "quartz": 0.94
+        "quartz": 0.94,
+        "seoul": 0.98
       },
       "trimLetter": {
         "quartz": 10
@@ -778,7 +784,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "quartz": 0.97
+        "quartz": 0.97,
+        "seoul": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -924,7 +931,9 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "UI/UX Designer": {
@@ -998,7 +1007,8 @@
         "moda": 0.99,
         "mono": 0.93,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       }
     },
     "Interaction Designer": {
@@ -1543,7 +1553,8 @@
         "mono": 0.93,
         "pop": 0.85,
         "cast": 0.92,
-        "iron": 0.9
+        "iron": 0.9,
+        "seoul": 0.98
       },
       "trimLetter": {
         "iron": 8
@@ -1737,7 +1748,8 @@
         "mono": 0.92,
         "cast": 0.94,
         "iron": 0.9,
-        "pop": 0.92
+        "pop": 0.92,
+        "seoul": 0.98
       },
       "trimLetter": {
         "iron": 8,
@@ -1866,7 +1878,8 @@
         "quartz": 0.89,
         "bronx": 0.89,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Design Manager": {
@@ -1946,7 +1959,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Product Design Manager": {
@@ -2026,7 +2041,9 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Design Operations Manager": {
@@ -2111,7 +2128,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Design Director": {
@@ -2268,7 +2287,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Product Manager": {
@@ -2400,7 +2421,9 @@
         "pop": 0.86,
         "cast": 0.9,
         "quartz": 0.85,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "quartz": 7,
@@ -2643,7 +2666,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Principal Product Manager": {
@@ -2723,7 +2748,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.97
       }
     },
     "Director of Product": {
@@ -2801,7 +2827,9 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.91,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -2965,7 +2993,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -2995,7 +3024,10 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.95,
+        "dubai": 0.95,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -3308,7 +3340,8 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.96
       }
     },
     "Product Owner": {
@@ -3445,7 +3478,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Product Operations Analyst": {
@@ -3578,7 +3613,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.96,
-        "iron": 0.85
+        "iron": 0.85,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -3713,7 +3750,9 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Chief Product Officer (CPO)": {
@@ -3788,7 +3827,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.88,
-        "munich": 0.98
+        "munich": 0.98,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.87,
@@ -3819,7 +3859,10 @@
         "pop": 0.85,
         "cast": 0.87,
         "berlin": 0.85,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.94,
+        "dubai": 0.93,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -4007,7 +4050,8 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Senior UX Researcher": {
@@ -4070,7 +4114,8 @@
         "bronx": 0.87,
         "mono": 0.95,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97
       },
       "fitLetter": {
         "modern": 0.9,
@@ -4095,7 +4140,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.9,
-        "berlin": 0.85
+        "berlin": 0.85,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -4364,7 +4411,8 @@
         "quartz": 0.86,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.98
       }
     },
     "Product Management Intern": {
@@ -4504,7 +4552,9 @@
         "bronx": 0.86,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     }
   }

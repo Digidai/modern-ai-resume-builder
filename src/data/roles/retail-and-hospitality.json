@@ -217,7 +217,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "iron": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -352,7 +354,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.97
       }
     },
     "Shift Supervisor": {
@@ -422,7 +425,8 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.94,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.99
       },
       "trimLetter": {
         "bronx": 1
@@ -558,7 +562,8 @@
         "bronx": 0.85,
         "mono": 0.94,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.99
       }
     },
     "Restaurant Manager": {
@@ -634,7 +639,8 @@
         "bronx": 0.88,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.98
       }
     },
     "Restaurant Supervisor": {
@@ -695,7 +701,8 @@
         "quartz": 0.89,
         "bronx": 0.85,
         "mono": 0.92,
-        "pop": 0.87
+        "pop": 0.87,
+        "seoul": 0.99
       }
     },
     "Chef": {
@@ -780,7 +787,9 @@
         "pop": 0.85,
         "cast": 0.9,
         "iron": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96,
+        "dubai": 0.97
       },
       "trimLetter": {
         "iron": 5
@@ -850,7 +859,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -878,7 +888,10 @@
         "cast": 0.91,
         "berlin": 0.85,
         "federal": 0.99,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.93,
+        "dubai": 0.95,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 2
@@ -1010,7 +1023,8 @@
         "mono": 0.94,
         "pop": 0.87,
         "cast": 0.98,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.99
       },
       "trimLetter": {
         "bronx": 1
@@ -1093,7 +1107,8 @@
         "bronx": 0.89,
         "mono": 0.86,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.99
       }
     },
     "Catering Manager": {
@@ -1413,7 +1428,9 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.96,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Housekeeper": {
@@ -1480,7 +1497,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.98
+        "cast": 0.98,
+        "seoul": 0.99
       }
     },
     "Housekeeping Supervisor": {
@@ -1621,7 +1639,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.97
+        "cast": 0.97,
+        "seoul": 0.97
       }
     },
     "Concierge": {
@@ -1692,7 +1711,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98
       }
     },
     "Reservation Agent": {
@@ -2014,7 +2034,9 @@
         "pop": 0.85,
         "cast": 0.95,
         "iron": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "trimLetter": {
         "iron": 6
@@ -2265,7 +2287,8 @@
         "bronx": 0.86,
         "mono": 0.95,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.88,
@@ -2291,7 +2314,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 6
@@ -2365,7 +2390,8 @@
         "mono": 0.92,
         "pop": 0.85,
         "cast": 0.98,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.96
       }
     },
     "District Manager": {
@@ -2447,7 +2473,9 @@
         "bronx": 0.85,
         "mono": 0.87,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Stock Associate": {
@@ -2519,7 +2547,8 @@
         "mono": 0.94,
         "pop": 0.85,
         "cast": 0.98,
-        "bronx": 0.85
+        "bronx": 0.85,
+        "seoul": 0.97
       },
       "trimLetter": {
         "bronx": 1
@@ -2594,7 +2623,8 @@
         "bronx": 0.85,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98
       }
     },
     "Hotel Sales Manager": {

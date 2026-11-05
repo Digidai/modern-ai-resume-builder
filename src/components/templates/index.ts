@@ -49,3 +49,6 @@ export * from './MunichTemplate';
 export * from './OnyxTemplate';
 export * from './RivieraTemplate';
 export * from './SummitTemplate';
+export * from './SeoulTemplate';
+export * from './DubaiTemplate';
+export * from './ManilaTemplate';

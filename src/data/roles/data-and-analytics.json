@@ -77,7 +77,9 @@
         "mono": 0.88,
         "pop": 0.88,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94,
+        "dubai": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -104,7 +106,10 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "munich": 0.92
+        "munich": 0.92,
+        "seoul": 0.93,
+        "dubai": 0.92,
+        "manila": 0.97
       },
       "trimLetter": {
         "berlin": 11
@@ -197,7 +202,8 @@
         "mono": 0.87,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.97
+        "munich": 0.97,
+        "dubai": 0.99
       }
     },
     "Applied Scientist": {
@@ -271,7 +277,8 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -297,7 +304,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.93
+        "munich": 0.93,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Machine Learning Scientist": {
@@ -374,7 +383,8 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94
       },
       "fitLetter": {
         "modern": 0.91,
@@ -401,7 +411,9 @@
         "pop": 0.85,
         "cast": 0.89,
         "berlin": 0.85,
-        "munich": 0.92
+        "munich": 0.92,
+        "seoul": 0.93,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 11
@@ -489,7 +501,9 @@
         "mono": 0.88,
         "pop": 0.87,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Senior Data Analyst": {
@@ -552,7 +566,8 @@
         "bronx": 0.89,
         "mono": 0.9,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.91,
@@ -576,7 +591,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.95,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95
       }
     },
     "Product Analyst": {
@@ -667,7 +683,9 @@
         "noir": 0.98,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Marketing Analyst": {
@@ -830,7 +848,9 @@
         "bronx": 0.86,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "BI Analyst": {
@@ -914,7 +934,9 @@
         "bronx": 0.91,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Business Intelligence Analyst": {
@@ -1005,7 +1027,9 @@
         "mono": 0.85,
         "pop": 0.85,
         "cast": 0.87,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Reporting Analyst": {
@@ -1065,7 +1089,8 @@
         "bronx": 0.92,
         "mono": 0.96,
         "pop": 0.86,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.9,
@@ -1087,7 +1112,8 @@
         "mono": 0.92,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Revenue Analyst": {
@@ -1172,7 +1198,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Growth Analyst": {
@@ -1249,7 +1277,9 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "Customer Insights Analyst": {
@@ -1313,7 +1343,8 @@
         "bronx": 0.87,
         "mono": 0.93,
         "pop": 0.86,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -1337,7 +1368,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.9,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.93,
+        "dubai": 0.97
       }
     },
     "Experimentation Analyst": {
@@ -1429,7 +1462,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.97
       }
     },
     "BI Developer": {
@@ -1509,7 +1544,9 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Analytics Engineer": {
@@ -1595,7 +1632,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Analytics Lead": {
@@ -1660,7 +1699,8 @@
         "bronx": 0.87,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -1685,7 +1725,9 @@
         "mono": 0.86,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.95,
+        "dubai": 0.99
       }
     },
     "Data Architect": {
@@ -1780,7 +1822,9 @@
         "mono": 0.85,
         "pop": 0.88,
         "cast": 0.91,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Data Modeler": {
@@ -1859,7 +1903,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.97
       }
     },
     "Statistician": {
@@ -1931,7 +1976,8 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.95
       },
       "fitLetter": {
         "modern": 0.92,
@@ -1959,7 +2005,9 @@
         "cast": 0.89,
         "berlin": 0.85,
         "quartz": 0.9,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.91,
+        "dubai": 0.97
       },
       "trimLetter": {
         "berlin": 10,
@@ -2045,7 +2093,8 @@
         "bronx": 0.9,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97
       }
     },
     "Data Quality Analyst": {
@@ -2129,7 +2178,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.95,
+        "dubai": 0.95
       }
     },
     "Data Quality Engineer": {
@@ -2217,7 +2268,9 @@
         "noir": 0.98,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Data Governance Analyst": {
@@ -2389,7 +2442,9 @@
         "bronx": 0.85,
         "mono": 0.9,
         "pop": 0.9,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.98,
+        "dubai": 0.97
       }
     },
     "Quantitative Analyst": {
@@ -2486,7 +2541,9 @@
         "pop": 0.87,
         "cast": 0.92,
         "quartz": 0.88,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10
@@ -2580,7 +2637,9 @@
         "mono": 0.88,
         "pop": 0.88,
         "cast": 0.94,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Decision Scientist": {
@@ -2674,7 +2733,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.98,
+        "dubai": 0.97
       }
     },
     "Risk Analyst": {
@@ -2757,7 +2818,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Fraud Analyst": {
@@ -2838,7 +2901,8 @@
         "bronx": 0.86,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97
       }
     },
     "Pricing Analyst": {
@@ -2922,7 +2986,8 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97
       }
     },
     "Data Visualization Specialist": {
@@ -3083,7 +3148,9 @@
         "cast": 0.9,
         "quartz": 0.94,
         "bronx": 0.85,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.97,
+        "dubai": 0.97
       },
       "trimLetter": {
         "quartz": 10,
@@ -3182,7 +3249,9 @@
         "mono": 0.85,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.99,
+        "dubai": 0.99
       }
     },
     "Data Science Lead": {
@@ -3272,7 +3341,9 @@
         "mono": 0.9,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Data Science Manager": {
@@ -3364,7 +3435,9 @@
         "mono": 0.86,
         "pop": 0.9,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.99
       }
     },
     "Data Science Director": {
@@ -3437,7 +3510,8 @@
         "bronx": 0.85,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.91
+        "cast": 0.91,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -3468,7 +3542,10 @@
         "berlin": 0.85,
         "quartz": 0.89,
         "bronx": 0.88,
-        "munich": 0.96
+        "munich": 0.96,
+        "seoul": 0.94,
+        "dubai": 0.95,
+        "manila": 0.99
       },
       "trimLetter": {
         "berlin": 10,
@@ -3541,7 +3618,9 @@
         "mono": 0.91,
         "pop": 0.85,
         "cast": 0.97,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.9,
@@ -3568,7 +3647,9 @@
         "pop": 0.85,
         "cast": 0.91,
         "berlin": 0.85,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.93,
+        "dubai": 0.95
       },
       "trimLetter": {
         "berlin": 6
@@ -3663,7 +3744,9 @@
         "mono": 0.86,
         "pop": 0.86,
         "cast": 0.93,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.94,
+        "dubai": 0.97
       }
     },
     "Director of Data": {
@@ -3744,7 +3827,9 @@
         "bronx": 0.85,
         "mono": 0.91,
         "pop": 0.85,
-        "cast": 0.93
+        "cast": 0.93,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Data Analyst Intern": {
@@ -3811,7 +3896,8 @@
         "bronx": 0.88,
         "mono": 0.92,
         "pop": 0.87,
-        "cast": 0.96
+        "cast": 0.96,
+        "seoul": 0.96
       },
       "fitLetter": {
         "modern": 0.93,
@@ -3837,7 +3923,9 @@
         "mono": 0.88,
         "pop": 0.85,
         "cast": 0.91,
-        "munich": 0.95
+        "munich": 0.95,
+        "seoul": 0.92,
+        "dubai": 0.97
       }
     },
     "Junior Data Analyst": {
@@ -3921,7 +4009,9 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.86,
-        "cast": 0.95
+        "cast": 0.95,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Data Science Intern": {
@@ -4015,7 +4105,9 @@
         "mono": 0.86,
         "pop": 0.88,
         "cast": 0.89,
-        "munich": 0.97
+        "munich": 0.97,
+        "seoul": 0.97,
+        "dubai": 0.99
       }
     },
     "Junior Data Scientist": {
@@ -4098,7 +4190,9 @@
         "noir": 0.96,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.95,
+        "dubai": 0.97
       }
     },
     "Staff Data Scientist": {
@@ -4193,7 +4287,9 @@
         "mono": 0.85,
         "pop": 0.88,
         "cast": 0.89,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.97,
+        "dubai": 0.95
       }
     },
     "Principal Data Scientist": {
@@ -4346,7 +4442,9 @@
         "bronx": 0.88,
         "mono": 0.89,
         "pop": 0.85,
-        "cast": 0.9
+        "cast": 0.9,
+        "seoul": 0.97,
+        "dubai": 0.97
       }
     },
     "Healthcare Data Analyst": {
@@ -4420,7 +4518,9 @@
         "mono": 0.9,
         "pop": 0.87,
         "cast": 0.93,
-        "munich": 0.99
+        "munich": 0.99,
+        "seoul": 0.98,
+        "dubai": 0.99
       },
       "fitLetter": {
         "modern": 0.89,
@@ -4448,7 +4548,10 @@
         "cast": 0.89,
         "berlin": 0.85,
         "federal": 0.97,
-        "munich": 0.94
+        "munich": 0.94,
+        "seoul": 0.92,
+        "dubai": 0.95,
+        "manila": 0.99
       },
       "trimLetter": {
         "berlin": 10
@@ -4531,7 +4634,8 @@
         "bronx": 0.85,
         "mono": 0.88,
         "pop": 0.85,
-        "cast": 0.92
+        "cast": 0.92,
+        "seoul": 0.97
       }
     },
     "Tableau Developer": {
@@ -4593,7 +4697,8 @@
         "bronx": 0.89,
         "mono": 0.92,
         "pop": 0.85,
-        "cast": 0.99
+        "cast": 0.99,
+        "seoul": 0.98
       },
       "fitLetter": {
         "modern": 0.93,
@@ -4617,7 +4722,9 @@
         "mono": 0.89,
         "pop": 0.85,
         "cast": 0.93,
-        "munich": 0.98
+        "munich": 0.98,
+        "seoul": 0.94,
+        "dubai": 0.99
       }
     }
   }

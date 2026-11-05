@@ -61,7 +61,8 @@
         "quartz": 0.9,
         "bronx": 0.85,
         "mono": 0.94,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.98
       }
     },
     "Robotics Engineer": {
@@ -238,7 +239,8 @@
         "quartz": 0.94,
         "bronx": 0.88,
         "mono": 0.98,
-        "pop": 0.86
+        "pop": 0.86,
+        "seoul": 0.99
       },
       "fitLetter": {
         "modern": 0.93,
@@ -258,7 +260,8 @@
         "quartz": 0.88,
         "bronx": 0.85,
         "mono": 0.93,
-        "pop": 0.85
+        "pop": 0.85,
+        "seoul": 0.95
       }
     },
     "SAP Consultant": {
