@@ -8,6 +8,7 @@ import { Button } from './Button';
 import { Textarea } from './Input';
 import { ScaledResumePreview } from './ScaledResumePreview';
 import { TaskProgress } from './TaskProgress';
+import { toPortraitDataUrl } from './PhotoField';
 import { UploadIcon, XIcon } from './Icons';
 import { looksLikeLatex, readResumeFile, ResumeFileError, tidyResumeText, type ResumeSource } from '../utils/resumeFile';
 
@@ -107,6 +108,9 @@ export const ResumeImportDialog: React.FC<{
   const [latex, setLatex] = useState(false);
   const [reading, setReading] = useState('');
   const [dragging, setDragging] = useState(false);
+  /** The headshot found in the last file read, as the editor stores photos, and whether to import it. */
+  const [photo, setPhoto] = useState('');
+  const [keepPhoto, setKeepPhoto] = useState(true);
 
 
   useEffect(() => {
@@ -185,6 +189,8 @@ export const ResumeImportDialog: React.FC<{
       setReading('');
     }
     setSource(read.text);
+    setPhoto(read.photo ? await toPortraitDataUrl(read.photo).catch(() => '') : '');
+    setKeepPhoto(true);
     await convert(read);
   };
 
@@ -192,7 +198,12 @@ export const ResumeImportDialog: React.FC<{
     if (!busy) onClose();
   };
 
-  const switchedTemplate = result && result.templateId !== current.templateId ? getTemplateById(result.templateId)?.name : null;
+  // A photo needs a photo template; Essential is the plainest one. Academic CVs keep Scholar.
+  const imported =
+    result && photo && keepPhoto
+      ? { ...result, photo, templateId: getTemplateById(result.templateId)?.photo || result.templateId !== current.templateId ? result.templateId : 'essential' }
+      : result;
+  const switchedTemplate = imported && imported.templateId !== current.templateId ? getTemplateById(imported.templateId) : null;
 
   return (
     <dialog
@@ -275,12 +286,25 @@ export const ResumeImportDialog: React.FC<{
         ) : (
           <div className="grid min-h-0 flex-1 gap-5 overflow-hidden px-5 py-4 md:grid-cols-[minmax(0,1fr)_17rem]">
             <div className="custom-scrollbar min-h-0 overflow-y-auto rounded-lg bg-tint p-4" data-testid="resume-import-preview">
-              <ScaledResumePreview data={result} mode="page" view="pages" />
+              <ScaledResumePreview data={imported ?? result} mode="page" view="pages" />
             </div>
             <div className="flex flex-col gap-3 text-sm">
               <p className="font-medium">{result.fullName || 'Unnamed resume'}</p>
               <p className="text-muted">{describe(result) || 'No sections found.'}</p>
-              {switchedTemplate && <p className="text-muted">Shown in {switchedTemplate} so the academic sections appear. You can change the template afterwards.</p>}
+              {photo && (
+                <label className="flex items-center gap-3 rounded-lg border border-rule p-2">
+                  <img src={photo} alt="Photo found in your file" className="h-14 w-10.5 shrink-0 rounded object-cover" />
+                  <span className="flex flex-1 items-center gap-2">
+                    <input type="checkbox" checked={keepPhoto} onChange={(event) => setKeepPhoto(event.target.checked)} className="h-4 w-4 accent-[var(--site-ink)]" />
+                    Use the photo from your file
+                  </span>
+                </label>
+              )}
+              {switchedTemplate && (
+                <p className="text-muted">
+                  Shown in {switchedTemplate.name} so {switchedTemplate.photo ? 'the photo appears' : 'the academic sections appear'}. You can change the template afterwards.
+                </p>
+              )}
               <p className="rounded-lg border border-amber-300/60 bg-amber-50 px-3 py-2 text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
                 Check every entry: AI can misread columns, tables and custom macros. Importing replaces your current resume; Undo brings it back.
               </p>
@@ -288,7 +312,8 @@ export const ResumeImportDialog: React.FC<{
                 <Button
                   onClick={() => {
                     setSource('');
-                    onImport(result);
+                    setPhoto('');
+                    onImport(imported ?? result);
                   }}
                 >
                   Replace my resume

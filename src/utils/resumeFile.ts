@@ -6,7 +6,12 @@ export type ResumeSourceKind = 'latex' | 'text';
 export interface ResumeSource {
   kind: ResumeSourceKind;
   text: string;
+  /** The headshot found in a PDF or Word file, as an image; it is never sent to the AI. */
+  photo?: Blob;
 }
+
+/** A displayed image that can be a headshot: portrait to square, between 0.5 and 3.5 inches wide (sizes in points). */
+const isHeadshotBox = (width: number, height: number) => width >= 36 && width <= 252 && height / width >= 0.75 && height / width <= 1.6;
 
 /** Why a file can't be read; the dialog shows the message. */
 export class ResumeFileError extends Error {}
@@ -36,7 +41,65 @@ const withLinks = (text: string, urls: string[]): string => {
   return extra.length ? `${text}\n\nLinks in the file:\n${extra.join('\n')}` : text;
 };
 
-const pdfText = async (file: File): Promise<string> => {
+type PdfJs = typeof import('pdfjs-dist/legacy/build/pdf.mjs');
+type PdfPage = Awaited<ReturnType<Awaited<ReturnType<PdfJs['getDocument']>['promise']>['getPage']>>;
+
+/** The decoded pixels of a pdf.js image object as a PNG; null for 1-bit images and masks. */
+const pdfImageBlob = async (pdfjs: PdfJs, image: { width: number; height: number; bitmap?: ImageBitmap; data?: Uint8ClampedArray; kind?: number }): Promise<Blob | null> => {
+  const canvas = document.createElement('canvas');
+  canvas.width = image.width;
+  canvas.height = image.height;
+  const context = canvas.getContext('2d')!;
+  if (image.bitmap) context.drawImage(image.bitmap, 0, 0);
+  else if (image.data && (image.kind === pdfjs.ImageKind.RGBA_32BPP || image.kind === pdfjs.ImageKind.RGB_24BPP)) {
+    const rgba = new Uint8ClampedArray(image.width * image.height * 4);
+    if (image.kind === pdfjs.ImageKind.RGBA_32BPP) rgba.set(image.data.subarray(0, rgba.length));
+    else for (let i = 0, j = 0; j < rgba.length; i += 3, j += 4) rgba.set([image.data[i], image.data[i + 1], image.data[i + 2], 255], j);
+    context.putImageData(new ImageData(rgba, image.width, image.height), 0, 0);
+  } else return null;
+  return new Promise((resolve) => canvas.toBlob(resolve, 'image/png'));
+};
+
+/**
+ * The headshot on a PDF page: the largest image drawn portrait to square and 0.5–3.5 in wide in the top
+ * half of the page. Logos, icons and full-page backgrounds fall outside that; the preview shows the pick.
+ */
+const pdfPhoto = async (pdfjs: PdfJs, page: PdfPage): Promise<Blob | null> => {
+  const { fnArray, argsArray } = await page.getOperatorList();
+  const [, , , pageTop] = page.view;
+  let ctm = [1, 0, 0, 1, 0, 0];
+  const stack: number[][] = [];
+  let best: { id: string; area: number } | null = null;
+  for (let i = 0; i < fnArray.length; i += 1) {
+    const fn = fnArray[i];
+    const args = argsArray[i];
+    if (fn === pdfjs.OPS.save) stack.push(ctm);
+    else if (fn === pdfjs.OPS.restore) ctm = stack.pop() ?? ctm;
+    else if (fn === pdfjs.OPS.transform) ctm = pdfjs.Util.transform(ctm, args);
+    else if (fn === pdfjs.OPS.paintFormXObjectBegin) {
+      stack.push(ctm);
+      if (Array.isArray(args[0])) ctm = pdfjs.Util.transform(ctm, args[0]);
+    } else if (fn === pdfjs.OPS.paintFormXObjectEnd) ctm = stack.pop() ?? ctm;
+    else if (fn === pdfjs.OPS.paintImageXObject && typeof args[0] === 'string') {
+      // An image fills the unit square of the current transform.
+      const [a, b, c, d, , f] = ctm;
+      const width = Math.hypot(a, b);
+      const height = Math.hypot(c, d);
+      const top = Math.max(f, f + b, f + d, f + b + d);
+      if (isHeadshotBox(width, height) && top > pageTop / 2 && (!best || width * height > best.area)) best = { id: args[0], area: width * height };
+    }
+  }
+  if (!best) return null;
+  const { id } = best;
+  const objects = id.startsWith('g_') ? page.commonObjs : page.objs;
+  const image = await new Promise<Parameters<typeof pdfImageBlob>[1] | null>((resolve) => {
+    objects.get(id, resolve);
+    setTimeout(() => resolve(null), 3000);
+  });
+  return image && image.width >= 64 && image.height >= 64 ? pdfImageBlob(pdfjs, image) : null;
+};
+
+const pdfText = async (file: File): Promise<{ text: string; photo: Blob | null }> => {
   const [pdfjs, { default: workerUrl }] = await Promise.all([import('pdfjs-dist/legacy/build/pdf.mjs'), import('pdfjs-dist/legacy/build/pdf.worker.min.mjs?url')]);
   pdfjs.GlobalWorkerOptions.workerSrc = workerUrl;
   const task = pdfjs.getDocument({ data: new Uint8Array(await file.arrayBuffer()), disableFontFace: true });
@@ -49,6 +112,7 @@ const pdfText = async (file: File): Promise<string> => {
   }
   const pages: string[] = [];
   const urls: string[] = [];
+  let photo: Blob | null = null;
   try {
     for (let n = 1; n <= Math.min(pdf.numPages, 12); n += 1) {
       const page = await pdf.getPage(n);
@@ -83,6 +147,8 @@ const pdfText = async (file: File): Promise<string> => {
       for (const annotation of await page.getAnnotations()) {
         if (typeof annotation.url === 'string') urls.push(annotation.url);
       }
+      // A photo that can't be read just isn't imported.
+      if (n === 1) photo = await pdfPhoto(pdfjs, page).catch(() => null);
       page.cleanup();
     }
   } finally {
@@ -92,11 +158,11 @@ const pdfText = async (file: File): Promise<string> => {
   if (text.replace(/\s/g, '').length < 40) {
     throw new ResumeFileError('This PDF has no text to read; it is probably a scan or an image. Export it again from Word or Google Docs, or paste the text.');
   }
-  return withLinks(text, urls);
+  return { text: withLinks(text, urls), photo };
 };
 
 /** One file from a .zip (a .docx is one), inflated with the browser's DecompressionStream. */
-const unzipEntry = async (bytes: Uint8Array, name: string): Promise<string | null> => {
+const unzipEntry = async (bytes: Uint8Array, name: string): Promise<Uint8Array | null> => {
   const view = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
   let end = bytes.length - 22;
   while (end >= 0 && view.getUint32(end, true) !== 0x06054b50) end -= 1;
@@ -113,13 +179,18 @@ const unzipEntry = async (bytes: Uint8Array, name: string): Promise<string | nul
     if (decoder.decode(bytes.subarray(at + 46, at + 46 + nameLength)) === name) {
       const start = local + 30 + view.getUint16(local + 26, true) + view.getUint16(local + 28, true);
       const data = bytes.subarray(start, start + size);
-      if (method === 0) return decoder.decode(data);
+      if (method === 0) return data;
       if (method !== 8) return null;
-      return new Response(new Response(data.slice()).body!.pipeThrough(new DecompressionStream('deflate-raw'))).text();
+      return new Uint8Array(await new Response(new Response(data.slice()).body!.pipeThrough(new DecompressionStream('deflate-raw'))).arrayBuffer());
     }
     at += 46 + skip;
   }
   return null;
+};
+
+const unzipText = async (bytes: Uint8Array, name: string) => {
+  const data = await unzipEntry(bytes, name);
+  return data && new TextDecoder().decode(data);
 };
 
 const W = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
@@ -127,9 +198,9 @@ const R = 'http://schemas.openxmlformats.org/officeDocument/2006/relationships';
 
 /** The text of a .docx: one line per paragraph, list items as "- " bullets, hyperlinks' URLs collected. */
 export const docxText = async (bytes: Uint8Array): Promise<string> => {
-  const xml = await unzipEntry(bytes, 'word/document.xml');
+  const xml = await unzipText(bytes, 'word/document.xml');
   if (!xml) throw new ResumeFileError("Couldn't read that Word file. Save it as .docx or PDF and try again.");
-  const relsXml = await unzipEntry(bytes, 'word/_rels/document.xml.rels');
+  const relsXml = await unzipText(bytes, 'word/_rels/document.xml.rels');
   const targets = new Map<string, string>();
   if (relsXml) {
     for (const rel of Array.from(new DOMParser().parseFromString(relsXml, 'application/xml').getElementsByTagName('Relationship'))) {
@@ -180,15 +251,45 @@ export const docxText = async (bytes: Uint8Array): Promise<string> => {
   return withLinks(tidyResumeText(lines.join('\n')), urls);
 };
 
+const IMAGE_TYPES: Record<string, string> = { jpg: 'image/jpeg', jpeg: 'image/jpeg', png: 'image/png', gif: 'image/gif', bmp: 'image/bmp', webp: 'image/webp' };
+
+/** The headshot in a .docx: the largest picture whose displayed size passes isHeadshotBox. */
+export const docxPhoto = async (bytes: Uint8Array): Promise<Blob | null> => {
+  const [xml, relsXml] = await Promise.all([unzipText(bytes, 'word/document.xml'), unzipText(bytes, 'word/_rels/document.xml.rels')]);
+  if (!xml || !relsXml) return null;
+  const targets = new Map(
+    Array.from(new DOMParser().parseFromString(relsXml, 'application/xml').getElementsByTagName('Relationship')).map((rel) => [rel.getAttribute('Id') ?? '', rel.getAttribute('Target') ?? ''])
+  );
+  let best: { target: string; area: number } | null = null;
+  // Each picture is a <w:drawing> with its displayed size in <wp:extent> (EMU, 12,700 per point) and the image in <a:blip r:embed>.
+  for (const drawing of Array.from(new DOMParser().parseFromString(xml, 'application/xml').getElementsByTagNameNS(W, 'drawing'))) {
+    const extent = Array.from(drawing.getElementsByTagName('*')).find((node) => node.localName === 'extent');
+    const blip = Array.from(drawing.getElementsByTagName('*')).find((node) => node.localName === 'blip');
+    const target = targets.get(blip?.getAttributeNS(R, 'embed') ?? '');
+    const width = Number(extent?.getAttribute('cx')) / 12700;
+    const height = Number(extent?.getAttribute('cy')) / 12700;
+    if (target && isHeadshotBox(width, height) && (!best || width * height > best.area)) best = { target, area: width * height };
+  }
+  if (!best) return null;
+  const path = best.target.startsWith('/') ? best.target.slice(1) : `word/${best.target}`;
+  const type = IMAGE_TYPES[path.split('.').pop()?.toLowerCase() ?? ''];
+  const data = type ? await unzipEntry(bytes, path) : null;
+  return data ? new Blob([data.slice()], { type }) : null;
+};
+
 /** Reads a chosen file; throws ResumeFileError with a message for the user when it can't. */
 export const readResumeFile = async (file: File): Promise<ResumeSource> => {
   const name = file.name.toLowerCase();
   if (file.size > MAX_FILE_BYTES) throw new ResumeFileError('That file is larger than 10 MB.');
-  if (name.endsWith('.pdf') || file.type === 'application/pdf') return { kind: 'text', text: await pdfText(file) };
+  if (name.endsWith('.pdf') || file.type === 'application/pdf') {
+    const { text, photo } = await pdfText(file);
+    return { kind: 'text', text, ...(photo ? { photo } : {}) };
+  }
   if (name.endsWith('.docx')) {
-    const text = await docxText(new Uint8Array(await file.arrayBuffer()));
+    const bytes = new Uint8Array(await file.arrayBuffer());
+    const [text, photo] = await Promise.all([docxText(bytes), docxPhoto(bytes).catch(() => null)]);
     if (!text) throw new ResumeFileError('That Word file has no text.');
-    return { kind: 'text', text };
+    return { kind: 'text', text, ...(photo ? { photo } : {}) };
   }
   if (name.endsWith('.doc') || name.endsWith('.pages') || name.endsWith('.odt') || name.endsWith('.rtf')) {
     throw new ResumeFileError('Save it as PDF or Word (.docx) first, then choose that file.');

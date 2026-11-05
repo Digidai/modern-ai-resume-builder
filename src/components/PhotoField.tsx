@@ -10,8 +10,8 @@ const MAX_UPLOAD_BYTES = 15 * 1024 * 1024;
 
 const PHOTO_TEMPLATE_NAMES = TEMPLATES.filter((template) => template.photo).map((template) => template.name);
 
-/** Centre-crops an image file to 3:4 and re-encodes it as a JPEG data URL (roughly 30–90 KB). */
-const toPortraitDataUrl = async (file: File): Promise<string> => {
+/** Centre-crops an image (an uploaded file, or a photo found by Import resume) to 3:4 and re-encodes it as a JPEG data URL (roughly 30–90 KB). */
+export const toPortraitDataUrl = async (file: Blob): Promise<string> => {
   const url = URL.createObjectURL(file);
   try {
     const image = new Image();

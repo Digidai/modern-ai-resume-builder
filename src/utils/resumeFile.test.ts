@@ -1,6 +1,6 @@
 import { readFileSync } from 'node:fs';
 import { describe, expect, it } from 'vitest';
-import { docxText, looksLikeLatex, tidyResumeText } from './resumeFile';
+import { docxPhoto, docxText, looksLikeLatex, tidyResumeText } from './resumeFile';
 
 describe('docxText', () => {
   it('reads paragraphs, list items as bullets and link URLs from a Word file', async () => {
@@ -9,6 +9,14 @@ describe('docxText', () => {
     expect(text).toContain('- Led the redesign of the savings flow, lifting pot creation by 18%.');
     expect(text).toContain('Senior Product Designer, Monzo — London | Mar 2022 – Present');
     expect(text).toMatch(/Links in the file:\nhttps:\/\/mariachen\.design\/?\nhttps:\/\/www\.linkedin\.com\/in\/mariachen/);
+  });
+});
+
+describe('docxPhoto', () => {
+  it('returns the headshot picture of a Word file', async () => {
+    const photo = await docxPhoto(new Uint8Array(readFileSync('src/test/fixtures/resume.docx')));
+    expect(photo?.type).toBe('image/jpeg');
+    expect(photo?.size).toBe(12964);
   });
 });
 
