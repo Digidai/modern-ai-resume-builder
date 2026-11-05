@@ -1041,6 +1041,12 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
             <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} maxPages={getTemplateById(data.templateId)?.maxPages} />
           </Section>
           <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
+            {getTemplateById(data.templateId)?.twoColumn && (
+              <p className="mb-4 rounded-lg border border-rule bg-tint px-3 py-2 text-sm text-muted" data-testid="two-column-note">
+                <span className="font-medium text-ink">{getTemplateById(data.templateId)?.name} uses two columns.</span> Applicant tracking systems can read the columns
+                mixed together, so when you apply through an online portal, pick a single-column template marked ATS.
+              </p>
+            )}
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">
               {TEMPLATES.map((t) => {
                 const selected = data.templateId === t.id;
