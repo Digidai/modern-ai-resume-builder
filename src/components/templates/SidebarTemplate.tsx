@@ -101,7 +101,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
             </aside>
 
-            <main className="page-frame flex min-w-0 flex-1 flex-col gap-7 bg-white pt-[15mm] pr-[13mm] pb-[12mm] pl-[10mm] text-slate-800">
+            <div className="page-frame flex min-w-0 flex-1 flex-col gap-7 bg-white pt-[15mm] pr-[13mm] pb-[12mm] pl-[10mm] text-slate-800">
                 {data.summary.trim() && (
                     <section>
                         <MainHeading>Profile</MainHeading>
@@ -158,7 +158,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     </section>
                 )}
-            </main>
+            </div>
         </div>
     );
 };

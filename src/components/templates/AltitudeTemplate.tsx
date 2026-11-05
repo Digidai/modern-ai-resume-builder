@@ -60,7 +60,7 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
             {(hasMain || hasSide) && (
                 <div className="grid grid-cols-[minmax(0,63fr)_minmax(0,37fr)] gap-x-[8mm]">
                     {hasMain && (
-                        <main className={`${hasSide ? 'col-start-1' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
+                        <div className={`${hasSide ? 'col-start-1' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
                             {summary && (
                                 <section>
                                     <SectionTitle>Profile</SectionTitle>
@@ -118,7 +118,7 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     </div>
                                 </section>
                             )}
-                        </main>
+                        </div>
                     )}
 
                     {hasSide && (

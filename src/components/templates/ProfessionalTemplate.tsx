@@ -43,7 +43,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             <div className="flex flex-1">
-                <main className={`flex-1 min-w-0 pl-[13mm] ${hasSidebar ? 'pr-[8mm]' : 'pr-[13mm]'} page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[11mm] flex flex-col gap-7`}>
+                <div className={`flex-1 min-w-0 pl-[13mm] ${hasSidebar ? 'pr-[8mm]' : 'pr-[13mm]'} page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[11mm] flex flex-col gap-7`}>
                     {data.summary && (
                         <section>
                             <MainHeading>Profile</MainHeading>
@@ -96,7 +96,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
 
                 {hasSidebar && (
                     <aside className="w-[31%] shrink-0 bg-(--accent)/5 border-l border-(--accent)/15 pl-[7mm] pr-[13mm] page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[11mm] flex flex-col gap-7">

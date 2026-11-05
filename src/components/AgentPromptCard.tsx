@@ -44,7 +44,7 @@ export const AgentPromptCard = ({ prompt, subject, className = '', defaultOpen =
               {copied ? 'Copied' : 'Copy prompt'}
             </button>
           </div>
-          <pre className="max-h-56 overflow-auto whitespace-pre-wrap p-3 font-label text-xs leading-relaxed text-ink">{prompt}</pre>
+          <pre tabIndex={0} role="region" aria-label="Prompt" className="focus-ring max-h-56 overflow-auto whitespace-pre-wrap p-3 font-label text-xs leading-relaxed text-ink">{prompt}</pre>
         </div>
         <Link to="/agents/" className="focus-ring mt-3 inline-block text-sm font-medium text-accent underline decoration-accent/30 underline-offset-4 hover:decoration-accent">
           Connect your agent (MCP, skill, API)

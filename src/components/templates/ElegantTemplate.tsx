@@ -38,7 +38,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className={hasSidebar && hasMain ? 'grid grid-cols-[minmax(0,1fr)_50mm] gap-9' : 'flex flex-col gap-7'}>
                 {hasMain && (
-                    <main className="min-w-0 flex flex-col gap-7">
+                    <div className="min-w-0 flex flex-col gap-7">
                         {data.summary && (
                             <section>
                                 <MainHeading>Profile</MainHeading>
@@ -89,7 +89,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 </div>
                             </section>
                         )}
-                    </main>
+                    </div>
                 )}
 
                 {hasSidebar && (

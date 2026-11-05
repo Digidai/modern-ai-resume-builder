@@ -86,7 +86,7 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
                     )}
                 </aside>
 
-                <main className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-[#F6F1EA] pt-[8mm] pr-[15mm] pb-[12mm] pl-[6mm]">
+                <div className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-[#F6F1EA] pt-[8mm] pr-[15mm] pb-[12mm] pl-[6mm]">
                     {summary && (
                         <section>
                             <Heading>Profile</Heading>
@@ -134,7 +134,7 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
             </div>
         </div>
     );

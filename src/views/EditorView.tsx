@@ -517,7 +517,7 @@ const EditorView: React.FC = () => {
         <Link
           to="/"
           className="flex items-center gap-2 rounded-lg px-2 py-1.5 text-sm font-semibold text-ink hover:bg-tint focus-ring"
-          aria-label="Back to home"
+          aria-label="ModernCV home"
         >
           <ArrowLeftIcon className="h-4 w-4 text-muted" />
           <span className="hidden sm:inline">ModernCV</span>

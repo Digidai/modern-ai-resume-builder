@@ -57,7 +57,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
             {(hasMain || hasSide) && (
                 <div className={`grid grid-cols-[58mm_minmax(0,1fr)] items-start gap-x-[7mm] page-frame px-[15mm] pt-[13mm] pb-[13mm] ${hasHeader ? '[&>*]:-mt-[6mm]' : ''}`}>
                     {hasMain && (
-                        <main className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
+                        <div className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
                             {summary && (
                                 <section>
                                     <SectionTitle>Profile</SectionTitle>
@@ -112,7 +112,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     </div>
                                 </section>
                             )}
-                        </main>
+                        </div>
                     )}
 
                     {hasSide && (

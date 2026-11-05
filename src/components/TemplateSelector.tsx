@@ -282,7 +282,8 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
         <div className="flex min-h-screen flex-col bg-paper font-sans text-ink">
             <SiteHeader />
 
-            <main className="mx-auto grid w-full max-w-7xl flex-1 gap-10 px-4 pb-12 pt-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_460px] xl:gap-14">
+            <main className="flex-1">
+            <div className="mx-auto grid w-full max-w-7xl flex-1 gap-10 px-4 pb-12 pt-6 sm:px-6 lg:grid-cols-[minmax(0,1fr)_400px] xl:grid-cols-[minmax(0,1fr)_460px] xl:gap-14">
                 <div className="lg:col-start-2 lg:row-start-1">
                     <nav aria-label="Breadcrumb" className="text-sm text-muted">
                         <Link className="focus-ring hover:text-ink" to="/">Home</Link>
@@ -394,7 +395,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                         </div>
                     </div>
                 </div>
-            </main>
+            </div>
 
             {example && exampleResume && (
                 <RoleExampleArticle title={resolvedJobTitle} fullName={personaName} example={example} onStart={startFromExample} />
@@ -415,6 +416,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
                     window.scrollTo({ top: 0, behavior: 'smooth' });
                 }}
             />
+            </main>
 
             <div className="fixed inset-x-0 bottom-0 z-20 border-t border-rule bg-paper/95 px-3 pb-3 pt-2 backdrop-blur-sm lg:hidden">
                 <div className="mx-auto max-w-xl">

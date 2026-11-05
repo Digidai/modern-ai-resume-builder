@@ -101,7 +101,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                     )}
                 </aside>
 
-                <main className="page-frame flex min-w-0 flex-1 flex-col gap-7 pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[13mm] pb-[12mm] pl-[8mm]">
+                <div className="page-frame flex min-w-0 flex-1 flex-col gap-7 pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[13mm] pb-[12mm] pl-[8mm]">
                     {data.summary.trim() && (
                         <section>
                             <MainHeading>Profile</MainHeading>
@@ -163,7 +163,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
             </div>
         </div>
     );

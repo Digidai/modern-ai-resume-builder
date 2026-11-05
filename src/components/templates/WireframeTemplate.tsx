@@ -51,7 +51,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                 </header>
 
                 <div className="flex flex-1">
-                    <main className="page-frame py-[5mm] [&>:first-child]:-mt-[5mm] [&>:last-child]:-mb-[5mm] flex-1 min-w-0 flex flex-col">
+                    <div className="page-frame py-[5mm] [&>:first-child]:-mt-[5mm] [&>:last-child]:-mb-[5mm] flex-1 min-w-0 flex flex-col">
                         {data.summary && (
                             <section className={sectionClass}>
                                 <Heading>Summary</Heading>
@@ -103,7 +103,7 @@ export const WireframeTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </section>
                         )}
                         {!hasSidebar && <Canvas />}
-                    </main>
+                    </div>
 
                     {hasSidebar && (
                         <aside className="page-frame py-[5mm] [&>:first-child]:-mt-[5mm] [&>:last-child]:-mb-[5mm] w-[33%] shrink-0 border-l-2 border-(--accent) flex flex-col">

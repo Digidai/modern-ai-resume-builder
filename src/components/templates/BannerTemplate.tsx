@@ -46,7 +46,7 @@ export const BannerTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             <div className="flex flex-1 flex-row">
-                <main className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[8mm] pr-[6mm] pb-[12mm] pl-[14mm]">
+                <div className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[8mm] pr-[6mm] pb-[12mm] pl-[14mm]">
                     {data.experience.length > 0 && (
                         <section>
                             <Heading>Work Experience</Heading>
@@ -86,7 +86,7 @@ export const BannerTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
 
                 <aside className="page-frame flex w-[62mm] shrink-0 flex-col gap-[17px] pt-[8mm] pr-[14mm] pb-[12mm] pl-[4mm]">
                     {skillGroups.length > 0 && (

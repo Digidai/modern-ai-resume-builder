@@ -55,7 +55,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
             {(hasMain || hasSide) && (
                 <div className="grid grid-cols-[minmax(0,33fr)_minmax(0,66fr)] gap-x-[7mm]">
                     {hasMain && (
-                        <main className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[5mm]`}>
+                        <div className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[5mm]`}>
                             {data.summary.trim() && (
                                 <section>
                                     <SectionTitle>Summary</SectionTitle>
@@ -112,7 +112,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     </div>
                                 </section>
                             )}
-                        </main>
+                        </div>
                     )}
 
                     {hasSide && (

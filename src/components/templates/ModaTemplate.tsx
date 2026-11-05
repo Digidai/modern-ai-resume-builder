@@ -14,7 +14,7 @@ export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
     const hasSide = skillGroups.length > 0 || data.education.length > 0;
 
     const main = (
-        <main className="flex min-w-0 flex-col gap-6">
+        <div className="flex min-w-0 flex-col gap-6">
             {data.summary.trim() && (
                 <section>
                     <SectionTitle>Profile</SectionTitle>
@@ -61,7 +61,7 @@ export const ModaTemplate: React.FC<TemplateProps> = ({ data }) => {
                     </div>
                 </section>
             )}
-        </main>
+        </div>
     );
 
     return (

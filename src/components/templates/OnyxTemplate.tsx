@@ -89,7 +89,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
             </aside>
 
-            <main className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[12mm] pb-[12mm] pl-[10mm]">
+            <div className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[12mm] pb-[12mm] pl-[10mm]">
                 {(name || title) && (
                     <header className="break-inside-avoid">
                         {name && <div role="heading" aria-level={1} className="text-[32px] font-bold uppercase leading-[1.08] tracking-[0.04em] text-neutral-900 wrap-break-word">{name}</div>}
@@ -147,7 +147,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     </section>
                 )}
-            </main>
+            </div>
         </div>
     );
 };

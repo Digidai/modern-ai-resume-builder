@@ -110,7 +110,7 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {hasMain && (
-                    <main className="flex flex-col gap-7 min-w-0">
+                    <div className="flex flex-col gap-7 min-w-0">
                         {data.experience.length > 0 && (
                             <section>
                                 <Heading ruled>Experience</Heading>
@@ -158,7 +158,7 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 </div>
                             </section>
                         )}
-                    </main>
+                    </div>
                 )}
             </div>
         </div>

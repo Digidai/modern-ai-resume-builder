@@ -29,7 +29,7 @@ const CodeBlock: React.FC<{ code: string; label: string; title?: string }> = ({ 
           {copied ? 'Copied' : 'Copy'}
         </button>
       </div>
-      <pre className="overflow-x-auto p-4 font-label text-[13px] leading-relaxed text-ink">{code}</pre>
+      <pre tabIndex={0} role="region" aria-label={label} className="focus-ring overflow-x-auto p-4 font-label text-[13px] leading-relaxed text-ink">{code}</pre>
     </div>
   );
 };

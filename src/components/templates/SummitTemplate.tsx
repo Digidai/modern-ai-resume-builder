@@ -44,7 +44,7 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             <div className="flex flex-1 flex-row">
-                <main className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[9mm] pr-[7mm] pb-[12mm] pl-[14mm]">
+                <div className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[9mm] pr-[7mm] pb-[12mm] pl-[14mm]">
                     {summary && (
                         <section>
                             <Heading>Profile</Heading>
@@ -93,7 +93,7 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
 
                 <aside className="page-frame flex w-[58mm] shrink-0 flex-col gap-[18px] border-l border-slate-200 pt-[9mm] pr-[12mm] pb-[12mm] pl-[7mm]">
                     {skillGroups.length > 0 && (

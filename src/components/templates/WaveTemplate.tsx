@@ -43,7 +43,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             <div className="relative flex flex-1 flex-row">
-                <main className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[6mm] pr-[7mm] pb-[12mm] pl-[14mm]">
+                <div className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[6mm] pr-[7mm] pb-[12mm] pl-[14mm]">
                     {summary && (
                         <section>
                             <Heading>About Me</Heading>
@@ -96,7 +96,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
                             </div>
                         </section>
                     )}
-                </main>
+                </div>
 
                 <aside className="page-frame flex w-[64mm] shrink-0 flex-col gap-[18px] pt-[6mm] pr-[13mm] pb-[12mm] pl-[5mm]">
                     {contacts.length > 0 && (

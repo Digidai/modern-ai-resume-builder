@@ -88,7 +88,7 @@ export const FrameTemplate: React.FC<TemplateProps> = ({ data }) => {
                 </div>
             </aside>
 
-            <main className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[13mm] pb-[12mm] pl-[10mm]">
+            <div className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[13mm] pb-[12mm] pl-[10mm]">
                 {(name || title) && (
                     <header className="border-b border-slate-200 pb-[14px] break-inside-avoid">
                         {name && <div role="heading" aria-level={1} className="text-[36px] font-bold leading-[1.05] tracking-[-0.01em] text-slate-900 wrap-break-word">{name}</div>}
@@ -144,7 +144,7 @@ export const FrameTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     </section>
                 )}
-            </main>
+            </div>
         </div>
     );
 };

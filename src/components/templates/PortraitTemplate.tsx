@@ -87,7 +87,7 @@ export const PortraitTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
             </aside>
 
-            <main className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[13mm] pb-[12mm] pl-[9mm]">
+            <div className="page-frame flex min-w-0 flex-1 flex-col gap-[18px] bg-white pt-[14mm] pr-[13mm] pb-[12mm] pl-[9mm]">
                 {(name || title) && (
                     <header className="break-inside-avoid">
                         {name && <div role="heading" aria-level={1} className="text-[33px] font-bold leading-[1.1] tracking-[-0.005em] text-slate-900 wrap-break-word">{name}</div>}
@@ -145,7 +145,7 @@ export const PortraitTemplate: React.FC<TemplateProps> = ({ data }) => {
                         </div>
                     </section>
                 )}
-            </main>
+            </div>
         </div>
     );
 };
