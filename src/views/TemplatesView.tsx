@@ -1,5 +1,5 @@
-import React, { useMemo, useState } from 'react';
-import { Link } from 'react-router';
+import React, { useMemo } from 'react';
+import { Link, useSearchParams } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { LazyResumePreview } from '../components/LazyResumePreview';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
@@ -7,12 +7,15 @@ import { useResume } from '../contexts/ResumeContext';
 import { TEMPLATES } from '../constants/templates';
 
 const FILTERS = [
-  { id: 'all', label: 'All' },
-  { id: 'ats', label: 'ATS-friendly' },
-  { id: 'creative', label: 'Two-column & creative' },
-  { id: 'photo', label: 'With photo' },
+  { id: 'all', label: 'All', matches: () => true },
+  { id: 'ats', label: 'ATS-friendly', matches: (t: Template) => t.atsFriendly },
+  { id: 'creative', label: 'Two-column & creative', matches: (t: Template) => !t.atsFriendly },
+  { id: 'photo', label: 'With photo', matches: (t: Template) => Boolean(t.photo) },
 ] as const;
+type Template = (typeof TEMPLATES)[number];
 type FilterId = (typeof FILTERS)[number]['id'];
+
+const PhotoBadge: React.FC = () => <span className="tag">Photo</span>;
 
 export const AtsBadge: React.FC<{ className?: string }> = ({ className = '' }) => (
   <span className={`tag ${className}`}>
@@ -22,18 +25,16 @@ export const AtsBadge: React.FC<{ className?: string }> = ({ className = '' }) =
 
 const TemplatesView: React.FC = () => {
   const { resumeData } = useResume();
-  const [filter, setFilter] = useState<FilterId>('all');
+  // The filter lives in the URL (/templates/?filter=photo) so a filtered list can be shared.
+  const [searchParams, setSearchParams] = useSearchParams();
+  const filter = FILTERS.find((f) => f.id === searchParams.get('filter')) ?? FILTERS[0];
+  const setFilter = (id: FilterId) => setSearchParams(id === 'all' ? {} : { filter: id }, { replace: true, preventScrollReset: true });
   const siteUrl = getSiteUrl();
   const pageUrl = `${siteUrl}/templates/`;
   const atsCount = TEMPLATES.filter((t) => t.atsFriendly).length;
   const description = `${TEMPLATES.length} free resume templates, ${atsCount} of them ATS-friendly. Inspired by Jake's Resume, Harvard, Awesome-CV and moderncv. Preview with your own content and download a PDF.`;
 
-  const visible = useMemo(
-    () => TEMPLATES.filter((t) =>
-        filter === 'all' ? true : filter === 'ats' ? t.atsFriendly : filter === 'photo' ? Boolean(t.photo) : !t.atsFriendly
-      ),
-    [filter]
-  );
+  const visible = useMemo(() => TEMPLATES.filter(filter.matches), [filter]);
 
   useSeo({
     title: `${TEMPLATES.length} Free Resume Templates (ATS-Friendly) | ModernCV`,
@@ -104,13 +105,14 @@ const TemplatesView: React.FC = () => {
             <button
               key={f.id}
               type="button"
-              aria-pressed={filter === f.id}
+              aria-pressed={filter.id === f.id}
               onClick={() => setFilter(f.id)}
               className={`focus-ring h-8 rounded-md px-3 text-sm font-medium transition-colors ${
-                filter === f.id ? 'bg-surface text-ink shadow-card ring-1 ring-rule' : 'text-muted hover:text-ink'
+                filter.id === f.id ? 'bg-surface text-ink shadow-card ring-1 ring-rule' : 'text-muted hover:text-ink'
               }`}
             >
               {f.label}
+              <span className="ml-1.5 tabular-nums text-muted">{TEMPLATES.filter(f.matches).length}</span>
             </button>
           ))}
         </div>
@@ -130,6 +132,7 @@ const TemplatesView: React.FC = () => {
                   {t.name}
                 </Link>
                 {t.atsFriendly && <AtsBadge />}
+                {t.photo && <PhotoBadge />}
               </div>
               <p className="mt-0.5 text-sm leading-5 text-muted">{t.description}</p>
             </li>
