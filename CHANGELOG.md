@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- The template picker in the editor is one Tab stop instead of 89: arrow keys move between templates and switch to them, Home and End jump to the first and last, and Tab moves on to the next control.
 - Several resumes in one browser, for example one per job you apply to. The resume menu in the editor header lists them, switches between them, starts a new blank one (keeping the template and style) or a copy of the current one, and renames or deletes them (Undo brings a deleted one back). They are stored only in this browser, like the single resume before.
 - Save backup with more than one resume saves all of them in one file, and Import backup adds them all to the resume menu (in a fresh browser the first one replaces the sample). A backup of one resume still replaces the current one, with Undo. An agent's #resume= link opens as a new resume when yours has changes, instead of replacing it.
 - Start from example on a job page opens the example as a new resume and keeps yours in the resume menu (an untouched sample or empty resume is replaced instead).

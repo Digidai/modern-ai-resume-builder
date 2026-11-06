@@ -7,7 +7,6 @@ expected delivery horizon and may change based on community feedback.
 
 - Expand role guides with more job families and levels.
 - Add a print QA checklist for templates.
-- Keyboard navigation (arrow keys) in the editor template picker.
 
 ## Next
 

@@ -388,6 +388,16 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
     [onChange]
   );
 
+  // Roving focus for the template radiogroup: one tab stop instead of one per template; arrow keys move and select.
+  const onTemplateKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const delta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+    const next = event.key === 'Home' ? 0 : event.key === 'End' ? TEMPLATES.length - 1 : delta ? (index + delta + TEMPLATES.length) % TEMPLATES.length : -1;
+    if (next < 0) return;
+    event.preventDefault();
+    setField('templateId', TEMPLATES[next].id);
+    document.getElementById(`editor-template-${TEMPLATES[next].id}`)?.focus();
+  };
+
   const updateDesign = useCallback(
     (patch: Partial<ResumeDesign>) =>
       onChange((prev) => ({ ...prev, design: { ...(prev.design ?? DEFAULT_DESIGN), ...patch } })),
@@ -1048,7 +1058,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
           </Section>
           <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">
-              {TEMPLATES.map((t) => {
+              {TEMPLATES.map((t, index) => {
                 const selected = data.templateId === t.id;
                 return (
                   <div key={t.id} className="group relative text-left">
@@ -1069,8 +1079,11 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                     <button
                       type="button"
                       role="radio"
+                      id={`editor-template-${t.id}`}
                       aria-checked={selected}
+                      tabIndex={selected || (index === 0 && !TEMPLATES.some((x) => x.id === data.templateId)) ? 0 : -1}
                       onClick={() => setField('templateId', t.id)}
+                      onKeyDown={(event) => onTemplateKeyDown(event, index)}
                       aria-label={`${t.name}: ${t.description}`}
                       className="absolute inset-0 cursor-pointer focus-visible:outline-none"
                     />
