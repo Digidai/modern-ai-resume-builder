@@ -14,8 +14,8 @@ import { AtsBadge } from './TemplatesView';
 import NotFoundView from './NotFoundView';
 import { AgentPromptCard } from '../components/AgentPromptCard';
 import { buildAgentPrompt } from '../shared/agentPrompt.mjs';
+import { templateMetaDescription } from '../shared/templateMeta.mjs';
 
-const lowerFirst = (text: string) => text.charAt(0).toLowerCase() + text.slice(1);
 const CATEGORIES = jobTitlesData as { name: string; titles: string[] }[];
 const GUIDES = roleGuideData.categories as Record<string, { templates: string[] }>;
 
@@ -33,7 +33,7 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
 
   const name = template.name;
   const pageUrl = `${siteUrl}/templates/${templateId}/`;
-  const description = `${template.name} resume template: ${template.description}. ${template.atsFriendly ? 'ATS-friendly single column. ' : ''}Best for ${lowerFirst(template.bestFor)}. Free, with PDF export.`;
+  const description = templateMetaDescription(template);
 
   useSeo({
     title: `${name} Resume Template${template.atsFriendly ? ' (ATS-Friendly)' : ''} | ModernCV`,

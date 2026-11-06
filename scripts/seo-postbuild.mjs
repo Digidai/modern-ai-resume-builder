@@ -6,6 +6,7 @@ import { slugifyJobTitle } from './slugify.mjs';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 import { buildJobPageTitle, describeExample, exampleToResume } from '../src/shared/roleExample.mjs';
 import { MCP_TOOLS } from '../src/shared/agentPrompt.mjs';
+import { lowerFirst, templateMetaDescription } from '../src/shared/templateMeta.mjs';
 
 const DEFAULT_SITE_URL = 'https://genedai.cv';
 const SITE_NAME = 'ModernCV';
@@ -331,7 +332,6 @@ const writeFileEnsuringDir = async (filePath, content) => {
   await fs.writeFile(filePath, content);
 };
 
-const lowerFirst = (text) => text.charAt(0).toLowerCase() + text.slice(1);
 
 const readJson = async (filePath) => JSON.parse(await fs.readFile(filePath, 'utf8'));
 
@@ -1720,7 +1720,7 @@ const main = async () => {
 
   for (const t of templates) {
     const pageUrl = `${siteUrl}/templates/${t.id}/`;
-    const description = `${t.name} resume template: ${t.description}. ${t.atsFriendly ? 'ATS-friendly single column. ' : ''}Best for ${lowerFirst(t.bestFor)}. Free, with PDF export.`;
+    const description = templateMetaDescription(t);
     const roles = categories
       .filter((c) => roleGuides.categories[c.name]?.templates.includes(t.id))
       .flatMap((c) => c.titles.slice(0, 4))

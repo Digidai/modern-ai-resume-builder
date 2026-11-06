@@ -2,3 +2,7 @@
 # a dedicated worker whose script sends a COEP header too. Import resume reads PDFs in the pdf.js worker.
 /assets/pdf.worker*
   Cross-Origin-Embedder-Policy: credentialless
+
+# Vite content-hashes every file in /assets/, so a changed file gets a new URL.
+/assets/*
+  Cache-Control: public, max-age=31536000, immutable
