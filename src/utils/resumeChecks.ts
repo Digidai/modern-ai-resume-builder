@@ -14,6 +14,9 @@ export interface ResumeCheck {
 
 /** About two printed lines of body text; a longer bullet reads as a paragraph. */
 export const LONG_BULLET_CHARS = 200;
+// CJK and full-width characters print about twice as wide as Latin ones.
+const WIDE = /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6]/g;
+const printWidth = (line: string) => line.length + (line.match(WIDE)?.length ?? 0);
 const MONTH = /^\d{4}-\d{2}$/;
 
 const bullets = (text: string) =>
@@ -35,7 +38,7 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
   if (data.experience.length === 0 && data.education.length === 0) {
     add({ id: 'no-history', message: 'Add your work experience or education.', tab: 'experience' });
   }
-  for (const exp of data.experience) {
+  data.experience.forEach((exp, index) => {
     const name = exp.role.trim() || exp.company.trim() || 'a position';
     const item = `experience:${exp.id}`;
     if (!exp.startDate) add({ id: `start-${exp.id}`, message: `Add a start date to ${name}.`, tab: 'experience', item });
@@ -45,12 +48,13 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     }
     const lines = bullets(exp.description);
     if (lines.length === 0) add({ id: `empty-${exp.id}`, message: `Describe what you achieved at ${name}.`, tab: 'experience', item });
-    else if (!lines.some((line) => /\d/.test(line))) {
+    // Recent roles carry the numbers; an older role with a line or two needs none.
+    else if ((index === 0 || lines.length >= 3) && !lines.some((line) => /\d/.test(line))) {
       add({ id: `numbers-${exp.id}`, message: `Add a number to ${name}: a %, an amount, a team size or a count.`, tab: 'experience', item });
     }
-    const long = lines.filter((line) => line.length > LONG_BULLET_CHARS).length;
+    const long = lines.filter((line) => printWidth(line) > LONG_BULLET_CHARS).length;
     if (long) add({ id: `long-${exp.id}`, message: `Shorten ${long === 1 ? 'a bullet' : `${long} bullets`} in ${name} to two lines or less.`, tab: 'experience', item });
-  }
+  });
   for (const edu of data.education) {
     if (MONTH.test(edu.startDate) && MONTH.test(edu.endDate) && edu.endDate < edu.startDate) {
       add({ id: `order-${edu.id}`, message: `${edu.school.trim() || 'An education entry'} ends before it starts.`, tab: 'experience', item: `education:${edu.id}` });

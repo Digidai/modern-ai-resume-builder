@@ -21,6 +21,16 @@ describe('checkResume', () => {
     expect(ids({ ...INITIAL_RESUME_DATA, email: 'pat@pat.dev', experience: [{ ...exp, startDate: '', endDate: '', description: '- Did 4 things' }] })).toEqual(['start-x', 'end-x']);
   });
 
+  it('asks older roles for numbers only when they have three or more bullets, and measures CJK bullets by printed width', () => {
+    const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
+    const old = (description: string) => ({ id: 'o', company: 'Old Co', role: 'Intern', startDate: '2015-01', endDate: '2016-01', isCurrent: false, description });
+    expect(ids({ ...base, experience: [base.experience[0], old('- Cleaned survey data\n- Wrote reports')] })).toEqual([]);
+    expect(ids({ ...base, experience: [base.experience[0], old('- Cleaned data\n- Wrote reports\n- Ran interviews')] })).toEqual(['numbers-o']);
+    // 120 CJK characters print as wide as 240 Latin ones; 120 Latin ones are fine.
+    expect(ids({ ...base, experience: [old(`- 负责${'数'.repeat(117)}3`)] })).toEqual(['long-o']);
+    expect(ids({ ...base, experience: [old(`- 1 ${'a'.repeat(118)}`)] })).toEqual([]);
+  });
+
   it('flags a resume over its page target only', () => {
     const data = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
     expect(ids(data, { count: 2, max: 2 })).toEqual([]);
