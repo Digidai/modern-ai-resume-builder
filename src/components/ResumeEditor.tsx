@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
+import { useCallback, useEffect, useMemo, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
 import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk, type Teaching } from '../types';
 import {
   PlusIcon,
@@ -8,6 +8,7 @@ import {
   ArrowUpIcon,
   ArrowDownIcon,
   XIcon,
+  CheckIcon,
 } from './Icons';
 import { Button } from './Button';
 import { TEMPLATES, getTemplateById, showsAwards } from '../constants/templates';
@@ -21,6 +22,8 @@ import { PhotoField } from './PhotoField';
 import { useAiActions } from '../hooks/useAiActions';
 import { createId } from '../utils/resumeData';
 import { formatDateRange, describeLink } from './templates/shared';
+import { usePreviewPages } from '../hooks/useOnePageFit';
+import { checkResume, type ResumeCheck } from '../utils/resumeChecks';
 
 const MAX_LINKS = 8;
 
@@ -167,6 +170,8 @@ interface ItemCardProps {
   onRemove: () => void;
   onMoveUp?: () => void;
   onMoveDown?: () => void;
+  /** `${list}:${id}`, so a resume check can scroll to the card. */
+  itemKey?: string;
   children: ReactNode;
 }
 
@@ -180,11 +185,12 @@ const ItemCard = ({
   onRemove,
   onMoveUp,
   onMoveDown,
+  itemKey,
   children,
 }: ItemCardProps) => {
   const label = title.trim() || placeholderTitle;
   return (
-    <div className="rounded-lg border border-rule bg-surface transition-colors">
+    <div className="scroll-mt-16 rounded-lg border border-rule bg-surface transition-colors" data-item={itemKey}>
       <div className="flex items-center gap-1 py-1.5 pl-1.5 pr-2">
         <button
           type="button"
@@ -230,6 +236,43 @@ const ItemCard = ({
         </div>
       </div>
       {isOpen && <div className="space-y-4 border-t border-rule p-4">{children}</div>}
+    </div>
+  );
+};
+
+/** Local suggestions for the resume's content; each one jumps to where it is fixed. */
+const ResumeChecks = ({ checks, onJump }: { checks: ResumeCheck[]; onJump: (check: ResumeCheck) => void }) => {
+  const [open, setOpen] = useState(false);
+  if (checks.length === 0) {
+    return (
+      <p className="flex items-center gap-2 rounded-lg border border-rule bg-surface px-3 py-2 text-sm text-muted" data-testid="resume-checks">
+        <CheckIcon className="h-4 w-4 text-ink" /> No suggestions. The basics are covered.
+      </p>
+    );
+  }
+  return (
+    <div className="rounded-lg border border-rule bg-surface" data-testid="resume-checks">
+      <button
+        type="button"
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm hover:bg-tint focus-ring"
+      >
+        <ChevronDownIcon className={`h-4 w-4 shrink-0 text-muted transition-transform ${open ? '' : '-rotate-90'}`} />
+        <span className="font-medium text-ink">{checks.length === 1 ? '1 suggestion' : `${checks.length} suggestions`}</span>
+        <span className="truncate text-muted">{open ? 'Select one to go there' : checks[0].message}</span>
+      </button>
+      {open && (
+        <ul className="border-t border-rule py-1">
+          {checks.map((check) => (
+            <li key={check.id}>
+              <button type="button" onClick={() => onJump(check)} className="w-full px-3 py-1.5 pl-9 text-left text-sm text-ink hover:bg-tint focus-ring">
+                {check.message}
+              </button>
+            </li>
+          ))}
+        </ul>
+      )}
     </div>
   );
 };
@@ -374,6 +417,20 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
       else next.add(id);
       return next;
     });
+  }, []);
+
+  const previewPages = usePreviewPages();
+  const maxPages = getTemplateById(data.templateId)?.maxPages ?? 2;
+  const checks = useMemo(
+    () => checkResume(data, previewPages ? { count: previewPages.pages, max: maxPages } : null),
+    [data, previewPages, maxPages]
+  );
+  const jumpToCheck = useCallback((check: ResumeCheck) => {
+    setActiveTab(check.tab);
+    const item = check.item;
+    if (!item) return;
+    setOpenIds((prev) => new Set(prev).add(item));
+    requestAnimationFrame(() => document.querySelector(`[data-item="${item}"]`)?.scrollIntoView({ block: 'start', behavior: 'smooth' }));
   }, []);
 
   // All updates are functional so late async results (AI) never overwrite newer edits.
@@ -536,6 +593,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
       </div>
 
       <div className="flex-1 space-y-10 px-4 py-6 sm:px-6" id={`panel-${activeTab}`} role="tabpanel" aria-labelledby={`tab-${activeTab}`}>
+        <ResumeChecks checks={checks} onJump={jumpToCheck} />
         {activeTab === 'profile' && (
           <>
             <Section title="Personal details" description="How recruiters will reach you.">
@@ -657,6 +715,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                   {data.experience.map((exp, index) => (
                     <ItemCard
                       key={exp.id}
+                      itemKey={`experience:${exp.id}`}
                       title={[exp.role, exp.company].filter((s) => s.trim()).join(' · ')}
                       subtitle={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
                       placeholderTitle="New position"
@@ -743,6 +802,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                   {data.education.map((edu, index) => (
                     <ItemCard
                       key={edu.id}
+                      itemKey={`education:${edu.id}`}
                       title={edu.school}
                       subtitle={[edu.degree, formatDateRange(edu.startDate, edu.endDate)].filter(Boolean).join(' · ')}
                       placeholderTitle="New education"
