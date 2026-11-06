@@ -11,7 +11,7 @@ import '@fontsource/inter/400.css';
 import '@fontsource/inter/500.css';
 import '@fontsource/inter/600.css';
 import '@fontsource/inter/700.css';
-import { loadResumeFonts } from './fonts';
+import { watchResumeFonts } from './fonts';
 import { ThemeProvider } from './contexts/ThemeContext';
 
 const computeBasename = () => {
@@ -28,7 +28,7 @@ const computeBasename = () => {
   return '/';
 };
 
-void loadResumeFonts();
+watchResumeFonts();
 
 const rootElement = document.getElementById('root');
 if (!rootElement) {

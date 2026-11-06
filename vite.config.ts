@@ -23,6 +23,9 @@ export default defineConfig(({ isSsrBuild }) => ({
     emptyOutDir: false,
     // The prerender bundle (src/entry-server.tsx) only renders HTML; public/ belongs to the site build.
     copyPublicDir: !isSsrBuild,
+    // Never inline font files: a stylesheet lists every unicode subset, and the browser fetches only
+    // the ones a page uses, but an inlined subset is downloaded with the CSS whether it is used or not.
+    assetsInlineLimit: (file) => (/\.(woff2?|ttf|otf)$/.test(file) ? false : undefined),
   },
   resolve: {
     alias: {

@@ -1,0 +1,11 @@
+import '@fontsource/source-serif-4/300.css';
+import '@fontsource/source-serif-4/400.css';
+import '@fontsource/source-serif-4/500.css';
+import '@fontsource/source-serif-4/600.css';
+import '@fontsource/source-serif-4/700.css';
+import '@fontsource/source-serif-4/800.css';
+import '@fontsource/source-serif-4/900.css';
+import '@fontsource/source-serif-4/400-italic.css';
+import '@fontsource/source-serif-4/500-italic.css';
+import '@fontsource/source-serif-4/600-italic.css';
+import '@fontsource/source-serif-4/700-italic.css';
