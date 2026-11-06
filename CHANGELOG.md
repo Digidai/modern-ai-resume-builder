@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Download Word (.docx) in More actions: an editable single-column Word file for portals and recruiters that ask for one, in the layout ATS parsers read best (Heading 1 sections, Word bullet lists, dates on a right tab stop, live links, A4 or US Letter as chosen). It is built in the browser with no extra library, and Import resume reads it back.
 - Resume checks in the editor: a line above every tab lists suggestions as you type, worked out in the browser without AI: missing name, contact details or summary, the sample email, positions without dates, ending before they start, without a single number (the most recent one, or an older one with three or more bullets) or with bullets over two lines (Chinese, Japanese and Korean text counts double width), fewer than three skills, and more pages than the template aims for. Selecting one opens the tab and the entry that fixes it.
 - The template picker in the editor is one Tab stop instead of 89: arrow keys move between templates and switch to them, Home and End jump to the first and last, and Tab moves on to the next control.
 - Several resumes in one browser, for example one per job you apply to. The resume menu in the editor header lists them, switches between them, starts a new blank one (keeping the template and style) or a copy of the current one, and renames or deletes them (Undo brings a deleted one back). They are stored only in this browser, like the single resume before.

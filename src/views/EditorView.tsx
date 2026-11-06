@@ -32,6 +32,7 @@ import { useToast } from '../components/Toast';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
 import { sanitizeResumeData } from '../utils/resumeData';
 import { downloadLatex, openInOverleaf } from '../utils/latex';
+import { downloadDocx } from '../utils/docx';
 import { ResumeImportDialog } from '../components/ResumeImportDialog';
 import { TaskProgress } from '../components/TaskProgress';
 import type { PdfExportProgress } from '../utils/pdfExport';
@@ -484,6 +485,12 @@ const EditorView: React.FC = () => {
           // The rest happens in Overleaf's tab: it creates the project, then compiles the PDF.
           showToast('Opening Overleaf in a new tab. It creates the project, then compiles the PDF there.', 'info', { duration: 8000 });
         },
+      },
+      {
+        label: 'Download Word (.docx)',
+        description: 'An editable single-column file for portals that ask for Word.',
+        icon: <FileIcon className="h-4 w-4" />,
+        onSelect: () => downloadDocx(resumeData),
       },
       {
         label: 'Download LaTeX (.tex)',

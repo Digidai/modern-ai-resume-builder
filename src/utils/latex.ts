@@ -193,14 +193,15 @@ ${sections.join('\n\n')}
 `;
 };
 
-const fileBase = (data: ResumeData) => (data.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[<>:"/\\|?*\u0000-\u001F]/g, '').toLowerCase();
+/** File name stem for downloads: the owner's name, lower case, safe on every OS. */
+export const resumeFileBase = (data: ResumeData) => (data.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[<>:"/\\|?*\u0000-\u001F]/g, '').toLowerCase();
 
 /** Saves the resume as `<name>-resume.tex`. */
 export const downloadLatex = (data: ResumeData): void => {
   const url = URL.createObjectURL(new Blob([toLatex(data)], { type: 'application/x-tex' }));
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = `${fileBase(data)}-resume.tex`;
+  anchor.download = `${resumeFileBase(data)}-resume.tex`;
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
@@ -214,7 +215,7 @@ export const openInOverleaf = (data: ResumeData): void => {
   form.action = 'https://www.overleaf.com/docs';
   form.target = '_blank';
   form.rel = 'noopener';
-  const fields = { encoded_snip: encodeURIComponent(toLatex(data)), snip_name: `${fileBase(data)}-resume.tex`, engine: latexEngine(data) };
+  const fields = { encoded_snip: encodeURIComponent(toLatex(data)), snip_name: `${resumeFileBase(data)}-resume.tex`, engine: latexEngine(data) };
   for (const [name, value] of Object.entries(fields)) {
     const input = document.createElement('input');
     input.type = 'hidden';
