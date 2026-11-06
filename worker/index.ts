@@ -1676,6 +1676,17 @@ export default {
       return finalizeResponse(request, env, assetResponse);
     }
 
+    // Every page path is lower case; links typed or shared with capitals ("/resume_tmpl/Software-Engineer/")
+    // move permanently to the page that exists.
+    const lowerPath = url.pathname.toLowerCase();
+    if (!isNotFoundShell && lowerPath !== url.pathname) {
+      const lowerUrl = new URL(lowerPath + url.search, url);
+      const lowerResponse = await env.ASSETS.fetch(new Request(lowerUrl.toString(), { method: 'HEAD' }));
+      // Follow the assets' own trailing-slash redirect so this is a single hop.
+      const location = lowerResponse.status >= 300 ? lowerResponse.headers.get('location') : null;
+      if (lowerResponse.status < 400) return Response.redirect(new URL(location ?? lowerUrl.toString(), lowerUrl).toString(), 301);
+    }
+
     // Every real page is prerendered, so anything else is a 404. Serve the SPA shell (which renders
     // the "not found" view) with a real 404 status so search engines don't index soft 404s.
     const spaUrl = new URL(request.url);
