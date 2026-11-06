@@ -350,8 +350,8 @@ export const useResumeData = () => {
     return () => window.removeEventListener('storage', handleStorage);
   }, []);
 
-  /** Replaces the whole resume (import, start from blank, restore sample) and persists it. */
-  const replaceData = useCallback((next: ResumeData) => {
+  /** Replaces the whole resume (import, start from blank, restore sample) and persists it; false if it couldn't be saved. */
+  const replaceData = useCallback((next: ResumeData): boolean => {
     if (saveTimerRef.current !== null) {
       window.clearTimeout(saveTimerRef.current);
       saveTimerRef.current = null;
@@ -370,6 +370,7 @@ export const useResumeData = () => {
     setResumeData(merged);
     setSaveError(success ? null : 'Failed to save changes locally');
     setSaveStatus(success ? 'idle' : 'error');
+    return success;
   }, []);
 
   useEffect(() => {

@@ -1,3 +1,4 @@
+import { ResumeSwitcher } from '../components/ResumeSwitcher';
 import React, { useCallback, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router';
 import { useSeo, SEO_ROBOTS_NOINDEX, getSiteUrl } from '../hooks/useSeo';
@@ -523,6 +524,7 @@ const EditorView: React.FC = () => {
           <span className="hidden sm:inline">ModernCV</span>
         </Link>
         <span className="hidden h-5 w-px bg-tint sm:block" />
+        <ResumeSwitcher />
         <SaveIndicator status={saveStatus} />
 
         <div className="flex flex-1 justify-center md:hidden">
