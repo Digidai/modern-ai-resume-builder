@@ -49,6 +49,11 @@ interface ResumeContextValue {
   deleteResume: (id: string) => void;
 }
 
+// The untouched sample or an empty resume isn't worth keeping: a resume opened from elsewhere takes its place.
+const content = ({ templateId: _t, design: _d, ...rest }: ResumeData) => JSON.stringify(rest);
+const THROWAWAY = [INITIAL_RESUME_DATA, BLANK_RESUME_DATA].map(content);
+const isThrowaway = (data: ResumeData) => THROWAWAY.includes(content(data));
+
 const STORAGE_FULL = "This browser's storage is full, so the resume couldn't be saved. Delete a resume or remove a photo, then try again.";
 
 const ResumeContext = createContext<ResumeContextValue | null>(null);
@@ -87,19 +92,6 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     }
   }, [isExportingPdf, resumeData, showError, showSuccess]);
 
-  const handleExportJson = useCallback(() => {
-    const blob = new Blob([JSON.stringify(resumeData, null, 2)], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `${toFileBase(resumeData.fullName).toLowerCase()}-resume-backup.json`;
-    document.body.appendChild(link);
-    link.click();
-    link.remove();
-    URL.revokeObjectURL(url);
-    showSuccess('Backup saved. Use “Import backup” to restore it on any device.');
-  }, [resumeData, showSuccess]);
-
   const replaceWithUndo = useCallback(
     (next: ResumeData, message: string) => {
       const previous = resumeData;
@@ -107,21 +99,6 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       showToast(message, 'success', { action: { label: 'Undo', onClick: () => replaceData(previous) } });
     },
     [replaceData, resumeData, showToast]
-  );
-
-  const importJson = useCallback(
-    async (file: File) => {
-      try {
-        const parsed = sanitizeResumeData(JSON.parse(await file.text()));
-        if (!parsed) throw new Error('not a resume');
-        replaceWithUndo(parsed, 'Backup imported.');
-        return true;
-      } catch {
-        showError('That file is not a ModernCV backup (.json).');
-        return false;
-      }
-    },
-    [replaceWithUndo, showError]
   );
 
   const startOver = useCallback(
@@ -232,10 +209,7 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
 
   const addResume = useCallback(
     (next: ResumeData, message: string) => {
-      // The untouched sample or an empty resume isn't worth keeping: the new one takes its place.
-      const content = ({ templateId: _t, design: _d, ...rest }: ResumeData) => JSON.stringify(rest);
-      const throwaway = [INITIAL_RESUME_DATA, BLANK_RESUME_DATA].some((base) => content(base) === content(resumeData));
-      if (!library || throwaway) {
+      if (!library || isThrowaway(resumeData)) {
         replaceWithUndo(next, message);
         return;
       }
@@ -274,6 +248,73 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       });
     },
     [library, saveLibrary, showToast]
+  );
+
+  const download = (payload: unknown, fileName: string) => {
+    const blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = fileName;
+    document.body.appendChild(link);
+    link.click();
+    link.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  // One resume: the resume itself, as before. Several: all of them, so one file moves or restores every resume.
+  const handleExportJson = useCallback(() => {
+    const resumes = (library?.entries ?? [])
+      .map((entry) => ({ name: resumeName(entry), data: entry.id === library?.activeId ? resumeData : readSnapshot(entry.id) }))
+      .filter((resume): resume is { name: string; data: ResumeData } => resume.data !== null);
+    if (resumes.length > 1) {
+      download({ moderncvBackup: 1, resumes }, `moderncv-${resumes.length}-resumes-backup.json`);
+      showSuccess(`Backup of all ${resumes.length} resumes saved. “Import backup” adds them to the resume menu on any device.`);
+      return;
+    }
+    download(resumeData, `${toFileBase(resumeData.fullName).toLowerCase()}-resume-backup.json`);
+    showSuccess('Backup saved. Use “Import backup” to restore it on any device.');
+  }, [library, resumeData, resumeName, showSuccess]);
+
+  const importJson = useCallback(
+    async (file: File) => {
+      try {
+        const raw = JSON.parse(await file.text());
+        if (Array.isArray(raw?.resumes)) {
+          // A backup of several resumes: add them all next to the one being edited.
+          const current = libraryRef.current;
+          const resumes = (raw.resumes as { name?: unknown; data?: unknown }[])
+            .map((r) => ({ name: typeof r?.name === 'string' ? r.name : '', data: sanitizeResumeData(r?.data) }))
+            .filter((r): r is { name: string; data: ResumeData } => r.data !== null);
+          if (!current || resumes.length === 0) throw new Error('not a resume');
+          let base = current;
+          if (current.entries.length === 1 && isThrowaway(resumeData)) {
+            // A fresh browser: the first resume replaces the sample instead of sitting next to it.
+            const [first] = resumes.splice(0, 1);
+            if (!replaceData(first.data)) throw new Error('storage');
+            base = { activeId: current.activeId, entries: [{ ...current.entries[0], name: first.name || suggestResumeName(first.data), updatedAt: Date.now(), templateId: first.data.templateId }] };
+          }
+          const added: ResumeEntry[] = [];
+          for (const resume of resumes) {
+            const id = newResumeId();
+            if (!writeSnapshot(id, resume.data)) break;
+            added.push({ id, name: resume.name || suggestResumeName(resume.data), updatedAt: Date.now(), templateId: resume.data.templateId });
+          }
+          saveLibrary({ ...base, entries: [...base.entries, ...added] });
+          if (added.length < resumes.length) showError(STORAGE_FULL);
+          else showSuccess(`Imported ${added.length + (base === current ? 0 : 1)} resumes from the backup. Switch between them in the resume menu.`);
+          return true;
+        }
+        const parsed = sanitizeResumeData(raw);
+        if (!parsed) throw new Error('not a resume');
+        replaceWithUndo(parsed, 'Backup imported.');
+        return true;
+      } catch {
+        showError('That file is not a ModernCV backup (.json).');
+        return false;
+      }
+    },
+    [replaceData, replaceWithUndo, resumeData, saveLibrary, showError, showSuccess]
   );
 
   const value = useMemo(

@@ -281,7 +281,7 @@ const content = ({ templateId: _t, design: _d, ...rest }: ResumeData) => JSON.st
 const SAMPLE_CONTENT = content(INITIAL_RESUME_DATA);
 const isUntouched = (data: ResumeData) => isBlank(data) || content(data) === SAMPLE_CONTENT;
 
-/** Asks before a #resume= link replaces a resume the user has written (anyone can craft such a link). */
+/** Asks before a #resume= link opens a resume next to the user's own (anyone can craft such a link). */
 const ReplaceFromLinkDialog: React.FC<{ incoming: ResumeData | null; onReplace: () => void; onClose: () => void }> = ({
   incoming,
   onReplace,
@@ -308,15 +308,15 @@ const ReplaceFromLinkDialog: React.FC<{ incoming: ResumeData | null; onReplace: 
           Open {name ? `${name}'s resume` : 'the resume'} from this link?
         </h2>
         <p id="replace-link-text" className="mt-1.5 text-sm leading-relaxed text-muted">
-          It replaces the resume saved in this browser. Download a backup first if you want to keep it.
+          It opens as a new resume. Yours stays in the resume menu.
         </p>
       </div>
       <div className="flex flex-wrap justify-end gap-2 border-t border-rule px-5 py-3">
         <Button variant="secondary" size="sm" onClick={onClose} autoFocus>
-          Keep my resume
+          Cancel
         </Button>
         <Button size="sm" onClick={onReplace}>
-          Replace
+          Open as new resume
         </Button>
       </div>
     </dialog>
@@ -332,6 +332,7 @@ const EditorView: React.FC = () => {
     importJson,
     startOver,
     loadResume,
+    addResume,
     isExportingPdf,
     pdfProgress,
     saveError,
@@ -562,7 +563,7 @@ const EditorView: React.FC = () => {
           <ReplaceFromLinkDialog
             incoming={linkResume}
             onReplace={() => {
-              if (linkResume) loadResume(linkResume, linkMessage(linkResume));
+              if (linkResume) addResume(linkResume, linkMessage(linkResume));
               setLinkResume(null);
             }}
             onClose={() => setLinkResume(null)}
