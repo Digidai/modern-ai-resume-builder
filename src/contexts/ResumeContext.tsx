@@ -42,6 +42,8 @@ interface ResumeContextValue {
   switchResume: (id: string) => void;
   /** Starts another resume, blank (keeping the template and style) or a copy of this one, and edits it. */
   createResume: (kind: 'blank' | 'duplicate') => void;
+  /** Edits `data` as a new resume, keeping the current one in the library (or replacing it if it is the untouched sample or empty). */
+  addResume: (data: ResumeData, message: string) => void;
   renameResume: (id: string, name: string) => void;
   /** Deletes a resume that is not being edited; the toast can bring it back. */
   deleteResume: (id: string) => void;
@@ -195,27 +197,51 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     [library, replaceData, resumeData, saveLibrary, showError, stashActive]
   );
 
+  /** Keeps the current resume in the library and edits `next` as a new one; false (with an error) if it couldn't be saved. */
+  const openAsNew = useCallback(
+    (current: ResumeLibrary, next: ResumeData, name: string): boolean => {
+      const stashed = stashActive(current);
+      if (!stashed) {
+        showError(STORAGE_FULL);
+        return false;
+      }
+      if (next !== resumeData && !replaceData(next)) {
+        replaceData(resumeData);
+        showError(STORAGE_FULL);
+        return false;
+      }
+      const id = newResumeId();
+      saveLibrary({ activeId: id, entries: [...stashed.entries, { id, name, updatedAt: Date.now(), templateId: next.templateId }] });
+      return true;
+    },
+    [replaceData, resumeData, saveLibrary, showError, stashActive]
+  );
+
   const createResume = useCallback(
     (kind: 'blank' | 'duplicate') => {
       if (!library) return;
-      const stashed = stashActive(library);
-      if (!stashed) {
-        showError(STORAGE_FULL);
-        return;
-      }
-      const active = stashed.entries.find((e) => e.id === library.activeId);
-      const next = kind === 'blank' ? { ...BLANK_RESUME_DATA, templateId: resumeData.templateId, design: resumeData.design } : resumeData;
-      if (kind === 'blank' && !replaceData(next)) {
-        replaceData(resumeData);
-        showError(STORAGE_FULL);
-        return;
-      }
-      const id = newResumeId();
-      const name = kind === 'duplicate' && active ? `${active.name} (copy)` : '';
-      saveLibrary({ activeId: id, entries: [...stashed.entries, { id, name, updatedAt: Date.now(), templateId: next.templateId }] });
-      showSuccess(kind === 'blank' ? 'Started a new resume. Your other resumes are in the list.' : 'Made a copy. You are now editing the copy.');
+      const active = library.entries.find((e) => e.id === library.activeId);
+      const ok =
+        kind === 'blank'
+          ? openAsNew(library, { ...BLANK_RESUME_DATA, templateId: resumeData.templateId, design: resumeData.design }, '')
+          : openAsNew(library, resumeData, `${active?.name || suggestResumeName(resumeData)} (copy)`);
+      if (ok) showSuccess(kind === 'blank' ? 'Started a new resume. Your other resumes are in the list.' : 'Made a copy. You are now editing the copy.');
     },
-    [library, replaceData, resumeData, saveLibrary, showError, showSuccess, stashActive]
+    [library, openAsNew, resumeData, showSuccess]
+  );
+
+  const addResume = useCallback(
+    (next: ResumeData, message: string) => {
+      // The untouched sample or an empty resume isn't worth keeping: the new one takes its place.
+      const content = ({ templateId: _t, design: _d, ...rest }: ResumeData) => JSON.stringify(rest);
+      const throwaway = [INITIAL_RESUME_DATA, BLANK_RESUME_DATA].some((base) => content(base) === content(resumeData));
+      if (!library || throwaway) {
+        replaceWithUndo(next, message);
+        return;
+      }
+      if (openAsNew(library, next, '')) showSuccess(`${message} Your other resumes are in the resume menu.`);
+    },
+    [library, openAsNew, replaceWithUndo, resumeData, showSuccess]
   );
 
   const renameResume = useCallback(
@@ -267,10 +293,11 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       resumeName,
       switchResume,
       createResume,
+      addResume,
       renameResume,
       deleteResume,
     }),
-    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, pdfProgress, handleDownloadPdf, handleExportJson, importJson, startOver, replaceWithUndo, library, resumeName, switchResume, createResume, renameResume, deleteResume]
+    [resumeData, setResumeData, saveError, saveStatus, isExportingPdf, pdfProgress, handleDownloadPdf, handleExportJson, importJson, startOver, replaceWithUndo, library, resumeName, switchResume, createResume, addResume, renameResume, deleteResume]
   );
 
   return <ResumeContext.Provider value={value}>{children}</ResumeContext.Provider>;

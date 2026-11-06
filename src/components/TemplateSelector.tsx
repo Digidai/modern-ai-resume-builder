@@ -39,7 +39,7 @@ interface TemplateSelectorProps {
 const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => {
     const { jobTitle } = useParams<{ jobTitle: string }>();
     const navigate = useNavigate();
-    const { resumeData, loadResume } = useResume();
+    const { resumeData, addResume } = useResume();
     const [selectedTemplateId, setSelectedTemplateId] = useState(() => resumeData.templateId || 'modern');
     const [showAllTemplates, setShowAllTemplates] = useState(false);
 
@@ -246,7 +246,7 @@ const JobTemplatePage: React.FC<TemplateSelectorProps> = ({ onUseTemplate }) => 
     const useSelected = () => onUseTemplate(resolvedJobTitle, selectedTemplateId);
     const startFromExample = () => {
         if (!exampleResume) return;
-        loadResume(
+        addResume(
             {
                 ...BLANK_RESUME_DATA,
                 ...exampleResume,
