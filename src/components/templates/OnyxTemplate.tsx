@@ -28,7 +28,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
     const summary = data.summary.trim();
 
     return (
-        <div className="flex flex-1 flex-row font-montserrat text-neutral-800 [--accent:var(--rs-accent,#2A9D8F)]">
+        <div className="flex flex-1 flex-row font-montserrat text-neutral-800 [--accent:var(--rs-accent,#228175)]">
             <aside className="page-frame flex w-[68mm] shrink-0 flex-col gap-[22px] bg-[#23272E] pt-[14mm] pr-[8mm] pb-[12mm] pl-[10mm] text-neutral-300 print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                 <Portrait
                     data={data}

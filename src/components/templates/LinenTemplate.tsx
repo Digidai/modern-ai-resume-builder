@@ -21,7 +21,7 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
     const summary = data.summary.trim();
 
     return (
-        <div className="flex flex-1 flex-col bg-[#F6F1EA] font-lato text-[#2F2924] [--accent:var(--rs-accent,#8B6B4A)] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
+        <div className="flex flex-1 flex-col bg-[#F6F1EA] font-lato text-[#2F2924] [--accent:var(--rs-accent,#866747)] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
             <header className="flex items-center gap-[8mm] px-[15mm] pt-[14mm] pb-[8mm] break-inside-avoid">
                 <Portrait
                     data={data}
@@ -59,7 +59,7 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
                                         <article key={edu.id} className="break-inside-avoid">
                                             {heading && <h3 className="text-[13px] font-bold leading-snug text-[#2F2924] wrap-break-word">{heading}</h3>}
                                             {school && <p className="text-[12.5px] leading-snug text-[#4A4038] wrap-break-word">{school}</p>}
-                                            {dates && <p className="mt-[2px] text-[12px] tabular-nums text-[#8A7E73]">{dates}</p>}
+                                            {dates && <p className="mt-[2px] text-[12px] tabular-nums text-[#756B62]">{dates}</p>}
                                         </article>
                                     );
                                 })}

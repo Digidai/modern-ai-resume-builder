@@ -15,7 +15,7 @@ const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => 
 
 const bodyText = 'text-[13.5px] leading-[1.5] text-slate-700 wrap-break-word';
 const listClass = 'list-disc pl-[1.1em] space-y-[2px] marker:text-(--accent)';
-const dateClass = 'shrink-0 whitespace-nowrap text-[12.5px] font-medium tabular-nums text-slate-500';
+const dateClass = 'shrink-0 whitespace-nowrap text-[12.5px] font-medium tabular-nums text-slate-600';
 
 export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
     const contacts = getContactEntries(data);
@@ -151,7 +151,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
                                                 <article key={edu.id} className="break-inside-avoid">
                                                     {(degree || school) && <h3 className="text-[14px] font-semibold leading-snug text-slate-900 wrap-break-word">{degree || school}</h3>}
                                                     {degree && school && <p className="text-[13.5px] leading-snug text-slate-700 wrap-break-word">{school}</p>}
-                                                    {dates && <p className="mt-[1px] text-[12.5px] font-medium tabular-nums text-slate-500">{dates}</p>}
+                                                    {dates && <p className="mt-[1px] text-[12.5px] font-medium tabular-nums text-slate-600">{dates}</p>}
                                                 </article>
                                             );
                                         })}

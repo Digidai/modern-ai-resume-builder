@@ -16,7 +16,7 @@ const Meta: React.FC<{ secondary?: React.ReactNode; dates?: string }> = ({ secon
         <div className="flex flex-wrap justify-center items-baseline gap-x-2 text-[13px] leading-snug mt-0.5">
             {secondary && <span className="italic text-slate-700 min-w-0 wrap-break-word">{secondary}</span>}
             {secondary && dates && <span className="text-(--accent)" aria-hidden="true">·</span>}
-            {dates && <span className="text-[12px] uppercase tracking-[0.08em] text-slate-500 tabular-nums whitespace-nowrap">{dates}</span>}
+            {dates && <span className="text-[12px] uppercase tracking-[0.08em] text-slate-600 tabular-nums whitespace-nowrap">{dates}</span>}
         </div>
     ) : null;
 

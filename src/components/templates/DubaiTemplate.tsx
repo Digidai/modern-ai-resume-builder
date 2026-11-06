@@ -30,7 +30,7 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
     const summary = data.summary.trim();
 
     return (
-        <div className="flex flex-1 flex-col gap-[17px] border-t-[6mm] border-(--accent) bg-white px-[15mm] pt-[11mm] pb-[13mm] font-raleway text-neutral-900 [--accent:var(--rs-accent,#A8823F)] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
+        <div className="flex flex-1 flex-col gap-[17px] border-t-[6mm] border-(--accent) bg-white px-[15mm] pt-[11mm] pb-[13mm] font-raleway text-neutral-900 [--accent:var(--rs-accent,#906F36)] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
             <header className="break-inside-avoid">
                 <div className="flex items-center gap-[7mm]">
                     <Portrait
