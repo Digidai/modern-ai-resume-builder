@@ -1449,6 +1449,8 @@ const withSecurityHeaders = async (request: Request, env: Env, response: Respons
   headers.set('cross-origin-opener-policy', 'same-origin');
   headers.set('cross-origin-resource-policy', 'same-origin');
   headers.set('cross-origin-embedder-policy', 'credentialless');
+  // Browsers then go straight to HTTPS on later visits; subdomains are left to their own settings.
+  if (new URL(request.url).protocol === 'https:') headers.set('strict-transport-security', 'max-age=31536000');
 
   const contentType = normalizeText(headers.get('content-type')).toLowerCase();
   if (contentType.includes('text/html') && response.status !== 304) {
