@@ -4,7 +4,7 @@ import { useSeo, SEO_ROBOTS_NOINDEX } from '../hooks/useSeo';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
 import jobTitles from '../data/jobTitles.json';
 
-const JOB_TITLE_COUNT = (jobTitles as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0);
+const JOB_TITLE_COUNT = (jobTitles as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0).toLocaleString('en');
 
 const links = [
   { to: '/editor/', label: 'Open the editor', body: 'Pick up where you left off — your resume is saved in this browser.' },

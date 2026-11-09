@@ -17,7 +17,7 @@ const HERO_TEMPLATE_IDS = ['modern', 'classic', 'timeline', 'sidebar'];
 const SHOWCASE_TEMPLATE_IDS = ['classic', 'modern', 'vanguard', 'timeline', 'banking', 'sidebar', 'creative', 'duo'];
 
 const ATS_COUNT = TEMPLATES.filter((t) => t.atsFriendly).length;
-const EXAMPLE_COUNT = (jobTitlesData as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0);
+const EXAMPLE_COUNT = (jobTitlesData as { titles: string[] }[]).reduce((n, c) => n + c.titles.length, 0).toLocaleString('en');
 
 const FACTS = [
   { title: `${TEMPLATES.length} templates`, body: `${ATS_COUNT} single-column and ATS-friendly, the rest two-column or expressive.` },

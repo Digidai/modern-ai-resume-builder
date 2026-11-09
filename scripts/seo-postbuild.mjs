@@ -739,7 +739,7 @@ const buildDirectoryOgSvg = ({ titles, totalTitles, totalCategories, templateCou
   <text class="brand" x="72" y="80">ModernCV</text>
   <text class="title" x="72" y="150">Job Title Directory</text>
   <text class="subtitle" x="72" y="200">${escapeHtml(
-    `${totalTitles} roles across ${totalCategories} categories`
+    `${totalTitles.toLocaleString('en')} roles across ${totalCategories} categories`
   )}</text>
   ${chips}
   <g transform="translate(760 130)">
@@ -1225,7 +1225,7 @@ Key facts:
 
 - [Resume editor](${siteUrl}/editor/): Edit, switch templates, use AI, download PDF.
 - [All templates](${siteUrl}/templates/): Every design with a description and ATS status.
-- [Resume examples by job title](${siteUrl}/directory/): Writing guides for ${jobItems.length} job titles.
+- [Resume examples by job title](${siteUrl}/directory/): Writing guides for ${jobItems.length.toLocaleString('en')} job titles.
 
 ## For agents
 
@@ -1614,7 +1614,7 @@ const main = async () => {
     routePath: '/',
     title: `ModernCV – Free Resume Builder with ${templates.length} Templates, No Sign-up`,
     description:
-      `Free resume builder with ${templates.length} templates and ${allTitles.length} example resumes by job title. No account, optional AI writing help, and a PDF with selectable text.`,
+      `Free resume builder with ${templates.length} templates and ${allTitles.length.toLocaleString('en')} example resumes by job title. No account, optional AI writing help, and a PDF with selectable text.`,
     keywords: buildHomeKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildHomeSchema(siteUrl, resolveOgImageUrl(siteUrl, homeOgPath), lastmodIso),
@@ -1626,7 +1626,7 @@ const main = async () => {
   await writePage({
     routePath: '/directory',
     title: 'Browse Resume Templates by Job Title | ModernCV Directory',
-    description: `${allTitles.length} resume examples by job title, each with a writing guide. Pick your role, preview it in ${templates.length} templates and download a PDF.`,
+    description: `${allTitles.length.toLocaleString('en')} resume examples by job title, each with a writing guide. Pick your role, preview it in ${templates.length} templates and download a PDF.`,
     keywords: buildDirectoryKeywords(),
     robots: ROBOTS_INDEX,
     ldJson: buildDirectorySchema(siteUrl, jobItems, directoryOgImageUrl, lastmodIso),

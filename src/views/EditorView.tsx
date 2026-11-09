@@ -16,6 +16,7 @@ import {
   AlertIcon,
   LoaderIcon,
   CodeIcon,
+  SparklesIcon,
 } from '../components/Icons';
 import { Button } from '../components/Button';
 import ThemeToggle from '../components/ThemeToggle';
@@ -471,7 +472,7 @@ const EditorView: React.FC = () => {
       {
         label: 'Import resume (PDF, Word, LaTeX)',
         description: 'AI fills the editor from your old resume; preview it first.',
-        icon: <CodeIcon className="h-4 w-4" />,
+        icon: <SparklesIcon className="h-4 w-4" />,
         onSelect: () => setImportOpen(true),
       },
     ],

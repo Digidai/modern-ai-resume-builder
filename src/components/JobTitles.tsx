@@ -17,7 +17,7 @@ interface JobTitleCategory {
 }
 
 const JOB_CATEGORIES = jobTitlesData as JobTitleCategory[];
-const TOTAL_TITLES = JOB_CATEGORIES.reduce((n, c) => n + c.titles.length, 0);
+const TOTAL_TITLES = JOB_CATEGORIES.reduce((n, c) => n + c.titles.length, 0).toLocaleString('en');
 
 interface CategoryCardProps {
     category: JobTitleCategory;
@@ -272,8 +272,8 @@ const JobTitles: React.FC = () => {
                         </div>
                         <p className="kicker mt-3 text-muted" aria-live="polite" aria-atomic="true">
                             {isSearching
-                                ? `${stats.filteredTitleCount} ${stats.filteredTitleCount === 1 ? 'role' : 'roles'} in ${filteredCategories.length} ${filteredCategories.length === 1 ? 'category' : 'categories'}`
-                                : `${stats.totalTitles} roles across ${stats.totalCategories} categories`}
+                                ? `${stats.filteredTitleCount.toLocaleString('en')} ${stats.filteredTitleCount === 1 ? 'role' : 'roles'} in ${filteredCategories.length} ${filteredCategories.length === 1 ? 'category' : 'categories'}`
+                                : `${stats.totalTitles.toLocaleString('en')} roles across ${stats.totalCategories} categories`}
                         </p>
                     </div>
                 </div>

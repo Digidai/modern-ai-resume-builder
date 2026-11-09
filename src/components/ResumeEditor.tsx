@@ -259,7 +259,7 @@ const ResumeChecks = ({ checks, onJump }: { checks: ResumeCheck[]; onJump: (chec
         className="flex w-full items-center gap-2 rounded-lg px-3 py-2 text-left text-sm hover:bg-tint focus-ring"
       >
         <ChevronDownIcon className={`h-4 w-4 shrink-0 text-muted transition-transform ${open ? '' : '-rotate-90'}`} />
-        <span className="font-medium text-ink">{checks.length === 1 ? '1 suggestion' : `${checks.length} suggestions`}</span>
+        <span className="shrink-0 whitespace-nowrap font-medium text-ink">{checks.length === 1 ? '1 suggestion' : `${checks.length} suggestions`}</span>
         <span className="truncate text-muted">{open ? 'Select one to go there' : checks[0].message}</span>
       </button>
       {open && (
