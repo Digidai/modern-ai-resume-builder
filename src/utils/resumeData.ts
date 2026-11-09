@@ -63,6 +63,29 @@ const strings = (value: unknown): string[] =>
   Array.isArray(value) ? value.filter((v): v is string => typeof v === 'string' && v.trim() !== '').map((v) => v.trim()) : [];
 /** JSON Resume dates are ISO (YYYY, YYYY-MM or YYYY-MM-DD); the editor stores YYYY-MM. */
 const isoMonth = (value: unknown): string => str(value).trim().slice(0, 7);
+
+const MONTH_NAMES = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december'];
+
+/**
+ * A month typed by hand where the browser has no month picker (Firefox, desktop Safari) → YYYY-MM, the
+ * form Chrome's picker gives, so templates, exports and checks read it the same: "Jan 2020",
+ * "September 2021", "2020/3", "03/2021", "2020年3月". A year, or anything else, is kept as typed.
+ */
+export const normalizeMonth = (value: string): string => {
+  const text = value.trim();
+  const month = (year: string, m: number) => (m >= 1 && m <= 12 ? `${year}-${String(m).padStart(2, '0')}` : value);
+  let match = /^(\d{4})\s*[-/.]\s*(\d{1,2})$/.exec(text) ?? /^(\d{4})\s*年\s*(\d{1,2})\s*月$/.exec(text);
+  if (match) return month(match[1], Number(match[2]));
+  match = /^(\d{1,2})\s*[-/.]\s*(\d{4})$/.exec(text);
+  if (match) return month(match[2], Number(match[1]));
+  match = /^([a-z]{3,9})\.?,?\s*(\d{4})$/i.exec(text);
+  if (match) {
+    const word = match[1].toLowerCase();
+    const index = MONTH_NAMES.findIndex((name) => name.startsWith(word));
+    if (index >= 0) return month(match[2], index + 1);
+  }
+  return value;
+};
 /** Summary text plus highlight bullets, in the editor's "- bullet" description format. */
 const describe = (summary: unknown, highlights: unknown): string =>
   [str(summary).trim(), ...strings(highlights).map((h) => `- ${h}`)].filter(Boolean).join('\n');

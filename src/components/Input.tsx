@@ -1,4 +1,5 @@
 import React, { useId, useLayoutEffect, useRef } from 'react';
+import { normalizeMonth } from '../utils/resumeData';
 
 export const fieldClass = (error?: string) =>
   `w-full rounded-lg border px-3 py-2 text-sm text-ink shadow-card placeholder:text-muted/70 transition-[color,border-color,box-shadow]
@@ -83,6 +84,15 @@ export const Input: React.FC<InputProps> = ({
         placeholder={placeholder}
         autoComplete={autoComplete}
         onChange={(e) => onChange(e.target.value)}
+        // Without a month picker the field is plain text: tidy "Jan 2020" or "2020/3" into YYYY-MM.
+        onBlur={
+          type === 'month'
+            ? (e) => {
+                const month = normalizeMonth(e.target.value);
+                if (month !== e.target.value) onChange(month);
+              }
+            : undefined
+        }
         disabled={disabled}
         aria-invalid={!!error}
         aria-describedby={error ? `${inputId}-error` : hint ? `${inputId}-hint` : undefined}

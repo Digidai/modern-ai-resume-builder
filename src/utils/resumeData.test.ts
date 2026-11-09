@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { sanitizeResumeData } from './resumeData';
+import { normalizeMonth, sanitizeResumeData } from './resumeData';
 
 describe('sanitizeResumeData', () => {
   it('keeps a US Letter paper choice and reads older or unknown values as A4', () => {
@@ -120,5 +120,24 @@ describe('sanitizeResumeData', () => {
   it('rejects JSON that is not a resume', () => {
     expect(sanitizeResumeData({ foo: 1 })).toBeNull();
     expect(sanitizeResumeData([1, 2])).toBeNull();
+  });
+});
+
+describe('normalizeMonth', () => {
+  it('turns months typed without a month picker into YYYY-MM', () => {
+    expect(normalizeMonth('Jan 2020')).toBe('2020-01');
+    expect(normalizeMonth(' Sept. 2021 ')).toBe('2021-09');
+    expect(normalizeMonth('March, 2019')).toBe('2019-03');
+    expect(normalizeMonth('2020/3')).toBe('2020-03');
+    expect(normalizeMonth('2020.11')).toBe('2020-11');
+    expect(normalizeMonth('03/2021')).toBe('2021-03');
+    expect(normalizeMonth('2020年3月')).toBe('2020-03');
+    expect(normalizeMonth('2020-03')).toBe('2020-03');
+  });
+
+  it('keeps years, impossible months and other text as typed', () => {
+    for (const typed of ['2019', '', '2020/13', '13/2020', 'Ma 2020', 'Summer 2020', 'Jan', 'Expected 2026']) {
+      expect(normalizeMonth(typed)).toBe(typed);
+    }
   });
 });
