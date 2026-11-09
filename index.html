@@ -108,6 +108,18 @@
   }
   </script>
   <style>
+    /* The site's text until Inter arrives (font-sans / font-display in index.css): Arial, or Roboto on
+       Android, scaled to Inter's width and line metrics so headings wrap the same way and nothing below
+       them moves when Inter swaps in. Here rather than in index.css so every page has it at first paint. */
+    @font-face {
+      font-family: "Inter Fallback";
+      src: local("Arial"), local("ArialMT"), local("Roboto");
+      ascent-override: 90.49%;
+      descent-override: 22.56%;
+      line-gap-override: 0%;
+      size-adjust: 107.06%;
+    }
+
     @media print {
       @page {
         margin: 0;
