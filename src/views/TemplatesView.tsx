@@ -124,14 +124,14 @@ const TemplatesView: React.FC = () => {
               <div className="rounded-xl border border-rule bg-tint p-3 transition-[box-shadow,border-color] duration-200 group-hover:border-muted/30 group-hover:shadow-raised group-has-[:focus-visible]:outline-2 group-has-[:focus-visible]:outline-offset-2 group-has-[:focus-visible]:outline-accent sm:p-4"><div className="overflow-hidden rounded-[2px] bg-white shadow-card">
                 <LazyResumePreview data={resumeData} templateId={t.id} eager={index < 8} />
               </div></div>
-              <div className="mt-3 flex items-center justify-between gap-2">
+              <div className="mt-3 flex flex-wrap items-center justify-between gap-x-2 gap-y-1">
                 <Link
                   to={`/templates/${t.id}/`}
                   className="font-display text-[15px] font-semibold text-ink after:absolute after:inset-0 focus-visible:outline-none"
                 >
                   {t.name}
                 </Link>
-                <span className="flex gap-1.5">
+                <span className="flex flex-wrap gap-1.5">
                   {t.atsFriendly && <AtsBadge />}
                   {t.twoColumn && <span className="tag whitespace-nowrap">2 columns</span>}
                   {t.photo && <PhotoBadge />}

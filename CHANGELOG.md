@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- On phones, the four links in the site menu fit on screens 360 px and wider instead of scrolling sideways with FAQ cut off at the edge, and on narrow phones the template cards' tags wrap onto a second line instead of pushing the Templates page wider than the screen.
 - On phones, the editor shows which resume you are editing ("Senior Product Designer (copy) · 2 of 2") in a thin line under the header once there are two or more, since the resume menu button there has room only for its icon. Tapping the line opens the resume menu.
 - On phones, the whole editor page could scroll about 370 px in the Profile tab, taking the header off screen (it happened after duplicating a resume, for example): the photo field's hidden file input was positioned against the page instead of the editor panel. The panel now contains it.
 - Small polish: the number of job titles reads "1,204" instead of "1204" on the home, directory and 404 pages, in their search descriptions, the directory's share image and llms.txt; the editor's "1 suggestion" label no longer wraps onto two lines on phones; and Import resume in More actions has its own sparkles icon instead of sharing Open in Overleaf's code icon.

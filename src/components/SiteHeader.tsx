@@ -52,7 +52,8 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
         </Link>
       </div>
     </div>
-    <nav className="flex gap-1 overflow-x-auto px-2 pb-2 md:hidden" aria-label="Main mobile">
+    {/* Tighter than the desktop bar so the four links fit from 360px wide; narrower screens scroll it. */}
+    <nav className="flex overflow-x-auto px-1.5 pb-2 md:hidden [&>a]:px-2" aria-label="Main mobile">
       <NavItems />
     </nav>
   </header>
