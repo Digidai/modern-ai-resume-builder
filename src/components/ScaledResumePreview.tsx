@@ -156,7 +156,7 @@ export const ScaledResumePreview: React.FC<ScaledResumePreviewProps> = ({
         {/* In the page view the paper stays laid out (for export, measuring and screen readers) but invisible;
             until it has been measured (prerendered HTML) the sheets are empty, so the paper itself shows. */}
         <div ref={paperHostRef} className={paged && scale ? 'pointer-events-none absolute inset-x-0 top-0 opacity-0 print:static print:opacity-100' : undefined}>
-          <ResumePreview data={resolvedData} id={exportable ? 'resume-preview-container' : ''} showPageBreaks={!isThumbnail && !paged} />
+          <ResumePreview data={resolvedData} id={exportable ? 'resume-preview-container' : ''} showPageBreaks={!isThumbnail && !paged} live={!isThumbnail} />
         </div>
         {paged && <PageSheets paperHost={paperHostRef} fullBleed={isFullBleedTemplate(resolvedData.templateId)} />}
       </div>

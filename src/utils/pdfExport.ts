@@ -51,6 +51,13 @@ const downloadBlob = (blob: Blob, fileName: string) => {
 
 const nextFrame = () => new Promise<void>((resolve) => requestAnimationFrame(() => resolve()));
 
+/** Waits (up to 2 s) for a live preview's deferred page measurement, so the export sees its final page count. */
+const layoutSettled = async (element: HTMLElement) => {
+  for (let waited = 0; element.dataset.layoutPending !== undefined && waited < 2000; waited += 50) {
+    await new Promise((resolve) => window.setTimeout(resolve, 50));
+  }
+};
+
 const getPreviewElement = async (previewElementId: string): Promise<HTMLElement> => {
   const immediate = document.getElementById(previewElementId);
   if (immediate) return immediate;
@@ -184,6 +191,7 @@ export const exportResumeToPdf = async ({
   await resumeFontsReady();
 
   const element = await getPreviewElement(previewElementId);
+  await layoutSettled(element);
   await nextFrame();
 
   const safeName = sanitizeFileName(rawFileName) || 'resume';

@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Typing stays quick in long resumes: the editor preview used to re-measure every page on each keystroke, which on a 9-page CV made a keystroke take over 200 ms on a mid-range phone. It now measures once you pause (a quarter of a second), so keystrokes take under 50 ms there; the page count, page guides and page-count suggestions follow just after, and Download PDF waits for the measurement so the PDF always gets the final page count. The PDF render page still measures right away.
 - On phones, the four links in the site menu fit on screens 360 px and wider instead of scrolling sideways with FAQ cut off at the edge, and on narrow phones the template cards' tags wrap onto a second line instead of pushing the Templates page wider than the screen.
 - On phones, the editor shows which resume you are editing ("Senior Product Designer (copy) · 2 of 2") in a thin line under the header once there are two or more, since the resume menu button there has room only for its icon. Tapping the line opens the resume menu.
 - On phones, the whole editor page could scroll about 370 px in the Profile tab, taking the header off screen (it happened after duplicating a resume, for example): the photo field's hidden file input was positioned against the page instead of the editor panel. The panel now contains it.

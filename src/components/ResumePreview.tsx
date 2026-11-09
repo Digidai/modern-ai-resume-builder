@@ -1,4 +1,5 @@
 import React, { useLayoutEffect, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
 import { ResumeData } from '../types';
 import { ResumeTemplateRenderer } from './ResumeTemplateRenderer';
 import { isFullBleedTemplate } from '../constants/templates';
@@ -9,12 +10,17 @@ import { getCspNonce } from '../utils/csp';
 
 const onePage = (pageHeightPx: number): PrintLayout => ({ pages: 1, breaksMm: [], fillHeightPx: pageHeightPx - 1, lastPageFill: 1 });
 
+/** On-screen previews re-measure their pages after the paper has been unchanged this long. */
+const MEASURE_IDLE_MS = 250;
+
 interface ResumePreviewProps {
   data: ResumeData;
   /** DOM id used by PDF export; only the one preview that gets exported should keep the default. */
   id?: string;
   /** Dashed page-break guides (screen only). Off for thumbnails. */
   showPageBreaks?: boolean;
+  /** An on-screen preview the user edits: its pages are re-measured once the paper stops changing. */
+  live?: boolean;
 }
 
 /**
@@ -22,7 +28,7 @@ interface ResumePreviewProps {
  * least one page; a template's root should be `flex-1` (never a fixed page height) so backgrounds reach the
  * bottom at any scale. Design settings arrive as CSS custom properties plus a uniform zoom.
  */
-const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-preview-container', showPageBreaks = true }) => {
+const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-preview-container', showPageBreaks = true, live = false }) => {
   const isFullBleed = isFullBleedTemplate(data.templateId);
   const scale = data.design?.scale || 1;
   const page = paperSize(data.design?.paper);
@@ -31,6 +37,9 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
   const [layout, setLayout] = useState<PrintLayout>(() => onePage(pageHeightPx));
   // Thumbnails are never printed or paginated, so only the editor, export and render papers measure.
   const paginated = showPageBreaks || !!id;
+
+  // Live previews follow later changes from the DOM (see below); the others re-measure on new data.
+  const remeasureOn = live ? null : data;
 
   useLayoutEffect(() => {
     const paper = paperRef.current;
@@ -48,10 +57,40 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
       );
     };
     measure();
-    const observer = new ResizeObserver(measure);
-    observer.observe(paper);
-    return () => observer.disconnect();
-  }, [data, isFullBleed, paginated, pageHeightPx]);
+    if (!live) {
+      const observer = new ResizeObserver(measure);
+      observer.observe(paper);
+      return () => observer.disconnect();
+    }
+    // Measuring forces layout over every page (tens of milliseconds for a long CV, several times that on
+    // a slow phone), which made each keystroke wait for it. On screen the page count can trail typing:
+    // measure once the paper has stopped changing. `data-layout-pending` marks the wait so PDF export
+    // can let it finish first.
+    const content = paper.querySelector<HTMLElement>('[data-resume-zoom]');
+    let timer = 0;
+    const settle = () => {
+      flushSync(measure);
+      delete paper.dataset.layoutPending;
+    };
+    const schedule = () => {
+      paper.dataset.layoutPending = '';
+      window.clearTimeout(timer);
+      timer = window.setTimeout(settle, MEASURE_IDLE_MS);
+    };
+    // The template's content, plus the paper's own style (design settings); not the page guides and
+    // data-pages this effect writes.
+    const mutation = new MutationObserver(schedule);
+    if (content) mutation.observe(content, { subtree: true, childList: true, characterData: true, attributes: true });
+    mutation.observe(paper, { attributes: true, attributeFilter: ['style'] });
+    const resize = new ResizeObserver(schedule);
+    resize.observe(paper);
+    return () => {
+      window.clearTimeout(timer);
+      delete paper.dataset.layoutPending;
+      mutation.disconnect();
+      resize.disconnect();
+    };
+  }, [remeasureOn, isFullBleed, paginated, pageHeightPx, live]);
 
   const breaks = layout.breaksMm;
   const std = PRINT_CONFIG.MARGIN_STANDARD_MM;
