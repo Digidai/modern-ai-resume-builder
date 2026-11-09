@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- On template pages, the large preview is a picture of the template: the sample resume's email and profile links can no longer be clicked or reached with Tab, and screen readers announce it as "Halo template with a sample resume" instead of reading out the sample text. Lighthouse accessibility on these pages goes from 96 to 100 (the tiny sample links failed the touch-target check).
 - The editor's More actions menu works from the keyboard like a menu: opening it moves focus to the first item, ↑/↓/Home/End move between items, Tab closes it, and Esc or choosing an item returns focus to the ⋯ button. Before, focus stayed on the button, so screen readers announced a menu that keyboard users had to Tab into item by item.
 - Pages no longer jump when the Inter font arrives on a slow connection. Until it loads, the site's text uses Arial (Roboto on Android) scaled to Inter's width and line height, so headings wrap the same way; on the role pages the example resume used to drop about 40 px, a layout shift of 0.23 (Google counts over 0.1 as poor), and now measures 0.
 - HTTPS responses send `Strict-Transport-Security: max-age=31536000`, so after one visit browsers go straight to HTTPS instead of first asking over plain HTTP and being redirected. Subdomains are not included.

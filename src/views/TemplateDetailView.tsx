@@ -172,8 +172,11 @@ const TemplateDetail: React.FC<{ template: Template }> = ({ template }) => {
         </div>
 
         <div className="lg:col-start-1 lg:row-start-1">
-          <div className="mx-auto w-full max-w-[210mm] bg-white shadow-sheet">
-            <ScaledResumePreview data={{ ...resumeData, templateId: template.id }} mode="page" />
+          {/* A picture of the template: the sample resume's links and text aren't for clicking, tabbing or selecting. */}
+          <div className="mx-auto w-full max-w-[210mm] bg-white shadow-sheet" role="img" aria-label={`${template.name} template with a sample resume`}>
+            <div inert>
+              <ScaledResumePreview data={{ ...resumeData, templateId: template.id }} mode="page" />
+            </div>
           </div>
         </div>
       </main>
