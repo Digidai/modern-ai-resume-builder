@@ -1,4 +1,4 @@
-import { useState, createContext, useContext, useCallback, useMemo, useRef, ReactNode } from 'react';
+import { useState, createContext, useContext, useCallback, useEffect, useMemo, useRef, ReactNode } from 'react';
 
 type ToastType = 'success' | 'error' | 'info' | 'warning';
 
@@ -40,25 +40,72 @@ const ICON_PATHS: Record<ToastType, string> = {
   warning: 'M12 9v2m0 4h.01M5.1 19h13.8c1.5 0 2.5-1.7 1.7-3L13.7 4c-.8-1.3-2.7-1.3-3.5 0L3.3 16c-.8 1.3.2 3 1.8 3z',
 };
 
+interface Timer {
+  timeout?: number;
+  remaining: number;
+  startedAt: number;
+}
+
 export const ToastProvider = ({ children }: { children: ReactNode }) => {
   const [toasts, setToasts] = useState<Toast[]>([]);
-  const timers = useRef(new Map<string, number>());
+  const timers = useRef(new Map<string, Timer>());
+  const regionRef = useRef<HTMLDivElement>(null);
+  const hovered = useRef(false);
+  const paused = useRef(false);
 
   const removeToast = useCallback((id: string) => {
-    window.clearTimeout(timers.current.get(id));
+    window.clearTimeout(timers.current.get(id)?.timeout);
     timers.current.delete(id);
     setToasts((prev) => prev.filter((t) => t.id !== id));
   }, []);
+
+  const start = useCallback(
+    (id: string, timer: Timer) => {
+      timer.startedAt = Date.now();
+      timer.timeout = window.setTimeout(() => removeToast(id), timer.remaining);
+    },
+    [removeToast]
+  );
+
+  // Toasts wait while the pointer is over them or focus is inside them, so there is time to read one
+  // and reach its Undo (WCAG 2.2.1); they count down again from where they stopped.
+  const syncPause = useCallback(() => {
+    const region = regionRef.current;
+    const shouldPause = hovered.current || (!!region && region.contains(document.activeElement));
+    if (shouldPause === paused.current) return;
+    paused.current = shouldPause;
+    for (const [id, timer] of timers.current) {
+      if (shouldPause) {
+        window.clearTimeout(timer.timeout);
+        timer.timeout = undefined;
+        timer.remaining = Math.max(timer.remaining - (Date.now() - timer.startedAt), 0);
+      } else {
+        // Leave a moment to read it after the pointer or focus moves away.
+        timer.remaining = Math.max(timer.remaining, 1500);
+        start(id, timer);
+      }
+    }
+  }, [start]);
+
+  // A toast removed under the pointer or with focus inside sends no leave or blur event.
+  useEffect(() => {
+    if (!toasts.length) hovered.current = false;
+    syncPause();
+  }, [toasts, syncPause]);
 
   const showToast = useCallback(
     (message: string, type: ToastType = 'info', options: ToastOptions = {}) => {
       const id = `${Date.now()}-${Math.random().toString(36).slice(2)}`;
       // Replace an identical visible message instead of stacking duplicates.
       setToasts((prev) => [...prev.filter((t) => t.message !== message), { id, message, type, ...options }].slice(-MAX_TOASTS));
-      const duration = options.duration ?? (options.action ? ACTION_DURATION : DEFAULT_DURATION);
-      timers.current.set(id, window.setTimeout(() => removeToast(id), duration));
+      const timer: Timer = {
+        remaining: options.duration ?? (options.action || type === 'error' ? ACTION_DURATION : DEFAULT_DURATION),
+        startedAt: Date.now(),
+      };
+      timers.current.set(id, timer);
+      if (!paused.current) start(id, timer);
     },
-    [removeToast]
+    [start]
   );
 
   const showSuccess = useCallback((message: string) => showToast(message, 'success'), [showToast]);
@@ -69,9 +116,21 @@ export const ToastProvider = ({ children }: { children: ReactNode }) => {
     <ToastContext.Provider value={value}>
       {children}
       <div
+        ref={regionRef}
         className="fixed inset-x-4 bottom-4 sm:inset-x-auto sm:right-6 sm:bottom-6 z-[60] flex flex-col items-center sm:items-end gap-2 pointer-events-none print:hidden"
         role="region"
         aria-label="Notifications"
+        onPointerEnter={() => {
+          hovered.current = true;
+          syncPause();
+        }}
+        onPointerLeave={() => {
+          hovered.current = false;
+          syncPause();
+        }}
+        onFocus={syncPause}
+        // Focus has not reached its next element yet during blur.
+        onBlur={() => window.setTimeout(syncPause)}
       >
         {toasts.map((toast) => (
           <div
