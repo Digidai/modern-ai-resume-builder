@@ -37,7 +37,17 @@ if (!rootElement) {
 
 // Each deploy replaces the hashed chunks, so a tab opened before a deploy can fail to load a
 // page's chunk (404). Reload once to pick up the new build; the timestamp stops a reload loop.
+let failedOffline = false;
 window.addEventListener('vite:preloadError', (event) => {
+  // Offline, nothing new was deployed and a reload would swap the editor for the browser's offline
+  // page: the import just fails, and fonts fall back while templates show a placeholder.
+  if (!navigator.onLine) {
+    failedOffline = true;
+    return;
+  }
+  // Browsers keep failing an import that failed until the page reloads, even back online. Those
+  // failures aren't a deploy either; the template placeholder offers the reload instead.
+  if (failedOffline) return;
   const key = 'chunkReloadAt';
   const last = Number(sessionStorage.getItem(key)) || 0;
   if (Date.now() - last < 10_000) return;

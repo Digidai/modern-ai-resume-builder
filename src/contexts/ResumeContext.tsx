@@ -73,10 +73,13 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
     setPdfProgress({ stage: 'preparing' });
     try {
       // PDF libraries (pdf-lib, html-to-image) are large; load them on demand.
-      const [{ exportResumeToPdf }] = await Promise.all([
-        import('../utils/pdfExport'),
-        preloadResumeTemplate(resumeData.templateId),
-      ]);
+      const loaded = await Promise.all([import('../utils/pdfExport'), preloadResumeTemplate(resumeData.templateId)]).catch(() => null);
+      if (!loaded) {
+        // Browsers keep failing an import that failed offline until the page reloads.
+        showError(navigator.onLine ? 'Couldn’t load what the PDF needs. Reload the page and try again.' : 'You’re offline. Download the PDF once you’re back online.');
+        return;
+      }
+      const [{ exportResumeToPdf }] = loaded;
       await exportResumeToPdf({
         rawFileName: resumeData.fullName.trim() || 'resume',
         data: resumeData,

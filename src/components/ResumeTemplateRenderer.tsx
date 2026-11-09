@@ -133,6 +133,48 @@ const TemplateFallback: React.FC = () => (
   <div className="w-full min-h-[120px] rounded-md bg-slate-100 dark:bg-slate-900 animate-pulse" data-template-loading="true" />
 );
 
+/**
+ * Keeps a template whose chunk didn't arrive (offline) inside its own paper, so the editor around it
+ * keeps working. Browsers keep failing that import until the page reloads, so it asks for a reload
+ * once the connection is back; the resume is saved locally, so nothing is lost.
+ */
+class TemplateLoadBoundary extends React.Component<{ children: React.ReactNode }, { failed: boolean }> {
+  state = { failed: false };
+
+  static getDerivedStateFromError() {
+    return { failed: true };
+  }
+
+  private connectionChanged = () => this.forceUpdate();
+
+  componentDidMount() {
+    window.addEventListener('online', this.connectionChanged);
+    window.addEventListener('offline', this.connectionChanged);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('online', this.connectionChanged);
+    window.removeEventListener('offline', this.connectionChanged);
+  }
+
+  render() {
+    if (!this.state.failed) return this.props.children;
+    return (
+      <div
+        role="status"
+        className="flex min-h-[320px] w-full flex-col items-center justify-center gap-3 rounded-md border border-dashed border-neutral-300 p-10 text-center text-neutral-500"
+        data-template-failed="true"
+      >
+        <p className="text-lg font-medium text-neutral-700">This template couldn’t load.</p>
+        {/* Text only: the editor shows inert copies of the paper, so a button here couldn't be clicked. */}
+        <p className="max-w-md text-base">
+          {navigator.onLine ? 'Reload the page to show it. Your edits are saved.' : 'You’re offline. Reload the page once you’re back online; your edits are saved.'}
+        </p>
+      </div>
+    );
+  }
+}
+
 export const preloadResumeTemplate = async (templateId: string): Promise<void> => {
   await loadTemplate(resolveTemplateId(templateId));
 };
@@ -146,8 +188,10 @@ export const ResumeTemplateRenderer: React.FC<ResumeTemplateRendererProps> = ({ 
 
   const Template = TEMPLATES[resolvedId];
   return (
-    <Suspense fallback={<TemplateFallback />}>
-      <Template data={data} />
-    </Suspense>
+    <TemplateLoadBoundary key={resolvedId}>
+      <Suspense fallback={<TemplateFallback />}>
+        <Template data={data} />
+      </Suspense>
+    </TemplateLoadBoundary>
   );
 };
