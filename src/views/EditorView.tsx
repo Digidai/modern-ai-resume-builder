@@ -97,11 +97,16 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
   const [open, setOpen] = useState(false);
   const rootRef = useRef<HTMLDivElement>(null);
 
+  const focusTrigger = () => rootRef.current?.querySelector<HTMLElement>('[aria-haspopup]')?.focus();
+
   useEffect(() => {
     if (!open) return;
+    // Menu pattern: focus moves to the first item; arrows move between items (see onMenuKeyDown).
+    rootRef.current?.querySelector<HTMLElement>('[role="menuitem"]')?.focus();
     const close = (event: MouseEvent | KeyboardEvent) => {
       if (event instanceof KeyboardEvent ? event.key === 'Escape' : !rootRef.current?.contains(event.target as Node)) {
         setOpen(false);
+        if (event instanceof KeyboardEvent) focusTrigger();
       }
     };
     document.addEventListener('mousedown', close);
@@ -112,6 +117,24 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
     };
   }, [open]);
 
+  const onMenuKeyDown = (event: React.KeyboardEvent<HTMLDivElement>) => {
+    if (event.key === 'Tab') {
+      setOpen(false);
+      return;
+    }
+    const menuItems = [...event.currentTarget.querySelectorAll<HTMLElement>('[role="menuitem"]')];
+    const index = menuItems.indexOf(document.activeElement as HTMLElement);
+    const next =
+      event.key === 'ArrowDown' ? (index + 1) % menuItems.length
+      : event.key === 'ArrowUp' ? (index - 1 + menuItems.length) % menuItems.length
+      : event.key === 'Home' ? 0
+      : event.key === 'End' ? menuItems.length - 1
+      : -1;
+    if (next < 0) return;
+    event.preventDefault();
+    menuItems[next]?.focus();
+  };
+
   return (
     <div ref={rootRef} className="relative">
       <Button variant="icon" onClick={() => setOpen((v) => !v)} aria-haspopup="menu" aria-expanded={open} aria-label="More actions" title="More actions">
@@ -120,6 +143,8 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
       {open && (
         <div
           role="menu"
+          aria-label="More actions"
+          onKeyDown={onMenuKeyDown}
           className="animate-enter absolute right-0 top-full z-40 mt-2 w-64 overflow-hidden rounded-lg border border-rule bg-surface p-1 shadow-sheet"
         >
           {items.map((group, groupIndex) => (
@@ -129,8 +154,11 @@ const ActionsMenu: React.FC<{ items: MenuItem[][] }> = ({ items }) => {
                   key={item.label}
                   type="button"
                   role="menuitem"
+                  tabIndex={-1}
                   onClick={() => {
                     setOpen(false);
+                    // Focus would otherwise fall to <body> when the item unmounts; dialogs take it from here.
+                    focusTrigger();
                     item.onSelect();
                   }}
                   className="flex w-full items-start gap-3 rounded-lg px-3 py-2 text-left hover:bg-tint focus-visible:bg-tint focus-visible:outline-none"

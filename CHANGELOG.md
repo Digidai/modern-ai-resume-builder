@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- The editor's More actions menu works from the keyboard like a menu: opening it moves focus to the first item, ↑/↓/Home/End move between items, Tab closes it, and Esc or choosing an item returns focus to the ⋯ button. Before, focus stayed on the button, so screen readers announced a menu that keyboard users had to Tab into item by item.
 - Pages no longer jump when the Inter font arrives on a slow connection. Until it loads, the site's text uses Arial (Roboto on Android) scaled to Inter's width and line height, so headings wrap the same way; on the role pages the example resume used to drop about 40 px, a layout shift of 0.23 (Google counts over 0.1 as poor), and now measures 0.
 - HTTPS responses send `Strict-Transport-Security: max-age=31536000`, so after one visit browsers go straight to HTTPS instead of first asking over plain HTTP and being redirected. Subdomains are not included.
 - Typing stays quick in long resumes: the editor preview used to re-measure every page on each keystroke, which on a 9-page CV made a keystroke take over 200 ms on a mid-range phone. It now measures once you pause (a quarter of a second), so keystrokes take under 50 ms there; the page count, page guides and page-count suggestions follow just after, and Download PDF waits for the measurement so the PDF always gets the final page count. The PDF render page still measures right away.
