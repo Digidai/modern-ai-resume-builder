@@ -1,4 +1,4 @@
-import { useCallback, useEffect, useMemo, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
+import { useCallback, useEffect, useMemo, useRef, useState, type Dispatch, type KeyboardEvent, type ReactNode, type SetStateAction } from 'react';
 import { ResumeData, ResumeDesign, Experience, Education, Project, DEFAULT_DESIGN, type Award, type Publication, type ResumeLink, type Talk, type Teaching } from '../types';
 import {
   PlusIcon,
@@ -189,8 +189,27 @@ const ItemCard = ({
   children,
 }: ItemCardProps) => {
   const label = title.trim() || placeholderTitle;
+  const rootRef = useRef<HTMLDivElement>(null);
+  // Moving re-inserts the card, and at either end one of its move buttons goes away: keep focus on the
+  // card's move buttons so keyboard users keep their place.
+  const move = (onMove: () => void, direction: 'up' | 'down') => () => {
+    onMove();
+    requestAnimationFrame(() => {
+      const root = rootRef.current;
+      (root?.querySelector<HTMLElement>(`[data-move="${direction}"]`) ?? root?.querySelector<HTMLElement>('[data-move]'))?.focus();
+    });
+  };
+  // The card's buttons go with it: focus the next (or previous) card, or the section's Add button once
+  // the list is empty, instead of dropping focus to the top of the page.
+  const remove = () => {
+    const root = rootRef.current;
+    const section = root?.closest('section');
+    const neighbour = (root?.nextElementSibling ?? root?.previousElementSibling)?.querySelector<HTMLElement>('button[aria-expanded]');
+    onRemove();
+    requestAnimationFrame(() => (neighbour?.isConnected ? neighbour : section?.querySelector<HTMLElement>('button'))?.focus());
+  };
   return (
-    <div className="scroll-mt-16 rounded-lg border border-rule bg-surface transition-colors" data-item={itemKey}>
+    <div ref={rootRef} className="scroll-mt-16 rounded-lg border border-rule bg-surface transition-colors" data-item={itemKey}>
       <div className="flex items-center gap-1 py-1.5 pl-1.5 pr-2">
         <button
           type="button"
@@ -214,12 +233,12 @@ const ItemCard = ({
         </button>
         <div className="flex shrink-0 items-center">
           {onMoveUp && (
-            <Button variant="icon" size="icon" className="h-8 w-8" onClick={onMoveUp} aria-label={`Move ${label} up`} title="Move up">
+            <Button variant="icon" size="icon" className="h-8 w-8" onClick={move(onMoveUp, 'up')} data-move="up" aria-label={`Move ${label} up`} title="Move up">
               <ArrowUpIcon className="h-4 w-4" />
             </Button>
           )}
           {onMoveDown && (
-            <Button variant="icon" size="icon" className="h-8 w-8" onClick={onMoveDown} aria-label={`Move ${label} down`} title="Move down">
+            <Button variant="icon" size="icon" className="h-8 w-8" onClick={move(onMoveDown, 'down')} data-move="down" aria-label={`Move ${label} down`} title="Move down">
               <ArrowDownIcon className="h-4 w-4" />
             </Button>
           )}
@@ -227,7 +246,7 @@ const ItemCard = ({
             variant="danger-ghost"
             size="icon"
             className="h-8 w-8"
-            onClick={onRemove}
+            onClick={remove}
             aria-label={`Remove ${label}`}
             title="Remove"
           >
@@ -352,7 +371,7 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
 
   return (
     <div className="space-y-2">
-      <div className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-lg border border-rule bg-surface p-1.5 transition-colors focus-within:border-accent focus-within:ring-1 focus-within:ring-accent">
+      <div data-skill-chips className="flex min-h-11 flex-wrap items-center gap-1.5 rounded-lg border border-rule bg-surface p-1.5 transition-colors focus-within:border-accent focus-within:ring-1 focus-within:ring-accent">
         {skills.map((skill, index) => (
           <span
             key={`${skill}-${index}`}
@@ -361,7 +380,15 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
             {skill}
             <button
               type="button"
-              onClick={() => onChange(skills.filter((_, i) => i !== index))}
+              onClick={(event) => {
+                const chips = event.currentTarget.closest('[data-skill-chips]');
+                onChange(skills.filter((_, i) => i !== index));
+                // Focus the chip that takes this one's place (or the one before, or the input).
+                requestAnimationFrame(() => {
+                  const buttons = chips?.querySelectorAll<HTMLElement>('button') ?? [];
+                  (buttons[index] ?? buttons[index - 1] ?? chips?.querySelector<HTMLElement>('input'))?.focus();
+                });
+              }}
               className="rounded p-0.5 text-muted hover:bg-tint hover:text-ink focus-ring"
               aria-label={`Remove ${skill}`}
             >
