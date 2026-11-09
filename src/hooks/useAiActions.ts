@@ -44,15 +44,6 @@ const partialWriter = (show: ((value: string) => void) | undefined, original: st
   };
 };
 
-type AiStatusState = 'idle' | 'loading' | 'success' | 'error';
-
-export interface AiStatus {
-  state: AiStatusState;
-  message: string;
-  fieldId?: string;
-  updatedAt: number;
-}
-
 const getAiErrorMessage = (error: unknown): { message: string } => {
   if (!(error instanceof AiError)) {
     return { message: error instanceof Error ? error.message : 'Failed to process AI request.' };
@@ -77,11 +68,6 @@ const getAiErrorMessage = (error: unknown): { message: string } => {
 
 export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   const [loadingCounts, setLoadingCounts] = useState<Record<string, number>>({});
-  const [aiStatus, setAiStatus] = useState<AiStatus>({
-    state: 'idle',
-    message: 'AI is ready.',
-    updatedAt: Date.now(),
-  });
 
   const startLoading = useCallback((fieldId: string) => {
     setLoadingCounts((previous) => ({
@@ -127,30 +113,12 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
       const partial = partialWriter(onPartial, text);
       void (async () => {
         startLoading(fieldId);
-        setAiStatus({
-          state: 'loading',
-          message: 'Polishing text with AI...',
-          fieldId,
-          updatedAt: Date.now(),
-        });
         try {
           const improved = await improveText(text, context, partial.write);
           onUpdate(improved);
-          setAiStatus({
-            state: 'success',
-            message: 'Text polished with AI.',
-            fieldId,
-            updatedAt: Date.now(),
-          });
         } catch (error) {
           partial.restore();
           const details = getAiErrorMessage(error);
-          setAiStatus({
-            state: 'error',
-            message: details.message,
-            fieldId,
-            updatedAt: Date.now(),
-          });
           onError(details.message);
         } finally {
           stopLoading(fieldId);
@@ -165,30 +133,12 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
       const partial = partialWriter(onPartial, original);
       void (async () => {
         startLoading(fieldId);
-        setAiStatus({
-          state: 'loading',
-          message: 'Generating with AI...',
-          fieldId,
-          updatedAt: Date.now(),
-        });
         try {
           const result = await generator(partial.write);
           onUpdate(result);
-          setAiStatus({
-            state: 'success',
-            message: 'Content generated with AI.',
-            fieldId,
-            updatedAt: Date.now(),
-          });
         } catch (error) {
           partial.restore();
           const details = getAiErrorMessage(error);
-          setAiStatus({
-            state: 'error',
-            message: details.message,
-            fieldId,
-            updatedAt: Date.now(),
-          });
           onError(details.message);
         } finally {
           stopLoading(fieldId);
@@ -204,7 +154,6 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   );
 
   return {
-    aiStatus,
     isLoadingField,
     improveField,
     generateField,

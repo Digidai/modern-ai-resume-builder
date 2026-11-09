@@ -18,6 +18,19 @@ type OrcidProgress = { total: number; read: number; listed: number } | null;
 
 const ORCID_STEPS = ['Find record', 'Read works', 'Review'] as const;
 
+/**
+ * The open panel's step: `fetching` only for ORCID, and only `review` has a list. `skipped` is set
+ * when the ORCID record lists more works than were read (the Worker reads the newest 4,000).
+ * Mirrored on the panel as `data-state` (`error` for an input step with an error).
+ */
+type Phase =
+  | { name: 'input'; error: string }
+  | { name: 'fetching'; progress: OrcidProgress }
+  | { name: 'review'; found: ImportedPublication[]; skipped: { read: number; listed: number } | null };
+
+const INPUT: Phase = { name: 'input', error: '' };
+const inputError = (error: string): Phase => ({ name: 'input', error });
+
 /** A work in the ORCID reply; `kind` is missing from servers older than the filters. */
 type OrcidWork = Omit<Publication, 'id'> & { kind?: PublicationKind };
 const fromOrcid = (works: OrcidWork[]): ImportedPublication[] => works.map((work) => ({ ...work, kind: work.kind ?? 'other', id: createId() }));
@@ -47,12 +60,12 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const [mode, setMode] = useState<Mode | null>(null);
   const [bibtex, setBibtex] = useState('');
   const [orcid, setOrcid] = useState('');
-  const [loading, setLoading] = useState(false);
-  const [progress, setProgress] = useState<OrcidProgress>(null);
-  /** Works the ORCID record lists when more than were read (the Worker reads the newest 4,000). */
-  const [skipped, setSkipped] = useState<{ read: number; listed: number } | null>(null);
-  const [error, setError] = useState('');
-  const [found, setFound] = useState<ImportedPublication[] | null>(null);
+  const [phase, setPhase] = useState<Phase>(INPUT);
+  const found = phase.name === 'review' ? phase.found : null;
+  const error = phase.name === 'input' ? phase.error : '';
+  const progress = phase.name === 'fetching' ? phase.progress : null;
+  /** Bumped when a fetch starts or the panel switches, so an older ORCID fetch can't land in it. */
+  const fetchRun = useRef(0);
   /** Filters on the review list: kinds hidden, and an inclusive year range (null = no limit). */
   const [hiddenKinds, setHiddenKinds] = useState<Set<PublicationKind>>(new Set());
   const [fromYear, setFromYear] = useState<number | null>(null);
@@ -62,19 +75,17 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const existingKeys = useMemo(() => new Set(existing.map((pub) => titleKey(pub.title))), [existing]);
 
   const reset = (next: Mode | null) => {
+    fetchRun.current += 1;
     setMode(next);
-    setError('');
-    setFound(null);
+    setPhase(INPUT);
   };
 
-  const review = (publications: ImportedPublication[], emptyMessage: string) => {
+  const review = (publications: ImportedPublication[], emptyMessage: string, skipped: { read: number; listed: number } | null = null) => {
     if (publications.length === 0) {
-      setError(emptyMessage);
-      setFound(null);
+      setPhase(inputError(emptyMessage));
       return;
     }
-    setError('');
-    setFound(publications);
+    setPhase({ name: 'review', found: publications, skipped });
     setHiddenKinds(new Set());
     setFromYear(null);
     setToYear(null);
@@ -84,18 +95,19 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const readBibtex = (source: string) => review(parseBibtex(source), 'No entries with a title or authors were found. Paste the contents of a .bib file.');
 
   const fetchOrcid = async () => {
-    setLoading(true);
-    setProgress(null);
-    setSkipped(null);
-    setError('');
-    setFound(null);
+    const run = ++fetchRun.current;
+    const current = () => fetchRun.current === run;
+    setPhase({ name: 'fetching', progress: null });
     let read = 0;
-    const fail = (message?: string) => setError(message || 'Could not load that ORCID record. Try again later.');
+    const fail = (message?: string) => {
+      if (current()) setPhase(inputError(message || 'Could not load that ORCID record. Try again later.'));
+    };
     try {
       const response = await fetch(`/api/orcid?id=${encodeURIComponent(orcid.trim())}&stream=1`);
       if (!response.ok || !response.body || !(response.headers.get('content-type') || '').includes('ndjson')) {
         const body = (await response.json().catch(() => null)) as { publications?: OrcidWork[]; error?: string } | null;
         if (!response.ok || !body?.publications) return fail(body?.error);
+        if (!current()) return;
         return review(fromOrcid(body.publications), 'That ORCID record has no public works yet.');
       }
       const reader = response.body.getReader();
@@ -103,6 +115,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
       let buffer = '';
       for (;;) {
         const { value, done } = await reader.read();
+        if (!current()) return void reader.cancel();
         buffer += decoder.decode(value, { stream: !done });
         const lines = buffer.split('\n');
         buffer = done ? '' : lines.pop() ?? '';
@@ -111,21 +124,18 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
           const event = JSON.parse(line) as OrcidEvent;
           if (event.type === 'progress') {
             read = event.total;
-            setProgress({ total: event.total, read: event.read, listed: event.listed });
+            setPhase({ name: 'fetching', progress: { total: event.total, read: event.read, listed: event.listed } });
           }
           else if (event.type === 'error') return fail(event.error);
           else {
-            if (event.listed && event.listed > read) setSkipped({ read, listed: event.listed });
-            return review(fromOrcid(event.publications), 'That ORCID record has no public works yet.');
+            const skipped = event.listed && event.listed > read ? { read, listed: event.listed } : null;
+            return review(fromOrcid(event.publications), 'That ORCID record has no public works yet.', skipped);
           }
         }
         if (done) return fail();
       }
     } catch {
-      setError('Could not reach ORCID. Check your connection and try again.');
-    } finally {
-      setLoading(false);
-      setProgress(null);
+      fail('Could not reach ORCID. Check your connection and try again.');
     }
   };
 
@@ -190,7 +200,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
       </div>
 
       {mode && (
-        <div className="space-y-3 rounded-lg border border-rule bg-tint/50 p-4">
+        <div className="space-y-3 rounded-lg border border-rule bg-tint/50 p-4" data-state={phase.name === 'input' && phase.error ? 'error' : phase.name}>
           {mode === 'bibtex' ? (
             <>
               <Textarea
@@ -219,7 +229,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                     event.target.value = '';
                     if (!file) return;
                     if (file.size > 2_000_000) {
-                      setError('That file is larger than 2 MB.');
+                      setPhase(inputError('That file is larger than 2 MB.'));
                       return;
                     }
                     const source = await file.text();
@@ -245,13 +255,13 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                 hint="Your public works are read from orcid.org."
                 className="min-w-[14rem] flex-1"
               />
-              <Button type="submit" size="sm" isLoading={loading} disabled={!orcid.trim()} className="mb-6">
+              <Button type="submit" size="sm" isLoading={phase.name === 'fetching'} disabled={!orcid.trim()} className="mb-6">
                 Fetch works
               </Button>
             </form>
           )}
 
-          {mode === 'orcid' && loading && (
+          {phase.name === 'fetching' && (
             <TaskProgress
               data-testid="orcid-progress"
               steps={ORCID_STEPS}
@@ -297,9 +307,9 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                   </button>
                 </span>
               </div>
-              {skipped && (
+              {phase.name === 'review' && phase.skipped && (
                 <p className="text-xs text-muted">
-                  The record lists {skipped.listed.toLocaleString('en')} works; the newest {skipped.read.toLocaleString('en')} were read. Add older ones with Import BibTeX.
+                  The record lists {phase.skipped.listed.toLocaleString('en')} works; the newest {phase.skipped.read.toLocaleString('en')} were read. Add older ones with Import BibTeX.
                 </p>
               )}
               {(kindCounts.length > 1 || years.length > 1) && (

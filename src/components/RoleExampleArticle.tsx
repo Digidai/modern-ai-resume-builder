@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCopyFeedback, copyLabel } from '../hooks/useCopyFeedback';
 import { exampleToText, formatRange, toBullets, type RoleExample } from '../shared/roleExample.mjs';
 import { Button } from './Button';
 
@@ -20,16 +20,7 @@ const SectionTitle = ({ children }: { children: string }) => (
  * so people can read, copy or start from it and search engines see unique content per role.
  */
 export const RoleExampleArticle = ({ title, fullName, example, onStart }: RoleExampleArticleProps) => {
-  const [copied, setCopied] = useState(false);
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(exampleToText(title, example));
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(false);
-    }
-  };
+  const [copyState, copy] = useCopyFeedback(exampleToText(title, example));
 
   return (
     <section className="mx-auto w-full max-w-7xl scroll-mt-24 px-4 pb-4 sm:px-6" id="example" aria-labelledby="example-heading">
@@ -45,7 +36,7 @@ export const RoleExampleArticle = ({ title, fullName, example, onStart }: RoleEx
           </div>
           <div className="flex gap-2">
             <Button variant="secondary" onClick={copy}>
-              {copied ? 'Copied' : 'Copy text'}
+              {copyLabel(copyState, 'Copy text')}
             </Button>
             <Button onClick={onStart}>
               Edit this example

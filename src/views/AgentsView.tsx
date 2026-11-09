@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { useCopyFeedback, copyLabel } from '../hooks/useCopyFeedback';
 import { Link } from 'react-router';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { SiteHeader, SiteFooter } from '../components/SiteHeader';
@@ -7,26 +8,18 @@ import { buildAgentPrompt, mcpSetup, MCP_TOOLS } from '../shared/agentPrompt.mjs
 import { TEMPLATES } from '../constants/templates';
 
 const CodeBlock: React.FC<{ code: string; label: string; title?: string }> = ({ code, label, title }) => {
-  const [copied, setCopied] = useState(false);
+  const [copyState, copy] = useCopyFeedback(code);
   return (
     <div className="overflow-hidden rounded-xl border border-rule bg-surface shadow-card">
       <div className="flex items-center justify-between gap-3 border-b border-rule bg-tint px-4 py-2">
         <span className="kicker truncate text-muted">{title ?? label}</span>
         <button
           type="button"
-          onClick={async () => {
-            try {
-              await navigator.clipboard.writeText(code);
-              setCopied(true);
-              window.setTimeout(() => setCopied(false), 2000);
-            } catch {
-              setCopied(false);
-            }
-          }}
+          onClick={copy}
           aria-label={`Copy ${label}`}
           className="focus-ring h-7 shrink-0 rounded-md border border-rule bg-surface px-2.5 text-xs font-medium text-ink shadow-card transition-colors hover:bg-tint"
         >
-          {copied ? 'Copied' : 'Copy'}
+          {copyLabel(copyState, 'Copy')}
         </button>
       </div>
       <pre tabIndex={0} role="region" aria-label={label} className="focus-ring overflow-x-auto p-4 font-label text-[13px] leading-relaxed text-ink">{code}</pre>

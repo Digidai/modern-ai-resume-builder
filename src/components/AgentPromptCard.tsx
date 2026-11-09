@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCopyFeedback, copyLabel } from '../hooks/useCopyFeedback';
 import { Link } from 'react-router';
 import { ChevronDownIcon } from './Icons';
 
@@ -13,16 +13,7 @@ interface AgentPromptCardProps {
 
 /** A ready-made prompt that makes any AI agent build a resume with ModernCV's templates (MCP or API). */
 export const AgentPromptCard = ({ prompt, subject, className = '', defaultOpen = false }: AgentPromptCardProps) => {
-  const [copied, setCopied] = useState(false);
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(prompt);
-      setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
-    } catch {
-      setCopied(false);
-    }
-  };
+  const [copyState, copy] = useCopyFeedback(prompt);
 
   return (
     <details className={`group overflow-hidden rounded-xl border border-rule bg-surface shadow-card [&_summary::-webkit-details-marker]:hidden ${className}`} open={defaultOpen}>
@@ -41,7 +32,7 @@ export const AgentPromptCard = ({ prompt, subject, className = '', defaultOpen =
           <div className="flex items-center justify-between border-b border-rule px-3 py-2">
             <span className="kicker text-muted">Prompt</span>
             <button type="button" onClick={copy} className="focus-ring h-7 rounded-md border border-rule bg-surface px-2.5 text-xs font-medium text-ink shadow-card transition-colors hover:bg-tint" aria-live="polite">
-              {copied ? 'Copied' : 'Copy prompt'}
+              {copyLabel(copyState, 'Copy prompt')}
             </button>
           </div>
           <pre tabIndex={0} role="region" aria-label="Prompt" className="focus-ring max-h-56 overflow-auto whitespace-pre-wrap p-3 font-label text-xs leading-relaxed text-ink">{prompt}</pre>
