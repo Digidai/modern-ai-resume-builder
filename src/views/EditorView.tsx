@@ -339,7 +339,12 @@ const EditorView: React.FC = () => {
     pdfProgress,
     saveError,
     saveStatus,
+    library,
+    resumeName,
   } = useResume();
+  // Phones hide the name in the resume menu button, so with several resumes it shows under the header.
+  const activeIndex = library ? library.entries.findIndex((entry) => entry.id === library.activeId) : -1;
+  const activeName = library && library.entries.length > 1 && activeIndex >= 0 ? resumeName(library.entries[activeIndex]) : null;
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
   const [importOpen, setImportOpen] = useState(false);
   // Prerendered as 'pages'; the saved choice applies once hydrated, before the first paint.
@@ -607,6 +612,15 @@ const EditorView: React.FC = () => {
           }}
         />
       </header>
+
+      {activeName && library && (
+        <p className="flex shrink-0 items-baseline gap-2 border-b border-rule bg-paper px-4 py-1.5 text-xs text-muted sm:hidden print:hidden" data-testid="mobile-resume-name">
+          <span className="min-w-0 truncate font-medium text-ink">{activeName}</span>
+          <span className="shrink-0 tabular-nums">
+            {activeIndex + 1} of {library.entries.length}
+          </span>
+        </p>
+      )}
 
       <div className="flex min-h-0 flex-1">
         <aside
