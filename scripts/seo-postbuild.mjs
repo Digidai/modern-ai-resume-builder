@@ -2,6 +2,7 @@ import { promises as fs } from 'node:fs';
 import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 import sharp from 'sharp';
+import Beasties from 'beasties';
 import { slugifyJobTitle } from './slugify.mjs';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 import { buildJobPageTitle, describeExample, exampleToResume } from '../src/shared/roleExample.mjs';
@@ -1364,6 +1365,47 @@ ${HOME_FAQ_ITEMS.map((f) => `### ${f.question}\n\n${f.answer}\n`).join('\n')}`;
   await writeFileEnsuringDir(path.join(distDir, 'resume.schema.json'), `${JSON.stringify(buildResumeSchema(siteUrl, templates), null, 2)}\n`);
 };
 
+/**
+ * Lets each prerendered page paint without waiting for the site stylesheet (all 89 templates' CSS):
+ * the rules its markup uses go inline in <head> and the full stylesheet loads from the end of <body>,
+ * where it no longer blocks the first paint. Stylesheets of only @font-face rules (Inter, about 9 KB)
+ * are inlined whole, so the preloaded fonts still apply at first paint.
+ */
+const inlineCriticalCss = async () => {
+  const beasties = new Beasties({
+    path: distDir,
+    publicPath: '/',
+    preload: 'body',
+    pruneSource: false,
+    reduceInlineStyles: false,
+    fonts: false,
+    // Classes the boot script puts on <html> before the first paint (dark theme, saved resume).
+    allowRules: [/^html\.(dark|saved-resume)\b/],
+    logLevel: 'warn',
+  });
+  const fontSheets = new Map();
+  const fontSheet = async (href) => {
+    if (!fontSheets.has(href)) {
+      const css = await fs.readFile(path.join(distDir, href), 'utf8').catch(() => '');
+      fontSheets.set(href, css.includes('@font-face') && !css.replace(/@font-face\{[^}]*\}/g, '').trim() ? css : null);
+    }
+    return fontSheets.get(href);
+  };
+  const pages = (await fs.readdir(distDir, { recursive: true })).filter(
+    // /render/ is the bare page the PDF renderer prints; it keeps its blocking stylesheet.
+    (file) => file.endsWith('.html') && !file.startsWith(`render${path.sep}`)
+  );
+  for (const page of pages) {
+    const file = path.join(distDir, page);
+    let html = await fs.readFile(file, 'utf8');
+    for (const [link, href] of html.matchAll(/<link rel="stylesheet"[^>]*href="(\/assets\/[^"]+\.css)"[^>]*>/g)) {
+      const css = await fontSheet(href);
+      if (css) html = html.replace(link, `<style>${css}</style>`);
+    }
+    await fs.writeFile(file, await beasties.process(html));
+  }
+};
+
 const main = async () => {
   const siteUrl = getSiteUrl();
   const lastmod = toIsoDate(new Date());
@@ -1859,6 +1901,8 @@ const main = async () => {
     await writeFileEnsuringDir(path.join(publicDir, 'sitemap.xml'), sitemapXml);
     await writeFileEnsuringDir(path.join(publicDir, 'robots.txt'), robotsTxt);
   }
+
+  await inlineCriticalCss();
 
   // Keep lastmod available for downstream generators (sitemap script may reuse).
   await writeFileEnsuringDir(path.join(distDir, '.seo-lastmod'), `${lastmod}\n`);

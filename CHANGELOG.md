@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Pages paint about half a second sooner on a slow connection: each prerendered page carries the CSS its own markup uses inline (about 6–9 KB compressed, plus the Inter @font-face rules), and the full stylesheet with all 89 templates' styles loads from the end of the page instead of blocking the first paint. The build does this with Beasties; the PDF render page is left as it was.
 - Download Word (.docx) in More actions: an editable single-column Word file for portals and recruiters that ask for one, in the layout ATS parsers read best (Heading 1 sections, Word bullet lists, dates on a right tab stop, live links, A4 or US Letter as chosen). It is built in the browser with no extra library, and Import resume reads it back.
 - Resume checks in the editor: a line above every tab lists suggestions as you type, worked out in the browser without AI: missing name, contact details or summary, the sample email, positions without dates, ending before they start, without a single number (the most recent one, or an older one with three or more bullets) or with bullets over two lines (Chinese, Japanese and Korean text counts double width), fewer than three skills, and more pages than the template aims for. Selecting one opens the tab and the entry that fixes it.
 - The template picker in the editor is one Tab stop instead of 89: arrow keys move between templates and switch to them, Home and End jump to the first and last, and Tab moves on to the next control.
