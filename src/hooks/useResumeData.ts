@@ -289,6 +289,12 @@ export const useResumeData = () => {
     };
   }, [flushSave, resumeData]);
 
+  // Closing the tab or reloading within the debounce would otherwise drop the last edits.
+  useEffect(() => {
+    window.addEventListener('pagehide', flushSave);
+    return () => window.removeEventListener('pagehide', flushSave);
+  }, [flushSave]);
+
   useEffect(() => {
     const handleStorage = (event: StorageEvent) => {
       if (!event.key) return;
