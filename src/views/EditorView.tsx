@@ -17,6 +17,7 @@ import {
   LoaderIcon,
   CodeIcon,
   SparklesIcon,
+  ChevronDownIcon,
 } from '../components/Icons';
 import { Button } from '../components/Button';
 import ThemeToggle from '../components/ThemeToggle';
@@ -345,6 +346,7 @@ const EditorView: React.FC = () => {
   // Phones hide the name in the resume menu button, so with several resumes it shows under the header.
   const activeIndex = library ? library.entries.findIndex((entry) => entry.id === library.activeId) : -1;
   const activeName = library && library.entries.length > 1 && activeIndex >= 0 ? resumeName(library.entries[activeIndex]) : null;
+  const [switcherOpen, setSwitcherOpen] = useState(false);
   const [mobileView, setMobileView] = useState<'edit' | 'preview'>('edit');
   const [importOpen, setImportOpen] = useState(false);
   // Prerendered as 'pages'; the saved choice applies once hydrated, before the first paint.
@@ -538,7 +540,7 @@ const EditorView: React.FC = () => {
           <span className="hidden sm:inline">ModernCV</span>
         </Link>
         <span className="hidden h-5 w-px bg-tint sm:block" />
-        <ResumeSwitcher />
+        <ResumeSwitcher open={switcherOpen} onOpenChange={setSwitcherOpen} />
         <SaveIndicator status={saveStatus} />
 
         <div className="flex flex-1 justify-center md:hidden">
@@ -614,17 +616,27 @@ const EditorView: React.FC = () => {
       </header>
 
       {activeName && library && (
-        <p className="flex shrink-0 items-baseline gap-2 border-b border-rule bg-paper px-4 py-1.5 text-xs text-muted sm:hidden print:hidden" data-testid="mobile-resume-name">
+        <button
+          type="button"
+          onClick={() => setSwitcherOpen(!switcherOpen)}
+          aria-haspopup="dialog"
+          aria-expanded={switcherOpen}
+          aria-label={`Resume: ${activeName}, ${activeIndex + 1} of ${library.entries.length}. Switch or add a resume`}
+          data-resume-menu-toggle
+          data-testid="mobile-resume-name"
+          className="flex shrink-0 items-center gap-2 border-b border-rule bg-paper px-4 py-1.5 text-left text-xs text-muted hover:bg-tint focus-ring sm:hidden print:hidden"
+        >
           <span className="min-w-0 truncate font-medium text-ink">{activeName}</span>
           <span className="shrink-0 tabular-nums">
             {activeIndex + 1} of {library.entries.length}
           </span>
-        </p>
+          <ChevronDownIcon className={`ml-auto h-3.5 w-3.5 shrink-0 transition-transform ${switcherOpen ? 'rotate-180' : ''}`} />
+        </button>
       )}
 
       <div className="flex min-h-0 flex-1">
         <aside
-          className={`user-resume custom-scrollbar w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
+          className={`user-resume custom-scrollbar relative w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
             mobileView === 'preview' ? 'max-md:hidden' : ''
           }`}
         >

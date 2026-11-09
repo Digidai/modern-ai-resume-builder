@@ -16,17 +16,21 @@ const relativeTime = (ms: number): string => {
 const iconButton =
   'flex h-8 w-8 shrink-0 items-center justify-center rounded-md text-muted hover:bg-tint hover:text-ink focus-ring';
 
-/** Header control to switch between, add, rename and delete the resumes saved in this browser. */
-export const ResumeSwitcher: React.FC = () => {
+/**
+ * Header control to switch between, add, rename and delete the resumes saved in this browser.
+ * The editor owns `open`, because on phones the resume name line under the header opens it too;
+ * clicks on an element marked `data-resume-menu-toggle` don't count as clicks outside.
+ */
+export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: boolean) => void }> = ({ open, onOpenChange: setOpen }) => {
   const { library, resumeData, resumeName, switchResume, createResume, renameResume, deleteResume } = useResume();
-  const [open, setOpen] = useState(false);
   const [renaming, setRenaming] = useState<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const close = (event: MouseEvent | KeyboardEvent) => {
-      if (event instanceof KeyboardEvent ? event.key === 'Escape' && !renaming : !rootRef.current?.contains(event.target as Node)) {
+      const outside = !rootRef.current?.contains(event.target as Node) && !(event.target as Element).closest?.('[data-resume-menu-toggle]');
+      if (event instanceof KeyboardEvent ? event.key === 'Escape' && !renaming : outside) {
         setOpen(false);
         setRenaming(null);
       }
@@ -37,7 +41,7 @@ export const ResumeSwitcher: React.FC = () => {
       document.removeEventListener('mousedown', close);
       document.removeEventListener('keydown', close);
     };
-  }, [open, renaming]);
+  }, [open, renaming, setOpen]);
 
   if (!library) return null;
   const active = library.entries.find((e) => e.id === library.activeId)!;
@@ -114,7 +118,7 @@ export const ResumeSwitcher: React.FC = () => {
     <div ref={rootRef} className="relative min-w-0">
       <button
         type="button"
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => setOpen(!open)}
         aria-haspopup="dialog"
         aria-expanded={open}
         aria-label={`Resume: ${resumeName(active)}. Switch or add a resume`}
