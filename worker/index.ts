@@ -142,6 +142,13 @@ const jsonResponse = (body: JsonObject, status = 200): Response =>
 const errorResponse = (status: number, code: AiErrorCode, message: string): Response =>
   jsonResponse({ code, error: message }, status);
 
+/** 405 with the Allow header HTTP requires, so clients can tell which method the route takes. */
+const methodNotAllowed = (allow: string, message: string): Response => {
+  const response = errorResponse(405, 'METHOD_NOT_ALLOWED', message);
+  response.headers.set('allow', allow);
+  return response;
+};
+
 const normalizeText = (value: unknown): string =>
   typeof value === 'string' ? value.trim() : '';
 
@@ -1111,7 +1118,7 @@ const PRINT_FIT_SCRIPT = `(expected) => {
 
 const handlePdfRequest = async (request: Request, env: Env): Promise<Response> => {
   if (request.method !== 'POST') {
-    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
+    return methodNotAllowed('POST, OPTIONS', 'Only POST is supported.');
   }
   const caller = await authorizeCaller(request, env, 'pdf', { ip: 10, session: 10, global: 120 });
   if (!caller.ok) return caller.response;
@@ -1178,7 +1185,7 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
 
 const handleSessionRequest = async (request: Request, env: Env): Promise<Response> => {
   if (request.method !== 'POST') {
-    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported for session creation.');
+    return methodNotAllowed('POST, OPTIONS', 'Only POST is supported for session creation.');
   }
 
   if (!isAllowedOriginRequest(request, env)) {
@@ -1343,7 +1350,7 @@ const authorizeCaller = async (request: Request, env: Env, scope: 'ai' | 'pdf', 
 
 const handleAiRequest = async (request: Request, env: Env): Promise<Response> => {
   if (request.method !== 'POST') {
-    return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Only POST is supported.');
+    return methodNotAllowed('POST, OPTIONS', 'Only POST is supported.');
   }
 
   const caller = await authorizeCaller(request, env, 'ai', {
@@ -1576,7 +1583,7 @@ export class RateLimiter {
 
 /** GET /api/orcid?id=0000-0002-1825-0097 → { orcid, publications } from the public ORCID record. */
 const handleOrcidRequest = async (request: Request, env: Env, url: URL): Promise<Response> => {
-  if (request.method !== 'GET') return errorResponse(405, 'METHOD_NOT_ALLOWED', 'Use GET.');
+  if (request.method !== 'GET') return methodNotAllowed('GET', 'Use GET.');
   const orcid = normalizeOrcid(url.searchParams.get('id') ?? '');
   if (!orcid) return errorResponse(400, 'INVALID_REQUEST', 'Enter an ORCID iD such as 0000-0002-1825-0097.');
   const limit = await consumeRateLimit(env, `orcid:ip:${getClientIp(request)}`, ORCID_RATE_LIMIT);

@@ -871,24 +871,23 @@ const handleMcp = async (request: Request, ctx: ToolContext): Promise<Response> 
 const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Promise<Response> => {
   const route = url.pathname.slice(AGENT_API_PREFIX.length).replace(/\/$/, '');
   const fail = (status: number, code: string, message: string) => json({ error: { code, message } }, status);
+  // A known route called with the wrong method says so (with Allow), rather than claiming the route doesn't exist.
+  const notAllowed = (allow: string, message: string) => json({ error: { code: 'METHOD_NOT_ALLOWED', message } }, 405, { allow });
 
-  if (route === 'templates' && request.method === 'GET') {
-    return json({ templates: listTemplates(ctx.origin, isTruthy(url.searchParams.get('ats_only'))) });
-  }
-  if (route === 'guide' && request.method === 'GET') {
-    return json(getWritingGuide(url.searchParams.get('job_title') ?? ''));
-  }
-  if (route === 'example' && request.method === 'GET') {
+  if (route === 'templates' || route === 'guide' || route === 'example') {
+    if (request.method !== 'GET' && request.method !== 'HEAD') return notAllowed('GET, HEAD', 'Use GET with query parameters.');
+    if (route === 'templates') return json({ templates: listTemplates(ctx.origin, isTruthy(url.searchParams.get('ats_only'))) });
+    if (route === 'guide') return json(getWritingGuide(url.searchParams.get('job_title') ?? ''));
     return json(await getExampleResume(ctx.env, ctx.origin, url.searchParams.get('job_title') ?? ''));
   }
   if (route === 'latex' || route === 'publications') {
-    if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');
+    if (request.method !== 'POST') return notAllowed('POST', 'Use POST with a JSON body.');
     const body = await readJson(request);
     if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object.');
     return json(route === 'latex' ? exportLatex(body as Json) : await importPublications(body as Json, ctx.deps));
   }
   if (route.startsWith(DOWNLOAD_PATH)) {
-    if (request.method !== 'GET' && request.method !== 'HEAD') return fail(405, 'METHOD_NOT_ALLOWED', 'Open the link with GET.');
+    if (request.method !== 'GET' && request.method !== 'HEAD') return notAllowed('GET, HEAD', 'Open the link with GET.');
     const [token = '', name = 'resume.pdf'] = route.slice(DOWNLOAD_PATH.length).split('/');
     const input = await openDownloadLink(ctx.env, token);
     // Link previews and mail scanners often probe with HEAD: answer without spending a render.
@@ -904,7 +903,7 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     });
   }
   if (route === 'link' || route === 'pdf' || route === 'preview') {
-    if (request.method !== 'POST') return fail(405, 'METHOD_NOT_ALLOWED', 'Use POST with a JSON body.');
+    if (request.method !== 'POST') return notAllowed('POST', 'Use POST with a JSON body.');
     const body = await readJson(request);
     if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object with `resume`.');
     if (route === 'link') return json(await createEditorLink(ctx.origin, body as Json));
