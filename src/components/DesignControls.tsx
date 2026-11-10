@@ -38,6 +38,15 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
     document.getElementById(`accent-${next}`)?.focus();
   };
   const accentTabIndex = (index: number) => (index === (hasPresetAccent ? selectedAccentIndex : 0) ? 0 : -1);
+  // Paper size is a radiogroup too: one tab stop, arrow keys move and select.
+  const onPaperKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const delta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+    if (!delta) return;
+    event.preventDefault();
+    const next = PAPER_IDS[(index + delta + PAPER_IDS.length) % PAPER_IDS.length];
+    onChange({ paper: next });
+    document.getElementById(`paper-${next}`)?.focus();
+  };
   const hexInvalid = hexDraft !== '' && !HEX.test(hexDraft);
 
   const contrast = HEX.test(hexDraft) ? contrastOnWhite(hexDraft) : null;
@@ -154,12 +163,15 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
       <fieldset>
         <legend className="text-sm font-medium text-ink">Paper size</legend>
         <div role="radiogroup" aria-label="Paper size" className="mt-2 grid grid-cols-2 gap-1 rounded-lg border border-rule bg-tint p-0.5 text-sm">
-          {PAPER_IDS.map((id) => (
+          {PAPER_IDS.map((id, index) => (
             <button
               key={id}
+              id={`paper-${id}`}
               type="button"
               role="radio"
               aria-checked={design.paper === id}
+              tabIndex={design.paper === id || (index === 0 && !PAPER_IDS.includes(design.paper)) ? 0 : -1}
+              onKeyDown={(e) => onPaperKeyDown(e, index)}
               onClick={() => onChange({ paper: id })}
               className={`focus-ring rounded-md px-3 py-1.5 font-medium transition-colors ${design.paper === id ? 'bg-surface text-ink shadow-card' : 'text-muted hover:text-ink'}`}
             >
