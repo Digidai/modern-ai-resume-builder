@@ -103,8 +103,8 @@ export const LinenTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
-                                        <article key={exp.id} className="relative border-l border-(--accent)/35 pb-[12px] pl-[14px] break-inside-avoid last:pb-0">
-                                            <span aria-hidden className="absolute top-[5px] -left-[5px] h-[9px] w-[9px] rounded-full border-[2px] border-(--accent) bg-[#F6F1EA]" />
+                                        <article key={exp.id} className="border-l border-(--accent)/35 pb-[12px] pl-[14px] break-inside-avoid last:pb-0">
+                                            <span aria-hidden className="absolute translate-x-[-19px] translate-y-[5px] h-[9px] w-[9px] rounded-full border-[2px] border-(--accent) bg-[#F6F1EA]" />
                                             {dates && <p className="text-[12px] font-semibold uppercase tabular-nums tracking-[0.08em] text-(--accent)">{dates}</p>}
                                             {heading && <h3 className="text-[14.5px] font-bold leading-snug text-[#2F2924] wrap-break-word">{heading}</h3>}
                                             {company && <p className="text-[13px] italic text-[#6B5F55] wrap-break-word">{company}</p>}

@@ -44,8 +44,8 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
                     {data.experience.map((exp) => {
                         const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
                         return (
-                            <article key={exp.id} className="relative pl-6 border-l-2 border-slate-200 break-inside-avoid">
-                                <span className="absolute -left-[7px] top-[5px] w-3 h-3 rounded-full bg-white border-[3px] border-(--accent)" aria-hidden="true" />
+                            <article key={exp.id} className="pl-6 border-l-2 border-slate-200 break-inside-avoid">
+                                <span className="absolute translate-x-[-31px] translate-y-[5px] w-3 h-3 rounded-full bg-white border-[3px] border-(--accent)" aria-hidden="true" />
                                 {(exp.role || dates) && (
                                     <div className="flex justify-between items-baseline gap-4">
                                         <h3 className="text-[16px] font-bold leading-snug text-slate-900 min-w-0 wrap-break-word">{exp.role}</h3>

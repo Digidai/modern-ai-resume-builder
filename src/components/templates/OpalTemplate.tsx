@@ -61,8 +61,8 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <SectionHeading>Experience</SectionHeading>
                     <div className="flex flex-col">
                         {data.experience.map((exp) => (
-                            <div key={exp.id} className="relative pl-6 pb-4.5 last:pb-0 border-l border-(--accent)/25 ml-[5px] break-inside-avoid">
-                                <span className="absolute -left-[5px] top-[6px] w-[9px] h-[9px] rounded-full bg-white border-2 border-(--accent)" aria-hidden="true" />
+                            <div key={exp.id} className="pl-6 pb-4.5 last:pb-0 border-l border-(--accent)/25 ml-[5px] break-inside-avoid">
+                                <span className="absolute translate-x-[-29px] translate-y-[6px] w-[9px] h-[9px] rounded-full bg-white border-2 border-(--accent)" aria-hidden="true" />
                                 <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
                                 {exp.company && <div className="text-[13.5px] text-slate-500 mt-0.5 wrap-break-word">{exp.company}</div>}
                                 {exp.description && (

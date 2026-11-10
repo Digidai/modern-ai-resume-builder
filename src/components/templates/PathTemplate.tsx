@@ -3,8 +3,8 @@ import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getC
 
 /** A milestone on the timeline: a solid accent node + section heading. */
 const Milestone: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
-    <section className="relative pl-9">
-        <span className="absolute left-0 top-[3px] w-4 h-4 rounded-full bg-(--accent) ring-4 ring-white" aria-hidden="true" />
+    <section className="pl-9">
+        <span className="absolute translate-x-[-36px] translate-y-[3px] w-4 h-4 rounded-full bg-(--accent) ring-4 ring-white" aria-hidden="true" />
         <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3.5 leading-[22px] break-after-avoid">{title}</h2>
         {children}
     </section>
@@ -12,7 +12,7 @@ const Milestone: React.FC<{ title: string; children: React.ReactNode }> = ({ tit
 
 /** A small stop on the timeline for an individual entry. */
 const Stop: React.FC = () => (
-    <span className="absolute -left-[32px] top-[7px] w-2.5 h-2.5 rounded-full bg-white border-2 border-(--accent) ring-[3px] ring-white" aria-hidden="true" />
+    <span className="absolute translate-x-[-32px] translate-y-[7px] w-2.5 h-2.5 rounded-full bg-white border-2 border-(--accent) ring-[3px] ring-white" aria-hidden="true" />
 );
 
 /** Second entry line: organisation on the left, the date pill on the right — the template's one date slot. */
@@ -59,8 +59,9 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-1 gap-9">
                 {hasTimeline && (
                     <div className="flex-1 min-w-0">
-                        <div className="relative flex flex-col gap-8">
-                            <div className="absolute left-[7px] top-2 bottom-1 w-0.5 bg-(--accent)/15" aria-hidden="true" />
+                        {/* The rail is a background, not a positioned line: a positioned wrapper would put this whole column
+                            after the rest of the page in the PDF's text order. */}
+                        <div className="flex flex-col gap-8 bg-[linear-gradient(color-mix(in_srgb,var(--accent)_15%,transparent),color-mix(in_srgb,var(--accent)_15%,transparent))] bg-size-[2px_calc(100%-12px)] bg-position-[7px_8px] bg-no-repeat">
                             {data.summary.trim() && (
                                 <Milestone title="Profile">
                                     <p className="text-slate-700 wrap-break-word">{data.summary}</p>
@@ -71,7 +72,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 <Milestone title="Experience">
                                     <div className="flex flex-col gap-5">
                                         {data.experience.map((exp) => (
-                                            <article key={exp.id} className="relative break-inside-avoid">
+                                            <article key={exp.id} className="break-inside-avoid">
                                                 <Stop />
                                                 {exp.role && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{exp.role}</h3>}
                                                 <SubLine left={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
@@ -86,7 +87,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 <Milestone title="Education">
                                     <div className="flex flex-col gap-4">
                                         {data.education.map((edu) => (
-                                            <article key={edu.id} className="relative break-inside-avoid">
+                                            <article key={edu.id} className="break-inside-avoid">
                                                 <Stop />
                                                 {edu.school && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{edu.school}</h3>}
                                                 <SubLine left={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate)} />

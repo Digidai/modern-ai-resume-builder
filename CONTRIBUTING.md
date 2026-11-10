@@ -16,7 +16,7 @@ Thanks for contributing to ModernCV. This project aims to keep a fast, local-fir
 
 ## Adding or Editing Templates
 
-1. Create or edit a template component in `src/components/templates/`. Its root must be `flex-1` and read the accent from `var(--rs-accent, <default>)`.
+1. Create or edit a template component in `src/components/templates/`. Its root must be `flex-1` and read the accent from `var(--rs-accent, <default>)`. Don't make an element that holds text `relative` just to place a decoration (a timeline dot, a rail): positioned elements are painted, and so written into the PDF's text, after the rest of the page, so ATS parsers would read that entry out of order. Leave the decoration `absolute` with no `top`/`left` (it stays where it would be in the flow) and move it with `translate`, or draw it as a background.
 2. Export it in `src/components/ResumeTemplates.tsx` and register it in `ResumeTemplateRenderer.tsx`.
 3. Add it to `TEMPLATE_CATALOG` in `src/constants/templates.ts` (name, description, `bestFor`, ATS flag). The picker, `/templates` pages, sitemap and `templates.json` all read this list.
 4. Check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures, then verify print preview and the PDF export.

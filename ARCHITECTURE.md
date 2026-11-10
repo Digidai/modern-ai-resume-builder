@@ -43,7 +43,7 @@ ModernCV is a local-first resume builder. Core editing runs in the browser and p
 - Template metadata (name, description, ATS flag, full-bleed) lives in `src/constants/templates.ts`.
 - Design settings (`ResumeData.design`: accent, font, scale) are applied by `ResumePreview` as CSS variables (`--rs-accent`, `--font-*`) plus `zoom`; see `src/constants/design.ts`.
 - To add a template:
-  1. Create a component in `src/components/templates/` whose root is `flex-1` and reads `var(--rs-accent, <default>)`.
+  1. Create a component in `src/components/templates/` whose root is `flex-1` and reads `var(--rs-accent, <default>)`. Keep text out of `relative` wrappers that only exist to place a decoration: Chromium writes positioned content into the PDF after everything else, so its text would come last for ATS parsers (place decorations with an offset-less `absolute` plus `translate`, or a background).
   2. Export it in `ResumeTemplates.tsx` and register it in `ResumeTemplateRenderer.tsx`.
   3. Add it to `TEMPLATE_CATALOG` (`photo: true` if it shows `data.photo` via `Portrait`, `publications: true` if it renders `data.publications`, `data.awards`, `data.talks` and `data.teaching` via `Citation`, `AwardLine`, `TalkLine` and `TeachingLine`); check it at `/dev/templates?t=<id>` with the default, long and sparse fixtures.
 

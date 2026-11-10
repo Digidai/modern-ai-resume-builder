@@ -60,8 +60,8 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
-                                        <article key={exp.id} className="relative pl-[16px] break-inside-avoid">
-                                            <span aria-hidden className="absolute top-[6px] left-0 h-[8px] w-[8px] rounded-full bg-(--accent)" />
+                                        <article key={exp.id} className="pl-[16px] break-inside-avoid">
+                                            <span aria-hidden className="absolute translate-x-[-16px] translate-y-[6px] h-[8px] w-[8px] rounded-full bg-(--accent)" />
                                             {heading && <h3 className="text-[14.5px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}
                                             {(company || dates) && (
                                                 <p className="text-[13px] leading-snug text-slate-600 wrap-break-word">

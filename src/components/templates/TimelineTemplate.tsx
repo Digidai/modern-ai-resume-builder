@@ -16,8 +16,8 @@ const bodyList = 'list-disc pl-4 space-y-[2.5px] marker:text-(--accent)/60';
 
 /** One entry on the rail: dot + dates first, then the heading lines and body. */
 const TimelineEntry: React.FC<{ dates: string; children: React.ReactNode }> = ({ dates, children }) => (
-    <article className="relative break-inside-avoid pl-[18px]">
-        <span aria-hidden className="absolute top-[5px] -left-[4.5px] size-2 rounded-full bg-(--accent) ring-[3px] ring-white" />
+    <article className="break-inside-avoid pl-[18px]">
+        <span aria-hidden className="absolute translate-x-[-22.5px] translate-y-[5px] size-2 rounded-full bg-(--accent) ring-[3px] ring-white" />
         {dates && <div className="text-[12.5px] font-medium leading-[18px] tabular-nums text-[#4B5563]">{dates}</div>}
         {children}
     </article>

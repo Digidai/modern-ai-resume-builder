@@ -118,9 +118,9 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
-                                        <article key={exp.id} className="relative ml-1 border-l-2 border-(--accent)/20 pb-5 pl-5 last:pb-0 break-inside-avoid">
+                                        <article key={exp.id} className="ml-1 border-l-2 border-(--accent)/20 pb-5 pl-5 last:pb-0 break-inside-avoid">
                                             <span
-                                                className="absolute -left-[7px] top-[5px] h-3 w-3 rounded-full border-[3px] border-(--accent) bg-white"
+                                                className="absolute translate-x-[-27px] translate-y-[5px] h-3 w-3 rounded-full border-[3px] border-(--accent) bg-white"
                                                 aria-hidden="true"
                                             />
                                             <div className="flex items-start justify-between gap-3">

@@ -118,8 +118,8 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 const heading = exp.role.trim() || exp.company.trim();
                                 const company = exp.role.trim() ? exp.company.trim() : '';
                                 return (
-                                    <article key={exp.id} className="relative break-inside-avoid">
-                                        <span aria-hidden="true" className="absolute -left-[27px] top-[6px] h-3 w-3 rounded-full border-2 border-white bg-(--accent)" />
+                                    <article key={exp.id} className="break-inside-avoid">
+                                        <span aria-hidden="true" className="absolute translate-x-[-27px] translate-y-[6px] h-3 w-3 rounded-full border-2 border-white bg-(--accent)" />
                                         {heading && <h3 className="text-[15.5px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}
                                         {(company || dates) && (
                                             <div className="mt-0.5 flex items-baseline justify-between gap-4">
