@@ -25,6 +25,21 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
   const { library, resumeData, resumeName, switchResume, createResume, renameResume, deleteResume } = useResume();
   const [renaming, setRenaming] = useState<string | null>(null);
   const rootRef = useRef<HTMLDivElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
+
+  // Keyboard focus never falls to the top of the page: it starts on the resume being edited, comes back
+  // to the button that opened the menu on Esc, and stays in the list after renaming or deleting.
+  const focusIn = (selector: string) => requestAnimationFrame(() => rootRef.current?.querySelector<HTMLElement>(selector)?.focus());
+  const focusOpener = () => {
+    const opener = openerRef.current;
+    (opener?.isConnected && opener.checkVisibility() ? opener : rootRef.current?.querySelector<HTMLElement>('[aria-haspopup]'))?.focus();
+  };
+
+  useEffect(() => {
+    if (!open) return;
+    openerRef.current = document.activeElement instanceof HTMLElement && document.activeElement !== document.body ? document.activeElement : null;
+    rootRef.current?.querySelector<HTMLElement>('[role="dialog"] [aria-current]')?.focus();
+  }, [open]);
 
   useEffect(() => {
     if (!open) return;
@@ -33,6 +48,7 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
       if (event instanceof KeyboardEvent ? event.key === 'Escape' && !renaming : outside) {
         setOpen(false);
         setRenaming(null);
+        if (event instanceof KeyboardEvent) focusOpener();
       }
     };
     document.addEventListener('mousedown', close);
@@ -50,7 +66,22 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
   const run = (action: () => void) => {
     setOpen(false);
     setRenaming(null);
+    focusOpener();
     action();
+  };
+
+  const finishRename = (id: string, name?: string) => {
+    if (name !== undefined) renameResume(id, name);
+    setRenaming(null);
+    focusIn(`[data-rename="${id}"]`);
+  };
+
+  const remove = (id: string) => {
+    const ids = library.entries.map((e) => e.id).filter((e) => e !== id);
+    const index = library.entries.findIndex((e) => e.id === id);
+    const next = ids[Math.min(index, ids.length - 1)];
+    deleteResume(id);
+    focusIn(`[data-resume="${next}"]`);
   };
 
   const row = (entry: ResumeEntry) => {
@@ -69,11 +100,10 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
             maxLength={80}
             onKeyDown={(event) => {
               if (event.key === 'Enter') {
-                renameResume(entry.id, event.currentTarget.value);
-                setRenaming(null);
+                finishRename(entry.id, event.currentTarget.value);
               } else if (event.key === 'Escape') {
                 event.stopPropagation();
-                setRenaming(null);
+                finishRename(entry.id);
               }
             }}
             onBlur={(event) => {
@@ -91,6 +121,7 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
         <button
           type="button"
           aria-current={isActive ? 'true' : undefined}
+          data-resume={entry.id}
           onClick={() => run(() => switchResume(entry.id))}
           className="flex min-w-0 flex-1 items-start gap-2.5 rounded-lg px-2.5 py-2 text-left focus-ring"
         >
@@ -100,11 +131,11 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
             <span className="block truncate text-xs text-muted">{meta}</span>
           </span>
         </button>
-        <button type="button" className={iconButton} aria-label={`Rename ${name}`} title="Rename" onClick={() => setRenaming(entry.id)}>
+        <button type="button" className={iconButton} data-rename={entry.id} aria-label={`Rename ${name}`} title="Rename" onClick={() => setRenaming(entry.id)}>
           <PenIcon className="h-4 w-4" />
         </button>
         {!isActive && (
-          <button type="button" className={iconButton} aria-label={`Delete ${name}`} title="Delete" onClick={() => deleteResume(entry.id)}>
+          <button type="button" className={iconButton} aria-label={`Delete ${name}`} title="Delete" onClick={() => remove(entry.id)}>
             <TrashIcon className="h-4 w-4" />
           </button>
         )}
@@ -133,6 +164,14 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
         <div
           role="dialog"
           aria-label="Your resumes"
+          // Tabbing out of the menu closes it, as clicking outside does.
+          onBlur={(event) => {
+            const next = event.relatedTarget as Element | null;
+            if (next && !rootRef.current?.contains(next) && !next.closest('[data-resume-menu-toggle]')) {
+              setOpen(false);
+              setRenaming(null);
+            }
+          }}
           className="animate-enter absolute left-0 top-full z-40 mt-2 w-[min(20rem,calc(100vw-1rem))] overflow-hidden rounded-lg border border-rule bg-surface p-1 shadow-sheet max-sm:-left-10"
         >
           <p className="kicker px-2.5 pb-1 pt-2 text-muted">Resumes in this browser</p>
