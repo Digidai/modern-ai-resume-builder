@@ -265,12 +265,9 @@ html.saved-resume:not(.hydrated) :is(.resume-fit, .user-resume) {
   opacity: 0;
 }
 
-/* Print specific overrides */
+/* Print specific overrides. No @page rule here: the stylesheet loads at the end of <body>, after the
+   resume's own @page margins, so a page default here would override them (index.html sets the default). */
 @media print {
-  @page {
-    margin: 0;
-  }
-
   body {
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
