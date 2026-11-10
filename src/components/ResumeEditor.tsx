@@ -791,6 +791,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                         placeholder={'- Led the redesign of onboarding, lifting activation by 18%\n- Built a design system used by 4 product teams'}
                         hint={descriptionHint}
                         minRows={4}
+                        pasteLists
                         disabled={isLoadingField(`exp-${exp.id}`)}
                         actions={polishButton(`exp-${exp.id}`, exp.description, 'Job Description', (v) =>
                           updateItem('experience', exp.id, { description: v })
@@ -918,6 +919,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                         onChange={(v) => updateItem('projects', proj.id, { description: v })}
                         placeholder="What it is, your role, and the result."
                         minRows={3}
+                        pasteLists
                         disabled={isLoadingField(`proj-${proj.id}`)}
                         actions={polishButton(`proj-${proj.id}`, proj.description, 'Project Description', (v) =>
                           updateItem('projects', proj.id, { description: v })

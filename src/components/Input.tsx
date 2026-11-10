@@ -1,4 +1,5 @@
 import React, { useId, useLayoutEffect, useRef } from 'react';
+import { htmlListToText } from '../utils/clipboard';
 import { normalizeMonth } from '../utils/resumeData';
 
 export const fieldClass = (error?: string) =>
@@ -112,6 +113,8 @@ interface TextareaProps {
   /** Minimum visible rows; the field grows with its content. */
   minRows?: number;
   className?: string;
+  /** Keep the bullets of a list pasted from a document or web page, as "- " lines. */
+  pasteLists?: boolean;
 }
 
 /** Auto-growing textarea with the same label/hint layout as Input. */
@@ -125,6 +128,7 @@ export const Textarea: React.FC<TextareaProps> = ({
   disabled = false,
   minRows = 3,
   className,
+  pasteLists = false,
 }) => {
   const generatedId = useId();
   const textareaId = `field-${generatedId.replace(/:/g, '')}`;
@@ -148,6 +152,24 @@ export const Textarea: React.FC<TextareaProps> = ({
         value={value}
         placeholder={placeholder}
         onChange={(e) => onChange(e.target.value)}
+        onPaste={
+          pasteLists
+            ? (e) => {
+                const listText = htmlListToText(e.clipboardData.getData('text/html'));
+                if (listText === null) return;
+                e.preventDefault();
+                const el = e.currentTarget;
+                // Start the list on its own line when pasting after text.
+                const before = el.value.slice(0, el.selectionStart);
+                const text = before && !before.endsWith('\n') ? `\n${listText}` : listText;
+                // insertText keeps the paste on the undo stack and fires onChange; setRangeText is the fallback.
+                if (!document.execCommand('insertText', false, text)) {
+                  el.setRangeText(text, el.selectionStart, el.selectionEnd, 'end');
+                  onChange(el.value);
+                }
+              }
+            : undefined
+        }
         disabled={disabled}
         aria-busy={disabled || undefined}
         aria-describedby={hint ? `${textareaId}-hint` : undefined}
