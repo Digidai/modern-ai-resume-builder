@@ -98,8 +98,11 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
   const replaceWithUndo = useCallback(
     (next: ResumeData, message: string) => {
       const previous = resumeData;
-      replaceData(next);
-      showToast(message, 'success', { action: { label: 'Undo', onClick: () => replaceData(previous) } });
+      const saved = replaceData(next);
+      // The new resume is on screen either way; say plainly when it couldn't be stored.
+      showToast(saved ? message : `${message.replace(/\.$/, '')}, but not saved: this browser's storage is full. Delete a resume or remove a photo.`, saved ? 'success' : 'error', {
+        action: { label: 'Undo', onClick: () => replaceData(previous) },
+      });
     },
     [replaceData, resumeData, showToast]
   );
@@ -312,8 +315,8 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
         if (!parsed) throw new Error('not a resume');
         replaceWithUndo(parsed, 'Backup imported.');
         return true;
-      } catch {
-        showError('That file is not a ModernCV backup (.json).');
+      } catch (error) {
+        showError(error instanceof Error && error.message === 'storage' ? STORAGE_FULL : 'That file is not a ModernCV backup (.json).');
         return false;
       }
     },
