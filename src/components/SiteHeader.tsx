@@ -20,7 +20,9 @@ const navLinkClass = ({ isActive }: { isActive: boolean }) =>
 const NavItems: React.FC = () => (
   <>
     <NavLink to="/directory/" className={navLinkClass}>
-      Resume examples
+      {/* Below 360px the short label lets all four links fit on one row (down to 320px) instead of scrolling. */}
+      <span className="max-[360px]:hidden">Resume examples</span>
+      <span className="min-[360px]:hidden">Examples</span>
     </NavLink>
     <NavLink to="/templates/" className={navLinkClass}>
       Templates
@@ -52,7 +54,7 @@ export const SiteHeader: React.FC<{ ctaLabel?: string }> = ({ ctaLabel = 'Open e
         </Link>
       </div>
     </div>
-    {/* Tighter than the desktop bar so the four links fit from 360px wide; narrower screens scroll it. */}
+    {/* Tighter than the desktop bar so the four links fit from 320px wide; anything narrower scrolls it. */}
     <nav className="flex overflow-x-auto px-1.5 pb-2 md:hidden [&>a]:px-2" aria-label="Main mobile">
       <NavItems />
     </nav>
