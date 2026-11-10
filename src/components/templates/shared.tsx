@@ -109,13 +109,19 @@ export interface ContactEntry {
     href?: string;
 }
 
+/** `tel:` link for a phone as written; an extension ("ext. 12", "x12") becomes `;ext=12` instead of extra digits. */
+export const telHref = (phone: string): string => {
+    const [, number, ext] = /^(.*?)(?:\s*(?:ext\.?|x|#)\s*(\d{1,6}))?\s*$/i.exec(phone) ?? [];
+    return `tel:${(number ?? phone).replace(/[^\d+]/g, '')}${ext ? `;ext=${ext}` : ''}`;
+};
+
 /** Non-empty contact fields and profile links in display order, with links where it makes sense. */
 export const getContactEntries = (data: ResumeData): ContactEntry[] => {
     const entries: ContactEntry[] = [];
     const email = data.email.trim();
     const phone = data.phone.trim();
     if (email) entries.push({ id: 'email', key: 'email', label: 'Email', icon: MailIcon, value: email, href: `mailto:${email}` });
-    if (phone) entries.push({ id: 'phone', key: 'phone', label: 'Phone', icon: PhoneIcon, value: phone, href: `tel:${phone.replace(/[^\d+]/g, '')}` });
+    if (phone) entries.push({ id: 'phone', key: 'phone', label: 'Phone', icon: PhoneIcon, value: phone, href: /\d/.test(phone) ? telHref(phone) : undefined });
     if (data.location.trim()) entries.push({ id: 'location', key: 'location', label: 'Location', icon: MapPinIcon, value: data.location.trim() });
     if (data.website.trim() && validateUrl(data.website)) entries.push({ id: 'website', key: 'website', label: 'Website', icon: GlobeIcon, value: displayUrl(data.website), href: toHref(data.website) });
     if (data.linkedin.trim() && validateUrl(data.linkedin)) entries.push({ id: 'linkedin', key: 'linkedin', label: 'LinkedIn', icon: LinkedinIcon, value: displayUrl(data.linkedin), href: toHref(data.linkedin) });

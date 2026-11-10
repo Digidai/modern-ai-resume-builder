@@ -1,11 +1,18 @@
 export const validateEmail = (email: string): boolean => {
   if (!email) return true;
-  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  // Pasted addresses often carry a stray space at either end.
+  return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim());
 };
 
+/**
+ * Digits with the separators people write around the world (spaces, dashes, dots as in "555.012.3456" or
+ * "06.12.34.56.78", a slash as in "030/123456", brackets, a leading +), an optional extension ("ext. 12",
+ * "x12", "#12"), and at least 4 digits.
+ */
 export const validatePhone = (phone: string): boolean => {
   if (!phone) return true;
-  return /^[\d\s\-+()]+$/.test(phone);
+  const match = /^\s*(\+?[\d\s\-.\/()]+?)(?:\s*(?:ext\.?|x|#)\s*\d{1,6})?\s*$/i.exec(phone);
+  return !!match && (match[1].match(/\d/g)?.length ?? 0) >= 4;
 };
 
 export const validateUrl = (url: string): boolean => {
