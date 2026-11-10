@@ -210,7 +210,8 @@ const fetchSessionToken = async (forceRefresh = false): Promise<string> => {
 
 const postAiRequest = async (
   payload: AiRequest,
-  sessionToken: string
+  sessionToken: string,
+  signal?: AbortSignal
 ): Promise<Response> => {
   const endpoint = getProxyUrl();
 
@@ -223,8 +224,10 @@ const postAiRequest = async (
         'x-ai-request-id': createRequestId(),
       },
       body: JSON.stringify(payload),
+      signal,
     });
-  } catch {
+  } catch (error) {
+    if (signal?.aborted) throw error;
     throw new AiError(
       'Unable to reach AI service. Please check your connection and try again.',
       'NETWORK_ERROR',
@@ -234,14 +237,14 @@ const postAiRequest = async (
 };
 
 /** Posts an AI request, refreshing the session once when it has expired; throws on any error status. */
-const sendAiRequest = async (payload: AiRequest): Promise<Response> => {
-  let response = await postAiRequest(payload, await fetchSessionToken());
+const sendAiRequest = async (payload: AiRequest, signal?: AbortSignal): Promise<Response> => {
+  let response = await postAiRequest(payload, await fetchSessionToken(), signal);
 
   if (response.status === 401) {
     const authError = await parseError(response);
     if (authError.code === 'SESSION_EXPIRED' || authError.code === 'INVALID_SESSION_TOKEN' || authError.code === 'AUTH_REQUIRED') {
       clearSessionCache();
-      response = await postAiRequest(payload, await fetchSessionToken(true));
+      response = await postAiRequest(payload, await fetchSessionToken(true), signal);
     } else {
       throw authError;
     }
@@ -304,18 +307,19 @@ export const generateSummary = async (role: string, skills: string[], onPartial?
 
 /**
  * Sends a prepared LaTeX resume to the AI parser and resolves to its JSON reply (one attempt, it is
- * slow). `onEvent` receives the streamed progress events as the model works.
+ * slow). `onEvent` receives the streamed progress events as the model works. Aborting `signal`
+ * stops the request and rejects with the signal's reason rather than an AiError.
  */
-export const parseLatexResume = (source: string, onEvent?: (event: AiStreamEvent) => void): Promise<string> =>
-  streamAiRequest({ action: 'parse_latex', source, stream: true }, onEvent);
+export const parseLatexResume = (source: string, onEvent?: (event: AiStreamEvent) => void, signal?: AbortSignal): Promise<string> =>
+  streamAiRequest({ action: 'parse_latex', source, stream: true }, onEvent, signal);
 
 /** Like parseLatexResume, for the text of a resume read from a PDF, Word file or paste. */
-export const parseResumeText = (source: string, onEvent?: (event: AiStreamEvent) => void): Promise<string> =>
-  streamAiRequest({ action: 'parse_text', source, stream: true }, onEvent);
+export const parseResumeText = (source: string, onEvent?: (event: AiStreamEvent) => void, signal?: AbortSignal): Promise<string> =>
+  streamAiRequest({ action: 'parse_text', source, stream: true }, onEvent, signal);
 
 /** Posts a `stream: true` request and resolves to the `done` text; `onEvent` sees every event before it. */
-const streamAiRequest = async (payload: AiRequest, onEvent?: (event: AiStreamEvent) => void): Promise<string> => {
-  const response = await sendAiRequest(payload);
+const streamAiRequest = async (payload: AiRequest, onEvent?: (event: AiStreamEvent) => void, signal?: AbortSignal): Promise<string> => {
+  const response = await sendAiRequest(payload, signal);
   // A server without streaming answers with the usual { text }.
   if (!(response.headers.get('content-type') || '').includes('ndjson') || !response.body) {
     const data = (await response.json().catch(() => ({}))) as unknown;
@@ -352,7 +356,7 @@ const streamAiRequest = async (payload: AiRequest, onEvent?: (event: AiStreamEve
       if (done) break;
     }
   } catch (error) {
-    if (error instanceof AiError) throw error;
+    if (error instanceof AiError || signal?.aborted) throw error;
     throw new AiError('The connection to the AI was interrupted. Please try again.', 'NETWORK_ERROR', true);
   }
   const result = handle(buffer);

@@ -964,9 +964,10 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
     const deadline = Date.now() + (isParseRequest(payload) ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
     let content = '';
     let lastThinking = 0;
+    let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
     try {
       if (upstream instanceof ReadableStream) {
-        const reader = (upstream as ReadableStream<Uint8Array>).getReader();
+        reader = (upstream as ReadableStream<Uint8Array>).getReader();
         const decoder = new TextDecoder();
         let buffer = '';
         for (;;) {
@@ -1016,6 +1017,8 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
       const empty = isParseRequest(payload) ? "The AI didn't return a resume. Please try again." : 'AI returned an empty response. Please try again.';
       await send(text ? { type: 'done', text } : { type: 'error', code: 'EMPTY_RESPONSE', error: empty });
     } catch (error) {
+      // A failed write means the client went away (Cancel or a closed tab): stop the model too.
+      await reader?.cancel().catch(() => undefined);
       console.error('[ai] parse stream failed', { model, message: error instanceof Error ? error.message : String(error) });
       await send({ type: 'error', code: 'UPSTREAM_UNAVAILABLE', error: 'AI service is temporarily unavailable. Please try again.' }).catch(() => undefined);
     } finally {

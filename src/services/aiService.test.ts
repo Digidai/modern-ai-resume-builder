@@ -2,6 +2,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   __resetAiSessionCacheForTests,
   improveText,
+  parseResumeText,
 } from './aiService';
 
 const jsonResponse = (body: unknown, status = 200) =>
@@ -113,5 +114,28 @@ describe('aiService', () => {
     // Quotes the model wraps around its reply are dropped, and each line keeps the input's "- " bullet.
     expect(partials).toEqual(['- Led a team', '- Led a team of 4\n- Cut costs', '- Led a team of 4\n- Cut costs 30%']);
     expect(JSON.parse(String(fetchMock.mock.calls[1][1]?.body))).toMatchObject({ action: 'improve', stream: true });
+  });
+
+  it('rejects with the abort reason when a resume conversion is cancelled mid-stream', async () => {
+    const encoder = new TextEncoder();
+    const controller = new AbortController();
+    // A stream that sends one event and then waits; like a real fetch, aborting errors the body.
+    const body = new ReadableStream<Uint8Array>({
+      start(stream) {
+        stream.enqueue(encoder.encode(`${JSON.stringify({ type: 'thinking' })}\n`));
+        controller.signal.addEventListener('abort', () => stream.error(controller.signal.reason));
+      },
+    });
+    fetchMock
+      .mockResolvedValueOnce(jsonResponse({ token: 'session-token', expiresAt: Date.now() + 60_000 }))
+      .mockResolvedValueOnce(new Response(body, { headers: { 'content-type': 'application/x-ndjson' } }));
+
+    const conversion = parseResumeText('Pat Lee\nEngineer', (event) => {
+      if (event.type === 'thinking') controller.abort();
+    }, controller.signal);
+
+    // Not an AiError ("connection interrupted"), so the dialog can go back quietly.
+    await expect(conversion).rejects.toMatchObject({ name: 'AbortError' });
+    expect(fetchMock.mock.calls[1][1]?.signal).toBe(controller.signal);
   });
 });

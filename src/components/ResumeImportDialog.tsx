@@ -119,7 +119,9 @@ export const ResumeImportDialog: React.FC<{
   /** The headshot found in the last file read, as the editor stores photos, and whether to import it. */
   const [photo, setPhoto] = useState('');
   const [keepPhoto, setKeepPhoto] = useState(true);
-
+  /** Stops the conversion in flight (Cancel, closing the dialog, or leaving the editor). */
+  const conversionRef = useRef<AbortController | null>(null);
+  useEffect(() => () => conversionRef.current?.abort(), []);
 
   useEffect(() => {
     const dialog = dialogRef.current;
@@ -151,6 +153,8 @@ export const ResumeImportDialog: React.FC<{
         return progress ? { ...previous, progress } : previous;
       });
     const startReading = () => advance((progress) => (progress.stage === 'sending' ? { ...progress, stage: 'reading' } : null));
+    const conversion = new AbortController();
+    conversionRef.current = conversion;
     let written = '';
     let lastUpdate = 0;
     // The upload takes a moment; after that the model is reading the prompt, even before it says so.
@@ -165,7 +169,7 @@ export const ResumeImportDialog: React.FC<{
         if (now - lastUpdate < 250) return;
         lastUpdate = now;
         advance(() => ({ stage: 'writing', written: written.length, ...latexParseProgress(written) }));
-      });
+      }, conversion.signal);
       const parsed = resumeFromParsedLatex(reply, current);
       if (!parsed) {
         setPhase(inputError(isLatex ? "Couldn't find resume content in that LaTeX. Check it is the main .tex file and try again." : "Couldn't find resume content in that text. Check it is your resume and try again."));
@@ -175,11 +179,18 @@ export const ResumeImportDialog: React.FC<{
       const academic = (parsed.publications ?? []).length + (parsed.awards ?? []).length + (parsed.talks ?? []).length + (parsed.teaching ?? []).length > 0;
       setPhase({ name: 'review', result: academic && !getTemplateById(current.templateId)?.publications ? { ...parsed, templateId: 'scholar' } : parsed });
     } catch (err) {
+      // Cancelled: back to the input with the text kept, and nothing to report.
+      if (conversion.signal.aborted) {
+        setPhase(INPUT);
+        return;
+      }
       setPhase(inputError(err instanceof AiError ? err.message : 'Conversion failed. Please try again.'));
     } finally {
       window.clearTimeout(readingTimer);
+      if (conversionRef.current === conversion) conversionRef.current = null;
     }
   };
+  const cancelConversion = () => conversionRef.current?.abort();
 
   const busy = phase.name === 'reading' || phase.name === 'converting';
   const result = phase.name === 'review' ? phase.result : null;
@@ -203,8 +214,11 @@ export const ResumeImportDialog: React.FC<{
     await convert(read);
   };
 
+  // Reading a file is quick and local, so only that step holds the dialog open; closing cancels a conversion.
   const close = () => {
-    if (!busy) onClose();
+    if (phase.name === 'reading') return;
+    cancelConversion();
+    onClose();
   };
 
   // A photo needs a photo template; Essential is the plainest one. Academic CVs keep Scholar.
@@ -219,7 +233,8 @@ export const ResumeImportDialog: React.FC<{
       ref={dialogRef}
       onClose={onClose}
       onCancel={(event) => {
-        if (busy) event.preventDefault();
+        if (phase.name === 'reading') event.preventDefault();
+        else cancelConversion();
       }}
       aria-labelledby="resume-import-title"
       data-state={phase.name === 'input' && phase.error ? 'error' : phase.name}
@@ -235,7 +250,7 @@ export const ResumeImportDialog: React.FC<{
               From a PDF, Word (.docx) or LaTeX file, or pasted text. AI fills in the editor; you check the result before anything changes.
             </p>
           </div>
-          <Button variant="icon" onClick={close} aria-label="Close" disabled={busy}>
+          <Button variant="icon" onClick={close} aria-label="Close" disabled={phase.name === 'reading'}>
             <XIcon className="h-4 w-4" />
           </Button>
         </div>
@@ -283,9 +298,16 @@ export const ResumeImportDialog: React.FC<{
               placeholder={'Pat Lee\nSoftware Engineer · pat@example.com\n\nExperience\nAcme Corp, Senior Engineer, 2021 – present\n• Led …'}
               hint="Plain text from any resume, or a .tex source. Text read from a file shows here, so you can fix it and convert again."
             />
-            <Button onClick={() => void convert({ kind: looksLikeLatex(source) ? 'latex' : 'text', text: source })} isLoading={phase.name === 'converting'} disabled={!source.trim() || busy}>
-              {phase.name === 'converting' ? 'Converting…' : 'Convert'}
-            </Button>
+            <div className="flex flex-wrap gap-2">
+              <Button onClick={() => void convert({ kind: looksLikeLatex(source) ? 'latex' : 'text', text: source })} isLoading={phase.name === 'converting'} disabled={!source.trim() || busy}>
+                {phase.name === 'converting' ? 'Converting…' : 'Convert'}
+              </Button>
+              {phase.name === 'converting' && (
+                <Button variant="secondary" onClick={cancelConversion}>
+                  Cancel
+                </Button>
+              )}
+            </div>
             {phase.name === 'converting' && <ConversionProgress progress={phase.progress} expected={phase.expected} latex={phase.latex} />}
             {error && (
               <p role="alert" className="text-sm text-danger">
