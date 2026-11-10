@@ -1690,6 +1690,12 @@ export default {
     // HTML is personalised per response (nonce + client token), so ask for the full page, never a 304.
     const assetRequest = isHtmlNavigationRequest(request) ? withoutConditionalHeaders(request) : request;
     const assetResponse = await env.ASSETS.fetch(assetRequest);
+    // The assets' canonical-URL redirects ("/editor" → "/editor/", "/index.html" → "/") are 307s; the move is
+    // permanent, so search engines should consolidate on the target.
+    if (assetResponse.status === 307 && (request.method === 'GET' || request.method === 'HEAD')) {
+      const location = assetResponse.headers.get('location');
+      if (location) return finalizeResponse(request, env, new Response(null, { status: 301, headers: { location: new URL(location, url).toString() } }));
+    }
     const isNotFoundShell = url.pathname === '/404' || url.pathname === '/404.html';
     if (!isNotFoundShell && (assetResponse.status !== 404 || !isHtmlNavigationRequest(request))) {
       return finalizeResponse(request, env, assetResponse);
@@ -1701,9 +1707,8 @@ export default {
     if (!isNotFoundShell && lowerPath !== url.pathname) {
       const lowerUrl = new URL(lowerPath + url.search, url);
       const lowerResponse = await env.ASSETS.fetch(new Request(lowerUrl.toString(), { method: 'HEAD' }));
-      // Follow the assets' own trailing-slash redirect so this is a single hop.
-      const location = lowerResponse.status >= 300 ? lowerResponse.headers.get('location') : null;
-      if (lowerResponse.status < 400) return Response.redirect(new URL(location ?? lowerUrl.toString(), lowerUrl).toString(), 301);
+      // The assets binding follows its own trailing-slash redirect; use where it ended, so this is a single hop.
+      if (lowerResponse.status < 400) return Response.redirect(lowerResponse.redirected && lowerResponse.url ? lowerResponse.url : lowerUrl.toString(), 301);
     }
 
     // Every real page is prerendered, so anything else is a 404. Serve the SPA shell (which renders
