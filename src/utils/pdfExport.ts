@@ -1,6 +1,7 @@
 import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
+import { resumeDocumentTitle } from './resumeData';
 import { isFullBleedTemplate } from '../constants/templates';
 import { MM_TO_PX } from '../constants/print';
 import { measurePrintLayout, pageBoxMm, paperOf, repeatedFrameSpace, SUPPORTS_CLONE, withPrintedPages } from './printLayout';
@@ -200,7 +201,7 @@ export const exportResumeToPdf = async ({
   try {
     const { renderPdfOnServer } = await import('./serverPdf');
     onProgress?.({ stage: 'server' });
-    const pdf = await renderPdfOnServer(element);
+    const pdf = await renderPdfOnServer(element, resumeDocumentTitle(data));
     onProgress?.({ stage: 'saving' });
     downloadBlob(pdf, `${safeName}.pdf`);
     return;
@@ -219,6 +220,7 @@ export const exportResumeToPdf = async ({
     // `style.fontFamily`, which Firefox doesn't expose).
     const fontEmbedCSS = await import('./serverPdf').then(({ buildFontEmbedCss }) => buildFontEmbedCss(element));
     const pdfDoc = await PDFDocument.create();
+    pdfDoc.setTitle(resumeDocumentTitle(data), { showInWindowTitleBar: true });
     const addPage: AddPage = async (png, index, pages) => {
       onProgress?.({ stage: 'building', page: index + 1, pages });
       // Let the progress repaint between pages; capturing and encoding each one blocks the main thread.

@@ -68,7 +68,7 @@ export const buildFontEmbedCss = async (element: HTMLElement): Promise<string> =
  * Snapshot of the rendered paper: its markup plus every same-origin CSS rule, with the
  * fonts it uses inlined as data: URLs (the render sandbox has no network access).
  */
-export const buildPdfSnapshot = async (element: HTMLElement): Promise<{ html: string; css: string }> => {
+export const buildPdfSnapshot = async (element: HTMLElement, title: string): Promise<{ html: string; css: string; title: string }> => {
   const fonts = buildFontEmbedCss(element);
   const cssParts: string[] = [];
   for (const sheet of Array.from(document.styleSheets)) {
@@ -83,12 +83,13 @@ export const buildPdfSnapshot = async (element: HTMLElement): Promise<{ html: st
   const clone = element.cloneNode(true) as HTMLElement;
   clone.querySelectorAll('[data-export-ignore="true"]').forEach((node) => node.remove());
   clone.removeAttribute('id');
-  return { html: clone.outerHTML, css: [await fonts, ...cssParts].join('\n') };
+  return { html: clone.outerHTML, css: [await fonts, ...cssParts].join('\n'), title };
 };
 
 /** Renders the paper to a vector PDF on the server (Cloudflare Browser Rendering). */
-export const renderPdfOnServer = async (element: HTMLElement): Promise<Blob> => {
-  const snapshot = await buildPdfSnapshot(element);
+/** `title` becomes the PDF's document title. */
+export const renderPdfOnServer = async (element: HTMLElement, title: string): Promise<Blob> => {
+  const snapshot = await buildPdfSnapshot(element, title);
   const response = await postWithAiSession('/api/pdf', JSON.stringify(snapshot));
   const blob = await response.blob();
   if (blob.type !== 'application/pdf' || blob.size < 500) throw new Error('Unexpected PDF response');

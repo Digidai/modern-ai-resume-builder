@@ -1037,8 +1037,12 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
  */
 const PDF_SANDBOX_CSP = "default-src 'none'; style-src 'unsafe-inline'; font-src data:; img-src data:";
 
-const buildPdfDocument = (html: string, css: string): string =>
+const escapeHtmlText = (text: string): string => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+
+// The <title> becomes the PDF's document title, which viewers show in the tab (without one it is "about:blank").
+const buildPdfDocument = (html: string, css: string, title: string): string =>
   `<!doctype html><html><head><meta charset="utf-8">` +
+  `<title>${escapeHtmlText(title.replace(/\s+/g, ' ').trim().slice(0, 200) || 'Resume')}</title>` +
   `<meta http-equiv="Content-Security-Policy" content="${PDF_SANDBOX_CSP}">` +
   // `</style` can't appear inside the CSS we were given; neutralize it if it does.
   `<style>${css.replace(/<\/style/gi, '<\\/style')}</style></head>` +
@@ -1140,7 +1144,7 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
       ? errorResponse(413, 'REQUEST_TOO_LARGE', 'Resume is too large to render.')
       : errorResponse(400, 'INVALID_JSON', 'Request body must be valid JSON.');
   }
-  const { html, css } = (body ?? {}) as { html?: unknown; css?: unknown };
+  const { html, css, title } = (body ?? {}) as { html?: unknown; css?: unknown; title?: unknown };
   if (typeof html !== 'string' || typeof css !== 'string' || !html.trim()) {
     return errorResponse(400, 'INVALID_REQUEST', 'Missing resume markup.');
   }
@@ -1155,7 +1159,7 @@ const handlePdfRequest = async (request: Request, env: Env): Promise<Response> =
       // except inline data: fonts and images is aborted: the page can never load or print another URL.
       await page.setRequestInterception(true);
       page.on('request', (req) => void (req.url().startsWith('data:') ? req.continue() : req.abort()).catch(() => undefined));
-      await page.setContent(buildPdfDocument(html, css), { waitUntil: 'load' });
+      await page.setContent(buildPdfDocument(html, css, typeof title === 'string' ? title : ''), { waitUntil: 'load' });
       await page.evaluate(() => document.fonts.ready.then(() => undefined));
       const format = /^<div[^>]*\bdata-paper="letter"/.test(html) ? 'Letter' : 'A4';
       const print = () => page.pdf({ format, printBackground: true, preferCSSPageSize: true });

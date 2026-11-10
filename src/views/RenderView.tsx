@@ -6,7 +6,7 @@ import { largestScaleForPages, measurePrintLayout } from '../utils/printLayout';
 import { SCALE_MIN } from '../constants/design';
 import { getTemplateById, isFullBleedTemplate } from '../constants/templates';
 import { decodeResumePayload, readResumeHash } from '../shared/resumeLink';
-import { sanitizeResumeData } from '../utils/resumeData';
+import { resumeDocumentTitle, sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
 import { paperSize } from '../constants/print';
 import { resumeFontsReady } from '../fonts';
@@ -24,7 +24,8 @@ const RenderView: React.FC = () => {
   const root = document.documentElement;
 
   useSeo({
-    title: 'Resume | ModernCV',
+    // The Agent API's PDFs take their document title from the page.
+    title: data ? resumeDocumentTitle(data) : 'Resume | ModernCV',
     description: 'Printable resume rendered by ModernCV.',
     canonical: '/render/',
     robots: SEO_ROBOTS_NOINDEX,

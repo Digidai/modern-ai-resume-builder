@@ -23,6 +23,10 @@ export const sanitizePhoto = (value: unknown): string => {
 const list = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object') : [];
 
+/** The PDF's document title, which viewers show in the tab or title bar: "Pat Lee – Resume". */
+export const resumeDocumentTitle = (data: Pick<ResumeData, 'fullName'>): string =>
+  data.fullName.trim() ? `${data.fullName.trim().replace(/\s+/g, ' ')} – Resume` : 'Resume';
+
 export const createId = (): string =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto
     ? crypto.randomUUID()
