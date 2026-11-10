@@ -116,7 +116,10 @@ const DEFAULT_CLIENT_TOKEN_TTL_SECONDS = 24 * 60 * 60;
 const RATE_LIMIT_WINDOW_MS = 60 * 1000;
 const MAX_RATE_LIMIT_BUCKETS = 5000;
 const SESSION_COOKIE_NAME = 'ai_session_id';
-const CLIENT_TOKEN_COOKIE_NAME = 'ai_client_id';
+// Path=/ so page requests see it: each HTML response reuses the browser's id instead of minting a new
+// one, which made every other open tab's page token stop matching. (The old `ai_client_id` was Path=/api;
+// a new name keeps it from shadowing this one on /api requests until it expires.)
+const CLIENT_TOKEN_COOKIE_NAME = 'ai_client';
 const CLIENT_TOKEN_META_NAME = 'ai-client-token';
 const CLIENT_TOKEN_HEADER = 'x-ai-client-token';
 const REQUEST_ID_HEADER = 'x-ai-request-id';
@@ -502,7 +505,8 @@ const issueSessionToken = async (
   const now = Math.floor(Date.now() / 1000);
   const ttlSeconds = parseInteger(env.AI_SESSION_TTL_SECONDS, DEFAULT_SESSION_TTL_SECONDS, 60, 3600);
   const expiresAt = now + ttlSeconds;
-  const sessionId = generateSessionId();
+  // Reuse the browser's session id, so a session started in another tab doesn't invalidate this one's token.
+  const sessionId = normalizeText(parseCookieHeader(request.headers.get('cookie'))[SESSION_COOKIE_NAME]) || generateSessionId();
   const ip = getClientIp(request);
   const userAgent = normalizeText(request.headers.get('user-agent')) || 'unknown';
 
@@ -558,7 +562,9 @@ const issueClientToken = async (
 
   return {
     token: `${encodedPayload}.${signature}`,
-    cookie: `${CLIENT_TOKEN_COOKIE_NAME}=${clientId}; Max-Age=${ttlSeconds}; Path=/api; HttpOnly; Secure; SameSite=Strict`,
+    // Lax: arriving from another site (a search result) must not mint a new id either. The id grants nothing
+    // on its own; the API also requires the signed token from the page.
+    cookie: `${CLIENT_TOKEN_COOKIE_NAME}=${clientId}; Max-Age=${ttlSeconds}; Path=/; HttpOnly; Secure; SameSite=Lax`,
   };
 };
 
