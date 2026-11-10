@@ -10,6 +10,7 @@ import { FONT_PRESETS } from '../src/constants/design';
 import { MM_TO_PX, paperSize } from '../src/constants/print';
 import { sanitizeResumeData } from '../src/utils/resumeData';
 import { encodeResumePayload } from '../src/shared/resumeLink';
+import { resumeFileName } from '../src/shared/fileName';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 import roleGuides from '../src/data/roleGuides.json';
 import jobTitles from '../src/data/jobTitles.json';
@@ -344,7 +345,7 @@ const exportLatex = (input: Json) => {
   const { resume, warnings } = prepareResume(input);
   const tex = toLatex(resume);
   const engine = latexEngine(resume);
-  const filename = `${(resume.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[^\p{L}\p{N}_.-]/gu, '').toLowerCase() || 'resume'}-resume.tex`;
+  const filename = resumeFileName(resume.fullName, 'tex');
   return {
     filename,
     engine,
@@ -441,8 +442,7 @@ const linkKey = async (env: AgentEnv): Promise<CryptoKey | null> => {
   );
 };
 
-const pdfFilename = (resume: ResumeData) =>
-  `${(resume.fullName.trim() || 'resume').replace(/\s+/g, '_').replace(/[^\p{L}\p{N}_.-]/gu, '').toLowerCase() || 'resume'}-resume.pdf`;
+const pdfFilename = (resume: ResumeData) => resumeFileName(resume.fullName, 'pdf');
 
 /** A URL that downloads this resume as a PDF for 7 days, or null (no secret configured, or too long). */
 const pdfDownloadLink = async (env: AgentEnv, origin: string, resume: ResumeData) => {
@@ -893,7 +893,7 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     // Link previews and mail scanners often probe with HEAD: answer without spending a render.
     if (request.method === 'HEAD') return new Response(null, { headers: { 'content-type': 'application/pdf' } });
     const result = await renderResume(ctx.env, ctx.deps, ctx.origin, input, 'pdf');
-    const filename = decodeURIComponent(name).replace(/[^\p{L}\p{N}_.-]/gu, '') || 'resume.pdf';
+    const filename = decodeURIComponent(name).replace(/[^\p{L}\p{M}\p{N}_.-]/gu, '') || 'Resume.pdf';
     return new Response(new Blob([result.bytes as BlobPart]), {
       headers: {
         'content-type': 'application/pdf',

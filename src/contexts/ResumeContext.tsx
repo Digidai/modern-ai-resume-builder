@@ -81,7 +81,6 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
       }
       const [{ exportResumeToPdf }] = loaded;
       await exportResumeToPdf({
-        rawFileName: resumeData.fullName.trim() || 'resume',
         data: resumeData,
         previewElementId: 'resume-preview-container',
         onProgress: setPdfProgress,

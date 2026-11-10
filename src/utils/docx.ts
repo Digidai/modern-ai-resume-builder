@@ -1,7 +1,7 @@
 import type { ResumeData } from '../types';
 import { BULLET_PATTERN, formatDateRange, getContactEntries, groupSkills, toHref } from '../components/templates/shared';
 import { validateUrl } from './validation';
-import { resumeFileBase } from './latex';
+import { resumeFileName } from '../shared/fileName';
 
 // The resume as an editable Word file (.docx) for portals and recruiters that ask for one. It is the
 // plain single-column layout ATS parsers read best: real Heading 1 sections, Word's own bullet list,
@@ -237,13 +237,13 @@ const zip = (files: Record<string, string>): Uint8Array => {
 /** The resume as the bytes of a .docx file. */
 export const toDocx = (data: ResumeData): Uint8Array => zip(buildParts(data));
 
-/** Saves the resume as `<name>-resume.docx`. */
+/** Saves the resume as `<Name>_Resume.docx`. */
 export const downloadDocx = (data: ResumeData): void => {
   const bytes = toDocx(data);
   const url = URL.createObjectURL(new Blob([bytes.slice()], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }));
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = `${resumeFileBase(data)}-resume.docx`;
+  anchor.download = resumeFileName(data.fullName, 'docx');
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();

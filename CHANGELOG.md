@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Every download is named the same way, after you: "Pat_Lee_Resume.pdf", ".docx" and ".tex", including PDFs and LaTeX from the Agent API and MCP. Before, Download PDF saved "Pat_Lee.pdf" (nothing said it was a resume) while the Word, LaTeX and agent files were lower case ("pat_lee-resume.docx"). Names in any script keep their letters and accents.
 - Phone numbers written with dots ("555.012.3456", "06.12.34.56.78"), a slash ("030/123456") or an extension ("ext. 12", "x12") are no longer marked "Invalid phone format" or listed under "Fix the email or phone format". An extension is kept out of the resume's tap-to-call link (it dialled "555012312" for "555 0123 x12"; now it calls 5550123, extension 12), and an email pasted with a space at either end is accepted.
 - Addresses without the trailing slash or with /index.html ("/editor", "/templates", "/index.html") redirect permanently (301) instead of temporarily (307), so search engines credit links to them to the real page. A job page linked with capitals and no trailing slash ("/resume_tmpl/Cloud-Engineer") now reaches the page in one redirect instead of two.
 - Downloaded PDFs are titled with your name, "Pat Lee – Resume", which PDF viewers show in the tab or title bar. Download PDF's title was "about:blank" (Chrome's PDF viewer showed that as the tab name when a recruiter opened the file), and Agent API and MCP PDFs were titled "Resume | ModernCV".

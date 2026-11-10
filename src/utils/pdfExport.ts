@@ -2,6 +2,7 @@ import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
 import { resumeDocumentTitle } from './resumeData';
+import { resumeFileName } from '../shared/fileName';
 import { isFullBleedTemplate } from '../constants/templates';
 import { MM_TO_PX } from '../constants/print';
 import { measurePrintLayout, pageBoxMm, paperOf, repeatedFrameSpace, SUPPORTS_CLONE, withPrintedPages } from './printLayout';
@@ -19,7 +20,6 @@ export type PdfExportProgress =
   | { stage: 'saving' };
 
 interface ExportResumeToPdfOptions {
-  rawFileName: string;
   data: ResumeData;
   previewElementId?: string;
   onProgress?: (progress: PdfExportProgress) => void;
@@ -32,12 +32,6 @@ const loadImage = (src: string) =>
     img.onerror = () => reject(new Error('Failed to load export image'));
     img.src = src;
   });
-
-const sanitizeFileName = (name: string) =>
-  name
-    .trim()
-    .replace(/\s+/g, '_')
-    .replace(/[<>:"/\\|?*\u0000-\u001F]/g, '');
 
 const downloadBlob = (blob: Blob, fileName: string) => {
   const url = URL.createObjectURL(blob);
@@ -184,7 +178,6 @@ const capturePagesBySlicing = async (element: HTMLElement, fontEmbedCSS: string)
 };
 
 export const exportResumeToPdf = async ({
-  rawFileName,
   data,
   previewElementId = 'resume-preview-container',
   onProgress,
@@ -195,7 +188,7 @@ export const exportResumeToPdf = async ({
   await layoutSettled(element);
   await nextFrame();
 
-  const safeName = sanitizeFileName(rawFileName) || 'resume';
+  const fileName = resumeFileName(data.fullName, 'pdf');
 
   // Best path: the server prints the exact preview to a vector PDF (selectable text, all templates).
   try {
@@ -203,7 +196,7 @@ export const exportResumeToPdf = async ({
     onProgress?.({ stage: 'server' });
     const pdf = await renderPdfOnServer(element, resumeDocumentTitle(data));
     onProgress?.({ stage: 'saving' });
-    downloadBlob(pdf, `${safeName}.pdf`);
+    downloadBlob(pdf, fileName);
     return;
   } catch (error) {
     console.warn('Server PDF rendering unavailable, exporting in the browser instead.', error);
@@ -243,7 +236,7 @@ export const exportResumeToPdf = async ({
 
     onProgress?.({ stage: 'saving' });
     const pdfBytes = await pdfDoc.save();
-    downloadBlob(new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }), `${safeName}.pdf`);
+    downloadBlob(new Blob([pdfBytes as Uint8Array<ArrayBuffer>], { type: 'application/pdf' }), fileName);
   } catch (error) {
     throw new Error(`PDF export failed: ${error instanceof Error ? error.message : 'Unknown error'}`);
   }
