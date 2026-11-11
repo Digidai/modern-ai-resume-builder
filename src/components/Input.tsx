@@ -1,4 +1,4 @@
-import React, { useId, useLayoutEffect, useRef } from 'react';
+import React, { useEffect, useId, useLayoutEffect, useRef, useState } from 'react';
 import { htmlListToText } from '../utils/clipboard';
 import { normalizeMonth } from '../utils/resumeData';
 
@@ -46,6 +46,9 @@ const FieldShell: React.FC<FieldShellProps> = ({ id, label, hint, error, actions
   </div>
 );
 
+/** What a month picker can show: nothing, or "2021-03". A year alone ("2021") it would show as empty. */
+const pickerShows = (value: string) => !value.trim() || /^\d{4}-\d{2}$/.test(value);
+
 interface InputProps {
   label: string;
   value: string;
@@ -75,11 +78,19 @@ export const Input: React.FC<InputProps> = ({
 }) => {
   const generatedId = useId();
   const inputId = id || `field-${generatedId.replace(/:/g, '')}`;
+  const inputRef = useRef<HTMLInputElement>(null);
+  // A month field holding a value the picker can't show (a year from an import, "Summer 2019") is plain
+  // text until it holds a month again. It only switches while unfocused, so typing isn't interrupted.
+  const [asText, setAsText] = useState(() => type === 'month' && !pickerShows(value));
+  useEffect(() => {
+    if (type === 'month' && document.activeElement !== inputRef.current) setAsText(!pickerShows(value));
+  }, [type, value]);
   return (
     <FieldShell id={inputId} label={label} hint={hint} error={error} className={className}>
       <input
+        ref={inputRef}
         id={inputId}
-        type={type}
+        type={asText ? 'text' : type}
         className={fieldClass(error)}
         value={value}
         placeholder={placeholder}
@@ -91,6 +102,7 @@ export const Input: React.FC<InputProps> = ({
             ? (e) => {
                 const month = normalizeMonth(e.target.value);
                 if (month !== e.target.value) onChange(month);
+                setAsText(!pickerShows(month));
               }
             : undefined
         }
