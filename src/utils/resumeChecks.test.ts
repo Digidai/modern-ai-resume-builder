@@ -31,6 +31,17 @@ describe('checkResume', () => {
     expect(ids({ ...base, experience: [old(`- 1 ${'a'.repeat(118)}`)] })).toEqual([]);
   });
 
+  it('spots an end before the start with years alone too', () => {
+    const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
+    const exp = (startDate: string, endDate: string) => [{ id: 'y', company: 'Acme', role: 'Engineer', startDate, endDate, isCurrent: false, description: '- Shipped 3 things' }];
+    expect(ids({ ...base, experience: exp('2022', '2019') })).toEqual(['order-y']);
+    expect(ids({ ...base, experience: exp('2022-05', '2021') })).toEqual(['order-y']);
+    // The same year in different precision isn't out of order.
+    expect(ids({ ...base, experience: exp('2021-06', '2021') })).toEqual([]);
+    expect(ids({ ...base, experience: exp('2019', '2022-01') })).toEqual([]);
+    expect(ids({ ...base, education: [{ id: 'u', school: 'MIT', degree: 'BS', startDate: '2020', endDate: '2016' }] })).toContain('order-u');
+  });
+
   it('counts the skills inside a group, not the groups', () => {
     const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
     expect(ids({ ...base, skills: ['Languages: Go, Python, SQL', 'Tools: Docker, AWS'] })).toEqual([]);

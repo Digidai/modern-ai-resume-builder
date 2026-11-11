@@ -17,7 +17,11 @@ export const LONG_BULLET_CHARS = 200;
 // CJK and full-width characters print about twice as wide as Latin ones.
 const WIDE = /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f\uff00-\uff60\uffe0-\uffe6]/g;
 const printWidth = (line: string) => line.length + (line.match(WIDE)?.length ?? 0);
-const MONTH = /^\d{4}-\d{2}$/;
+/** "2021-03" or a year alone ("2021", as imports give it). */
+const DATE = /^\d{4}(-\d{2})?$/;
+/** True when both dates are set and the end is earlier; a year alone compares by year ("2021" doesn't end before "2021-06"). */
+const endsBefore = (start: string, end: string) =>
+  DATE.test(start) && DATE.test(end) && (start.length === end.length ? end < start : end.slice(0, 4) < start.slice(0, 4));
 
 /** Skills listed: a group such as "Languages: Go, Python, SQL" counts each skill after its label. */
 const skillCount = (skills: string[]) =>
@@ -47,7 +51,7 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     const item = `experience:${exp.id}`;
     if (!exp.startDate) add({ id: `start-${exp.id}`, message: `Add a start date to ${name}.`, tab: 'experience', item });
     if (!exp.isCurrent && !exp.endDate) add({ id: `end-${exp.id}`, message: `Add an end date to ${name}, or mark it as current.`, tab: 'experience', item });
-    if (!exp.isCurrent && MONTH.test(exp.startDate) && MONTH.test(exp.endDate) && exp.endDate < exp.startDate) {
+    if (!exp.isCurrent && endsBefore(exp.startDate, exp.endDate)) {
       add({ id: `order-${exp.id}`, message: `${name} ends before it starts.`, tab: 'experience', item });
     }
     const lines = bullets(exp.description);
@@ -60,7 +64,7 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     if (long) add({ id: `long-${exp.id}`, message: `Shorten ${long === 1 ? 'a bullet' : `${long} bullets`} in ${name} to two lines or less.`, tab: 'experience', item });
   });
   for (const edu of data.education) {
-    if (MONTH.test(edu.startDate) && MONTH.test(edu.endDate) && edu.endDate < edu.startDate) {
+    if (endsBefore(edu.startDate, edu.endDate)) {
       add({ id: `order-${edu.id}`, message: `${edu.school.trim() || 'An education entry'} ends before it starts.`, tab: 'experience', item: `education:${edu.id}` });
     }
   }
