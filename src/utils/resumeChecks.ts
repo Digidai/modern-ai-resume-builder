@@ -19,6 +19,10 @@ const WIDE = /[\u1100-\u115f\u2e80-\ua4cf\uac00-\ud7a3\uf900-\ufaff\ufe30-\ufe4f
 const printWidth = (line: string) => line.length + (line.match(WIDE)?.length ?? 0);
 const MONTH = /^\d{4}-\d{2}$/;
 
+/** Skills listed: a group such as "Languages: Go, Python, SQL" counts each skill after its label. */
+const skillCount = (skills: string[]) =>
+  skills.reduce((total, entry) => total + entry.slice(entry.search(/[:：]/) + 1).split(/[,;，、；]/).filter((skill) => skill.trim()).length, 0);
+
 const bullets = (text: string) =>
   text
     .split('\n')
@@ -61,7 +65,7 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     }
   }
 
-  if (data.skills.length < 3) add({ id: 'skills', message: 'List at least three skills; ATS searches match on them.', tab: 'skills' });
+  if (skillCount(data.skills) < 3) add({ id: 'skills', message: 'List at least three skills; ATS searches match on them.', tab: 'skills' });
 
   if (pages && pages.count > pages.max) {
     add({ id: 'pages', message: `It runs to ${pages.count} pages; aim for ${pages.max === 1 ? 'one' : pages.max}. Shorten older roles or use Fit on the Template tab.`, tab: 'design' });

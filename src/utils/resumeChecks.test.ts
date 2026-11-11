@@ -31,6 +31,14 @@ describe('checkResume', () => {
     expect(ids({ ...base, experience: [old(`- 1 ${'a'.repeat(118)}`)] })).toEqual([]);
   });
 
+  it('counts the skills inside a group, not the groups', () => {
+    const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
+    expect(ids({ ...base, skills: ['Languages: Go, Python, SQL', 'Tools: Docker, AWS'] })).toEqual([]);
+    expect(ids({ ...base, skills: ['语言：Go、Python、SQL'] })).toEqual([]);
+    expect(ids({ ...base, skills: ['Languages: Go', 'Figma'] })).toEqual(['skills']);
+    expect(ids({ ...base, skills: ['Languages:', 'Tools:', 'Figma'] })).toEqual(['skills']);
+  });
+
   it('flags a resume over its page target only', () => {
     const data = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
     expect(ids(data, { count: 2, max: 2 })).toEqual([]);
