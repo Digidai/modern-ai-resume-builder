@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { AwardLine, Authors, TalkLine, TeachingLine, groupSkills } from './shared';
+import { AwardLine, Authors, TalkLine, TeachingLine, displayUrl, groupSkills, toHref } from './shared';
 
 describe('groupSkills', () => {
   it('splits a category on top-level separators but keeps commas inside parentheses', () => {
@@ -9,6 +9,21 @@ describe('groupSkills', () => {
       { category: 'Cloud', items: ['AWS (ECS, Lambda, S3)', 'GCP', 'Terraform'] },
       { category: '', items: ['Figma'] },
     ]);
+  });
+});
+
+describe('displayUrl and toHref', () => {
+  it('drop the tracking parameters share buttons add, and keep the ones a page needs', () => {
+    const shared = 'https://www.linkedin.com/in/pat-lee/?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app';
+    expect(displayUrl(shared)).toBe('www.linkedin.com/in/pat-lee');
+    expect(toHref(shared)).toBe('https://www.linkedin.com/in/pat-lee/');
+    expect(displayUrl('instagram.com/pat.lee?igsh=MXZ2bnd0')).toBe('instagram.com/pat.lee');
+    expect(toHref('youtu.be/dQw4w9WgXcQ?si=Ab12&t=42')).toBe('https://youtu.be/dQw4w9WgXcQ?t=42');
+    expect(displayUrl('youtube.com/watch?v=dQw4w9WgXcQ&si=Ab12')).toBe('youtube.com/watch?v=dQw4w9WgXcQ');
+    expect(displayUrl('x.com/patlee?s=21&t=Zx9')).toBe('x.com/patlee');
+    // "t" and "si" are only tracking on those sites.
+    expect(displayUrl('pat.dev/talk?t=3&si=1#demo')).toBe('pat.dev/talk?t=3&si=1#demo');
+    expect(displayUrl('https://pat.dev/')).toBe('pat.dev');
   });
 });
 

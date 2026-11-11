@@ -46,13 +46,42 @@ export const formatDateRange = (start: string, end: string, isCurrent = false): 
     return from || to;
 };
 
-/** Strips the protocol so links read cleanly on paper ("https://x.dev/" → "x.dev"). */
-export const displayUrl = (value: string): string =>
-    value.trim().replace(/^https?:\/\//i, '').replace(/^www\./i, 'www.').replace(/\/$/, '');
+/** Query parameters that only track where a link was shared from (LinkedIn's app adds four). */
+const TRACKING_PARAM = /^(utm_\w+|fbclid|gclid|msclkid|mc_[ce]id|igsh|igshid|trk|trackingId|lipi|originalSubdomain)$/i;
+/** Short tracking parameters that mean something else on other sites. */
+const SITE_TRACKING: ReadonlyArray<[host: RegExp, param: RegExp]> = [
+    [/(^|\.)(youtube\.com|youtu\.be|spotify\.com)$/, /^si$/],
+    [/(^|\.)(x|twitter)\.com$/, /^[st]$/],
+];
 
-/** Turns a typed URL ("github.com/x") into a link target. */
-export const toHref = (value: string): string =>
-    /^https?:\/\//i.test(value.trim()) ? value.trim() : `https://${value.trim()}`;
+/** A typed URL without the tracking parameters share buttons add ("…/in/pat?utm_source=share" → "…/in/pat"). */
+const withoutTracking = (value: string): string => {
+    const url = value.trim();
+    const match = /^([^?#]*)\?([^#]*)(#.*)?$/.exec(url);
+    if (!match) return url;
+    const [, base, query, hash = ''] = match;
+    const host = hostOf(base);
+    const kept = query.split('&').filter((pair) => {
+        let key = pair.split('=')[0] || '';
+        try {
+            key = decodeURIComponent(key);
+        } catch {
+            // A malformed escape is kept as typed.
+        }
+        return key && !TRACKING_PARAM.test(key) && !SITE_TRACKING.some(([site, param]) => site.test(host) && param.test(key));
+    });
+    return `${base}${kept.length ? `?${kept.join('&')}` : ''}${hash}`;
+};
+
+/** Strips the protocol and tracking parameters so links read cleanly on paper ("https://x.dev/" → "x.dev"). */
+export const displayUrl = (value: string): string =>
+    withoutTracking(value).replace(/^https?:\/\//i, '').replace(/\/$/, '');
+
+/** Turns a typed URL ("github.com/x") into a link target, without tracking parameters. */
+export const toHref = (value: string): string => {
+    const url = withoutTracking(value);
+    return /^https?:\/\//i.test(url) ? url : `https://${url}`;
+};
 
 type IconComponent = React.ComponentType<{ className?: string }>;
 
@@ -83,13 +112,14 @@ const NETWORKS: ReadonlyArray<{ label: string; icon: IconComponent; host: RegExp
     { label: 'ResearchGate', icon: BookIcon, host: /(^|\.)researchgate\.net$/ },
 ];
 
-const hostOf = (url: string): string => {
+function hostOf(url: string): string {
+    const value = url.trim();
     try {
-        return new URL(toHref(url)).hostname.toLowerCase().replace(/^www\./, '');
+        return new URL(/^https?:\/\//i.test(value) ? value : `https://${value}`).hostname.toLowerCase().replace(/^www\./, '');
     } catch {
         return '';
     }
-};
+}
 
 /** Label and icon for a profile link: the user's label if given, else the detected site, else "Link". */
 export const describeLink = (link: { label: string; url: string }): { label: string; icon: IconComponent } => {

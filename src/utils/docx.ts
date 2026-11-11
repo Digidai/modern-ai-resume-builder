@@ -1,5 +1,5 @@
 import type { ResumeData } from '../types';
-import { BULLET_PATTERN, formatDateRange, getContactEntries, groupSkills, toHref } from '../components/templates/shared';
+import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from '../components/templates/shared';
 import { validateUrl } from './validation';
 import { resumeFileName } from '../shared/fileName';
 
@@ -109,7 +109,7 @@ const buildBody = (data: ResumeData, textWidth: number) => {
       heading('Publications');
       publications.forEach((pub, index) => {
         const parts = [clean(pub.authors).replace(/[,;]$/, ''), pub.year.trim() ? `(${clean(pub.year)}).` : '', clean(pub.title), clean(pub.venue)].filter(Boolean);
-        const link = pub.link.trim() && validateUrl(pub.link) ? ` ${hyperlink(toHref(pub.link), pub.link.trim())}` : '';
+        const link = pub.link.trim() && validateUrl(pub.link) ? ` ${hyperlink(toHref(pub.link), displayUrl(pub.link))}` : '';
         out.push(paragraph(`${run(`[${index + 1}] ${parts.join(' ')}`)}${link}`, 'Entry', rightTab));
       });
     }
@@ -124,7 +124,7 @@ const buildBody = (data: ResumeData, textWidth: number) => {
   if (data.projects.length) {
     heading('Projects');
     for (const proj of data.projects) {
-      const link = proj.link.trim() && validateUrl(proj.link) ? `${tab}${hyperlink(toHref(proj.link), proj.link.trim().replace(/^https?:\/\//i, ''))}` : '';
+      const link = proj.link.trim() && validateUrl(proj.link) ? `${tab}${hyperlink(toHref(proj.link), displayUrl(proj.link))}` : '';
       out.push(paragraph(`${run(clean(proj.name), { bold: true })}${link}`, 'Entry', rightTab));
       rich(proj.description);
     }
