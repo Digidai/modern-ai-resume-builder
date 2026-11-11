@@ -1,5 +1,6 @@
 import type { AiErrorCode } from '../src/shared/aiContract';
 import { type ImportedPublication, type PublicationKind, formatAuthors, latexToText, parseBibtex } from '../src/utils/bibtex';
+import { publicationTitleKey } from '../src/shared/publicationTitle';
 
 // Publications from a public ORCID record, through ORCID's public API (no key needed). The work
 // summaries list every work; the bulk endpoint (≤ 100 put-codes per call) adds contributors and,
@@ -153,7 +154,8 @@ export const fetchOrcidPublications = async (
   const publications = results
     .flat()
     .filter((pub) => {
-      const key = pub.title.toLowerCase().replace(/[^a-z0-9]+/g, '');
+      const key = publicationTitleKey(pub.title);
+      if (!key) return true;
       if (seen.has(key)) return false;
       seen.add(key);
       return true;

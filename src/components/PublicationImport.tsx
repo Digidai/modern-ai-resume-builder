@@ -2,6 +2,7 @@ import React, { useMemo, useRef, useState } from 'react';
 import type { Publication } from '../types';
 import { PUBLICATION_KINDS, parseBibtex, type ImportedPublication, type PublicationKind } from '../utils/bibtex';
 import { createId } from '../utils/resumeData';
+import { publicationTitleKey } from '../shared/publicationTitle';
 import { Button } from './Button';
 import { Input, Textarea } from './Input';
 import { TaskProgress } from './TaskProgress';
@@ -50,8 +51,6 @@ const KIND_LABEL: Record<PublicationKind, string> = {
   other: 'Other',
 };
 
-const titleKey = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '');
-
 /**
  * "Import BibTeX" and "Import from ORCID" for the Publications section. Both produce a list the user
  * can tick through before adding; works already on the resume (same title) start unticked.
@@ -72,7 +71,8 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
   const [toYear, setToYear] = useState<number | null>(null);
   const [selected, setSelected] = useState<Set<string>>(new Set());
   const fileRef = useRef<HTMLInputElement>(null);
-  const existingKeys = useMemo(() => new Set(existing.map((pub) => titleKey(pub.title))), [existing]);
+  // A blank entry (just added, no title yet) has an empty key, which matches nothing.
+  const existingKeys = useMemo(() => new Set(existing.map((pub) => publicationTitleKey(pub.title)).filter(Boolean)), [existing]);
 
   const reset = (next: Mode | null) => {
     fetchRun.current += 1;
@@ -89,7 +89,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
     setHiddenKinds(new Set());
     setFromYear(null);
     setToYear(null);
-    setSelected(new Set(publications.filter((pub) => !existingKeys.has(titleKey(pub.title))).map((pub) => pub.id)));
+    setSelected(new Set(publications.filter((pub) => !existingKeys.has(publicationTitleKey(pub.title))).map((pub) => pub.id)));
   };
 
   const readBibtex = (source: string) => review(parseBibtex(source), 'No entries with a title or authors were found. Paste the contents of a .bib file.');
@@ -407,7 +407,7 @@ export const PublicationImport: React.FC<{ existing: Publication[]; onImport: (p
                         <span className="block text-ink">{pub.title || pub.authors}</span>
                         <span className="block text-xs text-muted">
                           {[KIND_LABEL[pub.kind], pub.authors, pub.venue, pub.year].filter(Boolean).join(' · ')}
-                          {existingKeys.has(titleKey(pub.title)) && ' · already on your resume'}
+                          {existingKeys.has(publicationTitleKey(pub.title)) && ' · already on your resume'}
                         </span>
                       </span>
                     </label>
