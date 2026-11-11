@@ -99,6 +99,7 @@ export const ResumeSwitcher: React.FC<{ open: boolean; onOpenChange: (open: bool
             aria-label="Resume name"
             maxLength={80}
             onKeyDown={(event) => {
+              if (event.nativeEvent.isComposing || event.keyCode === 229) return;
               if (event.key === 'Enter') {
                 finishRename(entry.id, event.currentTarget.value);
               } else if (event.key === 'Escape') {

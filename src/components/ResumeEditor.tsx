@@ -334,6 +334,10 @@ const AiButton = ({
   );
 };
 
+// Chinese and Japanese input methods type the full-width colon and commas.
+const GROUP_LABEL = /[:：]/;
+const LIST_COMMA = /[,，、]/;
+
 /**
  * Tag input: Enter or comma adds a skill, Backspace on an empty field removes the last one.
  * A "Category: a, b" entry stays one grouped skill (templates render it as a group).
@@ -344,7 +348,7 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
   const add = (raw: string) => {
     const incoming = raw
       .split('\n')
-      .flatMap((line) => (line.includes(':') ? [line] : line.split(',')))
+      .flatMap((line) => (GROUP_LABEL.test(line) ? [line] : line.split(LIST_COMMA)))
       .map((s) => s.trim())
       .filter(Boolean);
     if (!incoming.length) return;
@@ -361,7 +365,9 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
   };
 
   const handleKeyDown = (event: KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === 'Enter' || (event.key === ',' && !draft.includes(':'))) {
+    // Enter while an input method is composing confirms its text (Safari reports it as key code 229).
+    if (event.nativeEvent.isComposing || event.keyCode === 229) return;
+    if (event.key === 'Enter' || (event.key === ',' && !GROUP_LABEL.test(draft))) {
       event.preventDefault();
       add(draft);
     } else if (event.key === 'Backspace' && !draft && skills.length) {
@@ -401,9 +407,14 @@ const SkillsInput = ({ skills, onChange }: { skills: string[]; onChange: (skills
           value={draft}
           onChange={(e) => {
             const value = e.target.value;
-            // Pasting "a, b, c" adds all three at once (unless it is a "Category: a, b" group).
-            if (value.includes(',') && !value.includes(':')) add(value);
+            // Pasting "a, b, c" adds all three at once (unless it is a "Category: a, b" group); text an
+            // input method is still composing waits for compositionend.
+            if (!(e.nativeEvent as InputEvent).isComposing && LIST_COMMA.test(value) && !GROUP_LABEL.test(value)) add(value);
             else setDraft(value);
+          }}
+          onCompositionEnd={(e) => {
+            const value = e.currentTarget.value;
+            if (LIST_COMMA.test(value) && !GROUP_LABEL.test(value)) add(value);
           }}
           onPaste={(e) => {
             // Single-line inputs drop newlines, so split pasted multi-line lists ourselves.
