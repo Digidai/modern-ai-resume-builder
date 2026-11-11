@@ -100,6 +100,26 @@ const describe = (summary: unknown, highlights: unknown): string =>
  */
 export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unknown> => {
   const basics = obj(raw.basics);
+  // Grouped skills use the "Category: items" convention that templates render as groups.
+  const skills = list(raw.skills)
+    .map((s) => {
+      const keywords = strings(s.keywords);
+      return keywords.length ? (str(s.name) ? `${str(s.name)}: ${keywords.join(', ')}` : keywords.join(', ')) : str(s.name);
+    })
+    .filter((s) => s.trim());
+  // Certificates, languages and interests have no section of their own here; they become skill groups,
+  // the form the editor suggests for them (Federal and Vital print "Certifications:" in their own section).
+  // Brackets keep an issuer and year with their certificate when templates split a group at commas.
+  const bracket = (name: string, details: string[]) => (details.length ? `${name} (${details.join(', ')})` : name);
+  const certificates = list(raw.certificates)
+    .filter((c) => str(c.name).trim())
+    .map((c) => bracket(str(c.name).trim(), [str(c.issuer).trim(), str(c.date).trim().slice(0, 4)].filter(Boolean)));
+  const languages = list(raw.languages)
+    .filter((l) => str(l.language).trim())
+    .map((l) => bracket(str(l.language).trim(), [str(l.fluency).trim()].filter(Boolean)));
+  const interests = list(raw.interests).flatMap((i) => (strings(i.keywords).length ? strings(i.keywords) : [str(i.name).trim()])).filter(Boolean);
+  // "Languages" usually already names programming languages; spoken ones then get their own label.
+  const languagesLabel = skills.some((s) => /^languages\s*:/i.test(s)) ? 'Spoken languages' : 'Languages';
   const location = obj(basics.location);
   const profiles = list(basics.profiles);
   const linkedin = profiles.find((p) => /linkedin/i.test(str(p.network) + str(p.url)));
@@ -117,8 +137,12 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
       .filter((p) => p.url),
     location: [location.city, location.region, location.countryCode].map(str).filter(Boolean).join(', '),
     summary: str(basics.summary),
-    experience: list(raw.work).map((w) => ({
-      company: str(w.name) || str(w.company),
+    // Volunteer roles follow the jobs, as most resumes list them.
+    experience: [
+      ...list(raw.work).map((w) => [w, str(w.name) || str(w.company)] as const),
+      ...list(raw.volunteer).map((v) => [v, str(v.organization)] as const),
+    ].map(([w, company]) => ({
+      company,
       role: str(w.position),
       startDate: isoMonth(w.startDate),
       endDate: isoMonth(w.endDate),
@@ -127,7 +151,10 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
     })),
     education: list(raw.education).map((e) => ({
       school: str(e.institution),
-      degree: [str(e.studyType), str(e.area)].filter(Boolean).join(' in '),
+      // A grade goes in the degree line, as Import resume puts it ("BSc in Mathematics; GPA 3.8").
+      degree: [[str(e.studyType), str(e.area)].filter(Boolean).join(' in '), str(e.score).trim() && `${/^\d/.test(str(e.score).trim()) ? 'GPA ' : ''}${str(e.score).trim()}`]
+        .filter(Boolean)
+        .join('; '),
       startDate: isoMonth(e.startDate),
       endDate: isoMonth(e.endDate),
     })),
@@ -149,13 +176,12 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
       link: str(p.url),
       description: describe(p.description, p.highlights),
     })),
-    // Grouped skills use the "Category: items" convention that templates render as groups.
-    skills: list(raw.skills)
-      .map((s) => {
-        const keywords = strings(s.keywords);
-        return keywords.length ? (str(s.name) ? `${str(s.name)}: ${keywords.join(', ')}` : keywords.join(', ')) : str(s.name);
-      })
-      .filter((s) => s.trim()),
+    skills: [
+      ...skills,
+      ...(certificates.length ? [`Certifications: ${certificates.join(', ')}`] : []),
+      ...(languages.length ? [`${languagesLabel}: ${languages.join(', ')}`] : []),
+      ...(interests.length ? [`Interests: ${interests.join(', ')}`] : []),
+    ],
   };
 };
 

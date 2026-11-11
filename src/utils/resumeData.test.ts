@@ -78,6 +78,33 @@ describe('sanitizeResumeData', () => {
     expect(sanitizeResumeData({ fullName: 'Old backup' })?.links).toEqual([]);
   });
 
+  it('keeps JSON Resume certificates, languages, interests, volunteer roles and grades', () => {
+    const result = sanitizeResumeData({
+      basics: { name: 'Ada Lovelace' },
+      work: [{ name: 'Acme', position: 'Lead', startDate: '2021-03' }],
+      volunteer: [{ organization: 'Code Club', position: 'Mentor', startDate: '2019-01', endDate: '2020-06', highlights: ['Taught 30 pupils'] }],
+      education: [{ institution: 'UCL', studyType: 'BSc', area: 'Mathematics', score: '3.8/4.0' }, { institution: 'Oxford', studyType: 'MA', score: 'First Class Honours' }],
+      skills: [{ name: 'Languages', keywords: ['Python', 'SQL'] }],
+      certificates: [{ name: 'AWS Solutions Architect', issuer: 'Amazon Web Services', date: '2023-05-01' }, { name: 'PMP' }],
+      languages: [{ language: 'English', fluency: 'Native' }, { language: 'French' }],
+      interests: [{ name: 'Outdoors', keywords: ['Hiking', 'Climbing'] }, { name: 'Chess' }],
+    });
+
+    expect(result?.experience).toMatchObject([
+      { company: 'Acme', role: 'Lead' },
+      { company: 'Code Club', role: 'Mentor', startDate: '2019-01', endDate: '2020-06', isCurrent: false, description: '- Taught 30 pupils' },
+    ]);
+    expect(result?.education.map((e) => e.degree)).toEqual(['BSc in Mathematics; GPA 3.8/4.0', 'MA; First Class Honours']);
+    // Spoken languages get their own label when "Languages" already lists programming languages.
+    expect(result?.skills).toEqual([
+      'Languages: Python, SQL',
+      'Certifications: AWS Solutions Architect (Amazon Web Services, 2023), PMP',
+      'Spoken languages: English (Native), French',
+      'Interests: Hiking, Climbing, Chess',
+    ]);
+    expect(sanitizeResumeData({ basics: { name: 'Pat' }, languages: [{ language: 'Spanish', fluency: 'Fluent' }] })?.skills).toEqual(['Languages: Spanish (Fluent)']);
+  });
+
   it('keeps only inline raster photos, including a JSON Resume basics.image', () => {
     const jpeg = 'data:image/jpeg;base64,/9j/4AAQSkZJRg==';
     expect(sanitizeResumeData({ fullName: 'Pat', photo: jpeg })?.photo).toBe(jpeg);
