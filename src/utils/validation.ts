@@ -18,12 +18,14 @@ export const validatePhone = (phone: string): boolean => {
 export const validateUrl = (url: string): boolean => {
   if (!url) return true;
   const value = url.trim();
-  // No spaces, and a real host with a dot (or localhost); scheme optional.
+  // No spaces, and a real host with a dot (or localhost); scheme optional. "pat.dev:8080" is a host and
+  // port, not a scheme like "mailto:".
   if (/\s/.test(value)) return false;
-  if (/^[a-z][a-z0-9+.-]*:/i.test(value) && !/^https?:\/\//i.test(value)) return false;
+  if (/^[a-z][a-z0-9+.-]*:(?!\d)/i.test(value) && !/^https?:\/\//i.test(value)) return false;
   try {
     const { hostname } = new URL(/^https?:\/\//i.test(value) ? value : `https://${value}`);
-    return /^[a-z0-9-]+(\.[a-z0-9-]+)*\.[a-z]{2,}$/i.test(hostname) || hostname === 'localhost';
+    // Non-Latin domains arrive in punycode; their top-level domain is "xn--…" (.рф, .中国).
+    return /^[a-z0-9-]+(\.[a-z0-9-]+)*\.([a-z]{2,}|xn--[a-z0-9-]+)$/i.test(hostname) || hostname === 'localhost';
   } catch {
     return false;
   }

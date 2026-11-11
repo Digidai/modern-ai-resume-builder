@@ -38,7 +38,16 @@ const escapeRaw = (value: string): string =>
 /** Escapes a URL for \href (hyperref takes % and # escaped). */
 const escapeUrl = (url: string) => url.replace(/\\/g, '/').replace(/([%#{}])/g, '\\$1');
 
-const link = (url: string, label = displayUrl(url)) => `\\href{${escapeUrl(toHref(url))}}{${escapeLatex(label)}}`;
+/** The link target in ASCII (a domain like münchen.de in punycode), which every TeX engine's hyperref accepts. */
+const asciiHref = (url: string) => {
+  try {
+    return new URL(toHref(url)).href;
+  } catch {
+    return toHref(url);
+  }
+};
+
+const link = (url: string, label = displayUrl(url)) => `\\href{${escapeUrl(asciiHref(url))}}{${escapeLatex(label)}}`;
 
 const CJK = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]/;
 

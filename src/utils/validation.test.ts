@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { validateEmail, validatePhone } from './validation';
+import { validateEmail, validatePhone, validateUrl } from './validation';
 import { telHref } from '../components/templates/shared';
 
 describe('validatePhone', () => {
@@ -20,6 +20,20 @@ describe('validateEmail', () => {
   it('ignores spaces around a pasted address but not inside it', () => {
     expect(validateEmail(' pat@example.com ')).toBe(true);
     expect(validateEmail('pat lee@example.com')).toBe(false);
+  });
+});
+
+describe('validateUrl', () => {
+  it('accepts domains in any script and addresses with a port', () => {
+    for (const url of ['пример.рф', 'https://例子.中国/about', 'münchen.de', 'pat.dev:8080/demo', 'localhost:3000', 'https://pat.dev']) {
+      expect(validateUrl(url), url).toBe(true);
+    }
+  });
+
+  it('rejects other schemes, spaces and hosts without a domain', () => {
+    for (const url of ['mailto:pat@pat.dev', 'javascript:alert(1)', 'ftp://pat.dev', 'pat dev.com', 'pat', 'pat.d']) {
+      expect(validateUrl(url), url).toBe(false);
+    }
   });
 });
 
