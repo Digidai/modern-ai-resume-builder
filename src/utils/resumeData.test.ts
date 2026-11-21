@@ -161,6 +161,19 @@ describe('loosely shaped resumes from agents', () => {
     expect(ignoredResumeFields({ $schema: 'x', basics: { name: 'Pat' }, work: [], references: [] })).toEqual(['references']);
   });
 
+  it('keeps bullets sent as responsibilities or achievements, and a grade, honours and thesis', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      experience: [{ role: 'Engineer', company: 'Acme', responsibilities: ['Owned billing'], achievements: ['Cut churn 12%'] }],
+      education: [
+        { school: 'UCL', degree: 'BSc Mathematics', gpa: 3.8, honors: 'First class' },
+        { school: 'MIT', degree: 'PhD', thesis: 'Sparse attention', grade: 'Distinction' },
+      ],
+    });
+    expect(result?.experience[0].description).toBe('- Owned billing\n- Cut churn 12%');
+    expect(result?.education.map((e) => e.degree)).toEqual(['BSc Mathematics; GPA 3.8; First class', 'PhD; Distinction; thesis: Sparse attention']);
+  });
+
   it('reads JSON Resume work entries sent beside ModernCV fields', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',

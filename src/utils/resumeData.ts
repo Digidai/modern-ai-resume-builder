@@ -210,9 +210,10 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
 /** Bullets sent as a list (by agents, or a `highlights` array) as the editor's "- bullet" lines; a string stays as written. */
 const bulletText = (value: unknown): string =>
   Array.isArray(value) ? strings(value).map((line) => (/^[-•*–]\s/.test(line) ? line : `- ${line}`)).join('\n') : str(value);
-/** A description plus any `highlights` or `bullets` list next to it. */
+/** A description plus any bullet lists next to it, under the names agents use for them. */
+const BULLET_KEYS = ['highlights', 'bullets', 'responsibilities', 'achievements', 'accomplishments', 'duties'];
 const descriptionOf = (item: Record<string, unknown>): string =>
-  [bulletText(item.description ?? item.summary), bulletText(item.highlights), bulletText(item.bullets)].filter((part) => part.trim()).join('\n');
+  [bulletText(item.description ?? item.summary), ...BULLET_KEYS.map((key) => bulletText(item[key]))].filter((part) => part.trim()).join('\n');
 
 /**
  * Skills as the editor stores them (one entry per skill or "Category: a, b" group), from a list of strings, a
@@ -302,7 +303,15 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   const education: Education[] = list(raw.education).map((item) => ({
     id: str(item.id) || createId(),
     school: pick(item, 'school', 'institution', 'university', 'college'),
-    degree: pick(item, 'degree') || [pick(item, 'studyType'), pick(item, 'area', 'field', 'major')].filter(Boolean).join(' in '),
+    // A grade, honours and thesis go in the degree line, as Import resume writes them ("BSc in Mathematics; GPA 3.8").
+    degree: [
+      pick(item, 'degree') || [pick(item, 'studyType'), pick(item, 'area', 'field', 'major')].filter(Boolean).join(' in '),
+      ((grade) => (grade && /^\d/.test(grade) ? `GPA ${grade}` : grade))(pick(item, 'gpa', 'grade', 'score').trim()),
+      pick(item, 'honors', 'honours').trim(),
+      pick(item, 'thesis').trim() && `thesis: ${pick(item, 'thesis').trim()}`,
+    ]
+      .filter((part) => part.trim())
+      .join('; '),
     startDate: dateField(item.startDate),
     endDate: dateField(item.endDate),
   }));
