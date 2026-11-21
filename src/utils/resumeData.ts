@@ -1,4 +1,5 @@
 import { DEFAULT_TEMPLATE_ID, currentTemplateId } from '../constants/templates';
+import { validateUrl } from './validation';
 import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
 const str = (value: unknown): string => (typeof value === 'string' ? value : '');
@@ -220,6 +221,15 @@ const skillList = (value: unknown): string[] => {
     .filter(Boolean);
 };
 
+/** The first non-empty string among an item's fields: agents name the same field several ways ("title" for a role). */
+const pick = (item: Record<string, unknown>, ...keys: string[]): string => keys.map((key) => str(item[key])).find((value) => value.trim()) ?? '';
+
+/** "https://www.github.com/pat/" and "github.com/pat" are the same link. */
+const sameUrl = (a: string, b: string) => {
+  const key = (url: string) => url.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '');
+  return key(a) === key(b);
+};
+
 /** An end date that means the role is ongoing, as agents and other tools write it. */
 const ONGOING = /^(present|current|now|ongoing|today|至今|现在)$/i;
 /** A start or end date as the editor stores it: "2021-03" for any month form normalizeMonth knows, else as written. */
@@ -236,8 +246,8 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     const hours = (typeof item.hours === 'number' ? String(item.hours) : str(item.hours)).trim();
     return {
       id: str(item.id) || createId(),
-      company: str(item.company),
-      role: str(item.role),
+      company: pick(item, 'company', 'employer', 'organization', 'organisation'),
+      role: pick(item, 'role', 'title', 'position', 'jobTitle'),
       startDate: dateField(item.startDate),
       // "Present" is an ongoing role: the editor's "I currently work here", which every template prints its own way.
       endDate: ONGOING.test(str(item.endDate).trim()) ? '' : dateField(item.endDate),
@@ -248,15 +258,15 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   });
   const education: Education[] = list(raw.education).map((item) => ({
     id: str(item.id) || createId(),
-    school: str(item.school),
-    degree: str(item.degree),
+    school: pick(item, 'school', 'institution', 'university', 'college'),
+    degree: pick(item, 'degree') || [pick(item, 'studyType'), pick(item, 'area', 'field', 'major')].filter(Boolean).join(' in '),
     startDate: dateField(item.startDate),
     endDate: dateField(item.endDate),
   }));
   const projects: Project[] = list(raw.projects).map((item) => ({
     id: str(item.id) || createId(),
-    name: str(item.name),
-    link: str(item.link),
+    name: pick(item, 'name', 'title'),
+    link: pick(item, 'link', 'url'),
     description: descriptionOf(item),
   }));
   const publications: Publication[] = list(raw.publications)
@@ -296,9 +306,14 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
       year: str(item.year).trim(),
     }))
     .filter((item) => item.course || item.role);
-  const links: ResumeLink[] = list(raw.links)
-    .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
-    .filter((item) => item.url)
+  // Links may also come as plain URLs, and GitHub or a portfolio as their own fields.
+  const linkItems: Record<string, unknown>[] = [
+    ...(Array.isArray(raw.links) ? raw.links.map((item) => (typeof item === 'string' ? { url: item.trim() && validateUrl(item) ? item : '' } : obj(item))) : []),
+    ...(['github', 'portfolio'] as const).map((key) => ({ url: str(raw[key]) })),
+  ];
+  const links: ResumeLink[] = linkItems
+    .map((item) => ({ id: str(item.id) || createId(), label: pick(item, 'label', 'name', 'network').trim(), url: pick(item, 'url', 'href', 'link').trim() }))
+    .filter((item, index, all) => item.url && all.findIndex((other) => sameUrl(other.url, item.url)) === index)
     .slice(0, 8);
   const skills = skillList(raw.skills);
 

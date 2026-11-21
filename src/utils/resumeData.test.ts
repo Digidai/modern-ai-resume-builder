@@ -151,6 +151,26 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('reads the field names agents commonly use, and links as plain URLs', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      github: 'github.com/pat',
+      links: ['pat.dev', 'https://www.github.com/pat/', { name: 'Scholar', href: 'scholar.google.com/citations?user=x' }],
+      experience: [{ title: 'Senior Engineer', employer: 'Acme' }, { role: 'Intern', company: 'Beta', title: 'ignored' }],
+      education: [{ institution: 'UCL', studyType: 'BSc', area: 'Mathematics' }, { university: 'MIT', degree: 'PhD' }],
+      projects: [{ title: 'Engine', url: 'github.com/pat/engine' }],
+    });
+    expect(result?.experience).toMatchObject([{ role: 'Senior Engineer', company: 'Acme' }, { role: 'Intern', company: 'Beta' }]);
+    expect(result?.education).toMatchObject([{ school: 'UCL', degree: 'BSc in Mathematics' }, { school: 'MIT', degree: 'PhD' }]);
+    expect(result?.projects).toMatchObject([{ name: 'Engine', link: 'github.com/pat/engine' }]);
+    // The github field repeats a link already listed, so it is added once.
+    expect(result?.links.map(({ label, url }) => [label, url])).toEqual([
+      ['', 'pat.dev'],
+      ['', 'https://www.github.com/pat/'],
+      ['Scholar', 'scholar.google.com/citations?user=x'],
+    ]);
+  });
+
   it('keeps bullets sent as lists and skills sent as groups or one string', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',
