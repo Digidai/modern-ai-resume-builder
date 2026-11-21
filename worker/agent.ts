@@ -240,6 +240,8 @@ const prepareResume = (input: Json): PreparedResume => {
       throw new AgentError(400, 'INVALID_RESUME', '`resume` must be a JSON object, not a string.');
     }
   }
+  // The resume itself as the body, without the { resume } wrapper; options such as template may sit beside its fields.
+  if (input.resume === undefined && sanitizeResumeData(input)) input = { ...input, resume: input };
   const resume = sanitizeResumeData(input.resume);
   if (!resume) {
     throw new AgentError(
