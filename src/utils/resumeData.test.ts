@@ -150,6 +150,24 @@ describe('sanitizeResumeData', () => {
   });
 });
 
+describe('loosely shaped resumes from agents', () => {
+  it('keeps bullets sent as lists and skills sent as groups or one string', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      experience: [
+        { company: 'Acme', description: ['Led 3 launches', '- Cut costs 30%'] },
+        { company: 'Beta', description: 'Interned on the data team.', highlights: ['Built 2 dashboards'] },
+      ],
+      projects: [{ name: 'Engine', description: ['Fast', 'Small'] }],
+      skills: [{ category: 'Languages', items: ['Go', 'Python'] }, { name: 'Tools', keywords: 'Docker, Terraform' }, { name: 'Leadership' }, 'Figma', 42],
+    });
+    expect(result?.experience.map((e) => e.description)).toEqual(['- Led 3 launches\n- Cut costs 30%', 'Interned on the data team.\n- Built 2 dashboards']);
+    expect(result?.projects[0].description).toBe('- Fast\n- Small');
+    expect(result?.skills).toEqual(['Languages: Go, Python', 'Tools: Docker, Terraform', 'Leadership', 'Figma']);
+    expect(sanitizeResumeData({ fullName: 'Pat', skills: 'Python, SQL\nTools: Docker, AWS' })?.skills).toEqual(['Python', 'SQL', 'Tools: Docker, AWS']);
+  });
+});
+
 describe('dates in imported resumes', () => {
   it('stores month names and full dates as YYYY-MM, and "Present" as a current role', () => {
     const result = sanitizeResumeData({

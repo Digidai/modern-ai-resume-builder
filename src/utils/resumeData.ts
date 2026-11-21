@@ -190,6 +190,36 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
  * ResumeData, so templates never see missing fields or non-string values.
  * Returns null if it doesn't look like a resume.
  */
+/** Bullets sent as a list (by agents, or a `highlights` array) as the editor's "- bullet" lines; a string stays as written. */
+const bulletText = (value: unknown): string =>
+  Array.isArray(value) ? strings(value).map((line) => (/^[-•*–]\s/.test(line) ? line : `- ${line}`)).join('\n') : str(value);
+/** A description plus any `highlights` or `bullets` list next to it. */
+const descriptionOf = (item: Record<string, unknown>): string =>
+  [bulletText(item.description), bulletText(item.highlights), bulletText(item.bullets)].filter((part) => part.trim()).join('\n');
+
+/**
+ * Skills as the editor stores them (one entry per skill or "Category: a, b" group), from a list of strings, a
+ * list of { name | category, keywords | items } groups, or one string ("Python, SQL", or one group per line).
+ */
+const skillList = (value: unknown): string[] => {
+  if (typeof value === 'string')
+    return value
+      .split('\n')
+      .flatMap((line) => (/[:：]/.test(line) ? [line] : line.split(/[,，、]/)))
+      .map((skill) => skill.trim())
+      .filter(Boolean);
+  if (!Array.isArray(value)) return [];
+  return value
+    .map((skill) => {
+      if (typeof skill === 'string') return skill.trim();
+      const group = obj(skill);
+      const name = (str(group.name) || str(group.category) || str(group.label)).trim();
+      const items = Array.isArray(group.keywords ?? group.items ?? group.skills) ? strings(group.keywords ?? group.items ?? group.skills) : skillList(str(group.keywords ?? group.items ?? group.skills));
+      return items.length ? (name ? `${name}: ${items.join(', ')}` : items.join(', ')) : name;
+    })
+    .filter(Boolean);
+};
+
 /** An end date that means the role is ongoing, as agents and other tools write it. */
 const ONGOING = /^(present|current|now|ongoing|today|至今|现在)$/i;
 /** A start or end date as the editor stores it: "2021-03" for any month form normalizeMonth knows, else as written. */
@@ -212,7 +242,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
       // "Present" is an ongoing role: the editor's "I currently work here", which every template prints its own way.
       endDate: ONGOING.test(str(item.endDate).trim()) ? '' : dateField(item.endDate),
       isCurrent: item.isCurrent === true || ONGOING.test(str(item.endDate).trim()),
-      description: str(item.description),
+      description: descriptionOf(item),
       ...(hours ? { hours } : {}),
     };
   });
@@ -227,7 +257,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     id: str(item.id) || createId(),
     name: str(item.name),
     link: str(item.link),
-    description: str(item.description),
+    description: descriptionOf(item),
   }));
   const publications: Publication[] = list(raw.publications)
     .map((item) => ({
@@ -270,9 +300,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     .map((item) => ({ id: str(item.id) || createId(), label: str(item.label).trim(), url: str(item.url).trim() }))
     .filter((item) => item.url)
     .slice(0, 8);
-  const skills = Array.isArray(raw.skills)
-    ? raw.skills.filter((skill): skill is string => typeof skill === 'string' && skill.trim() !== '').map((skill) => skill.trim())
-    : [];
+  const skills = skillList(raw.skills);
 
   return {
     templateId: currentTemplateId(str(raw.templateId)) || DEFAULT_TEMPLATE_ID,
