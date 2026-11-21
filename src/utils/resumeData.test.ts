@@ -151,6 +151,25 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('keeps certifications, languages, interests and volunteer roles sent beside ModernCV fields', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      experience: [{ role: 'Engineer', company: 'Acme' }],
+      volunteer: [{ position: 'Mentor', organization: 'Code Club' }],
+      skills: ['Languages: Go, Python'],
+      certifications: [{ name: 'AWS Solutions Architect', issuer: 'Amazon', date: '2023-04' }, 'PMP'],
+      languages: ['English (Native)', { name: 'French', level: 'B2' }],
+      interests: ['Climbing'],
+    });
+    expect(result?.experience).toMatchObject([{ role: 'Engineer', company: 'Acme' }, { role: 'Mentor', company: 'Code Club' }]);
+    expect(result?.skills).toEqual([
+      'Languages: Go, Python',
+      'Certifications: AWS Solutions Architect (Amazon, 2023), PMP',
+      'Spoken languages: English (Native), French (B2)',
+      'Interests: Climbing',
+    ]);
+  });
+
   it('keeps skills sent as a category-to-list map', () => {
     expect(sanitizeResumeData({ fullName: 'Pat', skills: { Languages: ['Go', 'Python'], Tools: 'Docker, K8s', Empty: [] } })?.skills).toEqual([
       'Languages: Go, Python',

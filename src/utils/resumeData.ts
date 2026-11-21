@@ -96,6 +96,36 @@ export const normalizeMonth = (value: string): string => {
 const describe = (summary: unknown, highlights: unknown): string =>
   [str(summary).trim(), ...strings(highlights).map((h) => `- ${h}`)].filter(Boolean).join('\n');
 
+/** Entries given as plain strings ("PMP") or objects ({ name: "PMP" }). */
+const entries = (value: unknown): Record<string, unknown>[] =>
+  Array.isArray(value) ? value.map((item) => (typeof item === 'string' || typeof item === 'number' ? { name: item } : obj(item))) : [];
+
+/**
+ * Certificates, languages and interests have no section of their own; they become skill groups,
+ * the form the editor suggests for them (Federal and Vital print "Certifications:" in their own section).
+ * Brackets keep an issuer and year with their certificate when templates split a group at commas.
+ * Reads JSON Resume's shapes and the names agents use alongside ModernCV fields.
+ */
+const extraSkillGroups = (raw: Record<string, unknown>, skills: string[]): string[] => {
+  const bracket = (name: string, details: string[]) => (details.length ? `${name} (${details.join(', ')})` : name);
+  const certificates = [...entries(raw.certificates), ...entries(raw.certifications), ...entries(raw.licenses)]
+    .map((c) => [pick(c, 'name', 'title').trim(), [pick(c, 'issuer', 'organization', 'authority').trim(), pick(c, 'date', 'year').trim().slice(0, 4)].filter(Boolean)] as const)
+    .filter(([name]) => name)
+    .map(([name, details]) => bracket(name, details));
+  const languages = entries(raw.languages)
+    .map((l) => [pick(l, 'language', 'name').trim(), [pick(l, 'fluency', 'level', 'proficiency').trim()].filter(Boolean)] as const)
+    .filter(([name]) => name)
+    .map(([name, details]) => bracket(name, details));
+  const interests = entries(raw.interests).flatMap((i) => (strings(i.keywords).length ? strings(i.keywords) : [str(i.name).trim()])).filter(Boolean);
+  // "Languages" usually already names programming languages; spoken ones then get their own label.
+  const languagesLabel = skills.some((s) => /^languages\s*[:：]/i.test(s)) ? 'Spoken languages' : 'Languages';
+  return [
+    ...(certificates.length ? [`Certifications: ${certificates.join(', ')}`] : []),
+    ...(languages.length ? [`${languagesLabel}: ${languages.join(', ')}`] : []),
+    ...(interests.length ? [`Interests: ${interests.join(', ')}`] : []),
+  ];
+};
+
 /**
  * Converts a JSON Resume document (https://jsonresume.org/schema) into this app's backup shape,
  * so resumes exported by other tools or written by AI agents can be imported directly.
@@ -109,19 +139,6 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
       return keywords.length ? (str(s.name) ? `${str(s.name)}: ${keywords.join(', ')}` : keywords.join(', ')) : str(s.name);
     })
     .filter((s) => s.trim());
-  // Certificates, languages and interests have no section of their own here; they become skill groups,
-  // the form the editor suggests for them (Federal and Vital print "Certifications:" in their own section).
-  // Brackets keep an issuer and year with their certificate when templates split a group at commas.
-  const bracket = (name: string, details: string[]) => (details.length ? `${name} (${details.join(', ')})` : name);
-  const certificates = list(raw.certificates)
-    .filter((c) => str(c.name).trim())
-    .map((c) => bracket(str(c.name).trim(), [str(c.issuer).trim(), str(c.date).trim().slice(0, 4)].filter(Boolean)));
-  const languages = list(raw.languages)
-    .filter((l) => str(l.language).trim())
-    .map((l) => bracket(str(l.language).trim(), [str(l.fluency).trim()].filter(Boolean)));
-  const interests = list(raw.interests).flatMap((i) => (strings(i.keywords).length ? strings(i.keywords) : [str(i.name).trim()])).filter(Boolean);
-  // "Languages" usually already names programming languages; spoken ones then get their own label.
-  const languagesLabel = skills.some((s) => /^languages\s*:/i.test(s)) ? 'Spoken languages' : 'Languages';
   const location = obj(basics.location);
   const profiles = list(basics.profiles);
   const linkedin = profiles.find((p) => /linkedin/i.test(str(p.network) + str(p.url)));
@@ -180,9 +197,7 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
     })),
     skills: [
       ...skills,
-      ...(certificates.length ? [`Certifications: ${certificates.join(', ')}`] : []),
-      ...(languages.length ? [`${languagesLabel}: ${languages.join(', ')}`] : []),
-      ...(interests.length ? [`Interests: ${interests.join(', ')}`] : []),
+      ...extraSkillGroups(raw, skills),
     ],
   };
 };
@@ -256,7 +271,8 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   const known = ['fullName', 'title', 'summary', 'experience', 'education', 'skills', 'projects'];
   if (!known.some((key) => key in raw)) return null;
 
-  const experience: Experience[] = list(raw.experience).map((item) => {
+  // Volunteer roles follow the jobs, as they do for JSON Resume.
+  const experience: Experience[] = [...list(raw.experience), ...list(raw.volunteer)].map((item) => {
     const hours = (typeof item.hours === 'number' ? String(item.hours) : str(item.hours)).trim();
     return {
       id: str(item.id) || createId(),
@@ -329,7 +345,8 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     .map((item) => ({ id: str(item.id) || createId(), label: pick(item, 'label', 'name', 'network').trim(), url: pick(item, 'url', 'href', 'link').trim() }))
     .filter((item, index, all) => item.url && all.findIndex((other) => sameUrl(other.url, item.url)) === index)
     .slice(0, 8);
-  const skills = skillList(raw.skills);
+  const listed = skillList(raw.skills);
+  const skills = [...listed, ...extraSkillGroups(raw, listed)];
 
   return {
     templateId: currentTemplateId(str(raw.templateId)) || DEFAULT_TEMPLATE_ID,
