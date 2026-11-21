@@ -225,6 +225,10 @@ const skillList = (value: unknown): string[] => {
 /** The first non-empty string among an item's fields: agents name the same field several ways ("title" for a role). */
 const pick = (item: Record<string, unknown>, ...keys: string[]): string => keys.map((key) => str(item[key])).find((value) => value.trim()) ?? '';
 
+/** A location sent as { city, region | state, country | countryCode }: "San Francisco, CA, USA". */
+const placeOf = (place: Record<string, unknown>) =>
+  [pick(place, 'city'), pick(place, 'region', 'state'), pick(place, 'country', 'countryCode')].filter(Boolean).join(', ');
+
 /** A bare DOI ("10.1234/abcd") as a link; DOIs already written as URLs stay as they are. */
 const doiLink = (doi: string) => (doi.trim() && !/^https?:/i.test(doi.trim()) ? `https://doi.org/${doi.trim().replace(/^doi:\s*/i, '')}` : doi);
 
@@ -324,16 +328,16 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   return {
     templateId: currentTemplateId(str(raw.templateId)) || DEFAULT_TEMPLATE_ID,
     design: sanitizeDesign(raw.design),
-    fullName: str(raw.fullName),
-    title: str(raw.title),
+    fullName: pick(raw, 'fullName', 'name'),
+    title: pick(raw, 'title', 'headline', 'label'),
     email: str(raw.email),
     phone: str(raw.phone),
-    location: str(raw.location),
-    website: str(raw.website),
+    location: str(raw.location) || placeOf(obj(raw.location)),
+    website: pick(raw, 'website', 'url', 'homepage'),
     linkedin: str(raw.linkedin),
     links,
     ...(sanitizePhoto(raw.photo) ? { photo: sanitizePhoto(raw.photo) } : {}),
-    summary: str(raw.summary),
+    summary: pick(raw, 'summary', 'about', 'profile', 'objective'),
     experience,
     education,
     skills,

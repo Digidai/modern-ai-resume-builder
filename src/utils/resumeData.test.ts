@@ -151,6 +151,19 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('reads the name, headline, summary and location under other common names', () => {
+    const result = sanitizeResumeData({
+      name: 'Pat Lee',
+      headline: 'Staff Engineer',
+      about: 'Builds reliable systems.',
+      location: { city: 'San Francisco', state: 'CA', country: 'USA' },
+      experience: [],
+    });
+    expect(result).toMatchObject({ fullName: 'Pat Lee', title: 'Staff Engineer', summary: 'Builds reliable systems.', location: 'San Francisco, CA, USA' });
+    // A file that only has a "name" (package.json, say) is still not a resume.
+    expect(sanitizeResumeData({ name: 'modern-ai-resume-builder', version: '1.0.0' })).toBeNull();
+  });
+
   it('keeps numeric years and academic entries written with other field names', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',
