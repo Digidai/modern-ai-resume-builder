@@ -109,7 +109,7 @@ const entries = (value: unknown): Record<string, unknown>[] =>
 const extraSkillGroups = (raw: Record<string, unknown>, skills: string[]): string[] => {
   const bracket = (name: string, details: string[]) => (details.length ? `${name} (${details.join(', ')})` : name);
   const certificates = [...entries(raw.certificates), ...entries(raw.certifications), ...entries(raw.licenses)]
-    .map((c) => [pick(c, 'name', 'title').trim(), [pick(c, 'issuer', 'organization', 'authority').trim(), pick(c, 'date', 'year').trim().slice(0, 4)].filter(Boolean)] as const)
+    .map((c) => [pick(c, 'name', 'title').trim(), [pick(c, 'issuer', 'organization', 'authority').trim(), (pick(c, 'date', 'year').match(/\d{4}/)?.[0] ?? '')].filter(Boolean)] as const)
     .filter(([name]) => name)
     .map(([name, details]) => bracket(name, details));
   const languages = entries(raw.languages)
@@ -124,6 +124,68 @@ const extraSkillGroups = (raw: Record<string, unknown>, skills: string[]): strin
     ...(languages.length ? [`${languagesLabel}: ${languages.join(', ')}`] : []),
     ...(interests.length ? [`Interests: ${interests.join(', ')}`] : []),
   ];
+};
+
+/** Rich-text HTML (Reactive Resume's editor) as plain lines: list items become "- " bullets, paragraphs their own lines. */
+const htmlLines = (html: string): string[] =>
+  html
+    .replace(/<li[^>]*>/gi, '\n- ')
+    .replace(/<\/(?:p|li|h\d|div)>|<br\s*\/?>/gi, '\n')
+    .replace(/<[^>]+>/g, '')
+    .replace(/&nbsp;/g, ' ')
+    .replace(/&lt;/g, '<')
+    .replace(/&gt;/g, '>')
+    .replace(/&quot;/g, '"')
+    .replace(/&#39;/g, "'")
+    .replace(/&amp;/g, '&')
+    .split('\n')
+    .map((line) => line.replace(/\s+/g, ' ').trim())
+    .filter((line) => line && line !== '-');
+
+/** A date range written as text ("January 2019 to Present", "2014 - 2017", "2014-2017"); a single date is when it ended. */
+const dateRange = (text: string) => {
+  const parts = text
+    .split(/\s+(?:to|until|-)\s+|\s*[–—]\s*|(?<=^\d{4})-(?=\d{4}$)/i)
+    .map((part) => part.trim())
+    .filter(Boolean);
+  return parts.length > 1 ? { startDate: parts[0], endDate: parts[parts.length - 1] } : { startDate: '', endDate: parts[0] ?? '' };
+};
+
+/**
+ * A Reactive Resume (v4) export, { basics, sections: { experience: { items } , … }, metadata }, in the shape
+ * sanitizeResumeData reads; hidden items stay out, as they do on that resume. References and custom sections are not read.
+ */
+const isReactiveResume = (raw: Record<string, unknown>) => !!raw.basics && typeof raw.basics === 'object' && !!raw.sections && typeof raw.sections === 'object' && !Array.isArray(raw.sections);
+const fromReactiveResume = (raw: Record<string, unknown>): Record<string, unknown> => {
+  const basics = obj(raw.basics);
+  const sections = obj(raw.sections);
+  const items = (name: string) => list(obj(sections[name]).items).filter((item) => item.visible !== false);
+  const href = (item: Record<string, unknown>) => str(obj(item.url).href);
+  const text = (html: unknown) => htmlLines(str(html)).join('\n');
+  const job = (company: unknown, item: Record<string, unknown>) => ({ company: str(company), role: str(item.position), ...dateRange(str(item.date)), description: text(item.summary) });
+  const profiles = items('profiles').map((p) => ({ label: str(p.network), url: href(p) || profileUrl(str(p.network), str(p.username)) }));
+  const linkedin = profiles.find((p) => /linkedin/i.test(p.label + p.url));
+  return {
+    fullName: str(basics.name),
+    title: str(basics.headline),
+    email: str(basics.email),
+    phone: str(basics.phone),
+    location: str(basics.location),
+    website: href(basics),
+    photo: str(obj(basics.picture).url),
+    linkedin: linkedin?.url ?? '',
+    links: profiles.filter((p) => p !== linkedin),
+    summary: text(obj(sections.summary).content),
+    experience: [...items('experience').map((e) => job(e.company, e)), ...items('volunteer').map((v) => job(v.organization, v))],
+    education: items('education').map((e) => ({ institution: str(e.institution), studyType: str(e.studyType), area: str(e.area), score: str(e.score), ...dateRange(str(e.date)) })),
+    projects: items('projects').map((p) => ({ name: str(p.name), link: href(p), description: [str(p.description).trim(), text(p.summary)].filter(Boolean).join('\n') })),
+    publications: items('publications').map((p) => ({ title: str(p.name), venue: str(p.publisher), year: str(p.date), link: href(p) })),
+    awards: items('awards').map((a) => ({ title: str(a.title), issuer: str(a.awarder), year: str(a.date), detail: htmlLines(str(a.summary)).join(' ') })),
+    skills: items('skills').map((sk) => [str(sk.name).trim(), strings(sk.keywords).join(', ')].filter(Boolean).join(': ')),
+    certifications: items('certifications').map((c) => ({ name: str(c.name), issuer: str(c.issuer), date: str(c.date) })),
+    languages: items('languages').map((l) => ({ name: str(l.name), level: str(l.description) })),
+    interests: items('interests').map((i) => ({ name: str(i.name), keywords: i.keywords })),
+  };
 };
 
 /**
@@ -292,6 +354,7 @@ const ENTRY_FIELDS: Record<string, Set<string>> = {
  */
 export const ignoredResumeFields = (input: unknown): string[] => {
   const raw = obj(input);
+  if (isReactiveResume(raw)) return Object.keys(raw).filter((key) => !['basics', 'sections', 'metadata', 'templateId', 'design'].includes(key));
   const jsonResume = !!raw.basics && typeof raw.basics === 'object';
   const known = jsonResume ? JSON_RESUME_FIELDS : RESUME_FIELDS;
   const top = Object.keys(raw).filter((key) => !known.has(key));
@@ -305,7 +368,8 @@ export const ignoredResumeFields = (input: unknown): string[] => {
 export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
   let raw = input as Record<string, unknown>;
-  if (raw.basics && typeof raw.basics === 'object') raw = { ...fromJsonResume(raw), templateId: raw.templateId, design: raw.design };
+  if (raw.basics && typeof raw.basics === 'object')
+    raw = { ...(isReactiveResume(raw) ? fromReactiveResume(raw) : fromJsonResume(raw)), templateId: raw.templateId, design: raw.design };
   const known = ['fullName', 'title', 'summary', 'experience', 'education', 'skills', 'projects'];
   if (!known.some((key) => key in raw)) return null;
 

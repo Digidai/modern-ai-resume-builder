@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Import backup (and the Agent API) reads Reactive Resume (rxresu.me) JSON exports: profile, summary, experience and volunteer roles with their rich-text bullets, date ranges written as text ("January 2019 to Present"), education with its score, projects, publications, awards, skills, certifications, languages and interests. Hidden items stay out; references and custom sections are not read. Such a file used to import as a name and contact details only, with "Backup imported."
 - The ignored-field warning also names fields inside entries that the API doesn't read, once per section and field ("Ignored unknown resume fields: experience[].location, education[].minor"). Entries of JSON Resume documents are not checked, since their other fields are standard.
 - Bullets sent as `responsibilities`, `achievements`, `accomplishments` or `duties` lists are kept as "- " lines, and an education `gpa` (or `grade`, `score`), `honors` and `thesis` go in the degree line as Import resume writes them ("BSc Mathematics; GPA 3.8; First class"). The bullets were dropped and the API then warned that the job had no bullet points.
 - JSON Resume `work` entries sent beside ModernCV fields (`name` as the company, `position`, `summary` and `highlights`) are read as experience, current when they have no endDate as in JSON Resume. The whole Experience section was dropped; since the last change it was at least named in a warning.

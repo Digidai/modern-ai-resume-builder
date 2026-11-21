@@ -61,7 +61,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - 1,204 job titles in 21 families, each with a pre-rendered page: a realistic example resume written for that role and level, a writing guide (sections, skills, example bullets, recruiter tips) and FAQ. "Start from example" opens it in the editor.
 - Social and custom links: up to 8 extra links (GitHub, portfolio, X, Dribbble, Behance, Google Scholar, …) with auto-detected icons in every template.
 - Built for AI agents: a remote MCP server (`/mcp`), an installable agent skill, an HTTP API with an OpenAPI spec, copy-paste prompts on every template and job page, plus `llms.txt`, `llms-full.txt`, a template catalog and a resume JSON Schema. See [`/agents/`](https://genedai.cv/agents/).
-- Imports [JSON Resume](https://jsonresume.org/) files as well as ModernCV backups.
+- Imports [JSON Resume](https://jsonresume.org/) files and [Reactive Resume](https://rxresu.me/) JSON exports as well as ModernCV backups.
 - AI writing help (Cloudflare Workers AI) for summaries and experience bullets.
 - Local-first data storage with debounced segmented persistence for resume editing.
 - AI runs through the Cloudflare Worker's Workers AI binding; no API keys in the browser.
@@ -77,7 +77,7 @@ ModernCV helps job seekers build professional resumes quickly while giving HR te
 - **1,204 个职位页面（21 个职业大类）** - 每个职位都有按岗位和级别撰写的真实示例简历、预渲染写作指南（章节顺序、技能、示例要点、招聘方建议）和 FAQ，可一键“从示例开始”编辑
 - **社交与自定义链接** - 最多 8 个额外链接（GitHub、作品集、X、Dribbble、Behance、Google Scholar 等），自动识别图标，所有模板都会展示
 - **AI Agent 可直接使用** - 远程 MCP 服务（`/mcp`）、可安装的 Agent Skill、带 OpenAPI 的 HTTP API，每个模板和职位页都有可复制的 Prompt；另有 `llms.txt`、`llms-full.txt`、模板目录 JSON、简历 JSON Schema。详见 [`/agents/`](https://genedai.cv/agents/)
-- **JSON Resume 导入** - 可直接导入 JSON Resume 标准格式或本站备份文件
+- **JSON Resume 导入** - 可直接导入 JSON Resume 标准格式、Reactive Resume 导出的 JSON 或本站备份文件
 - **实时预览** - 输入内容时即时查看简历更新
 - **AI 智能优化** - 使用 Cloudflare Workers AI 优化和润色简历文本
 - **自动生成摘要** - 根据职位和技能自动生成专业摘要
@@ -185,7 +185,7 @@ An agent can draft a resume as JSON matching the schema (or as a JSON Resume doc
    - **Skills**: Skills (group them as "Languages: Go, Python"; pasting a list adds every item)
    - **Template**: Template picker, accent colour, font, text size and "Fit to one page"
 3. Changes are autosaved locally (with visible warning if persistence fails)
-4. **More actions** saves or imports a backup (ModernCV JSON or JSON Resume), starts from blank, or restores the sample
+4. **More actions** saves or imports a backup (ModernCV JSON, JSON Resume or a Reactive Resume export), starts from blank, or restores the sample
 
 ### AI Features
 - **Improve**: rewrites the summary or an experience description; **Undo** restores the original

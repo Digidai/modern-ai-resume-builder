@@ -500,7 +500,7 @@ const EditorView: React.FC = () => {
       },
       {
         label: 'Import backup',
-        description: 'Open a .json file saved from ModernCV.',
+        description: 'Open a ModernCV, JSON Resume or Reactive Resume .json file.',
         icon: <UploadIcon className="h-4 w-4" />,
         onSelect: () => fileInputRef.current?.click(),
       },

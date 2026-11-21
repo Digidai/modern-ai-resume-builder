@@ -21,7 +21,7 @@
   },
   {
     "question": "Can I import an existing resume?",
-    "answer": "Yes. Import a ModernCV JSON backup or a JSON Resume (jsonresume.org) file from the editor menu. AI assistants can produce either format for you."
+    "answer": "Yes. Import a ModernCV JSON backup, a JSON Resume (jsonresume.org) file or a Reactive Resume JSON export from the editor menu. AI assistants can produce either format for you."
   },
   {
     "question": "Can I tailor my resume to a specific job title?",

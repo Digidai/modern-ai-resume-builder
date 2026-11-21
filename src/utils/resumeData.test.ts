@@ -182,6 +182,39 @@ describe('loosely shaped resumes from agents', () => {
     expect(result?.education.map((e) => e.degree)).toEqual(['BSc Mathematics; GPA 3.8; First class', 'PhD; Distinction; thesis: Sparse attention']);
   });
 
+  it('imports a Reactive Resume export: sections, rich-text bullets, date ranges and hidden items', () => {
+    const url = (href: string) => ({ label: '', href });
+    const section = (items: unknown[]) => ({ name: '', visible: true, items });
+    const raw = {
+      basics: { name: 'John Doe', headline: 'Web Developer', email: 'john@doe.me', phone: '', location: 'Pleasantville, CA', url: url('https://johndoe.me/'), picture: { url: '' } },
+      sections: {
+        summary: { content: '<p>Builds <strong>fast</strong> sites &amp; apps.</p>' },
+        profiles: section([{ visible: true, network: 'LinkedIn', username: 'johndoe', url: url('https://linkedin.com/in/johndoe') }, { visible: true, network: 'GitHub', username: 'johndoe', url: url('') }]),
+        experience: section([
+          { visible: true, company: 'Creative Solutions', position: 'Senior Developer', location: 'SF', date: 'January 2019 to Present', summary: '<ul><li><p>Redesigned the site</p></li><li><p>Mentored 4 developers</p></li></ul>', url: url('') },
+          { visible: true, company: 'TechAdvancers', position: 'Developer', date: '2016 - 2018', summary: '', url: url('') },
+          { visible: false, company: 'Hidden Co', position: 'Intern', date: '2015', summary: '', url: url('') },
+        ]),
+        education: section([{ visible: true, institution: 'UC Berkeley', studyType: 'BSc', area: 'Computer Science', score: '3.8', date: 'August 2012 to May 2016', url: url('') }]),
+        skills: section([{ visible: true, name: 'Frameworks', keywords: ['React', 'Vue'] }]),
+        certifications: section([{ visible: true, name: 'AWS Developer', issuer: 'Amazon', date: 'March 2019', url: url('') }]),
+        languages: section([{ visible: true, name: 'French', description: 'Fluent' }]),
+        references: section([{ visible: true, name: 'Jane' }]),
+      },
+      metadata: { template: 'rhyhorn' },
+    };
+    const result = sanitizeResumeData(raw);
+    expect(result).toMatchObject({ fullName: 'John Doe', title: 'Web Developer', website: 'https://johndoe.me/', linkedin: 'https://linkedin.com/in/johndoe', summary: 'Builds fast sites & apps.' });
+    expect(result?.links.map((l) => l.url)).toEqual(['github.com/johndoe']);
+    expect(result?.experience).toMatchObject([
+      { company: 'Creative Solutions', role: 'Senior Developer', startDate: '2019-01', isCurrent: true, description: '- Redesigned the site\n- Mentored 4 developers' },
+      { company: 'TechAdvancers', startDate: '2016', endDate: '2018', isCurrent: false },
+    ]);
+    expect(result?.education).toMatchObject([{ school: 'UC Berkeley', degree: 'BSc in Computer Science; GPA 3.8', startDate: '2012-08', endDate: '2016-05' }]);
+    expect(result?.skills).toEqual(['Frameworks: React, Vue', 'Certifications: AWS Developer (Amazon, 2019)', 'Languages: French (Fluent)']);
+    expect(ignoredResumeFields(raw)).toEqual([]);
+  });
+
   it('reads JSON Resume work entries sent beside ModernCV fields', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',
