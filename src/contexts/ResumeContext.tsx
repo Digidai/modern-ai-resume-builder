@@ -4,7 +4,7 @@ import { INITIAL_RESUME_DATA, ResumeData } from '../types';
 import { useResumeData, type ResumeSaveStatus } from '../hooks/useResumeData';
 import { useToast } from '../components/Toast';
 import { preloadResumeTemplate } from '../components/ResumeTemplateRenderer';
-import { BLANK_RESUME_DATA, sanitizeResumeData } from '../utils/resumeData';
+import { BLANK_RESUME_DATA, ignoredResumeFields, sanitizeResumeData } from '../utils/resumeData';
 import type { PdfExportProgress } from '../utils/pdfExport';
 import {
   isLibraryKey,
@@ -312,10 +312,12 @@ export const ResumeProvider: FC<{ children: ReactNode }> = ({ children }) => {
         }
         const parsed = sanitizeResumeData(raw);
         if (!parsed) throw new Error('not a resume');
-        replaceWithUndo(parsed, 'Backup imported.');
+        // Name what wasn't read (fields from another tool, say), so nothing is lost without a word.
+        const ignored = ignoredResumeFields(raw);
+        replaceWithUndo(parsed, ignored.length ? `Backup imported. Not read: ${ignored.slice(0, 4).join(', ')}${ignored.length > 4 ? ` and ${ignored.length - 4} more` : ''}.` : 'Backup imported.');
         return true;
       } catch (error) {
-        showError(error instanceof Error && error.message === 'storage' ? STORAGE_FULL : 'That file is not a ModernCV backup (.json).');
+        showError(error instanceof Error && error.message === 'storage' ? STORAGE_FULL : 'That file is not a resume backup. Open a ModernCV, JSON Resume or Reactive Resume .json file.');
         return false;
       }
     },
