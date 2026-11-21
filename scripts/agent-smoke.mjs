@@ -147,8 +147,12 @@ const unknown = await postLink({ template: 'nope', resume: designer });
 check(unknown.status === 400 && unknown.body.error?.code === 'INVALID_TEMPLATE', 'unknown template is a 400 INVALID_TEMPLATE', `${unknown.status} ${unknown.body.error?.code}`);
 const unwrapped = await postLink({ ...designer, template: 'Ledger' });
 check(unwrapped.status === 200 && unwrapped.body.template === 'banking' && !unwrapped.body.warnings.some((w) => /Ignored unknown/.test(w)), 'a resume sent as the body, without { resume }, is accepted with its template (not reported as an unknown field)', `${unwrapped.status} ${unwrapped.body.template ?? unwrapped.body.error?.code}`);
-const extra = await postLink({ resume: { ...designer, hobbies: ['Chess'] } });
-check(extra.status === 200 && extra.body.warnings.some((w) => /Ignored unknown resume field: hobbies\b/.test(w)), 'an unknown resume field is named in a warning', extra.body.warnings?.join(' | '));
+const extra = await postLink({ resume: { ...designer, hobbies: ['Chess'], experience: [{ ...designer.experience[0], location: 'San Francisco' }] } });
+check(
+  extra.status === 200 && extra.body.warnings.some((w) => /Ignored unknown resume fields: hobbies, experience\[\]\.location\b/.test(w)),
+  'unknown resume and entry fields are named in a warning',
+  extra.body.warnings?.join(' | ')
+);
 const asString = await postLink({ resume: JSON.stringify({ ...designer, experience: [{ ...designer.experience[0], startDate: 'March 2021', endDate: '' }] }) });
 check(
   asString.status === 200 && asString.body.warnings.some((w) => /no endDate/.test(w)) && !asString.body.warnings.some((w) => /isn't a date/.test(w)),

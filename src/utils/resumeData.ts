@@ -271,10 +271,35 @@ const RESUME_FIELDS = new Set(['templateId', 'design', 'fullName', 'name', 'titl
 const JSON_RESUME_FIELDS = new Set(['$schema', 'meta', 'templateId', 'design', 'basics', 'work', 'volunteer', 'education', 'awards', 'certificates', 'publications', 'skills', 'languages', 'interests', 'projects']);
 
 /** Top-level fields of a resume that sanitizeResumeData ignores, so callers can say so instead of dropping them silently. */
+// Fields of each kind of entry sanitizeResumeData reads, by section; the sections that share a shape share a list.
+const JOB_FIELDS = ['id', 'company', 'employer', 'organization', 'organisation', 'name', 'role', 'title', 'position', 'jobTitle', 'startDate', 'endDate', 'isCurrent', 'hours', 'description', 'summary', ...BULLET_KEYS];
+const ENTRY_FIELDS: Record<string, Set<string>> = {
+  experience: new Set(JOB_FIELDS),
+  work: new Set(JOB_FIELDS),
+  volunteer: new Set(JOB_FIELDS),
+  education: new Set(['id', 'school', 'institution', 'university', 'college', 'degree', 'studyType', 'area', 'field', 'major', 'gpa', 'grade', 'score', 'honors', 'honours', 'thesis', 'startDate', 'endDate']),
+  projects: new Set(['id', 'name', 'title', 'link', 'url', 'description', 'summary', ...BULLET_KEYS]),
+  publications: new Set(['id', 'authors', 'author', 'title', 'name', 'venue', 'journal', 'conference', 'booktitle', 'publisher', 'year', 'date', 'releaseDate', 'link', 'url', 'doi']),
+  awards: new Set(['id', 'title', 'name', 'award', 'issuer', 'awarder', 'organization', 'organisation', 'year', 'date', 'detail', 'summary', 'description']),
+  talks: new Set(['id', 'title', 'name', 'event', 'venue', 'conference', 'location', 'year', 'date']),
+  teaching: new Set(['id', 'course', 'title', 'name', 'role', 'institution', 'school', 'university', 'year', 'date', 'term']),
+  links: new Set(['id', 'label', 'name', 'network', 'url', 'href', 'link']),
+};
+
+/**
+ * Fields of a resume that sanitizeResumeData ignores ("hobbies", "experience[].location"), so callers can say so
+ * instead of dropping them silently. Entries of a JSON Resume document are not checked: its other fields are standard.
+ */
 export const ignoredResumeFields = (input: unknown): string[] => {
   const raw = obj(input);
-  const known = raw.basics && typeof raw.basics === 'object' ? JSON_RESUME_FIELDS : RESUME_FIELDS;
-  return Object.keys(raw).filter((key) => !known.has(key));
+  const jsonResume = !!raw.basics && typeof raw.basics === 'object';
+  const known = jsonResume ? JSON_RESUME_FIELDS : RESUME_FIELDS;
+  const top = Object.keys(raw).filter((key) => !known.has(key));
+  if (jsonResume) return top;
+  const nested = Object.entries(ENTRY_FIELDS).flatMap(([section, fields]) =>
+    list(raw[section]).flatMap((entry) => Object.keys(entry).filter((key) => !fields.has(key)).map((key) => `${section}[].${key}`))
+  );
+  return [...top, ...new Set(nested)];
 };
 
 export const sanitizeResumeData = (input: unknown): ResumeData | null => {

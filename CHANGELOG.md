@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- The ignored-field warning also names fields inside entries that the API doesn't read, once per section and field ("Ignored unknown resume fields: experience[].location, education[].minor"). Entries of JSON Resume documents are not checked, since their other fields are standard.
 - Bullets sent as `responsibilities`, `achievements`, `accomplishments` or `duties` lists are kept as "- " lines, and an education `gpa` (or `grade`, `score`), `honors` and `thesis` go in the degree line as Import resume writes them ("BSc Mathematics; GPA 3.8; First class"). The bullets were dropped and the API then warned that the job had no bullet points.
 - JSON Resume `work` entries sent beside ModernCV fields (`name` as the company, `position`, `summary` and `highlights`) are read as experience, current when they have no endDate as in JSON Resume. The whole Experience section was dropped; since the last change it was at least named in a warning.
 - The Agent API and MCP tools name the top-level resume fields they ignore in a warning ("Ignored unknown resume fields: hobbies, work, references. See get_resume_schema …"), so an agent can rename or move them instead of losing them without a word. Other names the API reads (`name`, `headline`, `certifications`, …) and render options beside an unwrapped resume are not reported; JSON Resume documents are checked against JSON Resume's sections.

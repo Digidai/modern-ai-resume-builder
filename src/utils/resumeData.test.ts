@@ -157,6 +157,14 @@ describe('loosely shaped resumes from agents', () => {
     const full = { ...INITIAL_RESUME_DATA, photo: 'data:image/png;base64,AA==', publications: [], awards: [], talks: [], teaching: [] };
     expect(ignoredResumeFields(full)).toEqual([]);
     expect(ignoredResumeFields({ name: 'Pat', headline: 'Engineer', experience: [], work: [], references: [], hobbies: [] })).toEqual(['references', 'hobbies']);
+    // Entry fields too, once per section and field, whichever entry has them.
+    expect(
+      ignoredResumeFields({
+        fullName: 'Pat',
+        experience: [{ role: 'Engineer', company: 'Acme', location: 'Berlin' }, { title: 'Intern', employer: 'Beta', location: 'Paris', achievements: [] }],
+        education: [{ school: 'UCL', gpa: 3.8, minor: 'Physics' }],
+      })
+    ).toEqual(['experience[].location', 'education[].minor']);
     // JSON Resume documents are checked against JSON Resume's sections.
     expect(ignoredResumeFields({ $schema: 'x', basics: { name: 'Pat' }, work: [], references: [] })).toEqual(['references']);
   });
