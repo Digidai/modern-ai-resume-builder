@@ -212,7 +212,7 @@ const bulletText = (value: unknown): string =>
   Array.isArray(value) ? strings(value).map((line) => (/^[-•*–]\s/.test(line) ? line : `- ${line}`)).join('\n') : str(value);
 /** A description plus any `highlights` or `bullets` list next to it. */
 const descriptionOf = (item: Record<string, unknown>): string =>
-  [bulletText(item.description), bulletText(item.highlights), bulletText(item.bullets)].filter((part) => part.trim()).join('\n');
+  [bulletText(item.description ?? item.summary), bulletText(item.highlights), bulletText(item.bullets)].filter((part) => part.trim()).join('\n');
 
 /**
  * Skills as the editor stores them (one entry per skill or "Category: a, b" group), from a list of strings, a
@@ -265,7 +265,7 @@ const ONGOING = /^(present|current|now|ongoing|today|至今|现在)$/i;
 const dateField = (value: unknown) => normalizeMonth(str(value).trim());
 
 // Top-level fields sanitizeResumeData reads, including the other names agents use for them.
-const RESUME_FIELDS = new Set(['templateId', 'design', 'fullName', 'name', 'title', 'headline', 'label', 'email', 'phone', 'location', 'website', 'url', 'homepage', 'linkedin', 'links', 'github', 'portfolio', 'photo', 'summary', 'about', 'profile', 'objective', 'experience', 'volunteer', 'education', 'skills', 'projects', 'publications', 'awards', 'talks', 'teaching', 'certificates', 'certifications', 'licenses', 'languages', 'interests']);
+const RESUME_FIELDS = new Set(['templateId', 'design', 'fullName', 'name', 'title', 'headline', 'label', 'email', 'phone', 'location', 'website', 'url', 'homepage', 'linkedin', 'links', 'github', 'portfolio', 'photo', 'summary', 'about', 'profile', 'objective', 'experience', 'work', 'volunteer', 'education', 'skills', 'projects', 'publications', 'awards', 'talks', 'teaching', 'certificates', 'certifications', 'licenses', 'languages', 'interests']);
 // JSON Resume sections fromJsonResume reads, plus its metadata (references are not read).
 const JSON_RESUME_FIELDS = new Set(['$schema', 'meta', 'templateId', 'design', 'basics', 'work', 'volunteer', 'education', 'awards', 'certificates', 'publications', 'skills', 'languages', 'interests', 'projects']);
 
@@ -283,12 +283,13 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   const known = ['fullName', 'title', 'summary', 'experience', 'education', 'skills', 'projects'];
   if (!known.some((key) => key in raw)) return null;
 
-  // Volunteer roles follow the jobs, as they do for JSON Resume.
-  const experience: Experience[] = [...list(raw.experience), ...list(raw.volunteer)].map((item) => {
+  // JSON Resume's "work" sometimes comes beside ModernCV fields (no endDate means current there too);
+  // volunteer roles follow the jobs, as they do for JSON Resume.
+  const experience: Experience[] = [...list(raw.experience), ...list(raw.work).map((w): Record<string, unknown> => ({ isCurrent: !str(w.endDate).trim(), ...w })), ...list(raw.volunteer)].map((item) => {
     const hours = (typeof item.hours === 'number' ? String(item.hours) : str(item.hours)).trim();
     return {
       id: str(item.id) || createId(),
-      company: pick(item, 'company', 'employer', 'organization', 'organisation'),
+      company: pick(item, 'company', 'employer', 'organization', 'organisation', 'name'),
       role: pick(item, 'role', 'title', 'position', 'jobTitle'),
       startDate: dateField(item.startDate),
       // "Present" is an ongoing role: the editor's "I currently work here", which every template prints its own way.

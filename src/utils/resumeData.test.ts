@@ -156,9 +156,17 @@ describe('loosely shaped resumes from agents', () => {
     // Every field of a full resume, photo and academic sections included, round-trips without a warning.
     const full = { ...INITIAL_RESUME_DATA, photo: 'data:image/png;base64,AA==', publications: [], awards: [], talks: [], teaching: [] };
     expect(ignoredResumeFields(full)).toEqual([]);
-    expect(ignoredResumeFields({ name: 'Pat', headline: 'Engineer', experience: [], work: [], references: [], hobbies: [] })).toEqual(['work', 'references', 'hobbies']);
+    expect(ignoredResumeFields({ name: 'Pat', headline: 'Engineer', experience: [], work: [], references: [], hobbies: [] })).toEqual(['references', 'hobbies']);
     // JSON Resume documents are checked against JSON Resume's sections.
     expect(ignoredResumeFields({ $schema: 'x', basics: { name: 'Pat' }, work: [], references: [] })).toEqual(['references']);
+  });
+
+  it('reads JSON Resume work entries sent beside ModernCV fields', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      work: [{ name: 'Acme', position: 'Engineer', startDate: '2021-03', summary: 'Platform team.', highlights: ['Led 3 launches'] }],
+    });
+    expect(result?.experience).toMatchObject([{ company: 'Acme', role: 'Engineer', startDate: '2021-03', isCurrent: true, description: 'Platform team.\n- Led 3 launches' }]);
   });
 
   it('keeps certifications, languages, interests and volunteer roles sent beside ModernCV fields', () => {
