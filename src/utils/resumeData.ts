@@ -2,7 +2,8 @@ import { DEFAULT_TEMPLATE_ID, currentTemplateId } from '../constants/templates';
 import { validateUrl } from './validation';
 import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
-const str = (value: unknown): string => (typeof value === 'string' ? value : '');
+/** Text fields; agents often send years and phone numbers as numbers ("year": 2023). */
+const str = (value: unknown): string => (typeof value === 'string' ? value : typeof value === 'number' && Number.isFinite(value) ? String(value) : '');
 
 /** URL for a JSON Resume profile that only has a username (e.g. { network: "GitHub", username: "pat" }). */
 const PROFILE_HOSTS: Record<string, string> = {
@@ -224,6 +225,9 @@ const skillList = (value: unknown): string[] => {
 /** The first non-empty string among an item's fields: agents name the same field several ways ("title" for a role). */
 const pick = (item: Record<string, unknown>, ...keys: string[]): string => keys.map((key) => str(item[key])).find((value) => value.trim()) ?? '';
 
+/** A bare DOI ("10.1234/abcd") as a link; DOIs already written as URLs stay as they are. */
+const doiLink = (doi: string) => (doi.trim() && !/^https?:/i.test(doi.trim()) ? `https://doi.org/${doi.trim().replace(/^doi:\s*/i, '')}` : doi);
+
 /** "https://www.github.com/pat/" and "github.com/pat" are the same link. */
 const sameUrl = (a: string, b: string) => {
   const key = (url: string) => url.trim().toLowerCase().replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/+$/, '');
@@ -272,38 +276,38 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   const publications: Publication[] = list(raw.publications)
     .map((item) => ({
       id: str(item.id) || createId(),
-      authors: str(item.authors).trim(),
-      title: str(item.title).trim(),
-      venue: str(item.venue).trim(),
-      year: str(item.year).trim(),
-      link: str(item.link).trim(),
+      authors: (Array.isArray(item.authors) ? strings(item.authors).join(', ') : pick(item, 'authors', 'author')).trim(),
+      title: pick(item, 'title', 'name').trim(),
+      venue: pick(item, 'venue', 'journal', 'conference', 'booktitle', 'publisher').trim(),
+      year: pick(item, 'year', 'date', 'releaseDate').trim(),
+      link: (pick(item, 'link', 'url') || doiLink(str(item.doi))).trim(),
     }))
     .filter((item) => item.title || item.authors);
   const awards: Award[] = list(raw.awards)
     .map((item) => ({
       id: str(item.id) || createId(),
-      title: str(item.title).trim(),
-      issuer: str(item.issuer).trim(),
-      year: str(item.year).trim(),
-      detail: str(item.detail).trim(),
+      title: pick(item, 'title', 'name', 'award').trim(),
+      issuer: pick(item, 'issuer', 'awarder', 'organization', 'organisation').trim(),
+      year: pick(item, 'year', 'date').trim(),
+      detail: pick(item, 'detail', 'summary', 'description').trim(),
     }))
     .filter((item) => item.title || item.issuer);
   const talks: Talk[] = list(raw.talks)
     .map((item) => ({
       id: str(item.id) || createId(),
-      title: str(item.title).trim(),
-      event: str(item.event).trim(),
+      title: pick(item, 'title', 'name').trim(),
+      event: pick(item, 'event', 'venue', 'conference').trim(),
       location: str(item.location).trim(),
-      year: str(item.year).trim(),
+      year: pick(item, 'year', 'date').trim(),
     }))
     .filter((item) => item.title || item.event);
   const teaching: Teaching[] = list(raw.teaching)
     .map((item) => ({
       id: str(item.id) || createId(),
-      course: str(item.course).trim(),
+      course: pick(item, 'course', 'title', 'name').trim(),
       role: str(item.role).trim(),
-      institution: str(item.institution).trim(),
-      year: str(item.year).trim(),
+      institution: pick(item, 'institution', 'school', 'university').trim(),
+      year: pick(item, 'year', 'date', 'term').trim(),
     }))
     .filter((item) => item.course || item.role);
   // Links may also come as plain URLs, and GitHub or a portfolio as their own fields.

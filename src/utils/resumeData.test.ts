@@ -151,6 +151,22 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('keeps numeric years and academic entries written with other field names', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      education: [{ school: 'UCL', degree: 'PhD', startDate: 2016, endDate: 2020 }],
+      publications: [{ name: 'Sparse Attention', authors: ['P. Lee', 'J. Doe'], journal: 'NeurIPS', year: 2023, doi: '10.1234/abcd' }],
+      awards: [{ name: 'Best Paper', awarder: 'ICML', date: '2022' }],
+      talks: [{ title: 'Scaling laws', venue: 'Stanford NLP Seminar', year: 2024 }],
+      teaching: [{ title: 'CS 229', role: 'TA', university: 'Stanford', year: 2019 }],
+    });
+    expect(result?.education).toMatchObject([{ startDate: '2016', endDate: '2020' }]);
+    expect(result?.publications).toMatchObject([{ title: 'Sparse Attention', authors: 'P. Lee, J. Doe', venue: 'NeurIPS', year: '2023', link: 'https://doi.org/10.1234/abcd' }]);
+    expect(result?.awards).toMatchObject([{ title: 'Best Paper', issuer: 'ICML', year: '2022' }]);
+    expect(result?.talks).toMatchObject([{ title: 'Scaling laws', event: 'Stanford NLP Seminar', year: '2024' }]);
+    expect(result?.teaching).toMatchObject([{ course: 'CS 229', institution: 'Stanford', year: '2019' }]);
+  });
+
   it('reads the field names agents commonly use, and links as plain URLs', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',
