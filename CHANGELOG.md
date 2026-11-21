@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- The Agent API and MCP tools name the top-level resume fields they ignore in a warning ("Ignored unknown resume fields: hobbies, work, references. See get_resume_schema …"), so an agent can rename or move them instead of losing them without a word. Other names the API reads (`name`, `headline`, `certifications`, …) and render options beside an unwrapped resume are not reported; JSON Resume documents are checked against JSON Resume's sections.
 - `certifications` (or `certificates`, `licenses`), `languages`, `interests` and `volunteer` sent beside ModernCV fields, as agents often add them, are kept the way JSON Resume ones already were: certifications, languages and interests become skill groups ("Certifications: AWS Solutions Architect (Amazon, 2023)", "Languages: English (Native), French (B2)"), each as plain strings or objects, and volunteer roles follow the jobs under Experience. They were dropped without a warning.
 - Skills sent as a map of category to list (`"skills": { "Languages": ["Go", "Python"], "Tools": "Docker, K8s" }`, or a list of such objects) become "Languages: Go, Python" groups. The whole Skills section was dropped without a warning.
 - The Agent API accepts a resume sent as the request body itself, without the `{ "resume": … }` wrapper, with options such as `template` beside its fields. It answered 400 INVALID_RESUME, which agents read as a problem with the resume rather than with the envelope. A body with no resume in it is still a 400.

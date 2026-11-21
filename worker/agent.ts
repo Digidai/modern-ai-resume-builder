@@ -8,7 +8,7 @@ import puppeteer from '@cloudflare/puppeteer';
 import { TEMPLATES, currentTemplateId, getTemplateById, showsAwards } from '../src/constants/templates';
 import { FONT_PRESETS } from '../src/constants/design';
 import { MM_TO_PX, paperSize } from '../src/constants/print';
-import { sanitizeResumeData } from '../src/utils/resumeData';
+import { ignoredResumeFields, sanitizeResumeData } from '../src/utils/resumeData';
 import { encodeResumePayload } from '../src/shared/resumeLink';
 import { resumeFileName } from '../src/shared/fileName';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
@@ -241,7 +241,8 @@ const prepareResume = (input: Json): PreparedResume => {
     }
   }
   // The resume itself as the body, without the { resume } wrapper; options such as template may sit beside its fields.
-  if (input.resume === undefined && sanitizeResumeData(input)) input = { ...input, resume: input };
+  const unwrapped = input.resume === undefined && !!sanitizeResumeData(input);
+  if (unwrapped) input = { ...input, resume: input };
   const resume = sanitizeResumeData(input.resume);
   if (!resume) {
     throw new AgentError(
@@ -252,6 +253,9 @@ const prepareResume = (input: Json): PreparedResume => {
   }
   const warnings: string[] = [];
   const raw = input.resume as Json;
+  // Unknown fields are dropped; naming them lets the agent rename or move them (render options may sit beside an unwrapped resume).
+  const ignored = ignoredResumeFields(raw).filter((key) => !(unwrapped && key in RESUME_INPUT));
+  if (ignored.length) warnings.push(`Ignored unknown resume field${ignored.length === 1 ? '' : 's'}: ${ignored.slice(0, 10).join(', ')}${ignored.length > 10 ? ', …' : ''}. See get_resume_schema (or /resume.schema.json) for the fields a resume can have.`);
   const template =
     typeof input.template === 'string' ? input.template : typeof input.templateId === 'string' ? input.templateId : typeof raw.templateId === 'string' ? raw.templateId : '';
   const resolved = template ? resolveTemplate(template) : undefined;

@@ -1,5 +1,6 @@
 import { describe, expect, it } from 'vitest';
-import { normalizeMonth, sanitizeResumeData } from './resumeData';
+import { INITIAL_RESUME_DATA } from '../types';
+import { ignoredResumeFields, normalizeMonth, sanitizeResumeData } from './resumeData';
 
 describe('sanitizeResumeData', () => {
   it('keeps a US Letter paper choice and reads older or unknown values as A4', () => {
@@ -151,6 +152,15 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('names the top-level fields it ignores, and none of the fields it writes', () => {
+    // Every field of a full resume, photo and academic sections included, round-trips without a warning.
+    const full = { ...INITIAL_RESUME_DATA, photo: 'data:image/png;base64,AA==', publications: [], awards: [], talks: [], teaching: [] };
+    expect(ignoredResumeFields(full)).toEqual([]);
+    expect(ignoredResumeFields({ name: 'Pat', headline: 'Engineer', experience: [], work: [], references: [], hobbies: [] })).toEqual(['work', 'references', 'hobbies']);
+    // JSON Resume documents are checked against JSON Resume's sections.
+    expect(ignoredResumeFields({ $schema: 'x', basics: { name: 'Pat' }, work: [], references: [] })).toEqual(['references']);
+  });
+
   it('keeps certifications, languages, interests and volunteer roles sent beside ModernCV fields', () => {
     const result = sanitizeResumeData({
       fullName: 'Pat',

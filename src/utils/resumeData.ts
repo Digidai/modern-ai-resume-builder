@@ -264,6 +264,18 @@ const ONGOING = /^(present|current|now|ongoing|today|至今|现在)$/i;
 /** A start or end date as the editor stores it: "2021-03" for any month form normalizeMonth knows, else as written. */
 const dateField = (value: unknown) => normalizeMonth(str(value).trim());
 
+// Top-level fields sanitizeResumeData reads, including the other names agents use for them.
+const RESUME_FIELDS = new Set(['templateId', 'design', 'fullName', 'name', 'title', 'headline', 'label', 'email', 'phone', 'location', 'website', 'url', 'homepage', 'linkedin', 'links', 'github', 'portfolio', 'photo', 'summary', 'about', 'profile', 'objective', 'experience', 'volunteer', 'education', 'skills', 'projects', 'publications', 'awards', 'talks', 'teaching', 'certificates', 'certifications', 'licenses', 'languages', 'interests']);
+// JSON Resume sections fromJsonResume reads, plus its metadata (references are not read).
+const JSON_RESUME_FIELDS = new Set(['$schema', 'meta', 'templateId', 'design', 'basics', 'work', 'volunteer', 'education', 'awards', 'certificates', 'publications', 'skills', 'languages', 'interests', 'projects']);
+
+/** Top-level fields of a resume that sanitizeResumeData ignores, so callers can say so instead of dropping them silently. */
+export const ignoredResumeFields = (input: unknown): string[] => {
+  const raw = obj(input);
+  const known = raw.basics && typeof raw.basics === 'object' ? JSON_RESUME_FIELDS : RESUME_FIELDS;
+  return Object.keys(raw).filter((key) => !known.has(key));
+};
+
 export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
   let raw = input as Record<string, unknown>;
