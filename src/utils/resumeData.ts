@@ -78,7 +78,7 @@ const MONTH_NAMES = ['january', 'february', 'march', 'april', 'may', 'june', 'ju
 export const normalizeMonth = (value: string): string => {
   const text = value.trim();
   const month = (year: string, m: number) => (m >= 1 && m <= 12 ? `${year}-${String(m).padStart(2, '0')}` : value);
-  let match = /^(\d{4})\s*[-/.]\s*(\d{1,2})$/.exec(text) ?? /^(\d{4})\s*年\s*(\d{1,2})\s*月$/.exec(text);
+  let match = /^(\d{4})\s*[-/.]\s*(\d{1,2})(?:\s*[-/.]\s*\d{1,2})?$/.exec(text) ?? /^(\d{4})\s*年\s*(\d{1,2})\s*月$/.exec(text);
   if (match) return month(match[1], Number(match[2]));
   match = /^(\d{1,2})\s*[-/.]\s*(\d{4})$/.exec(text);
   if (match) return month(match[2], Number(match[1]));
@@ -190,6 +190,11 @@ export const fromJsonResume = (raw: Record<string, unknown>): Record<string, unk
  * ResumeData, so templates never see missing fields or non-string values.
  * Returns null if it doesn't look like a resume.
  */
+/** An end date that means the role is ongoing, as agents and other tools write it. */
+const ONGOING = /^(present|current|now|ongoing|today|至今|现在)$/i;
+/** A start or end date as the editor stores it: "2021-03" for any month form normalizeMonth knows, else as written. */
+const dateField = (value: unknown) => normalizeMonth(str(value).trim());
+
 export const sanitizeResumeData = (input: unknown): ResumeData | null => {
   if (!input || typeof input !== 'object' || Array.isArray(input)) return null;
   let raw = input as Record<string, unknown>;
@@ -203,9 +208,10 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
       id: str(item.id) || createId(),
       company: str(item.company),
       role: str(item.role),
-      startDate: str(item.startDate),
-      endDate: str(item.endDate),
-      isCurrent: item.isCurrent === true,
+      startDate: dateField(item.startDate),
+      // "Present" is an ongoing role: the editor's "I currently work here", which every template prints its own way.
+      endDate: ONGOING.test(str(item.endDate).trim()) ? '' : dateField(item.endDate),
+      isCurrent: item.isCurrent === true || ONGOING.test(str(item.endDate).trim()),
       description: str(item.description),
       ...(hours ? { hours } : {}),
     };
@@ -214,8 +220,8 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     id: str(item.id) || createId(),
     school: str(item.school),
     degree: str(item.degree),
-    startDate: str(item.startDate),
-    endDate: str(item.endDate),
+    startDate: dateField(item.startDate),
+    endDate: dateField(item.endDate),
   }));
   const projects: Project[] = list(raw.projects).map((item) => ({
     id: str(item.id) || createId(),

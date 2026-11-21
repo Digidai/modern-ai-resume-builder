@@ -150,6 +150,27 @@ describe('sanitizeResumeData', () => {
   });
 });
 
+describe('dates in imported resumes', () => {
+  it('stores month names and full dates as YYYY-MM, and "Present" as a current role', () => {
+    const result = sanitizeResumeData({
+      fullName: 'Pat',
+      experience: [
+        { company: 'Acme', startDate: 'Mar 2021', endDate: 'Present' },
+        { company: 'Beta', startDate: '2018-06-15', endDate: '2021-02', isCurrent: false },
+        { company: 'Gamma', startDate: 'Summer 2016', endDate: '2017' },
+      ],
+      education: [{ school: 'UCL', startDate: 'Sept 2014', endDate: 'June 2017' }],
+    });
+    expect(result?.experience).toMatchObject([
+      { startDate: '2021-03', endDate: '', isCurrent: true },
+      { startDate: '2018-06', endDate: '2021-02', isCurrent: false },
+      // Anything else stays as written.
+      { startDate: 'Summer 2016', endDate: '2017', isCurrent: false },
+    ]);
+    expect(result?.education).toMatchObject([{ startDate: '2014-09', endDate: '2017-06' }]);
+  });
+});
+
 describe('normalizeMonth', () => {
   it('turns months typed without a month picker into YYYY-MM', () => {
     expect(normalizeMonth('Jan 2020')).toBe('2020-01');
