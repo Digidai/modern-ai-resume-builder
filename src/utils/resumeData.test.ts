@@ -151,6 +151,18 @@ describe('sanitizeResumeData', () => {
 });
 
 describe('loosely shaped resumes from agents', () => {
+  it('keeps skills sent as a category-to-list map', () => {
+    expect(sanitizeResumeData({ fullName: 'Pat', skills: { Languages: ['Go', 'Python'], Tools: 'Docker, K8s', Empty: [] } })?.skills).toEqual([
+      'Languages: Go, Python',
+      'Tools: Docker, K8s',
+    ]);
+    expect(sanitizeResumeData({ fullName: 'Pat', skills: [{ Languages: ['Go'] }, 'SQL', { name: 'Cloud', keywords: ['AWS'] }] })?.skills).toEqual([
+      'Languages: Go',
+      'SQL',
+      'Cloud: AWS',
+    ]);
+  });
+
   it('reads the name, headline, summary and location under other common names', () => {
     const result = sanitizeResumeData({
       name: 'Pat Lee',

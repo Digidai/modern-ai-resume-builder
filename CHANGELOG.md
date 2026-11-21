@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Skills sent as a map of category to list (`"skills": { "Languages": ["Go", "Python"], "Tools": "Docker, K8s" }`, or a list of such objects) become "Languages: Go, Python" groups. The whole Skills section was dropped without a warning.
 - The Agent API accepts a resume sent as the request body itself, without the `{ "resume": … }` wrapper, with options such as `template` beside its fields. It answered 400 INVALID_RESUME, which agents read as a problem with the resume rather than with the envelope. A body with no resume in it is still a 400.
 - A resume whose name, headline and summary come as `name`, `headline` and `about` (or `profile`, `objective`), with `location` as { city, region or state, country }, keeps them. The PDF used to say "Your Name" with no title, location or profile.
 - Years and dates sent as numbers (`"year": 2023`, `"startDate": 2016`) are kept instead of dropped, and academic entries accept the names agents and BibTeX tools use: publication `authors` as a list, `journal`/`conference`/`booktitle`/`publisher` as the venue, a bare `doi` (linked as https://doi.org/…), an award's `name` and `awarder`, a talk's `venue`, and a course's `title` and `university`. An academic CV sent this way printed its publications as bare titles, its talks without the venue, its courses without the course name, and no awards at all.

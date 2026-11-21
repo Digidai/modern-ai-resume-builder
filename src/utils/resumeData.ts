@@ -203,6 +203,7 @@ const descriptionOf = (item: Record<string, unknown>): string =>
  * Skills as the editor stores them (one entry per skill or "Category: a, b" group), from a list of strings, a
  * list of { name | category, keywords | items } groups, or one string ("Python, SQL", or one group per line).
  */
+const GROUP_KEYS = ['name', 'category', 'label', 'keywords', 'items', 'skills'];
 const skillList = (value: unknown): string[] => {
   if (typeof value === 'string')
     return value
@@ -210,16 +211,21 @@ const skillList = (value: unknown): string[] => {
       .flatMap((line) => (/[:：]/.test(line) ? [line] : line.split(/[,，、]/)))
       .map((skill) => skill.trim())
       .filter(Boolean);
-  if (!Array.isArray(value)) return [];
-  return value
-    .map((skill) => {
-      if (typeof skill === 'string') return skill.trim();
-      const group = obj(skill);
-      const name = (str(group.name) || str(group.category) || str(group.label)).trim();
-      const items = Array.isArray(group.keywords ?? group.items ?? group.skills) ? strings(group.keywords ?? group.items ?? group.skills) : skillList(str(group.keywords ?? group.items ?? group.skills));
-      return items.length ? (name ? `${name}: ${items.join(', ')}` : items.join(', ')) : name;
-    })
-    .filter(Boolean);
+  const group = (skill: unknown): string[] => {
+    if (typeof skill === 'string') return [skill.trim()];
+    const item = obj(skill);
+    // { "Languages": ["Go", "Python"], "Tools": "Docker, K8s" }: one group per key.
+    if (!GROUP_KEYS.some((key) => key in item))
+      return Object.entries(item).flatMap(([name, list]) => {
+        const items = Array.isArray(list) ? strings(list) : skillList(str(list));
+        return items.length && name.trim() ? [`${name.trim()}: ${items.join(', ')}`] : [];
+      });
+    const name = pick(item, 'name', 'category', 'label').trim();
+    const list = item.keywords ?? item.items ?? item.skills;
+    const items = Array.isArray(list) ? strings(list) : skillList(str(list));
+    return [items.length ? (name ? `${name}: ${items.join(', ')}` : items.join(', ')) : name];
+  };
+  return (Array.isArray(value) ? value : value && typeof value === 'object' ? [value] : []).flatMap(group).filter(Boolean);
 };
 
 /** The first non-empty string among an item's fields: agents name the same field several ways ("title" for a role). */
