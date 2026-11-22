@@ -117,7 +117,7 @@ Every template reads `--rs-accent` and the paper font variables, so the editor's
 - Improve experience bullets with action verbs and measurable impact.
 - Frontend uses a Worker-injected `ai-client-token` to request a short-lived signed session via `/api/ai/session`, then calls `/api/ai`.
 - Worker enforces origin checks, client-token verification, session+request-id verification, and multi-dimensional rate limits (IP + session + global, backed by Durable Object) before calling Workers AI (`env.AI.run`).
-- The model is set by the `AI_MODEL` Worker var (default `@cf/zai-org/glm-5.3-flash`). No API key is needed; billing goes to the Cloudflare account.
+- The model is set by the `AI_MODEL` Worker var (default `@cf/openai/gpt-oss-20b`). No API key is needed; billing goes to the Cloudflare account.
 
 ### Job Title Directory and SEO
 - `/directory` route with searchable categories (1,204 titles in 21 families).

@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- AI features (Import resume, Improve, Write summary) work again. Cloudflare retired the Workers AI model `@cf/zai-org/glm-5.3-flash` on 2026-11-20, and from then on every AI request answered "AI service is temporarily unavailable". They now use `@cf/openai/gpt-oss-20b` with medium reasoning effort. In tests on two- and four-job resumes it kept every job and degree; at low effort it sometimes dropped one.
 - Import backup names the fields it didn't read, as the Agent API does ("Backup imported. Not read: hobbies, references, experience[].location …"), and a file that isn't a resume now says which formats work (ModernCV, JSON Resume or Reactive Resume) instead of "not a ModernCV backup".
 - Import backup (and the Agent API) reads Reactive Resume (rxresu.me) JSON exports: profile, summary, experience and volunteer roles with their rich-text bullets, date ranges written as text ("January 2019 to Present"), education with its score, projects, publications, awards, skills, certifications, languages and interests. Hidden items stay out; references and custom sections are not read. Such a file used to import as a name and contact details only, with "Backup imported."
 - The ignored-field warning also names fields inside entries that the API doesn't read, once per section and field ("Ignored unknown resume fields: experience[].location, education[].minor"). Entries of JSON Resume documents are not checked, since their other fields are standard.

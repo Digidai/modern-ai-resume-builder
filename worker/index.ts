@@ -102,7 +102,7 @@ const MAX_BODY_BYTES = 64 * 1024;
 /** /api/ai bodies: a resume source of MAX_LATEX_SOURCE_CHARS characters, CJK included (3 bytes each). */
 const MAX_AI_BODY_BYTES = 160 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
-const DEFAULT_MODEL = '@cf/zai-org/glm-5.3-flash';
+const DEFAULT_MODEL = '@cf/openai/gpt-oss-20b';
 const MAX_OUTPUT_TOKENS = 600;
 /** A whole resume as JSON, plus reasoning; parsing gets a longer budget and deadline. */
 const PARSE_OUTPUT_TOKENS = 8000;
