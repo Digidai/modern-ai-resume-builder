@@ -812,6 +812,18 @@ const modelContent = (data: unknown): string => {
   return typeof message?.content === 'string' ? message.content : '';
 };
 
+/** True when the model stopped at max_tokens (OpenAI-style `finish_reason: "length"`): its text is cut off. */
+const hitTokenLimit = (data: unknown): boolean => {
+  const choice = (data && typeof data === 'object' && Array.isArray((data as JsonObject).choices) ? ((data as JsonObject).choices as unknown[])[0] : undefined) as JsonObject | undefined;
+  return choice?.finish_reason === 'length';
+};
+
+/** The error for a reply cut off at max_tokens; shown instead of the partial text. */
+const tooLongMessage = (payload: AiRequest): string =>
+  isParseRequest(payload)
+    ? 'This CV is too long for the AI to convert in one go. Import a shorter version, then add the rest by hand.'
+    : 'This text is too long for the AI to rewrite in one go. Improve it in shorter parts.';
+
 /** What `{ text }` carries for a raw model reply: the JSON object for a parse, cleaned text otherwise. */
 const finishReply = (payload: AiRequest, raw: string): string =>
   isParseRequest(payload) ? extractJsonObject(raw) : finishAiText(raw, payload.action === 'improve' ? payload.text : undefined);
@@ -906,7 +918,7 @@ const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> => 
 /** Maps a Workers AI failure to the error codes handleAiRequest reports. */
 const upstreamError = (error: unknown, model: string): Error => {
   const message = error instanceof Error ? error.message : String(error);
-  if (message === 'UPSTREAM_TIMEOUT' || message === 'EMPTY_RESPONSE') return error as Error;
+  if (message === 'UPSTREAM_TIMEOUT' || message === 'EMPTY_RESPONSE' || message.startsWith('OUTPUT_TOO_LONG:')) return error as Error;
   console.error('[ai] Workers AI call failed', { model, message });
   // Workers AI reports capacity/rate limits as errors mentioning 429 or "capacity".
   if (/\b429\b|rate limit|capacity/i.test(message)) return new Error('UPSTREAM_RATE_LIMIT:AI is busy right now. Please try again in a moment.');
@@ -927,6 +939,7 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
 
   try {
     const result = await Promise.race([env.AI.run(model, input), timeout]);
+    if (hitTokenLimit(result)) throw new Error(`OUTPUT_TOO_LONG:${tooLongMessage(payload)}`);
     const text = finishReply(payload, modelContent(result));
     if (!text) throw new Error('EMPTY_RESPONSE');
     return text;
@@ -968,6 +981,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
   const relay = async () => {
     const deadline = Date.now() + (isParseRequest(payload) ? PARSE_TIMEOUT_MS : REQUEST_TIMEOUT_MS);
     let content = '';
+    let cutOff = false;
     let lastThinking = 0;
     let reader: ReadableStreamDefaultReader<Uint8Array> | undefined;
     try {
@@ -1005,6 +1019,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
             } catch {
               continue;
             }
+            cutOff ||= hitTokenLimit(chunk);
             const { text, reasoning } = streamDelta(chunk);
             if (text) {
               content += text;
@@ -1017,6 +1032,11 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
         }
       } else {
         content = modelContent(upstream);
+        cutOff = hitTokenLimit(upstream);
+      }
+      if (cutOff) {
+        await send({ type: 'error', code: 'REQUEST_TOO_LARGE', error: tooLongMessage(payload) });
+        return;
       }
       const text = finishReply(payload, content);
       const empty = isParseRequest(payload) ? "The AI didn't return a resume. Please try again." : 'AI returned an empty response. Please try again.';
@@ -1419,6 +1439,12 @@ const handleAiRequest = async (request: Request, env: Env): Promise<Response> =>
     if (message.startsWith('UPSTREAM_UNAVAILABLE:')) {
       return appendRateLimitHeaders(
         errorResponse(503, 'UPSTREAM_UNAVAILABLE', message.replace('UPSTREAM_UNAVAILABLE:', '').trim()),
+        globalRateLimit
+      );
+    }
+    if (message.startsWith('OUTPUT_TOO_LONG:')) {
+      return appendRateLimitHeaders(
+        errorResponse(413, 'REQUEST_TOO_LARGE', message.replace('OUTPUT_TOO_LONG:', '')),
         globalRateLimit
       );
     }
