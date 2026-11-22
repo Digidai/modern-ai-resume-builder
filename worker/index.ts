@@ -788,10 +788,12 @@ const buildUserPrompt = (payload: AiRequest): string => {
     // Told only to "preserve line breaks", the model merged a bullet list into one paragraph in most runs.
     const lines = payload.text.split('\n').filter((line) => line.trim()).length;
     return [
-      `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
+      // "Results-oriented" made the model append benefits (", improving incident response") in half the runs.
+      `Rewrite this ${payload.context || 'resume'} text to be concise and specific.`,
       'Use strong action verbs and active voice, keep the original meaning, and keep a similar length.',
       // In the system prompt this was ignored; here it keeps Chinese digits and most English ones (finishAiText fixes the rest).
       'Keep every number exactly as written, in digits (write 6, never six).',
+      'Add no results, benefits or purposes the text doesn\'t state: no clauses such as "improving …", "ensuring …" or "to enhance …", and no 提升/确保 phrases.',
       ...(lines > 1 ? [`The text has ${lines} lines: return exactly ${lines} lines, one rewritten line for each original line, in the same order.`] : []),
       '',
       payload.text,
