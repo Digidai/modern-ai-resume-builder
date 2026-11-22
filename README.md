@@ -282,7 +282,7 @@ Notes:
   - `AI_SESSION_RATE_LIMIT_PER_MINUTE`
   - `AI_SESSION_TTL_SECONDS`
   - `AI_CLIENT_TOKEN_TTL_SECONDS`
-- AI features require the `AI` binding (see `wrangler.jsonc`) and the `AI_SIGNING_SECRET` Worker secret. `AI_MODEL` and `AI_REASONING_EFFORT` vars choose the model.
+- AI features require the `AI` binding (see `wrangler.jsonc`) and the `AI_SIGNING_SECRET` Worker secret. `AI_MODEL` chooses the model; `AI_REASONING_EFFORT` (Improve, Write) and `AI_PARSE_REASONING_EFFORT` (Import resume) set its reasoning effort.
 - `npm run build` generates static SEO pages + OG images in `dist/og`.
 
 ## Scripts Reference

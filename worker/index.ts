@@ -28,8 +28,10 @@ interface Env {
   /** Cloudflare Browser Rendering binding, used to print resumes to vector PDF. */
   BROWSER?: Parameters<typeof puppeteer.launch>[0];
   AI_MODEL?: string;
-  /** Sent as `reasoning_effort` when set; leave empty for models that don't accept it. */
+  /** Sent as `reasoning_effort` for Improve and Write when set; leave empty for models that don't accept it. */
   AI_REASONING_EFFORT?: string;
+  /** `reasoning_effort` for resume parsing (Import resume), which needs more care to keep every entry. */
+  AI_PARSE_REASONING_EFFORT?: string;
   AI_SIGNING_SECRET?: string;
   ALLOWED_ORIGINS?: string;
   AI_RATE_LIMIT_PER_MINUTE?: string;
@@ -103,7 +105,8 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_AI_BODY_BYTES = 160 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = '@cf/openai/gpt-oss-20b';
-const MAX_OUTPUT_TOKENS = 600;
+/** Improve and Write: room for a long description rewritten, after the model's reasoning tokens. */
+const MAX_OUTPUT_TOKENS = 2000;
 /** A whole resume as JSON, plus reasoning; parsing gets a longer budget and deadline. */
 const PARSE_OUTPUT_TOKENS = 8000;
 const PARSE_TIMEOUT_MS = 150000;
@@ -779,10 +782,12 @@ const buildUserPrompt = (payload: AiRequest): string => {
   if (payload.action === 'parse_latex') return `LaTeX source:\n\n${payload.source}`;
   if (payload.action === 'parse_text') return `Resume text:\n\n${payload.source}`;
   if (payload.action === 'improve') {
+    // Told only to "preserve line breaks", the model merged a bullet list into one paragraph in most runs.
+    const lines = payload.text.split('\n').filter((line) => line.trim()).length;
     return [
       `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
       'Use strong action verbs and active voice, keep the original meaning, and keep a similar length.',
-      'Preserve line breaks if the original has multiple lines.',
+      ...(lines > 1 ? [`The text has ${lines} lines: return exactly ${lines} lines, one rewritten line for each original line, in the same order.`] : []),
       '',
       payload.text,
     ].join('\n');
@@ -885,8 +890,8 @@ const parseJsonBody = async (request: Request, maxBytes = MAX_BODY_BYTES): Promi
 };
 
 const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> => {
-  const reasoningEffort = normalizeText(env.AI_REASONING_EFFORT);
   const parsing = isParseRequest(payload);
+  const reasoningEffort = normalizeText(parsing ? env.AI_PARSE_REASONING_EFFORT : env.AI_REASONING_EFFORT);
   const system = payload.action === 'parse_latex' ? PARSE_LATEX_PROMPT : payload.action === 'parse_text' ? PARSE_TEXT_PROMPT : SYSTEM_PROMPT;
   return {
     messages: [
