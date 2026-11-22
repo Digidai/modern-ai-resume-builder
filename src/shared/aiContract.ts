@@ -42,6 +42,8 @@ export interface AiSummaryRequest extends AiStreamOption {
   action: 'summary';
   role: string;
   skills: string[];
+  /** The resume's jobs, one string each ("Role, Company, dates:\n- bullet"), so the summary is built from real facts. */
+  experience?: string[];
 }
 
 /** Converts a LaTeX resume or CV to ModernCV JSON; the reply's `text` is that JSON. */
@@ -90,6 +92,13 @@ const keepDigits = (text: string, input: string): string =>
     if (!new RegExp(`(?<![\\d.,])${digit}(?![\\d.,]\\d)`).test(input) || new RegExp(`\\b${word}\\b`, 'i').test(input)) return result;
     return result.replace(new RegExp(`\\b${word}\\b`, 'gi'), digit);
   }, text);
+
+/** The user text a reply is checked against in finishAiText: the text Improve rewrites, or the facts a summary uses (on one line, so it adds no bullets). */
+export const aiReplyInput = (payload: AiRequest): string | undefined => {
+  if (payload.action === 'improve') return payload.text;
+  if (payload.action === 'summary') return payload.experience?.join(' ').replace(/\s+/g, ' ') || undefined;
+  return undefined;
+};
 
 /**
  * Model text as the editor shows it: think blocks and the quotes or bullets models add despite

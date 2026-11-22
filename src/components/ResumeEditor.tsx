@@ -699,7 +699,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
                       onClick={() =>
                         generateField({
                           fieldId: 'summary',
-                          generator: (onPartial) => generateSummaryField(data.title, data.skills || [], onPartial),
+                          generator: (onPartial) => generateSummaryField(data.title, data.skills || [], data.experience || [], onPartial),
                           onUpdate: applyAi(data.summary, (v) => setField('summary', v)),
                           original: data.summary,
                           onPartial: (v) => setField('summary', v),

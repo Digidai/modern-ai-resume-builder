@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react';
 import { improveText, generateSummary, AiError, type AiPartialHandler } from '../services/aiService';
+import type { Experience } from '../types';
 
 interface UseAiActionsOptions {
   onError: (message: string) => void;
@@ -149,7 +150,7 @@ export const useAiActions = ({ onError }: UseAiActionsOptions) => {
   );
 
   const generateSummaryField = useCallback(
-    async (role: string, skills: string[], onPartial?: AiPartialHandler) => generateSummary(role, skills, onPartial),
+    async (role: string, skills: string[], experience: Experience[], onPartial?: AiPartialHandler) => generateSummary(role, skills, experience, onPartial),
     []
   );
 

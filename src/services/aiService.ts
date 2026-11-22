@@ -4,10 +4,12 @@ import {
   type AiRequest,
   type AiStreamEvent,
   finishAiText,
+  aiReplyInput,
   isAiApiResponse,
   isAiErrorCode,
   isAiSessionResponse,
 } from '../shared/aiContract';
+import type { Experience } from '../types';
 
 interface AiSessionCache {
   token: string;
@@ -293,7 +295,7 @@ const streamText = (payload: AiRequest, onPartial?: AiPartialHandler) =>
     return streamAiRequest({ ...payload, stream: true }, (event) => {
       if (event.type !== 'delta' || !onPartial) return;
       raw += event.text;
-      onPartial(finishAiText(raw, payload.action === 'improve' ? payload.text : undefined));
+      onPartial(finishAiText(raw, aiReplyInput(payload)));
     });
   });
 
@@ -302,8 +304,18 @@ export const improveText = async (text: string, context: string = 'resume', onPa
   return streamText({ action: 'improve', text, context }, onPartial);
 };
 
-export const generateSummary = async (role: string, skills: string[], onPartial?: AiPartialHandler): Promise<string> =>
-  streamText({ action: 'summary', role: role?.trim() || 'Professional', skills }, onPartial);
+/** "Role, Company, dates:" and the description of each job that has a role or company, for a summary to draw on. */
+const experienceFacts = (experience: Experience[]): string[] =>
+  experience
+    .filter((job) => job.role.trim() || job.company.trim())
+    .map((job) => {
+      const dates = [job.startDate, job.isCurrent ? 'Present' : job.endDate].filter((date) => date?.trim()).join(' – ');
+      const heading = [job.role, job.company, dates].map((part) => part?.trim()).filter(Boolean).join(', ');
+      return job.description.trim() ? `${heading}:\n${job.description.trim()}` : heading;
+    });
+
+export const generateSummary = async (role: string, skills: string[], experience: Experience[] = [], onPartial?: AiPartialHandler): Promise<string> =>
+  streamText({ action: 'summary', role: role?.trim() || 'Professional', skills, experience: experienceFacts(experience) }, onPartial);
 
 /**
  * Sends a prepared LaTeX resume to the AI parser and resolves to its JSON reply (one attempt, it is

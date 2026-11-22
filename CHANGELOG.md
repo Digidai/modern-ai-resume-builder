@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Write builds the summary from your jobs. It used to see only your title and skills, so every summary claimed results nobody had written ("drives product adoption and revenue growth", "proven track record"). It now gets your experience entries and uses their facts and numbers ("led the company-wide design system that reduced UI development time by 30% and shipped 4 major SaaS releases"). With no jobs filled in, it claims no achievements.
 - Improve no longer adds results your text doesn't claim. Asked for "results-oriented" text, it appended benefits such as ", improving incident response and root-cause analysis" or ", ensuring seamless integration and minimal downtime" in 4 of 8 runs; now in 0 of 8. Results you did write ("from 3 s to 800 ms", "raised NPS by 12 points") are kept.
 - Improve keeps numbers as digits. It rewrote "6 microservices" as "six microservices" and "6 个" as "六个" in nearly every run, which makes metrics harder to scan. It is now asked to keep numbers as written, and any number your text wrote as a digit is put back as a digit if the AI still spells it out.
 - Import resume converts long academic CVs in one go: a 20,000-character CV with 90 publications and 30 talks now imports in full (about 80 s). It used to stop partway and fail with "The AI didn't return a resume". A CV that is still too long now says so instead.

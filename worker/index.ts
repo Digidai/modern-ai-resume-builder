@@ -5,6 +5,7 @@ import {
   type AiStreamEvent,
   MAX_LATEX_SOURCE_CHARS,
   finishAiText,
+  aiReplyInput,
   isParseRequest,
 } from '../src/shared/aiContract';
 import { handleAgentRequest, pdfPageCount } from './agent';
@@ -801,10 +802,16 @@ const buildUserPrompt = (payload: AiRequest): string => {
   }
 
   const skills = payload.skills.filter(Boolean).join(', ');
+  const experience = payload.experience ?? [];
+  // Asked for an "outcome-oriented" summary from a title and skills alone, the model claimed results such as
+  // "drives revenue growth" in every run; given the jobs, it builds the summary from their facts.
   return [
     `Write a professional resume summary of 2-3 sentences for a ${payload.role || 'professional'}.`,
     skills ? `Weave in the most relevant of these skills: ${skills}.` : '',
-    'Make it confident and outcome-oriented, written without first-person pronouns.',
+    ...(experience.length
+      ? ['Base it on this experience; use its facts and numbers, and claim nothing it doesn\'t show (no "proven track record", no results it doesn\'t state):', ...experience, '']
+      : ['Claim no achievements, results or years of experience: nothing is known beyond the role and skills.']),
+    'Write it without first-person pronouns, with numbers in digits.',
   ]
     .filter(Boolean)
     .join('\n');
@@ -839,7 +846,7 @@ const tooLongMessage = (payload: AiRequest): string =>
 
 /** What `{ text }` carries for a raw model reply: the JSON object for a parse, cleaned text otherwise. */
 const finishReply = (payload: AiRequest, raw: string): string =>
-  isParseRequest(payload) ? extractJsonObject(raw) : finishAiText(raw, payload.action === 'improve' ? payload.text : undefined);
+  isParseRequest(payload) ? extractJsonObject(raw) : finishAiText(raw, aiReplyInput(payload));
 
 /** The outermost JSON object in model text, re-serialised; '' when there is none. */
 const extractJsonObject = (raw: string): string => {
@@ -889,6 +896,9 @@ const validateRequest = (body: unknown): AiRequest | null => {
       action: 'summary',
       role: normalizeText(value.role).slice(0, 120) || 'Professional',
       skills,
+      experience: Array.isArray(value.experience)
+        ? value.experience.filter((item): item is string => typeof item === 'string' && item.trim() !== '').slice(0, 6).map((item) => item.slice(0, 800))
+        : [],
       stream: value.stream === true,
     };
   }
