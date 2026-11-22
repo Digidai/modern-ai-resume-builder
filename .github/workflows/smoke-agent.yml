@@ -7,6 +7,9 @@ name: Agent smoke test
 on:
   push:
     branches: [main]
+  # Daily, so an outage that no push touches (such as Cloudflare retiring the Workers AI model) fails a run.
+  schedule:
+    - cron: '17 6 * * *'
   workflow_dispatch:
 
 concurrency:

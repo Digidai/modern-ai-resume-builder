@@ -7,7 +7,8 @@
 // Checks that PDFs render with the page count reported in x-resume-pages, that an over-long resume
 // gets a "scale" hint that really fits (one page, or two for Federal), and that MCP render_pdf returns
 // a download link that downloads the same PDF and rejects a tampered link. It uses exactly 6 renders;
-// on a 429 it waits for retry-after and tries once more.
+// on a 429 it waits for retry-after and tries once more. It also makes one editor AI request
+// (session, then "improve"), so a failing Workers AI model fails the run.
 
 const BASE = (process.argv[2] || process.env.SMOKE_BASE_URL || 'https://genedai.cv').replace(/\/$/, '');
 
@@ -203,6 +204,47 @@ if (check(typeof summary.download_url === 'string' && summary.download_url.start
   const tampered = summary.download_url.replace(/\/download\/(.)/, (_, c) => `/download/${c === 'A' ? 'B' : 'A'}`);
   const bad = await fetch(tampered);
   check(bad.status === 404, 'tampered download link is rejected', `status ${bad.status}`);
+}
+
+// Editor AI, the way the page calls it: the client token from the editor HTML buys a session, which
+// buys one "improve". Catches a retired or failing Workers AI model, which the agent API never touches.
+const userAgent = 'agent-smoke';
+const cookies = new Map();
+const keepCookies = (response) => {
+  for (const line of response.headers.getSetCookie()) {
+    const [pair] = line.split(';');
+    const at = pair.indexOf('=');
+    cookies.set(pair.slice(0, at), pair.slice(at + 1));
+  }
+};
+const browserHeaders = () => ({
+  'user-agent': userAgent,
+  origin: BASE,
+  'sec-fetch-site': 'same-origin',
+  'sec-fetch-mode': 'cors',
+  cookie: Array.from(cookies, ([name, value]) => `${name}=${value}`).join('; '),
+});
+const editor = await fetch(`${BASE}/editor/`, { headers: { 'user-agent': userAgent } });
+keepCookies(editor);
+const clientToken = /<meta name="ai-client-token" content="([^"]+)"/.exec(await editor.text())?.[1];
+if (check(Boolean(clientToken), 'editor page carries an AI client token')) {
+  const session = await fetch(`${BASE}/api/ai/session`, { method: 'POST', headers: { ...browserHeaders(), 'x-ai-client-token': clientToken } });
+  keepCookies(session);
+  const sessionBody = await session.json();
+  if (check(session.status === 200 && Boolean(sessionBody.token), 'POST /api/ai/session issues a session', `status ${session.status} ${sessionBody.code ?? ''}`)) {
+    const started = Date.now();
+    const improve = await fetch(`${BASE}/api/ai`, {
+      method: 'POST',
+      headers: { ...browserHeaders(), 'content-type': 'application/json', 'x-ai-session-token': sessionBody.token, 'x-ai-request-id': crypto.randomUUID() },
+      body: JSON.stringify({ action: 'improve', text: 'I made the website faster', context: 'Experience bullet' }),
+    });
+    const result = await improve.json();
+    check(
+      improve.status === 200 && typeof result.text === 'string' && result.text.trim().length > 10,
+      'POST /api/ai improves a bullet (Workers AI answers)',
+      improve.status === 200 ? `${Date.now() - started} ms: ${result.text.slice(0, 80)}` : `status ${improve.status} ${result.code}: ${result.error}`
+    );
+  }
 }
 
 // 1 render
