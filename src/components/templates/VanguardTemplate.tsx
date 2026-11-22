@@ -6,9 +6,9 @@ import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getC
 
 const SMALL_CAPS = '[font-variant-caps:small-caps]';
 
-// The accent covers the first three letters, or the first two characters (one word) of a Chinese heading.
+// The accent covers the first three letters, or the first two characters (about one word) of a Chinese, Japanese or Korean heading.
 const SectionTitle: React.FC<{ title: string }> = ({ title }) => {
-    const split = /^[\u4e00-\u9fff]/.test(title) ? 2 : 3;
+    const split = /^[\u3040-\u30ff\u4e00-\u9fff\uac00-\ud7af]/.test(title) ? 2 : 3;
     return (
     <h2 className="mb-[2.5mm] flex items-center gap-3 break-after-avoid font-roboto text-[21px] font-bold leading-tight text-[#333333]">
         <span className="shrink-0">

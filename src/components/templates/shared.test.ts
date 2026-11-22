@@ -63,10 +63,13 @@ describe('TalkLine, AwardLine and TeachingLine', () => {
 describe('resumeLanguage', () => {
   const resume = (patch: Partial<typeof INITIAL_RESUME_DATA>) => ({ ...INITIAL_RESUME_DATA, experience: [], education: [], projects: [], skills: [], ...patch });
 
-  it('reads Chinese content as Chinese even with English tool names, but not a Chinese name or Japanese', () => {
+  it('tells Chinese, Japanese and Korean content apart, even with English tool names, but not from a CJK name', () => {
     expect(resumeLanguage(resume({ title: '高级前端工程师', summary: '负责 React、TypeScript 与 Node.js 服务的架构设计，带领 5 人团队交付 Design System。' }))).toBe('zh');
     expect(resumeLanguage(resume({ fullName: '李明', title: 'Senior Engineer', summary: 'Builds data platforms with Spark and Kafka.' }))).toBe('en');
-    expect(resumeLanguage(resume({ title: 'フロントエンドエンジニア', summary: '大規模なウェブサービスの開発を担当しました。' }))).toBe('en');
+    expect(resumeLanguage(resume({ title: 'フロントエンドエンジニア', summary: '大規模なウェブサービスの開発を担当しました。' }))).toBe('ja');
+    // Mostly kanji with a few particles is still Japanese; Korean is Hangul even with English names.
+    expect(resumeLanguage(resume({ title: '営業部長', summary: '法人営業部門統括責任者として新規顧客開拓を推進。' }))).toBe('ja');
+    expect(resumeLanguage(resume({ title: '백엔드 개발자', summary: 'Kotlin과 Spring 기반 결제 시스템을 설계하고 운영했습니다.' }))).toBe('ko');
     expect(resumeLanguage(resume({ title: 'Engineer', skills: ['熟悉 Go'] }))).toBe('en');
   });
 
@@ -75,10 +78,13 @@ describe('resumeLanguage', () => {
     expect(resumeLanguage(resume({ summary: 'Product planning.', design: { ...DEFAULT_DESIGN, language: 'zh' } }))).toBe('zh');
   });
 
-  it('formats Chinese dates as year.month with 至今', () => {
+  it('formats dates the way each language writes them', () => {
     expect(formatDateRange('2021-3', '', true, 'zh')).toBe('2021.03 – 至今');
     expect(formatDateRange('2019-09', '2023-06', false, 'zh')).toBe('2019.09 – 2023.06');
     expect(formatDateRange('2021-03', '', true)).toBe('Mar 2021 – Present');
+    expect(formatDateRange('2021-03', '', true, 'ja')).toBe('2021年3月 – 現在');
+    expect(formatDateRange('2018-07', '2021-02', false, 'ko')).toBe('2018.07 – 2021.02');
+    expect(formatDateRange('2021-03', '', true, 'ko')).toBe('2021.03 – 현재');
   });
 });
 
@@ -98,20 +104,23 @@ describe('Templates', () => {
     expect(wide).toEqual([]);
   });
 
-  it('print every heading, contact label and date in Chinese for a Chinese resume', async () => {
+  it('print every heading, contact label and date in Chinese, Japanese or Korean for such a resume', async () => {
     const { TEMPLATES } = await import('../../constants/templates');
     const { TEMPLATE_LOADERS } = await import('../ResumeTemplateRenderer');
     const { FIXTURES } = await import('../../dev/fixtures');
+    const headings = { zh: ['工作经历', '教育背景'], ja: ['職務経歴', '学歴'], ko: ['경력', '학력'] } as const;
     const english: string[] = [];
     for (const template of TEMPLATES) {
       const { default: Template } = await TEMPLATE_LOADERS[template.id as keyof typeof TEMPLATE_LOADERS]();
-      const data = { ...FIXTURES.long, templateId: template.id, design: { ...DEFAULT_DESIGN, language: 'zh' as const } };
-      const html = renderToStaticMarkup(createElement(Template, { data }));
-      const text = html.replace(/<[^>]+>/g, '');
-      if (!text.includes('工作经历') || !text.includes('教育背景')) english.push(`${template.id}: no Chinese headings`);
-      for (const match of html.matchAll(/>\s*(Summary|Profile|Experience|Work Experience|Education|Skills|Projects|Contact|Email|Phone|Location|Present|Jan \d{4}|Mar \d{4})\s*</gi)) {
-        // Mono writes code: "const skills = [...]" keeps its variable names.
-        if (!html.slice(match.index - 60, match.index).includes('>const<')) english.push(`${template.id}: ${match[1]}`);
+      for (const language of ['zh', 'ja', 'ko'] as const) {
+        const data = { ...FIXTURES.long, templateId: template.id, design: { ...DEFAULT_DESIGN, language } };
+        const html = renderToStaticMarkup(createElement(Template, { data }));
+        const text = html.replace(/<[^>]+>/g, '');
+        if (!headings[language].every((heading) => text.includes(heading))) english.push(`${template.id} (${language}): no translated headings`);
+        for (const match of html.matchAll(/>\s*(Summary|Profile|Experience|Work Experience|Education|Skills|Projects|Contact|Email|Phone|Location|Present|Jan \d{4}|Mar \d{4})\s*</gi)) {
+          // Mono writes code: "const skills = [...]" keeps its variable names.
+          if (!html.slice(match.index - 60, match.index).includes('>const<')) english.push(`${template.id} (${language}): ${match[1]}`);
+        }
       }
     }
     expect(english).toEqual([]);

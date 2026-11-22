@@ -41,7 +41,7 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <ul className="mt-3.5 flex flex-wrap gap-x-5 gap-y-1 rounded border border-slate-200 bg-slate-50 px-3 py-2 font-mono text-[12.5px] text-slate-800 print:bg-transparent">
                         {contacts.map((entry) => (
                             <li key={entry.id} className="min-w-0 wrap-anywhere">
-                                <span className="text-(--accent)">{resumeLanguage(data) === 'zh' && entry.key !== 'link' ? entry.label : entry.key}</span>
+                                <span className="text-(--accent)">{resumeLanguage(data) !== 'en' && entry.key !== 'link' ? entry.label : entry.key}</span>
                                 <span className="text-slate-500">: </span>
                                 <ContactLink entry={entry} />
                             </li>

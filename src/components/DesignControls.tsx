@@ -25,8 +25,10 @@ const LANGUAGE_OPTIONS: Array<{ id: ResumeLanguage | undefined; label: string }>
   { id: undefined, label: 'Auto' },
   { id: 'en', label: 'English' },
   { id: 'zh', label: '中文' },
+  { id: 'ja', label: '日本語' },
+  { id: 'ko', label: '한국어' },
 ];
-const LANGUAGE_NAMES: Record<ResumeLanguage, string> = { en: 'English', zh: '中文' };
+const LANGUAGE_NAMES: Record<ResumeLanguage, string> = { en: 'English', zh: '中文', ja: '日本語', ko: '한국어' };
 
 export const DesignControls = ({ design, onChange, expectsLetter = false, maxPages, detectedLanguage = 'en' }: DesignControlsProps) => {
   const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum, overLimit } = useOnePageFit(design, onChange, maxPages);
@@ -207,19 +209,19 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
 
       <fieldset>
         <legend className="text-sm font-medium text-ink">Resume language</legend>
-        <div role="radiogroup" aria-label="Resume language" className="mt-2 grid grid-cols-3 gap-1 rounded-lg border border-rule bg-tint p-0.5 text-sm">
+        <div role="radiogroup" aria-label="Resume language" className="mt-2 grid grid-cols-5 gap-1 rounded-lg border border-rule bg-tint p-0.5 text-sm">
           {LANGUAGE_OPTIONS.map((option, index) => (
             <button
               key={option.label}
               id={`language-${index}`}
               type="button"
               role="radio"
-              lang={option.id === 'zh' ? 'zh' : undefined}
+              lang={option.id && option.id !== 'en' ? option.id : undefined}
               aria-checked={index === languageIndex}
               tabIndex={index === languageIndex ? 0 : -1}
               onKeyDown={(e) => onLanguageKeyDown(e, index)}
               onClick={() => onChange({ language: option.id })}
-              className={`focus-ring rounded-md px-3 py-1.5 font-medium transition-colors ${index === languageIndex ? 'bg-surface text-ink shadow-card' : 'text-muted hover:text-ink'}`}
+              className={`focus-ring rounded-md px-1 py-1.5 font-medium transition-colors ${index === languageIndex ? 'bg-surface text-ink shadow-card' : 'text-muted hover:text-ink'}`}
             >
               {option.label}
             </button>

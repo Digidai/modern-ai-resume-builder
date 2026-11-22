@@ -56,7 +56,7 @@ const PDFLATEX_SAFE = /^[\x00-\u017F\u2013\u2014\u2018\u2019\u201C\u201D\u2022\u
 
 export const latexEngine = (data: ResumeData): 'pdflatex' | 'xelatex' => {
   const text = JSON.stringify(data);
-  return resumeLanguage(data) === 'zh' || CJK.test(text) || !PDFLATEX_SAFE.test(text) ? 'xelatex' : 'pdflatex';
+  return resumeLanguage(data) !== 'en' || CJK.test(text) || !PDFLATEX_SAFE.test(text) ? 'xelatex' : 'pdflatex';
 };
 
 const bold = (text: string, owner: string) => {

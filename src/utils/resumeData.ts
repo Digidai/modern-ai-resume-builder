@@ -1,6 +1,6 @@
 import { DEFAULT_TEMPLATE_ID, currentTemplateId } from '../constants/templates';
 import { validateUrl } from './validation';
-import { DEFAULT_DESIGN, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
+import { DEFAULT_DESIGN, RESUME_LANGUAGES, type ResumeLanguage, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
 /** Text fields; agents often send years and phone numbers as numbers ("year": 2023). */
 const str = (value: unknown): string => (typeof value === 'string' ? value : typeof value === 'number' && Number.isFinite(value) ? String(value) : '');
@@ -60,7 +60,7 @@ export const sanitizeDesign = (input: unknown): ResumeDesign => {
   const font = typeof raw.font === 'string' && raw.font ? raw.font : DEFAULT_DESIGN.font;
   const scale = typeof raw.scale === 'number' && Number.isFinite(raw.scale) ? Math.min(1.15, Math.max(0.85, raw.scale)) : 1;
   const paper = raw.paper === 'letter' ? 'letter' : 'a4';
-  return { accent, font, scale, paper, ...(raw.language === 'en' || raw.language === 'zh' ? { language: raw.language } : {}) };
+  return { accent, font, scale, paper, ...(RESUME_LANGUAGES.includes(raw.language as ResumeLanguage) ? { language: raw.language as ResumeLanguage } : {}) };
 };
 
 const obj = (value: unknown): Record<string, unknown> =>

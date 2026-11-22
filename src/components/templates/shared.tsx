@@ -1,9 +1,9 @@
 import { validateUrl } from '../../utils/validation';
 import React from 'react';
 import { ResumeData, type Award, type Publication, type Talk, type Teaching, type ResumeLanguage } from '../../types';
-import { resumeLanguage, tr } from '../../utils/resumeLanguage';
+import { resumeLanguage, tr, translate } from '../../utils/resumeLanguage';
 
-export { resumeLanguage, tr };
+export { resumeLanguage, tr, translate };
 import {
     MailIcon,
     PhoneIcon,
@@ -32,20 +32,21 @@ export interface TemplateProps {
 
 const MONTHS = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-/** "2021-03" → "Mar 2021" (Chinese: "2021.03"), "2021" → "2021"; anything else is shown as typed. */
+/** "2021-03" → "Mar 2021" (Chinese and Korean: "2021.03", Japanese: "2021年3月"), "2021" → "2021"; anything else is shown as typed. */
 export const formatDate = (value: string, language: ResumeLanguage = 'en'): string => {
     const trimmed = value.trim();
     const match = /^(\d{4})-(\d{1,2})(?:-\d{1,2})?$/.exec(trimmed);
     if (!match) return trimmed;
     const month = MONTHS[Number(match[2]) - 1];
     if (!month) return match[1];
-    return language === 'zh' ? `${match[1]}.${match[2].padStart(2, '0')}` : `${month} ${match[1]}`;
+    if (language === 'en') return `${month} ${match[1]}`;
+    return language === 'ja' ? `${match[1]}年${Number(match[2])}月` : `${match[1]}.${match[2].padStart(2, '0')}`;
 };
 
-/** "Mar 2021 – Present" (Chinese: "2021.03 – 至今"); collapses gracefully when either end is missing. */
+/** "Mar 2021 – Present" (Chinese: "2021.03 – 至今", Japanese: "2021年3月 – 現在", Korean: "2021.03 – 현재"); collapses gracefully when either end is missing. */
 export const formatDateRange = (start: string, end: string, isCurrent = false, language: ResumeLanguage = 'en'): string => {
     const from = formatDate(start, language);
-    const to = isCurrent ? (language === 'zh' ? '至今' : 'Present') : formatDate(end, language);
+    const to = isCurrent ? translate(language, 'Present') : formatDate(end, language);
     if (from && to) return `${from} – ${to}`;
     return from || to;
 };

@@ -157,6 +157,12 @@ html.dark {
     -webkit-font-smoothing: antialiased;
   }
 
+  /* Korean puts spaces between words and wraps at them, like English; without this the browser breaks
+     inside words (사/용자). Chinese and Japanese have no spaces and break between characters. */
+  .resume-paper:lang(ko) {
+    word-break: keep-all;
+  }
+
   /* Full-bleed templates own their margins on every printed page: the template root and any `.page-frame`
      repeat their padding, borders and background on each page they span. On screen this only matters to
      the off-screen copy that printLayout.ts paginates in columns to predict the printed pages. */

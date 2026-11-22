@@ -7,6 +7,7 @@ import { MM_TO_PX, PRINT_CONFIG, paperSize } from '../constants/print';
 import { measurePrintLayout, SUPPORTS_CLONE, type PrintLayout } from '../utils/printLayout';
 import { designStyle } from '../constants/design';
 import { getCspNonce } from '../utils/csp';
+import { LANGUAGE_TAGS, resumeLanguage } from '../utils/resumeLanguage';
 
 const onePage = (pageHeightPx: number): PrintLayout => ({ pages: 1, breaksMm: [], fillHeightPx: pageHeightPx - 1, lastPageFill: 1 });
 
@@ -113,6 +114,7 @@ const ResumePreview: React.FC<ResumePreviewProps> = ({ data, id = 'resume-previe
         isFullBleed ? '' : 'p-[15mm]'
       }`}
       id={id || undefined}
+      lang={LANGUAGE_TAGS[resumeLanguage(data)]}
       data-template-id={data.templateId}
       data-paper={page.id}
       data-full-bleed={isFullBleed || undefined}

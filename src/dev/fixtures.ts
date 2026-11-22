@@ -1,7 +1,7 @@
 import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Award, type Publication, type Talk, type Teaching } from '../types';
 
 /** Resume data sets used by the dev-only template gallery (`/dev/templates`). */
-export const FIXTURES: Record<'default' | 'long' | 'sparse' | 'zh', ResumeData> = {
+export const FIXTURES: Record<'default' | 'long' | 'sparse' | 'zh' | 'ja' | 'ko', ResumeData> = {
   default: INITIAL_RESUME_DATA,
 
   // Stress test: long name and title, many entries, long bullets, long links, 20 skills.
@@ -162,6 +162,78 @@ export const FIXTURES: Record<'default' | 'long' | 'sparse' | 'zh', ResumeData> 
     education: [{ id: 'ze1', school: '同济大学', degree: '工业设计 学士', startDate: '2014-09', endDate: '2018-06' }],
     projects: [{ id: 'zp1', name: '企业级数据看板', link: 'siyuan.design/dashboard', description: '- 重构 40 余张报表的信息架构，用户平均查询时间减少 45%' }],
     skills: ['设计工具: Figma, Sketch, Principle', '研究方法: 用户访谈, 可用性测试, A/B 测试', '前端: HTML, CSS, React 基础'],
+  },
+
+  // Japanese (職務経歴書 style) and Korean resumes: headings and dates follow them automatically.
+  ja: {
+    ...INITIAL_RESUME_DATA,
+    fullName: '佐藤 健',
+    title: 'シニアプロダクトデザイナー',
+    email: 'ken.sato@example.com',
+    phone: '090-1234-5678',
+    location: '東京都渋谷区',
+    website: 'kensato.design',
+    linkedin: '',
+    links: [{ id: 'jl1', label: '', url: 'github.com/kensato' }],
+    summary: 'B2B SaaS のプロダクトデザインに 6 年間従事。デザインシステムの構築と業務フローの整理を得意とし、エンジニアと密に連携してユーザー調査の結果を画面に落とし込みます。',
+    experience: [
+      {
+        id: 'j1',
+        company: '株式会社ネビュラテック',
+        role: 'シニアプロダクトデザイナー',
+        startDate: '2021-03',
+        endDate: '',
+        isCurrent: true,
+        description: '- 全社のデザインシステムを主導し、フロントエンドの開発期間を 30% 短縮\n- プロダクト・開発チームと協力し SaaS の大型リリースを 4 回実施\n- デザイナー 3 名の育成と週次デザインレビューの立ち上げ',
+      },
+      {
+        id: 'j2',
+        company: '株式会社パルスクリエイティブ',
+        role: 'UI/UX デザイナー',
+        startDate: '2018-04',
+        endDate: '2021-02',
+        isCurrent: false,
+        description: '- 金融・医療業界のクライアント向けにレスポンシブな Web・モバイルアプリを設計\n- 60 件以上のユーザビリティテストを実施し、プロトタイプを検証',
+      },
+    ],
+    education: [{ id: 'je1', school: '千葉大学', degree: '工学部 デザイン学科 学士', startDate: '2014-04', endDate: '2018-03' }],
+    projects: [{ id: 'jp1', name: '業務ダッシュボードの刷新', link: 'kensato.design/dashboard', description: '- 40 以上のレポートの情報設計を見直し、検索時間を平均 45% 削減' }],
+    skills: ['デザインツール: Figma, Sketch', 'リサーチ: ユーザーインタビュー, ユーザビリティテスト', '資格: TOEIC 860 点'],
+  },
+  ko: {
+    ...INITIAL_RESUME_DATA,
+    fullName: '김지훈',
+    title: '시니어 프로덕트 디자이너',
+    email: 'jihoon.kim@example.com',
+    phone: '010-1234-5678',
+    location: '서울 강남구',
+    website: 'jihoon.design',
+    linkedin: '',
+    links: [{ id: 'kl1', label: '', url: 'github.com/jihoonkim' }],
+    summary: 'B2B SaaS 프로덕트 디자인 6년 경력. 디자인 시스템 구축과 복잡한 업무 흐름 정리에 강점이 있으며, 개발자와 긴밀히 협업해 사용자 리서치 결과를 화면으로 구현합니다.',
+    experience: [
+      {
+        id: 'k1',
+        company: '네뷸라테크',
+        role: '시니어 프로덕트 디자이너',
+        startDate: '2021-03',
+        endDate: '',
+        isCurrent: true,
+        description: '- 전사 디자인 시스템 구축을 주도해 프론트엔드 개발 기간 30% 단축\n- 제품·개발팀과 협업해 SaaS 메이저 릴리스 4회 출시\n- 디자이너 3명 멘토링 및 주간 디자인 리뷰 도입',
+      },
+      {
+        id: 'k2',
+        company: '펄스 크리에이티브',
+        role: 'UI/UX 디자이너',
+        startDate: '2018-07',
+        endDate: '2021-02',
+        isCurrent: false,
+        description: '- 금융·의료 고객사의 반응형 웹 및 모바일 앱 설계\n- 60회 이상의 사용성 테스트로 고해상도 프로토타입 검증',
+      },
+    ],
+    education: [{ id: 'ke1', school: '홍익대학교', degree: '산업디자인 학사', startDate: '2014-03', endDate: '2018-02' }],
+    projects: [{ id: 'kp1', name: '업무 대시보드 개편', link: 'jihoon.design/dashboard', description: '- 40여 개 리포트의 정보 구조를 재설계해 평균 조회 시간 45% 단축' }],
+    skills: ['디자인 도구: Figma, Sketch', '리서치: 사용자 인터뷰, 사용성 테스트', '자격증: 컴퓨터그래픽스운용기능사'],
   },
 };
 

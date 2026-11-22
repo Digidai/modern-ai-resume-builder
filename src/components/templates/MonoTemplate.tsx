@@ -28,7 +28,7 @@ const descriptionList = "list-['›_'] space-y-0.5 pl-4 marker:text-(--accent-li
 const block = 'flex flex-col gap-3.5 border-l-2 border-slate-700 pl-4';
 
 export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
-    const heading = (text: string) => (resumeLanguage(data) === 'zh' ? tr(data, text) : text.toLowerCase());
+    const heading = (text: string) => (resumeLanguage(data) !== 'en' ? tr(data, text) : text.toLowerCase());
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const flatSkills = skillGroups.length === 1 && !skillGroups[0].category;

@@ -2,8 +2,12 @@ import React from 'react';
 import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, resumeLanguage, tr } from './shared';
 
 /** Screenplay-style scene heading ("INT. EXPERIENCE — CONTINUOUS") trailed by an accent hairline. */
-/** Chinese screenplays write "内景" and the time of day the same way. */
-const ZH_TIMES: Record<string, string> = { DAY: '日', CONTINUOUS: '连续', NIGHT: '夜', FLASHBACK: '闪回', MONTAGE: '蒙太奇' };
+/** How Chinese, Japanese (○ marks a scene) and Korean screenplays write the fade-in, scene and time of day. */
+const SCREENPLAY = {
+    zh: { fade: '淡入：', scene: '内景 · ', DAY: '日', CONTINUOUS: '连续', NIGHT: '夜', FLASHBACK: '闪回', MONTAGE: '蒙太奇' },
+    ja: { fade: 'フェードイン：', scene: '○ ', DAY: '昼', CONTINUOUS: '続き', NIGHT: '夜', FLASHBACK: '回想', MONTAGE: 'モンタージュ' },
+    ko: { fade: '페이드 인:', scene: '실내 · ', DAY: '낮', CONTINUOUS: '연속', NIGHT: '밤', FLASHBACK: '플래시백', MONTAGE: '몽타주' },
+} as const;
 
 const SceneHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-2.5 flex items-center gap-3 text-[13px] font-bold tracking-[0.08em] text-(--accent) uppercase break-after-avoid">
@@ -24,8 +28,10 @@ const descriptionList = "list-['–_'] space-y-0.5 pl-4 marker:text-slate-500";
 const entryTitle = 'font-bold tracking-wide text-slate-950 uppercase';
 
 export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
-    const scene = (heading: string, time: string) =>
-        resumeLanguage(data) === 'zh' ? `内景 · ${tr(data, heading)} — ${ZH_TIMES[time]}` : `INT. ${heading.toUpperCase()} — ${time}`;
+    const language = resumeLanguage(data);
+    const screenplay = language === 'en' ? null : SCREENPLAY[language];
+    const scene = (heading: string, time: 'DAY' | 'CONTINUOUS' | 'NIGHT' | 'FLASHBACK' | 'MONTAGE') =>
+        screenplay ? `${screenplay.scene}${tr(data, heading)} — ${screenplay[time]}` : `INT. ${heading.toUpperCase()} — ${time}`;
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const flatSkills = skillGroups.length === 1 && !skillGroups[0].category;
@@ -33,7 +39,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-[#fafafa] px-[16mm] pt-[9mm] pb-[7mm] font-jetbrains text-[13.5px] leading-normal text-slate-800 wrap-break-word [--accent:var(--rs-accent,#1E293B)]">
             <header className="mb-4 border-b-2 border-(--accent) pb-4 text-center">
-                <div className="mb-1.5 text-[11px] tracking-[0.08em] text-(--accent) uppercase">{resumeLanguage(data) === 'zh' ? '淡入：' : 'Fade in:'}</div>
+                <div className="mb-1.5 text-[11px] tracking-[0.08em] text-(--accent) uppercase">{screenplay ? screenplay.fade : 'Fade in:'}</div>
                 <div role="heading" aria-level={1} className="text-[28px] leading-tight font-bold tracking-[0.08em] text-slate-950 uppercase">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-1.5 text-[14px] tracking-wide text-slate-700">({data.title})</p>}
                 {contacts.length > 0 && (

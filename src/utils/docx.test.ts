@@ -26,5 +26,8 @@ describe('toDocx', () => {
     expect(lines).toContain('教育背景');
     expect(text).toContain('Senior Product Designer, TechNova Solutions 2021.03 – 至今');
     expect(lines).not.toContain('Experience');
+    const ja = await docxText(toDocx({ ...INITIAL_RESUME_DATA, design: { ...DEFAULT_DESIGN, language: 'ja' } }));
+    expect(ja.split('\n')).toContain('職務経歴');
+    expect(ja).toContain('2021年3月 – 現在');
   });
 });
