@@ -27,6 +27,14 @@ const endsBefore = (start: string, end: string) =>
 const skillCount = (skills: string[]) =>
   skills.reduce((total, entry) => total + entry.slice(entry.search(/[:：]/) + 1).split(/[,;，、；]/).filter((skill) => skill.trim()).length, 0);
 
+/**
+ * A figure in a bullet: a digit, an English number word ("three designers", "doubled"), or a Chinese numeral
+ * before a unit ("三名", "两倍", "百分之二十"). A bare numeral isn't enough in Chinese: 一 and 万 sit inside words
+ * such as 统一 and 进一步.
+ */
+const NUMBER =
+  /\d|\b(?:two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|hundreds?|thousands?|millions?|billions?|dozens?|doubled?|tripled?|halved)\b|百分之|[零一二两三四五六七八九十百千万亿]+(?:个|名|人|位|次|倍|项|款|家|年|月|天|周|万|亿|成|条|篇|场|套|门|台|种|所|支|期|轮)/i;
+
 const bullets = (text: string) =>
   text
     .split('\n')
@@ -57,7 +65,7 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     const lines = bullets(exp.description);
     if (lines.length === 0) add({ id: `empty-${exp.id}`, message: `Describe what you achieved at ${name}.`, tab: 'experience', item });
     // Recent roles carry the numbers; an older role with a line or two needs none.
-    else if ((index === 0 || lines.length >= 3) && !lines.some((line) => /\d/.test(line))) {
+    else if ((index === 0 || lines.length >= 3) && !lines.some((line) => NUMBER.test(line))) {
       add({ id: `numbers-${exp.id}`, message: `Add a number to ${name}: a %, an amount, a team size or a count.`, tab: 'experience', item });
     }
     const long = lines.filter((line) => printWidth(line) > LONG_BULLET_CHARS).length;

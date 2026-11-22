@@ -26,6 +26,14 @@ describe('checkResume', () => {
     const old = (description: string) => ({ id: 'o', company: 'Old Co', role: 'Intern', startDate: '2015-01', endDate: '2016-01', isCurrent: false, description });
     expect(ids({ ...base, experience: [base.experience[0], old('- Cleaned survey data\n- Wrote reports')] })).toEqual([]);
     expect(ids({ ...base, experience: [base.experience[0], old('- Cleaned data\n- Wrote reports\n- Ran interviews')] })).toEqual(['numbers-o']);
+    // Figures written as words count; words that merely contain a numeral (统一, 进一步, "someone") don't.
+    const three = (line: string) => ids({ ...base, experience: [old(`- Cleaned data\n- Wrote reports\n- ${line}`)] });
+    expect(three('Mentored three designers')).toEqual([]);
+    expect(three('Doubled sign-ups')).toEqual([]);
+    expect(three('带领三名工程师完成迁移')).toEqual([]);
+    expect(three('转化率提升百分之二十')).toEqual([]);
+    expect(three('统一设计规范，进一步提升效率')).toEqual(['numbers-o']);
+    expect(three('Helped someone often')).toEqual(['numbers-o']);
     // 120 CJK characters print as wide as 240 Latin ones; 120 Latin ones are fine.
     expect(ids({ ...base, experience: [old(`- 负责${'数'.repeat(117)}3`)] })).toEqual(['long-o']);
     expect(ids({ ...base, experience: [old(`- 1 ${'a'.repeat(118)}`)] })).toEqual([]);
