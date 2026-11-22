@@ -782,6 +782,14 @@ const PARSE_TEXT_PROMPT = [
   'URLs listed at the end under "Links in the file" belong to the profile, project or publication whose text they were attached to.',
 ].join('\n');
 
+/** The language of text written in a CJK script (kana and Hangul first, since Japanese also uses Han characters); '' otherwise. */
+const cjkLanguage = (text: string): string => {
+  if (/[\u3040-\u30ff]/.test(text)) return 'Japanese';
+  if (/[\uac00-\ud7af]/.test(text)) return 'Korean';
+  if (/[\u4e00-\u9fff]/.test(text)) return 'Chinese';
+  return '';
+};
+
 const buildUserPrompt = (payload: AiRequest): string => {
   if (payload.action === 'parse_latex') return `LaTeX source:\n\n${payload.source}`;
   if (payload.action === 'parse_text') return `Resume text:\n\n${payload.source}`;
@@ -803,6 +811,7 @@ const buildUserPrompt = (payload: AiRequest): string => {
 
   const skills = payload.skills.filter(Boolean).join(', ');
   const experience = payload.experience ?? [];
+  const language = cjkLanguage([payload.role, ...experience].join(' '));
   // Asked for an "outcome-oriented" summary from a title and skills alone, the model claimed results such as
   // "drives revenue growth" in every run; given the jobs, it builds the summary from their facts.
   return [
@@ -810,8 +819,10 @@ const buildUserPrompt = (payload: AiRequest): string => {
     skills ? `Weave in the most relevant of these skills: ${skills}.` : '',
     ...(experience.length
       ? ['Base it on this experience; use its facts and numbers, and claim nothing it doesn\'t show (no "proven track record", no results it doesn\'t state):', ...experience, '']
-      : ['Claim no achievements, results or years of experience: nothing is known beyond the role and skills.']),
+      : ['Claim no achievements, results or years of experience (no "proven" or "track record"): nothing is known beyond the role and skills.']),
     'Write it without first-person pronouns, with numbers in digits.',
+    // The instructions are English, so with a Chinese title and no jobs the summary came back in English half the time.
+    ...(language ? [`Write it in ${language}.`] : []),
   ]
     .filter(Boolean)
     .join('\n');
