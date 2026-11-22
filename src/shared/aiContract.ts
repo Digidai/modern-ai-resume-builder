@@ -77,19 +77,34 @@ export const MAX_LATEX_SOURCE_CHARS = 40_000;
 
 export type AiRequest = AiImproveRequest | AiSummaryRequest | AiParseRequest;
 
+const NUMBER_WORDS = ['two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 'seventeen', 'eighteen', 'nineteen', 'twenty'];
+
+/**
+ * Puts back the digits of `input` that the model spelled out ("6 microservices" rewritten as "six"),
+ * which it did in most runs despite the prompt. Only for numbers the input wrote as digits and never as words.
+ * ("one" is left alone: it is usually a pronoun.)
+ */
+const keepDigits = (text: string, input: string): string =>
+  NUMBER_WORDS.reduce((result, word, index) => {
+    const digit = String(index + 2);
+    if (!new RegExp(`(?<![\\d.,])${digit}(?![\\d.,]\\d)`).test(input) || new RegExp(`\\b${word}\\b`, 'i').test(input)) return result;
+    return result.replace(new RegExp(`\\b${word}\\b`, 'gi'), digit);
+  }, text);
+
 /**
  * Model text as the editor shows it: think blocks and the quotes or bullets models add despite
- * instructions are removed, and when `input` used "- " bullets each line becomes one again (templates
- * render them as lists). Also works on a partial reply while it streams.
+ * instructions are removed, numbers `input` wrote as digits stay digits, and when `input` used "- "
+ * bullets each line becomes one again (templates render them as lists). Also works on a partial reply while it streams.
  */
 export const finishAiText = (raw: string, input?: string): string => {
-  const text = raw
+  const cleaned = raw
     .replace(/<think>[\s\S]*?<\/think>/gi, '')
     .replace(/<think>[\s\S]*$/i, '')
     .trim()
     .replace(/^["“”']+|["“”']+$/g, '')
     .replace(/^\s*(?:[-*•]\s+)/gm, '')
     .trim();
+  const text = input ? keepDigits(cleaned, input) : cleaned;
   if (!input || !/^\s*[-*•]\s+/m.test(input)) return text;
   return text
     .split('\n')

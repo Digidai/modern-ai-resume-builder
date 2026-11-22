@@ -790,6 +790,8 @@ const buildUserPrompt = (payload: AiRequest): string => {
     return [
       `Rewrite this ${payload.context || 'resume'} text to be concise, specific, and results-oriented.`,
       'Use strong action verbs and active voice, keep the original meaning, and keep a similar length.',
+      // In the system prompt this was ignored; here it keeps Chinese digits and most English ones (finishAiText fixes the rest).
+      'Keep every number exactly as written, in digits (write 6, never six).',
       ...(lines > 1 ? [`The text has ${lines} lines: return exactly ${lines} lines, one rewritten line for each original line, in the same order.`] : []),
       '',
       payload.text,
