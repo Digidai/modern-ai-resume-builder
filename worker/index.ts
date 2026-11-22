@@ -107,9 +107,12 @@ const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = '@cf/openai/gpt-oss-20b';
 /** Improve and Write: room for a long description rewritten, after the model's reasoning tokens. */
 const MAX_OUTPUT_TOKENS = 2000;
-/** A whole resume as JSON, plus reasoning; parsing gets a longer budget and deadline. */
-const PARSE_OUTPUT_TOKENS = 8000;
-const PARSE_TIMEOUT_MS = 150000;
+/**
+ * A whole resume as JSON, plus reasoning; parsing gets a longer budget and deadline. A 20,000-character
+ * academic CV (90 publications) took 8,700 tokens and 82 s with gpt-oss-20b at medium effort.
+ */
+const PARSE_OUTPUT_TOKENS = 16000;
+const PARSE_TIMEOUT_MS = 240000;
 const DEFAULT_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_PER_SESSION_RATE_LIMIT_PER_MINUTE = 20;
 const DEFAULT_GLOBAL_RATE_LIMIT_PER_MINUTE = 240;
@@ -812,10 +815,16 @@ const modelContent = (data: unknown): string => {
   return typeof message?.content === 'string' ? message.content : '';
 };
 
-/** True when the model stopped at max_tokens (OpenAI-style `finish_reason: "length"`): its text is cut off. */
-const hitTokenLimit = (data: unknown): boolean => {
-  const choice = (data && typeof data === 'object' && Array.isArray((data as JsonObject).choices) ? ((data as JsonObject).choices as unknown[])[0] : undefined) as JsonObject | undefined;
-  return choice?.finish_reason === 'length';
+/**
+ * True when the model stopped at max_tokens, so its text is cut off: an OpenAI-style `finish_reason: "length"`,
+ * or a `usage` (Workers AI's last stream chunk) that spent the whole budget, since streams don't always say why they ended.
+ */
+const hitTokenLimit = (data: unknown, maxTokens: number): boolean => {
+  if (!data || typeof data !== 'object') return false;
+  const value = data as JsonObject;
+  const choice = (Array.isArray(value.choices) ? value.choices[0] : undefined) as JsonObject | undefined;
+  const used = (value.usage as JsonObject | undefined)?.completion_tokens;
+  return choice?.finish_reason === 'length' || (typeof used === 'number' && used >= maxTokens);
 };
 
 /** The error for a reply cut off at max_tokens; shown instead of the partial text. */
@@ -901,7 +910,7 @@ const parseJsonBody = async (request: Request, maxBytes = MAX_BODY_BYTES): Promi
   }
 };
 
-const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> => {
+const buildAiInput = (env: Env, payload: AiRequest): Record<string, unknown> & { max_tokens: number } => {
   const parsing = isParseRequest(payload);
   const reasoningEffort = normalizeText(parsing ? env.AI_PARSE_REASONING_EFFORT : env.AI_REASONING_EFFORT);
   const system = payload.action === 'parse_latex' ? PARSE_LATEX_PROMPT : payload.action === 'parse_text' ? PARSE_TEXT_PROMPT : SYSTEM_PROMPT;
@@ -939,7 +948,7 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
 
   try {
     const result = await Promise.race([env.AI.run(model, input), timeout]);
-    if (hitTokenLimit(result)) throw new Error(`OUTPUT_TOO_LONG:${tooLongMessage(payload)}`);
+    if (hitTokenLimit(result, input.max_tokens)) throw new Error(`OUTPUT_TOO_LONG:${tooLongMessage(payload)}`);
     const text = finishReply(payload, modelContent(result));
     if (!text) throw new Error('EMPTY_RESPONSE');
     return text;
@@ -966,9 +975,10 @@ const streamDelta = (chunk: JsonObject): { text: string; reasoning: boolean } =>
 const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
   if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
   const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+  const input = buildAiInput(env, payload);
   let upstream: unknown;
   try {
-    upstream = await env.AI.run(model, { ...buildAiInput(env, payload), stream: true });
+    upstream = await env.AI.run(model, { ...input, stream: true });
   } catch (error) {
     throw upstreamError(error, model);
   }
@@ -1019,7 +1029,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
             } catch {
               continue;
             }
-            cutOff ||= hitTokenLimit(chunk);
+            cutOff ||= hitTokenLimit(chunk, input.max_tokens);
             const { text, reasoning } = streamDelta(chunk);
             if (text) {
               content += text;
@@ -1032,7 +1042,7 @@ const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
         }
       } else {
         content = modelContent(upstream);
-        cutOff = hitTokenLimit(upstream);
+        cutOff = hitTokenLimit(upstream, input.max_tokens);
       }
       if (cutOff) {
         await send({ type: 'error', code: 'REQUEST_TOO_LARGE', error: tooLongMessage(payload) });
