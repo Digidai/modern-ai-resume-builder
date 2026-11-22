@@ -44,6 +44,18 @@ describe('toLatex', () => {
     expect(toLatex({ ...data, summary: '负责搜索排序' })).toContain('\\usepackage{xeCJK}');
   });
 
+  // Fandol, xeCJK's default, has no Hangul, no "ー" and no Japanese kanji forms (経, 歴): Overleaf printed boxes.
+  it('loads TeX Live fonts that cover Japanese and Korean, and keeps the spaces between Korean words', () => {
+    const ja = toLatex({ ...data, summary: 'デザインシステムの構築を主導し、開発期間を短縮。' });
+    expect(ja).toContain('\\setCJKmainfont[BoldFont=HaranoAjiMincho-Bold.otf]{HaranoAjiMincho-Regular.otf}');
+    const ko = toLatex({ ...data, summary: '디자인 시스템 구축을 주도해 개발 기간을 단축했습니다.' });
+    expect(ko).toContain('{UnBatang.ttf}');
+    expect(ko).toContain('\\xeCJKsetup{CJKspace=true}');
+    // An English resume with a Korean name still needs the Korean fonts.
+    expect(toLatex({ ...data, fullName: '김지훈' })).toContain('{UnBatang.ttf}');
+    expect(toLatex({ ...data, summary: '负责搜索排序与推荐系统' })).not.toContain('setCJKmainfont');
+  });
+
   it('switches to XeLaTeX for characters pdfLaTeX cannot set, and keeps edge cases compilable', () => {
     expect(latexEngine({ ...data, summary: 'Café, naïve – “quoted” …' })).toBe('pdflatex');
     expect(latexEngine({ ...data, summary: 'Shipped → 🚀' })).toBe('xelatex');

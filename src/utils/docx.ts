@@ -1,6 +1,14 @@
 import type { ResumeData } from '../types';
 import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, resumeLanguage, toHref, tr } from '../components/templates/shared';
 import { validateUrl } from './validation';
+import { cjkFontLanguage } from './resumeLanguage';
+
+/** Fonts in every Windows and Microsoft Office for Mac. */
+const EAST_ASIA = {
+  zh: { font: 'Microsoft YaHei', lang: 'zh-CN' },
+  ja: { font: 'Yu Gothic', lang: 'ja-JP' },
+  ko: { font: 'Malgun Gothic', lang: 'ko-KR' },
+} as const;
 import { resumeFileName } from '../shared/fileName';
 
 // The resume as an editable Word file (.docx) for portals and recruiters that ask for one. It is the
@@ -146,7 +154,10 @@ const buildParts = (data: ResumeData): Record<string, string> => {
   const margin = 1080; // 0.75 in
   const textWidth = width - 2 * margin;
   const { body, links } = buildBody(data, textWidth);
-  const font = '<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Microsoft YaHei" w:cs="Calibri"/>';
+  // Word draws CJK text in the eastAsia font, and the eastAsia language tells it (and its proofing) which
+  // language that text is: Microsoft YaHei has no Hangul and draws kanji the Chinese way.
+  const cjk = EAST_ASIA[cjkFontLanguage(data)];
+  const font = `<w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="${cjk.font}" w:cs="Calibri"/>`;
 
   return {
     '[Content_Types].xml': `${XML_HEAD}<Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/numbering.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.numbering+xml"/><Override PartName="/docProps/core.xml" ContentType="application/vnd.openxmlformats-package.core-properties+xml"/></Types>`,
@@ -156,7 +167,7 @@ const buildParts = (data: ResumeData): Record<string, string> => {
       .map((url, i) => `<Relationship Id="rIdLink${i + 1}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/hyperlink" Target="${esc(url)}" TargetMode="External"/>`)
       .join('')}</Relationships>`,
     'word/numbering.xml': `${XML_HEAD}<w:numbering ${NS}><w:abstractNum w:abstractNumId="0"><w:multiLevelType w:val="singleLevel"/><w:lvl w:ilvl="0"><w:start w:val="1"/><w:numFmt w:val="bullet"/><w:lvlText w:val="•"/><w:lvlJc w:val="left"/><w:pPr><w:ind w:left="300" w:hanging="220"/></w:pPr></w:lvl></w:abstractNum><w:num w:numId="1"><w:abstractNumId w:val="0"/></w:num></w:numbering>`,
-    'word/styles.xml': `${XML_HEAD}<w:styles ${NS}><w:docDefaults><w:rPrDefault><w:rPr>${font}<w:sz w:val="21"/><w:szCs w:val="21"/><w:lang w:val="en-US"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="40" w:line="259" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>
+    'word/styles.xml': `${XML_HEAD}<w:styles ${NS}><w:docDefaults><w:rPrDefault><w:rPr>${font}<w:sz w:val="21"/><w:szCs w:val="21"/><w:lang w:val="en-US" w:eastAsia="${cjk.lang}"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="40" w:line="259" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults>
 <w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/><w:qFormat/></w:style>
 <w:style w:type="paragraph" w:styleId="Title"><w:name w:val="Title"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:spacing w:after="20"/></w:pPr><w:rPr><w:b/><w:sz w:val="40"/><w:szCs w:val="40"/></w:rPr></w:style>
 <w:style w:type="paragraph" w:styleId="Subtitle"><w:name w:val="Subtitle"/><w:basedOn w:val="Normal"/><w:next w:val="Normal"/><w:qFormat/><w:pPr><w:spacing w:after="40"/></w:pPr><w:rPr><w:color w:val="404040"/><w:sz w:val="24"/><w:szCs w:val="24"/></w:rPr></w:style>

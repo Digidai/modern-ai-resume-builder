@@ -29,5 +29,10 @@ describe('toDocx', () => {
     const ja = await docxText(toDocx({ ...INITIAL_RESUME_DATA, design: { ...DEFAULT_DESIGN, language: 'ja' } }));
     expect(ja.split('\n')).toContain('職務経歴');
     expect(ja).toContain('2021年3月 – 現在');
+    // Word draws CJK text in the eastAsia font: YaHei has no Hangul and draws kanji the Chinese way.
+    const styles = (language: 'ja' | 'ko') => new TextDecoder().decode(toDocx({ ...INITIAL_RESUME_DATA, design: { ...DEFAULT_DESIGN, language } }));
+    expect(styles('ja')).toContain('w:eastAsia="Yu Gothic"');
+    expect(styles('ja')).toContain('w:eastAsia="ja-JP"');
+    expect(styles('ko')).toContain('w:eastAsia="Malgun Gothic"');
   });
 });

@@ -1,6 +1,7 @@
 import type { ResumeData } from '../types';
 import { resumeFileName } from '../shared/fileName';
 import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, ownerNamePattern, resumeLanguage, toHref, tr } from '../components/templates/shared';
+import { cjkFontLanguage } from './resumeLanguage';
 import { validateUrl } from './validation';
 
 // The resume as a standalone LaTeX document for Overleaf or a local TeX install. It uses only
@@ -53,6 +54,22 @@ const CJK = /[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uf900-\ufaff]
 
 /** Characters pdfLaTeX typesets with inputenc utf8 + T1 + textcomp: Latin-1, Latin Extended-A and the punctuation escapeRaw maps. */
 const PDFLATEX_SAFE = /^[\x00-\u017F\u2013\u2014\u2018\u2019\u201C\u201D\u2022\u2026\u20AC\u200B-\u200D\uFEFF]*$/;
+
+// Fonts in every TeX Live (Overleaf included), loaded by file name. xeCJK's default, Fandol, covers
+// Chinese (GB 2312) only: it has no Hangul, no "ー" and no Japanese kanji forms such as 経 and 歴.
+// Korean puts spaces between words, which xeCJK drops between CJK characters unless CJKspace is on.
+const CJK_FONTS = {
+  zh: '% fontspec defaults to Latin Modern; xeCJK to the Fandol fonts bundled with TeX Live.',
+  ja: `% Harano Aji, the Japanese fonts bundled with TeX Live.
+\\setCJKmainfont[BoldFont=HaranoAjiMincho-Bold.otf]{HaranoAjiMincho-Regular.otf}
+\\setCJKsansfont[BoldFont=HaranoAjiGothic-Bold.otf]{HaranoAjiGothic-Regular.otf}
+\\setCJKmonofont{HaranoAjiGothic-Regular.otf}`,
+  ko: `% Un fonts, the Korean fonts bundled with TeX Live; keep the spaces between Korean words.
+\\setCJKmainfont[BoldFont=UnBatangBold.ttf]{UnBatang.ttf}
+\\setCJKsansfont[BoldFont=UnDotumBold.ttf]{UnDotum.ttf}
+\\setCJKmonofont{UnDotum.ttf}
+\\xeCJKsetup{CJKspace=true}`,
+} as const;
 
 export const latexEngine = (data: ResumeData): 'pdflatex' | 'xelatex' => {
   const text = JSON.stringify(data);
@@ -167,7 +184,7 @@ export const toLatex = (data: ResumeData): string => {
 
   const fonts =
     engine === 'xelatex'
-      ? '% fontspec defaults to Latin Modern; xeCJK to the Fandol fonts bundled with TeX Live.\n\\usepackage{fontspec}\n\\usepackage{xeCJK}'
+      ? `\\usepackage{fontspec}\n\\usepackage{xeCJK}\n${CJK_FONTS[cjkFontLanguage(data)]}`
       : '\\usepackage[T1]{fontenc}\n\\usepackage[utf8]{inputenc}\n\\usepackage{lmodern}\n\\usepackage{textcomp}';
 
   const paper = data.design?.paper === 'letter' ? 'letterpaper' : 'a4paper';

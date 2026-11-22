@@ -104,3 +104,11 @@ export const tr = (data: ResumeData, text: string): string => translate(resumeLa
 
 /** The BCP 47 tag for the resume's root, so browsers pick Japanese or Korean glyphs for shared Han characters. */
 export const LANGUAGE_TAGS: Record<ResumeLanguage, string> = { en: 'en', zh: 'zh-CN', ja: 'ja', ko: 'ko' };
+
+/** Which CJK fonts a document needs: the resume's language, or for an English resume the script its CJK text (a name, say) is in. */
+export const cjkFontLanguage = (data: ResumeData): Exclude<ResumeLanguage, 'en'> => {
+  const language = resumeLanguage(data);
+  if (language !== 'en') return language;
+  const text = JSON.stringify(data);
+  return /[\uac00-\ud7af]/.test(text) ? 'ko' : /[\u3040-\u30ff]/.test(text) ? 'ja' : 'zh';
+};
