@@ -39,6 +39,15 @@ describe('checkResume', () => {
     expect(ids({ ...base, experience: [old(`- 1 ${'a'.repeat(118)}`)] })).toEqual([]);
   });
 
+  it('flags bullets that open with a duty instead of an action', () => {
+    const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
+    const job = (description: string) => [{ id: 'd', company: 'Acme', role: 'Engineer', startDate: '2020-01', endDate: '', isCurrent: true, description }];
+    const checks = checkResume({ ...base, experience: job('- Responsible for the billing API\n- Tasked with 3 migrations\n- Shipped 2 apps') });
+    expect(checks.map((c) => c.message)).toEqual(['Start 2 bullets in Engineer with what you did, not "Responsible for".']);
+    // Only at the start of a bullet: the phrase mid-sentence is fine.
+    expect(ids({ ...base, experience: job('- Hired the team responsible for 3 apps') })).toEqual([]);
+  });
+
   it('spots an end before the start with years alone too', () => {
     const base = { ...INITIAL_RESUME_DATA, email: 'pat@pat.dev' };
     const exp = (startDate: string, endDate: string) => [{ id: 'y', company: 'Acme', role: 'Engineer', startDate, endDate, isCurrent: false, description: '- Shipped 3 things' }];

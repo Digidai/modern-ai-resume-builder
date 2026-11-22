@@ -35,6 +35,9 @@ const skillCount = (skills: string[]) =>
 const NUMBER =
   /\d|\b(?:two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|fifteen|twenty|thirty|forty|fifty|hundreds?|thousands?|millions?|billions?|dozens?|doubled?|tripled?|halved)\b|百分之|[零一二两三四五六七八九十百千万亿]+(?:个|名|人|位|次|倍|项|款|家|年|月|天|周|万|亿|成|条|篇|场|套|门|台|种|所|支|期|轮)/i;
 
+/** Bullet openings that list a duty rather than say what was done; recruiters and resume guides flag them. */
+const DUTY_OPENING = /^(?:responsible for|duties (?:included?|were)|tasked with|in charge of)\b/i;
+
 const bullets = (text: string) =>
   text
     .split('\n')
@@ -67,6 +70,10 @@ export const checkResume = (data: ResumeData, pages?: { count: number; max: numb
     // Recent roles carry the numbers; an older role with a line or two needs none.
     else if ((index === 0 || lines.length >= 3) && !lines.some((line) => NUMBER.test(line))) {
       add({ id: `numbers-${exp.id}`, message: `Add a number to ${name}: a %, an amount, a team size or a count.`, tab: 'experience', item });
+    }
+    const duties = lines.filter((line) => DUTY_OPENING.test(line)).length;
+    if (duties) {
+      add({ id: `duties-${exp.id}`, message: `Start ${duties === 1 ? 'a bullet' : `${duties} bullets`} in ${name} with what you did, not "Responsible for".`, tab: 'experience', item });
     }
     const long = lines.filter((line) => printWidth(line) > LONG_BULLET_CHARS).length;
     if (long) add({ id: `long-${exp.id}`, message: `Shorten ${long === 1 ? 'a bullet' : `${long} bullets`} in ${name} to two lines or less.`, tab: 'experience', item });
