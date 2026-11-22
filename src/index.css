@@ -5,21 +5,30 @@
    font-sans / font-serif / font-mono, which map to web fonts inside `.resume-paper`.
    The user's font preset overrides every non-mono family on the paper (see ResumePreview). */
 :root {
-  /* Base stacks; `--font-*` below point here so a preset can swap them without cycles. */
-  --rf-inter: "Inter", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC", sans-serif;
-  --rf-source-sans: "Source Sans 3", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-roboto: "Roboto", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-lato: "Lato", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-raleway: "Raleway", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-montserrat: "Montserrat", "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", sans-serif;
-  --rf-source-serif: "Source Serif 4", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-garamond: "EB Garamond", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-playfair: "Playfair Display", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-tinos: "Tinos", "Times New Roman", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-charis: "Charis SIL", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-plex-serif: "IBM Plex Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-latin-modern: "Latin Modern Roman", "CMU Serif", "Songti SC", "SimSun", "Noto Serif CJK SC", serif;
-  --rf-jetbrains: "JetBrains Mono", ui-monospace, "PingFang SC", "Noto Sans CJK SC", monospace;
+  /* CJK fallbacks: Chinese by default; `.resume-paper:lang(ja|ko)` swaps in Japanese and Korean fonts,
+     which draw shared Han characters the way those languages write them. */
+  --cjk-sans: "PingFang SC", "Microsoft YaHei", "Noto Sans CJK SC", "Noto Sans SC";
+  --cjk-serif: "Songti SC", "SimSun", "Noto Serif CJK SC";
+}
+
+/* Base stacks; `--font-*` below point here so a preset can swap them without cycles. They are declared
+   on the paper too, so they pick up its language's `--cjk-*` (custom properties resolve where declared). */
+:root,
+.resume-paper {
+  --rf-inter: "Inter", var(--cjk-sans), sans-serif;
+  --rf-source-sans: "Source Sans 3", var(--cjk-sans), sans-serif;
+  --rf-roboto: "Roboto", var(--cjk-sans), sans-serif;
+  --rf-lato: "Lato", var(--cjk-sans), sans-serif;
+  --rf-raleway: "Raleway", var(--cjk-sans), sans-serif;
+  --rf-montserrat: "Montserrat", var(--cjk-sans), sans-serif;
+  --rf-source-serif: "Source Serif 4", var(--cjk-serif), serif;
+  --rf-garamond: "EB Garamond", var(--cjk-serif), serif;
+  --rf-playfair: "Playfair Display", var(--cjk-serif), serif;
+  --rf-tinos: "Tinos", "Times New Roman", var(--cjk-serif), serif;
+  --rf-charis: "Charis SIL", var(--cjk-serif), serif;
+  --rf-plex-serif: "IBM Plex Serif", var(--cjk-serif), serif;
+  --rf-latin-modern: "Latin Modern Roman", "CMU Serif", var(--cjk-serif), serif;
+  --rf-jetbrains: "JetBrains Mono", ui-monospace, var(--cjk-sans), monospace;
 }
 
 @theme static {
@@ -155,6 +164,34 @@ html.dark {
     font-family: var(--font-sans);
     font-variant-ligatures: common-ligatures;
     -webkit-font-smoothing: antialiased;
+  }
+
+  /* Re-resolve the families on the paper so the stacks above use the paper's language. */
+  .resume-paper {
+    --font-inter: var(--rf-inter);
+    --font-source-sans: var(--rf-source-sans);
+    --font-roboto: var(--rf-roboto);
+    --font-lato: var(--rf-lato);
+    --font-raleway: var(--rf-raleway);
+    --font-montserrat: var(--rf-montserrat);
+    --font-source-serif: var(--rf-source-serif);
+    --font-garamond: var(--rf-garamond);
+    --font-playfair: var(--rf-playfair);
+    --font-tinos: var(--rf-tinos);
+    --font-charis: var(--rf-charis);
+    --font-plex-serif: var(--rf-plex-serif);
+    --font-latin-modern: var(--rf-latin-modern);
+    --font-jetbrains: var(--rf-jetbrains);
+  }
+
+  .resume-paper:lang(ja) {
+    --cjk-sans: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", "Noto Sans CJK JP", "Noto Sans JP";
+    --cjk-serif: "Hiragino Mincho ProN", "Yu Mincho", "Noto Serif CJK JP", "Noto Serif JP";
+  }
+
+  .resume-paper:lang(ko) {
+    --cjk-sans: "Apple SD Gothic Neo", "Malgun Gothic", "Noto Sans CJK KR", "Noto Sans KR";
+    --cjk-serif: "AppleMyungjo", "Batang", "Noto Serif CJK KR", "Noto Serif KR";
   }
 
   /* Korean puts spaces between words and wraps at them, like English; without this the browser breaks
