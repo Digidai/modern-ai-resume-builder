@@ -288,15 +288,31 @@ export const postWithAiSession = async (path: string, body: string): Promise<Res
 /** Called with the reply so far, cleaned the way the finished text will be, while the model writes it. */
 export type AiPartialHandler = (text: string) => void;
 
+/**
+ * How long Improve or Write waits for the model to start (the first stream event, normally within 2 s).
+ * Workers AI occasionally hangs for 30 s before failing; abandoning the attempt sooner lets the retry run.
+ */
+const START_TIMEOUT_MS = 12000;
+
 /** Streams a text request; each attempt starts the partial text over, so a retry doesn't repeat it. */
 const streamText = (payload: AiRequest, onPartial?: AiPartialHandler) =>
-  executeWithRetry(() => {
+  executeWithRetry(async () => {
     let raw = '';
-    return streamAiRequest({ ...payload, stream: true }, (event) => {
-      if (event.type !== 'delta' || !onPartial) return;
-      raw += event.text;
-      onPartial(finishAiText(raw, aiReplyInput(payload)));
-    });
+    const attempt = new AbortController();
+    const timer = setTimeout(
+      () => attempt.abort(new AiError('The AI took too long to start. Please try again.', 'UPSTREAM_TIMEOUT', true)),
+      START_TIMEOUT_MS
+    );
+    try {
+      return await streamAiRequest({ ...payload, stream: true }, (event) => {
+        clearTimeout(timer);
+        if (event.type !== 'delta' || !onPartial) return;
+        raw += event.text;
+        onPartial(finishAiText(raw, aiReplyInput(payload)));
+      }, attempt.signal);
+    } finally {
+      clearTimeout(timer);
+    }
   });
 
 export const improveText = async (text: string, context: string = 'resume', onPartial?: AiPartialHandler): Promise<string> => {

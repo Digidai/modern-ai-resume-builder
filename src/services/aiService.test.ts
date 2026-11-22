@@ -116,6 +116,32 @@ describe('aiService', () => {
     expect(JSON.parse(String(fetchMock.mock.calls[1][1]?.body))).toMatchObject({ action: 'improve', stream: true });
   });
 
+  it('abandons an Improve attempt the model never starts, and retries it', async () => {
+    vi.useFakeTimers();
+    try {
+      fetchMock
+        .mockResolvedValueOnce(jsonResponse({ token: 'session-token', expiresAt: Date.now() + 600_000 }))
+        // A hung model: no response until the request is aborted.
+        .mockImplementationOnce((_url, init) => new Promise((_resolve, reject) => {
+          init?.signal?.addEventListener('abort', () => reject(init.signal?.reason));
+        }))
+        .mockResolvedValueOnce(
+          new Response(`${JSON.stringify({ type: 'done', text: 'Led a team of 4' })}\n`, { headers: { 'content-type': 'application/x-ndjson' } })
+        );
+
+      const result = improveText('led team of 4', 'experience');
+      await vi.advanceTimersByTimeAsync(11_000);
+      expect(fetchMock).toHaveBeenCalledTimes(2);
+      await vi.advanceTimersByTimeAsync(3_000);
+
+      await expect(result).resolves.toBe('Led a team of 4');
+      expect(fetchMock).toHaveBeenCalledTimes(3);
+      expect((fetchMock.mock.calls[1][1]?.signal as AbortSignal).aborted).toBe(true);
+    } finally {
+      vi.useRealTimers();
+    }
+  });
+
   it('rejects with the abort reason when a resume conversion is cancelled mid-stream', async () => {
     const encoder = new TextEncoder();
     const controller = new AbortController();
