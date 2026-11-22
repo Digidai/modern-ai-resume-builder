@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Import resume keeps a Chinese CV in Chinese: degrees stay as written ("计算机科学 硕士", not "硕士 in 计算机科学"), and skills listed without categories no longer get English ones added ("Programming: Go, Java …", "Languages: 英语 CET-6"). Categories the CV does use are kept.
 - Improve and Write recover from a stalled AI sooner. Workers AI occasionally hangs for about 30 s before failing; the editor waited out the whole 30 s before retrying. It now gives up on an attempt that hasn't started after 12 s (a normal one starts within 2 s), cancels it and retries.
 - Write builds the summary from your jobs. It used to see only your title and skills, so every summary claimed results nobody had written ("drives product adoption and revenue growth", "proven track record"). It now gets your experience entries and uses their facts and numbers ("led the company-wide design system that reduced UI development time by 30% and shipped 4 major SaaS releases"). With no jobs filled in, it claims no achievements.
 - Improve no longer adds results your text doesn't claim. Asked for "results-oriented" text, it appended benefits such as ", improving incident response and root-cause analysis" or ", ensuring seamless integration and minimal downtime" in 4 of 8 runs; now in 0 of 8. Results you did write ("from 3 s to 800 ms", "raised NPS by 12 points") are kept.
