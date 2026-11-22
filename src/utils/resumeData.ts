@@ -60,7 +60,7 @@ export const sanitizeDesign = (input: unknown): ResumeDesign => {
   const font = typeof raw.font === 'string' && raw.font ? raw.font : DEFAULT_DESIGN.font;
   const scale = typeof raw.scale === 'number' && Number.isFinite(raw.scale) ? Math.min(1.15, Math.max(0.85, raw.scale)) : 1;
   const paper = raw.paper === 'letter' ? 'letter' : 'a4';
-  return { accent, font, scale, paper };
+  return { accent, font, scale, paper, ...(raw.language === 'en' || raw.language === 'zh' ? { language: raw.language } : {}) };
 };
 
 const obj = (value: unknown): Record<string, unknown> =>

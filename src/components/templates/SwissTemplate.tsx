@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const CONTACT_LABELS = { email: 'Email', phone: 'Phone', location: 'Location', website: 'Website', linkedin: 'LinkedIn' } as const;
 
@@ -45,17 +45,17 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {data.summary && (
-                <Section label="Profile">
+                <Section label={tr(data, 'Profile')}>
                     <p className="text-[15px] leading-[1.5] whitespace-pre-line wrap-break-word">{data.summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section label="Experience">
+                <Section label={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-4">
                         {data.experience.map((exp) => (
                             <div key={exp.id} className="break-inside-avoid">
-                                <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} size="text-[17px]" />
+                                <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} size="text-[17px]" />
                                 {exp.company && <div className="text-[13px] font-bold uppercase tracking-wide text-slate-600 mt-0.5 wrap-break-word">{exp.company}</div>}
                                 {exp.description && (
                                     <RichText text={exp.description} className="mt-1.5 text-slate-800 wrap-break-word" listClassName={listClass} />
@@ -67,7 +67,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section label="Projects">
+                <Section label={tr(data, 'Projects')}>
                     <div className="grid grid-cols-2 gap-4">
                         {data.projects.map((proj) => (
                             <div key={proj.id} className="min-w-0 bg-slate-100 p-3.5 break-inside-avoid">
@@ -87,11 +87,11 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section label="Education">
+                <Section label={tr(data, 'Education')}>
                     <div className="flex flex-col gap-3">
                         {data.education.map((edu) => (
                             <div key={edu.id} className="break-inside-avoid">
-                                <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate)} size="text-[15px]" />
+                                <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} size="text-[15px]" />
                                 {edu.degree && <div className="text-slate-700 mt-0.5 wrap-break-word">{edu.degree}</div>}
                             </div>
                         ))}
@@ -100,7 +100,7 @@ export const SwissTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section label="Skills">
+                <Section label={tr(data, 'Skills')}>
                     <div className="flex flex-col gap-2.5">
                         {skillGroups.map((group, gi) =>
                             group.category ? (

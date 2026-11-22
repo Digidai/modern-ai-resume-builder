@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Prism": an angular, energetic layout. A full-bleed accent header with a slanted lower edge
 // over a lighter offset facet, a Montserrat name in white, skewed date tags and parallelogram
@@ -54,19 +54,19 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className={`page-frame flex flex-col gap-[6mm] px-[15mm] pt-[13mm] pb-[13mm] ${hasHeader ? '[&>:first-child]:-mt-[9mm]' : ''}`}>
                 {summary && (
                     <section>
-                        <SectionTitle>Profile</SectionTitle>
+                        <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                         <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SectionTitle>Experience</SectionTitle>
+                        <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                         <div className="flex flex-col gap-[12px]">
                             {data.experience.map((exp) => {
                                 const role = exp.role.trim();
                                 const company = exp.company.trim();
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <article key={exp.id} className="break-inside-avoid">
                                         {(role || company || dates) && (
@@ -86,7 +86,7 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SectionTitle>Projects</SectionTitle>
+                        <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                         <div className="grid grid-cols-2 gap-x-[7mm] gap-y-[10px]">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="min-w-0 break-inside-avoid border-l-2 border-(--accent)/40 pl-[10px]">
@@ -107,12 +107,12 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="grid grid-cols-2 gap-x-[8mm] gap-y-[6mm]">
                         {data.education.length > 0 && (
                             <section className={`min-w-0 ${skillGroups.length ? '' : 'col-span-2'}`}>
-                                <SectionTitle>Education</SectionTitle>
+                                <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                 <div className="flex flex-col gap-[9px]">
                                     {data.education.map((edu) => {
                                         const degree = edu.degree.trim();
                                         const school = edu.school.trim();
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <article key={edu.id} className="break-inside-avoid">
                                                 {(degree || school || dates) && (
@@ -131,7 +131,7 @@ export const PrismTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {skillGroups.length > 0 && (
                             <section className={`min-w-0 break-inside-avoid ${data.education.length ? '' : 'col-span-2'}`}>
-                                <SectionTitle>Skills</SectionTitle>
+                                <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                 <div className="flex flex-col gap-[7px]">
                                     {skillGroups.map((group, index) => (
                                         <div key={index}>

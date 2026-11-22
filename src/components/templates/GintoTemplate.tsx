@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Keeps the oversized name on as few lines as possible without overflowing 210mm. */
 const nameSizeClass = (name: string): string => {
@@ -31,18 +31,18 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     if (data.summary.trim()) {
         sections.push({
-            title: 'Profile',
+            title: tr(data, 'Profile'),
             body: <p className="text-[14px] text-slate-800 wrap-break-word">{data.summary}</p>,
         });
     }
 
     if (data.experience.length > 0) {
         sections.push({
-            title: 'Experience',
+            title: tr(data, 'Experience'),
             body: (
                 <div className="flex flex-col gap-5">
                     {data.experience.map((exp) => {
-                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                         return (
                             <article key={exp.id} className="pl-6 border-l-2 border-slate-200 break-inside-avoid">
                                 <span className="absolute translate-x-[-31px] translate-y-[5px] w-3 h-3 rounded-full bg-white border-[3px] border-(--accent)" aria-hidden="true" />
@@ -64,7 +64,7 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     if (data.projects.length > 0) {
         sections.push({
-            title: 'Projects',
+            title: tr(data, 'Projects'),
             body: (
                 <div className="grid grid-cols-2 gap-4">
                     {data.projects.map((proj) => (
@@ -85,12 +85,12 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     if (data.education.length > 0) {
         sections.push({
-            title: 'Education',
+            title: tr(data, 'Education'),
             half: true,
             body: (
                 <div className="flex flex-col gap-3">
                     {data.education.map((edu) => {
-                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                         return (
                             <article key={edu.id} className="min-w-0 bg-slate-50 px-4 py-3 rounded-xl border border-slate-100 break-inside-avoid">
                                 {(edu.school || dates) && (
@@ -110,7 +110,7 @@ export const GintoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     if (skillGroups.length > 0) {
         sections.push({
-            title: 'Skills',
+            title: tr(data, 'Skills'),
             half: true,
             body: (
                 <div className="flex flex-col gap-2.5">

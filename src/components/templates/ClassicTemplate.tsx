@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Classic ATS", after Jake's Resume: 12.7 mm margins, one column, centered small-caps name,
 // small-caps headings over a hairline rule, two-row entries with right-aligned dates.
@@ -53,16 +53,16 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className={data.fullName.trim() || data.title.trim() || contacts.length ? 'mt-[12px]' : ''}>
                 {summary && (
-                    <Section title="Summary">
+                    <Section title={tr(data, 'Summary')}>
                         <p className="px-[14px] text-[13.33px] leading-[1.45] whitespace-pre-line wrap-break-word">{summary}</p>
                     </Section>
                 )}
 
                 {data.experience.length > 0 && (
-                    <Section title="Experience">
+                    <Section title={tr(data, 'Experience')}>
                         <div className="flex flex-col gap-[8px] px-[14px]">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <div key={exp.id} className="break-inside-avoid">
                                         <div className="flex justify-between items-baseline gap-x-4">
@@ -87,7 +87,7 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.projects.length > 0 && (
-                    <Section title="Projects">
+                    <Section title={tr(data, 'Projects')}>
                         <div className="flex flex-col gap-[7px] px-[14px]">
                             {data.projects.map((proj) => (
                                 <div key={proj.id} className="break-inside-avoid">
@@ -116,10 +116,10 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.education.length > 0 && (
-                    <Section title="Education">
+                    <Section title={tr(data, 'Education')}>
                         <div className="flex flex-col gap-[7px] px-[14px]">
                             {data.education.map((edu) => {
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 return (
                                     <div key={edu.id} className="break-inside-avoid">
                                         <div className="flex justify-between items-baseline gap-x-4">
@@ -135,11 +135,11 @@ export const ClassicTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Section title={hasCategories ? 'Technical Skills' : 'Skills'}>
+                    <Section title={hasCategories ? tr(data, 'Technical Skills') : tr(data, 'Skills')}>
                         <div className="flex flex-col gap-[2px] px-[14px] text-[13.33px] leading-[1.45] wrap-break-word">
                             {skillGroups.map((group, index) => (
                                 <p key={index}>
-                                    {(group.category || hasCategories) && <span className="font-bold">{group.category || 'Other'}: </span>}
+                                    {(group.category || hasCategories) && <span className="font-bold">{group.category || tr(data, 'Other')}: </span>}
                                     {group.items.join(', ')}
                                 </p>
                             ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-3.5 border-b border-slate-300 pb-1.5 font-serif text-[21px] font-semibold leading-tight text-(--accent) break-after-avoid">
@@ -50,11 +50,11 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid border-y border-slate-200 py-3.5 text-center">
-                    <h2 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.08em] text-(--accent)">Skills</h2>
+                    <h2 className="mb-2.5 text-[11px] font-bold uppercase tracking-[0.08em] text-(--accent)">{tr(data, 'Skills')}</h2>
                     <div className="flex flex-col gap-1.5">
                         {skillGroups.map((group, groupIndex) => (
                             <ul key={groupIndex} className="flex flex-wrap justify-center gap-x-4 gap-y-1 text-[14.5px] leading-snug text-slate-800">
-                                {hasCategories && <li className="font-semibold text-slate-900 wrap-break-word">{group.category || 'Other'}:</li>}
+                                {hasCategories && <li className="font-semibold text-slate-900 wrap-break-word">{group.category || tr(data, 'Other')}:</li>}
                                 {group.items.map((skill, index) => (
                                     <li key={index} className="min-w-0 wrap-break-word">
                                         {skill}
@@ -68,13 +68,13 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-5">
                         {data.experience.map((exp) => {
                             const heading = exp.role.trim() || exp.company.trim();
                             const company = exp.role.trim() ? exp.company.trim() : '';
                             return (
-                                <GutterRow key={exp.id} aside={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                                <GutterRow key={exp.id} aside={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                                     {heading && <h3 className={entryTitle}>{heading}</h3>}
                                     {company && <div className={entrySubtitle}>{company}</div>}
                                     <RichText text={exp.description} className={bodyText} listClassName={listClass} />
@@ -87,7 +87,7 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-4">
                         {data.projects.map((proj) => (
                             <GutterRow key={proj.id}>
@@ -115,13 +115,13 @@ export const MinimalistTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionTitle>Education</SectionTitle>
+                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                     <div className="flex flex-col gap-4">
                         {data.education.map((edu) => {
                             const heading = edu.school.trim() || edu.degree.trim();
                             const degree = edu.school.trim() ? edu.degree.trim() : '';
                             return (
-                                <GutterRow key={edu.id} aside={formatDateRange(edu.startDate, edu.endDate)}>
+                                <GutterRow key={edu.id} aside={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}>
                                     {heading && <h3 className={entryTitle}>{heading}</h3>}
                                     {degree && <div className={entrySubtitle}>{degree}</div>}
                                 </GutterRow>

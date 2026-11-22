@@ -1,6 +1,6 @@
 import type { ResumeData } from '../types';
 import { resumeFileName } from '../shared/fileName';
-import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, ownerNamePattern, toHref } from '../components/templates/shared';
+import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, ownerNamePattern, resumeLanguage, toHref, tr } from '../components/templates/shared';
 import { validateUrl } from './validation';
 
 // The resume as a standalone LaTeX document for Overleaf or a local TeX install. It uses only
@@ -56,7 +56,7 @@ const PDFLATEX_SAFE = /^[\x00-\u017F\u2013\u2014\u2018\u2019\u201C\u201D\u2022\u
 
 export const latexEngine = (data: ResumeData): 'pdflatex' | 'xelatex' => {
   const text = JSON.stringify(data);
-  return CJK.test(text) || !PDFLATEX_SAFE.test(text) ? 'xelatex' : 'pdflatex';
+  return resumeLanguage(data) === 'zh' || CJK.test(text) || !PDFLATEX_SAFE.test(text) ? 'xelatex' : 'pdflatex';
 };
 
 const bold = (text: string, owner: string) => {
@@ -108,14 +108,14 @@ export const toLatex = (data: ResumeData): string => {
   const teaching = data.teaching ?? [];
   const academic = publications.length + awards.length + talks.length + teaching.length > 0;
   const sections: string[] = [];
-  const add = (title: string, body: string) => body.trim() && sections.push(`\\section{${title}}\n${body.trim()}`);
+  const add = (title: string, body: string) => body.trim() && sections.push(`\\section{${escapeLatex(tr(data, title))}}\n${body.trim()}`);
 
   const summary = data.summary.trim() ? richText(data.summary) : '';
   const education = data.education
-    .map((edu) => entry(edu.school || edu.degree, formatDateRange(edu.startDate, edu.endDate), edu.school ? edu.degree : ''))
+    .map((edu) => entry(edu.school || edu.degree, formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data)), edu.school ? edu.degree : ''))
     .join('\n');
   const experience = data.experience
-    .map((exp) => [entry(exp.company || exp.role, formatDateRange(exp.startDate, exp.endDate, exp.isCurrent), [exp.company ? exp.role : '', hoursPerWeek(exp.hours)].filter(Boolean).join(', ')), richText(exp.description)].filter(Boolean).join('\n'))
+    .map((exp) => [entry(exp.company || exp.role, formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data)), [exp.company ? exp.role : '', hoursPerWeek(exp.hours)].filter(Boolean).join(', ')), richText(exp.description)].filter(Boolean).join('\n'))
     .join('\n\\medskip\n');
   const projects = data.projects
     .map((proj) => [`\\textbf{${escapeLatex(proj.name)}}${proj.link.trim() && validateUrl(proj.link) ? ` \\hfill ${link(proj.link)}` : ''}\\par`, richText(proj.description)].filter(Boolean).join('\n'))

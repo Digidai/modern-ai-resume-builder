@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Dubai", after the CV format common in the UAE, Saudi Arabia and the wider Gulf: a gold rule
 // across the top, a framed photo beside the name and title, contact details in two columns, a
@@ -55,13 +55,13 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Professional Summary">
+                <Section title={tr(data, 'Professional Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Core Competencies">
+                <Section title={tr(data, 'Core Competencies')}>
                     {categorized ? (
                         <div className="flex flex-col gap-[4px]">
                             {skillGroups.map((group, index) => (
@@ -85,10 +85,10 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Professional Experience">
+                <Section title={tr(data, 'Professional Experience')}>
                     <div className="flex flex-col gap-[13px]">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             const heading = exp.role.trim() || exp.company.trim();
                             const company = exp.role.trim() ? exp.company.trim() : '';
                             return (
@@ -107,10 +107,10 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => {
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             return (
                                 <article key={edu.id} className="flex items-baseline justify-between gap-4 break-inside-avoid">
                                     <div className="min-w-0">
@@ -126,7 +126,7 @@ export const DubaiTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">

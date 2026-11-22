@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Chinese resumes print Chinese headings and dates: 工作经历, 教育背景, 专业技能, contact labels (邮箱, 电话, 所在地) and "2021.03 – 至今" instead of Experience, Education, Skills and "Mar 2021 – Present", in every template, the PDF and the Word and LaTeX files. The language follows the content (a Chinese resume with English tool names still counts as Chinese; an English one with a Chinese name doesn't); Template › Resume language switches it to English or 中文 by hand.
 - A new suggestion catches bullets that list a duty instead of an action: "Start a bullet in Senior Product Designer with what you did, not \"Responsible for\"." It covers bullets opening with "Responsible for", "Tasked with", "In charge of" or "Duties included"; the phrase later in a sentence is fine.
 - The "Add a number" suggestion counts numbers written as words: "Mentored three designers", "Doubled sign-ups", "带领三名工程师", "提升百分之二十". Only digits counted before, so such roles were asked for a number they already had. Words that just contain a numeral (统一, 进一步) still don't count.
 - Write answers in your resume's language: with a Chinese (or Japanese, Korean) job title and no jobs filled in, half the summaries came back in English; now all came back in Chinese. A summary written without jobs also no longer claims a "proven ability".

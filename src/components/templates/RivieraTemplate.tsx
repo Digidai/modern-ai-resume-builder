@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Riviera": the centred, photo-first CV common in France, Spain and Italy. A round photo sits
 // above a serif name, the title and a single line of contact details; below, a single column with
@@ -48,15 +48,15 @@ export const RivieraTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line text-center`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => {
-                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                         return (
                             <article key={exp.id} className="break-inside-avoid">
                                 <div className="flex items-baseline justify-between gap-4">
@@ -75,9 +75,9 @@ export const RivieraTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => {
-                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                         return (
                             <article key={edu.id} className="flex items-baseline justify-between gap-4 break-inside-avoid">
                                 <p className="min-w-0 text-[14px] leading-snug wrap-break-word">
@@ -93,7 +93,7 @@ export const RivieraTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <h3 className="text-[14.5px] leading-snug wrap-break-word">
@@ -112,7 +112,7 @@ export const RivieraTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.some((group) => group.category) ? (
                         <div className="flex flex-col gap-[4px]">
                             {skillGroups.map((group, index) => (

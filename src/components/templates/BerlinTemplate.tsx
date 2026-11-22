@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Picks a display size that keeps the longest word of the name on one line at 210mm. */
 const nameSizeClass = (name: string): string => {
@@ -54,17 +54,17 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className="flex flex-col divide-y divide-black">
                 {data.summary && (
-                    <Row label="Profile">
+                    <Row label={tr(data, 'Profile')}>
                         <p className="text-[15px] leading-[1.6] font-medium whitespace-pre-line wrap-break-word">{data.summary}</p>
                     </Row>
                 )}
 
                 {data.experience.length > 0 && (
-                    <Row label="Experience">
+                    <Row label={tr(data, 'Experience')}>
                         <div className="flex flex-col gap-5">
                             {data.experience.map((exp) => (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} titleClass="text-[17px] uppercase" />
+                                    <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} titleClass="text-[17px] uppercase" />
                                     {exp.company && <div className="text-neutral-600 font-medium mt-0.5 wrap-break-word">{exp.company}</div>}
                                     {exp.description && (
                                         <RichText text={exp.description} className="mt-2 text-neutral-800 wrap-break-word" listClassName="space-y-1" itemClassName={itemClass} />
@@ -76,7 +76,7 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.projects.length > 0 && (
-                    <Row label="Projects">
+                    <Row label={tr(data, 'Projects')}>
                         <div className="grid grid-cols-2 gap-x-8 gap-y-5">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="min-w-0 break-inside-avoid">
@@ -96,11 +96,11 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.education.length > 0 && (
-                    <Row label="Education">
+                    <Row label={tr(data, 'Education')}>
                         <div className="flex flex-col gap-3">
                             {data.education.map((edu) => (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate)} titleClass="text-[16px]" />
+                                    <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} titleClass="text-[16px]" />
                                     {edu.degree && <div className="text-neutral-700 mt-0.5 wrap-break-word">{edu.degree}</div>}
                                 </article>
                             ))}
@@ -109,7 +109,7 @@ export const BerlinTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Row label="Skills">
+                    <Row label={tr(data, 'Skills')}>
                         <div className="flex flex-col gap-2">
                             {skillGroups.map((group, gi) => (
                                 <div key={gi} className="flex flex-wrap items-baseline gap-x-5 gap-y-1.5 font-semibold">

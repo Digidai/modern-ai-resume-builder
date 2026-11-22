@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** One section: a side label in the left column, content on the right (DOM order = reading order). */
 const Row: React.FC<{ label: string; children: React.ReactNode }> = ({ label, children }) => (
@@ -44,16 +44,16 @@ export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className="flex flex-col gap-7">
                 {data.summary.trim() && (
-                    <Row label="Profile">
+                    <Row label={tr(data, 'Profile')}>
                         <p className="text-slate-700 wrap-break-word">{data.summary}</p>
                     </Row>
                 )}
 
                 {data.experience.length > 0 && (
-                    <Row label="Experience">
+                    <Row label={tr(data, 'Experience')}>
                         <div className="flex flex-col gap-5">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <article key={exp.id} className="break-inside-avoid">
                                         {(exp.role || dates) && (
@@ -72,7 +72,7 @@ export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.projects.length > 0 && (
-                    <Row label="Projects">
+                    <Row label={tr(data, 'Projects')}>
                         <div className="flex flex-col gap-4">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">
@@ -94,10 +94,10 @@ export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.education.length > 0 && (
-                    <Row label="Education">
+                    <Row label={tr(data, 'Education')}>
                         <div className="flex flex-col gap-3">
                             {data.education.map((edu) => {
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 return (
                                     <article key={edu.id} className="break-inside-avoid">
                                         {(edu.school || dates) && (
@@ -115,7 +115,7 @@ export const LateralTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Row label="Skills">
+                    <Row label={tr(data, 'Skills')}>
                         <div className="flex flex-col gap-2">
                             {skillGroups.map((group, gi) =>
                                 group.category ? (

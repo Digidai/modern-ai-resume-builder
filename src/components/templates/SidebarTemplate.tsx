@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const CONTACT_LABELS = {
     email: 'Email',
@@ -49,7 +49,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <dl className="flex flex-col gap-2.5 text-[13px] leading-snug">
                         {contacts.map((entry) => (
                             <div key={entry.id} className="min-w-0">
-                                <dt className="mb-0.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">{entry.key === 'link' ? entry.label : CONTACT_LABELS[entry.key]}</dt>
+                                <dt className="mb-0.5 text-[11px] font-semibold uppercase tracking-[0.08em] text-white/60">{entry.key === 'link' ? entry.label : tr(data, CONTACT_LABELS[entry.key])}</dt>
                                 <dd className="text-white">
                                     <ContactLink entry={entry} className="wrap-anywhere" fit />
                                 </dd>
@@ -60,7 +60,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section className="break-inside-avoid">
-                        <SidebarHeading>Skills</SidebarHeading>
+                        <SidebarHeading>{tr(data, 'Skills')}</SidebarHeading>
                         <div className="flex flex-col gap-3">
                             {skillGroups.map((group, groupIndex) => (
                                 <div key={groupIndex}>
@@ -82,10 +82,10 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SidebarHeading>Education</SidebarHeading>
+                        <SidebarHeading>{tr(data, 'Education')}</SidebarHeading>
                         <div className="flex flex-col gap-4">
                             {data.education.map((edu) => {
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 const heading = edu.school.trim() || edu.degree.trim();
                                 const degree = edu.school.trim() ? edu.degree.trim() : '';
                                 return (
@@ -104,17 +104,17 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="page-frame flex min-w-0 flex-1 flex-col gap-7 bg-white pt-[15mm] pr-[13mm] pb-[12mm] pl-[10mm] text-slate-800">
                 {data.summary.trim() && (
                     <section>
-                        <MainHeading>Profile</MainHeading>
+                        <MainHeading>{tr(data, 'Profile')}</MainHeading>
                         <p className={`${bodyText} whitespace-pre-line`}>{data.summary.trim()}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <MainHeading>Experience</MainHeading>
+                        <MainHeading>{tr(data, 'Experience')}</MainHeading>
                         <div className="ml-[3px] flex flex-col gap-5 border-l-2 border-(--accent)/20 pl-5">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 const heading = exp.role.trim() || exp.company.trim();
                                 const company = exp.role.trim() ? exp.company.trim() : '';
                                 return (
@@ -137,7 +137,7 @@ export const SidebarTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <MainHeading>Projects</MainHeading>
+                        <MainHeading>{tr(data, 'Projects')}</MainHeading>
                         <div className="flex flex-col gap-4">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">

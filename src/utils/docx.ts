@@ -1,5 +1,5 @@
 import type { ResumeData } from '../types';
-import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from '../components/templates/shared';
+import { BULLET_PATTERN, displayUrl, formatDateRange, getContactEntries, groupSkills, resumeLanguage, toHref, tr } from '../components/templates/shared';
 import { validateUrl } from './validation';
 import { resumeFileName } from '../shared/fileName';
 
@@ -45,7 +45,7 @@ const buildBody = (data: ResumeData, textWidth: number) => {
     return `<w:hyperlink r:id="rIdLink${links.length}"><w:r><w:rPr><w:rStyle w:val="Hyperlink"/></w:rPr><w:t xml:space="preserve">${esc(label)}</w:t></w:r></w:hyperlink>`;
   };
   const out: string[] = [];
-  const heading = (title: string) => out.push(paragraph(run(title), 'Heading1'));
+  const heading = (title: string) => out.push(paragraph(run(tr(data, title)), 'Heading1'));
   /** Bold title, optional plain detail, dates flush right. */
   const entry = (title: string, detail: string, dates: string) =>
     out.push(paragraph(`${run(clean(title), { bold: true })}${detail ? run(`${title.trim() ? ', ' : ''}${clean(detail)}`) : ''}${dates ? `${tab}${run(dates)}` : ''}`, 'Entry', rightTab));
@@ -86,14 +86,14 @@ const buildBody = (data: ResumeData, textWidth: number) => {
     heading('Experience');
     for (const exp of data.experience) {
       const hours = /^\d+(?:\.\d+)?$/.test(exp.hours?.trim() ?? '') ? `${exp.hours!.trim()} hours per week` : clean(exp.hours ?? '');
-      entry(exp.role, [exp.company, hours].map(clean).filter(Boolean).join(', '), formatDateRange(exp.startDate, exp.endDate, exp.isCurrent));
+      entry(exp.role, [exp.company, hours].map(clean).filter(Boolean).join(', '), formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data)));
       rich(exp.description);
     }
   };
   const education = () => {
     if (!data.education.length) return;
     heading('Education');
-    for (const edu of data.education) entry(edu.school || edu.degree, edu.school ? edu.degree : '', formatDateRange(edu.startDate, edu.endDate));
+    for (const edu of data.education) entry(edu.school || edu.degree, edu.school ? edu.degree : '', formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data)));
   };
   /** One line per entry with the year flush right. */
   const rows = (title: string, items: Array<{ bold: string; rest: string; year: string }>) => {

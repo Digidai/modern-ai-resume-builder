@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const Label: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="inline-block bg-(--accent) text-white px-3 py-1 font-montserrat text-[12px] font-extrabold uppercase tracking-[0.08em] mb-4 break-after-avoid">
@@ -45,17 +45,17 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="page-frame flex-1 px-[14mm] pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[12mm] flex flex-col gap-7">
                 {data.summary.trim() && (
                     <section>
-                        <Label>Profile</Label>
+                        <Label>{tr(data, 'Profile')}</Label>
                         <p className="text-[14.5px] font-medium wrap-break-word">{data.summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <Label>Experience</Label>
+                        <Label>{tr(data, 'Experience')}</Label>
                         <div className="border-l-4 border-(--accent) pl-6 flex flex-col gap-5">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <article key={exp.id} className="break-inside-avoid">
                                         {(exp.role || dates) && (
@@ -75,7 +75,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <Label>Projects</Label>
+                        <Label>{tr(data, 'Projects')}</Label>
                         <div className="grid grid-cols-2 gap-x-10 gap-y-5">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="min-w-0 border-t-2 border-(--accent) pt-3 break-inside-avoid">
@@ -96,10 +96,10 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="grid grid-cols-2 gap-10">
                         {hasEducation && (
                             <section className="min-w-0">
-                                <Label>Education</Label>
+                                <Label>{tr(data, 'Education')}</Label>
                                 <div className="flex flex-col gap-4">
                                     {data.education.map((edu) => {
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <article key={edu.id} className="border-b-2 border-neutral-200 pb-4 last:border-b-0 last:pb-0 break-inside-avoid">
                                                 {edu.school && <div className="text-[15px] font-bold leading-snug wrap-break-word">{edu.school}</div>}
@@ -114,7 +114,7 @@ export const IronTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {skillGroups.length > 0 && (
                             <section className={hasEducation ? 'min-w-0' : 'min-w-0 col-span-2'}>
-                                <Label>Skills</Label>
+                                <Label>{tr(data, 'Skills')}</Label>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Jade": the layout most Chinese resumes use. Name, target role and a two-column contact grid on
 // the left of the header with a one-inch ID photo (25 × 35 mm) on the right; sections open with a
@@ -44,7 +44,7 @@ export const JadeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         {name && <div role="heading" aria-level={1} className="text-[32px] font-bold leading-[1.1] tracking-[0.02em] text-slate-900 wrap-break-word">{name}</div>}
                         {title && (
                             <p className="mt-[6px] text-[14.5px] leading-snug text-slate-600 wrap-break-word">
-                                <span className="font-semibold text-slate-500">Target role </span>
+                                <span className="font-semibold text-slate-500">{tr(data, 'Target role')} </span>
                                 <span className="font-semibold text-(--accent)">{title}</span>
                             </p>
                         )}
@@ -65,20 +65,20 @@ export const JadeTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
                             const heading = exp.company.trim() || exp.role.trim();
                             const role = exp.company.trim() ? exp.role.trim() : '';
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHead title={heading} subtitle={role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHead title={heading} subtitle={role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />
                                 </article>
                             );
@@ -88,7 +88,7 @@ export const JadeTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -108,14 +108,14 @@ export const JadeTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => {
                             const heading = edu.school.trim() || edu.degree.trim();
                             const degree = edu.school.trim() ? edu.degree.trim() : '';
                             return (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHead title={heading} subtitle={degree} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                    <EntryHead title={heading} subtitle={degree} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                 </article>
                             );
                         })}
@@ -124,7 +124,7 @@ export const JadeTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[4px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={`${bodyText} break-inside-avoid`}>

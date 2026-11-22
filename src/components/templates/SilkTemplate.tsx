@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Centered italic serif title between two accent hairlines — the Silk signature. */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -61,10 +61,10 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SectionTitle>Experience</SectionTitle>
+                        <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                         <div className="flex flex-col gap-4">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <Entry
                                         key={exp.id}
@@ -86,7 +86,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SectionTitle>Projects</SectionTitle>
+                        <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                         <div className="flex flex-col gap-4">
                             {data.projects.map((proj) => (
                                 <Entry key={proj.id} aside={proj.name && <Org>{proj.name}</Org>}>
@@ -104,10 +104,10 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SectionTitle>Education</SectionTitle>
+                        <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                         <div className="flex flex-col gap-3">
                             {data.education.map((edu) => {
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 return (
                                     <Entry
                                         key={edu.id}
@@ -128,7 +128,7 @@ export const SilkTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section>
-                        <SectionTitle>Skills</SectionTitle>
+                        <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                         <div className="flex flex-col gap-1.5">
                             {skillGroups.map((group, i) => (
                                 group.category ? (

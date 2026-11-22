@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="flex items-baseline gap-3 font-playfair text-[21px] leading-tight text-stone-900 mb-3.5 break-after-avoid">
@@ -41,17 +41,17 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="min-w-0 flex flex-col gap-7">
                         {data.summary && (
                             <section>
-                                <MainHeading>Profile</MainHeading>
+                                <MainHeading>{tr(data, 'Profile')}</MainHeading>
                                 <p className="font-playfair italic text-[15.5px] leading-[1.6] text-stone-700 whitespace-pre-line wrap-break-word">{data.summary}</p>
                             </section>
                         )}
 
                         {data.experience.length > 0 && (
                             <section>
-                                <MainHeading>Experience</MainHeading>
+                                <MainHeading>{tr(data, 'Experience')}</MainHeading>
                                 <div className="flex flex-col gap-5">
                                     {data.experience.map((exp) => {
-                                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                         return (
                                             <div key={exp.id} className="break-inside-avoid">
                                                 <div className="flex justify-between items-baseline gap-4">
@@ -71,7 +71,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.projects.length > 0 && (
                             <section>
-                                <MainHeading>Projects</MainHeading>
+                                <MainHeading>{tr(data, 'Projects')}</MainHeading>
                                 <div className="flex flex-col gap-4">
                                     {data.projects.map((proj) => (
                                         <div key={proj.id} className="break-inside-avoid">
@@ -96,10 +96,10 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className={`min-w-0 flex flex-col gap-7 ${hasMain ? 'border-l border-stone-200 pl-7' : ''}`}>
                         {data.education.length > 0 && (
                             <section>
-                                <SideHeading>Education</SideHeading>
+                                <SideHeading>{tr(data, 'Education')}</SideHeading>
                                 <div className="flex flex-col gap-4">
                                     {data.education.map((edu) => {
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <div key={edu.id} className="break-inside-avoid">
                                                 {edu.school && <h3 className="font-bold text-stone-900 text-[14px] leading-snug wrap-break-word">{edu.school}</h3>}
@@ -114,7 +114,7 @@ export const ElegantTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {skillGroups.length > 0 && (
                             <section>
-                                <SideHeading>Skills</SideHeading>
+                                <SideHeading>{tr(data, 'Skills')}</SideHeading>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="break-inside-avoid">

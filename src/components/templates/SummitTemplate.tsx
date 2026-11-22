@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Summit": the corporate photo resume. A full-width accent band carries a square photo, the name,
 // the title and the contact details; below, a wide main column (profile, experience, projects) and
@@ -47,17 +47,17 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[9mm] pr-[7mm] pb-[12mm] pl-[14mm]">
                     {summary && (
                         <section>
-                            <Heading>Profile</Heading>
+                            <Heading>{tr(data, 'Profile')}</Heading>
                             <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                         </section>
                     )}
 
                     {data.experience.length > 0 && (
                         <section>
-                            <Heading>Experience</Heading>
+                            <Heading>{tr(data, 'Experience')}</Heading>
                             <div className="flex flex-col gap-[13px]">
                                 {data.experience.map((exp) => {
-                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
@@ -77,7 +77,7 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.projects.length > 0 && (
                         <section>
-                            <Heading>Projects</Heading>
+                            <Heading>{tr(data, 'Projects')}</Heading>
                             <div className="flex flex-col gap-[10px]">
                                 {data.projects.map((proj) => (
                                     <article key={proj.id} className="break-inside-avoid">
@@ -98,7 +98,7 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <aside className="page-frame flex w-[58mm] shrink-0 flex-col gap-[18px] border-l border-slate-200 pt-[9mm] pr-[12mm] pb-[12mm] pl-[7mm]">
                     {skillGroups.length > 0 && (
                         <section>
-                            <Heading>Skills</Heading>
+                            <Heading>{tr(data, 'Skills')}</Heading>
                             <div className="flex flex-col gap-[9px]">
                                 {skillGroups.map((group, groupIndex) => (
                                     <div key={groupIndex} className="break-inside-avoid">
@@ -116,12 +116,12 @@ export const SummitTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.education.length > 0 && (
                         <section>
-                            <Heading>Education</Heading>
+                            <Heading>{tr(data, 'Education')}</Heading>
                             <div className="flex flex-col gap-[10px]">
                                 {data.education.map((edu) => {
                                     const heading = edu.degree.trim() || edu.school.trim();
                                     const school = edu.degree.trim() ? edu.school.trim() : '';
-                                    const dates = formatDateRange(edu.startDate, edu.endDate);
+                                    const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                     return (
                                         <article key={edu.id} className="break-inside-avoid">
                                             {heading && <h3 className="text-[13px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}

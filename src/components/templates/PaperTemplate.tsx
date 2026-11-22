@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Newspaper column head: small tracked caps over an accent rule. */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -25,10 +25,10 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Professional Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Professional Experience')}</SectionTitle>
                     <div className="flex flex-col gap-4">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
                                     <div className="flex items-baseline justify-between gap-4">
@@ -45,7 +45,7 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-4">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -87,10 +87,10 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <aside className="flex min-w-0 flex-col gap-6 border-l border-stone-300 pl-6">
                             {data.education.length > 0 && (
                                 <section>
-                                    <SectionTitle>Education</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                     <div className="flex flex-col gap-3">
                                         {data.education.map((edu) => {
-                                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                             return (
                                                 <div key={edu.id} className="break-inside-avoid text-[14px] leading-snug">
                                                     {edu.school && <div className="font-bold">{edu.school}</div>}
@@ -104,7 +104,7 @@ export const PaperTemplate: React.FC<TemplateProps> = ({ data }) => {
                             )}
                             {skillGroups.length > 0 && (
                                 <section>
-                                    <SectionTitle>Skills</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                     <div className="flex flex-col gap-2 text-[14px] leading-snug">
                                         {skillGroups.map((group, i) => (
                                             <div key={i}>

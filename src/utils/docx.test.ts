@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { toDocx } from './docx';
 import { docxText } from './resumeFile';
-import { INITIAL_RESUME_DATA } from '../types';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA } from '../types';
 
 describe('toDocx', () => {
   it('writes a Word file the importer reads back: headings, bullets, dates, links and escaped text', async () => {
@@ -17,5 +17,14 @@ describe('toDocx', () => {
     const raw = new TextDecoder().decode(toDocx(data));
     expect(raw).toContain('Target="https://www.alexsterling.design" TargetMode="External"');
     expect(raw).toContain('Target="mailto:alex.sterling@example.com" TargetMode="External"');
+  });
+
+  it('writes headings and dates in Chinese when the resume language is Chinese', async () => {
+    const text = await docxText(toDocx({ ...INITIAL_RESUME_DATA, design: { ...DEFAULT_DESIGN, language: 'zh' } }));
+    const lines = text.split('\n');
+    expect(lines).toContain('工作经历');
+    expect(lines).toContain('教育背景');
+    expect(text).toContain('Senior Product Designer, TechNova Solutions 2021.03 – 至今');
+    expect(lines).not.toContain('Experience');
   });
 });

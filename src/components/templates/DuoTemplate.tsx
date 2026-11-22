@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Deedy" two-column archetype: big centred Lato name (lighter first name), Raleway meta lines,
 // a full-bleed hairline, then a 33/66 grid. The main column comes first in the DOM and is placed
@@ -58,17 +58,17 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[5mm]`}>
                             {data.summary.trim() && (
                                 <section>
-                                    <SectionTitle>Summary</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Summary')}</SectionTitle>
                                     <p className={bodyText}>{data.summary}</p>
                                 </section>
                             )}
 
                             {data.experience.length > 0 && (
                                 <section>
-                                    <SectionTitle>Experience</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                                     <div className="flex flex-col gap-3.5">
                                         {data.experience.map((exp) => {
-                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                             const company = exp.company.trim();
                                             const role = exp.role.trim();
                                             return (
@@ -91,7 +91,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {data.projects.length > 0 && (
                                 <section>
-                                    <SectionTitle>Projects</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                                     <div className="flex flex-col gap-3">
                                         {data.projects.map((proj) => (
                                             <article key={proj.id} className="break-inside-avoid">
@@ -119,10 +119,10 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <aside className={`${hasMain ? 'col-start-1' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[5mm]`}>
                             {data.education.length > 0 && (
                                 <section>
-                                    <SectionTitle>Education</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                     <div className="flex flex-col gap-3">
                                         {data.education.map((edu) => {
-                                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                             return (
                                                 <article key={edu.id} className="break-inside-avoid">
                                                     {edu.school.trim() && <h3 className="text-[14px] font-bold uppercase leading-snug tracking-[0.02em] text-[#333333] wrap-break-word">{edu.school}</h3>}
@@ -137,7 +137,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {skillGroups.length > 0 && (
                                 <section>
-                                    <SectionTitle>Skills</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                     <div className="flex flex-col gap-2.5">
                                         {skillGroups.map((group, index) => (
                                             <div key={index} className="break-inside-avoid">
@@ -158,7 +158,7 @@ export const DuoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {links.length > 0 && (
                                 <section className="break-inside-avoid">
-                                    <SectionTitle>Links</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Links')}</SectionTitle>
                                     <dl className="flex flex-col gap-2">
                                         {links.map((entry) => (
                                             <div key={entry.id}>

@@ -1,7 +1,7 @@
 import { DEFAULT_DESIGN, INITIAL_RESUME_DATA, ResumeData, type Award, type Publication, type Talk, type Teaching } from '../types';
 
 /** Resume data sets used by the dev-only template gallery (`/dev/templates`). */
-export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
+export const FIXTURES: Record<'default' | 'long' | 'sparse' | 'zh', ResumeData> = {
   default: INITIAL_RESUME_DATA,
 
   // Stress test: long name and title, many entries, long bullets, long links, 20 skills.
@@ -125,6 +125,43 @@ export const FIXTURES: Record<'default' | 'long' | 'sparse', ResumeData> = {
     education: [],
     skills: [],
     projects: [],
+  },
+
+  // A Chinese resume with English tool names: headings and dates switch to Chinese automatically.
+  zh: {
+    ...INITIAL_RESUME_DATA,
+    fullName: '王思远',
+    title: '高级产品设计师',
+    email: 'siyuan.wang@example.com',
+    phone: '138 0013 8000',
+    location: '上海',
+    website: 'siyuan.design',
+    linkedin: '',
+    links: [{ id: 'zl1', label: '', url: 'github.com/siyuanwang' }],
+    summary: '6 年 B 端 SaaS 产品设计经验，擅长设计系统与复杂业务流程梳理，能与研发紧密协作，把用户研究结论落到可交付的界面方案中。',
+    experience: [
+      {
+        id: 'z1',
+        company: '星云科技',
+        role: '高级产品设计师',
+        startDate: '2021-03',
+        endDate: '',
+        isCurrent: true,
+        description: '- 主导公司级 Design System 建设，组件复用率提升至 85%，前端开发周期缩短 30%\n- 与产品、研发协作交付 4 个 SaaS 大版本，客户续约率提升 12%\n- 带教 3 名设计师，建立每周设计评审机制',
+      },
+      {
+        id: 'z2',
+        company: '脉动创意',
+        role: 'UI/UX 设计师',
+        startDate: '2018-06',
+        endDate: '2021-02',
+        isCurrent: false,
+        description: '- 为金融与医疗客户设计响应式 Web 和移动应用\n- 组织 60 余场可用性测试，验证高保真原型',
+      },
+    ],
+    education: [{ id: 'ze1', school: '同济大学', degree: '工业设计 学士', startDate: '2014-09', endDate: '2018-06' }],
+    projects: [{ id: 'zp1', name: '企业级数据看板', link: 'siyuan.design/dashboard', description: '- 重构 40 余张报表的信息架构，用户平均查询时间减少 45%' }],
+    skills: ['设计工具: Figma, Sketch, Principle', '研究方法: 用户访谈, 可用性测试, A/B 测试', '前端: HTML, CSS, React 基础'],
   },
 };
 

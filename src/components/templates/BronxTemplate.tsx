@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Poster-sized name: as big as possible while the longest word still fits on one line. */
 const nameSizeClass = (name: string): string => {
@@ -64,14 +64,14 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className="flex flex-col gap-7 min-w-0">
                         {data.summary.trim() && (
                             <section>
-                                <Heading>Profile</Heading>
+                                <Heading>{tr(data, 'Profile')}</Heading>
                                 <p className="text-[14px] font-medium leading-[1.5] wrap-break-word">{data.summary}</p>
                             </section>
                         )}
 
                         {skillGroups.length > 0 && (
                             <section>
-                                <Heading>Skills</Heading>
+                                <Heading>{tr(data, 'Skills')}</Heading>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">
@@ -91,10 +91,10 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.education.length > 0 && (
                             <section>
-                                <Heading>Education</Heading>
+                                <Heading>{tr(data, 'Education')}</Heading>
                                 <div className="flex flex-col gap-4">
                                     {data.education.map((edu) => {
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <article key={edu.id} className="break-inside-avoid">
                                                 {dates && <DateTag>{dates}</DateTag>}
@@ -113,10 +113,10 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="flex flex-col gap-7 min-w-0">
                         {data.experience.length > 0 && (
                             <section>
-                                <Heading ruled>Experience</Heading>
+                                <Heading ruled>{tr(data, 'Experience')}</Heading>
                                 <div className="flex flex-col gap-6">
                                     {data.experience.map((exp) => {
-                                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                        const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                         return (
                                             <article key={exp.id} className="break-inside-avoid">
                                                 {dates && <DateTag>{dates}</DateTag>}
@@ -137,7 +137,7 @@ export const BronxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.projects.length > 0 && (
                             <section>
-                                <Heading ruled>Projects</Heading>
+                                <Heading ruled>{tr(data, 'Projects')}</Heading>
                                 <div className="flex flex-col gap-5">
                                     {data.projects.map((proj) => (
                                         <article key={proj.id} className="break-inside-avoid">

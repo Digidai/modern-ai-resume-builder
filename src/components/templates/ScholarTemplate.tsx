@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref, tr } from './shared';
 
 // "Scholar": an academic CV for PhD students, postdocs and researchers. Source Serif, spaced-capital
 // section headings over a hairline, and a left gutter that carries the years of each entry and the
@@ -21,13 +21,13 @@ const Section: React.FC<{ title: string; children: React.ReactNode }> = ({ title
 );
 
 /** Years: "2019–2024", "2021–present", or one year. */
-const years = (start: string, end: string, isCurrent = false): string => {
+const years = (start: string, end: string, isCurrent = false, present = 'present'): string => {
     const year = (value: string) => {
         const formatted = formatDate(value);
         return /\d{4}$/.test(formatted) ? formatted.slice(-4) : formatted;
     };
     const from = year(start);
-    const to = isCurrent ? 'present' : year(end);
+    const to = isCurrent ? present : year(end);
     if (from && to && from !== to) return `${from}–${to}`;
     return from || to;
 };
@@ -70,13 +70,13 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Research interests">
+                <Section title={tr(data, 'Research interests')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => {
                         const heading = edu.degree.trim() || edu.school.trim();
                         const school = edu.degree.trim() ? edu.school.trim() : '';
@@ -91,7 +91,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {publications.length > 0 && (
-                <Section title="Publications">
+                <Section title={tr(data, 'Publications')}>
                     {publications.map((pub, index) => (
                         <Row key={pub.id} gutter={`[${index + 1}]`}>
                             <p className={bodyText}>
@@ -103,7 +103,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Grants and awards">
+                <Section title={tr(data, 'Grants and awards')}>
                     {awards.map((award) => (
                         <Row key={award.id} gutter={award.year}>
                             <p className={bodyText}>
@@ -115,7 +115,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {talks.length > 0 && (
-                <Section title="Talks">
+                <Section title={tr(data, 'Talks')}>
                     {talks.map((talk) => (
                         <Row key={talk.id} gutter={talk.year}>
                             <p className={bodyText}>
@@ -127,7 +127,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {teaching.length > 0 && (
-                <Section title="Teaching">
+                <Section title={tr(data, 'Teaching')}>
                     {teaching.map((entry) => (
                         <Row key={entry.id} gutter={entry.year}>
                             <p className={bodyText}>
@@ -139,12 +139,12 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => {
                         const heading = exp.role.trim() || exp.company.trim();
                         const company = exp.role.trim() ? exp.company.trim() : '';
                         return (
-                            <Row key={exp.id} gutter={years(exp.startDate, exp.endDate, exp.isCurrent)}>
+                            <Row key={exp.id} gutter={years(exp.startDate, exp.endDate, exp.isCurrent, tr(data, 'present'))}>
                                 {heading && <h3 className="text-[14.5px] font-semibold leading-snug text-neutral-950 wrap-break-word">{heading}</h3>}
                                 {company && <p className="text-[14px] italic leading-snug text-neutral-700 wrap-break-word">{company}</p>}
                                 <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
@@ -155,7 +155,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Row key={proj.id}>
                             {proj.name.trim() && <h3 className="text-[14.5px] font-semibold leading-snug text-neutral-950 wrap-break-word">{proj.name}</h3>}
@@ -171,7 +171,7 @@ export const ScholarTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.map((group, index) => (
                         <Row key={index} gutter={group.category}>
                             <p className={bodyText}>{group.items.join(', ')}</p>

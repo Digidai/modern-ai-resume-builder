@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const card = 'rounded-2xl bg-white/85 px-5 py-4 shadow-sm ring-1 ring-slate-900/5';
 const descriptionList = 'list-disc space-y-0.5 pl-4 marker:text-(--accent-2)';
@@ -65,11 +65,11 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.experience.length > 0 && (
                     <section>
-                        <Badge>Experience</Badge>
+                        <Badge>{tr(data, 'Experience')}</Badge>
                         <div className="flex flex-col gap-3">
                             {data.experience.map((exp) => (
                                 <article key={exp.id} className={`${card} break-inside-avoid`}>
-                                    <EntryHead title={exp.role} subtitle={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHead title={exp.role} subtitle={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     <RichText text={exp.description} className={`mt-2 ${body}`} listClassName={descriptionList} />
                                 </article>
                             ))}
@@ -79,7 +79,7 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <Badge tone="accent-2">Projects</Badge>
+                        <Badge tone="accent-2">{tr(data, 'Projects')}</Badge>
                         <div className="grid grid-cols-2 gap-3">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className={`${card} min-w-0 break-inside-avoid`}>
@@ -100,7 +100,7 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <div className="grid grid-cols-2 gap-3">
                         {hasSkills && (
                             <section className={`${card} min-w-0 break-inside-avoid ${hasEducation ? '' : 'col-span-2'}`}>
-                                <Badge>Skills</Badge>
+                                <Badge>{tr(data, 'Skills')}</Badge>
                                 <div className="flex flex-col gap-2">
                                     {skillGroups.map((group, i) => (
                                         <div key={i}>
@@ -119,11 +119,11 @@ export const PopTemplate: React.FC<TemplateProps> = ({ data }) => {
                         )}
                         {hasEducation && (
                             <section className={`${card} min-w-0 break-inside-avoid ${hasSkills ? '' : 'col-span-2'}`}>
-                                <Badge tone="accent-2">Education</Badge>
+                                <Badge tone="accent-2">{tr(data, 'Education')}</Badge>
                                 <div className="flex flex-col gap-2.5">
                                     {data.education.map((edu) => (
                                         <div key={edu.id}>
-                                            <EntryHead small title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                            <EntryHead small title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                             {edu.degree && <div className="text-[13.5px] leading-snug text-slate-700">{edu.degree}</div>}
                                         </div>
                                     ))}

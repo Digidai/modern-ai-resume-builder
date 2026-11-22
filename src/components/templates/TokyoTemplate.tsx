@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, Portrait, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, Portrait, RichText, displayUrl, formatDate, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Tokyo": inspired by the Japanese rirekisho form. A ruled header table with small field labels
 // and a 3×4 photo box on the right, then every section is a bordered table: a tinted heading bar,
@@ -48,18 +48,18 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex flex-1 flex-col gap-[12px] bg-white px-[13mm] pt-[12mm] pb-[11mm] font-sans text-slate-800 [--accent:var(--rs-accent,#A3243A)]">
             {(name || title || contacts.length > 0) && (
                 <header className="flex flex-col gap-[6px] break-inside-avoid">
-                    <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-(--accent)">Résumé</p>
+                    <p className="text-[12px] font-semibold uppercase tracking-[0.08em] text-(--accent)">{tr(data, 'Résumé')}</p>
                     <div className={`flex border ${RULE}`}>
                         <div className={`min-w-0 flex-1 divide-y divide-slate-300 ${hasPhoto ? `border-r ${RULE}` : ''}`}>
                             {name && (
                                 <div className="px-[12px] pt-[6px] pb-[8px]">
-                                    <p className={CELL_LABEL}>Name</p>
+                                    <p className={CELL_LABEL}>{tr(data, 'Name')}</p>
                                     <div role="heading" aria-level={1} className="mt-[2px] text-[29px] font-bold leading-[1.1] tracking-[0.01em] text-slate-900 wrap-break-word">{name}</div>
                                 </div>
                             )}
                             {title && (
                                 <div className="px-[12px] py-[6px]">
-                                    <p className={CELL_LABEL}>Position</p>
+                                    <p className={CELL_LABEL}>{tr(data, 'Position')}</p>
                                     <p className="mt-[1px] text-[15px] font-semibold leading-snug text-(--accent) wrap-break-word">{title}</p>
                                 </div>
                             )}
@@ -93,19 +93,19 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <section className={`border ${RULE} break-inside-avoid`}>
                     <h2 className={`flex items-center gap-[8px] border-b ${RULE} bg-(--accent)/7 px-[10px] py-[5px] text-[13px] font-bold uppercase tracking-[0.08em] text-slate-900`}>
                         <span aria-hidden className="h-[11px] w-[3px] bg-(--accent)" />
-                        Profile
+                        {tr(data, 'Profile')}
                     </h2>
                     <p className={`${bodyText} whitespace-pre-line px-[12px] py-[6px]`}>{summary}</p>
                 </section>
             )}
 
             {data.experience.length > 0 && (
-                <Table title="Work history">
+                <Table title={tr(data, 'Work history')}>
                     {data.experience.map((exp) => {
                         const heading = exp.role.trim() || exp.company.trim();
                         const company = exp.role.trim() ? exp.company.trim() : '';
                         return (
-                            <Row key={exp.id} start={formatDate(exp.startDate)} end={exp.isCurrent ? 'Present' : formatDate(exp.endDate)}>
+                            <Row key={exp.id} start={formatDate(exp.startDate, resumeLanguage(data))} end={exp.isCurrent ? tr(data, 'Present') : formatDate(exp.endDate, resumeLanguage(data))}>
                                 <h3 className="text-[14.5px] font-bold leading-snug text-slate-900 wrap-break-word">
                                     {heading}
                                     {company && <span className="font-semibold text-slate-600">{`, ${company}`}</span>}
@@ -118,12 +118,12 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Table title="Education">
+                <Table title={tr(data, 'Education')}>
                     {data.education.map((edu) => {
                         const heading = edu.school.trim() || edu.degree.trim();
                         const degree = edu.school.trim() ? edu.degree.trim() : '';
                         return (
-                            <Row key={edu.id} start={formatDate(edu.startDate)} end={formatDate(edu.endDate)}>
+                            <Row key={edu.id} start={formatDate(edu.startDate, resumeLanguage(data))} end={formatDate(edu.endDate, resumeLanguage(data))}>
                                 <h3 className="text-[14.5px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>
                                 {degree && <p className="text-[13.5px] leading-snug text-slate-700 wrap-break-word">{degree}</p>}
                             </Row>
@@ -133,7 +133,7 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Table title="Skills and licences">
+                <Table title={tr(data, 'Skills and licences')}>
                     {skillGroups.map((group, index) => (
                         <Row key={index} label={group.category}>
                             <p className={bodyText}>{group.items.join(' · ')}</p>
@@ -143,7 +143,7 @@ export const TokyoTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Table title="Projects">
+                <Table title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Row key={proj.id} label="">
                             {proj.name.trim() && <h3 className="text-[14.5px] font-bold leading-snug text-slate-900 wrap-break-word">{proj.name}</h3>}

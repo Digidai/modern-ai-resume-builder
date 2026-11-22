@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-3.5 text-xs font-bold tracking-[0.08em] text-(--accent-light) uppercase break-after-avoid">{children}</h2>
@@ -17,16 +17,16 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex min-w-0 flex-col gap-6">
             {data.summary.trim() && (
                 <section>
-                    <SectionTitle>Profile</SectionTitle>
+                    <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                     <p className="text-[14.5px] leading-normal text-zinc-200">{data.summary}</p>
                 </section>
             )}
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-5">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             return (
                                 <article key={exp.id} className="break-inside-avoid border-l-2 border-zinc-700 pl-5">
                                     <div className="flex items-baseline justify-between gap-4">
@@ -43,7 +43,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-5">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid border-l-2 border-zinc-700 pl-5">
@@ -84,7 +84,7 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className="flex min-w-0 flex-col gap-6 border-l border-zinc-700 pl-7">
                         {skillGroups.length > 0 && (
                             <section>
-                                <SectionTitle>Skills</SectionTitle>
+                                <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, i) => (
                                         <div key={i}>
@@ -104,10 +104,10 @@ export const NoirTemplate: React.FC<TemplateProps> = ({ data }) => {
                         )}
                         {data.education.length > 0 && (
                             <section>
-                                <SectionTitle>Education</SectionTitle>
+                                <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                 <div className="flex flex-col gap-4">
                                     {data.education.map((edu) => {
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <div key={edu.id} className="break-inside-avoid">
                                                 {edu.school && <div className="text-[14px] leading-snug font-medium text-white">{edu.school}</div>}

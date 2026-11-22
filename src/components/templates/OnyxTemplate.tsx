@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Onyx": the dark-sidebar photo resume that the big online builders made popular. A charcoal
 // column with a round photo, contact details, skills and education sits beside a white main column
@@ -38,7 +38,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {contacts.length > 0 && (
                     <section>
-                        <SideHeading>Contact</SideHeading>
+                        <SideHeading>{tr(data, 'Contact')}</SideHeading>
                         <div className="flex flex-col gap-[7px] text-[12px] leading-snug text-neutral-300">
                             {contacts.map((entry) => (
                                 <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" fit />
@@ -49,7 +49,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section>
-                        <SideHeading>Skills</SideHeading>
+                        <SideHeading>{tr(data, 'Skills')}</SideHeading>
                         <div className="flex flex-col gap-[10px]">
                             {skillGroups.map((group, groupIndex) => (
                                 <div key={groupIndex} className="break-inside-avoid">
@@ -70,12 +70,12 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SideHeading>Education</SideHeading>
+                        <SideHeading>{tr(data, 'Education')}</SideHeading>
                         <div className="flex flex-col gap-[10px]">
                             {data.education.map((edu) => {
                                 const heading = edu.degree.trim() || edu.school.trim();
                                 const school = edu.degree.trim() ? edu.school.trim() : '';
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 return (
                                     <article key={edu.id} className="break-inside-avoid">
                                         {heading && <h3 className="text-[12.5px] font-semibold leading-snug text-white wrap-break-word">{heading}</h3>}
@@ -99,17 +99,17 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {summary && (
                     <section>
-                        <MainHeading>Profile</MainHeading>
+                        <MainHeading>{tr(data, 'Profile')}</MainHeading>
                         <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <MainHeading>Experience</MainHeading>
+                        <MainHeading>{tr(data, 'Experience')}</MainHeading>
                         <div className="flex flex-col gap-[13px]">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 const heading = exp.role.trim() || exp.company.trim();
                                 const company = exp.role.trim() ? exp.company.trim() : '';
                                 return (
@@ -131,7 +131,7 @@ export const OnyxTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <MainHeading>Projects</MainHeading>
+                        <MainHeading>{tr(data, 'Projects')}</MainHeading>
                         <div className="flex flex-col gap-[10px]">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">

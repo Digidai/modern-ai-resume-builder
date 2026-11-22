@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Small-caps heading on a full-width hairline, the way a LaTeX CV sets \section. */
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -48,18 +48,18 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.summary && (
                 <section>
-                    <SectionHeading>Profile</SectionHeading>
+                    <SectionHeading>{tr(data, 'Profile')}</SectionHeading>
                     <p className="pl-[4mm] leading-[1.55] whitespace-pre-line wrap-break-word">{data.summary}</p>
                 </section>
             )}
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionHeading>Education</SectionHeading>
+                    <SectionHeading>{tr(data, 'Education')}</SectionHeading>
                     <div className="pl-[4mm] flex flex-col gap-2.5">
                         {data.education.map((edu) => (
                             <div key={edu.id} className="break-inside-avoid">
-                                <EntryHead primary={edu.school} secondary={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                <EntryHead primary={edu.school} secondary={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                             </div>
                         ))}
                     </div>
@@ -68,7 +68,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {(data.publications ?? []).length > 0 && (
                 <section>
-                    <SectionHeading>Publications</SectionHeading>
+                    <SectionHeading>{tr(data, 'Publications')}</SectionHeading>
                     <ol className="pl-[4mm] flex flex-col gap-1.5">
                         {(data.publications ?? []).map((pub) => (
                             <li key={pub.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
@@ -81,7 +81,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {(data.awards ?? []).length > 0 && (
                 <section>
-                    <SectionHeading>Grants and Awards</SectionHeading>
+                    <SectionHeading>{tr(data, 'Grants and Awards')}</SectionHeading>
                     <ul className="pl-[4mm] flex flex-col gap-1.5">
                         {(data.awards ?? []).map((award) => (
                             <li key={award.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
@@ -94,7 +94,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {(data.talks ?? []).length > 0 && (
                 <section>
-                    <SectionHeading>Talks</SectionHeading>
+                    <SectionHeading>{tr(data, 'Talks')}</SectionHeading>
                     <ul className="pl-[4mm] flex flex-col gap-1.5">
                         {(data.talks ?? []).map((talk) => (
                             <li key={talk.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
@@ -107,7 +107,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {(data.teaching ?? []).length > 0 && (
                 <section>
-                    <SectionHeading>Teaching</SectionHeading>
+                    <SectionHeading>{tr(data, 'Teaching')}</SectionHeading>
                     <ul className="pl-[4mm] flex flex-col gap-1.5">
                         {(data.teaching ?? []).map((entry) => (
                             <li key={entry.id} className="pl-[5mm] -indent-[5mm] leading-normal wrap-break-word break-inside-avoid">
@@ -120,11 +120,11 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionHeading>Experience</SectionHeading>
+                    <SectionHeading>{tr(data, 'Experience')}</SectionHeading>
                     <div className="pl-[4mm] flex flex-col gap-3.5">
                         {data.experience.map((exp) => (
                             <div key={exp.id} className="break-inside-avoid">
-                                <EntryHead primary={exp.company} secondary={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                <EntryHead primary={exp.company} secondary={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                 {exp.description && (
                                     <RichText text={exp.description} className="mt-1.5 leading-normal wrap-break-word" listClassName={listClass} />
                                 )}
@@ -136,7 +136,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionHeading>Projects</SectionHeading>
+                    <SectionHeading>{tr(data, 'Projects')}</SectionHeading>
                     {/* Reference-list rhythm: hanging indent, title first, link in italics. */}
                     <div className="pl-[4mm] flex flex-col gap-2.5">
                         {data.projects.map((proj) => (
@@ -161,7 +161,7 @@ export const AcademicTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionHeading>Skills</SectionHeading>
+                    <SectionHeading>{tr(data, 'Skills')}</SectionHeading>
                     <div className="pl-[4mm] flex flex-col gap-1">
                         {skillGroups.map((group, i) => (
                             <p key={i} className="leading-normal wrap-break-word">

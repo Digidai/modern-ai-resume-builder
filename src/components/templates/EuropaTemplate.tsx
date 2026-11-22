@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Europa": modelled on the Europass CV used across the EU. A 3:4 photo beside the name and an
 // icon contact list, then sections set on a two-column grid: a narrow left column for dates and
@@ -59,7 +59,7 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="About me">
+                <Section title={tr(data, 'About me')}>
                     <Row>
                         <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                     </Row>
@@ -67,12 +67,12 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Work experience">
+                <Section title={tr(data, 'Work experience')}>
                     {data.experience.map((exp) => {
                         const heading = exp.role.trim() || exp.company.trim();
                         const company = exp.role.trim() ? exp.company.trim() : '';
                         return (
-                            <Row key={exp.id} label={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                            <Row key={exp.id} label={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                                 {heading && <h3 className="text-[15px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}
                                 {company && <p className="text-[13.5px] font-semibold leading-snug text-(--accent) wrap-break-word">{company}</p>}
                                 <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />
@@ -83,12 +83,12 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => {
                         const heading = edu.degree.trim() || edu.school.trim();
                         const school = edu.degree.trim() ? edu.school.trim() : '';
                         return (
-                            <Row key={edu.id} label={formatDateRange(edu.startDate, edu.endDate)}>
+                            <Row key={edu.id} label={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}>
                                 {heading && <h3 className="text-[15px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}
                                 {school && <p className="text-[13.5px] leading-snug text-slate-700 wrap-break-word">{school}</p>}
                             </Row>
@@ -98,7 +98,7 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.map((group, index) => (
                         <Row key={index} label={group.category}>
                             <p className={bodyText}>{group.items.join(' · ')}</p>
@@ -108,7 +108,7 @@ export const EuropaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Row key={proj.id}>
                             {proj.name.trim() && <h3 className="text-[15px] font-bold leading-snug text-slate-900 wrap-break-word">{proj.name}</h3>}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Altitude", after the AltaCV LaTeX layout: a bold uppercase name with an accent tagline and an
 // icon contact row, then a 63/37 two-column body. The main column (profile, experience, projects)
@@ -63,19 +63,19 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div className={`${hasSide ? 'col-start-1' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
                             {summary && (
                                 <section>
-                                    <SectionTitle>Profile</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                                     <p className={`${bodyText} whitespace-pre-line border-l-[3px] border-(--accent)/40 pl-[10px] italic`}>{summary}</p>
                                 </section>
                             )}
 
                             {data.experience.length > 0 && (
                                 <section>
-                                    <SectionTitle>Experience</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                                     <div className="flex flex-col gap-[9px]">
                                         {data.experience.map((exp) => {
                                             const role = exp.role.trim();
                                             const company = exp.company.trim();
-                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                             const heading = role || company;
                                             const sub = role ? company : '';
                                             return (
@@ -97,7 +97,7 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {data.projects.length > 0 && (
                                 <section>
-                                    <SectionTitle>Projects</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                                     <div className="flex flex-col gap-[9px]">
                                         {data.projects.map((proj) => (
                                             <article key={proj.id} className={`break-inside-avoid ${divider}`}>
@@ -125,7 +125,7 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <aside className={`${hasMain ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
                             {skillGroups.length > 0 && (
                                 <section className="break-inside-avoid">
-                                    <SectionTitle>Skills</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                     <div className="flex flex-col gap-[8px]">
                                         {skillGroups.map((group, index) => (
                                             <div key={index}>
@@ -148,12 +148,12 @@ export const AltitudeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {data.education.length > 0 && (
                                 <section>
-                                    <SectionTitle>Education</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                     <div className="flex flex-col gap-[9px]">
                                         {data.education.map((edu) => {
                                             const degree = edu.degree.trim();
                                             const school = edu.school.trim();
-                                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                             return (
                                                 <article key={edu.id} className={`break-inside-avoid ${divider}`}>
                                                     {(degree || school) && <h3 className="text-[14.5px] font-semibold leading-snug text-[#222222] wrap-break-word">{degree || school}</h3>}

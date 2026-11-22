@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Standard", after Gayle Laakmann McDowell's resume format (CareerCup, "Cracking the Coding
 // Interview"), long recommended by tech recruiters: Times throughout, a large small-caps name
@@ -71,7 +71,7 @@ export const StandardTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Summary">
+                <Section title={tr(data, 'Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
@@ -79,10 +79,10 @@ export const StandardTemplate: React.FC<TemplateProps> = ({ data }) => {
             {data.education.length > 0 && data.experience.length === 0 && <EducationSection data={data} />}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => (
                         <article key={exp.id} className="break-inside-avoid">
-                            <EntryHead left={exp.company.trim() || exp.role.trim()} center={exp.company.trim() ? exp.role.trim() : ''} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                            <EntryHead left={exp.company.trim() || exp.role.trim()} center={exp.company.trim() ? exp.role.trim() : ''} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                             <RichText text={exp.description} className={`mt-[2px] ${bodyText}`} listClassName={listClass} />
                         </article>
                     ))}
@@ -90,7 +90,7 @@ export const StandardTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <EntryHead left={proj.name.trim()} center={proj.link.trim() ? displayUrl(proj.link) : ''} href={proj.link.trim() ? toHref(proj.link) : undefined} />
@@ -103,7 +103,7 @@ export const StandardTemplate: React.FC<TemplateProps> = ({ data }) => {
             {data.education.length > 0 && data.experience.length > 0 && <EducationSection data={data} />}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[2px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>
@@ -119,10 +119,10 @@ export const StandardTemplate: React.FC<TemplateProps> = ({ data }) => {
 };
 
 const EducationSection: React.FC<{ data: TemplateProps['data'] }> = ({ data }) => (
-    <Section title="Education">
+    <Section title={tr(data, 'Education')}>
         {data.education.map((edu) => (
             <article key={edu.id} className="break-inside-avoid">
-                <EntryHead left={edu.school.trim() || edu.degree.trim()} center={edu.school.trim() ? edu.degree.trim() : ''} right={formatDateRange(edu.startDate, edu.endDate)} />
+                <EntryHead left={edu.school.trim() || edu.degree.trim()} center={edu.school.trim() ? edu.degree.trim() : ''} right={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
             </article>
         ))}
     </Section>

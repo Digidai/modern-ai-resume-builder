@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Vital": a calm, clinical single-column resume for healthcare and other credential-led roles.
 // Labelled contact details (Email, Phone…) in a two-column grid, and a tinted credentials block
@@ -60,14 +60,14 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {summary && (
                 <section>
-                    <SectionTitle>Profile</SectionTitle>
+                    <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </section>
             )}
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionTitle>{hasCategories ? 'Credentials & Skills' : 'Skills'}</SectionTitle>
+                    <SectionTitle>{hasCategories ? tr(data, 'Credentials & Skills') : tr(data, 'Skills')}</SectionTitle>
                     <div className="flex flex-col gap-[6px] rounded-[6px] border border-(--accent)/25 bg-(--accent)/5 px-[14px] py-[10px]">
                         {skillGroups.map((group, index) =>
                             group.category ? (
@@ -77,7 +77,7 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
                                 </div>
                             ) : (
                                 <ul key={index} className="grid grid-cols-3 gap-x-4 gap-y-[2px]">
-                                    {hasCategories && <li className="col-span-3 text-[13.5px] font-bold leading-[1.5] text-slate-900">Other</li>}
+                                    {hasCategories && <li className="col-span-3 text-[13.5px] font-bold leading-[1.5] text-slate-900">{tr(data, 'Other')}</li>}
                                     {group.items.map((skill, itemIndex) => (
                                         <li key={itemIndex} className={`flex min-w-0 items-baseline gap-[7px] ${bodyText}`}>
                                             <span aria-hidden className="relative top-[-2px] h-[5px] w-[5px] shrink-0 rounded-full bg-(--accent)" />
@@ -93,14 +93,14 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
                             const role = exp.role.trim();
                             const company = exp.company.trim();
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHeader title={role || company} subtitle={role ? company : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHeader title={role || company} subtitle={role ? company : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />
                                 </article>
                             );
@@ -111,14 +111,14 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionTitle>Education</SectionTitle>
+                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                     <div className="flex flex-col gap-[9px]">
                         {data.education.map((edu) => {
                             const degree = edu.degree.trim();
                             const school = edu.school.trim();
                             return (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHeader title={degree || school} subtitle={degree ? school : ''} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                    <EntryHeader title={degree || school} subtitle={degree ? school : ''} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                 </article>
                             );
                         })}
@@ -128,7 +128,7 @@ export const VitalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Meridian": a modern take on the Harvard serif resume. Left-aligned serif name, capitalised
 // accent headings over a hairline (synthesised small caps extract as "E ducation", so ATS misses them), and a right-hand date rail: every dated entry carries its dates
@@ -64,13 +64,13 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
                             const role = exp.role.trim();
@@ -80,7 +80,7 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     key={exp.id}
                                     title={role || company}
                                     subtitle={role ? company : ''}
-                                    dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                                    dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                                 >
                                     {exp.description.trim() && <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />}
                                 </RailEntry>
@@ -91,7 +91,7 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -119,7 +119,7 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.education.map((edu) => {
                             const school = edu.school.trim();
@@ -129,7 +129,7 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
                                     key={edu.id}
                                     title={school || degree}
                                     subtitle={school ? degree : ''}
-                                    dates={formatDateRange(edu.startDate, edu.endDate)}
+                                    dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                                 />
                             );
                         })}
@@ -138,11 +138,11 @@ export const MeridianTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <div className={`flex flex-col gap-[3px] ${bodyText}`}>
                         {skillGroups.map((group, index) => (
                             <p key={index}>
-                                {hasCategories && <span className="font-semibold text-neutral-950">{group.category || 'Other'}: </span>}
+                                {hasCategories && <span className="font-semibold text-neutral-950">{group.category || tr(data, 'Other')}: </span>}
                                 {group.items.join(hasCategories ? ', ' : ' · ')}
                             </p>
                         ))}

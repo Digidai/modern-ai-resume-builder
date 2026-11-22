@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, ContactLink, RichText, displayUrl, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, ContactLink, RichText, displayUrl, getContactEntries, groupSkills, toHref, tr } from './shared';
 
 // "Federal": a USAJOBS-style federal resume. One plain column in a system sans, black text, and the
 // details HR specialists check for every job spelled out: title (with series and grade), employer,
@@ -28,9 +28,9 @@ const monthYear = (value: string): string => {
     return match ? `${match[2].padStart(2, '0')}/${match[1]}` : trimmed;
 };
 
-const dateRange = (start: string, end: string, isCurrent = false): string => {
+const dateRange = (start: string, end: string, isCurrent = false, present = 'Present'): string => {
     const from = monthYear(start);
-    const to = isCurrent ? 'Present' : monthYear(end);
+    const to = isCurrent ? present : monthYear(end);
     return from && to ? `${from} – ${to}` : from || to;
 };
 
@@ -84,18 +84,18 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Professional Summary">
+                <Section title={tr(data, 'Professional Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Work Experience">
+                <Section title={tr(data, 'Work Experience')}>
                     <div className="flex flex-col gap-[13px]">
                         {data.experience.map((exp) => {
                             const role = exp.role.trim();
                             const company = exp.company.trim();
-                            const dates = dateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = dateRange(exp.startDate, exp.endDate, exp.isCurrent, tr(data, 'Present'));
                             const hours = hoursText(exp.hours);
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
@@ -117,7 +117,7 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => {
                             const degree = edu.degree.trim();
@@ -153,7 +153,7 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[3px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>
@@ -166,7 +166,7 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Honors and Awards">
+                <Section title={tr(data, 'Honors and Awards')}>
                     <ul className="flex flex-col gap-[4px]">
                         {awards.map((award) => (
                             <li key={award.id} className={`${bodyText} break-inside-avoid`}>
@@ -178,7 +178,7 @@ export const FederalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Wave", after the curved-header photo resume that is one of the most used designs on Canva: an
 // accent band with a wavy lower edge crosses the top of the first page, a round photo overlaps it,
@@ -46,17 +46,17 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div className="page-frame flex min-w-0 flex-1 flex-col gap-[17px] pt-[6mm] pr-[7mm] pb-[12mm] pl-[14mm]">
                     {summary && (
                         <section>
-                            <Heading>About Me</Heading>
+                            <Heading>{tr(data, 'About Me')}</Heading>
                             <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                         </section>
                     )}
 
                     {data.experience.length > 0 && (
                         <section>
-                            <Heading>Experience</Heading>
+                            <Heading>{tr(data, 'Experience')}</Heading>
                             <div className="flex flex-col gap-[13px]">
                                 {data.experience.map((exp) => {
-                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
@@ -80,7 +80,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.projects.length > 0 && (
                         <section>
-                            <Heading>Projects</Heading>
+                            <Heading>{tr(data, 'Projects')}</Heading>
                             <div className="flex flex-col gap-[10px]">
                                 {data.projects.map((proj) => (
                                     <article key={proj.id} className="break-inside-avoid">
@@ -101,7 +101,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <aside className="page-frame flex w-[64mm] shrink-0 flex-col gap-[18px] pt-[6mm] pr-[13mm] pb-[12mm] pl-[5mm]">
                     {contacts.length > 0 && (
                         <section>
-                            <Heading>Contact</Heading>
+                            <Heading>{tr(data, 'Contact')}</Heading>
                             <div className="flex flex-col gap-[7px] text-[12px] leading-snug text-slate-700">
                                 {contacts.map((entry) => (
                                     <ContactItem key={entry.id} entry={entry} iconClassName="h-[13px] w-[13px] text-(--accent)" fit />
@@ -112,7 +112,7 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {skillGroups.length > 0 && (
                         <section>
-                            <Heading>Skills</Heading>
+                            <Heading>{tr(data, 'Skills')}</Heading>
                             <div className="flex flex-col gap-[9px]">
                                 {skillGroups.map((group, groupIndex) => (
                                     <div key={groupIndex} className="break-inside-avoid">
@@ -130,12 +130,12 @@ export const WaveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.education.length > 0 && (
                         <section>
-                            <Heading>Education</Heading>
+                            <Heading>{tr(data, 'Education')}</Heading>
                             <div className="flex flex-col gap-[10px]">
                                 {data.education.map((edu) => {
                                     const heading = edu.degree.trim() || edu.school.trim();
                                     const school = edu.degree.trim() ? edu.school.trim() : '';
-                                    const dates = formatDateRange(edu.startDate, edu.endDate);
+                                    const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                     return (
                                         <article key={edu.id} className="break-inside-avoid">
                                             {heading && <h3 className="text-[13px] font-bold leading-snug text-slate-900 wrap-break-word">{heading}</h3>}

@@ -1,7 +1,8 @@
 import { describe, expect, it } from 'vitest';
 import { createElement } from 'react';
 import { renderToStaticMarkup } from 'react-dom/server';
-import { AwardLine, Authors, TalkLine, TeachingLine, displayUrl, groupSkills, toHref } from './shared';
+import { AwardLine, Authors, TalkLine, TeachingLine, displayUrl, formatDateRange, groupSkills, resumeLanguage, toHref } from './shared';
+import { DEFAULT_DESIGN, INITIAL_RESUME_DATA } from '../../types';
 
 describe('groupSkills', () => {
   it('splits a category on top-level separators but keeps commas inside parentheses', () => {
@@ -59,6 +60,28 @@ describe('TalkLine, AwardLine and TeachingLine', () => {
   });
 });
 
+describe('resumeLanguage', () => {
+  const resume = (patch: Partial<typeof INITIAL_RESUME_DATA>) => ({ ...INITIAL_RESUME_DATA, experience: [], education: [], projects: [], skills: [], ...patch });
+
+  it('reads Chinese content as Chinese even with English tool names, but not a Chinese name or Japanese', () => {
+    expect(resumeLanguage(resume({ title: '高级前端工程师', summary: '负责 React、TypeScript 与 Node.js 服务的架构设计，带领 5 人团队交付 Design System。' }))).toBe('zh');
+    expect(resumeLanguage(resume({ fullName: '李明', title: 'Senior Engineer', summary: 'Builds data platforms with Spark and Kafka.' }))).toBe('en');
+    expect(resumeLanguage(resume({ title: 'フロントエンドエンジニア', summary: '大規模なウェブサービスの開発を担当しました。' }))).toBe('en');
+    expect(resumeLanguage(resume({ title: 'Engineer', skills: ['熟悉 Go'] }))).toBe('en');
+  });
+
+  it('follows the design setting over the content', () => {
+    expect(resumeLanguage(resume({ summary: '负责产品规划与用户研究工作。', design: { ...DEFAULT_DESIGN, language: 'en' } }))).toBe('en');
+    expect(resumeLanguage(resume({ summary: 'Product planning.', design: { ...DEFAULT_DESIGN, language: 'zh' } }))).toBe('zh');
+  });
+
+  it('formats Chinese dates as year.month with 至今', () => {
+    expect(formatDateRange('2021-3', '', true, 'zh')).toBe('2021.03 – 至今');
+    expect(formatDateRange('2019-09', '2023-06', false, 'zh')).toBe('2019.09 – 2023.06');
+    expect(formatDateRange('2021-03', '', true)).toBe('Mar 2021 – Present');
+  });
+});
+
 describe('Templates', () => {
   // Chrome's PDFs place letter-spaced glyphs one by one; past about 0.1em, text extraction (pdftotext,
   // which ATS parsers resemble) reads "E D U C AT I O N" and misses the heading.
@@ -73,5 +96,24 @@ describe('Templates', () => {
       for (const [cls, value] of html.matchAll(/tracking-\[([\d.]+)em\]|tracking-widest/g)) if (!value || Number(value) > 0.08) wide.push(`${template.id}: ${cls}`);
     }
     expect(wide).toEqual([]);
+  });
+
+  it('print every heading, contact label and date in Chinese for a Chinese resume', async () => {
+    const { TEMPLATES } = await import('../../constants/templates');
+    const { TEMPLATE_LOADERS } = await import('../ResumeTemplateRenderer');
+    const { FIXTURES } = await import('../../dev/fixtures');
+    const english: string[] = [];
+    for (const template of TEMPLATES) {
+      const { default: Template } = await TEMPLATE_LOADERS[template.id as keyof typeof TEMPLATE_LOADERS]();
+      const data = { ...FIXTURES.long, templateId: template.id, design: { ...DEFAULT_DESIGN, language: 'zh' as const } };
+      const html = renderToStaticMarkup(createElement(Template, { data }));
+      const text = html.replace(/<[^>]+>/g, '');
+      if (!text.includes('工作经历') || !text.includes('教育背景')) english.push(`${template.id}: no Chinese headings`);
+      for (const match of html.matchAll(/>\s*(Summary|Profile|Experience|Work Experience|Education|Skills|Projects|Contact|Email|Phone|Location|Present|Jan \d{4}|Mar \d{4})\s*</gi)) {
+        // Mono writes code: "const skills = [...]" keeps its variable names.
+        if (!html.slice(match.index - 60, match.index).includes('>const<')) english.push(`${template.id}: ${match[1]}`);
+      }
+    }
+    expect(english).toEqual([]);
   });
 });

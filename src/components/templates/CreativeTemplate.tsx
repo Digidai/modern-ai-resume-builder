@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SidebarHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-3 border-b-2 border-(--accent)/25 pb-1.5 font-montserrat text-[12px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
@@ -44,7 +44,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <aside className="flex w-[34%] shrink-0 flex-col gap-7 bg-(--accent)/6 page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[7mm] pb-[12mm] pl-[12mm] print:[-webkit-print-color-adjust:exact] print:[print-color-adjust:exact]">
                     {contacts.length > 0 && (
                         <section>
-                            <SidebarHeading>Contact</SidebarHeading>
+                            <SidebarHeading>{tr(data, 'Contact')}</SidebarHeading>
                             <ul className="flex flex-col gap-2 text-[13.5px] text-slate-700">
                                 {contacts.map((entry) => {
                                     const Icon = entry.icon;
@@ -61,7 +61,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {skillGroups.length > 0 && (
                         <section className="break-inside-avoid">
-                            <SidebarHeading>Skills</SidebarHeading>
+                            <SidebarHeading>{tr(data, 'Skills')}</SidebarHeading>
                             <div className="flex flex-col gap-3">
                                 {skillGroups.map((group, groupIndex) => (
                                     <div key={groupIndex}>
@@ -84,10 +84,10 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.education.length > 0 && (
                         <section>
-                            <SidebarHeading>Education</SidebarHeading>
+                            <SidebarHeading>{tr(data, 'Education')}</SidebarHeading>
                             <div className="flex flex-col gap-4">
                                 {data.education.map((edu) => {
-                                    const dates = formatDateRange(edu.startDate, edu.endDate);
+                                    const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                     return (
                                         <article key={edu.id} className="break-inside-avoid">
                                             {edu.school.trim() && <h3 className="text-[14px] font-bold leading-snug text-slate-900 wrap-break-word">{edu.school}</h3>}
@@ -104,17 +104,17 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div className="page-frame flex min-w-0 flex-1 flex-col gap-7 pt-[12mm] [&>:first-child]:-mt-[3mm] pr-[13mm] pb-[12mm] pl-[8mm]">
                     {data.summary.trim() && (
                         <section>
-                            <MainHeading>Profile</MainHeading>
+                            <MainHeading>{tr(data, 'Profile')}</MainHeading>
                             <p className={`${bodyText} whitespace-pre-line`}>{data.summary.trim()}</p>
                         </section>
                     )}
 
                     {data.experience.length > 0 && (
                         <section>
-                            <MainHeading>Experience</MainHeading>
+                            <MainHeading>{tr(data, 'Experience')}</MainHeading>
                             <div className="flex flex-col">
                                 {data.experience.map((exp) => {
-                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                     const heading = exp.role.trim() || exp.company.trim();
                                     const company = exp.role.trim() ? exp.company.trim() : '';
                                     return (
@@ -142,7 +142,7 @@ export const CreativeTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.projects.length > 0 && (
                         <section>
-                            <MainHeading>Projects</MainHeading>
+                            <MainHeading>{tr(data, 'Projects')}</MainHeading>
                             <div className="flex flex-col gap-4">
                                 {data.projects.map((proj) => (
                                     <article key={proj.id} className="break-inside-avoid">

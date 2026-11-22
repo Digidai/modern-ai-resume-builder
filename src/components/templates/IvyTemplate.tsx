@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Ivy", after the Harvard career-services format: Times-style type throughout, a modest
 // centered bold name over a full-width hairline, a • separated contact line, centered
@@ -53,16 +53,16 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className={hasHeader ? 'mt-[14px]' : ''}>
                 {summary && (
-                    <Section title="Summary">
+                    <Section title={tr(data, 'Summary')}>
                         <p className={`${bodyClass} whitespace-pre-line`}>{summary}</p>
                     </Section>
                 )}
 
                 {data.education.length > 0 && (
-                    <Section title="Education">
+                    <Section title={tr(data, 'Education')}>
                         <div className="flex flex-col gap-[10px]">
                             {data.education.map((edu) => {
-                                const dates = formatDateRange(edu.startDate, edu.endDate);
+                                const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                 return (
                                     <div key={edu.id} className={`break-inside-avoid ${bodyClass}`}>
                                         {edu.school && edu.degree && <h3 className="font-bold">{edu.school}</h3>}
@@ -78,10 +78,10 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.experience.length > 0 && (
-                    <Section title="Experience">
+                    <Section title={tr(data, 'Experience')}>
                         <div className="flex flex-col gap-[10px]">
                             {data.experience.map((exp) => {
-                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                 return (
                                     <div key={exp.id} className={`break-inside-avoid ${bodyClass}`}>
                                         {exp.company && exp.role && <h3 className="font-bold">{exp.company}</h3>}
@@ -100,7 +100,7 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.projects.length > 0 && (
-                    <Section title="Projects">
+                    <Section title={tr(data, 'Projects')}>
                         <div className="flex flex-col gap-[10px]">
                             {data.projects.map((proj) => (
                                 <div key={proj.id} className={`break-inside-avoid ${bodyClass}`}>
@@ -129,11 +129,11 @@ export const IvyTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Section title="Skills">
+                    <Section title={tr(data, 'Skills')}>
                         <div className={`flex flex-col gap-[2px] ${bodyClass}`}>
                             {skillGroups.map((group, index) => (
                                 <p key={index}>
-                                    {(group.category || hasCategories) && <span className="font-bold">{group.category || 'Other'}: </span>}
+                                    {(group.category || hasCategories) && <span className="font-bold">{group.category || tr(data, 'Other')}: </span>}
                                     {group.items.join(', ')}
                                 </p>
                             ))}

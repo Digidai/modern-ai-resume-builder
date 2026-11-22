@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Ledger", after moderncv's banking style: a left-aligned bold name in the accent (first
 // names a tint lighter) with the title beside it in grey, an icon contact line, a tinted
@@ -73,20 +73,20 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             <div className={hasHeader ? 'mt-[16px]' : ''}>
                 {summary && (
-                    <Section title="Summary">
+                    <Section title={tr(data, 'Summary')}>
                         <p className={`${bodyClass} whitespace-pre-line`}>{summary}</p>
                     </Section>
                 )}
 
                 {data.experience.length > 0 && (
-                    <Section title="Experience">
+                    <Section title={tr(data, 'Experience')}>
                         <div className="flex flex-col gap-[11px]">
                             {data.experience.map((exp) => (
                                 <div key={exp.id} className="break-inside-avoid">
                                     <EntryHead
                                         title={exp.role || exp.company}
                                         subtitle={exp.role ? exp.company : ''}
-                                        dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                                        dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                                     />
                                     {exp.description.trim() && (
                                         <RichText text={exp.description} className={`mt-[3px] space-y-[3px] ${bodyClass}`} listClassName={listClass} />
@@ -98,14 +98,14 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.education.length > 0 && (
-                    <Section title="Education">
+                    <Section title={tr(data, 'Education')}>
                         <div className="flex flex-col gap-[8px]">
                             {data.education.map((edu) => (
                                 <div key={edu.id} className="break-inside-avoid">
                                     <EntryHead
                                         title={edu.degree || edu.school}
                                         subtitle={edu.degree ? edu.school : ''}
-                                        dates={formatDateRange(edu.startDate, edu.endDate)}
+                                        dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                                     />
                                 </div>
                             ))}
@@ -114,7 +114,7 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {data.projects.length > 0 && (
-                    <Section title="Projects">
+                    <Section title={tr(data, 'Projects')}>
                         <div className="flex flex-col gap-[10px]">
                             {data.projects.map((proj) => (
                                 <div key={proj.id} className="break-inside-avoid">
@@ -135,12 +135,12 @@ export const LedgerTemplate: React.FC<TemplateProps> = ({ data }) => {
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Section title="Skills">
+                    <Section title={tr(data, 'Skills')}>
                         <div className={`flex flex-col gap-[3px] ${bodyClass}`}>
                             {skillGroups.map((group, index) => (
                                 <p key={index}>
                                     {(group.category || hasCategories) && (
-                                        <span className="font-bold text-neutral-900">{group.category || 'Other'}: </span>
+                                        <span className="font-bold text-neutral-900">{group.category || tr(data, 'Other')}: </span>
                                     )}
                                     {group.items.join(', ')}
                                 </p>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** Centered serif title between two hairlines: the Executive signature. */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -41,17 +41,17 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.summary.trim() && (
                 <section>
-                    <SectionTitle>Professional Summary</SectionTitle>
+                    <SectionTitle>{tr(data, 'Professional Summary')}</SectionTitle>
                     <p className={`${bodyText} mx-auto max-w-[160mm] text-center whitespace-pre-line`}>{data.summary.trim()}</p>
                 </section>
             )}
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-[18px]">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             const heading = exp.company.trim() || exp.role.trim();
                             const role = exp.company.trim() ? exp.role.trim() : '';
                             return (
@@ -73,7 +73,7 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-3.5">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -101,11 +101,11 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionTitle>Core Competencies</SectionTitle>
+                    <SectionTitle>{tr(data, 'Core Competencies')}</SectionTitle>
                     <div className="flex flex-col gap-1.5">
                         {skillGroups.map((group, groupIndex) => (
                             <ul key={groupIndex} className="flex flex-wrap justify-center gap-x-5 gap-y-1 text-[14.5px] leading-snug text-slate-800">
-                                {hasCategories && <li className="font-bold text-slate-900 wrap-break-word">{group.category || 'Other'}:</li>}
+                                {hasCategories && <li className="font-bold text-slate-900 wrap-break-word">{group.category || tr(data, 'Other')}:</li>}
                                 {group.items.map((skill, index) => (
                                     <li key={index} className="min-w-0 wrap-break-word">
                                         {skill}
@@ -119,10 +119,10 @@ export const ExecutiveTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionTitle>Education</SectionTitle>
+                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                     <div className="flex flex-col gap-3">
                         {data.education.map((edu) => {
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             const heading = edu.school.trim() || edu.degree.trim();
                             const degree = edu.school.trim() ? edu.degree.trim() : '';
                             return (

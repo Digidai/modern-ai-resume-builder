@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Graduate": for students and new graduates. Education comes first (put GPA, honours and relevant
 // coursework in the degree line), then skills so a recruiter sees the toolkit at a glance, then
@@ -57,14 +57,14 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => (
                             <article key={edu.id} className="break-inside-avoid">
                                 <EntryHead
                                     title={edu.school.trim() || edu.degree.trim()}
                                     subtitle={edu.school.trim() ? edu.degree.trim() : ''}
-                                    dates={formatDateRange(edu.startDate, edu.endDate)}
+                                    dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                                 />
                             </article>
                         ))}
@@ -73,13 +73,13 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[2px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>
@@ -92,14 +92,14 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-[11px]">
                         {data.experience.map((exp) => (
                             <article key={exp.id} className="break-inside-avoid">
                                 <EntryHead
                                     title={exp.role.trim() || exp.company.trim()}
                                     subtitle={exp.role.trim() ? exp.company.trim() : ''}
-                                    dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                                    dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                                 />
                                 <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
                             </article>
@@ -109,7 +109,7 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[9px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -129,7 +129,7 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {publications.length > 0 && (
-                <Section title="Publications">
+                <Section title={tr(data, 'Publications')}>
                     <ul className="flex flex-col gap-[5px]">
                         {publications.map((pub) => (
                             <li key={pub.id} className={`${bodyText} break-inside-avoid`}>
@@ -141,7 +141,7 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Grants and awards">
+                <Section title={tr(data, 'Grants and awards')}>
                     <ul className="flex flex-col gap-[5px]">
                         {awards.map((award) => (
                             <li key={award.id} className={`${bodyText} break-inside-avoid`}>
@@ -153,7 +153,7 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {talks.length > 0 && (
-                <Section title="Talks">
+                <Section title={tr(data, 'Talks')}>
                     <ul className="flex flex-col gap-[5px]">
                         {talks.map((talk) => (
                             <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
@@ -165,7 +165,7 @@ export const GraduateTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {teaching.length > 0 && (
-                <Section title="Teaching">
+                <Section title={tr(data, 'Teaching')}>
                     <ul className="flex flex-col gap-[5px]">
                         {teaching.map((entry) => (
                             <li key={entry.id} className={`${bodyText} break-inside-avoid`}>

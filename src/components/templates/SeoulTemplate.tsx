@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Seoul", after the Korean 이력서 used by the big Korean job boards: a 3×4 photo on the left with
 // the name and a labelled details grid beside it, then sections opened by a heavy black rule and
@@ -61,19 +61,19 @@ export const SeoulTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
-                    <HeadRow cells={['Period', 'Company', 'Position']} />
+                <Section title={tr(data, 'Experience')}>
+                    <HeadRow cells={[tr(data, 'Period'), tr(data, 'Company'), tr(data, 'Position')]} />
                     <div className="divide-y divide-neutral-200">
                         {data.experience.map((exp) => (
                             <article key={exp.id} className="px-[8px] py-[7px] break-inside-avoid">
                                 <div className={`${GRID} items-baseline`}>
-                                    <span className="text-[12.5px] tabular-nums text-neutral-500 wrap-break-word">{formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}</span>
+                                    <span className="text-[12.5px] tabular-nums text-neutral-500 wrap-break-word">{formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}</span>
                                     <h3 className="text-[14px] font-bold leading-snug text-neutral-900 wrap-break-word">{exp.company}</h3>
                                     <p className="text-[13.5px] font-semibold leading-snug text-(--accent) wrap-break-word">{exp.role}</p>
                                 </div>
@@ -85,12 +85,12 @@ export const SeoulTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
-                    <HeadRow cells={['Period', 'School', 'Degree']} />
+                <Section title={tr(data, 'Education')}>
+                    <HeadRow cells={[tr(data, 'Period'), tr(data, 'School'), tr(data, 'Degree')]} />
                     <div className="divide-y divide-neutral-200">
                         {data.education.map((edu) => (
                             <div key={edu.id} className={`${GRID} items-baseline px-[8px] py-[6px] break-inside-avoid`}>
-                                <span className="text-[12.5px] tabular-nums text-neutral-500 wrap-break-word">{formatDateRange(edu.startDate, edu.endDate)}</span>
+                                <span className="text-[12.5px] tabular-nums text-neutral-500 wrap-break-word">{formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}</span>
                                 <span className="text-[14px] font-bold leading-snug text-neutral-900 wrap-break-word">{edu.school}</span>
                                 <span className="text-[13.5px] leading-snug text-neutral-700 wrap-break-word">{edu.degree}</span>
                             </div>
@@ -100,7 +100,7 @@ export const SeoulTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="divide-y divide-neutral-200">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="px-[8px] py-[6px] break-inside-avoid">
@@ -120,7 +120,7 @@ export const SeoulTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.some((group) => group.category) ? (
                         <dl className="divide-y divide-neutral-200">
                             {skillGroups.map((group, index) => (

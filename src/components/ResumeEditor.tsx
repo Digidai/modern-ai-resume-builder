@@ -24,6 +24,7 @@ import { createId } from '../utils/resumeData';
 import { formatDateRange, describeLink } from './templates/shared';
 import { usePreviewPages } from '../hooks/useOnePageFit';
 import { checkResume, type ResumeCheck } from '../utils/resumeChecks';
+import { detectResumeLanguage } from '../utils/resumeLanguage';
 
 const MAX_LINKS = 8;
 
@@ -1154,7 +1155,7 @@ const ResumeEditor: React.FC<ResumeEditorProps> = ({ data, onChange }) => {
             </p>
           )}
           <Section title="Style" description="Accent colour, font, paper and size apply to every template.">
-            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} maxPages={getTemplateById(data.templateId)?.maxPages} />
+            <DesignControls design={data.design ?? DEFAULT_DESIGN} onChange={updateDesign} expectsLetter={showHours} maxPages={getTemplateById(data.templateId)?.maxPages} detectedLanguage={detectResumeLanguage(data)} />
           </Section>
           <Section title="Template" description="Switch any time — your content stays the same. ATS-marked templates are single-column and parse cleanly in applicant tracking systems.">
             <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-2 xl:grid-cols-3" role="radiogroup" aria-label="Resume templates">

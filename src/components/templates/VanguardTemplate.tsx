@@ -1,20 +1,24 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Awesome" archetype: Roboto header with light first name / bold last name, headings whose first
 // three letters carry the accent with a rule filling the line, and two-row entries with dates right.
 
 const SMALL_CAPS = '[font-variant-caps:small-caps]';
 
-const SectionTitle: React.FC<{ title: string }> = ({ title }) => (
+// The accent covers the first three letters, or the first two characters (one word) of a Chinese heading.
+const SectionTitle: React.FC<{ title: string }> = ({ title }) => {
+    const split = /^[\u4e00-\u9fff]/.test(title) ? 2 : 3;
+    return (
     <h2 className="mb-[2.5mm] flex items-center gap-3 break-after-avoid font-roboto text-[21px] font-bold leading-tight text-[#333333]">
         <span className="shrink-0">
-            <span className="text-(--accent)">{title.slice(0, 3)}</span>
-            {title.slice(3)}
+            <span className="text-(--accent)">{title.slice(0, split)}</span>
+            {title.slice(split)}
         </span>
         <span aria-hidden className="h-[1.2px] min-w-6 flex-1 bg-[#5D5D5D]" />
     </h2>
-);
+    );
+};
 
 /** Row 1: organisation (bold) with an optional accent detail on the right; row 2: role in small caps, dates right. */
 const EntryHeader: React.FC<{ title: string; aside?: React.ReactNode; subtitle?: string; dates?: string }> = ({ title, aside, subtitle, dates }) => (
@@ -73,14 +77,14 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-col gap-[4mm]">
                 {data.summary.trim() && (
                     <section>
-                        <SectionTitle title="Summary" />
+                        <SectionTitle title={tr(data, 'Summary')} />
                         <p className="text-justify text-[13.5px] leading-[1.5] text-[#333333] wrap-break-word">{data.summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SectionTitle title="Experience" />
+                        <SectionTitle title={tr(data, 'Experience')} />
                         <div className="flex flex-col gap-3">
                             {data.experience.map((exp) => {
                                 const company = exp.company.trim();
@@ -89,7 +93,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
                                         <EntryHeader
                                             title={company || exp.role.trim()}
                                             subtitle={company ? exp.role.trim() : ''}
-                                            dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                                            dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                                         />
                                         <RichText text={exp.description} className={bodyText} listClassName={bodyList} />
                                     </article>
@@ -101,7 +105,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SectionTitle title="Projects" />
+                        <SectionTitle title={tr(data, 'Projects')} />
                         <div className="flex flex-col gap-2.5">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">
@@ -129,7 +133,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SectionTitle title="Education" />
+                        <SectionTitle title={tr(data, 'Education')} />
                         <div className="flex flex-col gap-2.5">
                             {data.education.map((edu) => {
                                 const school = edu.school.trim();
@@ -138,7 +142,7 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
                                         <EntryHeader
                                             title={school || edu.degree.trim()}
                                             subtitle={school ? edu.degree.trim() : ''}
-                                            dates={formatDateRange(edu.startDate, edu.endDate)}
+                                            dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                                         />
                                     </article>
                                 );
@@ -149,11 +153,11 @@ export const VanguardTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section className="break-inside-avoid">
-                        <SectionTitle title="Skills" />
+                        <SectionTitle title={tr(data, 'Skills')} />
                         <dl className="grid grid-cols-[fit-content(32%)_minmax(0,1fr)] gap-x-4 gap-y-1.5 text-[13.5px] leading-[1.45]">
                             {skillGroups.map((group, index) => (
                                 <React.Fragment key={index}>
-                                    <dt className="text-right font-bold text-[#414141] wrap-break-word">{group.category || 'Skills'}</dt>
+                                    <dt className="text-right font-bold text-[#414141] wrap-break-word">{group.category || tr(data, 'Skills')}</dt>
                                     <dd className="text-[#333333] wrap-break-word">{group.items.join(', ')}</dd>
                                 </React.Fragment>
                             ))}

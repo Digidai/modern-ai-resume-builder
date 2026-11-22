@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** A centered title flanked by hairlines — the template's signature divider. */
 const Divider: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -30,12 +30,12 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     const education = hasEducation && (
         <section className="min-w-0">
-            <Divider>Education</Divider>
+            <Divider>{tr(data, 'Education')}</Divider>
             <div className="flex flex-col gap-3.5 text-center">
                 {data.education.map((edu) => (
                     <article key={edu.id} className="break-inside-avoid">
                         {edu.school && <h3 className="font-playfair text-[16px] text-slate-900 leading-snug wrap-break-word">{edu.school}</h3>}
-                        <Meta secondary={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                        <Meta secondary={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                     </article>
                 ))}
             </div>
@@ -44,7 +44,7 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
 
     const projects = hasProjects && (
         <section className="min-w-0">
-            <Divider>Projects</Divider>
+            <Divider>{tr(data, 'Projects')}</Divider>
             <div className="flex flex-col gap-3.5 text-center">
                 {data.projects.map((proj) => (
                     <article key={proj.id} className="break-inside-avoid">
@@ -85,14 +85,14 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
                 {data.summary.trim() && (
                     <section className="text-center px-[8mm]">
                         <div className="w-10 h-px bg-(--accent)/50 mx-auto mb-3.5" aria-hidden="true" />
-                        <h2 className="sr-only">Profile</h2>
+                        <h2 className="sr-only">{tr(data, 'Profile')}</h2>
                         <p className="italic text-[14.5px] text-slate-700 leading-[1.7] wrap-break-word">{data.summary}</p>
                     </section>
                 )}
 
                 {skillGroups.length > 0 && (
                     <section className="text-center">
-                        <Divider>Skills</Divider>
+                        <Divider>{tr(data, 'Skills')}</Divider>
                         <div className="flex flex-col gap-1">
                             {skillGroups.map((group, gi) => (
                                 <p key={gi} className="wrap-break-word">
@@ -111,13 +111,13 @@ export const SymmetryTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.experience.length > 0 && (
                     <section>
-                        <Divider>Experience</Divider>
+                        <Divider>{tr(data, 'Experience')}</Divider>
                         <div className="flex flex-col gap-4">
                             {data.experience.map((exp) => (
                                 <article key={exp.id} className="break-inside-avoid">
                                     <div className="text-center">
                                         {exp.role && <h3 className="font-playfair text-[17px] text-slate-900 leading-snug wrap-break-word">{exp.role}</h3>}
-                                        <Meta secondary={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                        <Meta secondary={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     </div>
                                     <RichText
                                         text={exp.description}

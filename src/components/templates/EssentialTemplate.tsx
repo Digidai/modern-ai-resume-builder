@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Essential": the plain black-and-white resume with a photo, as in the basic word-processor
 // templates. A 3:4 photo beside the name, title and contact lines; bold capital headings over a
@@ -54,13 +54,13 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Summary">
+                <Section title={tr(data, 'Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => (
                         <article key={exp.id} className="break-inside-avoid">
                             <EntryHead
@@ -71,7 +71,7 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
                                         {exp.company.trim() && <span>{exp.company}</span>}
                                     </>
                                 }
-                                right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                                right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                             />
                             <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
                         </article>
@@ -80,7 +80,7 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
                         <article key={edu.id} className="break-inside-avoid">
                             <EntryHead
@@ -91,7 +91,7 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
                                         {edu.school.trim() && <span>{edu.school}</span>}
                                     </>
                                 }
-                                right={formatDateRange(edu.startDate, edu.endDate)}
+                                right={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                             />
                         </article>
                     ))}
@@ -99,7 +99,7 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <EntryHead
@@ -122,7 +122,7 @@ export const EssentialTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <div className="flex flex-col gap-[3px]">
                         {skillGroups.map((group, index) => (
                             <p key={index} className={`${bodyText} break-inside-avoid`}>

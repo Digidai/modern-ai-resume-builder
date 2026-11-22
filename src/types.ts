@@ -91,7 +91,12 @@ export interface ResumeDesign {
   scale: number;
   /** Paper the resume prints on: A4 (default) or US Letter. */
   paper: PaperId;
+  /** Language of the headings and dates templates print; unset means detect it from the content. */
+  language?: ResumeLanguage;
 }
+
+/** Languages templates and exports can print their headings and dates in. */
+export type ResumeLanguage = 'en' | 'zh';
 
 export const DEFAULT_DESIGN: ResumeDesign = { accent: '', font: 'template', scale: 1, paper: 'a4' };
 

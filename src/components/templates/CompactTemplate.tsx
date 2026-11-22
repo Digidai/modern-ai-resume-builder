@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-2 border-b border-(--accent)/40 pb-[3px] text-[12.5px] font-bold uppercase tracking-[0.08em] text-(--accent) break-after-avoid">
@@ -40,14 +40,14 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.summary.trim() && (
                 <section>
-                    <SectionHeading>Summary</SectionHeading>
+                    <SectionHeading>{tr(data, 'Summary')}</SectionHeading>
                     <p className={`${bodyText} whitespace-pre-line`}>{data.summary.trim()}</p>
                 </section>
             )}
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionHeading>Skills</SectionHeading>
+                    <SectionHeading>{tr(data, 'Skills')}</SectionHeading>
                     <div className="flex flex-col gap-0.5">
                         {skillGroups.map((group, groupIndex) => (
                             <p key={groupIndex} className="text-slate-800 wrap-break-word">
@@ -61,10 +61,10 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionHeading>Experience</SectionHeading>
+                    <SectionHeading>{tr(data, 'Experience')}</SectionHeading>
                     <div className="flex flex-col gap-3">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             const role = exp.role.trim();
                             const company = exp.company.trim();
                             return (
@@ -93,7 +93,7 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionHeading>Projects</SectionHeading>
+                    <SectionHeading>{tr(data, 'Projects')}</SectionHeading>
                     <div className="flex flex-col gap-2.5">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -121,10 +121,10 @@ export const CompactTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionHeading>Education</SectionHeading>
+                    <SectionHeading>{tr(data, 'Education')}</SectionHeading>
                     <div className="flex flex-col gap-1.5">
                         {data.education.map((edu) => {
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             const school = edu.school.trim();
                             const degree = edu.degree.trim();
                             return (

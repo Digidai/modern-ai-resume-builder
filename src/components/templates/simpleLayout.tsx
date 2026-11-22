@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // One clean, single-column resume layout shared by several catalogue templates. Each template is a
 // combination of a typeface, a header arrangement, a heading style, where dates sit and whether
@@ -178,18 +178,18 @@ export const createSimpleTemplate = (style: SimpleStyle): React.FC<TemplateProps
                 {(name || title || contacts.length > 0 || data.photo) && header}
 
                 {summary && (
-                    <Section title="Summary">
+                    <Section title={tr(data, 'Summary')}>
                         <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                     </Section>
                 )}
 
                 {data.experience.length > 0 && (
-                    <Section title="Experience">
+                    <Section title={tr(data, 'Experience')}>
                         {data.experience.map((exp) => {
                             const heading = exp.role.trim() || exp.company.trim();
                             const sub = exp.role.trim() ? exp.company.trim() : '';
                             return (
-                                <Entry key={exp.id} heading={heading} sub={sub} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                                <Entry key={exp.id} heading={heading} sub={sub} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                                     <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
                                 </Entry>
                             );
@@ -198,17 +198,17 @@ export const createSimpleTemplate = (style: SimpleStyle): React.FC<TemplateProps
                 )}
 
                 {data.education.length > 0 && (
-                    <Section title="Education">
+                    <Section title={tr(data, 'Education')}>
                         {data.education.map((edu) => {
                             const heading = edu.degree.trim() || edu.school.trim();
                             const sub = edu.degree.trim() ? edu.school.trim() : '';
-                            return <Entry key={edu.id} heading={heading} sub={sub} dates={formatDateRange(edu.startDate, edu.endDate)} />;
+                            return <Entry key={edu.id} heading={heading} sub={sub} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />;
                         })}
                     </Section>
                 )}
 
                 {data.projects.length > 0 && (
-                    <Section title="Projects">
+                    <Section title={tr(data, 'Projects')}>
                         {data.projects.map((proj) => (
                             // With a date column the project name takes the column, as in moderncv.
                             <Entry key={proj.id} heading={column ? '' : proj.name.trim()} sub="" dates={column ? proj.name.trim() : ''}>
@@ -224,7 +224,7 @@ export const createSimpleTemplate = (style: SimpleStyle): React.FC<TemplateProps
                 )}
 
                 {skillGroups.length > 0 && (
-                    <Section title="Skills">
+                    <Section title={tr(data, 'Skills')}>
                         {column && skillGroups.some((group) => group.category) ? (
                             skillGroups.map((group, index) => (
                                 <div key={index} className={`${COLUMN} break-inside-avoid`}>

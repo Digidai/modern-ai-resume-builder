@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Manila", after the photo resume expected across the Philippines, Indonesia, Malaysia and
 // Vietnam: name, title and contact details on the left with a square 2×2 ID photo on the right,
@@ -48,16 +48,16 @@ export const ManilaTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Career Objective">
+                <Section title={tr(data, 'Career Objective')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Work Experience">
+                <Section title={tr(data, 'Work Experience')}>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             const heading = exp.role.trim() || exp.company.trim();
                             const company = exp.role.trim() ? exp.company.trim() : '';
                             return (
@@ -76,10 +76,10 @@ export const ManilaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => {
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             return (
                                 <article key={edu.id} className="flex items-baseline justify-between gap-4 break-inside-avoid">
                                     <div className="min-w-0">
@@ -95,7 +95,7 @@ export const ManilaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -113,7 +113,7 @@ export const ManilaTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.some((group) => group.category) ? (
                         <div className="flex flex-col gap-[4px]">
                             {skillGroups.map((group, index) => (

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="flex items-center gap-4 text-[12px] font-semibold uppercase tracking-[0.08em] text-(--accent) mb-3.5 break-after-avoid">
@@ -47,7 +47,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skills.length > 0 && (
                 <section>
-                    <SectionHeading>Skills</SectionHeading>
+                    <SectionHeading>{tr(data, 'Skills')}</SectionHeading>
                     <ul className="flex flex-wrap justify-center gap-2">
                         {skills.map((skill, i) => (
                             <li key={i} className="max-w-full text-[13px] border border-(--accent)/20 px-3 py-0.5 rounded-md text-slate-700 wrap-break-word">{skill}</li>
@@ -58,12 +58,12 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionHeading>Experience</SectionHeading>
+                    <SectionHeading>{tr(data, 'Experience')}</SectionHeading>
                     <div className="flex flex-col">
                         {data.experience.map((exp) => (
                             <div key={exp.id} className="pl-6 pb-4.5 last:pb-0 border-l border-(--accent)/25 ml-[5px] break-inside-avoid">
                                 <span className="absolute translate-x-[-29px] translate-y-[6px] w-[9px] h-[9px] rounded-full bg-white border-2 border-(--accent)" aria-hidden="true" />
-                                <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                 {exp.company && <div className="text-[13.5px] text-slate-500 mt-0.5 wrap-break-word">{exp.company}</div>}
                                 {exp.description && (
                                     <RichText text={exp.description} className="mt-1.5 text-slate-600 wrap-break-word" listClassName={listClass} />
@@ -76,7 +76,7 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionHeading>Projects</SectionHeading>
+                    <SectionHeading>{tr(data, 'Projects')}</SectionHeading>
                     <div className="flex flex-col gap-3">
                         {data.projects.map((proj) => (
                             <div key={proj.id} className="min-w-0 bg-(--accent)/5 px-5 py-3.5 rounded-xl break-inside-avoid">
@@ -97,11 +97,11 @@ export const OpalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionHeading>Education</SectionHeading>
+                    <SectionHeading>{tr(data, 'Education')}</SectionHeading>
                     <div className="flex flex-col gap-3">
                         {data.education.map((edu) => (
                             <div key={edu.id} className="break-inside-avoid">
-                                <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                 {edu.degree && <div className="text-[13.5px] text-slate-500 mt-0.5 wrap-break-word">{edu.degree}</div>}
                             </div>
                         ))}

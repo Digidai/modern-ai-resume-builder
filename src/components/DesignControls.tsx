@@ -1,5 +1,5 @@
 import { useEffect, useState, type KeyboardEvent } from 'react';
-import type { ResumeDesign } from '../types';
+import type { ResumeDesign, ResumeLanguage } from '../types';
 import { DEFAULT_DESIGN } from '../types';
 import { ACCENT_PRESETS, FONT_PRESETS, SCALE_MAX, SCALE_MIN, SCALE_STEP, contrastOnWhite } from '../constants/design';
 import { CheckIcon } from './Icons';
@@ -17,9 +17,18 @@ interface DesignControlsProps {
   expectsLetter?: boolean;
   /** The template's page limit (Federal: 2); above it the page count turns into a warning. */
   maxPages?: number;
+  /** The language the resume's content is in, which "Auto" prints headings and dates in. */
+  detectedLanguage?: ResumeLanguage;
 }
 
-export const DesignControls = ({ design, onChange, expectsLetter = false, maxPages }: DesignControlsProps) => {
+const LANGUAGE_OPTIONS: Array<{ id: ResumeLanguage | undefined; label: string }> = [
+  { id: undefined, label: 'Auto' },
+  { id: 'en', label: 'English' },
+  { id: 'zh', label: '中文' },
+];
+const LANGUAGE_NAMES: Record<ResumeLanguage, string> = { en: 'English', zh: '中文' };
+
+export const DesignControls = ({ design, onChange, expectsLetter = false, maxPages, detectedLanguage = 'en' }: DesignControlsProps) => {
   const { pageCount, lastPageSparse, fitLabel, fit, note: fitNote, atMinimum, overLimit } = useOnePageFit(design, onChange, maxPages);
   const [hexDraft, setHexDraft] = useState(design.accent);
 
@@ -46,6 +55,16 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
     const next = PAPER_IDS[(index + delta + PAPER_IDS.length) % PAPER_IDS.length];
     onChange({ paper: next });
     document.getElementById(`paper-${next}`)?.focus();
+  };
+  // Resume language: a radiogroup like paper size.
+  const languageIndex = Math.max(0, LANGUAGE_OPTIONS.findIndex((option) => option.id === design.language));
+  const onLanguageKeyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
+    const delta = event.key === 'ArrowRight' || event.key === 'ArrowDown' ? 1 : event.key === 'ArrowLeft' || event.key === 'ArrowUp' ? -1 : 0;
+    if (!delta) return;
+    event.preventDefault();
+    const next = (index + delta + LANGUAGE_OPTIONS.length) % LANGUAGE_OPTIONS.length;
+    onChange({ language: LANGUAGE_OPTIONS[next].id });
+    document.getElementById(`language-${next}`)?.focus();
   };
   const hexInvalid = hexDraft !== '' && !HEX.test(hexDraft);
 
@@ -186,6 +205,33 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
         </p>
       </fieldset>
 
+      <fieldset>
+        <legend className="text-sm font-medium text-ink">Resume language</legend>
+        <div role="radiogroup" aria-label="Resume language" className="mt-2 grid grid-cols-3 gap-1 rounded-lg border border-rule bg-tint p-0.5 text-sm">
+          {LANGUAGE_OPTIONS.map((option, index) => (
+            <button
+              key={option.label}
+              id={`language-${index}`}
+              type="button"
+              role="radio"
+              lang={option.id === 'zh' ? 'zh' : undefined}
+              aria-checked={index === languageIndex}
+              tabIndex={index === languageIndex ? 0 : -1}
+              onKeyDown={(e) => onLanguageKeyDown(e, index)}
+              onClick={() => onChange({ language: option.id })}
+              className={`focus-ring rounded-md px-3 py-1.5 font-medium transition-colors ${index === languageIndex ? 'bg-surface text-ink shadow-card' : 'text-muted hover:text-ink'}`}
+            >
+              {option.label}
+            </button>
+          ))}
+        </div>
+        <p className="mt-2 text-xs leading-relaxed text-muted">
+          {design.language
+            ? 'Section headings and dates print in this language, in the PDF and the Word and LaTeX files.'
+            : `Follows your content: headings and dates print in ${LANGUAGE_NAMES[detectedLanguage]}.`}
+        </p>
+      </fieldset>
+
       <div>
         <div className="flex items-baseline justify-between">
           <label htmlFor="design-scale" className="text-sm font-medium text-ink">
@@ -221,8 +267,8 @@ export const DesignControls = ({ design, onChange, expectsLetter = false, maxPag
             {!isDefault && (
               <button
                 type="button"
-                // The paper size is a choice about where you apply, not style, so it is kept.
-                onClick={() => onChange({ ...DEFAULT_DESIGN, paper: design.paper })}
+                // The paper size and language are choices about where you apply, not style, so they are kept.
+                onClick={() => onChange({ ...DEFAULT_DESIGN, paper: design.paper, language: design.language })}
                 className="focus-ring h-8 rounded-lg border border-rule bg-surface shadow-card px-3 text-xs font-medium text-ink hover:bg-tint"
               >
                 Reset style

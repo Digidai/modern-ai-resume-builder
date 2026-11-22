@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Modern accent" single column with a timeline: a tinted accent line runs down the dated sections
 // (Experience, Education) with an accent dot per entry; each entry's dates sit beside the dot,
@@ -54,17 +54,17 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-col gap-[13px]">
                 {data.summary.trim() && (
                     <section>
-                        <SectionTitle>Profile</SectionTitle>
+                        <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                         <p className={`mt-2 ${bodyText}`}>{data.summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SectionTitle>Experience</SectionTitle>
+                        <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                         <Rail gap="gap-3.5">
                             {data.experience.map((exp) => (
-                                <TimelineEntry key={exp.id} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                                <TimelineEntry key={exp.id} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                                     {exp.role.trim() && <h3 className="text-[14.5px] font-semibold leading-snug text-[#111827] wrap-break-word">{exp.role}</h3>}
                                     {exp.company.trim() && <div className="text-[13.5px] font-medium leading-snug text-(--accent) wrap-break-word">{exp.company}</div>}
                                     <RichText text={exp.description} className={`mt-1.5 ${bodyText}`} listClassName={bodyList} />
@@ -76,7 +76,7 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SectionTitle>Projects</SectionTitle>
+                        <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                         <div className="mt-2 flex flex-col gap-2.5">
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">
@@ -104,10 +104,10 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SectionTitle>Education</SectionTitle>
+                        <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                         <Rail gap="gap-2.5">
                             {data.education.map((edu) => (
-                                <TimelineEntry key={edu.id} dates={formatDateRange(edu.startDate, edu.endDate)}>
+                                <TimelineEntry key={edu.id} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}>
                                     {edu.degree.trim() && <h3 className="text-[14.5px] font-semibold leading-snug text-[#111827] wrap-break-word">{edu.degree}</h3>}
                                     {edu.school.trim() && <div className="text-[13.5px] font-medium leading-snug text-(--accent) wrap-break-word">{edu.school}</div>}
                                 </TimelineEntry>
@@ -118,7 +118,7 @@ export const TimelineTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section className="break-inside-avoid">
-                        <SectionTitle>Skills</SectionTitle>
+                        <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                         {hasCategories ? (
                             <div className="mt-2 flex flex-col gap-1">
                                 {skillGroups.map((group, index) => (

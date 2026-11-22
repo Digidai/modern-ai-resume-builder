@@ -1,6 +1,6 @@
 import React from 'react';
 import { BookIcon, BriefcaseIcon, CodeIcon, PenIcon, SparklesIcon } from '../Icons';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Lumen", after billryan/resume (one of the most used LaTeX resumes on GitHub, common in China
 // and for English tech applications): a centred name over one line of icon contacts, section
@@ -71,7 +71,7 @@ export const LumenTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Summary" icon={PenIcon}>
+                <Section title={tr(data, 'Summary')} icon={PenIcon}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
@@ -79,10 +79,10 @@ export const LumenTemplate: React.FC<TemplateProps> = ({ data }) => {
             {data.education.length > 0 && data.experience.length === 0 && <EducationSection data={data} />}
 
             {data.experience.length > 0 && (
-                <Section title="Experience" icon={BriefcaseIcon}>
+                <Section title={tr(data, 'Experience')} icon={BriefcaseIcon}>
                     {data.experience.map((exp) => (
                         <article key={exp.id} className="break-inside-avoid">
-                            <EntryHead title={exp.company.trim() || exp.role.trim()} subtitle={exp.company.trim() ? exp.role.trim() : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                            <EntryHead title={exp.company.trim() || exp.role.trim()} subtitle={exp.company.trim() ? exp.role.trim() : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                             <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
                         </article>
                     ))}
@@ -90,7 +90,7 @@ export const LumenTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects" icon={CodeIcon}>
+                <Section title={tr(data, 'Projects')} icon={CodeIcon}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <EntryHead title={proj.name.trim()} subtitle={proj.link.trim() ? displayUrl(proj.link) : ''} href={proj.link.trim() ? toHref(proj.link) : undefined} />
@@ -103,7 +103,7 @@ export const LumenTemplate: React.FC<TemplateProps> = ({ data }) => {
             {data.education.length > 0 && data.experience.length > 0 && <EducationSection data={data} />}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills" icon={SparklesIcon}>
+                <Section title={tr(data, 'Skills')} icon={SparklesIcon}>
                     <ul className="flex flex-col gap-[3px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>
@@ -119,10 +119,10 @@ export const LumenTemplate: React.FC<TemplateProps> = ({ data }) => {
 };
 
 const EducationSection: React.FC<{ data: TemplateProps['data'] }> = ({ data }) => (
-    <Section title="Education" icon={BookIcon}>
+    <Section title={tr(data, 'Education')} icon={BookIcon}>
         {data.education.map((edu) => (
             <article key={edu.id} className="break-inside-avoid">
-                <EntryHead title={edu.school.trim() || edu.degree.trim()} subtitle={edu.school.trim() ? edu.degree.trim() : ''} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                <EntryHead title={edu.school.trim() || edu.degree.trim()} subtitle={edu.school.trim() ? edu.degree.trim() : ''} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
             </article>
         ))}
     </Section>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Text": a resume that is only text. No rules, capitals, colour or icons: the hierarchy comes from
 // weight, size and white space alone, like a well-set plain document. One sans-serif face, one column.
@@ -48,18 +48,18 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Summary">
+                <Section title={tr(data, 'Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-[14px]">
                         {data.experience.map((exp) => {
                             const heading = exp.role.trim() || exp.company.trim();
                             const company = exp.role.trim() ? exp.company.trim() : '';
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
                                     {heading && <h3 className="text-[14px] font-semibold leading-snug text-neutral-950 wrap-break-word">{heading}</h3>}
@@ -73,7 +73,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[11px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -91,12 +91,12 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[9px]">
                         {data.education.map((edu) => {
                             const heading = edu.degree.trim() || edu.school.trim();
                             const school = edu.degree.trim() ? edu.school.trim() : '';
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             return (
                                 <article key={edu.id} className="break-inside-avoid">
                                     {heading && <h3 className="text-[14px] font-semibold leading-snug text-neutral-950 wrap-break-word">{heading}</h3>}
@@ -109,7 +109,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {publications.length > 0 && (
-                <Section title="Publications">
+                <Section title={tr(data, 'Publications')}>
                     <ul className="flex flex-col gap-[6px]">
                         {publications.map((pub) => (
                             <li key={pub.id} className={`${bodyText} break-inside-avoid`}>
@@ -121,7 +121,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Grants and awards">
+                <Section title={tr(data, 'Grants and awards')}>
                     <ul className="flex flex-col gap-[6px]">
                         {awards.map((award) => (
                             <li key={award.id} className={`${bodyText} break-inside-avoid`}>
@@ -133,7 +133,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {talks.length > 0 && (
-                <Section title="Talks">
+                <Section title={tr(data, 'Talks')}>
                     <ul className="flex flex-col gap-[6px]">
                         {talks.map((talk) => (
                             <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
@@ -145,7 +145,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {teaching.length > 0 && (
-                <Section title="Teaching">
+                <Section title={tr(data, 'Teaching')}>
                     <ul className="flex flex-col gap-[6px]">
                         {teaching.map((entry) => (
                             <li key={entry.id} className={`${bodyText} break-inside-avoid`}>
@@ -157,7 +157,7 @@ export const TextTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[3px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>

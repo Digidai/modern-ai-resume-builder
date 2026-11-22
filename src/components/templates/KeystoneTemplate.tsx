@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Keystone": a corporate single-column resume. Serif name on the left with contact details
 // stacked on the right, a heavy accent rule under the header, and section headings set in a
@@ -62,21 +62,21 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {summary && (
                 <section>
-                    <SectionTitle>Professional Summary</SectionTitle>
+                    <SectionTitle>{tr(data, 'Professional Summary')}</SectionTitle>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </section>
             )}
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
                             const company = exp.company.trim();
                             const role = exp.role.trim();
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHeader org={company || role} detail={company ? role : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHeader org={company || role} detail={company ? role : ''} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />
                                 </article>
                             );
@@ -87,7 +87,7 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -112,14 +112,14 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionTitle>Education</SectionTitle>
+                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                     <div className="flex flex-col gap-[9px]">
                         {data.education.map((edu) => {
                             const school = edu.school.trim();
                             const degree = edu.degree.trim();
                             return (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHeader org={school || degree} detail={school ? degree : ''} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                    <EntryHeader org={school || degree} detail={school ? degree : ''} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                 </article>
                             );
                         })}
@@ -129,12 +129,12 @@ export const KeystoneTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionTitle>{hasCategories ? 'Skills' : 'Core Competencies'}</SectionTitle>
+                    <SectionTitle>{hasCategories ? tr(data, 'Skills') : tr(data, 'Core Competencies')}</SectionTitle>
                     {hasCategories ? (
                         <div className="flex flex-col gap-[3px]">
                             {skillGroups.map((group, index) => (
                                 <div key={index} className="grid grid-cols-[34mm_minmax(0,1fr)] gap-x-4">
-                                    <span className="text-[13.5px] font-bold leading-[1.5] text-slate-900 wrap-break-word">{group.category || 'Other'}</span>
+                                    <span className="text-[13.5px] font-bold leading-[1.5] text-slate-900 wrap-break-word">{group.category || tr(data, 'Other')}</span>
                                     <span className={bodyText}>{group.items.join(', ')}</span>
                                 </div>
                             ))}

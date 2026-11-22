@@ -1,7 +1,10 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, resumeLanguage, tr } from './shared';
 
 /** Screenplay-style scene heading ("INT. EXPERIENCE — CONTINUOUS") trailed by an accent hairline. */
+/** Chinese screenplays write "内景" and the time of day the same way. */
+const ZH_TIMES: Record<string, string> = { DAY: '日', CONTINUOUS: '连续', NIGHT: '夜', FLASHBACK: '闪回', MONTAGE: '蒙太奇' };
+
 const SceneHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-2.5 flex items-center gap-3 text-[13px] font-bold tracking-[0.08em] text-(--accent) uppercase break-after-avoid">
         <span className="shrink-0">{children}</span>
@@ -21,6 +24,8 @@ const descriptionList = "list-['–_'] space-y-0.5 pl-4 marker:text-slate-500";
 const entryTitle = 'font-bold tracking-wide text-slate-950 uppercase';
 
 export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
+    const scene = (heading: string, time: string) =>
+        resumeLanguage(data) === 'zh' ? `内景 · ${tr(data, heading)} — ${ZH_TIMES[time]}` : `INT. ${heading.toUpperCase()} — ${time}`;
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const flatSkills = skillGroups.length === 1 && !skillGroups[0].category;
@@ -28,7 +33,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
     return (
         <div className="flex flex-1 flex-col bg-[#fafafa] px-[16mm] pt-[9mm] pb-[7mm] font-jetbrains text-[13.5px] leading-normal text-slate-800 wrap-break-word [--accent:var(--rs-accent,#1E293B)]">
             <header className="mb-4 border-b-2 border-(--accent) pb-4 text-center">
-                <div className="mb-1.5 text-[11px] tracking-[0.08em] text-(--accent) uppercase">Fade in:</div>
+                <div className="mb-1.5 text-[11px] tracking-[0.08em] text-(--accent) uppercase">{resumeLanguage(data) === 'zh' ? '淡入：' : 'Fade in:'}</div>
                 <div role="heading" aria-level={1} className="text-[28px] leading-tight font-bold tracking-[0.08em] text-slate-950 uppercase">{data.fullName}</div>
                 {data.title.trim() && <p className="mt-1.5 text-[14px] tracking-wide text-slate-700">({data.title})</p>}
                 {contacts.length > 0 && (
@@ -43,17 +48,17 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-col gap-4">
                 {data.summary.trim() && (
                     <section>
-                        <SceneHeading>INT. PROFILE — DAY</SceneHeading>
+                        <SceneHeading>{scene('Profile', 'DAY')}</SceneHeading>
                         <p>{data.summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SceneHeading>INT. EXPERIENCE — CONTINUOUS</SceneHeading>
+                        <SceneHeading>{scene('Experience', 'CONTINUOUS')}</SceneHeading>
                         <div className="flex flex-col gap-3.5">
                             {data.experience.map((exp) => (
-                                <Shot key={exp.id} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                                <Shot key={exp.id} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                                     {exp.role && <h3 className={entryTitle}>{exp.role}</h3>}
                                     {exp.company && <div className="text-slate-700">{exp.company}</div>}
                                     <RichText text={exp.description} className="mt-1" listClassName={descriptionList} />
@@ -65,7 +70,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SceneHeading>INT. PROJECTS — NIGHT</SceneHeading>
+                        <SceneHeading>{scene('Projects', 'NIGHT')}</SceneHeading>
                         <div className="flex flex-col gap-3.5">
                             {data.projects.map((proj) => (
                                 <Shot key={proj.id}>
@@ -84,10 +89,10 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SceneHeading>INT. EDUCATION — FLASHBACK</SceneHeading>
+                        <SceneHeading>{scene('Education', 'FLASHBACK')}</SceneHeading>
                         <div className="flex flex-col gap-3">
                             {data.education.map((edu) => (
-                                <Shot key={edu.id} dates={formatDateRange(edu.startDate, edu.endDate)}>
+                                <Shot key={edu.id} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}>
                                     {edu.school && <h3 className={entryTitle}>{edu.school}</h3>}
                                     {edu.degree && <div className="text-slate-700">{edu.degree}</div>}
                                 </Shot>
@@ -98,7 +103,7 @@ export const CastTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section className="break-inside-avoid">
-                        <SceneHeading>INT. SKILLS — MONTAGE</SceneHeading>
+                        <SceneHeading>{scene('Skills', 'MONTAGE')}</SceneHeading>
                         {flatSkills ? (
                             <ul className="columns-3 gap-6">
                                 {skillGroups[0].items.map((skill, i) => (

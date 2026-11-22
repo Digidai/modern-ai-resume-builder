@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, ContactLink, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Capital": the banking and finance resume (the format of the big investment banks and consultancies)
 // with a small photo for London, Frankfurt, Zurich, Hong Kong and Singapore applications. Times, the
@@ -58,16 +58,16 @@ export const CapitalTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
                         <article key={edu.id} className="break-inside-avoid">
-                            <Line left={<span className="font-bold">{edu.school}</span>} right={formatDateRange(edu.startDate, edu.endDate)} />
+                            <Line left={<span className="font-bold">{edu.school}</span>} right={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                             {edu.degree.trim() && <Line italic left={edu.degree} />}
                         </article>
                     ))}
@@ -75,13 +75,13 @@ export const CapitalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => {
                         const firm = exp.company.trim() || exp.role.trim();
                         const role = exp.company.trim() ? exp.role.trim() : '';
                         return (
                             <article key={exp.id} className="break-inside-avoid">
-                                <Line left={<span className="font-bold">{firm}</span>} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                <Line left={<span className="font-bold">{firm}</span>} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                 {role && <Line italic left={role} />}
                                 <RichText text={exp.description} className={`mt-[2px] ${bodyText}`} listClassName={listClass} />
                             </article>
@@ -91,7 +91,7 @@ export const CapitalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects and Transactions">
+                <Section title={tr(data, 'Projects and Transactions')}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <Line
@@ -114,7 +114,7 @@ export const CapitalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Honors and Awards">
+                <Section title={tr(data, 'Honors and Awards')}>
                     <ul className={`${listClass} ${bodyText}`}>
                         {awards.map((award) => (
                             <li key={award.id} className="break-inside-avoid">
@@ -126,7 +126,7 @@ export const CapitalTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills and Interests">
+                <Section title={tr(data, 'Skills and Interests')}>
                     <div className="flex flex-col gap-[2px]">
                         {skillGroups.map((group, index) => (
                             <p key={index} className={`${bodyText} break-inside-avoid`}>

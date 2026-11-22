@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Campus": a student and graduate resume with a photo. A round photo beside the name, target role
 // and contact row; Education comes first and leads with the school, then Projects before
@@ -58,16 +58,16 @@ export const CampusTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
                         <article key={edu.id} className="break-inside-avoid">
-                            <Head title={edu.school.trim() || edu.degree} right={formatDateRange(edu.startDate, edu.endDate)} />
+                            <Head title={edu.school.trim() || edu.degree} right={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                             {edu.school.trim() && edu.degree.trim() && <p className="text-[13.5px] leading-snug text-slate-700 wrap-break-word">{edu.degree}</p>}
                         </article>
                     ))}
@@ -75,7 +75,7 @@ export const CampusTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <article key={proj.id} className="break-inside-avoid">
                             <Head title={proj.name} />
@@ -91,13 +91,13 @@ export const CampusTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => {
                         const heading = exp.role.trim() || exp.company.trim();
                         const company = exp.role.trim() ? exp.company.trim() : '';
                         return (
                             <article key={exp.id} className="break-inside-avoid">
-                                <Head title={heading} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                <Head title={heading} right={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                 {company && <p className="text-[13.5px] font-semibold text-(--accent) wrap-break-word">{company}</p>}
                                 <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
                             </article>
@@ -107,7 +107,7 @@ export const CampusTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Honors and Awards">
+                <Section title={tr(data, 'Honors and Awards')}>
                     <ul className={`${listClass} ${bodyText}`}>
                         {awards.map((award) => (
                             <li key={award.id} className="break-inside-avoid">
@@ -119,7 +119,7 @@ export const CampusTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.map((group, groupIndex) => (
                         <div key={groupIndex} className="flex flex-wrap items-baseline gap-[5px] break-inside-avoid">
                             {group.category && <span className="mr-[3px] text-[13px] font-bold text-slate-900">{group.category}</span>}

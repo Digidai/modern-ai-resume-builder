@@ -9,7 +9,7 @@ import { FIXTURES, SAMPLE_AWARDS, SAMPLE_PHOTO, SAMPLE_PUBLICATIONS, SAMPLE_TALK
  * Dev-only template gallery (not bundled in production).
  * /dev/templates?f=long            → every template, scaled down
  * /dev/templates?t=modern&f=sparse → one template at true page size, for screenshots (&paper=letter for US Letter)
- * Optional design overrides: &accent=%23A0442A  &font=garamond  &scale=0.9  &photo=1 (sample photo)  &pubs=1 (sample publications, awards, talks and teaching)  &hours=1 (40 hours per week on every job)
+ * Optional design overrides: &accent=%23A0442A  &font=garamond  &scale=0.9  &photo=1 (sample photo)  &pubs=1 (sample publications, awards, talks and teaching)  &hours=1 (40 hours per week on every job)  &lang=en|zh (resume language; default: detected)
  */
 const TemplateGallery: React.FC = () => {
   const [params] = useSearchParams();
@@ -28,6 +28,7 @@ const TemplateGallery: React.FC = () => {
       font: params.get('font') || 'template',
       scale: Number(params.get('scale')) || 1,
       paper: paper.id,
+      ...(params.get('lang') === 'en' || params.get('lang') === 'zh' ? { language: params.get('lang') as 'en' | 'zh' } : {}),
     },
   };
 

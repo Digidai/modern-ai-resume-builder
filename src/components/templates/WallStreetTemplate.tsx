@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Wall Street": the investment-banking resume format (as in the Wall Street Oasis template).
 // Times, half-inch margins, centred capitalised name over one contact line, bold capitalised
@@ -59,26 +59,26 @@ export const WallStreetTemplate: React.FC<TemplateProps> = ({ data }) => {
             {summary && <p className={`${bodyText} mb-[8px] whitespace-pre-line`}>{summary}</p>}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
                         <Entry
                             key={edu.id}
                             primary={edu.school.trim() || edu.degree.trim()}
                             secondary={edu.school.trim() ? edu.degree.trim() : ''}
-                            dates={formatDateRange(edu.startDate, edu.endDate)}
+                            dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}
                         />
                     ))}
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => (
                         <Entry
                             key={exp.id}
                             primary={exp.company.trim() || exp.role.trim()}
                             secondary={exp.company.trim() ? exp.role.trim() : ''}
-                            dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}
+                            dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}
                         >
                             <RichText text={exp.description} className={`mt-[1px] ${bodyText}`} listClassName={listClass} />
                         </Entry>
@@ -87,7 +87,7 @@ export const WallStreetTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Entry key={proj.id} primary={proj.name.trim()}>
                             {proj.link.trim() && (
@@ -102,11 +102,11 @@ export const WallStreetTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills & Interests">
+                <Section title={tr(data, 'Skills & Interests')}>
                     <ul className="flex flex-col">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>
-                                <span className="font-bold">{group.category || 'Skills'}: </span>
+                                <span className="font-bold">{group.category || tr(data, 'Skills')}: </span>
                                 {group.items.join(', ')}
                             </li>
                         ))}

@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, ContactItem, RichText, TalkLine, TeachingLine, displayUrl, formatDate, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, ContactItem, RichText, TalkLine, TeachingLine, displayUrl, formatDate, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Oxford", after moderncv's classic style (the class's default and the most used LaTeX CV in
 // Europe and academia): a large name with the title in grey under it, contacts stacked on the
@@ -67,7 +67,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Summary">
+                <Section title={tr(data, 'Summary')}>
                     <Row>
                         <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                     </Row>
@@ -75,9 +75,9 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => (
-                        <Row key={exp.id} left={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                        <Row key={exp.id} left={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                             <p className="text-[14px] leading-snug wrap-break-word">
                                 {exp.role.trim() && <span className="font-semibold text-neutral-950">{exp.role}</span>}
                                 {exp.role.trim() && exp.company.trim() && ', '}
@@ -90,7 +90,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
                         <Row key={edu.id} left={[yearOf(edu.startDate), yearOf(edu.endDate)].filter(Boolean).join('–')}>
                             <p className="text-[14px] leading-snug wrap-break-word">
@@ -104,7 +104,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {publications.length > 0 && (
-                <Section title="Publications">
+                <Section title={tr(data, 'Publications')}>
                     {publications.map((pub) => (
                         <Row key={pub.id} left={pub.year}>
                             <p className={bodyText}>
@@ -116,7 +116,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Grants and awards">
+                <Section title={tr(data, 'Grants and awards')}>
                     {awards.map((award) => (
                         <Row key={award.id} left={award.year}>
                             <p className={bodyText}>
@@ -128,7 +128,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {talks.length > 0 && (
-                <Section title="Talks">
+                <Section title={tr(data, 'Talks')}>
                     {talks.map((talk) => (
                         <Row key={talk.id} left={talk.year}>
                             <p className={bodyText}>
@@ -140,7 +140,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {teaching.length > 0 && (
-                <Section title="Teaching">
+                <Section title={tr(data, 'Teaching')}>
                     {teaching.map((entry) => (
                         <Row key={entry.id} left={entry.year}>
                             <p className={bodyText}>
@@ -152,7 +152,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Row key={proj.id} left={proj.name}>
                             {proj.link.trim() && (
@@ -167,7 +167,7 @@ export const OxfordTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.some((group) => group.category) ? (
                         skillGroups.map((group, index) => (
                             <Row key={index} left={group.category}>

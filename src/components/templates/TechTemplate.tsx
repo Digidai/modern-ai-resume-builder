@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-3 flex items-center gap-2.5 font-mono text-[13.5px] font-bold uppercase tracking-[0.06em] text-slate-900 break-after-avoid">
@@ -41,7 +41,7 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <ul className="mt-3.5 flex flex-wrap gap-x-5 gap-y-1 rounded border border-slate-200 bg-slate-50 px-3 py-2 font-mono text-[12.5px] text-slate-800 print:bg-transparent">
                         {contacts.map((entry) => (
                             <li key={entry.id} className="min-w-0 wrap-anywhere">
-                                <span className="text-(--accent)">{entry.key}</span>
+                                <span className="text-(--accent)">{resumeLanguage(data) === 'zh' && entry.key !== 'link' ? entry.label : entry.key}</span>
                                 <span className="text-slate-500">: </span>
                                 <ContactLink entry={entry} />
                             </li>
@@ -52,14 +52,14 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.summary.trim() && (
                 <section>
-                    <SectionHeading>Summary</SectionHeading>
+                    <SectionHeading>{tr(data, 'Summary')}</SectionHeading>
                     <p className={`${bodyText} border-l-2 border-(--accent)/30 pl-3 whitespace-pre-line`}>{data.summary.trim()}</p>
                 </section>
             )}
 
             {skillGroups.length > 0 && (
                 <section className="break-inside-avoid">
-                    <SectionHeading>Skills</SectionHeading>
+                    <SectionHeading>{tr(data, 'Skills')}</SectionHeading>
                     <div className="flex flex-col gap-2">
                         {skillGroups.map((group, groupIndex) => (
                             <div key={groupIndex} className="flex flex-wrap items-baseline gap-1.5">
@@ -80,10 +80,10 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.experience.length > 0 && (
                 <section>
-                    <SectionHeading>Experience</SectionHeading>
+                    <SectionHeading>{tr(data, 'Experience')}</SectionHeading>
                     <div className="flex flex-col gap-[18px]">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             const role = exp.role.trim();
                             const company = exp.company.trim();
                             return (
@@ -108,7 +108,7 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.projects.length > 0 && (
                 <section>
-                    <SectionHeading>Projects</SectionHeading>
+                    <SectionHeading>{tr(data, 'Projects')}</SectionHeading>
                     <div className="flex flex-col gap-3.5">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -136,10 +136,10 @@ export const TechTemplate: React.FC<TemplateProps> = ({ data }) => {
 
             {data.education.length > 0 && (
                 <section>
-                    <SectionHeading>Education</SectionHeading>
+                    <SectionHeading>{tr(data, 'Education')}</SectionHeading>
                     <div className="flex flex-col gap-2.5">
                         {data.education.map((edu) => {
-                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                             const heading = edu.school.trim() || edu.degree.trim();
                             const degree = edu.school.trim() ? edu.degree.trim() : '';
                             return (

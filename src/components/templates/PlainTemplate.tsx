@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, AwardLine, Citation, TalkLine, TeachingLine, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Plain": the most basic resume there is. Black text in one sans-serif face, one column, left
 // aligned, no colour, icons or boxes. Section headings are small capitals over a single hairline;
@@ -59,20 +59,20 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {summary && (
-                <Section title="Summary">
+                <Section title={tr(data, 'Summary')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     <div className="flex flex-col gap-[12px]">
                         {data.experience.map((exp) => {
                             const heading = exp.role.trim() || exp.company.trim();
                             const company = exp.role.trim() ? exp.company.trim() : '';
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHead title={heading} subtitle={company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHead title={heading} subtitle={company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     <RichText text={exp.description} className={`mt-[4px] ${bodyText}`} listClassName={listClass} />
                                 </article>
                             );
@@ -82,7 +82,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     <div className="flex flex-col gap-[10px]">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -102,14 +102,14 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     <div className="flex flex-col gap-[8px]">
                         {data.education.map((edu) => {
                             const heading = edu.degree.trim() || edu.school.trim();
                             const school = edu.degree.trim() ? edu.school.trim() : '';
                             return (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHead title={heading} subtitle={school} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                    <EntryHead title={heading} subtitle={school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                 </article>
                             );
                         })}
@@ -118,7 +118,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {publications.length > 0 && (
-                <Section title="Publications">
+                <Section title={tr(data, 'Publications')}>
                     <ul className="flex flex-col gap-[5px]">
                         {publications.map((pub) => (
                             <li key={pub.id} className={`${bodyText} break-inside-avoid`}>
@@ -130,7 +130,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {awards.length > 0 && (
-                <Section title="Grants and awards">
+                <Section title={tr(data, 'Grants and awards')}>
                     <ul className="flex flex-col gap-[5px]">
                         {awards.map((award) => (
                             <li key={award.id} className={`${bodyText} break-inside-avoid`}>
@@ -142,7 +142,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {talks.length > 0 && (
-                <Section title="Talks">
+                <Section title={tr(data, 'Talks')}>
                     <ul className="flex flex-col gap-[5px]">
                         {talks.map((talk) => (
                             <li key={talk.id} className={`${bodyText} break-inside-avoid`}>
@@ -154,7 +154,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {teaching.length > 0 && (
-                <Section title="Teaching">
+                <Section title={tr(data, 'Teaching')}>
                     <ul className="flex flex-col gap-[5px]">
                         {teaching.map((entry) => (
                             <li key={entry.id} className={`${bodyText} break-inside-avoid`}>
@@ -166,7 +166,7 @@ export const PlainTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     <ul className="flex flex-col gap-[3px]">
                         {skillGroups.map((group, index) => (
                             <li key={index} className={bodyText}>

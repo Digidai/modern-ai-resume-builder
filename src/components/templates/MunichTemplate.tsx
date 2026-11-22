@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, Portrait, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 // "Munich", after the German tabular Lebenslauf: name, title and contact details on the left, a
 // 35×45 mm passport photo on the right, then sections ruled in the accent colour with the dates in
@@ -56,15 +56,15 @@ export const MunichTemplate: React.FC<TemplateProps> = ({ data }) => {
             </header>
 
             {summary && (
-                <Section title="Profile">
+                <Section title={tr(data, 'Profile')}>
                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                 </Section>
             )}
 
             {data.experience.length > 0 && (
-                <Section title="Experience">
+                <Section title={tr(data, 'Experience')}>
                     {data.experience.map((exp) => (
-                        <Row key={exp.id} left={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)}>
+                        <Row key={exp.id} left={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))}>
                             {exp.role.trim() && <h3 className="text-[14.5px] font-bold leading-snug text-neutral-900 wrap-break-word">{exp.role}</h3>}
                             {exp.company.trim() && <p className="text-[13.5px] leading-snug text-neutral-600 wrap-break-word">{exp.company}</p>}
                             <RichText text={exp.description} className={`mt-[3px] ${bodyText}`} listClassName={listClass} />
@@ -74,9 +74,9 @@ export const MunichTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.education.length > 0 && (
-                <Section title="Education">
+                <Section title={tr(data, 'Education')}>
                     {data.education.map((edu) => (
-                        <Row key={edu.id} left={formatDateRange(edu.startDate, edu.endDate)}>
+                        <Row key={edu.id} left={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))}>
                             {edu.degree.trim() && <h3 className="text-[14.5px] font-bold leading-snug text-neutral-900 wrap-break-word">{edu.degree}</h3>}
                             {edu.school.trim() && <p className="text-[13.5px] leading-snug text-neutral-600 wrap-break-word">{edu.school}</p>}
                         </Row>
@@ -85,7 +85,7 @@ export const MunichTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {data.projects.length > 0 && (
-                <Section title="Projects">
+                <Section title={tr(data, 'Projects')}>
                     {data.projects.map((proj) => (
                         <Row key={proj.id} left={proj.name}>
                             {proj.link.trim() && (
@@ -100,7 +100,7 @@ export const MunichTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
 
             {skillGroups.length > 0 && (
-                <Section title="Skills">
+                <Section title={tr(data, 'Skills')}>
                     {skillGroups.some((group) => group.category) ? (
                         skillGroups.map((group, index) => (
                             <Row key={index} left={group.category}>

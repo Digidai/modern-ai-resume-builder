@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, resumeLanguage, tr } from './shared';
 
 /** Doc-comment heading with a trailing hairline: `/** @experience *\/ ────`. */
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -28,6 +28,7 @@ const descriptionList = "list-['›_'] space-y-0.5 pl-4 marker:text-(--accent-li
 const block = 'flex flex-col gap-3.5 border-l-2 border-slate-700 pl-4';
 
 export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
+    const heading = (text: string) => (resumeLanguage(data) === 'zh' ? tr(data, text) : text.toLowerCase());
     const contacts = getContactEntries(data);
     const skillGroups = groupSkills(data.skills);
     const flatSkills = skillGroups.length === 1 && !skillGroups[0].category;
@@ -79,18 +80,18 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
             <div className="flex flex-col gap-4">
                 {data.summary.trim() && (
                     <section>
-                        <SectionTitle>summary</SectionTitle>
+                        <SectionTitle>{heading('Summary')}</SectionTitle>
                         <p className="border-l-2 border-slate-700 pl-4">{data.summary}</p>
                     </section>
                 )}
 
                 {data.experience.length > 0 && (
                     <section>
-                        <SectionTitle>experience</SectionTitle>
+                        <SectionTitle>{heading('Experience')}</SectionTitle>
                         <div className={block}>
                             {data.experience.map((exp) => (
                                 <article key={exp.id} className="break-inside-avoid">
-                                    <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                    <EntryHead title={exp.role} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                     {exp.company && <div className="mt-0.5 text-(--accent-light)">@ {exp.company}</div>}
                                     <RichText text={exp.description} className="mt-1.5" listClassName={descriptionList} />
                                 </article>
@@ -101,7 +102,7 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.projects.length > 0 && (
                     <section>
-                        <SectionTitle>projects</SectionTitle>
+                        <SectionTitle>{heading('Projects')}</SectionTitle>
                         <div className={block}>
                             {data.projects.map((proj) => (
                                 <article key={proj.id} className="break-inside-avoid">
@@ -125,7 +126,7 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {skillGroups.length > 0 && (
                     <section className="break-inside-avoid">
-                        <SectionTitle>skills</SectionTitle>
+                        <SectionTitle>{heading('Skills')}</SectionTitle>
                         <div className="border-l-2 border-slate-700 pl-4">
                             {flatSkills ? (
                                 <p>
@@ -155,11 +156,11 @@ export const MonoTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                 {data.education.length > 0 && (
                     <section>
-                        <SectionTitle>education</SectionTitle>
+                        <SectionTitle>{heading('Education')}</SectionTitle>
                         <div className={block}>
                             {data.education.map((edu) => (
                                 <article key={edu.id} className="break-inside-avoid">
-                                    <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                    <EntryHead title={edu.school} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                     {edu.degree && <div className="mt-0.5">{edu.degree}</div>}
                                 </article>
                             ))}

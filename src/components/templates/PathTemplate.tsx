@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 /** A milestone on the timeline: a solid accent node + section heading. */
 const Milestone: React.FC<{ title: string; children: React.ReactNode }> = ({ title, children }) => (
@@ -63,19 +63,19 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                             after the rest of the page in the PDF's text order. */}
                         <div className="flex flex-col gap-8 bg-[linear-gradient(color-mix(in_srgb,var(--accent)_15%,transparent),color-mix(in_srgb,var(--accent)_15%,transparent))] bg-size-[2px_calc(100%-12px)] bg-position-[7px_8px] bg-no-repeat">
                             {data.summary.trim() && (
-                                <Milestone title="Profile">
+                                <Milestone title={tr(data, 'Profile')}>
                                     <p className="text-slate-700 wrap-break-word">{data.summary}</p>
                                 </Milestone>
                             )}
 
                             {data.experience.length > 0 && (
-                                <Milestone title="Experience">
+                                <Milestone title={tr(data, 'Experience')}>
                                     <div className="flex flex-col gap-5">
                                         {data.experience.map((exp) => (
                                             <article key={exp.id} className="break-inside-avoid">
                                                 <Stop />
                                                 {exp.role && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{exp.role}</h3>}
-                                                <SubLine left={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent)} />
+                                                <SubLine left={exp.company} dates={formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data))} />
                                                 <RichText text={exp.description} className="mt-1.5 text-slate-700 wrap-break-word" listClassName={BULLETS} />
                                             </article>
                                         ))}
@@ -84,13 +84,13 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                             )}
 
                             {data.education.length > 0 && (
-                                <Milestone title="Education">
+                                <Milestone title={tr(data, 'Education')}>
                                     <div className="flex flex-col gap-4">
                                         {data.education.map((edu) => (
                                             <article key={edu.id} className="break-inside-avoid">
                                                 <Stop />
                                                 {edu.school && <h3 className="text-[15.5px] font-bold text-slate-900 leading-snug wrap-break-word">{edu.school}</h3>}
-                                                <SubLine left={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate)} />
+                                                <SubLine left={edu.degree} dates={formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data))} />
                                             </article>
                                         ))}
                                     </div>
@@ -104,7 +104,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className={hasTimeline ? 'w-[33%] shrink-0 flex flex-col gap-7' : 'flex-1 flex flex-col gap-7'}>
                         {skillGroups.length > 0 && (
                             <section className="bg-slate-50 border border-slate-100 p-5 rounded-2xl break-inside-avoid">
-                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">Skills</h2>
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">{tr(data, 'Skills')}</h2>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="min-w-0">
@@ -122,7 +122,7 @@ export const PathTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.projects.length > 0 && (
                             <section>
-                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">Projects</h2>
+                                <h2 className="font-raleway text-[12.5px] font-bold uppercase tracking-[0.08em] text-slate-900 mb-3 break-after-avoid">{tr(data, 'Projects')}</h2>
                                 <div className="flex flex-col gap-4">
                                     {data.projects.map((proj) => (
                                         <article key={proj.id} className="border-l-2 border-(--accent)/30 pl-4 py-0.5 break-inside-avoid">

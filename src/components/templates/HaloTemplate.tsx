@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, initialsOf, Portrait, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, initialsOf, Portrait, toHref, tr, resumeLanguage } from './shared';
 
 // "Halo": a soft, friendly layout. A full-bleed header washed with an accent gradient holds an
 // round photo (initials when there is none), an IBM Plex Serif name and an icon contact row. Below, a
@@ -60,19 +60,19 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <div className={`${hasSide ? 'col-start-2' : 'col-span-2'} row-start-1 flex min-w-0 flex-col gap-[6mm]`}>
                             {summary && (
                                 <section>
-                                    <SectionTitle>Profile</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                                     <p className={`${bodyText} whitespace-pre-line`}>{summary}</p>
                                 </section>
                             )}
 
                             {data.experience.length > 0 && (
                                 <section>
-                                    <SectionTitle>Experience</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                                     <div className="flex flex-col gap-[12px]">
                                         {data.experience.map((exp) => {
                                             const role = exp.role.trim();
                                             const company = exp.company.trim();
-                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                             return (
                                                 <article key={exp.id} className="break-inside-avoid">
                                                     {(role || company || dates) && (
@@ -92,7 +92,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {data.projects.length > 0 && (
                                 <section>
-                                    <SectionTitle>Projects</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                                     <div className="flex flex-col gap-[10px]">
                                         {data.projects.map((proj) => (
                                             <article key={proj.id} className="break-inside-avoid">
@@ -121,7 +121,7 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
                         >
                             {skillGroups.length > 0 && (
                                 <section className="break-inside-avoid">
-                                    <SectionTitle>Skills</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                     <div className="flex flex-col gap-[8px]">
                                         {skillGroups.map((group, index) => (
                                             <div key={index}>
@@ -141,12 +141,12 @@ export const HaloTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                             {data.education.length > 0 && (
                                 <section>
-                                    <SectionTitle>Education</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                     <div className="flex flex-col gap-[10px]">
                                         {data.education.map((edu) => {
                                             const degree = edu.degree.trim();
                                             const school = edu.school.trim();
-                                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                             return (
                                                 <article key={edu.id} className="break-inside-avoid">
                                                     {(degree || school) && <h3 className="text-[14px] font-semibold leading-snug text-slate-900 wrap-break-word">{degree || school}</h3>}

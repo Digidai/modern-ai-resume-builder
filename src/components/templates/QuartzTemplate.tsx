@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactItem, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="mb-3.5 border-b-2 border-(--accent) pb-1.5 font-jetbrains text-[12px] font-bold uppercase tracking-[0.08em] text-slate-900 break-after-avoid">
@@ -26,16 +26,16 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
         <div className="flex min-w-0 flex-col gap-6">
             {data.summary.trim() && (
                 <section>
-                    <SectionTitle>Profile</SectionTitle>
+                    <SectionTitle>{tr(data, 'Profile')}</SectionTitle>
                     <p className="text-[14px] font-medium text-slate-800">{data.summary}</p>
                 </section>
             )}
             {data.experience.length > 0 && (
                 <section>
-                    <SectionTitle>Experience</SectionTitle>
+                    <SectionTitle>{tr(data, 'Experience')}</SectionTitle>
                     <div className="flex flex-col gap-5">
                         {data.experience.map((exp) => {
-                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                            const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                             return (
                                 <article key={exp.id} className="break-inside-avoid">
                                     {(exp.role || dates) && (
@@ -56,7 +56,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
             )}
             {data.projects.length > 0 && (
                 <section>
-                    <SectionTitle>Projects</SectionTitle>
+                    <SectionTitle>{tr(data, 'Projects')}</SectionTitle>
                     <div className="flex flex-col gap-4">
                         {data.projects.map((proj) => (
                             <article key={proj.id} className="break-inside-avoid">
@@ -94,7 +94,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                         <aside className="page-frame flex min-w-0 flex-col gap-6 border-r-2 border-(--accent) bg-(--accent)/5 px-[6mm] py-[6mm]">
                             {contacts.length > 0 && (
                                 <section>
-                                    <SectionTitle>Contact</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Contact')}</SectionTitle>
                                     <ul className="flex flex-col gap-1.5 text-[12.5px] text-slate-800">
                                         {contacts.map((entry) => (
                                             <li key={entry.id} className="min-w-0">
@@ -106,7 +106,7 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                             )}
                             {skillGroups.length > 0 && (
                                 <section>
-                                    <SectionTitle>Skills</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Skills')}</SectionTitle>
                                     <div className="flex flex-col gap-3">
                                         {skillGroups.map((group, gi) => (
                                             <div key={gi} className="min-w-0">
@@ -128,10 +128,10 @@ export const QuartzTemplate: React.FC<TemplateProps> = ({ data }) => {
                             )}
                             {data.education.length > 0 && (
                                 <section>
-                                    <SectionTitle>Education</SectionTitle>
+                                    <SectionTitle>{tr(data, 'Education')}</SectionTitle>
                                     <div className="flex flex-col gap-3">
                                         {data.education.map((edu) => {
-                                            const dates = formatDateRange(edu.startDate, edu.endDate);
+                                            const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                             return (
                                                 <article key={edu.id} className="break-inside-avoid border border-(--accent)/25 bg-white p-3">
                                                     {edu.school && <h3 className="text-[14px] font-bold leading-snug">{edu.school}</h3>}

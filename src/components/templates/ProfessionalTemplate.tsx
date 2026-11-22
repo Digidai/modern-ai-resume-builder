@@ -1,5 +1,5 @@
 import React from 'react';
-import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref } from './shared';
+import { TemplateProps, ContactLink, RichText, displayUrl, formatDateRange, getContactEntries, groupSkills, toHref, tr, resumeLanguage } from './shared';
 
 const MainHeading: React.FC<{ children: React.ReactNode }> = ({ children }) => (
     <h2 className="text-[13px] font-bold uppercase tracking-[0.08em] text-(--accent) border-b border-(--accent)/35 pb-1.5 mb-3.5 break-after-avoid">
@@ -46,17 +46,17 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
                 <div className={`flex-1 min-w-0 pl-[13mm] ${hasSidebar ? 'pr-[8mm]' : 'pr-[13mm]'} page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[11mm] flex flex-col gap-7`}>
                     {data.summary && (
                         <section>
-                            <MainHeading>Profile</MainHeading>
+                            <MainHeading>{tr(data, 'Profile')}</MainHeading>
                             <p className="text-[14px] text-slate-700 leading-[1.6] whitespace-pre-line wrap-break-word">{data.summary}</p>
                         </section>
                     )}
 
                     {data.experience.length > 0 && (
                         <section>
-                            <MainHeading>Experience</MainHeading>
+                            <MainHeading>{tr(data, 'Experience')}</MainHeading>
                             <div className="flex flex-col gap-4">
                                 {data.experience.map((exp) => {
-                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent);
+                                    const dates = formatDateRange(exp.startDate, exp.endDate, exp.isCurrent, resumeLanguage(data));
                                     return (
                                         <div key={exp.id} className="break-inside-avoid">
                                             <div className="flex justify-between items-baseline gap-4">
@@ -76,7 +76,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                     {data.projects.length > 0 && (
                         <section>
-                            <MainHeading>Projects</MainHeading>
+                            <MainHeading>{tr(data, 'Projects')}</MainHeading>
                             <div className="flex flex-col gap-3.5">
                                 {data.projects.map((proj) => (
                                     <div key={proj.id} className="break-inside-avoid">
@@ -102,7 +102,7 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
                     <aside className="w-[31%] shrink-0 bg-(--accent)/5 border-l border-(--accent)/15 pl-[7mm] pr-[13mm] page-frame pt-[12mm] [&>:first-child]:-mt-[3mm] pb-[11mm] flex flex-col gap-7">
                         {skillGroups.length > 0 && (
                             <section>
-                                <SideHeading>Skills</SideHeading>
+                                <SideHeading>{tr(data, 'Skills')}</SideHeading>
                                 <div className="flex flex-col gap-3">
                                     {skillGroups.map((group, gi) => (
                                         <div key={gi} className="break-inside-avoid">
@@ -122,10 +122,10 @@ export const ProfessionalTemplate: React.FC<TemplateProps> = ({ data }) => {
 
                         {data.education.length > 0 && (
                             <section>
-                                <SideHeading>Education</SideHeading>
+                                <SideHeading>{tr(data, 'Education')}</SideHeading>
                                 <div className="flex flex-col gap-4">
                                     {data.education.map((edu) => {
-                                        const dates = formatDateRange(edu.startDate, edu.endDate);
+                                        const dates = formatDateRange(edu.startDate, edu.endDate, false, resumeLanguage(data));
                                         return (
                                             <div key={edu.id} className="break-inside-avoid">
                                                 {edu.school && <h3 className="font-bold text-slate-900 text-[13.5px] leading-snug wrap-break-word">{edu.school}</h3>}
