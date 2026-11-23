@@ -30,5 +30,7 @@ describe('looksLikeLatex', () => {
 describe('tidyResumeText', () => {
   it('closes up letter-spaced headings but keeps their words apart', () => {
     expect(tidyResumeText('S O F T W A R E  E N G I N E E R\nS K I L L S\nGo,  Python and C')).toBe('SOFTWARE ENGINEER\nSKILLS\nGo, Python and C');
+    // A drop cap rejoins its word; a lone A or I, which can be a word, and a capital before a capitalised line stay.
+    expect(tidyResumeText('D\nata engineer with 9 years\nA\ndata team lead\nB\nSkills')).toBe('Data engineer with 9 years\nA\ndata team lead\nB\nSkills');
   });
 });

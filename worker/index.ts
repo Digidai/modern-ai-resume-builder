@@ -784,6 +784,10 @@ const PARSE_TEXT_PROMPT = [
   'description is a single string with one bullet per line, each starting with "- "; join a bullet that was broken across lines; keep the wording.',
   'A paragraph without bullets stays as one "- " line. Ignore page numbers, repeated page headers or footers and "References available" lines.',
   'URLs listed at the end under "Links in the file" belong to the profile, project or publication whose text they were attached to.',
+  // Templates set names, titles and employers in capitals with CSS, and the PDF text keeps them: "PRIYA RAMAN", "BRIGHTLINE PAY".
+  'Words in all capitals only because the layout styled them so are written in normal case, in every field: the name, job titles, and company, school and degree names too.',
+  'For example "PRIYA RAMAN" is "Priya Raman", "SENIOR DATA ENGINEER" is "Senior Data Engineer", "BRIGHTLINE PAY" is "Brightline Pay", "UNIVERSITY OF MICHIGAN" is "University of Michigan" and "NASA JET PROPULSION LABORATORY" is "NASA Jet Propulsion Laboratory".',
+  'Acronyms and names that are always capitals stay so (IBM, NASA, AWS, SQL, MBA, UCLA); text the CV writes in normal case keeps its case.',
 ].join('\n');
 
 /** The language of text written in a CJK script (kana and Hangul first, since Japanese also uses Han characters); '' otherwise. */

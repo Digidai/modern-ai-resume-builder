@@ -32,6 +32,8 @@ export const tidyResumeText = (text: string): string =>
     // Letter-spaced headings come out as "S K I L L S" (words two or more spaces apart).
     .map((line) => (/^\S(?: +\S){2,}$/.test(line) ? line.split(/ {2,}/).map((word) => word.replace(/ /g, '')).join(' ') : line.replace(/ {2,}/g, ' ')))
     .join('\n')
+    // A drop cap comes out on a line of its own ("D" then "ata engineer with 9 years"); A and I can be words of their own, so they stay.
+    .replace(/(^|\n)([B-HJ-Z])\n(?=[a-z])/g, '$1$2')
     .replace(/\n{3,}/g, '\n\n')
     .trim();
 
