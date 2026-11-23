@@ -19,6 +19,7 @@ import { RESUME_LANGUAGES, type ResumeData, type ResumeLanguage } from '../src/t
 import { slugifyJobTitle } from '../src/utils/slug';
 import { validateUrl } from '../src/utils/validation';
 import { latexEngine, toLatex } from '../src/utils/latex';
+import { toDocx } from '../src/utils/docx';
 import { PUBLICATION_KINDS, parseBibtex, type ImportedPublication, type PublicationKind } from '../src/utils/bibtex';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
@@ -27,7 +28,7 @@ export interface AgentEnv {
   BROWSER?: Parameters<typeof puppeteer.launch>[0];
   /** Origin the headless browser loads `/render/` from; defaults to the request's origin. */
   RENDER_ORIGIN?: string;
-  /** Also keys the encryption of PDF download links (see pdfDownloadLink). */
+  /** Also keys the encryption of PDF and Word download links (see downloadLink). */
   AI_SIGNING_SECRET?: string;
 }
 
@@ -357,6 +358,14 @@ const createEditorLink = async (origin: string, input: Json) => {
   return { url, template: resume.templateId, warnings };
 };
 
+const DOCX_TYPE = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+
+/** The resume as an editable Word file: the editor's single-column .docx, the same for every template. */
+const exportDocx = (input: Json) => {
+  const { resume, warnings } = prepareResume(input);
+  return { resume, warnings, bytes: toDocx(resume), filename: resumeFileName(resume.fullName, 'docx', tr(resume, 'Resume')) };
+};
+
 /** The resume as a standalone .tex file, with what is needed to open it in Overleaf. */
 const exportLatex = (input: Json) => {
   const { resume, warnings } = prepareResume(input);
@@ -460,9 +469,14 @@ const linkKey = async (env: AgentEnv): Promise<CryptoKey | null> => {
 };
 
 const pdfFilename = (resume: ResumeData) => resumeFileName(resume.fullName, 'pdf', tr(resume, 'Resume'));
+/** content-disposition for a download, with an ASCII fallback for clients that ignore filename*. */
+const attachment = (filename: string) => `attachment; filename="${filename.replace(/[^\x20-\x7e]/g, '_')}"; filename*=UTF-8''${encodeURIComponent(filename)}`;
 
-/** A URL that downloads this resume as a PDF for 7 days, or null (no secret configured, or too long). */
-const pdfDownloadLink = async (env: AgentEnv, origin: string, resume: ResumeData) => {
+/**
+ * A URL that downloads this resume for 7 days, or null (no secret configured, or too long). The token
+ * carries only the resume; the file name's extension picks the format, a PDF or a Word file.
+ */
+const downloadLink = async (env: AgentEnv, origin: string, resume: ResumeData, format: 'pdf' | 'docx' = 'pdf') => {
   const key = await linkKey(env);
   if (!key) return null;
   const expires = Date.now() + DOWNLOAD_TTL_MS;
@@ -472,7 +486,7 @@ const pdfDownloadLink = async (env: AgentEnv, origin: string, resume: ResumeData
   const token = new Uint8Array(iv.length + sealed.length);
   token.set(iv);
   token.set(sealed, iv.length);
-  const url = `${origin}${AGENT_API_PREFIX}${DOWNLOAD_PATH}${toBase64Url(token)}/${encodeURIComponent(pdfFilename(resume))}`;
+  const url = `${origin}${AGENT_API_PREFIX}${DOWNLOAD_PATH}${toBase64Url(token)}/${encodeURIComponent(resumeFileName(resume.fullName, format, tr(resume, 'Resume')))}`;
   return url.length > MAX_DOWNLOAD_URL_CHARS ? null : { url, expiresAt: new Date(expires).toISOString() };
 };
 
@@ -741,6 +755,23 @@ const TOOLS: Tool[] = [
     },
   },
   {
+    name: 'export_docx',
+    title: 'Export the resume as a Word file',
+    description:
+      'Returns download_url, a link that downloads the resume as an editable Word file (.docx) for 7 days, for job portals and recruiters that ask for Word. It is one plain single-column layout whatever the template (real headings, Word bullets, live links), which applicant tracking systems parse well; headings follow the resume language. If the resume is too long for a link, the file is embedded instead.',
+    inputSchema: { type: 'object', properties: { resume: RESUME_INPUT.resume, language: RESUME_INPUT.language }, required: ['resume'] },
+    annotations: { readOnlyHint: true, openWorldHint: false },
+    run: async (args, { env, origin }) => {
+      const { resume, bytes, filename, warnings } = exportDocx(args);
+      const link = await downloadLink(env, origin, resume, 'docx');
+      if (link) return [text({ download_url: link.url, expires_at: link.expiresAt, filename, bytes: bytes.length, warnings })];
+      return [
+        text({ filename, bytes: bytes.length, warnings, note: 'The Word file is embedded below; it was too large for a download link.' }),
+        { type: 'resource', resource: { uri: `moderncv://${encodeURIComponent(filename)}`, mimeType: DOCX_TYPE, blob: toBase64(bytes) } },
+      ];
+    },
+  },
+  {
     name: 'render_preview',
     title: 'Preview the first page as an image',
     description:
@@ -764,7 +795,7 @@ const TOOLS: Tool[] = [
     annotations: { readOnlyHint: true, openWorldHint: false },
     run: async (args, { env, origin, deps }) => {
       const result = await renderResume(env, deps, origin, args, 'pdf');
-      const link = await pdfDownloadLink(env, origin, result.resume);
+      const link = await downloadLink(env, origin, result.resume);
       const summary = { pages: result.pages, template: result.template, bytes: result.bytes.length, warnings: result.warnings };
       if (link) return [text({ download_url: link.url, expires_at: link.expiresAt, ...summary })];
       // Too long for a URL (or links not configured): embed the file instead.
@@ -778,7 +809,7 @@ const TOOLS: Tool[] = [
 
 const SERVER_INSTRUCTIONS = `ModernCV builds resumes with ${TEMPLATES.length} professional templates and exports vector PDFs. Free, no account.
 Workflow: 1) get_writing_guide and get_example_resume for the target job title; 2) draft the resume JSON (get_resume_schema) from facts the user gave you, never invent employers, dates or metrics; 3) pick a template with list_templates (prefer ATS-friendly for online applications); 4) render_preview to check layout and page count, then shorten or lower scale until it fits; 5) render_pdf returns download_url (a 7-day PDF download link) to give the user, and create_editor_link so they can review and edit it in the browser.
-US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), dates as YYYY-MM like every template (federal prints them as MM/YYYY) and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line; a clearance goes in skills as "Security Clearance: Top Secret/SCI, active" and is listed first in that section. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf.`;
+US federal jobs (USAJOBS): template "federal" with paper "letter", hours per week on every job (experience[].hours), dates as YYYY-MM like every template (federal prints them as MM/YYYY) and series/grade in the job title, e.g. "Program Analyst, GS-0343-12"; at most 2 pages (render_pdf warns above that). Awards go in awards[] (shown as Honors and Awards); certifications and licenses go in skills as "Certifications: PMP, PMI, 2022; CISSP, ISC2, 2024" (semicolons between credentials) and get their own section, one per line; a clearance goes in skills as "Security Clearance: Top Secret/SCI, active" and is listed first in that section. Academic CVs: import_publications reads an ORCID record or BibTeX (filter by kind and year), and publications, awards, talks and teaching show in templates with publications: true. Existing LaTeX CV: read the .tex yourself and map it to the resume JSON. export_latex returns the resume as a .tex file for Overleaf; export_docx returns a Word file download link for portals that ask for .docx.`;
 
 // ---------------------------------------------------------------------------------------------
 // Transport
@@ -912,16 +943,23 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     if (request.method !== 'GET' && request.method !== 'HEAD') return notAllowed('GET, HEAD', 'Open the link with GET.');
     const [token = '', name = 'resume.pdf'] = route.slice(DOWNLOAD_PATH.length).split('/');
     const input = await openDownloadLink(ctx.env, token);
+    const docx = /\.docx$/i.test(name);
     // Link previews and mail scanners often probe with HEAD: answer without spending a render.
-    if (request.method === 'HEAD') return new Response(null, { headers: { 'content-type': 'application/pdf' } });
+    if (request.method === 'HEAD') return new Response(null, { headers: { 'content-type': docx ? DOCX_TYPE : 'application/pdf' } });
+    const filename = decodeURIComponent(name).replace(/[^\p{L}\p{M}\p{N}_.-]/gu, '') || (docx ? 'Resume.docx' : 'Resume.pdf');
+    if (docx) return new Response(new Blob([exportDocx(input).bytes as BlobPart]), { headers: { 'content-type': DOCX_TYPE, 'content-disposition': attachment(filename) } });
     const result = await renderResume(ctx.env, ctx.deps, ctx.origin, input, 'pdf');
-    const filename = decodeURIComponent(name).replace(/[^\p{L}\p{M}\p{N}_.-]/gu, '') || 'Resume.pdf';
     return new Response(new Blob([result.bytes as BlobPart]), {
-      headers: {
-        'content-type': 'application/pdf',
-        'content-disposition': `attachment; filename="${filename.replace(/[^\x20-\x7e]/g, '_')}"; filename*=UTF-8''${encodeURIComponent(filename)}`,
-        'x-resume-pages': String(result.pages),
-      },
+      headers: { 'content-type': 'application/pdf', 'content-disposition': attachment(filename), 'x-resume-pages': String(result.pages) },
+    });
+  }
+  if (route === 'docx') {
+    if (request.method !== 'POST') return notAllowed('POST', 'Use POST with a JSON body.');
+    const body = await readJson(request);
+    if (!body || typeof body !== 'object' || Array.isArray(body)) return fail(400, 'INVALID_REQUEST', 'Body must be a JSON object with `resume`.');
+    const { bytes, filename, warnings } = exportDocx(body as Json);
+    return new Response(new Blob([bytes as BlobPart]), {
+      headers: { 'content-type': DOCX_TYPE, 'content-disposition': attachment(filename), 'x-resume-warnings': encodeURIComponent(JSON.stringify(warnings)) },
     });
   }
   if (route === 'link' || route === 'pdf' || route === 'preview') {
@@ -933,7 +971,7 @@ const handleHttpApi = async (request: Request, url: URL, ctx: ToolContext): Prom
     return new Response(new Blob([result.bytes as BlobPart]), {
       headers: {
         'content-type': route === 'pdf' ? 'application/pdf' : 'image/png',
-        ...(route === 'pdf' ? { 'content-disposition': `attachment; filename="${pdfFilename(result.resume).replace(/[^\x20-\x7e]/g, '_')}"; filename*=UTF-8''${encodeURIComponent(pdfFilename(result.resume))}` } : {}),
+        ...(route === 'pdf' ? { 'content-disposition': attachment(pdfFilename(result.resume)) } : {}),
         'x-resume-pages': String(result.pages),
         'x-resume-warnings': encodeURIComponent(JSON.stringify(result.warnings)),
       },

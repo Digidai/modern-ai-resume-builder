@@ -7,7 +7,7 @@ description: Write, design and export a professional resume with ModernCV (89 te
 
 ModernCV (https://genedai.cv) turns a resume written as JSON into a polished A4 or US Letter PDF in one of 89 templates, and can hand the user an editor link with the resume preloaded. No account or API key is needed.
 
-If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`). Otherwise use the HTTP API below with `curl`. Over MCP, `render_pdf` returns `download_url`, a link that downloads the PDF for 7 days; give it to the user as a clickable link (a resume too long for a link comes back as an embedded PDF instead). Tool names map to HTTP routes: `get_writing_guide` → `GET /api/agent/guide`, `get_example_resume` → `GET /api/agent/example`, `get_resume_schema` → `GET /resume.schema.json`, `list_templates` → `GET /api/agent/templates`, `import_publications` → `POST /api/agent/publications`, `render_preview` / `render_pdf` / `create_editor_link` / `export_latex` → `POST /api/agent/preview` / `pdf` / `link` / `latex`.
+If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `get_example_resume`, `get_resume_schema`, `list_templates`, `import_publications`, `render_preview`, `render_pdf`, `create_editor_link`, `export_latex`, `export_docx`). Otherwise use the HTTP API below with `curl`. Over MCP, `render_pdf` returns `download_url`, a link that downloads the PDF for 7 days; give it to the user as a clickable link (a resume too long for a link comes back as an embedded PDF instead); `export_docx` returns the same kind of link for a Word file. Tool names map to HTTP routes: `get_writing_guide` → `GET /api/agent/guide`, `get_example_resume` → `GET /api/agent/example`, `get_resume_schema` → `GET /resume.schema.json`, `list_templates` → `GET /api/agent/templates`, `import_publications` → `POST /api/agent/publications`, `render_preview` / `render_pdf` / `create_editor_link` / `export_latex` / `export_docx` → `POST /api/agent/preview` / `pdf` / `link` / `latex` / `docx`.
 
 ## Workflow
 
@@ -23,6 +23,7 @@ If the `moderncv` MCP server is connected, use its tools (`get_writing_guide`, `
 - **Publications from ORCID or BibTeX.** `POST /api/agent/publications` with `{ "orcid": "0000-0002-1825-0097" }` or `{ "bibtex": "<.bib contents>" }` returns `{ listed, found, counts, publications: [{ authors, title, venue, year, link, kind }] }`. Narrow a long record with `kinds` (`journal`, `conference`, `preprint`, `book`, `thesis`, `other`) and `from_year` / `to_year`, then put the chosen entries, without `kind`, in `publications`. Ask the user which works to include rather than listing hundreds.
 - **An existing LaTeX CV** (Overleaf, moderncv, Awesome-CV, Jake's Resume): read the `.tex` and map it to the JSON below yourself; keep every fact and the wording of each `\item`.
 - **LaTeX out.** `POST /api/agent/latex` with `{ resume }` returns `{ filename, engine, tex, overleaf, warnings }`. Save `tex` as a file for the user. To open it in Overleaf, a browser form posts `encoded_snip` (the URL-encoded tex), `snip_name` and `engine` to `https://www.overleaf.com/docs`.
+- **Word out.** When a job portal or recruiter asks for .docx, `POST /api/agent/docx` with `{ resume }` returns the Word file (save it for the user). It is one plain single-column layout whatever the template, which ATS parsers read well; the PDF keeps the template's design.
 
 ## HTTP API
 
@@ -37,6 +38,7 @@ Base URL: `https://genedai.cv`. JSON in, JSON/PDF/PNG out. CORS is open. Renderi
 | `POST /api/agent/preview` | same | `image/png` of page 1; headers `x-resume-pages`, `x-resume-warnings` |
 | `POST /api/agent/pdf` | same | `application/pdf` (A4 or US Letter, selectable text) |
 | `POST /api/agent/latex` | `{ resume }` | `{ filename, engine, tex, overleaf, warnings }` |
+| `POST /api/agent/docx` | `{ resume, language? }` | Word file (.docx); header `x-resume-warnings` |
 | `POST /api/agent/publications` | `{ orcid }` or `{ bibtex }`, optional `kinds`, `from_year`, `to_year` | `{ source, listed, found, counts, returned, publications }` |
 
 `template` is an id from the templates list (default `modern`); an unknown one is a 400 `INVALID_TEMPLATE` listing the valid ids. `accent` is `#RRGGBB`. `font` is one of `template, inter, source-sans, lato, roboto, source-serif, charis, garamond, tinos, plex-serif, latin-modern`. `scale` is 0.85–1.15. `paper` is `a4` (default) or `letter`; use `letter` for US and Canadian applications, and check the page count again since Letter pages are shorter.

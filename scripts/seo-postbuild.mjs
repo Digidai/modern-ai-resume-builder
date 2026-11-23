@@ -1108,6 +1108,35 @@ const buildOpenApi = (siteUrl, templates) => {
           },
         },
       },
+      '/api/agent/docx': {
+        post: {
+          operationId: 'exportDocx',
+          summary: 'The resume as an editable Word file (.docx): one single-column, ATS-friendly layout whatever the template',
+          requestBody: {
+            required: true,
+            content: {
+              'application/json': {
+                schema: {
+                  type: 'object',
+                  required: ['resume'],
+                  properties: {
+                    resume: resumeProp,
+                    language: { type: 'string', enum: ['en', 'zh', 'ja', 'ko'], description: "Language of the section headings and dates; omit to follow the resume's content." },
+                  },
+                },
+              },
+            },
+          },
+          responses: {
+            200: {
+              description: 'Word file',
+              headers: { 'x-resume-warnings': { description: 'URL-encoded JSON array of content warnings.', schema: { type: 'string' } } },
+              content: { 'application/vnd.openxmlformats-officedocument.wordprocessingml.document': {} },
+            },
+            400: error,
+          },
+        },
+      },
       '/api/agent/latex': {
         post: {
           operationId: 'exportLatex',
@@ -1292,6 +1321,7 @@ Remote MCP server: ${siteUrl}/mcp (Streamable HTTP, stateless, no auth). Add it 
 | render_pdf · POST /api/agent/pdf | Vector PDF on A4 or US Letter (over MCP: a 7-day download link) |
 | create_editor_link · POST /api/agent/link | Editor URL with the resume preloaded (in the URL fragment) |
 | export_latex · POST /api/agent/latex | The resume as a .tex file plus Overleaf form fields |
+| export_docx · POST /api/agent/docx | An editable Word file (over MCP: a 7-day download link) |
 
 POST bodies are \`{ "resume": {...}, "template": "classic", "accent": "#1F6E73", "font": "inter", "scale": 0.95, "paper": "letter" }\`; only \`resume\` is required. Rendering is rate limited per IP and globally. Resumes are rendered and discarded, never stored. Never invent facts for a user's resume.
 

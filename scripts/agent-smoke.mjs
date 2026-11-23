@@ -212,6 +212,24 @@ if (check(typeof summary.download_url === 'string' && summary.download_url.start
   check(bad.status === 404, 'tampered download link is rejected', `status ${bad.status}`);
 }
 
+// Word export (no renders): over HTTP, and over MCP as a download link that serves the same file.
+const DOCX = 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+const docxResponse = await fetch(`${BASE}/api/agent/docx`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ resume: designer }) });
+const docxBytes = new Uint8Array(await docxResponse.arrayBuffer());
+const docxText = new TextDecoder().decode(docxBytes);
+check(
+  docxResponse.status === 200 && docxResponse.headers.get('content-type') === DOCX && docxText.startsWith('PK') && docxText.includes('word/document.xml') && docxText.includes(designer.fullName),
+  'POST /api/agent/docx returns a Word file with the resume in it',
+  `status ${docxResponse.status}, ${docxBytes.length} bytes, ${docxResponse.headers.get('content-disposition')}`
+);
+const docxCall = await mcp('tools/call', { name: 'export_docx', arguments: { resume: designer } });
+const docxSummary = docxCall.body.result?.content?.[0]?.type === 'text' ? JSON.parse(docxCall.body.result.content[0].text) : {};
+if (check(typeof docxSummary.download_url === 'string' && /\.docx$/.test(docxSummary.download_url), 'MCP export_docx returns a .docx download_url', docxSummary.filename)) {
+  const download = await fetch(docxSummary.download_url);
+  const bytes = new Uint8Array(await download.arrayBuffer());
+  check(download.status === 200 && download.headers.get('content-type') === DOCX && bytes.length === docxBytes.length, 'the .docx download_url serves the Word file', `status ${download.status}, ${bytes.length} bytes`);
+}
+
 // Editor AI, the way the page calls it: the client token from the editor HTML buys a session, which
 // buys one "improve". Catches a retired or failing Workers AI model, which the agent API never touches.
 const userAgent = 'agent-smoke';
