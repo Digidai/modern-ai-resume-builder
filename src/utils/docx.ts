@@ -255,7 +255,7 @@ export const downloadDocx = (data: ResumeData): void => {
   const url = URL.createObjectURL(new Blob([bytes.slice()], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' }));
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = resumeFileName(data.fullName, 'docx');
+  anchor.download = resumeFileName(data.fullName, 'docx', tr(data, 'Resume'));
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();

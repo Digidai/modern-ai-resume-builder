@@ -9,6 +9,7 @@ import { TEMPLATES, currentTemplateId, getTemplateById, showsAwards } from '../s
 import { FONT_PRESETS } from '../src/constants/design';
 import { MM_TO_PX, paperSize } from '../src/constants/print';
 import { ignoredResumeFields, sanitizeResumeData } from '../src/utils/resumeData';
+import { tr } from '../src/utils/resumeLanguage';
 import { encodeResumePayload } from '../src/shared/resumeLink';
 import { resumeFileName } from '../src/shared/fileName';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
@@ -351,7 +352,7 @@ const exportLatex = (input: Json) => {
   const { resume, warnings } = prepareResume(input);
   const tex = toLatex(resume);
   const engine = latexEngine(resume);
-  const filename = resumeFileName(resume.fullName, 'tex');
+  const filename = resumeFileName(resume.fullName, 'tex', tr(resume, 'Resume'));
   return {
     filename,
     engine,
@@ -448,7 +449,7 @@ const linkKey = async (env: AgentEnv): Promise<CryptoKey | null> => {
   );
 };
 
-const pdfFilename = (resume: ResumeData) => resumeFileName(resume.fullName, 'pdf');
+const pdfFilename = (resume: ResumeData) => resumeFileName(resume.fullName, 'pdf', tr(resume, 'Resume'));
 
 /** A URL that downloads this resume as a PDF for 7 days, or null (no secret configured, or too long). */
 const pdfDownloadLink = async (env: AgentEnv, origin: string, resume: ResumeData) => {

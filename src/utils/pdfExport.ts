@@ -2,6 +2,7 @@ import { PDFDocument } from 'pdf-lib';
 import { toPng } from 'html-to-image';
 import { ResumeData } from '../types';
 import { resumeDocumentTitle } from './resumeData';
+import { tr } from './resumeLanguage';
 import { resumeFileName } from '../shared/fileName';
 import { isFullBleedTemplate } from '../constants/templates';
 import { MM_TO_PX } from '../constants/print';
@@ -188,7 +189,7 @@ export const exportResumeToPdf = async ({
   await layoutSettled(element);
   await nextFrame();
 
-  const fileName = resumeFileName(data.fullName, 'pdf');
+  const fileName = resumeFileName(data.fullName, 'pdf', tr(data, 'Resume'));
 
   // Best path: the server prints the exact preview to a vector PDF (selectable text, all templates).
   try {

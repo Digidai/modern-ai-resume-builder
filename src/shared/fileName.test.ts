@@ -13,4 +13,9 @@ describe('resumeFileName', () => {
     expect(resumeFileName('Pat "PL" Lee/Smith: CV?', 'tex')).toBe('Pat_PL_LeeSmith_CV_Resume.tex');
     expect(resumeFileName('   ', 'pdf')).toBe('Resume.pdf');
   });
+
+  it("uses the resume language's word for resume", () => {
+    expect(resumeFileName('王思远', 'pdf', '简历')).toBe('王思远_简历.pdf');
+    expect(resumeFileName('', 'docx', '이력서')).toBe('이력서.docx');
+  });
 });

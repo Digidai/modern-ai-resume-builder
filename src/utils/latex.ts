@@ -225,7 +225,7 @@ export const downloadLatex = (data: ResumeData): void => {
   const url = URL.createObjectURL(new Blob([toLatex(data)], { type: 'application/x-tex' }));
   const anchor = document.createElement('a');
   anchor.href = url;
-  anchor.download = resumeFileName(data.fullName, 'tex');
+  anchor.download = resumeFileName(data.fullName, 'tex', tr(data, 'Resume'));
   document.body.appendChild(anchor);
   anchor.click();
   anchor.remove();
@@ -239,7 +239,7 @@ export const openInOverleaf = (data: ResumeData): void => {
   form.action = 'https://www.overleaf.com/docs';
   form.target = '_blank';
   form.rel = 'noopener';
-  const fields = { encoded_snip: encodeURIComponent(toLatex(data)), snip_name: resumeFileName(data.fullName, 'tex'), engine: latexEngine(data) };
+  const fields = { encoded_snip: encodeURIComponent(toLatex(data)), snip_name: resumeFileName(data.fullName, 'tex', tr(data, 'Resume')), engine: latexEngine(data) };
   for (const [name, value] of Object.entries(fields)) {
     const input = document.createElement('input');
     input.type = 'hidden';
