@@ -5,6 +5,7 @@ import { Button } from './Button';
 import { SiteHeader, SiteFooter } from './SiteHeader';
 import { useResume } from '../contexts/ResumeContext';
 import jobTitlesData from '../data/jobTitles.json';
+import { titleMatchRank } from '../utils/jobTitleSearch';
 import { useSeo, SEO_ROBOTS_INDEX, getSiteUrl } from '../hooks/useSeo';
 import { slugifyJobTitle } from '../utils/slug';
 import { debounce } from '../utils/debounce';
@@ -156,29 +157,23 @@ const JobTitles: React.FC = () => {
 
 
     const filteredCategories = useMemo(() => {
-        const lowerSearch = search.trim().replace(/\s+/g, ' ').toLowerCase();
-        if (!lowerSearch) return JOB_CATEGORIES;
-        // Whole-word matches rank first ("rn" finds "Registered Nurse (RN)" before "Intern").
-        const wordStart = new RegExp(`(^|[^a-z0-9])${lowerSearch.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}`, 'i');
-        const rank = (title: string) => (title.toLowerCase() === lowerSearch ? 0 : wordStart.test(title) ? 1 : 2);
+        if (!search.trim()) return JOB_CATEGORIES;
 
-        return JOB_CATEGORIES.map(category => {
-            // Check if category name matches
-            if (category.name.toLowerCase().includes(lowerSearch)) {
-                return category;
-            }
-            // Or filter titles
-            const matches = category.titles.filter(title => title.toLowerCase().includes(lowerSearch));
-            const filteredTitles = matches.some(title => rank(title) < 2) ? matches.filter(title => rank(title) < 2) : matches;
-
-            if (filteredTitles.length > 0) {
-                return {
-                    ...category,
-                    titles: filteredTitles
-                };
-            }
-            return null;
-        }).filter(Boolean) as JobTitleCategory[];
+        const ranked = JOB_CATEGORIES.map((category) => ({
+            category,
+            // A category whose name has the words ("healthcare") shows whole; letters inside a word don't count ("rn" in "Government").
+            whole: titleMatchRank(category.name, search) === 1,
+            titles: category.titles.map((title) => [title, titleMatchRank(title, search)] as const).filter(([, rank]) => rank !== null),
+        }));
+        // Whole-word matches anywhere hide letters-inside-a-word matches everywhere ("rn" finds "Registered Nurse (RN)", not "Intern").
+        const wordMatch = ranked.some(({ whole, titles }) => whole || titles.some(([, rank]) => rank === 1));
+        return ranked
+            .map(({ category, whole, titles }) => {
+                if (whole) return category;
+                const kept = titles.filter(([, rank]) => !wordMatch || rank === 1).map(([title]) => title);
+                return kept.length ? { ...category, titles: kept } : null;
+            })
+            .filter(Boolean) as JobTitleCategory[];
     }, [search]);
 
     const isSearching = search.trim().length > 0;
