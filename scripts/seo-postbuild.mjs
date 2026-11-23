@@ -856,6 +856,7 @@ const buildResumeSchema = (siteUrl, templates) => {
           font: { type: 'string', enum: ['template', 'inter', 'source-sans', 'lato', 'roboto', 'source-serif', 'charis', 'garamond', 'tinos', 'plex-serif', 'latin-modern'] },
           scale: { type: 'number', minimum: 0.85, maximum: 1.15, default: 1 },
           paper: { type: 'string', enum: ['a4', 'letter'], default: 'a4', description: 'Paper size: A4 or US Letter.' },
+          language: { type: 'string', enum: ['en', 'zh', 'ja', 'ko'], description: "Language of the section headings and dates; omit to follow the resume's content." },
         },
       },
       fullName: { type: 'string' },

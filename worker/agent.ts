@@ -15,7 +15,7 @@ import { resumeFileName } from '../src/shared/fileName';
 import { buildRoleGuide } from '../src/shared/roleGuide.mjs';
 import roleGuides from '../src/data/roleGuides.json';
 import jobTitles from '../src/data/jobTitles.json';
-import type { ResumeData } from '../src/types';
+import { RESUME_LANGUAGES, type ResumeData, type ResumeLanguage } from '../src/types';
 import { slugifyJobTitle } from '../src/utils/slug';
 import { validateUrl } from '../src/utils/validation';
 import { latexEngine, toLatex } from '../src/utils/latex';
@@ -286,6 +286,11 @@ const prepareResume = (input: Json): PreparedResume => {
     const paper = input.paper.trim().toLowerCase().replace(/^us[\s-]?letter$/, 'letter');
     if (paper === 'a4' || paper === 'letter') resume.design.paper = paper;
     else warnings.push(`Ignored paper "${input.paper}"; use "a4" or "letter".`);
+  }
+  if (typeof input.language === 'string' && input.language) {
+    const language = input.language.trim().toLowerCase().split(/[-_]/)[0];
+    if (RESUME_LANGUAGES.includes(language as ResumeLanguage)) resume.design.language = language as ResumeLanguage;
+    else warnings.push(`Ignored language "${input.language}"; use ${RESUME_LANGUAGES.map((l) => `"${l}"`).join(', ')}, or omit it to follow the resume's content.`);
   }
 
   // Dates: YYYY-MM is the contract; common other forms are converted rather than printed as typed.
@@ -608,6 +613,11 @@ const RESUME_INPUT = {
   font: { type: 'string', enum: FONT_IDS, description: 'Font preset. "template" keeps the template\'s own fonts.' },
   scale: { type: 'number', minimum: 0.85, maximum: 1.15, description: 'Text size, 0.85–1.15 (1 = default). Lower it to fit one page.' },
   paper: { type: 'string', enum: ['a4', 'letter'], description: 'Paper size: "a4" (default) or "letter" (US Letter, for US and Canadian applications). Letter pages are shorter, so check the page count again.' },
+  language: {
+    type: 'string',
+    enum: [...RESUME_LANGUAGES],
+    description: 'Language of the section headings and dates ("工作经历", "2021.03 – 至今"). Omit it: they follow the resume\'s content, so a Chinese, Japanese or Korean resume gets its own. Set it only when the user asks, e.g. "en" for a Chinese resume with English headings.',
+  },
 };
 
 interface ToolContext {
