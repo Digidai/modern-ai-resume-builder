@@ -1,6 +1,10 @@
 import { describe, expect, it } from 'vitest';
 import { DEFAULT_DESIGN } from '../types';
-import { latexParseProgress, latexSourceProblem, prepareLatexSource, resumeFromParsedLatex } from './latexImport';
+import { latexParseProgress, latexSourceProblem, missingDatedEntries, prepareLatexSource, resumeFromParsedLatex } from './latexImport';
+import { sanitizeResumeData } from './resumeData';
+import { docxText } from './resumeFile';
+import { toDocx } from './docx';
+import { toLatex } from './latex';
 
 describe('prepareLatexSource', () => {
   it('drops comments and setup lines but keeps escaped percent signs and macro definitions', () => {
@@ -65,5 +69,34 @@ describe('latexParseProgress', () => {
       '"skills":["Python, R","SQL"],"publications":[{"title":"On {graphs}"},{"title":"Unfinished \\"quo';
     expect(latexParseProgress(partial)).toEqual({ section: 'publications', counts: { experience: 2, skills: 2, publications: 2 } });
     expect(latexParseProgress('{"fullName":"Pat","education":[]').section).toBeNull();
+  });
+});
+
+describe('missingDatedEntries', () => {
+  const pat = sanitizeResumeData({
+    fullName: 'Pat Lee',
+    summary: 'Placed 38,000 cubic yards across 9 projects in 2024–2025.',
+    experience: [
+      { company: 'Keystone', role: 'Foreman', startDate: '2019-05', isCurrent: true, description: '- Raised ratings each year from 2021 to 2025' },
+      { company: 'Buckeye', role: 'Finisher', startDate: '2014-03', endDate: '2019-04' },
+    ],
+    education: [{ school: 'Ohio State', degree: 'BS', startDate: '2010-09', endDate: '2014-05' }],
+  })!;
+
+  it('counts dated entry headings the parse has no entry for, in Word text and LaTeX', async () => {
+    const text = await docxText(toDocx(pat));
+    const tex = prepareLatexSource(toLatex(pat));
+    expect(missingDatedEntries(text, pat)).toBe(0);
+    expect(missingDatedEntries(tex, pat)).toBe(0);
+    const skipped = { ...pat, experience: pat.experience.slice(0, 1) };
+    expect(missingDatedEntries(text, skipped)).toBe(1);
+    expect(missingDatedEntries(tex, skipped)).toBe(1);
+  });
+
+  it('reads CJK and numeric dates, and ignores periods inside sentences and bullets', () => {
+    const one = { ...pat, experience: [], education: pat.education };
+    expect(missingDatedEntries('字节跳动 前端负责人 2020.03 – 至今\n浙江大学 2012年9月 – 2016年6月', one)).toBe(1);
+    expect(missingDatedEntries('Acme, Engineer 03/2019 - 04/2021\nOhio State, BS 2010 – 2014', one)).toBe(1);
+    expect(missingDatedEntries('Grew sales 30% in 2023–2025\n- Led the team from 2021 to 2024\nOhio State, BS 2010 – 2014', one)).toBe(0);
   });
 });

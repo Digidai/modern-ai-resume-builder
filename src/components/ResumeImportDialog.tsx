@@ -3,7 +3,7 @@ import type { ResumeData } from '../types';
 import { MAX_LATEX_SOURCE_CHARS } from '../shared/aiContract';
 import { getTemplateById } from '../constants/templates';
 import { AiError, parseLatexResume, parseResumeText } from '../services/aiService';
-import { latexParseProgress, latexSourceProblem, prepareLatexSource, resumeFromParsedLatex, type LatexProgressSection } from '../utils/latexImport';
+import { latexParseProgress, latexSourceProblem, missingDatedEntries, prepareLatexSource, resumeFromParsedLatex, type LatexProgressSection } from '../utils/latexImport';
 import { Button } from './Button';
 import { Textarea } from './Input';
 import { ScaledResumePreview } from './ScaledResumePreview';
@@ -65,7 +65,7 @@ type Phase =
   | { name: 'input'; error: string }
   | { name: 'reading'; file: string }
   | { name: 'converting'; latex: boolean; expected: number; progress: Progress }
-  | { name: 'review'; result: ResumeData };
+  | { name: 'review'; result: ResumeData; missing: number; from: ResumeSource };
 
 const INPUT: Phase = { name: 'input', error: '' };
 const inputError = (error: string): Phase => ({ name: 'input', error });
@@ -177,7 +177,12 @@ export const ResumeImportDialog: React.FC<{
       }
       // Academic sections only show in academic templates; switch to Scholar rather than hide them.
       const academic = (parsed.publications ?? []).length + (parsed.awards ?? []).length + (parsed.talks ?? []).length + (parsed.teaching ?? []).length > 0;
-      setPhase({ name: 'review', result: academic && !getTemplateById(current.templateId)?.publications ? { ...parsed, templateId: 'scholar' } : parsed });
+      setPhase({
+        name: 'review',
+        result: academic && !getTemplateById(current.templateId)?.publications ? { ...parsed, templateId: 'scholar' } : parsed,
+        missing: missingDatedEntries(prepared, parsed),
+        from: { kind, text },
+      });
     } catch (err) {
       // Cancelled: back to the input with the text kept, and nothing to report.
       if (conversion.signal.aborted) {
@@ -194,6 +199,7 @@ export const ResumeImportDialog: React.FC<{
 
   const busy = phase.name === 'reading' || phase.name === 'converting';
   const result = phase.name === 'review' ? phase.result : null;
+  const missing = phase.name === 'review' ? phase.missing : 0;
   const error = phase.name === 'input' ? phase.error : '';
 
   /** Reads the file's text into the box (so it can be checked or fixed), then converts it. */
@@ -336,6 +342,16 @@ export const ResumeImportDialog: React.FC<{
                 <p className="text-muted">
                   Shown in {switchedTemplate.name} so {switchedTemplate.photo ? 'the photo appears' : 'the academic sections appear'}. You can change the template afterwards.
                 </p>
+              )}
+              {missing > 0 && phase.name === 'review' && (
+                <div role="alert" className="flex flex-col items-start gap-2 rounded-lg border border-danger/40 bg-danger/5 px-3 py-2 text-danger">
+                  <p>
+                    Your file has {missing} more dated {missing === 1 ? 'entry' : 'entries'} than the import found: AI sometimes skips a job or degree. Compare with your file, or convert it again.
+                  </p>
+                  <Button variant="secondary" size="sm" onClick={() => void convert(phase.from)}>
+                    Convert again
+                  </Button>
+                </div>
               )}
               <p className="rounded-lg border border-amber-300/60 bg-amber-50 px-3 py-2 text-amber-900 dark:border-amber-500/30 dark:bg-amber-500/10 dark:text-amber-200">
                 Check every entry: AI can misread columns, tables and custom macros. Importing replaces your current resume; Undo brings it back.

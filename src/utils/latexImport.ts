@@ -29,6 +29,27 @@ export const latexSourceProblem = (prepared: string): LatexSourceProblem | null 
   return null;
 };
 
+const MONTH = '(?:jan|feb|mar|apr|may|jun|jul|aug|sep|oct|nov|dec)[a-z]*\\.?';
+const DATE = `(?:(?:${MONTH}\\s+)?(?:19|20)\\d{2}(?:[./-]\\d{1,2})?|\\d{1,2}/(?:19|20)\\d{2}|(?:19|20)\\d{2}年(?:\\d{1,2}月)?|(?:19|20)\\d{2}\\.\\d{2})`;
+const DATE_RANGE = new RegExp(`${DATE}\\s*(?:–|—|-{1,3}|\\bto\\b|~|～|至|\\\\textendash|\\$-\\$)\\s*(?:${DATE}|present|current|now|today|至今|现在|現在|현재)`, 'i');
+
+/**
+ * How many dated lines of the source ("Aug 2017 – Mar 2021", "2012.09 – 2016.06") have no job, degree or
+ * other dated entry in the parsed resume. The parser now and then skips a whole entry; a resume gives
+ * nearly every job and degree its own date range, so more ranges than entries means one is likely missing.
+ */
+export const missingDatedEntries = (source: string, parsed: ResumeData): number => {
+  // Entry headings only: not bullets or long summary lines, and not a period named in a sentence ("in 2024–2025").
+  const ranges = source.split('\n').filter((line) => {
+    const text = line.trim();
+    if (text.length > 160 || /^(?:[-•▪*·]|\d+\.|\\item\b)/.test(text)) return false;
+    const at = text.search(DATE_RANGE);
+    return at !== -1 && !/\b(?:in|from|between|during|since|of)\s+$/i.test(text.slice(0, at));
+  }).length;
+  const entries = parsed.experience.length + parsed.education.length + (parsed.awards?.length ?? 0) + (parsed.teaching?.length ?? 0);
+  return Math.max(0, ranges - entries);
+};
+
 /** The parser's JSON reply as a resume, keeping the user's template and design; null when it holds no resume. */
 export const resumeFromParsedLatex = (json: string, current: Pick<ResumeData, 'templateId' | 'design'>): ResumeData | null => {
   let raw: unknown;
