@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
+- Screen readers can find the editor. It had no heading and, on phones in Edit view, its only main landmark was the hidden preview, so "jump to main" and the heading list led nowhere; the editor now has a "Resume editor" heading and one main landmark holding the Edit resume and Resume preview regions. axe reports no issues on the editor at phone or desktop width.
 - Agents can set the resume language: render_pdf, render_preview, create_editor_link and the /api/agent endpoints take `language` ("en", "zh", "ja", "ko"; "zh-CN" works too), and /resume.schema.json lists `design.language`. Without it, headings and dates still follow the resume's content.
 - Downloads are named in the resume's language: "王思远_简历.pdf", "佐藤_健_履歴書.docx", "김지훈_이력서.tex" instead of "王思远_Resume.pdf", in the editor and the Agent API's download links.
 - PDFs declare the resume's language. Every PDF said it was English (`/Lang (en)`), so screen readers that follow it read a Chinese, Japanese or Korean resume with English pronunciation; it now says zh-CN, ja or ko, in Download PDF and the Agent API. The document title PDF viewers show follows it too ("王思远 – 简历", "佐藤 健 – 履歴書" instead of "王思远 – Resume"), as does the Word file's title.

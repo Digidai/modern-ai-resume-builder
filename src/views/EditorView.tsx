@@ -662,8 +662,10 @@ const EditorView: React.FC = () => {
         </button>
       )}
 
-      <div className="flex min-h-0 flex-1">
-        <aside
+      <main className="flex min-h-0 flex-1">
+        <h1 className="sr-only">Resume editor</h1>
+        <section
+          aria-label="Edit resume"
           className={`user-resume custom-scrollbar relative w-full shrink-0 overflow-y-auto bg-paper md:w-[460px] md:border-r md:border-rule lg:w-[520px] md: print:hidden ${
             mobileView === 'preview' ? 'max-md:hidden' : ''
           }`}
@@ -679,10 +681,10 @@ const EditorView: React.FC = () => {
           <SectionErrorBoundary sectionName="Resume Editor">
             <ResumeEditor data={resumeData} onChange={setResumeData} />
           </SectionErrorBoundary>
-        </aside>
+        </section>
 
         {/* Kept mounted (just visually hidden) on mobile so PDF export can always read the preview. */}
-        <main
+        <section
           className={`custom-scrollbar flex-1 overflow-y-auto bg-tint px-3 py-4 sm:p-8 lg:p-10 print:overflow-visible print:bg-white print:p-0 ${
             mobileView === 'edit' ? 'max-md:pointer-events-none max-md:invisible max-md:absolute max-md:inset-x-0 max-md:h-0 max-md:overflow-hidden' : ''
           }`}
@@ -704,8 +706,8 @@ const EditorView: React.FC = () => {
             )}
           </div>
           <PageStatus design={resumeData.design ?? DEFAULT_DESIGN} onChange={updateDesign} view={previewView} maxPages={maxPages} />
-        </main>
-      </div>
+        </section>
+      </main>
     </div>
   );
 };
