@@ -20,6 +20,7 @@ import { slugifyJobTitle } from '../src/utils/slug';
 import { validateUrl } from '../src/utils/validation';
 import { latexEngine, toLatex } from '../src/utils/latex';
 import { toDocx } from '../src/utils/docx';
+import { titleMatchRank } from '../src/utils/jobTitleSearch';
 import { PUBLICATION_KINDS, parseBibtex, type ImportedPublication, type PublicationKind } from '../src/utils/bibtex';
 import { OrcidError, fetchOrcidPublications, normalizeOrcid } from './orcid';
 
@@ -121,6 +122,12 @@ const resolveTitle = (title: string): string | undefined => {
   const loose = looseKey(title);
   const direct = titleByLoose.get(lower) ?? titleByLoose.get(loose) ?? (GENERIC_TITLES[loose] && titleByLoose.get(GENERIC_TITLES[loose].toLowerCase()));
   if (direct) return direct;
+  // The shortest title with every word of the request, matched as the directory search does: plurals,
+  // HR/ML/SWE spelled out, spaces inside words ignored ("registered nurses", "ML engineer", "fullstack
+  // developer", "elementary teacher" → "Elementary School Teacher" rather than "Teacher").
+  const allWords = [...new Set(titleByLoose.values())].filter((known) => titleMatchRank(known, title) === 1);
+  // Full length, so a long name behind an acronym ("SDET (Software Development Engineer in Test)") isn't the shortest.
+  if (allWords.length) return allWords.reduce((a, b) => (b.length < a.length ? b : a));
   // Longest known title inside the request ("Senior Data Analyst II" → "Senior Data Analyst").
   let best: string | undefined;
   for (const [key, known] of titleByLoose) {

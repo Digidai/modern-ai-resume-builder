@@ -137,6 +137,13 @@ if (first.headers.get('cf-mitigated') === 'challenge' || !first.headers.get('con
 const templates = await first.json();
 check(Array.isArray(templates.templates) && templates.templates.some((t) => t.id === 'federal' && t.maxPages === 2), 'GET /api/agent/templates lists federal with maxPages 2', `${templates.templates?.length} templates`);
 
+// Job titles the way people write them resolve to a directory example (no renders).
+for (const [asked, expected] of [['registered nurses', 'Registered Nurse (RN)'], ['ML engineer', 'Machine Learning Engineer'], ['elementary teacher', 'Elementary School Teacher']]) {
+  const response = await fetch(`${BASE}/api/agent/example?job_title=${encodeURIComponent(asked)}`);
+  const body = await response.json();
+  check(response.status === 200 && body.matchedTitle === expected && body.resume?.experience?.length > 0, `example for "${asked}" is ${expected}`, `${response.status} ${body.matchedTitle ?? body.error?.code}`);
+}
+
 // Input handling (no renders): template names resolve, unknown ids are rejected, dates are normalized.
 const postLink = async (body) => {
   const response = await fetch(`${BASE}/api/agent/link`, { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
