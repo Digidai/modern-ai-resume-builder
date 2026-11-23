@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
+import { DEFAULT_DESIGN as DESIGN, INITIAL_RESUME_DATA as SAMPLE } from '../types';
 import { INITIAL_RESUME_DATA } from '../types';
-import { ignoredResumeFields, normalizeMonth, sanitizeResumeData } from './resumeData';
+import { ignoredResumeFields, normalizeMonth, sanitizeResumeData, resumeDocumentTitle } from './resumeData';
 
 describe('sanitizeResumeData', () => {
   it('keeps a US Letter paper choice and reads older or unknown values as A4', () => {
@@ -357,5 +358,13 @@ describe('normalizeMonth', () => {
     for (const typed of ['2019', '', '2020/13', '13/2020', 'Ma 2020', 'Summer 2020', 'Jan', 'Expected 2026']) {
       expect(normalizeMonth(typed)).toBe(typed);
     }
+  });
+});
+
+describe('resumeDocumentTitle', () => {
+  it('names the document in the resume language, which PDF viewers show in the title bar', () => {
+    expect(resumeDocumentTitle(SAMPLE)).toBe('Alex Sterling – Resume');
+    expect(resumeDocumentTitle({ ...SAMPLE, fullName: '王思远', design: { ...DESIGN, language: 'zh' } })).toBe('王思远 – 简历');
+    expect(resumeDocumentTitle({ ...SAMPLE, fullName: '', design: { ...DESIGN, language: 'ja' } })).toBe('履歴書');
   });
 });

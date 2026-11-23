@@ -1,5 +1,6 @@
 import { DEFAULT_TEMPLATE_ID, currentTemplateId } from '../constants/templates';
 import { validateUrl } from './validation';
+import { tr } from './resumeLanguage';
 import { DEFAULT_DESIGN, RESUME_LANGUAGES, type ResumeLanguage, type Education, type Experience, type Project, type Award, type Publication, type ResumeData, type Talk, type Teaching, type ResumeDesign, type ResumeLink } from '../types';
 
 /** Text fields; agents often send years and phone numbers as numbers ("year": 2023). */
@@ -25,9 +26,11 @@ export const sanitizePhoto = (value: unknown): string => {
 const list = (value: unknown): Record<string, unknown>[] =>
   Array.isArray(value) ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object') : [];
 
-/** The PDF's document title, which viewers show in the tab or title bar: "Pat Lee – Resume". */
-export const resumeDocumentTitle = (data: Pick<ResumeData, 'fullName'>): string =>
-  data.fullName.trim() ? `${data.fullName.trim().replace(/\s+/g, ' ')} – Resume` : 'Resume';
+/** The PDF's document title, which viewers show in the tab or title bar: "Pat Lee – Resume", "王思远 – 简历". */
+export const resumeDocumentTitle = (data: ResumeData): string => {
+  const word = tr(data, 'Resume');
+  return data.fullName.trim() ? `${data.fullName.trim().replace(/\s+/g, ' ')} – ${word}` : word;
+};
 
 export const createId = (): string =>
   typeof crypto !== 'undefined' && 'randomUUID' in crypto

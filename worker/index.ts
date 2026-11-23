@@ -1139,8 +1139,10 @@ const PDF_SANDBOX_CSP = "default-src 'none'; style-src 'unsafe-inline'; font-src
 const escapeHtmlText = (text: string): string => text.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
 // The <title> becomes the PDF's document title, which viewers show in the tab (without one it is "about:blank").
+// Chrome copies <html lang> into the PDF's /Lang (screen readers read the document in it; without one it is
+// "en-US"), so it takes the language ResumePreview put on the paper.
 const buildPdfDocument = (html: string, css: string, title: string): string =>
-  `<!doctype html><html><head><meta charset="utf-8">` +
+  `<!doctype html><html lang="${/^<div[^>]*\blang="([A-Za-z]{2,3}(?:-[A-Za-z]{2,4})?)"/.exec(html)?.[1] ?? 'en'}"><head><meta charset="utf-8">` +
   `<title>${escapeHtmlText(title.replace(/\s+/g, ' ').trim().slice(0, 200) || 'Resume')}</title>` +
   `<meta http-equiv="Content-Security-Policy" content="${PDF_SANDBOX_CSP}">` +
   // `</style` can't appear inside the CSS we were given; neutralize it if it does.

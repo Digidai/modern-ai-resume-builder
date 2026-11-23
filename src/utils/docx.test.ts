@@ -34,5 +34,6 @@ describe('toDocx', () => {
     expect(styles('ja')).toContain('w:eastAsia="Yu Gothic"');
     expect(styles('ja')).toContain('w:eastAsia="ja-JP"');
     expect(styles('ko')).toContain('w:eastAsia="Malgun Gothic"');
+    expect(styles('ko')).toContain('<dc:title>Alex Sterling – 이력서</dc:title>');
   });
 });

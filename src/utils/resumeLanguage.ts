@@ -51,6 +51,7 @@ const WORDS: Record<string, [zh: string, ja: string, ko: string]> = {
   Present: ['至今', '現在', '현재'],
   present: ['至今', '現在', '현재'],
   'Résumé': ['个人简历', '履歴書', '이력서'],
+  Resume: ['简历', '履歴書', '이력서'],
 };
 const COLUMN = { zh: 0, ja: 1, ko: 2 } as const;
 

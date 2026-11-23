@@ -10,6 +10,7 @@ import { resumeDocumentTitle, sanitizeResumeData } from '../utils/resumeData';
 import type { ResumeData } from '../types';
 import { paperSize } from '../constants/print';
 import { resumeFontsReady } from '../fonts';
+import { LANGUAGE_TAGS, resumeLanguage } from '../utils/resumeLanguage';
 
 /**
  * Bare paper (A4 or US Letter) for `/render/#resume=<payload>`: the Worker's agent PDF endpoint opens this page in
@@ -42,6 +43,8 @@ const RenderView: React.FC = () => {
         return;
       }
       await preloadResumeTemplate(parsed.templateId);
+      // Chrome copies <html lang> into the PDF's /Lang, which screen readers read the document in.
+      root.lang = LANGUAGE_TAGS[resumeLanguage(parsed)];
       if (!cancelled) setData(parsed);
     })();
     return () => {
