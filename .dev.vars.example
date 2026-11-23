@@ -8,6 +8,7 @@ AI_SIGNING_SECRET=YOUR_SIGNING_SECRET
 # Optional overrides (defaults live in wrangler.jsonc "vars").
 # ALLOWED_ORIGINS=http://localhost:5173,http://127.0.0.1:5173
 # AI_MODEL=@cf/openai/gpt-oss-20b
+# AI_FALLBACK_MODEL=@cf/openai/gpt-oss-120b  # used once Workers AI retires AI_MODEL
 # AI_REASONING_EFFORT=low
 # AI_PARSE_REASONING_EFFORT=medium
 # AI_RATE_LIMIT_PER_MINUTE=20

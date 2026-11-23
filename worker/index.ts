@@ -29,6 +29,8 @@ interface Env {
   /** Cloudflare Browser Rendering binding, used to print resumes to vector PDF. */
   BROWSER?: Parameters<typeof puppeteer.launch>[0];
   AI_MODEL?: string;
+  /** Used when Workers AI has retired AI_MODEL, so AI keeps working until the var is updated. */
+  AI_FALLBACK_MODEL?: string;
   /** Sent as `reasoning_effort` for Improve and Write when set; leave empty for models that don't accept it. */
   AI_REASONING_EFFORT?: string;
   /** `reasoning_effort` for resume parsing (Import resume), which needs more care to keep every entry. */
@@ -106,6 +108,8 @@ const MAX_BODY_BYTES = 64 * 1024;
 const MAX_AI_BODY_BYTES = 160 * 1024;
 const REQUEST_TIMEOUT_MS = 30000;
 const DEFAULT_MODEL = '@cf/openai/gpt-oss-20b';
+/** Same family as the default: it takes the same messages, max_tokens and reasoning_effort values. */
+const DEFAULT_FALLBACK_MODEL = '@cf/openai/gpt-oss-120b';
 /** Improve and Write: room for a long description rewritten, after the model's reasoning tokens. */
 const MAX_OUTPUT_TOKENS = 2000;
 /**
@@ -959,10 +963,42 @@ const upstreamError = (error: unknown, model: string): Error => {
   return new Error('UPSTREAM_UNAVAILABLE:AI service is temporarily unavailable. Please try again.');
 };
 
+/** Workers AI's answer for a model it has retired: "5028: @cf/… was deprecated on 2026-11-20" (or one it no longer lists). */
+const RETIRED_MODEL = /\b5028\b|was deprecated|no such model|model not found/i;
+/** Models this isolate has seen retired, so later requests skip straight to the fallback. */
+const retiredModels = new Set<string>();
+
+/**
+ * Runs the configured model, or the fallback once Workers AI has retired it. When glm-5.3-flash was
+ * retired, every Improve, Write and Import failed until AI_MODEL was changed by hand. The switch is
+ * logged as an error so it shows up in the logs until the var is updated. Returns the model that ran.
+ */
+const runAi = async (env: Env & { AI: NonNullable<Env['AI']> }, input: Record<string, unknown>): Promise<{ model: string; result: unknown }> => {
+  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
+  const fallback = normalizeText(env.AI_FALLBACK_MODEL) || DEFAULT_FALLBACK_MODEL;
+  if (!retiredModels.has(model) || fallback === model) {
+    try {
+      return { model, result: await env.AI.run(model, input) };
+    } catch (error) {
+      const message = error instanceof Error ? error.message : String(error);
+      if (fallback === model || !RETIRED_MODEL.test(message)) throw Object.assign(error instanceof Error ? error : new Error(message), { model });
+      retiredModels.add(model);
+      console.error('[ai] model retired, using fallback; update AI_MODEL', { model, fallback, message });
+    }
+  }
+  try {
+    return { model: fallback, result: await env.AI.run(fallback, input) };
+  } catch (error) {
+    throw Object.assign(error instanceof Error ? error : new Error(String(error)), { model: fallback });
+  }
+};
+
+/** The model a failed runAi call was using, for the error log. */
+const failedModel = (error: unknown, env: Env) => (error as { model?: string } | null)?.model ?? (normalizeText(env.AI_MODEL) || DEFAULT_MODEL);
+
 const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
   if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
 
-  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
   const parsing = isParseRequest(payload);
   const input = buildAiInput(env, payload);
 
@@ -972,13 +1008,13 @@ const callAi = async (env: Env, payload: AiRequest): Promise<string> => {
   });
 
   try {
-    const result = await Promise.race([env.AI.run(model, input), timeout]);
+    const { result } = await Promise.race([runAi({ ...env, AI: env.AI }, input), timeout]);
     if (hitTokenLimit(result, input.max_tokens)) throw new Error(`OUTPUT_TOO_LONG:${tooLongMessage(payload)}`);
     const text = finishReply(payload, modelContent(result));
     if (!text) throw new Error('EMPTY_RESPONSE');
     return text;
   } catch (error) {
-    throw upstreamError(error, model);
+    throw upstreamError(error, failedModel(error, env));
   } finally {
     clearTimeout(timeoutId);
   }
@@ -999,13 +1035,13 @@ const streamDelta = (chunk: JsonObject): { text: string; reasoning: boolean } =>
  */
 const streamAi = async (env: Env, payload: AiRequest): Promise<Response> => {
   if (!env.AI) throw new Error('AI_NOT_CONFIGURED');
-  const model = normalizeText(env.AI_MODEL) || DEFAULT_MODEL;
   const input = buildAiInput(env, payload);
   let upstream: unknown;
+  let model: string;
   try {
-    upstream = await env.AI.run(model, { ...input, stream: true });
+    ({ model, result: upstream } = await runAi({ ...env, AI: env.AI }, { ...input, stream: true }));
   } catch (error) {
-    throw upstreamError(error, model);
+    throw upstreamError(error, failedModel(error, env));
   }
 
   const { readable, writable } = new TransformStream<Uint8Array, Uint8Array>();
