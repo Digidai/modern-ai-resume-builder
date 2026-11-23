@@ -302,6 +302,11 @@ describe('loosely shaped resumes from agents', () => {
       ['', 'https://www.github.com/pat/'],
       ['Scholar', 'scholar.google.com/citations?user=x'],
     ]);
+    // One entry sent as an object rather than a one-item list.
+    const single = sanitizeResumeData({ fullName: 'Pat', experience: { company: 'Acme', role: 'Engineer' }, education: { school: 'UCL' }, links: 'pat.dev' });
+    expect(single?.experience).toMatchObject([{ company: 'Acme', role: 'Engineer' }]);
+    expect(single?.education).toMatchObject([{ school: 'UCL' }]);
+    expect(single?.links.map((link) => link.url)).toEqual(['pat.dev']);
   });
 
   it('keeps bullets sent as lists and skills sent as groups or one string', () => {

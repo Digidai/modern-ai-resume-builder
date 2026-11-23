@@ -23,8 +23,13 @@ export const sanitizePhoto = (value: unknown): string => {
   const photo = str(value).trim();
   return photo.length <= MAX_PHOTO_LENGTH && /^data:image\/(jpeg|png|webp);base64,[a-z0-9+/]+=*$/i.test(photo) ? photo : '';
 };
+// A single entry given as an object, not a one-item list (a common slip for a one-job resume), still counts.
 const list = (value: unknown): Record<string, unknown>[] =>
-  Array.isArray(value) ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object') : [];
+  Array.isArray(value)
+    ? value.filter((item): item is Record<string, unknown> => !!item && typeof item === 'object')
+    : value && typeof value === 'object' && Object.keys(value).length
+      ? [value as Record<string, unknown>]
+      : [];
 
 /** The PDF's document title, which viewers show in the tab or title bar: "Pat Lee – Resume", "王思远 – 简历". */
 export const resumeDocumentTitle = (data: ResumeData): string => {
@@ -452,7 +457,7 @@ export const sanitizeResumeData = (input: unknown): ResumeData | null => {
     .filter((item) => item.course || item.role);
   // Links may also come as plain URLs, and GitHub or a portfolio as their own fields.
   const linkItems: Record<string, unknown>[] = [
-    ...(Array.isArray(raw.links) ? raw.links.map((item) => (typeof item === 'string' ? { url: item.trim() && validateUrl(item) ? item : '' } : obj(item))) : []),
+    ...(Array.isArray(raw.links) ? raw.links : raw.links ? [raw.links] : []).map((item) => (typeof item === 'string' ? { url: item.trim() && validateUrl(item) ? item : '' } : obj(item))),
     ...(['github', 'portfolio'] as const).map((key) => ({ url: str(raw[key]) })),
   ];
   const links: ResumeLink[] = linkItems

@@ -1821,7 +1821,7 @@ const main = async () => {
   }
 
   const agentsUrl = `${siteUrl}/agents/`;
-  const agentsDescription = `Connect Claude, ChatGPT, Cursor or any AI agent to ModernCV: a free remote MCP server, an agent skill and an HTTP API to draft resumes, render ${templates.length} templates to PDF and hand off an editor link.`;
+  const agentsDescription = `Connect Claude, ChatGPT or Cursor to ModernCV: a free MCP server, agent skill and HTTP API that draft resumes and render ${templates.length} templates to PDF.`;
   await writePage({
     routePath: '/agents',
     title: 'Use ModernCV from AI Agents (MCP Server, Skill, API) | ModernCV',

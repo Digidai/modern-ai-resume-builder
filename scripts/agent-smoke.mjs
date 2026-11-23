@@ -154,6 +154,12 @@ check(
   'unknown resume and entry fields are named in a warning',
   extra.body.warnings?.join(' | ')
 );
+const notList = await postLink({ resume: { ...designer, projects: 'Built a design system' } });
+check(
+  notList.status === 200 && notList.body.warnings.some((w) => /Ignored projects: it must be a list/.test(w)),
+  'a list field sent as text is named in a warning',
+  notList.body.warnings?.join(' | ')
+);
 const asString = await postLink({ resume: JSON.stringify({ ...designer, experience: [{ ...designer.experience[0], startDate: 'March 2021', endDate: '' }] }) });
 check(
   asString.status === 200 && asString.body.warnings.some((w) => /no endDate/.test(w)) && !asString.body.warnings.some((w) => /isn't a date/.test(w)),

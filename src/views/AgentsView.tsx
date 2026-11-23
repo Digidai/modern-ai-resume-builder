@@ -40,7 +40,7 @@ const AgentsView: React.FC = () => {
   const siteUrl = getSiteUrl();
   const pageUrl = `${siteUrl}/agents/`;
   const title = 'Use ModernCV from AI Agents (MCP Server, Skill, API) | ModernCV';
-  const description = `Connect Claude, ChatGPT, Cursor or any AI agent to ModernCV: a free remote MCP server, an agent skill and an HTTP API to draft resumes, render ${TEMPLATES.length} templates to PDF and hand off an editor link.`;
+  const description = `Connect Claude, ChatGPT or Cursor to ModernCV: a free MCP server, agent skill and HTTP API that draft resumes and render ${TEMPLATES.length} templates to PDF.`;
 
   useSeo({
     title,

@@ -257,6 +257,11 @@ const prepareResume = (input: Json): PreparedResume => {
   // Unknown fields are dropped; naming them lets the agent rename or move them (render options may sit beside an unwrapped resume).
   const ignored = ignoredResumeFields(raw).filter((key) => !(unwrapped && key in RESUME_INPUT));
   if (ignored.length) warnings.push(`Ignored unknown resume field${ignored.length === 1 ? '' : 's'}: ${ignored.slice(0, 10).join(', ')}${ignored.length > 10 ? ', …' : ''}. See get_resume_schema (or /resume.schema.json) for the fields a resume can have.`);
+  // A list sent as text or a number is dropped whole; say so rather than render a resume with the section silently missing.
+  const notLists = ['experience', 'education', 'projects', 'publications', 'awards', 'talks', 'teaching', 'work', 'volunteer'].filter(
+    (key) => raw[key] != null && typeof raw[key] !== 'object' && raw[key] !== ''
+  );
+  if (notLists.length) warnings.push(`Ignored ${notLists.join(', ')}: ${notLists.length === 1 ? 'it must be a list' : 'these must be lists'} of entries, e.g. "experience": [{ "company": "…", "role": "…", "startDate": "2021-03" }].`);
   const template =
     typeof input.template === 'string' ? input.template : typeof input.templateId === 'string' ? input.templateId : typeof raw.templateId === 'string' ? raw.templateId : '';
   const resolved = template ? resolveTemplate(template) : undefined;
