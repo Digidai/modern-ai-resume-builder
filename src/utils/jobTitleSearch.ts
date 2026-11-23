@@ -1,12 +1,14 @@
 // Matching job titles to what people type in the directory search: in any word order, with or
 // without hyphens and spaces ("front end" finds "Frontend"), in the plural, and with common
-// abbreviations spelled out either way ("hr manager" and "human resources manager").
+// abbreviations spelled out either way ("hr manager" and "human resources manager", "sr" and "senior").
 
 const EXPANSIONS: Record<string, string[]> = {
   hr: ['human', 'resources'],
   ml: ['machine', 'learning'],
   swe: ['software', 'engineer'],
   sde: ['software', 'development', 'engineer'],
+  sr: ['senior'],
+  jr: ['junior'],
 };
 
 const singular = (word: string) =>

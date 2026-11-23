@@ -23,6 +23,7 @@ describe('titleMatchRank', () => {
     expect(titleMatchRank('HR Manager', 'human resources manager')).toBe(1);
     expect(titleMatchRank('VP of Human Resources', 'hr')).toBe(1);
     expect(titleMatchRank('Machine Learning Engineer', 'ml engineer')).toBe(1);
+    expect(titleMatchRank('Senior Data Scientist', 'sr data scientist')).toBe(1);
   });
 
   it('ranks letters inside a word below whole words, and keeps a leading dot', () => {
